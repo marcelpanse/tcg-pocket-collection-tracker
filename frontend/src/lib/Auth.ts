@@ -35,7 +35,7 @@ export const getUser = async () => {
 export const sendMagicLink = async (email: string) => {
   const account = new Account(client)
 
-  const token = await account.createMagicURLToken(ID.unique(), email, `${window.location.origin}/verify`)
+  const token = await account.createMagicURLToken(ID.unique(), email, `${window.location.origin}/#/verify`)
   console.log(token)
 }
 
