@@ -6,6 +6,8 @@ client.setProject('679d358b0013b9a1797f')
 
 function App() {
   const [user, setUser] = useState<Models.User<Models.Preferences> | null>(null)
+  const [emailInput, setEmailInput] = useState('')
+  const [emailSent, setEmailSent] = useState(false)
 
   useEffect(() => {
     login().catch(console.error)
@@ -31,22 +33,28 @@ function App() {
       const user = await account.get()
       setUser(user)
       // Logged in
-      console.log('already logged in', user)
+      console.log('user is logged in', user)
       return true
-    } catch (err) {
+    } catch (_e) {
       // Not logged in
-      console.log('not logged in yet', err)
       return false
     }
   }
 
   const sendMagicLink = async () => {
-    const client = new Client().setEndpoint('https://cloud.appwrite.io/v1').setProject('679d358b0013b9a1797f')
+    if (!emailInput) {
+      //TODO: need tailwind snackbar with warning
+      return
+    }
+
+    //TODO: validate email with regex
 
     const account = new Account(client)
 
     const token = await account.createMagicURLToken(ID.unique(), 'marcel.panse@gmail.com', `${window.location.origin}/verify`)
     console.log(token)
+
+    setEmailSent(true)
   }
 
   const logout = async () => {
@@ -57,16 +65,19 @@ function App() {
     setUser(null)
   }
 
+  // TODO: split into routes and protect with auth (see: https://appwrite.io/docs/products/auth/quick-start)
   return (
     <>
       <h1>TCG Pocket Collection Tracker</h1>
-      {!user && (
+      {!user && !emailSent && (
         <div className="card">
+          <input type="text" placeholder="email" onChange={(e) => setEmailInput(e.target.value)} />
           <button type="button" onClick={() => sendMagicLink()}>
             login / signup
           </button>
         </div>
       )}
+      {emailSent && <h2>Check your email for a login link!</h2>}
       {user && (
         <>
           <h2>Hi {user.email}</h2>
