@@ -1,5 +1,9 @@
-import { Account, Client, ID } from 'appwrite'
+import { Account, Client, Databases, ID } from 'appwrite'
 const client = new Client().setProject('679d358b0013b9a1797f')
+const databases = new Databases(client)
+
+export const DATABASE_ID = '679f7ce60013c742add3'
+export const COLLECTION_ID = '679f7cf50003d1a172c5'
 
 export const login = async () => {
   const urlParams = new URLSearchParams(window.location.search)
@@ -44,4 +48,8 @@ export const logout = async () => {
 
   const result = await account.deleteSession('current')
   console.log('logged out', result)
+}
+
+export const getDatabase = async () => {
+  return databases
 }
