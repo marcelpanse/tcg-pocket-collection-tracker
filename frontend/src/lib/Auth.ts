@@ -25,9 +25,9 @@ export const getUser = async () => {
     // Logged in
     console.log('user is logged in', user)
     return user
-  } catch (_e) {
+  } catch {
     // Not logged in
-    console.log('user is not logged in', _e)
+    // console.log('user is not logged in', _e)
     return null
   }
 }
