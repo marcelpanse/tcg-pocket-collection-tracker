@@ -18,6 +18,7 @@ export const Home = () => {
   return (
     <div>
       <h1>TCG Pocket Collection Tracker</h1>
+      <p>Coming soon...</p>
       {!user && !emailSent && (
         <div className="card">
           <input type="text" placeholder="email" onChange={(e) => setEmailInput(e.target.value)} />
