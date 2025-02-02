@@ -31,6 +31,7 @@ export const Cards: FC<Props> = ({ user }) => {
       ownedCard.amount_owned = Math.max(0, ownedCard.amount_owned + increment)
       setOwnedCards([...ownedCards])
       await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, { amount_owned: ownedCard.amount_owned })
+      await fetchCollection()
     } else if (!ownedCard && increment > 0) {
       console.log('adding new card', cardId)
       await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
