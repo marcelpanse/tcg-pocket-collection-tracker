@@ -48,5 +48,5 @@ export function calculateNewCardProbability(pack: Pack, collection: Collection):
   probabilityNoNewCard = noNewCardProbabilities.reduce((acc, curr) => acc * curr, 1)
 
   // Return the probability of getting a new card using toFixed to avoid floating point errors
-  return parseFloat(probabilityNoNewCard.toFixed(20))
+  return 1 - parseFloat(probabilityNoNewCard.toFixed(20))
 }
