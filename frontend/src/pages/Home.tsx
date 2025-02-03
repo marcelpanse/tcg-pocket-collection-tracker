@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { Cards } from '../components/Cards.tsx'
 import { Login } from '../components/Login.tsx'
 import { getUser, logout } from '../lib/Auth'
+import { Button } from "@/components/ui/button"
 
 export const Home = () => {
   const [user, setUser] = useState<Models.User<Models.Preferences> | null>(null)
@@ -23,7 +24,7 @@ export const Home = () => {
       {user && (
         <>
           <h2>Hi {user.email}</h2>
-          <button
+          <Button
             className="cursor-pointer rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             type="button"
             onClick={async () => {
@@ -32,7 +33,7 @@ export const Home = () => {
             }}
           >
             logout
-          </button>
+          </Button>
 
           <Cards user={user} />
         </>
