@@ -13,7 +13,7 @@ import {ModeToggle} from "@/components/mode-toggle"
 
 export function Header() {
   return (
-    <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
+    <header className="flex h-20 w-full justify-between shrink-0 items-center px-4 md:px-6">
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" className="lg:hidden">
@@ -27,20 +27,17 @@ export function Header() {
             <span className="sr-only">Acme Inc</span>
           </Link>
           <div className="grid gap-2 py-6">
-            <Link to="#" className="flex w-full items-center py-2 text-lg font-semibold" >
-              Home
+            <Link to="/overview" className="flex w-full items-center py-2 text-lg font-semibold" >
+            Overview
             </Link>
-            <Link to="#" className="flex w-full items-center py-2 text-lg font-semibold" >
-              About
+            <Link to="/pokedex" className="flex w-full items-center py-2 text-lg font-semibold" >
+              Pokedex
             </Link>
-            <Link to="#" className="flex w-full items-center py-2 text-lg font-semibold" >
-              Services
+            <Link to="/collection" className="flex w-full items-center py-2 text-lg font-semibold" >
+              Collection
             </Link>
-            <Link to="#" className="flex w-full items-center py-2 text-lg font-semibold" >
-              Portfolio
-            </Link>
-            <Link to="#" className="flex w-full items-center py-2 text-lg font-semibold" >
-              Contact
+            <Link to="/trade" className="flex w-full items-center py-2 text-lg font-semibold" >
+              Trade
             </Link>
           </div>
         </SheetContent>
@@ -53,14 +50,14 @@ export function Header() {
         <NavigationMenuList>
           <NavigationMenuLink asChild>
             <Link
-              to="#"
+              to="/overview"
             >
               <Button className="cursor-pointer" variant="ghost">Overview</Button>
             </Link>
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
             <Link
-              to="#"
+              to="/pokedex"
               
               
             >
@@ -69,24 +66,28 @@ export function Header() {
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
             <Link
-              to="#"
+              to="/collection"
               
             >
-              <Button className="cursor-pointer" variant="ghost">ASASD</Button>
+              <Button className="cursor-pointer" variant="ghost">Collection</Button>
             </Link>
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
             <Link
-              to="#"
+              to="/trade"
               
               
             >
               <Button className="cursor-pointer" variant="ghost">Trade</Button>
             </Link>
           </NavigationMenuLink>
-          <ModeToggle />
+          
         </NavigationMenuList>
       </NavigationMenu>
+      <div className="ml-auto" >
+
+            <ModeToggle />
+          </div>
     </header>
   )
 }
