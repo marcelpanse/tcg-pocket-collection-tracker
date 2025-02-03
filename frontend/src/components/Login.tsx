@@ -1,38 +1,50 @@
+import { Button } from '@/components/ui/button.tsx'
+import { useToast } from '@/hooks/use-toast.ts'
 import { useState } from 'react'
 import { sendMagicLink } from '../lib/Auth.ts'
+import { Input } from './ui/input.tsx'
 
 export const Login = () => {
+  const { toast } = useToast()
+
   const [emailInput, setEmailInput] = useState('')
   const [emailSent, setEmailSent] = useState(false)
 
   return (
     <>
       {!emailSent && (
-        <div className="flex align-center justify-center gap-2">
-          <input
-            type="text"
-            placeholder="email"
-            onChange={(e) => setEmailInput(e.target.value)}
-            className="block rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-          />
-          <button
-            className="cursor-pointer rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            type="button"
-            onClick={async () => {
-              //TODO: validate email with regex
-              if (emailInput) {
-                await sendMagicLink(emailInput)
-                setEmailSent(true)
-              } else {
-                // TODO: show error in Snackbar
-              }
-            }}
-          >
-            login / signup
-          </button>
+        <div className="pt-4">
+          Fill in your email address to get a magic link to login. If you don't have an account yet, we will automatically create one for you.
+          <div className="flex align-center justify-center gap-2 pt-4">
+            <Input type="email" placeholder="Email" onChange={(e) => setEmailInput(e.target.value)} />
+
+            <Button
+              onClick={async () => {
+                if (emailInput) {
+                  // TODO: validate email with regex
+                  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+                  if (!regex.test(emailInput)) {
+                    toast({
+                      title: 'Please enter a valid email address',
+                    })
+                    return
+                  }
+
+                  setEmailSent(true)
+                  await sendMagicLink(emailInput)
+                } else {
+                  toast({
+                    title: 'Please enter an email address',
+                  })
+                }
+              }}
+            >
+              login / signup
+            </Button>
+          </div>
         </div>
       )}
-      {emailSent && <h2>Check your email for a login link!</h2>}
+      {emailSent && <div className="pt-4">Thank you. Check your email for a magic login link!</div>}
     </>
   )
 }

@@ -1,5 +1,3 @@
-export function Trade(){
-    return (
-        <h1>Comming soon</h1>
-    )
+export function Trade() {
+  return <h1>Coming soon</h1>
 }
