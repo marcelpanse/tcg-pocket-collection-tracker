@@ -2,6 +2,8 @@ import { ID, type Models } from 'appwrite'
 import { type FC, useEffect, useState } from 'react'
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '../lib/Auth.ts'
 import type { CollectionRow } from '../types'
+import CardsTest from './CardTest.tsx'
+import A1 from '../../../cards/A1.json'
 
 interface Props {
   user: Models.User<Models.Preferences>
@@ -46,7 +48,7 @@ export const Cards: FC<Props> = ({ user }) => {
   const Card = ({ cardId }: { cardId: string }) => {
     return (
       <div className="flex items-center gap-x-2">
-        Card A01
+        <CardsTest cardId={cardId} setIsSelected={() => updateCardCount(cardId, 1)} selected={(ownedCards?.find((c) => c?.card_id === cardId)?.amount_owned || 0) > 0}/>
         <button
           type="button"
           onClick={() => updateCardCount(cardId, -1)}
@@ -71,13 +73,12 @@ export const Cards: FC<Props> = ({ user }) => {
   }
 
   return (
-    <ul className="mt-8 space-y-2">
-      <li>
-        <Card cardId="A01" />
-      </li>
-      <li>
-        <Card cardId="A02" />
-      </li>
+    <ul className="mt-8 space-y-2 w-full flex flex-wrap justify-center max-w-[800px]">
+      {
+        A1.slice(0, 100).map((card, index) => 
+          <CardsTest key={card.id} cardId={`A1-${card.id}`} setIsSelected={() => updateCardCount(`A1-${card.id}`, 1)} selected={(ownedCards?.find((c) => c?.card_id === `A1-${card.id}`)?.amount_owned || 0) > 0}/>
+    )
+      }
     </ul>
   )
 }
