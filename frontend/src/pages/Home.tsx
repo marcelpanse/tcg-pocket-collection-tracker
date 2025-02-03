@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { Cards } from '../components/Cards.tsx'
 import { Login } from '../components/Login.tsx'
 import { getUser, logout } from '../lib/Auth'
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button.tsx"
 
 export const Home = () => {
   const [user, setUser] = useState<Models.User<Models.Preferences> | null>(null)
