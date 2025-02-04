@@ -10,7 +10,7 @@ export const login = async () => {
   const secret = urlParams.get('secret')
   const userId = urlParams.get('userId')
   ;[('secret', 'userId')].forEach((param) => {
-    console.error(`Missing parameter ${param}`)
+    console.error(`Missing parameter!!`)
   })
 
   const user = await getUser()
