@@ -56,9 +56,14 @@ export const Cards: FC<Props> = ({ user }) => {
   }
 
   const Card = ({ card }: { card: CardType }) => {
+    const amountOwned = ownedCards.find((c) => c.card_id === card.id)?.amount_owned || 0
     return (
       <div className="flex flex-col items-center gap-y-4 w-fit border p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group">
-        <img className="w-40 rounded-lg object-cover transform group-hover:scale-105 transition duration-200" src={card?.image} alt={card?.name} />
+        <img
+          className={`${amountOwned === 0 ? 'grayscale' : ''} w-40 rounded-lg object-cover transform group-hover:scale-105 transition duration-200`}
+          src={card?.image}
+          alt={card?.name}
+        />
         <div className="flex items-center gap-x-4 mt-2">
           <button
             type="button"
@@ -69,7 +74,7 @@ export const Cards: FC<Props> = ({ user }) => {
               <path d="M5 10a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 5 10z" />
             </svg>
           </button>
-          <span className="text-lg font-semibold">{ownedCards.find((c) => c.card_id === card.id)?.amount_owned || 0}</span>
+          <span className="text-lg font-semibold">{amountOwned}</span>
           <button
             type="button"
             onClick={() => updateCardCount(card.id, 1)}
