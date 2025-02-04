@@ -9,7 +9,13 @@
 		"rules": { "recommended": false },
 		"ignore": ["dist"]
 	},
-	"javascript": { "formatter": { "quoteStyle": "double" } },
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"indentStyle": "space",
+			"indentWidth": 2
+		}
+	},
 	"overrides": [
 		{
 			"include": ["**/*.{ts,tsx}"],
