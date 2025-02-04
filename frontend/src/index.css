@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+@plugin "tailwindcss-animate";
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+  .dark body {
+    background-color: #000;
+    color: #fff;
+  }
+}
