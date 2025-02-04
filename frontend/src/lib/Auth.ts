@@ -9,6 +9,9 @@ export const login = async () => {
   const urlParams = new URLSearchParams(window.location.search)
   const secret = urlParams.get('secret')
   const userId = urlParams.get('userId')
+  ;[('secret', 'userId')].forEach((param) => {
+    console.error(`Missing parameter ${param}`)
+  })
 
   const user = await getUser()
   if (user) {

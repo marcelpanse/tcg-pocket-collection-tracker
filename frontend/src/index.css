@@ -1,10 +1,7 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
 @plugin "tailwindcss-animate";
-
-@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   :root {
