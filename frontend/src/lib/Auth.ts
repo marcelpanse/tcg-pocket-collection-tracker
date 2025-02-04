@@ -1,5 +1,5 @@
 import { Account, Client, Databases, ID } from 'appwrite'
-const client = new Client().setProject('679d358b0013b9a1797f')
+const client = new Client().setProject('679d358b0013b9a1797f').setEndpoint('https://api.tcgpocketcollectiontracker.com/v1')
 const databases = new Databases(client)
 
 export const DATABASE_ID = '679f7ce60013c742add3'

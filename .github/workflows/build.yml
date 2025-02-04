@@ -1,8 +1,5 @@
 name: Build
-on:
-  pull_request:
-    types: [ opened, edited, reopened, review_requested ]
-    branches: [ main ]
+on: pull_request
 permissions:
   contents: write
 jobs:
