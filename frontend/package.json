@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run lint && tsc -b && vite build",
-    "lint": "pnpm run biome:check",
+    "lint": "npm run biome:check",
     "lint:fix": "npm run biome:fix",
     "preview": "vite preview",
     "prepush": "npm run build",
