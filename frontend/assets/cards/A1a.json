@@ -1,0 +1,3564 @@
+[
+  {
+    "id": "1",
+    "name": "Exeggcute",
+    "hp": "50",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_001_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Growth",
+        "damage": "Spurt",
+        "effect": "Take a [G] Energy from your Energy Zone and attach it to this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #1",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Yuka Morii",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "2",
+    "name": "Exeggutor",
+    "hp": "130",
+    "card_type": "Pokémon - Stage 1 - Evolves from Exeggcute",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_002_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless", "Colorless", "Colorless"],
+        "name": "Psychic",
+        "damage": "80+",
+        "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #2",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Mythical Island #69",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Masakazu Fukuda",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "3",
+    "name": "Celebi ex",
+    "hp": "130",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_003_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless"],
+        "name": "Powerful Bloom",
+        "damage": "50x",
+        "effect": "Flip a coin for each Energy attached to this Pokémon. This attack does 50 damage for each heads."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #3",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #75",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #85",
+        "rarity": "☆☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "1.666%",
+      "5 card": "6.664%"
+    },
+    "crafting_cost": 500
+  },
+  {
+    "id": "4",
+    "name": "Snivy",
+    "hp": "70",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_004_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless"],
+        "name": "Vine Whip",
+        "damage": "40",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #4",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kagemaru Himeno",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "5",
+    "name": "Servine",
+    "hp": "80",
+    "card_type": "Pokémon - Stage 1 - Evolves from Snivy",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_005_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless"],
+        "name": "Vine Whip",
+        "damage": "50",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #5",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Shigenori Negishi",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "6",
+    "name": "Serperior",
+    "hp": "110",
+    "card_type": "Pokémon - Stage 2 - Evolves from Servine",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_006_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless", "Colorless", "Colorless"],
+        "name": "Solar Beam",
+        "damage": "70",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Jungle Totem",
+      "effect": "Each  Energy attached to your  Pokémon provides 2  Energy. This effect doesn't stack."
+    },
+    "weakness": "Fire",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #6",
+        "rarity": "◊◊◊"
+      },
+      {
+        "version": "Mythical Island #70",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Yoshioka",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "7",
+    "name": "Morelull",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_007_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass"],
+        "name": "Ram",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #7",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Saya Tsuruta",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "8",
+    "name": "Shiinotic",
+    "hp": "90",
+    "card_type": "Pokémon - Stage 1 - Evolves from Morelull",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_008_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Grass"],
+        "name": "Flickering Spores",
+        "damage": "50",
+        "effect": "Your opponent's Active Pokémon is now Asleep."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #8",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Mizue",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "9",
+    "name": "Dhelmise",
+    "hp": "100",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_009_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass"],
+        "name": "Energy Whip",
+        "damage": "20+",
+        "effect": "If this Pokémon has at least 3 extra [G] Energy attached, this attack does 70 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #9",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Hasuno",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "10",
+    "name": "Ponyta",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_010_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire"],
+        "name": "Stomp",
+        "damage": "10+",
+        "effect": "Flip a coin. If heads, this attack does 30 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #10",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Tomokazu Komiya",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "11",
+    "name": "Rapidash",
+    "hp": "100",
+    "card_type": "Pokémon - Stage 1 - Evolves from Ponyta",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_011_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire", "Colorless"],
+        "name": "Rising Lunge",
+        "damage": "40+",
+        "effect": "Flip a coin. If heads, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #11",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "AKIRA EGAWA",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "12",
+    "name": "Magmar",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_012_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire", "Fire"],
+        "name": "Fire Blast",
+        "damage": "80",
+        "effect": "Discard 2 [R] Energy from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #12",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "sui",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "13",
+    "name": "Larvesta",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_013_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire", "Colorless"],
+        "name": "Combustion",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #13",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "kawayoo",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "14",
+    "name": "Volcarona",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 1 - Evolves from Larvesta",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_014_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire", "Fire", "Colorless"],
+        "name": "Volcanic",
+        "damage": "Ash",
+        "effect": "Discard 2 [R] Energy from this Pokémon. This attack does 80 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #14",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "DOM",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "15",
+    "name": "Salandit",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_015_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Venoshock",
+        "damage": "10+",
+        "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 40 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #15",
+        "rarity": "◊"
+      },
+      {
+        "version": "Mythical Island #71",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Naoki Saito",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "16",
+    "name": "Salazzle",
+    "hp": "80",
+    "card_type": "Pokémon - Stage 1 - Evolves from Salandit",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_016_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire"],
+        "name": "Poison Claws",
+        "damage": "30",
+        "effect": "Your opponent's Active Pokémon is now Poisoned."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #16",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Mitsuhiro Arita",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "17",
+    "name": "Magikarp",
+    "hp": "30",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_017_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water"],
+        "name": "Leap",
+        "damage": "Out",
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #17",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Mitsuhiro Arita",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "18",
+    "name": "Gyarados ex",
+    "hp": "180",
+    "card_type": "Pokémon - Stage 1 - Evolves from Magikarp",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_018_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Water", "Colorless"],
+        "name": "Rampaging Whirlpool",
+        "damage": "140",
+        "effect": "Discard a random Energy from among the Energy attached to all Pokémon (both yours and your opponent's)."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "3",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #18",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #76",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "1.666%",
+      "5 card": "6.664%"
+    },
+    "crafting_cost": 500
+  },
+  {
+    "id": "19",
+    "name": "Vaporeon",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 1 - Evolves from Eevee",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_019_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless", "Colorless"],
+        "name": "Wave Splash",
+        "damage": "60",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Wash Out",
+      "effect": "As often as you like during your turn, you may move a  Energy from 1 of your Benched  Pokémon to your Active  Pokémon."
+    },
+    "weakness": "Lightning",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #19",
+        "rarity": "◊◊◊"
+      },
+      {
+        "version": "Mythical Island #72",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "LINNE",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "20",
+    "name": "Finneon",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_020_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water"],
+        "name": "ater Gun",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #20",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "sui",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "21",
+    "name": "Lumineon",
+    "hp": "80",
+    "card_type": "Pokémon - Stage 1 - Evolves from Finneon",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_021_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water"],
+        "name": "Aqua",
+        "damage": "Liner",
+        "effect": "This attack does 50 damage to 1 of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "0",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #21",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Sekio",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "22",
+    "name": "Chewtle",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_022_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless"],
+        "name": "Bite",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #22",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Taiga Kayama",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "23",
+    "name": "Drednaw",
+    "hp": "130",
+    "card_type": "Pokémon - Stage 1 - Evolves from Chewtle",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_023_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Water"],
+        "name": "Crunch",
+        "damage": "70",
+        "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #23",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "nisimono",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "24",
+    "name": "Cramorant",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_024_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Colorless"],
+        "name": "Dive",
+        "damage": "60",
+        "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #24",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Jerky",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "25",
+    "name": "Pikachu",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_025_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Circle Circuit",
+        "damage": "10x",
+        "effect": "This attack does 10 damage for each of your Benched [L] Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #25",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Naoyo Kimura",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "26",
+    "name": "Raichu",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 1 - Evolves from Pikachu",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_026_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Lightning", "Lightning"],
+        "name": "Gigashock",
+        "damage": "60",
+        "effect": "This attack also does 20 damage to each of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #26",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "hncl",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "27",
+    "name": "Electabuzz",
+    "hp": "70",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_027_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Lightning"],
+        "name": "Thunder",
+        "damage": "Spear",
+        "effect": "This attack does 40 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #27",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Naoyo Kimura",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "28",
+    "name": "Joltik",
+    "hp": "40",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_028_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Bug Bite",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #28",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "MINAMINAMI Take",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "29",
+    "name": "Galvantula",
+    "hp": "80",
+    "card_type": "Pokémon - Stage 1 - Evolves from Joltik",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_029_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Lightning"],
+        "name": "Electroweb",
+        "damage": "70",
+        "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #29",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Mitsuhiro Arita",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "30",
+    "name": "Dedenne",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_030_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Thunder Shock",
+        "damage": "10",
+        "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #30",
+        "rarity": "◊"
+      },
+      {
+        "version": "Mythical Island #73",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Taiga Kayama",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "31",
+    "name": "Mew",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_031_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "sy Report",
+        "damage": "20",
+        "effect": "Your opponent reveals their hand."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #283",
+        "rarity": "☆☆☆"
+      },
+      {
+        "version": "Mythical Island #31",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Saya Tsuruta",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "32",
+    "name": "Mew ex",
+    "hp": "130",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_032_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "syshot",
+        "damage": "20",
+        "effect": ""
+      },
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Genome",
+        "damage": "Hacking",
+        "effect": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #32",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #77",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #83",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #86",
+        "rarity": "♛"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "1.666%",
+      "5 card": "6.664%"
+    },
+    "crafting_cost": 500
+  },
+  {
+    "id": "33",
+    "name": "Sigilyph",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_033_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Spike Draw",
+        "damage": "10",
+        "effect": "Draw a card."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #33",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Shigenori Negishi",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "34",
+    "name": "Elgyem",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_034_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Headbutt",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #34",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kouki Saitou",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "35",
+    "name": "Beheeyem",
+    "hp": "90",
+    "card_type": "Pokémon - Stage 1 - Evolves from Elgyem",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_035_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Mind Jack",
+        "damage": "10+",
+        "effect": "This attack does 20 more damage for each of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #35",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "sowsow",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "36",
+    "name": "Flabébé",
+    "hp": "40",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_036_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Hypnotic",
+        "damage": "Gaze",
+        "effect": "Your opponent's Active Pokémon is now Asleep."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Metal",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #36",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Cona Nitanda",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "37",
+    "name": "Floette",
+    "hp": "70",
+    "card_type": "Pokémon - Stage 1 - Evolves from Flabébé",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_037_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Leaf Drain",
+        "damage": "40",
+        "effect": "Heal 10 damage from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Metal",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #37",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Cona Nitanda",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "38",
+    "name": "Florges",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 2 - Evolves from Floette",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_038_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Psychic"],
+        "name": "Bloomshine",
+        "damage": "80",
+        "effect": "Heal 20 damage from each of your Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Metal",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #38",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Cona Nitanda",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "39",
+    "name": "Swirlix",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_039_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Fairy Wind",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Metal",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #39",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "5ban Graphics",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "40",
+    "name": "Slurpuff",
+    "hp": "100",
+    "card_type": "Pokémon - Stage 1 - Evolves from Swirlix",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_040_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Colorless"],
+        "name": "Magical Shot",
+        "damage": "60",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Metal",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #40",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kagemaru Himeno",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "41",
+    "name": "Mankey",
+    "hp": "50",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_041_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "ocus ist",
+        "damage": "50",
+        "effect": "Flip a coin. If tails, this attack does nothing."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Psychic",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #41",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Akira Komayama",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "42",
+    "name": "Primeape",
+    "hp": "80",
+    "card_type": "Pokémon - Stage 1 - Evolves from Mankey",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_042_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Punch",
+        "damage": "50",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Psychic",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #42",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Taiga Kayama",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "43",
+    "name": "Geodude",
+    "hp": "70",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_043_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless"],
+        "name": "Light Punch",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #43",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "GOSSAN",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "44",
+    "name": "Graveler",
+    "hp": "100",
+    "card_type": "Pokémon - Stage 1 - Evolves from Geodude",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_044_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless"],
+        "name": "Lunge Out",
+        "damage": "40",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #44",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Ayaka Yoshida",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "45",
+    "name": "Golem",
+    "hp": "160",
+    "card_type": "Pokémon - Stage 2 - Evolves from Graveler",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_045_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
+        "name": "Guard Press",
+        "damage": "120",
+        "effect": "During your opponent's next turn, this Pokémon takes −30 damage from attacks."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "3",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #45",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Masakazu Fukuda",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "46",
+    "name": "Aerodactyl ex",
+    "hp": "140",
+    "card_type": "Pokémon - Stage 1",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_046_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless"],
+        "name": "Land Crush",
+        "damage": "80",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Primeval Law",
+      "effect": "Your opponent can't play any Pokémon from their hand to evolve their Active Pokémon."
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #46",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #78",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #84",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "1.666%",
+      "5 card": "6.664%"
+    },
+    "crafting_cost": 500
+  },
+  {
+    "id": "47",
+    "name": "Marshadow",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_047_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless"],
+        "name": "Revenge",
+        "damage": "40+",
+        "effect": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Psychic",
+    "retreat": "1",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #47",
+        "rarity": "◊◊◊"
+      },
+      {
+        "version": "Mythical Island #74",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "kantaro",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "48",
+    "name": "Stonjourner",
+    "hp": "120",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_048_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Fighting", "Fighting"],
+        "name": "Mega Kick",
+        "damage": "90",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #48",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Teeziro",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "49",
+    "name": "Koffing",
+    "hp": "70",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_049_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Unknown",
+        "damage": "0",
+        "effect": "Put 1 random Koffing from your deck onto your Bench."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #49",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Naoyo Kimura",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "50",
+    "name": "Weezing",
+    "hp": "110",
+    "card_type": "Pokémon - Stage 1 - Evolves from Koffing",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_050_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness", "Darkness"],
+        "name": "Smokescreen",
+        "damage": "50",
+        "effect": "During your opponent's next turn, if the Defending Pokémon tries to use an attack, your opponent flips a coin. If tails, that attack doesn't happen."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #50",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Mousho",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "51",
+    "name": "Purrloin",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_051_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Scratch",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #51",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kagemaru Himeno",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "52",
+    "name": "Liepard",
+    "hp": "90",
+    "card_type": "Pokémon - Stage 1 - Evolves from Purrloin",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_052_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Slash",
+        "damage": "40",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #52",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "GIDORA",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "53",
+    "name": "Venipede",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_053_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Ram",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #53",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Yukiko Baba",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "54",
+    "name": "Whirlipede",
+    "hp": "90",
+    "card_type": "Pokémon - Stage 1 - Evolves from Venipede",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_054_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Poison Sting",
+        "damage": "20",
+        "effect": "Your opponent's Active Pokémon is now Poisoned."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #54",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Shin Nagasawa",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "55",
+    "name": "Scolipede",
+    "hp": "140",
+    "card_type": "Pokémon - Stage 2 - Evolves from Whirlipede",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_055_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness", "Colorless"],
+        "name": "Venoshock",
+        "damage": "70+",
+        "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 50 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #55",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "5ban Graphics",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "56",
+    "name": "Druddigon",
+    "hp": "100",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_056_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire", "Water", "Colorless"],
+        "name": "Dragon Claw",
+        "damage": "90",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Rough Skin",
+      "effect": "If this Pokémon is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the Attacking Pokémon."
+    },
+    "weakness": "none",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #56",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Ryota Murayama",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "57",
+    "name": "Pidgey",
+    "hp": "50",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_057_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Flap",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #57",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Shigenori Negishi",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "58",
+    "name": "Pidgeotto",
+    "hp": "90",
+    "card_type": "Pokémon - Stage 1 - Evolves from Pidgey",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_058_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Wing Attack",
+        "damage": "50",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #58",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Taiga Kayama",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "59",
+    "name": "Pidgeot ex",
+    "hp": "170",
+    "card_type": "Pokémon - Stage 2 - Evolves from Pidgeotto",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_059_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Scattering Cyclone",
+        "damage": "80+",
+        "effect": "This attack does 20 more damage for each of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #59",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #79",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "1.666%",
+      "5 card": "6.664%"
+    },
+    "crafting_cost": 500
+  },
+  {
+    "id": "60",
+    "name": "Tauros",
+    "hp": "100",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_060_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Fighting Tackle",
+        "damage": "40+",
+        "effect": "If your opponent's Active Pokémon is a Pokémon  more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #60",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "KEIICHIRO ITO",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "61",
+    "name": "Eevee",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_061_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "ontinuous Steps",
+        "damage": "20x",
+        "effect": "Flip a coin until you get tails. This attack does 20 damage for each heads."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #61",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Hitoshi Ariga",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "62",
+    "name": "Chatot",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_062_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Unknown",
+        "damage": "0",
+        "effect": "Shuffle your hand into your deck. Draw a card for each card in your opponent's hand."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #62",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Masako Tomii",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "63",
+    "name": "Old Amber",
+    "hp": "40",
+    "card_type": "Trainer - Item",
+    "evolution_type": "Item",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_063_EN.webp",
+    "attacks": [],
+    "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #218",
+        "rarity": "◊"
+      },
+      {
+        "version": "Mythical Island #63",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Toyste Beach",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "64",
+    "name": "Pokémon Flute",
+    "hp": "",
+    "card_type": "Trainer - Item",
+    "evolution_type": "Item",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_064_EN.webp",
+    "attacks": [],
+    "ability": "Put a Basic Pokémon from your opponent's discard pile onto their Bench.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #64",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Toyste Beach",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "65",
+    "name": "Mythical Slab",
+    "hp": "",
+    "card_type": "Trainer - Item",
+    "evolution_type": "Item",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_065_EN.webp",
+    "attacks": [],
+    "ability": "Look at the top card of your deck. If that card is a [P] Pokémon, put it into your hand. If it is not a [P] Pokémon, put it on the bottom of your deck.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #65",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "AYUMI ODASHIMA",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "66",
+    "name": "Budding Expeditioner",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_066_EN.webp",
+    "attacks": [],
+    "ability": "Put your Mew ex in the Active Spot into your hand.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #66",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Mythical Island #80",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Yuu Nishida",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "67",
+    "name": "Blue",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_067_EN.webp",
+    "attacks": [],
+    "ability": "During your opponent's next turn, all of your Pokémon take −10 damage from attacks from your opponent's Pokémon.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #67",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Mythical Island #81",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Ryuta Fuse",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "68",
+    "name": "Leaf",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_068_EN.webp",
+    "attacks": [],
+    "ability": "During this turn, the Retreat Cost of your Active Pokémon is 2 less.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #68",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Mythical Island #82",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "En Morikura",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "69",
+    "name": "Exeggutor",
+    "hp": "130",
+    "card_type": "Pokémon - Stage 1 - Evolves from Exeggcute",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_069_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless", "Colorless", "Colorless"],
+        "name": "Psychic",
+        "damage": "80+",
+        "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "3",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #2",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Mythical Island #69",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Gapao",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "2.572%",
+      "5 card": "10.288%"
+    },
+    "crafting_cost": 400
+  },
+  {
+    "id": "70",
+    "name": "Serperior",
+    "hp": "110",
+    "card_type": "Pokémon - Stage 2 - Evolves from Servine",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_070_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless", "Colorless", "Colorless"],
+        "name": "Solar Beam",
+        "damage": "70",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Jungle Totem",
+      "effect": "Each  Energy attached to your  Pokémon provides 2  Energy. This effect doesn't stack."
+    },
+    "weakness": "Fire",
+    "retreat": "2",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #6",
+        "rarity": "◊◊◊"
+      },
+      {
+        "version": "Mythical Island #70",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "rika",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "2.572%",
+      "5 card": "10.288%"
+    },
+    "crafting_cost": 400
+  },
+  {
+    "id": "71",
+    "name": "Salandit",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_071_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Venoshock",
+        "damage": "10+",
+        "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 40 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #15",
+        "rarity": "◊"
+      },
+      {
+        "version": "Mythical Island #71",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Nurikabe",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "2.572%",
+      "5 card": "10.288%"
+    },
+    "crafting_cost": 400
+  },
+  {
+    "id": "72",
+    "name": "Vaporeon",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 1 - Evolves from Eevee",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_072_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless", "Colorless"],
+        "name": "Wave Splash",
+        "damage": "60",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Wash Out",
+      "effect": "As often as you like during your turn, you may move a  Energy from 1 of your Benched  Pokémon to your Active  Pokémon."
+    },
+    "weakness": "Lightning",
+    "retreat": "2",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #19",
+        "rarity": "◊◊◊"
+      },
+      {
+        "version": "Mythical Island #72",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "aspara",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "2.572%",
+      "5 card": "10.288%"
+    },
+    "crafting_cost": 400
+  },
+  {
+    "id": "73",
+    "name": "Dedenne",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_073_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Thunder Shock",
+        "damage": "10",
+        "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #30",
+        "rarity": "◊"
+      },
+      {
+        "version": "Mythical Island #73",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Yuu Nishida",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "2.572%",
+      "5 card": "10.288%"
+    },
+    "crafting_cost": 400
+  },
+  {
+    "id": "74",
+    "name": "Marshadow",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_074_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless"],
+        "name": "Revenge",
+        "damage": "40+",
+        "effect": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Psychic",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #47",
+        "rarity": "◊◊◊"
+      },
+      {
+        "version": "Mythical Island #74",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "OKACHEKE",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "2.572%",
+      "5 card": "10.288%"
+    },
+    "crafting_cost": 400
+  },
+  {
+    "id": "75",
+    "name": "Celebi ex",
+    "hp": "130",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_075_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless"],
+        "name": "Powerful Bloom",
+        "damage": "50x",
+        "effect": "Flip a coin for each Energy attached to this Pokémon. This attack does 50 damage for each heads."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #3",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #75",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #85",
+        "rarity": "☆☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "76",
+    "name": "Gyarados ex",
+    "hp": "180",
+    "card_type": "Pokémon - Stage 1 - Evolves from Magikarp",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_076_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Water", "Colorless"],
+        "name": "Rampaging Whirlpool",
+        "damage": "140",
+        "effect": "Discard a random Energy from among the Energy attached to all Pokémon (both yours and your opponent's)."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "3",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #18",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #76",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "77",
+    "name": "Mew ex",
+    "hp": "130",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_077_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "syshot",
+        "damage": "20",
+        "effect": ""
+      },
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Genome",
+        "damage": "Hacking",
+        "effect": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #32",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #77",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #83",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #86",
+        "rarity": "♛"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "78",
+    "name": "Aerodactyl ex",
+    "hp": "140",
+    "card_type": "Pokémon - Stage 1",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_078_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless"],
+        "name": "Land Crush",
+        "damage": "80",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Primeval Law",
+      "effect": "Your opponent can't play any Pokémon from their hand to evolve their Active Pokémon."
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #46",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #78",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #84",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "79",
+    "name": "Pidgeot ex",
+    "hp": "170",
+    "card_type": "Pokémon - Stage 2 - Evolves from Pidgeotto",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_079_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Scattering Cyclone",
+        "damage": "80+",
+        "effect": "This attack does 20 more damage for each of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #59",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #79",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "80",
+    "name": "Budding Expeditioner",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_080_EN.webp",
+    "attacks": [],
+    "ability": "Put your Mew ex in the Active Spot into your hand.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #66",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Mythical Island #80",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Yuu Nishida",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "81",
+    "name": "Blue",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_081_EN.webp",
+    "attacks": [],
+    "ability": "During your opponent's next turn, all of your Pokémon take −10 damage from attacks from your opponent's Pokémon.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #67",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Mythical Island #81",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Ryuta Fuse",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "82",
+    "name": "Leaf",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_082_EN.webp",
+    "attacks": [],
+    "ability": "During this turn, the Retreat Cost of your Active Pokémon is 2 less.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #68",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Mythical Island #82",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "En Morikura",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "83",
+    "name": "Mew ex",
+    "hp": "130",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_083_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "syshot",
+        "damage": "20",
+        "effect": ""
+      },
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Genome",
+        "damage": "Hacking",
+        "effect": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #32",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #77",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #83",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #86",
+        "rarity": "♛"
+      }
+    ],
+    "artist": "HYOGONOSUKE",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "84",
+    "name": "Aerodactyl ex",
+    "hp": "140",
+    "card_type": "Pokémon - Stage 1",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_084_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless"],
+        "name": "Land Crush",
+        "damage": "80",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Primeval Law",
+      "effect": "Your opponent can't play any Pokémon from their hand to evolve their Active Pokémon."
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #46",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #78",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #84",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "danciao",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "85",
+    "name": "Celebi ex",
+    "hp": "130",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_085_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless"],
+        "name": "Powerful Bloom",
+        "damage": "50x",
+        "effect": "Flip a coin for each Energy attached to this Pokémon. This attack does 50 damage for each heads."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "☆☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #3",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #75",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #85",
+        "rarity": "☆☆☆"
+      }
+    ],
+    "artist": "kantaro",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.222%",
+      "5 card": "0.888%"
+    },
+    "crafting_cost": 1500
+  },
+  {
+    "id": "86",
+    "name": "Mew ex",
+    "hp": "130",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_086_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "syshot",
+        "damage": "20",
+        "effect": ""
+      },
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Genome",
+        "damage": "Hacking",
+        "effect": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "Crown Rare",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Mythical Island  (A1a)",
+    "pack": "Mew pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #32",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Mythical Island #77",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #83",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Mythical Island #86",
+        "rarity": "♛"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  }
+]

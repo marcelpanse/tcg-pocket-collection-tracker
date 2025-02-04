@@ -18,10 +18,12 @@ export interface Card {
     damage: string
     effect: string
   }[]
-  ability: {
-    name: string
-    effect: string
-  } | string
+  ability:
+    | {
+        name: string
+        effect: string
+      }
+    | string
   weakness: string
   retreat: string
   rarity: string
@@ -41,4 +43,3 @@ export interface Card {
   }
   crafting_cost: number
 }
-
