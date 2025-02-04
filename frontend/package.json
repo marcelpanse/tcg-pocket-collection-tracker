@@ -7,8 +7,9 @@
     "dev": "vite",
     "build": "npm run lint && tsc -b && vite build",
     "lint": "pnpm run biome:check",
-    "lint:fix": "bun run biome:fix",
+    "lint:fix": "npm run biome:fix",
     "preview": "vite preview",
+    "prepush": "npm run build",
     "biome:check": "biome check --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .",
     "biome:fix": "biome check --write --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .",
     "prepare": "husky"
