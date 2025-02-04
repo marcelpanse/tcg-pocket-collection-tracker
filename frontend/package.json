@@ -12,7 +12,7 @@
     "prepush": "npm run build",
     "biome:check": "biome check --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .",
     "biome:fix": "biome check --write --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .",
-    "prepare": "husky"
+    "prepare": "cd .. && husky"
   },
   "dependencies": {
     "@biomejs/biome": "^1.9.4",
