@@ -7,11 +7,11 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
-  :root {
-    --radius: 0.5rem;
-  }
-  .dark body {
-    background-color: #000;
-    color: #fff;
-  }
+	:root {
+		--radius: 0.5rem;
+	}
+	.dark body {
+		background-color: #000;
+		color: #fff;
+	}
 }
