@@ -4,7 +4,7 @@ import type { Card, CollectionRow } from '@/types'
 import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { ID, type Models } from 'appwrite'
-import { type FC, useEffect, useMemo, useRef, useState } from 'react'
+import { type FC, useMemo, useRef } from 'react'
 import A1 from '../../assets/cards/A1.json'
 import A1a from '../../assets/cards/A1a.json'
 import A2 from '../../assets/cards/A2.json'
@@ -16,6 +16,14 @@ const PackHeader = ({ title }: { title: string }) => {
   return <h2 className="mt-10 w-full scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">{title}</h2>
 }
 
+interface Props {
+  user: Models.User<Models.Preferences> | null
+
+  ownedCards: CollectionRow[]
+
+  setOwnedCards: (cards: CollectionRow[]) => void
+}
+
 const columnHelper = createColumnHelper<CardType>()
 
 const a1Cards: CardType[] = A1 as unknown as CardType[]
@@ -23,24 +31,7 @@ const a2Cards: CardType[] = A2 as unknown as CardType[]
 const a1aCards: CardType[] = A1a as unknown as CardType[]
 const paCards: CardType[] = PA as unknown as CardType[]
 
-interface Props {
-  user: Models.User<Models.Preferences>
-}
-
-export const Cards: FC<Props> = ({ user }) => {
-  const [ownedCards, setOwnedCards] = useState<CollectionRow[]>([])
-
-  useEffect(() => {
-    fetchCollection()
-  }, [])
-
-  const fetchCollection = async () => {
-    const db = await getDatabase()
-    const { documents } = await db.listDocuments(DATABASE_ID, COLLECTION_ID)
-    console.log('documents', documents)
-    setOwnedCards(documents as unknown as CollectionRow[])
-  }
-
+export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
   const updateCardCount = async (cardId: string, increment: number) => {
     console.log(`${cardId} button clicked`)
     const db = await getDatabase()
@@ -56,7 +47,7 @@ export const Cards: FC<Props> = ({ user }) => {
     } else if (!ownedCard && increment > 0) {
       console.log('adding new card', cardId)
       const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
-        email: user.email,
+        email: user?.email,
         card_id: cardId,
         amount_owned: increment,
       })
