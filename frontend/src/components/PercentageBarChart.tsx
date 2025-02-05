@@ -64,7 +64,7 @@ export function PercentageBarChart({ data, config }: PercentageBarChartProps) {
               axisLine={false}
               tickFormatter={(value) => config[value as keyof typeof config]?.label || value}
             />
-            <ChartTooltip cursor={false} content={<CustomTooltipContent hideLabel />} />
+            <ChartTooltip cursor={false} content={<CustomTooltipContent payload={[]} active={false} />} />
             <Bar
               dataKey="percentage"
               strokeWidth={2}
