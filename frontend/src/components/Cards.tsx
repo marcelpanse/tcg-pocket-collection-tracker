@@ -53,22 +53,29 @@ export const Cards: FC<Props> = ({ user }) => {
       await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
         amount_owned: ownedCard.amount_owned,
       })
-      // await fetchCollection()
     } else if (!ownedCard && increment > 0) {
       console.log('adding new card', cardId)
-      await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
+      const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
         email: user.email,
         card_id: cardId,
         amount_owned: increment,
       })
-      await fetchCollection()
+      setOwnedCards([
+        ...ownedCards,
+        {
+          $id: newCard.$id,
+          email: newCard.email,
+          card_id: newCard.card_id,
+          amount_owned: newCard.amount_owned,
+        },
+      ])
     }
   }
 
   const Card = ({ card }: { card: CardType }) => {
     const amountOwned = ownedCards.find((c) => c.card_id === card.id)?.amount_owned || 0
     return (
-      <div className="flex flex-col items-center gap-y-4 w-fit border border-gray-700 bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group">
+      <div className="flex flex-col items-center gap-y-4 w-fit border border-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group">
         <FancyCard card={card} selected={amountOwned > 0} setIsSelected={() => {}} />
         <div className="flex items-center gap-x-4 mt-2">
           <button
