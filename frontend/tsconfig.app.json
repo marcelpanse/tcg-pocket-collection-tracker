@@ -20,8 +20,16 @@
 
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@assets/*": ["./assets/*"],
+      "@components/*": ["./components/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@lib/*": ["./lib/*"],
+      "@pages/*": ["./pages/*"],
+      "@types/*": ["./types/*"],
+      "@util/*": ["./util/*"]
     }
   },
-  "include": ["src"]
+  "exclude": ["node_modules", "build"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

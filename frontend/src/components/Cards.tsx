@@ -1,12 +1,22 @@
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
-import type { CollectionRow } from '@/types'
+import type { Card, CollectionRow } from '@/types'
+import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
+import { useVirtualizer } from '@tanstack/react-virtual'
 import { ID, type Models } from 'appwrite'
-import { type FC, useEffect, useState } from 'react'
+import { type FC, useEffect, useMemo, useRef, useState } from 'react'
 import A1 from '../../assets/cards/A1.json'
 import A1a from '../../assets/cards/A1a.json'
 import A2 from '../../assets/cards/A2.json'
 import PA from '../../assets/cards/P-A.json'
 import type { Card as CardType } from '../types'
+import FancyCard from './FancyCard'
+
+const PackHeader = ({ title }: { title: string }) => {
+  return <h2 className="mt-10 w-full scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">{title}</h2>
+}
+
+const columnHelper = createColumnHelper<CardType>()
 
 const a1Cards: CardType[] = A1 as unknown as CardType[]
 const a2Cards: CardType[] = A2 as unknown as CardType[]
@@ -58,12 +68,8 @@ export const Cards: FC<Props> = ({ user }) => {
   const Card = ({ card }: { card: CardType }) => {
     const amountOwned = ownedCards.find((c) => c.card_id === card.id)?.amount_owned || 0
     return (
-      <div className="flex flex-col items-center gap-y-4 w-fit border p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group">
-        <img
-          className={`${amountOwned === 0 ? 'grayscale' : ''} w-40 rounded-lg object-cover transform group-hover:scale-105 transition duration-200`}
-          src={card?.image}
-          alt={card?.name}
-        />
+      <div className="flex flex-col items-center gap-y-4 w-fit border border-gray-700 bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group">
+        <FancyCard card={card} selected={amountOwned > 0} setIsSelected={() => {}} />
         <div className="flex items-center gap-x-4 mt-2">
           <button
             type="button"
@@ -90,26 +96,124 @@ export const Cards: FC<Props> = ({ user }) => {
   }
 
   const Pack = ({ cards }: { cards: CardType[] }) => {
+    const parentRef = useRef<HTMLDivElement>(null)
+
+    const columns = useMemo(() => {
+      return [
+        columnHelper.accessor('image', {
+          id: 'imageUrl',
+        }),
+        columnHelper.accessor('id', {
+          id: 'id',
+        }),
+        columnHelper.accessor('name', {
+          id: 'name',
+        }),
+        columnHelper.accessor('pack', {
+          id: 'pack',
+        }),
+      ]
+    }, [])
+
+    // Columns and data are defined in a stable reference, will not cause infinite loop!
+    const table = useReactTable({
+      columns,
+      data: cards,
+      enableGrouping: true,
+      getCoreRowModel: getCoreRowModel(),
+      getGroupedRowModel: getGroupedRowModel(),
+      initialState: {
+        grouping: ['pack'],
+      },
+    })
+    const groupedRows = table.getRowModel().rows
+
+    const groupedGridRows = groupedRows.map((groupRow) => {
+      const header = { type: 'header', row: groupRow }
+      const dataRows = groupRow.subRows.map((subRow) => ({ type: 'data', row: subRow }))
+
+      const gridRows = []
+      for (let i = 0; i < dataRows.length; i += 5) {
+        gridRows.push(dataRows.slice(i, i + 5))
+      }
+
+      return { header, gridRows }
+    })
+
+    const flattenedRows = groupedGridRows.flatMap((group) => [
+      { type: 'header', height: 45, data: group.header }, // Group header
+      ...group.gridRows.map((gridRow) => ({ type: 'gridRow', height: 269, data: gridRow })), // Grid rows
+    ])
+
+    const rowVirtualizer = useVirtualizer({
+      getScrollElement: () => parentRef.current,
+      count: flattenedRows.length,
+      estimateSize: (index) => (flattenedRows[index].type === 'header' ? 45 : 269) + 12,
+      overscan: 5,
+    })
+
     return (
-      <>
-        <h2 className="text-center text-2xl font-bold my-5">{cards[0].set_details}</h2>
-        <ul className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          {cards.map((card) => (
-            <li key={card.id} className="mx-auto">
-              <Card card={card} />
-            </li>
-          ))}
-        </ul>
-      </>
+      <div ref={parentRef} className="h-[calc(100vh-180px)] overflow-y-auto">
+        <div
+          style={{
+            height: `${rowVirtualizer.getTotalSize()}px`,
+            position: 'relative',
+          }}
+          className="w-full"
+        >
+          {rowVirtualizer.getVirtualItems().map((virtualRow) => {
+            const row = flattenedRows[virtualRow.index]
+            return (
+              <div
+                key={virtualRow.key}
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: `${virtualRow.size}px`,
+                  transform: `translateY(${virtualRow.start}px)`,
+                }}
+              >
+                {row.type === 'header' ? (
+                  <PackHeader title={(row.data as { type: string; row: Row<Card> }).row.getValue('pack')} />
+                ) : (
+                  <div className="flex justify-center gap-5">
+                    {(row.data as { type: string; row: Row<Card> }[]).map(({ row: subRow }) => (
+                      <Card key={subRow.original.id} card={subRow.original} />
+                    ))}
+                  </div>
+                )}
+              </div>
+            )
+          })}
+        </div>
+      </div>
     )
   }
 
   return (
-    <>
-      <Pack cards={a1Cards} />
-      <Pack cards={a2Cards} />
-      <Pack cards={a1aCards} />
-      <Pack cards={paCards} />
-    </>
+    <div className="flex flex-col gap-y-4 max-w-[900px] mx-auto">
+      <Tabs defaultValue="a1">
+        <TabsList className="m-auto mt-4 mb-8">
+          <TabsTrigger value="a1">A1 - Genetic Apex</TabsTrigger>
+          <TabsTrigger value="a1a">A1A - Mythical Island</TabsTrigger>
+          <TabsTrigger value="a2">A2 - Space Time Smackdown</TabsTrigger>
+          <TabsTrigger value="pa">PA - Promo A</TabsTrigger>
+        </TabsList>
+        <TabsContent value="a1">
+          <Pack cards={a1Cards} />
+        </TabsContent>
+        <TabsContent value="a1a">
+          <Pack cards={a1aCards} />
+        </TabsContent>
+        <TabsContent value="a2">
+          <Pack cards={a2Cards} />
+        </TabsContent>
+        <TabsContent value="pa">
+          <Pack cards={paCards} />
+        </TabsContent>
+      </Tabs>
+    </div>
   )
 }
