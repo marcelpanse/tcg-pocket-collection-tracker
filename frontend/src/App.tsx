@@ -43,7 +43,7 @@ function App() {
       <Toaster />
       <Header user={user} setUser={setUser} />
       <Routes>
-        <Route path="/" element={<Overview user={user} />} />
+        <Route path="/" element={<Overview user={user} ownedCards={ownedCards} />} />
         <Route path="/verify" element={<Verify />} />
         <Route path="/collection" element={<Collection user={user} ownedCards={ownedCards} setOwnedCards={setOwnedCards} />} />
         <Route path="/pokedex" element={<Pokedex />} />
