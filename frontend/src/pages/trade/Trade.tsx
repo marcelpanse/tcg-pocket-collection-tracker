@@ -1,17 +1,8 @@
 import { LookingForTrade } from '@/components/LookingForTrade'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { a1Cards, a1aCards, a2Cards, paCards } from '@/lib/CardsDB'
 import type { CollectionRow } from '@/types'
 import type { Models } from 'appwrite'
-import A1 from '../../assets/cards/A1.json'
-import A1a from '../../assets/cards/A1a.json'
-import A2 from '../../assets/cards/A2.json'
-import PA from '../../assets/cards/P-A.json'
-import type { Card as CardType } from '../types'
-
-const a1Cards: CardType[] = A1 as unknown as CardType[]
-const a2Cards: CardType[] = A2 as unknown as CardType[]
-const a1aCards: CardType[] = A1a as unknown as CardType[]
-const paCards: CardType[] = PA as unknown as CardType[]
 
 interface Props {
   user: Models.User<Models.Preferences> | null
@@ -21,7 +12,7 @@ interface Props {
 export function Trade({ user, ownedCards }: Props) {
   const lookingForTradeCards = () => {
     const allCards = [...a1Cards, ...a2Cards, ...a1aCards, ...paCards]
-    const missingCards = allCards.filter((ac) => ownedCards.findIndex((oc) => oc.card_id === ac.id) === -1)
+    const missingCards = allCards.filter((ac) => ownedCards.findIndex((oc) => oc.card_id === ac.card_id) === -1)
     return missingCards
   }
 

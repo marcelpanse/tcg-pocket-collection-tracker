@@ -22,8 +22,8 @@ export function LookingForTrade({ cards }: { cards: CardType[] }) {
       columnHelper.accessor('image', {
         id: 'imageUrl',
       }),
-      columnHelper.accessor('id', {
-        id: 'id',
+      columnHelper.accessor('card_id', {
+        id: 'card_id',
       }),
       columnHelper.accessor('name', {
         id: 'name',
@@ -105,12 +105,12 @@ export function LookingForTrade({ cards }: { cards: CardType[] }) {
                     const card = subRow.original
                     return (
                       <div
-                        key={`div_${subRow.original.id}`}
+                        key={`div_${subRow.original.card_id}`}
                         className="flex flex-col items-center gap-y-2 w-fit border border-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group"
                       >
-                        <FancyCard key={`card_${card.id}`} card={card} selected={true} setIsSelected={() => {}} />
+                        <FancyCard key={`card_${card.card_id}`} card={card} selected={true} setIsSelected={() => {}} />
                         <p className="text-[12px] font-semibold whitespace-nowrap overflow-hidden text-ellipsis max-w-[130px]">
-                          {card.id} - {card.name}
+                          {card.card_id} - {card.name}
                         </p>
                         <div className="bg-gray-600 rounded-xl">
                           <span className="text-lg font-semibold m-3">{tradeableRaritiesDictionary[card.rarity]}</span>
