@@ -5,8 +5,16 @@ export interface CollectionRow {
   amount_owned: number
 }
 
-export interface Card {
+export interface Expansion {
+  name: string
   id: string
+  cards: Card[]
+  packs: string[]
+}
+
+export interface Card {
+  card_id: string
+  expansion: string
   name: string
   hp: string
   card_type: string

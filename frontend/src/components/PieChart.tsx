@@ -14,7 +14,7 @@ interface PieChartComponentProps {
   footer?: string
 }
 
-export function PieChartComponent({ data, config, title, description, footer }: PieChartComponentProps) {
+export const PieChartComponent = ({ data, config, title, description, footer }: PieChartComponentProps) => {
   const totalPercentage = React.useMemo(() => {
     return data.reduce((acc, curr) => acc + curr.percentage, 0)
   }, [data])
