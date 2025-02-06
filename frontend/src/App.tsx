@@ -2,7 +2,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth'
 import { getUser } from '@/lib/Auth.ts'
 import type { CollectionRow } from '@/types'
-import type { Models } from 'appwrite'
+import { type Models, Query } from 'appwrite'
 import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Header } from './components/ui/Header.tsx'
@@ -33,7 +33,10 @@ function App() {
 
   const fetchCollection = async () => {
     const db = await getDatabase()
-    const { documents } = await db.listDocuments(DATABASE_ID, COLLECTION_ID)
+
+    // this gets all your cards at once (max 5k unique cards - there aren't that many unique cards yet), not sure what it does with performance, but we'll see ;-)
+    const { documents } = await db.listDocuments(DATABASE_ID, COLLECTION_ID, [Query.limit(5000)])
+
     console.log('documents', documents)
     setOwnedCards(documents as unknown as CollectionRow[])
   }
