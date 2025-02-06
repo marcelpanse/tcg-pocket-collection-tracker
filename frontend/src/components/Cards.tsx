@@ -66,9 +66,12 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
   const Card = ({ card }: { card: CardType }) => {
     const amountOwned = ownedCards.find((c) => c.card_id === card.id)?.amount_owned || 0
     return (
-      <div className="flex flex-col items-center gap-y-4 w-fit border border-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group">
+      <div className="flex flex-col items-center gap-y-2 w-fit border border-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group">
         <FancyCard card={card} selected={amountOwned > 0} setIsSelected={() => {}} />
-        <div className="flex items-center gap-x-4 mt-2">
+        <p className="text-[12px] font-semibold whitespace-nowrap overflow-hidden text-ellipsis max-w-[130px]">
+          {card.id} - {card.name}
+        </p>
+        <div className="flex items-center gap-x-4">
           <button
             type="button"
             onClick={() => updateCardCount(card.id, -1)}
