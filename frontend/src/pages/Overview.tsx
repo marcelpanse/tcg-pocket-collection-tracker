@@ -1,4 +1,5 @@
-import { PercentageBarChart } from '@/components/PercentageBarChart'
+import { BarChartComponent } from '@/components/BarChart'
+import { PieChartComponent } from '@/components/PieChart'
 import type { CollectionRow } from '@/types'
 import type { Models } from 'appwrite'
 import type { FC } from 'react'
@@ -6,34 +7,63 @@ import type { FC } from 'react'
 interface GradientCardProps {
   title: string
   paragraph: string
-  gradientFrom: string
-  gradientTo: string
+  className?: string
 }
 
-const chartData = [
-  { packName: 'Pack1', percentage: 0.1, fill: '#FF5733' }, // Color aleatorio
-  { packName: 'Pack2', percentage: 0.5, fill: '#33FF57' }, // Color aleatorio
-  { packName: 'Pack3', percentage: 0.8, fill: '#3357FF' }, // Color aleatorio
+//Names of the packs and their respective colors
+//The varible should be chartData and the inicial from the names of the packs
+//For example chartDataMCP for Mewtwo, Charizard, Pikachu
+
+const chartDataMCP = [
+  { packName: 'Mewtwo', percentage: 0.1, fill: '#986C88' },
+  { packName: 'Charizard', percentage: 0.8, fill: '#E2711B' },
+  { packName: 'Pikachu', percentage: 0.6, fill: '#EDC12A' },
 ]
 
-const chartConfig = {
-  Pack1: {
-    label: 'Pack 1',
+const chartConfigMCP = {
+  Mewtwo: {
+    label: 'Mewtwo',
     color: 'hsl(var(--chart-1))',
   },
-  Pack2: {
-    label: 'Pack 2',
+  Charizard: {
+    label: 'Charizard',
     color: 'hsl(var(--chart-2))',
   },
-  Pack3: {
-    label: 'Pack 3',
+  Pikachu: {
+    label: 'Pikachu',
     color: 'hsl(var(--chart-3))',
   },
 }
 
-const GradientCard: FC<GradientCardProps> = ({ title, paragraph, gradientFrom, gradientTo }) => {
+const chartPieDataMCP = [
+  { packName: 'Mewtwo', percentage: 12, fill: '#986C88' },
+  { packName: 'Charizard', percentage: 30, fill: '#E2711B' },
+  { packName: 'Pikachu', percentage: 50, fill: '#EDC12A' },
+  { packName: 'Missing', percentage: 90, fill: '#9b9b9b' },
+]
+
+const chartPieConfigMCP = {
+  Mewtwo: {
+    label: 'Mewtwo',
+    color: 'hsl(var(--chart-1))',
+  },
+  Charizard: {
+    label: 'Charizard',
+    color: 'hsl(var(--chart-2))',
+  },
+  Pikachu: {
+    label: 'Pikachu',
+    color: 'hsl(var(--chart-3))',
+  },
+  MissingCards: {
+    label: 'Missing Cards',
+    color: 'hsl(var(--chart-4))',
+  },
+}
+
+const GradientCard: FC<GradientCardProps> = ({ title, paragraph, className }) => {
   return (
-    <div className={`col-span-5 bg-gradient-to-l from-[${gradientFrom}]/70 to-[${gradientTo}]/70 rounded-4xl flex flex-col items-center justify-center p-8`}>
+    <div className={`${className} rounded-4xl flex flex-col tex items-center justify-center p-8`}>
       <header className="text-7xl font-semibold text-white">{title}</header>
       <p className="text-2xl text-white mt-2 text-center">{paragraph}</p>
     </div>
@@ -46,56 +76,79 @@ interface Props {
 }
 
 export const Overview: FC<Props> = ({ user, ownedCards }) => {
-  console.log('user', user)
-  console.log('ownedCards', ownedCards)
-
   const ownedCardsCount = ownedCards.reduce((total, card) => total + card.amount_owned, 0)
-  console.log('ownedCardsCount', ownedCardsCount)
   if (user) {
     return (
-      <main className="min-h-screen p-8 max-w-[90rem] mx-auto ">
-        <section className="grid grid-cols-8 gap-6">
+      <main className="min-h-screen p-8 max-w-7xl mx-auto">
+        <section className="grid lg:grid-cols-8 grid-cols-4 gap-6">
           <div className="p-8 aspect-square w-full col-span-2 h-full opacity-100 border-2 border-solid border-gray-600 rounded-4xl flex-col flex items-center justify-center">
             <h2 className="text-2xl mb-2 text-center">You have</h2>
             <h1 className="text-7xl mb-3 text-balance text-center font-semibold">{ownedCards.length}</h1>
             <h2 className="text-2xl text-center text-balance">types of Pokemon</h2>
           </div>
-          <div className="rounded-4xl w-full h-full col-span-4 p-10 flex flex-col items-center justify-center border-gray-600 border-2">
-            <h1 className="text-5xl text-balance text-center font-semibold">TCG Pocket Collection Tracker</h1>
-            <h2 className="text-center text-xl mt-5 text-balance">Work in progress, check back soon!</h2>
+          <div className="rounded-4xl w-full h-full col-span-4 p-10 flex flex-col items-center justify-center border-gray-600 border-2 -order-1 lg:order-none">
+            <header className="text-3xl mb-2">Welcome to</header>
+            <h1 className="text-5xl text-balance mb-5 text-center font-semibold">TCG Pocket Collection Tracker</h1>
+            <footer className="text-center text-xl text-balance">Work in progress, check back soon!</footer>
           </div>
           <div className="p-8 aspect-square w-full h-full col-span-2 opacity-100 border-2 border-solid border-gray-600 rounded-4xl flex-col flex items-center justify-center">
             <h2 className="text-2xl mb-2 text-center">You have</h2>
-            <h1 className="text-7xl mb-3 text-balance text-center font-semibold">{ownedCardsCount}</h1>
+            <h1 className="text-7xl mb-3 text-balance text-center font-semibold truncate overflow-hidden whitespace-nowrap">{ownedCardsCount}</h1>
             <h2 className="text-2xl text-center text-balance">cards in Total</h2>
           </div>
           <GradientCard
             title="Pikachu"
             paragraph="is the most probable pack to get a new card from among Mewtwo, Charizard, and Pikachu packs"
-            gradientFrom="#B4470F"
-            gradientTo="#EDC12A"
+            className="col-span-4 bg-gradient-to-br from-yellow-400/85 to-yellow-600/85"
           />
-          <div className="col-span-3">
-            <PercentageBarChart data={chartData} config={chartConfig} />
+          <div className="sm:col-span-2 col-span-full">
+            <BarChartComponent data={chartDataMCP} config={chartConfigMCP} footer="Example text" />
+          </div>
+          <div className="sm:col-span-2 col-span-full">
+            <PieChartComponent
+              data={chartPieDataMCP}
+              config={chartPieConfigMCP}
+              title="Total Cards"
+              description="Between Pikachu, Charizard and Mewtwo"
+              footer="You have 92/190 cards"
+            />
           </div>
           <GradientCard
             title="Dialga"
             paragraph="is the most probable pack to get a new card from among Palkia and Dialga packs"
-            gradientFrom="#6382EA"
-            gradientTo="#03039F"
+            className="col-span-4 bg-gradient-to-br from-blue-400/85 to-blue-600/85"
           />
-          <div className="col-span-3">
-            <PercentageBarChart data={chartData} config={chartConfig} />
+          <div className="sm:col-span-2 col-span-full">
+            <BarChartComponent data={chartDataMCP} config={chartConfigMCP} footer="Example text" />
           </div>
+          <div className="sm:col-span-2 col-span-full">
+            <PieChartComponent
+              data={chartPieDataMCP}
+              config={chartPieConfigMCP}
+              title="Total Cards"
+              description="Between Pikachu, Charizard and Mewtwo"
+              footer="You have 92/190 cards"
+            />
+          </div>
+
           <GradientCard
             title="Charizard"
             paragraph="is the most probable pack to get a new card from among Palkia and Dialga packs"
-            gradientFrom="#E2711B"
-            gradientTo="#940406"
+            className="col-span-4 bg-gradient-to-br from-red-400/85 to-red-600/85"
           />
-          <div className="col-span-3">
-            <PercentageBarChart data={chartData} config={chartConfig} />
+          <div className="sm:col-span-2 col-span-full">
+            <BarChartComponent data={chartDataMCP} config={chartConfigMCP} footer="Example text" />
           </div>
+          <div className="sm:col-span-2 col-span-full">
+            <PieChartComponent
+              data={chartPieDataMCP}
+              config={chartPieConfigMCP}
+              title="Total Cards"
+              description="Between Pikachu, Charizard and Mewtwo"
+              footer="You have 92/190 cards"
+            />
+          </div>
+          <div />
         </section>
       </main>
     )
