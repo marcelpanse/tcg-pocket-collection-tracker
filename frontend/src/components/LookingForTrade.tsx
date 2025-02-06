@@ -5,6 +5,14 @@ import { useMemo, useRef } from 'react'
 import type { Card as CardType } from '../types'
 import FancyCard from './FancyCard'
 
+const tradeableRaritiesDictionary: { [id: string]: number } = {
+  '◊': 0,
+  '◊◊': 0,
+  '◊◊◊': 120,
+  '◊◊◊◊': 500,
+  '☆': 500,
+}
+
 export function LookingForTrade({ cards }: { cards: CardType[] }) {
   const columnHelper = createColumnHelper<CardType>()
   const parentRef = useRef<HTMLDivElement>(null)
@@ -29,7 +37,7 @@ export function LookingForTrade({ cards }: { cards: CardType[] }) {
   // Columns and data are defined in a stable reference, will not cause infinite loop!
   const table = useReactTable({
     columns,
-    data: cards,
+    data: cards.filter((c) => Object.keys(tradeableRaritiesDictionary).includes(c.rarity)),
     enableGrouping: true,
     getCoreRowModel: getCoreRowModel(),
     getGroupedRowModel: getGroupedRowModel(),
@@ -94,12 +102,19 @@ export function LookingForTrade({ cards }: { cards: CardType[] }) {
               ) : (
                 <div className="flex justify-center gap-5">
                   {(row.data as { type: string; row: Row<Card> }[]).map(({ row: subRow }) => {
+                    const card = subRow.original
                     return (
                       <div
                         key={`div_${subRow.original.id}`}
-                        className="flex flex-col items-center gap-y-4 w-fit border border-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group"
+                        className="flex flex-col items-center gap-y-2 w-fit border border-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group"
                       >
-                        <FancyCard key={`card_${subRow.original.id}`} card={subRow.original} selected={true} setIsSelected={() => {}} />
+                        <FancyCard key={`card_${card.id}`} card={card} selected={true} setIsSelected={() => {}} />
+                        <p className="text-[12px] font-semibold whitespace-nowrap overflow-hidden text-ellipsis max-w-[130px]">
+                          {card.id} - {card.name}
+                        </p>
+                        <div className="bg-gray-600 rounded-xl">
+                          <span className="text-lg font-semibold m-3">{tradeableRaritiesDictionary[card.rarity]}</span>
+                        </div>
                       </div>
                     )
                   })}
