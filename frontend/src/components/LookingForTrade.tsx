@@ -88,7 +88,9 @@ export function LookingForTrade({ cards }: { cards: CardType[] }) {
               }}
             >
               {row.type === 'header' ? (
-                <></>
+                <h2 className="mt-10 w-[900px] mx-auto scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+                  {(row.data as { type: string; row: Row<Card> }).row.getValue('pack')}
+                </h2>
               ) : (
                 <div className="flex justify-center gap-5">
                   {(row.data as { type: string; row: Row<Card> }[]).map(({ row: subRow }) => {

@@ -35,22 +35,26 @@ export function Trade() {
   }
 
   return (
-    <div className="flex flex-col gap-y-4 max-w-[900px] mx-auto">
+    <div className="flex flex-col gap-y-4">
       <Tabs defaultValue="looking_for">
-        <TabsList className="m-auto mt-4 mb-8">
-          <TabsTrigger value="looking_for">Looking For</TabsTrigger>
-          <TabsTrigger value="for_trade">For Trade</TabsTrigger>
-          <TabsTrigger value="buying_tokens">Buying Tokens</TabsTrigger>
-        </TabsList>
-        <TabsContent value="looking_for">
-          <LookingForTrade cards={lookingForTradeCards()} />
-        </TabsContent>
-        <TabsContent value="for_trade">
-          <span>For Trade</span>
-        </TabsContent>
-        <TabsContent value="buying_tokens">
-          <span>Buying Tokens</span>
-        </TabsContent>
+        <div className="max-w-[900px] mx-auto">
+          <TabsList className="m-auto mt-4 mb-8">
+            <TabsTrigger value="looking_for">Looking For</TabsTrigger>
+            <TabsTrigger value="for_trade">For Trade</TabsTrigger>
+            <TabsTrigger value="buying_tokens">Buying Tokens</TabsTrigger>
+          </TabsList>
+        </div>
+        <div className="max-w-auto mx-auto">
+          <TabsContent value="looking_for">
+            <LookingForTrade cards={lookingForTradeCards()} />
+          </TabsContent>
+          <TabsContent value="for_trade">
+            <span>For Trade</span>
+          </TabsContent>
+          <TabsContent value="buying_tokens">
+            <span>Buying Tokens</span>
+          </TabsContent>
+        </div>
       </Tabs>
     </div>
   )
