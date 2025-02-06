@@ -154,14 +154,21 @@ export const Overview: FC<Props> = ({ user, ownedCards }) => {
     )
   }
   return (
-    <section className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-      <div className="mx-auto max-w-screen-md sm:text-center">
-        <h2 className="mb-4 text-3xl tracking-tight font-extrabold sm:text-4xl">Sign up to view your card statistics</h2>
-        <p className="mx-auto mb-8 max-w-2xl md:mb-12 sm:text-xl">To view your card statistics, please register or log in.</p>
-        <p className="mx-auto mb-8 max-w-2xl md:mb-12 sm:text-xl">
-          By registering, you can keep track of your collection, trade with other users, and access exclusive features.
-        </p>
-      </div>
-    </section>
+    <article className="grid gap-5 max-w-7xl mx-auto">
+      <section className="rounded-4xl w-full h-full p-10 flex flex-col items-center justify-center border-gray-500 border-2">
+        <header className="text-3xl mb-2">Welcome to</header>
+        <h1 className="text-5xl text-balance mb-5 text-center font-semibold">TCG Pocket Collection Tracker</h1>
+        <footer className="text-center text-xl text-balance">Work in progress, check back soon!</footer>
+      </section>
+      <section className="w-full h-full text-center p-10 mx-auto max-w-screen-xl lg:py-16 lg:px-6 border-2 border-gray-500 rounded-4xl">
+        <div className="mx-auto max-w-screen-md sm:text-center">
+          <h2 className="mb-4 text-3xl tracking-tight font-extrabold sm:text-4xl">Sign up to view your card statistics</h2>
+          <p className="mx-auto mb-4 max-w-2xl sm:text-xl">To view your card statistics, please register or log in.</p>
+          <p className="mx-auto max-w-2xl sm:text-xl">
+            By registering, you can keep track of your collection, trade with other users, and access exclusive features.
+          </p>
+        </div>
+      </section>
+    </article>
   )
 }
