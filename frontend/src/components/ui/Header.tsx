@@ -1,4 +1,3 @@
-import { ModeToggle } from '@/components/mode-toggle'
 import { Button } from '@/components/ui/button'
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu'
 
@@ -100,7 +99,7 @@ export const Header: FC<Props> = ({ user, setUser }) => (
           </Dialog>
         )}
 
-        <ModeToggle />
+        {/* <ModeToggle /> */}
       </div>
     </header>
   </>
