@@ -1,7 +1,7 @@
-'use client'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart'
-import { Bar, BarChart, CartesianGrid } from 'recharts'
+import type { FC } from 'react'
+import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts'
 
 //Example of a percentage bar chart configuration
 /* const chartData = [
@@ -26,46 +26,44 @@ const chartConfig = {
 } satisfies ChartConfig */
 
 interface PercentageBarChartProps {
+  title: string
   data: { packName: string; percentage: number; fill: string }[]
-  config: ChartConfig
+  config?: ChartConfig
   footer?: string
 }
+export const BarChartComponent: FC<PercentageBarChartProps> = ({ title, data, config = {}, footer }) => (
+  <Card className="border-2 border-solid border-gray-500 rounded-4xl ">
+    <CardHeader className="text-center text-balance">
+      <CardTitle>{title}</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <ChartContainer config={config}>
+        <BarChart accessibilityLayer data={data}>
+          <CartesianGrid vertical={false} />
+          <XAxis dataKey="packName" tickLine={false} tickMargin={10} axisLine={false} />
+          <ChartTooltip cursor={false} content={<CustomTooltipContent payload={[]} active={false} />} />
+          <Bar dataKey="percentage" strokeWidth={2} radius={8} />
+        </BarChart>
+      </ChartContainer>
+    </CardContent>
+    <CardFooter className="flex-col flex-1 items-center gap-2">{footer}</CardFooter>
+  </Card>
+)
 
 interface CustomTooltipContentProps {
   payload: { value: number; key: string }[]
   active: boolean
 }
-
-const CustomTooltipContent = (props: CustomTooltipContentProps) => {
+const CustomTooltipContent: FC<CustomTooltipContentProps> = (props) => {
   const { payload, active } = props
   if (active && payload && payload.length) {
     const newPayload = payload.map((entry) => {
       return {
         ...entry,
-        value: `${entry.value * 100}%`,
+        value: `${Math.round(entry.value * 100)}%`,
       }
     })
     return <ChartTooltipContent {...props} payload={newPayload} />
   }
   return null
-}
-
-export function BarChartComponent({ data, config, footer }: PercentageBarChartProps) {
-  return (
-    <Card className="border-2 border-solid border-gray-500 rounded-4xl">
-      <CardHeader className="text-center text-balance">
-        <CardTitle>Probability getting new card</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <ChartContainer config={config}>
-          <BarChart accessibilityLayer data={data}>
-            <CartesianGrid vertical={false} />
-            <ChartTooltip cursor={false} content={<CustomTooltipContent payload={[]} active={false} />} />
-            <Bar dataKey="percentage" strokeWidth={2} radius={8} />
-          </BarChart>
-        </ChartContainer>
-      </CardContent>
-      <CardFooter className="flex-col flex-1 items-center gap-2">{footer}</CardFooter>
-    </Card>
-  )
 }

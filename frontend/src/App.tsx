@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@/components/theme-provider'
+import { ThemeProvider } from '@/components/ThemeProvider'
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth'
 import { getUser } from '@/lib/Auth.ts'
 import type { CollectionRow } from '@/types'
@@ -7,10 +7,10 @@ import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Header } from './components/ui/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
-import { Collection } from './pages/Collection.tsx'
-import { Overview } from './pages/Overview.tsx'
-import { Trade } from './pages/Trade.tsx'
-import { Verify } from './pages/Verify.tsx'
+import { Collection } from './pages/collection/Collection.tsx'
+import { Overview } from './pages/overview/Overview.tsx'
+import { Trade } from './pages/trade/Trade.tsx'
+import { Verify } from './pages/verify/Verify.tsx'
 
 function App() {
   const [user, setUser] = useState<Models.User<Models.Preferences> | null>(null)
