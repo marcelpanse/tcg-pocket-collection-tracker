@@ -52,7 +52,7 @@ const CustomTooltipContent = (props: CustomTooltipContentProps) => {
 
 export function BarChartComponent({ data, config, footer }: PercentageBarChartProps) {
   return (
-    <Card>
+    <Card className="border-2 border-solid border-gray-500 rounded-4xl">
       <CardHeader className="text-center text-balance">
         <CardTitle>Probability getting new card</CardTitle>
       </CardHeader>
@@ -65,7 +65,7 @@ export function BarChartComponent({ data, config, footer }: PercentageBarChartPr
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-center gap-2">{footer}</CardFooter>
+      <CardFooter className="flex-col flex-1 items-center gap-2">{footer}</CardFooter>
     </Card>
   )
 }

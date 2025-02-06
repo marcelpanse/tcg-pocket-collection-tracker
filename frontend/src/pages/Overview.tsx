@@ -79,19 +79,19 @@ export const Overview: FC<Props> = ({ user, ownedCards }) => {
   const ownedCardsCount = ownedCards.reduce((total, card) => total + card.amount_owned, 0)
   if (user) {
     return (
-      <main className="min-h-screen p-8 max-w-7xl mx-auto">
+      <main className="min-h-screen p-8 max-w-7xl mx-auto fade-in-up">
         <section className="grid lg:grid-cols-8 grid-cols-4 gap-6">
-          <div className="p-8 aspect-square w-full col-span-2 h-full opacity-100 border-2 border-solid border-gray-600 rounded-4xl flex-col flex items-center justify-center">
+          <div className="p-8 aspect-square w-full col-span-2 h-full border-2 border-solid border-gray-500 rounded-4xl flex-col flex items-center justify-center">
             <h2 className="text-2xl mb-2 text-center">You have</h2>
             <h1 className="text-7xl mb-3 text-balance text-center font-semibold">{ownedCards.length}</h1>
             <h2 className="text-2xl text-center text-balance">types of Pokemon</h2>
           </div>
-          <div className="rounded-4xl w-full h-full col-span-4 p-10 flex flex-col items-center justify-center border-gray-600 border-2 -order-1 lg:order-none">
+          <div className="rounded-4xl w-full h-full col-span-4 p-10 flex flex-col items-center justify-center border-gray-500 border-2 -order-1 lg:order-none">
             <header className="text-3xl mb-2">Welcome to</header>
             <h1 className="text-5xl text-balance mb-5 text-center font-semibold">TCG Pocket Collection Tracker</h1>
             <footer className="text-center text-xl text-balance">Work in progress, check back soon!</footer>
           </div>
-          <div className="p-8 aspect-square w-full h-full col-span-2 opacity-100 border-2 border-solid border-gray-600 rounded-4xl flex-col flex items-center justify-center">
+          <div className="p-8 aspect-square w-full h-full col-span-2 opacity-100 border-2 border-solid border-gray-500 rounded-4xl flex-col flex items-center justify-center">
             <h2 className="text-2xl mb-2 text-center">You have</h2>
             <h1 className="text-7xl mb-3 text-balance text-center font-semibold truncate overflow-hidden whitespace-nowrap">{ownedCardsCount}</h1>
             <h2 className="text-2xl text-center text-balance">cards in Total</h2>
@@ -99,7 +99,7 @@ export const Overview: FC<Props> = ({ user, ownedCards }) => {
           <GradientCard
             title="Pikachu"
             paragraph="is the most probable pack to get a new card from among Mewtwo, Charizard, and Pikachu packs"
-            className="col-span-4 bg-gradient-to-br from-yellow-400/85 to-yellow-600/85"
+            className="col-span-4 bg-gradient-to-br from-yellow-400/50 to-yellow-500/50"
           />
           <div className="sm:col-span-2 col-span-full">
             <BarChartComponent data={chartDataMCP} config={chartConfigMCP} footer="Example text" />
@@ -116,7 +116,7 @@ export const Overview: FC<Props> = ({ user, ownedCards }) => {
           <GradientCard
             title="Dialga"
             paragraph="is the most probable pack to get a new card from among Palkia and Dialga packs"
-            className="col-span-4 bg-gradient-to-br from-blue-400/85 to-blue-600/85"
+            className="col-span-4 bg-gradient-to-br from-blue-400/50 to-blue-500/50"
           />
           <div className="sm:col-span-2 col-span-full">
             <BarChartComponent data={chartDataMCP} config={chartConfigMCP} footer="Example text" />
@@ -134,7 +134,7 @@ export const Overview: FC<Props> = ({ user, ownedCards }) => {
           <GradientCard
             title="Charizard"
             paragraph="is the most probable pack to get a new card from among Palkia and Dialga packs"
-            className="col-span-4 bg-gradient-to-br from-red-400/85 to-red-600/85"
+            className="col-span-4 bg-gradient-to-br from-red-400/50 to-red-500/50"
           />
           <div className="sm:col-span-2 col-span-full">
             <BarChartComponent data={chartDataMCP} config={chartConfigMCP} footer="Example text" />

@@ -20,7 +20,7 @@ export function PieChartComponent({ data, config, title, description, footer }: 
   }, [data])
 
   return (
-    <Card className="flex flex-col h-full ">
+    <Card className="flex flex-col h-full border-2 border-solid border-gray-500 rounded-4xl">
       <CardHeader className="items-center pb-0 text-balance text-center">
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
