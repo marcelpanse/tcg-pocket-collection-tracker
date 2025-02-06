@@ -1,4 +1,4 @@
-import type { Card, CollectionRow, Expansion } from '@/types'
+import type { Card, CollectionRow, Expansion, Pack } from '@/types'
 import A1 from '../../assets/cards/A1.json'
 import A1a from '../../assets/cards/A1a.json'
 import A2 from '../../assets/cards/A2.json'
@@ -24,25 +24,34 @@ export const expansions: Expansion[] = [
     name: 'Genetic Apex',
     id: 'A1',
     cards: a1Cards,
-    packs: ['Mewtwo pack', 'Charizard pack', 'Pikachu pack', 'Every pack'],
+    packs: [
+      { name: 'Mewtwo pack', color: '#986C88' },
+      { name: 'Charizard pack', color: '#E2711B' },
+      { name: 'Pikachu pack', color: '#EDC12A' },
+      { name: 'Every pack', color: '#CCCCCC' },
+    ],
   },
   {
     name: 'Mythical Island',
     id: 'A1a',
     cards: a1aCards,
-    packs: ['Mew pack'],
+    packs: [{ name: 'Mew pack', color: '#986C88' }],
   },
   {
     name: 'Space-Time Smackdown',
     id: 'A2',
     cards: a2Cards,
-    packs: ['Dialka pack', 'Palkia pack', 'Every pack'],
+    packs: [
+      { name: 'Dialka pack', color: '#986C88' },
+      { name: 'Palkia pack', color: '#E2711B' },
+      { name: 'Every pack', color: '#CCCCCC' },
+    ],
   },
   {
     name: 'Promo-A',
     id: 'PA',
     cards: paCards,
-    packs: ['Every pack'],
+    packs: [{ name: 'Every pack', color: '#CCCCCC' }],
   },
 ]
 
@@ -63,4 +72,10 @@ export const totalNrOfCards = (expansion?: Expansion, pack?: string) => {
     return expansion.cards.length
   }
   return expansion.cards.filter((c) => c.pack === pack).length
+}
+
+export const pullRate = (_ownedCards: CollectionRow[], _expansion: Expansion, _pack: Pack) => {
+  const r = Math.random()
+  console.log('pullRate', r)
+  return r
 }

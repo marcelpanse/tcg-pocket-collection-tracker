@@ -9,7 +9,12 @@ export interface Expansion {
   name: string
   id: string
   cards: Card[]
-  packs: string[]
+  packs: Pack[]
+}
+
+export interface Pack {
+  name: string
+  color: string
 }
 
 export interface Card {

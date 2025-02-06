@@ -1,7 +1,7 @@
-import { Cards } from '@/components/Cards.tsx'
 import type { CollectionRow } from '@/types'
 import type { Models } from 'appwrite'
 import type { FC } from 'react'
+import { Cards } from './components/Cards.tsx'
 
 interface Props {
   user: Models.User<Models.Preferences> | null

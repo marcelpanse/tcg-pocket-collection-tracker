@@ -1,66 +1,9 @@
-import { BarChartComponent } from '@/components/BarChart'
-import { Progress } from '@/components/ui/progress'
+import { BarChartComponent } from '@/components/BarChart.tsx'
+import { Progress } from '@/components/ui/progress.tsx'
 import * as CardsDB from '@/lib/CardsDB.ts'
 import type { CollectionRow, Expansion } from '@/types'
 import type { Models } from 'appwrite'
 import type { FC } from 'react'
-
-interface GradientCardProps {
-  title: string
-  paragraph: string
-  className?: string
-}
-
-//Names of the packs and their respective colors
-//The varible should be chartData and the inicial from the names of the packs
-//For example chartDataMCP for Mewtwo, Charizard, Pikachu
-
-const chartDataMCP = [
-  { packName: 'Mewtwo', percentage: 0.1, fill: '#986C88' },
-  { packName: 'Charizard', percentage: 0.8, fill: '#E2711B' },
-  { packName: 'Pikachu', percentage: 0.6, fill: '#EDC12A' },
-]
-
-const chartConfigMCP = {
-  Mewtwo: {
-    label: 'Mewtwo',
-    color: 'hsl(var(--chart-1))',
-  },
-  Charizard: {
-    label: 'Charizard',
-    color: 'hsl(var(--chart-2))',
-  },
-  Pikachu: {
-    label: 'Pikachu',
-    color: 'hsl(var(--chart-3))',
-  },
-}
-
-// const chartPieDataMCP = [
-//   { packName: 'Mewtwo', percentage: 12, fill: '#986C88' },
-//   { packName: 'Charizard', percentage: 30, fill: '#E2711B' },
-//   { packName: 'Pikachu', percentage: 50, fill: '#EDC12A' },
-//   { packName: 'Missing', percentage: 90, fill: '#9b9b9b' },
-// ]
-//
-// const chartPieConfigMCP = {
-//   Mewtwo: {
-//     label: 'Mewtwo',
-//     color: 'hsl(var(--chart-1))',
-//   },
-//   Charizard: {
-//     label: 'Charizard',
-//     color: 'hsl(var(--chart-2))',
-//   },
-//   Pikachu: {
-//     label: 'Pikachu',
-//     color: 'hsl(var(--chart-3))',
-//   },
-//   MissingCards: {
-//     label: 'Missing Cards',
-//     color: 'hsl(var(--chart-4))',
-//   },
-// }
 
 interface Props {
   user: Models.User<Models.Preferences> | null
@@ -116,7 +59,21 @@ export const Overview: FC<Props> = ({ user, ownedCards }) => {
   )
 }
 
-const ExpansionOverview = ({ ownedCards, expansion }: { ownedCards: CollectionRow[]; expansion: Expansion }) => {
+interface ExpansionOverviewProps {
+  ownedCards: CollectionRow[]
+  expansion: Expansion
+}
+const ExpansionOverview: FC<ExpansionOverviewProps> = ({ ownedCards, expansion }) => {
+  let packs = expansion.packs
+  if (expansion.packs.length > 1) {
+    packs = expansion.packs.filter((pack) => pack.name !== 'Every pack')
+  }
+  const chartData = packs.map((pack) => ({
+    packName: pack.name.replace(' pack', '').replace('Every', 'Promo-A'),
+    percentage: CardsDB.pullRate(ownedCards, expansion, pack),
+    fill: pack.color,
+  }))
+
   return (
     <>
       <h2 className="col-span-8 text-2xl">{expansion.name}</h2>
@@ -126,28 +83,28 @@ const ExpansionOverview = ({ ownedCards, expansion }: { ownedCards: CollectionRo
         className="col-span-8 lg:col-span-4 bg-gradient-to-br from-yellow-400/50 to-yellow-500/50"
       />
       <div className="sm:col-span-2 col-span-full">
-        <BarChartComponent data={chartDataMCP} config={chartConfigMCP} footer="Example text" />
+        <BarChartComponent title="Probability of getting new card per pack" data={chartData} />
       </div>
       <div className="sm:col-span-2 col-span-full">
         <CompleteProgress title="Total cards" ownedCards={ownedCards} expansion={expansion} />
         {expansion.packs.length > 1 &&
-          expansion.packs.map((pack) => <CompleteProgress key={pack} title={pack} ownedCards={ownedCards} expansion={expansion} pack={pack} />)}
-
-        {/*<PieChartComponent*/}
-        {/*  data={chartPieDataMCP}*/}
-        {/*  config={chartPieConfigMCP}*/}
-        {/*  title="Total cards"*/}
-        {/*  description="Between packs Pikachu, Charizard and Mewtwo"*/}
-        {/*  footer={`You have ${CardsDB.nrOfCardsOwned(ownedCards, expansion)}/${expansion.cards.length} cards`}*/}
-        {/*/>*/}
+          expansion.packs.map((pack) => (
+            <CompleteProgress key={pack.name} title={pack.name} ownedCards={ownedCards} expansion={expansion} packName={pack.name} />
+          ))}
       </div>
     </>
   )
 }
 
-const CompleteProgress = ({ title, ownedCards, expansion, pack }: { title: string; ownedCards: CollectionRow[]; expansion: Expansion; pack?: string }) => {
-  const nrOfCardsOwned = CardsDB.nrOfCardsOwned(ownedCards, expansion, pack)
-  const totalNrOfCards = CardsDB.totalNrOfCards(expansion, pack)
+interface CompleteProgressProps {
+  title: string
+  ownedCards: CollectionRow[]
+  expansion: Expansion
+  packName?: string
+}
+const CompleteProgress: FC<CompleteProgressProps> = ({ title, ownedCards, expansion, packName }) => {
+  const nrOfCardsOwned = CardsDB.nrOfCardsOwned(ownedCards, expansion, packName)
+  const totalNrOfCards = CardsDB.totalNrOfCards(expansion, packName)
 
   return (
     <div className="mt-4">
@@ -158,6 +115,11 @@ const CompleteProgress = ({ title, ownedCards, expansion, pack }: { title: strin
   )
 }
 
+interface GradientCardProps {
+  title: string
+  paragraph: string
+  className?: string
+}
 const GradientCard: FC<GradientCardProps> = ({ title, paragraph, className }) => {
   return (
     <div className={`${className} rounded-4xl flex flex-col tex items-center justify-center p-8`}>

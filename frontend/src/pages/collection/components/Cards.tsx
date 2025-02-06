@@ -1,13 +1,13 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
-import { a1Cards, a1aCards, a2Cards, paCards } from '@/lib/CardsDB'
+import { a1Cards, a1aCards, a2Cards, paCards } from '@/lib/CardsDB.ts'
 import type { Card, CollectionRow } from '@/types'
 import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { ID, type Models } from 'appwrite'
 import { type FC, useMemo, useRef } from 'react'
-import type { Card as CardType } from '../types'
-import FancyCard from './FancyCard'
+import FancyCard from '../../../components/FancyCard.tsx'
+import type { Card as CardType } from '../../../types'
 
 const PackHeader = ({ title }: { title: string }) => {
   return <h2 className="mt-10 w-full scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">{title}</h2>
