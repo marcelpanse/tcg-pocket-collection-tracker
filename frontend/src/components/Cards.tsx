@@ -1,14 +1,11 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
+import { a1Cards, a1aCards, a2Cards, paCards } from '@/lib/CardsDB'
 import type { Card, CollectionRow } from '@/types'
 import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { ID, type Models } from 'appwrite'
 import { type FC, useMemo, useRef } from 'react'
-import A1 from '../../assets/cards/A1.json'
-import A1a from '../../assets/cards/A1a.json'
-import A2 from '../../assets/cards/A2.json'
-import PA from '../../assets/cards/P-A.json'
 import type { Card as CardType } from '../types'
 import FancyCard from './FancyCard'
 
@@ -18,24 +15,17 @@ const PackHeader = ({ title }: { title: string }) => {
 
 interface Props {
   user: Models.User<Models.Preferences> | null
-
   ownedCards: CollectionRow[]
-
   setOwnedCards: (cards: CollectionRow[]) => void
 }
 
 const columnHelper = createColumnHelper<CardType>()
 
-const a1Cards: CardType[] = A1 as unknown as CardType[]
-const a2Cards: CardType[] = A2 as unknown as CardType[]
-const a1aCards: CardType[] = A1a as unknown as CardType[]
-const paCards: CardType[] = PA as unknown as CardType[]
-
 export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
   const updateCardCount = async (cardId: string, increment: number) => {
     console.log(`${cardId} button clicked`)
     const db = await getDatabase()
-    const ownedCard = ownedCards.find((c) => c.card_id === cardId)
+    const ownedCard = ownedCards.find((row) => row.card_id === cardId)
 
     if (ownedCard) {
       console.log('updating', ownedCard)
@@ -64,17 +54,17 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
   }
 
   const Card = ({ card }: { card: CardType }) => {
-    const amountOwned = ownedCards.find((c) => c.card_id === card.id)?.amount_owned || 0
+    const amountOwned = ownedCards.find((c) => c.card_id === card.card_id)?.amount_owned || 0
     return (
       <div className="flex flex-col items-center gap-y-2 w-fit border border-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group">
         <FancyCard card={card} selected={amountOwned > 0} setIsSelected={() => {}} />
         <p className="text-[12px] font-semibold whitespace-nowrap overflow-hidden text-ellipsis max-w-[130px]">
-          {card.id} - {card.name}
+          {card.card_id} - {card.name}
         </p>
         <div className="flex items-center gap-x-4">
           <button
             type="button"
-            onClick={() => updateCardCount(card.id, -1)}
+            onClick={() => updateCardCount(card.card_id, -1)}
             className="flex items-center justify-center w-8 h-8 rounded-full bg-red-500 text-white hover:bg-red-400 transition duration-200 focus:outline-none"
           >
             <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -84,7 +74,7 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
           <span className="text-lg font-semibold">{amountOwned}</span>
           <button
             type="button"
-            onClick={() => updateCardCount(card.id, 1)}
+            onClick={() => updateCardCount(card.card_id, 1)}
             className="flex items-center justify-center w-8 h-8 rounded-full bg-green-500 text-white hover:bg-green-400 transition duration-200 focus:outline-none"
           >
             <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -104,8 +94,8 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
         columnHelper.accessor('image', {
           id: 'imageUrl',
         }),
-        columnHelper.accessor('id', {
-          id: 'id',
+        columnHelper.accessor('card_id', {
+          id: 'card_id',
         }),
         columnHelper.accessor('name', {
           id: 'name',
@@ -181,7 +171,7 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
                 ) : (
                   <div className="flex justify-center gap-5">
                     {(row.data as { type: string; row: Row<Card> }[]).map(({ row: subRow }) => (
-                      <Card key={subRow.original.id} card={subRow.original} />
+                      <Card key={subRow.original.card_id} card={subRow.original} />
                     ))}
                   </div>
                 )}

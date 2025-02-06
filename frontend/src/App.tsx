@@ -9,7 +9,6 @@ import { Header } from './components/ui/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { Collection } from './pages/Collection.tsx'
 import { Overview } from './pages/Overview.tsx'
-import { Pokedex } from './pages/Pokedex.tsx'
 import { Trade } from './pages/Trade.tsx'
 import { Verify } from './pages/Verify.tsx'
 
@@ -42,14 +41,13 @@ function App() {
   }
 
   return (
-    <ThemeProvider defaultTheme="system" storageKey="tcgpct-ui-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="tcgpct-ui-theme">
       <Toaster />
       <Header user={user} setUser={setUser} />
       <Routes>
         <Route path="/" element={<Overview user={user} ownedCards={ownedCards} />} />
         <Route path="/verify" element={<Verify />} />
         <Route path="/collection" element={<Collection user={user} ownedCards={ownedCards} setOwnedCards={setOwnedCards} />} />
-        <Route path="/pokedex" element={<Pokedex />} />
         <Route path="/trade" element={<Trade />} />
       </Routes>
     </ThemeProvider>
