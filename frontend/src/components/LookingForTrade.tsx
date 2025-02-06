@@ -1,9 +1,9 @@
-import { createColumnHelper, getCoreRowModel, getGroupedRowModel, Row, useReactTable } from "@tanstack/react-table"
-import { useVirtualizer } from "@tanstack/react-virtual"
-import { useMemo, useRef } from "react"
 import type { Card } from '@/types'
+import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
+import { useVirtualizer } from '@tanstack/react-virtual'
+import { useMemo, useRef } from 'react'
 import type { Card as CardType } from '../types'
-import FancyCard from "./FancyCard"
+import FancyCard from './FancyCard'
 
 export function LookingForTrade({ cards }: { cards: CardType[] }) {
   const columnHelper = createColumnHelper<CardType>()
@@ -74,7 +74,7 @@ export function LookingForTrade({ cards }: { cards: CardType[] }) {
       >
         {rowVirtualizer.getVirtualItems().map((virtualRow) => {
           const row = flattenedRows[virtualRow.index]
-          console.log("Row", row)
+          console.log('Row', row)
           return (
             <div
               key={virtualRow.key}
@@ -93,10 +93,13 @@ export function LookingForTrade({ cards }: { cards: CardType[] }) {
                 <div className="flex justify-center gap-5">
                   {(row.data as { type: string; row: Row<Card> }[]).map(({ row: subRow }) => {
                     return (
-                      <div className="flex flex-col items-center gap-y-4 w-fit border border-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group">
-                        <FancyCard key={subRow.original.id} card={subRow.original} selected={true} setIsSelected={() => {}} />
+                      <div
+                        key={`div_${subRow.original.id}`}
+                        className="flex flex-col items-center gap-y-4 w-fit border border-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group"
+                      >
+                        <FancyCard key={`card_${subRow.original.id}`} card={subRow.original} selected={true} setIsSelected={() => {}} />
                       </div>
-                    );
+                    )
                   })}
                 </div>
               )}

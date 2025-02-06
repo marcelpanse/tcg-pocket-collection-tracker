@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { COLLECTION_ID, DATABASE_ID, getDatabase } from "@/lib/Auth";
-import { CollectionRow } from "@/types";
-import type { Card as CardType } from '../types'
+import { LookingForTrade } from '@/components/LookingForTrade'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth'
+import type { CollectionRow } from '@/types'
+import { useEffect, useState } from 'react'
 import A1 from '../../assets/cards/A1.json'
 import A1a from '../../assets/cards/A1a.json'
 import A2 from '../../assets/cards/A2.json'
 import PA from '../../assets/cards/P-A.json'
-import { LookingForTrade } from "@/components/LookingForTrade";
+import type { Card as CardType } from '../types'
 
 const a1Cards: CardType[] = A1 as unknown as CardType[]
 const a2Cards: CardType[] = A2 as unknown as CardType[]
@@ -16,7 +16,7 @@ const paCards: CardType[] = PA as unknown as CardType[]
 
 export function Trade() {
   const [ownedCards, setOwnedCards] = useState<CollectionRow[]>([])
-    
+
   useEffect(() => {
     fetchCollection()
   }, [])
@@ -27,11 +27,11 @@ export function Trade() {
     console.log('documents', documents)
     setOwnedCards(documents as unknown as CollectionRow[])
   }
-  
+
   const lookingForTradeCards = () => {
     const allCards = [...a1Cards, ...a2Cards, ...a1aCards, ...paCards]
-    const missingCards = allCards.filter(ac => ownedCards.findIndex(oc => oc.card_id === ac.id) == -1)
-    return missingCards;
+    const missingCards = allCards.filter((ac) => ownedCards.findIndex((oc) => oc.card_id === ac.id) === -1)
+    return missingCards
   }
 
   return (
@@ -43,7 +43,7 @@ export function Trade() {
           <TabsTrigger value="buying_tokens">Buying Tokens</TabsTrigger>
         </TabsList>
         <TabsContent value="looking_for">
-          <LookingForTrade cards={lookingForTradeCards()}/>
+          <LookingForTrade cards={lookingForTradeCards()} />
         </TabsContent>
         <TabsContent value="for_trade">
           <span>For Trade</span>
@@ -53,5 +53,5 @@ export function Trade() {
         </TabsContent>
       </Tabs>
     </div>
-  );
+  )
 }
