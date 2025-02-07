@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
-import { a1Cards, a1aCards, a2Cards, allCards, paCards } from '@/lib/CardsDB.ts'
+import { allCards, expansions } from '@/lib/CardsDB.ts'
 import type { Card, CollectionRow } from '@/types'
 import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
@@ -99,7 +99,6 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
           const newPosition = parentRef.current.scrollTop
           setScrollPosition(newPosition)
           localStorage.setItem('scrollPosition', newPosition.toString())
-          console.log('handleScroll - scrollPosition:', newPosition)
         }
       }
 
@@ -118,7 +117,6 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
     useEffect(() => {
       if (parentRef.current) {
         parentRef.current.scrollTop = scrollPosition
-        console.log('useEffect - scrollPosition set to:', scrollPosition)
       }
     }, [scrollPosition])
 
@@ -221,26 +219,20 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
       <Tabs defaultValue="all">
         <TabsList className="m-auto mt-4 mb-8">
           <TabsTrigger value="all">All</TabsTrigger>
-          <TabsTrigger value="a1">A1 - Genetic Apex</TabsTrigger>
-          <TabsTrigger value="a1a">A1A - Mythical Island</TabsTrigger>
-          <TabsTrigger value="a2">A2 - Space Time Smackdown</TabsTrigger>
-          <TabsTrigger value="pa">PA - Promo A</TabsTrigger>
+          {expansions.map((expansion) => (
+            <TabsTrigger key={`tab_trigger_${expansion.id}`} value={expansion.id}>
+              {expansion.name}
+            </TabsTrigger>
+          ))}
         </TabsList>
         <TabsContent value="all">
           <Pack cards={allCards} />
         </TabsContent>
-        <TabsContent value="a1">
-          <Pack cards={a1Cards} />
-        </TabsContent>
-        <TabsContent value="a1a">
-          <Pack cards={a1aCards} />
-        </TabsContent>
-        <TabsContent value="a2">
-          <Pack cards={a2Cards} />
-        </TabsContent>
-        <TabsContent value="pa">
-          <Pack cards={paCards} />
-        </TabsContent>
+        {expansions.map((expansion) => (
+          <TabsContent value={expansion.id} key={expansion.id}>
+            <Pack key={`tab_content_${expansion.id}`} cards={expansion.cards} />
+          </TabsContent>
+        ))}
       </Tabs>
     </div>
   )
