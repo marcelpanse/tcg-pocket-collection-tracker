@@ -5,7 +5,7 @@ import type { Card, CollectionRow } from '@/types'
 import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { ID, type Models } from 'appwrite'
-import { type FC, useMemo, useRef } from 'react'
+import { type FC, useEffect, useMemo, useRef, useState } from 'react'
 import FancyCard from '../../../components/FancyCard.tsx'
 import type { Card as CardType } from '../../../types'
 
@@ -88,6 +88,39 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
 
   const Pack = ({ cards }: { cards: CardType[] }) => {
     const parentRef = useRef<HTMLDivElement>(null)
+    const [scrollPosition, setScrollPosition] = useState(() => {
+      const savedPosition = localStorage.getItem('scrollPosition')
+      return savedPosition ? Number.parseInt(savedPosition, 10) : 0
+    })
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (parentRef.current) {
+          const newPosition = parentRef.current.scrollTop
+          setScrollPosition(newPosition)
+          localStorage.setItem('scrollPosition', newPosition.toString())
+          console.log('handleScroll - scrollPosition:', newPosition)
+        }
+      }
+
+      const parentElement = parentRef.current
+      if (parentElement) {
+        parentElement.addEventListener('scroll', handleScroll)
+      }
+
+      return () => {
+        if (parentElement) {
+          parentElement.removeEventListener('scroll', handleScroll)
+        }
+      }
+    }, [])
+
+    useEffect(() => {
+      if (parentRef.current) {
+        parentRef.current.scrollTop = scrollPosition
+        console.log('useEffect - scrollPosition set to:', scrollPosition)
+      }
+    }, [scrollPosition])
 
     const columns = useMemo(() => {
       return [
