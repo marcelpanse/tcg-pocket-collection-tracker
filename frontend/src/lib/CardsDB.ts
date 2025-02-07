@@ -57,10 +57,11 @@ export const expansions: Expansion[] = [
 ]
 
 export const nrOfCardsOwned = (ownedCards: CollectionRow[], expansion?: Expansion, pack?: string) => {
+  if (!expansion) {
+    return ownedCards.filter((oc) => oc.amount_owned > 0).length
+  }
+
   return ownedCards.filter((oc) => {
-    if (!expansion) {
-      return ownedCards.filter((oc) => oc.amount_owned > 0).length
-    }
     if (pack) {
       return expansion.cards.find((c) => c.pack === pack && c.card_id === oc.card_id && oc.amount_owned > 0)
     }
