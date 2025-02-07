@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
-import { a1Cards, a1aCards, a2Cards, paCards } from '@/lib/CardsDB.ts'
+import { a1Cards, a1aCards, a2Cards, allCards, paCards } from '@/lib/CardsDB.ts'
 import type { Card, CollectionRow } from '@/types'
 import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
@@ -133,8 +133,8 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
         columnHelper.accessor('name', {
           id: 'name',
         }),
-        columnHelper.accessor('pack', {
-          id: 'pack',
+        columnHelper.accessor('set_details', {
+          id: 'set_details',
         }),
       ]
     }, [])
@@ -147,7 +147,7 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
       getCoreRowModel: getCoreRowModel(),
       getGroupedRowModel: getGroupedRowModel(),
       initialState: {
-        grouping: ['pack'],
+        grouping: ['set_details'],
       },
     })
     const groupedRows = table.getRowModel().rows
@@ -200,7 +200,7 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
                 }}
               >
                 {row.type === 'header' ? (
-                  <PackHeader title={(row.data as { type: string; row: Row<Card> }).row.getValue('pack')} />
+                  <PackHeader title={(row.data as { type: string; row: Row<Card> }).row.getValue('set_details')} />
                 ) : (
                   <div className="flex justify-center gap-5">
                     {(row.data as { type: string; row: Row<Card> }[]).map(({ row: subRow }) => (
@@ -218,7 +218,7 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
 
   return (
     <div className="flex flex-col gap-y-4 max-w-[900px] mx-auto">
-      <Tabs defaultValue="a1">
+      <Tabs defaultValue="all">
         <TabsList className="m-auto mt-4 mb-8">
           <TabsTrigger value="all">All</TabsTrigger>
           <TabsTrigger value="a1">A1 - Genetic Apex</TabsTrigger>
@@ -227,7 +227,7 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
           <TabsTrigger value="pa">PA - Promo A</TabsTrigger>
         </TabsList>
         <TabsContent value="all">
-          <Pack cards={[...a1Cards, ...a1aCards, ...a2Cards, ...paCards]} />
+          <Pack cards={allCards} />
         </TabsContent>
         <TabsContent value="a1">
           <Pack cards={a1Cards} />
