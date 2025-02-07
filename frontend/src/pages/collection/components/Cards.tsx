@@ -187,11 +187,15 @@ export const Cards: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
     <div className="flex flex-col gap-y-4 max-w-[900px] mx-auto">
       <Tabs defaultValue="a1">
         <TabsList className="m-auto mt-4 mb-8">
+          <TabsTrigger value="all">All</TabsTrigger>
           <TabsTrigger value="a1">A1 - Genetic Apex</TabsTrigger>
           <TabsTrigger value="a1a">A1A - Mythical Island</TabsTrigger>
           <TabsTrigger value="a2">A2 - Space Time Smackdown</TabsTrigger>
           <TabsTrigger value="pa">PA - Promo A</TabsTrigger>
         </TabsList>
+        <TabsContent value="all">
+          <Pack cards={[...a1Cards, ...a1aCards, ...a2Cards, ...paCards]} />
+        </TabsContent>
         <TabsContent value="a1">
           <Pack cards={a1Cards} />
         </TabsContent>
