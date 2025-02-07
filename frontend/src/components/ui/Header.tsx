@@ -5,6 +5,7 @@ import { Login } from '@/components/Login.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
 import { logout } from '@/lib/Auth.ts'
 import type { Models } from 'appwrite'
+import { ChevronRight } from 'lucide-react'
 import type { FC } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -15,33 +16,31 @@ interface Props {
 
 export const Header: FC<Props> = ({ user, setUser }) => (
   <>
-    <header className="flex h-20 w-full justify-between shrink-0 items-center px-4 md:px-6">
+    <header className="flex h-20 w-full justify-between shrink-0 items-center px-4 md:px-6 flex-wrap">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuLink asChild>
             <Link to="/">
-              <Button className="cursor-pointer" variant="ghost">
-                Overview
-              </Button>
+              <Button variant="ghost">Overview</Button>
             </Link>
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
             <Link to="/collection">
-              <Button className="cursor-pointer" variant="ghost">
-                Collection
-              </Button>
+              <Button variant="ghost">Collection</Button>
             </Link>
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
             <Link to="/trade">
-              <Button className="cursor-pointer" variant="ghost">
-                Trade
-              </Button>
+              <Button variant="ghost">Trade</Button>
             </Link>
           </NavigationMenuLink>
         </NavigationMenuList>
       </NavigationMenu>
       <div className="flex items-center gap-2">
+        <Button variant="ghost" onClick={() => window.open('https://github.com/marcelpanse/tcg-pocket-collection-tracker/discussions', '_blank')}>
+          Questions <ChevronRight />
+        </Button>
+
         {user ? (
           <Button
             variant="outline"
@@ -65,8 +64,6 @@ export const Header: FC<Props> = ({ user, setUser }) => (
             </DialogContent>
           </Dialog>
         )}
-
-        {/* <ModeToggle /> */}
       </div>
     </header>
   </>

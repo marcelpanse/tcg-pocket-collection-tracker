@@ -1,4 +1,3 @@
-import { ThemeProvider } from '@/components/ThemeProvider'
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth'
 import { getUser } from '@/lib/Auth.ts'
 import type { CollectionRow } from '@/types'
@@ -41,7 +40,7 @@ function App() {
   }
 
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="tcgpct-ui-theme">
+    <>
       <Toaster />
       <Header user={user} setUser={setUser} />
       <Routes>
@@ -50,7 +49,7 @@ function App() {
         <Route path="/collection" element={<Collection user={user} ownedCards={ownedCards} setOwnedCards={setOwnedCards} />} />
         <Route path="/trade" element={<Trade user={user} ownedCards={ownedCards} />} />
       </Routes>
-    </ThemeProvider>
+    </>
   )
 }
 
