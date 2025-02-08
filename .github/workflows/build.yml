@@ -15,4 +15,4 @@ jobs:
       - name: Install and Build 🔧
         run: |
           pnpm install
-          pnpm --filter frontend run build
+          pnpm run build

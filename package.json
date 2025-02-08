@@ -7,7 +7,9 @@
     "lint:fix": "pnpm run biome:fix",
     "biome:check": "pnpm biome check --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .",
     "biome:fix": "pnpm biome check --write --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .",
-    "prepare": "lefthook install"
+    "prepare": "lefthook install",
+    "dev": "pnpm --filter frontend run dev",
+    "build": "pnpm --filter frontend run build"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
