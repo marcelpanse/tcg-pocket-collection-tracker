@@ -1,8 +1,0 @@
-#!/usr/bin/env sh
-
-cd frontend && npm run prepush
-
-if [ $(git status --porcelain=v1 2>/dev/null | wc -l) -ne 0 ]; then
-  echo "Warning, you have uncommitted changes, are you sure you want to push? (if so use the --no-verify flag)"
-  exit 1
-fi

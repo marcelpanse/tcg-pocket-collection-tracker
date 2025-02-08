@@ -10,7 +10,7 @@ interface Props {
   ownedCards: CollectionRow[]
 }
 
-export function Trade({ user, ownedCards }: Props) {
+function Trade({ user, ownedCards }: Props) {
   if (user) {
     return (
       <div className="flex flex-col gap-y-4">
@@ -40,3 +40,5 @@ export function Trade({ user, ownedCards }: Props) {
 
   return null
 }
+
+export default Trade

@@ -10,7 +10,8 @@ export interface Expansion {
   id: string
   cards: Card[]
   packs: Pack[]
-  tradeable: boolean
+  tradeable?: boolean
+  promo?: boolean
 }
 
 export interface Pack {

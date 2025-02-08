@@ -1,7 +1,7 @@
+import { login } from '@/lib/Auth.ts'
 import { useEffect, useState } from 'react'
-import { login } from '../../lib/Auth.ts'
 
-export const Verify = () => {
+const Verify = () => {
   const [errorLoggingIn, setErrorLoggingIn] = useState(false)
 
   useEffect(() => {
@@ -26,3 +26,5 @@ export const Verify = () => {
     </div>
   )
 }
+
+export default Verify
