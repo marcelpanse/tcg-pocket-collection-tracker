@@ -7,7 +7,7 @@ import { logout } from '@/lib/Auth.ts'
 import type { Models } from 'appwrite'
 import { ChevronRight } from 'lucide-react'
 import type { FC } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 
 interface Props {
   user: Models.User<Models.Preferences> | null

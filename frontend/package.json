@@ -15,6 +15,7 @@
     "prepare": "pnpm -w lefthook install"
   },
   "dependencies": {
+    "@loadable/component": "^5.16.4",
     "@radix-ui/react-dialog": "^1.1.5",
     "@radix-ui/react-dropdown-menu": "^2.1.5",
     "@radix-ui/react-navigation-menu": "^1.2.4",
@@ -32,13 +33,14 @@
     "lucide-react": "^0.474.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.1.5",
+    "react-router": "^7.1.5",
     "recharts": "^2.15.1",
     "tailwind-merge": "^3.0.1",
     "tailwindcss": "^4.0.3",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/loadable__component": "^5.13.9",
     "@types/node": "^22.13.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",

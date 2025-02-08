@@ -9,7 +9,7 @@ interface Props {
   ownedCards: CollectionRow[]
 }
 
-export function Trade({ user, ownedCards }: Props) {
+function Trade({ user, ownedCards }: Props) {
   const lookingForTradeCards = () => {
     const allCards = [...a1Cards, ...a2Cards, ...a1aCards, ...paCards]
     const missingCards = allCards.filter((ac) => ownedCards.findIndex((oc) => oc.card_id === ac.card_id) === -1)
@@ -45,3 +45,5 @@ export function Trade({ user, ownedCards }: Props) {
 
   return null
 }
+
+export default Trade

@@ -1,15 +1,18 @@
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth'
 import { getUser } from '@/lib/Auth.ts'
 import type { CollectionRow } from '@/types'
+import loadable from '@loadable/component'
 import { type Models, Query } from 'appwrite'
 import { useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router'
 import { Header } from './components/ui/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
-import { Collection } from './pages/collection/Collection.tsx'
-import { Overview } from './pages/overview/Overview.tsx'
-import { Trade } from './pages/trade/Trade.tsx'
-import { Verify } from './pages/verify/Verify.tsx'
+
+// Lazy import for chunking
+const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
+const Verify = loadable(() => import('./pages/verify/Verify.tsx'))
+const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
+const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 
 function App() {
   const [user, setUser] = useState<Models.User<Models.Preferences> | null>(null)
