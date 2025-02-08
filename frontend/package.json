@@ -9,10 +9,8 @@
     "lint": "pnpm -w run biome:check",
     "lint:fix": "pnpm -w run biome:fix",
     "preview": "vite preview",
-    "prepush": "pnpm run build",
     "biome:check": "pnpm -w biome check --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .",
-    "biome:fix": "pnpm -w biome check --write --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .",
-    "prepare": "pnpm -w lefthook install"
+    "biome:fix": "pnpm -w biome check --write --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true ."
   },
   "dependencies": {
     "@loadable/component": "^5.16.4",
