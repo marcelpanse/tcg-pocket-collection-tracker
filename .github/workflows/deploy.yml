@@ -12,12 +12,15 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'dist' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+
+      - name: Install and Build 🔧
         run: |
-          cd frontend && npm install
-          npm run build
+          pnpm install
+          pnpm --filter frontend run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: frontend/dist # The folder the action should deploy.
+          folder: frontend/dist

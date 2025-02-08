@@ -1,0 +1,21 @@
+{
+  "name": "tcg-pocket-collection-tracker",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "pnpm run biome:check",
+    "lint:fix": "pnpm run biome:fix",
+    "biome:check": "pnpm biome check --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .",
+    "biome:fix": "pnpm biome check --write --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .",
+    "prepare": "lefthook install"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "lefthook": "^1.10.10"
+  },
+  "type": "module",
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=20"
+  }
+}

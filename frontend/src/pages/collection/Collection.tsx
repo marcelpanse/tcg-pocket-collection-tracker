@@ -9,7 +9,7 @@ interface Props {
   setOwnedCards: (cards: CollectionRow[]) => void
 }
 
-export const Collection: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
+const Collection: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
   if (user) {
     // TODO: Refactor that cards still show without a user, but prompts for a login if you are not logged in yet.
     return <Cards user={user} ownedCards={ownedCards} setOwnedCards={setOwnedCards} />
@@ -17,3 +17,5 @@ export const Collection: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
 
   return null
 }
+
+export default Collection

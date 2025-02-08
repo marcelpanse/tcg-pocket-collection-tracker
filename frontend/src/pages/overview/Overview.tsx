@@ -9,7 +9,7 @@ interface Props {
   ownedCards: CollectionRow[]
 }
 
-export const Overview: FC<Props> = ({ user, ownedCards }) => {
+const Overview: FC<Props> = ({ user, ownedCards }) => {
   const ownedCardsCount = ownedCards.reduce((total, card) => total + card.amount_owned, 0)
   if (user) {
     return (
@@ -57,3 +57,5 @@ export const Overview: FC<Props> = ({ user, ownedCards }) => {
     </article>
   )
 }
+
+export default Overview

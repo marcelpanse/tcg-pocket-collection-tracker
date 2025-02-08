@@ -2,6 +2,8 @@
   "files": [],
   "references": [{ "path": "./tsconfig.app.json" }],
   "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["./assets/*"],
