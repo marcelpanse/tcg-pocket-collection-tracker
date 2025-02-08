@@ -3,6 +3,9 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 @plugin "tailwindcss-animate";
 
+/*noinspection CssInvalidAtRule*/
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --radius: 0.5rem;
