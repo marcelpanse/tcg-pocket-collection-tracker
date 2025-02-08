@@ -44,7 +44,7 @@ export const expansions: Expansion[] = [
     id: 'A2',
     cards: a2Cards,
     packs: [
-      { name: 'Dialka pack', color: '#A0C5E8' },
+      { name: 'Dialga pack', color: '#A0C5E8' },
       { name: 'Palkia pack', color: '#D5A6BD' },
       { name: 'Every pack', color: '#CCCCCC' },
     ],
