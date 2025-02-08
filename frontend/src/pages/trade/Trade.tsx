@@ -1,8 +1,9 @@
-import { LookingForTrade } from '@/components/LookingForTrade'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { a1Cards, a1aCards, a2Cards, paCards } from '@/lib/CardsDB'
 import type { CollectionRow } from '@/types'
 import type { Models } from 'appwrite'
+import { BuyingTokens } from './BuyingTokens'
+import { ForTrade } from './ForTrade'
+import { LookingFor } from './LookingFor'
 
 interface Props {
   user: Models.User<Models.Preferences> | null
@@ -10,12 +11,6 @@ interface Props {
 }
 
 export function Trade({ user, ownedCards }: Props) {
-  const lookingForTradeCards = () => {
-    const allCards = [...a1Cards, ...a2Cards, ...a1aCards, ...paCards]
-    const missingCards = allCards.filter((ac) => ownedCards.findIndex((oc) => oc.card_id === ac.card_id) === -1)
-    return missingCards
-  }
-
   if (user) {
     return (
       <div className="flex flex-col gap-y-4">
@@ -29,13 +24,13 @@ export function Trade({ user, ownedCards }: Props) {
           </div>
           <div className="max-w-auto mx-auto">
             <TabsContent value="looking_for">
-              <LookingForTrade cards={lookingForTradeCards()} />
+              <LookingFor ownedCards={ownedCards} />
             </TabsContent>
             <TabsContent value="for_trade">
-              <span>For Trade</span>
+              <ForTrade ownedCards={ownedCards} />
             </TabsContent>
             <TabsContent value="buying_tokens">
-              <span>Buying Tokens</span>
+              <BuyingTokens ownedCards={ownedCards} />
             </TabsContent>
           </div>
         </Tabs>
