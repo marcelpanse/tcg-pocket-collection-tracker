@@ -11,7 +11,6 @@ import { fetchCollection } from './lib/fetchCollection.ts'
 
 // Lazy import for chunking
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
-const Verify = loadable(() => import('./pages/verify/Verify.tsx'))
 const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const Community = loadable(() => import('./pages/community/Community.tsx'))
@@ -32,13 +31,12 @@ function App() {
   }, [user])
 
   return (
-    <UserContext.Provider value={{ user, signOut: () => setUser(null), isLoginDialogOpen, setIsLoginDialogOpen }}>
+    <UserContext.Provider value={{ user, setUser, isLoginDialogOpen, setIsLoginDialogOpen }}>
       <CollectionContext.Provider value={{ ownedCards, setOwnedCards }}>
         <Toaster />
         <Header />
         <Routes>
           <Route path="/" element={<Overview />} />
-          <Route path="/verify" element={<Verify />} />
           <Route path="/collection" element={<Collection />} />
           <Route path="/trade" element={<Trade />} />
           <Route path="/community" element={<Community />} />

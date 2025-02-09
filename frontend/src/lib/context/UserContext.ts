@@ -5,14 +5,14 @@ export type User = Models.User<Models.Preferences>
 
 interface IUserContext {
   user: User | null
-  signOut: () => void
+  setUser: (user: User | null) => void
   isLoginDialogOpen: boolean
   setIsLoginDialogOpen: (isLoginDialogOpen: boolean) => void
 }
 
 export const UserContext = createContext<IUserContext>({
   user: null,
-  signOut: () => {},
+  setUser: () => {},
   isLoginDialogOpen: false,
   setIsLoginDialogOpen: () => {},
 })

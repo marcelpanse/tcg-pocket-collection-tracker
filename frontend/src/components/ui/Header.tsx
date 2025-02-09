@@ -8,7 +8,7 @@ import { use } from 'react'
 import { Link } from 'react-router'
 
 export function Header() {
-  const { user, signOut, isLoginDialogOpen, setIsLoginDialogOpen } = use(UserContext)
+  const { user, setUser, isLoginDialogOpen, setIsLoginDialogOpen } = use(UserContext)
   return (
     <>
       <header className="flex h-20 w-full shrink-0 flex-wrap items-center justify-between px-4 md:px-6">
@@ -41,7 +41,7 @@ export function Header() {
               variant="outline"
               onClick={async () => {
                 await logout()
-                signOut()
+                setUser(null)
               }}
             >
               Logout
