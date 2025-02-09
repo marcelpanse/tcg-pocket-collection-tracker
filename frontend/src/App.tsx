@@ -20,12 +20,12 @@ function App() {
   const [ownedCards, setOwnedCards] = useState<CollectionRow[]>([])
 
   useEffect(() => {
-    getUser().then(setUser)
+    getUser().then(setUser).catch(console.error)
   }, [])
 
   useEffect(() => {
     if (user) {
-      fetchCollection().then(setOwnedCards)
+      fetchCollection().then(setOwnedCards).catch(console.error)
     }
   }, [user])
 
