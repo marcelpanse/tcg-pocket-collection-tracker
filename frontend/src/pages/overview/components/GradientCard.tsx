@@ -8,9 +8,9 @@ interface GradientCardProps {
 }
 export const GradientCard: FC<GradientCardProps> = ({ title, paragraph, className, backgroundColor }) => {
   return (
-    <div className={`${className} rounded-4xl flex flex-col tex items-center justify-center p-8`} style={{ backgroundColor }}>
-      <header className="text-7xl font-semibold text-white">{title}</header>
-      <p className="text-2xl text-white mt-2 text-center">{paragraph}</p>
+    <div className={`${className} tex flex flex-col items-center justify-center rounded-4xl p-8`} style={{ backgroundColor }}>
+      <header className="font-semibold text-7xl text-white">{title}</header>
+      <p className="mt-2 text-center text-2xl text-white">{paragraph}</p>
     </div>
   )
 }

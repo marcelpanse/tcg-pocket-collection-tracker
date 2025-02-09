@@ -1,4 +1,6 @@
-export interface CollectionRow {
+import type { Models } from 'appwrite'
+
+export interface CollectionRow extends Partial<Models.Document> {
   $id: string
   email: string
   card_id: string

@@ -8,18 +8,18 @@ export function BuyingTokensCard({ card }: { card: Card & { amount_owned?: numbe
   return (
     <div
       key={`div_${card.card_id}`}
-      className="flex flex-col items-center gap-y-2 w-fit border border-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 group"
+      className="group flex w-fit flex-col items-center gap-y-2 rounded-lg border border-gray-700 p-4 shadow-md transition duration-200 hover:shadow-lg"
     >
       <FancyCard key={`card_${card.card_id}`} card={card} selected={true} setIsSelected={() => {}} />
-      <p className="text-[12px] font-semibold whitespace-nowrap overflow-hidden text-ellipsis max-w-[130px]">
+      <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px]">
         {card.card_id} - {card.name}
       </p>
       <div className="flex flex-row gap-x-2">
-        <div className="bg-fuchsia-600 rounded-xl">
-          <span className="text-lg font-semibold m-3">{amountOwned}</span>
+        <div className="rounded-xl bg-fuchsia-600">
+          <span className="m-3 font-semibold text-lg">{amountOwned}</span>
         </div>
-        <div className="bg-gray-600 rounded-xl">
-          <span className="text-lg font-semibold m-3">{possibleCoinsToGet}</span>
+        <div className="rounded-xl bg-gray-600">
+          <span className="m-3 font-semibold text-lg">{possibleCoinsToGet}</span>
         </div>
       </div>
     </div>

@@ -151,7 +151,7 @@ const ChartTooltipContent = React.forwardRef<
       <div
         ref={ref}
         className={cn(
-          'grid min-w-[8rem] items-start gap-1.5 rounded-lg border border-neutral-200 border-neutral-200/50 bg-white px-2.5 py-1.5 text-xs shadow-xl dark:border-neutral-800 dark:border-neutral-800/50 dark:bg-neutral-950',
+          'grid min-w-[8rem] items-start gap-1.5 rounded-lg border border-neutral-200/50 bg-white px-2.5 py-1.5 text-xs shadow-xl dark:border-neutral-800/50 dark:bg-neutral-950',
           className,
         )}
       >
@@ -179,7 +179,7 @@ const ChartTooltipContent = React.forwardRef<
                     ) : (
                       !hideIndicator && (
                         <div
-                          className={cn('shrink-0 rounded-[2px] bg-[var(--color-bg)] border-[var(--color-border)]', {
+                          className={cn('shrink-0 rounded-[2px] border-[var(--color-border)] bg-[var(--color-bg)]', {
                             'h-2.5 w-2.5': indicator === 'dot',
                             'w-1': indicator === 'line',
                             'w-0 border-[1.5px] border-dashed bg-transparent': indicator === 'dashed',
@@ -200,7 +200,7 @@ const ChartTooltipContent = React.forwardRef<
                         <span className="text-neutral-500 dark:text-neutral-400">{itemConfig?.label || item.name}</span>
                       </div>
                       {item.value && (
-                        <span className="font-mono font-medium tabular-nums text-neutral-950 dark:text-neutral-50">{item.value.toLocaleString()}</span>
+                        <span className="font-medium font-mono text-neutral-950 tabular-nums dark:text-neutral-50">{item.value.toLocaleString()}</span>
                       )}
                     </div>
                   </>

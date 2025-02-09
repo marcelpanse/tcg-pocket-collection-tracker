@@ -1,6 +1,6 @@
+import useMousePosition from '@/lib/hooks/useMousePosition'
 import type { Card } from '@/types'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import useMousePosition from '../lib/hooks/useMousePosition'
 
 // Generic throttle function with strict typing
 const throttle = <T extends unknown[]>(fn: (...args: T) => void, delay: number): ((...args: T) => void) => {

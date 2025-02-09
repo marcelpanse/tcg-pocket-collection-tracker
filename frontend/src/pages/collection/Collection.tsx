@@ -1,21 +1,39 @@
-import type { CollectionRow } from '@/types'
-import type { Models } from 'appwrite'
-import type { FC } from 'react'
-import { Cards } from './components/Cards.tsx'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
+import { allCards, expansions } from '@/lib/CardsDB'
+import { UserContext } from '@/lib/context/UserContext.ts'
+import { use } from 'react'
+import { Pack } from './components/Pack'
 
-interface Props {
-  user: Models.User<Models.Preferences> | null
-  ownedCards: CollectionRow[]
-  setOwnedCards: (cards: CollectionRow[]) => void
-}
+// TODO: Refactor that cards still show without a user, but prompts for a login if you are not logged in yet.
+function Collection() {
+  const { user } = use(UserContext)
 
-const Collection: FC<Props> = ({ user, ownedCards, setOwnedCards }) => {
-  if (user) {
-    // TODO: Refactor that cards still show without a user, but prompts for a login if you are not logged in yet.
-    return <Cards user={user} ownedCards={ownedCards} setOwnedCards={setOwnedCards} />
+  if (!user) {
+    return null
   }
 
-  return null
+  return (
+    <div className="mx-auto flex max-w-[900px] flex-col gap-y-4">
+      <Tabs defaultValue="all">
+        <TabsList className="m-auto mt-4 mb-8">
+          <TabsTrigger value="all">All</TabsTrigger>
+          {expansions.map((expansion) => (
+            <TabsTrigger key={`tab_trigger_${expansion.id}`} value={expansion.id}>
+              {expansion.name}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+        <TabsContent value="all">
+          <Pack cards={allCards} />
+        </TabsContent>
+        {expansions.map((expansion) => (
+          <TabsContent value={expansion.id} key={`tab_content_${expansion.id}`}>
+            <Pack key={`tab_content_${expansion.id}`} cards={expansion.cards} />
+          </TabsContent>
+        ))}
+      </Tabs>
+    </div>
+  )
 }
 
 export default Collection

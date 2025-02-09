@@ -1,10 +1,7 @@
-'use client'
-
-import * as React from 'react'
-import { Label, Pie, PieChart } from 'recharts'
-
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart'
+import { useMemo } from 'react'
+import { Label, Pie, PieChart } from 'recharts'
 
 interface PieChartComponentProps {
   data: { packName: string; percentage: number; fill: string }[]
@@ -15,13 +12,13 @@ interface PieChartComponentProps {
 }
 
 export const PieChartComponent = ({ data, config, title, description, footer }: PieChartComponentProps) => {
-  const totalPercentage = React.useMemo(() => {
+  const totalPercentage = useMemo(() => {
     return data.reduce((acc, curr) => acc + curr.percentage, 0)
   }, [data])
 
   return (
-    <Card className="flex flex-col h-full border-2 border-solid border-gray-500 rounded-4xl">
-      <CardHeader className="items-center pb-0 text-balance text-center">
+    <Card className="flex h-full flex-col rounded-4xl border-2 border-gray-500 border-solid">
+      <CardHeader className="items-center text-balance pb-0 text-center">
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
@@ -35,7 +32,7 @@ export const PieChartComponent = ({ data, config, title, description, footer }: 
                   if (viewBox && 'cx' in viewBox && 'cy' in viewBox) {
                     return (
                       <text x={viewBox.cx} y={viewBox.cy} textAnchor="middle" dominantBaseline="middle">
-                        <tspan x={viewBox.cx} y={viewBox.cy} className="fill-white text-3xl font-bold">
+                        <tspan x={viewBox.cx} y={viewBox.cy} className="fill-white font-bold text-3xl">
                           {totalPercentage.toLocaleString()}
                         </tspan>
                         <tspan x={viewBox.cx} y={(viewBox.cy || 0) + 24} className="fill-white">

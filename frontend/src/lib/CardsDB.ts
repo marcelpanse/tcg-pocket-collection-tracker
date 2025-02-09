@@ -68,7 +68,7 @@ export const tradeableRaritiesDictionary: { [id: string]: number } = {
   '☆': 500,
 }
 
-export const nrOfCardsOwned = (ownedCards: CollectionRow[], expansion?: Expansion, pack?: string) => {
+export const getNrOfCardsOwned = (ownedCards: CollectionRow[], expansion?: Expansion, pack?: string) => {
   if (!expansion) {
     return ownedCards.filter((oc) => oc.amount_owned > 0).length
   }
@@ -81,7 +81,7 @@ export const nrOfCardsOwned = (ownedCards: CollectionRow[], expansion?: Expansio
   }).length
 }
 
-export const totalNrOfCards = (expansion?: Expansion, pack?: string) => {
+export const getTotalNrOfCards = (expansion?: Expansion, pack?: string) => {
   if (!expansion) {
     return allCards.length
   }

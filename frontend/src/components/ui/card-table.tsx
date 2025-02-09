@@ -1,10 +1,10 @@
 import type { Card } from '@/types'
+import type { Card as CardType } from '@/types'
 import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { useMemo, useRef } from 'react'
-import type { Card as CardType } from '../../types'
 
-export function CardTable<T extends Card>({ cards, cardElement }: { cards: T[]; cardElement: (card: T) => JSX.Element }) {
+export function CardTable<T extends Card>({ cards, cardElement }: { cards: T[]; cardElement: (card: T) => React.ReactNode }) {
   const columnHelper = createColumnHelper<CardType>()
   const parentRef = useRef<HTMLDivElement>(null)
 
@@ -86,7 +86,7 @@ export function CardTable<T extends Card>({ cards, cardElement }: { cards: T[]; 
               }}
             >
               {row.type === 'header' ? (
-                <h2 className="mt-10 w-[900px] mx-auto scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+                <h2 className="mx-auto mt-10 w-[900px] scroll-m-20 border-b pb-2 font-semibold text-3xl tracking-tight transition-colors first:mt-0">
                   {(row.data as { type: string; row: Row<T> }).row.getValue('pack')}
                 </h2>
               ) : (

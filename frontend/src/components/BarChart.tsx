@@ -32,8 +32,8 @@ interface PercentageBarChartProps {
   footer?: string
 }
 export const BarChartComponent: FC<PercentageBarChartProps> = ({ title, data, config = {}, footer }) => (
-  <Card className="border-2 border-solid border-gray-500 rounded-4xl ">
-    <CardHeader className="text-center text-balance">
+  <Card className="rounded-4xl border-2 border-gray-500 border-solid ">
+    <CardHeader className="text-balance text-center">
       <CardTitle>{title}</CardTitle>
     </CardHeader>
     <CardContent>
@@ -46,7 +46,7 @@ export const BarChartComponent: FC<PercentageBarChartProps> = ({ title, data, co
         </BarChart>
       </ChartContainer>
     </CardContent>
-    <CardFooter className="flex-col flex-1 items-center gap-2">{footer}</CardFooter>
+    <CardFooter className="flex-1 flex-col items-center gap-2">{footer}</CardFooter>
   </Card>
 )
 

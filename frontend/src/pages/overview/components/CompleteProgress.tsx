@@ -1,22 +1,25 @@
 import { Progress } from '@/components/ui/progress.tsx'
-import * as CardsDB from '@/lib/CardsDB.ts'
-import type { CollectionRow, Expansion } from '@/types'
-import type { FC } from 'react'
+import { getNrOfCardsOwned, getTotalNrOfCards } from '@/lib/CardsDB.ts'
+import { CollectionContext } from '@/lib/context/CollectionContext'
+import type { Expansion } from '@/types'
+import { use, useMemo } from 'react'
 
 interface CompleteProgressProps {
   title: string
-  ownedCards: CollectionRow[]
   expansion: Expansion
   packName?: string
 }
-export const CompleteProgress: FC<CompleteProgressProps> = ({ title, ownedCards, expansion, packName }) => {
-  const nrOfCardsOwned = CardsDB.nrOfCardsOwned(ownedCards, expansion, packName)
-  const totalNrOfCards = CardsDB.totalNrOfCards(expansion, packName)
+
+export function CompleteProgress({ title, expansion, packName }: CompleteProgressProps) {
+  const { ownedCards } = use(CollectionContext)
+  const nrOfCardsOwned = useMemo(() => getNrOfCardsOwned(ownedCards, expansion, packName), [ownedCards, expansion, packName])
+  const totalNrOfCards = useMemo(() => getTotalNrOfCards(expansion, packName), [expansion, packName])
+  const progressValue = useMemo(() => (nrOfCardsOwned / totalNrOfCards) * 100, [nrOfCardsOwned, totalNrOfCards])
 
   return (
     <div className="mt-4">
       {title}
-      <Progress value={(nrOfCardsOwned / totalNrOfCards) * 100} />
+      <Progress value={progressValue} />
       You have {nrOfCardsOwned}/{totalNrOfCards} cards
     </div>
   )

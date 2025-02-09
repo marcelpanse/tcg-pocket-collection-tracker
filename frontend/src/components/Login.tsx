@@ -1,8 +1,11 @@
 import { Button } from '@/components/ui/button.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
+import { sendMagicLink } from '@/lib/Auth.ts'
 import { useState } from 'react'
-import { sendMagicLink } from '../lib/Auth.ts'
+import { email, maxLength, nonEmpty, pipe, safeParse, string } from 'valibot'
 import { Input } from './ui/input.tsx'
+
+const EmailSchema = pipe(string(), nonEmpty('Email is required'), email('Email must be valid'), maxLength(255, 'Email must be less than 255 characters'))
 
 export const Login = () => {
   const { toast } = useToast()
@@ -10,41 +13,31 @@ export const Login = () => {
   const [emailInput, setEmailInput] = useState('')
   const [emailSent, setEmailSent] = useState(false)
 
+  if (emailSent) {
+    return <div className="pt-4">Thank you. Check your email for a magic login link!</div>
+  }
+
   return (
-    <>
-      {!emailSent && (
-        <div className="pt-4">
-          Fill in your email address to get a magic link to login. If you don't have an account yet, we will automatically create one for you.
-          <div className="flex align-center justify-center gap-2 pt-4">
-            <Input type="email" placeholder="Email" onChange={(e) => setEmailInput(e.target.value)} />
+    <div className="pt-4">
+      Fill in your email address to get a magic link to login. If you don't have an account yet, we will automatically create one for you.
+      <div className="flex justify-center gap-2 pt-4 align-center">
+        <Input type="email" placeholder="Email" onChange={(e) => setEmailInput(e.target.value)} />
 
-            <Button
-              onClick={async () => {
-                if (emailInput) {
-                  // TODO: validate email with regex
-                  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-                  if (!regex.test(emailInput)) {
-                    toast({
-                      title: 'Please enter a valid email address',
-                    })
-                    return
-                  }
+        <Button
+          onClick={async () => {
+            const result = safeParse(EmailSchema, emailInput)
+            if (!result.success) {
+              toast({ title: 'Please enter a valid email address' })
+              return
+            }
 
-                  setEmailSent(true)
-                  await sendMagicLink(emailInput)
-                } else {
-                  toast({
-                    title: 'Please enter an email address',
-                  })
-                }
-              }}
-            >
-              login / signup
-            </Button>
-          </div>
-        </div>
-      )}
-      {emailSent && <div className="pt-4">Thank you. Check your email for a magic login link!</div>}
-    </>
+            setEmailSent(true)
+            await sendMagicLink(emailInput)
+          }}
+        >
+          login / signup
+        </Button>
+      </div>
+    </div>
   )
 }

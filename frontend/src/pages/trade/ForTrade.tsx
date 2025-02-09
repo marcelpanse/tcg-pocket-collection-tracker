@@ -1,19 +1,24 @@
 import { CardTable } from '@/components/ui/card-table'
 import { allCards, expansions, tradeableRaritiesDictionary } from '@/lib/CardsDB'
-import type { CollectionRow } from '@/types'
+import { CollectionContext } from '@/lib/context/CollectionContext'
+import { use, useMemo } from 'react'
 import { ForTradeCard } from './components/ForTradeCard'
 
-export function ForTrade({ ownedCards }: { ownedCards: CollectionRow[] }) {
-  const tradeableExpansions = expansions.filter((e) => e.tradeable).map((e) => e.id)
-  const forTradeCards = ownedCards.filter((c) => c.amount_owned > 1)
-  const tradeableCards = allCards
-    .filter((ac) => forTradeCards.findIndex((oc) => oc.card_id === ac.card_id) > -1)
-    .map((ac) => {
-      return {
-        ...ac,
-        amount_owned: forTradeCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned,
-      }
-    })
+export function ForTrade() {
+  const { ownedCards } = use(CollectionContext)
+
+  const tradeableExpansions = useMemo(() => expansions.filter((e) => e.tradeable).map((e) => e.id), [])
+  const forTradeCards = useMemo(() => ownedCards.filter((c) => c.amount_owned > 1), [ownedCards])
+  const tradeableCards = useMemo(
+    () =>
+      allCards
+        .filter((ac) => forTradeCards.findIndex((oc) => oc.card_id === ac.card_id) > -1)
+        .map((ac) => ({
+          ...ac,
+          amount_owned: forTradeCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned,
+        })),
+    [forTradeCards],
+  )
 
   return (
     <CardTable
