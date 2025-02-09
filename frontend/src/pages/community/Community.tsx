@@ -12,7 +12,7 @@ const Community = () => {
       <Tabs defaultValue="introduce">
         <TabsList className="m-auto mt-4 mb-8">
           <TabsTrigger value="introduce">Introduce yourself</TabsTrigger>
-          <TabsTrigger value="trade">Tade</TabsTrigger>
+          <TabsTrigger value="trade">Trade</TabsTrigger>
           <TabsTrigger value="feedback">Ideas & Feedback</TabsTrigger>
           <Button variant={'ghost'} size="sm" onClick={() => window.open('https://github.com/marcelpanse/tcg-pocket-collection-tracker', '_blank')}>
             GitHub repository <ExternalLink />
