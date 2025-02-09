@@ -14,6 +14,7 @@ const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
 const Verify = loadable(() => import('./pages/verify/Verify.tsx'))
 const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
+const Community = loadable(() => import('./pages/community/Community.tsx'))
 
 function App() {
   const [user, setUser] = useState<User | null>(null)
@@ -39,6 +40,7 @@ function App() {
           <Route path="/verify" element={<Verify />} />
           <Route path="/collection" element={<Collection />} />
           <Route path="/trade" element={<Trade />} />
+          <Route path="/community" element={<Community />} />
         </Routes>
       </CollectionContext.Provider>
     </UserContext.Provider>

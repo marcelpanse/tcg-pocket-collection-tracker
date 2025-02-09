@@ -61,9 +61,6 @@
       },
       "performance": {
         "noAccumulatingSpread": "off"
-      },
-      "nursery": {
-        "useSortedClasses": "error"
       }
     }
   },

@@ -4,7 +4,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu'
 import { logout } from '@/lib/Auth.ts'
 import { UserContext } from '@/lib/context/UserContext'
-import { ChevronRight } from 'lucide-react'
 import { use } from 'react'
 import { Link } from 'react-router'
 
@@ -33,9 +32,9 @@ export function Header() {
           </NavigationMenuList>
         </NavigationMenu>
         <div className="flex items-center gap-2">
-          <Button variant="ghost" onClick={() => window.open('https://github.com/marcelpanse/tcg-pocket-collection-tracker/discussions', '_blank')}>
-            Questions <ChevronRight />
-          </Button>
+          <Link to="/community">
+            <Button variant="ghost">Community</Button>
+          </Link>
 
           {user ? (
             <Button
