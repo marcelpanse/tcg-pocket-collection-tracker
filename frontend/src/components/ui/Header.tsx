@@ -8,7 +8,7 @@ import { use } from 'react'
 import { Link } from 'react-router'
 
 export function Header() {
-  const { user, signOut } = use(UserContext)
+  const { user, signOut, isLoginDialogOpen, setIsLoginDialogOpen } = use(UserContext)
   return (
     <>
       <header className="flex h-20 w-full shrink-0 flex-wrap items-center justify-between px-4 md:px-6">
@@ -47,7 +47,7 @@ export function Header() {
               Logout
             </Button>
           ) : (
-            <Dialog>
+            <Dialog open={isLoginDialogOpen} onOpenChange={setIsLoginDialogOpen}>
               <DialogTrigger asChild>
                 <Button>Login</Button>
               </DialogTrigger>

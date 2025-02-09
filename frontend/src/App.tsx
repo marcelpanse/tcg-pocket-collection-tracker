@@ -19,6 +19,7 @@ const Community = loadable(() => import('./pages/community/Community.tsx'))
 function App() {
   const [user, setUser] = useState<User | null>(null)
   const [ownedCards, setOwnedCards] = useState<CollectionRow[]>([])
+  const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false)
 
   useEffect(() => {
     getUser().then(setUser).catch(console.error)
@@ -31,7 +32,7 @@ function App() {
   }, [user])
 
   return (
-    <UserContext.Provider value={{ user, signOut: () => setUser(null) }}>
+    <UserContext.Provider value={{ user, signOut: () => setUser(null), isLoginDialogOpen, setIsLoginDialogOpen }}>
       <CollectionContext.Provider value={{ ownedCards, setOwnedCards }}>
         <Toaster />
         <Header />

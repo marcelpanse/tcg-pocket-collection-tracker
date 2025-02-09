@@ -1,17 +1,8 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
 import { allCards, expansions } from '@/lib/CardsDB'
-import { UserContext } from '@/lib/context/UserContext.ts'
-import { use } from 'react'
 import { Pack } from './components/Pack'
 
-// TODO: Refactor that cards still show without a user, but prompts for a login if you are not logged in yet.
 function Collection() {
-  const { user } = use(UserContext)
-
-  if (!user) {
-    return null
-  }
-
   return (
     <div className="mx-auto flex max-w-[900px] flex-col gap-y-4">
       <Tabs defaultValue="all">

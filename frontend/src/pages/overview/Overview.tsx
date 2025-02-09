@@ -10,12 +10,11 @@ function Fallback() {
       <section className="flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-gray-500 p-10">
         <header className="mb-2 text-3xl">Welcome to</header>
         <h1 className="mb-5 text-balance text-center font-semibold text-5xl">TCG Pocket Collection Tracker</h1>
-        <footer className="text-balance text-center text-xl">Work in progress, check back soon!</footer>
       </section>
       <section className="mx-auto h-full w-full max-w-screen-xl rounded-4xl border-2 border-gray-500 p-10 text-center lg:px-6 lg:py-16">
         <div className="mx-auto max-w-screen-md sm:text-center">
           <h2 className="mb-4 font-extrabold text-3xl tracking-tight sm:text-4xl">Sign up to view your card statistics</h2>
-          <p className="mx-auto mb-4 max-w-2xl sm:text-xl">To view your card statistics, please register or log in.</p>
+          <p className="mx-auto mb-4 max-w-2xl sm:text-xl">To view your card statistics, please log in.</p>
           <p className="mx-auto max-w-2xl sm:text-xl">
             By registering, you can keep track of your collection, trade with other users, and access exclusive features.
           </p>
@@ -46,7 +45,6 @@ function Overview() {
         <div className="-order-1 col-span-8 flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-gray-500 p-10 lg:order-none lg:col-span-4">
           <header className="mb-2 text-3xl">Welcome to</header>
           <h1 className="mb-5 text-balance text-center font-semibold text-5xl">TCG Pocket Collection Tracker</h1>
-          <footer className="text-balance text-center text-xl">Work in progress, check back soon!</footer>
         </div>
         <div className="col-span-8 flex aspect-square h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-gray-500 border-solid p-8 opacity-100 lg:col-span-2">
           <h2 className="mb-2 text-center text-2xl">You have</h2>

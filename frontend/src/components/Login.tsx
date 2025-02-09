@@ -19,7 +19,11 @@ export const Login = () => {
 
   return (
     <div className="pt-4">
-      Fill in your email address to get a magic link to login. If you don't have an account yet, we will automatically create one for you.
+      <p>
+        Fill in your email address to get a magic link to login. If you don't have an account yet, we will automatically create one for you. We won't use your
+        email address for anything else.
+      </p>
+
       <div className="flex justify-center gap-2 pt-4 align-center">
         <Input type="email" placeholder="Email" onChange={(e) => setEmailInput(e.target.value)} />
 

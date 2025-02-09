@@ -11,7 +11,7 @@ interface Props {
 }
 
 export function Card({ card }: Props) {
-  const { user } = use(UserContext)
+  const { user, setIsLoginDialogOpen } = use(UserContext)
   const { ownedCards, setOwnedCards } = use(CollectionContext)
   const amountOwned = useMemo(() => ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0, [ownedCards])
 
@@ -51,6 +51,10 @@ export function Card({ card }: Props) {
 
   const addCard = useCallback(
     async (cardId: string) => {
+      if (!user) {
+        setIsLoginDialogOpen(true)
+        return
+      }
       await updateCardCount(cardId, 1)
     },
     [updateCardCount],
@@ -58,6 +62,10 @@ export function Card({ card }: Props) {
 
   const removeCard = useCallback(
     async (cardId: string) => {
+      if (!user) {
+        setIsLoginDialogOpen(true)
+        return
+      }
       await updateCardCount(cardId, -1)
     },
     [updateCardCount],
