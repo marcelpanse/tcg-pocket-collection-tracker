@@ -1,5 +1,4 @@
 import { login } from '@/lib/Auth'
-// useLogin.ts
 import { useMemo } from 'react'
 
 export type LoginPromise = ReturnType<typeof login>
