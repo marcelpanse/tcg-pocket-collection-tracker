@@ -60,3 +60,7 @@ export interface Card {
   }
   crafting_cost: number
 }
+
+export interface CollectedCard extends Card {
+  amount_owned?: number
+}

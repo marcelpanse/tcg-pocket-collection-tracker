@@ -73,7 +73,7 @@ export function Card({ card }: Props) {
 
   return (
     <div className="group flex w-fit flex-col items-center gap-y-2 rounded-lg border border-gray-700 p-4 shadow-md transition duration-200 hover:shadow-lg">
-      <FancyCard card={card} selected={amountOwned > 0} setIsSelected={() => {}} />
+      <FancyCard card={card} selected={amountOwned > 0} />
       <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px]">
         {card.card_id} - {card.name}
       </p>

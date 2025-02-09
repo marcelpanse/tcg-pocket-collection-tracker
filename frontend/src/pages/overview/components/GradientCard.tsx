@@ -1,12 +1,11 @@
-import type { FC } from 'react'
-
 interface GradientCardProps {
   title: string
   paragraph: string
   className?: string
   backgroundColor?: string
 }
-export const GradientCard: FC<GradientCardProps> = ({ title, paragraph, className, backgroundColor }) => {
+
+export function GradientCard({ title, paragraph, className, backgroundColor }: GradientCardProps) {
   return (
     <div className={`${className} tex flex flex-col items-center justify-center rounded-4xl p-8`} style={{ backgroundColor }}>
       <header className="font-semibold text-7xl text-white">{title}</header>

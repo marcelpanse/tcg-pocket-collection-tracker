@@ -27,7 +27,13 @@ const throttle = <T extends unknown[]>(fn: (...args: T) => void, delay: number):
   }
 }
 
-const FancyCard = ({ selected, setIsSelected, card }: { selected: boolean; setIsSelected: React.Dispatch<React.SetStateAction<boolean>>; card: Card }) => {
+interface Props {
+  card: Card
+  selected: boolean
+  setIsSelected?: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+function FancyCard({ selected, setIsSelected, card }: Props) {
   const cardRef = useRef<HTMLImageElement>(null)
   const { x, y } = useMousePosition()
   const [throttledPos, setThrottledPos] = useState({ x: 0, y: 0 })
@@ -86,7 +92,7 @@ const FancyCard = ({ selected, setIsSelected, card }: { selected: boolean; setIs
     >
       <img
         draggable={false}
-        onMouseDown={() => setIsSelected(!selected)}
+        onMouseDown={() => setIsSelected?.(!selected)}
         ref={cardRef}
         className="card-test"
         width={128}

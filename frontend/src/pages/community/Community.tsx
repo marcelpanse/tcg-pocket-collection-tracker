@@ -1,14 +1,12 @@
 import { Button } from '@/components/ui/button.tsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
-import Giscus from '@giscus/react'
 import { ExternalLink } from 'lucide-react'
-import type { FC } from 'react'
+import { Board } from './components/Board'
 
-const Community = () => {
+function Community() {
   return (
     <div className="mx-auto flex max-w-[900px] flex-col gap-y-4">
       <h1 className="text-3xl font-bold">Community </h1>
-
       <Tabs defaultValue="introduce">
         <TabsList className="m-auto mt-4 mb-8">
           <TabsTrigger value="introduce">Introduce yourself</TabsTrigger>
@@ -24,13 +22,11 @@ const Community = () => {
             Let's connect and get to know each other. We're a community of people who love to play TCG. We're here to help each other, share our knowledge, and
             learn from each other. Whether you're a seasoned player or just starting out, we welcome you to join us.
           </p>
-
           <Board term="app/introductions" />
         </TabsContent>
         <TabsContent value="trade">
           <h1 className="text-lg">Trading 💰</h1>
           <p className="text-sm mb-20">Trade! Leave your wishlist of cards so others can comment and connect with youto set up trades.</p>
-
           <Board term="app/trade" />
         </TabsContent>
         <TabsContent value="feedback">
@@ -39,33 +35,10 @@ const Community = () => {
             This website is a fully open source work in progress. We're always looking for ways to improve the experience. If you have any ideas or feedback,
             please let us know!
           </p>
-
           <Board term="app/feedback" />
         </TabsContent>
       </Tabs>
     </div>
-  )
-}
-
-interface Props {
-  term: string
-}
-const Board: FC<Props> = ({ term }) => {
-  return (
-    <Giscus
-      id="comments"
-      term={term}
-      repo="marcelpanse/tcg-pocket-collection-tracker"
-      repoId="925409235"
-      categoryId="DIC_kwDONyif084CmzGj"
-      mapping="specific"
-      reactionsEnabled="1"
-      emitMetadata="0"
-      inputPosition="bottom"
-      theme="light"
-      lang="en"
-      loading="eager"
-    />
   )
 }
 
