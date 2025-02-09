@@ -64,7 +64,7 @@ const Board: FC<Props> = ({ term }) => {
       inputPosition="bottom"
       theme="light"
       lang="en"
-      loading="lazy"
+      loading="eager"
     />
   )
 }
