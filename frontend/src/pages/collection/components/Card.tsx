@@ -13,7 +13,7 @@ interface Props {
 export function Card({ card }: Props) {
   const { user, setIsLoginDialogOpen } = use(UserContext)
   const { ownedCards, setOwnedCards } = use(CollectionContext)
-  const amountOwned = useMemo(() => ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0, [ownedCards])
+  card.amount_owned = useMemo(() => ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0, [ownedCards])
 
   const updateCardCount = useCallback(
     async (cardId: string, increment: number) => {
@@ -73,7 +73,7 @@ export function Card({ card }: Props) {
 
   return (
     <div className="group flex w-fit flex-col items-center gap-y-2 rounded-lg border border-gray-700 p-4 shadow-md transition duration-200 hover:shadow-lg">
-      <FancyCard card={card} selected={amountOwned > 0} />
+      <FancyCard card={card} selected={card.amount_owned > 0} />
       <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px]">
         {card.card_id} - {card.name}
       </p>
@@ -89,7 +89,7 @@ export function Card({ card }: Props) {
             <path d="M5 10a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 5 10z" />
           </svg>
         </button>
-        <span className="font-semibold text-lg">{amountOwned}</span>
+        <span className="font-semibold text-lg">{card.amount_owned}</span>
         <button
           name="add"
           aria-label="add 1 card"

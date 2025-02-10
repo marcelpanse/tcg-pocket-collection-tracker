@@ -1,6 +1,7 @@
 import useMousePosition from '@/lib/hooks/useMousePosition'
 import type { Card } from '@/types'
 import { useCallback, useEffect, useRef, useState } from 'react'
+import CardModal from './CardDetails'
 
 // Generic throttle function with strict typing
 const throttle = <T extends unknown[]>(fn: (...args: T) => void, delay: number): ((...args: T) => void) => {
@@ -38,6 +39,7 @@ function FancyCard({ selected, setIsSelected, card }: Props) {
   const { x, y } = useMousePosition()
   const [throttledPos, setThrottledPos] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   // Memoize throttled position updates
   const throttledSetPos = useRef(throttle<Parameters<typeof setThrottledPos>>((position) => setThrottledPos(position), 50))
@@ -50,6 +52,11 @@ function FancyCard({ selected, setIsSelected, card }: Props) {
 
   const handleMouseEnter = useCallback(() => setIsHovering(true), [])
   const handleMouseLeave = useCallback(() => setIsHovering(false), [])
+
+  const handleCardClick = () => {
+    setIsSelected?.(!selected)
+    setIsModalOpen(true)
+  }
 
   let centeredX = 0
   let centeredY = 0
@@ -79,30 +86,33 @@ function FancyCard({ selected, setIsSelected, card }: Props) {
   }
 
   return (
-    <div
-      style={{
-        flex: '1 0 20%',
-        perspective: '1000px',
-        transformStyle: 'preserve-3d',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        zIndex: isHovering ? 10 : 0,
-      }}
-    >
-      <img
-        draggable={false}
-        onMouseDown={() => setIsSelected?.(!selected)}
-        ref={cardRef}
-        className="card-test"
-        width={128}
-        style={cardTestStyle}
-        src={card?.image}
-        alt="Bulbasaur"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      />
-    </div>
+    <>
+      <div
+        style={{
+          flex: '1 0 20%',
+          perspective: '1000px',
+          transformStyle: 'preserve-3d',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: isHovering ? 10 : 0,
+        }}
+      >
+        <img
+          draggable={false}
+          onMouseDown={handleCardClick}
+          ref={cardRef}
+          className="card-test"
+          width={128}
+          style={cardTestStyle}
+          src={card?.image}
+          alt={card.name}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        />
+      </div>
+      <CardModal card={card} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </>
   )
 }
 
