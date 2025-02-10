@@ -1,10 +1,10 @@
 import FancyCard from '@/components/FancyCard'
 import { tradeableRaritiesDictionary } from '@/lib/CardsDB'
-import type { CollectedCard } from '@/types'
+import type { Card as CardType } from '@/types'
 import { useMemo } from 'react'
 
 interface Props {
-  card: CollectedCard
+  card: CardType
 }
 
 export function BuyingTokensCard({ card }: Props) {

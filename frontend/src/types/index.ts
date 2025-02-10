@@ -59,9 +59,5 @@ export interface Card {
     '5 card': string | null | undefined
   }
   crafting_cost: number
-  amount_owned?: number
-}
-
-export interface CollectedCard extends Card {
-  amount_owned?: number
+  amount_owned: number
 }

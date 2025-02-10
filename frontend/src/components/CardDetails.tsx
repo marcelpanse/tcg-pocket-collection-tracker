@@ -13,6 +13,7 @@ const CardModal: React.FC<CardModalProps> = ({ card, isOpen, onClose }) => {
   if (!isOpen || !card) return null
 
   const alternateVersions = card.alternate_versions.slice(1)
+  const amountOwned = card.amount_owned || 0
 
   const getImageForVersion = (version: string) => {
     const id = version.split('#')[1]
@@ -39,7 +40,7 @@ const CardModal: React.FC<CardModalProps> = ({ card, isOpen, onClose }) => {
                 <tbody>
                   <tr>
                     <th style={tableHeaderStyle}>Number Owned</th>
-                    <td style={tableCellStyle}>{card.amount_owned}</td>
+                    <td style={tableCellStyle}>{amountOwned}</td>
                   </tr>
                   <tr>
                     <th style={tableHeaderStyle}>Rarity</th>

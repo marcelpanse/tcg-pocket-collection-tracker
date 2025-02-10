@@ -3,9 +3,13 @@ import { allCards, expansions, tradeableRaritiesDictionary } from '@/lib/CardsDB
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { use, useMemo } from 'react'
 import { ForTradeCard } from './components/ForTradeCard'
+import { GoTrackYourCards } from './components/GoTrackYourCards'
+import { NoTradeableCards } from './components/NoTradeableCards'
 
 export function ForTrade() {
   const { ownedCards } = use(CollectionContext)
+
+  if (!ownedCards || ownedCards.every((c) => c.amount_owned < 2)) return <GoTrackYourCards />
 
   const tradeableExpansions = useMemo(() => expansions.filter((e) => e.tradeable).map((e) => e.id), [])
   const forTradeCards = useMemo(() => ownedCards.filter((c) => c.amount_owned > 1), [ownedCards])
@@ -19,13 +23,19 @@ export function ForTrade() {
         })),
     [forTradeCards],
   )
+  const tradeableCardsFilteredByGame = useMemo(
+    () => tradeableCards.filter((c) => Object.keys(tradeableRaritiesDictionary).includes(c.rarity) && tradeableExpansions.includes(c.expansion)),
+    [tradeableCards],
+  )
 
-  return (
+  return tradeableCardsFilteredByGame && tradeableCardsFilteredByGame.length > 0 ? (
     <CardTable
-      cards={tradeableCards.filter((c) => Object.keys(tradeableRaritiesDictionary).includes(c.rarity) && tradeableExpansions.includes(c.expansion))}
+      cards={tradeableCardsFilteredByGame}
       cardElement={(card) => {
         return <ForTradeCard card={card} />
       }}
     />
+  ) : (
+    <NoTradeableCards />
   )
 }

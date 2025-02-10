@@ -4,12 +4,13 @@ import { use } from 'react'
 import { BuyingTokens } from './BuyingTokens'
 import { ForTrade } from './ForTrade'
 import { LookingFor } from './LookingFor'
+import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 
 function Trade() {
   const { user } = use(UserContext)
 
   if (!user) {
-    return null
+    return <UserNotLoggedIn />
   }
 
   return (
