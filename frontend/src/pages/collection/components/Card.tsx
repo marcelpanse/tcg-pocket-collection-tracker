@@ -4,7 +4,7 @@ import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
 import type { Card as CardType } from '@/types'
 import { ID } from 'appwrite'
-import { use, useCallback, useMemo } from 'react'
+import { use, useCallback, useMemo, useState } from 'react'
 
 interface Props {
   card: CardType
@@ -14,6 +14,7 @@ export function Card({ card }: Props) {
   const { user, setIsLoginDialogOpen } = use(UserContext)
   const { ownedCards, setOwnedCards } = use(CollectionContext)
   const amountOwned = useMemo(() => ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0, [ownedCards])
+  const [inputValue, setInputValue] = useState(amountOwned)
 
   const updateCardCount = useCallback(
     async (cardId: string, increment: number) => {
@@ -45,8 +46,9 @@ export function Card({ card }: Props) {
           },
         ])
       }
+      setInputValue(Math.max(0, amountOwned + increment))
     },
-    [ownedCards, user, setOwnedCards],
+    [ownedCards, user, setOwnedCards, amountOwned],
   )
 
   const addCard = useCallback(
@@ -66,10 +68,20 @@ export function Card({ card }: Props) {
         setIsLoginDialogOpen(true)
         return
       }
-      await updateCardCount(cardId, -1)
+      if (amountOwned > 0) {
+        await updateCardCount(cardId, -1)
+      }
     },
-    [updateCardCount],
+    [updateCardCount, amountOwned],
   )
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)
+    if (!Number.isNaN(value) && value >= 0) {
+      setInputValue(value)
+      updateCardCount(card.card_id, value - amountOwned)
+    }
+  }
 
   return (
     <div className="group flex w-fit flex-col items-center gap-y-2 rounded-lg border border-gray-700 p-4 shadow-md transition duration-200 hover:shadow-lg">
@@ -89,7 +101,7 @@ export function Card({ card }: Props) {
             <path d="M5 10a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 5 10z" />
           </svg>
         </button>
-        <span className="font-semibold text-lg">{amountOwned}</span>
+        <input type="text" value={inputValue} onChange={handleInputChange} className="w-7 text-center border border-gray-300 rounded" />
         <button
           name="add"
           aria-label="add 1 card"
