@@ -19,7 +19,7 @@ export function ForTrade() {
         .filter((ac) => forTradeCards.findIndex((oc) => oc.card_id === ac.card_id) > -1)
         .map((ac) => ({
           ...ac,
-          amount_owned: forTradeCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned,
+          amount_owned: forTradeCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned ?? 0,
         })),
     [forTradeCards],
   )
