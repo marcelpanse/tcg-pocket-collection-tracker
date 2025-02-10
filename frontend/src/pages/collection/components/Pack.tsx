@@ -14,12 +14,6 @@ interface Props {
 export function Pack({ cards }: Props) {
   const parentRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
-  let cardsPerRow = 5
-  if (width > 800 && width < 1000) {
-    cardsPerRow = 4
-  } else if (width <= 800) {
-    cardsPerRow = 3
-  }
 
   const columns = useMemo(() => {
     return [
@@ -50,6 +44,13 @@ export function Pack({ cards }: Props) {
     },
   })
   const groupedRows = useMemo(() => table.getGroupedRowModel().rows, [table.getGroupedRowModel().rows]) // Get grouped rows from the table model
+
+  let cardsPerRow = 5
+  if (width > 800 && width < 1000) {
+    cardsPerRow = 4
+  } else if (width <= 800) {
+    cardsPerRow = 3
+  }
 
   const groupedGridRows = useMemo(
     () =>
@@ -99,7 +100,7 @@ export function Pack({ cards }: Props) {
                   {(row.data as { type: string; row: Row<CardType> }).row.getValue('set_details')}
                 </h2>
               ) : (
-                <div className="flex justify-center gap-x-5">
+                <div className="flex justify-center gap-x-3">
                   {(row.data as { type: string; row: Row<CardType> }[]).map(({ row: subRow }) => (
                     <Card key={subRow.original.card_id} card={subRow.original} />
                   ))}
