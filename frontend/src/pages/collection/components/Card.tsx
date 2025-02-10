@@ -5,6 +5,7 @@ import { UserContext } from '@/lib/context/UserContext'
 import type { Card as CardType } from '@/types'
 import { ID } from 'appwrite'
 import { use, useCallback, useMemo } from 'react'
+import { Link } from 'react-router'
 
 interface Props {
   card: CardType
@@ -73,7 +74,9 @@ export function Card({ card }: Props) {
 
   return (
     <div className="group flex w-fit flex-col items-center gap-y-2 rounded-lg border border-gray-700 p-4 shadow-md transition duration-200 hover:shadow-lg">
-      <FancyCard card={card} selected={amountOwned > 0} />
+      <Link viewTransition key={card.card_id} to={`/card/${card.card_id}`} state={{ card }}>
+        <FancyCard card={card} selected={amountOwned > 0} />
+      </Link>
       <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px]">
         {card.card_id} - {card.name}
       </p>

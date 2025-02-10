@@ -8,6 +8,7 @@ import { Toaster } from './components/ui/toaster.tsx'
 import { CollectionContext } from './lib/context/CollectionContext.ts'
 import { type User, UserContext } from './lib/context/UserContext.ts'
 import { fetchCollection } from './lib/fetchCollection.ts'
+import { CardDetail } from './pages/collection/components/CardDetail.tsx'
 
 // Lazy import for chunking
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
@@ -40,6 +41,7 @@ function App() {
           <Route path="/collection" element={<Collection />} />
           <Route path="/trade" element={<Trade />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/card/:id" element={<CardDetail />} />
         </Routes>
       </CollectionContext.Provider>
     </UserContext.Provider>
