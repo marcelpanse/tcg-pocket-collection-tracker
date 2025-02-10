@@ -4,17 +4,23 @@ import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
 import type { Card as CardType } from '@/types'
 import { ID } from 'appwrite'
-import { use, useCallback, useMemo, useState } from 'react'
+import { use, useCallback, useEffect, useMemo, useState } from 'react'
 
 interface Props {
   card: CardType
 }
 
+let _inputDebounce: number | null = null
+
 export function Card({ card }: Props) {
   const { user, setIsLoginDialogOpen } = use(UserContext)
   const { ownedCards, setOwnedCards } = use(CollectionContext)
   const amountOwned = useMemo(() => ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0, [ownedCards])
-  const [inputValue, setInputValue] = useState(amountOwned)
+  const [inputValue, setInputValue] = useState(0)
+
+  useEffect(() => {
+    setInputValue(amountOwned)
+  }, [amountOwned])
 
   const updateCardCount = useCallback(
     async (cardId: string, increment: number) => {
@@ -79,7 +85,12 @@ export function Card({ card }: Props) {
     const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)
     if (!Number.isNaN(value) && value >= 0) {
       setInputValue(value)
-      updateCardCount(card.card_id, value - amountOwned)
+      if (_inputDebounce) {
+        window.clearTimeout(_inputDebounce)
+      }
+      _inputDebounce = window.setTimeout(async () => {
+        await updateCardCount(card.card_id, value - amountOwned)
+      }, 300)
     }
   }
 
