@@ -1,11 +1,9 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
 import { use } from 'react'
 import { BuyingTokens } from './BuyingTokens'
 import { ForTrade } from './ForTrade'
 import { LookingFor } from './LookingFor'
-import { GoTrackYourCards } from './components/GoTrackYourCards'
 import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 
 function Trade() {
@@ -14,10 +12,6 @@ function Trade() {
   if (!user) {
     return <UserNotLoggedIn />
   }
-
-  const { ownedCards } = use(CollectionContext)
-
-  if (!ownedCards || ownedCards.every((c) => c.amount_owned < 2)) return <GoTrackYourCards />
 
   return (
     <div className="flex flex-col gap-y-4">

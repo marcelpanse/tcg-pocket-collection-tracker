@@ -3,6 +3,7 @@ import { allCards, expansions, tradeableRaritiesDictionary } from '@/lib/CardsDB
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { use, useMemo } from 'react'
 import { BuyingTokensCard } from './components/BuyingTokensCard'
+import { NoSellableCards } from './components/NoSellableCards'
 
 export function BuyingTokens() {
   const { ownedCards } = use(CollectionContext)
@@ -20,11 +21,14 @@ export function BuyingTokens() {
         })),
     [forTradeCards],
   )
+  const sellableCardsFilteredByGame = useMemo(
+    () => tradeableCards.filter((c) => Object.keys(raritiesThatCanEarnTradeTokens).includes(c.rarity) && tradeableExpansions.includes(c.expansion)),
+    [tradeableCards],
+  )
 
-  return (
-    <CardTable
-      cards={tradeableCards.filter((c) => Object.keys(raritiesThatCanEarnTradeTokens).includes(c.rarity) && tradeableExpansions.includes(c.expansion))}
-      cardElement={(card) => <BuyingTokensCard card={card} />}
-    />
+  return sellableCardsFilteredByGame && sellableCardsFilteredByGame.length > 0 ? (
+    <CardTable cards={sellableCardsFilteredByGame} cardElement={(card) => <BuyingTokensCard card={card} />} />
+  ) : (
+    <NoSellableCards />
   )
 }

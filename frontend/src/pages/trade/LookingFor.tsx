@@ -3,6 +3,7 @@ import { allCards, expansions, tradeableRaritiesDictionary } from '@/lib/CardsDB
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { use, useMemo } from 'react'
 import { LookingForCard } from './components/LookingForCard'
+import { NoCardsNeeded } from './components/NoCardsNeeded'
 
 export function LookingFor() {
   const { ownedCards } = use(CollectionContext)
@@ -14,12 +15,14 @@ export function LookingFor() {
     [lookingForTradeCards],
   )
 
-  return (
+  return cards && cards.length > 0 ? (
     <CardTable
       cards={cards}
       cardElement={(card) => {
         return <LookingForCard card={card} />
       }}
     />
+  ) : (
+    <NoCardsNeeded />
   )
 }
