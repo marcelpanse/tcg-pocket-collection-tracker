@@ -1,7 +1,8 @@
+import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
 import type { Card as CardType } from '@/types'
 import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useRef } from 'react'
 import { Card } from './Card'
 
 const columnHelper = createColumnHelper<CardType>()
@@ -12,10 +13,13 @@ interface Props {
 
 export function Pack({ cards }: Props) {
   const parentRef = useRef<HTMLDivElement>(null)
-  const [scrollPosition, setScrollPosition] = useState(() => {
-    const savedPosition = localStorage.getItem('scrollPosition')
-    return savedPosition ? Number.parseInt(savedPosition, 10) : 0
-  })
+  const { width } = useWindowDimensions()
+  let cardsPerRow = 5
+  if (width > 800 && width < 1000) {
+    cardsPerRow = 4
+  } else if (width <= 800) {
+    cardsPerRow = 3
+  }
 
   const columns = useMemo(() => {
     return [
@@ -54,20 +58,20 @@ export function Pack({ cards }: Props) {
         const dataRows = groupRow.subRows.map((subRow) => ({ type: 'data', row: subRow }))
 
         const gridRows = []
-        for (let i = 0; i < dataRows.length; i += 5) {
-          gridRows.push(dataRows.slice(i, i + 5))
+        for (let i = 0; i < dataRows.length; i += cardsPerRow) {
+          gridRows.push(dataRows.slice(i, i + cardsPerRow))
         }
 
         return { header, gridRows }
       }),
-    [groupedRows],
+    [groupedRows, cardsPerRow],
   )
 
   const flattenedRows = useMemo(
     () =>
       groupedGridRows.flatMap((group) => [
-        { type: 'header', height: 45, data: group.header }, // Group header
-        ...group.gridRows.map((gridRow) => ({ type: 'gridRow', height: 269, data: gridRow })), // Grid rows
+        { type: 'header', height: 60, data: group.header }, // Group header
+        ...group.gridRows.map((gridRow) => ({ type: 'gridRow', height: 250, data: gridRow })), // Grid rows
       ]),
     [groupedGridRows],
   )
@@ -75,39 +79,12 @@ export function Pack({ cards }: Props) {
   const rowVirtualizer = useVirtualizer({
     getScrollElement: () => parentRef.current,
     count: flattenedRows.length,
-    estimateSize: (index) => (flattenedRows[index].type === 'header' ? 45 : 269) + 12,
+    estimateSize: (index) => (flattenedRows[index].type === 'header' ? 60 : 250) + 12,
     overscan: 5,
   })
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (parentRef.current) {
-        const newPosition = parentRef.current.scrollTop
-        setScrollPosition(newPosition)
-        localStorage.setItem('scrollPosition', newPosition.toString())
-      }
-    }
-
-    const parentElement = parentRef.current
-    if (parentElement) {
-      parentElement.addEventListener('scroll', handleScroll)
-    }
-
-    return () => {
-      if (parentElement) {
-        parentElement.removeEventListener('scroll', handleScroll)
-      }
-    }
-  }, [])
-
-  useEffect(() => {
-    if (parentRef.current) {
-      parentRef.current.scrollTop = scrollPosition
-    }
-  }, [scrollPosition])
-
   return (
-    <div ref={parentRef} className="h-[calc(100vh-180px)] overflow-y-auto">
+    <div ref={parentRef} className="h-[calc(100vh-180px)] overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
       <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
         {rowVirtualizer.getVirtualItems().map((virtualRow) => {
           const row = flattenedRows[virtualRow.index]
@@ -118,11 +95,11 @@ export function Pack({ cards }: Props) {
               className="absolute top-0 left-0 w-full"
             >
               {row.type === 'header' ? (
-                <h2 className="mt-10 w-full scroll-m-20 border-b pb-2 font-semibold text-3xl tracking-tight transition-colors first:mt-0">
+                <h2 className="mt-10 text-center w-full scroll-m-20 border-b border-gray-200 pb-2 font-semibold text-3xl tracking-tight transition-colors first:mt-0">
                   {(row.data as { type: string; row: Row<CardType> }).row.getValue('set_details')}
                 </h2>
               ) : (
-                <div className="flex justify-center gap-5">
+                <div className="flex justify-center gap-x-5">
                   {(row.data as { type: string; row: Row<CardType> }[]).map(({ row: subRow }) => (
                     <Card key={subRow.original.card_id} card={subRow.original} />
                   ))}
