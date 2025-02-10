@@ -5,7 +5,7 @@ export function NoTradeableCards() {
         <div className="mx-auto max-w-screen-md sm:text-center">
           <h2 className="mb-4 font-extrabold text-3xl tracking-tight sm:text-4xl">You have no tradeable cards!</h2>
           <p className="mx-auto mb-4 max-w-2xl sm:text-xl">
-            Make you go to over to collections and you input your whole collection amount to see what you can trade
+            Go to the collections page and input your collected cards to see what you can trade
           </p>
         </div>
       </section>
