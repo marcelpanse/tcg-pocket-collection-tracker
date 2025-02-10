@@ -24,11 +24,13 @@ export function Header() {
                 <Button variant="ghost">Collection</Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild>
-              <Link to="/trade">
-                <Button variant="ghost">Trade</Button>
-              </Link>
-            </NavigationMenuLink>
+            {user && (
+              <NavigationMenuLink asChild>
+                <Link to="/trade">
+                  <Button variant="ghost">Trade</Button>
+                </Link>
+              </NavigationMenuLink>
+            )}
           </NavigationMenuList>
         </NavigationMenu>
         <div className="flex items-center gap-2">
