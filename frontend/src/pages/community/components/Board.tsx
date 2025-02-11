@@ -13,12 +13,12 @@ export function Board({ term }: Props) {
       repoId="925409235"
       categoryId="DIC_kwDONyif084CmzGj"
       mapping="specific"
-      reactionsEnabled="1"
+      reactionsEnabled="0"
       emitMetadata="0"
       inputPosition="bottom"
       theme="light"
       lang="en"
-      loading="eager"
+      loading="lazy"
     />
   )
 }

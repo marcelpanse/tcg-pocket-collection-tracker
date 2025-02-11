@@ -7,22 +7,22 @@ function Community() {
   return (
     <div className="mx-auto flex max-w-[900px] flex-col gap-y-4">
       <h1 className="text-3xl font-bold">Community </h1>
-      <Tabs defaultValue="introduce">
+      <Tabs defaultValue="announcements">
         <TabsList className="m-auto mt-4 mb-8">
-          <TabsTrigger value="introduce">Introduce yourself</TabsTrigger>
+          <TabsTrigger value="announcements">Announcements</TabsTrigger>
           <TabsTrigger value="trade">Trade</TabsTrigger>
           <TabsTrigger value="feedback">Ideas & Feedback</TabsTrigger>
           <Button variant={'ghost'} size="sm" onClick={() => window.open('https://github.com/marcelpanse/tcg-pocket-collection-tracker', '_blank')}>
             GitHub repository <ExternalLink />
           </Button>
         </TabsList>
-        <TabsContent value="introduce">
-          <h1 className="text-lg">Say hello! 👋</h1>
+        <TabsContent value="announcements">
+          <h1 className="text-lg">Announcements 🚀</h1>
           <p className="text-sm mb-20">
             Let's connect and get to know each other. We're a community of people who love to play TCG. We're here to help each other, share our knowledge, and
             learn from each other. Whether you're a seasoned player or just starting out, we welcome you to join us.
           </p>
-          <Board term="app/introductions" />
+          <Board term="app/announcements" />
         </TabsContent>
         <TabsContent value="trade">
           <h1 className="text-lg">Trading 💰</h1>
