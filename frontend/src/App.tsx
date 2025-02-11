@@ -8,13 +8,13 @@ import { Toaster } from './components/ui/toaster.tsx'
 import { CollectionContext } from './lib/context/CollectionContext.ts'
 import { type User, UserContext } from './lib/context/UserContext.ts'
 import { fetchCollection } from './lib/fetchCollection.ts'
-import { CardDetail } from './pages/collection/components/CardDetail.tsx'
 
 // Lazy import for chunking
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
 const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const Community = loadable(() => import('./pages/community/Community.tsx'))
+const CardDetail = loadable(() => import('./pages/collection/CardDetail.tsx'))
 
 function App() {
   const [user, setUser] = useState<User | null>(null)

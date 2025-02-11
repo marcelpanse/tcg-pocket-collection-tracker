@@ -1,8 +1,8 @@
-import { getCardById } from '@/lib/CardsDB'
+import { getCardById } from '@/lib/CardsDB.ts'
 import type { Card } from '@/types'
 import { useLocation } from 'react-router'
 
-export function CardDetail() {
+function CardDetail() {
   const location = useLocation()
   let card: Card
 
@@ -104,3 +104,5 @@ export function CardDetail() {
     </div>
   )
 }
+
+export default CardDetail
