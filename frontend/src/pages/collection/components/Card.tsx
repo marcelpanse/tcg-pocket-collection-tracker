@@ -12,12 +12,13 @@ interface Props {
   card: CardType
 }
 
-let _inputDebounce: number | null = null
+// keep track of the debounce timeouts for each card
+const _inputDebounce: Record<string, number | null> = {}
 
 export function Card({ card }: Props) {
   const { user, setIsLoginDialogOpen } = use(UserContext)
   const { ownedCards, setOwnedCards } = use(CollectionContext)
-  const amountOwned = useMemo(() => ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0, [ownedCards])
+  let amountOwned = useMemo(() => ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0, [ownedCards])
   const [inputValue, setInputValue] = useState(0)
 
   useEffect(() => {
@@ -25,36 +26,43 @@ export function Card({ card }: Props) {
   }, [amountOwned])
 
   const updateCardCount = useCallback(
-    async (cardId: string, increment: number) => {
-      console.log(`${cardId} button clicked`)
-      const db = await getDatabase()
-      const ownedCard = ownedCards.find((row) => row.card_id === cardId)
+    async (cardId: string, newAmount: number) => {
+      // we need to optimistically update the amountOwned so we can use it in the addCard/removeCard functions since the setState won't be updated yet if you click fast.
+      amountOwned = Math.max(0, newAmount)
+      setInputValue(amountOwned)
 
-      if (ownedCard) {
-        console.log('updating', ownedCard)
-        ownedCard.amount_owned = Math.max(0, ownedCard.amount_owned + increment)
-        setOwnedCards([...ownedCards])
-        await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
-          amount_owned: ownedCard.amount_owned,
-        })
-      } else if (!ownedCard && increment > 0) {
-        console.log('adding new card', cardId)
-        const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
-          email: user?.email,
-          card_id: cardId,
-          amount_owned: increment,
-        })
-        setOwnedCards([
-          ...ownedCards,
-          {
-            $id: newCard.$id,
-            email: newCard.email,
-            card_id: newCard.card_id,
-            amount_owned: newCard.amount_owned,
-          },
-        ])
+      if (_inputDebounce[cardId]) {
+        window.clearTimeout(_inputDebounce[cardId])
       }
-      setInputValue(Math.max(0, amountOwned + increment))
+      _inputDebounce[cardId] = window.setTimeout(async () => {
+        const db = await getDatabase()
+        const ownedCard = ownedCards.find((row) => row.card_id === cardId)
+
+        if (ownedCard) {
+          console.log('updating', ownedCard)
+          ownedCard.amount_owned = Math.max(0, newAmount)
+          setOwnedCards([...ownedCards])
+          await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
+            amount_owned: ownedCard.amount_owned,
+          })
+        } else if (!ownedCard && newAmount > 0) {
+          console.log('adding new card', cardId)
+          const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
+            email: user?.email,
+            card_id: cardId,
+            amount_owned: newAmount,
+          })
+          setOwnedCards([
+            ...ownedCards,
+            {
+              $id: newCard.$id,
+              email: newCard.email,
+              card_id: newCard.card_id,
+              amount_owned: newCard.amount_owned,
+            },
+          ])
+        }
+      }, 1000)
     },
     [ownedCards, user, setOwnedCards, amountOwned],
   )
@@ -65,7 +73,7 @@ export function Card({ card }: Props) {
         setIsLoginDialogOpen(true)
         return
       }
-      await updateCardCount(cardId, 1)
+      await updateCardCount(cardId, amountOwned + 1)
     },
     [updateCardCount],
   )
@@ -76,23 +84,15 @@ export function Card({ card }: Props) {
         setIsLoginDialogOpen(true)
         return
       }
-      if (amountOwned > 0) {
-        await updateCardCount(cardId, -1)
-      }
+      await updateCardCount(cardId, amountOwned - 1)
     },
-    [updateCardCount, amountOwned],
+    [updateCardCount],
   )
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)
     if (!Number.isNaN(value) && value >= 0) {
-      setInputValue(value)
-      if (_inputDebounce) {
-        window.clearTimeout(_inputDebounce)
-      }
-      _inputDebounce = window.setTimeout(async () => {
-        await updateCardCount(card.card_id, value - amountOwned)
-      }, 300)
+      await updateCardCount(card.card_id, value)
     }
   }
 

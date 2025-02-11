@@ -26,6 +26,17 @@ export const Login = () => {
     }
   }
 
+  const submitEmail = async () => {
+    const result = safeParse(EmailSchema, emailInput)
+    if (!result.success) {
+      toast({ title: 'Please enter a valid email address', variant: 'destructive' })
+      return
+    }
+
+    const userId = await sendOTP(emailInput)
+    setUserId(userId)
+  }
+
   if (userId) {
     return (
       <>
@@ -57,22 +68,18 @@ export const Login = () => {
       </p>
 
       <div className="flex justify-center gap-2 pt-4 align-center">
-        <Input type="email" placeholder="Email" onChange={(e) => setEmailInput(e.target.value)} />
-
-        <Button
-          onClick={async () => {
-            const result = safeParse(EmailSchema, emailInput)
-            if (!result.success) {
-              toast({ title: 'Please enter a valid email address' })
-              return
+        <Input
+          type="email"
+          placeholder="Email"
+          onChange={(e) => setEmailInput(e.target.value)}
+          onKeyDown={async (e) => {
+            if (e.key === 'Enter') {
+              await submitEmail()
             }
-
-            const userId = await sendOTP(emailInput)
-            setUserId(userId)
           }}
-        >
-          login / signup
-        </Button>
+        />
+
+        <Button onClick={submitEmail}>login / signup</Button>
       </div>
     </div>
   )
