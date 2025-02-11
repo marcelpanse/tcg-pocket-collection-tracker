@@ -14,6 +14,7 @@ const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
 const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const Community = loadable(() => import('./pages/community/Community.tsx'))
+const CardDetail = loadable(() => import('./pages/collection/CardDetail.tsx'))
 
 function App() {
   const [user, setUser] = useState<User | null>(null)
@@ -42,6 +43,7 @@ function App() {
           <Route path="/collection" element={<Collection />} />
           <Route path="/trade" element={<Trade />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/card/:id" element={<CardDetail />} />
         </Routes>
       </CollectionContext.Provider>
     </UserContext.Provider>

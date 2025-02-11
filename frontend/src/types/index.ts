@@ -35,12 +35,10 @@ export interface Card {
     damage: string
     effect: string
   }[]
-  ability:
-    | {
-        name: string
-        effect: string
-      }
-    | string
+  ability: {
+    name: string
+    effect: string
+  }
   weakness: string
   retreat: string
   rarity: string

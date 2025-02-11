@@ -19,6 +19,10 @@ export const a1aCards: Card[] = update(A1a as unknown as Card[], 'A1a')
 export const paCards: Card[] = update(PA as unknown as Card[], 'P-A')
 export const allCards: Card[] = [...a1Cards, ...a2Cards, ...a1aCards, ...paCards]
 
+export const getCardById = (cardId: string): Card | undefined => {
+  return allCards.find((card) => card.card_id === cardId)
+}
+
 export const expansions: Expansion[] = [
   {
     name: 'Genetic Apex',
