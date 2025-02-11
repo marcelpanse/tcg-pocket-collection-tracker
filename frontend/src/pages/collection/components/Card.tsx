@@ -7,6 +7,7 @@ import type { Card as CardType } from '@/types'
 import { ID } from 'appwrite'
 import { MinusIcon, PlusIcon } from 'lucide-react'
 import { use, useCallback, useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router'
 
 interface Props {
   card: CardType
@@ -98,7 +99,9 @@ export function Card({ card }: Props) {
 
   return (
     <div className="group flex w-fit flex-col items-center rounded-lg">
-      <FancyCard card={card} selected={amountOwned > 0} />
+      <Link viewTransition to={`/card/${card.card_id}`} state={{ card }}>
+        <FancyCard card={card} selected={amountOwned > 0} />
+      </Link>
       <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">
         {card.card_id} - {card.name}
       </p>

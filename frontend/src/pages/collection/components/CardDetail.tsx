@@ -1,8 +1,37 @@
+import { getCardById } from '@/lib/CardsDB'
+import type { Card } from '@/types'
 import { useLocation } from 'react-router'
 
 export function CardDetail() {
   const location = useLocation()
-  const card = location.state.card
+  let card: Card
+
+  if (!location.state) {
+    card = getCardById(location.pathname.split('/').pop() || '') || {
+      card_id: '',
+      name: 'Unknown',
+      image: '',
+      rarity: '',
+      hp: '0',
+      card_type: '',
+      evolution_type: '',
+      ex: 'false',
+      crafting_cost: 0,
+      artist: '',
+      set_details: '',
+      expansion: '',
+      pack: '',
+      weakness: '',
+      retreat: '',
+      ability: { name: '', effect: '' },
+      probability: { '1-3 card': '', '4 card': '', '5 card': '' },
+      attacks: [],
+      fullart: 'false',
+      alternate_versions: [],
+    }
+  } else {
+    card = location.state.card
+  }
 
   return (
     <div className="flex flex-col p-5 lg:flex-row rounded-4xl max-w-7xl mx-auto">
@@ -11,8 +40,8 @@ export function CardDetail() {
         <img src={card.image} alt={card.name} className="rounded-lg shadow-lg" />
       </div>
       {/* Card Details Section */}
-      <div className="lg:flex-1 p-4 bg-gray-50 rounded-4xl shadow-md">
-        <h1 className="text-2xl font-bold text-yellow-500 mb-2">
+      <div className="lg:flex-1 p-7 bg-gray-50 rounded-4xl shadow-md">
+        <h1 className="text-3xl font-bold text-yellow-500 mb-2">
           {card.name} {card.rarity}
         </h1>
         <p className="text-gray-600 text-lg mb-1">
