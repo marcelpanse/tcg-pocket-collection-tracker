@@ -11,7 +11,7 @@ interface Props {
   cards: CardType[]
 }
 
-export function Pack({ cards }: Props) {
+export function CardsTable({ cards }: Props) {
   const parentRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
 
@@ -85,7 +85,7 @@ export function Pack({ cards }: Props) {
   })
 
   return (
-    <div ref={parentRef} className="h-[calc(100vh-180px)] overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
+    <div ref={parentRef} className="h-[calc(100vh-270px)] overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
       <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
         {rowVirtualizer.getVirtualItems().map((virtualRow) => {
           const row = flattenedRows[virtualRow.index]

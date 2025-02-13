@@ -1,32 +1,43 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
-import { allCards, expansions } from '@/lib/CardsDB'
-import { Pack } from './components/Pack'
+import ExpansionsFilter from '@/components/ExpansionsFilter.tsx'
+import RarityFilter from '@/components/RarityFilter.tsx'
+import SearchInput from '@/components/SearchInput.tsx'
+import { allCards } from '@/lib/CardsDB'
+import { useMemo, useState } from 'react'
+import { CardsTable } from './components/CardsTable.tsx'
 
 function Collection() {
+  const [searchValue, setSearchValue] = useState('')
+  const [expansionFilter, setExpansionFilter] = useState<string>('all')
+  const [rarityFilter, setRarityFilter] = useState<string[]>([])
+
+  const getFilteredCards = useMemo(() => {
+    let filteredCards = allCards
+
+    if (expansionFilter !== 'all') {
+      filteredCards = filteredCards.filter((card) => card.expansion === expansionFilter)
+    }
+    if (rarityFilter.length > 0) {
+      filteredCards = filteredCards.filter((card) => rarityFilter.includes(card.rarity))
+    }
+    if (searchValue) {
+      filteredCards = filteredCards.filter((card) => {
+        return card.name.toLowerCase().includes(searchValue.toLowerCase()) || card.card_id.toLowerCase().includes(searchValue.toLowerCase())
+      })
+    }
+
+    return filteredCards
+  }, [expansionFilter, rarityFilter, searchValue])
+
   return (
-    <div className="flex flex-col gap-y-4">
-      <Tabs defaultValue="all">
-        <div className="mx-auto max-w-[900px]">
-          <TabsList className="w-full m-auto mt-4 mb-8 flex-wrap h-auto">
-            <TabsTrigger value="all">All</TabsTrigger>
-            {expansions.map((expansion) => (
-              <TabsTrigger key={`tab_trigger_${expansion.id}`} value={expansion.id}>
-                {expansion.name}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        </div>
-        <div className="mx-auto max-w-auto">
-          <TabsContent value="all">
-            <Pack cards={allCards} />
-          </TabsContent>
-          {expansions.map((expansion) => (
-            <TabsContent value={expansion.id} key={`tab_content_${expansion.id}`}>
-              <Pack key={`tab_content_${expansion.id}`} cards={expansion.cards} />
-            </TabsContent>
-          ))}
-        </div>
-      </Tabs>
+    <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">
+      <div className="flex items-center gap-2 flex-col md:flex-row px-8">
+        <SearchInput setSearchValue={setSearchValue} />
+        <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} />
+      </div>
+      <div className="px-8 pb-8">
+        <RarityFilter setRarityFilter={setRarityFilter} />
+      </div>
+      <CardsTable cards={getFilteredCards} />
     </div>
   )
 }

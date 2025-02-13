@@ -56,7 +56,7 @@ export const expansions: Expansion[] = [
   },
   {
     name: 'Promo-A',
-    id: 'PA',
+    id: 'P-A',
     cards: paCards,
     packs: [{ name: 'Every pack', color: '#CCCCCC' }],
     tradeable: false,
@@ -81,72 +81,113 @@ export const sellableForTokensDictionary: { [id: string]: number } = {
   '♛': 1500,
 }
 
-export const getNrOfCardsOwned = (ownedCards: CollectionRow[], expansion?: Expansion, pack?: string) => {
-  if (!expansion) {
-    return ownedCards.filter((oc) => oc.amount_owned > 0).length
+interface NrOfCardsOwnedProps {
+  ownedCards: CollectionRow[]
+  rarityFilter: string[]
+  expansion?: Expansion
+  packName?: string
+}
+export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, expansion, packName }: NrOfCardsOwnedProps) => {
+  let filteredOwnedCards = ownedCards
+    .filter((oc) => oc.amount_owned > 0)
+    .map((cr) => ({ ...cr, rarity: allCards.find((c) => c.card_id === cr.card_id)?.rarity || '' }))
+
+  if (rarityFilter.length > 0) {
+    //filter out cards that are not in the rarity filter
+    filteredOwnedCards = filteredOwnedCards.filter((oc) => rarityFilter.includes(oc.rarity))
   }
 
-  return ownedCards.filter((oc) => {
-    if (pack) {
-      return expansion.cards.find((c) => c.pack === pack && c.card_id === oc.card_id && oc.amount_owned > 0)
+  if (!expansion) {
+    return filteredOwnedCards.length
+  }
+
+  return filteredOwnedCards.filter((oc) => {
+    if (packName) {
+      return expansion.cards.find((c) => c.pack === packName && c.card_id === oc.card_id)
     }
-    return expansion.cards.find((c) => c.card_id === oc.card_id && oc.amount_owned > 0)
+    return expansion.cards.find((c) => c.card_id === oc.card_id)
   }).length
 }
 
-export const getTotalNrOfCards = (expansion?: Expansion, pack?: string) => {
+interface TotalNrOfCardsProps {
+  rarityFilter: string[]
+  expansion?: Expansion
+  packName?: string
+}
+export const getTotalNrOfCards = ({ rarityFilter, expansion, packName }: TotalNrOfCardsProps) => {
+  let filteredCards = [...allCards]
+
   if (!expansion) {
-    return allCards.length
+    return filteredCards.length
   }
-  if (!pack) {
-    return expansion.cards.length
+
+  if (rarityFilter.length > 0) {
+    //filter out cards that are not in the rarity filter
+    filteredCards = expansion.cards.filter((c) => rarityFilter.includes(c.rarity))
   }
-  return expansion.cards.filter((c) => c.pack === pack).length
+
+  if (!packName) {
+    return filteredCards.length
+  }
+  filteredCards = filteredCards.filter((c) => c.pack === packName)
+
+  return filteredCards.length
 }
 
-export const pullRate = (ownedCards: CollectionRow[], expansion: Expansion, pack: Pack) => {
+const probabilityPerRarity1_3: Record<string, number> = {
+  '◊': 100,
+  '◊◊': 0,
+  '◊◊◊': 0,
+  '◊◊◊◊': 0,
+  '☆': 0,
+  '☆☆': 0,
+  '☆☆☆': 0,
+  'Crown Rare': 0,
+}
+const probabilityPerRarity4: Record<string, number> = {
+  '◊': 0,
+  '◊◊': 90,
+  '◊◊◊': 5,
+  '◊◊◊◊': 1.666,
+  '☆': 2.572,
+  '☆☆': 0.5,
+  '☆☆☆': 0.222,
+  'Crown Rare': 0.04,
+}
+const probabilityPerRarity5: Record<string, number> = {
+  '◊': 0,
+  '◊◊': 60,
+  '◊◊◊': 20,
+  '◊◊◊◊': 6.664,
+  '☆': 10.288,
+  '☆☆': 2,
+  '☆☆☆': 0.888,
+  'Crown Rare': 0.16,
+}
+
+interface PullRateProps {
+  ownedCards: CollectionRow[]
+  expansion: Expansion
+  pack: Pack
+  rarityFilter?: string[]
+}
+export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [] }: PullRateProps) => {
   if (ownedCards.length === 0) {
     return 1
   }
 
   //probabilities
-
-  const probabilityPerRarity1_3: Record<string, number> = {
-    '◊': 100,
-    '◊◊': 0,
-    '◊◊◊': 0,
-    '◊◊◊◊': 0,
-    '☆': 0,
-    '☆☆': 0,
-    '☆☆☆': 0,
-    'Crown Rare': 0,
-  }
-  const probabilityPerRarity4: Record<string, number> = {
-    '◊': 0,
-    '◊◊': 90,
-    '◊◊◊': 5,
-    '◊◊◊◊': 1.666,
-    '☆': 2.572,
-    '☆☆': 0.5,
-    '☆☆☆': 0.222,
-    'Crown Rare': 0.04,
-  }
-  const probabilityPerRarity5: Record<string, number> = {
-    '◊': 0,
-    '◊◊': 60,
-    '◊◊◊': 20,
-    '◊◊◊◊': 6.664,
-    '☆': 10.288,
-    '☆☆': 2,
-    '☆☆☆': 0.888,
-    'Crown Rare': 0.16,
-  }
-  console.log('calc pull rate for', pack.name, ownedCards.length)
+  console.log('calc pull rate for', pack.name, ownedCards.length, rarityFilter)
 
   const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'Every pack')
   // console.log('cards in pack', cardsInPack.length) //79
-  const missingCards = cardsInPack.filter((c) => !ownedCards.find((oc) => oc.card_id === c.card_id && oc.amount_owned > 0))
-  // console.log('missing cards', missingCards.length) //79
+  let missingCards = cardsInPack.filter((c) => !ownedCards.find((oc) => oc.card_id === c.card_id && oc.amount_owned > 0))
+  // console.log('missing cards', missingCards)
+
+  if (rarityFilter.length > 0) {
+    //filter out cards that are not in the rarity filter
+    missingCards = missingCards.filter((c) => rarityFilter.includes(c.rarity))
+  }
 
   let totalProbability1_3 = 0
   let totalProbability4 = 0

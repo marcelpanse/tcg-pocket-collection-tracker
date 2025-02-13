@@ -8,8 +8,9 @@ import { use, useMemo } from 'react'
 
 interface ExpansionOverviewProps {
   expansion: Expansion
+  rarityFilter: string[]
 }
-export function ExpansionOverview({ expansion }: ExpansionOverviewProps) {
+export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverviewProps) {
   const { ownedCards } = use(CollectionContext)
 
   const { highestProbabilityPack, chartData } = useMemo(() => {
@@ -19,7 +20,7 @@ export function ExpansionOverview({ expansion }: ExpansionOverviewProps) {
     }
     const chartData = packs.map((pack) => ({
       packName: pack.name.replace(' pack', '').replace('Every', 'Promo-A'),
-      percentage: CardsDB.pullRate(ownedCards, expansion, pack),
+      percentage: CardsDB.pullRate({ ownedCards: ownedCards, expansion: expansion, pack: pack, rarityFilter }),
       fill: pack.color,
     }))
 
@@ -29,7 +30,7 @@ export function ExpansionOverview({ expansion }: ExpansionOverviewProps) {
       highestProbabilityPack,
       chartData,
     }
-  }, [ownedCards, expansion])
+  }, [ownedCards, expansion, rarityFilter])
 
   return (
     <>
@@ -38,7 +39,8 @@ export function ExpansionOverview({ expansion }: ExpansionOverviewProps) {
         <>
           <GradientCard
             title={highestProbabilityPack.packName}
-            paragraph={`is the most probable pack to get a new card from among ${chartData.map((cd) => cd.packName).join(', ')} packs`}
+            packNames={chartData.map((cd) => cd.packName).join(', ')}
+            percentage={highestProbabilityPack.percentage}
             className="col-span-8 lg:col-span-4"
             backgroundColor={highestProbabilityPack.fill}
           />
@@ -48,9 +50,11 @@ export function ExpansionOverview({ expansion }: ExpansionOverviewProps) {
         </>
       )}
       <div className="col-span-full sm:col-span-2">
-        <CompleteProgress title="Total cards" expansion={expansion} />
+        <CompleteProgress title="Total cards" expansion={expansion} rarityFilter={rarityFilter} />
         {expansion.packs.length > 1 &&
-          expansion.packs.map((pack) => <CompleteProgress key={pack.name} title={pack.name} expansion={expansion} packName={pack.name} />)}
+          expansion.packs.map((pack) => (
+            <CompleteProgress key={pack.name} rarityFilter={rarityFilter} title={pack.name} expansion={expansion} packName={pack.name} />
+          ))}
       </div>
     </>
   )

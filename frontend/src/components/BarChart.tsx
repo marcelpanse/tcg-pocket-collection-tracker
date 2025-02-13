@@ -1,7 +1,7 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart'
 import type { FC } from 'react'
-import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts'
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from 'recharts'
 
 //Example of a percentage bar chart configuration
 /* const chartData = [
@@ -38,9 +38,10 @@ export const BarChartComponent: FC<PercentageBarChartProps> = ({ title, data, co
     </CardHeader>
     <CardContent>
       <ChartContainer config={config}>
-        <BarChart accessibilityLayer data={data}>
+        <BarChart accessibilityLayer data={data.map((d) => ({ ...d, percentage: d.percentage * 100 }))}>
           <CartesianGrid vertical={false} />
           <XAxis dataKey="packName" tickLine={false} tickMargin={10} axisLine={false} />
+          <YAxis type="number" domain={[0, 100]} />
           <ChartTooltip cursor={false} content={<CustomTooltipContent payload={[]} active={false} />} />
           <Bar dataKey="percentage" strokeWidth={2} radius={8} />
         </BarChart>
@@ -60,7 +61,7 @@ const CustomTooltipContent: FC<CustomTooltipContentProps> = (props) => {
     const newPayload = payload.map((entry) => {
       return {
         ...entry,
-        value: `${Math.round(entry.value * 100)}%`,
+        value: `: ${Math.round(entry.value * 10) / 10}%`,
       }
     })
     return <ChartTooltipContent {...props} payload={newPayload} />
