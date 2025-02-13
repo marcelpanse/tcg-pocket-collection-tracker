@@ -11,7 +11,7 @@ const SearchInput: FC<Props> = ({ setSearchValue }) => {
     <Input
       type="search"
       placeholder="Search"
-      className="w-full md:w-48"
+      className="w-full md:w-64"
       onChange={(e) => {
         if (_searchDebounce) {
           window.clearTimeout(_searchDebounce)
