@@ -17,7 +17,7 @@ function Trade() {
     <div className="flex flex-col gap-y-4">
       <Tabs defaultValue="looking_for">
         <div className="mx-auto max-w-[900px]">
-          <TabsList className="m-auto mt-4 mb-8">
+          <TabsList className="w-full m-auto mt-4 mb-8 flex-wrap h-auto">
             <TabsTrigger value="looking_for">Looking For</TabsTrigger>
             <TabsTrigger value="for_trade">For Trade</TabsTrigger>
             <TabsTrigger value="buying_tokens">Buying Tokens</TabsTrigger>
