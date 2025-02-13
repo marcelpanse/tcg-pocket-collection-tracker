@@ -1,4 +1,4 @@
-import{r as $,i as $e,R as re,j as se}from"./index-DMG5nXZl.js";function le(){const{innerWidth:e,innerHeight:i}=window;return{width:e,height:i}}function xt(){const[e,i]=$.useState(le());return $.useEffect(()=>{function t(){i(le())}return window.addEventListener("resize",t),()=>window.removeEventListener("resize",t)},[]),e}/**
+import{r as $,n as $e,R as re,j as se}from"./index-CkxF7y-l.js";function le(){const{innerWidth:e,innerHeight:i}=window;return{width:e,height:i}}function xt(){const[e,i]=$.useState(le());return $.useEffect(()=>{function t(){i(le())}return window.addEventListener("resize",t),()=>window.removeEventListener("resize",t)},[]),e}/**
    * table-core
    *
    * Copyright (c) TanStack
