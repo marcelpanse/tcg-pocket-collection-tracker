@@ -17,7 +17,7 @@ export const a1Cards: Card[] = update(A1 as unknown as Card[], 'A1')
 export const a2Cards: Card[] = update(A2 as unknown as Card[], 'A2')
 export const a1aCards: Card[] = update(A1a as unknown as Card[], 'A1a')
 export const paCards: Card[] = update(PA as unknown as Card[], 'P-A')
-export const allCards: Card[] = [...a1Cards, ...a2Cards, ...a1aCards, ...paCards]
+export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...paCards]
 
 export const getCardById = (cardId: string): Card | undefined => {
   return allCards.find((card) => card.card_id === cardId)
@@ -70,6 +70,15 @@ export const tradeableRaritiesDictionary: { [id: string]: number } = {
   '◊◊◊': 120,
   '◊◊◊◊': 500,
   '☆': 500,
+}
+
+export const sellableForTokensDictionary: { [id: string]: number } = {
+  '◊◊◊': 25,
+  '◊◊◊◊': 125,
+  '☆': 100,
+  '☆☆': 300,
+  '☆☆☆': 300,
+  '♛': 1500,
 }
 
 export const getNrOfCardsOwned = (ownedCards: CollectionRow[], expansion?: Expansion, pack?: string) => {

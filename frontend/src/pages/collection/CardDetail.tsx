@@ -37,7 +37,7 @@ function CardDetail() {
     <div className="flex flex-col p-5 lg:flex-row rounded-4xl max-w-7xl mx-auto">
       {/* Fancy Card Section */}
       <div className="flex justify-center lg:w-1/2">
-        <img src={card.image} alt={card.name} className="rounded-lg shadow-lg" />
+        <img src={`/images/${card.image.split('/').at(-1)}`} alt={card.name} className="rounded-lg shadow-lg" />
       </div>
       {/* Card Details Section */}
       <div className="lg:flex-1 p-7 bg-gray-50 rounded-4xl shadow-md">

@@ -96,7 +96,7 @@ export function Pack({ cards }: Props) {
               className="absolute top-0 left-0 w-full"
             >
               {row.type === 'header' ? (
-                <h2 className="mt-10 text-center w-full scroll-m-20 border-b border-gray-200 pb-2 font-semibold text-3xl tracking-tight transition-colors first:mt-0">
+                <h2 className="mx-auto mt-10 text-center w-full max-w-[900px] scroll-m-20 border-b border-gray-200 pb-2 font-semibold text-3xl tracking-tight transition-colors first:mt-0">
                   {(row.data as { type: string; row: Row<CardType> }).row.getValue('set_details')}
                 </h2>
               ) : (
