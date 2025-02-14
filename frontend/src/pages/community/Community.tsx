@@ -5,7 +5,7 @@ import { Board } from './components/Board'
 
 function Community() {
   return (
-    <div className="mx-auto flex max-w-[900px] flex-col gap-y-4">
+    <div className="mx-auto flex max-w-[900px] flex-col gap-y-4 px-4">
       <h1 className="text-3xl font-bold">Community </h1>
       <Tabs defaultValue="announcements">
         <TabsList className="m-auto mt-4 mb-8">

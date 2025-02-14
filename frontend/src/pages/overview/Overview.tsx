@@ -42,7 +42,7 @@ function Overview() {
       </div>
 
       <section className="grid grid-cols-8 gap-6">
-        <div className="col-span-8 flex aspect-square h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-gray-500 border-solid p-8 lg:col-span-2">
+        <div className="col-span-8 flex aspect-square h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-gray-200 border-solid p-8 lg:col-span-2">
           <h2 className="mb-2 text-center text-2xl">You have</h2>
           <h1 className="mb-3 text-balance text-center font-semibold text-7xl">{CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter })}</h1>
           <h2 className="text-balance text-center text-2xl">out of {CardsDB.getTotalNrOfCards({ rarityFilter })} unique cards</h2>
@@ -54,7 +54,7 @@ function Overview() {
           className="col-span-8 lg:col-span-4 col-start-1 lg:col-start-3"
           backgroundColor={highestProbabilityPack?.fill}
         />
-        <div className="col-span-8 flex aspect-square h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-gray-500 border-solid p-8 opacity-100 lg:col-span-2">
+        <div className="col-span-8 flex aspect-square h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-gray-200 border-solid p-8 opacity-100 lg:col-span-2">
           <h2 className="mb-2 text-center text-2xl">You have</h2>
           <h1 className="mb-3 overflow-hidden truncate whitespace-nowrap text-balance text-center font-semibold text-7xl">{ownedCardsCount}</h1>
           <h2 className="text-balance text-center text-2xl">cards in Total</h2>

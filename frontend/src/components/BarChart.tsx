@@ -32,7 +32,7 @@ interface PercentageBarChartProps {
   footer?: string
 }
 export const BarChartComponent: FC<PercentageBarChartProps> = ({ title, data, config = {}, footer }) => (
-  <Card className="rounded-4xl border-2 border-gray-500 border-solid ">
+  <Card className="rounded-4xl border-2 border-gray-200 border-solid shadow-none">
     <CardHeader className="text-balance text-center">
       <CardTitle>{title}</CardTitle>
     </CardHeader>
@@ -41,7 +41,7 @@ export const BarChartComponent: FC<PercentageBarChartProps> = ({ title, data, co
         <BarChart accessibilityLayer data={data.map((d) => ({ ...d, percentage: d.percentage * 100 }))}>
           <CartesianGrid vertical={false} />
           <XAxis dataKey="packName" tickLine={false} tickMargin={10} axisLine={false} />
-          <YAxis type="number" domain={[0, 100]} />
+          <YAxis type="number" domain={[0, 100]} width={25} />
           <ChartTooltip cursor={false} content={<CustomTooltipContent payload={[]} active={false} />} />
           <Bar dataKey="percentage" strokeWidth={2} radius={8} />
         </BarChart>
