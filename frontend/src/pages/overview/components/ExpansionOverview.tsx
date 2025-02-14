@@ -38,7 +38,7 @@ export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverview
 
   return (
     <>
-      <h2 className="col-span-8 text-2xl">{expansion.name}</h2>
+      <h2 className="col-span-8 text-2xl pl-8">{expansion.name}</h2>
       {isMobile ? (
         <div className="col-span-full">
           <Carousel padding="2rem">
