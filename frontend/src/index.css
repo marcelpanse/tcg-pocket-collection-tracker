@@ -27,4 +27,8 @@
   .fade-in-up {
     animation: fadeInUp 0.4s ease-out;
   }
+
+  .inner-custom {
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.6);
+  }
 }
