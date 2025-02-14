@@ -24,8 +24,8 @@
     "@radix-ui/react-toast": "^1.2.6",
     "@radix-ui/react-toggle": "^1.1.2",
     "@radix-ui/react-toggle-group": "^1.1.2",
-    "@tailwindcss/vite": "^4.0.5",
-    "@tanstack/react-table": "^8.20.6",
+    "@tailwindcss/vite": "^4.0.6",
+    "@tanstack/react-table": "^8.21.2",
     "@tanstack/react-virtual": "^3.13.0",
     "@types/recharts": "^1.8.29",
     "appwrite": "^17.0.0",
@@ -39,17 +39,17 @@
     "react-router": "^7.1.5",
     "recharts": "^2.15.1",
     "tailwind-merge": "^3.0.1",
-    "tailwindcss": "^4.0.5",
+    "tailwindcss": "^4.0.6",
     "tailwindcss-animate": "^1.0.7",
-    "valibot": "1.0.0-beta.15"
+    "valibot": "1.0.0-rc.0"
   },
   "devDependencies": {
     "@types/loadable__component": "^5.13.9",
-    "@types/node": "^22.13.1",
+    "@types/node": "^22.13.4",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "@vitejs/plugin-react-swc": "^3.7.2",
-    "globals": "^15.14.0",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "globals": "^15.15.0",
     "typescript": "~5.7.3",
     "vite": "^6.1.0",
     "vite-plugin-strip-comments": "^0.0.5"
