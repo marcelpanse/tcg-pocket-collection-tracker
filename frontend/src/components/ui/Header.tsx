@@ -29,6 +29,16 @@ export function Header() {
                 <Button variant="ghost">Trade</Button>
               </Link>
             </NavigationMenuLink>
+            <NavigationMenuLink asChild>
+              <Link to="/import">
+                <Button variant="ghost">Import</Button>
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild>
+              <Link to="/export">
+                <Button variant="ghost">Export</Button>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuList>
         </NavigationMenu>
         <div className="flex items-center gap-2">
