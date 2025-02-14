@@ -117,19 +117,17 @@ interface TotalNrOfCardsProps {
 export const getTotalNrOfCards = ({ rarityFilter, expansion, packName }: TotalNrOfCardsProps) => {
   let filteredCards = [...allCards]
 
-  if (!expansion) {
-    return filteredCards.length
+  if (expansion) {
+    filteredCards = expansion.cards
+  }
+  if (packName) {
+    filteredCards = filteredCards.filter((c) => c.pack === packName)
   }
 
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter
-    filteredCards = expansion.cards.filter((c) => rarityFilter.includes(c.rarity))
+    filteredCards = filteredCards.filter((c) => rarityFilter.includes(c.rarity))
   }
-
-  if (!packName) {
-    return filteredCards.length
-  }
-  filteredCards = filteredCards.filter((c) => c.pack === packName)
 
   return filteredCards.length
 }
