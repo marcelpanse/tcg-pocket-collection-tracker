@@ -1,24 +1,47 @@
-import { type Card, type CollectionRow, type Expansion, type Pack, Rarity } from '@/types'
+import { BooleanType, type Card, type CollectionRow, type Expansion, type Pack, Rarity } from '@/types'
 import A1 from '@assets/cards/A1.json' with { type: 'json' }
 import A1a from '@assets/cards/A1a.json' with { type: 'json' }
 import A2 from '@assets/cards/A2.json' with { type: 'json' }
 import PA from '@assets/cards/P-A.json' with { type: 'json' }
 import type { RaritySet } from './context/FiltersContext'
 
-const update = (cards: Card[], expansionName: string) => {
-  for (const card of cards) {
-    // @ts-expect-error there is an ID in the JSON, but I don't want it in the Type because you should always use the card_id, having both is confusing.
-    card.card_id = `${expansionName}-${card.id}`
-    card.expansion = expansionName
+type JSONInput = typeof A1 | typeof A1a | typeof A2 | typeof PA
+
+const convertAbility = (ability: JSONInput[number]['ability']): { name: string; effect: string } => {
+  if (typeof ability === 'string') return { name: '', effect: ability }
+  if (typeof ability === 'object' && 'name' in ability && 'effect' in ability) {
+    return ability
+  }
+  return { name: '', effect: '' }
+}
+
+const update = (inCards: JSONInput, expansionName: string): Card[] => {
+  const cards: Card[] = []
+  for (const card of inCards) {
+    cards.push({
+      ...card,
+      card_id: `${expansionName}-${card.id}`,
+      expansion: expansionName,
+      rarity: card.rarity in Rarity || Object.values(Rarity).includes(card.rarity as Rarity) ? (card.rarity as Rarity) : Rarity['◊'],
+      fullart: card.fullart in BooleanType ? (card.fullart as BooleanType) : BooleanType.No,
+      alternate_versions: card.alternate_versions.map((av) => ({ version: av.version, rarity: av.rarity in Rarity ? (av.rarity as Rarity) : Rarity['◊'] })),
+      ability: convertAbility(card.ability),
+      probability: {
+        '1-3 card': ('1-3 card' in card.probability && card.probability['1-3 card']) || null,
+        '4 card': ('4 card' in card.probability && card.probability['4 card']) || null,
+        '5 card': ('5 card' in card.probability && card.probability['5 card']) || null,
+      },
+      crafting_cost: Number(card.crafting_cost),
+    })
   }
   return cards
 }
 
-export const a1Cards: Card[] = update(A1 as unknown as Card[], 'A1')
-export const a2Cards: Card[] = update(A2 as unknown as Card[], 'A2')
-export const a1aCards: Card[] = update(A1a as unknown as Card[], 'A1a')
-export const paCards: Card[] = update(PA as unknown as Card[], 'P-A')
-export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...paCards]
+export const a1Cards: Card[] = update(A1, 'A1')
+export const a2Cards: Card[] = update(A2, 'A2')
+export const a1aCards: Card[] = update(A1a, 'A1a')
+export const paCards: Card[] = update(PA, 'P-A')
+export const allCards: Card[] = [a1Cards, a1aCards, a2Cards, paCards].flat()
 
 export const getCardById = (cardId: string): Card | undefined => {
   return allCards.find((card) => card.card_id === cardId)

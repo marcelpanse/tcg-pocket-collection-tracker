@@ -1,6 +1,6 @@
 import type { Models } from 'appwrite'
 
-enum BooleanType {
+export enum BooleanType {
   Yes = 'Yes',
   No = 'No',
 }

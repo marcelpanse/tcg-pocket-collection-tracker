@@ -9,7 +9,7 @@ export const getUser = async () => {
   try {
     const account = new Account(client)
     const user = await account.get()
-    console.log('user is logged in', user)
+    console.debug('user is logged in', user)
     return user
   } catch {
     // Not logged in
