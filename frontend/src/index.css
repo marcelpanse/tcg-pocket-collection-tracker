@@ -27,4 +27,35 @@
   .fade-in-up {
     animation: fadeInUp 0.4s ease-out;
   }
+
+  body {
+    background-color: #2f2f2f;
+    color: #ebebeb;
+  }
+
+  .dark\:data-\[state\=on\]\:bg-neutral-800 {
+    &:where(.dark, .dark *) {
+      &[data-state="on"] {
+        background-color: #666 !important;
+      }
+    }
+  }
+
+  .dark\:data-\[state\=active\]\:bg-neutral-950 {
+    &:where(.dark, .dark *) {
+      &[data-state="active"] {
+        background-color: #666 !important;
+      }
+    }
+  }
+
+  .dark\:hover\:bg-neutral-800 {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: #666 !important;
+        }
+      }
+    }
+  }
 }

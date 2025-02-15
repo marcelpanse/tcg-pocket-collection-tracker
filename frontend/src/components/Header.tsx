@@ -1,9 +1,10 @@
+import HamburgerMenu from '@/components/HamburgerMenu.tsx'
 import { Login } from '@/components/Login.tsx'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
-import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu'
+import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu.tsx'
 import { logout } from '@/lib/Auth.ts'
-import { UserContext } from '@/lib/context/UserContext'
+import { UserContext } from '@/lib/context/UserContext.ts'
 import { use } from 'react'
 import { Link } from 'react-router'
 
@@ -11,8 +12,9 @@ export function Header() {
   const { user, setUser, isLoginDialogOpen, setIsLoginDialogOpen } = use(UserContext)
   return (
     <>
-      <header className="flex h-20 w-full shrink-0 flex-wrap items-center justify-between px-4 md:px-6">
-        <NavigationMenu>
+      <header className="flex h-20 w-full shrink-0 flex-wrap items-center px-4 md:px-6">
+        <div className="shrink font-bold pr-4 hidden md:block">TCG Pocket Collection Tracker</div>
+        <NavigationMenu className="max-w-full justify-start">
           <NavigationMenuList>
             <NavigationMenuLink asChild>
               <Link to="/">
@@ -24,21 +26,22 @@ export function Header() {
                 <Button variant="ghost">Collection</Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild>
+            <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/trade">
                 <Button variant="ghost">Trade</Button>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuList>
         </NavigationMenu>
-        <div className="flex items-center gap-2">
+        <div className="items-center gap-2 hidden sm:flex">
           <Link to="/community">
             <Button variant="ghost">Community</Button>
           </Link>
 
           {user ? (
             <Button
-              variant="outline"
+              className="hidden sm:block"
+              variant="ghost"
               onClick={async () => {
                 await logout()
                 setUser(null)
@@ -51,7 +54,7 @@ export function Header() {
               <DialogTrigger asChild>
                 <Button>Login</Button>
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent className="border-2 border-slate-600 shadow-none">
                 <DialogHeader>
                   <DialogTitle>Login / Sign up</DialogTitle>
                 </DialogHeader>
@@ -60,6 +63,7 @@ export function Header() {
             </Dialog>
           )}
         </div>
+        <HamburgerMenu />
       </header>
     </>
   )

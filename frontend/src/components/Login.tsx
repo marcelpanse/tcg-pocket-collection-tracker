@@ -42,14 +42,14 @@ export const Login = () => {
       <>
         <p className="pt-4">Thank you. Fill in the 6-digit code from the email we've sent.</p>
         <div>
-          <InputOTP maxLength={6} onComplete={otpEntered}>
-            <InputOTPGroup>
+          <InputOTP maxLength={6} autoFocus onComplete={otpEntered}>
+            <InputOTPGroup className="border-2 border-slate-600 shadow-none">
               <InputOTPSlot index={0} />
               <InputOTPSlot index={1} />
               <InputOTPSlot index={2} />
             </InputOTPGroup>
             <InputOTPSeparator />
-            <InputOTPGroup>
+            <InputOTPGroup className="border-2 border-slate-600 shadow-none">
               <InputOTPSlot index={3} />
               <InputOTPSlot index={4} />
               <InputOTPSlot index={5} />
