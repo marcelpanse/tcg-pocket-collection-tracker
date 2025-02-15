@@ -136,3 +136,6 @@ dist
 .pnp.*
 
 .husky/*
+
+# We enforce pnpm as a package manager so npm lock files should not be committed
+package-lock.json

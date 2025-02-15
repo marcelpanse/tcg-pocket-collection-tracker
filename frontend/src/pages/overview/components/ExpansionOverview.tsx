@@ -1,6 +1,7 @@
 import { BarChartComponent } from '@/components/BarChart.tsx'
 import * as CardsDB from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
+import type { RaritySet } from '@/lib/context/FiltersContext'
 import { CompleteProgress } from '@/pages/overview/components/CompleteProgress.tsx'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import type { Expansion } from '@/types'
@@ -8,7 +9,7 @@ import { use, useMemo } from 'react'
 
 interface ExpansionOverviewProps {
   expansion: Expansion
-  rarityFilter: string[]
+  rarityFilter: RaritySet
 }
 export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverviewProps) {
   const { ownedCards } = use(CollectionContext)

@@ -1,12 +1,13 @@
-import type { Card, CollectionRow, Expansion, Pack } from '@/types'
-import A1 from '../../assets/cards/A1.json'
-import A1a from '../../assets/cards/A1a.json'
-import A2 from '../../assets/cards/A2.json'
-import PA from '../../assets/cards/P-A.json'
+import { type Card, type CollectionRow, type Expansion, type Pack, Rarity } from '@/types'
+import A1 from '@assets/cards/A1.json' with { type: 'json' }
+import A1a from '@assets/cards/A1a.json' with { type: 'json' }
+import A2 from '@assets/cards/A2.json' with { type: 'json' }
+import PA from '@assets/cards/P-A.json' with { type: 'json' }
+import type { RaritySet } from './context/FiltersContext'
 
 const update = (cards: Card[], expansionName: string) => {
   for (const card of cards) {
-    // @ts-ignore there is an ID in the JSON, but I don't want it in the Type because you should always use the card_id, having both is confusing.
+    // @ts-expect-error there is an ID in the JSON, but I don't want it in the Type because you should always use the card_id, having both is confusing.
     card.card_id = `${expansionName}-${card.id}`
     card.expansion = expansionName
   }
@@ -83,18 +84,18 @@ export const sellableForTokensDictionary: { [id: string]: number } = {
 
 interface NrOfCardsOwnedProps {
   ownedCards: CollectionRow[]
-  rarityFilter: string[]
+  rarityFilter: RaritySet
   expansion?: Expansion
   packName?: string
 }
 export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, expansion, packName }: NrOfCardsOwnedProps) => {
   let filteredOwnedCards = ownedCards
     .filter((oc) => oc.amount_owned > 0)
-    .map((cr) => ({ ...cr, rarity: allCards.find((c) => c.card_id === cr.card_id)?.rarity || '' }))
+    .map((cr) => ({ ...cr, rarity: allCards.find((c) => c.card_id === cr.card_id)?.rarity || Rarity['◊'] }))
 
-  if (rarityFilter.length > 0) {
+  if (rarityFilter !== 'all' && rarityFilter.size > 0) {
     //filter out cards that are not in the rarity filter
-    filteredOwnedCards = filteredOwnedCards.filter((oc) => rarityFilter.includes(oc.rarity))
+    filteredOwnedCards = filteredOwnedCards.filter((oc) => rarityFilter.has(oc.rarity))
   }
 
   if (!expansion) {
@@ -110,7 +111,7 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, expansion, packNam
 }
 
 interface TotalNrOfCardsProps {
-  rarityFilter: string[]
+  rarityFilter: RaritySet
   expansion?: Expansion
   packName?: string
 }
@@ -124,9 +125,9 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName }: TotalNr
     filteredCards = filteredCards.filter((c) => c.pack === packName)
   }
 
-  if (rarityFilter.length > 0) {
+  if (rarityFilter !== 'all' && rarityFilter.size > 0) {
     //filter out cards that are not in the rarity filter
-    filteredCards = filteredCards.filter((c) => rarityFilter.includes(c.rarity))
+    filteredCards = filteredCards.filter((c) => rarityFilter.has(c.rarity))
   }
 
   return filteredCards.length
@@ -167,9 +168,9 @@ interface PullRateProps {
   ownedCards: CollectionRow[]
   expansion: Expansion
   pack: Pack
-  rarityFilter?: string[]
+  rarityFilter?: RaritySet
 }
-export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [] }: PullRateProps) => {
+export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = 'all' }: PullRateProps) => {
   if (ownedCards.length === 0) {
     return 1
   }
@@ -182,9 +183,9 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [] }: Pul
   let missingCards = cardsInPack.filter((c) => !ownedCards.find((oc) => oc.card_id === c.card_id && oc.amount_owned > 0))
   // console.log('missing cards', missingCards)
 
-  if (rarityFilter.length > 0) {
+  if (rarityFilter !== 'all' && rarityFilter.size > 0) {
     //filter out cards that are not in the rarity filter
-    missingCards = missingCards.filter((c) => rarityFilter.includes(c.rarity))
+    missingCards = missingCards.filter((c) => rarityFilter.has(c.rarity))
   }
 
   let totalProbability1_3 = 0

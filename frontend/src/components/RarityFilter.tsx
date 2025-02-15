@@ -1,40 +1,47 @@
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
-import type { FC } from 'react'
+import { FiltersContext, type RaritySet } from '@/lib/context/FiltersContext'
+import { Rarity } from '@/types'
+import { type Dispatch, type SetStateAction, use } from 'react'
 
 interface Props {
-  setRarityFilter: (rarityFilter: string[]) => void
+  setRarityFilter?: Dispatch<SetStateAction<RaritySet>>
 }
-const RarityFilter: FC<Props> = ({ setRarityFilter }) => {
+
+function RarityFilter({ setRarityFilter: inSetRarityFilter }: Props) {
+  const { setRarityFilter: contextSetRarityFilter } = use(FiltersContext)
+
+  const setRarityFilter = inSetRarityFilter ?? contextSetRarityFilter
+
   return (
     <ToggleGroup
       variant="outline"
       type="multiple"
       size="sm"
-      onValueChange={(value) => setRarityFilter(value)}
+      onValueChange={(values: Rarity[]) => (values.length === 0 ? setRarityFilter('all') : setRarityFilter(new Set(values)))}
       className="justify-end shadow-none border-2 border-slate-600 rounded-md"
     >
-      <ToggleGroupItem value="◊" aria-label="◊" className="text-gray-400 hover:text-gray-500">
+      <ToggleGroupItem value={Rarity['◊']} aria-label="◊" className="text-gray-400 hover:text-gray-500">
         ♢
       </ToggleGroupItem>
-      <ToggleGroupItem value="◊◊" aria-label="◊◊" className="text-gray-400 hover:text-gray-500">
+      <ToggleGroupItem value={Rarity['◊◊']} aria-label="◊◊" className="text-gray-400 hover:text-gray-500">
         ♢♢
       </ToggleGroupItem>
-      <ToggleGroupItem value="◊◊◊" aria-label="◊◊◊" className="text-gray-400 hover:text-gray-500">
+      <ToggleGroupItem value={Rarity['◊◊◊']} aria-label="◊◊◊" className="text-gray-400 hover:text-gray-500">
         ♢♢♢
       </ToggleGroupItem>
-      <ToggleGroupItem value="◊◊◊◊" aria-label="◊◊◊◊" className="text-gray-400 hover:text-gray-500">
+      <ToggleGroupItem value={Rarity['◊◊◊◊']} aria-label="◊◊◊◊" className="text-gray-400 hover:text-gray-500">
         ♢♢♢♢
       </ToggleGroupItem>
-      <ToggleGroupItem value="☆" aria-label="☆" className="text-yellow-500 hover:text-yellow-600 .dark:data-[state=on]:text-yellow-500">
+      <ToggleGroupItem value={Rarity['☆']} aria-label="☆" className="text-yellow-500 hover:text-yellow-600 .dark:data-[state=on]:text-yellow-500">
         ☆
       </ToggleGroupItem>
-      <ToggleGroupItem value="☆☆" aria-label="☆☆" className="text-yellow-500 hover:text-yellow-600 data-[state=on]:text-yellow-500">
+      <ToggleGroupItem value={Rarity['☆☆']} aria-label="☆☆" className="text-yellow-500 hover:text-yellow-500">
         ☆☆
       </ToggleGroupItem>
-      <ToggleGroupItem value="☆☆☆" aria-label="☆☆☆" className="text-yellow-500 hover:text-yellow-600 data-[state=on]:text-yellow-500">
+      <ToggleGroupItem value={Rarity['☆☆☆']} aria-label="☆☆☆" className="text-yellow-500 hover:text-yellow-500">
         ☆☆☆
       </ToggleGroupItem>
-      <ToggleGroupItem value="Crown Rare" aria-label="♛">
+      <ToggleGroupItem value={Rarity.CrownRare} aria-label="♛">
         👑
       </ToggleGroupItem>
     </ToggleGroup>

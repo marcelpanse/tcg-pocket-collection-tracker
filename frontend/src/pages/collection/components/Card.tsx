@@ -110,6 +110,7 @@ export function Card({ card }: Props) {
           <MinusIcon />
         </Button>
         <input
+          title="Amount owned"
           min="0"
           max="99"
           type="text"
