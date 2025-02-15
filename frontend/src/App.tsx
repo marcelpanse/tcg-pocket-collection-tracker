@@ -2,6 +2,7 @@ import { getUser } from '@/lib/Auth.ts'
 import type { CollectionRow } from '@/types'
 import loadable from '@loadable/component'
 import { useEffect, useState } from 'react'
+import { ErrorBoundary } from 'react-error-boundary'
 import { Route, Routes } from 'react-router'
 import { Header } from './components/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
@@ -36,15 +37,17 @@ function App() {
   return (
     <UserContext.Provider value={{ user, setUser, isLoginDialogOpen, setIsLoginDialogOpen }}>
       <CollectionContext.Provider value={{ ownedCards, setOwnedCards }}>
-        <Toaster />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Overview />} />
-          <Route path="/collection" element={<Collection />} />
-          <Route path="/trade" element={<Trade />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="/card/:id" element={<CardDetail />} />
-        </Routes>
+        <ErrorBoundary fallback={<div>Something went wrong</div>}>
+          <Toaster />
+          <Header />
+          <Routes>
+            <Route path="/" element={<Overview />} />
+            <Route path="/collection" element={<Collection />} />
+            <Route path="/trade" element={<Trade />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/card/:id" element={<CardDetail />} />
+          </Routes>
+        </ErrorBoundary>
       </CollectionContext.Provider>
     </UserContext.Provider>
   )

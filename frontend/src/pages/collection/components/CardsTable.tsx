@@ -46,10 +46,13 @@ export function CardsTable({ cards }: Props) {
   const groupedRows = useMemo(() => table.getGroupedRowModel().rows, [table.getGroupedRowModel().rows]) // Get grouped rows from the table model
 
   let cardsPerRow = 5
-  if (width > 800 && width < 1000) {
+  let cardHeight = Math.min(width, 890) / 5 + 120
+  if (width > 600 && width < 800) {
     cardsPerRow = 4
-  } else if (width <= 800) {
+    cardHeight = width / 3 + 50
+  } else if (width <= 600) {
     cardsPerRow = 3
+    cardHeight = width / 3 + 100
   }
 
   const groupedGridRows = useMemo(
@@ -72,7 +75,7 @@ export function CardsTable({ cards }: Props) {
     () =>
       groupedGridRows.flatMap((group) => [
         { type: 'header', height: 60, data: group.header }, // Group header
-        ...group.gridRows.map((gridRow) => ({ type: 'gridRow', height: 250, data: gridRow })), // Grid rows
+        ...group.gridRows.map((gridRow) => ({ type: 'gridRow', height: cardHeight, data: gridRow })), // Grid rows
       ]),
     [groupedGridRows],
   )
@@ -80,12 +83,12 @@ export function CardsTable({ cards }: Props) {
   const rowVirtualizer = useVirtualizer({
     getScrollElement: () => parentRef.current,
     count: flattenedRows.length,
-    estimateSize: (index) => (flattenedRows[index].type === 'header' ? 60 : 250) + 12,
+    estimateSize: (index) => (flattenedRows[index].type === 'header' ? 60 : cardHeight) + 12,
     overscan: 5,
   })
 
   return (
-    <div ref={parentRef} className="h-[calc(100vh-270px)] overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
+    <div ref={parentRef} className="h-[calc(100vh-270px)] overflow-y-auto mt-4 sm:mt-8 px-4" style={{ scrollbarWidth: 'none' }}>
       <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
         {rowVirtualizer.getVirtualItems().map((virtualRow) => {
           const row = flattenedRows[virtualRow.index]

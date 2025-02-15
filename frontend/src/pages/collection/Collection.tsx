@@ -46,9 +46,9 @@ function Collection() {
         <SearchInput setSearchValue={setSearchValue} />
         <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} />
       </div>
-      <div className="flex items-center justify-between gap-2 flex-col md:flex-row px-8 pb-8">
+      <div className="items-center justify-between gap-2 flex-col md:flex-row px-8 hidden md:flex">
         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
-        <RarityFilter setRarityFilter={setRarityFilter} />
+        <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
       </div>
       <CardsTable cards={getFilteredCards} />
     </div>
