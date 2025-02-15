@@ -23,7 +23,7 @@ function Collection() {
     }
     if (ownedFilter !== 'all') {
       if (ownedFilter === 'owned') {
-        filteredCards = filteredCards.filter((card) => ownedCards.find((oc) => oc.card_id === card.card_id))
+        filteredCards = filteredCards.filter((card) => ownedCards.find((oc) => oc.card_id === card.card_id && oc.amount_owned > 0))
       } else if (ownedFilter === 'missing') {
         filteredCards = filteredCards.filter((card) => !ownedCards.find((oc) => oc.card_id === card.card_id))
       }
