@@ -8,8 +8,13 @@ interface Props {
 }
 
 function RarityFilter({ setRarityFilter: inSetRarityFilter }: Props) {
-  const { dispatch } = use(FiltersContext)
-  const setRarityFilter = inSetRarityFilter ?? ((rarity: RaritySet) => dispatch({ type: 'SET_RARITY_FILTER', payload: rarity }))
+  const { setFilterState } = use(FiltersContext)
+  const setRarityFilter =
+    inSetRarityFilter ??
+    ((rarity: RaritySet) =>
+      setFilterState((draft) => {
+        draft.rarityFilter = rarity
+      }))
 
   return (
     <ToggleGroup
