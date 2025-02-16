@@ -2,14 +2,24 @@ import HamburgerMenu from '@/components/HamburgerMenu.tsx'
 import { Login } from '@/components/Login.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu.tsx'
 import { logout } from '@/lib/Auth.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
+import { LogOut, UserRoundPen } from 'lucide-react'
 import { use } from 'react'
 import { Link } from 'react-router'
 
 export function Header() {
-  const { user, setUser, isLoginDialogOpen, setIsLoginDialogOpen } = use(UserContext)
+  const { user, setUser, isLoginDialogOpen, setIsLoginDialogOpen, setIsProfileDialogOpen } = use(UserContext)
   return (
     <>
       <header className="flex h-20 w-full shrink-0 flex-wrap items-center px-4 md:px-6">
@@ -39,16 +49,31 @@ export function Header() {
           </Link>
 
           {user ? (
-            <Button
-              className="hidden sm:block"
-              variant="ghost"
-              onClick={async () => {
-                await logout()
-                setUser(null)
-              }}
-            >
-              Logout
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <UserRoundPen />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56">
+                <DropdownMenuLabel>My account</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={() => setIsProfileDialogOpen(true)}>Edit profile</DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuGroup>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem
+                    onClick={async () => {
+                      await logout()
+                      setUser(null)
+                    }}
+                  >
+                    Log out
+                    <LogOut />
+                  </DropdownMenuItem>
+                </DropdownMenuGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
           ) : (
             <Dialog open={isLoginDialogOpen} onOpenChange={setIsLoginDialogOpen}>
               <DialogTrigger asChild>

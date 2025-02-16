@@ -1,5 +1,11 @@
 import type { Models } from 'appwrite'
 
+export interface AccountRow {
+  $id: string
+  username: string
+  friend_id: string
+}
+
 export interface CollectionRow extends Partial<Models.Document> {
   $id: string
   email: string
