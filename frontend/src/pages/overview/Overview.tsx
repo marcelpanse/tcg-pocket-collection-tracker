@@ -50,7 +50,7 @@ function Overview() {
       )}
 
       <div className="mb-8 flex justify-end">
-        <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
+        <RarityFilter setRarityFilter={setRarityFilter} />
       </div>
 
       <section className="grid grid-cols-8 gap-6">
