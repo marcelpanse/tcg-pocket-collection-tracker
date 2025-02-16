@@ -48,7 +48,7 @@ export interface Card {
   retreat: string
   rarity: Rarity
   fullart: BooleanType
-  ex: string
+  ex: BooleanType
   set_details: string
   pack: string
   alternate_versions: {

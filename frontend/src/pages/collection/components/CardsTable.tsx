@@ -2,7 +2,7 @@ import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
 import type { Card as CardType } from '@/types'
 import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
-import { useMemo, useRef } from 'react'
+import { memo, useMemo, useRef } from 'react'
 import { Card } from './Card'
 
 const columnHelper = createColumnHelper<CardType>()
@@ -11,7 +11,7 @@ interface Props {
   cards: CardType[]
 }
 
-export function CardsTable({ cards }: Props) {
+export const CardsTable = memo(({ cards }: Props) => {
   const parentRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
 
@@ -112,4 +112,4 @@ export function CardsTable({ cards }: Props) {
       </div>
     </div>
   )
-}
+})

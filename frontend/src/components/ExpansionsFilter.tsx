@@ -4,10 +4,10 @@ import { FiltersContext } from '@/lib/context/FiltersContext'
 import { use } from 'react'
 
 function ExpansionsFilter() {
-  const { expansionFilter, setExpansionFilter } = use(FiltersContext)
+  const { state, dispatch } = use(FiltersContext)
 
   return (
-    <Tabs value={expansionFilter} onValueChange={(value) => setExpansionFilter(value)} className="w-full">
+    <Tabs value={state.expansionFilter} onValueChange={(value) => dispatch({ type: 'SET_EXPANSION_FILTER', payload: value })} className="w-full">
       <TabsList className="w-full flex-wrap h-auto lg:h-[40px] border-2 border-slate-600 rounded-md">
         <TabsTrigger value="all">All</TabsTrigger>
         {expansions.map((expansion) => (

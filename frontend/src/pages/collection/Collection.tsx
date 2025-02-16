@@ -4,47 +4,51 @@ import RarityFilter from '@/components/RarityFilter.tsx'
 import SearchInput from '@/components/SearchInput.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import { type ExpansionSet, FiltersContext, type OwnedFilterMode, type RaritySet } from '@/lib/context/FiltersContext.ts'
-import { use, useCallback, useMemo, useState } from 'react'
+import { FiltersContext, useFilters } from '@/lib/context/FiltersContext.ts'
+import { use, useDeferredValue, useMemo } from 'react'
 import { CardsTable } from './components/CardsTable.tsx'
-import { isExpansion, isOwned, isRarity, isSearch } from './filters.ts'
+import { isArtist, isCardType, isEvolutionStage, isEx, isExpansion, isMinimumHp, isOwned, isPack, isRarity, isSearch, isWeakness } from './filters.ts'
 
 function Collection() {
   const { ownedCards } = use(CollectionContext)
+  const [state, dispatch] = useFilters()
 
-  const [searchValue, setSearchValue] = useState('')
-  const [expansionFilter, setExpansionFilter] = useState<ExpansionSet>('all')
-  const [rarityFilter, setRarityFilter] = useState<RaritySet>('all')
-  const [ownedFilterMode, setOwnedFilterMode] = useState<OwnedFilterMode>('all')
-
-  const isOwnedFilter = useCallback(isOwned(ownedFilterMode, ownedCards), [ownedFilterMode, ownedCards])
-  const isExpansionFilter = useCallback(isExpansion(expansionFilter), [expansionFilter])
-  const isSearchFilter = useCallback(isSearch(searchValue), [searchValue])
-  const isRarityFilter = useCallback(isRarity(rarityFilter), [rarityFilter])
+  /**
+   * Apply deferred value to reduce UI flickering during rapid filter changes.
+   * The table contains a large number of cards, and quick filtering adjustments
+   * can cause visual instability. By introducing a slight delay here, we ensure
+   * a smoother user experience when interacting with the filters.
+   */
+  const deferredState = useDeferredValue(state)
 
   const filteredCards = useMemo(() => {
-    //! This filtering process is "commutative": order of filters doesn't affect the final result.
-    //! However, performance is "order-dependent": placing restrictive filters first improves efficiency.
-    // biome-ignore format: More readable over multiple lines
+    /**
+     * This filtering process is commutative (order-independent) but performance-sensitive.
+     * Placing more restrictive filters first improves efficiency.
+     * The implementation is O(n) and memory-efficient, avoiding intermediary arrays.
+     */
     const filters = [
-        isOwnedFilter,
-        isExpansionFilter,
-        isRarityFilter,
-        isSearchFilter,
-      ]
+      isOwned(deferredState.ownedFilterMode, ownedCards),
+      isExpansion(deferredState.expansionFilter),
+      isRarity(deferredState.rarityFilter),
+      isSearch(deferredState.searchValue),
+      isMinimumHp(deferredState.minimumHp),
+      isCardType(deferredState.cardTypeFilter),
+      isEvolutionStage(deferredState.evolutionStageFilter),
+      isWeakness(deferredState.weaknessFilter),
+      isEx(deferredState.exFilter),
+      isPack(deferredState.packFilter),
+      isArtist(deferredState.artistFilter),
+    ]
 
-    //! This is O(n) because it is a single loop and reduce memory usage because it doesn't use
-    //! intermediary arrays.
-    return filters.reduce((acc, filter) => acc.filter(filter), allCards)
-  }, [isOwnedFilter, isRarityFilter, isExpansionFilter, isSearchFilter])
+    return allCards.filter((card) => filters.every((filter) => filter(card)))
+  }, [deferredState, ownedCards])
 
   return (
-    <FiltersContext.Provider
-      value={{ searchValue, setSearchValue, expansionFilter, setExpansionFilter, rarityFilter, setRarityFilter, ownedFilterMode, setOwnedFilterMode }}
-    >
+    <FiltersContext.Provider value={{ state: deferredState, dispatch }}>
       <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">
         <div className="flex items-center gap-2 flex-col md:flex-row px-8">
-          <SearchInput setSearchValue={setSearchValue} />
+          <SearchInput setSearchValue={(searchValue) => dispatch({ type: 'SET_SEARCH', payload: searchValue })} />
           <ExpansionsFilter />
         </div>
         <div className="flex items-center justify-between gap-2 flex-col md:flex-row px-8 pb-8">

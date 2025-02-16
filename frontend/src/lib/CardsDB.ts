@@ -24,6 +24,7 @@ const update = (inCards: JSONInput, expansionName: string): Card[] => {
       expansion: expansionName,
       rarity: card.rarity in Rarity || Object.values(Rarity).includes(card.rarity as Rarity) ? (card.rarity as Rarity) : Rarity['◊'],
       fullart: card.fullart in BooleanType ? (card.fullart as BooleanType) : BooleanType.No,
+      ex: card.ex in BooleanType ? (card.ex as BooleanType) : BooleanType.No,
       alternate_versions: card.alternate_versions.map((av) => ({ version: av.version, rarity: av.rarity in Rarity ? (av.rarity as Rarity) : Rarity['◊'] })),
       ability: convertAbility(card.ability),
       probability: {

@@ -1,21 +1,20 @@
 import { getCardById } from '@/lib/CardsDB.ts'
-import type { Card } from '@/types'
-import { useLocation } from 'react-router'
+import { BooleanType, type Card, Rarity } from '@/types'
+import { useMemo } from 'react'
+import { useParams } from 'react-router'
 
 function CardDetail() {
-  const location = useLocation()
-  let card: Card
-
-  if (!location.state) {
-    card = getCardById(location.pathname.split('/').pop() || '') || {
+  const { id: cardId } = useParams()
+  const card = useMemo<Card>(() => {
+    const fallbackCard: Card = {
       card_id: '',
       name: 'Unknown',
       image: '',
-      rarity: '',
+      rarity: Rarity['◊'],
       hp: '0',
       card_type: '',
       evolution_type: '',
-      ex: 'false',
+      ex: BooleanType.No,
       crafting_cost: 0,
       artist: '',
       set_details: '',
@@ -26,12 +25,11 @@ function CardDetail() {
       ability: { name: '', effect: '' },
       probability: { '1-3 card': '', '4 card': '', '5 card': '' },
       attacks: [],
-      fullart: 'false',
+      fullart: BooleanType.No,
       alternate_versions: [],
     }
-  } else {
-    card = location.state.card
-  }
+    return typeof cardId === 'string' ? getCardById(cardId) || fallbackCard : fallbackCard
+  }, [cardId])
 
   return (
     <div className="flex flex-col p-5 lg:flex-row rounded-4xl max-w-7xl mx-auto">

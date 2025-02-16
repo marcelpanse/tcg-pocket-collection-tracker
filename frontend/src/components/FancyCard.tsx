@@ -76,6 +76,7 @@ function FancyCard({ selected, setIsSelected, card }: Props) {
     transformStyle: 'preserve-3d',
     cursor: 'pointer',
     opacity: selected ? 1 : 0.5,
+    aspectRatio: '128/179',
   }
 
   return (
