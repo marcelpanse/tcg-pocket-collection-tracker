@@ -2,10 +2,15 @@ import ExpansionsFilter from '@/components/ExpansionsFilter.tsx'
 import OwnedFilter from '@/components/OwnedFilter.tsx'
 import RarityFilter from '@/components/RarityFilter.tsx'
 import SearchInput from '@/components/SearchInput.tsx'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { FiltersContext, FiltersContextDefaultState } from '@/lib/context/FiltersContext.ts'
-import { use, useMemo } from 'react'
+import { DialogDescription } from '@radix-ui/react-dialog'
+import { Check, Settings2 } from 'lucide-react'
+import { use, useMemo, useState } from 'react'
 import { useImmer } from 'use-immer'
 import { CardsTable } from './components/CardsTable.tsx'
 import { isArtist, isCardType, isEvolutionStage, isEx, isExpansion, isMinimumHp, isOwned, isPack, isRarity, isSearch, isWeakness } from './filters.ts'
@@ -13,6 +18,7 @@ import { isArtist, isCardType, isEvolutionStage, isEx, isExpansion, isMinimumHp,
 function Collection() {
   const { ownedCards } = use(CollectionContext)
   const [filterState, setFilterState] = useImmer(FiltersContextDefaultState)
+  const [open, setOpen] = useState(false)
 
   const filteredCards = useMemo(() => {
     /**
@@ -50,12 +56,52 @@ function Collection() {
           />
           <ExpansionsFilter />
         </div>
-        <div className="flex items-center justify-between gap-2 flex-col md:flex-row px-8 pb-8">
+        <div className="flex items-center justify-between gap-2 flex-col md:flex-row px-8">
           <OwnedFilter />
           <RarityFilter />
         </div>
+        <div className="flex items-center justify-end gap-2 flex-col md:flex-row px-8 pb-8">
+          <Button onClick={() => setOpen(true)} variant="ghost">
+            <Settings2 />
+            All Filters
+          </Button>
+        </div>
         <CardsTable cards={filteredCards} />
       </div>
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Filters</DialogTitle>
+            <DialogDescription className="text-sm">Contains all the filters for filtering collection cards.</DialogDescription>
+          </DialogHeader>
+          <Accordion type="multiple" className="w-full">
+            <AccordionItem value="owned-filter">
+              <AccordionTrigger>Owned Filter</AccordionTrigger>
+              <AccordionContent className="[&>*]:flex-grow">
+                <OwnedFilter fullWidth />
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="rarity-filter">
+              <AccordionTrigger>Rarity Filter</AccordionTrigger>
+              <AccordionContent>
+                <RarityFilter />
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="expansion-filter">
+              <AccordionTrigger>Expansion Filter</AccordionTrigger>
+              <AccordionContent>
+                <ExpansionsFilter />
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <DialogFooter>
+            <Button onClick={() => setOpen(false)} className="cursor-pointer">
+              <Check />
+              Apply
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </FiltersContext.Provider>
   )
 }
