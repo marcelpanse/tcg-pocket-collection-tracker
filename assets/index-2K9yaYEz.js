@@ -1,4 +1,4 @@
-import{r as z,k as Me}from"./index-BR0wOlCy.js";/**
+import{r as z,T as Me}from"./index-C2hxVECM.js";/**
    * table-core
    *
    * Copyright (c) TanStack
