@@ -3,11 +3,11 @@ import { useToast } from '@/hooks/use-toast.ts'
 import { checkOTP, sendOTP } from '@/lib/Auth.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { use, useState } from 'react'
-import { email, maxLength, nonEmpty, pipe, safeParse, string } from 'valibot'
+import { z } from 'zod'
 import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from './ui/input-otp.tsx'
 import { Input } from './ui/input.tsx'
 
-const EmailSchema = pipe(string(), nonEmpty('Email is required'), email('Email must be valid'), maxLength(255, 'Email must be less than 255 characters'))
+const EmailSchema = z.string().nonempty('Email is required').email('Email must be valid').max(255, 'Email must be less than 255 characters')
 
 export const Login = () => {
   const { setUser, setIsLoginDialogOpen } = use(UserContext)
@@ -27,7 +27,7 @@ export const Login = () => {
   }
 
   const submitEmail = async () => {
-    const result = safeParse(EmailSchema, emailInput)
+    const result = EmailSchema.safeParse(emailInput)
     if (!result.success) {
       toast({ title: 'Please enter a valid email address', variant: 'destructive' })
       return
