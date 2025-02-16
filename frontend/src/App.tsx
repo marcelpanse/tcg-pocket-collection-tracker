@@ -1,4 +1,3 @@
-import { EditProfile } from '@/components/EditProfile.tsx'
 import { getUser } from '@/lib/Auth.ts'
 import { fetchAccount } from '@/lib/fetchAccount.ts'
 import type { AccountRow, CollectionRow } from '@/types'
@@ -18,6 +17,7 @@ const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const Community = loadable(() => import('./pages/community/Community.tsx'))
 const CardDetail = loadable(() => import('./pages/collection/CardDetail.tsx'))
+const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
 
 function App() {
   const [user, setUser] = useState<User | null>(null)
