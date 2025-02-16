@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 
 export function ForTradeCard({ card }: { card: Card & { amount_owned?: number } }) {
   return (
-    <div className="group flex w-fit flex-col items-center rounded-lg">
+    <div className="group flex w-32 flex-col items-center rounded-lg">
       <Link viewTransition to={`/card/${card.card_id}`} state={{ card }}>
         <FancyCard card={card} selected={true} />
       </Link>

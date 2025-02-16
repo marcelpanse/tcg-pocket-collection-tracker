@@ -1,5 +1,11 @@
 import type { Models } from 'appwrite'
 
+export interface AccountRow {
+  $id: string
+  username: string
+  friend_id: string
+}
+
 export enum BooleanType {
   Yes = 'Yes',
   No = 'No',

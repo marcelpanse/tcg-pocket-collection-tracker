@@ -58,4 +58,10 @@
       }
     }
   }
+
+  .dark\:text-red-900 {
+    &:where(.dark, .dark *) {
+      color: #f56532 !important;
+    }
+  }
 }

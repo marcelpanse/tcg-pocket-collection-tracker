@@ -3,7 +3,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { logout } from '@/lib/Auth.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { cn } from '@/lib/utils'
-import { Menu } from 'lucide-react'
+import { LogOut, Menu, UserRoundPen } from 'lucide-react'
 import type * as React from 'react'
 import { use, useState } from 'react'
 import { Link } from 'react-router'
@@ -36,7 +36,7 @@ const MenuItemComponent: React.FC<{ item: MenuItem; setOpen: (open: boolean) => 
 
 export default function HamburgerMenu() {
   const [open, setOpen] = useState(false)
-  const { user, setUser, setIsLoginDialogOpen } = use(UserContext)
+  const { user, setUser, setIsLoginDialogOpen, setIsProfileDialogOpen } = use(UserContext)
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -52,6 +52,18 @@ export default function HamburgerMenu() {
             <MenuItemComponent key={item.title} item={item} setOpen={setOpen} />
           ))}
         </nav>
+
+        <Button
+          variant="secondary"
+          onClick={() => {
+            setIsProfileDialogOpen(true)
+            setOpen(false)
+          }}
+        >
+          Edit profile
+          <UserRoundPen />
+        </Button>
+
         {user ? (
           <Button
             variant="default"
@@ -62,6 +74,7 @@ export default function HamburgerMenu() {
             }}
           >
             Logout
+            <LogOut />
           </Button>
         ) : (
           <Button

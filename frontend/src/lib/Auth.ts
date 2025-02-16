@@ -4,6 +4,7 @@ const databases = new Databases(client)
 
 export const DATABASE_ID = '679f7ce60013c742add3'
 export const COLLECTION_ID = '679f7cf50003d1a172c5'
+export const ACCOUNTS_ID = '67b1e20b0032c6efb057'
 
 export const getUser = async () => {
   try {

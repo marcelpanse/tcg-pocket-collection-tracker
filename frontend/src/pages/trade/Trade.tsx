@@ -23,7 +23,7 @@ function Trade() {
             <TabsTrigger value="buying_tokens">Buying Tokens</TabsTrigger>
           </TabsList>
         </div>
-        <div className="mx-auto max-w-auto">
+        <div className="max-w-auto mx-4 md:mx-8">
           <TabsContent value="looking_for">
             <LookingFor />
           </TabsContent>
