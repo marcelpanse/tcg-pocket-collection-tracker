@@ -15,8 +15,6 @@ const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const Community = loadable(() => import('./pages/community/Community.tsx'))
 const CardDetail = loadable(() => import('./pages/collection/CardDetail.tsx'))
-const Import = loadable(() => import('./pages/import/Import.tsx'))
-const Export = loadable(() => import('./pages/export/Export.tsx'))
 
 function App() {
   const [user, setUser] = useState<User | null>(null)
@@ -46,8 +44,6 @@ function App() {
           <Route path="/trade" element={<Trade />} />
           <Route path="/community" element={<Community />} />
           <Route path="/card/:id" element={<CardDetail />} />
-          <Route path="/import" element={<Import />} />
-          <Route path="/export" element={<Export />} />
         </Routes>
       </CollectionContext.Provider>
     </UserContext.Provider>
