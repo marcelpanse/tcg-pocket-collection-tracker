@@ -95,7 +95,7 @@ function FancyCard({ selected, setIsSelected, card }: Props) {
         onMouseDown={() => setIsSelected?.(!selected)}
         ref={cardRef}
         className="card-test"
-        width={128}
+        width="100%"
         style={cardTestStyle}
         src={`/images/${card.image.split('/').at(-1)}`}
         alt="Bulbasaur"

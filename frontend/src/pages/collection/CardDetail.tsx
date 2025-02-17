@@ -1,3 +1,4 @@
+import FancyCard from '@/components/FancyCard.tsx'
 import { getCardById } from '@/lib/CardsDB.ts'
 import type { Card } from '@/types'
 import { useLocation } from 'react-router'
@@ -34,10 +35,10 @@ function CardDetail() {
   }
 
   return (
-    <div className="flex flex-col p-5 lg:flex-row rounded-4xl max-w-7xl mx-auto">
+    <div className="flex flex-col p-5 lg:flex-row rounded-4xl max-w-4xl mx-auto gap-8">
       {/* Fancy Card Section */}
       <div className="flex justify-center lg:w-1/2">
-        <img src={`/images/${card.image.split('/').at(-1)}`} alt={card.name} className="rounded-lg shadow-lg" />
+        <FancyCard card={card} selected={true} />
       </div>
       {/* Card Details Section */}
       <div className="lg:flex-1 p-7 bg-gray-50 rounded-4xl shadow-md">
