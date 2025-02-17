@@ -98,7 +98,7 @@ export function Card({ card }: Props) {
   }
 
   return (
-    <div className="group flex w-fit max-w-40 flex-col items-center rounded-lg">
+    <div className="group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg">
       <Link viewTransition to={`/card/${card.card_id}`} state={{ card }}>
         <FancyCard card={card} selected={amountOwned > 0} />
       </Link>
