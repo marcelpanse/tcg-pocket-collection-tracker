@@ -23,9 +23,9 @@ function Collection() {
     }
     if (ownedFilter !== 'all') {
       if (ownedFilter === 'owned') {
-        filteredCards = filteredCards.filter((card) => ownedCards.find((oc) => oc.card_id === card.card_id))
+        filteredCards = filteredCards.filter((card) => ownedCards.find((oc) => oc.card_id === card.card_id && oc.amount_owned > 0))
       } else if (ownedFilter === 'missing') {
-        filteredCards = filteredCards.filter((card) => !ownedCards.find((oc) => oc.card_id === card.card_id))
+        filteredCards = filteredCards.filter((card) => !ownedCards.find((oc) => oc.card_id === card.card_id && oc.amount_owned > 0))
       }
     }
     if (rarityFilter.length > 0) {
@@ -46,9 +46,9 @@ function Collection() {
         <SearchInput setSearchValue={setSearchValue} />
         <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} />
       </div>
-      <div className="flex items-center justify-between gap-2 flex-col md:flex-row px-8 pb-8">
+      <div className="items-center justify-between gap-2 flex-col md:flex-row px-8 hidden md:flex">
         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
-        <RarityFilter setRarityFilter={setRarityFilter} />
+        <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
       </div>
       <CardsTable cards={getFilteredCards} />
     </div>

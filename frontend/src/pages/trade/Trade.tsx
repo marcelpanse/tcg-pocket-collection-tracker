@@ -17,13 +17,13 @@ function Trade() {
     <div className="flex flex-col gap-y-4">
       <Tabs defaultValue="looking_for">
         <div className="mx-auto max-w-[900px]">
-          <TabsList className="w-full m-auto mt-4 mb-8 flex-wrap h-auto">
+          <TabsList className="w-full m-auto mt-4 mb-8 flex-wrap h-auto border-2 border-slate-600 rounded-md">
             <TabsTrigger value="looking_for">Looking For</TabsTrigger>
             <TabsTrigger value="for_trade">For Trade</TabsTrigger>
             <TabsTrigger value="buying_tokens">Buying Tokens</TabsTrigger>
           </TabsList>
         </div>
-        <div className="mx-auto max-w-auto">
+        <div className="max-w-auto mx-4 md:mx-8">
           <TabsContent value="looking_for">
             <LookingFor />
           </TabsContent>
