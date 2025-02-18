@@ -16,16 +16,16 @@ function Collection() {
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
 
   const getFilteredCards = useMemo(() => {
-    let filteredCards = allCards;
+    let filteredCards = allCards
 
     if (expansionFilter !== 'all') {
-      filteredCards = filteredCards.filter((card) => card.expansion === expansionFilter);
+      filteredCards = filteredCards.filter((card) => card.expansion === expansionFilter)
     }
     if (ownedFilter !== 'all') {
       if (ownedFilter === 'owned') {
-        filteredCards = filteredCards.filter((card) => ownedCards.find((oc) => (oc.card_id === card.linkedCardID || oc.card_id === card.card_id) && oc.amount_owned > 0))
+        filteredCards = filteredCards.filter((card) => ownedCards.find((oc) => oc.card_id === card.card_id && oc.amount_owned > 0))
       } else if (ownedFilter === 'missing') {
-        filteredCards = filteredCards.filter((card) => !ownedCards.find((oc) => (oc.card_id === card.linkedCardID || oc.card_id === card.card_id) && oc.amount_owned > 0))
+        filteredCards = filteredCards.filter((card) => !ownedCards.find((oc) => oc.card_id === card.card_id && oc.amount_owned > 0))
       }
     }
     if (rarityFilter.length > 0) {
@@ -33,12 +33,12 @@ function Collection() {
     }
     if (searchValue) {
       filteredCards = filteredCards.filter((card) => {
-        return card.name.toLowerCase().includes(searchValue.toLowerCase()) || card.card_id.toLowerCase().includes(searchValue.toLowerCase()) || (card.linkedCardID && card.linkedCardID.toLowerCase().includes(searchValue.toLowerCase()));
+        return card.name.toLowerCase().includes(searchValue.toLowerCase()) || card.card_id.toLowerCase().includes(searchValue.toLowerCase())
       })
     }
 
-    return filteredCards;
-}, [expansionFilter, rarityFilter, searchValue, ownedFilter, ownedCards])
+    return filteredCards
+  }, [expansionFilter, rarityFilter, searchValue, ownedFilter, ownedCards])
 
   return (
     <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">

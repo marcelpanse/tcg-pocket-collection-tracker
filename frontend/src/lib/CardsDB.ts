@@ -7,9 +7,8 @@ import PA from '../../assets/cards/P-A.json'
 const update = (cards: Card[], expansionName: string) => {
   for (const card of cards) {
     // @ts-ignore there is an ID in the JSON, but I don't want it in the Type because you should always use the card_id, having both is confusing.
-    card.card_id = `${expansionName}-${card.id}`
+    card.card_id = card.linkedCardID || `${expansionName}-${card.id}`
     card.expansion = expansionName
-    card.linkedCardID = card.linkedCardID || card.card_id // Ensure linkedCardID exists
   }
   return cards
 }
@@ -21,7 +20,7 @@ export const paCards: Card[] = update(PA as unknown as Card[], 'P-A')
 export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...paCards]
 
 export const getCardById = (cardId: string): Card | undefined => {
-  return allCards.find((card) => card.card_id === cardId || card.linkedCardID === cardId)
+  return allCards.find((card) => card.card_id === cardId)
 }
 
 export const expansions: Expansion[] = [
@@ -91,7 +90,7 @@ interface NrOfCardsOwnedProps {
 export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, expansion, packName }: NrOfCardsOwnedProps) => {
   let filteredOwnedCards = ownedCards
     .filter((oc) => oc.amount_owned > 0)
-    .map((cr) => ({ ...cr, rarity: allCards.find((c) => c.card_id === cr.card_id || c.linkedCardID === cr.card_id)?.rarity || '' }))
+    .map((cr) => ({ ...cr, rarity: allCards.find((c) => c.card_id === cr.card_id)?.rarity || '' }))
 
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter
@@ -127,7 +126,7 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName }: TotalNr
 
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter
-    filteredCards = filteredCards.filter((c) => rarityFilter.includes(c.rarity) && !filteredCards.some(existing => existing.linkedCardID === c.linkedCardID && existing.card_id !== c.card_id))
+    filteredCards = filteredCards.filter((c) => rarityFilter.includes(c.rarity) && !filteredCards.some((existing) => existing.card_id !== c.card_id))
   }
 
   return filteredCards.length
