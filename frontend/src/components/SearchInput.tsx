@@ -11,7 +11,7 @@ const SearchInput: FC<Props> = ({ setSearchValue }) => {
     <Input
       type="search"
       placeholder="Search..."
-      className="w-full md:w-64 border-2 h-[38px]"
+      className="w-full md:w-64 border-2 h-[38px] bg-black/50"
       style={{ borderColor: '#45556C' }}
       onChange={(e) => {
         if (_searchDebounce) {

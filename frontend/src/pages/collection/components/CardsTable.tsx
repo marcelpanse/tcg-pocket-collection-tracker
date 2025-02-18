@@ -88,7 +88,7 @@ export function CardsTable({ cards }: Props) {
   })
 
   return (
-    <div ref={parentRef} className="h-[calc(100vh-270px)] overflow-y-auto mt-4 sm:mt-8 px-4" style={{ scrollbarWidth: 'none' }}>
+    <div ref={parentRef} className="h-fill overflow-y-auto mt-4 sm:mt-8 px-4" style={{ scrollbarWidth: 'none' }}>
       <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
         {rowVirtualizer.getVirtualItems().map((virtualRow) => {
           const row = flattenedRows[virtualRow.index]
