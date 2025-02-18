@@ -1,0 +1,1428 @@
+[
+  {
+    "id": "1",
+    "name": "Potion",
+    "hp": "",
+    "card_type": "Trainer - Item",
+    "evolution_type": "Item",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_001_EN.webp",
+    "attacks": [],
+    "ability": "Heal 20 damage from 1 of your Pokémon.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "5ban Graphics",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "2",
+    "name": "X Speed",
+    "hp": "",
+    "card_type": "Trainer - Item",
+    "evolution_type": "Item",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_002_EN.webp",
+    "attacks": [],
+    "ability": "During this turn, the Retreat Cost of your Active Pokémon is 1 less.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "Toyste Beach",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "3",
+    "name": "Hand Scope",
+    "hp": "",
+    "card_type": "Trainer - Item",
+    "evolution_type": "Item",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_003_EN.webp",
+    "attacks": [],
+    "ability": "Your opponent reveals their hand.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "Toyste Beach",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "4",
+    "name": "Pokédex",
+    "hp": "",
+    "card_type": "Trainer - Item",
+    "evolution_type": "Item",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_004_EN.webp",
+    "attacks": [],
+    "ability": "Look at the top 3 cards of your deck.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "Ryo Ueda",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "5",
+    "name": "Poké Ball",
+    "hp": "",
+    "card_type": "Trainer - Item",
+    "evolution_type": "Item",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_005_EN.webp",
+    "attacks": [],
+    "ability": "Put 1 random Basic Pokemon from your deck into your hand.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "Ryo Ueda",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "6",
+    "name": "Red Card",
+    "hp": "",
+    "card_type": "Trainer - Item",
+    "evolution_type": "Item",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_006_EN.webp",
+    "attacks": [],
+    "ability": "Your opponent shuffles their hand into their deck and draws 3 cards.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "5ban Graphics",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "7",
+    "name": "Professor's Research",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_007_EN.webp",
+    "attacks": [],
+    "ability": "Draw 2 cards.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "Naoki Saito",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "8",
+    "name": "Pokédex",
+    "hp": "",
+    "card_type": "Trainer - Item",
+    "evolution_type": "Item",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_008_EN.webp",
+    "attacks": [],
+    "ability": "Look at the top 3 cards of your deck.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "Yuu Nishida",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "9",
+    "name": "Pikachu",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_009_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Gnaw",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #94",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Atsushi Furusawa",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "10",
+    "name": "Mewtwo",
+    "hp": "120",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_010_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "name": "Power Blast",
+        "damage": "120",
+        "effect": "Discard 2 [P] Energy from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "2",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #128",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Krgc",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "11",
+    "name": "Chansey",
+    "hp": "120",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_011_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Gentle Slap",
+        "damage": "60",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "3",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #202",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "sowsow",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "12",
+    "name": "Meowth",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_012_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Pay Day",
+        "damage": "10",
+        "effect": "Draw 1 card."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #196",
+        "rarity": "◊"
+      },
+      {
+        "version": "Genetic Apex #246",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Shigenori Negishi",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "13",
+    "name": "Butterfree",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 2 - Evolves from Metapod",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_013_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless", "Colorless"],
+        "name": "Gust",
+        "damage": "60",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Powder Heal",
+      "effect": "Once during your turn, you may heal 20 damage from each of your Pokémon."
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #7",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "miki kudo",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "14",
+    "name": "Lapras ex",
+    "hp": "140",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_014_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Colorless"],
+        "name": "Bubble Drain",
+        "damage": "80",
+        "effect": "Heal 20 damage from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "3",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "15",
+    "name": "Pikachu",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_015_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Gnaw",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #94",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kouki Saitou",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "16",
+    "name": "Clefairy",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_016_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Slap",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Metal",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #113",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Shibuzoh.",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "17",
+    "name": "Mankey",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_017_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Reckless Charge",
+        "damage": "30",
+        "effect": "This Pokémon also does 10 damage to itself."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Psychic",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "Souichirou Gunjima",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "18",
+    "name": "Venusaur",
+    "hp": "160",
+    "card_type": "Pokémon - Stage 2 - Evolves from Ivysaur",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_018_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Grass", "Colorless", "Colorless"],
+        "name": "Mega Drain",
+        "damage": "80",
+        "effect": "Heal 30 damage from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "3",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #3",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Kuroimori",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "19",
+    "name": "Greninja",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 2 - Evolves from Frogadier",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_019_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless"],
+        "name": "Mist Slash",
+        "damage": "60",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Water Shuriken",
+      "effect": "Once during your turn, you may do 20 damage to 1 of your opponent's Pokémon."
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #89",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Sanosuke Sakuma",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "20",
+    "name": "Haunter",
+    "hp": "70",
+    "card_type": "Pokémon - Stage 1 - Evolves from Gastly",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_020_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Surprise Attack",
+        "damage": "50",
+        "effect": "Flip a coin. If tails, this attack does nothing."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "Mékayu",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "21",
+    "name": "Onix",
+    "hp": "110",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_021_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Fighting", "Fighting"],
+        "name": "Land Crush",
+        "damage": "70",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "4",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #150",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Tomokazu Komiya",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "22",
+    "name": "Jigglypuff",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_022_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Unknown",
+        "damage": "0",
+        "effect": "Your opponent's Active Pokémon is now Asleep."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "Kurata So",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "23",
+    "name": "Bulbasaur",
+    "hp": "70",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_023_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless"],
+        "name": "Vine Whip",
+        "damage": "40",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #1",
+        "rarity": "◊"
+      },
+      {
+        "version": "Genetic Apex #227",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Kouki Saitou",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "24",
+    "name": "Magnemite",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_024_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "ightning Ball",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #97",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Miki Tanaka",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "25",
+    "name": "Moltres ex",
+    "hp": "140",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_025_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire"],
+        "name": "Inferno",
+        "damage": "Dance",
+        "effect": "Flip 3 coins. Take an amount of [R] Energy from your Energy Zone equal to the number of heads and attach it to your Benched [R] Pokémon in any way you like."
+      },
+      {
+        "cost": ["Fire", "Colorless", "Colorless"],
+        "name": "Heat Blast",
+        "damage": "70",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "2",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #47",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Genetic Apex #255",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Genetic Apex #274",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA Igarashi",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "26",
+    "name": "Pikachu",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_026_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Gnaw",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #94",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kouki Saitou",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "27",
+    "name": "Snivy",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_027_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass"],
+        "name": "Tackle",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "Yoriyuki Ikegami",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "28",
+    "name": "Volcarona",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 1 - Evolves from Larvesta",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_028_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire", "Fire", "Colorless"],
+        "name": "Volcanic",
+        "damage": "Ash",
+        "effect": "Discard 2 [R] Energy from this Pokémon. This attack does 80 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "2",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #14",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Shin Nagasawa",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "29",
+    "name": "Blastoise",
+    "hp": "150",
+    "card_type": "Pokémon - Stage 2 - Evolves from Wartortle",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_029_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Colorless"],
+        "name": "Hydro Pump",
+        "damage": "80+",
+        "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "3",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #55",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "danciao",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "30",
+    "name": "Eevee",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_030_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Unknown",
+        "damage": "0",
+        "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do −20 damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "En Morikura",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "31",
+    "name": "Cinccino",
+    "hp": "90",
+    "card_type": "Pokémon - Stage 1 - Evolves from Minccino",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_031_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Do the Wave",
+        "damage": "30x",
+        "effect": "This attack does 30 damage for each of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #213",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "MAHOU",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "32",
+    "name": "Charmander",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_032_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire"],
+        "name": "Ember",
+        "damage": "30",
+        "effect": "Discard a [R] Energy from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #33",
+        "rarity": "◊"
+      },
+      {
+        "version": "Genetic Apex #230",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Naoyo Kimura",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "33",
+    "name": "Squirtle",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_033_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water"],
+        "name": "ater Gun",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #53",
+        "rarity": "◊"
+      },
+      {
+        "version": "Genetic Apex #232",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Kanako Eo",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "34",
+    "name": "Piplup",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_034_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Unknown",
+        "damage": "0",
+        "effect": "Heal 20 damage from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Space-Time Smackdown #35",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kariya",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "35",
+    "name": "Turtwig",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_035_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless"],
+        "name": "Bite",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "2",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Space-Time Smackdown #10",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Atsuko Nishida",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "36",
+    "name": "Electivire",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 1 - Evolves from Electabuzz",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_036_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Lightning"],
+        "name": "Exciting Voltage",
+        "damage": "40+",
+        "effect": "If this Pokémon has at least 2 extra [L] Energy attached, this attack does 80 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "3",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Space-Time Smackdown #57",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Sumiyoshi Kizuki",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "37",
+    "name": "Cresselia ex",
+    "hp": "140",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_037_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Psychic", "Colorless"],
+        "name": "Psychic Flash",
+        "damage": "80",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Lunar Plumage",
+      "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, heal 20 damage from this Pokémon."
+    },
+    "weakness": "Darkness",
+    "retreat": "2",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "PLANETA Mochizuki",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "38",
+    "name": "Misdreavus",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_038_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Confuse",
+        "damage": "Ray",
+        "effect": "Your opponent's Active Pokémon is now Confused."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Unknown",
+        "rarity": "Unknown"
+      }
+    ],
+    "artist": "Miki Tanaka",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "39",
+    "name": "Skarmory",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_039_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Metal"],
+        "name": "etal Arms",
+        "damage": "20+",
+        "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 30 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Space-Time Smackdown #111",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Anesaki Dynamic",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "40",
+    "name": "Chimchar",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_040_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire"],
+        "name": "Scratch",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Space-Time Smackdown #27",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "sui",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "41",
+    "name": "Togepi",
+    "hp": "50",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_041_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "ound",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Metal",
+    "retreat": "1",
+    "rarity": "",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [
+      {
+        "version": "Space-Time Smackdown #63",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Naoyo Kimura",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  }
+]
