@@ -50,7 +50,17 @@ function App() {
             <Route path="/collection" element={<Collection />} />
             <Route path="/trade" element={<Trade />} />
             <Route path="/community" element={<Community />} />
-            <Route path="/card/:id" element={<CardDetail />} />
+            <Route
+              path="/card/:id"
+              element={
+                <CardDetail
+                  cardId={''}
+                  onClose={(): void => {
+                    throw new Error('Function not implemented.')
+                  }}
+                />
+              }
+            />
           </Routes>
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
         </ErrorBoundary>
