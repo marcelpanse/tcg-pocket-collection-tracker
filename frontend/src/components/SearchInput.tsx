@@ -1,11 +1,13 @@
 import { Input } from '@/components/ui/input.tsx'
+import { debounce } from '@std/async/debounce'
 import type { FC } from 'react'
 
-let _searchDebounce: number | null = null
+const SEARCH_DEBOUNCE_MS = 500
 
 type Props = {
   setSearchValue: (searchValue: string) => void
 }
+
 const SearchInput: FC<Props> = ({ setSearchValue }) => {
   return (
     <Input
@@ -13,14 +15,7 @@ const SearchInput: FC<Props> = ({ setSearchValue }) => {
       placeholder="Search..."
       className="w-full md:w-64 border-2 h-[38px]"
       style={{ borderColor: '#45556C' }}
-      onChange={(e) => {
-        if (_searchDebounce) {
-          window.clearTimeout(_searchDebounce)
-        }
-        _searchDebounce = window.setTimeout(() => {
-          setSearchValue(e.target.value)
-        }, 500)
-      }}
+      onChange={debounce((e) => setSearchValue(e.target.value), SEARCH_DEBOUNCE_MS)}
     />
   )
 }

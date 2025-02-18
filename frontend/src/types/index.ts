@@ -6,6 +6,11 @@ export interface AccountRow {
   friend_id: string
 }
 
+export enum BooleanType {
+  Yes = 'Yes',
+  No = 'No',
+}
+
 export interface CollectionRow extends Partial<Models.Document> {
   $id: string
   email: string
@@ -47,14 +52,14 @@ export interface Card {
   }
   weakness: string
   retreat: string
-  rarity: string
-  fullart: string
-  ex: string
+  rarity: Rarity
+  fullart: BooleanType
+  ex: BooleanType
   set_details: string
   pack: string
   alternate_versions: {
     version: string
-    rarity: string
+    rarity: Rarity
   }[]
   artist: string
   probability: {
@@ -67,4 +72,15 @@ export interface Card {
 
 export interface CollectedCard extends Card {
   amount_owned?: number
+}
+
+export enum Rarity {
+  '◊' = '◊',
+  '◊◊' = '◊◊',
+  '◊◊◊' = '◊◊◊',
+  '◊◊◊◊' = '◊◊◊◊',
+  '☆' = '☆',
+  '☆☆' = '☆☆',
+  '☆☆☆' = '☆☆☆',
+  CrownRare = 'Crown Rare',
 }

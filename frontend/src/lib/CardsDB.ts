@@ -1,23 +1,48 @@
-import type { Card, CollectionRow, Expansion, Pack } from '@/types'
-import A1 from '../../assets/cards/A1.json'
-import A1a from '../../assets/cards/A1a.json'
-import A2 from '../../assets/cards/A2.json'
-import PA from '../../assets/cards/P-A.json'
+import { BooleanType, type Card, type CollectionRow, type Expansion, type Pack, Rarity } from '@/types'
+import A1 from '@assets/cards/A1.json' with { type: 'json' }
+import A1a from '@assets/cards/A1a.json' with { type: 'json' }
+import A2 from '@assets/cards/A2.json' with { type: 'json' }
+import PA from '@assets/cards/P-A.json' with { type: 'json' }
+import type { RaritySet } from './context/FiltersContext'
 
-const update = (cards: Card[], expansionName: string) => {
-  for (const card of cards) {
-    // @ts-ignore there is an ID in the JSON, but I don't want it in the Type because you should always use the card_id, having both is confusing.
-    card.card_id = `${expansionName}-${card.id}`
-    card.expansion = expansionName
+type JSONInput = typeof A1 | typeof A1a | typeof A2 | typeof PA
+
+const convertAbility = (ability: JSONInput[number]['ability']): { name: string; effect: string } => {
+  if (typeof ability === 'string') return { name: '', effect: ability }
+  if (typeof ability === 'object' && 'name' in ability && 'effect' in ability) {
+    return ability
+  }
+  return { name: '', effect: '' }
+}
+
+const update = (inCards: JSONInput, expansionName: string): Card[] => {
+  const cards: Card[] = []
+  for (const card of inCards) {
+    cards.push({
+      ...card,
+      card_id: `${expansionName}-${card.id}`,
+      expansion: expansionName,
+      rarity: card.rarity in Rarity || Object.values(Rarity).includes(card.rarity as Rarity) ? (card.rarity as Rarity) : Rarity['◊'],
+      fullart: card.fullart in BooleanType ? (card.fullart as BooleanType) : BooleanType.No,
+      ex: card.ex in BooleanType ? (card.ex as BooleanType) : BooleanType.No,
+      alternate_versions: card.alternate_versions.map((av) => ({ version: av.version, rarity: av.rarity in Rarity ? (av.rarity as Rarity) : Rarity['◊'] })),
+      ability: convertAbility(card.ability),
+      probability: {
+        '1-3 card': ('1-3 card' in card.probability && card.probability['1-3 card']) || null,
+        '4 card': ('4 card' in card.probability && card.probability['4 card']) || null,
+        '5 card': ('5 card' in card.probability && card.probability['5 card']) || null,
+      },
+      crafting_cost: Number(card.crafting_cost),
+    })
   }
   return cards
 }
 
-export const a1Cards: Card[] = update(A1 as unknown as Card[], 'A1')
-export const a2Cards: Card[] = update(A2 as unknown as Card[], 'A2')
-export const a1aCards: Card[] = update(A1a as unknown as Card[], 'A1a')
-export const paCards: Card[] = update(PA as unknown as Card[], 'P-A')
-export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...paCards]
+export const a1Cards: Card[] = update(A1, 'A1')
+export const a2Cards: Card[] = update(A2, 'A2')
+export const a1aCards: Card[] = update(A1a, 'A1a')
+export const paCards: Card[] = update(PA, 'P-A')
+export const allCards: Card[] = [a1Cards, a1aCards, a2Cards, paCards].flat()
 
 export const getCardById = (cardId: string): Card | undefined => {
   return allCards.find((card) => card.card_id === cardId)
@@ -83,18 +108,18 @@ export const sellableForTokensDictionary: { [id: string]: number } = {
 
 interface NrOfCardsOwnedProps {
   ownedCards: CollectionRow[]
-  rarityFilter: string[]
+  rarityFilter: RaritySet
   expansion?: Expansion
   packName?: string
 }
 export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, expansion, packName }: NrOfCardsOwnedProps) => {
   let filteredOwnedCards = ownedCards
     .filter((oc) => oc.amount_owned > 0)
-    .map((cr) => ({ ...cr, rarity: allCards.find((c) => c.card_id === cr.card_id)?.rarity || '' }))
+    .map((cr) => ({ ...cr, rarity: allCards.find((c) => c.card_id === cr.card_id)?.rarity || Rarity['◊'] }))
 
-  if (rarityFilter.length > 0) {
+  if (rarityFilter !== 'all' && rarityFilter.size > 0) {
     //filter out cards that are not in the rarity filter
-    filteredOwnedCards = filteredOwnedCards.filter((oc) => rarityFilter.includes(oc.rarity))
+    filteredOwnedCards = filteredOwnedCards.filter((oc) => rarityFilter.has(oc.rarity))
   }
 
   if (!expansion) {
@@ -110,7 +135,7 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, expansion, packNam
 }
 
 interface TotalNrOfCardsProps {
-  rarityFilter: string[]
+  rarityFilter: RaritySet
   expansion?: Expansion
   packName?: string
 }
@@ -124,9 +149,9 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName }: TotalNr
     filteredCards = filteredCards.filter((c) => c.pack === packName)
   }
 
-  if (rarityFilter.length > 0) {
+  if (rarityFilter !== 'all' && rarityFilter.size > 0) {
     //filter out cards that are not in the rarity filter
-    filteredCards = filteredCards.filter((c) => rarityFilter.includes(c.rarity))
+    filteredCards = filteredCards.filter((c) => rarityFilter.has(c.rarity))
   }
 
   return filteredCards.length
@@ -167,9 +192,9 @@ interface PullRateProps {
   ownedCards: CollectionRow[]
   expansion: Expansion
   pack: Pack
-  rarityFilter?: string[]
+  rarityFilter?: RaritySet
 }
-export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [] }: PullRateProps) => {
+export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = 'all' }: PullRateProps) => {
   if (ownedCards.length === 0) {
     return 1
   }
@@ -182,9 +207,9 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [] }: Pul
   let missingCards = cardsInPack.filter((c) => !ownedCards.find((oc) => oc.card_id === c.card_id && oc.amount_owned > 0))
   // console.log('missing cards', missingCards)
 
-  if (rarityFilter.length > 0) {
+  if (rarityFilter !== 'all' && rarityFilter.size > 0) {
     //filter out cards that are not in the rarity filter
-    missingCards = missingCards.filter((c) => rarityFilter.includes(c.rarity))
+    missingCards = missingCards.filter((c) => rarityFilter.has(c.rarity))
   }
 
   let totalProbability1_3 = 0

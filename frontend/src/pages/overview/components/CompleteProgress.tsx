@@ -1,6 +1,7 @@
 import { Progress } from '@/components/ui/progress.tsx'
 import { getNrOfCardsOwned, getTotalNrOfCards } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
+import type { RaritySet } from '@/lib/context/FiltersContext'
 import type { Expansion } from '@/types'
 import { use, useMemo } from 'react'
 
@@ -8,10 +9,10 @@ interface CompleteProgressProps {
   title: string
   expansion: Expansion
   packName?: string
-  rarityFilter?: string[]
+  rarityFilter?: RaritySet
 }
 
-export function CompleteProgress({ title, expansion, packName, rarityFilter = [] }: CompleteProgressProps) {
+export function CompleteProgress({ title, expansion, packName, rarityFilter = 'all' }: CompleteProgressProps) {
   const { ownedCards } = use(CollectionContext)
 
   const nrOfCardsOwned = useMemo(() => getNrOfCardsOwned({ ownedCards, rarityFilter, expansion, packName }), [ownedCards, expansion, packName, rarityFilter])

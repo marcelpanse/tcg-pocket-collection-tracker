@@ -1,14 +1,26 @@
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
-import type { FC } from 'react'
+import { FiltersContext, type OwnedFilterMode } from '@/lib/context/FiltersContext'
+import { cn } from '@/lib/utils'
+import { use } from 'react'
 
 interface Props {
-  ownedFilter: string
-  setOwnedFilter: (ownedFilter: 'all' | 'owned' | 'missing') => void
+  fullWidth?: boolean
 }
-const OwnedFilter: FC<Props> = ({ ownedFilter, setOwnedFilter }) => {
+
+function OwnedFilter({ fullWidth }: Props) {
+  const { filterState, setFilterState } = use(FiltersContext)
+
   return (
-    <Tabs value={ownedFilter} onValueChange={(value) => setOwnedFilter(value as 'all' | 'owned' | 'missing')} className="w-50">
-      <TabsList className="w-full flex-wrap h-auto lg:h-10 bg-neutral-50 border-2 border-slate-600 rounded-md">
+    <Tabs
+      value={filterState.ownedFilterMode}
+      onValueChange={(value) =>
+        setFilterState((draft) => {
+          draft.ownedFilterMode = value as OwnedFilterMode
+        })
+      }
+      className={fullWidth ? 'w-full' : 'w-50'}
+    >
+      <TabsList className={cn('w-full flex-wrap h-auto lg:h-10 bg-neutral-50 border-2 border-slate-600 rounded-md', fullWidth && '[&>*]:basis-1/3')}>
         <TabsTrigger value="all">All</TabsTrigger>
         <TabsTrigger value="missing">Missing</TabsTrigger>
         <TabsTrigger value="owned">Owned</TabsTrigger>

@@ -7,12 +7,12 @@
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["./assets/*"],
-      "@components/*": ["./components/*"],
-      "@hooks/*": ["./hooks/*"],
-      "@lib/*": ["./lib/*"],
-      "@pages/*": ["./pages/*"],
-      "@types/*": ["./types/*"],
-      "@util/*": ["./util/*"],
+      "@components/*": ["./src/components/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@types/*": ["./src/types/*"],
+      "@util/*": ["./src/util/*"],
       "@/*": ["./src/*"]
     }
   }
