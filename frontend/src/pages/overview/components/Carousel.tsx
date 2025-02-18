@@ -14,7 +14,7 @@ export function Carousel({ padding, children }: CarouselComponentProps) {
       <article
         ref={scrollContainer}
         className="flex overflow-x-auto hide-scroll gap-5 snap-x scroll-smooth"
-        style={{ scrollPadding: padding, paddingLeft: padding, paddingRight: `calc(${padding} + 1.5rem)` }}
+        style={{ scrollPadding: padding, paddingLeft: padding, paddingRight: `calc(${padding} + 1.5rem)`, scrollbarWidth: 'none' }}
       >
         {children}
       </article>
