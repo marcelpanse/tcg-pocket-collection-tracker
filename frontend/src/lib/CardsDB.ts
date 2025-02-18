@@ -6,6 +6,7 @@ import PA from '../../assets/cards/P-A.json'
 
 const update = (cards: Card[], expansionName: string) => {
   for (const card of cards) {
+    // we set the card_id to the linkedCardID if it exists, so we really threat it as a single card eventhough it appears in multiple expansions.
     // @ts-ignore there is an ID in the JSON, but I don't want it in the Type because you should always use the card_id, having both is confusing.
     card.card_id = card.linkedCardID || `${expansionName}-${card.id}`
     card.expansion = expansionName
