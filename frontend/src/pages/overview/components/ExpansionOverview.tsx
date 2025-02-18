@@ -56,7 +56,7 @@ export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverview
                 </div>
               </>
             )}
-            <div className="col-span-8 snap-start flex-shrink-0 w-full border-2 border-gray-200 border-solid rounded-4xl p-8">
+            <div className="col-span-8 snap-start flex-shrink-0 w-full border-2 border-slate-600 border-solid rounded-4xl p-4 sm:p-8">
               <CompleteProgress title="Total cards" expansion={expansion} rarityFilter={rarityFilter} />
               {expansion.packs.length > 1 &&
                 expansion.packs.map((pack) => (
@@ -76,12 +76,12 @@ export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverview
                 className="col-span-8 lg:col-span-4"
                 backgroundColor={highestProbabilityPack.fill}
               />
-              <div className="col-span-full sm:col-span-2">
+              <div className="col-span-4 lg:col-span-2">
                 <BarChartComponent title="Probability of getting new card per pack" data={chartData} />
               </div>
             </>
           )}
-          <div className="col-span-full sm:col-span-2 ">
+          <div className="col-span-4 lg:col-span-2">
             <CompleteProgress title="Total cards" expansion={expansion} rarityFilter={rarityFilter} />
             {expansion.packs.length > 1 &&
               expansion.packs.map((pack) => (

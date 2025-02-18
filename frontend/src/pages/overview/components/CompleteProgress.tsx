@@ -19,7 +19,7 @@ export function CompleteProgress({ title, expansion, packName, rarityFilter = []
   const progressValue = useMemo(() => (nrOfCardsOwned / totalNrOfCards) * 100, [nrOfCardsOwned, totalNrOfCards])
 
   return (
-    <div className="mt-4">
+    <div className="sm:mt-4">
       {title}
       <Progress value={progressValue} />
       You have {nrOfCardsOwned}/{totalNrOfCards} cards

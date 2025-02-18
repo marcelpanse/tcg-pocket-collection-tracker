@@ -54,26 +54,26 @@ function Overview() {
         </div>
 
         <section className="grid grid-cols-8 gap-6">
-          <div className="col-span-8 flex aspect-square h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-8 md:col-span-2">
-            <h2 className="mb-2 text-center text-2xl">You have</h2>
-            <h1 className="mb-3 text-balance text-center font-semibold text-7xl">{CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter })}</h1>
-            <h2 className="text-balance text-center text-2xl">out of {CardsDB.getTotalNrOfCards({ rarityFilter })} unique cards</h2>
+          <div className="col-span-8 flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-4 sm:p-8 md:col-span-2">
+            <h2 className="mb-2 text-center text-lg sm:text-2xl">You have</h2>
+            <h1 className="mb-3 text-balance text-center font-semibold text-3xl sm:text-7xl">{CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter })}</h1>
+            <h2 className="text-balance text-center text-lg sm:text-2xl">out of {CardsDB.getTotalNrOfCards({ rarityFilter })} unique cards</h2>
           </div>
           <GradientCard
             title={highestProbabilityPack?.packName || ''}
             packNames="all"
             percentage={highestProbabilityPack?.percentage || 0}
-            className="col-span-8 lg:col-span-4 col-start-1 lg:col-start-3"
+            className="col-span-8 md:col-span-4 col-start-1 md:col-start-3"
             backgroundColor={highestProbabilityPack?.fill}
           />
-          <div className="col-span-8 flex aspect-square h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-8 opacity-100 md:col-span-2">
-            <h2 className="mb-2 text-center text-2xl">You have</h2>
-            <h1 className="mb-3 overflow-hidden truncate whitespace-nowrap text-balance text-center font-semibold text-7xl">{ownedCardsCount}</h1>
-            <h2 className="text-balance text-center text-2xl">cards in total</h2>
+          <div className="col-span-8 flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-4 sm:p-8 md:col-span-2">
+            <h2 className="mb-2 text-center text-lg sm:text-2xl">You have</h2>
+            <h1 className="mb-3 text-balance text-center font-semibold text-3xl sm:text-7xl">{ownedCardsCount}</h1>
+            <h2 className="text-balance text-center text-lg sm:text-2xl">cards in total</h2>
           </div>
         </section>
       </article>
-      <article className="mx-auto min-h-screen max-w-7xl sm:p-6 p-0 grid grid-cols-8 gap-6">
+      <article className="mx-auto min-h-screen max-w-7xl sm:p-6 p-0 pt-6 grid grid-cols-8 gap-6">
         {CardsDB.expansions.map((expansion) => (
           <ExpansionOverview key={expansion.id} expansion={expansion} rarityFilter={rarityFilter} />
         ))}
