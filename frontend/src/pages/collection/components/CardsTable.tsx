@@ -9,9 +9,10 @@ const columnHelper = createColumnHelper<CardType>()
 
 interface Props {
   cards: CardType[]
+  onCardClick?: (cardId: string) => void // New prop to handle clicks
 }
 
-export function CardsTable({ cards }: Props) {
+export function CardsTable({ cards, onCardClick }: Props) {
   const parentRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
 
@@ -105,7 +106,7 @@ export function CardsTable({ cards }: Props) {
               ) : (
                 <div className="flex justify-center gap-x-3">
                   {(row.data as { type: string; row: Row<CardType> }[]).map(({ row: subRow }) => (
-                    <Card key={subRow.original.card_id} card={subRow.original} />
+                    <Card key={subRow.original.card_id} card={subRow.original} onClick={() => onCardClick?.(subRow.original.card_id)} />
                   ))}
                 </div>
               )}
