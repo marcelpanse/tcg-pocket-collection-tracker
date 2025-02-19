@@ -1,6 +1,7 @@
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
+import { ID } from 'appwrite'
 import { use, useCallback, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 import XLSX from 'xlsx'
@@ -15,21 +16,26 @@ type ExcelRowType = {
 export const ExcelReader = () => {
   const { user } = use(UserContext)
   const { ownedCards, setOwnedCards } = use(CollectionContext)
+  console.log('owned cards', ownedCards)
 
   const [processedData, setProcessedData] = useState<(ExcelRowType & { added?: boolean; updated?: boolean; removed?: boolean })[] | null>(null)
   const [numberProcessed, setNumberProcessed] = useState<number>(0)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [errorMessage, setErrorMessage] = useState<string>('')
+  const [progressMessage, setProgressMessage] = useState<string>('')
 
-  const ProcessFileRows = async (data: { expansionName: string; count: number; id: string; name: string }[]) => {
+  const processFileRows = async (data: { expansionName: string; count: number; id: string; name: string }[]) => {
     if (data) {
       const db = await getDatabase()
-      for (const r of data) {
+      for (let i = 0; i < data.length; i++) {
+        const r = data[i]
         const newAmount = Number(r.count)
         const cardId = r.id
+        console.log('checking', ownedCards, r.id)
         const ownedCard = ownedCards.find((row) => row.card_id === r.id)
 
         if (ownedCard && ownedCard.amount_owned !== newAmount) {
+          console.log('updating card', ownedCard.card_id, newAmount)
           ownedCard.amount_owned = Math.max(0, newAmount)
           setOwnedCards([...ownedCards])
           await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
@@ -37,7 +43,8 @@ export const ExcelReader = () => {
           })
           setProcessedData((p) => [...(p ?? []), { ...r, updated: newAmount > 0, removed: newAmount === 0 }])
         } else if (!ownedCard && newAmount > 0) {
-          const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, r.id, {
+          console.log('creating card', r.id, newAmount)
+          const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
             email: user?.email,
             card_id: cardId,
             amount_owned: newAmount,
@@ -54,6 +61,7 @@ export const ExcelReader = () => {
           ])
           setProcessedData((p) => [...(p ?? []), { ...r, added: true }])
         }
+        setProgressMessage(`Processed ${i + 1} of ${data.length}`)
         setNumberProcessed((n) => n + 1)
       }
     }
@@ -75,7 +83,7 @@ export const ExcelReader = () => {
       setErrorMessage('Error With File')
     }
 
-    reader.onload = (e) => {
+    reader.onload = async (e) => {
       try {
         const worksheetNames = ['Genetic Apex', 'Mythical Island', 'Space-Time Smackdown', 'PROMO-A']
         const workbook = XLSX.read(e.target?.result)
@@ -103,7 +111,8 @@ export const ExcelReader = () => {
         }
 
         setProcessedData([])
-        ProcessFileRows(results).then(() => console.log('Processed File Rows'))
+        await processFileRows(results)
+        console.log('Processed File Rows')
       } catch (error) {
         console.error('Error processing Excel file:', error)
         setErrorMessage(`Error processing Excel file: ${error}`)
@@ -124,29 +133,34 @@ export const ExcelReader = () => {
       </div>
       {isLoading && (
         <>
-          <p>Excel File Is Loading</p>
+          <p>Excel file is loading</p>
           <progress className="w-full" value={numberProcessed} />
         </>
       )}
-      {errorMessage?.length > 0 && <p className="text-color-red">{errorMessage}</p>}
+      {errorMessage?.length > 0 && <p className="text-red-400 mb-2">{errorMessage}</p>}
+      {progressMessage?.length > 0 && <p className="text-gray-200 mb-2">{progressMessage}</p>}
       {processedData && (
         <div>
           {processedData.length > 0 ? (
             <pre>
-              Data Updated:
-              <table>
+              Data updated:
+              <table className="w-full text-left table-auto">
                 <thead>
-                  <th>Expansion Name</th>
-                  <th>ID</th>
-                  <th>Card Name</th>
-                  <th>Status (Count)</th>
+                  <tr>
+                    <th>Expansion Name</th>
+                    <th>ID</th>
+                    <th>Card Name</th>
+                    <th>Status (Count)</th>
+                  </tr>
                 </thead>
                 {processedData.map((d, index) => (
                   <tbody key={`data-${d.id}-${index}`}>
-                    <td>{d.expansionName}</td>
-                    <td>{d.id}</td>
-                    <td>{d.name}</td>
-                    <td>{d.added ? `Added (${d.count})` : d.updated ? `Updated (${d.count})` : d.removed ? 'Removed' : 'Unknown'}</td>
+                    <tr>
+                      <td>{d.expansionName}</td>
+                      <td>{d.id}</td>
+                      <td>{d.name}</td>
+                      <td>{d.added ? `Added (${d.count})` : d.updated ? `Updated (${d.count})` : d.removed ? 'Removed' : 'Unknown'}</td>
+                    </tr>
                   </tbody>
                 ))}
               </table>

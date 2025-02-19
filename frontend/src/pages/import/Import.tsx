@@ -9,17 +9,17 @@ function Import() {
   const { user } = use(UserContext)
 
   if (!user) {
-    return <TitleCard title={'Sign up to import your cards'} paragraph={'To import your spreadsheet, please log in.'} backgroundColor="#777777" />
+    return <TitleCard title={'Sign up to import your cards'} paragraph={'To import your spreadsheet, please log in.'} className="bg-gray-400" />
   }
 
   return (
     <div className="flex flex-col gap-y-4 max-w-[900px] mx-auto">
       <TitleCard
-        title={'Import Disclaimer'}
+        title={'Import disclaimer'}
         paragraph={
           'This import feature will OVERWRITE your current collection with the values from the database.  ONLY do this process if your spreadsheet contains the exact count values you want in your collection.'
         }
-        backgroundColor="#FF0000"
+        className="bg-amber-600"
       />
       <div className="w-full text-center">
         <Link to={'https://docs.google.com/spreadsheets/d/1AsnYR7IsEiHyrnxfwyRO-wEZbWj33fIICjSqBw9VCcM/copy?usp=sharing'}>
