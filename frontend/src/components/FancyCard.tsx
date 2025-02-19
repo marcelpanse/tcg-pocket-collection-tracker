@@ -97,7 +97,7 @@ function FancyCard({ selected, setIsSelected, card }: Props) {
         className="card-test"
         width="100%"
         style={cardTestStyle}
-        src={`/images/${card.image.split('/').at(-1)}`}
+        src={`/images/${card.image?.split('/').at(-1)}`}
         alt="Bulbasaur"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

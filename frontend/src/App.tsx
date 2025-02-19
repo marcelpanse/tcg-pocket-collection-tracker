@@ -16,7 +16,6 @@ const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
 const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const Community = loadable(() => import('./pages/community/Community.tsx'))
-const CardDetail = loadable(() => import('./pages/collection/CardDetail.tsx'))
 const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
 
 function App() {
@@ -50,17 +49,6 @@ function App() {
             <Route path="/collection" element={<Collection />} />
             <Route path="/trade" element={<Trade />} />
             <Route path="/community" element={<Community />} />
-            <Route
-              path="/card/:id"
-              element={
-                <CardDetail
-                  cardId={''}
-                  onClose={(): void => {
-                    throw new Error('Function not implemented.')
-                  }}
-                />
-              }
-            />
           </Routes>
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
         </ErrorBoundary>

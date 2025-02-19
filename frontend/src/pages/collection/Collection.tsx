@@ -58,7 +58,7 @@ function Collection() {
           onCardClick={(cardId) => setSelectedCardId(cardId)} // Handle card clicks
         />
 
-        {selectedCardId && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId(null)} />}
+        <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId(null)} />
       </div>
     </div>
   )
