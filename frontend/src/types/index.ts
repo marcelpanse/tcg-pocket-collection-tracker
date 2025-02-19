@@ -29,6 +29,7 @@ export interface Pack {
 
 export interface Card {
   card_id: string
+  linkedCardID?: string
   expansion: string
   name: string
   hp: string

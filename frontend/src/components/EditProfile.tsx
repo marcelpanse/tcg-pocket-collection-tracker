@@ -20,7 +20,7 @@ interface Props {
   isProfileDialogOpen: boolean
   setIsProfileDialogOpen: (isProfileDialogOpen: boolean) => void
 }
-export const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setIsProfileDialogOpen }) => {
+const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setIsProfileDialogOpen }) => {
   const { user } = use(UserContext)
   const { toast } = useToast()
 
@@ -35,7 +35,7 @@ export const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpe
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
+    values: {
       username: account?.username || '',
       friend_id: account?.friend_id || '',
     },
@@ -138,3 +138,5 @@ export const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpe
     </Dialog>
   )
 }
+
+export default EditProfile

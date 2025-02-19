@@ -1,4 +1,3 @@
-import { EditProfile } from '@/components/EditProfile.tsx'
 import { getUser } from '@/lib/Auth.ts'
 import { fetchAccount } from '@/lib/fetchAccount.ts'
 import type { AccountRow, CollectionRow } from '@/types'
@@ -20,6 +19,7 @@ const Community = loadable(() => import('./pages/community/Community.tsx'))
 const CardDetail = loadable(() => import('./pages/collection/CardDetail.tsx'))
 const Import = loadable(() => import('./pages/import/Import.tsx'))
 const Export = loadable(() => import('./pages/export/Export.tsx'))
+const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
 
 function App() {
   const [user, setUser] = useState<User | null>(null)
@@ -56,9 +56,7 @@ function App() {
             <Route path="/import" element={<Import />} />
             <Route path="/export" element={<Export />} />
           </Routes>
-          {account && (
-            <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
-          )}
+          <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
         </ErrorBoundary>
       </CollectionContext.Provider>
     </UserContext.Provider>

@@ -5,6 +5,8 @@ import { CompleteProgress } from '@/pages/overview/components/CompleteProgress.t
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import type { Expansion } from '@/types'
 import { use, useMemo } from 'react'
+import { useMediaQuery } from 'react-responsive'
+import { Carousel } from './Carousel'
 
 interface ExpansionOverviewProps {
   expansion: Expansion
@@ -12,6 +14,8 @@ interface ExpansionOverviewProps {
 }
 export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverviewProps) {
   const { ownedCards } = use(CollectionContext)
+
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
   const { highestProbabilityPack, chartData } = useMemo(() => {
     let { packs } = expansion
@@ -34,28 +38,58 @@ export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverview
 
   return (
     <>
-      <h2 className="col-span-8 text-2xl">{expansion.name}</h2>
-      {!expansion.promo && (
+      <h2 className="col-span-8 text-2xl pl-8">{expansion.name}</h2>
+      {isMobile ? (
+        <div className="col-span-full">
+          <Carousel padding="2rem">
+            {!expansion.promo && (
+              <>
+                <GradientCard
+                  title={highestProbabilityPack.packName}
+                  packNames={chartData.map((cd) => cd.packName).join(', ')}
+                  percentage={highestProbabilityPack.percentage}
+                  className="col-span-8 snap-start flex-shrink-0 w-full"
+                  backgroundColor={highestProbabilityPack.fill}
+                />
+                <div className="col-span-8 snap-start flex-shrink-0 w-full">
+                  <BarChartComponent title="Probability of getting new card per pack" data={chartData} />
+                </div>
+              </>
+            )}
+            <div className="col-span-8 snap-start flex-shrink-0 w-full border-2 border-slate-600 border-solid rounded-4xl p-4 sm:p-8">
+              <CompleteProgress title="Total cards" expansion={expansion} rarityFilter={rarityFilter} />
+              {expansion.packs.length > 1 &&
+                expansion.packs.map((pack) => (
+                  <CompleteProgress key={pack.name} rarityFilter={rarityFilter} title={pack.name} expansion={expansion} packName={pack.name} />
+                ))}
+            </div>
+          </Carousel>
+        </div>
+      ) : (
         <>
-          <GradientCard
-            title={highestProbabilityPack.packName}
-            packNames={chartData.map((cd) => cd.packName).join(', ')}
-            percentage={highestProbabilityPack.percentage}
-            className="col-span-8 lg:col-span-4"
-            backgroundColor={highestProbabilityPack.fill}
-          />
-          <div className="col-span-full sm:col-span-2">
-            <BarChartComponent title="Probability of getting new card per pack" data={chartData} />
+          {!expansion.promo && (
+            <>
+              <GradientCard
+                title={highestProbabilityPack.packName}
+                packNames={chartData.map((cd) => cd.packName).join(', ')}
+                percentage={highestProbabilityPack.percentage}
+                className="col-span-8 lg:col-span-4"
+                backgroundColor={highestProbabilityPack.fill}
+              />
+              <div className="col-span-4 lg:col-span-2">
+                <BarChartComponent title="Probability of getting new card per pack" data={chartData} />
+              </div>
+            </>
+          )}
+          <div className="col-span-4 lg:col-span-2">
+            <CompleteProgress title="Total cards" expansion={expansion} rarityFilter={rarityFilter} />
+            {expansion.packs.length > 1 &&
+              expansion.packs.map((pack) => (
+                <CompleteProgress key={pack.name} rarityFilter={rarityFilter} title={pack.name} expansion={expansion} packName={pack.name} />
+              ))}
           </div>
         </>
       )}
-      <div className="col-span-full sm:col-span-2">
-        <CompleteProgress title="Total cards" expansion={expansion} rarityFilter={rarityFilter} />
-        {expansion.packs.length > 1 &&
-          expansion.packs.map((pack) => (
-            <CompleteProgress key={pack.name} rarityFilter={rarityFilter} title={pack.name} expansion={expansion} packName={pack.name} />
-          ))}
-      </div>
     </>
   )
 }
