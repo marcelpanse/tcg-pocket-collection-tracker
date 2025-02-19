@@ -98,11 +98,10 @@ export function Card({ card, onClick }: Props) {
   }
 
   return (
-    <div
-      className="group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer"
-      onClick={onClick} // Allow clicking to trigger the sidebar
-    >
-      <FancyCard card={card} selected={amountOwned > 0} />
+    <div className="group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer">
+      <div onClick={onClick}>
+        <FancyCard card={card} selected={amountOwned > 0} />
+      </div>
       <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">
         {card.card_id} - {card.name}
       </p>
