@@ -31,17 +31,17 @@ export function Header() {
           <NavigationMenuList>
             <NavigationMenuLink asChild>
               <Link to="/">
-                <Button variant="ghost">Overview</Button>
+                <Button variant="ghost">{t('header.overview')}</Button>
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild>
               <Link to="/collection">
-                <Button variant="ghost">Collection</Button>
+                <Button variant="ghost">{t('header.collection')}</Button>
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/trade">
-                <Button variant="ghost">Trade</Button>
+                <Button variant="ghost">{t('header.trade')}</Button>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuList>
@@ -54,14 +54,14 @@ export function Header() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-              <DropdownMenuLabel>{t('selectLanguage')}</DropdownMenuLabel>
+              <DropdownMenuLabel>{t('header.selectLanguage')}</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => changeLanguage('es')}>{t('languages.es')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('en')}>{t('languages.en')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('es')}>{t('header.languages.es')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('en')}>{t('header.languages.en')}</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           <Link to="/community">
-            <Button variant="ghost">Community</Button>
+            <Button variant="ghost">{t('header.community')}</Button>
           </Link>
 
           {user ? (
@@ -72,9 +72,9 @@ export function Header() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56">
-                <DropdownMenuLabel>My account</DropdownMenuLabel>
+                <DropdownMenuLabel>{t('header.myAccount')}</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={() => setIsProfileDialogOpen(true)}>Edit profile</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setIsProfileDialogOpen(true)}>{t('header.editProfile')}</DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
                   <DropdownMenuSeparator />
@@ -84,7 +84,7 @@ export function Header() {
                       setUser(null)
                     }}
                   >
-                    Log out
+                    {t('header.logOut')}
                     <LogOut />
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
@@ -93,11 +93,11 @@ export function Header() {
           ) : (
             <Dialog open={isLoginDialogOpen} onOpenChange={setIsLoginDialogOpen}>
               <DialogTrigger asChild>
-                <Button>Login</Button>
+                <Button>{t('header.login')}</Button>
               </DialogTrigger>
               <DialogContent className="border-2 border-slate-600 shadow-none">
                 <DialogHeader>
-                  <DialogTitle>Login / Sign up</DialogTitle>
+                  <DialogTitle>{t('header.signUp')}</DialogTitle>
                 </DialogHeader>
                 <Login />
               </DialogContent>
