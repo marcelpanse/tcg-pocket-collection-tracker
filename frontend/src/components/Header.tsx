@@ -12,14 +12,17 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu.tsx'
+import { useI18n } from '@/hooks/use-i18n'
 import { logout } from '@/lib/Auth.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
-import { LogOut, UserRoundPen } from 'lucide-react'
+import { Globe, LogOut, UserRoundPen } from 'lucide-react'
 import { use } from 'react'
 import { Link } from 'react-router'
 
 export function Header() {
   const { user, setUser, isLoginDialogOpen, setIsLoginDialogOpen, setIsProfileDialogOpen } = use(UserContext)
+  const { t, changeLanguage } = useI18n()
+
   return (
     <>
       <header className="flex h-20 w-full shrink-0 flex-wrap items-center px-4 md:px-6">
@@ -44,6 +47,19 @@ export function Header() {
           </NavigationMenuList>
         </NavigationMenu>
         <div className="items-center gap-2 hidden sm:flex">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Globe />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56">
+              <DropdownMenuLabel>{t('selectLanguage')}</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem onClick={() => changeLanguage('es')}>{t('languages.es')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('en')}>{t('languages.en')}</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link to="/community">
             <Button variant="ghost">Community</Button>
           </Link>
