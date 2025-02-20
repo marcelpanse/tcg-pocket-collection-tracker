@@ -33,6 +33,7 @@ export interface Pack {
 
 export interface Card {
   card_id: string
+  linkedCardID?: string
   expansion: string
 >>>>>>> 7cb76f3866e4f04d49dbb1acdf91df59900ecd5d
   name: string

@@ -7,16 +7,16 @@ import type { Card as CardType } from '@/types'
 import { ID } from 'appwrite'
 import { MinusIcon, PlusIcon } from 'lucide-react'
 import { use, useCallback, useEffect, useMemo, useState } from 'react'
-import { Link } from 'react-router'
 
 interface Props {
   card: CardType
+  onClick?: () => void // Allow click handling
 }
 
 // keep track of the debounce timeouts for each card
 const _inputDebounce: Record<string, number | null> = {}
 
-export function Card({ card }: Props) {
+export function Card({ card, onClick }: Props) {
   const { user, setIsLoginDialogOpen } = use(UserContext)
   const { ownedCards, setOwnedCards } = use(CollectionContext)
   let amountOwned = useMemo(() => ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0, [ownedCards])
@@ -98,10 +98,10 @@ export function Card({ card }: Props) {
   }
 
   return (
-    <div className="group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg">
-      <Link viewTransition to={`/card/${card.card_id}`} state={{ card }}>
+    <div className="group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer">
+      <div onClick={onClick}>
         <FancyCard card={card} selected={amountOwned > 0} />
-      </Link>
+      </div>
       <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">
         {card.card_id} - {card.name}
       </p>

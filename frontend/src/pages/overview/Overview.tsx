@@ -39,42 +39,45 @@ function Overview() {
   }, [ownedCards, rarityFilter])
 
   return (
-    <main className="fade-in-up mx-auto min-h-screen max-w-7xl pt-0 px-4 md:px-8 md:py-4">
-      {ownedCards.length === 0 && (
-        <Alert className="mb-8 border-2 border-slate-600 shadow-none">
-          <Siren className="h-4 w-4" />
-          <AlertTitle>You don't have any cards logged yet!</AlertTitle>
-          <AlertDescription>Head over to the collection page to add your first card or hit the login button to create an account.</AlertDescription>
-        </Alert>
-      )}
+    <main className="fade-in-up">
+      <article className="mx-auto max-w-7xl px-8">
+        {ownedCards.length === 0 && (
+          <Alert className="mb-8 border-2 border-slate-600 shadow-none">
+            <Siren className="h-4 w-4" />
+            <AlertTitle>You don't have any cards logged yet!</AlertTitle>
+            <AlertDescription>Head over to the collection page to add your first card or hit the login button to create an account.</AlertDescription>
+          </Alert>
+        )}
 
-      <div className="mb-8 flex justify-end">
-        <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
-      </div>
-
-      <section className="grid grid-cols-8 gap-6">
-        <div className="col-span-8 flex aspect-square h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-8 md:col-span-2">
-          <h2 className="mb-2 text-center text-2xl">You have</h2>
-          <h1 className="mb-3 text-balance text-center font-semibold text-7xl">{CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter })}</h1>
-          <h2 className="text-balance text-center text-2xl">out of {CardsDB.getTotalNrOfCards({ rarityFilter })} unique cards</h2>
-        </div>
-        <GradientCard
-          title={highestProbabilityPack?.packName || ''}
-          packNames="all"
-          percentage={highestProbabilityPack?.percentage || 0}
-          className="col-span-8 md:col-span-4 col-start-1 md:col-start-3"
-          backgroundColor={highestProbabilityPack?.fill}
-        />
-        <div className="col-span-8 flex aspect-square h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-8 opacity-100 md:col-span-2">
-          <h2 className="mb-2 text-center text-2xl">You have</h2>
-          <h1 className="mb-3 overflow-hidden truncate whitespace-nowrap text-balance text-center font-semibold text-7xl">{ownedCardsCount}</h1>
-          <h2 className="text-balance text-center text-2xl">cards in total</h2>
+        <div className="mb-8 flex justify-end">
+          <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
         </div>
 
+        <section className="grid grid-cols-8 gap-6">
+          <div className="col-span-8 flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-4 sm:p-8 md:col-span-2">
+            <h2 className="mb-2 text-center text-lg sm:text-2xl">You have</h2>
+            <h1 className="mb-3 text-balance text-center font-semibold text-3xl sm:text-7xl">{CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter })}</h1>
+            <h2 className="text-balance text-center text-lg sm:text-2xl">out of {CardsDB.getTotalNrOfCards({ rarityFilter })} unique cards</h2>
+          </div>
+          <GradientCard
+            title={highestProbabilityPack?.packName || ''}
+            packNames="all"
+            percentage={highestProbabilityPack?.percentage || 0}
+            className="col-span-8 md:col-span-4 col-start-1 md:col-start-3"
+            backgroundColor={highestProbabilityPack?.fill}
+          />
+          <div className="col-span-8 flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-4 sm:p-8 md:col-span-2">
+            <h2 className="mb-2 text-center text-lg sm:text-2xl">You have</h2>
+            <h1 className="mb-3 text-balance text-center font-semibold text-3xl sm:text-7xl">{ownedCardsCount}</h1>
+            <h2 className="text-balance text-center text-lg sm:text-2xl">cards in total</h2>
+          </div>
+        </section>
+      </article>
+      <article className="mx-auto min-h-screen max-w-7xl sm:p-6 p-0 pt-6 grid grid-cols-8 gap-6">
         {CardsDB.expansions.map((expansion) => (
           <ExpansionOverview key={expansion.id} expansion={expansion} rarityFilter={rarityFilter} />
         ))}
-      </section>
+      </article>
     </main>
   )
 }
