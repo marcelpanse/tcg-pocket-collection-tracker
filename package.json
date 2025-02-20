@@ -26,5 +26,9 @@
         "react": "^19.0.0"
       }
     }
+  },
+  "dependencies": {
+    "i18next": "^24.2.2",
+    "react-i18next": "^15.4.1"
   }
 }
