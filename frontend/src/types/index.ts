@@ -13,6 +13,10 @@ export interface CollectionRow extends Partial<Models.Document> {
   amount_owned: number
 }
 
+<<<<<<< HEAD
+export interface Card {
+  id: string
+=======
 export interface Expansion {
   name: string
   id: string
@@ -31,6 +35,7 @@ export interface Card {
   card_id: string
   linkedCardID?: string
   expansion: string
+>>>>>>> 7cb76f3866e4f04d49dbb1acdf91df59900ecd5d
   name: string
   hp: string
   card_type: string
@@ -45,7 +50,11 @@ export interface Card {
   ability: {
     name: string
     effect: string
+<<<<<<< HEAD
+  } | string
+=======
   }
+>>>>>>> 7cb76f3866e4f04d49dbb1acdf91df59900ecd5d
   weakness: string
   retreat: string
   rarity: string
@@ -66,6 +75,9 @@ export interface Card {
   crafting_cost: number
 }
 
+<<<<<<< HEAD
+=======
 export interface CollectedCard extends Card {
   amount_owned?: number
 }
+>>>>>>> 7cb76f3866e4f04d49dbb1acdf91df59900ecd5d

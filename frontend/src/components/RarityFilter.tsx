@@ -22,28 +22,28 @@ const RarityFilter: FC<Props> = ({ rarityFilter, setRarityFilter }) => {
         onValueChange={(value) => setRarityFilter(value)}
         className={`justify-end shadow-none border-2 border-slate-600 rounded-md ${isMobile ? 'flex-col' : 'flex-row'}`}
       >
-        <ToggleGroupItem value="◊" aria-label="◊" className="text-gray-400 hover:text-gray-500">
+        <ToggleGroupItem value="◊" aria-label="◊" className="bg-black/50 text-gray-400 hover:text-gray-500">
           ♢
         </ToggleGroupItem>
-        <ToggleGroupItem value="◊◊" aria-label="◊◊" className="text-gray-400 hover:text-gray-500">
+        <ToggleGroupItem value="◊◊" aria-label="◊◊" className="bg-black/50 text-gray-400 hover:text-gray-500">
           ♢♢
         </ToggleGroupItem>
-        <ToggleGroupItem value="◊◊◊" aria-label="◊◊◊" className="text-gray-400 hover:text-gray-500">
+        <ToggleGroupItem value="◊◊◊" aria-label="◊◊◊" className="bg-black/50 text-gray-400 hover:text-gray-500">
           ♢♢♢
         </ToggleGroupItem>
-        <ToggleGroupItem value="◊◊◊◊" aria-label="◊◊◊◊" className="text-gray-400 hover:text-gray-500">
+        <ToggleGroupItem value="◊◊◊◊" aria-label="◊◊◊◊" className="bg-black/50 text-gray-400 hover:text-gray-500">
           ♢♢♢♢
         </ToggleGroupItem>
-        <ToggleGroupItem value="☆" aria-label="☆" className="text-yellow-500 hover:text-yellow-600 .dark:data-[state=on]:text-yellow-500">
+        <ToggleGroupItem value="☆" aria-label="☆" className="bg-black/50 text-yellow-500 hover:text-yellow-600 .dark:data-[state=on]:text-yellow-500">
           ☆
         </ToggleGroupItem>
-        <ToggleGroupItem value="☆☆" aria-label="☆☆" className="text-yellow-500 hover:text-yellow-600 data-[state=on]:text-yellow-500">
+        <ToggleGroupItem value="☆☆" aria-label="☆☆" className="bg-black/50 text-yellow-500 hover:text-yellow-600 data-[state=on]:text-yellow-500">
           ☆☆
         </ToggleGroupItem>
-        <ToggleGroupItem value="☆☆☆" aria-label="☆☆☆" className="text-yellow-500 hover:text-yellow-600 data-[state=on]:text-yellow-500">
+        <ToggleGroupItem value="☆☆☆" aria-label="☆☆☆" className="bg-black/50 text-yellow-500 hover:text-yellow-600 data-[state=on]:text-yellow-500">
           ☆☆☆
         </ToggleGroupItem>
-        <ToggleGroupItem value="Crown Rare" aria-label="♛">
+        <ToggleGroupItem className='bg-black/50' value="Crown Rare" aria-label="♛">
           👑
         </ToggleGroupItem>
       </ToggleGroup>
