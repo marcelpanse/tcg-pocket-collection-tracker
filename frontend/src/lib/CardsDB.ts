@@ -79,7 +79,7 @@ export const sellableForTokensDictionary: { [id: string]: number } = {
   '☆': 100,
   '☆☆': 300,
   '☆☆☆': 300,
-  '♛': 1500,
+  'Crown Rare': 1500,
 }
 
 interface NrOfCardsOwnedProps {

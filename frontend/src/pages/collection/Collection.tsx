@@ -1,3 +1,4 @@
+import { CardsTable } from '@/components/CardsTable.tsx'
 import ExpansionsFilter from '@/components/ExpansionsFilter.tsx'
 import OwnedFilter from '@/components/OwnedFilter.tsx'
 import RarityFilter from '@/components/RarityFilter.tsx'
@@ -5,8 +6,6 @@ import SearchInput from '@/components/SearchInput.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { use, useMemo, useState } from 'react'
-import CardDetail from './CardDetail.tsx' // Import sidebar component
-import { CardsTable } from './components/CardsTable.tsx'
 
 function Collection() {
   const { ownedCards } = use(CollectionContext)
@@ -15,7 +14,6 @@ function Collection() {
   const [expansionFilter, setExpansionFilter] = useState<string>('all')
   const [rarityFilter, setRarityFilter] = useState<string[]>([])
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
-  const [selectedCardId, setSelectedCardId] = useState<string | null>(null)
 
   const getFilteredCards = useMemo(() => {
     let filteredCards = allCards
@@ -53,12 +51,7 @@ function Collection() {
         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
       </div>
       <div>
-        <CardsTable
-          cards={getFilteredCards}
-          onCardClick={(cardId) => setSelectedCardId(cardId)} // Handle card clicks
-        />
-
-        <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId(null)} />
+        <CardsTable cards={getFilteredCards} />
       </div>
     </div>
   )

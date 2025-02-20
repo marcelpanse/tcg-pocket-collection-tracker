@@ -1,8 +1,8 @@
-import FancyCard from '@/components/FancyCard'
-import { Button } from '@/components/ui/button'
-import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth'
-import { CollectionContext } from '@/lib/context/CollectionContext'
-import { UserContext } from '@/lib/context/UserContext'
+import FancyCard from '@/components/FancyCard.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
+import { CollectionContext } from '@/lib/context/CollectionContext.ts'
+import { UserContext } from '@/lib/context/UserContext.ts'
 import type { Card as CardType } from '@/types'
 import { ID } from 'appwrite'
 import { MinusIcon, PlusIcon } from 'lucide-react'
@@ -10,15 +10,14 @@ import { use, useCallback, useEffect, useMemo, useState } from 'react'
 
 interface Props {
   card: CardType
-  onClick?: () => void // Allow click handling
 }
 
 // keep track of the debounce timeouts for each card
 const _inputDebounce: Record<string, number | null> = {}
 
-export function Card({ card, onClick }: Props) {
+export function Card({ card }: Props) {
   const { user, setIsLoginDialogOpen } = use(UserContext)
-  const { ownedCards, setOwnedCards } = use(CollectionContext)
+  const { ownedCards, setOwnedCards, setSelectedCardId } = use(CollectionContext)
   let amountOwned = useMemo(() => ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0, [ownedCards])
   const [inputValue, setInputValue] = useState(0)
 
@@ -99,7 +98,7 @@ export function Card({ card, onClick }: Props) {
 
   return (
     <div className="group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer">
-      <div onClick={onClick}>
+      <div onClick={() => setSelectedCardId(card.card_id)}>
         <FancyCard card={card} selected={amountOwned > 0} />
       </div>
       <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">

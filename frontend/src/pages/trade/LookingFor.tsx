@@ -1,11 +1,13 @@
-import { CardTable } from '@/components/ui/card-table'
+import { CardsTable } from '@/components/CardsTable.tsx'
 import { allCards, expansions, tradeableRaritiesDictionary } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext'
-import { use, useMemo } from 'react'
-import { LookingForCard } from './components/LookingForCard'
+import { type FC, use, useMemo } from 'react'
 import { NoCardsNeeded } from './components/NoCardsNeeded'
 
-export function LookingFor() {
+interface Props {
+  rarityFilter: string[]
+}
+export const LookingFor: FC<Props> = ({ rarityFilter }) => {
   const { ownedCards } = use(CollectionContext)
 
   const lookingForTradeCards = useMemo(
@@ -22,15 +24,7 @@ export function LookingFor() {
     () => lookingForTradeCards.filter((c) => Object.keys(tradeableRaritiesDictionary).includes(c.rarity) && tradeableExpansions.includes(c.expansion)),
     [lookingForTradeCards],
   )
+  const filteredCards = useMemo(() => cards.filter((c) => rarityFilter.length === 0 || rarityFilter.includes(c.rarity)), [cards, rarityFilter])
 
-  return cards && cards.length > 0 ? (
-    <CardTable
-      cards={cards}
-      cardElement={(card) => {
-        return <LookingForCard card={card} />
-      }}
-    />
-  ) : (
-    <NoCardsNeeded />
-  )
+  return cards && cards.length > 0 ? <CardsTable cards={filteredCards} /> : <NoCardsNeeded />
 }
