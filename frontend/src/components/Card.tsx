@@ -4,6 +4,7 @@ import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import type { Card as CardType } from '@/types'
+import type { CollectionRow } from '@/types'
 import { ID } from 'appwrite'
 import { MinusIcon, PlusIcon } from 'lucide-react'
 import { use, useCallback, useEffect, useMemo, useState } from 'react'
@@ -125,17 +126,11 @@ export function Card({ card }: Props) {
   )
 }
 
-export interface OwnedCard {
-  $id: string
-  email?: string
-  card_id: string
-  amount_owned: number
-}
 export const updateMultipleCards = async (
   cardIds: string[],
   newAmount: number,
-  ownedCards: OwnedCard[],
-  setOwnedCards: React.Dispatch<React.SetStateAction<OwnedCard[]>>,
+  ownedCards: CollectionRow[],
+  setOwnedCards: React.Dispatch<React.SetStateAction<CollectionRow[]>>,
 ) => {
   const db = await getDatabase()
 
