@@ -124,12 +124,18 @@ export function Card({ card }: Props) {
     </div>
   )
 }
+interface OwnedCard {
+  $id: string
+  email: string
+  card_id: string
+  amount_owned: number
+}
 
 export const updateMultipleCards = async (
   cardIds: string[],
   newAmount: number,
-  ownedCards: { card_id: string; amount_owned: number }[], // Replace with correct type
-  setOwnedCards: React.Dispatch<React.SetStateAction<{ card_id: string; amount_owned: number }[]>>, // Replace with correct type
+  ownedCards: OwnedCard[],
+  setOwnedCards: React.Dispatch<React.SetStateAction<OwnedCard[]>>,
 ) => {
   const db = await getDatabase()
 
