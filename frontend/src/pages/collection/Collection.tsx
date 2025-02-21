@@ -59,7 +59,7 @@ function Collection() {
         <SearchInput setSearchValue={setSearchValue} />
         <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} />
       </div>
-      <div className="items-center justify-between gap-2 flex-col md:flex-row px-8 hidden md:flex">
+      <div className="items-center justify-between gap-2 flex-col md:flex-row px-8 md:flex">
         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
         <MultipleSelection onMarkAllAsOwned={markAllAsOwned} />
