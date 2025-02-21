@@ -134,13 +134,13 @@ export const updateMultipleCards = async (
   user: { email: string } | null,
 ) => {
   const db = await getDatabase()
+  const ownedCardsCopy = [...ownedCards]
   for (const cardId of cardIds) {
-    const ownedCard = ownedCards.find((row) => row.card_id === cardId)
+    const ownedCard = ownedCardsCopy.find((row) => row.card_id === cardId)
 
     if (ownedCard) {
       console.log('Updating existing card:', cardId)
       ownedCard.amount_owned = Math.max(0, newAmount)
-      setOwnedCards([...ownedCards])
       await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
         amount_owned: ownedCard.amount_owned,
       })
@@ -152,15 +152,13 @@ export const updateMultipleCards = async (
         email: user?.email,
       })
 
-      setOwnedCards((prevCards) => [
-        ...prevCards,
-        {
-          $id: newCard.$id,
-          email: newCard.email,
-          card_id: newCard.card_id,
-          amount_owned: newCard.amount_owned,
-        },
-      ])
+      ownedCardsCopy.push({
+        $id: newCard.$id,
+        email: newCard.email,
+        card_id: newCard.card_id,
+        amount_owned: newCard.amount_owned,
+      })
     }
   }
+  setOwnedCards([...ownedCardsCopy]) // rerender the component
 }
