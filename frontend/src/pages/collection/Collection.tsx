@@ -1,7 +1,7 @@
+import { BatchUpdateDialog } from '@/components/BatchUpdateDialog'
 import { updateMultipleCards } from '@/components/Card.tsx'
 import { CardsTable } from '@/components/CardsTable.tsx'
 import ExpansionsFilter from '@/components/ExpansionsFilter.tsx'
-import { MultipleSelection } from '@/components/MultipleSelection.tsx'
 import OwnedFilter from '@/components/OwnedFilter.tsx'
 import RarityFilter from '@/components/RarityFilter.tsx'
 import SearchInput from '@/components/SearchInput.tsx'
@@ -13,7 +13,7 @@ import { useContext } from 'react'
 
 function Collection() {
   const { user } = useContext(UserContext)
-  const { ownedCards, setOwnedCards } = useContext(CollectionContext) // Ensure setOwnedCards is properly typed
+  const { ownedCards, setOwnedCards } = useContext(CollectionContext)
   const [searchValue, setSearchValue] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<string>('all')
   const [rarityFilter, setRarityFilter] = useState<string[]>([])
@@ -44,13 +44,8 @@ function Collection() {
     return filteredCards
   }, [expansionFilter, rarityFilter, searchValue, ownedFilter, ownedCards])
 
-  const markAllAsOwned = async (value: number | null) => {
-    if (value === null) return
-
-    const filteredCardIds = getFilteredCards.map((card) => card.card_id)
-    if (filteredCardIds.length === 0) return
-
-    await updateMultipleCards(filteredCardIds, value, ownedCards, setOwnedCards, user)
+  const handleBatchUpdate = async (cardIds: string[], amount: number) => {
+    await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)
   }
 
   return (
@@ -62,7 +57,7 @@ function Collection() {
       <div className="items-center justify-between gap-2 flex-col md:flex-row px-8 md:flex">
         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
-        <MultipleSelection onMarkAllAsOwned={markAllAsOwned} />
+        <BatchUpdateDialog filteredCards={getFilteredCards} onBatchUpdate={handleBatchUpdate} disabled={getFilteredCards.length === 0} />
       </div>
       <div>
         <CardsTable cards={getFilteredCards} />
