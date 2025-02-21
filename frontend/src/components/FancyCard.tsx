@@ -2,7 +2,6 @@ import useMousePosition from '@/lib/hooks/useMousePosition'
 import type { Card } from '@/types'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-// Generic throttle function with strict typing
 const throttle = <T extends unknown[]>(fn: (...args: T) => void, delay: number): ((...args: T) => void) => {
   let lastCall = 0
   let timeoutId: ReturnType<typeof setTimeout> | null = null
@@ -31,7 +30,7 @@ interface Props {
   card: Card
   selected: boolean
   setIsSelected?: React.Dispatch<React.SetStateAction<boolean>>
-  size?: 'default' | 'small' // Add a size prop
+  size?: 'default' | 'small'
 }
 
 function FancyCard({ selected, setIsSelected, card, size = 'default' }: Props) {

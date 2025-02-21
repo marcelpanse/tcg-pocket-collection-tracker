@@ -11,6 +11,7 @@ import { useEffect, useMemo, useState } from 'react' // Add useEffect
 interface BatchUpdateDialogProps {
   filteredCards: Card[]
   onBatchUpdate: (cardIds: string[], amount: number) => void
+  disabled?: boolean
 }
 
 export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateDialogProps) {
@@ -47,7 +48,7 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
   const handleSelectAll = () => {
     const allSelected = uniqueCards.reduce(
       (acc, card) => {
-        acc[card.card_id] = true // Set all cards to selected: true
+        acc[card.card_id] = true
         return acc
       },
       {} as Record<string, boolean>,
