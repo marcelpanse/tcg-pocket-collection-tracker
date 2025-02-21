@@ -127,7 +127,7 @@ export function Card({ card }: Props) {
 
 export interface OwnedCard {
   $id: string
-  email: string
+  email?: string
   card_id: string
   amount_owned: number
 }
