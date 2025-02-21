@@ -141,12 +141,12 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
               <strong>You can also select or deselect individual cards if you don’t want to update all of them.</strong>
             </AlertDescription>
           </Alert>
-          <div className="flex gap-2">
-            <Button variant="outline" onClick={handleSelectAll}>
-              Select All
-            </Button>
+          <div className="flex gap-2 justify-between">
             <Button variant="outline" onClick={handleDeselectAll}>
               Deselect All
+            </Button>
+            <Button variant="outline" onClick={handleSelectAll}>
+              Select All
             </Button>
           </div>
 

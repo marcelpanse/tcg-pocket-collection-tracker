@@ -7,12 +7,10 @@ import RarityFilter from '@/components/RarityFilter.tsx'
 import SearchInput from '@/components/SearchInput.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import { UserContext } from '@/lib/context/UserContext'
 import { useMemo, useState } from 'react'
 import { useContext } from 'react'
 
 function Collection() {
-  const { user } = useContext(UserContext)
   const { ownedCards, setOwnedCards } = useContext(CollectionContext)
   const [searchValue, setSearchValue] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<string>('all')
@@ -45,7 +43,7 @@ function Collection() {
   }, [expansionFilter, rarityFilter, searchValue, ownedFilter, ownedCards])
 
   const handleBatchUpdate = async (cardIds: string[], amount: number) => {
-    await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)
+    await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards)
   }
 
   return (
