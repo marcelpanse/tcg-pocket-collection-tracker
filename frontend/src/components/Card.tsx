@@ -149,12 +149,14 @@ export const updateMultipleCards = async (
       const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
         card_id: cardId,
         amount_owned: newAmount,
+        email: user?.email, // Ensure email is included
       })
 
       setOwnedCards((prevCards) => [
         ...prevCards,
         {
           $id: newCard.$id,
+          email: newCard.email, // Ensure email is included
           card_id: newCard.card_id,
           amount_owned: newCard.amount_owned,
         },

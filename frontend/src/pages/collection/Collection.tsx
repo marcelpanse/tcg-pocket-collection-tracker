@@ -47,7 +47,7 @@ function Collection() {
     const filteredCardIds = getFilteredCards.map((card) => card.card_id)
     if (filteredCardIds.length === 0) return
 
-    await updateMultipleCards(filteredCardIds, value, ownedCards, setOwnedCards)
+    await updateMultipleCards(filteredCardIds, value, ownedCards, setOwnedCards, user?.email)
   }
 
   return (
