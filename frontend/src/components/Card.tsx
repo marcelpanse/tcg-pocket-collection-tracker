@@ -4,6 +4,7 @@ import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import type { Card as CardType } from '@/types'
+import type { CollectionRow } from '@/types'
 import { ID } from 'appwrite'
 import { MinusIcon, PlusIcon } from 'lucide-react'
 import { use, useCallback, useEffect, useMemo, useState } from 'react'
@@ -123,4 +124,43 @@ export function Card({ card }: Props) {
       </div>
     </div>
   )
+}
+
+export const updateMultipleCards = async (
+  cardIds: string[],
+  newAmount: number,
+  ownedCards: CollectionRow[],
+  setOwnedCards: React.Dispatch<React.SetStateAction<CollectionRow[]>>,
+  user: { email: string } | null,
+) => {
+  const db = await getDatabase()
+  for (const cardId of cardIds) {
+    const ownedCard = ownedCards.find((row) => row.card_id === cardId)
+
+    if (ownedCard) {
+      console.log('Updating existing card:', cardId)
+      ownedCard.amount_owned = Math.max(0, newAmount)
+      setOwnedCards([...ownedCards])
+      await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
+        amount_owned: ownedCard.amount_owned,
+      })
+    } else if (!ownedCard && newAmount > 0) {
+      console.log('Adding new card:', cardId)
+      const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
+        card_id: cardId,
+        amount_owned: newAmount,
+        email: user?.email,
+      })
+
+      setOwnedCards((prevCards) => [
+        ...prevCards,
+        {
+          $id: newCard.$id,
+          email: newCard.email,
+          card_id: newCard.card_id,
+          amount_owned: newCard.amount_owned,
+        },
+      ])
+    }
+  }
 }
