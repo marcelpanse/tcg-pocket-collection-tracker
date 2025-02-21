@@ -125,6 +125,12 @@ export function Card({ card }: Props) {
   )
 }
 
+export interface OwnedCard {
+  $id: string
+  email: string
+  card_id: string
+  amount_owned: number
+}
 export const updateMultipleCards = async (
   cardIds: string[],
   newAmount: number,

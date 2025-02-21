@@ -12,7 +12,7 @@ export function MultipleSelection({ onMarkAllAsOwned }: MultipleSelectionProps) 
   const handleDecrement = () => {
     if (customValue !== null) {
       if (customValue > 0) {
-        setCustomValue((prev) => prev - 1)
+        setCustomValue((prev) => (prev || 0) - 1)
       } else if (customValue === 0) {
         setCustomValue(null)
       }
