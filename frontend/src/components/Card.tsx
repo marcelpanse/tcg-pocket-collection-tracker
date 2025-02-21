@@ -124,3 +124,40 @@ export function Card({ card }: Props) {
     </div>
   )
 }
+
+export const updateMultipleCards = async (
+  cardIds: string[],
+  newAmount: number,
+  ownedCards: { card_id: string; amount_owned: number }[], // Replace with correct type
+  setOwnedCards: React.Dispatch<React.SetStateAction<{ card_id: string; amount_owned: number }[]>>, // Replace with correct type
+) => {
+  const db = await getDatabase()
+
+  for (const cardId of cardIds) {
+    const ownedCard = ownedCards.find((row) => row.card_id === cardId)
+
+    if (ownedCard) {
+      console.log('Updating existing card:', cardId)
+      ownedCard.amount_owned = Math.max(0, newAmount)
+      setOwnedCards([...ownedCards])
+      await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
+        amount_owned: ownedCard.amount_owned,
+      })
+    } else if (!ownedCard && newAmount > 0) {
+      console.log('Adding new card:', cardId)
+      const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
+        card_id: cardId,
+        amount_owned: newAmount,
+      })
+
+      setOwnedCards((prevCards) => [
+        ...prevCards,
+        {
+          $id: newCard.$id,
+          card_id: newCard.card_id,
+          amount_owned: newCard.amount_owned,
+        },
+      ])
+    }
+  }
+}

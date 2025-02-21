@@ -1,5 +1,7 @@
+import { updateMultipleCards } from '@/components/Card.tsx'
 import { CardsTable } from '@/components/CardsTable.tsx'
 import ExpansionsFilter from '@/components/ExpansionsFilter.tsx'
+import { MultipleSelection } from '@/components/MultipleSelection.tsx'
 import OwnedFilter from '@/components/OwnedFilter.tsx'
 import RarityFilter from '@/components/RarityFilter.tsx'
 import SearchInput from '@/components/SearchInput.tsx'
@@ -8,8 +10,7 @@ import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { use, useMemo, useState } from 'react'
 
 function Collection() {
-  const { ownedCards } = use(CollectionContext)
-
+  const { ownedCards, setOwnedCards } = use(CollectionContext)
   const [searchValue, setSearchValue] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<string>('all')
   const [rarityFilter, setRarityFilter] = useState<string[]>([])
@@ -40,6 +41,15 @@ function Collection() {
     return filteredCards
   }, [expansionFilter, rarityFilter, searchValue, ownedFilter, ownedCards])
 
+  const markAllAsOwned = async (value: number | null) => {
+    if (value === null) return
+
+    const filteredCardIds = getFilteredCards.map((card) => card.card_id)
+    if (filteredCardIds.length === 0) return
+
+    await updateMultipleCards(filteredCardIds, value, ownedCards, setOwnedCards)
+  }
+
   return (
     <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">
       <div className="flex items-center gap-2 flex-col md:flex-row px-8">
@@ -49,6 +59,7 @@ function Collection() {
       <div className="items-center justify-between gap-2 flex-col md:flex-row px-8 hidden md:flex">
         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
+        <MultipleSelection onMarkAllAsOwned={markAllAsOwned} />
       </div>
       <div>
         <CardsTable cards={getFilteredCards} />
