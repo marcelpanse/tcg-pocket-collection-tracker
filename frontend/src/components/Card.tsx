@@ -127,13 +127,13 @@ export function Card({ card }: Props) {
 }
 
 export const updateMultipleCards = async (
-  cardIds: string[], // Only selected card IDs
+  cardIds: string[],
   newAmount: number,
   ownedCards: CollectionRow[],
   setOwnedCards: React.Dispatch<React.SetStateAction<CollectionRow[]>>,
+  user: { email: string } | null,
 ) => {
   const db = await getDatabase()
-  const user = UserContext
   for (const cardId of cardIds) {
     const ownedCard = ownedCards.find((row) => row.card_id === cardId)
 

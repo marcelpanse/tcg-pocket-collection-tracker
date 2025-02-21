@@ -7,6 +7,7 @@ import RarityFilter from '@/components/RarityFilter.tsx'
 import SearchInput from '@/components/SearchInput.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
+import { UserContext } from '@/lib/context/UserContext.ts'
 import { useMemo, useState } from 'react'
 import { useContext } from 'react'
 
@@ -16,6 +17,7 @@ function Collection() {
   const [expansionFilter, setExpansionFilter] = useState<string>('all')
   const [rarityFilter, setRarityFilter] = useState<string[]>([])
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
+  const { user } = useContext(UserContext)
 
   const getFilteredCards = useMemo(() => {
     let filteredCards = allCards
@@ -43,7 +45,7 @@ function Collection() {
   }, [expansionFilter, rarityFilter, searchValue, ownedFilter, ownedCards])
 
   const handleBatchUpdate = async (cardIds: string[], amount: number) => {
-    await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards)
+    await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)
   }
 
   return (
