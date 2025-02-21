@@ -1,9 +1,10 @@
 import type { CollectionRow } from '@/types'
 import { createContext } from 'react'
+import type { Dispatch, SetStateAction } from 'react'
 
 interface ICollectionContext {
   ownedCards: CollectionRow[]
-  setOwnedCards: (cards: CollectionRow[]) => void
+  setOwnedCards: Dispatch<SetStateAction<CollectionRow[]>>
   selectedCardId: string
   setSelectedCardId: (cardId: string) => void
 }

@@ -7,10 +7,11 @@ import RarityFilter from '@/components/RarityFilter.tsx'
 import SearchInput from '@/components/SearchInput.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import { use, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
+import { useContext } from 'react'
 
 function Collection() {
-  const { ownedCards, setOwnedCards } = use(CollectionContext)
+  const { ownedCards, setOwnedCards } = useContext(CollectionContext) // Ensure setOwnedCards is properly typed
   const [searchValue, setSearchValue] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<string>('all')
   const [rarityFilter, setRarityFilter] = useState<string[]>([])
@@ -47,7 +48,7 @@ function Collection() {
     const filteredCardIds = getFilteredCards.map((card) => card.card_id)
     if (filteredCardIds.length === 0) return
 
-    await updateMultipleCards(filteredCardIds, value, ownedCards, setOwnedCards)
+    await updateMultipleCards(filteredCardIds, value, ownedCards, setOwnedCards) // Correct usage
   }
 
   return (
