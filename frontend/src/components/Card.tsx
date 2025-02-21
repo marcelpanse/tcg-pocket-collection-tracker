@@ -132,9 +132,9 @@ export const updateMultipleCards = async (
   cardIds: string[],
   newAmount: number,
   ownedCards: CollectionRow[],
-  setOwnedCards: React.Dispatch<React.SetStateAction<CollectionRow[]>>,
+  setOwnedCards: React.Dispatch<React.SetStateAction<CollectionRow[]>>, // Correct type
 ) => {
-  const { user } = useContext(UserContext) // Access user from UserContext
+  const { user } = useContext(UserContext)
   const db = await getDatabase()
 
   for (const cardId of cardIds) {
@@ -152,14 +152,14 @@ export const updateMultipleCards = async (
       const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
         card_id: cardId,
         amount_owned: newAmount,
-        email: user?.email, // Use the user object from context
+        email: user?.email,
       })
 
       setOwnedCards((prevCards) => [
         ...prevCards,
         {
           $id: newCard.$id,
-          email: newCard.email, // Ensure email is included
+          email: newCard.email,
           card_id: newCard.card_id,
           amount_owned: newCard.amount_owned,
         },
