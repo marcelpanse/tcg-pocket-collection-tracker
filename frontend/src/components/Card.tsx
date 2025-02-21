@@ -126,12 +126,15 @@ export function Card({ card }: Props) {
   )
 }
 
+import { useContext } from 'react'
+
 export const updateMultipleCards = async (
   cardIds: string[],
   newAmount: number,
   ownedCards: CollectionRow[],
   setOwnedCards: React.Dispatch<React.SetStateAction<CollectionRow[]>>,
 ) => {
+  const { user } = useContext(UserContext) // Access user from UserContext
   const db = await getDatabase()
 
   for (const cardId of cardIds) {
@@ -149,7 +152,7 @@ export const updateMultipleCards = async (
       const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
         card_id: cardId,
         amount_owned: newAmount,
-        email: user?.email, // Ensure email is included
+        email: user?.email, // Use the user object from context
       })
 
       setOwnedCards((prevCards) => [
