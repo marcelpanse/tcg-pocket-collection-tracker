@@ -24,9 +24,15 @@ function Overview() {
   const { user } = use(UserContext)
 
   const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
-  const [rarityFilter, setRarityFilter] = useState<string[]>([])
   const [totals, setTotals] = useState<{ totalUsers: number }>({ totalUsers: 0 })
   const ownedCardsCount = useMemo(() => ownedCards.reduce((total, card) => total + card.amount_owned, 0), [ownedCards])
+  const [rarityFilter, setRarityFilter] = useState<string[]>(() => {
+    const savedRarityFilter = localStorage.getItem('rarityFilter')
+    return savedRarityFilter ? JSON.parse(savedRarityFilter) : []
+  })
+  useEffect(() => {
+    localStorage.setItem('rarityFilter', JSON.stringify(rarityFilter))
+  }, [rarityFilter])
 
   useEffect(() => {
     const storage = getStorage()
