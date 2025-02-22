@@ -18,9 +18,14 @@ function Overview() {
   const { ownedCards } = use(CollectionContext)
 
   const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
-  const [rarityFilter, setRarityFilter] = useState<string[]>([])
   const ownedCardsCount = useMemo(() => ownedCards.reduce((total, card) => total + card.amount_owned, 0), [ownedCards])
-
+  const [rarityFilter, setRarityFilter] = useState<string[]>(() => {
+    const savedRarityFilter = localStorage.getItem('rarityFilter')
+    return savedRarityFilter ? JSON.parse(savedRarityFilter) : []
+  })
+  useEffect(() => {
+    localStorage.setItem('rarityFilter', JSON.stringify(rarityFilter))
+  }, [rarityFilter])
   useEffect(() => {
     let newHighestProbabilityPack: Pack | undefined
     for (const expansion of CardsDB.expansions) {
@@ -30,6 +35,7 @@ function Overview() {
         fill: pack.color,
       }))
       const highestProbabilityPackCandidate = pullRates.sort((a, b) => b.percentage - a.percentage)[0]
+
       if (highestProbabilityPackCandidate.percentage > (newHighestProbabilityPack?.percentage || 0)) {
         newHighestProbabilityPack = highestProbabilityPackCandidate
       }
