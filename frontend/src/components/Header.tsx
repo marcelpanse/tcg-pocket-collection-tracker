@@ -12,16 +12,17 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu.tsx'
-import { useI18n } from '@/hooks/use-i18n'
 import { logout } from '@/lib/Auth.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { Globe, LogOut, UserRoundPen } from 'lucide-react'
 import { use } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 
 export function Header() {
   const { user, setUser, isLoginDialogOpen, setIsLoginDialogOpen, setIsProfileDialogOpen } = use(UserContext)
-  const { t, changeLanguage } = useI18n()
+  const { t, i18n } = useTranslation('header')
+  const changeLanguage = (lng: string) => i18n.changeLanguage(lng)
 
   return (
     <>
@@ -31,17 +32,17 @@ export function Header() {
           <NavigationMenuList>
             <NavigationMenuLink asChild>
               <Link to="/">
-                <Button variant="ghost">{t('header.overview')}</Button>
+                <Button variant="ghost">{t('overview')}</Button>
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild>
               <Link to="/collection">
-                <Button variant="ghost">{t('header.collection')}</Button>
+                <Button variant="ghost">{t('collection')}</Button>
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/trade">
-                <Button variant="ghost">{t('header.trade')}</Button>
+                <Button variant="ghost">{t('trade')}</Button>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuList>
@@ -54,14 +55,14 @@ export function Header() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-              <DropdownMenuLabel>{t('header.selectLanguage')}</DropdownMenuLabel>
+              <DropdownMenuLabel>{t('selectLanguage')}</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => changeLanguage('es')}>{t('header.languages.es')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('en')}>{t('header.languages.en')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('es')}>{t('languages.es')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('en')}>{t('languages.en')}</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           <Link to="/community">
-            <Button variant="ghost">{t('header.community')}</Button>
+            <Button variant="ghost">{t('community')}</Button>
           </Link>
 
           {user ? (
@@ -72,9 +73,9 @@ export function Header() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56">
-                <DropdownMenuLabel>{t('header.myAccount')}</DropdownMenuLabel>
+                <DropdownMenuLabel>{t('myAccount')}</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={() => setIsProfileDialogOpen(true)}>{t('header.editProfile')}</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setIsProfileDialogOpen(true)}>{t('editProfile')}</DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
                   <DropdownMenuSeparator />
@@ -84,7 +85,7 @@ export function Header() {
                       setUser(null)
                     }}
                   >
-                    {t('header.logOut')}
+                    {t('logOut')}
                     <LogOut />
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
@@ -93,11 +94,11 @@ export function Header() {
           ) : (
             <Dialog open={isLoginDialogOpen} onOpenChange={setIsLoginDialogOpen}>
               <DialogTrigger asChild>
-                <Button>{t('header.login')}</Button>
+                <Button>{t('login')}</Button>
               </DialogTrigger>
               <DialogContent className="border-2 border-slate-600 shadow-none">
                 <DialogHeader>
-                  <DialogTitle>{t('header.signUp')}</DialogTitle>
+                  <DialogTitle>{t('signUp')}</DialogTitle>
                 </DialogHeader>
                 <Login />
               </DialogContent>
