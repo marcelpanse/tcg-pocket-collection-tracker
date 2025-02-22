@@ -1,0 +1,21 @@
+{
+  "projectId": "679d358b0013b9a1797f",
+  "functions": [
+    {
+      "$id": "67b7934d000412bf1516",
+      "execute": [],
+      "name": "TotalsCounter",
+      "enabled": true,
+      "logging": true,
+      "runtime": "node-22",
+      "scopes": ["users.read", "documents.read", "files.write", "files.read"],
+      "events": [],
+      "schedule": "*/1 * * * *",
+      "timeout": 900,
+      "entrypoint": "dist/main.js",
+      "commands": "npm install\nnpm run build",
+      "specification": "s-0.5vcpu-512mb",
+      "path": "backend/functions/TotalsCounter"
+    }
+  ]
+}

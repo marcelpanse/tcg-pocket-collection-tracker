@@ -79,7 +79,7 @@ export const sellableForTokensDictionary: { [id: string]: number } = {
   '☆': 100,
   '☆☆': 300,
   '☆☆☆': 300,
-  '♛': 1500,
+  'Crown Rare': 1500,
 }
 
 interface NrOfCardsOwnedProps {
@@ -127,7 +127,7 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName }: TotalNr
 
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter
-    filteredCards = filteredCards.filter((c) => rarityFilter.includes(c.rarity) && !filteredCards.some((existing) => existing.card_id !== c.card_id))
+    filteredCards = filteredCards.filter((c) => rarityFilter.includes(c.rarity))
   }
 
   return filteredCards.length

@@ -2,7 +2,6 @@ import useMousePosition from '@/lib/hooks/useMousePosition'
 import type { Card } from '@/types'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-// Generic throttle function with strict typing
 const throttle = <T extends unknown[]>(fn: (...args: T) => void, delay: number): ((...args: T) => void) => {
   let lastCall = 0
   let timeoutId: ReturnType<typeof setTimeout> | null = null
@@ -31,9 +30,10 @@ interface Props {
   card: Card
   selected: boolean
   setIsSelected?: React.Dispatch<React.SetStateAction<boolean>>
+  size?: 'default' | 'small'
 }
 
-function FancyCard({ selected, setIsSelected, card }: Props) {
+function FancyCard({ selected, setIsSelected, card, size = 'default' }: Props) {
   const cardRef = useRef<HTMLImageElement>(null)
   const { x, y } = useMousePosition()
   const [throttledPos, setThrottledPos] = useState({ x: 0, y: 0 })
@@ -76,6 +76,8 @@ function FancyCard({ selected, setIsSelected, card }: Props) {
     transformStyle: 'preserve-3d',
     cursor: 'pointer',
     opacity: selected ? 1 : 0.5,
+    width: size === 'small' ? '80px' : '100%', // Adjust size based on prop
+    height: size === 'small' ? '112px' : 'auto', // Adjust size based on prop
   }
 
   return (
@@ -95,10 +97,9 @@ function FancyCard({ selected, setIsSelected, card }: Props) {
         onMouseDown={() => setIsSelected?.(!selected)}
         ref={cardRef}
         className="card-test"
-        width="100%"
         style={cardTestStyle}
         src={`/images/${card.image?.split('/').at(-1)}`}
-        alt="Bulbasaur"
+        alt={card.name}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       />

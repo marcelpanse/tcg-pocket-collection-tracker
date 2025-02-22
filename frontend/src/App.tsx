@@ -1,5 +1,6 @@
 import { getUser } from '@/lib/Auth.ts'
 import { fetchAccount } from '@/lib/fetchAccount.ts'
+import CardDetail from '@/pages/collection/CardDetail.tsx'
 import type { AccountRow, CollectionRow } from '@/types'
 import loadable from '@loadable/component'
 import { useEffect, useState } from 'react'
@@ -26,6 +27,7 @@ function App() {
   const [ownedCards, setOwnedCards] = useState<CollectionRow[]>([])
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false)
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false)
+  const [selectedCardId, setSelectedCardId] = useState('')
 
   useEffect(() => {
     getUser().then(setUser).catch(console.error)
@@ -42,8 +44,8 @@ function App() {
 
   return (
     <UserContext.Provider value={{ user, setUser, account, setAccount, isLoginDialogOpen, setIsLoginDialogOpen, isProfileDialogOpen, setIsProfileDialogOpen }}>
-      <CollectionContext.Provider value={{ ownedCards, setOwnedCards }}>
-        <ErrorBoundary fallback={<div>Something went wrong</div>}>
+      <CollectionContext.Provider value={{ ownedCards, setOwnedCards, selectedCardId, setSelectedCardId }}>
+        <ErrorBoundary fallback={<div className="m-4">Something went wrong, please refresh the page.</div>}>
           <Toaster />
           <Header />
           <Routes>
@@ -55,6 +57,7 @@ function App() {
             <Route path="/export" element={<Export />} />
           </Routes>
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
+          <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
         </ErrorBoundary>
       </CollectionContext.Provider>
     </UserContext.Provider>

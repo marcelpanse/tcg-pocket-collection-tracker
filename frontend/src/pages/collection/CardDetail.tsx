@@ -1,15 +1,15 @@
 import FancyCard from '@/components/FancyCard.tsx'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
-import { getCardById } from '@/lib/CardsDB.ts'
+import { getCardById, sellableForTokensDictionary } from '@/lib/CardsDB.ts'
 import type { Card } from '@/types'
 
 interface CardDetailProps {
-  cardId: string | null
+  cardId: string
   onClose: () => void // Function to close the sidebar
 }
 
 function CardDetail({ cardId, onClose }: CardDetailProps) {
-  const card: Card = getCardById(cardId || '') || ({} as Card)
+  const card: Card = getCardById(cardId) || ({} as Card)
 
   return (
     <Sheet
@@ -32,6 +32,9 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
           </div>
 
           <div className="p-4 w-full">
+            <p className="text-lg mb-1">
+              <strong>Trade tokens:</strong> {sellableForTokensDictionary[card.rarity] || 'N/A'}
+            </p>
             <p className="text-lg mb-1">
               <strong>HP:</strong> {card.hp}
             </p>
