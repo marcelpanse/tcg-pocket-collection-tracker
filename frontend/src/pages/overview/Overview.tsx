@@ -9,6 +9,7 @@ import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import { Query } from 'appwrite'
 import { Siren } from 'lucide-react'
 import { use, useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { ExpansionOverview } from './components/ExpansionOverview'
 
 interface Pack {
@@ -22,6 +23,7 @@ const BUCKET_ID = '67b79b0d0008be153794'
 function Overview() {
   const { ownedCards } = use(CollectionContext)
   const { user } = use(UserContext)
+  const { t } = useTranslation('gradient-card')
 
   const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
   const [totals, setTotals] = useState<{ totalUsers: number }>({ totalUsers: 0 })
@@ -93,7 +95,7 @@ function Overview() {
           </div>
           <GradientCard
             title={highestProbabilityPack?.packName || ''}
-            packNames="all"
+            packNames={t('all')}
             percentage={highestProbabilityPack?.percentage || 0}
             className="col-span-8 md:col-span-4 col-start-1 md:col-start-3"
             backgroundColor={highestProbabilityPack?.fill}

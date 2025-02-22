@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 interface GradientCardProps {
   title: string
   className?: string
@@ -7,6 +9,9 @@ interface GradientCardProps {
 }
 
 export function GradientCard({ title, packNames, percentage, className, backgroundColor }: GradientCardProps) {
+  const { t } = useTranslation('gradient-card')
+  const chancePercentage = Math.round(percentage * 1000) / 10
+
   return (
     <div
       className={`${className} tex flex flex-col items-center justify-center rounded-4xl p-4 sm:p-8 transition-all duration-200`}
@@ -14,7 +19,10 @@ export function GradientCard({ title, packNames, percentage, className, backgrou
     >
       <header className="font-semibold text-2xl sm:text-6xl text-white">{title}</header>
       <p className="mt-2 text-center text-md sm:text-xl text-white">
-        is the most probable pack to get a new card from among {packNames} packs. You have a {Math.round(percentage * 1000) / 10}% chance of getting a new card.
+        {t('text', {
+          packNames: packNames,
+          chancePercentage: chancePercentage,
+        })}
       </p>
     </div>
   )
