@@ -1,7 +1,7 @@
+import { DiscourseForum } from '@/components/DiscourseForum.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
 import { ExternalLink } from 'lucide-react'
-import { Board } from './components/Board'
 
 function Community() {
   return (
@@ -22,12 +22,12 @@ function Community() {
             Let's connect and get to know each other. We're a community of people who love to play TCG. We're here to help each other, share our knowledge, and
             learn from each other. Whether you're a seasoned player or just starting out, we welcome you to join us.
           </p>
-          <Board term="app/announcements" />
+          <DiscourseForum topicId="12" />
         </TabsContent>
         <TabsContent value="trade">
           <h1 className="text-lg mt-4">Trading 💰</h1>
           <p className="text-sm mb-10">Trade! Leave your wishlist of cards so others can comment and connect with youto set up trades.</p>
-          <Board term="app/trade" />
+          <DiscourseForum topicId="13" />
         </TabsContent>
         <TabsContent value="feedback">
           <h1 className="text-lg mt-4">Ideas & Feedback 💡</h1>
@@ -35,7 +35,7 @@ function Community() {
             This website is a fully open source work in progress. We're always looking for ways to improve the experience. If you have any ideas or feedback,
             please let us know!
           </p>
-          <Board term="app/feedback" />
+          <DiscourseForum topicId="14" />
         </TabsContent>
       </Tabs>
     </div>

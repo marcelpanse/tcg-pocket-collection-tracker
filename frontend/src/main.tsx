@@ -1,4 +1,4 @@
-import { StrictMode, Suspense } from 'react'
+import { Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import { HashRouter } from 'react-router'
 import App from './App.tsx'
@@ -10,11 +10,9 @@ if (!root) {
 }
 
 createRoot(root).render(
-  <StrictMode>
-    <Suspense fallback={<div>Loading...</div>}>
-      <HashRouter>
-        <App />
-      </HashRouter>
-    </Suspense>
-  </StrictMode>,
+  <Suspense fallback={<div>Loading...</div>}>
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </Suspense>,
 )

@@ -1,4 +1,4 @@
-import { getUser } from '@/lib/Auth.ts'
+import { authSSO, getUser } from '@/lib/Auth.ts'
 import { fetchAccount } from '@/lib/fetchAccount.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
 import type { AccountRow, CollectionRow } from '@/types'
@@ -35,8 +35,16 @@ function App() {
 
   useEffect(() => {
     if (user) {
-      fetchCollection().then(setOwnedCards).catch(console.error)
-      fetchAccount(user.email).then(setAccount).catch(console.error)
+      // check if query params sso & sig are set
+      const params = new URLSearchParams(window.location.search)
+      const sso = params.get('sso')
+      const sig = params.get('sig')
+      if (sso && sig) {
+        authSSO(sso, sig).catch(console.error)
+      } else {
+        fetchCollection().then(setOwnedCards).catch(console.error)
+        fetchAccount(user.email).then(setAccount).catch(console.error)
+      }
     } else {
       setOwnedCards([]) // in case the user is logged out, clear the cards
     }

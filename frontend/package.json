@@ -60,6 +60,7 @@
     "globals": "^15.15.0",
     "typescript": "~5.7.3",
     "vite": "^6.1.0",
+    "vite-plugin-mkcert": "^1.17.6",
     "vite-plugin-strip-comments": "^0.0.5"
   },
   "packageManager": "pnpm@10.2.1"
