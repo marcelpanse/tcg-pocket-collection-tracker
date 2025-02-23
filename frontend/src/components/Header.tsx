@@ -29,13 +29,14 @@ export function Header() {
       <header className="flex h-20 w-full shrink-0 flex-wrap items-center px-4 md:px-6">
         <div className="shrink font-bold pr-4 hidden md:block">TCG Pocket Collection Tracker</div>
         <NavigationMenu className="max-w-full justify-start">
+          <div className="shrink font-bold pr-4 block md:hidden">TCG Pocket Collection Tracker</div>
           <NavigationMenuList>
-            <NavigationMenuLink asChild>
+            <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/">
                 <Button variant="ghost">{t('overview')}</Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild>
+            <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/collection">
                 <Button variant="ghost">{t('collection')}</Button>
               </Link>
