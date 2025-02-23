@@ -12,6 +12,7 @@ import { ID } from 'appwrite'
 import { Siren } from 'lucide-react'
 import { type FC, use } from 'react'
 import { useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 import { z } from 'zod'
 
 interface Props {
@@ -23,6 +24,7 @@ interface Props {
 const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setIsProfileDialogOpen }) => {
   const { user } = use(UserContext)
   const { toast } = useToast()
+  const { t } = useTranslation('edit-profile')
 
   const formSchema = z.object({
     username: z.string().min(2, {
@@ -78,15 +80,13 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
     <Dialog open={isProfileDialogOpen} onOpenChange={setIsProfileDialogOpen}>
       <DialogContent className="border-2 border-slate-600 shadow-none">
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
+          <DialogTitle>{t('editProfile')}</DialogTitle>
         </DialogHeader>
 
         <Alert className="mb-2 border-2 border-slate-600 shadow-none">
           <Siren className="h-4 w-4" />
-          <AlertTitle>Update your profile</AlertTitle>
-          <AlertDescription>
-            Make sure to update your profile with the actual values from your Pokémon Pocket app. We'll use this information to set up trades.
-          </AlertDescription>
+          <AlertTitle>{t('updateProfile.title')}</AlertTitle>
+          <AlertDescription>{t('updateProfile.description')}</AlertDescription>
         </Alert>
 
         <Form {...form}>
@@ -95,11 +95,11 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
               name="email"
               render={() => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>{t('email')}</FormLabel>
                   <FormControl className="mt-2">
                     <Input placeholder="Email" disabled value={user?.email} />
                   </FormControl>
-                  <FormDescription>Your registered email.</FormDescription>
+                  <FormDescription>{t('registeredEmail')}</FormDescription>
                 </FormItem>
               )}
             />
@@ -108,11 +108,11 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
               name="username"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Username</FormLabel>
+                  <FormLabel>{t('username')}</FormLabel>
                   <FormControl className="mt-2">
                     <Input placeholder="Username" {...field} />
                   </FormControl>
-                  <FormDescription>Match your Pokemon Pocket display name here.</FormDescription>
+                  <FormDescription>{t('usernameDescription')}</FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -122,16 +122,16 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
               name="friend_id"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Friend ID</FormLabel>
+                  <FormLabel>{t('friendID')}</FormLabel>
                   <FormControl className="mt-2">
                     <Input placeholder="Friend ID" {...field} />
                   </FormControl>
-                  <FormDescription>Match your Pokemon Pocket friend ID here (without dashes).</FormDescription>
+                  <FormDescription>{t('friendIDDescription')}</FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type="submit">Save</Button>
+            <Button type="submit">{t('save')}</Button>
           </form>
         </Form>
       </DialogContent>
