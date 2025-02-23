@@ -1,0 +1,161 @@
+{
+  "../node_modules/.pnpm/@giscus+react@3.1.0_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@giscus/react/dist/giscus-Ci9LqPcC.js": {
+    "file": "assets/giscus-Ci9LqPcC-BNebfDgq.js",
+    "name": "giscus-Ci9LqPcC",
+    "src": "../node_modules/.pnpm/@giscus+react@3.1.0_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@giscus/react/dist/giscus-Ci9LqPcC.js",
+    "isDynamicEntry": true
+  },
+  "_CardsTable-BQUcNOCe.js": {
+    "file": "assets/CardsTable-BQUcNOCe.js",
+    "name": "CardsTable",
+    "imports": [
+      "index.html",
+      "_RarityFilter-MRWrHI4q.js"
+    ]
+  },
+  "_RarityFilter-MRWrHI4q.js": {
+    "file": "assets/RarityFilter-MRWrHI4q.js",
+    "name": "RarityFilter",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_alert-CSNDk3jG.js": {
+    "file": "assets/alert-CSNDk3jG.js",
+    "name": "alert",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_index-DVdDRSn1.js": {
+    "file": "assets/index-DVdDRSn1.js",
+    "name": "index",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_siren-B2nWK14w.js": {
+    "file": "assets/siren-B2nWK14w.js",
+    "name": "siren",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_tabs-yo9MRb0r.js": {
+    "file": "assets/tabs-yo9MRb0r.js",
+    "name": "tabs",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_title-card-Sf2GrtIS.js": {
+    "file": "assets/title-card-Sf2GrtIS.js",
+    "name": "title-card",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.html": {
+    "file": "assets/index-BBe_H4kB.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/pages/overview/Overview.tsx",
+      "src/pages/collection/Collection.tsx",
+      "src/pages/trade/Trade.tsx",
+      "src/pages/community/Community.tsx",
+      "src/components/EditProfile.tsx",
+      "src/pages/import/Import.tsx",
+      "src/pages/export/Export.tsx"
+    ],
+    "css": [
+      "assets/index-B60_BQQL.css"
+    ]
+  },
+  "src/components/EditProfile.tsx": {
+    "file": "assets/EditProfile-Bi2k3Cjj.js",
+    "name": "EditProfile",
+    "src": "src/components/EditProfile.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_alert-CSNDk3jG.js",
+      "_siren-B2nWK14w.js"
+    ]
+  },
+  "src/pages/collection/Collection.tsx": {
+    "file": "assets/Collection-C8YsNRum.js",
+    "name": "Collection",
+    "src": "src/pages/collection/Collection.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_alert-CSNDk3jG.js",
+      "_CardsTable-BQUcNOCe.js",
+      "_tabs-yo9MRb0r.js",
+      "_RarityFilter-MRWrHI4q.js"
+    ]
+  },
+  "src/pages/community/Community.tsx": {
+    "file": "assets/Community-Cn4Z-2sg.js",
+    "name": "Community",
+    "src": "src/pages/community/Community.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_tabs-yo9MRb0r.js"
+    ],
+    "dynamicImports": [
+      "../node_modules/.pnpm/@giscus+react@3.1.0_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@giscus/react/dist/giscus-Ci9LqPcC.js"
+    ]
+  },
+  "src/pages/export/Export.tsx": {
+    "file": "assets/Export-DPuPWccv.js",
+    "name": "Export",
+    "src": "src/pages/export/Export.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_title-card-Sf2GrtIS.js"
+    ]
+  },
+  "src/pages/import/Import.tsx": {
+    "file": "assets/Import-j9iP3fsQ.js",
+    "name": "Import",
+    "src": "src/pages/import/Import.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_title-card-Sf2GrtIS.js",
+      "_index-DVdDRSn1.js"
+    ]
+  },
+  "src/pages/overview/Overview.tsx": {
+    "file": "assets/Overview-DTKJpJkF.js",
+    "name": "Overview",
+    "src": "src/pages/overview/Overview.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_RarityFilter-MRWrHI4q.js",
+      "_alert-CSNDk3jG.js",
+      "_index-DVdDRSn1.js",
+      "_siren-B2nWK14w.js"
+    ]
+  },
+  "src/pages/trade/Trade.tsx": {
+    "file": "assets/Trade-OjEkGLsV.js",
+    "name": "Trade",
+    "src": "src/pages/trade/Trade.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_RarityFilter-MRWrHI4q.js",
+      "_tabs-yo9MRb0r.js",
+      "_CardsTable-BQUcNOCe.js",
+      "_alert-CSNDk3jG.js",
+      "_siren-B2nWK14w.js"
+    ]
+  }
+}
