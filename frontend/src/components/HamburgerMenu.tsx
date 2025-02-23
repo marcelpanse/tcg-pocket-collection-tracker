@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import { LogOut, Menu, UserRoundPen } from 'lucide-react'
 import type * as React from 'react'
 import { use, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 
 type MenuItem = {
@@ -14,13 +15,15 @@ type MenuItem = {
 }
 
 const menuItems: MenuItem[] = [
-  { title: 'Overview', href: '/' },
-  { title: 'Collection', href: '/collection' },
-  { title: 'Trade', href: '/trade' },
-  { title: 'Community', href: '/community' },
+  { title: 'overview', href: '/' },
+  { title: 'collection', href: '/collection' },
+  { title: 'trade', href: '/trade' },
+  { title: 'community', href: '/community' },
 ]
 
 const MenuItemComponent: React.FC<{ item: MenuItem; setOpen: (open: boolean) => void }> = ({ item, setOpen }) => {
+  const { t } = useTranslation('hamburguer-menu')
+
   return (
     <Link
       to={item.href}
@@ -29,12 +32,14 @@ const MenuItemComponent: React.FC<{ item: MenuItem; setOpen: (open: boolean) => 
         setOpen(false)
       }}
     >
-      {item.title}
+      {t(item.title)}
     </Link>
   )
 }
 
 export default function HamburgerMenu() {
+  const { t } = useTranslation('hamburguer-menu')
+
   const [open, setOpen] = useState(false)
   const { user, setUser, setIsLoginDialogOpen, setIsProfileDialogOpen } = use(UserContext)
 
@@ -43,7 +48,7 @@ export default function HamburgerMenu() {
       <SheetTrigger asChild>
         <Button variant="ghost" size="icon" className="sm:hidden">
           <Menu className="h-5 w-5" />
-          <span className="sr-only">Toggle menu</span>
+          <span className="sr-only">{t('toggle')}</span>
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="flex flex-col w-[240px] sm:w-[300px]">
@@ -60,7 +65,7 @@ export default function HamburgerMenu() {
             setOpen(false)
           }}
         >
-          Edit profile
+          {t('editProfile')}
           <UserRoundPen />
         </Button>
 
@@ -73,7 +78,7 @@ export default function HamburgerMenu() {
               setOpen(false)
             }}
           >
-            Logout
+            {t('logOut')}
             <LogOut />
           </Button>
         ) : (
@@ -84,7 +89,7 @@ export default function HamburgerMenu() {
               setOpen(false)
             }}
           >
-            Login
+            {t('login')}
           </Button>
         )}
       </SheetContent>
