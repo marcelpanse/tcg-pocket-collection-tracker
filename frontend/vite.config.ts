@@ -7,6 +7,9 @@ import stripComments from 'vite-plugin-strip-comments'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), stripComments({ type: 'none' })],
+  build: {
+    manifest: true,
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
