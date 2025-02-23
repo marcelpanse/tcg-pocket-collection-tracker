@@ -3,6 +3,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
 import { type FC, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface Props {
   rarityFilter: string[]
@@ -10,6 +11,7 @@ interface Props {
 }
 const RarityFilter: FC<Props> = ({ rarityFilter, setRarityFilter }) => {
   const { width } = useWindowDimensions()
+  const { t } = useTranslation('rarity-filter')
   const isMobile = width < 768
 
   const Toggles = useMemo(
@@ -58,7 +60,9 @@ const RarityFilter: FC<Props> = ({ rarityFilter, setRarityFilter }) => {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="outline">Filters ({rarityFilter.length})</Button>
+        <Button variant="outline">
+          {t('filters')} ({rarityFilter.length})
+        </Button>
       </PopoverTrigger>
       <PopoverContent className="w-32">{Toggles}</PopoverContent>
     </Popover>
