@@ -14,7 +14,7 @@ if (!root) {
 
 createRoot(root).render(
   <StrictMode>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div />}>
       <I18nextProvider i18n={i18n}>
         <HashRouter>
           <App />
