@@ -1,4 +1,3 @@
-import { BatchUpdateDialog } from '@/components/BatchUpdateDialog'
 import { updateMultipleCards } from '@/components/Card.tsx'
 import { CardsTable } from '@/components/CardsTable.tsx'
 import ExpansionsFilter from '@/components/ExpansionsFilter.tsx'
@@ -45,7 +44,7 @@ function Collection() {
     return filteredCards
   }, [expansionFilter, rarityFilter, searchValue, ownedFilter, ownedCards])
 
-  const handleBatchUpdate = async (cardIds: string[], amount: number) => {
+  const _handleBatchUpdate = async (cardIds: string[], amount: number) => {
     await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)
   }
 
@@ -59,8 +58,8 @@ function Collection() {
         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
         {/*TODO: NOT READY YET, FEEL FREE TO HELP*/}
-        {/*<CardTracker></CardTracker>*/}
-        <BatchUpdateDialog filteredCards={getFilteredCards} onBatchUpdate={handleBatchUpdate} disabled={getFilteredCards.length === 0} />
+        <CardTracker />
+        {/*<BatchUpdateDialog filteredCards={getFilteredCards} onBatchUpdate={handleBatchUpdate} disabled={getFilteredCards.length === 0} />*/}
       </div>
       <div>
         <CardsTable cards={getFilteredCards} />
