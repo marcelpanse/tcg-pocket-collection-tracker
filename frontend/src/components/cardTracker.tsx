@@ -3,12 +3,6 @@ import { useEffect, useState } from 'react'
 
 declare global {
   interface Window {
-    cv: unknown
-  }
-}
-
-declare global {
-  interface Window {
     cvjs_loaded?: boolean
     Module?: unknown
     cv?: {
