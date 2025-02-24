@@ -14,6 +14,7 @@ declare global {
     }
   }
 }
+declare const cv: unknown
 const CardTracker = () => {
   const [originalCards, setOriginalCards] = useState<HTMLImageElement[]>([]) // Loaded card images
   const [results, setResults] = useState<{ screenshot: string; cards: string[] }[]>([]) // Matching results
