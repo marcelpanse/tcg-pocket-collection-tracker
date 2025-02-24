@@ -5,7 +5,7 @@ import ExpansionsFilter from '@/components/ExpansionsFilter.tsx'
 import OwnedFilter from '@/components/OwnedFilter.tsx'
 import RarityFilter from '@/components/RarityFilter.tsx'
 import SearchInput from '@/components/SearchInput.tsx'
-import CardTracker from '@/components/cardTracker.tsx'
+// import CardTracker from '@/components/cardTracker.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
@@ -59,7 +59,7 @@ function Collection() {
         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
         {/*TODO: NOT READY YET, FEEL FREE TO HELP*/}
-        <CardTracker />
+        {/*<CardTracker />*/}
         <BatchUpdateDialog filteredCards={getFilteredCards} onBatchUpdate={handleBatchUpdate} disabled={getFilteredCards.length === 0} />
       </div>
       <div>
