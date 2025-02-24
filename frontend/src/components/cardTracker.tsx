@@ -7,6 +7,19 @@ declare global {
   }
 }
 
+declare global {
+  interface Window {
+    cvjs_loaded?: boolean
+    Module?: unknown
+    cv?: {
+      Mat: unknown
+      matFromImageData: (data: ImageData) => unknown
+      matchTemplate: (src: unknown, template: unknown, result: unknown, method: unknown) => void
+      minMaxLoc: (mat: unknown) => unknown
+      TM_CCOEFF_NORMED: unknown
+    }
+  }
+}
 const CardTracker = () => {
   const [originalCards, setOriginalCards] = useState<HTMLImageElement[]>([]) // Loaded card images
   const [results, setResults] = useState<{ screenshot: string; cards: string[] }[]>([]) // Matching results
@@ -17,6 +30,7 @@ const CardTracker = () => {
   const DOWNSAMPLE_FACTOR_SCREEN = 0.5
   const MATCH_THRESHOLD = 0.6
   let isLoadingScript = false
+  const cv = undefined
 
   // Fetch card names
   const getCardNames = async () => {
