@@ -31,6 +31,7 @@ To get started:
 1. Clone the repository locally.
 2. Run `pnpm install` to install dependencies.
 3. Execute `pnpm dev` to launch the development server.
+4. Open `https://localhost:5173` in your browser.
 
 We maintain code standards with Biome, ensuring up-to-date formatting and linting through integrated git hooks. Installing a Biome plugin in your IDE is advised for consistency.
 

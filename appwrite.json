@@ -11,11 +11,27 @@
       "scopes": ["users.read", "documents.read", "files.write", "files.read"],
       "events": [],
       "schedule": "*/1 * * * *",
-      "timeout": 900,
+      "timeout": 10,
       "entrypoint": "dist/main.js",
       "commands": "npm install\nnpm run build",
       "specification": "s-0.5vcpu-512mb",
       "path": "backend/functions/TotalsCounter"
+    },
+    {
+      "$id": "67ba4433001821690693",
+      "execute": ["users"],
+      "name": "SSO",
+      "enabled": true,
+      "logging": true,
+      "runtime": "node-22",
+      "scopes": ["users.read", "documents.read"],
+      "events": [],
+      "schedule": "",
+      "timeout": 5,
+      "entrypoint": "dist/main.js",
+      "commands": "npm install\nnpm run build",
+      "specification": "s-0.5vcpu-512mb",
+      "path": "backend/functions/SSO"
     }
   ]
 }

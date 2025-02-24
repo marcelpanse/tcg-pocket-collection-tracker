@@ -1,4 +1,4 @@
-import { StrictMode, Suspense } from 'react'
+import { Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import { I18nextProvider } from 'react-i18next'
 import { HashRouter } from 'react-router'
@@ -13,13 +13,11 @@ if (!root) {
 }
 
 createRoot(root).render(
-  <StrictMode>
-    <Suspense fallback={<div />}>
-      <I18nextProvider i18n={i18n}>
-        <HashRouter>
-          <App />
-        </HashRouter>
-      </I18nextProvider>
-    </Suspense>
-  </StrictMode>,
+  <Suspense fallback={<div />}>
+    <I18nextProvider i18n={i18n}>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </I18nextProvider>
+  </Suspense>,
 )
