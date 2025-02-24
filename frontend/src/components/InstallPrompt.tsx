@@ -2,13 +2,10 @@ import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-// Definisci il tipo per l'evento beforeinstallprompt
+// Define the type for the beforeinstallprompt event
 interface BeforeInstallPromptEvent extends Event {
-  readonly platforms: string[]
-  readonly userChoice: Promise<{
-    outcome: 'accepted' | 'dismissed'
-    platform: string
-  }>
+  platforms: string[]
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed'; platform: string }>
   prompt(): Promise<void>
 }
 
@@ -24,26 +21,26 @@ const InstallPrompt = () => {
       setIsVisible(true)
     }
 
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt as EventListener)
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt as EventListener)
     }
   }, [])
 
-  const handleInstallClick = () => {
+  const handleInstallClick = async () => {
     setIsVisible(false)
 
     if (deferredPrompt) {
-      deferredPrompt.prompt()
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log("Utente ha accettato l'installazione")
-        } else {
-          console.log("Utente ha rifiutato l'installazione")
-        }
-        setDeferredPrompt(null)
-      })
+      await deferredPrompt.prompt()
+      const choiceResult = await deferredPrompt.userChoice
+
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt')
+      } else {
+        console.log('User dismissed the install prompt')
+      }
+      setDeferredPrompt(null)
     }
   }
 
@@ -54,8 +51,8 @@ const InstallPrompt = () => {
       style={{
         position: 'fixed',
         bottom: '10px',
-        textAlign: 'center',
-        justifySelf: 'anchor-center',
+        left: '50%',
+        transform: 'translateX(-50%)',
         padding: '10px',
         backgroundColor: '#2f2f2fee',
         border: '1px solid #ccc',
@@ -65,10 +62,10 @@ const InstallPrompt = () => {
       }}
     >
       <p>{t('install')}</p>
-      <Button onClick={handleInstallClick} variant="default">
+      <Button onClick={handleInstallClick} type="button" variant="default">
         {t('accept')}
       </Button>
-      <Button onClick={() => setIsVisible(false)} variant="outline">
+      <Button onClick={() => setIsVisible(false)} type="button" variant="outline">
         {t('cancel')}
       </Button>
     </div>

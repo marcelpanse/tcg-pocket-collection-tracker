@@ -5,73 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6593521d-b549-40d1-a777-46ed6a2e8b1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/en/complete-progress.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/en/edit-profile.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/en/expansion-overview.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/en/gradient-card.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/en/hamburguer-menu.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/en/header.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/en/login.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/en/owned-filter.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/en/pages/community.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/en/pages/overview.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/en/rarity-filter.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/es/complete-progress.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/es/edit-profile.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/es/expansion-overview.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/es/gradient-card.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/es/hamburguer-menu.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/es/header.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/es/login.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/es/owned-filter.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/es/pages/community.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/es/pages/overview.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/locales/es/rarity-filter.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/use-i18n.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/i18n.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/en/complete-progress.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/en/edit-profile.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/en/expansion-overview.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/en/gradient-card.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/en/hamburguer-menu.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/en/header.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/en/login.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/en/owned-filter.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/en/pages/community.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/en/pages/overview.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/en/rarity-filter.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/es/complete-progress.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/es/edit-profile.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/es/expansion-overview.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/es/gradient-card.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/es/hamburguer-menu.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/es/header.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/es/login.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/es/owned-filter.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/es/pages/community.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/es/pages/overview.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/locales/es/rarity-filter.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/EditProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/EditProfile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/HamburgerMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/HamburgerMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/OwnedFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/OwnedFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/RarityFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RarityFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/collection/Collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/collection/Collection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/community/Community.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/community/Community.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/overview/Overview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/overview/Overview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/overview/components/CompleteProgress.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/overview/components/CompleteProgress.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/overview/components/ExpansionOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/overview/components/ExpansionOverview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/overview/components/GradientCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/overview/components/GradientCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/InstallPrompt.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InstallPrompt.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
