@@ -187,17 +187,6 @@ const CardTracker = () => {
     loadCardImages()
   }, [cvReady])
 
-  // Utility function to load images
-  const _loadImage = (url: string): Promise<HTMLImageElement> => {
-    return new Promise((resolve, reject) => {
-      const img = new Image()
-      img.crossOrigin = 'anonymous' // Required for CORS compliance
-      img.src = url
-      img.onload = () => resolve(img)
-      img.onerror = (err) => reject(err)
-    })
-  }
-
   // Process a screenshot for template matching
   const processScreenshot = async (img: HTMLImageElement): Promise<HTMLImageElement> => {
     const canvas = document.createElement('canvas')
