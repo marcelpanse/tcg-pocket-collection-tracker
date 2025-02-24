@@ -59,6 +59,7 @@ const InstallPrompt = () => {
         borderRadius: '5px',
         boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
         zIndex: 1000,
+        justifyItems: 'center',
       }}
     >
       <p>{t('install')}</p>
