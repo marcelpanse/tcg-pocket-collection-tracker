@@ -30,7 +30,6 @@ const CardTracker = () => {
   const DOWNSAMPLE_FACTOR_SCREEN = 0.5
   const MATCH_THRESHOLD = 0.6
   let isLoadingScript = false
-  const cv = undefined
 
   // Fetch card names
   const getCardNames = async () => {
