@@ -1,3 +1,4 @@
+import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { getUser } from '@/lib/Auth.ts'
 import { fetchAccount } from '@/lib/fetchAccount.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
@@ -44,6 +45,7 @@ function App() {
 
   return (
     <UserContext.Provider value={{ user, setUser, account, setAccount, isLoginDialogOpen, setIsLoginDialogOpen, isProfileDialogOpen, setIsProfileDialogOpen }}>
+      <InstallPrompt />
       <CollectionContext.Provider value={{ ownedCards, setOwnedCards, selectedCardId, setSelectedCardId }}>
         <ErrorBoundary fallback={<div className="m-4">Something went wrong, please refresh the page.</div>}>
           <Toaster />

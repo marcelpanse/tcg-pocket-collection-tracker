@@ -10,6 +10,7 @@ import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { useMemo, useState } from 'react'
 import { useContext } from 'react'
+// import CardTracker from "@/components/cardTracker.tsx";
 
 function Collection() {
   const { ownedCards, setOwnedCards } = useContext(CollectionContext)
@@ -57,6 +58,8 @@ function Collection() {
       <div className="items-center justify-between gap-2 flex-col md:flex-row px-8 md:flex">
         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
+        {/*TODO: NOT READY YET, FEEL FREE TO HELP*/}
+        {/*<CardTracker></CardTracker>*/}
         <BatchUpdateDialog filteredCards={getFilteredCards} onBatchUpdate={handleBatchUpdate} disabled={getFilteredCards.length === 0} />
       </div>
       <div>

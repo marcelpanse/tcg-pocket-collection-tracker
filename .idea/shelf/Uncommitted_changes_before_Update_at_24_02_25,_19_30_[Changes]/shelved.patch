@@ -1,0 +1,236 @@
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"name\": \"tcg-pocket-collection-tracker\",\n  \"version\": \"0.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"lint\": \"pnpm run biome:check\",\n    \"lint:fix\": \"pnpm run biome:fix\",\n    \"biome:check\": \"pnpm biome check --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .\",\n    \"biome:fix\": \"pnpm biome check --write --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .\",\n    \"prepare\": \"lefthook install\",\n    \"dev\": \"pnpm --filter frontend run dev\",\n    \"build\": \"pnpm --filter frontend run build\"\n  },\n  \"devDependencies\": {\n    \"@biomejs/biome\": \"1.9.4\",\n    \"lefthook\": \"^1.10.10\"\n  },\n  \"type\": \"module\",\n  \"packageManager\": \"pnpm@10.2.1\",\n  \"engines\": {\n    \"node\": \">=20\"\n  },\n  \"pnpm\": {\n    \"peerDependencyRules\": {\n      \"allowedVersions\": {\n        \"react\": \"^19.0.0\"\n      }\n    }\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/package.json b/package.json
+--- a/package.json	(revision b18abf1dd6d10834c7e0b2fa1a35c44a7d26dcea)
++++ b/package.json	(date 1740420378728)
+@@ -26,5 +26,8 @@
+         "react": "^19.0.0"
+       }
+     }
++  },
++  "dependencies": {
++    "@techstark/opencv-js": "^4.10.0-release.1"
+   }
+ }
+Index: frontend/src/main.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { StrictMode, Suspense } from 'react'\nimport { createRoot } from 'react-dom/client'\nimport { HashRouter } from 'react-router'\nimport App from './App.tsx'\nimport './index.css'\nimport './registerServiceWorker.js'\n\nconst root = document.getElementById('root')\nif (!root) {\n  throw new Error('No root element found!')\n}\n\ncreateRoot(root).render(\n  <StrictMode>\n    <Suspense fallback={<div>Loading...</div>}>\n      <HashRouter>\n        <App />\n      </HashRouter>\n    </Suspense>\n  </StrictMode>,\n)\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/main.tsx b/frontend/src/main.tsx
+--- a/frontend/src/main.tsx	(revision b18abf1dd6d10834c7e0b2fa1a35c44a7d26dcea)
++++ b/frontend/src/main.tsx	(date 1740421345734)
+@@ -4,6 +4,7 @@
+ import App from './App.tsx'
+ import './index.css'
+ import './registerServiceWorker.js'
++import InstallPrompt  from './components/InstallPrompt.tsx'
+ 
+ const root = document.getElementById('root')
+ if (!root) {
+@@ -14,6 +15,7 @@
+   <StrictMode>
+     <Suspense fallback={<div>Loading...</div>}>
+       <HashRouter>
++          <InstallPrompt />
+         <App />
+       </HashRouter>
+     </Suspense>
+Index: frontend/vite.config.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import path from 'node:path'\nimport tailwindcss from '@tailwindcss/vite'\nimport react from '@vitejs/plugin-react-swc'\nimport { defineConfig } from 'vite'\nimport stripComments from 'vite-plugin-strip-comments'\n\n// https://vite.dev/config/\nexport default defineConfig({\n  plugins: [react(), tailwindcss(), stripComments({ type: 'none' })],\n  build: {\n    manifest: true,\n  },\n  resolve: {\n    alias: {\n      '@': path.resolve(__dirname, './src'),\n    },\n  },\n})\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/vite.config.ts b/frontend/vite.config.ts
+--- a/frontend/vite.config.ts	(revision b18abf1dd6d10834c7e0b2fa1a35c44a7d26dcea)
++++ b/frontend/vite.config.ts	(date 1740420378733)
+@@ -6,6 +6,9 @@
+ 
+ // https://vite.dev/config/
+ export default defineConfig({
++  optimizeDeps: {
++    include: ['@techstark/opencv-js'],
++  },
+   plugins: [react(), tailwindcss(), stripComments({ type: 'none' })],
+   build: {
+     manifest: true,
+Index: frontend/src/pages/collection/Collection.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { BatchUpdateDialog } from '@/components/BatchUpdateDialog'\nimport { updateMultipleCards } from '@/components/Card.tsx'\nimport { CardsTable } from '@/components/CardsTable.tsx'\nimport ExpansionsFilter from '@/components/ExpansionsFilter.tsx'\nimport OwnedFilter from '@/components/OwnedFilter.tsx'\nimport RarityFilter from '@/components/RarityFilter.tsx'\nimport SearchInput from '@/components/SearchInput.tsx'\nimport { allCards } from '@/lib/CardsDB'\nimport { CollectionContext } from '@/lib/context/CollectionContext.ts'\nimport { UserContext } from '@/lib/context/UserContext.ts'\nimport { useMemo, useState } from 'react'\nimport { useContext } from 'react'\n\nfunction Collection() {\n  const { ownedCards, setOwnedCards } = useContext(CollectionContext)\n  const [searchValue, setSearchValue] = useState('')\n  const [expansionFilter, setExpansionFilter] = useState<string>('all')\n  const [rarityFilter, setRarityFilter] = useState<string[]>([])\n  const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')\n  const { user } = useContext(UserContext)\n\n  const getFilteredCards = useMemo(() => {\n    let filteredCards = allCards\n\n    if (expansionFilter !== 'all') {\n      filteredCards = filteredCards.filter((card) => card.expansion === expansionFilter)\n    }\n    if (ownedFilter !== 'all') {\n      if (ownedFilter === 'owned') {\n        filteredCards = filteredCards.filter((card) => ownedCards.find((oc) => oc.card_id === card.card_id && oc.amount_owned > 0))\n      } else if (ownedFilter === 'missing') {\n        filteredCards = filteredCards.filter((card) => !ownedCards.find((oc) => oc.card_id === card.card_id && oc.amount_owned > 0))\n      }\n    }\n    if (rarityFilter.length > 0) {\n      filteredCards = filteredCards.filter((card) => rarityFilter.includes(card.rarity))\n    }\n    if (searchValue) {\n      filteredCards = filteredCards.filter((card) => {\n        return card.name.toLowerCase().includes(searchValue.toLowerCase()) || card.card_id.toLowerCase().includes(searchValue.toLowerCase())\n      })\n    }\n\n    return filteredCards\n  }, [expansionFilter, rarityFilter, searchValue, ownedFilter, ownedCards])\n\n  const handleBatchUpdate = async (cardIds: string[], amount: number) => {\n    await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)\n  }\n\n  return (\n    <div className=\"flex flex-col gap-y-1 mx-auto max-w-[900px]\">\n      <div className=\"flex items-center gap-2 flex-col md:flex-row px-8\">\n        <SearchInput setSearchValue={setSearchValue} />\n        <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} />\n      </div>\n      <div className=\"items-center justify-between gap-2 flex-col md:flex-row px-8 md:flex\">\n        <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />\n        <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />\n        <BatchUpdateDialog filteredCards={getFilteredCards} onBatchUpdate={handleBatchUpdate} disabled={getFilteredCards.length === 0} />\n      </div>\n      <div>\n        <CardsTable cards={getFilteredCards} />\n      </div>\n    </div>\n  )\n}\n\nexport default Collection\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/pages/collection/Collection.tsx b/frontend/src/pages/collection/Collection.tsx
+--- a/frontend/src/pages/collection/Collection.tsx	(revision b18abf1dd6d10834c7e0b2fa1a35c44a7d26dcea)
++++ b/frontend/src/pages/collection/Collection.tsx	(date 1740420378726)
+@@ -10,6 +10,7 @@
+ import { UserContext } from '@/lib/context/UserContext.ts'
+ import { useMemo, useState } from 'react'
+ import { useContext } from 'react'
++import  CardTracker  from '@/components/cardTracker.tsx'
+ 
+ function Collection() {
+   const { ownedCards, setOwnedCards } = useContext(CollectionContext)
+@@ -58,6 +59,7 @@
+         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
+         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
+         <BatchUpdateDialog filteredCards={getFilteredCards} onBatchUpdate={handleBatchUpdate} disabled={getFilteredCards.length === 0} />
++        <CardTracker />
+       </div>
+       <div>
+         <CardsTable cards={getFilteredCards} />
+Index: frontend/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <meta name=\"description\" content=\"TCG Pocket Collection Tracker helps you track your Pokemon Pocket game cards, find the best packs to open, manage trades, and connect with friends and our community.\" />\n    <meta name=\"keywords\" content=\"Pokemon Pocket, TCG, card tracker, collection, trading, community, best packs to open\" />\n    <meta name=\"author\" content=\"TCG Pocket Collection Tracker Team\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/pokemon.svg\" />\n    <link rel=\"preconnect\" href=\"https://api.tcgpocketcollectiontracker.com\">\n\n    <title>TCG Pocket Collection Tracker</title>\n\n    <!-- Open Graph Meta Tags for better social media sharing -->\n    <meta property=\"og:title\" content=\"TCG Pocket Collection Tracker\" />\n    <meta property=\"og:description\" content=\"A companion app for tracking Pokemon Pocket game cards, picking the best packs, trading, and connecting with friends.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:url\" content=\"https://www.tcgpocketcollectiontracker.com\" />\n    <meta property=\"og:image\" content=\"https://www.tcgpocketcollectiontracker.com/images/og-image.jpg\" />\n\n    <!-- Twitter Card Meta Tags -->\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:title\" content=\"TCG Pocket Collection Tracker\" />\n    <meta name=\"twitter:description\" content=\"Track and trade your Pokemon Pocket game cards. Discover the best packs to open.\" />\n    <meta name=\"twitter:image\" content=\"https://www.tcgpocketcollectiontracker.com/images/twitter-card.jpg\" />\n  </head>\n  <body class=\"dark\">\n    <div id=\"root\" aria-label=\"Main Content Area\"></div>\n    <noscript>\n      <p style=\"display:none;\">\n        Welcome to the TCG Pocket Collection Tracker. Discover the ultimate tool for managing your Pokemon Pocket game cards collection. Join our community to track rare cards, find the best packs to open, and initiate trades with other collectors. Stay updated with the latest card releases and enhance your collection strategies with our features designed for card enthusiasts.\n      </p>\n    </noscript>\n    <script type=\"module\" src=\"/src/main.tsx\"></script>\n  </body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/index.html b/frontend/index.html
+--- a/frontend/index.html	(revision b18abf1dd6d10834c7e0b2fa1a35c44a7d26dcea)
++++ b/frontend/index.html	(date 1740420378731)
+@@ -32,6 +32,7 @@
+         Welcome to the TCG Pocket Collection Tracker. Discover the ultimate tool for managing your Pokemon Pocket game cards collection. Join our community to track rare cards, find the best packs to open, and initiate trades with other collectors. Stay updated with the latest card releases and enhance your collection strategies with our features designed for card enthusiasts.
+       </p>
+     </noscript>
++
+     <script type="module" src="/src/main.tsx"></script>
+   </body>
+ </html>
+Index: frontend/src/types/index.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import type { Models } from 'appwrite'\n\nexport interface AccountRow {\n  $id: string\n  username: string\n  friend_id: string\n}\n\nexport interface CollectionRow extends Partial<Models.Document> {\n  $id: string\n  email: string\n  card_id: string\n  amount_owned: number\n}\n\nexport interface Expansion {\n  name: string\n  id: string\n  cards: Card[]\n  packs: Pack[]\n  tradeable?: boolean\n  promo?: boolean\n}\n\nexport interface Pack {\n  name: string\n  color: string\n}\n\nexport interface Card {\n  card_id: string\n  linkedCardID?: string\n  expansion: string\n  name: string\n  hp: string\n  card_type: string\n  evolution_type: string\n  image: string\n  attacks: {\n    cost: string[]\n    name: string\n    damage: string\n    effect: string\n  }[]\n  ability: {\n    name: string\n    effect: string\n  }\n  weakness: string\n  retreat: string\n  rarity: string\n  fullart: string\n  ex: string\n  set_details: string\n  pack: string\n  alternate_versions: {\n    version: string\n    rarity: string\n  }[]\n  artist: string\n  probability: {\n    '1-3 card': string | null | undefined\n    '4 card': string | null | undefined\n    '5 card': string | null | undefined\n  }\n  crafting_cost: number\n}\n\nexport interface CollectedCard extends Card {\n  amount_owned?: number\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/types/index.ts b/frontend/src/types/index.ts
+--- a/frontend/src/types/index.ts	(revision b18abf1dd6d10834c7e0b2fa1a35c44a7d26dcea)
++++ b/frontend/src/types/index.ts	(date 1740421250477)
+@@ -69,3 +69,4 @@
+ export interface CollectedCard extends Card {
+   amount_owned?: number
+ }
++
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"6593521d-b549-40d1-a777-46ed6a2e8b1b\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/frontend/src/main.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/frontend/src/main.tsx\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/frontend/vite.config.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/frontend/vite.config.ts\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/pnpm-lock.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pnpm-lock.yaml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"TypeScript File\" />\n        <option value=\"TypeScript JSX File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"SWAP_SIDES_IN_COMPARE_BRANCHES\" value=\"true\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 7\n}</component>\n  <component name=\"ProjectId\" id=\"2sRSRU8X9gyJIgfo11Sgatp0MVX\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"flattenModules\" value=\"true\" />\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n    <option name=\"useFileNestingRules\" value=\"false\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"last_opened_file_path\": \"/Users/lucian/Documents/githubProjects/tcg-pocket-collection-tracker\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"settings.editor.selected.configurable\": \"reference.settings.ide.settings.web.browsers\",\n    \"ts.external.directory.path\": \"/Users/lucian/Documents/githubProjects/tcg-pocket-collection-tracker/frontend/node_modules/typescript/lib\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"6593521d-b549-40d1-a777-46ed6a2e8b1b\" name=\"Changes\" comment=\"\" />\n      <created>1740140008795</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1740140008795</updated>\n      <workItem from=\"1740140009866\" duration=\"19259000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision b18abf1dd6d10834c7e0b2fa1a35c44a7d26dcea)
++++ b/.idea/workspace.xml	(date 1740421647090)
+@@ -6,9 +6,14 @@
+   <component name="ChangeListManager">
+     <list default="true" id="6593521d-b549-40d1-a777-46ed6a2e8b1b" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/frontend/src/pages/collection/Collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/collection/Collection.tsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/frontend/src/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/types/index.ts" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -18,15 +23,15 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+-        <option value="TypeScript File" />
+         <option value="TypeScript JSX File" />
++        <option value="TypeScript File" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
++        <entry key="$PROJECT_DIR$" value="cache-images-and-webapp" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -49,7 +54,7 @@
+   "keyToString": {
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "main",
++    "git-widget-placeholder": "install-on-device-popup",
+     "last_opened_file_path": "/Users/lucian/Documents/githubProjects/tcg-pocket-collection-tracker",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
+@@ -70,6 +75,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1740140008795</updated>
+       <workItem from="1740140009866" duration="19259000" />
++      <workItem from="1740419597798" duration="2045000" />
+     </task>
+     <servers />
+   </component>
+Index: package-lock.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"name\": \"tcg-pocket-collection-tracker\",\n  \"version\": \"0.0.0\",\n  \"lockfileVersion\": 3,\n  \"requires\": true,\n  \"packages\": {\n    \"\": {\n      \"name\": \"tcg-pocket-collection-tracker\",\n      \"version\": \"0.0.0\",\n      \"devDependencies\": {\n        \"@biomejs/biome\": \"1.9.4\",\n        \"lefthook\": \"^1.10.10\"\n      },\n      \"engines\": {\n        \"node\": \">=20\"\n      }\n    },\n    \"node_modules/@biomejs/biome\": {\n      \"version\": \"1.9.4\",\n      \"resolved\": \"https://registry.npmjs.org/@biomejs/biome/-/biome-1.9.4.tgz\",\n      \"integrity\": \"sha512-1rkd7G70+o9KkTn5KLmDYXihGoTaIGO9PIIN2ZB7UJxFrWw04CZHPYiMRjYsaDvVV7hP1dYNRLxSANLaBFGpog==\",\n      \"dev\": true,\n      \"hasInstallScript\": true,\n      \"license\": \"MIT OR Apache-2.0\",\n      \"bin\": {\n        \"biome\": \"bin/biome\"\n      },\n      \"engines\": {\n        \"node\": \">=14.21.3\"\n      },\n      \"funding\": {\n        \"type\": \"opencollective\",\n        \"url\": \"https://opencollective.com/biome\"\n      },\n      \"optionalDependencies\": {\n        \"@biomejs/cli-darwin-arm64\": \"1.9.4\",\n        \"@biomejs/cli-darwin-x64\": \"1.9.4\",\n        \"@biomejs/cli-linux-arm64\": \"1.9.4\",\n        \"@biomejs/cli-linux-arm64-musl\": \"1.9.4\",\n        \"@biomejs/cli-linux-x64\": \"1.9.4\",\n        \"@biomejs/cli-linux-x64-musl\": \"1.9.4\",\n        \"@biomejs/cli-win32-arm64\": \"1.9.4\",\n        \"@biomejs/cli-win32-x64\": \"1.9.4\"\n      }\n    },\n    \"node_modules/@biomejs/cli-darwin-arm64\": {\n      \"version\": \"1.9.4\",\n      \"resolved\": \"https://registry.npmjs.org/@biomejs/cli-darwin-arm64/-/cli-darwin-arm64-1.9.4.tgz\",\n      \"integrity\": \"sha512-bFBsPWrNvkdKrNCYeAp+xo2HecOGPAy9WyNyB/jKnnedgzl4W4Hb9ZMzYNbf8dMCGmUdSavlYHiR01QaYR58cw==\",\n      \"cpu\": [\n        \"arm64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT OR Apache-2.0\",\n      \"optional\": true,\n      \"os\": [\n        \"darwin\"\n      ],\n      \"engines\": {\n        \"node\": \">=14.21.3\"\n      }\n    },\n    \"node_modules/@biomejs/cli-darwin-x64\": {\n      \"version\": \"1.9.4\",\n      \"resolved\": \"https://registry.npmjs.org/@biomejs/cli-darwin-x64/-/cli-darwin-x64-1.9.4.tgz\",\n      \"integrity\": \"sha512-ngYBh/+bEedqkSevPVhLP4QfVPCpb+4BBe2p7Xs32dBgs7rh9nY2AIYUL6BgLw1JVXV8GlpKmb/hNiuIxfPfZg==\",\n      \"cpu\": [\n        \"x64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT OR Apache-2.0\",\n      \"optional\": true,\n      \"os\": [\n        \"darwin\"\n      ],\n      \"engines\": {\n        \"node\": \">=14.21.3\"\n      }\n    },\n    \"node_modules/@biomejs/cli-linux-arm64\": {\n      \"version\": \"1.9.4\",\n      \"resolved\": \"https://registry.npmjs.org/@biomejs/cli-linux-arm64/-/cli-linux-arm64-1.9.4.tgz\",\n      \"integrity\": \"sha512-fJIW0+LYujdjUgJJuwesP4EjIBl/N/TcOX3IvIHJQNsAqvV2CHIogsmA94BPG6jZATS4Hi+xv4SkBBQSt1N4/g==\",\n      \"cpu\": [\n        \"arm64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT OR Apache-2.0\",\n      \"optional\": true,\n      \"os\": [\n        \"linux\"\n      ],\n      \"engines\": {\n        \"node\": \">=14.21.3\"\n      }\n    },\n    \"node_modules/@biomejs/cli-linux-arm64-musl\": {\n      \"version\": \"1.9.4\",\n      \"resolved\": \"https://registry.npmjs.org/@biomejs/cli-linux-arm64-musl/-/cli-linux-arm64-musl-1.9.4.tgz\",\n      \"integrity\": \"sha512-v665Ct9WCRjGa8+kTr0CzApU0+XXtRgwmzIf1SeKSGAv+2scAlW6JR5PMFo6FzqqZ64Po79cKODKf3/AAmECqA==\",\n      \"cpu\": [\n        \"arm64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT OR Apache-2.0\",\n      \"optional\": true,\n      \"os\": [\n        \"linux\"\n      ],\n      \"engines\": {\n        \"node\": \">=14.21.3\"\n      }\n    },\n    \"node_modules/@biomejs/cli-linux-x64\": {\n      \"version\": \"1.9.4\",\n      \"resolved\": \"https://registry.npmjs.org/@biomejs/cli-linux-x64/-/cli-linux-x64-1.9.4.tgz\",\n      \"integrity\": \"sha512-lRCJv/Vi3Vlwmbd6K+oQ0KhLHMAysN8lXoCI7XeHlxaajk06u7G+UsFSO01NAs5iYuWKmVZjmiOzJ0OJmGsMwg==\",\n      \"cpu\": [\n        \"x64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT OR Apache-2.0\",\n      \"optional\": true,\n      \"os\": [\n        \"linux\"\n      ],\n      \"engines\": {\n        \"node\": \">=14.21.3\"\n      }\n    },\n    \"node_modules/@biomejs/cli-linux-x64-musl\": {\n      \"version\": \"1.9.4\",\n      \"resolved\": \"https://registry.npmjs.org/@biomejs/cli-linux-x64-musl/-/cli-linux-x64-musl-1.9.4.tgz\",\n      \"integrity\": \"sha512-gEhi/jSBhZ2m6wjV530Yy8+fNqG8PAinM3oV7CyO+6c3CEh16Eizm21uHVsyVBEB6RIM8JHIl6AGYCv6Q6Q9Tg==\",\n      \"cpu\": [\n        \"x64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT OR Apache-2.0\",\n      \"optional\": true,\n      \"os\": [\n        \"linux\"\n      ],\n      \"engines\": {\n        \"node\": \">=14.21.3\"\n      }\n    },\n    \"node_modules/@biomejs/cli-win32-arm64\": {\n      \"version\": \"1.9.4\",\n      \"resolved\": \"https://registry.npmjs.org/@biomejs/cli-win32-arm64/-/cli-win32-arm64-1.9.4.tgz\",\n      \"integrity\": \"sha512-tlbhLk+WXZmgwoIKwHIHEBZUwxml7bRJgk0X2sPyNR3S93cdRq6XulAZRQJ17FYGGzWne0fgrXBKpl7l4M87Hg==\",\n      \"cpu\": [\n        \"arm64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT OR Apache-2.0\",\n      \"optional\": true,\n      \"os\": [\n        \"win32\"\n      ],\n      \"engines\": {\n        \"node\": \">=14.21.3\"\n      }\n    },\n    \"node_modules/@biomejs/cli-win32-x64\": {\n      \"version\": \"1.9.4\",\n      \"resolved\": \"https://registry.npmjs.org/@biomejs/cli-win32-x64/-/cli-win32-x64-1.9.4.tgz\",\n      \"integrity\": \"sha512-8Y5wMhVIPaWe6jw2H+KlEm4wP/f7EW3810ZLmDlrEEy5KvBsb9ECEfu/kMWD484ijfQ8+nIi0giMgu9g1UAuuA==\",\n      \"cpu\": [\n        \"x64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT OR Apache-2.0\",\n      \"optional\": true,\n      \"os\": [\n        \"win32\"\n      ],\n      \"engines\": {\n        \"node\": \">=14.21.3\"\n      }\n    },\n    \"node_modules/lefthook\": {\n      \"version\": \"1.10.10\",\n      \"resolved\": \"https://registry.npmjs.org/lefthook/-/lefthook-1.10.10.tgz\",\n      \"integrity\": \"sha512-YW0fTONgOXsephvXq2gIFbegCW19MHCyKYX7JDWmzVF1ZiVMnDBYUL/SP3i0RtFvlCmqENl4SgKwYYQGUMnvig==\",\n      \"dev\": true,\n      \"hasInstallScript\": true,\n      \"license\": \"MIT\",\n      \"bin\": {\n        \"lefthook\": \"bin/index.js\"\n      },\n      \"optionalDependencies\": {\n        \"lefthook-darwin-arm64\": \"1.10.10\",\n        \"lefthook-darwin-x64\": \"1.10.10\",\n        \"lefthook-freebsd-arm64\": \"1.10.10\",\n        \"lefthook-freebsd-x64\": \"1.10.10\",\n        \"lefthook-linux-arm64\": \"1.10.10\",\n        \"lefthook-linux-x64\": \"1.10.10\",\n        \"lefthook-openbsd-arm64\": \"1.10.10\",\n        \"lefthook-openbsd-x64\": \"1.10.10\",\n        \"lefthook-windows-arm64\": \"1.10.10\",\n        \"lefthook-windows-x64\": \"1.10.10\"\n      }\n    },\n    \"node_modules/lefthook-darwin-arm64\": {\n      \"version\": \"1.10.10\",\n      \"resolved\": \"https://registry.npmjs.org/lefthook-darwin-arm64/-/lefthook-darwin-arm64-1.10.10.tgz\",\n      \"integrity\": \"sha512-hEypKdwWpmNSl4Q8eJxgmlGb2ybJj1+W5/v13Mxc+ApEmjbpNiJzPcdjC9zyaMEpPK4EybiHy8g5ZC0dLOwkpA==\",\n      \"cpu\": [\n        \"arm64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"optional\": true,\n      \"os\": [\n        \"darwin\"\n      ]\n    },\n    \"node_modules/lefthook-darwin-x64\": {\n      \"version\": \"1.10.10\",\n      \"resolved\": \"https://registry.npmjs.org/lefthook-darwin-x64/-/lefthook-darwin-x64-1.10.10.tgz\",\n      \"integrity\": \"sha512-9xNbeE78i4Amz+uOheg9dcy7X/6X12h98SUMrYWk7fONvjW/Bp9h6nPGIGxI5krHp9iRB8rhmo33ljVDVtTlyg==\",\n      \"cpu\": [\n        \"x64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"optional\": true,\n      \"os\": [\n        \"darwin\"\n      ]\n    },\n    \"node_modules/lefthook-freebsd-arm64\": {\n      \"version\": \"1.10.10\",\n      \"resolved\": \"https://registry.npmjs.org/lefthook-freebsd-arm64/-/lefthook-freebsd-arm64-1.10.10.tgz\",\n      \"integrity\": \"sha512-GT9wYxPxkvO1rtIAmctayT9xQIVII5xUIG3Pv6gZo+r6yEyle0EFTLFDbmVje7p7rQNCsvJ8XzCNdnyDrva90g==\",\n      \"cpu\": [\n        \"arm64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"optional\": true,\n      \"os\": [\n        \"freebsd\"\n      ]\n    },\n    \"node_modules/lefthook-freebsd-x64\": {\n      \"version\": \"1.10.10\",\n      \"resolved\": \"https://registry.npmjs.org/lefthook-freebsd-x64/-/lefthook-freebsd-x64-1.10.10.tgz\",\n      \"integrity\": \"sha512-2BB/HRhEb9wGpk5K38iNkHtMPnn+TjXDtFG6C/AmUPLXLNhGnNiYp+v2uhUE8quWzxJx7QzfnU7Ga+/gzJcIcw==\",\n      \"cpu\": [\n        \"x64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"optional\": true,\n      \"os\": [\n        \"freebsd\"\n      ]\n    },\n    \"node_modules/lefthook-linux-arm64\": {\n      \"version\": \"1.10.10\",\n      \"resolved\": \"https://registry.npmjs.org/lefthook-linux-arm64/-/lefthook-linux-arm64-1.10.10.tgz\",\n      \"integrity\": \"sha512-GJ7GALKJ1NcMnNZG9uY+zJR3yS8q7/MgcHFWSJhBl+w4KTiiD/RAdSl5ALwEK2+UX36Eo+7iQA7AXzaRdAii4w==\",\n      \"cpu\": [\n        \"arm64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"optional\": true,\n      \"os\": [\n        \"linux\"\n      ]\n    },\n    \"node_modules/lefthook-linux-x64\": {\n      \"version\": \"1.10.10\",\n      \"resolved\": \"https://registry.npmjs.org/lefthook-linux-x64/-/lefthook-linux-x64-1.10.10.tgz\",\n      \"integrity\": \"sha512-dWUvPM9YTIJ3+X9dB+8iOnzoVHbnNmpscmUqEOKSeizgBrvuuIYKZJGDyjEtw65Qnmn1SJ7ouSaKK93p5c7SkQ==\",\n      \"cpu\": [\n        \"x64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"optional\": true,\n      \"os\": [\n        \"linux\"\n      ]\n    },\n    \"node_modules/lefthook-openbsd-arm64\": {\n      \"version\": \"1.10.10\",\n      \"resolved\": \"https://registry.npmjs.org/lefthook-openbsd-arm64/-/lefthook-openbsd-arm64-1.10.10.tgz\",\n      \"integrity\": \"sha512-KnwDyxOvbvGSBTbEF/OxkynZRPLowd3mIXUKHtkg3ABcQ4UREalX+Sh0nWU2dNjQbINx7Eh6B42TxNC7h+qXEg==\",\n      \"cpu\": [\n        \"arm64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"optional\": true,\n      \"os\": [\n        \"openbsd\"\n      ]\n    },\n    \"node_modules/lefthook-openbsd-x64\": {\n      \"version\": \"1.10.10\",\n      \"resolved\": \"https://registry.npmjs.org/lefthook-openbsd-x64/-/lefthook-openbsd-x64-1.10.10.tgz\",\n      \"integrity\": \"sha512-49nnG886CI3WkrzVJ71D1M2KWpUYN1BP9LMKNzN11cmZ0j6dUK4hj3nbW+NcrKXxgYzzyLU3FFwrc51OVy2eKA==\",\n      \"cpu\": [\n        \"x64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"optional\": true,\n      \"os\": [\n        \"openbsd\"\n      ]\n    },\n    \"node_modules/lefthook-windows-arm64\": {\n      \"version\": \"1.10.10\",\n      \"resolved\": \"https://registry.npmjs.org/lefthook-windows-arm64/-/lefthook-windows-arm64-1.10.10.tgz\",\n      \"integrity\": \"sha512-9ni0Tsnk+O5oL7EBfKj9C5ZctD1mrTyHCtiu1zQJBbREReJtPjIM9DwWzecfbuVfrIlpbviVQvx5mjZ44bqlWw==\",\n      \"cpu\": [\n        \"arm64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"optional\": true,\n      \"os\": [\n        \"win32\"\n      ]\n    },\n    \"node_modules/lefthook-windows-x64\": {\n      \"version\": \"1.10.10\",\n      \"resolved\": \"https://registry.npmjs.org/lefthook-windows-x64/-/lefthook-windows-x64-1.10.10.tgz\",\n      \"integrity\": \"sha512-gkKWYrlay4iecFfY1Ris5VcRYa0BaNJKMk0qE/wZmIpMgu4GvNg+f9BEwTMflkQIanABduT9lrECaL1lX5ClKw==\",\n      \"cpu\": [\n        \"x64\"\n      ],\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"optional\": true,\n      \"os\": [\n        \"win32\"\n      ]\n    }\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/package-lock.json b/package-lock.json
+--- a/package-lock.json	(revision b18abf1dd6d10834c7e0b2fa1a35c44a7d26dcea)
++++ b/package-lock.json	(date 1740420386000)
+@@ -7,6 +7,9 @@
+     "": {
+       "name": "tcg-pocket-collection-tracker",
+       "version": "0.0.0",
++      "dependencies": {
++        "@techstark/opencv-js": "^4.10.0-release.1"
++      },
+       "devDependencies": {
+         "@biomejs/biome": "1.9.4",
+         "lefthook": "^1.10.10"
+@@ -179,6 +182,12 @@
+         "node": ">=14.21.3"
+       }
+     },
++    "node_modules/@techstark/opencv-js": {
++      "version": "4.10.0-release.1",
++      "resolved": "https://registry.npmjs.org/@techstark/opencv-js/-/opencv-js-4.10.0-release.1.tgz",
++      "integrity": "sha512-S4XELidRiQeA0q1s9VQLo540wCxUo24r1O4C+LqZ6llX+sPCXvZCPv3Ice8dEIr0uavyZ8YZeKXSBdDgMXSXjw==",
++      "license": "Apache-2.0"
++    },
+     "node_modules/lefthook": {
+       "version": "1.10.10",
+       "resolved": "https://registry.npmjs.org/lefthook/-/lefthook-1.10.10.tgz",
+Index: frontend/src/App.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { getUser } from '@/lib/Auth.ts'\nimport { fetchAccount } from '@/lib/fetchAccount.ts'\nimport CardDetail from '@/pages/collection/CardDetail.tsx'\nimport type { AccountRow, CollectionRow } from '@/types'\nimport loadable from '@loadable/component'\nimport { useEffect, useState } from 'react'\nimport { ErrorBoundary } from 'react-error-boundary'\nimport { Route, Routes } from 'react-router'\nimport { Header } from './components/Header.tsx'\nimport { Toaster } from './components/ui/toaster.tsx'\nimport { CollectionContext } from './lib/context/CollectionContext.ts'\nimport { type User, UserContext } from './lib/context/UserContext.ts'\nimport { fetchCollection } from './lib/fetchCollection.ts'\n\n// Lazy import for chunking\nconst Overview = loadable(() => import('./pages/overview/Overview.tsx'))\nconst Collection = loadable(() => import('./pages/collection/Collection.tsx'))\nconst Trade = loadable(() => import('./pages/trade/Trade.tsx'))\nconst Community = loadable(() => import('./pages/community/Community.tsx'))\nconst EditProfile = loadable(() => import('./components/EditProfile.tsx'))\nconst Import = loadable(() => import('./pages/import/Import.tsx'))\nconst Export = loadable(() => import('./pages/export/Export.tsx'))\n\nfunction App() {\n  const [user, setUser] = useState<User | null>(null)\n  const [account, setAccount] = useState<AccountRow | null>(null)\n  const [ownedCards, setOwnedCards] = useState<CollectionRow[]>([])\n  const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false)\n  const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false)\n  const [selectedCardId, setSelectedCardId] = useState('')\n\n  useEffect(() => {\n    getUser().then(setUser).catch(console.error)\n  }, [])\n\n  useEffect(() => {\n    if (user) {\n      fetchCollection().then(setOwnedCards).catch(console.error)\n      fetchAccount(user.email).then(setAccount).catch(console.error)\n    } else {\n      setOwnedCards([]) // in case the user is logged out, clear the cards\n    }\n  }, [user])\n\n  return (\n    <UserContext.Provider value={{ user, setUser, account, setAccount, isLoginDialogOpen, setIsLoginDialogOpen, isProfileDialogOpen, setIsProfileDialogOpen }}>\n      <CollectionContext.Provider value={{ ownedCards, setOwnedCards, selectedCardId, setSelectedCardId }}>\n        <ErrorBoundary fallback={<div className=\"m-4\">Something went wrong, please refresh the page.</div>}>\n          <Toaster />\n          <Header />\n          <Routes>\n            <Route path=\"/\" element={<Overview />} />\n            <Route path=\"/collection\" element={<Collection />} />\n            <Route path=\"/trade\" element={<Trade />} />\n            <Route path=\"/community\" element={<Community />} />\n            <Route path=\"/import\" element={<Import />} />\n            <Route path=\"/export\" element={<Export />} />\n          </Routes>\n          <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />\n          <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />\n        </ErrorBoundary>\n      </CollectionContext.Provider>\n    </UserContext.Provider>\n  )\n}\n\nexport default App\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/App.tsx b/frontend/src/App.tsx
+--- a/frontend/src/App.tsx	(revision b18abf1dd6d10834c7e0b2fa1a35c44a7d26dcea)
++++ b/frontend/src/App.tsx	(date 1740421345738)
+@@ -43,6 +43,7 @@
+   }, [user])
+ 
+   return (
++
+     <UserContext.Provider value={{ user, setUser, account, setAccount, isLoginDialogOpen, setIsLoginDialogOpen, isProfileDialogOpen, setIsProfileDialogOpen }}>
+       <CollectionContext.Provider value={{ ownedCards, setOwnedCards, selectedCardId, setSelectedCardId }}>
+         <ErrorBoundary fallback={<div className="m-4">Something went wrong, please refresh the page.</div>}>
