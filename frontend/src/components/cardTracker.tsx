@@ -14,7 +14,30 @@ declare global {
     }
   }
 }
-declare const cv: unknown
+interface CvMat {
+  delete(): void
+}
+
+interface CvPoint {
+  x: number
+  y: number
+}
+
+interface CvMinMaxLocResult {
+  minVal: number
+  maxVal: number
+  minLoc: CvPoint
+  maxLoc: CvPoint
+}
+
+declare const cv: {
+  matFromImageData: (imageData: ImageData) => CvMat
+  Mat: new () => CvMat
+  matchTemplate: (image: CvMat, template: CvMat, result: CvMat, method: number) => void
+  minMaxLoc: (mat: CvMat) => CvMinMaxLocResult
+  TM_CCOEFF_NORMED: number
+}
+
 const CardTracker = () => {
   const [originalCards, setOriginalCards] = useState<HTMLImageElement[]>([]) // Loaded card images
   const [results, setResults] = useState<{ screenshot: string; cards: string[] }[]>([]) // Matching results
