@@ -59,7 +59,7 @@ function Collection() {
         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
         {/*TODO: NOT READY YET, FEEL FREE TO HELP*/}
-        <CardTracker />
+        {/*<CardTracker />*/}
         <BatchUpdateDialog filteredCards={getFilteredCards} onBatchUpdate={handleBatchUpdate} disabled={getFilteredCards.length === 0} />
       </div>
       <div>
