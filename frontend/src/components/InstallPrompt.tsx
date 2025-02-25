@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useMediaQuery } from 'react-responsive'
 
 // Define the type for the beforeinstallprompt event
 interface BeforeInstallPromptEvent extends Event {
@@ -11,14 +12,17 @@ interface BeforeInstallPromptEvent extends Event {
 
 const InstallPrompt = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState<boolean>(() => {
+    const showInstall = localStorage.getItem('showInstall')
+    return JSON.parse(showInstall) && true
+  })
   const { t } = useTranslation('header')
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (event: BeforeInstallPromptEvent) => {
       event.preventDefault()
       setDeferredPrompt(event)
-      setIsVisible(true)
     }
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt as EventListener)
@@ -30,6 +34,7 @@ const InstallPrompt = () => {
 
   const handleInstallClick = async () => {
     setIsVisible(false)
+    localStorage.setItem('showInstall', JSON.stringify(false))
 
     if (deferredPrompt) {
       await deferredPrompt.prompt()
@@ -40,11 +45,12 @@ const InstallPrompt = () => {
       } else {
         console.log('User dismissed the install prompt')
       }
+
       setDeferredPrompt(null)
     }
   }
 
-  if (!isVisible) return null
+  if (!isVisible || !isMobile) return null
 
   return (
     <div
@@ -66,7 +72,14 @@ const InstallPrompt = () => {
       <Button onClick={handleInstallClick} type="button" variant="default">
         {t('accept')}
       </Button>
-      <Button onClick={() => setIsVisible(false)} type="button" variant="outline">
+      <Button
+        onClick={() => {
+          setIsVisible(false)
+          localStorage.setItem('showInstall', JSON.stringify(false))
+        }}
+        type="button"
+        variant="outline"
+      >
         {t('cancel')}
       </Button>
     </div>
