@@ -45,7 +45,6 @@ function App() {
 
   return (
     <UserContext.Provider value={{ user, setUser, account, setAccount, isLoginDialogOpen, setIsLoginDialogOpen, isProfileDialogOpen, setIsProfileDialogOpen }}>
-      <InstallPrompt />
       <CollectionContext.Provider value={{ ownedCards, setOwnedCards, selectedCardId, setSelectedCardId }}>
         <ErrorBoundary fallback={<div className="m-4">Something went wrong, please refresh the page.</div>}>
           <Toaster />
@@ -60,6 +59,7 @@ function App() {
           </Routes>
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
           <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
+          <InstallPrompt />
         </ErrorBoundary>
       </CollectionContext.Provider>
     </UserContext.Provider>

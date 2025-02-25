@@ -14,8 +14,8 @@ import {
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu.tsx'
 import { logout } from '@/lib/Auth.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
-import { Download, Globe, LogOut, UserRoundPen } from 'lucide-react'
-import { use, useState } from 'react'
+import { Globe, LogOut, UserRoundPen } from 'lucide-react'
+import { use } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 
@@ -23,16 +23,6 @@ export function Header() {
   const { user, setUser, isLoginDialogOpen, setIsLoginDialogOpen, setIsProfileDialogOpen } = use(UserContext)
   const { t, i18n } = useTranslation('header')
   const changeLanguage = (lng: string) => i18n.changeLanguage(lng)
-  const [isInstalled, setIsInstalled] = useState<boolean>(() => {
-    const showInstalled = localStorage.getItem('installed')
-    return JSON.parse(showInstalled || 'false')
-  })
-  const handleStorageChange = () => {
-    const showInstall = localStorage.getItem('installed')
-    setIsInstalled(JSON.parse(showInstall || 'false'))
-  }
-
-  window.addEventListener('storage', handleStorageChange)
 
   return (
     <>
@@ -61,18 +51,6 @@ export function Header() {
           <Link to="/community" className="hidden sm:block">
             <Button variant="ghost">{t('community')}</Button>
           </Link>
-          {!isInstalled && (
-            <Button
-              className="block sm:hidden"
-              variant="ghost"
-              onClick={() => {
-                localStorage.setItem('showInstall', 'true')
-                window.dispatchEvent(new Event('storage'))
-              }}
-            >
-              <Download />
-            </Button>
-          )}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">

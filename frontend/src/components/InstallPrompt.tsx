@@ -11,16 +11,16 @@ interface BeforeInstallPromptEvent extends Event {
 
 const InstallPrompt = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
-  const [isVisible, setIsVisible] = useState<boolean>(() => {
+  const [showInstall, setShowInstall] = useState<boolean>(() => {
     const showInstall = localStorage.getItem('showInstall')
-    return JSON.parse(showInstall || 'false')
+    return JSON.parse(showInstall || 'true')
   })
   const { t } = useTranslation('header')
 
   useEffect(() => {
     const handleStorageChange = () => {
       const showInstall = localStorage.getItem('showInstall')
-      setIsVisible(JSON.parse(showInstall || 'false'))
+      setShowInstall(JSON.parse(showInstall || 'true'))
     }
 
     window.addEventListener('storage', handleStorageChange)
@@ -31,7 +31,6 @@ const InstallPrompt = () => {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('installed', 'false')
     const handleBeforeInstallPrompt = (event: BeforeInstallPromptEvent) => {
       event.preventDefault()
       setDeferredPrompt(event)
@@ -45,17 +44,17 @@ const InstallPrompt = () => {
   }, [])
 
   const handleInstallClick = async () => {
-    setIsVisible(false)
-    localStorage.setItem('showInstall', JSON.stringify(false))
-
+    console.log('install clicked', deferredPrompt)
     if (deferredPrompt) {
+      console.log('prompting')
       await deferredPrompt.prompt()
+      console.log('awaiting user choice')
       const choiceResult = await deferredPrompt.userChoice
 
       if (choiceResult.outcome === 'accepted') {
         console.log('User accepted the install prompt')
-        localStorage.setItem('installed', 'true')
-        window.dispatchEvent(new Event('storage'))
+        setShowInstall(false)
+        localStorage.setItem('showInstall', 'false')
       } else {
         console.log('User dismissed the install prompt')
       }
@@ -64,7 +63,11 @@ const InstallPrompt = () => {
     }
   }
 
-  if (!isVisible) return null
+  if (!showInstall || !deferredPrompt) {
+    // no deferredPrompt means it can't be installed (e.g. on iOS), so don't show it.
+    console.log('not showing install', showInstall, deferredPrompt)
+    return null
+  }
 
   return (
     <div
@@ -73,25 +76,18 @@ const InstallPrompt = () => {
         bottom: '10px',
         left: '50%',
         transform: 'translateX(-50%)',
-        padding: '10px',
-        backgroundColor: '#2f2f2fee',
-        border: '1px solid #ccc',
-        borderRadius: '5px',
-        boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
-        zIndex: 1000,
-        justifyItems: 'center',
       }}
-      className="block sm:hidden"
+      className="block sm:hidden border-2 border-slate-600 p-2 shadow-sm bg-gray-900 rounded-md"
     >
-      <p>{t('install')}</p>
+      <p className="pb-2">{t('install')}</p>
       <div className="justify-between flex">
         <Button onClick={handleInstallClick} type="button" variant="default">
           {t('accept')}
         </Button>
         <Button
           onClick={() => {
-            setIsVisible(false)
-            localStorage.setItem('showInstall', JSON.stringify(false))
+            setShowInstall(false)
+            localStorage.setItem('showInstall', 'false')
           }}
           type="button"
           variant="outline"

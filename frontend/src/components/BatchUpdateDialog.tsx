@@ -116,13 +116,13 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
   return (
     <>
       <Button variant="ghost" onClick={() => setIsOpen(true)} disabled={isBatchUpdateDisabled}>
-        Batch update
+        Bulk update
       </Button>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
-            <DialogTitle>Batch update cards</DialogTitle>
+            <DialogTitle>Bulk update cards</DialogTitle>
           </DialogHeader>
 
           <Alert variant="destructive">
