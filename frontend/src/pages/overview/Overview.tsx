@@ -9,6 +9,7 @@ import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import { Query } from 'appwrite'
 import { Siren } from 'lucide-react'
 import { use, useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { ExpansionOverview } from './components/ExpansionOverview'
 
 interface Pack {
@@ -22,6 +23,7 @@ const BUCKET_ID = '67b79b0d0008be153794'
 function Overview() {
   const { ownedCards } = use(CollectionContext)
   const { user } = use(UserContext)
+  const { t } = useTranslation('pages/overview')
 
   const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
   const [totals, setTotals] = useState<{ totalUsers: number }>({ totalUsers: 0 })
@@ -30,6 +32,9 @@ function Overview() {
     const savedRarityFilter = localStorage.getItem('rarityFilter')
     return savedRarityFilter ? JSON.parse(savedRarityFilter) : []
   })
+
+  const totalUniqueCards = CardsDB.getTotalNrOfCards({ rarityFilter })
+
   useEffect(() => {
     localStorage.setItem('rarityFilter', JSON.stringify(rarityFilter))
   }, [rarityFilter])
@@ -73,35 +78,37 @@ function Overview() {
         {ownedCards.length === 0 && (
           <Alert className="mb-8 border-2 border-slate-600 shadow-none">
             <Siren className="h-4 w-4" />
-            <AlertTitle>You don't have any cards logged yet!</AlertTitle>
-            <AlertDescription>Head over to the collection page to add your first card or hit the login button to create an account.</AlertDescription>
+            <AlertTitle>{t('dontHaveCards.title')}</AlertTitle>
+            <AlertDescription>{t('dontHaveCards.description')}</AlertDescription>
           </Alert>
         )}
 
         <div className="mb-8 flex items-center gap-2">
           <p className="grow-1">
-            {user ? 'Amazing, that you are part of the ' : 'Join the '} <strong>{totals.totalUsers}</strong> users in our community! 🎉
+            {user ? t('usersOurCommunity.youAre') : t('usersOurCommunity.join')}
+            <strong> {totals.totalUsers} </strong>
+            {t('usersOurCommunity.text')}
           </p>
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
         </div>
 
         <section className="grid grid-cols-8 gap-6">
           <div className="col-span-8 flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-4 sm:p-8 md:col-span-2">
-            <h2 className="mb-2 text-center text-lg sm:text-2xl">You have</h2>
+            <h2 className="mb-2 text-center text-lg sm:text-2xl">{t('youHave')}</h2>
             <h1 className="mb-3 text-balance text-center font-semibold text-3xl sm:text-7xl">{CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter })}</h1>
-            <h2 className="text-balance text-center text-lg sm:text-2xl">out of {CardsDB.getTotalNrOfCards({ rarityFilter })} unique cards</h2>
+            <h2 className="text-balance text-center text-lg sm:text-2xl">{t('uniqueCards', { totalUniqueCards: totalUniqueCards })}</h2>
           </div>
           <GradientCard
             title={highestProbabilityPack?.packName || ''}
-            packNames="all"
+            packNames={t('all')}
             percentage={highestProbabilityPack?.percentage || 0}
             className="col-span-8 md:col-span-4 col-start-1 md:col-start-3"
             backgroundColor={highestProbabilityPack?.fill}
           />
           <div className="col-span-8 flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-4 sm:p-8 md:col-span-2">
-            <h2 className="mb-2 text-center text-lg sm:text-2xl">You have</h2>
+            <h2 className="mb-2 text-center text-lg sm:text-2xl">{t('youHave')}</h2>
             <h1 className="mb-3 text-balance text-center font-semibold text-3xl sm:text-7xl">{ownedCardsCount}</h1>
-            <h2 className="text-balance text-center text-lg sm:text-2xl">cards in total</h2>
+            <h2 className="text-balance text-center text-lg sm:text-2xl">{t('cardsTotal')}</h2>
           </div>
         </section>
       </article>

@@ -13,10 +13,10 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "lefthook": "^1.10.10"
+    "lefthook": "^1.10.11"
   },
   "type": "module",
-  "packageManager": "pnpm@10.2.1",
+  "packageManager": "pnpm@10.4.1",
   "engines": {
     "node": ">=20"
   },
@@ -26,5 +26,10 @@
         "react": "^19.0.0"
       }
     }
+  },
+  "dependencies": {
+    "i18next": "^24.2.2",
+    "i18next-http-backend": "^3.0.2",
+    "react-i18next": "^15.4.1"
   }
 }

@@ -14,12 +14,16 @@ import {
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu.tsx'
 import { logout } from '@/lib/Auth.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
-import { LogOut, UserRoundPen } from 'lucide-react'
+import { Globe, LogOut, UserRoundPen } from 'lucide-react'
 import { use } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 
 export function Header() {
   const { user, setUser, isLoginDialogOpen, setIsLoginDialogOpen, setIsProfileDialogOpen } = use(UserContext)
+  const { t, i18n } = useTranslation('header')
+  const changeLanguage = (lng: string) => i18n.changeLanguage(lng)
+
   return (
     <>
       <header className="flex h-20 w-full shrink-0 flex-wrap items-center px-4 md:px-6">
@@ -28,60 +32,75 @@ export function Header() {
           <NavigationMenuList>
             <NavigationMenuLink asChild>
               <Link to="/">
-                <Button variant="ghost">Overview</Button>
+                <Button variant="ghost">{t('overview')}</Button>
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild>
               <Link to="/collection">
-                <Button variant="ghost">Collection</Button>
+                <Button variant="ghost">{t('collection')}</Button>
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/trade">
-                <Button variant="ghost">Trade</Button>
+                <Button variant="ghost">{t('trade')}</Button>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuList>
         </NavigationMenu>
-        <div className="items-center gap-2 hidden sm:flex">
-          <Link to="/community">
-            <Button variant="ghost">Community</Button>
+        <div className="items-center gap-2 flex">
+          <Link to="/community" className="hidden sm:block">
+            <Button variant="ghost">{t('community')}</Button>
           </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Globe />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56">
+              <DropdownMenuLabel>{t('selectLanguage')}</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem onClick={() => changeLanguage('es')}>{t('languages.es')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('en')}>{t('languages.en')}</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
 
           {user ? (
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <UserRoundPen />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56">
-                <DropdownMenuLabel>My account</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={() => setIsProfileDialogOpen(true)}>Edit profile</DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuGroup>
+            <div className="hidden sm:block">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <UserRoundPen />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-56">
+                  <DropdownMenuLabel>{t('myAccount')}</DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem
-                    onClick={async () => {
-                      await logout()
-                      setUser(null)
-                    }}
-                  >
-                    Log out
-                    <LogOut />
-                  </DropdownMenuItem>
-                </DropdownMenuGroup>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                  <DropdownMenuItem onClick={() => setIsProfileDialogOpen(true)}>{t('editProfile')}</DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuGroup>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem
+                      onClick={async () => {
+                        await logout()
+                        setUser(null)
+                      }}
+                    >
+                      {t('logOut')}
+                      <LogOut />
+                    </DropdownMenuItem>
+                  </DropdownMenuGroup>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
           ) : (
             <Dialog open={isLoginDialogOpen} onOpenChange={setIsLoginDialogOpen}>
               <DialogTrigger asChild>
-                <Button>Login</Button>
+                <Button>{t('login')}</Button>
               </DialogTrigger>
               <DialogContent className="border-2 border-slate-600 shadow-none">
                 <DialogHeader>
-                  <DialogTitle>Login / Sign up</DialogTitle>
+                  <DialogTitle>{t('signUp')}</DialogTitle>
                 </DialogHeader>
                 <Login />
               </DialogContent>

@@ -5,6 +5,7 @@ import { CompleteProgress } from '@/pages/overview/components/CompleteProgress.t
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import type { Expansion } from '@/types'
 import { use, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
 import { Carousel } from './Carousel'
 
@@ -14,6 +15,7 @@ interface ExpansionOverviewProps {
 }
 export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverviewProps) {
   const { ownedCards } = use(CollectionContext)
+  const { t } = useTranslation('expansion-overview')
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
@@ -52,12 +54,12 @@ export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverview
                   backgroundColor={highestProbabilityPack.fill}
                 />
                 <div className="col-span-8 snap-start flex-shrink-0 w-full">
-                  <BarChartComponent title="Probability of getting new card per pack" data={chartData} />
+                  <BarChartComponent title={t('probabilityNewCard')} data={chartData} />
                 </div>
               </>
             )}
             <div className="col-span-8 snap-start flex-shrink-0 w-full border-2 border-slate-600 border-solid rounded-4xl p-4 sm:p-8">
-              <CompleteProgress title="Total cards" expansion={expansion} rarityFilter={rarityFilter} />
+              <CompleteProgress title={t('totalCards')} expansion={expansion} rarityFilter={rarityFilter} />
               {expansion.packs.length > 1 &&
                 expansion.packs.map((pack) => (
                   <CompleteProgress key={pack.name} rarityFilter={rarityFilter} title={pack.name} expansion={expansion} packName={pack.name} />
@@ -77,12 +79,12 @@ export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverview
                 backgroundColor={highestProbabilityPack.fill}
               />
               <div className="col-span-4 lg:col-span-2">
-                <BarChartComponent title="Probability of getting new card per pack" data={chartData} />
+                <BarChartComponent title={t('probabilityNewCard')} data={chartData} />
               </div>
             </>
           )}
           <div className="col-span-4 lg:col-span-2">
-            <CompleteProgress title="Total cards" expansion={expansion} rarityFilter={rarityFilter} />
+            <CompleteProgress title={t('totalCards')} expansion={expansion} rarityFilter={rarityFilter} />
             {expansion.packs.length > 1 &&
               expansion.packs.map((pack) => (
                 <CompleteProgress key={pack.name} rarityFilter={rarityFilter} title={pack.name} expansion={expansion} packName={pack.name} />

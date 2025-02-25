@@ -3,6 +3,7 @@ import { useToast } from '@/hooks/use-toast.ts'
 import { checkOTP, sendOTP } from '@/lib/Auth.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { use, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { z } from 'zod'
 import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from './ui/input-otp.tsx'
 import { Input } from './ui/input.tsx'
@@ -12,6 +13,7 @@ const EmailSchema = z.string().nonempty('Email is required').email('Email must b
 export const Login = () => {
   const { setUser, setIsLoginDialogOpen } = use(UserContext)
   const { toast } = useToast()
+  const { t } = useTranslation('login')
 
   const [emailInput, setEmailInput] = useState('')
   const [userId, setUserId] = useState('')
@@ -22,14 +24,14 @@ export const Login = () => {
       setUser(user)
       setIsLoginDialogOpen(false)
     } catch {
-      toast({ title: 'Invalid code', variant: 'destructive' })
+      toast({ title: t('invalidCode'), variant: 'destructive' })
     }
   }
 
   const submitEmail = async () => {
     const result = EmailSchema.safeParse(emailInput)
     if (!result.success) {
-      toast({ title: 'Please enter a valid email address', variant: 'destructive' })
+      toast({ title: t('validEmail'), variant: 'destructive' })
       return
     }
 
@@ -40,7 +42,7 @@ export const Login = () => {
   if (userId) {
     return (
       <>
-        <p className="pt-4">Thank you. Fill in the 6-digit code from the email we've sent.</p>
+        <p className="pt-4">{t('fill6Digit')}</p>
         <div>
           <InputOTP maxLength={6} autoFocus onComplete={otpEntered}>
             <InputOTPGroup className="border-2 border-slate-600 shadow-none">
@@ -62,10 +64,7 @@ export const Login = () => {
 
   return (
     <div className="pt-4">
-      <p>
-        Fill in your email address to get a magic link to login. If you don't have an account yet, we will automatically create one for you. We won't use your
-        email address for anything else.
-      </p>
+      <p>{t('fillEmail')}</p>
 
       <div className="flex justify-center gap-2 pt-4 align-center">
         <Input
@@ -79,7 +78,7 @@ export const Login = () => {
           }}
         />
 
-        <Button onClick={submitEmail}>login / signup</Button>
+        <Button onClick={submitEmail}>{t('button')}</Button>
       </div>
     </div>
   )
