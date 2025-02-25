@@ -14,7 +14,7 @@ const InstallPrompt = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
   const [isVisible, setIsVisible] = useState<boolean>(() => {
     const showInstall = localStorage.getItem('showInstall')
-    return JSON.parse(showInstall) && true
+    return JSON.parse(showInstall || 'false') && true
   })
   const { t } = useTranslation('header')
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
