@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6593521d-b549-40d1-a777-46ed6a2e8b1b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/locales/en/header.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/locales/en/header.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/locales/es/header.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/locales/es/header.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/i18n.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/i18n.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/locales/en/header.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/locales/en/header.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/locales/es/header.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/locales/es/header.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/InstallPrompt 2.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/InstallPrompt.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InstallPrompt.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +49,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging install-on-device-popup",
+    "git-widget-placeholder": "install-on-device-popup",
     "last_opened_file_path": "/Users/lucian/Documents/githubProjects/tcg-pocket-collection-tracker/frontend/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

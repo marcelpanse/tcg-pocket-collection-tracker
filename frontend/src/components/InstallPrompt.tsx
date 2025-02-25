@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useMediaQuery } from 'react-responsive'
 
 // Define the type for the beforeinstallprompt event
 interface BeforeInstallPromptEvent extends Event {
@@ -14,12 +13,25 @@ const InstallPrompt = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
   const [isVisible, setIsVisible] = useState<boolean>(() => {
     const showInstall = localStorage.getItem('showInstall')
-    return JSON.parse(showInstall || 'false') && true
+    return JSON.parse(showInstall || 'false')
   })
   const { t } = useTranslation('header')
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
   useEffect(() => {
+    const handleStorageChange = () => {
+      const showInstall = localStorage.getItem('showInstall')
+      setIsVisible(JSON.parse(showInstall || 'false'))
+    }
+
+    window.addEventListener('storage', handleStorageChange)
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange)
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('installed', 'false')
     const handleBeforeInstallPrompt = (event: BeforeInstallPromptEvent) => {
       event.preventDefault()
       setDeferredPrompt(event)
@@ -42,6 +54,8 @@ const InstallPrompt = () => {
 
       if (choiceResult.outcome === 'accepted') {
         console.log('User accepted the install prompt')
+        localStorage.setItem('installed', 'true')
+        window.dispatchEvent(new Event('storage'))
       } else {
         console.log('User dismissed the install prompt')
       }
@@ -50,7 +64,7 @@ const InstallPrompt = () => {
     }
   }
 
-  if (!isVisible || !isMobile) return null
+  if (!isVisible) return null
 
   return (
     <div
@@ -67,21 +81,24 @@ const InstallPrompt = () => {
         zIndex: 1000,
         justifyItems: 'center',
       }}
+      className="block sm:hidden"
     >
       <p>{t('install')}</p>
-      <Button onClick={handleInstallClick} type="button" variant="default">
-        {t('accept')}
-      </Button>
-      <Button
-        onClick={() => {
-          setIsVisible(false)
-          localStorage.setItem('showInstall', JSON.stringify(false))
-        }}
-        type="button"
-        variant="outline"
-      >
-        {t('cancel')}
-      </Button>
+      <div className="justify-between flex">
+        <Button onClick={handleInstallClick} type="button" variant="default">
+          {t('accept')}
+        </Button>
+        <Button
+          onClick={() => {
+            setIsVisible(false)
+            localStorage.setItem('showInstall', JSON.stringify(false))
+          }}
+          type="button"
+          variant="outline"
+        >
+          {t('cancel')}
+        </Button>
+      </div>
     </div>
   )
 }
