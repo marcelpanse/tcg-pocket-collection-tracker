@@ -1,7 +1,14 @@
 import FancyCard from '@/components/FancyCard.tsx'
+import { Button } from '@/components/ui/button.tsx'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
+import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
 import { getCardById, sellableForTokensDictionary } from '@/lib/CardsDB.ts'
+import { CollectionContext } from '@/lib/context/CollectionContext.ts'
+import { UserContext } from '@/lib/context/UserContext.ts'
 import type { Card } from '@/types'
+import { ID } from 'appwrite'
+import { MinusIcon, PlusIcon } from 'lucide-react'
+import { useCallback, useContext, useEffect, useRef, useState } from 'react'
 
 interface CardDetailProps {
   cardId: string
@@ -10,6 +17,78 @@ interface CardDetailProps {
 
 function CardDetail({ cardId, onClose }: CardDetailProps) {
   const card: Card = getCardById(cardId) || ({} as Card)
+  const { user, setIsLoginDialogOpen } = useContext(UserContext)
+  const { ownedCards, setOwnedCards } = useContext(CollectionContext)
+
+  // Determine the initial count from the collection data.
+  const initialCount = ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0
+  const [count, setCount] = useState<number>(initialCount)
+  const debounceRef = useRef<number | null>(null)
+
+  useEffect(() => {
+    setCount(initialCount)
+  }, [initialCount])
+
+  const updateCardCount = useCallback(
+    async (newCount: number) => {
+      const validatedCount = Math.max(0, newCount)
+      setCount(validatedCount)
+
+      // Debounce rapid updates so that the backend isn't spammed.
+      if (debounceRef.current) {
+        clearTimeout(debounceRef.current)
+      }
+      debounceRef.current = window.setTimeout(async () => {
+        const db = await getDatabase()
+        const ownedCard = ownedCards.find((row) => row.card_id === card.card_id)
+
+        if (ownedCard) {
+          ownedCard.amount_owned = validatedCount
+          setOwnedCards([...ownedCards])
+          await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
+            amount_owned: validatedCount,
+          })
+        } else if (validatedCount > 0) {
+          if (!user) {
+            setIsLoginDialogOpen(true)
+            return
+          }
+          const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
+            email: user.email,
+            card_id: card.card_id,
+            amount_owned: validatedCount,
+          })
+          setOwnedCards([
+            ...ownedCards,
+            {
+              $id: newCard.$id,
+              email: newCard.email,
+              card_id: newCard.card_id,
+              amount_owned: newCard.amount_owned,
+            },
+          ])
+        }
+      }, 1000)
+    },
+    [ownedCards, card.card_id, user, setOwnedCards, setIsLoginDialogOpen],
+  )
+
+  const increment = () => {
+    updateCardCount(count + 1)
+  }
+
+  const decrement = () => {
+    if (count > 0) {
+      updateCardCount(count - 1)
+    }
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)
+    if (!Number.isNaN(value) && value >= 0) {
+      updateCardCount(value)
+    }
+  }
 
   return (
     <Sheet
@@ -31,7 +110,23 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
             <FancyCard card={card} selected={true} />
           </div>
 
-          <div className="p-4 w-full">
+          {/* Counter UI for adjusting card quantity */}
+          <div className="flex items-center gap-x-3 mt-2">
+            <Button variant="ghost" size="lg" onClick={decrement} className="rounded-full">
+              <MinusIcon />
+            </Button>
+            <input
+              type="text"
+              value={count}
+              onChange={handleInputChange}
+              className="w-16 text-center border border-gray-300 rounded p-2 text-xl"
+              onFocus={(e) => e.target.select()}
+            />
+            <Button variant="ghost" size="lg" className="rounded-full" onClick={increment}>
+              <PlusIcon />
+            </Button>
+          </div>
+          <div className="p-4 w-full border-t border-gray-500 mt-4">
             <p className="text-lg mb-1">
               <strong>Trade tokens:</strong> {sellableForTokensDictionary[card.rarity] || 'N/A'}
             </p>
