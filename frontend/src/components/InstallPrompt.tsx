@@ -65,7 +65,6 @@ const InstallPrompt = () => {
 
   if (!showInstall || !deferredPrompt) {
     // no deferredPrompt means it can't be installed (e.g. on iOS), so don't show it.
-    console.log('not showing install', showInstall, deferredPrompt)
     return null
   }
 
