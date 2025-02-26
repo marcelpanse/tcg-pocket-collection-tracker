@@ -137,3 +137,6 @@ dist
 
 .husky/*
 **/.DS_Store
+
+#webstorm IDE
+.idea/

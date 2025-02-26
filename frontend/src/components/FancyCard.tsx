@@ -1,4 +1,3 @@
-import useMousePosition from '@/lib/hooks/useMousePosition'
 import type { Card } from '@/types'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
@@ -35,7 +34,6 @@ interface Props {
 
 function FancyCard({ selected, setIsSelected, card, size = 'default' }: Props) {
   const cardRef = useRef<HTMLImageElement>(null)
-  const { x, y } = useMousePosition()
   const [throttledPos, setThrottledPos] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
 
@@ -43,10 +41,15 @@ function FancyCard({ selected, setIsSelected, card, size = 'default' }: Props) {
   const throttledSetPos = useRef(throttle<Parameters<typeof setThrottledPos>>((position) => setThrottledPos(position), 50))
 
   useEffect(() => {
-    if (isHovering) {
-      throttledSetPos.current({ x: x || 0, y: y || 0 })
+    const updateMousePos = (e: MouseEvent) => {
+      if (isHovering) {
+        throttledSetPos.current({ x: e.clientX, y: e.clientY })
+      }
     }
-  }, [x, y, isHovering])
+
+    window.addEventListener('mousemove', updateMousePos)
+    return () => window.removeEventListener('mousemove', updateMousePos)
+  }, [isHovering])
 
   const handleMouseEnter = useCallback(() => setIsHovering(true), [])
   const handleMouseLeave = useCallback(() => setIsHovering(false), [])

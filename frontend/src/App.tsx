@@ -1,3 +1,4 @@
+import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { authSSO, getUser } from '@/lib/Auth.ts'
 import { fetchAccount } from '@/lib/fetchAccount.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
@@ -66,6 +67,7 @@ function App() {
           </Routes>
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
           <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
+          <InstallPrompt />
         </ErrorBoundary>
       </CollectionContext.Provider>
     </UserContext.Provider>

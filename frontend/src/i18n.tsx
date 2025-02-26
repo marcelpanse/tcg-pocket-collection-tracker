@@ -6,11 +6,12 @@ i18n
   .use(Backend)
   .use(initReactI18next)
   .init({
-    lng: 'en', // default language
+    lng: 'en', // default language,
+    // debug: true,
     interpolation: { escapeValue: false },
     fallbackLng: 'en',
     backend: {
-      loadPath: '/src/locales/{{lng}}/{{ns}}.json',
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
   })
 
