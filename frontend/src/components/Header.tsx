@@ -30,13 +30,14 @@ export function Header() {
         <div className="shrink font-bold pr-4 hidden md:block">TCG Pocket Collection Tracker</div>
         <NavigationMenu className="max-w-full justify-start">
           <NavigationMenuList>
+            <div className="shrink font-bold pr-4 block md:hidden">TCG Pocket Collection Tracker</div>
             <NavigationMenuLink asChild>
-              <Link to="/">
+              <Link to="/" className="hidden sm:block">
                 <Button variant="ghost">{t('overview')}</Button>
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild>
-              <Link to="/collection">
+              <Link to="/collection" className="hidden sm:block">
                 <Button variant="ghost">{t('collection')}</Button>
               </Link>
             </NavigationMenuLink>
@@ -97,7 +98,7 @@ export function Header() {
           ) : (
             <Dialog open={isLoginDialogOpen} onOpenChange={setIsLoginDialogOpen}>
               <DialogTrigger asChild>
-                <Button>{t('login')}</Button>
+                <Button className="hidden sm:block">{t('login')}</Button>
               </DialogTrigger>
               <DialogContent className="border-2 border-slate-600 shadow-none">
                 <DialogHeader>
