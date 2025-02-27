@@ -1,5 +1,5 @@
+import CardCounter from '@/components/CardCounter'
 import FancyCard from '@/components/FancyCard.tsx'
-import { Button } from '@/components/ui/button.tsx'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
 import { getCardById, sellableForTokensDictionary } from '@/lib/CardsDB.ts'
@@ -7,7 +7,6 @@ import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import type { Card } from '@/types'
 import { ID } from 'appwrite'
-import { MinusIcon, PlusIcon } from 'lucide-react'
 import { useCallback, useContext, useEffect, useRef, useState } from 'react'
 
 interface CardDetailProps {
@@ -83,13 +82,6 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
     }
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)
-    if (!Number.isNaN(value) && value >= 0) {
-      updateCardCount(value)
-    }
-  }
-
   return (
     <Sheet
       open={!!cardId}
@@ -111,21 +103,7 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
           </div>
 
           {/* Counter UI for adjusting card quantity */}
-          <div className="flex items-center gap-x-3 mt-2">
-            <Button variant="ghost" size="lg" onClick={decrement} className="rounded-full">
-              <MinusIcon />
-            </Button>
-            <input
-              type="text"
-              value={count}
-              onChange={handleInputChange}
-              className="w-16 text-center border border-gray-300 rounded p-2 text-xl"
-              onFocus={(e) => e.target.select()}
-            />
-            <Button variant="ghost" size="lg" className="rounded-full" onClick={increment}>
-              <PlusIcon />
-            </Button>
-          </div>
+          <CardCounter count={count} onIncrement={increment} onDecrement={decrement} onInputChange={updateCardCount} />
           <div className="p-4 w-full border-t border-gray-500 mt-4">
             <p className="text-lg mb-1">
               <strong>Trade tokens:</strong> {sellableForTokensDictionary[card.rarity] || 'N/A'}

@@ -1,12 +1,11 @@
+import CardCounter from '@/components/CardCounter.tsx'
 import FancyCard from '@/components/FancyCard.tsx'
-import { Button } from '@/components/ui/button.tsx'
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import type { Card as CardType } from '@/types'
 import type { CollectionRow } from '@/types'
 import { ID } from 'appwrite'
-import { MinusIcon, PlusIcon } from 'lucide-react'
 import { use, useCallback, useEffect, useMemo, useState } from 'react'
 
 interface Props {
@@ -76,7 +75,7 @@ export function Card({ card }: Props) {
       }
       await updateCardCount(cardId, amountOwned + 1)
     },
-    [updateCardCount],
+    [user, setIsLoginDialogOpen, updateCardCount, amountOwned],
   )
 
   const removeCard = useCallback(
@@ -87,15 +86,8 @@ export function Card({ card }: Props) {
       }
       await updateCardCount(cardId, amountOwned - 1)
     },
-    [updateCardCount],
+    [user, setIsLoginDialogOpen, updateCardCount, amountOwned],
   )
-
-  const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)
-    if (!Number.isNaN(value) && value >= 0) {
-      await updateCardCount(card.card_id, value)
-    }
-  }
 
   return (
     <div className="group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer">
@@ -105,23 +97,13 @@ export function Card({ card }: Props) {
       <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">
         {card.card_id} - {card.name}
       </p>
-      <div className="flex items-center gap-x-1">
-        <Button variant="ghost" size="icon" onClick={() => removeCard(card.card_id)} className="rounded-full">
-          <MinusIcon />
-        </Button>
-        <input
-          min="0"
-          max="99"
-          type="text"
-          value={inputValue}
-          onChange={handleInputChange}
-          className="w-7 text-center border-none rounded"
-          onFocus={(event) => event.target.select()}
-        />
-        <Button variant="ghost" size="icon" className="rounded-full" onClick={() => addCard(card.card_id)}>
-          <PlusIcon />
-        </Button>
-      </div>
+      <CardCounter
+        count={inputValue}
+        onIncrement={() => addCard(card.card_id)}
+        onDecrement={() => removeCard(card.card_id)}
+        buttonSize="icon" // Matches small button style
+        inputClassName="w-7 text-center border-none rounded" // Matches original input style
+      />
     </div>
   )
 }

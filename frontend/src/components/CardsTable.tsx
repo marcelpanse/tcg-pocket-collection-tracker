@@ -2,7 +2,7 @@ import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
 import type { Card as CardType } from '@/types'
 import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
-import { useMemo, useRef } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { Card } from './Card.tsx'
 
 const columnHelper = createColumnHelper<CardType>()
@@ -14,6 +14,12 @@ interface Props {
 export function CardsTable({ cards }: Props) {
   const parentRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
+
+  useEffect(() => {
+    if (parentRef.current) {
+      parentRef.current.scrollTop = 0
+    }
+  }, [cards])
 
   const columns = useMemo(() => {
     return [
@@ -32,7 +38,6 @@ export function CardsTable({ cards }: Props) {
     ]
   }, [])
 
-  // Columns and data are defined in a stable reference, will not cause infinite loop!
   const table = useReactTable({
     columns,
     data: cards,
@@ -43,7 +48,7 @@ export function CardsTable({ cards }: Props) {
       grouping: ['set_details'],
     },
   })
-  const groupedRows = useMemo(() => table.getGroupedRowModel().rows, [table.getGroupedRowModel().rows]) // Get grouped rows from the table model
+  const groupedRows = useMemo(() => table.getGroupedRowModel().rows, [table.getGroupedRowModel().rows])
 
   let cardsPerRow = 5
   let cardHeight = Math.min(width, 890) / 5 + 120
@@ -74,8 +79,8 @@ export function CardsTable({ cards }: Props) {
   const flattenedRows = useMemo(
     () =>
       groupedGridRows.flatMap((group) => [
-        { type: 'header', height: 60, data: group.header }, // Group header
-        ...group.gridRows.map((gridRow) => ({ type: 'gridRow', height: cardHeight, data: gridRow })), // Grid rows
+        { type: 'header', height: 60, data: group.header },
+        ...group.gridRows.map((gridRow) => ({ type: 'gridRow', height: cardHeight, data: gridRow })),
       ]),
     [groupedGridRows],
   )
