@@ -1,34 +1,10 @@
 import type { Card } from '@/types'
-import { useCallback, useEffect, useRef, useState } from 'react'
-
-const throttle = <T extends unknown[]>(fn: (...args: T) => void, delay: number): ((...args: T) => void) => {
-  let lastCall = 0
-  let timeoutId: ReturnType<typeof setTimeout> | null = null
-
-  return (...args: T): void => {
-    const now = performance.now()
-    const timeSinceLastCall = now - lastCall
-
-    if (timeSinceLastCall < delay) {
-      if (!timeoutId) {
-        timeoutId = setTimeout(() => {
-          lastCall = performance.now()
-          timeoutId = null
-          fn(...args)
-        }, delay - timeSinceLastCall)
-      }
-      return
-    }
-
-    lastCall = now
-    fn(...args)
-  }
-}
+import { type CSSProperties, type Dispatch, type SetStateAction, useCallback, useRef, useState } from 'react'
 
 interface Props {
   card: Card
   selected: boolean
-  setIsSelected?: React.Dispatch<React.SetStateAction<boolean>>
+  setIsSelected?: Dispatch<SetStateAction<boolean>>
   size?: 'default' | 'small'
 }
 
@@ -40,19 +16,19 @@ function FancyCard({ selected, setIsSelected, card, size = 'default' }: Props) {
   // Memoize throttled position updates
   const throttledSetPos = useRef(throttle<Parameters<typeof setThrottledPos>>((position) => setThrottledPos(position), 50))
 
-  useEffect(() => {
-    const updateMousePos = (e: MouseEvent) => {
-      if (isHovering) {
-        throttledSetPos.current({ x: e.clientX, y: e.clientY })
-      }
-    }
+  const updateMousePos = (e: MouseEvent) => {
+    throttledSetPos.current({ x: e.clientX, y: e.clientY })
+  }
 
+  const handleMouseEnter = useCallback(() => {
+    setIsHovering(true)
     window.addEventListener('mousemove', updateMousePos)
-    return () => window.removeEventListener('mousemove', updateMousePos)
-  }, [isHovering])
+  }, [])
 
-  const handleMouseEnter = useCallback(() => setIsHovering(true), [])
-  const handleMouseLeave = useCallback(() => setIsHovering(false), [])
+  const handleMouseLeave = useCallback(() => {
+    setIsHovering(false)
+    window.removeEventListener('mousemove', updateMousePos)
+  }, [])
 
   let centeredX = 0
   let centeredY = 0
@@ -70,7 +46,7 @@ function FancyCard({ selected, setIsSelected, card, size = 'default' }: Props) {
   const rotateY = isHovering ? clamp(centeredX / 4, -10, 10) : 0
   const rotateX = isHovering ? clamp(-centeredY / 4, -10, 10) : 0
 
-  const cardTestStyle: React.CSSProperties = {
+  const cardTestStyle: CSSProperties = {
     transform: `perspective(1000px)
                    rotateY(${rotateY}deg)
                    rotateX(${rotateX}deg)
@@ -108,6 +84,30 @@ function FancyCard({ selected, setIsSelected, card, size = 'default' }: Props) {
       />
     </div>
   )
+}
+
+const throttle = <T extends unknown[]>(fn: (...args: T) => void, delay: number): ((...args: T) => void) => {
+  let lastCall = 0
+  let timeoutId: ReturnType<typeof setTimeout> | null = null
+
+  return (...args: T): void => {
+    const now = performance.now()
+    const timeSinceLastCall = now - lastCall
+
+    if (timeSinceLastCall < delay) {
+      if (!timeoutId) {
+        timeoutId = setTimeout(() => {
+          lastCall = performance.now()
+          timeoutId = null
+          fn(...args)
+        }, delay - timeSinceLastCall)
+      }
+      return
+    }
+
+    lastCall = now
+    fn(...args)
+  }
 }
 
 export default FancyCard
