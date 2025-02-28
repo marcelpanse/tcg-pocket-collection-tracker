@@ -1,0 +1,20 @@
+{
+  "short_name": "TCG Pocket Tracker",
+  "name": "TCG Pocket Collection Tracker",
+  "icons": [
+    {
+      "src": "/pokemon-icon128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/pokemon-icon512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2f2f2f",
+  "theme_color": "#2f2f2f"
+}

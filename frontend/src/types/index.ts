@@ -1,12 +1,36 @@
-export interface CollectionRow {
+import type { Models } from 'appwrite'
+
+export interface AccountRow {
+  $id: string
+  username: string
+  friend_id: string
+}
+
+export interface CollectionRow extends Partial<Models.Document> {
   $id: string
   email: string
   card_id: string
   amount_owned: number
 }
 
-export interface Card {
+export interface Expansion {
+  name: string
   id: string
+  cards: Card[]
+  packs: Pack[]
+  tradeable?: boolean
+  promo?: boolean
+}
+
+export interface Pack {
+  name: string
+  color: string
+}
+
+export interface Card {
+  card_id: string
+  linkedCardID?: string
+  expansion: string
   name: string
   hp: string
   card_type: string
@@ -18,12 +42,10 @@ export interface Card {
     damage: string
     effect: string
   }[]
-  ability:
-    | {
-        name: string
-        effect: string
-      }
-    | string
+  ability: {
+    name: string
+    effect: string
+  }
   weakness: string
   retreat: string
   rarity: string
@@ -42,4 +64,8 @@ export interface Card {
     '5 card': string | null | undefined
   }
   crafting_cost: number
+}
+
+export interface CollectedCard extends Card {
+  amount_owned?: number
 }
