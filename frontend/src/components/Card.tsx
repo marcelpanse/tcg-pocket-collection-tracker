@@ -6,88 +6,50 @@ import { UserContext } from '@/lib/context/UserContext.ts'
 import type { Card as CardType } from '@/types'
 import type { CollectionRow } from '@/types'
 import { ID } from 'appwrite'
-import { use, useCallback, useEffect, useMemo, useState } from 'react'
+import { forwardRef, useContext, useImperativeHandle, useMemo } from 'react'
 
-interface Props {
-  card: CardType
-}
+export const Card = forwardRef(({ card, hideUI = false }: { card: CardType; hideUI?: boolean }, ref) => {
+  const { user, setIsLoginDialogOpen } = useContext(UserContext)
+  const { ownedCards, setOwnedCards, setSelectedCardId } = useContext(CollectionContext)
 
-// keep track of the debounce timeouts for each card
-const _inputDebounce: Record<string, number | null> = {}
+  const amountOwned = useMemo(() => ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0, [ownedCards])
 
-export function Card({ card }: Props) {
-  const { user, setIsLoginDialogOpen } = use(UserContext)
-  const { ownedCards, setOwnedCards, setSelectedCardId } = use(CollectionContext)
-  let amountOwned = useMemo(() => ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0, [ownedCards])
-  const [inputValue, setInputValue] = useState(0)
+  const updateCardCount = async (newAmount: number) => {
+    const validatedCount = Math.max(0, newAmount)
 
-  useEffect(() => {
-    setInputValue(amountOwned)
-  }, [amountOwned])
+    const ownedCard = ownedCards.find((row) => row.card_id === card.card_id)
 
-  const updateCardCount = useCallback(
-    async (cardId: string, newAmount: number) => {
-      // we need to optimistically update the amountOwned so we can use it in the addCard/removeCard functions since the setState won't be updated yet if you click fast.
-      amountOwned = Math.max(0, newAmount)
-      setInputValue(amountOwned)
-
-      if (_inputDebounce[cardId]) {
-        window.clearTimeout(_inputDebounce[cardId])
-      }
-      _inputDebounce[cardId] = window.setTimeout(async () => {
-        const db = await getDatabase()
-        const ownedCard = ownedCards.find((row) => row.card_id === cardId)
-
-        if (ownedCard) {
-          console.log('updating', ownedCard)
-          ownedCard.amount_owned = Math.max(0, newAmount)
-          setOwnedCards([...ownedCards])
-          await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
-            amount_owned: ownedCard.amount_owned,
-          })
-        } else if (!ownedCard && newAmount > 0) {
-          console.log('adding new card', cardId)
-          const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
-            email: user?.email,
-            card_id: cardId,
-            amount_owned: newAmount,
-          })
-          setOwnedCards([
-            ...ownedCards,
-            {
-              $id: newCard.$id,
-              email: newCard.email,
-              card_id: newCard.card_id,
-              amount_owned: newCard.amount_owned,
-            },
-          ])
-        }
-      }, 1000)
-    },
-    [ownedCards, user, setOwnedCards, amountOwned],
-  )
-
-  const addCard = useCallback(
-    async (cardId: string) => {
+    if (ownedCard) {
+      ownedCard.amount_owned = validatedCount
+      setOwnedCards([...ownedCards])
+    } else if (validatedCount > 0) {
       if (!user) {
         setIsLoginDialogOpen(true)
         return
       }
-      await updateCardCount(cardId, amountOwned + 1)
-    },
-    [user, setIsLoginDialogOpen, updateCardCount, amountOwned],
-  )
+      setOwnedCards([
+        ...ownedCards,
+        {
+          $id: `${card.card_id}-${user.email}`,
+          email: user.email,
+          card_id: card.card_id,
+          amount_owned: validatedCount,
+        },
+      ])
+    }
+  }
 
-  const removeCard = useCallback(
-    async (cardId: string) => {
-      if (!user) {
-        setIsLoginDialogOpen(true)
-        return
-      }
-      await updateCardCount(cardId, amountOwned - 1)
-    },
-    [user, setIsLoginDialogOpen, updateCardCount, amountOwned],
-  )
+  const addCard = () => updateCardCount(amountOwned + 1)
+  const removeCard = () => updateCardCount(amountOwned - 1)
+
+  // Expose these functions via `useImperativeHandle`
+  useImperativeHandle(ref, () => ({
+    updateCardCount,
+    addCard,
+    removeCard,
+  }))
+
+  if (hideUI) return null
 
   return (
     <div className="group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer">
@@ -98,15 +60,16 @@ export function Card({ card }: Props) {
         {card.card_id} - {card.name}
       </p>
       <CardCounter
-        count={inputValue}
-        onIncrement={() => addCard(card.card_id)}
-        onDecrement={() => removeCard(card.card_id)}
-        buttonSize="icon" // Matches small button style
-        inputClassName="w-7 text-center border-none rounded" // Matches original input style
+        cardID={card.card_id}
+        count={amountOwned}
+        onIncrement={addCard}
+        onDecrement={removeCard}
+        buttonSize="icon"
+        inputClassName="w-7 text-center border-none rounded"
       />
     </div>
   )
-}
+})
 
 export const updateMultipleCards = async (
   cardIds: string[],

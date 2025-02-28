@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button.tsx'
 import { MinusIcon, PlusIcon } from 'lucide-react'
 
 interface CardCounterProps {
+  cardID: string
   count: number
   onIncrement: () => void
   onDecrement: () => void

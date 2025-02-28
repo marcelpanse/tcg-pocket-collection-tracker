@@ -1,13 +1,11 @@
+import { Card } from '@/components/Card.tsx'
 import CardCounter from '@/components/CardCounter'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
-import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
 import { getCardById, sellableForTokensDictionary } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import { UserContext } from '@/lib/context/UserContext.ts'
-import type { Card } from '@/types'
-import { ID } from 'appwrite'
-import { useCallback, useContext, useEffect, useRef, useState } from 'react'
+import type { Card as CardType } from '@/types'
+import { useContext, useRef } from 'react'
 
 interface CardDetailProps {
   cardId: string
@@ -15,82 +13,19 @@ interface CardDetailProps {
 }
 
 function CardDetail({ cardId, onClose }: CardDetailProps) {
-  const card: Card = getCardById(cardId) || ({} as Card)
-  const { user, setIsLoginDialogOpen } = useContext(UserContext)
-  const { ownedCards, setOwnedCards } = useContext(CollectionContext)
+  const card: CardType = getCardById(cardId) || ({} as CardType)
+  const { ownedCards } = useContext(CollectionContext)
 
-  // Determine the initial count from the collection data.
-  const initialCount = ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0
-  const [count, setCount] = useState<number>(initialCount)
-  const debounceRef = useRef<number | null>(null)
+  const amountOwned = ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0
 
-  useEffect(() => {
-    setCount(initialCount)
-  }, [initialCount])
-
-  const updateCardCount = useCallback(
-    async (newCount: number) => {
-      const validatedCount = Math.max(0, newCount)
-      setCount(validatedCount)
-
-      // Debounce rapid updates so that the backend isn't spammed.
-      if (debounceRef.current) {
-        clearTimeout(debounceRef.current)
-      }
-      debounceRef.current = window.setTimeout(async () => {
-        const db = await getDatabase()
-        const ownedCard = ownedCards.find((row) => row.card_id === card.card_id)
-
-        if (ownedCard) {
-          ownedCard.amount_owned = validatedCount
-          setOwnedCards([...ownedCards])
-          await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
-            amount_owned: validatedCount,
-          })
-        } else if (validatedCount > 0) {
-          if (!user) {
-            setIsLoginDialogOpen(true)
-            return
-          }
-          const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
-            email: user.email,
-            card_id: card.card_id,
-            amount_owned: validatedCount,
-          })
-          setOwnedCards([
-            ...ownedCards,
-            {
-              $id: newCard.$id,
-              email: newCard.email,
-              card_id: newCard.card_id,
-              amount_owned: newCard.amount_owned,
-            },
-          ])
-        }
-      }, 1000)
-    },
-    [ownedCards, card.card_id, user, setOwnedCards, setIsLoginDialogOpen],
-  )
-
-  const increment = () => {
-    updateCardCount(count + 1)
-  }
-
-  const decrement = () => {
-    if (count > 0) {
-      updateCardCount(count - 1)
-    }
-  }
+  const cardRef = useRef<{
+    updateCardCount: (newAmount: number) => void
+    addCard: () => void
+    removeCard: () => void
+  } | null>(null)
 
   return (
-    <Sheet
-      open={!!cardId}
-      onOpenChange={(open) => {
-        if (!open) {
-          onClose()
-        }
-      }}
-    >
+    <Sheet open={!!cardId} onOpenChange={(open) => !open && onClose()}>
       <SheetContent className="transition-all duration-300 ease-in-out border-slate-600 overflow-y-auto">
         <SheetHeader>
           <SheetTitle>
@@ -100,10 +35,18 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
         <div className="flex flex-col items-center">
           <div className="px-10 py-4">
             <FancyCard card={card} selected={true} />
+            <Card ref={cardRef} card={card} hideUI={true} />
           </div>
 
           {/* Counter UI for adjusting card quantity */}
-          <CardCounter count={count} onIncrement={increment} onDecrement={decrement} onInputChange={updateCardCount} />
+          <CardCounter
+            cardID={card.card_id}
+            count={amountOwned}
+            onIncrement={() => cardRef.current?.addCard()}
+            onDecrement={() => cardRef.current?.removeCard()}
+            onInputChange={(value) => cardRef.current?.updateCardCount(value)}
+          />
+
           <div className="p-4 w-full border-t border-gray-500 mt-4">
             <p className="text-lg mb-1">
               <strong>Trade tokens:</strong> {sellableForTokensDictionary[card.rarity] || 'N/A'}
