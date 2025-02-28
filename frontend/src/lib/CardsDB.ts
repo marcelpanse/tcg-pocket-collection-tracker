@@ -2,6 +2,7 @@ import type { Card, CollectionRow, Expansion, Pack } from '@/types'
 import A1 from '../../assets/cards/A1.json'
 import A1a from '../../assets/cards/A1a.json'
 import A2 from '../../assets/cards/A2.json'
+import A2a from '../../assets/cards/A2a.json'
 import PA from '../../assets/cards/P-A.json'
 
 const update = (cards: Card[], expansionName: string) => {
@@ -15,10 +16,11 @@ const update = (cards: Card[], expansionName: string) => {
 }
 
 export const a1Cards: Card[] = update(A1 as unknown as Card[], 'A1')
-export const a2Cards: Card[] = update(A2 as unknown as Card[], 'A2')
 export const a1aCards: Card[] = update(A1a as unknown as Card[], 'A1a')
+export const a2Cards: Card[] = update(A2 as unknown as Card[], 'A2')
+export const a2aCards: Card[] = update(A2a as unknown as Card[], 'A2a')
 export const paCards: Card[] = update(PA as unknown as Card[], 'P-A')
-export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...paCards]
+export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...a2aCards, ...paCards]
 
 export const getCardById = (cardId: string): Card | undefined => {
   return allCards.find((card) => card.card_id === cardId)
@@ -53,6 +55,13 @@ export const expansions: Expansion[] = [
       { name: 'Palkia pack', color: '#D5A6BD' },
       { name: 'Every pack', color: '#CCCCCC' },
     ],
+    tradeable: true,
+  },
+  {
+    name: 'Triumphant Light',
+    id: 'A2a',
+    cards: a2aCards,
+    packs: [{ name: 'Arceus pack', color: '#E4D7CA' }],
     tradeable: false,
   },
   {

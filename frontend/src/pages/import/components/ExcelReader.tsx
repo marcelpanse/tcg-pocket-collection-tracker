@@ -85,7 +85,7 @@ export const ExcelReader = () => {
 
     reader.onload = async (e) => {
       try {
-        const worksheetNames = ['Genetic Apex', 'Mythical Island', 'Space-Time Smackdown', 'PROMO-A']
+        const worksheetNames = ['Genetic Apex', 'Mythical Island', 'Space-Time Smackdown', 'Triumphant Light', 'PROMO-A']
         const workbook = XLSX.read(e.target?.result)
         const results: ExcelRowType[] = []
         for (const worksheetName of worksheetNames) {
