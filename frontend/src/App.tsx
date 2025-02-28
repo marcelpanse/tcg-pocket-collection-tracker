@@ -46,7 +46,7 @@ function App() {
   return (
     <UserContext.Provider value={{ user, setUser, account, setAccount, isLoginDialogOpen, setIsLoginDialogOpen, isProfileDialogOpen, setIsProfileDialogOpen }}>
       <CollectionContext.Provider value={{ ownedCards, setOwnedCards, selectedCardId, setSelectedCardId }}>
-        <ErrorBoundary fallback={<div className="m-4">Something went wrong, please refresh the page.</div>}>
+        <ErrorBoundary fallback={<div className="m-4">A new version was deployed, please refresh the page to see the latest changes.</div>}>
           <Toaster />
           <Header />
           <Routes>

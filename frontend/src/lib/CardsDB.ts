@@ -185,7 +185,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [] }: Pul
   }
 
   //probabilities
-  console.log('calc pull rate for', pack.name, ownedCards.length, rarityFilter)
+  // console.log('calc pull rate for', pack.name, ownedCards.length, rarityFilter)
 
   const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'Every pack')
   // console.log('cards in pack', cardsInPack.length) //79
@@ -223,7 +223,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [] }: Pul
 
   // take the total probabilities per card draw (for the 1-3 you need to take the cube root of the probability) and multiply
   const chanceToGetNewCard = 1 - (1 - totalProbability1_3) ** 3 * (1 - totalProbability4) * (1 - totalProbability5)
-  console.log('chance to get new card', chanceToGetNewCard)
+  // console.log('chance to get new card', chanceToGetNewCard)
 
   return chanceToGetNewCard
 }

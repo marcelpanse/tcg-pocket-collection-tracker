@@ -57,18 +57,22 @@ function Overview() {
 
   useEffect(() => {
     let newHighestProbabilityPack: Pack | undefined
-    for (const expansion of CardsDB.expansions) {
-      const pullRates = expansion.packs.map((pack) => ({
-        packName: pack.name.replace(' pack', '').replace('Every', 'Promo-A'),
-        percentage: CardsDB.pullRate({ ownedCards: ownedCards, expansion, pack, rarityFilter }),
-        fill: pack.color,
-      }))
+    const filteredExpansions = CardsDB.expansions.filter((expansion) => !expansion.promo)
+    for (const expansion of filteredExpansions) {
+      const pullRates = expansion.packs
+        .filter((p) => p.name !== 'Every pack')
+        .map((pack) => ({
+          packName: pack.name.replace(' pack', ''),
+          percentage: CardsDB.pullRate({ ownedCards: ownedCards, expansion, pack, rarityFilter }),
+          fill: pack.color,
+        }))
       const highestProbabilityPackCandidate = pullRates.sort((a, b) => b.percentage - a.percentage)[0]
       if (highestProbabilityPackCandidate.percentage > (newHighestProbabilityPack?.percentage || 0)) {
         newHighestProbabilityPack = highestProbabilityPackCandidate
       }
     }
 
+    console.log('newHighestProbabilityPack', newHighestProbabilityPack)
     setHighestProbabilityPack(newHighestProbabilityPack)
   }, [ownedCards, rarityFilter])
 
