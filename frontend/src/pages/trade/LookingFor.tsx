@@ -6,8 +6,9 @@ import { NoCardsNeeded } from './components/NoCardsNeeded'
 
 interface Props {
   rarityFilter: string[]
+  minCards: number
 }
-export const LookingFor: FC<Props> = ({ rarityFilter }) => {
+export const LookingFor: FC<Props> = ({ rarityFilter, minCards }) => {
   const { ownedCards } = use(CollectionContext)
 
   const lookingForTradeCards = useMemo(
@@ -15,9 +16,9 @@ export const LookingFor: FC<Props> = ({ rarityFilter }) => {
       allCards.filter(
         (ac) =>
           ownedCards.findIndex((oc) => oc.card_id === ac.card_id) === -1 ||
-          ownedCards[ownedCards.findIndex((oc) => oc.card_id === ac.card_id)].amount_owned === 0,
+          ownedCards[ownedCards.findIndex((oc) => oc.card_id === ac.card_id)].amount_owned <= minCards,
       ),
-    [ownedCards],
+    [ownedCards, minCards],
   )
   const tradeableExpansions = useMemo(() => expansions.filter((e) => e.tradeable).map((e) => e.id), [])
   const cards = useMemo(

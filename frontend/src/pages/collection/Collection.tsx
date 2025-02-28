@@ -13,12 +13,13 @@ import { useMemo, useState } from 'react'
 import { useContext } from 'react'
 
 function Collection() {
+  const { user } = useContext(UserContext)
   const { ownedCards, setOwnedCards } = useContext(CollectionContext)
   const [searchValue, setSearchValue] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<string>('all')
   const [rarityFilter, setRarityFilter] = useState<string[]>([])
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
-  const { user } = useContext(UserContext)
+  const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
 
   const getFilteredCards = useMemo(() => {
     let filteredCards = allCards
@@ -42,8 +43,11 @@ function Collection() {
       })
     }
 
+    setResetScrollTrigger(true)
+    setTimeout(() => setResetScrollTrigger(false), 100)
+
     return filteredCards
-  }, [expansionFilter, rarityFilter, searchValue, ownedFilter, ownedCards])
+  }, [expansionFilter, rarityFilter, searchValue, ownedFilter])
 
   const handleBatchUpdate = async (cardIds: string[], amount: number) => {
     await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)
@@ -52,10 +56,10 @@ function Collection() {
   return (
     <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">
       <div className="flex items-center gap-2 flex-col md:flex-row px-8">
-        <SearchInput setSearchValue={setSearchValue} />
         <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} />
       </div>
       <div className="items-center justify-between gap-2 flex-col md:flex-row px-8 md:flex">
+        <SearchInput setSearchValue={setSearchValue} />
         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
         {/*TODO: NOT READY YET, FEEL FREE TO HELP*/}
@@ -63,7 +67,7 @@ function Collection() {
         <BatchUpdateDialog filteredCards={getFilteredCards} onBatchUpdate={handleBatchUpdate} disabled={getFilteredCards.length === 0} />
       </div>
       <div>
-        <CardsTable cards={getFilteredCards} />
+        <CardsTable cards={getFilteredCards} resetScrollTrigger={resetScrollTrigger} />
       </div>
     </div>
   )

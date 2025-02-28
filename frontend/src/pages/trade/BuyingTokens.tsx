@@ -6,11 +6,14 @@ import { NoSellableCards } from './components/NoSellableCards'
 
 interface Props {
   rarityFilter: string[]
+  minCards: number
 }
-export const BuyingTokens: FC<Props> = ({ rarityFilter }) => {
+
+export const BuyingTokens: FC<Props> = ({ rarityFilter, minCards }) => {
   const { ownedCards } = use(CollectionContext)
 
-  const sellableCards = useMemo(() => ownedCards.filter((c) => c.amount_owned >= 3), [ownedCards])
+  const sellableCards = useMemo(() => ownedCards.filter((c) => c.amount_owned >= minCards), [ownedCards, minCards])
+
   const tradeableCards = useMemo(
     () =>
       allCards
@@ -21,10 +24,12 @@ export const BuyingTokens: FC<Props> = ({ rarityFilter }) => {
         })),
     [sellableCards],
   )
+
   const sellableCardsFilteredByExpansion = useMemo(
     () => tradeableCards.filter((c) => Object.keys(sellableForTokensDictionary).includes(c.rarity)),
     [tradeableCards],
   )
+
   const filteredCards = useMemo(
     () => sellableCardsFilteredByExpansion.filter((c) => rarityFilter.length === 0 || rarityFilter.includes(c.rarity)),
     [sellableCardsFilteredByExpansion, rarityFilter],
