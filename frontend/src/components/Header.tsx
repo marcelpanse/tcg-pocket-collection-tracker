@@ -60,8 +60,9 @@ export function Header() {
             <DropdownMenuContent className="w-56">
               <DropdownMenuLabel>{t('selectLanguage')}</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => changeLanguage('es')}>{t('languages.es')}</DropdownMenuItem>
               <DropdownMenuItem onClick={() => changeLanguage('en')}>{t('languages.en')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('es')}>{t('languages.es')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('pt-BR')}>{t('languages.pt-br')}</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
