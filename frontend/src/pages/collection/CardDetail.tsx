@@ -1,4 +1,4 @@
-import FancyCard from '@/components/FancyCard.tsx'
+import { Card as CardComponent } from '@/components/Card'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { getCardById, sellableForTokensDictionary } from '@/lib/CardsDB.ts'
 import type { Card } from '@/types'
@@ -27,8 +27,8 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
           </SheetTitle>
         </SheetHeader>
         <div className="flex flex-col items-center">
-          <div className="px-10 py-4">
-            <FancyCard card={card} selected={true} />
+          <div className="px-10 py-4 w-full">
+            <CardComponent card={card} useMaxWidth />
           </div>
 
           <div className="p-4 w-full">
