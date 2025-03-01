@@ -49,7 +49,7 @@ function Trade() {
               {currentTab === 'looking_for' ? 'Maximum' : 'Minimum'} number of cards:
               <select value={minCards} onChange={(e) => setMinCards(Number.parseInt(e.target.value))} className="p-1">
                 {[0, 1, 2, 3, 4, 5].map((number) => (
-                  <option key={number} value={number}>
+                  <option key={number} value={number} className="text-black">
                     {number}
                   </option>
                 ))}

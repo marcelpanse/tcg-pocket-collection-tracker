@@ -11,12 +11,13 @@ import { use, useCallback, useEffect, useMemo, useState } from 'react'
 
 interface Props {
   card: CardType
+  useMaxWidth?: boolean
 }
 
 // keep track of the debounce timeouts for each card
 const _inputDebounce: Record<string, number | null> = {}
 
-export function Card({ card }: Props) {
+export function Card({ card, useMaxWidth = false }: Props) {
   const { user, setIsLoginDialogOpen } = use(UserContext)
   const { ownedCards, setOwnedCards, setSelectedCardId } = use(CollectionContext)
   let amountOwned = useMemo(() => ownedCards.find((row) => row.card_id === card.card_id)?.amount_owned || 0, [ownedCards])
@@ -98,7 +99,7 @@ export function Card({ card }: Props) {
   }
 
   return (
-    <div className="group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer">
+    <div className={`group flex w-fit ${!useMaxWidth ? 'max-w-32 md:max-w-40' : ''} flex-col items-center rounded-lg cursor-pointer`}>
       <div onClick={() => setSelectedCardId(card.card_id)}>
         <FancyCard card={card} selected={amountOwned > 0} />
       </div>
