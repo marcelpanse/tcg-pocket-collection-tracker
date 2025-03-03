@@ -47,10 +47,6 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
     }
   }, [isOpen])
 
-  useEffect(() => {
-    setChangesMade(true)
-  }, [amount])
-
   const handleSelect = (cardId: string, selected: boolean) => {
     setSelectedCards((prev) => ({ ...prev, [cardId]: selected }))
   }
@@ -87,10 +83,12 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
         setAmount(0)
       }
     }
+    setChangesMade(true)
   }
 
   const handleIncrement = () => {
     setAmount((prev) => (prev ? prev + 1 : 1))
+    setChangesMade(true)
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -105,6 +103,7 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
         setAmount(0)
       }
     }
+    setChangesMade(true)
   }
 
   const handleConfirm = async () => {
