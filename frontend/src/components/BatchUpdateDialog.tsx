@@ -19,6 +19,7 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
   const [amount, setAmount] = useState(0)
   const [selectedCards, setSelectedCards] = useState<Record<string, boolean>>({})
   const [isProcessing, setIsProcessing] = useState(false)
+  const [changesMade, setChangesMade] = useState(false)
 
   const isBatchUpdateDisabled = filteredCards.length === 0
   const uniqueCards = useMemo(() => {
@@ -41,7 +42,14 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
       )
       setSelectedCards(initialSelectedCards)
     }
+    if (!isOpen) {
+      setChangesMade(false)
+    }
   }, [isOpen])
+
+  useEffect(() => {
+    setChangesMade(true)
+  }, [amount])
 
   const handleSelect = (cardId: string, selected: boolean) => {
     setSelectedCards((prev) => ({ ...prev, [cardId]: selected }))
@@ -185,7 +193,7 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
             <Button variant="outline" onClick={() => setIsOpen(false)}>
               Cancel
             </Button>
-            <Button onClick={handleConfirm} disabled={selectedCount === 0 || isProcessing} variant="default">
+            <Button onClick={handleConfirm} disabled={selectedCount === 0 || isProcessing || !changesMade} variant="default">
               {isProcessing && (
                 <svg
                   aria-hidden="true"
