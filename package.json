@@ -9,7 +9,8 @@
     "biome:fix": "pnpm biome check --write --error-on-warnings --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true .",
     "prepare": "lefthook install",
     "dev": "pnpm --filter frontend run dev",
-    "build": "pnpm --filter frontend run build"
+    "build": "pnpm --filter frontend run build",
+    "download-images": "node scripts/download-images.js"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -28,9 +29,11 @@
     }
   },
   "dependencies": {
+    "fs-extra": "^11.3.0",
     "i18next": "^24.2.2",
     "i18next-browser-languagedetector": "^8.0.4",
     "i18next-http-backend": "^3.0.2",
+    "node-fetch": "^3.3.2",
     "react-i18next": "^15.4.1"
   }
 }
