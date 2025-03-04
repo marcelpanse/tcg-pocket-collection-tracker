@@ -69,3 +69,9 @@ export interface Card {
 export interface CollectedCard extends Card {
   amount_owned?: number
 }
+
+export interface ImportExportRow {
+  Id: string
+  CardName: string
+  NumberOwned: number
+}
