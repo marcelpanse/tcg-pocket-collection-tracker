@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import type { ImportExportRow } from '@/types'
@@ -21,9 +22,8 @@ export const ExportWriter = () => {
   }
 
   return (
-    <button onClick={() => createFile()} type="submit">
-      {' '}
-      Export
-    </button>
+    <Button onClick={() => createFile()} type="submit" className="w-40">
+      Download CSV file
+    </Button>
   )
 }

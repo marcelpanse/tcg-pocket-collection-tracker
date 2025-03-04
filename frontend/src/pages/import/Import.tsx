@@ -13,10 +13,8 @@ function Import() {
   return (
     <div className="flex flex-col gap-y-4 max-w-[900px] mx-auto">
       <TitleCard
-        title={'Import disclaimer'}
-        paragraph={
-          'This import feature will OVERWRITE your current collection with the values from the database.  ONLY do this process if your spreadsheet contains the exact count values you want in your collection.'
-        }
+        title="Import"
+        paragraph="This will OVERWRITE your current collection with the values from the imported CSV file. ONLY do this process if your spreadsheet contains the exact count values you want in your collection."
         className="bg-amber-600"
       />
       <div className="w-full border-2 border-indigo-600 rounded-xl p-4 text-center">

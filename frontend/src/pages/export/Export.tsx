@@ -11,13 +11,9 @@ function Export() {
   }
 
   return (
-    <div className="flex flex-col gap-y-4 max-w-[900px] mx-auto">
-      <TitleCard
-        title={'Export Disclaimer'}
-        paragraph={'This export feature will export your current collection with the values from the database.'}
-        className="bg-amber-600"
-      />
-      <div className="w-full border-2 border-indigo-600 rounded-xl p-4 text-center">
+    <div className="flex flex-col gap-y-4 mx-auto">
+      <TitleCard title="Export" paragraph="This will export your current collection to a CSV file." className="bg-amber-600" />
+      <div className="w-full text-center">
         <ExportWriter />
       </div>
     </div>
