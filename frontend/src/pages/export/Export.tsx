@@ -1,6 +1,7 @@
 import { TitleCard } from '@/components/ui/title-card'
 import { UserContext } from '@/lib/context/UserContext'
 import { use } from 'react'
+import { ExportWriter } from './components/ExportWriter'
 
 function Export() {
   const { user } = use(UserContext)
@@ -10,8 +11,11 @@ function Export() {
   }
 
   return (
-    <div className="flex flex-col gap-y-4 max-w-[900px] mx-auto">
-      <TitleCard title={'Feature incoming'} paragraph={'Export collection feature is coming soon.'} className="bg-gray-400" />
+    <div className="flex flex-col gap-y-4 mx-auto">
+      <TitleCard title="Export" paragraph="This will export your current collection to a CSV file." className="bg-amber-600" />
+      <div className="w-full text-center">
+        <ExportWriter />
+      </div>
     </div>
   )
 }
