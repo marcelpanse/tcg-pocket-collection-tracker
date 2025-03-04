@@ -1424,5 +1424,36 @@
     "artist": "Naoyo Kimura",
     "probability": {},
     "crafting_cost": "Unknown"
+  },
+  {
+    "id": "42",
+    "name": "Darkrai ex",
+    "hp": "140",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_042_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Dark Prism",
+        "damage": "80",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Nightmare Aura",
+      "effect": "Whenever you attach a [D] Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon.\n\n"
+    },
+    "weakness": "Grass",
+    "retreat": "2",
+    "rarity": "☆☆",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Promo-A",
+    "pack": "Every pack",
+    "alternate_versions": [],
+    "artist": "PLANETA Mochizuki",
+    "probability": {},
+    "crafting_cost": "Unknown"
   }
 ]
