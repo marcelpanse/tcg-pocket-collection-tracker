@@ -1,50 +1,50 @@
 {
-  "_CardsTable-PMG8maeX.js": {
-    "file": "assets/CardsTable-PMG8maeX.js",
+  "_CardsTable-cTbalXNY.js": {
+    "file": "assets/CardsTable-cTbalXNY.js",
     "name": "CardsTable",
     "imports": [
       "index.html",
-      "_RarityFilter-ckmkSHJW.js"
+      "_RarityFilter-hpk39m7w.js"
     ]
   },
-  "_RarityFilter-ckmkSHJW.js": {
-    "file": "assets/RarityFilter-ckmkSHJW.js",
+  "_RarityFilter-hpk39m7w.js": {
+    "file": "assets/RarityFilter-hpk39m7w.js",
     "name": "RarityFilter",
     "imports": [
       "index.html"
     ]
   },
-  "_alert-DQd-_yl6.js": {
-    "file": "assets/alert-DQd-_yl6.js",
+  "_alert-CwZ1I9Vz.js": {
+    "file": "assets/alert-CwZ1I9Vz.js",
     "name": "alert",
     "imports": [
       "index.html"
     ]
   },
-  "_browser-ponyfill-BnV1Qstk.js": {
-    "file": "assets/browser-ponyfill-BnV1Qstk.js",
+  "_browser-ponyfill-BzOkVirY.js": {
+    "file": "assets/browser-ponyfill-BzOkVirY.js",
     "name": "browser-ponyfill",
     "isDynamicEntry": true,
     "imports": [
       "index.html"
     ]
   },
-  "_siren-BhBiIeux.js": {
-    "file": "assets/siren-BhBiIeux.js",
+  "_siren-MvVcF58n.js": {
+    "file": "assets/siren-MvVcF58n.js",
     "name": "siren",
     "imports": [
       "index.html"
     ]
   },
-  "_tabs-CQqOE3Sl.js": {
-    "file": "assets/tabs-CQqOE3Sl.js",
+  "_tabs-C1ODIsFD.js": {
+    "file": "assets/tabs-C1ODIsFD.js",
     "name": "tabs",
     "imports": [
       "index.html"
     ]
   },
   "index.html": {
-    "file": "assets/index-CGAg6ACc.js",
+    "file": "assets/index-BEeZff_R.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -54,70 +54,70 @@
       "src/pages/trade/Trade.tsx",
       "src/pages/community/Community.tsx",
       "src/components/EditProfile.tsx",
-      "_browser-ponyfill-BnV1Qstk.js"
+      "_browser-ponyfill-BzOkVirY.js"
     ],
     "css": [
       "assets/index-DACYpFhi.css"
     ]
   },
   "src/components/EditProfile.tsx": {
-    "file": "assets/EditProfile-BsM1_mWz.js",
+    "file": "assets/EditProfile-DpqqT8vM.js",
     "name": "EditProfile",
     "src": "src/components/EditProfile.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_alert-DQd-_yl6.js",
-      "_siren-BhBiIeux.js"
+      "_alert-CwZ1I9Vz.js",
+      "_siren-MvVcF58n.js"
     ]
   },
   "src/pages/collection/Collection.tsx": {
-    "file": "assets/Collection-BR0gBomm.js",
+    "file": "assets/Collection-CbPzoGHI.js",
     "name": "Collection",
     "src": "src/pages/collection/Collection.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_alert-DQd-_yl6.js",
-      "_CardsTable-PMG8maeX.js",
-      "_tabs-CQqOE3Sl.js",
-      "_RarityFilter-ckmkSHJW.js"
+      "_alert-CwZ1I9Vz.js",
+      "_CardsTable-cTbalXNY.js",
+      "_tabs-C1ODIsFD.js",
+      "_RarityFilter-hpk39m7w.js"
     ]
   },
   "src/pages/community/Community.tsx": {
-    "file": "assets/Community-wLmfSSwn.js",
+    "file": "assets/Community-C_JpHfJ4.js",
     "name": "Community",
     "src": "src/pages/community/Community.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_tabs-CQqOE3Sl.js"
+      "_tabs-C1ODIsFD.js"
     ]
   },
   "src/pages/overview/Overview.tsx": {
-    "file": "assets/Overview-D8I8O9I0.js",
+    "file": "assets/Overview-ZJHtzl40.js",
     "name": "Overview",
     "src": "src/pages/overview/Overview.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_RarityFilter-ckmkSHJW.js",
-      "_alert-DQd-_yl6.js",
-      "_siren-BhBiIeux.js"
+      "_RarityFilter-hpk39m7w.js",
+      "_alert-CwZ1I9Vz.js",
+      "_siren-MvVcF58n.js"
     ]
   },
   "src/pages/trade/Trade.tsx": {
-    "file": "assets/Trade-uDvtD2BF.js",
+    "file": "assets/Trade-Dxz2lKFV.js",
     "name": "Trade",
     "src": "src/pages/trade/Trade.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_RarityFilter-ckmkSHJW.js",
-      "_tabs-CQqOE3Sl.js",
-      "_CardsTable-PMG8maeX.js",
-      "_alert-DQd-_yl6.js",
-      "_siren-BhBiIeux.js"
+      "_RarityFilter-hpk39m7w.js",
+      "_tabs-C1ODIsFD.js",
+      "_CardsTable-cTbalXNY.js",
+      "_alert-CwZ1I9Vz.js",
+      "_siren-MvVcF58n.js"
     ]
   }
 }
