@@ -8,7 +8,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_001_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Vine Whip",
         "damage": "40",
         "effect": ""
@@ -18,7 +18,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -52,7 +52,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_002_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "colorless", "colorless"],
         "name": "Razor Leaf",
         "damage": "60",
         "effect": ""
@@ -62,7 +62,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -92,7 +92,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_003_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "grass", "colorless", "colorless"],
         "name": "Mega Drain",
         "damage": "80",
         "effect": "Heal 30 damage from this Pokémon."
@@ -102,7 +102,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -132,13 +132,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_004_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "colorless", "colorless"],
         "name": "Razor Leaf",
         "damage": "60",
         "effect": ""
       },
       {
-        "cost": ["Grass", "Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "grass", "colorless", "colorless"],
         "name": "Giant Bloom",
         "damage": "100",
         "effect": "Heal 30 damage from this Pokémon."
@@ -148,7 +148,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -182,7 +182,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_005_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Find a",
         "damage": "Friend",
         "effect": "Put 1 random [G] Pokémon from your deck into your hand."
@@ -192,7 +192,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -222,7 +222,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_006_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Bug Bite",
         "damage": "30",
         "effect": ""
@@ -232,7 +232,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -262,7 +262,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_007_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "colorless", "colorless"],
         "name": "Gust",
         "damage": "60",
         "effect": ""
@@ -272,7 +272,7 @@
       "name": "Powder Heal",
       "effect": "Once during your turn, you may heal 20 damage from each of your Pokémon."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -302,7 +302,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_008_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Sting",
         "damage": "20",
         "effect": ""
@@ -312,7 +312,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -342,7 +342,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_009_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Bug Bite",
         "damage": "30",
         "effect": ""
@@ -352,7 +352,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -382,7 +382,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_010_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Sharp Sting",
         "damage": "70",
         "effect": ""
@@ -392,7 +392,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -422,7 +422,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_011_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Ram",
         "damage": "20",
         "effect": ""
@@ -432,7 +432,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -462,7 +462,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_012_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Drool",
         "damage": "40",
         "effect": ""
@@ -472,7 +472,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -506,7 +506,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_013_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Grass", "Colorless"],
+        "cost": ["grass", "grass", "colorless"],
         "name": "Soothing Scent",
         "damage": "80",
         "effect": "Your opponent's Active Pokémon is now Asleep."
@@ -516,7 +516,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -546,7 +546,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_014_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Scratch",
         "damage": "30",
         "effect": ""
@@ -556,7 +556,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -586,7 +586,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_015_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Grass", "Colorless"],
+        "cost": ["grass", "grass", "colorless"],
         "name": "Slash",
         "damage": "80",
         "effect": ""
@@ -596,7 +596,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -626,7 +626,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_016_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Tackle",
         "damage": "20",
         "effect": ""
@@ -636,7 +636,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -666,7 +666,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_017_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Poison Powder",
         "damage": "30",
         "effect": "Your opponent's Active Pokémon is now Poisoned."
@@ -676,7 +676,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -706,7 +706,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_018_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Vine Whip",
         "damage": "20",
         "effect": ""
@@ -716,7 +716,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -746,7 +746,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_019_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Razor Leaf",
         "damage": "40",
         "effect": ""
@@ -756,7 +756,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -786,7 +786,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_020_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Vine Whip",
         "damage": "60",
         "effect": ""
@@ -796,7 +796,7 @@
       "name": "Fragrance Trap",
       "effect": "If this Pokémon is in the Active Spot, once during your turn, you may switch in 1 of your opponent's Benched Basic Pokémon to the Active Spot."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -826,7 +826,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_021_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Seed Bomb",
         "damage": "20",
         "effect": ""
@@ -836,7 +836,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -866,7 +866,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_022_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Stomp",
         "damage": "30+",
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
@@ -876,7 +876,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -906,7 +906,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_023_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Tropical Swing",
         "damage": "40+",
         "effect": "Flip a coin. If heads, this attack does 40 more damage."
@@ -916,7 +916,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -950,7 +950,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_024_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Absorb",
         "damage": "40",
         "effect": "Heal 10 damage from this Pokémon."
@@ -960,7 +960,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -990,7 +990,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_025_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Sharp Scythe",
         "damage": "30",
         "effect": ""
@@ -1000,7 +1000,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -1030,7 +1030,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_026_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Grass"],
+        "cost": ["grass", "grass"],
         "name": "Double Horn",
         "damage": "50x",
         "effect": "Flip 2 coins. This attack does 50 damage for each heads."
@@ -1040,7 +1040,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -1074,7 +1074,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_027_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Attach",
         "damage": "10",
         "effect": ""
@@ -1084,7 +1084,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -1114,7 +1114,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_028_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Rolling Tackle",
         "damage": "40",
         "effect": ""
@@ -1124,7 +1124,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -1154,7 +1154,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_029_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Blot",
         "damage": "10",
         "effect": "Heal 10 damage from this Pokémon."
@@ -1164,7 +1164,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -1194,7 +1194,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_030_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Grass"],
+        "cost": ["grass", "grass"],
         "name": "Leaf Supply",
         "damage": "50",
         "effect": "Take a [G] Energy from your Energy Zone and attach it to 1 of your Benched [G] Pokémon."
@@ -1204,7 +1204,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -1234,7 +1234,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_031_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Surprise Attack",
         "damage": "40",
         "effect": "Flip a coin. If tails, this attack does nothing."
@@ -1244,7 +1244,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -1274,7 +1274,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_032_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "colorless", "colorless"],
         "name": "Razor Leaf",
         "damage": "70",
         "effect": ""
@@ -1284,7 +1284,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -1314,7 +1314,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_033_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Ember",
         "damage": "30",
         "effect": "Discard a [R] Energy from this Pokémon."
@@ -1324,7 +1324,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -1358,8 +1358,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_034_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
-        "name": "Fire Claws",
+        "cost": ["fire", "colorless", "colorless"],
+        "name": "fire Claws",
         "damage": "60",
         "effect": ""
       }
@@ -1368,7 +1368,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -1398,8 +1398,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_035_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Fire", "Colorless", "Colorless"],
-        "name": "Fire Spin",
+        "cost": ["fire", "fire", "colorless", "colorless"],
+        "name": "fire Spin",
         "damage": "150",
         "effect": "Discard 2 [R] Energy from this Pokémon."
       }
@@ -1408,7 +1408,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -1438,13 +1438,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_036_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Slash",
         "damage": "60",
         "effect": ""
       },
       {
-        "cost": ["Fire", "Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "fire", "colorless", "colorless"],
         "name": "Crimson Storm",
         "damage": "200",
         "effect": "Discard 2 [R] Energy from this Pokémon."
@@ -1454,7 +1454,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -1496,7 +1496,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_037_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Tail",
         "damage": "Whip",
         "effect": "Flip a coin. If heads, the Defending Pokémon can't attack during your opponent's next turn."
@@ -1506,7 +1506,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -1536,7 +1536,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_038_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Fire"],
+        "cost": ["fire", "fire"],
         "name": "Flamethrower",
         "damage": "90",
         "effect": "Discard a [R] Energy from this Pokémon."
@@ -1546,7 +1546,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -1576,7 +1576,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_039_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Bite",
         "damage": "20",
         "effect": ""
@@ -1586,7 +1586,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -1616,7 +1616,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_040_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Fire", "Colorless"],
+        "cost": ["fire", "fire", "colorless"],
         "name": "Heat Tackle",
         "damage": "100",
         "effect": "This Pokémon also does 20 damage to itself."
@@ -1626,7 +1626,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -1656,7 +1656,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_041_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Fire", "Colorless"],
+        "cost": ["fire", "fire", "colorless"],
         "name": "Inferno Onrush",
         "damage": "120",
         "effect": "This Pokémon also does 20 damage to itself."
@@ -1666,7 +1666,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -1700,7 +1700,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_042_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Flare",
         "damage": "20",
         "effect": ""
@@ -1710,7 +1710,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -1740,8 +1740,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_043_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire"],
-        "name": "Fire Mane",
+        "cost": ["fire"],
+        "name": "fire Mane",
         "damage": "40",
         "effect": ""
       }
@@ -1750,7 +1750,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -1784,7 +1784,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_044_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Fire"],
+        "cost": ["fire", "fire"],
         "name": "Magma Punch",
         "damage": "50",
         "effect": ""
@@ -1794,7 +1794,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -1824,7 +1824,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_045_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Flamethrower",
         "damage": "110",
         "effect": "Discard 1 [R] Energy from this Pokémon."
@@ -1834,7 +1834,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -1864,7 +1864,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_046_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Sky Attack",
         "damage": "130",
         "effect": "Flip a coin. If tails, this attack does nothing."
@@ -1874,7 +1874,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -1904,13 +1904,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_047_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Inferno",
         "damage": "Dance",
         "effect": "Flip 3 coins. Take an amount of [R] Energy from your Energy Zone equal to the number of heads and attach it to your Benched [R] Pokémon in any way you like."
       },
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Heat Blast",
         "damage": "70",
         "effect": ""
@@ -1920,7 +1920,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -1958,7 +1958,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_048_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Combustion",
         "damage": "30",
         "effect": ""
@@ -1968,7 +1968,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -1998,7 +1998,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_049_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Scratch",
         "damage": "20",
         "effect": ""
@@ -2008,7 +2008,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -2038,8 +2038,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_050_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless"],
-        "name": "Fire Claws",
+        "cost": ["fire", "colorless"],
+        "name": "fire Claws",
         "damage": "60",
         "effect": ""
       }
@@ -2048,7 +2048,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -2078,7 +2078,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_051_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Gnaw",
         "damage": "10",
         "effect": ""
@@ -2088,7 +2088,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -2118,8 +2118,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_052_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless", "Colorless"],
-        "name": "Fire Blast",
+        "cost": ["fire", "colorless", "colorless", "colorless"],
+        "name": "fire Blast",
         "damage": "130",
         "effect": "Discard a [R] Energy from this Pokémon."
       }
@@ -2128,7 +2128,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
@@ -2158,7 +2158,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_053_EN.webp",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "ater Gun",
         "damage": "20",
         "effect": ""
@@ -2168,7 +2168,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -2202,7 +2202,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_054_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Wave Splash",
         "damage": "40",
         "effect": ""
@@ -2212,7 +2212,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -2242,7 +2242,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_055_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Colorless"],
+        "cost": ["water", "water", "colorless"],
         "name": "Hydro Pump",
         "damage": "80+",
         "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
@@ -2252,7 +2252,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -2282,13 +2282,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_056_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Surf",
         "damage": "40",
         "effect": ""
       },
       {
-        "cost": ["Water", "Water", "Colorless"],
+        "cost": ["water", "water", "colorless"],
         "name": "Hydro Bazooka",
         "damage": "100+",
         "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
@@ -2298,7 +2298,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -2332,7 +2332,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_057_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Headache",
         "damage": "10",
         "effect": "Your opponent can't use any Supporter cards from their hand during their next turn."
@@ -2342,7 +2342,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -2372,7 +2372,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_058_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Water"],
+        "cost": ["water", "water"],
         "name": "Aqua Edge",
         "damage": "70",
         "effect": ""
@@ -2382,7 +2382,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -2412,7 +2412,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_059_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Razor Fin",
         "damage": "10",
         "effect": ""
@@ -2422,7 +2422,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -2452,7 +2452,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_060_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Knuckle Punch",
         "damage": "40",
         "effect": ""
@@ -2462,7 +2462,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -2492,7 +2492,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_061_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless", "Colorless"],
+        "cost": ["water", "colorless", "colorless"],
         "name": "Mega Punch",
         "damage": "80",
         "effect": ""
@@ -2502,7 +2502,7 @@
       "name": "Counterattack",
       "effect": "If this Pokémon is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the attacking Pokémon."
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -2532,7 +2532,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_062_EN.webp",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Gentle Slap",
         "damage": "20",
         "effect": ""
@@ -2542,7 +2542,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -2572,7 +2572,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_063_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Poison Tentacles",
         "damage": "50",
         "effect": "Your opponent's Active Pokémon is now Poisoned."
@@ -2582,7 +2582,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -2612,7 +2612,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_064_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Headbutt",
         "damage": "30",
         "effect": ""
@@ -2622,7 +2622,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -2652,7 +2652,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_065_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Water"],
+        "cost": ["water", "water", "water"],
         "name": "Surf",
         "damage": "90",
         "effect": ""
@@ -2662,7 +2662,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
@@ -2692,7 +2692,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_066_EN.webp",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Tongue Slap",
         "damage": "20",
         "effect": ""
@@ -2702,7 +2702,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -2732,7 +2732,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_067_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Colorless"],
+        "cost": ["water", "water", "colorless"],
         "name": "Surf",
         "damage": "70",
         "effect": ""
@@ -2742,7 +2742,7 @@
       "name": "Shell Armor",
       "effect": "This Pokémon takes -10 damage from attacks."
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
@@ -2772,7 +2772,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_068_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Vise Grip",
         "damage": "40",
         "effect": ""
@@ -2782,7 +2782,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -2812,7 +2812,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_069_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Colorless"],
+        "cost": ["water", "water", "colorless"],
         "name": "KO Crab",
         "damage": "80+",
         "effect": "Flip 2 coins. If both of them are heads, this attack does 80 more damage."
@@ -2822,7 +2822,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
@@ -2852,7 +2852,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_070_EN.webp",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "ater Gun",
         "damage": "20",
         "effect": ""
@@ -2862,7 +2862,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -2892,8 +2892,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_071_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Water"],
-        "name": "Water",
+        "cost": ["water", "water", "water"],
+        "name": "water",
         "damage": "Arrow",
         "effect": "This attack does 50 damage to 1 of your opponent's Pokémon."
       }
@@ -2902,7 +2902,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -2932,7 +2932,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_072_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Flop",
         "damage": "10",
         "effect": ""
@@ -2942,7 +2942,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -2972,7 +2972,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_073_EN.webp",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Horn Hazard",
         "damage": "80",
         "effect": "Flip a coin. If tails, this attack does nothing."
@@ -2982,7 +2982,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -3012,7 +3012,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_074_EN.webp",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Smack",
         "damage": "20",
         "effect": ""
@@ -3022,7 +3022,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -3052,7 +3052,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_075_EN.webp",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "ave Splash",
         "damage": "40",
         "effect": ""
@@ -3062,7 +3062,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "0",
     "rarity": "◊◊",
     "fullart": "No",
@@ -3092,7 +3092,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_076_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Water"],
+        "cost": ["water", "water"],
         "name": "Hydro Splash",
         "damage": "90",
         "effect": ""
@@ -3102,7 +3102,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "0",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -3136,7 +3136,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_077_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Splash",
         "damage": "10",
         "effect": ""
@@ -3146,7 +3146,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -3176,7 +3176,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_078_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Water", "Water"],
+        "cost": ["water", "water", "water", "water"],
         "name": "Hyper Beam",
         "damage": "100",
         "effect": "Discard a random Energy from your opponent's Active Pokémon."
@@ -3186,7 +3186,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "4",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -3220,7 +3220,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_079_EN.webp",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Hydro Pump",
         "damage": "20+",
         "effect": "If this Pokémon has at least 3 extra [W] Energy attached, this attack does 70 more damage."
@@ -3230,7 +3230,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -3264,7 +3264,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_080_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless", "Colorless"],
+        "cost": ["water", "colorless", "colorless"],
         "name": "Bubble Drain",
         "damage": "60",
         "effect": "Heal 30 damage from this Pokémon."
@@ -3274,7 +3274,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -3304,7 +3304,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_081_EN.webp",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "ater Gun",
         "damage": "40",
         "effect": ""
@@ -3314,7 +3314,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -3344,7 +3344,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_082_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless", "Colorless"],
+        "cost": ["water", "colorless", "colorless"],
         "name": "Ancient Whirlpool",
         "damage": "70",
         "effect": "During your opponent's next turn, the Defending Pokémon can't attack."
@@ -3354,7 +3354,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -3384,7 +3384,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_083_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Colorless"],
+        "cost": ["water", "water", "colorless"],
         "name": "Ice Beam",
         "damage": "60",
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
@@ -3394,7 +3394,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -3424,13 +3424,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_084_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Ice Wing",
         "damage": "40",
         "effect": ""
       },
       {
-        "cost": ["Water", "Water", "Water"],
+        "cost": ["water", "water", "water"],
         "name": "Blizzard",
         "damage": "80",
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
@@ -3440,7 +3440,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -3478,7 +3478,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_085_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Flap",
         "damage": "30",
         "effect": ""
@@ -3488,7 +3488,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -3518,7 +3518,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_086_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Wing Attack",
         "damage": "70",
         "effect": ""
@@ -3528,7 +3528,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -3558,7 +3558,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_087_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Flop",
         "damage": "10",
         "effect": ""
@@ -3568,7 +3568,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -3598,8 +3598,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_088_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
-        "name": "Water Drip",
+        "cost": ["colorless"],
+        "name": "water Drip",
         "damage": "30",
         "effect": ""
       }
@@ -3608,7 +3608,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -3638,17 +3638,17 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_089_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Mist Slash",
         "damage": "60",
         "effect": ""
       }
     ],
     "ability": {
-      "name": "Water Shuriken",
+      "name": "water Shuriken",
       "effect": "Once during your turn, you may do 20 damage to 1 of your opponent's Pokémon."
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -3678,7 +3678,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_090_EN.webp",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Rain Splash",
         "damage": "30",
         "effect": ""
@@ -3688,7 +3688,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -3718,7 +3718,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_091_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Second Strike",
         "damage": "10+",
         "effect": "If your opponent's Active Pokémon has damage on it, this attack does 60 more damage."
@@ -3728,7 +3728,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -3758,7 +3758,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_092_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Ram",
         "damage": "10",
         "effect": ""
@@ -3768,7 +3768,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -3798,7 +3798,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_093_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Powder Snow",
         "damage": "40",
         "effect": "Your opponent's Active Pokémon is now Asleep."
@@ -3808,7 +3808,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -3838,7 +3838,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_094_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Gnaw",
         "damage": "20",
         "effect": ""
@@ -3848,7 +3848,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -3878,7 +3878,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_095_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning", "Lightning"],
+        "cost": ["lightning", "lightning", "lightning"],
         "name": "Thunderbolt",
         "damage": "140",
         "effect": "Discard all Energy from this Pokémon."
@@ -3888,7 +3888,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -3918,7 +3918,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_096_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Circle Circuit",
         "damage": "30x",
         "effect": "This attack does 30 damage for each of your Benched [L] Pokémon."
@@ -3928,7 +3928,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -3970,7 +3970,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_097_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "ightning Ball",
         "damage": "20",
         "effect": ""
@@ -3980,7 +3980,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -4010,7 +4010,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_098_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Colorless", "Colorless", "Colorless"],
+        "cost": ["lightning", "colorless", "colorless", "colorless"],
         "name": "Spinning Attack",
         "damage": "60",
         "effect": ""
@@ -4020,7 +4020,7 @@
       "name": "Volt Charge",
       "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to this Pokémon."
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -4050,7 +4050,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_099_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Tackle",
         "damage": "20",
         "effect": ""
@@ -4060,7 +4060,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -4090,7 +4090,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_100_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Electro Ball",
         "damage": "70",
         "effect": ""
@@ -4100,7 +4100,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "0",
     "rarity": "◊◊",
     "fullart": "No",
@@ -4134,7 +4134,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_101_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Thunder Punch",
         "damage": "40+",
         "effect": "Flip a coin. If heads, this attack does 40 more damage. If tails, this Pokémon also does 20 damage to itself."
@@ -4144,7 +4144,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -4174,7 +4174,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_102_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Colorless"],
+        "cost": ["lightning", "colorless"],
         "name": "Pin Missile",
         "damage": "40x",
         "effect": "Flip 4 coins. This attack does 40 damage for each heads."
@@ -4184,7 +4184,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -4214,7 +4214,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_103_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning", "Colorless"],
+        "cost": ["lightning", "lightning", "colorless"],
         "name": "Raging Thunder",
         "damage": "100",
         "effect": "This attack also does 30 damage to 1 of your Benched Pokémon."
@@ -4224,7 +4224,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -4254,13 +4254,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_104_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Peck",
         "damage": "20",
         "effect": ""
       },
       {
-        "cost": ["Lightning", "Lightning", "Lightning"],
+        "cost": ["lightning", "lightning", "lightning"],
         "name": "Thundering Hurricane",
         "damage": "50x",
         "effect": "Flip 4 coins. This attack does 50 damage for each heads."
@@ -4270,7 +4270,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -4308,7 +4308,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_105_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Zap Kick",
         "damage": "20",
         "effect": ""
@@ -4318,7 +4318,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -4348,7 +4348,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_106_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Thunder",
         "damage": "Spear",
         "effect": "This attack does 30 damage to 1 of your opponent's Pokémon."
@@ -4358,7 +4358,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -4388,7 +4388,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_107_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Tiny Charge",
         "damage": "30",
         "effect": ""
@@ -4398,7 +4398,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -4428,7 +4428,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_108_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Head Bolt",
         "damage": "40",
         "effect": ""
@@ -4438,7 +4438,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -4468,7 +4468,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_109_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning", "Colorless"],
+        "cost": ["lightning", "lightning", "colorless"],
         "name": "Thunder Fang",
         "damage": "80",
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
@@ -4478,7 +4478,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -4508,7 +4508,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_110_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Tail Whap",
         "damage": "20",
         "effect": ""
@@ -4518,7 +4518,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -4548,7 +4548,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_111_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Quick Attack",
         "damage": "40+",
         "effect": "Flip a coin. If heads, this attack does 40 more damage."
@@ -4558,7 +4558,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -4588,7 +4588,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_112_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Thunder Shock",
         "damage": "30",
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
@@ -4598,7 +4598,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -4628,7 +4628,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_113_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic"],
+        "cost": ["psychic"],
         "name": "Slap",
         "damage": "20",
         "effect": ""
@@ -4638,7 +4638,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -4668,7 +4668,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_114_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic"],
+        "cost": ["psychic"],
         "name": "Magical Shot",
         "damage": "40",
         "effect": ""
@@ -4678,7 +4678,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -4708,7 +4708,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_115_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Unknown",
         "damage": "0",
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
@@ -4718,7 +4718,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -4748,7 +4748,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_116_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "colorless", "colorless"],
         "name": "Super Psy Bolt",
         "damage": "60",
         "effect": ""
@@ -4758,7 +4758,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -4788,8 +4788,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_117_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless", "Colorless"],
-        "name": "Psychic",
+        "cost": ["psychic", "colorless", "colorless"],
+        "name": "psychic",
         "damage": "60+",
         "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon."
       }
@@ -4798,7 +4798,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -4832,7 +4832,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_118_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Tail Whap",
         "damage": "30",
         "effect": ""
@@ -4842,7 +4842,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -4876,7 +4876,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_119_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless"],
         "name": "Super Psy Bolt",
         "damage": "80",
         "effect": ""
@@ -4886,7 +4886,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
@@ -4916,7 +4916,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_120_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic"],
+        "cost": ["psychic"],
         "name": "Suffocating Gas",
         "damage": "20",
         "effect": ""
@@ -4926,7 +4926,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -4956,7 +4956,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_121_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic"],
+        "cost": ["psychic"],
         "name": "Will-O-Wisp",
         "damage": "30",
         "effect": ""
@@ -4966,7 +4966,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -4996,7 +4996,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_122_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic"],
+        "cost": ["psychic"],
         "name": "Bother",
         "damage": "50",
         "effect": "Your opponent can't use any Supporter cards from their hand during their next turn."
@@ -5006,7 +5006,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -5036,7 +5036,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_123_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Psychic"],
+        "cost": ["psychic", "psychic", "psychic"],
         "name": "Spooky Shot",
         "damage": "100",
         "effect": ""
@@ -5046,7 +5046,7 @@
       "name": "Shadowy Spellbind",
       "effect": "As long as this Pokémon is in the Active Spot, your opponent can't use any Supporter cards from their hand."
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -5084,7 +5084,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_124_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Mumble",
         "damage": "30",
         "effect": ""
@@ -5094,7 +5094,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -5124,7 +5124,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_125_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless"],
         "name": "Psypunch",
         "damage": "50",
         "effect": ""
@@ -5134,7 +5134,7 @@
       "name": "Sleep Pendulum",
       "effect": "Once during your turn, you may flip a coin. If heads, your opponent's Active Pokémon is now Asleep."
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -5164,7 +5164,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_126_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Barrier Attack",
         "damage": "30",
         "effect": "During your opponent's next turn, this Pokémon takes -20 damage from attacks."
@@ -5174,7 +5174,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -5204,8 +5204,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_127_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
-        "name": "Psychic",
+        "cost": ["psychic", "colorless"],
+        "name": "psychic",
         "damage": "30+",
         "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
       }
@@ -5214,7 +5214,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -5244,7 +5244,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_128_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless", "colorless"],
         "name": "Power Blast",
         "damage": "120",
         "effect": "Discard 2 [P] Energy from this Pokémon."
@@ -5254,7 +5254,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -5284,13 +5284,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_129_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
-        "name": "Psychic Sphere",
+        "cost": ["psychic", "colorless"],
+        "name": "psychic Sphere",
         "damage": "50",
         "effect": ""
       },
       {
-        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless", "colorless"],
         "name": "Psydrive",
         "damage": "150",
         "effect": "Discard 2 [P] Energy from this Pokémon."
@@ -5300,7 +5300,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -5342,7 +5342,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_130_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Ram",
         "damage": "10",
         "effect": ""
@@ -5352,7 +5352,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -5382,7 +5382,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_131_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Smack",
         "damage": "30",
         "effect": ""
@@ -5392,7 +5392,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -5422,7 +5422,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_132_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless"],
         "name": "Psyshot",
         "damage": "60",
         "effect": ""
@@ -5432,7 +5432,7 @@
       "name": "Psy Shadow",
       "effect": "Once during your turn, you may take 1  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -5462,7 +5462,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_133_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Gnaw",
         "damage": "10",
         "effect": ""
@@ -5472,7 +5472,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -5502,7 +5502,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_134_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Heart Stamp",
         "damage": "60",
         "effect": ""
@@ -5512,7 +5512,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -5542,7 +5542,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_135_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "colorless", "colorless"],
         "name": "Mega Punch",
         "damage": "50",
         "effect": ""
@@ -5552,7 +5552,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "3",
     "rarity": "◊",
     "fullart": "No",
@@ -5582,7 +5582,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_136_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless", "colorless"],
         "name": "Double Lariat",
         "damage": "100x",
         "effect": "Flip 2 coins. This attack does 100 damage for each heads."
@@ -5592,7 +5592,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "4",
     "rarity": "◊◊",
     "fullart": "No",
@@ -5622,7 +5622,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_137_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Scratch",
         "damage": "10",
         "effect": ""
@@ -5632,7 +5632,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -5662,7 +5662,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_138_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting"],
+        "cost": ["fighting", "fighting"],
         "name": "Slash",
         "damage": "70",
         "effect": ""
@@ -5672,7 +5672,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -5702,7 +5702,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_139_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Mud-Slap",
         "damage": "20",
         "effect": ""
@@ -5712,7 +5712,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -5746,7 +5746,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_140_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Dig",
         "damage": "40",
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
@@ -5756,7 +5756,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -5786,7 +5786,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_141_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Low Kick",
         "damage": "20",
         "effect": ""
@@ -5796,7 +5796,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -5826,7 +5826,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_142_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting"],
+        "cost": ["fighting", "fighting"],
         "name": "Fight Back",
         "damage": "40+",
         "effect": "If this Pokémon has damage on it, this attack does 60 more damage."
@@ -5836,7 +5836,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -5866,7 +5866,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_143_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Knuckle Punch",
         "damage": "20",
         "effect": ""
@@ -5876,7 +5876,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -5906,7 +5906,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_144_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting"],
+        "cost": ["fighting", "fighting"],
         "name": "Strength",
         "damage": "50",
         "effect": ""
@@ -5916,7 +5916,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -5946,7 +5946,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_145_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Fighting"],
+        "cost": ["fighting", "fighting", "fighting"],
         "name": "Seismic Toss",
         "damage": "100",
         "effect": ""
@@ -5956,7 +5956,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -5986,7 +5986,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_146_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Fighting"],
+        "cost": ["fighting", "fighting", "fighting"],
         "name": "Mega Punch",
         "damage": "120",
         "effect": ""
@@ -5996,7 +5996,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "3",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -6034,7 +6034,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_147_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Tackle",
         "damage": "20",
         "effect": ""
@@ -6044,7 +6044,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -6074,7 +6074,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_148_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Colorless", "Colorless"],
+        "cost": ["fighting", "colorless", "colorless"],
         "name": "Rollout",
         "damage": "70",
         "effect": ""
@@ -6084,7 +6084,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
@@ -6114,7 +6114,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_149_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Colorless", "Colorless", "Colorless"],
+        "cost": ["fighting", "colorless", "colorless", "colorless"],
         "name": "Double-Edge",
         "damage": "150",
         "effect": "This Pokémon also does 50 damage to itself."
@@ -6124,7 +6124,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -6154,7 +6154,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_150_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Fighting"],
+        "cost": ["fighting", "fighting", "fighting"],
         "name": "Land Crush",
         "damage": "70",
         "effect": ""
@@ -6164,7 +6164,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊",
     "fullart": "No",
@@ -6194,7 +6194,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_151_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Unknown",
         "damage": "0",
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do -20 damage."
@@ -6204,7 +6204,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -6238,7 +6238,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_152_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Bone Beatdown",
         "damage": "40",
         "effect": ""
@@ -6248,7 +6248,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -6278,7 +6278,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_153_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting"],
+        "cost": ["fighting", "fighting"],
         "name": "Bonemerang",
         "damage": "80x",
         "effect": "Flip 2 coins. This attack does 80 damage for each heads."
@@ -6288,7 +6288,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -6322,7 +6322,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_154_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Stretch",
         "damage": "Kick",
         "effect": "This attack does 30 damage to 1 of your opponent's Benched Pokémon."
@@ -6332,7 +6332,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -6362,7 +6362,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_155_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Jab",
         "damage": "30",
         "effect": ""
@@ -6372,7 +6372,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -6402,7 +6402,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_156_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Colorless"],
+        "cost": ["fighting", "fighting", "colorless"],
         "name": "Tackle",
         "damage": "60",
         "effect": ""
@@ -6412,7 +6412,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "3",
     "rarity": "◊",
     "fullart": "No",
@@ -6442,7 +6442,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_157_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
+        "cost": ["fighting", "fighting", "fighting", "colorless"],
         "name": "Horn Drill",
         "damage": "100",
         "effect": ""
@@ -6452,7 +6452,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊",
     "fullart": "No",
@@ -6482,7 +6482,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_158_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Shell Attack",
         "damage": "40",
         "effect": ""
@@ -6492,7 +6492,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -6522,7 +6522,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_159_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Leech Life",
         "damage": "50",
         "effect": "Heal from this Pokémon the same amount of damage you did to your opponent's Active Pokémon."
@@ -6532,7 +6532,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -6562,7 +6562,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_160_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Pound",
         "damage": "20",
         "effect": ""
@@ -6572,7 +6572,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -6602,7 +6602,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_161_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Spiral Kick",
         "damage": "40",
         "effect": ""
@@ -6612,7 +6612,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -6642,7 +6642,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_162_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Colorless"],
+        "cost": ["fighting", "colorless"],
         "name": "Knuckle Punch",
         "damage": "30",
         "effect": ""
@@ -6652,7 +6652,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -6682,7 +6682,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_163_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Colorless"],
+        "cost": ["fighting", "fighting", "colorless"],
         "name": "Knock Back",
         "damage": "70",
         "effect": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
@@ -6692,7 +6692,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
@@ -6722,7 +6722,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_164_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Bite",
         "damage": "20",
         "effect": ""
@@ -6732,7 +6732,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -6762,7 +6762,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_165_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness", "Colorless"],
+        "cost": ["darkness", "colorless"],
         "name": "Corner",
         "damage": "60",
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
@@ -6772,7 +6772,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -6802,7 +6802,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_166_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Call for",
         "damage": "Family",
         "effect": "Put 1 random Nidoran♂ from your deck onto your Bench."
@@ -6812,7 +6812,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -6842,7 +6842,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_167_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Bite",
         "damage": "30",
         "effect": ""
@@ -6852,7 +6852,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -6882,7 +6882,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_168_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness", "Darkness", "Colorless"],
+        "cost": ["darkness", "darkness", "colorless"],
         "name": "Lovestrike",
         "damage": "80+",
         "effect": "This attack does 50 more damage for each of your Benched Nidoking."
@@ -6892,7 +6892,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -6926,7 +6926,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_169_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Peck",
         "damage": "20",
         "effect": ""
@@ -6936,7 +6936,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -6966,7 +6966,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_170_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness", "Colorless"],
+        "cost": ["darkness", "colorless"],
         "name": "Horn Attack",
         "damage": "40",
         "effect": ""
@@ -6976,7 +6976,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -7006,7 +7006,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_171_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness", "Darkness", "Colorless"],
+        "cost": ["darkness", "darkness", "colorless"],
         "name": "Poison Horn",
         "damage": "90",
         "effect": "Your opponent's Active Pokémon is now Poisoned."
@@ -7016,7 +7016,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -7050,7 +7050,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_172_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Glide",
         "damage": "10",
         "effect": ""
@@ -7060,7 +7060,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -7090,7 +7090,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_173_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Wing Attack",
         "damage": "40",
         "effect": ""
@@ -7100,7 +7100,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -7134,7 +7134,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_174_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Poison Gas",
         "damage": "10",
         "effect": "Your opponent's Active Pokémon is now Poisoned."
@@ -7144,7 +7144,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊",
     "fullart": "No",
@@ -7174,7 +7174,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_175_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness", "Darkness", "Colorless"],
+        "cost": ["darkness", "darkness", "colorless"],
         "name": "Venoshock",
         "damage": "70+",
         "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 50 more damage."
@@ -7184,7 +7184,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -7214,7 +7214,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_176_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Suffocating Gas",
         "damage": "20",
         "effect": ""
@@ -7224,7 +7224,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -7254,7 +7254,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_177_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Tackle",
         "damage": "30",
         "effect": ""
@@ -7264,7 +7264,7 @@
       "name": "Gas Leak",
       "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may make your opponent's Active Pokémon Poisoned."
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -7298,7 +7298,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_178_EN.webp",
     "attacks": [
       {
-        "cost": ["Metal"],
+        "cost": ["metal"],
         "name": "Crunch",
         "damage": "20",
         "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
@@ -7308,7 +7308,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -7338,7 +7338,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_179_EN.webp",
     "attacks": [
       {
-        "cost": ["Metal"],
+        "cost": ["metal"],
         "name": "Pierce",
         "damage": "30",
         "effect": ""
@@ -7348,7 +7348,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -7378,8 +7378,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_180_EN.webp",
     "attacks": [
       {
-        "cost": ["Metal", "Metal"],
-        "name": "Metal Claw",
+        "cost": ["metal", "metal"],
+        "name": "metal Claw",
         "damage": "70",
         "effect": ""
       }
@@ -7388,7 +7388,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -7418,7 +7418,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_181_EN.webp",
     "attacks": [
       {
-        "cost": ["Metal"],
+        "cost": ["metal"],
         "name": "Unknown",
         "damage": "0",
         "effect": "Take 1 [M] Energy from your Energy Zone and attach it to this Pokémon."
@@ -7428,7 +7428,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -7458,7 +7458,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_182_EN.webp",
     "attacks": [
       {
-        "cost": ["Metal", "Metal", "Metal", "Colorless"],
+        "cost": ["metal", "metal", "metal", "colorless"],
         "name": "Heavy Impact",
         "damage": "120",
         "effect": ""
@@ -7468,7 +7468,7 @@
       "name": "Hard Coat",
       "effect": "This Pokémon takes -20 damage from attacks."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -7498,7 +7498,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_183_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Lightning"],
+        "cost": ["water", "lightning"],
         "name": "Ram",
         "damage": "40",
         "effect": ""
@@ -7538,7 +7538,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_184_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Lightning", "Colorless"],
+        "cost": ["water", "lightning", "colorless"],
         "name": "Tail Smack",
         "damage": "80",
         "effect": ""
@@ -7578,7 +7578,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_185_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Lightning", "Colorless", "Colorless"],
+        "cost": ["water", "lightning", "colorless", "colorless"],
         "name": "Draco",
         "damage": "Meteor",
         "effect": "1 of your opponent's Pokémon is chosen at random 4 times. For each time a Pokémon was chosen, do 50 damage to it."
@@ -7622,7 +7622,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_186_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Gust",
         "damage": "10",
         "effect": ""
@@ -7632,7 +7632,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -7662,7 +7662,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_187_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Gust",
         "damage": "30",
         "effect": ""
@@ -7672,7 +7672,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -7702,7 +7702,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_188_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Wing Attack",
         "damage": "70",
         "effect": ""
@@ -7712,7 +7712,7 @@
       "name": "Drive Off",
       "effect": "Once during your turn, you may switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -7746,7 +7746,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_189_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Gnaw",
         "damage": "20",
         "effect": ""
@@ -7756,7 +7756,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -7786,7 +7786,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_190_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Bite",
         "damage": "40",
         "effect": ""
@@ -7796,7 +7796,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -7826,7 +7826,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_191_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Peck",
         "damage": "20",
         "effect": ""
@@ -7836,7 +7836,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -7866,7 +7866,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_192_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Drill Run",
         "damage": "50",
         "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
@@ -7876,7 +7876,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -7906,7 +7906,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_193_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Pound",
         "damage": "30",
         "effect": ""
@@ -7916,7 +7916,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -7946,7 +7946,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_194_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Hyper Voice",
         "damage": "60",
         "effect": ""
@@ -7956,7 +7956,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -7986,7 +7986,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_195_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Sleepy Song",
         "damage": "80",
         "effect": "Your opponent's Active Pokémon is now Asleep."
@@ -7996,7 +7996,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊◊",
     "fullart": "No",
@@ -8034,7 +8034,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_196_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Pay Day",
         "damage": "10",
         "effect": "Draw 1 card."
@@ -8044,7 +8044,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -8078,7 +8078,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_197_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Shadow Claw",
         "damage": "40",
         "effect": "Flip a coin. If heads, discard a random card from your opponent's hand."
@@ -8088,7 +8088,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -8118,7 +8118,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_198_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Leek Slap",
         "damage": "40",
         "effect": ""
@@ -8128,7 +8128,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -8158,7 +8158,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_199_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Peck",
         "damage": "20",
         "effect": ""
@@ -8168,7 +8168,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -8198,7 +8198,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_200_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Drill Peck",
         "damage": "40",
         "effect": ""
@@ -8208,7 +8208,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "0",
     "rarity": "◊◊",
     "fullart": "No",
@@ -8238,7 +8238,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_201_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Continuous Lick",
         "damage": "60x",
         "effect": "Flip a coin until you get tails. This attack does 60 damage for each heads."
@@ -8248,7 +8248,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
@@ -8278,7 +8278,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_202_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Gentle Slap",
         "damage": "60",
         "effect": ""
@@ -8288,7 +8288,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
@@ -8318,7 +8318,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_203_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Dizzy Punch",
         "damage": "30x",
         "effect": "Flip 2 coins. This attack does 30 damage for each heads."
@@ -8328,7 +8328,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -8358,7 +8358,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_204_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Horn Attack",
         "damage": "50",
         "effect": ""
@@ -8368,7 +8368,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
@@ -8398,7 +8398,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_205_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "opy",
         "damage": "Anything",
         "effect": "Choose 1 of your opponent's Pokémon's attacks and use it as this attack. If this Pokémon doesn't have the necessary Energy to use that attack, this attack does nothing."
@@ -8408,7 +8408,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -8442,7 +8442,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_206_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Tackle",
         "damage": "20",
         "effect": ""
@@ -8452,7 +8452,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -8494,7 +8494,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_207_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Tackle",
         "damage": "20",
         "effect": ""
@@ -8504,7 +8504,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -8546,7 +8546,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_208_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Tackle",
         "damage": "20",
         "effect": ""
@@ -8556,7 +8556,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -8598,7 +8598,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_209_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Sharpen",
         "damage": "20",
         "effect": ""
@@ -8608,7 +8608,7 @@
       "name": "Data Scan",
       "effect": "Once during your turn, you may look at the top card of your deck."
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -8642,7 +8642,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_210_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Primal",
         "damage": "Wingbeat",
         "effect": "Flip a coin. If heads, your opponent shuffles their Active Pokémon back into their deck."
@@ -8652,7 +8652,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -8682,7 +8682,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_211_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless", "colorless"],
         "name": "Rollout",
         "damage": "70",
         "effect": ""
@@ -8692,7 +8692,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "4",
     "rarity": "◊◊◊",
     "fullart": "No",
@@ -8726,7 +8726,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_212_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Tail Smack",
         "damage": "20",
         "effect": ""
@@ -8736,7 +8736,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -8766,7 +8766,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_213_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Do the Wave",
         "damage": "30x",
         "effect": "This attack does 30 damage for each of your Benched Pokémon."
@@ -8776,7 +8776,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
@@ -8806,7 +8806,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_214_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Tackle",
         "damage": "30",
         "effect": ""
@@ -8816,7 +8816,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
@@ -8846,7 +8846,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_215_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Rolling Tackle",
         "damage": "80",
         "effect": ""
@@ -8856,7 +8856,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
@@ -9252,7 +9252,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_227_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Vine Whip",
         "damage": "40",
         "effect": ""
@@ -9262,7 +9262,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9296,7 +9296,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_228_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Drool",
         "damage": "40",
         "effect": ""
@@ -9306,7 +9306,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9340,7 +9340,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_229_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Grass"],
+        "cost": ["grass", "grass"],
         "name": "Double Horn",
         "damage": "50x",
         "effect": "Flip 2 coins. This attack does 50 damage for each heads."
@@ -9350,7 +9350,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9384,7 +9384,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_230_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Ember",
         "damage": "30",
         "effect": "Discard a [R] Energy from this Pokémon."
@@ -9394,7 +9394,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9428,8 +9428,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_231_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire"],
-        "name": "Fire Mane",
+        "cost": ["fire"],
+        "name": "fire Mane",
         "damage": "40",
         "effect": ""
       }
@@ -9438,7 +9438,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9472,7 +9472,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_232_EN.webp",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "ater Gun",
         "damage": "20",
         "effect": ""
@@ -9482,7 +9482,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9516,7 +9516,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_233_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Water", "Water"],
+        "cost": ["water", "water", "water", "water"],
         "name": "Hyper Beam",
         "damage": "100",
         "effect": "Discard a random Energy from your opponent's Active Pokémon."
@@ -9526,7 +9526,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "4",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9560,7 +9560,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_234_EN.webp",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Hydro Pump",
         "damage": "20+",
         "effect": "If this Pokémon has at least 3 extra [W] Energy attached, this attack does 70 more damage."
@@ -9570,7 +9570,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9604,7 +9604,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_235_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Electro Ball",
         "damage": "70",
         "effect": ""
@@ -9614,7 +9614,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "0",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9648,8 +9648,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_236_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless", "Colorless"],
-        "name": "Psychic",
+        "cost": ["psychic", "colorless", "colorless"],
+        "name": "psychic",
         "damage": "60+",
         "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon."
       }
@@ -9658,7 +9658,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9692,7 +9692,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_237_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Tail Whap",
         "damage": "30",
         "effect": ""
@@ -9702,7 +9702,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9736,7 +9736,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_238_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Mud-Slap",
         "damage": "20",
         "effect": ""
@@ -9746,7 +9746,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9780,7 +9780,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_239_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Unknown",
         "damage": "0",
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do -20 damage."
@@ -9790,7 +9790,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9824,7 +9824,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_240_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness", "Darkness", "Colorless"],
+        "cost": ["darkness", "darkness", "colorless"],
         "name": "Lovestrike",
         "damage": "80+",
         "effect": "This attack does 50 more damage for each of your Benched Nidoking."
@@ -9834,7 +9834,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9868,7 +9868,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_241_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness", "Darkness", "Colorless"],
+        "cost": ["darkness", "darkness", "colorless"],
         "name": "Poison Horn",
         "damage": "90",
         "effect": "Your opponent's Active Pokémon is now Poisoned."
@@ -9878,7 +9878,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9912,7 +9912,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_242_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Wing Attack",
         "damage": "40",
         "effect": ""
@@ -9922,7 +9922,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
@@ -9956,7 +9956,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_243_EN.webp",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Tackle",
         "damage": "30",
         "effect": ""
@@ -9966,7 +9966,7 @@
       "name": "Gas Leak",
       "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may make your opponent's Active Pokémon Poisoned."
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "☆",
     "fullart": "Yes",
@@ -10000,7 +10000,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_244_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Lightning", "Colorless", "Colorless"],
+        "cost": ["water", "lightning", "colorless", "colorless"],
         "name": "Draco",
         "damage": "Meteor",
         "effect": "1 of your opponent's Pokémon is chosen at random 4 times. For each time a Pokémon was chosen, do 50 damage to it."
@@ -10044,7 +10044,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_245_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Wing Attack",
         "damage": "70",
         "effect": ""
@@ -10054,7 +10054,7 @@
       "name": "Drive Off",
       "effect": "Once during your turn, you may switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
@@ -10088,7 +10088,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_246_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Pay Day",
         "damage": "10",
         "effect": "Draw 1 card."
@@ -10098,7 +10098,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
@@ -10132,7 +10132,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_247_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "opy",
         "damage": "Anything",
         "effect": "Choose 1 of your opponent's Pokémon's attacks and use it as this attack. If this Pokémon doesn't have the necessary Energy to use that attack, this attack does nothing."
@@ -10142,7 +10142,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
@@ -10176,7 +10176,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_248_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Tackle",
         "damage": "20",
         "effect": ""
@@ -10186,7 +10186,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
@@ -10228,7 +10228,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_249_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Sharpen",
         "damage": "20",
         "effect": ""
@@ -10238,7 +10238,7 @@
       "name": "Data Scan",
       "effect": "Once during your turn, you may look at the top card of your deck."
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
@@ -10272,7 +10272,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_250_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless", "colorless"],
         "name": "Rollout",
         "damage": "70",
         "effect": ""
@@ -10282,7 +10282,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "4",
     "rarity": "☆",
     "fullart": "Yes",
@@ -10316,13 +10316,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_251_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "colorless", "colorless"],
         "name": "Razor Leaf",
         "damage": "60",
         "effect": ""
       },
       {
-        "cost": ["Grass", "Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "grass", "colorless", "colorless"],
         "name": "Giant Bloom",
         "damage": "100",
         "effect": "Heal 30 damage from this Pokémon."
@@ -10332,7 +10332,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10366,7 +10366,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_252_EN.webp",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Tropical Swing",
         "damage": "40+",
         "effect": "Flip a coin. If heads, this attack does 40 more damage."
@@ -10376,7 +10376,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10410,13 +10410,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_253_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Slash",
         "damage": "60",
         "effect": ""
       },
       {
-        "cost": ["Fire", "Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "fire", "colorless", "colorless"],
         "name": "Crimson Storm",
         "damage": "200",
         "effect": "Discard 2 [R] Energy from this Pokémon."
@@ -10426,7 +10426,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10468,7 +10468,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_254_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Fire", "Colorless"],
+        "cost": ["fire", "fire", "colorless"],
         "name": "Inferno Onrush",
         "damage": "120",
         "effect": "This Pokémon also does 20 damage to itself."
@@ -10478,7 +10478,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10512,13 +10512,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_255_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Inferno",
         "damage": "Dance",
         "effect": "Flip 3 coins. Take an amount of [R] Energy from your Energy Zone equal to the number of heads and attach it to your Benched [R] Pokémon in any way you like."
       },
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Heat Blast",
         "damage": "70",
         "effect": ""
@@ -10528,7 +10528,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10566,13 +10566,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_256_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Surf",
         "damage": "40",
         "effect": ""
       },
       {
-        "cost": ["Water", "Water", "Colorless"],
+        "cost": ["water", "water", "colorless"],
         "name": "Hydro Bazooka",
         "damage": "100+",
         "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
@@ -10582,7 +10582,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10616,7 +10616,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_257_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Water"],
+        "cost": ["water", "water"],
         "name": "Hydro Splash",
         "damage": "90",
         "effect": ""
@@ -10626,7 +10626,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "0",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10660,13 +10660,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_258_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Ice Wing",
         "damage": "40",
         "effect": ""
       },
       {
-        "cost": ["Water", "Water", "Water"],
+        "cost": ["water", "water", "water"],
         "name": "Blizzard",
         "damage": "80",
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
@@ -10676,7 +10676,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10714,7 +10714,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_259_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Circle Circuit",
         "damage": "30x",
         "effect": "This attack does 30 damage for each of your Benched [L] Pokémon."
@@ -10724,7 +10724,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10766,13 +10766,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_260_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Peck",
         "damage": "20",
         "effect": ""
       },
       {
-        "cost": ["Lightning", "Lightning", "Lightning"],
+        "cost": ["lightning", "lightning", "lightning"],
         "name": "Thundering Hurricane",
         "damage": "50x",
         "effect": "Flip 4 coins. This attack does 50 damage for each heads."
@@ -10782,7 +10782,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10820,7 +10820,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_261_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Psychic"],
+        "cost": ["psychic", "psychic", "psychic"],
         "name": "Spooky Shot",
         "damage": "100",
         "effect": ""
@@ -10830,7 +10830,7 @@
       "name": "Shadowy Spellbind",
       "effect": "As long as this Pokémon is in the Active Spot, your opponent can't use any Supporter cards from their hand."
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10868,13 +10868,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_262_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
-        "name": "Psychic Sphere",
+        "cost": ["psychic", "colorless"],
+        "name": "psychic Sphere",
         "damage": "50",
         "effect": ""
       },
       {
-        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless", "colorless"],
         "name": "Psydrive",
         "damage": "150",
         "effect": "Discard 2 [P] Energy from this Pokémon."
@@ -10884,7 +10884,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10926,7 +10926,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_263_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Fighting"],
+        "cost": ["fighting", "fighting", "fighting"],
         "name": "Mega Punch",
         "damage": "120",
         "effect": ""
@@ -10936,7 +10936,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "3",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -10974,7 +10974,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_264_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting"],
+        "cost": ["fighting", "fighting"],
         "name": "Bonemerang",
         "damage": "80x",
         "effect": "Flip 2 coins. This attack does 80 damage for each heads."
@@ -10984,7 +10984,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -11018,7 +11018,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_265_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Sleepy Song",
         "damage": "80",
         "effect": "Your opponent's Active Pokémon is now Asleep."
@@ -11028,7 +11028,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -11338,13 +11338,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_274_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Inferno",
         "damage": "Dance",
         "effect": "Flip 3 coins. Take an amount of [R] Energy from your Energy Zone equal to the number of heads and attach it to your Benched [R] Pokémon in any way you like."
       },
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Heat Blast",
         "damage": "70",
         "effect": ""
@@ -11354,7 +11354,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -11392,13 +11392,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_275_EN.webp",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Ice Wing",
         "damage": "40",
         "effect": ""
       },
       {
-        "cost": ["Water", "Water", "Water"],
+        "cost": ["water", "water", "water"],
         "name": "Blizzard",
         "damage": "80",
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
@@ -11408,7 +11408,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -11446,13 +11446,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_276_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Peck",
         "damage": "20",
         "effect": ""
       },
       {
-        "cost": ["Lightning", "Lightning", "Lightning"],
+        "cost": ["lightning", "lightning", "lightning"],
         "name": "Thundering Hurricane",
         "damage": "50x",
         "effect": "Flip 4 coins. This attack does 50 damage for each heads."
@@ -11462,7 +11462,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -11500,7 +11500,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_277_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Psychic"],
+        "cost": ["psychic", "psychic", "psychic"],
         "name": "Spooky Shot",
         "damage": "100",
         "effect": ""
@@ -11510,7 +11510,7 @@
       "name": "Shadowy Spellbind",
       "effect": "As long as this Pokémon is in the Active Spot, your opponent can't use any Supporter cards from their hand."
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -11548,7 +11548,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_278_EN.webp",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Fighting"],
+        "cost": ["fighting", "fighting", "fighting"],
         "name": "Mega Punch",
         "damage": "120",
         "effect": ""
@@ -11558,7 +11558,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "3",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -11596,7 +11596,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_279_EN.webp",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Sleepy Song",
         "damage": "80",
         "effect": "Your opponent's Active Pokémon is now Asleep."
@@ -11606,7 +11606,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
@@ -11644,13 +11644,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_280_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Slash",
         "damage": "60",
         "effect": ""
       },
       {
-        "cost": ["Fire", "Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "fire", "colorless", "colorless"],
         "name": "Crimson Storm",
         "damage": "200",
         "effect": "Discard 2 [R] Energy from this Pokémon."
@@ -11660,7 +11660,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "☆☆☆",
     "fullart": "Yes",
@@ -11702,7 +11702,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_281_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Circle Circuit",
         "damage": "30x",
         "effect": "This attack does 30 damage for each of your Benched [L] Pokémon."
@@ -11712,7 +11712,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆☆",
     "fullart": "Yes",
@@ -11754,13 +11754,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_282_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
-        "name": "Psychic Sphere",
+        "cost": ["psychic", "colorless"],
+        "name": "psychic Sphere",
         "damage": "50",
         "effect": ""
       },
       {
-        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless", "colorless"],
         "name": "Psydrive",
         "damage": "150",
         "effect": "Discard 2 [P] Energy from this Pokémon."
@@ -11770,7 +11770,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆☆☆",
     "fullart": "Yes",
@@ -11812,7 +11812,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_283_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic"],
+        "cost": ["psychic"],
         "name": "sy Report",
         "damage": "20",
         "effect": "Your opponent reveals their hand."
@@ -11822,7 +11822,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆☆",
     "fullart": "Yes",
@@ -11856,13 +11856,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_284_EN.webp",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Slash",
         "damage": "60",
         "effect": ""
       },
       {
-        "cost": ["Fire", "Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "fire", "colorless", "colorless"],
         "name": "Crimson Storm",
         "damage": "200",
         "effect": "Discard 2 [R] Energy from this Pokémon."
@@ -11872,7 +11872,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "Crown Rare",
     "fullart": "Yes",
@@ -11910,7 +11910,7 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_285_EN.webp",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Circle Circuit",
         "damage": "30x",
         "effect": "This attack does 30 damage for each of your Benched [L] Pokémon."
@@ -11920,7 +11920,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "Crown Rare",
     "fullart": "Yes",
@@ -11958,13 +11958,13 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1/A1_286_EN.webp",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
-        "name": "Psychic Sphere",
+        "cost": ["psychic", "colorless"],
+        "name": "psychic Sphere",
         "damage": "50",
         "effect": ""
       },
       {
-        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless", "colorless"],
         "name": "Psydrive",
         "damage": "150",
         "effect": "Discard 2 [P] Energy from this Pokémon."
@@ -11974,7 +11974,7 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "Crown Rare",
     "fullart": "Yes",

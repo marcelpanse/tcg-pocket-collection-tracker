@@ -58,29 +58,30 @@ export default function HamburgerMenu() {
           ))}
         </nav>
 
-        <Button
-          variant="secondary"
-          onClick={() => {
-            setIsProfileDialogOpen(true)
-            setOpen(false)
-          }}
-        >
-          {t('editProfile')}
-          <UserRoundPen />
-        </Button>
-
         {user ? (
-          <Button
-            variant="default"
-            onClick={async () => {
-              await logout()
-              setUser(null)
-              setOpen(false)
-            }}
-          >
-            {t('logOut')}
-            <LogOut />
-          </Button>
+          <>
+            <Button
+              variant="secondary"
+              onClick={() => {
+                setIsProfileDialogOpen(true)
+                setOpen(false)
+              }}
+            >
+              {t('editProfile')}
+              <UserRoundPen />
+            </Button>
+            <Button
+              variant="default"
+              onClick={async () => {
+                await logout()
+                setUser(null)
+                setOpen(false)
+              }}
+            >
+              {t('logOut')}
+              <LogOut />
+            </Button>
+          </>
         ) : (
           <Button
             variant="default"

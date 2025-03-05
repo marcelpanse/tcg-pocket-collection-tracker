@@ -2,6 +2,7 @@ import { Card as CardComponent } from '@/components/Card'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { getCardById, sellableForTokensDictionary } from '@/lib/CardsDB.ts'
 import type { Card } from '@/types'
+import { useTranslation } from 'react-i18next'
 
 interface CardDetailProps {
   cardId: string
@@ -9,6 +10,7 @@ interface CardDetailProps {
 }
 
 function CardDetail({ cardId, onClose }: CardDetailProps) {
+  const { t } = useTranslation(['cards/cards-types', 'cards/evolutions', 'cards/types'])
   const card: Card = getCardById(cardId) || ({} as Card)
 
   return (
@@ -66,7 +68,7 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
             <div className="mt-4">
               <h2 className="text-xl font-semibold">Details</h2>
               <p>
-                <strong>Weakness:</strong> {card.weakness || 'N/A'}
+                <strong>Weakness:</strong> {t(card.weakness || 'N/A', { ns: 'cards/types' })}
               </p>
               <p>
                 <strong>Retreat:</strong> {card.retreat || 'N/A'}
