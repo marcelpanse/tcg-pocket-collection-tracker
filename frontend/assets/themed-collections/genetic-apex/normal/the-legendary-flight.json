@@ -1,0 +1,20 @@
+{
+  "name": "The Legendary Flight",
+  "requiredCards": [
+    {
+      "_card": ["Moltres"],
+      "cardId": ["A1-46", "A1-47", "A1-255", "A1-274"],
+      "amount": 1
+    },
+    {
+      "_card": ["Articuno"],
+      "cardId": ["A1-83", "A1-84", "A1-258", "A1-275"],
+      "amount": 1
+    },
+    {
+      "_card": ["Zapdos"],
+      "cardId": ["A1-103", "A1-104", "A1-260", "A1-276"],
+      "amount": 1
+    }
+  ]
+}

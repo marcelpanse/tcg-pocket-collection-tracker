@@ -1,12 +1,9 @@
 import RarityFilter from '@/components/RarityFilter.tsx'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTitle } from '@/components/ui/alert.tsx'
-import { getStorage } from '@/lib/Auth.ts'
 import * as CardsDB from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
-import { UserContext } from '@/lib/context/UserContext'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
-import { Query } from 'appwrite'
 import { Siren } from 'lucide-react'
 import { use, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -18,15 +15,11 @@ interface Pack {
   fill: string
 }
 
-const BUCKET_ID = '67b79b0d0008be153794'
-
 function Overview() {
   const { ownedCards } = use(CollectionContext)
-  const { user } = use(UserContext)
   const { t } = useTranslation('pages/overview')
 
   const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
-  const [totals, setTotals] = useState<{ totalUsers: number }>({ totalUsers: 0 })
   const ownedCardsCount = useMemo(() => ownedCards.reduce((total, card) => total + card.amount_owned, 0), [ownedCards])
   const [rarityFilter, setRarityFilter] = useState<string[]>(() => {
     const savedRarityFilter = localStorage.getItem('rarityFilter')
@@ -38,22 +31,6 @@ function Overview() {
   useEffect(() => {
     localStorage.setItem('rarityFilter', JSON.stringify(rarityFilter))
   }, [rarityFilter])
-
-  useEffect(() => {
-    const storage = getStorage()
-    storage.listFiles(BUCKET_ID, [Query.equal('name', 'totals.json'), Query.limit(1)]).then((res) => {
-      const file = getStorage().getFileView(
-        res.files[0].bucketId, // bucketId
-        res.files[0].$id, // fileId
-      )
-      fetch(file)
-        .then((res) => res.json())
-        .then((data) => {
-          console.log('data', data)
-          setTotals(data)
-        })
-    })
-  }, [])
 
   useEffect(() => {
     let newHighestProbabilityPack: Pack | undefined
@@ -88,11 +65,6 @@ function Overview() {
         )}
 
         <div className="mb-8 flex items-center gap-2">
-          <p className="grow-1">
-            {user ? t('usersOurCommunity.youAre') : t('usersOurCommunity.join')}
-            <strong> {totals.totalUsers} </strong>
-            {t('usersOurCommunity.text')}
-          </p>
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
         </div>
 

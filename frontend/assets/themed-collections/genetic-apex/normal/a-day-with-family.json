@@ -1,0 +1,35 @@
+{
+  "name": "A Day with Family",
+  "requiredCards": [
+    {
+      "_card": ["NidoranF"],
+      "cardId": ["A1-166"],
+      "amount": 1
+    },
+    {
+      "_card": ["Nidorina"],
+      "cardId": ["A1-167"],
+      "amount": 1
+    },
+    {
+      "_card": ["Nidoqueen"],
+      "cardId": ["A1-168", "A1-240"],
+      "amount": 1
+    },
+    {
+      "_card": ["NidoranM"],
+      "cardId": ["A1-169"],
+      "amount": 1
+    },
+    {
+      "_card": ["Nidorino"],
+      "cardId": ["A1-170"],
+      "amount": 1
+    },
+    {
+      "_card": ["Nidoking"],
+      "cardId": ["A1-171", "A1-241"],
+      "amount": 1
+    }
+  ]
+}

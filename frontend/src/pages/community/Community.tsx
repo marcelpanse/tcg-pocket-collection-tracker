@@ -1,8 +1,8 @@
+import { DiscourseForum } from '@/components/DiscourseForum.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
 import { ExternalLink } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { Board } from './components/Board'
 
 function Community() {
   const { t } = useTranslation('pages/community')
@@ -23,17 +23,17 @@ function Community() {
         <TabsContent value="announcements">
           <h1 className="text-lg mt-4">{t('announcements')} 🚀</h1>
           <p className="text-sm mb-10">{t('announcementsText')}</p>
-          <Board term="app/announcements" />
+          <DiscourseForum topicId="12" />
         </TabsContent>
         <TabsContent value="trade">
           <h1 className="text-lg mt-4">{t('trade')} 💰</h1>
           <p className="text-sm mb-10">{t('tradeText')}</p>
-          <Board term="app/trade" />
+          <DiscourseForum topicId="13" />
         </TabsContent>
         <TabsContent value="feedback">
           <h1 className="text-lg mt-4">{t('ideasFeedback')} 💡</h1>
           <p className="text-sm mb-10">{t('ideasFeedbackText')}</p>
-          <Board term="app/feedback" />
+          <DiscourseForum topicId="14" />
         </TabsContent>
       </Tabs>
     </div>

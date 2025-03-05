@@ -1,0 +1,60 @@
+{
+  "name": "Safari Zone",
+  "requiredCards": [
+    {
+      "_card": ["Exeggcute"],
+      "cardId": ["A1-21"],
+      "amount": 1
+    },
+    {
+      "_card": ["Scyther"],
+      "cardId": ["A1-25"],
+      "amount": 1
+    },
+    {
+      "_card": ["Pinsir"],
+      "cardId": ["A1-26", "A1-229"],
+      "amount": 1
+    },
+    {
+      "_card": ["Slowpoke"],
+      "cardId": ["A1-118", "A1-237"],
+      "amount": 1
+    },
+    {
+      "_card": ["Rhyhorn"],
+      "cardId": ["A1-156"],
+      "amount": 1
+    },
+    {
+      "_card": ["Dratini"],
+      "cardId": ["A1-183"],
+      "amount": 1
+    },
+    {
+      "_card": ["Dragonair"],
+      "cardId": ["A1-184"],
+      "amount": 1
+    },
+    {
+      "_card": ["Doduo"],
+      "cardId": ["A1-199"],
+      "amount": 1
+    },
+    {
+      "_card": ["Chansey"],
+      "cardId": ["A1-202"],
+      "amount": 1
+    },
+    {
+      "_card": ["Kangaskhan"],
+      "cardId": ["A1-203"],
+      "amount": 1
+    },
+    {
+      "_card": ["Tauros"],
+      "cardId": ["A1-204"],
+      "amount": 1
+    }
+  ]
+}

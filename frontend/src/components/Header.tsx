@@ -14,13 +14,17 @@ import {
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu.tsx'
 import { logout } from '@/lib/Auth.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
+import Export from '@/pages/export/Export'
+import Import from '@/pages/import/Import'
 import { Globe, LogOut, UserRoundPen } from 'lucide-react'
-import { use } from 'react'
+import { use, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 
 export function Header() {
   const { user, setUser, isLoginDialogOpen, setIsLoginDialogOpen, setIsProfileDialogOpen } = use(UserContext)
+  const [isImportDialogOpen, setIsImportDialogOpen] = useState<boolean>(false)
+  const [isExportDialogOpen, setIsExportDialogOpen] = useState<boolean>(false)
   const { t, i18n } = useTranslation('header')
   const changeLanguage = (lng: string) => i18n.changeLanguage(lng)
 
@@ -79,6 +83,8 @@ export function Header() {
                   <DropdownMenuSeparator />
                   <DropdownMenuItem onClick={() => setIsProfileDialogOpen(true)}>{t('editProfile')}</DropdownMenuItem>
                   <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={() => setIsExportDialogOpen(true)}>{t('export')}</DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setIsImportDialogOpen(true)}>{t('import')}</DropdownMenuItem>
                   <DropdownMenuGroup>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem
@@ -110,6 +116,22 @@ export function Header() {
         </div>
         <HamburgerMenu />
       </header>
+      <Dialog open={isImportDialogOpen} onOpenChange={setIsImportDialogOpen}>
+        <DialogContent className="border-2 border-slate-600 shadow-none">
+          <DialogHeader>
+            <DialogTitle>{t('import')}</DialogTitle>
+          </DialogHeader>
+          <Import />
+        </DialogContent>
+      </Dialog>
+      <Dialog open={isExportDialogOpen} onOpenChange={setIsExportDialogOpen}>
+        <DialogContent className="border-2 border-slate-600 shadow-none">
+          <DialogHeader>
+            <DialogTitle>{t('export')}</DialogTitle>
+          </DialogHeader>
+          <Export />
+        </DialogContent>
+      </Dialog>
     </>
   )
 }
