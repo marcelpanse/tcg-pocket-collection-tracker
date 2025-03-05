@@ -27,7 +27,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: Exp
     }
     const chartData = packs.map((pack) => ({
       packName: pack.name.replace(' pack', '').replace('Every', 'Promo-A'),
-      percentage: numberFilter < 1 ? 0 : CardsDB.pullRate({ ownedCards: ownedCards, expansion: expansion, pack: pack, rarityFilter, numberFilter }),
+      percentage: CardsDB.pullRate({ ownedCards: ownedCards, expansion: expansion, pack: pack, rarityFilter, numberFilter }),
       fill: pack.color,
     }))
 

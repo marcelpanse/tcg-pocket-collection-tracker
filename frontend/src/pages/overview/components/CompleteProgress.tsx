@@ -18,9 +18,6 @@ export function CompleteProgress({ title, expansion, packName, rarityFilter = []
   const { t } = useTranslation('complete-progress')
 
   const nrOfCardsOwned = useMemo(() => {
-    if (numberFilter < 1) {
-      return getTotalNrOfCards({ rarityFilter, expansion, packName })
-    }
     return getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, expansion, packName })
   }, [ownedCards, expansion, packName, rarityFilter, numberFilter])
 
