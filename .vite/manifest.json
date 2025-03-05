@@ -1,57 +1,57 @@
 {
-  "_CardsTable-BK8QrdpJ.js": {
-    "file": "assets/CardsTable-BK8QrdpJ.js",
+  "_CardsTable-DDeymd8q.js": {
+    "file": "assets/CardsTable-DDeymd8q.js",
     "name": "CardsTable",
     "imports": [
       "index.html",
-      "_RarityFilter-Bx_vxKtM.js"
+      "_RarityFilter-vL0A6tsN.js"
     ]
   },
-  "_NumberFilter-D_BB_4Tq.js": {
-    "file": "assets/NumberFilter-D_BB_4Tq.js",
+  "_NumberFilter-Cx-wjk57.js": {
+    "file": "assets/NumberFilter-Cx-wjk57.js",
     "name": "NumberFilter",
     "imports": [
       "index.html"
     ]
   },
-  "_RarityFilter-Bx_vxKtM.js": {
-    "file": "assets/RarityFilter-Bx_vxKtM.js",
+  "_RarityFilter-vL0A6tsN.js": {
+    "file": "assets/RarityFilter-vL0A6tsN.js",
     "name": "RarityFilter",
     "imports": [
       "index.html"
     ]
   },
-  "_alert-Ba2jBJBL.js": {
-    "file": "assets/alert-Ba2jBJBL.js",
+  "_alert-SyLhVaXO.js": {
+    "file": "assets/alert-SyLhVaXO.js",
     "name": "alert",
     "imports": [
       "index.html"
     ]
   },
-  "_browser-ponyfill-BC_KK9lS.js": {
-    "file": "assets/browser-ponyfill-BC_KK9lS.js",
+  "_browser-ponyfill-DGzyUKx7.js": {
+    "file": "assets/browser-ponyfill-DGzyUKx7.js",
     "name": "browser-ponyfill",
     "isDynamicEntry": true,
     "imports": [
       "index.html"
     ]
   },
-  "_siren-Cup_4ZqO.js": {
-    "file": "assets/siren-Cup_4ZqO.js",
+  "_siren-0Iw4LO-4.js": {
+    "file": "assets/siren-0Iw4LO-4.js",
     "name": "siren",
     "imports": [
       "index.html"
     ]
   },
-  "_tabs-Cshs8fSz.js": {
-    "file": "assets/tabs-Cshs8fSz.js",
+  "_tabs-Ched0860.js": {
+    "file": "assets/tabs-Ched0860.js",
     "name": "tabs",
     "imports": [
       "index.html"
     ]
   },
   "index.html": {
-    "file": "assets/index-BvdLgzO4.js",
+    "file": "assets/index-DTazUrZJ.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -61,72 +61,72 @@
       "src/pages/trade/Trade.tsx",
       "src/pages/community/Community.tsx",
       "src/components/EditProfile.tsx",
-      "_browser-ponyfill-BC_KK9lS.js"
+      "_browser-ponyfill-DGzyUKx7.js"
     ],
     "css": [
       "assets/index-DACYpFhi.css"
     ]
   },
   "src/components/EditProfile.tsx": {
-    "file": "assets/EditProfile-FHBkplDd.js",
+    "file": "assets/EditProfile-DsrzrOAy.js",
     "name": "EditProfile",
     "src": "src/components/EditProfile.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_alert-Ba2jBJBL.js",
-      "_siren-Cup_4ZqO.js"
+      "_alert-SyLhVaXO.js",
+      "_siren-0Iw4LO-4.js"
     ]
   },
   "src/pages/collection/Collection.tsx": {
-    "file": "assets/Collection-DbTOFADZ.js",
+    "file": "assets/Collection-QGbQLYM0.js",
     "name": "Collection",
     "src": "src/pages/collection/Collection.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_alert-Ba2jBJBL.js",
-      "_CardsTable-BK8QrdpJ.js",
-      "_tabs-Cshs8fSz.js",
-      "_RarityFilter-Bx_vxKtM.js"
+      "_alert-SyLhVaXO.js",
+      "_CardsTable-DDeymd8q.js",
+      "_tabs-Ched0860.js",
+      "_RarityFilter-vL0A6tsN.js"
     ]
   },
   "src/pages/community/Community.tsx": {
-    "file": "assets/Community-Div3mHO_.js",
+    "file": "assets/Community-CpZomDjY.js",
     "name": "Community",
     "src": "src/pages/community/Community.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_tabs-Cshs8fSz.js"
+      "_tabs-Ched0860.js"
     ]
   },
   "src/pages/overview/Overview.tsx": {
-    "file": "assets/Overview-BjbrYee3.js",
+    "file": "assets/Overview-DhoUU2bP.js",
     "name": "Overview",
     "src": "src/pages/overview/Overview.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_NumberFilter-D_BB_4Tq.js",
-      "_RarityFilter-Bx_vxKtM.js",
-      "_alert-Ba2jBJBL.js",
-      "_siren-Cup_4ZqO.js"
+      "_NumberFilter-Cx-wjk57.js",
+      "_RarityFilter-vL0A6tsN.js",
+      "_alert-SyLhVaXO.js",
+      "_siren-0Iw4LO-4.js"
     ]
   },
   "src/pages/trade/Trade.tsx": {
-    "file": "assets/Trade-BT34g9rf.js",
+    "file": "assets/Trade-D65oAspc.js",
     "name": "Trade",
     "src": "src/pages/trade/Trade.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_NumberFilter-D_BB_4Tq.js",
-      "_RarityFilter-Bx_vxKtM.js",
-      "_tabs-Cshs8fSz.js",
-      "_CardsTable-BK8QrdpJ.js",
-      "_alert-Ba2jBJBL.js",
-      "_siren-Cup_4ZqO.js"
+      "_NumberFilter-Cx-wjk57.js",
+      "_RarityFilter-vL0A6tsN.js",
+      "_tabs-Ched0860.js",
+      "_CardsTable-DDeymd8q.js",
+      "_alert-SyLhVaXO.js",
+      "_siren-0Iw4LO-4.js"
     ]
   }
 }
