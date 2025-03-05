@@ -1,4 +1,5 @@
 import InstallPrompt from '@/components/InstallPrompt.tsx'
+import { useToast } from '@/hooks/use-toast.ts'
 import { authSSO, getUser } from '@/lib/Auth.ts'
 import { fetchAccount } from '@/lib/fetchAccount.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
@@ -21,6 +22,8 @@ const Community = loadable(() => import('./pages/community/Community.tsx'))
 const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
 
 function App() {
+  const { toast } = useToast()
+
   const [user, setUser] = useState<User | null>(null)
   const [account, setAccount] = useState<AccountRow | null>(null)
   const [ownedCards, setOwnedCards] = useState<CollectionRow[]>([])
@@ -39,6 +42,7 @@ function App() {
       const sso = params.get('sso')
       const sig = params.get('sig')
       if (sso && sig) {
+        toast({ title: 'Logging in', description: 'Please wait...', variant: 'default' })
         authSSO(sso, sig).catch(console.error)
       } else {
         fetchCollection().then(setOwnedCards).catch(console.error)

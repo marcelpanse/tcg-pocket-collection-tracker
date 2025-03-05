@@ -1,4 +1,5 @@
 import { Account, Client, Databases, Functions, ID, Storage } from 'appwrite'
+
 const client = new Client().setProject('679d358b0013b9a1797f').setEndpoint('https://api.tcgpocketcollectiontracker.com/v1')
 const databases = new Databases(client)
 const storage = new Storage(client)
@@ -50,10 +51,6 @@ export const getStorage = () => {
 }
 
 export const authSSO = async (sso: string, sig: string) => {
-  console.log('sso', sso, sig)
   const response = await functions.createExecution('67ba4433001821690693', JSON.stringify({ sso, sig }))
-  const redirectUrl = JSON.parse(response.responseBody).redirectUrl
-  console.log('redirectUrl', redirectUrl)
-
-  window.location.href = redirectUrl
+  window.location.href = JSON.parse(response.responseBody).redirectUrl
 }
