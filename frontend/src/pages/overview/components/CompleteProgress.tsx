@@ -17,11 +17,14 @@ export function CompleteProgress({ title, expansion, packName, rarityFilter = []
   const { ownedCards } = use(CollectionContext)
   const { t } = useTranslation('complete-progress')
 
-  const nrOfCardsOwned = useMemo(
-    () => getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, expansion, packName }),
-    [ownedCards, expansion, packName, rarityFilter, numberFilter],
-  )
-  const totalNrOfCards = useMemo(() => getTotalNrOfCards({ rarityFilter, expansion, packName }), [rarityFilter, expansion, packName, numberFilter])
+  const nrOfCardsOwned = useMemo(() => {
+    if (numberFilter < 1) {
+      return getTotalNrOfCards({ rarityFilter, expansion, packName })
+    }
+    return getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, expansion, packName })
+  }, [ownedCards, expansion, packName, rarityFilter, numberFilter])
+
+  const totalNrOfCards = useMemo(() => getTotalNrOfCards({ rarityFilter, expansion, packName }), [rarityFilter, expansion, packName])
   const progressValue = useMemo(() => (nrOfCardsOwned / totalNrOfCards) * 100, [nrOfCardsOwned, totalNrOfCards])
 
   return (

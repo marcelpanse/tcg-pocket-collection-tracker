@@ -100,15 +100,15 @@ interface NrOfCardsOwnedProps {
 }
 export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expansion, packName }: NrOfCardsOwnedProps) => {
   let filteredOwnedCards = ownedCards
-    .filter((oc) => oc.amount_owned > 0)
+    .filter((oc) => oc.amount_owned > numberFilter - 1)
     .map((cr) => ({ ...cr, rarity: allCards.find((c) => c.card_id === cr.card_id)?.rarity || '' }))
+
+  console.log(filteredOwnedCards.length)
 
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter
     filteredOwnedCards = filteredOwnedCards.filter((oc) => rarityFilter.includes(oc.rarity))
   }
-
-  filteredOwnedCards = filteredOwnedCards.filter((oc) => oc.amount_owned > numberFilter - 1)
 
   if (!expansion) {
     return filteredOwnedCards.length
@@ -193,8 +193,9 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
 
   const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'Every pack')
   // console.log('cards in pack', cardsInPack.length) //79
+  console.log('before:', cardsInPack.length)
   let missingCards = cardsInPack.filter((c) => !ownedCards.find((oc) => oc.card_id === c.card_id && oc.amount_owned > numberFilter - 1))
-  // console.log('missing cards', missingCards)
+  console.log('after:', missingCards.length)
 
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter

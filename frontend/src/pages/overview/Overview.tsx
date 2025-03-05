@@ -46,7 +46,7 @@ function Overview() {
         .filter((p) => p.name !== 'Every pack')
         .map((pack) => ({
           packName: pack.name.replace(' pack', ''),
-          percentage: CardsDB.pullRate({ ownedCards: ownedCards, expansion, pack, rarityFilter, numberFilter }),
+          percentage: numberFilter < 1 ? 0 : CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter }),
           fill: pack.color,
         }))
       const highestProbabilityPackCandidate = pullRates.sort((a, b) => b.percentage - a.percentage)[0]
@@ -71,14 +71,14 @@ function Overview() {
 
         <div className="mb-8 flex items-center gap-2">
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
-          <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[1, 2]} />
+          <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[0, 1, 2, 3, 4, 5]} />
         </div>
 
         <section className="grid grid-cols-8 gap-6">
           <div className="col-span-8 flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-4 sm:p-8 md:col-span-2">
             <h2 className="mb-2 text-center text-lg sm:text-2xl">{t('youHave')}</h2>
             <h1 className="mb-3 text-balance text-center font-semibold text-3xl sm:text-7xl">
-              {CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter })}
+              {numberFilter < 1 ? totalUniqueCards : CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter })}
             </h1>
             <h2 className="text-balance text-center text-lg sm:text-2xl">{t('uniqueCards', { totalUniqueCards: totalUniqueCards })}</h2>
             <h2 className="text-balance text-center text-md sm:text-lg">
