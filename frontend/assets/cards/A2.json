@@ -1,11 +1,11 @@
 [
   {
     "id": "1",
-    "name": "Oddish",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_001_EN.webp",
+    "hp": "60",
+    "name": "Oddish",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -32,26 +32,21 @@
       }
     ],
     "artist": "Asako Ito",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "2",
-    "name": "Gloom",
-    "hp": "80",
-    "card_type": "Pokémon - Stage 1 - Evolves from Oddish",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_002_EN.webp",
+    "hp": "80",
+    "name": "Gloom",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Grass"],
         "name": "Razor Leaf",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -72,26 +67,21 @@
       }
     ],
     "artist": "Shibuzoh.",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "3",
-    "name": "Bellossom",
-    "hp": "130",
-    "card_type": "Pokémon - Stage 2 - Evolves from Gloom",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_003_EN.webp",
+    "hp": "130",
+    "name": "Bellossom",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Grass", "Grass"],
         "name": "Leaf Step",
         "damage": "80",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -112,26 +102,21 @@
       }
     ],
     "artist": "Naoyo Kimura",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "4",
-    "name": "Tangela",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_004_EN.webp",
+    "hp": "70",
+    "name": "Tangela",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
         "name": "Vine Whip",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -152,20 +137,15 @@
       }
     ],
     "artist": "Narumi Sato",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "5",
-    "name": "Tangrowth",
-    "hp": "130",
-    "card_type": "Pokémon - Stage 1 - Evolves from Tangela",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_005_EN.webp",
+    "hp": "130",
+    "name": "Tangrowth",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Grass", "Colorless"],
@@ -196,26 +176,21 @@
       }
     ],
     "artist": "kodama",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "6",
-    "name": "Yanma",
-    "hp": "50",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_006_EN.webp",
+    "hp": "50",
+    "name": "Yanma",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
         "name": "Flap",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -236,20 +211,15 @@
       }
     ],
     "artist": "Eri Yamaki",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "7",
-    "name": "Yanmega ex",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 1 - Evolves from Yanma",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_007_EN.webp",
+    "hp": "140",
+    "name": "Yanmega ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -284,26 +254,21 @@
       }
     ],
     "artist": "PLANETA Tsuji",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "1.666%",
-      "5 card": "6.664%"
-    },
     "crafting_cost": 500
   },
   {
     "id": "8",
-    "name": "Roselia",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_008_EN.webp",
+    "hp": "70",
+    "name": "Roselia",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Grass"],
         "name": "Sting",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -324,20 +289,15 @@
       }
     ],
     "artist": "kirisAki",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "9",
-    "name": "Roserade",
-    "hp": "100",
-    "card_type": "Pokémon - Stage 1 - Evolves from Roselia",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_009_EN.webp",
+    "hp": "100",
+    "name": "Roserade",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -364,26 +324,21 @@
       }
     ],
     "artist": "Masakazu Fukuda",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "10",
-    "name": "Turtwig",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_010_EN.webp",
+    "hp": "80",
+    "name": "Turtwig",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
         "name": "Bite",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -401,29 +356,28 @@
       {
         "version": "Space-Time Smackdown #10",
         "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #35",
+        "rarity": ""
       }
     ],
     "artist": "OOYAMA",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "11",
-    "name": "Grotle",
-    "hp": "100",
-    "card_type": "Pokémon - Stage 1 - Evolves from Turtwig",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_011_EN.webp",
+    "hp": "100",
+    "name": "Grotle",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Colorless"],
         "name": "Razor Leaf",
         "damage": "60",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -444,20 +398,15 @@
       }
     ],
     "artist": "Sumiyoshi Kizuki",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "12",
-    "name": "Torterra",
-    "hp": "160",
-    "card_type": "Pokémon - Stage 2 - Evolves from Grotle",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_012_EN.webp",
+    "hp": "160",
+    "name": "Torterra",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Colorless", "Colorless"],
@@ -484,26 +433,21 @@
       }
     ],
     "artist": "kawayoo",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "13",
-    "name": "Kricketot",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_013_EN.webp",
+    "hp": "60",
+    "name": "Kricketot",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Grass"],
         "name": "Bug Bite",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -524,20 +468,15 @@
       }
     ],
     "artist": "Shigenori Negishi",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "14",
-    "name": "Kricketune",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Kricketot",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_014_EN.webp",
+    "hp": "90",
+    "name": "Kricketune",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -564,26 +503,21 @@
       }
     ],
     "artist": "Naoyo Kimura",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "15",
-    "name": "Burmy",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_015_EN.webp",
+    "hp": "60",
+    "name": "Burmy",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
         "name": "Tackle",
         "damage": "10",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -604,20 +538,15 @@
       }
     ],
     "artist": "Mugi Hamada",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "16",
-    "name": "Wormadam",
-    "hp": "120",
-    "card_type": "Pokémon - Stage 1 - Evolves from Burmy",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_016_EN.webp",
+    "hp": "120",
+    "name": "Wormadam",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless", "Colorless"],
@@ -644,26 +573,21 @@
       }
     ],
     "artist": "Kouki Saitou",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "17",
-    "name": "Combee",
-    "hp": "50",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_017_EN.webp",
+    "hp": "50",
+    "name": "Combee",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "all for",
+        "name": "Call for",
         "damage": "Family",
-        "effect": "Put 1 random  from your deck onto your Bench."
+        "effect": "Put 1 random Basic Pokémon from your deck onto your Bench."
       }
     ],
     "ability": {
@@ -688,26 +612,21 @@
       }
     ],
     "artist": "Yukiko Baba",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "18",
-    "name": "Vespiquen",
-    "hp": "100",
-    "card_type": "Pokémon - Stage 1 - Evolves from Combee",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_018_EN.webp",
+    "hp": "100",
+    "name": "Vespiquen",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Grass", "Grass"],
         "name": "Pierce",
         "damage": "70",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -728,20 +647,15 @@
       }
     ],
     "artist": "chibi",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "19",
-    "name": "Carnivine",
-    "hp": "90",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_019_EN.webp",
+    "hp": "90",
+    "name": "Carnivine",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Colorless"],
@@ -772,20 +686,15 @@
       }
     ],
     "artist": "Anesaki Dynamic",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "20",
-    "name": "Leafeon",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Eevee",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_020_EN.webp",
+    "hp": "90",
+    "name": "Leafeon",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -812,20 +721,15 @@
       }
     ],
     "artist": "Kouki Saitou",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "21",
-    "name": "Mow Rotom",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_021_EN.webp",
+    "hp": "80",
+    "name": "Mow Rotom",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -852,26 +756,21 @@
       }
     ],
     "artist": "kawayoo",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "22",
-    "name": "Shaymin",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_022_EN.webp",
+    "hp": "60",
+    "name": "Shaymin",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
         "name": "Flop",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -896,25 +795,20 @@
       }
     ],
     "artist": "Narumi Sato",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "23",
-    "name": "Magmar",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_023_EN.webp",
+    "hp": "80",
+    "name": "Magmar",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Fire"],
         "name": "Unknown",
-        "damage": "0",
+        "damage": "Stoke",
         "effect": "Take a [R] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
@@ -936,20 +830,15 @@
       }
     ],
     "artist": "Hiroki Asanuma",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "24",
-    "name": "Magmortar",
-    "hp": "130",
-    "card_type": "Pokémon - Stage 1 - Evolves from Magmar",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_024_EN.webp",
+    "hp": "130",
+    "name": "Magmortar",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Fire", "Fire", "Fire", "Fire"],
@@ -976,26 +865,21 @@
       }
     ],
     "artist": "KEIICHIRO ITO",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "25",
-    "name": "Slugma",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_025_EN.webp",
+    "hp": "70",
+    "name": "Slugma",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Fire"],
         "name": "Flare",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1016,20 +900,15 @@
       }
     ],
     "artist": "Naoyo Kimura",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "26",
-    "name": "Magcargo",
-    "hp": "120",
-    "card_type": "Pokémon - Stage 1 - Evolves from Slugma",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_026_EN.webp",
+    "hp": "120",
+    "name": "Magcargo",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Fire", "Colorless"],
@@ -1056,26 +935,21 @@
       }
     ],
     "artist": "Oswaldo KATO",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "27",
-    "name": "Chimchar",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_027_EN.webp",
+    "hp": "60",
+    "name": "Chimchar",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Fire"],
         "name": "Scratch",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1093,29 +967,28 @@
       {
         "version": "Space-Time Smackdown #27",
         "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #40",
+        "rarity": ""
       }
     ],
     "artist": "Kagemaru Himeno",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "28",
-    "name": "Monferno",
-    "hp": "80",
-    "card_type": "Pokémon - Stage 1 - Evolves from Chimchar",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_028_EN.webp",
+    "hp": "80",
+    "name": "Monferno",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Fire"],
         "name": "Fiery Punch",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1136,20 +1009,15 @@
       }
     ],
     "artist": "Masakazu Fukuda",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "29",
-    "name": "Infernape ex",
-    "hp": "170",
-    "card_type": "Pokémon - Stage 2 - Evolves from Monferno",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_029_EN.webp",
+    "hp": "170",
+    "name": "Infernape ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Fire", "Fire"],
@@ -1184,20 +1052,15 @@
       }
     ],
     "artist": "PLANETA CG Works",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "1.666%",
-      "5 card": "6.664%"
-    },
     "crafting_cost": 500
   },
   {
     "id": "30",
-    "name": "Heat Rotom",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_030_EN.webp",
+    "hp": "80",
+    "name": "Heat Rotom",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Fire", "Colorless"],
@@ -1224,26 +1087,21 @@
       }
     ],
     "artist": "Kedamahadaitai Yawarakai",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "31",
-    "name": "Swinub",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_031_EN.webp",
+    "hp": "60",
+    "name": "Swinub",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
         "name": "Headbutt",
         "damage": "40",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1264,26 +1122,21 @@
       }
     ],
     "artist": "Eri Yamaki",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "32",
-    "name": "Piloswine",
-    "hp": "110",
-    "card_type": "Pokémon - Stage 1 - Evolves from Swinub",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_032_EN.webp",
+    "hp": "110",
+    "name": "Piloswine",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
         "name": "Hammer In",
         "damage": "60",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1304,26 +1157,21 @@
       }
     ],
     "artist": "Suwama Chiaki",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "33",
-    "name": "Mamoswine",
-    "hp": "160",
-    "card_type": "Pokémon - Stage 2 - Evolves from Piloswine",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_033_EN.webp",
+    "hp": "160",
+    "name": "Mamoswine",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless", "Colorless"],
         "name": "Frosty Flattening",
         "damage": "120",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1348,26 +1196,21 @@
       }
     ],
     "artist": "match",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "34",
-    "name": "Regice",
-    "hp": "110",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_034_EN.webp",
+    "hp": "110",
+    "name": "Regice",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water", "Water"],
         "name": "Frost Smash",
         "damage": "50",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1388,25 +1231,20 @@
       }
     ],
     "artist": "Tomokazu Komiya",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "35",
-    "name": "Piplup",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_035_EN.webp",
+    "hp": "60",
+    "name": "Piplup",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
         "name": "Unknown",
-        "damage": "0",
+        "damage": "Nap",
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
@@ -1425,29 +1263,28 @@
       {
         "version": "Space-Time Smackdown #35",
         "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #34",
+        "rarity": ""
       }
     ],
     "artist": "Hajime Kusajima",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "36",
-    "name": "Prinplup",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Piplup",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_036_EN.webp",
+    "hp": "90",
+    "name": "Prinplup",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
         "name": "Surf",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1468,20 +1305,15 @@
       }
     ],
     "artist": "Mizue",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "37",
-    "name": "Empoleon",
-    "hp": "150",
-    "card_type": "Pokémon - Stage 2 - Evolves from Prinplup",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_037_EN.webp",
+    "hp": "150",
+    "name": "Empoleon",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
@@ -1508,26 +1340,21 @@
       }
     ],
     "artist": "Satoshi Shirai",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "38",
-    "name": "Buizel",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_038_EN.webp",
+    "hp": "60",
+    "name": "Buizel",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water"],
-        "name": "ater Gun",
+        "name": "Water Gun",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1548,20 +1375,15 @@
       }
     ],
     "artist": "OKUBO",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "39",
-    "name": "Floatzel",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Buizel",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_039_EN.webp",
+    "hp": "90",
+    "name": "Floatzel",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1588,26 +1410,21 @@
       }
     ],
     "artist": "Kanako Eo",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "40",
-    "name": "Shellos",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_040_EN.webp",
+    "hp": "70",
+    "name": "Shellos",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
         "name": "Mud-Slap",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1628,20 +1445,15 @@
       }
     ],
     "artist": "Teeziro",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "41",
-    "name": "Gastrodon",
-    "hp": "120",
-    "card_type": "Pokémon - Stage 1 - Evolves from Shellos",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_041_EN.webp",
+    "hp": "120",
+    "name": "Gastrodon",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Water", "Colorless", "Colorless"],
@@ -1672,20 +1484,15 @@
       }
     ],
     "artist": "Aya Kusube",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "42",
-    "name": "Finneon",
-    "hp": "50",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_042_EN.webp",
+    "hp": "50",
+    "name": "Finneon",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1712,26 +1519,21 @@
       }
     ],
     "artist": "Shigenori Negishi",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "43",
-    "name": "Lumineon",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Finneon",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_043_EN.webp",
+    "hp": "90",
+    "name": "Lumineon",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Water"],
-        "name": "aterfall",
+        "name": "Waterfall",
         "damage": "50",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1752,20 +1554,15 @@
       }
     ],
     "artist": "rika",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "44",
-    "name": "Snover",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_044_EN.webp",
+    "hp": "70",
+    "name": "Snover",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1792,26 +1589,21 @@
       }
     ],
     "artist": "match",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "45",
-    "name": "Abomasnow",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 1 - Evolves from Snover",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_045_EN.webp",
+    "hp": "140",
+    "name": "Abomasnow",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Water", "Water", "Water", "Colorless"],
         "name": "Frost Breath",
         "damage": "120",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1832,20 +1624,15 @@
       }
     ],
     "artist": "Shin Nagasawa",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "46",
-    "name": "Glaceon",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Eevee",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_046_EN.webp",
+    "hp": "90",
+    "name": "Glaceon",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Water", "Water"],
@@ -1872,26 +1659,21 @@
       }
     ],
     "artist": "Naoyo Kimura",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "47",
-    "name": "Wash Rotom",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_047_EN.webp",
+    "hp": "80",
+    "name": "Wash Rotom",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water"],
-        "name": "ave Splash",
+        "name": "Wave Splash",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -1912,20 +1694,15 @@
       }
     ],
     "artist": "Saboteri",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "48",
-    "name": "Frost Rotom",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_048_EN.webp",
+    "hp": "80",
+    "name": "Frost Rotom",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water", "Water"],
@@ -1952,26 +1729,21 @@
       }
     ],
     "artist": "MAHOU",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "49",
-    "name": "Palkia ex",
-    "hp": "150",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_049_EN.webp",
+    "hp": "150",
+    "name": "Palkia ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water"],
         "name": "Slash",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       },
       {
         "cost": ["Water", "Water", "Water", "Colorless"],
@@ -2010,20 +1782,15 @@
       }
     ],
     "artist": "PLANETA CG Works",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "1.666%",
-      "5 card": "6.664%"
-    },
     "crafting_cost": 500
   },
   {
     "id": "50",
-    "name": "Manaphy",
-    "hp": "50",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_050_EN.webp",
+    "hp": "50",
+    "name": "Manaphy",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -2051,29 +1818,28 @@
       {
         "version": "Space-Time Smackdown #162",
         "rarity": "☆"
+      },
+      {
+        "version": "Promo-A #48",
+        "rarity": ""
       }
     ],
     "artist": "MINAMINAMI Take",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "51",
-    "name": "Magnemite",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_051_EN.webp",
+    "hp": "60",
+    "name": "Magnemite",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
         "name": "Ram",
         "damage": "10",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -2094,26 +1860,21 @@
       }
     ],
     "artist": "MAHOU",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "52",
-    "name": "Magneton",
-    "hp": "80",
-    "card_type": "Pokémon - Stage 1 - Evolves from Magnemite",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_052_EN.webp",
+    "hp": "80",
+    "name": "Magneton",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
         "name": "Lightning Ball",
         "damage": "50",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -2134,20 +1895,15 @@
       }
     ],
     "artist": "Yumi",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "53",
-    "name": "Magnezone",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 2 - Evolves from Magneton",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_053_EN.webp",
+    "hp": "140",
+    "name": "Magnezone",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Lightning", "Colorless", "Colorless"],
@@ -2174,20 +1930,15 @@
       }
     ],
     "artist": "Yoshinobu Saito",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "54",
-    "name": "Voltorb",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_054_EN.webp",
+    "hp": "60",
+    "name": "Voltorb",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -2214,26 +1965,21 @@
       }
     ],
     "artist": "Midori Harada",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "55",
-    "name": "Electrode",
-    "hp": "80",
-    "card_type": "Pokémon - Stage 1 - Evolves from Voltorb",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_055_EN.webp",
+    "hp": "80",
+    "name": "Electrode",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Lightning"],
         "name": "Rolling Attack",
         "damage": "50",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -2254,25 +2000,20 @@
       }
     ],
     "artist": "Anesaki Dynamic",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "56",
-    "name": "Electabuzz",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_056_EN.webp",
+    "hp": "80",
+    "name": "Electabuzz",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Lightning"],
         "name": "Unknown",
-        "damage": "0",
+        "damage": "Charge",
         "effect": "Take a [L] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
@@ -2294,20 +2035,15 @@
       }
     ],
     "artist": "Shin Nagasawa",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "57",
-    "name": "Electivire",
-    "hp": "120",
-    "card_type": "Pokémon - Stage 1 - Evolves from Electabuzz",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_057_EN.webp",
+    "hp": "120",
+    "name": "Electivire",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -2331,28 +2067,27 @@
       {
         "version": "Space-Time Smackdown #57",
         "rarity": "◊◊◊"
+      },
+      {
+        "version": "Promo-A #36",
+        "rarity": ""
       }
     ],
     "artist": "kawayoo",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "58",
-    "name": "Shinx",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_058_EN.webp",
+    "hp": "60",
+    "name": "Shinx",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Lightning"],
         "name": "Unknown",
-        "damage": "0",
+        "damage": "Hide",
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
@@ -2378,26 +2113,21 @@
       }
     ],
     "artist": "Shibuzoh.",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "59",
-    "name": "Luxio",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Shinx",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_059_EN.webp",
+    "hp": "90",
+    "name": "Luxio",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Lightning", "Colorless"],
         "name": "Electric Claws",
         "damage": "40",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -2418,20 +2148,15 @@
       }
     ],
     "artist": "Naoki Saito",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "60",
-    "name": "Luxray",
-    "hp": "130",
-    "card_type": "Pokémon - Stage 2 - Evolves from Luxio",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_060_EN.webp",
+    "hp": "130",
+    "name": "Luxray",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning", "Lightning"],
@@ -2458,20 +2183,15 @@
       }
     ],
     "artist": "Hitoshi Ariga",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "61",
-    "name": "Pachirisu ex",
-    "hp": "120",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_061_EN.webp",
+    "hp": "120",
+    "name": "Pachirisu ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -2506,20 +2226,15 @@
       }
     ],
     "artist": "PLANETA Tsuji",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "1.666%",
-      "5 card": "6.664%"
-    },
     "crafting_cost": 500
   },
   {
     "id": "62",
-    "name": "Rotom",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_062_EN.webp",
+    "hp": "70",
+    "name": "Rotom",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2550,26 +2265,21 @@
       }
     ],
     "artist": "Krgc",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "63",
-    "name": "Togepi",
-    "hp": "50",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_063_EN.webp",
+    "hp": "50",
+    "name": "Togepi",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic"],
-        "name": "ound",
+        "name": "Pound",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -2587,29 +2297,28 @@
       {
         "version": "Space-Time Smackdown #63",
         "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #41",
+        "rarity": ""
       }
     ],
     "artist": "Narumi Sato",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "64",
-    "name": "Togetic",
-    "hp": "80",
-    "card_type": "Pokémon - Stage 1 - Evolves from Togepi",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_064_EN.webp",
+    "hp": "80",
+    "name": "Togetic",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Psychic"],
         "name": "Fairy Wind",
         "damage": "40",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -2630,20 +2339,15 @@
       }
     ],
     "artist": "Kanako Eo",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "65",
-    "name": "Togekiss",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 2 - Evolves from Togetic",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_065_EN.webp",
+    "hp": "140",
+    "name": "Togekiss",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -2670,26 +2374,21 @@
       }
     ],
     "artist": "kawayoo",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "66",
-    "name": "Misdreavus",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_066_EN.webp",
+    "hp": "60",
+    "name": "Misdreavus",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic"],
         "name": "Mumble",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -2710,20 +2409,15 @@
       }
     ],
     "artist": "Sumiyoshi Kizuki",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "67",
-    "name": "Mismagius ex",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 1 - Evolves from Misdreavus",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_067_EN.webp",
+    "hp": "140",
+    "name": "Mismagius ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -2758,25 +2452,20 @@
       }
     ],
     "artist": "PLANETA Igarashi",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "1.666%",
-      "5 card": "6.664%"
-    },
     "crafting_cost": 500
   },
   {
     "id": "68",
-    "name": "Ralts",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_068_EN.webp",
+    "hp": "60",
+    "name": "Ralts",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
         "name": "Unknown",
-        "damage": "0",
+        "damage": "Teleport",
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
@@ -2798,26 +2487,21 @@
       }
     ],
     "artist": "Miki Tanaka",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "69",
-    "name": "Kirlia",
-    "hp": "80",
-    "card_type": "Pokémon - Stage 1 - Evolves from Ralts",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_069_EN.webp",
+    "hp": "80",
+    "name": "Kirlia",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless"],
         "name": "Slap",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -2838,26 +2522,21 @@
       }
     ],
     "artist": "Yukiko Baba",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "70",
-    "name": "Duskull",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_070_EN.webp",
+    "hp": "60",
+    "name": "Duskull",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic"],
         "name": "Will-O-Wisp",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -2878,26 +2557,21 @@
       }
     ],
     "artist": "ryoma uratsuka",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "71",
-    "name": "Dusclops",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Duskull",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_071_EN.webp",
+    "hp": "90",
+    "name": "Dusclops",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Psychic", "Colorless", "Colorless"],
         "name": "Psypunch",
         "damage": "50",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -2918,26 +2592,21 @@
       }
     ],
     "artist": "Sumiyoshi Kizuki",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "72",
-    "name": "Dusknoir",
-    "hp": "130",
-    "card_type": "Pokémon - Stage 2 - Evolves from Dusclops",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_072_EN.webp",
+    "hp": "130",
+    "name": "Dusknoir",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Psychic", "Colorless", "Colorless"],
         "name": "Devour Soul",
         "damage": "70",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -2958,20 +2627,15 @@
       }
     ],
     "artist": "Suwama Chiaki",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "73",
-    "name": "Drifloon",
-    "hp": "50",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_073_EN.webp",
+    "hp": "50",
+    "name": "Drifloon",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -3002,26 +2666,21 @@
       }
     ],
     "artist": "Atsuko Nishida",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "74",
-    "name": "Drifblim",
-    "hp": "100",
-    "card_type": "Pokémon - Stage 1 - Evolves from Drifloon",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_074_EN.webp",
+    "hp": "100",
+    "name": "Drifblim",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
         "name": "Balloon Strike",
         "damage": "60",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3042,20 +2701,15 @@
       }
     ],
     "artist": "Miki Tanaka",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "75",
-    "name": "Uxie",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_075_EN.webp",
+    "hp": "70",
+    "name": "Uxie",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -3082,20 +2736,15 @@
       }
     ],
     "artist": "AKIRA EGAWA",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "76",
-    "name": "Mesprit",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_076_EN.webp",
+    "hp": "70",
+    "name": "Mesprit",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic", "Psychic"],
@@ -3126,24 +2775,19 @@
       }
     ],
     "artist": "AKIRA EGAWA",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "77",
-    "name": "Azelf",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_077_EN.webp",
+    "hp": "70",
+    "name": "Azelf",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic"],
-        "name": "sychic",
+        "name": "Psychic",
         "damage": "Arrow",
         "effect": "This attack does 20 damage to 1 of your opponent's Pokémon."
       }
@@ -3166,26 +2810,21 @@
       }
     ],
     "artist": "AKIRA EGAWA",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "78",
-    "name": "Giratina",
-    "hp": "120",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_078_EN.webp",
+    "hp": "120",
+    "name": "Giratina",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic", "Colorless"],
         "name": "Spooky Shot",
         "damage": "70",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3210,20 +2849,15 @@
       }
     ],
     "artist": "AKIRA EGAWA",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "79",
-    "name": "Cresselia",
-    "hp": "110",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_079_EN.webp",
+    "hp": "110",
+    "name": "Cresselia",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -3254,26 +2888,21 @@
       }
     ],
     "artist": "Masako Tomii",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "80",
-    "name": "Rhyhorn",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_080_EN.webp",
+    "hp": "80",
+    "name": "Rhyhorn",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless"],
         "name": "Horn Attack",
         "damage": "40",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3294,26 +2923,21 @@
       }
     ],
     "artist": "otumami",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "81",
-    "name": "Rhydon",
-    "hp": "110",
-    "card_type": "Pokémon - Stage 1 - Evolves from Rhyhorn",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_081_EN.webp",
+    "hp": "110",
+    "name": "Rhydon",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Colorless"],
         "name": "Wrack Down",
         "damage": "70",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3334,20 +2958,15 @@
       }
     ],
     "artist": "Oswaldo KATO",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "82",
-    "name": "Rhyperior",
-    "hp": "160",
-    "card_type": "Pokémon - Stage 2 - Evolves from Rhydon",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_082_EN.webp",
+    "hp": "160",
+    "name": "Rhyperior",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
@@ -3378,26 +2997,21 @@
       }
     ],
     "artist": "Naoki Saito",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "83",
-    "name": "Gligar",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_083_EN.webp",
+    "hp": "60",
+    "name": "Gligar",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Fighting"],
         "name": "Pierce",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3418,20 +3032,15 @@
       }
     ],
     "artist": "Sanosuke Sakuma",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "84",
-    "name": "Gliscor",
-    "hp": "100",
-    "card_type": "Pokémon - Stage 1 - Evolves from Gligar",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_084_EN.webp",
+    "hp": "100",
+    "name": "Gliscor",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -3458,26 +3067,21 @@
       }
     ],
     "artist": "Mizue",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "85",
-    "name": "Hitmontop",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_085_EN.webp",
+    "hp": "80",
+    "name": "Hitmontop",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting"],
         "name": "Spinning Attack",
         "damage": "50",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3498,26 +3102,21 @@
       }
     ],
     "artist": "sowsow",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "86",
-    "name": "Nosepass",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_086_EN.webp",
+    "hp": "70",
+    "name": "Nosepass",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
         "name": "Ram",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3538,26 +3137,21 @@
       }
     ],
     "artist": "Midori Harada",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "87",
-    "name": "Regirock",
-    "hp": "120",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_087_EN.webp",
+    "hp": "120",
+    "name": "Regirock",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
         "name": "Boulder Crush",
         "damage": "100",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3578,26 +3172,21 @@
       }
     ],
     "artist": "Tomokazu Komiya",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "88",
-    "name": "Cranidos",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Skull Fossil",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_088_EN.webp",
+    "hp": "90",
+    "name": "Cranidos",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Fighting"],
         "name": "Headbutt",
         "damage": "50",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3618,20 +3207,15 @@
       }
     ],
     "artist": "Kouki Saitou",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "89",
-    "name": "Rampardos",
-    "hp": "150",
-    "card_type": "Pokémon - Stage 2 - Evolves from Cranidos",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_089_EN.webp",
+    "hp": "150",
+    "name": "Rampardos",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -3658,26 +3242,21 @@
       }
     ],
     "artist": "Yoshinobu Saito",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "90",
-    "name": "Wormadam",
-    "hp": "120",
-    "card_type": "Pokémon - Stage 1 - Evolves from Burmy",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_090_EN.webp",
+    "hp": "120",
+    "name": "Wormadam",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless", "Colorless"],
         "name": "Land Crush",
         "damage": "70",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3698,26 +3277,21 @@
       }
     ],
     "artist": "Hajime Kusajima",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "91",
-    "name": "Riolu",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_091_EN.webp",
+    "hp": "60",
+    "name": "Riolu",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Fighting"],
         "name": "Jab",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3738,26 +3312,21 @@
       }
     ],
     "artist": "AKIRA EGAWA",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "92",
-    "name": "Lucario",
-    "hp": "100",
-    "card_type": "Pokémon - Stage 1 - Evolves from Riolu",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_092_EN.webp",
+    "hp": "100",
+    "name": "Lucario",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting"],
         "name": "Submarine Blow",
         "damage": "40",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3782,26 +3351,21 @@
       }
     ],
     "artist": "nagimiso",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "93",
-    "name": "Hippopotas",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_093_EN.webp",
+    "hp": "80",
+    "name": "Hippopotas",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Colorless"],
         "name": "Rolling Tackle",
         "damage": "60",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3826,26 +3390,21 @@
       }
     ],
     "artist": "Akira Komayama",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "94",
-    "name": "Hippowdon",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 1 - Evolves from Hippopotas",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_094_EN.webp",
+    "hp": "140",
+    "name": "Hippowdon",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
         "name": "Earthen Press",
         "damage": "120",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3866,20 +3425,15 @@
       }
     ],
     "artist": "KEIICHIRO ITO",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "95",
-    "name": "Gallade ex",
-    "hp": "170",
-    "card_type": "Pokémon - Stage 2 - Evolves from Kirlia",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_095_EN.webp",
+    "hp": "170",
+    "name": "Gallade ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting"],
@@ -3914,26 +3468,21 @@
       }
     ],
     "artist": "PLANETA CG Works",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "1.666%",
-      "5 card": "6.664%"
-    },
     "crafting_cost": 500
   },
   {
     "id": "96",
-    "name": "Murkrow",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_096_EN.webp",
+    "hp": "60",
+    "name": "Murkrow",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Darkness"],
         "name": "Peck",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -3954,20 +3503,15 @@
       }
     ],
     "artist": "Yukiko Baba",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "97",
-    "name": "Honchkrow",
-    "hp": "100",
-    "card_type": "Pokémon - Stage 1 - Evolves from Murkrow",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_097_EN.webp",
+    "hp": "100",
+    "name": "Honchkrow",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness"],
@@ -3994,24 +3538,19 @@
       }
     ],
     "artist": "Hideki Ishikawa",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "98",
-    "name": "Sneasel",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_098_EN.webp",
+    "hp": "60",
+    "name": "Sneasel",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Darkness"],
-        "name": "ouble Scratch",
+        "name": "Double Scratch",
         "damage": "20x",
         "effect": "Flip 2 coins. This attack does 20 damage for each heads."
       }
@@ -4034,20 +3573,15 @@
       }
     ],
     "artist": "Hasuno",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "99",
-    "name": "Weavile ex",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 1 - Evolves from Sneasel",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_099_EN.webp",
+    "hp": "140",
+    "name": "Weavile ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -4082,26 +3616,21 @@
       }
     ],
     "artist": "PLANETA CG Works",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "1.666%",
-      "5 card": "6.664%"
-    },
     "crafting_cost": 500
   },
   {
     "id": "100",
-    "name": "Poochyena",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_100_EN.webp",
+    "hp": "60",
+    "name": "Poochyena",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Darkness"],
         "name": "Bite",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -4122,26 +3651,21 @@
       }
     ],
     "artist": "Midori Harada",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "101",
-    "name": "Mightyena",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Poochyena",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_101_EN.webp",
+    "hp": "90",
+    "name": "Mightyena",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Darkness", "Colorless"],
         "name": "Darkness Fang",
         "damage": "60",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -4162,26 +3686,21 @@
       }
     ],
     "artist": "Kouki Saitou",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "102",
-    "name": "Stunky",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_102_EN.webp",
+    "hp": "70",
+    "name": "Stunky",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Darkness"],
         "name": "Scratch",
         "damage": "10",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -4202,20 +3721,15 @@
       }
     ],
     "artist": "Kyoko Umemoto",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "103",
-    "name": "Skuntank",
-    "hp": "100",
-    "card_type": "Pokémon - Stage 1 - Evolves from Stunky",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_103_EN.webp",
+    "hp": "100",
+    "name": "Skuntank",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Darkness", "Colorless"],
@@ -4242,20 +3756,15 @@
       }
     ],
     "artist": "kirisAki",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "104",
-    "name": "Spiritomb",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_104_EN.webp",
+    "hp": "80",
+    "name": "Spiritomb",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -4286,26 +3795,21 @@
       }
     ],
     "artist": "HYOGONOSUKE",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "105",
-    "name": "Skorupi",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_105_EN.webp",
+    "hp": "70",
+    "name": "Skorupi",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Darkness", "Colorless"],
         "name": "Pierce",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -4326,20 +3830,15 @@
       }
     ],
     "artist": "Naoki Saito",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "106",
-    "name": "Drapion",
-    "hp": "120",
-    "card_type": "Pokémon - Stage 1 - Evolves from Skorupi",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_106_EN.webp",
+    "hp": "120",
+    "name": "Drapion",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness", "Darkness"],
@@ -4366,20 +3865,15 @@
       }
     ],
     "artist": "Hitoshi Ariga",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "107",
-    "name": "Croagunk",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_107_EN.webp",
+    "hp": "60",
+    "name": "Croagunk",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness"],
@@ -4410,20 +3904,15 @@
       }
     ],
     "artist": "Masakazu Fukuda",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "108",
-    "name": "Toxicroak",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Croagunk",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_108_EN.webp",
+    "hp": "90",
+    "name": "Toxicroak",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness"],
@@ -4450,20 +3939,15 @@
       }
     ],
     "artist": "Hajime Kusajima",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "109",
-    "name": "Darkrai",
-    "hp": "110",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_109_EN.webp",
+    "hp": "110",
+    "name": "Darkrai",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness", "Colorless"],
@@ -4490,26 +3974,21 @@
       }
     ],
     "artist": "Masako Tomii",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "110",
-    "name": "Darkrai ex",
-    "hp": "140",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_110_EN.webp",
+    "hp": "140",
+    "name": "Darkrai ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness", "Colorless"],
         "name": "Dark Prism",
         "damage": "80",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -4535,27 +4014,26 @@
       {
         "version": "Space-Time Smackdown #202",
         "rarity": "☆☆"
+      },
+      {
+        "version": "Promo-A #42",
+        "rarity": ""
       }
     ],
     "artist": "PLANETA Yamashita",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "1.666%",
-      "5 card": "6.664%"
-    },
     "crafting_cost": 500
   },
   {
     "id": "111",
-    "name": "Skarmory",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_111_EN.webp",
+    "hp": "80",
+    "name": "Skarmory",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Metal"],
-        "name": "etal Arms",
+        "name": "Metal Arms",
         "damage": "20+",
         "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 30 more damage."
       }
@@ -4575,29 +4053,28 @@
       {
         "version": "Space-Time Smackdown #111",
         "rarity": "◊◊"
+      },
+      {
+        "version": "Promo-A #39",
+        "rarity": ""
       }
     ],
     "artist": "Oswaldo KATO",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "112",
-    "name": "Registeel",
-    "hp": "110",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_112_EN.webp",
+    "hp": "110",
+    "name": "Registeel",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Metal"],
         "name": "Metal Claw",
         "damage": "90",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -4618,26 +4095,21 @@
       }
     ],
     "artist": "Tomokazu Komiya",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "113",
-    "name": "Shieldon",
-    "hp": "100",
-    "card_type": "Pokémon - Stage 1 - Evolves from Armor Fossil",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_113_EN.webp",
+    "hp": "100",
+    "name": "Shieldon",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Metal", "Colorless"],
         "name": "Headbutt",
         "damage": "50",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -4658,26 +4130,21 @@
       }
     ],
     "artist": "Kouki Saitou",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "114",
-    "name": "Bastiodon",
-    "hp": "160",
-    "card_type": "Pokémon - Stage 2 - Evolves from Shieldon",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_114_EN.webp",
+    "hp": "160",
+    "name": "Bastiodon",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Colorless"],
         "name": "Headbang",
         "damage": "80",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -4698,20 +4165,15 @@
       }
     ],
     "artist": "Kagemaru Himeno",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "115",
-    "name": "Wormadam",
-    "hp": "110",
-    "card_type": "Pokémon - Stage 1 - Evolves from Burmy",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_115_EN.webp",
+    "hp": "110",
+    "name": "Wormadam",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Metal", "Metal"],
@@ -4738,26 +4200,21 @@
       }
     ],
     "artist": "Kyoko Umemoto",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "116",
-    "name": "Bronzor",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_116_EN.webp",
+    "hp": "60",
+    "name": "Bronzor",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Metal", "Colorless"],
         "name": "Tackle",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -4778,20 +4235,15 @@
       }
     ],
     "artist": "Miki Tanaka",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "117",
-    "name": "Bronzong",
-    "hp": "120",
-    "card_type": "Pokémon - Stage 1 - Evolves from Bronzor",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_117_EN.webp",
+    "hp": "120",
+    "name": "Bronzong",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Colorless"],
@@ -4818,20 +4270,15 @@
       }
     ],
     "artist": "Yuka Morii",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "118",
-    "name": "Probopass",
-    "hp": "130",
-    "card_type": "Pokémon - Stage 1 - Evolves from Nosepass",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_118_EN.webp",
+    "hp": "130",
+    "name": "Probopass",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Metal", "Colorless"],
@@ -4858,20 +4305,15 @@
       }
     ],
     "artist": "MAHOU",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "119",
-    "name": "Dialga ex",
-    "hp": "150",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_119_EN.webp",
+    "hp": "150",
+    "name": "Dialga ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal"],
@@ -4883,7 +4325,7 @@
         "cost": ["Metal", "Metal", "Colorless", "Colorless"],
         "name": "Heavy Impact",
         "damage": "100",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -4916,20 +4358,15 @@
       }
     ],
     "artist": "PLANETA CG Works",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "1.666%",
-      "5 card": "6.664%"
-    },
     "crafting_cost": 500
   },
   {
     "id": "120",
-    "name": "Heatran",
-    "hp": "120",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_120_EN.webp",
+    "hp": "120",
+    "name": "Heatran",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Metal"],
@@ -4960,26 +4397,21 @@
       }
     ],
     "artist": "Oswaldo KATO",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "121",
-    "name": "Gible",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_121_EN.webp",
+    "hp": "60",
+    "name": "Gible",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
         "name": "Gnaw",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -5000,26 +4432,21 @@
       }
     ],
     "artist": "Naoyo Kimura",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "122",
-    "name": "Gabite",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Gible",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_122_EN.webp",
+    "hp": "90",
+    "name": "Gabite",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Water", "Fighting"],
         "name": "Slash",
         "damage": "60",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -5040,26 +4467,21 @@
       }
     ],
     "artist": "Shigenori Negishi",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "123",
-    "name": "Garchomp",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 2 - Evolves from Gabite",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_123_EN.webp",
+    "hp": "140",
+    "name": "Garchomp",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Water", "Fighting"],
         "name": "Dragon Claw",
         "damage": "100",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -5084,26 +4506,21 @@
       }
     ],
     "artist": "Atsushi Furusawa",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "124",
-    "name": "Lickitung",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_124_EN.webp",
+    "hp": "80",
+    "name": "Lickitung",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
         "name": "Tongue Slap",
         "damage": "50",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -5124,20 +4541,15 @@
       }
     ],
     "artist": "Yukiko Baba",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "125",
-    "name": "Lickilicky ex",
-    "hp": "160",
-    "card_type": "Pokémon - Stage 1 - Evolves from Lickitung",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_125_EN.webp",
+    "hp": "160",
+    "name": "Lickilicky ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -5172,20 +4584,15 @@
       }
     ],
     "artist": "PLANETA Igarashi",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "1.666%",
-      "5 card": "6.664%"
-    },
     "crafting_cost": 500
   },
   {
     "id": "126",
-    "name": "Eevee",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_126_EN.webp",
+    "hp": "60",
+    "name": "Eevee",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -5212,26 +4619,21 @@
       }
     ],
     "artist": "Shibuzoh.",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "127",
-    "name": "Porygon",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_127_EN.webp",
+    "hp": "60",
+    "name": "Porygon",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
         "name": "Beam",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -5252,26 +4654,21 @@
       }
     ],
     "artist": "Shin Nagasawa",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "128",
-    "name": "Porygon2",
-    "hp": "80",
-    "card_type": "Pokémon - Stage 1 - Evolves from Porygon",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_128_EN.webp",
+    "hp": "80",
+    "name": "Porygon2",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless"],
         "name": "Sharpen",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -5292,20 +4689,15 @@
       }
     ],
     "artist": "sowsow",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "129",
-    "name": "Porygon-Z",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 2 - Evolves from Porygon2",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_129_EN.webp",
+    "hp": "140",
+    "name": "Porygon-Z",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -5332,26 +4724,21 @@
       }
     ],
     "artist": "Shin Nagasawa",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "130",
-    "name": "Aipom",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_130_EN.webp",
+    "hp": "60",
+    "name": "Aipom",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
         "name": "Tail Jab",
         "damage": "20",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -5372,20 +4759,15 @@
       }
     ],
     "artist": "Miki Tanaka",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "131",
-    "name": "Ambipom",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Aipom",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_131_EN.webp",
+    "hp": "90",
+    "name": "Ambipom",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -5412,20 +4794,15 @@
       }
     ],
     "artist": "Naoyo Kimura",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "132",
-    "name": "Starly",
-    "hp": "50",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_132_EN.webp",
+    "hp": "50",
+    "name": "Starly",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -5452,26 +4829,21 @@
       }
     ],
     "artist": "Atsuko Nishida",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "133",
-    "name": "Staravia",
-    "hp": "80",
-    "card_type": "Pokémon - Stage 1 - Evolves from Starly",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_133_EN.webp",
+    "hp": "80",
+    "name": "Staravia",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
         "name": "Wing Attack",
         "damage": "40",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -5492,20 +4864,15 @@
       }
     ],
     "artist": "REND",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "134",
-    "name": "Staraptor",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 2 - Evolves from Staravia",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_134_EN.webp",
+    "hp": "140",
+    "name": "Staraptor",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -5536,20 +4903,15 @@
       }
     ],
     "artist": "Sekio",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "135",
-    "name": "Bidoof",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_135_EN.webp",
+    "hp": "60",
+    "name": "Bidoof",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -5580,26 +4942,21 @@
       }
     ],
     "artist": "Kagemaru Himeno",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "136",
-    "name": "Bibarel",
-    "hp": "110",
-    "card_type": "Pokémon - Stage 1 - Evolves from Bidoof",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_136_EN.webp",
+    "hp": "110",
+    "name": "Bibarel",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
         "name": "Rolling Tackle",
         "damage": "60",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -5620,26 +4977,21 @@
       }
     ],
     "artist": "kirisAki",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "137",
-    "name": "Buneary",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_137_EN.webp",
+    "hp": "60",
+    "name": "Buneary",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
         "name": "Splash",
         "damage": "10",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -5660,20 +5012,15 @@
       }
     ],
     "artist": "Narumi Sato",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "138",
-    "name": "Lopunny",
-    "hp": "90",
-    "card_type": "Pokémon - Stage 1 - Evolves from Buneary",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_138_EN.webp",
+    "hp": "90",
+    "name": "Lopunny",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -5700,20 +5047,15 @@
       }
     ],
     "artist": "Sanosuke Sakuma",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "139",
-    "name": "Glameow",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_139_EN.webp",
+    "hp": "60",
+    "name": "Glameow",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -5744,20 +5086,15 @@
       }
     ],
     "artist": "sowsow",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "140",
-    "name": "Purugly",
-    "hp": "110",
-    "card_type": "Pokémon - Stage 1 - Evolves from Glameow",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_140_EN.webp",
+    "hp": "110",
+    "name": "Purugly",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -5784,20 +5121,15 @@
       }
     ],
     "artist": "Kagemaru Himeno",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "141",
-    "name": "Chatot",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_141_EN.webp",
+    "hp": "70",
+    "name": "Chatot",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -5824,20 +5156,15 @@
       }
     ],
     "artist": "HYOGONOSUKE",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "142",
-    "name": "Fan Rotom",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_142_EN.webp",
+    "hp": "80",
+    "name": "Fan Rotom",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -5864,20 +5191,15 @@
       }
     ],
     "artist": "Masakazu Fukuda",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "143",
-    "name": "Regigigas",
-    "hp": "140",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_143_EN.webp",
+    "hp": "140",
+    "name": "Regigigas",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -5908,22 +5230,17 @@
       }
     ],
     "artist": "Tomokazu Komiya",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "5.000%",
-      "5 card": "20.000%"
-    },
     "crafting_cost": 150
   },
   {
     "id": "144",
-    "name": "Skull Fossil",
-    "hp": "",
-    "card_type": "Trainer - Item",
-    "evolution_type": "Item",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_144_EN.webp",
+    "hp": "Unknown",
+    "name": "Skull Fossil",
+    "card_type": "Trainer",
+    "evolution_type": "Item",
     "attacks": [],
-    "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.",
+    "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊",
@@ -5938,22 +5255,17 @@
       }
     ],
     "artist": "Toyste Beach",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "145",
-    "name": "Armor Fossil",
-    "hp": "",
-    "card_type": "Trainer - Item",
-    "evolution_type": "Item",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_145_EN.webp",
+    "hp": "Unknown",
+    "name": "Armor Fossil",
+    "card_type": "Trainer",
+    "evolution_type": "Item",
     "attacks": [],
-    "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.",
+    "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊",
@@ -5968,22 +5280,17 @@
       }
     ],
     "artist": "Toyste Beach",
-    "probability": {
-      "1-3 card": "100.000%",
-      "4 card": "0.000%",
-      "5 card": "0.000%"
-    },
     "crafting_cost": 35
   },
   {
     "id": "146",
-    "name": "Pokémon Communication",
-    "hp": "",
-    "card_type": "Trainer - Item",
-    "evolution_type": "Item",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_146_EN.webp",
+    "hp": "Unknown",
+    "name": "Pokémon Communication",
+    "card_type": "Trainer",
+    "evolution_type": "Item",
     "attacks": [],
-    "ability": "Choose a Pokémon in your hand and switch it with a random Pokémon in your deck.",
+    "ability": "Choose a Pokémon in your hand and switch it with a random Pokémon in your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ayaka Yoshida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
@@ -5998,22 +5305,17 @@
       }
     ],
     "artist": "Ayaka Yoshida",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "147",
-    "name": "Giant Cape",
-    "hp": "",
-    "card_type": "Trainer - Tool",
-    "evolution_type": "Tool",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_147_EN.webp",
+    "hp": "Unknown",
+    "name": "Giant Cape",
+    "card_type": "Trainer",
+    "evolution_type": "Tool",
     "attacks": [],
-    "ability": "The Pokémon this card is attached to gets +20 HP.",
+    "ability": "The Pokémon this card is attached to gets +20 HP.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
@@ -6028,22 +5330,17 @@
       }
     ],
     "artist": "Ryo Ueda",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "148",
-    "name": "Rocky Helmet",
-    "hp": "",
-    "card_type": "Trainer - Tool",
-    "evolution_type": "Tool",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_148_EN.webp",
+    "hp": "Unknown",
+    "name": "Rocky Helmet",
+    "card_type": "Trainer",
+    "evolution_type": "Tool",
     "attacks": [],
-    "ability": "If the Pokémon this card is attached to is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the Attacking Pokémon.",
+    "ability": "If the Pokémon this card is attached to is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the Attacking Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ayaka Yoshida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
@@ -6058,22 +5355,17 @@
       }
     ],
     "artist": "Ayaka Yoshida",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "149",
-    "name": "Lum Berry",
-    "hp": "",
-    "card_type": "Trainer - Tool",
-    "evolution_type": "Tool",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_149_EN.webp",
+    "hp": "Unknown",
+    "name": "Lum Berry",
+    "card_type": "Trainer",
+    "evolution_type": "Tool",
     "attacks": [],
-    "ability": "At the end of each turn, if the Pokémon this card is attached to is affected by any Special Conditions, it recovers from all of them, and discard this card.",
+    "ability": "At the end of each turn, if the Pokémon this card is attached to is affected by any Special Conditions, it recovers from all of them, and discard this card.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yoshinobu Saito",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
@@ -6088,22 +5380,17 @@
       }
     ],
     "artist": "Yoshinobu Saito",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "150",
-    "name": "Cyrus",
-    "hp": "",
-    "card_type": "Trainer - Supporter",
-    "evolution_type": "Supporter",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_150_EN.webp",
+    "hp": "Unknown",
+    "name": "Cyrus",
+    "card_type": "Trainer",
+    "evolution_type": "Supporter",
     "attacks": [],
-    "ability": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot.",
+    "ability": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
@@ -6122,22 +5409,17 @@
       }
     ],
     "artist": "akagi",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "151",
-    "name": "Team Galactic Grunt",
-    "hp": "",
-    "card_type": "Trainer - Supporter",
-    "evolution_type": "Supporter",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_151_EN.webp",
+    "hp": "Unknown",
+    "name": "Team Galactic Grunt",
+    "card_type": "Trainer",
+    "evolution_type": "Supporter",
     "attacks": [],
-    "ability": "Put 1 random Glameow, Stunky, or Croagunk from your deck into your hand.",
+    "ability": "Put 1 random Glameow, Stunky, or Croagunk from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
@@ -6156,22 +5438,17 @@
       }
     ],
     "artist": "GOSSAN",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "152",
-    "name": "Cynthia",
-    "hp": "",
-    "card_type": "Trainer - Supporter",
-    "evolution_type": "Supporter",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_152_EN.webp",
+    "hp": "Unknown",
+    "name": "Cynthia",
+    "card_type": "Trainer",
+    "evolution_type": "Supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Garchomp or Togekiss do +50 damage to your opponent's Active Pokémon.",
+    "ability": "During this turn, attacks used by your Garchomp or Togekiss do +50 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
@@ -6190,22 +5467,17 @@
       }
     ],
     "artist": "Ryuta Fuse",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "153",
-    "name": "Volkner",
-    "hp": "",
-    "card_type": "Trainer - Supporter",
-    "evolution_type": "Supporter",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_153_EN.webp",
+    "hp": "Unknown",
+    "name": "Volkner",
+    "card_type": "Trainer",
+    "evolution_type": "Supporter",
     "attacks": [],
-    "ability": "Choose 1 of your Electivire or Luxray. Attach 2 [L] Energy from your discard pile to that Pokémon.",
+    "ability": "Choose 1 of your Electivire or Luxray. Attach 2 [L] Energy from your discard pile to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
@@ -6224,22 +5496,17 @@
       }
     ],
     "artist": "GIDORA",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "154",
-    "name": "Dawn",
-    "hp": "",
-    "card_type": "Trainer - Supporter",
-    "evolution_type": "Supporter",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_154_EN.webp",
+    "hp": "Unknown",
+    "name": "Dawn",
+    "card_type": "Trainer",
+    "evolution_type": "Supporter",
     "attacks": [],
-    "ability": "Move an Energy from 1 of your Benched Pokémon to your Active Pokémon.",
+    "ability": "Move an Energy from 1 of your Benched Pokémon to your Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
@@ -6258,22 +5525,17 @@
       }
     ],
     "artist": "saino misaki",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "155",
-    "name": "Mars",
-    "hp": "",
-    "card_type": "Trainer - Supporter",
-    "evolution_type": "Supporter",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_155_EN.webp",
+    "hp": "Unknown",
+    "name": "Mars",
+    "card_type": "Trainer",
+    "evolution_type": "Supporter",
     "attacks": [],
-    "ability": "Your opponent shuffles their hand into their deck and draws a card for each of their remaining points needed to win.",
+    "ability": "Your opponent shuffles their hand into their deck and draws a card for each of their remaining points needed to win.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
@@ -6292,20 +5554,15 @@
       }
     ],
     "artist": "Yuu Nishida",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "90.000%",
-      "5 card": "60.000%"
-    },
     "crafting_cost": 70
   },
   {
     "id": "156",
-    "name": "Tangrowth",
-    "hp": "130",
-    "card_type": "Pokémon - Stage 1 - Evolves from Tangela",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_156_EN.webp",
+    "hp": "130",
+    "name": "Tangrowth",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Grass", "Colorless"],
@@ -6336,26 +5593,21 @@
       }
     ],
     "artist": "Saboteri",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "157",
-    "name": "Combee",
-    "hp": "50",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_157_EN.webp",
+    "hp": "50",
+    "name": "Combee",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "all for",
+        "name": "Call for",
         "damage": "Family",
-        "effect": "Put 1 random  from your deck onto your Bench."
+        "effect": "Put 1 random Basic Pokémon from your deck onto your Bench."
       }
     ],
     "ability": {
@@ -6380,20 +5632,15 @@
       }
     ],
     "artist": "Shibuzoh.",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "158",
-    "name": "Carnivine",
-    "hp": "90",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_158_EN.webp",
+    "hp": "90",
+    "name": "Carnivine",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Colorless"],
@@ -6424,26 +5671,21 @@
       }
     ],
     "artist": "Yoriyuki Ikegami",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "159",
-    "name": "Shaymin",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_159_EN.webp",
+    "hp": "60",
+    "name": "Shaymin",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
         "name": "Flop",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -6468,26 +5710,21 @@
       }
     ],
     "artist": "REND",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "160",
-    "name": "Mamoswine",
-    "hp": "160",
-    "card_type": "Pokémon - Stage 2 - Evolves from Piloswine",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_160_EN.webp",
+    "hp": "160",
+    "name": "Mamoswine",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless", "Colorless"],
         "name": "Frosty Flattening",
         "damage": "120",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -6512,20 +5749,15 @@
       }
     ],
     "artist": "OKACHEKE",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "161",
-    "name": "Gastrodon",
-    "hp": "120",
-    "card_type": "Pokémon - Stage 1 - Evolves from Shellos",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_161_EN.webp",
+    "hp": "120",
+    "name": "Gastrodon",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Water", "Colorless", "Colorless"],
@@ -6556,20 +5788,15 @@
       }
     ],
     "artist": "takashi shiraishi",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "162",
-    "name": "Manaphy",
-    "hp": "50",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_162_EN.webp",
+    "hp": "50",
+    "name": "Manaphy",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -6597,28 +5824,27 @@
       {
         "version": "Space-Time Smackdown #162",
         "rarity": "☆"
+      },
+      {
+        "version": "Promo-A #48",
+        "rarity": ""
       }
     ],
     "artist": "miki kudo",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "163",
-    "name": "Shinx",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_163_EN.webp",
+    "hp": "60",
+    "name": "Shinx",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Lightning"],
         "name": "Unknown",
-        "damage": "0",
+        "damage": "Hide",
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
@@ -6644,20 +5870,15 @@
       }
     ],
     "artist": "Yuu Nishida",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "164",
-    "name": "Rotom",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_164_EN.webp",
+    "hp": "70",
+    "name": "Rotom",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -6688,20 +5909,15 @@
       }
     ],
     "artist": "Shimaris Yukichi",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "165",
-    "name": "Drifloon",
-    "hp": "50",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_165_EN.webp",
+    "hp": "50",
+    "name": "Drifloon",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -6732,20 +5948,15 @@
       }
     ],
     "artist": "Orca",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "166",
-    "name": "Mesprit",
-    "hp": "70",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_166_EN.webp",
+    "hp": "70",
+    "name": "Mesprit",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic", "Psychic"],
@@ -6776,26 +5987,21 @@
       }
     ],
     "artist": "Orca",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "167",
-    "name": "Giratina",
-    "hp": "120",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_167_EN.webp",
+    "hp": "120",
+    "name": "Giratina",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic", "Colorless"],
         "name": "Spooky Shot",
         "damage": "70",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -6820,20 +6026,15 @@
       }
     ],
     "artist": "Rond",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "168",
-    "name": "Cresselia",
-    "hp": "110",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_168_EN.webp",
+    "hp": "110",
+    "name": "Cresselia",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -6864,20 +6065,15 @@
       }
     ],
     "artist": "rika",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "169",
-    "name": "Rhyperior",
-    "hp": "160",
-    "card_type": "Pokémon - Stage 2 - Evolves from Rhydon",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_169_EN.webp",
+    "hp": "160",
+    "name": "Rhyperior",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
@@ -6908,26 +6104,21 @@
       }
     ],
     "artist": "Taiga Kayama",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "170",
-    "name": "Lucario",
-    "hp": "100",
-    "card_type": "Pokémon - Stage 1 - Evolves from Riolu",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_170_EN.webp",
+    "hp": "100",
+    "name": "Lucario",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting"],
         "name": "Submarine Blow",
         "damage": "40",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -6952,26 +6143,21 @@
       }
     ],
     "artist": "Akira Komayama",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "171",
-    "name": "Hippopotas",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_171_EN.webp",
+    "hp": "80",
+    "name": "Hippopotas",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Colorless"],
         "name": "Rolling Tackle",
         "damage": "60",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -6996,20 +6182,15 @@
       }
     ],
     "artist": "Teeziro",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "172",
-    "name": "Spiritomb",
-    "hp": "80",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_172_EN.webp",
+    "hp": "80",
+    "name": "Spiritomb",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -7040,20 +6221,15 @@
       }
     ],
     "artist": "Shinji Kanda",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "173",
-    "name": "Croagunk",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_173_EN.webp",
+    "hp": "60",
+    "name": "Croagunk",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness"],
@@ -7084,20 +6260,15 @@
       }
     ],
     "artist": "GOSSAN",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "174",
-    "name": "Heatran",
-    "hp": "120",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_174_EN.webp",
+    "hp": "120",
+    "name": "Heatran",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Metal"],
@@ -7128,26 +6299,21 @@
       }
     ],
     "artist": "OKUBO",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "175",
-    "name": "Garchomp",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 2 - Evolves from Gabite",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_175_EN.webp",
+    "hp": "140",
+    "name": "Garchomp",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Water", "Fighting"],
         "name": "Dragon Claw",
         "damage": "100",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -7172,20 +6338,15 @@
       }
     ],
     "artist": "MINAMINAMI Take",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "176",
-    "name": "Staraptor",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 2 - Evolves from Staravia",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_176_EN.webp",
+    "hp": "140",
+    "name": "Staraptor",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -7216,20 +6377,15 @@
       }
     ],
     "artist": "Ryota Murayama",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "177",
-    "name": "Bidoof",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_177_EN.webp",
+    "hp": "60",
+    "name": "Bidoof",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -7260,20 +6416,15 @@
       }
     ],
     "artist": "Shinya Komatsu",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "178",
-    "name": "Glameow",
-    "hp": "60",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_178_EN.webp",
+    "hp": "60",
+    "name": "Glameow",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -7304,20 +6455,15 @@
       }
     ],
     "artist": "matazo",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "179",
-    "name": "Regigigas",
-    "hp": "140",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_179_EN.webp",
+    "hp": "140",
+    "name": "Regigigas",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -7348,20 +6494,15 @@
       }
     ],
     "artist": "Tetsu Kayama",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "2.572%",
-      "5 card": "10.288%"
-    },
     "crafting_cost": 400
   },
   {
     "id": "180",
-    "name": "Yanmega ex",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 1 - Evolves from Yanma",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_180_EN.webp",
+    "hp": "140",
+    "name": "Yanmega ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -7396,20 +6537,15 @@
       }
     ],
     "artist": "PLANETA Tsuji",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "181",
-    "name": "Infernape ex",
-    "hp": "170",
-    "card_type": "Pokémon - Stage 2 - Evolves from Monferno",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_181_EN.webp",
+    "hp": "170",
+    "name": "Infernape ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Fire", "Fire"],
@@ -7444,26 +6580,21 @@
       }
     ],
     "artist": "PLANETA CG Works",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "182",
-    "name": "Palkia ex",
-    "hp": "150",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_182_EN.webp",
+    "hp": "150",
+    "name": "Palkia ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water"],
         "name": "Slash",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       },
       {
         "cost": ["Water", "Water", "Water", "Colorless"],
@@ -7502,20 +6633,15 @@
       }
     ],
     "artist": "PLANETA CG Works",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "183",
-    "name": "Pachirisu ex",
-    "hp": "120",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_183_EN.webp",
+    "hp": "120",
+    "name": "Pachirisu ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -7550,20 +6676,15 @@
       }
     ],
     "artist": "PLANETA Tsuji",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "184",
-    "name": "Mismagius ex",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 1 - Evolves from Misdreavus",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_184_EN.webp",
+    "hp": "140",
+    "name": "Mismagius ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -7598,20 +6719,15 @@
       }
     ],
     "artist": "PLANETA Tsuji",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "185",
-    "name": "Gallade ex",
-    "hp": "170",
-    "card_type": "Pokémon - Stage 2 - Evolves from Kirlia",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_185_EN.webp",
+    "hp": "170",
+    "name": "Gallade ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting"],
@@ -7646,20 +6762,15 @@
       }
     ],
     "artist": "PLANETA CG Works",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "186",
-    "name": "Weavile ex",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 1 - Evolves from Sneasel",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_186_EN.webp",
+    "hp": "140",
+    "name": "Weavile ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -7694,26 +6805,21 @@
       }
     ],
     "artist": "PLANETA CG Works",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "187",
-    "name": "Darkrai ex",
-    "hp": "140",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_187_EN.webp",
+    "hp": "140",
+    "name": "Darkrai ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness", "Colorless"],
         "name": "Dark Prism",
         "damage": "80",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -7739,23 +6845,22 @@
       {
         "version": "Space-Time Smackdown #202",
         "rarity": "☆☆"
+      },
+      {
+        "version": "Promo-A #42",
+        "rarity": ""
       }
     ],
     "artist": "PLANETA Yamashita",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "188",
-    "name": "Dialga ex",
-    "hp": "150",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_188_EN.webp",
+    "hp": "150",
+    "name": "Dialga ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal"],
@@ -7767,7 +6872,7 @@
         "cost": ["Metal", "Metal", "Colorless", "Colorless"],
         "name": "Heavy Impact",
         "damage": "100",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -7800,20 +6905,15 @@
       }
     ],
     "artist": "PLANETA CG Works",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "189",
-    "name": "Lickilicky ex",
-    "hp": "160",
-    "card_type": "Pokémon - Stage 1 - Evolves from Lickitung",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_189_EN.webp",
+    "hp": "160",
+    "name": "Lickilicky ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -7848,22 +6948,17 @@
       }
     ],
     "artist": "PLANETA Tsuji",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "190",
-    "name": "Cyrus",
-    "hp": "",
-    "card_type": "Trainer - Supporter",
-    "evolution_type": "Supporter",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_190_EN.webp",
+    "hp": "Unknown",
+    "name": "Cyrus",
+    "card_type": "Trainer",
+    "evolution_type": "Supporter",
     "attacks": [],
-    "ability": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot.",
+    "ability": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
@@ -7882,22 +6977,17 @@
       }
     ],
     "artist": "akagi",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "191",
-    "name": "Team Galactic Grunt",
-    "hp": "",
-    "card_type": "Trainer - Supporter",
-    "evolution_type": "Supporter",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_191_EN.webp",
+    "hp": "Unknown",
+    "name": "Team Galactic Grunt",
+    "card_type": "Trainer",
+    "evolution_type": "Supporter",
     "attacks": [],
-    "ability": "Put 1 random Glameow, Stunky, or Croagunk from your deck into your hand.",
+    "ability": "Put 1 random Glameow, Stunky, or Croagunk from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
@@ -7916,22 +7006,17 @@
       }
     ],
     "artist": "GOSSAN",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "192",
-    "name": "Cynthia",
-    "hp": "",
-    "card_type": "Trainer - Supporter",
-    "evolution_type": "Supporter",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_192_EN.webp",
+    "hp": "Unknown",
+    "name": "Cynthia",
+    "card_type": "Trainer",
+    "evolution_type": "Supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Garchomp or Togekiss do +50 damage to your opponent's Active Pokémon.",
+    "ability": "During this turn, attacks used by your Garchomp or Togekiss do +50 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
@@ -7950,22 +7035,17 @@
       }
     ],
     "artist": "Ryuta Fuse",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "193",
-    "name": "Volkner",
-    "hp": "",
-    "card_type": "Trainer - Supporter",
-    "evolution_type": "Supporter",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_193_EN.webp",
+    "hp": "Unknown",
+    "name": "Volkner",
+    "card_type": "Trainer",
+    "evolution_type": "Supporter",
     "attacks": [],
-    "ability": "Choose 1 of your Electivire or Luxray. Attach 2 [L] Energy from your discard pile to that Pokémon.",
+    "ability": "Choose 1 of your Electivire or Luxray. Attach 2 [L] Energy from your discard pile to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
@@ -7984,22 +7064,17 @@
       }
     ],
     "artist": "GIDORA",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "194",
-    "name": "Dawn",
-    "hp": "",
-    "card_type": "Trainer - Supporter",
-    "evolution_type": "Supporter",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_194_EN.webp",
+    "hp": "Unknown",
+    "name": "Dawn",
+    "card_type": "Trainer",
+    "evolution_type": "Supporter",
     "attacks": [],
-    "ability": "Move an Energy from 1 of your Benched Pokémon to your Active Pokémon.",
+    "ability": "Move an Energy from 1 of your Benched Pokémon to your Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
@@ -8018,22 +7093,17 @@
       }
     ],
     "artist": "saino misaki",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "195",
-    "name": "Mars",
-    "hp": "",
-    "card_type": "Trainer - Supporter",
-    "evolution_type": "Supporter",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_195_EN.webp",
+    "hp": "Unknown",
+    "name": "Mars",
+    "card_type": "Trainer",
+    "evolution_type": "Supporter",
     "attacks": [],
-    "ability": "Your opponent shuffles their hand into their deck and draws a card for each of their remaining points needed to win.",
+    "ability": "Your opponent shuffles their hand into their deck and draws a card for each of their remaining points needed to win.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
@@ -8052,20 +7122,15 @@
       }
     ],
     "artist": "Yuu Nishida",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "196",
-    "name": "Yanmega ex",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 1 - Evolves from Yanma",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_196_EN.webp",
+    "hp": "140",
+    "name": "Yanmega ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -8100,20 +7165,15 @@
       }
     ],
     "artist": "Mina Nakai",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "197",
-    "name": "Infernape ex",
-    "hp": "170",
-    "card_type": "Pokémon - Stage 2 - Evolves from Monferno",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_197_EN.webp",
+    "hp": "170",
+    "name": "Infernape ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Fire", "Fire"],
@@ -8148,20 +7208,15 @@
       }
     ],
     "artist": "nagimiso",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "198",
-    "name": "Pachirisu ex",
-    "hp": "120",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_198_EN.webp",
+    "hp": "120",
+    "name": "Pachirisu ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -8196,20 +7251,15 @@
       }
     ],
     "artist": "Nurikabe",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "199",
-    "name": "Mismagius ex",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 1 - Evolves from Misdreavus",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_199_EN.webp",
+    "hp": "140",
+    "name": "Mismagius ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -8244,20 +7294,15 @@
       }
     ],
     "artist": "Kuroimori",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "200",
-    "name": "Gallade ex",
-    "hp": "170",
-    "card_type": "Pokémon - Stage 2 - Evolves from Kirlia",
-    "evolution_type": "Stage 2",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_200_EN.webp",
+    "hp": "170",
+    "name": "Gallade ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 2",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting"],
@@ -8292,20 +7337,15 @@
       }
     ],
     "artist": "Takumi Wada",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "201",
-    "name": "Weavile ex",
-    "hp": "140",
-    "card_type": "Pokémon - Stage 1 - Evolves from Sneasel",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_201_EN.webp",
+    "hp": "140",
+    "name": "Weavile ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -8340,26 +7380,21 @@
       }
     ],
     "artist": "hncl",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "202",
-    "name": "Darkrai ex",
-    "hp": "140",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_202_EN.webp",
+    "hp": "140",
+    "name": "Darkrai ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness", "Colorless"],
         "name": "Dark Prism",
         "damage": "80",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -8385,23 +7420,22 @@
       {
         "version": "Space-Time Smackdown #202",
         "rarity": "☆☆"
+      },
+      {
+        "version": "Promo-A #42",
+        "rarity": ""
       }
     ],
     "artist": "Oswaldo KATO",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "203",
-    "name": "Lickilicky ex",
-    "hp": "160",
-    "card_type": "Pokémon - Stage 1 - Evolves from Lickitung",
-    "evolution_type": "Stage 1",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_203_EN.webp",
+    "hp": "160",
+    "name": "Lickilicky ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Stage 1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -8436,26 +7470,21 @@
       }
     ],
     "artist": "Jerky",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.500%",
-      "5 card": "2.000%"
-    },
     "crafting_cost": 1250
   },
   {
     "id": "204",
-    "name": "Palkia ex",
-    "hp": "150",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_204_EN.webp",
+    "hp": "150",
+    "name": "Palkia ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water"],
         "name": "Slash",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       },
       {
         "cost": ["Water", "Water", "Water", "Colorless"],
@@ -8494,20 +7523,15 @@
       }
     ],
     "artist": "N-DESIGN Inc.",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.222%",
-      "5 card": "0.888%"
-    },
     "crafting_cost": 1500
   },
   {
     "id": "205",
-    "name": "Dialga ex",
-    "hp": "150",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_205_EN.webp",
+    "hp": "150",
+    "name": "Dialga ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal"],
@@ -8519,7 +7543,7 @@
         "cost": ["Metal", "Metal", "Colorless", "Colorless"],
         "name": "Heavy Impact",
         "damage": "100",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -8552,26 +7576,21 @@
       }
     ],
     "artist": "N-DESIGN Inc.",
-    "probability": {
-      "1-3 card": "0.000%",
-      "4 card": "0.222%",
-      "5 card": "0.888%"
-    },
     "crafting_cost": 1500
   },
   {
     "id": "206",
-    "name": "Palkia ex",
-    "hp": "150",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_206_EN.webp",
+    "hp": "150",
+    "name": "Palkia ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Water"],
         "name": "Slash",
         "damage": "30",
-        "effect": ""
+        "effect": "No effect"
       },
       {
         "cost": ["Water", "Water", "Water", "Colorless"],
@@ -8610,16 +7629,15 @@
       }
     ],
     "artist": "PLANETA CG Works",
-    "probability": {},
     "crafting_cost": "Unknown"
   },
   {
     "id": "207",
-    "name": "Dialga ex",
-    "hp": "150",
-    "card_type": "Pokémon - Basic",
-    "evolution_type": "Basic",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_207_EN.webp",
+    "hp": "150",
+    "name": "Dialga ex",
+    "card_type": "Pokémon",
+    "evolution_type": "Basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal"],
@@ -8631,7 +7649,7 @@
         "cost": ["Metal", "Metal", "Colorless", "Colorless"],
         "name": "Heavy Impact",
         "damage": "100",
-        "effect": ""
+        "effect": "No effect"
       }
     ],
     "ability": {
@@ -8664,7 +7682,6 @@
       }
     ],
     "artist": "PLANETA CG Works",
-    "probability": {},
     "crafting_cost": "Unknown"
   }
 ]

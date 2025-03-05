@@ -10,7 +10,7 @@
     "prepare": "lefthook install",
     "dev": "pnpm --filter frontend run dev",
     "build": "pnpm --filter frontend run build",
-    "download-images": "node scripts/download-images.js"
+    "scraper": "node scripts/scraper.js && node scripts/download-images.js"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -29,6 +29,7 @@
     }
   },
   "dependencies": {
+    "cheerio": "^1.0.0",
     "fs-extra": "^11.3.0",
     "i18next": "^24.2.2",
     "i18next-browser-languagedetector": "^8.0.4",
