@@ -103,8 +103,6 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
     .filter((oc) => oc.amount_owned > numberFilter - 1)
     .map((cr) => ({ ...cr, rarity: allCards.find((c) => c.card_id === cr.card_id)?.rarity || '' }))
 
-  console.log(filteredOwnedCards.length)
-
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter
     filteredOwnedCards = filteredOwnedCards.filter((oc) => rarityFilter.includes(oc.rarity))
