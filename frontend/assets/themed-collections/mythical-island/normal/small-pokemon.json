@@ -1,30 +1,30 @@
 {
-    "name": "Small Pokemon",
-    "requiredCards": [
-        {
-            "_card": ["Morelull", "Pidgey"],
-            "cardId": ["A1a-7", "A1a-57"],
-            "amount": 1
-        },
-        {
-            "_card": ["Chewtle"],
-            "cardId": ["A1a-22"],
-            "amount": 1
-        },
-        {
-            "_card": ["Joltik", "Dedenne"],
-            "cardId": ["A1a-28", "A1a-30"],
-            "amount": 1
-        },
-        {
-            "_card": ["Flabebe", "Floette"],
-            "cardId": ["A1a-36", "A1a-37"],
-            "amount": 1
-        },
-        {
-            "_card": ["Eevee", "Chatot"],
-            "cardId": ["A1a-61", "A1a-62"],
-            "amount": 1
-        }
-    ]
+  "name": "Small Pokemon",
+  "requiredCards": [
+    {
+      "_card": ["Morelull", "Pidgey"],
+      "cardId": ["A1a-7", "A1a-57"],
+      "amount": 1
+    },
+    {
+      "_card": ["Chewtle"],
+      "cardId": ["A1a-22"],
+      "amount": 1
+    },
+    {
+      "_card": ["Joltik", "Dedenne"],
+      "cardId": ["A1a-28", "A1a-30"],
+      "amount": 1
+    },
+    {
+      "_card": ["Flabebe", "Floette"],
+      "cardId": ["A1a-36", "A1a-37"],
+      "amount": 1
+    },
+    {
+      "_card": ["Eevee", "Chatot"],
+      "cardId": ["A1a-61", "A1a-62"],
+      "amount": 1
+    }
+  ]
 }

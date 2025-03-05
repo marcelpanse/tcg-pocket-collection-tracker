@@ -1,20 +1,20 @@
 {
-    "name": "Flower Travelers",
-    "requiredCards": [
-        {
-            "_card": ["Flabebe"],
-            "cardId": ["A1a-36"],
-            "amount": 1
-        },
-        {
-            "_card": ["Floette"],
-            "cardId": ["A1a-37"],
-            "amount": 1
-        },
-        {
-            "_card": ["Florges"],
-            "cardId": ["A1a-38"],
-            "amount": 1
-        }
-    ]
+  "name": "Flower Travelers",
+  "requiredCards": [
+    {
+      "_card": ["Flabebe"],
+      "cardId": ["A1a-36"],
+      "amount": 1
+    },
+    {
+      "_card": ["Floette"],
+      "cardId": ["A1a-37"],
+      "amount": 1
+    },
+    {
+      "_card": ["Florges"],
+      "cardId": ["A1a-38"],
+      "amount": 1
+    }
+  ]
 }

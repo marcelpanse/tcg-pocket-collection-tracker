@@ -10,13 +10,17 @@ interface CompleteProgressProps {
   expansion: Expansion
   packName?: string
   rarityFilter?: string[]
+  numberFilter?: number
 }
 
-export function CompleteProgress({ title, expansion, packName, rarityFilter = [] }: CompleteProgressProps) {
+export function CompleteProgress({ title, expansion, packName, rarityFilter = [], numberFilter = 1 }: CompleteProgressProps) {
   const { ownedCards } = use(CollectionContext)
   const { t } = useTranslation('complete-progress')
 
-  const nrOfCardsOwned = useMemo(() => getNrOfCardsOwned({ ownedCards, rarityFilter, expansion, packName }), [ownedCards, expansion, packName, rarityFilter])
+  const nrOfCardsOwned = useMemo(() => {
+    return getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, expansion, packName })
+  }, [ownedCards, expansion, packName, rarityFilter, numberFilter])
+
   const totalNrOfCards = useMemo(() => getTotalNrOfCards({ rarityFilter, expansion, packName }), [rarityFilter, expansion, packName])
   const progressValue = useMemo(() => (nrOfCardsOwned / totalNrOfCards) * 100, [nrOfCardsOwned, totalNrOfCards])
 

@@ -1,30 +1,30 @@
 {
-    "name": "Catching Bugs",
-    "requiredCards": [
-        {
-            "_card": ["Larvesta"],
-            "cardId": ["A1a-13"],
-            "amount": 1
-        },
-        {
-            "_card": ["Joltik"],
-            "cardId": ["A1a-28"],
-            "amount": 1
-        },
-        {
-            "_card": ["Venipede"],
-            "cardId": ["A1a-53"],
-            "amount": 1
-        },
-        {
-            "_card": ["whirlipede"],
-            "cardId": ["A1a-54"],
-            "amount": 1
-        },
-        {
-            "_card": ["Scolipede", "Galvantula", "Volcarona"],
-            "cardId": ["A1a-55", "A1a-29", "A1a-14"],
-            "amount": 1
-        }
-    ]
+  "name": "Catching Bugs",
+  "requiredCards": [
+    {
+      "_card": ["Larvesta"],
+      "cardId": ["A1a-13"],
+      "amount": 1
+    },
+    {
+      "_card": ["Joltik"],
+      "cardId": ["A1a-28"],
+      "amount": 1
+    },
+    {
+      "_card": ["Venipede"],
+      "cardId": ["A1a-53"],
+      "amount": 1
+    },
+    {
+      "_card": ["whirlipede"],
+      "cardId": ["A1a-54"],
+      "amount": 1
+    },
+    {
+      "_card": ["Scolipede", "Galvantula", "Volcarona"],
+      "cardId": ["A1a-55", "A1a-29", "A1a-14"],
+      "amount": 1
+    }
+  ]
 }

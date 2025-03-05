@@ -94,12 +94,13 @@ export const sellableForTokensDictionary: { [id: string]: number } = {
 interface NrOfCardsOwnedProps {
   ownedCards: CollectionRow[]
   rarityFilter: string[]
+  numberFilter: number
   expansion?: Expansion
   packName?: string
 }
-export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, expansion, packName }: NrOfCardsOwnedProps) => {
+export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expansion, packName }: NrOfCardsOwnedProps) => {
   let filteredOwnedCards = ownedCards
-    .filter((oc) => oc.amount_owned > 0)
+    .filter((oc) => oc.amount_owned > numberFilter - 1)
     .map((cr) => ({ ...cr, rarity: allCards.find((c) => c.card_id === cr.card_id)?.rarity || '' }))
 
   if (rarityFilter.length > 0) {
@@ -178,8 +179,9 @@ interface PullRateProps {
   expansion: Expansion
   pack: Pack
   rarityFilter?: string[]
+  numberFilter?: number
 }
-export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [] }: PullRateProps) => {
+export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numberFilter = 1 }: PullRateProps) => {
   if (ownedCards.length === 0) {
     return 1
   }
@@ -189,8 +191,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [] }: Pul
 
   const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'Every pack')
   // console.log('cards in pack', cardsInPack.length) //79
-  let missingCards = cardsInPack.filter((c) => !ownedCards.find((oc) => oc.card_id === c.card_id && oc.amount_owned > 0))
-  // console.log('missing cards', missingCards)
+  let missingCards = cardsInPack.filter((c) => !ownedCards.find((oc) => oc.card_id === c.card_id && oc.amount_owned > numberFilter - 1))
 
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter
