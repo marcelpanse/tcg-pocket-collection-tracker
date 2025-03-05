@@ -25,6 +25,7 @@ function Overview() {
     const savedRarityFilter = localStorage.getItem('rarityFilter')
     return savedRarityFilter ? JSON.parse(savedRarityFilter) : []
   })
+  const [numberFilter, setNumberFilter] = useState(1)
 
   const totalUniqueCards = CardsDB.getTotalNrOfCards({ rarityFilter })
 
@@ -40,7 +41,7 @@ function Overview() {
         .filter((p) => p.name !== 'Every pack')
         .map((pack) => ({
           packName: pack.name.replace(' pack', ''),
-          percentage: CardsDB.pullRate({ ownedCards: ownedCards, expansion, pack, rarityFilter }),
+          percentage: CardsDB.pullRate({ ownedCards: ownedCards, expansion, pack, rarityFilter, numberFilter }),
           fill: pack.color,
         }))
       const highestProbabilityPackCandidate = pullRates.sort((a, b) => b.percentage - a.percentage)[0]
@@ -49,9 +50,8 @@ function Overview() {
       }
     }
 
-    console.log('newHighestProbabilityPack', newHighestProbabilityPack)
     setHighestProbabilityPack(newHighestProbabilityPack)
-  }, [ownedCards, rarityFilter])
+  }, [ownedCards, rarityFilter, numberFilter])
 
   return (
     <main className="fade-in-up">
@@ -66,13 +66,30 @@ function Overview() {
 
         <div className="mb-8 flex items-center gap-2">
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
+          <div className="px-3 py-1 border-2 border-slate-600 rounded-md">
+            <label className="flex items-center gap-x-2 text-white/50 text-sm">
+              Number of cards:
+              <select value={numberFilter} onChange={(e) => setNumberFilter(Number.parseInt(e.target.value))} className="p-1">
+                {[1, 2].map((number) => (
+                  <option key={number} value={number} className="text-black">
+                    {number}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
         </div>
 
         <section className="grid grid-cols-8 gap-6">
           <div className="col-span-8 flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-4 sm:p-8 md:col-span-2">
             <h2 className="mb-2 text-center text-lg sm:text-2xl">{t('youHave')}</h2>
-            <h1 className="mb-3 text-balance text-center font-semibold text-3xl sm:text-7xl">{CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter })}</h1>
+            <h1 className="mb-3 text-balance text-center font-semibold text-3xl sm:text-7xl">
+              {CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter })}
+            </h1>
             <h2 className="text-balance text-center text-lg sm:text-2xl">{t('uniqueCards', { totalUniqueCards: totalUniqueCards })}</h2>
+            <h2 className="text-balance text-center text-md sm:text-lg">
+              {numberFilter === 1 ? t('numberOfCopies-single') : t('numberOfCopies-plural', { numberFilter: numberFilter })}
+            </h2>
           </div>
           <GradientCard
             title={highestProbabilityPack?.packName || ''}
@@ -90,7 +107,7 @@ function Overview() {
       </article>
       <article className="mx-auto min-h-screen max-w-7xl sm:p-6 p-0 pt-6 grid grid-cols-8 gap-6">
         {CardsDB.expansions.map((expansion) => (
-          <ExpansionOverview key={expansion.id} expansion={expansion} rarityFilter={rarityFilter} />
+          <ExpansionOverview key={expansion.id} expansion={expansion} rarityFilter={rarityFilter} numberFilter={numberFilter} />
         ))}
       </article>
     </main>

@@ -94,10 +94,11 @@ export const sellableForTokensDictionary: { [id: string]: number } = {
 interface NrOfCardsOwnedProps {
   ownedCards: CollectionRow[]
   rarityFilter: string[]
+  numberFilter: number
   expansion?: Expansion
   packName?: string
 }
-export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, expansion, packName }: NrOfCardsOwnedProps) => {
+export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expansion, packName }: NrOfCardsOwnedProps) => {
   let filteredOwnedCards = ownedCards
     .filter((oc) => oc.amount_owned > 0)
     .map((cr) => ({ ...cr, rarity: allCards.find((c) => c.card_id === cr.card_id)?.rarity || '' }))
@@ -106,6 +107,8 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, expansion, packNam
     //filter out cards that are not in the rarity filter
     filteredOwnedCards = filteredOwnedCards.filter((oc) => rarityFilter.includes(oc.rarity))
   }
+
+  filteredOwnedCards = filteredOwnedCards.filter((oc) => oc.amount_owned > numberFilter - 1)
 
   if (!expansion) {
     return filteredOwnedCards.length
@@ -178,8 +181,9 @@ interface PullRateProps {
   expansion: Expansion
   pack: Pack
   rarityFilter?: string[]
+  numberFilter?: number
 }
-export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [] }: PullRateProps) => {
+export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numberFilter = 1 }: PullRateProps) => {
   if (ownedCards.length === 0) {
     return 1
   }
@@ -189,7 +193,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [] }: Pul
 
   const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'Every pack')
   // console.log('cards in pack', cardsInPack.length) //79
-  let missingCards = cardsInPack.filter((c) => !ownedCards.find((oc) => oc.card_id === c.card_id && oc.amount_owned > 0))
+  let missingCards = cardsInPack.filter((c) => !ownedCards.find((oc) => oc.card_id === c.card_id && oc.amount_owned > numberFilter - 1))
   // console.log('missing cards', missingCards)
 
   if (rarityFilter.length > 0) {
