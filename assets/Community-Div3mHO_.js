@@ -1,4 +1,4 @@
-import{a1 as o,r,j as e,u as d,B as l}from"./index-BEeZff_R.js";import{T as i,a as m,b as a,c}from"./tabs-C1ODIsFD.js";/**
+import{a1 as o,r,j as e,u as d,B as l}from"./index-BvdLgzO4.js";import{T as i,a as m,b as a,c}from"./tabs-Cshs8fSz.js";/**
  * @license lucide-react v0.477.0 - ISC
  *
  * This source code is licensed under the ISC license.
