@@ -163,7 +163,7 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
           </div>
 
           <ScrollArea className="h-64 rounded-md border p-4">
-            <div className="grid grid-cols-6 gap-2">
+            <div className="grid grid-cols-5 gap-2">
               {uniqueCards.map((card) => (
                 <CardMiniature key={card.card_id} card={card} onSelect={handleSelect} selected={selectedCards[card.card_id]} />
               ))}
