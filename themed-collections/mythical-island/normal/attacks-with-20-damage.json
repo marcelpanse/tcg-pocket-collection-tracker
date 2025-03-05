@@ -1,0 +1,30 @@
+{
+    "name": "Attacks with 20 Damage",
+    "requiredCards": [
+        {
+            "_card": ["Morelull", "Finneon"],
+            "cardId": ["A1a-7", "A1a-20"],
+            "amount": 1
+        },
+        {
+            "_card": ["Elgyem", "Mew"],
+            "cardId": ["A1a-34", "A1a-31"],
+            "amount": 1
+        },
+        {
+            "_card": ["Swirlix", "Mew"],
+            "cardId": ["A1a-39", "A1a-32"],
+            "amount": 1
+        },
+        {
+            "_card": ["Purrloin", "Venipede"],
+            "cardId": ["A1a-51", "A1a-53"],
+            "amount": 1
+        },
+        {
+            "_card": ["Whirlpede", "Pidgey"],
+            "cardId": ["A1a-54", "A1a-57"],
+            "amount": 1
+        }
+    ]
+}

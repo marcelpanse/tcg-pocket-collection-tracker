@@ -1,0 +1,25 @@
+{
+    "name": "Tree of Repose",
+    "requiredCards": [
+        {
+            "_card": ["Chewtle"],
+            "cardId": ["A1a-22"],
+            "amount": 1
+        },
+        {
+            "_card": ["Dedenne"],
+            "cardId": ["A1a-30"],
+            "amount": 1
+        },
+        {
+            "_card": ["Primeape"],
+            "cardId": ["A1a-42"],
+            "amount": 1
+        },
+        {
+            "_card": ["Pidgeotto"],
+            "cardId": ["A1a-58"],
+            "amount": 1
+        }
+    ]
+}
