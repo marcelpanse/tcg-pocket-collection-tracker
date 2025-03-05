@@ -15,7 +15,6 @@ i18n
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
     supportedLngs: ['en', 'es', 'pt-BR'],
-    pluralSeparator: '_',
   })
 
 export default i18n

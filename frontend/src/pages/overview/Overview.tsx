@@ -1,3 +1,4 @@
+import NumberFilter from '@/components/NumberFilter'
 import RarityFilter from '@/components/RarityFilter.tsx'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTitle } from '@/components/ui/alert.tsx'
@@ -25,13 +26,17 @@ function Overview() {
     const savedRarityFilter = localStorage.getItem('rarityFilter')
     return savedRarityFilter ? JSON.parse(savedRarityFilter) : []
   })
-  const [numberFilter, setNumberFilter] = useState(1)
+  const [numberFilter, setNumberFilter] = useState(() => {
+    const savedNumberFilter = localStorage.getItem('numberFilter')
+    return savedNumberFilter ? Number.parseInt(savedNumberFilter) : 1
+  })
 
   const totalUniqueCards = CardsDB.getTotalNrOfCards({ rarityFilter })
 
   useEffect(() => {
     localStorage.setItem('rarityFilter', JSON.stringify(rarityFilter))
-  }, [rarityFilter])
+    localStorage.setItem('numberFilter', numberFilter.toString())
+  }, [rarityFilter, numberFilter])
 
   useEffect(() => {
     let newHighestProbabilityPack: Pack | undefined
@@ -66,18 +71,7 @@ function Overview() {
 
         <div className="mb-8 flex items-center gap-2">
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
-          <div className="px-3 py-1 border-2 border-slate-600 rounded-md">
-            <label className="flex items-center gap-x-2 text-white/50 text-sm">
-              Number of cards:
-              <select value={numberFilter} onChange={(e) => setNumberFilter(Number.parseInt(e.target.value))} className="p-1">
-                {[1, 2].map((number) => (
-                  <option key={number} value={number} className="text-black">
-                    {number}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
+          <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[1, 2]} />
         </div>
 
         <section className="grid grid-cols-8 gap-6">
