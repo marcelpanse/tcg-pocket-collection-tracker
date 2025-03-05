@@ -1,0 +1,15 @@
+{
+  "name": "Electabuzz and Magmar",
+  "requiredCards": [
+    {
+      "_card": ["Magmar"],
+      "cardId": ["A1-44"],
+      "amount": 1
+    },
+    {
+      "_card": ["Electabuzz"],
+      "cardId": ["A1-101"],
+      "amount": 1
+    }
+  ]
+}

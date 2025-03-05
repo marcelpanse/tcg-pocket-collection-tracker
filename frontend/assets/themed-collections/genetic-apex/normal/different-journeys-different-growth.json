@@ -1,0 +1,50 @@
+{
+  "name": "Different Journeys, Different Growth",
+  "requiredCards": [
+    {
+      "_card": ["Bulbasaur"],
+      "cardId": ["A1-1", "A1-227"],
+      "amount": 1
+    },
+    {
+      "_card": ["Ivysaur"],
+      "cardId": ["A1-2"],
+      "amount": 1
+    },
+    {
+      "_card": ["Venusaur"],
+      "cardId": ["A1-3", "A1-4", "A1-251"],
+      "amount": 1
+    },
+    {
+      "_card": ["Charmander"],
+      "cardId": ["A1-33", "A1-230"],
+      "amount": 1
+    },
+    {
+      "_card": ["Charmeleon"],
+      "cardId": ["A1-34"],
+      "amount": 1
+    },
+    {
+      "_card": ["Charizard"],
+      "cardId": ["A1-35", "A1-36", "A1-253", "A1-280", "A1-284"],
+      "amount": 1
+    },
+    {
+      "_card": ["Squirtle"],
+      "cardId": ["A1-53", "A1-232"],
+      "amount": 1
+    },
+    {
+      "_card": ["Wartortle"],
+      "cardId": ["A1-54"],
+      "amount": 1
+    },
+    {
+      "_card": ["Blastoise"],
+      "cardId": ["A1-55", "A1-56", "A1-256"],
+      "amount": 1
+    }
+  ]
+}

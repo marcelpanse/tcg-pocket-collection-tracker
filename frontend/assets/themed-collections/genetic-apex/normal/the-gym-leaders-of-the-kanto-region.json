@@ -1,0 +1,45 @@
+{
+  "name": "The Gym Leaders of the Kanto Region",
+  "requiredCards": [
+    {
+      "_card": ["Erika"],
+      "cardId": ["A1-219", "A1-266"],
+      "amount": 1
+    },
+    {
+      "_card": ["Misty"],
+      "cardId": ["A1-220", "A1-267"],
+      "amount": 1
+    },
+    {
+      "_card": ["Blaine"],
+      "cardId": ["A1-221", "A1-268"],
+      "amount": 1
+    },
+    {
+      "_card": ["Koga"],
+      "cardId": ["A1-222", "A1-269"],
+      "amount": 1
+    },
+    {
+      "_card": ["Giovanni"],
+      "cardId": ["A1-223", "A1-270"],
+      "amount": 1
+    },
+    {
+      "_card": ["Brock"],
+      "cardId": ["A1-224", "A1-271"],
+      "amount": 1
+    },
+    {
+      "_card": ["Sabrina"],
+      "cardId": ["A1-225", "A1-272"],
+      "amount": 1
+    },
+    {
+      "_card": ["Lt. Surge"],
+      "cardId": ["A1-226", "A1-273"],
+      "amount": 1
+    }
+  ]
+}

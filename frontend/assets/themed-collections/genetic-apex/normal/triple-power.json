@@ -1,0 +1,25 @@
+{
+  "name": "Triple Power",
+  "requiredCards": [
+    {
+      "_card": ["Exeggutor"],
+      "cardId": ["A1-22", "A1-23", "A1-252"],
+      "amount": 1
+    },
+    {
+      "_card": ["Magneton"],
+      "cardId": ["A1-98"],
+      "amount": 1
+    },
+    {
+      "_card": ["Dugtrio"],
+      "cardId": ["A1-140"],
+      "amount": 1
+    },
+    {
+      "_card": ["Dodrio"],
+      "cardId": ["A1-200"],
+      "amount": 1
+    }
+  ]
+}

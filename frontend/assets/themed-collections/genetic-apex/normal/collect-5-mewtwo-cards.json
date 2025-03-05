@@ -1,0 +1,10 @@
+{
+  "name": "Collect 5 Mewtwo cards",
+  "requiredCards": [
+    {
+      "_card": ["Mewtwo"],
+      "cardId": ["A1-128"],
+      "amount": 5
+    }
+  ]
+}
