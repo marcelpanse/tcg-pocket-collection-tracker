@@ -71,7 +71,7 @@ function Overview() {
 
         <div className="mb-8 flex items-center gap-2">
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
-          <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[0, 1, 2, 3, 4, 5]} />
+          <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[1, 2, 3, 4, 5]} />
         </div>
 
         <section className="grid grid-cols-8 gap-6">

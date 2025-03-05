@@ -193,9 +193,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
 
   const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'Every pack')
   // console.log('cards in pack', cardsInPack.length) //79
-  console.log('before:', cardsInPack.length)
   let missingCards = cardsInPack.filter((c) => !ownedCards.find((oc) => oc.card_id === c.card_id && oc.amount_owned > numberFilter - 1))
-  console.log('after:', missingCards.length)
 
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter
