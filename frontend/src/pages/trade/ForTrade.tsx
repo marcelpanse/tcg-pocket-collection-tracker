@@ -7,14 +7,16 @@ import { NoTradeableCards } from './components/NoTradeableCards'
 
 interface Props {
   rarityFilter: string[]
+  minCards: number // Added minCards to props
 }
-export const ForTrade: FC<Props> = ({ rarityFilter }) => {
+
+export const ForTrade: FC<Props> = ({ rarityFilter, minCards }) => {
   const { ownedCards } = use(CollectionContext)
 
-  if (!ownedCards || ownedCards.every((c) => c.amount_owned < 2)) return <GoTrackYourCards />
+  if (!ownedCards || ownedCards.every((c) => c.amount_owned < minCards)) return <GoTrackYourCards />
 
   const tradeableExpansions = useMemo(() => expansions.filter((e) => e.tradeable).map((e) => e.id), [])
-  const forTradeCards = useMemo(() => ownedCards.filter((c) => c.amount_owned > 1), [ownedCards])
+  const forTradeCards = useMemo(() => ownedCards.filter((c) => c.amount_owned >= minCards), [ownedCards, minCards])
   const tradeableCards = useMemo(
     () =>
       allCards
@@ -25,10 +27,12 @@ export const ForTrade: FC<Props> = ({ rarityFilter }) => {
         })),
     [forTradeCards],
   )
+
   const tradeableCardsFilteredByExpansion = useMemo(
     () => tradeableCards.filter((c) => Object.keys(tradeableRaritiesDictionary).includes(c.rarity) && tradeableExpansions.includes(c.expansion)),
     [tradeableCards],
   )
+
   const filteredCards = useMemo(
     () => tradeableCardsFilteredByExpansion.filter((c) => rarityFilter.length === 0 || rarityFilter.includes(c.rarity)),
     [tradeableCardsFilteredByExpansion, rarityFilter],

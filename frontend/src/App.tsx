@@ -19,8 +19,6 @@ const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const Community = loadable(() => import('./pages/community/Community.tsx'))
 const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
-const Import = loadable(() => import('./pages/import/Import.tsx'))
-const Export = loadable(() => import('./pages/export/Export.tsx'))
 
 function App() {
   const [user, setUser] = useState<User | null>(null)
@@ -54,7 +52,7 @@ function App() {
   return (
     <UserContext.Provider value={{ user, setUser, account, setAccount, isLoginDialogOpen, setIsLoginDialogOpen, isProfileDialogOpen, setIsProfileDialogOpen }}>
       <CollectionContext.Provider value={{ ownedCards, setOwnedCards, selectedCardId, setSelectedCardId }}>
-        <ErrorBoundary fallback={<div className="m-4">Something went wrong, please refresh the page.</div>}>
+        <ErrorBoundary fallback={<div className="m-4">A new version was deployed, please refresh the page to see the latest changes.</div>}>
           <Toaster />
           <Header />
           <Routes>
@@ -62,8 +60,6 @@ function App() {
             <Route path="/collection" element={<Collection />} />
             <Route path="/trade" element={<Trade />} />
             <Route path="/community" element={<Community />} />
-            <Route path="/import" element={<Import />} />
-            <Route path="/export" element={<Export />} />
           </Routes>
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
           <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />

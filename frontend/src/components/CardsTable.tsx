@@ -9,17 +9,18 @@ const columnHelper = createColumnHelper<CardType>()
 
 interface Props {
   cards: CardType[]
+  resetScrollTrigger?: boolean
 }
 
-export function CardsTable({ cards }: Props) {
-  const parentRef = useRef<HTMLDivElement>(null)
+export function CardsTable({ cards, resetScrollTrigger }: Props) {
+  const scrollRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
 
   useEffect(() => {
-    if (parentRef.current) {
-      parentRef.current.scrollTop = 0
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = 0
     }
-  }, [cards])
+  }, [resetScrollTrigger])
 
   const columns = useMemo(() => {
     return [
@@ -86,14 +87,14 @@ export function CardsTable({ cards }: Props) {
   )
 
   const rowVirtualizer = useVirtualizer({
-    getScrollElement: () => parentRef.current,
+    getScrollElement: () => scrollRef.current,
     count: flattenedRows.length,
     estimateSize: (index) => (flattenedRows[index].type === 'header' ? 60 : cardHeight) + 12,
     overscan: 5,
   })
 
   return (
-    <div ref={parentRef} className="h-[calc(100vh-270px)] overflow-y-auto mt-4 sm:mt-8 px-4" style={{ scrollbarWidth: 'none' }}>
+    <div ref={scrollRef} className="h-[calc(100vh-270px)] overflow-y-auto mt-4 sm:mt-8 px-4" style={{ scrollbarWidth: 'none' }}>
       <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
         {rowVirtualizer.getVirtualItems().map((virtualRow) => {
           const row = flattenedRows[virtualRow.index]

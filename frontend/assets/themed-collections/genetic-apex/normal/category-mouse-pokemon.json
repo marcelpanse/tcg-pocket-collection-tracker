@@ -1,0 +1,35 @@
+{
+  "name": "Category: Mouse Pokemon",
+  "requiredCards": [
+    {
+      "_card": ["Pikachu"],
+      "cardId": ["A1-94", "A1-96", "A1-259", "A1-281", "A1-285"],
+      "amount": 1
+    },
+    {
+      "_card": ["Raichu"],
+      "cardId": ["A1-95"],
+      "amount": 1
+    },
+    {
+      "_card": ["Sandshrew"],
+      "cardId": ["A1-137"],
+      "amount": 1
+    },
+    {
+      "_card": ["Sandslash"],
+      "cardId": ["A1-138"],
+      "amount": 1
+    },
+    {
+      "_card": ["Rattata"],
+      "cardId": ["A1-189"],
+      "amount": 1
+    },
+    {
+      "_card": ["Raticate"],
+      "cardId": ["A1-190"],
+      "amount": 1
+    }
+  ]
+}

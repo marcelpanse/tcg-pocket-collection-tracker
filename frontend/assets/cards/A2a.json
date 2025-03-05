@@ -1,0 +1,4000 @@
+[
+  {
+    "id": "1",
+    "name": "Heracross",
+    "hp": "100",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_001_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless", "Colorless"],
+        "name": "Single-Horn Throw",
+        "damage": "50+",
+        "effect": "Flip 2 coins. If both of them are heads, this attack does 70 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #1",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Satoshi Shirai",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "2",
+    "name": "Burmy",
+    "hp": "50",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_002_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass"],
+        "name": "Ram",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #2",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "miki kudo",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "3",
+    "name": "Mothim",
+    "hp": "90",
+    "card_type": "Pokémon - Stage 1 - Evolves from Burmy",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_003_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Gust",
+        "damage": "50",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "0",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #3",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "MAHOU",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "4",
+    "name": "Combee",
+    "hp": "50",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_004_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass"],
+        "name": "Bug Bite",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #4",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Akira Komayama",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "5",
+    "name": "Vespiquen",
+    "hp": "100",
+    "card_type": "Pokémon - Stage 1 - Evolves from Combee",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_005_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Grass", "Grass"],
+        "name": "Reckless Charge",
+        "damage": "120",
+        "effect": "This Pokémon also does 30 damage to itself."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #5",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "kawayoo",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "6",
+    "name": "Cherubi",
+    "hp": "50",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_006_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass"],
+        "name": "Leafage",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #6",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Atsuko Nishida",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "7",
+    "name": "Cherrim",
+    "hp": "80",
+    "card_type": "Pokémon - Stage 1 - Evolves from Cherubi",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_007_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass"],
+        "name": "Worry Seed",
+        "damage": "40",
+        "effect": "Your opponent's Active Pokémon is now Confused."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #7",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Midori Harada",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "8",
+    "name": "Cherrim",
+    "hp": "80",
+    "card_type": "Pokémon - Stage 1 - Evolves from Cherubi",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_008_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Grass"],
+        "name": "Leech Seed",
+        "damage": "60",
+        "effect": "Heal 20 damage from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #8",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Kagemaru Himeno",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "9",
+    "name": "Carnivine",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_009_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass"],
+        "name": "Vine Whip",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Power Link",
+      "effect": "If you have Arceus or Arceus ex in play, attacks used by this Pokémon do +30 damage to your opponent's Active Pokémon."
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #9",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Shiburingaru",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "10",
+    "name": "Leafeon ex",
+    "hp": "140",
+    "card_type": "Pokémon - Stage 1 - Evolves from Eevee",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_010_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless", "Colorless"],
+        "name": "Solar Beam",
+        "damage": "70",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Forest Breath",
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a  Energy from your Energy Zone and attach it to 1 of your  Pokémon."
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #10",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #82",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #91",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "1.666%",
+      "5 card": "6.664%"
+    },
+    "crafting_cost": 500
+  },
+  {
+    "id": "11",
+    "name": "Houndour",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_011_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire"],
+        "name": "Flare",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #11",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kouki Saitou",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "12",
+    "name": "Houndoom",
+    "hp": "100",
+    "card_type": "Pokémon - Stage 1 - Evolves from Houndour",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_012_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire", "Colorless"],
+        "name": "Corner",
+        "damage": "60",
+        "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #12",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #76",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Hajime Kusajima",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "13",
+    "name": "Heatran",
+    "hp": "110",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_013_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire", "Fire"],
+        "name": "Ragin’ Mad Strike",
+        "damage": "40+",
+        "effect": "If this Pokémon has damage on it, this attack does 40 more damage."
+      }
+    ],
+    "ability": {
+      "name": "Speed Link",
+      "effect": "If you have Arceus or Arceus ex in play, this Pokémon has no Retreat Cost."
+    },
+    "weakness": "Water",
+    "retreat": "3",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #13",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Kazumasa Yasukuni",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "14",
+    "name": "Marill",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_014_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water"],
+        "name": "ater Gun",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #14",
+        "rarity": "◊"
+      },
+      {
+        "version": "Triumphant Light #77",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Tika Matsuno",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "15",
+    "name": "Azumarill",
+    "hp": "100",
+    "card_type": "Pokémon - Stage 1 - Evolves from Marill",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_015_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless"],
+        "name": "Waterfall",
+        "damage": "60",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #15",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "miki kudo",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "16",
+    "name": "Barboach",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_016_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless"],
+        "name": "Mud-Slap",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #16",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "sui",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "17",
+    "name": "Whiscash",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 1 - Evolves from Barboach",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_017_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Colorless", "Colorless"],
+        "name": "Thrash",
+        "damage": "80+",
+        "effect": "Flip a coin. If heads, this attack does 60 more damage. If tails, this Pokémon also does 20 damage to itself."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #17",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Shinya Komatsu",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "18",
+    "name": "Snorunt",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_018_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water"],
+        "name": "Icicle",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Metal",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #18",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "sowsow",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "19",
+    "name": "Froslass",
+    "hp": "90",
+    "card_type": "Pokémon - Stage 1 - Evolves from Snorunt",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_019_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless"],
+        "name": "Blizzard",
+        "damage": "40",
+        "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Metal",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #19",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Mizue",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "20",
+    "name": "Snover",
+    "hp": "70",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_020_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless"],
+        "name": "Corkscrew Punch",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Metal",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #20",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "otumami",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "21",
+    "name": "Abomasnow",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 1 - Evolves from Snover",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_021_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Colorless"],
+        "name": "Mega Punch",
+        "damage": "80",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Vigor Link",
+      "effect": "If you have Arceus or Arceus ex in play, attacks used by this Pokémon cost 1 less  Energy."
+    },
+    "weakness": "Metal",
+    "retreat": "3",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #21",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "nagimiso",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "22",
+    "name": "Glaceon ex",
+    "hp": "140",
+    "card_type": "Pokémon - Stage 1 - Evolves from Eevee",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_022_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Colorless"],
+        "name": "Freezing Wind",
+        "damage": "90",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Snowy Terrain",
+      "effect": "During Pokémon Checkup, if this Pokémon is in the Active Spot, do 10 damage to your opponent's Active Pokémon."
+    },
+    "weakness": "Metal",
+    "retreat": "1",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #22",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #83",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #92",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "1.666%",
+      "5 card": "6.664%"
+    },
+    "crafting_cost": 500
+  },
+  {
+    "id": "23",
+    "name": "Palkia",
+    "hp": "120",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_023_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Water"],
+        "name": "Zone Smash",
+        "damage": "60+",
+        "effect": "Flip a coin. If heads, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #23",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "toriyufu",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "24",
+    "name": "Phione",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_024_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water"],
+        "name": "Water Pulse",
+        "damage": "40",
+        "effect": "Your opponent's Active Pokémon is now Asleep."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #24",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "AKIRA EGAWA",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "25",
+    "name": "Pikachu",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_025_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Spark",
+        "damage": "10",
+        "effect": "This attack also does 10 damage to 1 of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #25",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "MAHOU",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "26",
+    "name": "Raichu",
+    "hp": "90",
+    "card_type": "Pokémon - Stage 1 - Evolves from Pikachu",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_026_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Lightning"],
+        "name": "Spark",
+        "damage": "40",
+        "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Resilience Link",
+      "effect": "If you have Arceus or Arceus ex in play, this Pokémon takes −30 damage from attacks."
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #26",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Nisota Niso",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "27",
+    "name": "Electrike",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_027_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Zap Kick",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #27",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Shin Nagasawa",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "28",
+    "name": "Manectric",
+    "hp": "90",
+    "card_type": "Pokémon - Stage 1 - Evolves from Electrike",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_028_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Flash",
+        "damage": "40",
+        "effect": "During your opponent's next turn, if the Defending Pokémon tries to use an attack, your opponent flips a coin. If tails, that attack doesn't happen."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #28",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "match",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "29",
+    "name": "Clefairy",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_029_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Colorless"],
+        "name": "Smack",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Metal",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #29",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "rika",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "30",
+    "name": "Clefable",
+    "hp": "100",
+    "card_type": "Pokémon - Stage 1 - Evolves from Clefairy",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_030_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Colorless", "Colorless"],
+        "name": "Moonblast",
+        "damage": "60",
+        "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do −30 damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Metal",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #30",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "sui",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "31",
+    "name": "Gastly",
+    "hp": "50",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_031_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Unknown",
+        "damage": "0",
+        "effect": "Flip a coin. If heads, your opponent reveals a random card from their hand and shuffles it into their deck."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #31",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Yuu Nishida",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "32",
+    "name": "Haunter",
+    "hp": "80",
+    "card_type": "Pokémon - Stage 1 - Evolves from Gastly",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_032_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Psychic"],
+        "name": "Mumble",
+        "damage": "40",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #32",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Eri Yamaki",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "33",
+    "name": "Gengar",
+    "hp": "140",
+    "card_type": "Pokémon - Stage 2 - Evolves from Haunter",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_033_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Psychic"],
+        "name": "Hypnoblast",
+        "damage": "70",
+        "effect": "Your opponent's Active Pokémon is now Asleep."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #33",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Midori Harada",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "34",
+    "name": "Unown",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_034_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Hidden Power",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "CHECK",
+      "effect": "Once during your turn, you may choose either player. Look at the top card of that player's deck."
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #34",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #78",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Tetsu Kayama",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "35",
+    "name": "Rotom",
+    "hp": "70",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_035_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Dash",
+        "damage": "Attack",
+        "effect": "This attack does 20 damage to 1 of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Speed Link",
+      "effect": "If you have Arceus or Arceus ex in play, this Pokémon has no Retreat Cost."
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #35",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Anesaki Dynamic",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "36",
+    "name": "Sudowoodo",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_036_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "ighting Headbutt",
+        "damage": "20+",
+        "effect": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 30 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #36",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #79",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Tomokazu Komiya",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "37",
+    "name": "Phanpy",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_037_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Rollout",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #37",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Asako Ito",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "38",
+    "name": "Donphan",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 1 - Evolves from Phanpy",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_038_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Fighting", "Fighting"],
+        "name": "Rolling Spin",
+        "damage": "60",
+        "effect": "During your next turn, this Pokémon's Rolling Spin attack does +60 damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #38",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Shin Nagasawa",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "39",
+    "name": "Larvitar",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_039_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless"],
+        "name": "Corkscrew Punch",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #39",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Yukiko Baba",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "40",
+    "name": "Pupitar",
+    "hp": "80",
+    "card_type": "Pokémon - Stage 1 - Evolves from Larvitar",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_040_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless", "Colorless"],
+        "name": "Speed Attack",
+        "damage": "50",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #40",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "match",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "41",
+    "name": "Tyranitar",
+    "hp": "160",
+    "card_type": "Pokémon - Stage 2 - Evolves from Pupitar",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_041_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
+        "name": "Land Crush",
+        "damage": "130",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Power Link",
+      "effect": "If you have Arceus or Arceus ex in play, attacks used by this Pokémon do +30 damage to your opponent's Active Pokémon."
+    },
+    "weakness": "Grass",
+    "retreat": "4",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #41",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "kawayoo",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "42",
+    "name": "Nosepass",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_042_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Tackle",
+        "damage": "10",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "3",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #42",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Satoshi Shirai",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "43",
+    "name": "Meditite",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_043_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Kick",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Psychic",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #43",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Mina Nakai",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "44",
+    "name": "Medicham",
+    "hp": "100",
+    "card_type": "Pokémon - Stage 1 - Evolves from Meditite",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_044_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Kick Shot",
+        "damage": "80",
+        "effect": "Flip a coin. If tails, this attack does nothing."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Psychic",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #44",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Tetsu Kayama",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "45",
+    "name": "Gible",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_045_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Tackle",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #45",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kyoko Umemoto",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "46",
+    "name": "Gabite",
+    "hp": "80",
+    "card_type": "Pokémon - Stage 1 - Evolves from Gible",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_046_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Sharp Scythe",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #46",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Sumiyoshi Kizuki",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "47",
+    "name": "Garchomp ex",
+    "hp": "170",
+    "card_type": "Pokémon - Stage 2 - Evolves from Gabite",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_047_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Linear",
+        "damage": "Attack",
+        "effect": "This attack does 50 damage to 1 of your opponent's Pokémon."
+      },
+      {
+        "cost": ["Fighting", "Fighting", "Colorless"],
+        "name": "Dragon Claw",
+        "damage": "100",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "1",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #47",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #84",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #93",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "1.666%",
+      "5 card": "6.664%"
+    },
+    "crafting_cost": 500
+  },
+  {
+    "id": "48",
+    "name": "Zubat",
+    "hp": "50",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_048_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Bite",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #48",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Sekio",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "49",
+    "name": "Golbat",
+    "hp": "80",
+    "card_type": "Pokémon - Stage 1 - Evolves from Zubat",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_049_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Bite",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #49",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kyoko Umemoto",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "50",
+    "name": "Crobat",
+    "hp": "110",
+    "card_type": "Pokémon - Stage 2 - Evolves from Golbat",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_050_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "arkness Fang",
+        "damage": "50",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Cunning Link",
+      "effect": "Once during your turn, if you have Arceus or Arceus ex in play, you may do 30 damage to your opponent's Active Pokémon."
+    },
+    "weakness": "Fighting",
+    "retreat": "0",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #50",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "AKIRA EGAWA",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "51",
+    "name": "Croagunk",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_051_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Beat",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #51",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "SATOSHI NAKAI",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "52",
+    "name": "Toxicroak",
+    "hp": "100",
+    "card_type": "Pokémon - Stage 1 - Evolves from Croagunk",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_052_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Unknown",
+        "damage": "0",
+        "effect": "Your opponent's Active Pokémon is now Poisoned. Do 20 damage to this Pokémon instead of the usual amount for this Special Condition."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #52",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Souichirou Gunjima",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "53",
+    "name": "Magnemite",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_053_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Metal"],
+        "name": "Tackle",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #53",
+        "rarity": "◊"
+      },
+      {
+        "version": "Triumphant Light #80",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "OKACHEKE",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "54",
+    "name": "Magneton",
+    "hp": "90",
+    "card_type": "Pokémon - Stage 1 - Evolves from Magnemite",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_054_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Metal", "Colorless"],
+        "name": "Rolling Attack",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #54",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Souichirou Gunjima",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "55",
+    "name": "Magnezone",
+    "hp": "140",
+    "card_type": "Pokémon - Stage 2 - Evolves from Magneton",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_055_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Metal", "Metal", "Colorless"],
+        "name": "Power Beam",
+        "damage": "80",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Resilience Link",
+      "effect": "If you have Arceus or Arceus ex in play, this Pokémon takes −30 damage from attacks."
+    },
+    "weakness": "Fire",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #55",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "toriyufu",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "56",
+    "name": "Mawile",
+    "hp": "70",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_056_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Iron Beam Breaker",
+        "damage": "20+",
+        "effect": "If your opponent's Active Pokémon is a [M] Pokémon, this attack does 30 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #56",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "tetsuya koizumi",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "57",
+    "name": "Probopass ex",
+    "hp": "160",
+    "card_type": "Pokémon - Stage 1 - Evolves from Nosepass",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_057_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Metal", "Metal", "Colorless"],
+        "name": "Defensive Unit",
+        "damage": "90",
+        "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "3",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #57",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #85",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #94",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA Tsuji",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "1.666%",
+      "5 card": "6.664%"
+    },
+    "crafting_cost": 500
+  },
+  {
+    "id": "58",
+    "name": "Bronzor",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_058_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Ram",
+        "damage": "10",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #58",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Akira Komayama",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "59",
+    "name": "Bronzong",
+    "hp": "120",
+    "card_type": "Pokémon - Stage 1 - Evolves from Bronzor",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_059_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Psychic",
+        "damage": "50+",
+        "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #59",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Naoki Saito",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "60",
+    "name": "Dialga",
+    "hp": "120",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_060_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Metal", "Metal", "Colorless"],
+        "name": "Time Mash",
+        "damage": "100",
+        "effect": "Flip a coin. If tails, during your next turn, this Pokémon can't attack."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #60",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "akagi",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "61",
+    "name": "Giratina",
+    "hp": "120",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_061_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Psychic", "Colorless"],
+        "name": "Crisis Dive",
+        "damage": "120",
+        "effect": "Discard 2 random Energy from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "none",
+    "retreat": "3",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #61",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Shin Nagasawa",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "62",
+    "name": "Eevee",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_062_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Tail Whap",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #62",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Naoyo Kimura",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "63",
+    "name": "Snorlax",
+    "hp": "140",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_063_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
+        "name": "Collapse",
+        "damage": "100",
+        "effect": "This Pokémon is now Asleep."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "4",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #63",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "burari",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "64",
+    "name": "Hoothoot",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_064_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Peck",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #64",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Sumiyoshi Kizuki",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "65",
+    "name": "Noctowl",
+    "hp": "100",
+    "card_type": "Pokémon - Stage 1 - Evolves from Hoothoot",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_065_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Silent Wing",
+        "damage": "50",
+        "effect": "Your opponent reveals their hand."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #65",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "DOM",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "66",
+    "name": "Starly",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_066_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Glide",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #66",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Apios",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "67",
+    "name": "Staravia",
+    "hp": "80",
+    "card_type": "Pokémon - Stage 1 - Evolves from Starly",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_067_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Wing Attack",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #67",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Masakazu Fukuda",
+    "probability": {
+      "1-3 card": "100.000%",
+      "4 card": "0.000%",
+      "5 card": "0.000%"
+    },
+    "crafting_cost": 35
+  },
+  {
+    "id": "68",
+    "name": "Staraptor",
+    "hp": "150",
+    "card_type": "Pokémon - Stage 2 - Evolves from Staravia",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_068_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Brave Bird",
+        "damage": "130",
+        "effect": "This Pokémon also does 20 damage to itself."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #68",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Minahamu",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "69",
+    "name": "Shaymin",
+    "hp": "70",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_069_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Flap",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Sky Support",
+      "effect": "As long as this Pokémon is on your Bench, your Active Basic Pokemon's Retreat Cost is 1 less."
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #69",
+        "rarity": "◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #81",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Mizue",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "70",
+    "name": "Arceus",
+    "hp": "120",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_070_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
+        "name": "Power Blast",
+        "damage": "100",
+        "effect": "Discard a random Energy from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fighting",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #70",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Nurikabe",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "5.000%",
+      "5 card": "20.000%"
+    },
+    "crafting_cost": 150
+  },
+  {
+    "id": "71",
+    "name": "Arceus ex",
+    "hp": "140",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_071_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Ultimate Force",
+        "damage": "70+",
+        "effect": "This attack does 20 more damage for each of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Fabled Luster",
+      "effect": "This Pokémon can't be affected by any Special Conditions."
+    },
+    "weakness": "Fighting",
+    "retreat": "2",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #71",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #86",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #95",
+        "rarity": "☆☆☆"
+      },
+      {
+        "version": "Triumphant Light #96",
+        "rarity": "♛"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "1.666%",
+      "5 card": "6.664%"
+    },
+    "crafting_cost": 500
+  },
+  {
+    "id": "72",
+    "name": "Irida",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_072_EN.webp",
+    "attacks": [],
+    "ability": "Heal 40 damage from each of your Pokémon that has any [W] Energy attached.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #72",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #87",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Atsushi Furusawa",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "73",
+    "name": "Celestic Town Elder",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_073_EN.webp",
+    "attacks": [],
+    "ability": "Put 1 random Basic Pokemon from your discard pile into your hand.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #73",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #88",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Yuu Nishida",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "74",
+    "name": "Barry",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_074_EN.webp",
+    "attacks": [],
+    "ability": "During this turn, attacks used by your Snorlax, Heracross, and Staraptor cost 2 less [C] Energy.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #74",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #89",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Hideki Ishikawa",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "75",
+    "name": "Adaman",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_075_EN.webp",
+    "attacks": [],
+    "ability": "During your opponent's next turn, all of your [M] Pokémon take −20 damage from attacks from your opponent's Pokémon.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #75",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #90",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "akagi",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "90.000%",
+      "5 card": "60.000%"
+    },
+    "crafting_cost": 70
+  },
+  {
+    "id": "76",
+    "name": "Houndoom",
+    "hp": "100",
+    "card_type": "Pokémon - Stage 1 - Evolves from Houndour",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_076_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fire", "Colorless"],
+        "name": "Corner",
+        "damage": "60",
+        "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Water",
+    "retreat": "2",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #12",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #76",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "matazo",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "2.572%",
+      "5 card": "10.288%"
+    },
+    "crafting_cost": 400
+  },
+  {
+    "id": "77",
+    "name": "Marill",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_077_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water"],
+        "name": "ater Gun",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #14",
+        "rarity": "◊"
+      },
+      {
+        "version": "Triumphant Light #77",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Taiga Kayama",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "2.572%",
+      "5 card": "10.288%"
+    },
+    "crafting_cost": 400
+  },
+  {
+    "id": "78",
+    "name": "Unown",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_078_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Hidden Power",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "CHECK",
+      "effect": "Once during your turn, you may choose either player. Look at the top card of that player's deck."
+    },
+    "weakness": "Darkness",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #34",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #78",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "IKEDA Saki",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "2.572%",
+      "5 card": "10.288%"
+    },
+    "crafting_cost": 400
+  },
+  {
+    "id": "79",
+    "name": "Sudowoodo",
+    "hp": "80",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_079_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "ighting Headbutt",
+        "damage": "20+",
+        "effect": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 30 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "2",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #36",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #79",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Yuriko Akase",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "2.572%",
+      "5 card": "10.288%"
+    },
+    "crafting_cost": 400
+  },
+  {
+    "id": "80",
+    "name": "Magnemite",
+    "hp": "60",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_080_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Metal"],
+        "name": "Tackle",
+        "damage": "20",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #53",
+        "rarity": "◊"
+      },
+      {
+        "version": "Triumphant Light #80",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Yukihiro Tada",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "2.572%",
+      "5 card": "10.288%"
+    },
+    "crafting_cost": 400
+  },
+  {
+    "id": "81",
+    "name": "Shaymin",
+    "hp": "70",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_081_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Flap",
+        "damage": "30",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Sky Support",
+      "effect": "As long as this Pokémon is on your Bench, your Active Basic Pokemon's Retreat Cost is 1 less."
+    },
+    "weakness": "Lightning",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #69",
+        "rarity": "◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #81",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "MINAMINAMI Take",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "2.572%",
+      "5 card": "10.288%"
+    },
+    "crafting_cost": 400
+  },
+  {
+    "id": "82",
+    "name": "Leafeon ex",
+    "hp": "140",
+    "card_type": "Pokémon - Stage 1 - Evolves from Eevee",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_082_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless", "Colorless"],
+        "name": "Solar Beam",
+        "damage": "70",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Forest Breath",
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a  Energy from your Energy Zone and attach it to 1 of your  Pokémon."
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #10",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #82",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #91",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "83",
+    "name": "Glaceon ex",
+    "hp": "140",
+    "card_type": "Pokémon - Stage 1 - Evolves from Eevee",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_083_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Colorless"],
+        "name": "Freezing Wind",
+        "damage": "90",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Snowy Terrain",
+      "effect": "During Pokémon Checkup, if this Pokémon is in the Active Spot, do 10 damage to your opponent's Active Pokémon."
+    },
+    "weakness": "Metal",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #22",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #83",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #92",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "84",
+    "name": "Garchomp ex",
+    "hp": "170",
+    "card_type": "Pokémon - Stage 2 - Evolves from Gabite",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_084_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Linear",
+        "damage": "Attack",
+        "effect": "This attack does 50 damage to 1 of your opponent's Pokémon."
+      },
+      {
+        "cost": ["Fighting", "Fighting", "Colorless"],
+        "name": "Dragon Claw",
+        "damage": "100",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #47",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #84",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #93",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "85",
+    "name": "Probopass ex",
+    "hp": "160",
+    "card_type": "Pokémon - Stage 1 - Evolves from Nosepass",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_085_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Metal", "Metal", "Colorless"],
+        "name": "Defensive Unit",
+        "damage": "90",
+        "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "3",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #57",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #85",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #94",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA Tsuji",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "86",
+    "name": "Arceus ex",
+    "hp": "140",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_086_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Ultimate Force",
+        "damage": "70+",
+        "effect": "This attack does 20 more damage for each of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Fabled Luster",
+      "effect": "This Pokémon can't be affected by any Special Conditions."
+    },
+    "weakness": "Fighting",
+    "retreat": "2",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #71",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #86",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #95",
+        "rarity": "☆☆☆"
+      },
+      {
+        "version": "Triumphant Light #96",
+        "rarity": "♛"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "87",
+    "name": "Irida",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_087_EN.webp",
+    "attacks": [],
+    "ability": "Heal 40 damage from each of your Pokémon that has any [W] Energy attached.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #72",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #87",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Atsushi Furusawa",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "88",
+    "name": "Celestic Town Elder",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_088_EN.webp",
+    "attacks": [],
+    "ability": "Put 1 random Basic Pokemon from your discard pile into your hand.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #73",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #88",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Yuu Nishida",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "89",
+    "name": "Barry",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_089_EN.webp",
+    "attacks": [],
+    "ability": "During this turn, attacks used by your Snorlax, Heracross, and Staraptor cost 2 less [C] Energy.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #74",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #89",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Hideki Ishikawa",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "90",
+    "name": "Adaman",
+    "hp": "",
+    "card_type": "Trainer - Supporter",
+    "evolution_type": "Supporter",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_090_EN.webp",
+    "attacks": [],
+    "ability": "During your opponent's next turn, all of your [M] Pokémon take −20 damage from attacks from your opponent's Pokémon.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "No",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #75",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Triumphant Light #90",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "akagi",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "91",
+    "name": "Leafeon ex",
+    "hp": "140",
+    "card_type": "Pokémon - Stage 1 - Evolves from Eevee",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_091_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless", "Colorless"],
+        "name": "Solar Beam",
+        "damage": "70",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Forest Breath",
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a  Energy from your Energy Zone and attach it to 1 of your  Pokémon."
+    },
+    "weakness": "Fire",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #10",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #82",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #91",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "saino misaki",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "92",
+    "name": "Glaceon ex",
+    "hp": "140",
+    "card_type": "Pokémon - Stage 1 - Evolves from Eevee",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_092_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Colorless"],
+        "name": "Freezing Wind",
+        "damage": "90",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "Snowy Terrain",
+      "effect": "During Pokémon Checkup, if this Pokémon is in the Active Spot, do 10 damage to your opponent's Active Pokémon."
+    },
+    "weakness": "Metal",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #22",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #83",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #92",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "rika",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "93",
+    "name": "Garchomp ex",
+    "hp": "170",
+    "card_type": "Pokémon - Stage 2 - Evolves from Gabite",
+    "evolution_type": "Stage 2",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_093_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Linear",
+        "damage": "Attack",
+        "effect": "This attack does 50 damage to 1 of your opponent's Pokémon."
+      },
+      {
+        "cost": ["Fighting", "Fighting", "Colorless"],
+        "name": "Dragon Claw",
+        "damage": "100",
+        "effect": ""
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Grass",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #47",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #84",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #93",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "toriyufu",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "94",
+    "name": "Probopass ex",
+    "hp": "160",
+    "card_type": "Pokémon - Stage 1 - Evolves from Nosepass",
+    "evolution_type": "Stage 1",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_094_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Metal", "Metal", "Colorless"],
+        "name": "Defensive Unit",
+        "damage": "90",
+        "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "Fire",
+    "retreat": "3",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #57",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #85",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #94",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Masa",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.500%",
+      "5 card": "2.000%"
+    },
+    "crafting_cost": 1250
+  },
+  {
+    "id": "95",
+    "name": "Arceus ex",
+    "hp": "140",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_095_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Ultimate Force",
+        "damage": "70+",
+        "effect": "This attack does 20 more damage for each of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Fabled Luster",
+      "effect": "This Pokémon can't be affected by any Special Conditions."
+    },
+    "weakness": "Fighting",
+    "retreat": "2",
+    "rarity": "☆☆☆",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #71",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #86",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #95",
+        "rarity": "☆☆☆"
+      },
+      {
+        "version": "Triumphant Light #96",
+        "rarity": "♛"
+      }
+    ],
+    "artist": "Takumi Wada",
+    "probability": {
+      "1-3 card": "0.000%",
+      "4 card": "0.222%",
+      "5 card": "0.888%"
+    },
+    "crafting_cost": 1500
+  },
+  {
+    "id": "96",
+    "name": "Arceus ex",
+    "hp": "140",
+    "card_type": "Pokémon - Basic",
+    "evolution_type": "Basic",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_096_EN.webp",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Ultimate Force",
+        "damage": "70+",
+        "effect": "This attack does 20 more damage for each of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Fabled Luster",
+      "effect": "This Pokémon can't be affected by any Special Conditions."
+    },
+    "weakness": "Fighting",
+    "retreat": "2",
+    "rarity": "Crown Rare",
+    "fullart": "Yes",
+    "ex": "Yes",
+    "set_details": "Triumphant Light  (A2a)",
+    "pack": "Arceus pack",
+    "alternate_versions": [
+      {
+        "version": "Triumphant Light #71",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "version": "Triumphant Light #86",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Triumphant Light #95",
+        "rarity": "☆☆☆"
+      },
+      {
+        "version": "Triumphant Light #96",
+        "rarity": "♛"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "probability": {},
+    "crafting_cost": "Unknown"
+  }
+]

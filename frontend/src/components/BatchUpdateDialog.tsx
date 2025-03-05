@@ -19,6 +19,7 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
   const [amount, setAmount] = useState(0)
   const [selectedCards, setSelectedCards] = useState<Record<string, boolean>>({})
   const [isProcessing, setIsProcessing] = useState(false)
+  const [changesMade, setChangesMade] = useState(false)
 
   const isBatchUpdateDisabled = filteredCards.length === 0
   const uniqueCards = useMemo(() => {
@@ -40,6 +41,9 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
         {} as Record<string, boolean>,
       )
       setSelectedCards(initialSelectedCards)
+    }
+    if (!isOpen) {
+      setChangesMade(false)
     }
   }, [isOpen])
 
@@ -79,10 +83,12 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
         setAmount(0)
       }
     }
+    setChangesMade(true)
   }
 
   const handleIncrement = () => {
     setAmount((prev) => (prev ? prev + 1 : 1))
+    setChangesMade(true)
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -97,6 +103,7 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
         setAmount(0)
       }
     }
+    setChangesMade(true)
   }
 
   const handleConfirm = async () => {
@@ -185,7 +192,7 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
             <Button variant="outline" onClick={() => setIsOpen(false)}>
               Cancel
             </Button>
-            <Button onClick={handleConfirm} disabled={selectedCount === 0 || isProcessing} variant="default">
+            <Button onClick={handleConfirm} disabled={selectedCount === 0 || isProcessing || !changesMade} variant="default">
               {isProcessing && (
                 <svg
                   aria-hidden="true"

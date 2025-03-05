@@ -1,0 +1,10 @@
+{
+  "name": "Collect 5 Charizard cards",
+  "requiredCards": [
+    {
+      "_card": ["Charizard"],
+      "cardId": ["A1-35"],
+      "amount": 5
+    }
+  ]
+}
