@@ -1,0 +1,10 @@
+{
+  "name": "Collect 3 Chimchar cards",
+  "requiredCards": [
+    {
+      "_card": ["Chimchar"],
+      "cardId": ["A2-27"],
+      "amount": 3
+    }
+  ]
+}

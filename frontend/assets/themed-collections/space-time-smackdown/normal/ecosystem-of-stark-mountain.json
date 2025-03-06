@@ -1,0 +1,25 @@
+{
+  "name": "Ecosystem of Stark Mountain",
+  "requiredCards": [
+    {
+      "_card": ["Magcargo"],
+      "cardId": ["A2-26"],
+      "amount": 1
+    },
+    {
+      "_card": ["Rhydon"],
+      "cardId": ["A2-81"],
+      "amount": 1
+    },
+    {
+      "_card": ["Skarmory"],
+      "cardId": ["A2-111"],
+      "amount": 1
+    },
+    {
+      "_card": ["Heatran"],
+      "cardId": ["A2-120", "A2-174"],
+      "amount": 1
+    }
+  ]
+}

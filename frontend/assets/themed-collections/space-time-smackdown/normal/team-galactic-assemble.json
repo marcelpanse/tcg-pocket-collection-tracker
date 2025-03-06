@@ -1,0 +1,35 @@
+{
+  "name": "Team Galactic, Assemble!",
+  "requiredCards": [
+    {
+      "_card": ["Stunky"],
+      "cardId": ["A2-102"],
+      "amount": 1
+    },
+    {
+      "_card": ["Croagunk"],
+      "cardId": ["A2-107", "A2-173"],
+      "amount": 1
+    },
+    {
+      "_card": ["Glameow"],
+      "cardId": ["A2-139", "A2-178"],
+      "amount": 1
+    },
+    {
+      "_card": ["Cyrus"],
+      "cardId": ["A2-150", "A2-190"],
+      "amount": 1
+    },
+    {
+      "_card": ["Team Galactic Grunt"],
+      "cardId": ["A2-151", "A2-191"],
+      "amount": 1
+    },
+    {
+      "_card": ["Mars"],
+      "cardId": ["A2-155", "A2-195"],
+      "amount": 1
+    }
+  ]
+}
