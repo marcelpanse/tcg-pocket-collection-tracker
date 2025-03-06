@@ -1,0 +1,53 @@
+{
+  "name": "Pokemon with 60 HP",
+  "requiredCards": [
+      {
+          "_card": [
+              "Meditite",
+              "Croagunk",
+              "Marill",
+              "Phione",
+              "Pikachu",
+              "Phanpy",
+              "Houndour",
+              "Barboach",
+              "Eevee",
+              "Snorunt",
+              "Electrike",
+              "Clefairy",
+              "Hoothoot",
+              "Unown",
+              "Larvitar",
+              "Gible",
+              "Magnemite",
+              "Bronzor",
+              "Starly"
+          ],
+          "cardId": [
+              "A2a-43",
+              "A2a-51",
+              "A2a-14",
+              "A2a-77",
+              "A2a-24",
+              "A2a-25",
+              "A2a-37",
+              "A2a-11",
+              "A2a-16",
+              "A2a-62",
+              "A2a-18",
+              "A2a-27",
+              "A2a-29",
+              "A2a-64",
+              "A2a-34",
+              "A2a-78",
+              "A2a-39",
+              "A2a-45",
+              "A2a-53",
+              "A2a-80",
+              "A2a-58",
+              "A2a-66"
+          ],
+          "amount": 4
+      }
+  ]
+}

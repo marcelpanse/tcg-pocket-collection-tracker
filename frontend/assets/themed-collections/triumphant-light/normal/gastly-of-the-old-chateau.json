@@ -1,0 +1,15 @@
+{
+  "name": "Gastly of the Old Chateau",
+  "requiredCards": [
+    {
+      "_card": ["Gastly"],
+      "cardId": ["A2a-31"],
+      "amount": 4
+    },
+    {
+      "_card": ["Rotom"],
+      "cardId": ["A2a-35"],
+      "amount": 1
+    }
+  ]
+}

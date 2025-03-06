@@ -1,0 +1,10 @@
+{
+  "name": "Collect 3 Marill cards",
+  "requiredCards": [
+    {
+      "_card": ["Marill"],
+      "cardId": ["A2a-14", "A2a-77"],
+      "amount": 3
+    }
+  ]
+}

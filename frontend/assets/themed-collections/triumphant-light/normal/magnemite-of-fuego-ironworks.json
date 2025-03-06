@@ -1,0 +1,15 @@
+{
+  "name": "Magnemite of Fuego Ironworks",
+  "requiredCards": [
+    {
+      "_card": ["Magnemite", "Magneton"],
+      "cardId": ["A2a-53", "A2a-80", "A2a-54"],
+      "amount": 4
+    },
+    {
+      "_card": ["Magnezone"],
+      "cardId": ["A2a-55"],
+      "amount": 1
+    }
+  ]
+}
