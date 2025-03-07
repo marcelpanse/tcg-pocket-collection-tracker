@@ -500,7 +500,6 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                                       alt={match.card.name}
                                       className="w-full h-auto object-contain"
                                     />
-                                    <p>{match.card.name}</p>
                                     <div className="text-xs text-center mt-1 bg-black/60 text-white py-0.5 rounded">
                                       {(100 - (match.distance / 128) * 100).toFixed(0)}%
                                     </div>

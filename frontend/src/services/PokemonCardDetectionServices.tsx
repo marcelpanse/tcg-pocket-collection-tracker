@@ -86,8 +86,10 @@ class PokemonCardDetectorService {
         [0, maxSize - originalWidth],
         [0, 0],
       ])
-
-      return tf.image.resizeBilinear(imgPadded, [modelWidth, modelHeight]).div(255.0).expandDims(0)
+      return tf.image
+        .resizeBilinear(imgPadded as tf.Tensor3D, [modelWidth, modelHeight])
+        .div(255.0)
+        .expandDims(0)
     })
 
     return {
@@ -133,7 +135,7 @@ class PokemonCardDetectorService {
         let transRes: tf.Tensor
 
         if (predictions instanceof tf.Tensor && predictions.shape.length === 3 && predictions.shape[0] === 1) {
-          transRes = predictions.squeeze(0)
+          transRes = predictions.squeeze([0])
         } else {
           transRes = predictions
         }
