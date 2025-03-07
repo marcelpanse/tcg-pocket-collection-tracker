@@ -86,11 +86,12 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
         const storedHashCount = await hashStorageService.getHashCount()
 
         if (storedHashCount !== uniqueCards.length) {
-          console.log('Generating hashes for all cards...')
+          console.log('Checking and generating missing card hashes...')
 
           const batchSize = 80
           const totalCards = uniqueCards.length
           const allHashes = []
+          const existingHashes = await hashStorageService.getAllHashes()
 
           for (let i = 0; i < totalCards; i += batchSize) {
             const batch = uniqueCards.slice(i, i + batchSize)
@@ -98,6 +99,13 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
             // Process one batch
             const batchPromises = batch.map(async (card) => {
               try {
+                // Check if hash already exists for this card
+                const existingHash = existingHashes.find((h) => h.id === card.card_id)
+                if (existingHash) {
+                  return existingHash
+                }
+
+                // Calculate new hash only if it doesn't exist
                 const hash = await hashingService.calculatePerceptualHash(`/images/${card.image?.split('/').at(-1)}`)
                 return { id: card.card_id, hash }
               } catch (error) {
@@ -118,7 +126,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
           }
 
           await hashStorageService.storeHashes(allHashes)
-          console.log('All hashes generated and stored')
+          console.log('All missing hashes generated and stored')
         } else {
           console.log('Using stored hashes from IndexDB')
         }
@@ -211,7 +219,8 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
     const files = event.target.files
     if (!files || files.length === 0) return
 
-    const imageFiles = Array.from(files)
+    const imageFiles = Array.from(files).filter((file) => file.type.startsWith('image/'))
+    if (imageFiles.length === 0) return
     setImages(imageFiles)
 
     try {
@@ -347,15 +356,15 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
         <div className="flex flex-col items-center">
           {/* Selection indicator */}
           {card.matchedCard && card.topMatches && showPotentialMatches && (
-            <div className="mt-2 w-full">
-              <p className="text-sm font-medium mb-1">Other potential matches:</p>
+            <div className="mt-2 mb-2 w-full">
+              <p className="text-sm font-medium mb-4">Other potential matches:</p>
               <div className="grid grid-cols-4 gap-1">
                 {card.topMatches
                   .filter((match) => match.id !== card.matchedCard?.id)
                   .map((match) => (
                     <div
                       key={match.id}
-                      className="p-1 border rounded cursor-pointer hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                      className="p-1 border rounded cursor-pointer hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 transform hover:scale-150 hover:z-50 transition-all duration-200 ease-in-out"
                       onClick={(e) => {
                         e.stopPropagation()
                         handleChangeMatch(index, match.id)
@@ -492,7 +501,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                 </AlertDescription>
               </Alert>
 
-              <div className="flex gap-2 justify-between">
+              <div className="flex gap-2 justify-between my-4">
                 <Button variant="outline" onClick={handleDeselectAll}>
                   Deselect All
                 </Button>

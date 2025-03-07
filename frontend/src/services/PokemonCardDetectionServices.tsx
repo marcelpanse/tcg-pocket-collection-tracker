@@ -103,14 +103,25 @@ class PokemonCardDetectorService {
 
   private async fileToImage(imageFile: File): Promise<HTMLImageElement> {
     return new Promise<HTMLImageElement>((resolve, reject) => {
-      const img = new Image()
-      img.src = URL.createObjectURL(imageFile)
-      img.onload = () => {
-        resolve(img)
+      if (!imageFile.type.startsWith('image/')) {
+        return reject(new Error('Invalid file type'))
       }
-      img.onerror = (error) => {
+
+      const reader = new FileReader()
+      reader.onload = () => {
+        const img = new Image()
+        img.src = reader.result as string
+        img.onload = () => {
+          resolve(img)
+        }
+        img.onerror = (error) => {
+          reject(error)
+        }
+      }
+      reader.onerror = (error) => {
         reject(error)
       }
+      reader.readAsDataURL(imageFile)
     })
   }
 
@@ -121,8 +132,8 @@ class PokemonCardDetectorService {
 
     const modelWidth = 640
     const modelHeight = 640
-    const scoreThreshold = 0.5
-    const iouThreshold = 0.45
+    const scoreThreshold = 0.1
+    const iouThreshold = 0.1
 
     const { input, originalWidth, originalHeight, paddedWidth, paddedHeight } = this.preprocessImage(image, modelWidth, modelHeight)
 

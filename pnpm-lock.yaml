@@ -39,6 +39,9 @@ importers:
       lefthook:
         specifier: ^1.10.11
         version: 1.10.11
+      vite-plugin-mkcert:
+        specifier: ^1.17.7
+        version: 1.17.7(vite@6.2.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1))
 
   frontend:
     dependencies:
