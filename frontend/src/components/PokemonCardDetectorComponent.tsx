@@ -1,8 +1,7 @@
 import { incrementMultipleCards } from '@/components/Card'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
-import ScrollArea from '@/components/ui/scroll-area'
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogOverlay, DialogTitle } from '@/components/ui/dialog'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
@@ -426,171 +425,124 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
       )}
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-4xl">
-          <DialogHeader>
-            <DialogTitle>Pokemon Card Scanner</DialogTitle>
-          </DialogHeader>
+        <DialogOverlay className="DialogOverlay">
+          <DialogContent className="DialogContent max-w-4xl">
+            <DialogHeader>
+              <DialogTitle>Pokemon card scanner</DialogTitle>
+            </DialogHeader>
 
-          {!isLoading && extractedCards.length === 0 && (
-            <div
-              className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900/10"
-              onClick={() => fileInputRef.current?.click()}
-            >
-              <AlertDescription>
-                <p className="mb-4 text-center">
-                  You can upload multiple images at once. The system will scan each image for Pokemon cards and display the results. You can verify the matches,
-                  select or deselect detected cards, and choose how much to increment the quantity for selected cards.
-                </p>
-              </AlertDescription>
-              <input type="file" ref={fileInputRef} onChange={handleImageUpload} accept="image/*" multiple disabled={isLoading} className="w-full hidden" />
-              <Button variant="outline" className="mt-2">
-                Select Images
-              </Button>
-            </div>
-          )}
-
-          {isLoading && (
-            <Alert variant="default">
-              <AlertDescription>
-                <p>Processing images, please wait...</p>
-              </AlertDescription>
-            </Alert>
-          )}
-
-          {!isLoading && extractedCards.length > 0 && (
-            <div>
-              <Alert variant="destructive">
+            {!isLoading && extractedCards.length === 0 && (
+              <div
+                className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900/10"
+                onClick={() => fileInputRef.current?.click()}
+              >
                 <AlertDescription>
-                  <p>
-                    We've detected{' '}
-                    <strong
-                      style={{
-                        fontSize: '1.25rem',
-                        color: '#f3f4f6',
-                        padding: '0.25rem 0.5rem',
-                        borderRadius: '0.375rem',
-                        margin: '0 0.25rem',
-                      }}
-                    >
-                      {extractedCards.length}
-                    </strong>{' '}
-                    cards from your images. You can modify matches using the show/hide matches button, which displays the next 4 most probable matches. The
-                    quantity in your collection for selected cards will increase by{' '}
-                    <strong
-                      style={{
-                        fontSize: '1.25rem',
-                        color: '#f3f4f6',
-                        padding: '0.25rem 0.5rem',
-                        borderRadius: '0.375rem',
-                        margin: '0 0.25rem',
-                      }}
-                    >
-                      {amount}
-                    </strong>
-                  </p>
-                  <p className="mt-2">
-                    <strong>
-                      <span
-                        style={{
-                          fontSize: '1.25rem',
-                          color: '#f3f4f6',
-                          padding: '0.25rem 0.5rem',
-                          borderRadius: '0.375rem',
-                          margin: '0 0.25rem',
-                        }}
-                      >
-                        {selectedCount} cards selected
-                      </span>
-                    </strong>
+                  <p className="mb-4 text-center">
+                    You can upload multiple images at once. The system will scan each image for Pokemon cards and display the results. You can verify the
+                    matches, select or deselect detected cards, and choose how much to increment the quantity for selected cards.
                   </p>
                 </AlertDescription>
-              </Alert>
-
-              <div className="flex gap-2 justify-between my-4">
-                <Button variant="outline" onClick={handleDeselectAll}>
-                  Deselect All
-                </Button>
-                <Button variant="outline" onClick={() => setShowPotentialMatches((prev) => !prev)}>
-                  {showPotentialMatches ? 'Hide' : 'Show'} Edit Matches
-                </Button>
-                <Button variant="outline" onClick={handleSelectAll}>
-                  Select All
+                <input type="file" ref={fileInputRef} onChange={handleImageUpload} accept="image/*" multiple disabled={isLoading} className="w-full hidden" />
+                <Button variant="outline" className="mt-2">
+                  Select images
                 </Button>
               </div>
+            )}
 
-              <ScrollArea className="h-96 rounded-md border p-4">
+            {isLoading && (
+              <Alert variant="default">
+                <AlertDescription>
+                  <p>Processing images, please wait...</p>
+                </AlertDescription>
+              </Alert>
+            )}
+
+            {!isLoading && extractedCards.length > 0 && (
+              <div>
+                <div className="flex gap-2 justify-between my-4 flex-wrap">
+                  <Button variant="outline" onClick={handleDeselectAll} className="hidden sm:block">
+                    Deselect all
+                  </Button>
+                  <Button variant="outline" onClick={() => setShowPotentialMatches((prev) => !prev)}>
+                    {showPotentialMatches ? 'Hide' : 'Show'} edit matches
+                  </Button>
+                  <Button variant="outline" onClick={handleSelectAll} className="hidden sm:block">
+                    Select all
+                  </Button>
+                </div>
+
                 <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
                   {extractedCards.map((card, index) => renderPotentialMatches(card, index))}
                 </div>
-              </ScrollArea>
 
-              {
-                <div className="flex flex-col items-center gap-2">
-                  <p className="text-sm font-medium">Set increment for selected cards:</p>
-                  <div className="flex items-center gap-x-1">
-                    <Button variant="ghost" size="icon" onClick={handleDecrement} disabled={amount === 0} className="rounded-full">
-                      <MinusIcon size={14} />
-                    </Button>
-                    <input
-                      type="text"
-                      min="0"
-                      value={amount}
-                      onChange={handleInputChange}
-                      placeholder="Enter amount"
-                      className="w-10 text-center border-none rounded"
-                      onFocus={(event) => event.target.select()}
-                    />
-                    <Button variant="ghost" size="icon" onClick={handleIncrement} className="rounded-full">
-                      <PlusIcon size={14} />
-                    </Button>
+                {
+                  <div className="flex flex-col items-center gap-2">
+                    <p className="text-sm font-medium pt-4">Set increment for selected cards</p>
+                    <div className="flex items-center gap-x-1">
+                      <Button variant="ghost" size="icon" onClick={handleDecrement} disabled={amount === 0} className="rounded-full">
+                        <MinusIcon size={14} />
+                      </Button>
+                      <input
+                        type="text"
+                        min="0"
+                        value={amount}
+                        onChange={handleInputChange}
+                        placeholder="Enter amount"
+                        className="w-10 text-center border-none rounded"
+                        onFocus={(event) => event.target.select()}
+                      />
+                      <Button variant="ghost" size="icon" onClick={handleIncrement} className="rounded-full">
+                        <PlusIcon size={14} />
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              }
-            </div>
-          )}
-
-          <DialogFooter>
-            <Button
-              variant="outline"
-              onClick={() => {
-                setIsOpen(false)
-                if (extractedCards.length > 0) {
-                  setExtractedCards([])
-                  setResults([])
-                  setImages([])
-                  setAmount(1)
-                  setShowPotentialMatches(false)
                 }
-              }}
-            >
-              {extractedCards.length > 0 ? 'Cancel' : 'Close'}
-            </Button>
-            {extractedCards.length > 0 && (
-              <Button onClick={handleConfirm} disabled={selectedCount === 0 || isProcessing || isLoading} variant="default">
-                {isProcessing ? (
-                  <svg
-                    aria-hidden="true"
-                    className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
-                    viewBox="0 0 100 101"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-                      fill="currentColor"
-                    />
-                    <path
-                      d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-                      fill="currentFill"
-                    />
-                  </svg>
-                ) : (
-                  'Update Selected Cards'
-                )}
-              </Button>
+              </div>
             )}
-          </DialogFooter>
-        </DialogContent>
+
+            <DialogFooter>
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setIsOpen(false)
+                  if (extractedCards.length > 0) {
+                    setExtractedCards([])
+                    setResults([])
+                    setImages([])
+                    setAmount(1)
+                    setShowPotentialMatches(false)
+                  }
+                }}
+              >
+                {extractedCards.length > 0 ? 'Cancel' : 'Close'}
+              </Button>
+              {extractedCards.length > 0 && (
+                <Button onClick={handleConfirm} disabled={selectedCount === 0 || isProcessing || isLoading} variant="default">
+                  {isProcessing ? (
+                    <svg
+                      aria-hidden="true"
+                      className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                      viewBox="0 0 100 101"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                        fill="currentFill"
+                      />
+                    </svg>
+                  ) : (
+                    'Update selected cards'
+                  )}
+                </Button>
+              )}
+            </DialogFooter>
+          </DialogContent>
+        </DialogOverlay>
       </Dialog>
     </div>
   )
