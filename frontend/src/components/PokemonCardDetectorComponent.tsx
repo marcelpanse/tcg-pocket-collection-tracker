@@ -335,7 +335,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
     setIsProcessing(false)
   }
 
-  const renderPotentialMatches = (card, index) => {
+  const renderPotentialMatches = (card: ExtractedCard, index: number) => {
     if (card.matchedCard && card.topMatches && showPotentialMatches) {
       return (
         <div className="mt-2 w-full">
@@ -353,7 +353,8 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                   }}
                   title={match.card.name}
                 >
-                  {/* ... resto del codice ... */}
+                  <img src={`/images/${match.card.image?.split('/').at(-1)}`} alt={match.card.name} className="w-full h-auto object-contain" />
+                  <div className="text-xs text-center mt-1 bg-black/60 text-white py-0.5 rounded">{(100 - (match.distance / 128) * 100).toFixed(0)}%</div>
                 </div>
               ))}
           </div>
