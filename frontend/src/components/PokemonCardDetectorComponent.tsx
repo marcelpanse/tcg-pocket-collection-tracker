@@ -314,7 +314,13 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
 
     if (cardIds.length > 0) {
       try {
-        await incrementMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)
+        await incrementMultipleCards(
+          cardIds.filter((id): id is string => id !== undefined),
+          amount,
+          ownedCards,
+          setOwnedCards,
+          user,
+        )
         setIsOpen(false)
         setExtractedCards([])
         setResults([])
@@ -359,7 +365,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
           )}
 
           {isLoading && (
-            <Alert variant="info">
+            <Alert variant="default">
               <AlertDescription>
                 <p>Processing images, please wait...</p>
               </AlertDescription>
@@ -438,7 +444,17 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                       <div className="flex flex-col items-center">
                         {/* Selection indicator */}
                         <div className="flex justify-between items-center mb-2 w-full">
-                          <span className="text-sm font-medium">{card.selected ? 'Selected' : 'Click to select'}</span>
+                          <span className="text-sm font-medium">
+                            {card.selected ? 'Selected' : 'Click to select'}{' '}
+                            <p>
+                              {card.matchedCard &&
+                                card.topMatches &&
+                                card.topMatches
+                                  .filter((match) => match.id === card.matchedCard?.id)
+                                  .map((match) => match.card.name)
+                                  .join(' ')}
+                            </p>
+                          </span>
                           {card.selected && <div className="bg-blue-500 text-white text-xs px-2 py-0.5 rounded-full">Selected</div>}
                         </div>
 
@@ -454,6 +470,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                           {card.matchedCard && (
                             <div className="w-1/2 relative">
                               <img src={card.matchedCard.imageUrl} alt="Best match" className="w-full h-auto object-contain" />
+
                               <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
                                 {(100 - (card.matchedCard.distance / 128) * 100).toFixed(0)}% match
                               </div>
@@ -483,6 +500,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                                       alt={match.card.name}
                                       className="w-full h-auto object-contain"
                                     />
+                                    <p>{match.card.name}</p>
                                     <div className="text-xs text-center mt-1 bg-black/60 text-white py-0.5 rounded">
                                       {(100 - (match.distance / 128) * 100).toFixed(0)}%
                                     </div>
