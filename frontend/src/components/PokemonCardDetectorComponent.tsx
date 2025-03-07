@@ -374,7 +374,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
           )}
 
           {!isLoading && extractedCards.length > 0 && (
-            <>
+            <div>
               <Alert variant="destructive">
                 <AlertDescription>
                   <p>
@@ -535,7 +535,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                   </div>
                 </div>
               }
-            </>
+            </div>
           )}
 
           <DialogFooter>
