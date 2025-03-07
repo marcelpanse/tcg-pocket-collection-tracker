@@ -418,10 +418,12 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
     )
   }
   return (
-    <div className="pokemon-card-detector">
-      <Button onClick={() => setIsOpen(true)} variant="default" className="w-full" disabled={isGeneratingHashes}>
-        {isGeneratingHashes ? 'Generating hashes, it will take few seconds' : 'Scan Pokemon Cards'}
-      </Button>
+    <div className="pokemon-card-detector flex justify-end">
+      {!isGeneratingHashes && (
+        <Button onClick={() => setIsOpen(true)} variant="ghost">
+          Scan
+        </Button>
+      )}
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-4xl">

@@ -122,7 +122,7 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
 
   return (
     <>
-      <Button variant="ghost" onClick={() => setIsOpen(true)} disabled={isBatchUpdateDisabled}>
+      <Button className="hidden sm:block" variant="ghost" onClick={() => setIsOpen(true)} disabled={isBatchUpdateDisabled}>
         Bulk update
       </Button>
 

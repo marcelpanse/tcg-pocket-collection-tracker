@@ -3,7 +3,6 @@ import { updateMultipleCards } from '@/components/Card.tsx'
 import { CardsTable } from '@/components/CardsTable.tsx'
 import ExpansionsFilter from '@/components/ExpansionsFilter.tsx'
 import OwnedFilter from '@/components/OwnedFilter.tsx'
-import PokemonCardDetector from '@/components/PokemonCardDetectorComponent'
 import RarityFilter from '@/components/RarityFilter.tsx'
 import SearchInput from '@/components/SearchInput.tsx'
 import { allCards } from '@/lib/CardsDB'
@@ -63,10 +62,6 @@ function Collection() {
         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
 
         <BatchUpdateDialog filteredCards={getFilteredCards} onBatchUpdate={handleBatchUpdate} disabled={getFilteredCards.length === 0} />
-      </div>
-
-      <div className="px-8 my-4">
-        <PokemonCardDetector />
       </div>
 
       <div>

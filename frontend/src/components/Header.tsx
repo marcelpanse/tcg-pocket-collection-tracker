@@ -1,5 +1,6 @@
 import HamburgerMenu from '@/components/HamburgerMenu.tsx'
 import { Login } from '@/components/Login.tsx'
+import PokemonCardDetector from '@/components/PokemonCardDetectorComponent.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
 import {
@@ -50,6 +51,7 @@ export function Header() {
               </Link>
             </NavigationMenuLink>
           </NavigationMenuList>
+          <PokemonCardDetector />
         </NavigationMenu>
         <div className="items-center gap-2 flex">
           <Link to="/community" className="hidden sm:block">
