@@ -271,7 +271,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
   const handleIncrement = () => {
     setAmount((prev) => prev + 1)
   }
-
+  /*
   const _handleChangeMatch = (cardIndex: number, matchId: string) => {
     setExtractedCards((prev) => {
       const updated = [...prev]
@@ -294,7 +294,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
       return updated
     })
   }
-
+*/
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.trim()
     if (value === '') {
