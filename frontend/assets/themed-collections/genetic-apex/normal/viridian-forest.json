@@ -1,0 +1,30 @@
+{
+  "name": "Viridian Forest",
+  "requiredCards": [
+    {
+      "_card": ["Caterpie"],
+      "cardId": ["A1-5"],
+      "amount": 1
+    },
+    {
+      "_card": ["Metapod"],
+      "cardId": ["A1-6"],
+      "amount": 1
+    },
+    {
+      "_card": ["Weedle"],
+      "cardId": ["A1-8"],
+      "amount": 1
+    },
+    {
+      "_card": ["Kakuna"],
+      "cardId": ["A1-9"],
+      "amount": 1
+    },
+    {
+      "_card": ["Pikachu"],
+      "cardId": ["A1-94", "A1-96", "A1-259", "A1-281", "A1-285"],
+      "amount": 1
+    }
+  ]
+}

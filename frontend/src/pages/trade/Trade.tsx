@@ -1,3 +1,4 @@
+import NumberFilter from '@/components/NumberFilter'
 import RarityFilter from '@/components/RarityFilter.tsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { UserContext } from '@/lib/context/UserContext'
@@ -43,19 +44,12 @@ function Trade() {
             <TabsTrigger value="buying_tokens">Buying Tokens</TabsTrigger>
           </TabsList>
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
-
-          <div className="px-3 py-1 border-2 border-slate-600 rounded-md">
-            <label className="flex items-center gap-x-2 text-white/50 text-sm">
-              {currentTab === 'looking_for' ? 'Maximum' : 'Minimum'} number of cards:
-              <select value={minCards} onChange={(e) => setMinCards(Number.parseInt(e.target.value))} className="p-1">
-                {[0, 1, 2, 3, 4, 5].map((number) => (
-                  <option key={number} value={number} className="text-black">
-                    {number}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
+          <NumberFilter
+            numberFilter={minCards}
+            setNumberFilter={setMinCards}
+            options={[0, 1, 2, 3, 4, 5]}
+            labelKey={currentTab === 'looking_for' ? 'maxNum' : 'minNum'}
+          />
         </div>
         <div className="max-w-auto mx-4 md:mx-8">
           <TabsContent value="looking_for">

@@ -1,0 +1,10 @@
+{
+  "name": "Hard-Bodied Pokemon",
+  "requiredCards": [
+    {
+      "_card": ["Probopass", "Nosepass", "Magnemite", "Magneton", "Magnezone", "Donphan", "Pupitar"],
+      "cardId": ["A2a-57", "A2a-85", "A2a-94", "A2a-42", "A2a-53", "A2a-80", "A2a-54", "A2a-55", "A2a-38", "A2a-40"],
+      "amount": 4
+    }
+  ]
+}

@@ -77,15 +77,6 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
               <p>
                 <strong>Ability Effect:</strong> {card.ability?.effect || 'N/A'}
               </p>
-              <p>
-                <strong>Probability (1-3 cards):</strong> {card.probability?.['1-3 card'] || 'N/A'}
-              </p>
-              <p>
-                <strong>Probability (4 cards):</strong> {card.probability?.['4 card'] || 'N/A'}
-              </p>
-              <p>
-                <strong>Probability (5 cards):</strong> {card.probability?.['5 card'] || 'N/A'}
-              </p>
             </div>
           </div>
         </div>

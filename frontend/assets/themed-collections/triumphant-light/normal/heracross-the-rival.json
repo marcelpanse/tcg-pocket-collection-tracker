@@ -1,0 +1,25 @@
+{
+  "name": "Heracross, the Rival",
+  "requiredCards": [
+    {
+      "_card": ["Heracross"],
+      "cardId": ["A2a-1"],
+      "amount": 1
+    },
+    {
+      "_card": ["Snorlax"],
+      "cardId": ["A2a-63"],
+      "amount": 1
+    },
+    {
+      "_card": ["Staraptor"],
+      "cardId": ["A2a-68"],
+      "amount": 1
+    },
+    {
+      "_card": ["Barry"],
+      "cardId": ["A2a-74"],
+      "amount": 1
+    }
+  ]
+}

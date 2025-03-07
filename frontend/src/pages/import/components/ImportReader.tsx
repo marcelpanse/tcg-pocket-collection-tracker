@@ -1,39 +1,33 @@
 import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
+import type { ImportExportRow } from '@/types'
 import { ID } from 'appwrite'
 import { use, useCallback, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 import XLSX from 'xlsx'
 
-type ExcelRowType = {
-  expansionName: string
-  count: number
-  id: string
-  name: string
-}
-
-export const ExcelReader = () => {
+export const ImportReader = () => {
   const { user } = use(UserContext)
   const { ownedCards, setOwnedCards } = use(CollectionContext)
-  console.log('owned cards', ownedCards)
 
-  const [processedData, setProcessedData] = useState<(ExcelRowType & { added?: boolean; updated?: boolean; removed?: boolean })[] | null>(null)
+  const [processedData, setProcessedData] = useState<(ImportExportRow & { added?: boolean; updated?: boolean; removed?: boolean })[] | null>(null)
   const [numberProcessed, setNumberProcessed] = useState<number>(0)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [errorMessage, setErrorMessage] = useState<string>('')
   const [progressMessage, setProgressMessage] = useState<string>('')
 
-  const processFileRows = async (data: { expansionName: string; count: number; id: string; name: string }[]) => {
+  const processFileRows = async (data: ImportExportRow[]) => {
     if (data) {
       const db = await getDatabase()
       for (let i = 0; i < data.length; i++) {
         const r = data[i]
-        const newAmount = Number(r.count)
-        const cardId = r.id
-        console.log('checking', ownedCards, r.id)
-        const ownedCard = ownedCards.find((row) => row.card_id === r.id)
-
+        console.log('Row', r)
+        console.log('First Owned Card', ownedCards[0])
+        const newAmount = Number(r.NumberOwned)
+        const cardId = r.Id
+        const ownedCard = ownedCards.find((row) => row.card_id === r.Id)
+        console.log('Owned Card', ownedCard)
         if (ownedCard && ownedCard.amount_owned !== newAmount) {
           console.log('updating card', ownedCard.card_id, newAmount)
           ownedCard.amount_owned = Math.max(0, newAmount)
@@ -43,7 +37,7 @@ export const ExcelReader = () => {
           })
           setProcessedData((p) => [...(p ?? []), { ...r, updated: newAmount > 0, removed: newAmount === 0 }])
         } else if (!ownedCard && newAmount > 0) {
-          console.log('creating card', r.id, newAmount)
+          console.log('creating card', r.Id, newAmount)
           const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
             email: user?.email,
             card_id: cardId,
@@ -85,33 +79,12 @@ export const ExcelReader = () => {
 
     reader.onload = async (e) => {
       try {
-        const worksheetNames = ['Genetic Apex', 'Mythical Island', 'Space-Time Smackdown', 'Triumphant Light', 'PROMO-A']
         const workbook = XLSX.read(e.target?.result)
-        const results: ExcelRowType[] = []
-        for (const worksheetName of worksheetNames) {
-          const worksheet = workbook.Sheets[worksheetName]
-          const jsonData = XLSX.utils.sheet_to_json<unknown[]>(worksheet, { header: 1 })
-
-          // Extract columns B and C
-          for (let i = 1; i < jsonData.length; i++) {
-            if (jsonData?.[i] && jsonData[i].length > 5) {
-              const col = (jsonData[i][2] as string)?.split(' ')
-              const obj = {
-                expansionName: `${worksheetName}  (${col[0]})`,
-                count: Number(jsonData[i][1] ?? 0),
-                id: `${col[0]}-${Number(col[1])}`,
-                name: `${jsonData[i][3]}`,
-              }
-
-              if (obj.expansionName && obj.count >= 0 && obj.id && obj.name) {
-                results.push(obj)
-              }
-            }
-          }
-        }
-
-        setProcessedData([])
-        await processFileRows(results)
+        console.log('Workbook Sheets', workbook.SheetNames)
+        const worksheet = workbook.Sheets[workbook.SheetNames[0]]
+        const jsonData = XLSX.utils.sheet_to_json<ImportExportRow>(worksheet)
+        console.log('JsonData', jsonData)
+        await processFileRows(jsonData)
         console.log('Processed File Rows')
       } catch (error) {
         console.error('Error processing Excel file:', error)
@@ -139,7 +112,7 @@ export const ExcelReader = () => {
       )}
       {errorMessage?.length > 0 && <p className="text-red-400 mb-2">{errorMessage}</p>}
       {progressMessage?.length > 0 && <p className="text-gray-200 mb-2">{progressMessage}</p>}
-      {processedData && (
+      {processedData && console.log('Processed Data', processedData) && (
         <div>
           {processedData.length > 0 ? (
             <pre>
@@ -154,12 +127,11 @@ export const ExcelReader = () => {
                   </tr>
                 </thead>
                 {processedData.map((d, index) => (
-                  <tbody key={`data-${d.id}-${index}`}>
+                  <tbody key={`data-${d.Id}-${index}`}>
                     <tr>
-                      <td>{d.expansionName}</td>
-                      <td>{d.id}</td>
-                      <td>{d.name}</td>
-                      <td>{d.added ? `Added (${d.count})` : d.updated ? `Updated (${d.count})` : d.removed ? 'Removed' : 'Unknown'}</td>
+                      <td>{d.Id}</td>
+                      <td>{d.CardName}</td>
+                      <td>{d.added ? `Added (${d.NumberOwned})` : d.updated ? `Updated (${d.NumberOwned})` : d.removed ? 'Removed' : 'Unknown'}</td>
                     </tr>
                   </tbody>
                 ))}

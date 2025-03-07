@@ -12,8 +12,9 @@ import { Carousel } from './Carousel'
 interface ExpansionOverviewProps {
   expansion: Expansion
   rarityFilter: string[]
+  numberFilter: number
 }
-export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverviewProps) {
+export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: ExpansionOverviewProps) {
   const { ownedCards } = use(CollectionContext)
   const { t } = useTranslation('expansion-overview')
 
@@ -26,7 +27,7 @@ export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverview
     }
     const chartData = packs.map((pack) => ({
       packName: pack.name.replace(' pack', '').replace('Every', 'Promo-A'),
-      percentage: CardsDB.pullRate({ ownedCards: ownedCards, expansion: expansion, pack: pack, rarityFilter }),
+      percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter }),
       fill: pack.color,
     }))
 
@@ -36,7 +37,7 @@ export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverview
       highestProbabilityPack,
       chartData,
     }
-  }, [ownedCards, expansion, rarityFilter])
+  }, [ownedCards, expansion, rarityFilter, numberFilter])
 
   return (
     <>
@@ -59,10 +60,17 @@ export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverview
               </>
             )}
             <div className="col-span-8 snap-start flex-shrink-0 w-full border-2 border-slate-600 border-solid rounded-4xl p-4 sm:p-8">
-              <CompleteProgress title={t('totalCards')} expansion={expansion} rarityFilter={rarityFilter} />
+              <CompleteProgress title={t('totalCards')} expansion={expansion} rarityFilter={rarityFilter} numberFilter={numberFilter} />
               {expansion.packs.length > 1 &&
                 expansion.packs.map((pack) => (
-                  <CompleteProgress key={pack.name} rarityFilter={rarityFilter} title={pack.name} expansion={expansion} packName={pack.name} />
+                  <CompleteProgress
+                    key={pack.name}
+                    rarityFilter={rarityFilter}
+                    title={pack.name}
+                    expansion={expansion}
+                    packName={pack.name}
+                    numberFilter={numberFilter}
+                  />
                 ))}
             </div>
           </Carousel>
@@ -84,10 +92,17 @@ export function ExpansionOverview({ expansion, rarityFilter }: ExpansionOverview
             </>
           )}
           <div className="col-span-4 lg:col-span-2">
-            <CompleteProgress title={t('totalCards')} expansion={expansion} rarityFilter={rarityFilter} />
+            <CompleteProgress title={t('totalCards')} expansion={expansion} rarityFilter={rarityFilter} numberFilter={numberFilter} />
             {expansion.packs.length > 1 &&
               expansion.packs.map((pack) => (
-                <CompleteProgress key={pack.name} rarityFilter={rarityFilter} title={pack.name} expansion={expansion} packName={pack.name} />
+                <CompleteProgress
+                  key={pack.name}
+                  rarityFilter={rarityFilter}
+                  numberFilter={numberFilter}
+                  title={pack.name}
+                  expansion={expansion}
+                  packName={pack.name}
+                />
               ))}
           </div>
         </>

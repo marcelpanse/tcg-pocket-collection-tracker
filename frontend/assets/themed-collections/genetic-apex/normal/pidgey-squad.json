@@ -1,0 +1,20 @@
+{
+  "name": "Pidgey Squad",
+  "requiredCards": [
+    {
+      "_card": ["Pidgey"],
+      "cardId": ["A1-186"],
+      "amount": 1
+    },
+    {
+      "_card": ["Pidgeotto"],
+      "cardId": ["A1-187"],
+      "amount": 1
+    },
+    {
+      "_card": ["Pidgeot"],
+      "cardId": ["A1-188", "A1-245"],
+      "amount": 1
+    }
+  ]
+}

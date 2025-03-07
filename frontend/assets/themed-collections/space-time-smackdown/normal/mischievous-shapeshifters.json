@@ -1,0 +1,35 @@
+{
+  "name": "Mischievous Shapeshifters",
+  "requiredCards": [
+    {
+      "_card": ["Mow Rotom"],
+      "cardId": ["A2-21"],
+      "amount": 1
+    },
+    {
+      "_card": ["Heat Rotom"],
+      "cardId": ["A2-30"],
+      "amount": 1
+    },
+    {
+      "_card": ["Wash Rotom"],
+      "cardId": ["A2-47"],
+      "amount": 1
+    },
+    {
+      "_card": ["Frost Rotom"],
+      "cardId": ["A2-48"],
+      "amount": 1
+    },
+    {
+      "_card": ["Rotom"],
+      "cardId": ["A2-62", "A2-164"],
+      "amount": 1
+    },
+    {
+      "_card": ["Fan Rotom"],
+      "cardId": ["A2-142"],
+      "amount": 1
+    }
+  ]
+}

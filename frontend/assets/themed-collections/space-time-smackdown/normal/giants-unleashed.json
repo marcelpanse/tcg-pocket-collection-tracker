@@ -1,0 +1,25 @@
+{
+  "name": "Giants Unleashed",
+  "requiredCards": [
+    {
+      "_card": ["Regice"],
+      "cardId": ["A2-34"],
+      "amount": 1
+    },
+    {
+      "_card": ["Regirock"],
+      "cardId": ["A2-87"],
+      "amount": 1
+    },
+    {
+      "_card": ["Registeel"],
+      "cardId": ["A2-112"],
+      "amount": 1
+    },
+    {
+      "_card": ["Regigigas"],
+      "cardId": ["A2-143", "A2-179"],
+      "amount": 1
+    }
+  ]
+}

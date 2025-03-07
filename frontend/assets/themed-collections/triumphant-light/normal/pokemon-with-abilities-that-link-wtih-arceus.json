@@ -1,0 +1,50 @@
+{
+  "name": "Pokemon with Abilities that \"Link\" with Arceus",
+  "requiredCards": [
+    {
+      "_card": ["Carnivine"],
+      "cardId": ["A2a-9"],
+      "amount": 1
+    },
+    {
+      "_card": ["Heatran"],
+      "cardId": ["A2a-13"],
+      "amount": 1
+    },
+    {
+      "_card": ["Abomasnow"],
+      "cardId": ["A2a-21"],
+      "amount": 1
+    },
+    {
+      "_card": ["Raichu"],
+      "cardId": ["A2a-26"],
+      "amount": 1
+    },
+    {
+      "_card": ["Rotom"],
+      "cardId": ["A2a-35"],
+      "amount": 1
+    },
+    {
+      "_card": ["Tyranitar"],
+      "cardId": ["A2a-41"],
+      "amount": 1
+    },
+    {
+      "_card": ["Crobat"],
+      "cardId": ["A2a-50"],
+      "amount": 1
+    },
+    {
+      "_card": ["Magnezone"],
+      "cardId": ["A2a-55"],
+      "amount": 1
+    },
+    {
+      "_card": ["Arceus"],
+      "cardId": ["A2a-70", "A2a-71", "A2a-86", "A2a-95", "A2a-96"],
+      "amount": 1
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "A Big Snorlax Nuisance",
+  "requiredCards": [
+    {
+      "_card": ["Oddish"],
+      "cardId": ["A1-11"],
+      "amount": 1
+    },
+    {
+      "_card": ["Venonat"],
+      "cardId": ["A1-16"],
+      "amount": 1
+    },
+    {
+      "_card": ["Bellsprout"],
+      "cardId": ["A1-18"],
+      "amount": 1
+    },
+    {
+      "_card": ["Snorlax"],
+      "cardId": ["A1-250"],
+      "amount": 1
+    }
+  ]
+}
