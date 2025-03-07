@@ -447,7 +447,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
 
                         {card.matchedCard && card.topMatches && showPotentialMatches && (
                           <div className="mt-2 w-full">
-                            <p className="text-sm font-medium mb-1">Other potential matches:</p>
+                            <span className="text-sm font-medium mb-1">Other potential matches:</span>
                             <div className="grid grid-cols-4 gap-1">
                               {card.topMatches
                                 .filter((match) => match.id !== card.matchedCard?.id)
@@ -456,7 +456,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                                     key={match.id}
                                     className="p-1 border rounded cursor-pointer hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20"
                                     onClick={(e) => {
-                                      e.stopPropagation() // Prevent triggering the parent onClick
+                                      e.stopPropagation()
                                       handleChangeMatch(index, match.id)
                                     }}
                                     title={match.card.name}
