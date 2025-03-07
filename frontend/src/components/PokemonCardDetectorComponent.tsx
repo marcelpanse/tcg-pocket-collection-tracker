@@ -447,7 +447,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
 
                         {card.matchedCard && card.topMatches && showPotentialMatches && (
                           <div className="mt-2 w-full">
-                            <span className="text-sm font-medium mb-1">Other potential matches:</span>
+                            <p className="text-sm font-medium mb-1">Other potential matches:</p>
                             <div className="grid grid-cols-4 gap-1">
                               {card.topMatches
                                 .filter((match) => match.id !== card.matchedCard?.id)
