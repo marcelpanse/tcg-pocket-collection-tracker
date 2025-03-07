@@ -271,8 +271,8 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
   const handleIncrement = () => {
     setAmount((prev) => prev + 1)
   }
-  /*
-  const _handleChangeMatch = (cardIndex: number, matchId: string) => {
+
+  const handleChangeMatch = (cardIndex: number, matchId: string) => {
     setExtractedCards((prev) => {
       const updated = [...prev]
       const card = updated[cardIndex]
@@ -294,7 +294,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
       return updated
     })
   }
-*/
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.trim()
     if (value === '') {
@@ -333,6 +333,34 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
     }
 
     setIsProcessing(false)
+  }
+
+  const renderPotentialMatches = (card, index) => {
+    if (card.matchedCard && card.topMatches && showPotentialMatches) {
+      return (
+        <div className="mt-2 w-full">
+          <p className="text-sm font-medium mb-1">Other potential matches:</p>
+          <div className="grid grid-cols-4 gap-1">
+            {card.topMatches
+              .filter((match) => match.id !== card.matchedCard?.id)
+              .map((match) => (
+                <div
+                  key={match.id}
+                  className="p-1 border rounded cursor-pointer hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    handleChangeMatch(index, match.id)
+                  }}
+                  title={match.card.name}
+                >
+                  {/* ... resto del codice ... */}
+                </div>
+              ))}
+          </div>
+        </div>
+      )
+    }
+    return null
   }
 
   return (
@@ -445,38 +473,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                       <div className="flex flex-col items-center">
                         {/* Selection indicator */}
 
-                        {card.matchedCard && card.topMatches && showPotentialMatches && (
-                          /*   <div className="mt-2 w-full">
-                            <p className="text-sm font-medium mb-1">Other potential matches:</p>
-                            <div className="grid grid-cols-4 gap-1">
-                              {card.topMatches
-                                .filter((match) => match.id !== card.matchedCard?.id)
-                                .map((match) => (
-                                  <div
-                                    key={match.id}
-                                    className="p-1 border rounded cursor-pointer hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20"
-                                    onClick={(e) => {
-                                      e.stopPropagation()
-                                      handleChangeMatch(index, match.id)
-                                    }}
-                                    title={match.card.name}
-                                  >
-                                    <img
-                                      src={`/images/${match.card.image?.split('/').at(-1)}`}
-                                      alt={match.card.name}
-                                      className="w-full h-auto object-contain"
-                                    />
-                                    <div className="text-xs text-center mt-1 bg-black/60 text-white py-0.5 rounded">
-                                      {(100 - (match.distance / 128) * 100).toFixed(0)}%
-                                    </div>
-                                  </div>
-                                ))}
-                            </div>
-                          </div>
-                          Implementa gradualmente il resto */
-
-                          <p className="text-sm">Other potential matches:</p>
-                        )}
+                        {renderPotentialMatches(card, index)}
 
                         {/* Extracted card and best match side by side */}
                         <div className="flex w-full gap-2 mb-2">
