@@ -156,7 +156,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
 
         const extractedCards = await Promise.all(
           detections.detections
-            .filter((detection) => detection.confidence >= 90)
+            .filter((detection) => detection.confidence >= 50)
             .map(async (detection) => {
               const points = detection.points
               const [x1, y1] = points[0]
