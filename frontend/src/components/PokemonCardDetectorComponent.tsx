@@ -474,9 +474,8 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                             </div>
                           </div>
                           Implementa gradualmente il resto */
-                          <div className="mt-2 w-full">
-                            <p className="text-sm">Other potential matches:</p>
-                          </div>
+
+                          <p className="text-sm">Other potential matches:</p>
                         )}
 
                         {/* Extracted card and best match side by side */}
