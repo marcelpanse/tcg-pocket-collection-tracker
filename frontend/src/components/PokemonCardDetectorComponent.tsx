@@ -272,7 +272,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
     setAmount((prev) => prev + 1)
   }
 
-  const handleChangeMatch = (cardIndex: number, matchId: string) => {
+  const _handleChangeMatch = (cardIndex: number, matchId: string) => {
     setExtractedCards((prev) => {
       const updated = [...prev]
       const card = updated[cardIndex]
@@ -446,7 +446,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                         {/* Selection indicator */}
 
                         {card.matchedCard && card.topMatches && showPotentialMatches && (
-                          <div className="mt-2 w-full">
+                          /*   <div className="mt-2 w-full">
                             <p className="text-sm font-medium mb-1">Other potential matches:</p>
                             <div className="grid grid-cols-4 gap-1">
                               {card.topMatches
@@ -472,6 +472,10 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                                   </div>
                                 ))}
                             </div>
+                          </div>
+                          Implementa gradualmente il resto */
+                          <div className="mt-2 w-full">
+                            <p className="text-sm">Other potential matches:</p>
                           </div>
                         )}
 
