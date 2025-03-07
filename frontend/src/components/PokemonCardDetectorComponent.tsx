@@ -326,6 +326,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
         setResults([])
         setImages([])
         setAmount(1)
+        setShowPotentialMatches(false)
       } catch (error) {
         console.error('Error incrementing card quantities:', error)
       }
@@ -548,6 +549,8 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                   setExtractedCards([])
                   setResults([])
                   setImages([])
+                  setAmount(1)
+                  setShowPotentialMatches(false)
                 }
               }}
             >

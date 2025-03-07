@@ -160,7 +160,7 @@ class PokemonCardDetectorService {
         return [boxes, scores, classes]
       })
 
-      const nms = await tf.image.nonMaxSuppressionAsync(boxes, scores, 100, iouThreshold, scoreThreshold)
+      const nms = await tf.image.nonMaxSuppressionAsync(boxes as tf.Tensor2D, scores, 100, iouThreshold, scoreThreshold)
 
       const detections = tf.tidy(() => tf.concat([boxes.gather(nms, 0), scores.gather(nms, 0).expandDims(1), classes.gather(nms, 0).expandDims(1)], 1))
 

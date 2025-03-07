@@ -14,7 +14,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "lefthook": "^1.10.11"
+    "lefthook": "^1.10.11",
+    "vite-plugin-mkcert": "^1.17.7"
   },
   "type": "module",
   "packageManager": "pnpm@10.5.2",
