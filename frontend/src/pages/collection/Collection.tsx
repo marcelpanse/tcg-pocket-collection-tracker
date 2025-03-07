@@ -20,38 +20,6 @@ function Collection() {
   const [rarityFilter, setRarityFilter] = useState<string[]>([])
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
-
-  const _handleDetectionsComplete = (allDetections) => {
-    // Do something with all the detections
-    console.log('All detections:', allDetections)
-
-    // Here you could process the detections to identify cards
-    // and update the collection accordingly
-  }
-
-  const _preprocessImage = (img) => {
-    const canvas = document.createElement('canvas')
-    const ctx = canvas.getContext('2d')
-    canvas.width = img.width
-    canvas.height = img.height
-    ctx.drawImage(img, 0, 0)
-
-    // Get image data (RGBA format)
-    const imageData = ctx.getImageData(0, 0, img.width, img.height)
-    const data = imageData.data
-
-    // Remove alpha channel and normalize pixel values to [0, 1]
-    const inputData = new Float32Array(img.width * img.height * 3)
-    for (let i = 0, j = 0; i < data.length; i += 4, j += 3) {
-      inputData[j] = data[i] / 255.0 // R
-      inputData[j + 1] = data[i + 1] / 255.0 // G
-      inputData[j + 2] = data[i + 2] / 255.0 // B
-    }
-
-    // Create a tensor with shape [1, 3, height, width]
-    const inputTensor = new ort.Tensor('float32', inputData, [1, 3, img.height, img.width])
-    return inputTensor
-  }
   const getFilteredCards = useMemo(() => {
     let filteredCards = allCards
 
