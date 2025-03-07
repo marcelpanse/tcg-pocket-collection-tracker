@@ -336,34 +336,75 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
   }
 
   const renderPotentialMatches = (card: ExtractedCard, index: number) => {
-    if (card.matchedCard && card.topMatches && showPotentialMatches) {
-      return (
-        <div className="mt-2 w-full">
-          <p className="text-sm font-medium mb-1">Other potential matches:</p>
-          <div className="grid grid-cols-4 gap-1">
-            {card.topMatches
-              .filter((match) => match.id !== card.matchedCard?.id)
-              .map((match) => (
-                <div
-                  key={match.id}
-                  className="p-1 border rounded cursor-pointer hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20"
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    handleChangeMatch(index, match.id)
-                  }}
-                  title={match.card.name}
-                >
-                  <img src={`/images/${match.card.image?.split('/').at(-1)}`} alt={match.card.name} className="w-full h-auto object-contain" />
-                  <div className="text-xs text-center mt-1 bg-black/60 text-white py-0.5 rounded">{(100 - (match.distance / 128) * 100).toFixed(0)}%</div>
+    return (
+      <div
+        key={index}
+        className={`border rounded-md p-2 cursor-pointer transition-all duration-200 ${
+          card.selected ? 'border-blue-300 bg-blue-50 dark:bg-blue-900/70' : 'border-gray-200 grayscale'
+        }`}
+        onClick={() => handleSelect(index, !card.selected)}
+      >
+        <div className="flex flex-col items-center">
+          {/* Selection indicator */}
+          {card.matchedCard && card.topMatches && showPotentialMatches && (
+            <div className="mt-2 w-full">
+              <p className="text-sm font-medium mb-1">Other potential matches:</p>
+              <div className="grid grid-cols-4 gap-1">
+                {card.topMatches
+                  .filter((match) => match.id !== card.matchedCard?.id)
+                  .map((match) => (
+                    <div
+                      key={match.id}
+                      className="p-1 border rounded cursor-pointer hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        handleChangeMatch(index, match.id)
+                      }}
+                      title={match.card.name}
+                    >
+                      <img src={`/images/${match.card.image?.split('/').at(-1)}`} alt={match.card.name} className="w-full h-auto object-contain" />
+                      <div className="text-xs text-center mt-1 bg-black/60 text-white py-0.5 rounded">{(100 - (match.distance / 128) * 100).toFixed(0)}%</div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          )}
+
+          {/* Extracted card and best match side by side */}
+          <div className="flex w-full gap-2 mb-2">
+            {/* Extracted card */}
+            <div className="w-1/2 relative">
+              <img src={card.imageUrl} alt={`Detected card ${index + 1}`} className="w-full h-auto object-contain" />
+              <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs px-1 py-0.5 text-center">Extracted Card</div>
+            </div>
+
+            {/* Best match card */}
+            {card.matchedCard && (
+              <div className="w-1/2 relative">
+                <img src={card.matchedCard.imageUrl} alt="Best match" className="w-full h-auto object-contain" />
+                <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
+                  {(100 - (card.matchedCard.distance / 128) * 100).toFixed(0)}% match
                 </div>
-              ))}
+              </div>
+            )}
+          </div>
+
+          {/* Potential matches thumbnails */}
+          <div className="flex justify-between items-center mb-2 w-full">
+            <span className="text-sm font-medium">
+              {card.selected ? 'Selected' : 'Click to select'}{' '}
+              {card.matchedCard &&
+                card.topMatches &&
+                card.topMatches
+                  .filter((match) => match.id === card.matchedCard?.id)
+                  .map((match) => match.card.name)
+                  .join(' ')}
+            </span>
           </div>
         </div>
-      )
-    }
-    return null
+      </div>
+    )
   }
-
   return (
     <div className="pokemon-card-detector">
       <Button onClick={() => setIsOpen(true)} variant="default" className="w-full" disabled={isGeneratingHashes}>
@@ -465,52 +506,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
 
               <ScrollArea className="h-96 rounded-md border p-4">
                 <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-                  {extractedCards.map((card, index) => (
-                    <div
-                      key={index}
-                      className={`border rounded-md p-2 cursor-pointer transition-all duration-200 ${card.selected ? 'border-blue-300 bg-blue-50 dark:bg-blue-900/70' : 'border-gray-200 grayscale'}`}
-                      onClick={() => handleSelect(index, !card.selected)}
-                    >
-                      <div className="flex flex-col items-center">
-                        {/* Selection indicator */}
-
-                        {renderPotentialMatches(card, index)}
-
-                        {/* Extracted card and best match side by side */}
-                        <div className="flex w-full gap-2 mb-2">
-                          {/* Extracted card */}
-                          <div className="w-1/2 relative">
-                            <img src={card.imageUrl} alt={`Detected card ${index + 1}`} className="w-full h-auto object-contain" />
-                            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs px-1 py-0.5 text-center">Extracted Card</div>
-                          </div>
-
-                          {/* Best match card */}
-                          {card.matchedCard && (
-                            <div className="w-1/2 relative">
-                              <img src={card.matchedCard.imageUrl} alt="Best match" className="w-full h-auto object-contain" />
-
-                              <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
-                                {(100 - (card.matchedCard.distance / 128) * 100).toFixed(0)}% match
-                              </div>
-                            </div>
-                          )}
-                        </div>
-
-                        {/* Potential matches thumbnails */}
-                        <div className="flex justify-between items-center mb-2 w-full">
-                          <span className="text-sm font-medium">
-                            {card.selected ? 'Selected' : 'Click to select'}{' '}
-                            {card.matchedCard &&
-                              card.topMatches &&
-                              card.topMatches
-                                .filter((match) => match.id === card.matchedCard?.id)
-                                .map((match) => match.card.name)
-                                .join(' ')}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+                  {extractedCards.map((card, index) => renderPotentialMatches(card, index))}
                 </div>
               </ScrollArea>
 
