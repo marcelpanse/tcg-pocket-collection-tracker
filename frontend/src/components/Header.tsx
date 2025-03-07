@@ -67,6 +67,7 @@ export function Header() {
               <DropdownMenuItem onClick={() => changeLanguage('en')}>{t('languages.en')}</DropdownMenuItem>
               <DropdownMenuItem onClick={() => changeLanguage('es')}>{t('languages.es')}</DropdownMenuItem>
               <DropdownMenuItem onClick={() => changeLanguage('pt-BR')}>{t('languages.pt-br')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('fr')}>{t('languages.fr')}</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 

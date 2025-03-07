@@ -14,7 +14,7 @@ i18n
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
-    supportedLngs: ['en', 'es', 'pt-BR'],
+    supportedLngs: ['en', 'es', 'pt-BR', 'fr'],
   })
 
 export default i18n
