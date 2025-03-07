@@ -1,0 +1,570 @@
+import { incrementMultipleCards } from '@/components/Card'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { Button } from '@/components/ui/button'
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import ScrollArea from '@/components/ui/scroll-area'
+import { allCards } from '@/lib/CardsDB'
+import { CollectionContext } from '@/lib/context/CollectionContext'
+import { UserContext } from '@/lib/context/UserContext'
+import { CardHashStorageService } from '@/services/CardHashStorageService'
+import { ImageSimilarityService } from '@/services/ImageHashingService'
+import PokemonCardDetectorService, { type DetectionResult } from '@/services/PokemonCardDetectionServices'
+import type { Card } from '@/types'
+import { MinusIcon, PlusIcon } from 'lucide-react'
+import type React from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { use } from 'react'
+
+interface PokemonCardDetectorProps {
+  onDetectionComplete?: (results: DetectionResult[]) => void
+  modelPath?: string
+}
+
+interface ExtractedCard {
+  imageUrl: string
+  confidence: number
+  hash?: string
+  matchedCard?: {
+    id: string
+    distance: number
+    imageUrl?: string
+  }
+  topMatches?: Array<{
+    id: string
+    distance: number
+    card: Card
+  }>
+  selected?: boolean
+}
+
+const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
+  const { user } = use(UserContext)
+  const { ownedCards, setOwnedCards } = use(CollectionContext)
+  const [isOpen, setIsOpen] = useState(false)
+  const [_images, setImages] = useState<File[]>([])
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [_results, setResults] = useState<DetectionResult[]>([])
+  const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
+  const [amount, setAmount] = useState(1)
+  const [isProcessing, setIsProcessing] = useState(false)
+  const [isGeneratingHashes, setIsGeneratingHashes] = useState(false)
+  const [showPotentialMatches, setShowPotentialMatches] = useState(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
+  const detectorService = PokemonCardDetectorService.getInstance()
+
+  useEffect(() => {
+    const initializeModel = async () => {
+      try {
+        setIsLoading(true)
+        await detectorService.loadModel(modelPath)
+        console.log('Model loaded successfully')
+      } catch (error) {
+        console.error('Error loading model:', error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    initializeModel()
+  }, [modelPath])
+
+  const hashingService = ImageSimilarityService.getInstance()
+  const hashStorageService = CardHashStorageService.getInstance()
+  const uniqueCards = useMemo(() => {
+    return allCards.reduce((acc, card) => {
+      if (!acc.some((c) => c.card_id === card.card_id)) {
+        acc.push(card)
+      }
+      return acc
+    }, [] as Card[])
+  }, [allCards])
+  useEffect(() => {
+    const generateAndStoreHashes = async () => {
+      try {
+        setIsGeneratingHashes(true)
+        await hashStorageService.initDB()
+        const storedHashCount = await hashStorageService.getHashCount()
+
+        if (storedHashCount !== uniqueCards.length) {
+          console.log('Generating hashes for all cards...')
+
+          const batchSize = 80
+          const totalCards = uniqueCards.length
+          const allHashes = []
+
+          for (let i = 0; i < totalCards; i += batchSize) {
+            const batch = uniqueCards.slice(i, i + batchSize)
+
+            // Process one batch
+            const batchPromises = batch.map(async (card) => {
+              try {
+                const hash = await hashingService.calculatePerceptualHash(`/images/${card.image?.split('/').at(-1)}`)
+                return { id: card.card_id, hash }
+              } catch (error) {
+                console.error(`Error generating hash for card ${card.card_id}:`, error)
+                return null
+              }
+            })
+
+            const batchResults = await Promise.all(batchPromises)
+            const validResults = batchResults.filter((hash): hash is { id: string; hash: string } => hash !== null)
+            allHashes.push(...validResults)
+
+            // Allow UI to update between batches
+            await new Promise((resolve) => setTimeout(resolve, 0))
+
+            // Optional: show progress
+            console.log(`Processed ${Math.min(i + batchSize, totalCards)}/${totalCards} cards`)
+          }
+
+          await hashStorageService.storeHashes(allHashes)
+          console.log('All hashes generated and stored')
+        } else {
+          console.log('Using stored hashes from IndexDB')
+        }
+      } catch (error) {
+        console.error('Error in hash generation/storage:', error)
+      } finally {
+        setIsGeneratingHashes(false)
+      }
+    }
+
+    generateAndStoreHashes()
+  }, [])
+
+  // Extract card images function
+  const extractCardImages = async (file: File, detections: DetectionResult) => {
+    const image = new Image()
+    const imageUrl = URL.createObjectURL(file)
+    const hashingService = ImageSimilarityService.getInstance()
+
+    return new Promise<ExtractedCard[]>((resolve) => {
+      image.onload = async () => {
+        const canvas = document.createElement('canvas')
+        const ctx = canvas.getContext('2d')
+
+        // Get all stored hashes for comparison
+        const storedHashes = await hashStorageService.getAllHashes()
+
+        const extractedCards = await Promise.all(
+          detections.detections
+            .filter((detection) => detection.confidence >= 90)
+            .map(async (detection) => {
+              const points = detection.points
+              const [x1, y1] = points[0]
+              const [x2, y2] = points[2]
+              const width = x2 - x1
+              const height = y2 - y1
+
+              canvas.width = width
+              canvas.height = height
+
+              ctx?.drawImage(image, x1, y1, width, height, 0, 0, width, height)
+
+              const cardImageUrl = canvas.toDataURL('image/png')
+              const hash = await hashingService.calculatePerceptualHash(cardImageUrl)
+
+              // Calculate distances for all cards and sort them
+              const matches = storedHashes
+                .map((storedHash) => {
+                  const distance = hashingService.calculateHammingDistance(hash, storedHash.hash)
+                  const matchedCard = uniqueCards.find((card) => card.card_id === storedHash.id)
+                  return {
+                    id: storedHash.id,
+                    distance,
+                    card: matchedCard as Card,
+                  }
+                })
+                .sort((a, b) => a.distance - b.distance)
+
+              // Get top 5 matches
+              const topMatches = matches.slice(0, 5)
+
+              // Best match is the first one
+              const bestMatch = topMatches[0]
+
+              return {
+                imageUrl: cardImageUrl,
+                confidence: detection.confidence,
+                hash,
+                matchedCard: bestMatch
+                  ? {
+                      id: bestMatch.id,
+                      distance: bestMatch.distance,
+                      imageUrl: `/images/${bestMatch.card.image?.split('/').at(-1)}`,
+                    }
+                  : undefined,
+                topMatches,
+                selected: true, // Default to selected
+              }
+            }),
+        )
+
+        URL.revokeObjectURL(imageUrl)
+        resolve(extractedCards)
+      }
+      image.src = imageUrl
+    })
+  }
+
+  const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files
+    if (!files || files.length === 0) return
+
+    const imageFiles = Array.from(files)
+    setImages(imageFiles)
+
+    try {
+      setIsLoading(true)
+
+      if (!detectorService.isModelLoaded()) {
+        await detectorService.loadModel(modelPath)
+      }
+
+      const detectionResults = await detectorService.detectImages(imageFiles)
+      setResults(detectionResults)
+
+      console.log(detectionResults)
+      // Extract card images
+      const allExtractedCards: ExtractedCard[] = []
+      for (let i = 0; i < imageFiles.length; i++) {
+        const extractedFromImage = await extractCardImages(imageFiles[i], detectionResults[i])
+        allExtractedCards.push(...extractedFromImage)
+      }
+      setExtractedCards(allExtractedCards)
+      console.log(allExtractedCards)
+
+      if (onDetectionComplete) {
+        onDetectionComplete(detectionResults)
+      }
+    } catch (error) {
+      console.error('Error during detection:', error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const handleSelect = (index: number, selected: boolean) => {
+    setExtractedCards((prev) => {
+      const updated = [...prev]
+      updated[index] = { ...updated[index], selected }
+      return updated
+    })
+  }
+
+  const handleSelectAll = () => {
+    setExtractedCards((prev) => prev.map((card) => ({ ...card, selected: true })))
+  }
+
+  const handleDeselectAll = () => {
+    setExtractedCards((prev) => prev.map((card) => ({ ...card, selected: false })))
+  }
+
+  const selectedCount = extractedCards.filter((card) => card.selected).length
+
+  const handleDecrement = () => {
+    if (amount > 0) {
+      setAmount((prev) => prev - 1)
+    }
+  }
+
+  const handleIncrement = () => {
+    setAmount((prev) => prev + 1)
+  }
+
+  const handleChangeMatch = (cardIndex: number, matchId: string) => {
+    setExtractedCards((prev) => {
+      const updated = [...prev]
+      const card = updated[cardIndex]
+
+      if (card.topMatches) {
+        const newMatch = card.topMatches.find((match) => match.id === matchId)
+        if (newMatch) {
+          updated[cardIndex] = {
+            ...card,
+            matchedCard: {
+              id: newMatch.id,
+              distance: newMatch.distance,
+              imageUrl: `/images/${newMatch.card.image?.split('/').at(-1)}`,
+            },
+          }
+        }
+      }
+
+      return updated
+    })
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.trim()
+    if (value === '') {
+      setAmount(0)
+    } else {
+      const numericValue = Number(value)
+      if (!Number.isNaN(numericValue)) {
+        setAmount(numericValue < 0 ? 0 : numericValue)
+      }
+    }
+  }
+
+  const handleConfirm = async () => {
+    setIsProcessing(true)
+
+    const cardIds = extractedCards.filter((card) => card.selected && card.matchedCard).map((card) => card.matchedCard?.id)
+
+    if (cardIds.length > 0) {
+      try {
+        await incrementMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)
+        setIsOpen(false)
+        setExtractedCards([])
+        setResults([])
+        setImages([])
+        setAmount(1)
+      } catch (error) {
+        console.error('Error incrementing card quantities:', error)
+      }
+    }
+
+    setIsProcessing(false)
+  }
+
+  return (
+    <div className="pokemon-card-detector">
+      <Button onClick={() => setIsOpen(true)} variant="default" className="w-full" disabled={isGeneratingHashes}>
+        {isGeneratingHashes ? 'Generating hashes, it will take few seconds' : 'Scan Pokemon Cards'}
+      </Button>
+
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
+        <DialogContent className="max-w-4xl">
+          <DialogHeader>
+            <DialogTitle>Pokemon Card Scanner</DialogTitle>
+          </DialogHeader>
+
+          {!isLoading && extractedCards.length === 0 && (
+            <div
+              className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900/10"
+              onClick={() => fileInputRef.current?.click()}
+            >
+              <AlertDescription>
+                <p className="mb-4 text-center">
+                  You can upload multiple images at once. The system will scan each image for Pokemon cards and display the results. You can verify the matches,
+                  select or deselect detected cards, and choose how much to increment the quantity for selected cards.
+                </p>
+              </AlertDescription>
+              <input type="file" ref={fileInputRef} onChange={handleImageUpload} accept="image/*" multiple disabled={isLoading} className="w-full hidden" />
+              <Button variant="outline" className="mt-2">
+                Select Images
+              </Button>
+            </div>
+          )}
+
+          {isLoading && (
+            <Alert variant="info">
+              <AlertDescription>
+                <p>Processing images, please wait...</p>
+              </AlertDescription>
+            </Alert>
+          )}
+
+          {!isLoading && extractedCards.length > 0 && (
+            <>
+              <Alert variant="destructive">
+                <AlertDescription>
+                  <p>
+                    We've detected{' '}
+                    <strong
+                      style={{
+                        fontSize: '1.25rem',
+                        color: '#f3f4f6',
+                        padding: '0.25rem 0.5rem',
+                        borderRadius: '0.375rem',
+                        margin: '0 0.25rem',
+                      }}
+                    >
+                      {extractedCards.length}
+                    </strong>{' '}
+                    cards from your images. You can modify matches using the show/hide matches button, which displays the next 4 most probable matches. The
+                    quantity in your collection for selected cards will increase by{' '}
+                    <strong
+                      style={{
+                        fontSize: '1.25rem',
+                        color: '#f3f4f6',
+                        padding: '0.25rem 0.5rem',
+                        borderRadius: '0.375rem',
+                        margin: '0 0.25rem',
+                      }}
+                    >
+                      {amount}
+                    </strong>
+                  </p>
+                  <p className="mt-2">
+                    <strong>
+                      <span
+                        style={{
+                          fontSize: '1.25rem',
+                          color: '#f3f4f6',
+                          padding: '0.25rem 0.5rem',
+                          borderRadius: '0.375rem',
+                          margin: '0 0.25rem',
+                        }}
+                      >
+                        {selectedCount} cards selected
+                      </span>
+                    </strong>
+                  </p>
+                </AlertDescription>
+              </Alert>
+
+              <div className="flex gap-2 justify-between">
+                <Button variant="outline" onClick={handleDeselectAll}>
+                  Deselect All
+                </Button>
+                <Button variant="outline" onClick={() => setShowPotentialMatches((prev) => !prev)}>
+                  {showPotentialMatches ? 'Hide' : 'Show'} Edit Matches
+                </Button>
+                <Button variant="outline" onClick={handleSelectAll}>
+                  Select All
+                </Button>
+              </div>
+
+              <ScrollArea className="h-96 rounded-md border p-4">
+                <div className="grid grid-cols-3 gap-4">
+                  {extractedCards.map((card, index) => (
+                    <div
+                      key={index}
+                      className={`border rounded-md p-2 cursor-pointer transition-all duration-200 ${card.selected ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20' : 'border-gray-200 grayscale'}`}
+                      onClick={() => handleSelect(index, !card.selected)}
+                    >
+                      <div className="flex flex-col items-center">
+                        {/* Selection indicator */}
+                        <div className="flex justify-between items-center mb-2 w-full">
+                          <span className="text-sm font-medium">{card.selected ? 'Selected' : 'Click to select'}</span>
+                          {card.selected && <div className="bg-blue-500 text-white text-xs px-2 py-0.5 rounded-full">Selected</div>}
+                        </div>
+
+                        {/* Extracted card and best match side by side */}
+                        <div className="flex w-full gap-2 mb-2">
+                          {/* Extracted card */}
+                          <div className="w-1/2 relative">
+                            <img src={card.imageUrl} alt={`Detected card ${index + 1}`} className="w-full h-auto object-contain" />
+                            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs px-1 py-0.5 text-center">Extracted Card</div>
+                          </div>
+
+                          {/* Best match card */}
+                          {card.matchedCard && (
+                            <div className="w-1/2 relative">
+                              <img src={card.matchedCard.imageUrl} alt="Best match" className="w-full h-auto object-contain" />
+                              <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
+                                {(100 - (card.matchedCard.distance / 128) * 100).toFixed(0)}% match
+                              </div>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Potential matches thumbnails */}
+                        {card.matchedCard && card.topMatches && showPotentialMatches && (
+                          <div className="mt-2 w-full">
+                            <p className="text-sm font-medium mb-1">Other potential matches:</p>
+                            <div className="grid grid-cols-4 gap-1">
+                              {card.topMatches
+                                .filter((match) => match.id !== card.matchedCard?.id)
+                                .map((match) => (
+                                  <div
+                                    key={match.id}
+                                    className="p-1 border rounded cursor-pointer hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                                    onClick={(e) => {
+                                      e.stopPropagation() // Prevent triggering the parent onClick
+                                      handleChangeMatch(index, match.id)
+                                    }}
+                                    title={match.card.name}
+                                  >
+                                    <img
+                                      src={`/images/${match.card.image?.split('/').at(-1)}`}
+                                      alt={match.card.name}
+                                      className="w-full h-auto object-contain"
+                                    />
+                                    <div className="text-xs text-center mt-1 bg-black/60 text-white py-0.5 rounded">
+                                      {(100 - (match.distance / 128) * 100).toFixed(0)}%
+                                    </div>
+                                  </div>
+                                ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </ScrollArea>
+
+              {
+                <div className="flex flex-col items-center gap-2">
+                  <p className="text-sm font-medium">Set quantity for selected cards:</p>
+                  <div className="flex items-center gap-x-1">
+                    <Button variant="ghost" size="icon" onClick={handleDecrement} disabled={amount === 0} className="rounded-full">
+                      <MinusIcon size={14} />
+                    </Button>
+                    <input
+                      type="text"
+                      min="0"
+                      value={amount}
+                      onChange={handleInputChange}
+                      placeholder="Enter amount"
+                      className="w-10 text-center border-none rounded"
+                      onFocus={(event) => event.target.select()}
+                    />
+                    <Button variant="ghost" size="icon" onClick={handleIncrement} className="rounded-full">
+                      <PlusIcon size={14} />
+                    </Button>
+                  </div>
+                </div>
+              }
+            </>
+          )}
+
+          <DialogFooter>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setIsOpen(false)
+                if (extractedCards.length > 0) {
+                  setExtractedCards([])
+                  setResults([])
+                  setImages([])
+                }
+              }}
+            >
+              {extractedCards.length > 0 ? 'Cancel' : 'Close'}
+            </Button>
+            {extractedCards.length > 0 && (
+              <Button onClick={handleConfirm} disabled={selectedCount === 0 || isProcessing || isLoading} variant="default">
+                {isProcessing ? (
+                  <svg
+                    aria-hidden="true"
+                    className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                    viewBox="0 0 100 101"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                      fill="currentFill"
+                    />
+                  </svg>
+                ) : (
+                  'Update Selected Cards'
+                )}
+              </Button>
+            )}
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </div>
+  )
+}
+
+export default PokemonCardDetector

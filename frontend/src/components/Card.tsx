@@ -163,3 +163,41 @@ export const updateMultipleCards = async (
   }
   setOwnedCards([...ownedCardsCopy]) // rerender the component
 }
+export const incrementMultipleCards = async (
+  cardIds: string[],
+  incrementAmount: number,
+  ownedCards: CollectionRow[],
+  setOwnedCards: React.Dispatch<React.SetStateAction<CollectionRow[]>>,
+  user: { email: string } | null,
+) => {
+  const db = await getDatabase()
+  const ownedCardsCopy = [...ownedCards]
+  for (const cardId of cardIds) {
+    const ownedCard = ownedCardsCopy.find((row) => row.card_id === cardId)
+    const currentAmount = ownedCard?.amount_owned || 0
+    const newAmount = Math.max(0, currentAmount + incrementAmount)
+
+    if (ownedCard) {
+      console.log('Incrementing existing card:', cardId, 'from', currentAmount, 'to', newAmount)
+      ownedCard.amount_owned = newAmount
+      await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
+        amount_owned: ownedCard.amount_owned,
+      })
+    } else if (!ownedCard && newAmount > 0) {
+      console.log('Adding new card:', cardId, 'with amount', newAmount)
+      const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
+        card_id: cardId,
+        amount_owned: newAmount,
+        email: user?.email,
+      })
+
+      ownedCardsCopy.push({
+        $id: newCard.$id,
+        email: newCard.email,
+        card_id: newCard.card_id,
+        amount_owned: newCard.amount_owned,
+      })
+    }
+  }
+  setOwnedCards([...ownedCardsCopy]) // rerender the component
+}

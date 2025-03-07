@@ -3,9 +3,9 @@ import { updateMultipleCards } from '@/components/Card.tsx'
 import { CardsTable } from '@/components/CardsTable.tsx'
 import ExpansionsFilter from '@/components/ExpansionsFilter.tsx'
 import OwnedFilter from '@/components/OwnedFilter.tsx'
+import PokemonCardDetector from '@/components/PokemonCardDetectorComponent'
 import RarityFilter from '@/components/RarityFilter.tsx'
 import SearchInput from '@/components/SearchInput.tsx'
-// import CardTracker from '@/components/cardTracker.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
@@ -21,6 +21,37 @@ function Collection() {
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
 
+  const _handleDetectionsComplete = (allDetections) => {
+    // Do something with all the detections
+    console.log('All detections:', allDetections)
+
+    // Here you could process the detections to identify cards
+    // and update the collection accordingly
+  }
+
+  const _preprocessImage = (img) => {
+    const canvas = document.createElement('canvas')
+    const ctx = canvas.getContext('2d')
+    canvas.width = img.width
+    canvas.height = img.height
+    ctx.drawImage(img, 0, 0)
+
+    // Get image data (RGBA format)
+    const imageData = ctx.getImageData(0, 0, img.width, img.height)
+    const data = imageData.data
+
+    // Remove alpha channel and normalize pixel values to [0, 1]
+    const inputData = new Float32Array(img.width * img.height * 3)
+    for (let i = 0, j = 0; i < data.length; i += 4, j += 3) {
+      inputData[j] = data[i] / 255.0 // R
+      inputData[j + 1] = data[i + 1] / 255.0 // G
+      inputData[j + 2] = data[i + 2] / 255.0 // B
+    }
+
+    // Create a tensor with shape [1, 3, height, width]
+    const inputTensor = new ort.Tensor('float32', inputData, [1, 3, img.height, img.width])
+    return inputTensor
+  }
   const getFilteredCards = useMemo(() => {
     let filteredCards = allCards
 
@@ -62,10 +93,14 @@ function Collection() {
         <SearchInput setSearchValue={setSearchValue} />
         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
-        {/*TODO: NOT READY YET, FEEL FREE TO HELP*/}
-        {/*<CardTracker />*/}
+
         <BatchUpdateDialog filteredCards={getFilteredCards} onBatchUpdate={handleBatchUpdate} disabled={getFilteredCards.length === 0} />
       </div>
+
+      <div className="px-8 my-4">
+        <PokemonCardDetector />
+      </div>
+
       <div>
         <CardsTable cards={getFilteredCards} resetScrollTrigger={resetScrollTrigger} />
       </div>
