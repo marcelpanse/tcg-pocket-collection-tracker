@@ -142,6 +142,9 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
 
   // Extract card images function
   const extractCardImages = async (file: File, detections: DetectionResult) => {
+    if (!file.type.startsWith('image/')) {
+      throw new Error('Invalid file type')
+    }
     const image = new Image()
     const imageUrl = URL.createObjectURL(file)
     const hashingService = ImageSimilarityService.getInstance()
