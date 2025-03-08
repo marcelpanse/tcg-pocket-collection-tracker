@@ -57,10 +57,6 @@ class PokemonCardDetectorService {
     return !!this.model
   }
 
-  public setNumClass(numClass: number): void {
-    this.numClass = numClass
-  }
-
   private preprocessImage(
     image: HTMLImageElement,
     modelWidth: number,
@@ -145,7 +141,7 @@ class PokemonCardDetectorService {
       const [boxes, scores, classes] = tf.tidy(() => {
         let transRes: tf.Tensor
 
-        if (predictions instanceof tf.Tensor && predictions.shape.length === 3 && predictions.shape[0] === 1) {
+        if (predictions.shape.length === 3 && predictions.shape[0] === 1) {
           transRes = predictions.squeeze([0])
         } else {
           transRes = predictions

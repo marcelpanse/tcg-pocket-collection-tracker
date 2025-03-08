@@ -48,6 +48,7 @@ export function CardsTable({ cards, resetScrollTrigger }: Props) {
     initialState: {
       grouping: ['set_details'],
     },
+    autoResetPageIndex: false, //we need this to prevent a React state update when the component is not yet mounted
   })
   const groupedRows = useMemo(() => table.getGroupedRowModel().rows, [table.getGroupedRowModel().rows])
 

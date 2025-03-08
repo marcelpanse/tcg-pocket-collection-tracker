@@ -11,17 +11,6 @@ export class ImageSimilarityService {
     return ImageSimilarityService.instance
   }
 
-  public async compareTwoImages(image1: string | HTMLImageElement, image2: string | HTMLImageElement): Promise<number> {
-    const hash1 = await this.calculatePerceptualHash(image1)
-    const hash2 = await this.calculatePerceptualHash(image2)
-
-    const distance = this.calculateHammingDistance(hash1, hash2)
-    const maxDistance = hash1.length
-
-    const similarity = 100 - (distance / maxDistance) * 100
-    return Math.round(similarity * 100) / 100
-  }
-
   public async calculatePerceptualHash(imageData: string | HTMLImageElement): Promise<string> {
     const img = await this.ensureImage(imageData)
     const canvas = document.createElement('canvas')
@@ -155,9 +144,5 @@ export class ImageSimilarityService {
         img.src = source
       }
     })
-  }
-
-  public areSimilar(similarity: number, threshold = 85): boolean {
-    return similarity >= threshold
   }
 }

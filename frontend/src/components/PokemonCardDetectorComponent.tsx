@@ -10,7 +10,7 @@ import { ImageSimilarityService } from '@/services/ImageHashingService'
 import PokemonCardDetectorService, { type DetectionResult } from '@/services/PokemonCardDetectionServices'
 import type { Card } from '@/types'
 import { MinusIcon, PlusIcon } from 'lucide-react'
-import type React from 'react'
+import type { ChangeEvent, FC } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { use } from 'react'
 
@@ -36,36 +36,38 @@ interface ExtractedCard {
   selected?: boolean
 }
 
-const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
+const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
   const { user } = use(UserContext)
   const { ownedCards, setOwnedCards } = use(CollectionContext)
   const [isOpen, setIsOpen] = useState(false)
-  const [_images, setImages] = useState<File[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [_results, setResults] = useState<DetectionResult[]>([])
+  const [isGeneratingHashes, setIsGeneratingHashes] = useState(false)
+  const [progress, setProgress] = useState('0%')
   const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
   const [amount, setAmount] = useState(1)
   const [isProcessing, setIsProcessing] = useState(false)
-  const [isGeneratingHashes, setIsGeneratingHashes] = useState(false)
   const [showPotentialMatches, setShowPotentialMatches] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
   const detectorService = PokemonCardDetectorService.getInstance()
 
   useEffect(() => {
-    const initializeModel = async () => {
-      try {
-        setIsLoading(true)
-        await detectorService.loadModel(modelPath)
-        console.log('Model loaded successfully')
-      } catch (error) {
-        console.error('Error loading model:', error)
-      } finally {
-        setIsLoading(false)
-      }
+    if (isOpen) {
+      initializeModel().catch(console.error)
+      generateAndStoreHashes().catch(console.error)
     }
+  }, [modelPath, isOpen])
 
-    initializeModel()
-  }, [modelPath])
+  const initializeModel = async () => {
+    try {
+      setIsLoading(true)
+      await detectorService.loadModel(modelPath)
+      console.log('Model loaded successfully')
+    } catch (error) {
+      console.error('Error loading model:', error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
   const hashingService = ImageSimilarityService.getInstance()
   const hashStorageService = CardHashStorageService.getInstance()
@@ -77,67 +79,64 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
       return acc
     }, [] as Card[])
   }, [allCards])
-  useEffect(() => {
-    const generateAndStoreHashes = async () => {
-      try {
-        setIsGeneratingHashes(true)
-        await hashStorageService.initDB()
-        const storedHashCount = await hashStorageService.getHashCount()
 
-        if (storedHashCount !== uniqueCards.length) {
-          console.log('Checking and generating missing card hashes...')
+  const generateAndStoreHashes = async () => {
+    try {
+      setIsGeneratingHashes(true)
+      await hashStorageService.initDB()
+      const storedHashCount = await hashStorageService.getHashCount()
 
-          const batchSize = 80
-          const totalCards = uniqueCards.length
-          const allHashes = []
-          const existingHashes = await hashStorageService.getAllHashes()
+      if (storedHashCount !== uniqueCards.length) {
+        console.log('Checking and generating missing card hashes...')
 
-          for (let i = 0; i < totalCards; i += batchSize) {
-            const batch = uniqueCards.slice(i, i + batchSize)
+        const batchSize = 80
+        const totalCards = uniqueCards.length
+        const allHashes = []
+        const existingHashes = await hashStorageService.getAllHashes()
 
-            // Process one batch
-            const batchPromises = batch.map(async (card) => {
-              try {
-                // Check if hash already exists for this card
-                const existingHash = existingHashes.find((h) => h.id === card.card_id)
-                if (existingHash) {
-                  return existingHash
-                }
+        for (let i = 0; i < totalCards; i += batchSize) {
+          const batch = uniqueCards.slice(i, i + batchSize)
 
-                // Calculate new hash only if it doesn't exist
-                const hash = await hashingService.calculatePerceptualHash(`/images/${card.image?.split('/').at(-1)}`)
-                return { id: card.card_id, hash }
-              } catch (error) {
-                console.error(`Error generating hash for card ${card.card_id}:`, error)
-                return null
+          // Process one batch
+          const batchPromises = batch.map(async (card) => {
+            try {
+              // Check if hash already exists for this card
+              const existingHash = existingHashes.find((h) => h.id === card.card_id)
+              if (existingHash) {
+                return existingHash
               }
-            })
 
-            const batchResults = await Promise.all(batchPromises)
-            const validResults = batchResults.filter((hash): hash is { id: string; hash: string } => hash !== null)
-            allHashes.push(...validResults)
+              // Calculate new hash only if it doesn't exist
+              const hash = await hashingService.calculatePerceptualHash(`/images/${card.image?.split('/').at(-1)}`)
+              return { id: card.card_id, hash }
+            } catch (error) {
+              console.error(`Error generating hash for card ${card.card_id}:`, error)
+              return null
+            }
+          })
 
-            // Allow UI to update between batches
-            await new Promise((resolve) => setTimeout(resolve, 0))
+          const batchResults = await Promise.all(batchPromises)
+          const validResults = batchResults.filter((hash): hash is { id: string; hash: string } => hash !== null)
+          allHashes.push(...validResults)
 
-            // Optional: show progress
-            console.log(`Processed ${Math.min(i + batchSize, totalCards)}/${totalCards} cards`)
-          }
+          // Allow UI to update between batches
+          await new Promise((resolve) => setTimeout(resolve, 0))
 
-          await hashStorageService.storeHashes(allHashes)
-          console.log('All missing hashes generated and stored')
-        } else {
-          console.log('Using stored hashes from IndexDB')
+          const progress = ((Math.min(i + batchSize, totalCards) / totalCards) * 100).toFixed(0)
+          setProgress(`${progress}%`)
         }
-      } catch (error) {
-        console.error('Error in hash generation/storage:', error)
-      } finally {
-        setIsGeneratingHashes(false)
-      }
-    }
 
-    generateAndStoreHashes()
-  }, [])
+        await hashStorageService.storeHashes(allHashes)
+        console.log('All missing hashes generated and stored')
+      } else {
+        console.log('Using stored hashes from IndexDB')
+      }
+    } catch (error) {
+      console.error('Error in hash generation/storage:', error)
+    } finally {
+      setIsGeneratingHashes(false)
+    }
+  }
 
   // Extract card images function
   const extractCardImages = async (file: File, detections: DetectionResult) => {
@@ -217,25 +216,21 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
     })
   }
 
-  const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageUpload = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files
     if (!files || files.length === 0) return
 
     const imageFiles = Array.from(files).filter((file) => file.type.startsWith('image/'))
     if (imageFiles.length === 0) return
-    setImages(imageFiles)
 
     try {
-      setIsLoading(true)
-
       if (!detectorService.isModelLoaded()) {
         await detectorService.loadModel(modelPath)
       }
 
       const detectionResults = await detectorService.detectImages(imageFiles)
-      setResults(detectionResults)
-
       console.log(detectionResults)
+
       // Extract card images
       const allExtractedCards: ExtractedCard[] = []
       for (let i = 0; i < imageFiles.length; i++) {
@@ -250,8 +245,6 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
       }
     } catch (error) {
       console.error('Error during detection:', error)
-    } finally {
-      setIsLoading(false)
     }
   }
 
@@ -306,7 +299,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
     })
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.trim()
     if (value === '') {
       setAmount(0)
@@ -334,8 +327,6 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
         )
         setIsOpen(false)
         setExtractedCards([])
-        setResults([])
-        setImages([])
         setAmount(1)
         setShowPotentialMatches(false)
       } catch (error) {
@@ -418,11 +409,9 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
   }
   return (
     <div className="pokemon-card-detector flex justify-end">
-      {!isGeneratingHashes && (
-        <Button onClick={() => setIsOpen(true)} variant="ghost">
-          Scan
-        </Button>
-      )}
+      <Button onClick={() => setIsOpen(true)} variant="ghost">
+        Scan
+      </Button>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogOverlay className="DialogOverlay">
@@ -431,7 +420,7 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
               <DialogTitle>Pokemon card scanner</DialogTitle>
             </DialogHeader>
 
-            {!isLoading && extractedCards.length === 0 && (
+            {!isLoading && !isGeneratingHashes && extractedCards.length === 0 && (
               <div
                 className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900/10"
                 onClick={() => fileInputRef.current?.click()}
@@ -449,10 +438,28 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
               </div>
             )}
 
-            {isLoading && (
+            {(isLoading || isGeneratingHashes) && (
               <Alert variant="default">
                 <AlertDescription>
-                  <p>Processing images, please wait...</p>
+                  <div className="flex items-center space-x-2">
+                    <svg
+                      aria-hidden="true"
+                      className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                      viewBox="0 0 100 101"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                        fill="currentFill"
+                      />
+                    </svg>
+                    <p>Downloading and loading scan model, please wait... ({progress})</p>
+                  </div>
                 </AlertDescription>
               </Alert>
             )}
@@ -507,8 +514,6 @@ const PokemonCardDetector: React.FC<PokemonCardDetectorProps> = ({ onDetectionCo
                   setIsOpen(false)
                   if (extractedCards.length > 0) {
                     setExtractedCards([])
-                    setResults([])
-                    setImages([])
                     setAmount(1)
                     setShowPotentialMatches(false)
                   }

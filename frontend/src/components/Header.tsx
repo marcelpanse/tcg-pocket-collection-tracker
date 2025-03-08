@@ -40,7 +40,7 @@ export function Header() {
                 <Button variant="ghost">{t('overview')}</Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild>
+            <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/collection">
                 <Button variant="ghost">{t('collection')}</Button>
               </Link>

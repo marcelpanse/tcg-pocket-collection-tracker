@@ -8,7 +8,7 @@ import SearchInput from '@/components/SearchInput.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useContext } from 'react'
 
 function Collection() {
@@ -19,6 +19,7 @@ function Collection() {
   const [rarityFilter, setRarityFilter] = useState<string[]>([])
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
+
   const getFilteredCards = useMemo(() => {
     let filteredCards = allCards
 
@@ -42,10 +43,15 @@ function Collection() {
     }
 
     setResetScrollTrigger(true)
-    setTimeout(() => setResetScrollTrigger(false), 100)
 
     return filteredCards
   }, [expansionFilter, rarityFilter, searchValue, ownedFilter])
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setResetScrollTrigger(false), 100)
+
+    return () => clearTimeout(timeout)
+  }, [getFilteredCards])
 
   const handleBatchUpdate = async (cardIds: string[], amount: number) => {
     await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)
