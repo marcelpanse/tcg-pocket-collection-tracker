@@ -216,6 +216,8 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
         image.src = imageUrl
       } else {
         console.error('Invalid image URL:', imageUrl)
+        URL.revokeObjectURL(imageUrl)
+        throw new Error('Invalid image URL')
       }
     })
   }
