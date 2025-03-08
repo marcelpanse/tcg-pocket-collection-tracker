@@ -212,7 +212,11 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
         URL.revokeObjectURL(imageUrl)
         resolve(extractedCards)
       }
-      image.src = imageUrl
+      if (imageUrl.startsWith('blob:')) {
+        image.src = imageUrl
+      } else {
+        console.error('Invalid image URL:', imageUrl)
+      }
     })
   }
 
