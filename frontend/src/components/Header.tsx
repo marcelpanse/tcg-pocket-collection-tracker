@@ -54,7 +54,7 @@ export function Header() {
           <PokemonCardDetector />
         </NavigationMenu>
         <div className="items-center gap-2 flex">
-          <Link to="/community" className="hidden sm:block">
+          <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden sm:block">
             <Button variant="ghost">{t('community')}</Button>
           </Link>
           <DropdownMenu>
@@ -66,10 +66,10 @@ export function Header() {
             <DropdownMenuContent className="w-56">
               <DropdownMenuLabel>{t('selectLanguage')}</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => changeLanguage('en')}>{t('languages.en')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('es')}>{t('languages.es')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('pt-BR')}>{t('languages.pt-br')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('fr')}>{t('languages.fr')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('en-US')}>{t('languages.en-US')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('es-ES')}>{t('languages.es-ES')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('pt-BR')}>{t('languages.pt-BR')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => changeLanguage('fr-FR')}>{t('languages.fr-FR')}</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 

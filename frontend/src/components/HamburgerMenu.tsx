@@ -18,7 +18,7 @@ const menuItems: MenuItem[] = [
   { title: 'overview', href: '/' },
   { title: 'collection', href: '/collection' },
   { title: 'trade', href: '/trade' },
-  { title: 'community', href: '/community' },
+  { title: 'community', href: 'https://community.tcgpocketcollectiontracker.com' },
 ]
 
 const MenuItemComponent: React.FC<{ item: MenuItem; setOpen: (open: boolean) => void }> = ({ item, setOpen }) => {
