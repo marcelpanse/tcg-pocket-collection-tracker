@@ -8,8 +8,10 @@
     "join": "Rejoignez les",
     "text": "utilisateurs de notre communauté 🎉"
   },
-  "all": "Tout",
+  "all": "tous les paquets",
   "youHave": "Vous possédez",
-  "uniqueCards": "sur {{totalUniqueCards}} cartes uniques",
+  "uniqueCards": "cartes uniques sur {{totalUniqueCards}}",
+  "numberOfCopies-single": "avec au moins 1 exemplaire",
+  "numberOfCopies-plural": "avec au moins {{numberFilter}} exemplaires",
   "cardsTotal": "cartes au total"
 }
