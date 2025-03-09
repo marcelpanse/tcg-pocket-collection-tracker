@@ -126,7 +126,8 @@ interface TotalNrOfCardsProps {
   packName?: string
 }
 export const getTotalNrOfCards = ({ rarityFilter, expansion, packName }: TotalNrOfCardsProps) => {
-  let filteredCards = [...allCards]
+  // note we have to filter out the cards with a linked card ID (Old Amber) because they are counted as the same card.
+  let filteredCards = [...allCards].filter((c) => !c.linkedCardID)
 
   if (expansion) {
     filteredCards = expansion.cards
