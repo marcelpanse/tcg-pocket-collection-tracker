@@ -182,7 +182,7 @@ importers:
         specifier: ^6.2.0
         version: 6.2.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)
       vite-plugin-mkcert:
-        specifier: ^1.17.6
+        specifier: ^1.17.7
         version: 1.17.7(vite@6.2.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1))
       vite-plugin-strip-comments:
         specifier: ^0.0.5
