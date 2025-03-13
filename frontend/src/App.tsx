@@ -1,7 +1,6 @@
 import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
-import { authSSO, getUser } from '@/lib/Auth.ts'
-import { fetchAccount } from '@/lib/fetchAccount.ts'
+import { authSSO, supabase } from '@/lib/Auth.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
 import type { AccountRow, CollectionRow } from '@/types'
 import loadable from '@loadable/component'
@@ -31,8 +30,19 @@ function App() {
   const [selectedCardId, setSelectedCardId] = useState('')
 
   useEffect(() => {
-    getUser().then(setUser).catch(console.error)
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      console.log('supa set session', session)
+      setUser(session)
+    })
+
+    return () => subscription.unsubscribe()
   }, [])
+
+  // useEffect(() => {
+  //   getUser().then(setUser).catch(console.error)
+  // }, [])
 
   useEffect(() => {
     if (user) {
@@ -45,7 +55,7 @@ function App() {
         authSSO(sso, sig).catch(console.error)
       } else {
         fetchCollection().then(setOwnedCards).catch(console.error)
-        fetchAccount(user.email).then(setAccount).catch(console.error)
+        // fetchAccount(user.email).then(setAccount).catch(console.error)
       }
     } else {
       setOwnedCards([]) // in case the user is logged out, clear the cards
