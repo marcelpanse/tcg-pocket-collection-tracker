@@ -58,6 +58,7 @@
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react-swc": "^3.8.0",
     "globals": "^16.0.0",
+    "node-appwrite": "^15.0.1",
     "typescript": "~5.7.3",
     "vite": "^6.2.0",
     "vite-plugin-mkcert": "^1.17.7",

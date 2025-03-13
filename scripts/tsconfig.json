@@ -1,0 +1,9 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "target": "esnext",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "."
+  }
+}

@@ -36,6 +36,7 @@
     "i18next": "^24.2.2",
     "i18next-browser-languagedetector": "^8.0.4",
     "i18next-http-backend": "^3.0.2",
+    "node-appwrite": "^15.0.1",
     "node-fetch": "^3.3.2",
     "react-i18next": "^15.4.1"
   }
