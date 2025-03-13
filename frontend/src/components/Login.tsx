@@ -16,12 +16,10 @@ export const Login = () => {
   const { t } = useTranslation('login')
 
   const [emailInput, setEmailInput] = useState('')
-  const [userId, setUserId] = useState('')
+  const [emailSubmitted, setEmailSubmitted] = useState(false)
 
   const otpEntered = async (otp: string) => {
     try {
-      // const user = await checkOTP(userId, otp)
-
       const {
         data: { session },
         error,
@@ -38,8 +36,6 @@ export const Login = () => {
         console.log('supa session', session)
         setIsLoginDialogOpen(false)
       }
-
-      // setUser(user)
     } catch {
       toast({ title: t('invalidCode'), variant: 'destructive' })
     }
@@ -52,20 +48,16 @@ export const Login = () => {
       return
     }
 
-    // const userId = await sendOTP(emailInput)
-    // setUserId(userId)
-
-    const { data, error } = await supabase.auth.signInWithOtp({ email: emailInput })
-    console.log('supa data', data)
+    const { error } = await supabase.auth.signInWithOtp({ email: emailInput })
     if (error) {
       console.log('supa OTP error', error)
       toast({ title: 'There was an error sending your OTP email. Please try again.', variant: 'destructive' })
     } else {
-      setUserId('dummy')
+      setEmailSubmitted(true)
     }
   }
 
-  if (userId) {
+  if (emailSubmitted) {
     return (
       <>
         <p className="pt-4">{t('fill6Digit')}</p>
