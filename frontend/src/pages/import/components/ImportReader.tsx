@@ -1,8 +1,7 @@
-import { COLLECTION_ID, DATABASE_ID, getDatabase } from '@/lib/Auth'
+import { supabase } from '@/lib/Auth.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
-import type { ImportExportRow } from '@/types'
-import { ID } from 'appwrite'
+import type { CollectionRow, ImportExportRow } from '@/types'
 import { use, useCallback, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 import XLSX from 'xlsx'
@@ -18,8 +17,13 @@ export const ImportReader = () => {
   const [progressMessage, setProgressMessage] = useState<string>('')
 
   const processFileRows = async (data: ImportExportRow[]) => {
+    if (!user || !user.user.email) {
+      throw new Error('User not logged in')
+    }
+
     if (data) {
-      const db = await getDatabase()
+      const cardArray: CollectionRow[] = []
+
       for (let i = 0; i < data.length; i++) {
         const r = data[i]
         console.log('Row', r)
@@ -28,35 +32,34 @@ export const ImportReader = () => {
         const cardId = r.Id
         const ownedCard = ownedCards.find((row) => row.card_id === r.Id)
         console.log('Owned Card', ownedCard)
+
+        cardArray.push({ card_id: cardId, amount_owned: newAmount, email: user?.user.email })
+
+        // update UI
         if (ownedCard && ownedCard.amount_owned !== newAmount) {
           console.log('updating card', ownedCard.card_id, newAmount)
           ownedCard.amount_owned = Math.max(0, newAmount)
           setOwnedCards([...ownedCards])
-          await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
-            amount_owned: ownedCard.amount_owned,
-          })
           setProcessedData((p) => [...(p ?? []), { ...r, updated: newAmount > 0, removed: newAmount === 0 }])
         } else if (!ownedCard && newAmount > 0) {
           console.log('creating card', r.Id, newAmount)
-          const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
-            email: user?.email,
-            card_id: cardId,
-            amount_owned: newAmount,
-          })
-
           setOwnedCards([
             ...ownedCards,
             {
-              $id: newCard.$id,
-              email: newCard.email,
-              card_id: newCard.card_id,
-              amount_owned: newCard.amount_owned,
+              email: user?.user.email,
+              card_id: cardId,
+              amount_owned: newAmount,
             },
           ])
           setProcessedData((p) => [...(p ?? []), { ...r, added: true }])
         }
         setProgressMessage(`Processed ${i + 1} of ${data.length}`)
         setNumberProcessed((n) => n + 1)
+      }
+
+      const { error } = await supabase.from('collection').upsert(cardArray)
+      if (error) {
+        throw new Error('Error updating collection')
       }
     }
   }

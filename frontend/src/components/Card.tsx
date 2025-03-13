@@ -2,7 +2,7 @@ import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { supabase } from '@/lib/Auth.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import { UserContext } from '@/lib/context/UserContext.ts'
+import { type User, UserContext } from '@/lib/context/UserContext.ts'
 import type { Card as CardType } from '@/types'
 import type { CollectionRow } from '@/types'
 import { MinusIcon, PlusIcon } from 'lucide-react'
@@ -36,51 +36,21 @@ export function Card({ card, useMaxWidth = false }: Props) {
         window.clearTimeout(_inputDebounce[cardId])
       }
       _inputDebounce[cardId] = window.setTimeout(async () => {
-        // const db = await getDatabase()
+        if (!user || !user.user.email) {
+          throw new Error('User not logged in')
+        }
+
         const ownedCard = ownedCards.find((row) => row.card_id === cardId)
-
         if (ownedCard) {
-          console.log('updating', ownedCard)
           ownedCard.amount_owned = Math.max(0, newAmount)
-          setOwnedCards([...ownedCards])
-          // await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
-          //   amount_owned: ownedCard.amount_owned,
-          // })
+        } else {
+          ownedCards.push({ email: user.user.email, card_id: cardId, amount_owned: newAmount })
+        }
+        setOwnedCards([...ownedCards])
 
-          const { data, error } = await supabase
-            .from('collection')
-            .upsert({ card_id: ownedCard.card_id, amount_owned: ownedCard.amount_owned, email: user?.user.email })
-            .select()
-          if (error) {
-            console.log('supa error', error)
-            throw new Error('Error updating collection')
-          } else {
-            console.log('supa data', data)
-          }
-        } else if (!ownedCard && newAmount > 0) {
-          console.log('adding new card', cardId, user?.user)
-          // const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
-          //   email: user?.email,
-          //   card_id: cardId,
-          //   amount_owned: newAmount,
-          // })
-
-          const { data, error } = await supabase.from('collection').upsert({ card_id: cardId, amount_owned: newAmount, email: user?.user.email }).select()
-          if (error) {
-            console.log('supa error', error)
-            throw new Error('Error updating collection')
-          }
-
-          const newCard = data[0] as CollectionRow
-
-          setOwnedCards([
-            ...ownedCards,
-            {
-              email: user?.user.email,
-              card_id: newCard.card_id,
-              amount_owned: newCard.amount_owned,
-            },
-          ])
+        const { error } = await supabase.from('collection').upsert({ card_id: cardId, amount_owned: newAmount, email: user.user.email })
+        if (error) {
+          throw new Error('Error updating collection')
         }
       }, 1000)
     },
@@ -150,33 +120,38 @@ export const updateMultipleCards = async (
   newAmount: number,
   ownedCards: CollectionRow[],
   setOwnedCards: React.Dispatch<React.SetStateAction<CollectionRow[]>>,
-  _user: { email: string } | null,
+  user: User | null,
 ) => {
-  // const db = await getDatabase()
+  if (!user || !user.user.email) {
+    throw new Error('User not logged in')
+  }
+  if (newAmount < 0) {
+    throw new Error('New amount cannot be negative')
+  }
+
   const ownedCardsCopy = [...ownedCards]
+
+  // update into the database
+  const cardArray = cardIds.map((cardId) => ({ card_id: cardId, amount_owned: newAmount, email: user.user.email }))
+  const { error } = await supabase.from('collection').upsert(cardArray)
+  if (error) {
+    throw new Error('Error bulk updating collection')
+  }
+
+  // update the UI
   for (const cardId of cardIds) {
     const ownedCard = ownedCardsCopy.find((row) => row.card_id === cardId)
 
     if (ownedCard) {
       console.log('Updating existing card:', cardId)
-      ownedCard.amount_owned = Math.max(0, newAmount)
-      // await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
-      //   amount_owned: ownedCard.amount_owned,
-      // })
-    } else if (!ownedCard && newAmount > 0) {
+      ownedCard.amount_owned = newAmount
+    } else if (!ownedCard) {
       console.log('Adding new card:', cardId)
-      // const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
-      //   card_id: cardId,
-      //   amount_owned: newAmount,
-      //   email: user?.email,
-      // })
-
-      // ownedCardsCopy.push({
-      //   $id: newCard.$id,
-      //   email: newCard.email,
-      //   card_id: newCard.card_id,
-      //   amount_owned: newCard.amount_owned,
-      // })
+      ownedCardsCopy.push({
+        email: user.user.email,
+        card_id: cardId,
+        amount_owned: newAmount,
+      })
     }
   }
   setOwnedCards([...ownedCardsCopy]) // rerender the component
@@ -186,36 +161,40 @@ export const incrementMultipleCards = async (
   incrementAmount: number,
   ownedCards: CollectionRow[],
   setOwnedCards: React.Dispatch<React.SetStateAction<CollectionRow[]>>,
-  _user: { email: string } | null,
+  user: User | null,
 ) => {
-  // const db = await getDatabase()
+  console.log('incrementing multiple cards', cardIds, incrementAmount)
+
+  if (!user || !user.user.email) {
+    throw new Error('User not logged in')
+  }
+
   const ownedCardsCopy = [...ownedCards]
+  const cardArray: CollectionRow[] = []
+
   for (const cardId of cardIds) {
     const ownedCard = ownedCardsCopy.find((row) => row.card_id === cardId)
     const currentAmount = ownedCard?.amount_owned || 0
     const newAmount = Math.max(0, currentAmount + incrementAmount)
 
+    cardArray.push({ card_id: cardId, amount_owned: newAmount, email: user.user.email })
+
     if (ownedCard) {
       console.log('Incrementing existing card:', cardId, 'from', currentAmount, 'to', newAmount)
       ownedCard.amount_owned = newAmount
-      // await db.updateDocument(DATABASE_ID, COLLECTION_ID, ownedCard.$id, {
-      //   amount_owned: ownedCard.amount_owned,
-      // })
     } else if (!ownedCard && newAmount > 0) {
       console.log('Adding new card:', cardId, 'with amount', newAmount)
-      // const newCard = await db.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
-      //   card_id: cardId,
-      //   amount_owned: newAmount,
-      //   email: user?.email,
-      // })
-      //
-      // ownedCardsCopy.push({
-      //   $id: newCard.$id,
-      //   email: newCard.email,
-      //   card_id: newCard.card_id,
-      //   amount_owned: newCard.amount_owned,
-      // })
+      ownedCardsCopy.push({
+        email: user.user.email,
+        card_id: cardId,
+        amount_owned: newAmount,
+      })
     }
+  }
+
+  const { error } = await supabase.from('collection').upsert(cardArray)
+  if (error) {
+    throw new Error('Error bulk updating collection')
   }
   setOwnedCards([...ownedCardsCopy]) // rerender the component
 }

@@ -4,11 +4,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { useToast } from '@/hooks/use-toast.ts'
-import { ACCOUNTS_ID, DATABASE_ID, getDatabase } from '@/lib/Auth.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import type { AccountRow } from '@/types'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { ID } from 'appwrite'
 import { Siren } from 'lucide-react'
 import { type FC, use } from 'react'
 import { useForm } from 'react-hook-form'
@@ -44,25 +42,25 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
   })
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    const db = await getDatabase()
+    // const db = await getDatabase()
 
     try {
       if (!account) {
         // create new account object
         console.log('creating new account', values)
-        const newAccount = await db.createDocument(DATABASE_ID, ACCOUNTS_ID, ID.unique(), {
-          email: user?.email,
-          username: values.username,
-          friend_id: values.friend_id,
-        })
-        setAccount(newAccount as unknown as AccountRow)
+        // const newAccount = await db.createDocument(DATABASE_ID, ACCOUNTS_ID, ID.unique(), {
+        //   email: user?.user.email,
+        //   username: values.username,
+        //   friend_id: values.friend_id,
+        // })
+        // setAccount(newAccount as unknown as AccountRow)
       } else {
         // update existing account object
         console.log('updating account', values)
-        await db.updateDocument(DATABASE_ID, ACCOUNTS_ID, account.$id, {
-          username: values.username,
-          friend_id: values.friend_id,
-        })
+        // await db.updateDocument(DATABASE_ID, ACCOUNTS_ID, account.$id, {
+        //   username: values.username,
+        //   friend_id: values.friend_id,
+        // })
 
         account.username = values.username
         account.friend_id = values.friend_id
@@ -97,7 +95,7 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
                 <FormItem>
                   <FormLabel>{t('email')}</FormLabel>
                   <FormControl className="mt-2">
-                    <Input placeholder="Email" disabled value={user?.email} />
+                    <Input placeholder="Email" disabled value={user?.user.email} />
                   </FormControl>
                   <FormDescription>{t('registeredEmail')}</FormDescription>
                 </FormItem>

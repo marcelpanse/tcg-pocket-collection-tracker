@@ -102,9 +102,6 @@ importers:
       '@types/recharts':
         specifier: ^1.8.29
         version: 1.8.29
-      appwrite:
-        specifier: ^17.0.0
-        version: 17.0.0
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1253,9 +1250,6 @@ packages:
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
-
-  appwrite@17.0.0:
-    resolution: {integrity: sha512-R5+jMh6dVsKC5BdcO9G3wQPxqlU048zxj/Hahq2SU86XIxb0jWThQqS7MtyLUg7tz27SrwO2JvpwUrT9SOStDA==}
 
   argparse@1.0.10:
     resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
@@ -3100,8 +3094,6 @@ snapshots:
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
-
-  appwrite@17.0.0: {}
 
   argparse@1.0.10:
     dependencies:

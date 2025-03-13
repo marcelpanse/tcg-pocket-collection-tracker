@@ -9,13 +9,15 @@ export const ExportWriter = () => {
   const { ownedCards } = use(CollectionContext)
 
   const createFile = () => {
-    const json: ImportExportRow[] = allCards.map((ac) => {
-      return {
-        Id: ac.card_id,
-        CardName: ac.name,
-        NumberOwned: ownedCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned ?? 0,
-      }
-    })
+    const json: ImportExportRow[] = allCards
+      .filter((c) => !c.linkedCardID)
+      .map((ac) => {
+        return {
+          Id: ac.card_id,
+          CardName: ac.name,
+          NumberOwned: ownedCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned ?? 0,
+        }
+      })
     const sheet = XLSX.utils.json_to_sheet(json)
     const book = XLSX.utils.book_new(sheet)
     XLSX.writeFile(book, 'tcgcollectiontracterexport.csv')

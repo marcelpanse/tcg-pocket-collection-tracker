@@ -1,6 +1,6 @@
 import type { AccountRow } from '@/types'
-import { createContext } from 'react'
 import type { Session } from '@supabase/supabase-js'
+import { createContext } from 'react'
 
 export type User = Session
 

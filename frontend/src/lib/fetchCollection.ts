@@ -1,18 +1,34 @@
-import { supabase } from './Auth'
 import type { CollectionRow } from '@/types'
+import { supabase } from './Auth'
+
+const PAGE_SIZE = 500
 
 export async function fetchCollection() {
-  // const db = await getDatabase()
-  // this gets all your cards at once (max 5k unique cards - there aren't that many unique cards yet), not sure what it does with performance, but we'll see ;-)
-  // const { documents } = await db.listDocuments(DATABASE_ID, COLLECTION_ID, [Query.select(['$id', 'amount_owned', 'card_id', 'email']), Query.limit(5000)])
-  // return documents as CollectionRow[]
+  const { count, error } = await supabase.from('collection').select('*', { count: 'exact', head: true })
 
-  const { data, error } = await supabase.from('collection').select('email, card_id, amount_owned')
+  if (error) {
+    throw new Error('Error fetching collection')
+  }
+
+  if (!count) {
+    return []
+  }
+
+  return fetchRange(count, 0, PAGE_SIZE)
+}
+
+const fetchRange = async (total: number, start: number, end: number): Promise<CollectionRow[]> => {
+  console.log('fetching range', total, start, end)
+
+  const { data, error } = await supabase.from('collection').select('email, card_id, amount_owned').range(start, end)
   if (error) {
     console.log('supa error', error)
     throw new Error('Error fetching collection')
-  } else {
-    console.log('supa data', data)
-    return data as CollectionRow[]
   }
+
+  if (end < total) {
+    return [...data, ...(await fetchRange(total, end, Math.min(total, end + PAGE_SIZE)))]
+  }
+
+  return data as CollectionRow[]
 }

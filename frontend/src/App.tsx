@@ -40,10 +40,6 @@ function App() {
     return () => subscription.unsubscribe()
   }, [])
 
-  // useEffect(() => {
-  //   getUser().then(setUser).catch(console.error)
-  // }, [])
-
   useEffect(() => {
     if (user) {
       // check if query params sso & sig are set
