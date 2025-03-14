@@ -10,7 +10,7 @@ interface CardDetailProps {
 }
 
 function CardDetail({ cardId, onClose }: CardDetailProps) {
-  const { t } = useTranslation('pages/card-detail')
+  const { t } = useTranslation(['pages/card-detail', 'common/types'])
   const card: Card = getCardById(cardId) || ({} as Card)
 
   return (
@@ -68,7 +68,7 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
             <div className="mt-4">
               <h2 className="text-xl font-semibold">{t('text.details')}</h2>
               <p>
-                <strong>{t('text.weakness')}:</strong> {t(`weakness.${card.weakness}`) || 'N/A'}
+                <strong>{t('text.weakness')}:</strong> {t(`${card.weakness}`, { ns: 'common/types' }) || 'N/A'}
               </p>
               <p>
                 <strong>{t('text.retreat')}:</strong> {card.retreat || 'N/A'}
