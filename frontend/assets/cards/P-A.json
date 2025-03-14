@@ -4,8 +4,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_001_EN.webp",
     "hp": "Unknown",
     "name": "Potion",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Heal 20 damage from 1 of your Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics",
     "weakness": "N/A",
@@ -29,8 +29,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_002_EN.webp",
     "hp": "Unknown",
     "name": "X Speed",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "During this turn, the Retreat Cost of your Active Pokémon is 1 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
     "weakness": "N/A",
@@ -54,8 +54,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_003_EN.webp",
     "hp": "Unknown",
     "name": "Hand Scope",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Your opponent reveals their hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
     "weakness": "N/A",
@@ -79,8 +79,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_004_EN.webp",
     "hp": "Unknown",
     "name": "Pokédex",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Look at the top 3 cards of your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda",
     "weakness": "N/A",
@@ -108,8 +108,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_005_EN.webp",
     "hp": "Unknown",
     "name": "Poké Ball",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Put 1 random Basic Pokemon from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda",
     "weakness": "N/A",
@@ -133,8 +133,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_006_EN.webp",
     "hp": "Unknown",
     "name": "Red Card",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Your opponent shuffles their hand into their deck and draws 3 cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics",
     "weakness": "N/A",
@@ -158,8 +158,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_007_EN.webp",
     "hp": "Unknown",
     "name": "Professor's Research",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Draw 2 cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                Naoki Saito",
     "weakness": "N/A",
@@ -183,8 +183,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_008_EN.webp",
     "hp": "Unknown",
     "name": "Pokédex",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Look at the top 3 cards of your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
     "weakness": "N/A",
@@ -212,8 +212,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_009_EN.webp",
     "hp": "60",
     "name": "Pikachu",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -259,8 +259,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_010_EN.webp",
     "hp": "120",
     "name": "Mewtwo",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
@@ -298,8 +298,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_011_EN.webp",
     "hp": "120",
     "name": "Chansey",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -337,8 +337,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_012_EN.webp",
     "hp": "60",
     "name": "Meowth",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -380,8 +380,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_013_EN.webp",
     "hp": "120",
     "name": "Butterfree",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Grass", "Colorless", "Colorless"],
@@ -419,8 +419,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_014_EN.webp",
     "hp": "140",
     "name": "Lapras ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
@@ -454,8 +454,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_015_EN.webp",
     "hp": "60",
     "name": "Pikachu",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -501,8 +501,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_016_EN.webp",
     "hp": "60",
     "name": "Clefairy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -540,8 +540,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_017_EN.webp",
     "hp": "60",
     "name": "Mankey",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -575,8 +575,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_018_EN.webp",
     "hp": "160",
     "name": "Venusaur",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Colorless", "Colorless"],
@@ -614,8 +614,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_019_EN.webp",
     "hp": "120",
     "name": "Greninja",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
@@ -653,8 +653,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_020_EN.webp",
     "hp": "70",
     "name": "Haunter",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -688,8 +688,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_021_EN.webp",
     "hp": "110",
     "name": "Onix",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting"],
@@ -727,8 +727,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_022_EN.webp",
     "hp": "60",
     "name": "Jigglypuff",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -762,8 +762,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_023_EN.webp",
     "hp": "70",
     "name": "Bulbasaur",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -805,8 +805,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_024_EN.webp",
     "hp": "60",
     "name": "Magnemite",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -844,8 +844,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_025_EN.webp",
     "hp": "140",
     "name": "Moltres ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -897,8 +897,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_026_EN.webp",
     "hp": "60",
     "name": "Pikachu",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -944,8 +944,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_027_EN.webp",
     "hp": "60",
     "name": "Snivy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -979,8 +979,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_028_EN.webp",
     "hp": "120",
     "name": "Volcarona",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fire", "Fire", "Colorless"],
@@ -1018,8 +1018,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_029_EN.webp",
     "hp": "150",
     "name": "Blastoise",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
@@ -1057,8 +1057,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_030_EN.webp",
     "hp": "60",
     "name": "Eevee",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -1092,8 +1092,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_031_EN.webp",
     "hp": "90",
     "name": "Cinccino",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -1131,8 +1131,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_032_EN.webp",
     "hp": "60",
     "name": "Charmander",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -1174,8 +1174,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_033_EN.webp",
     "hp": "60",
     "name": "Squirtle",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1217,8 +1217,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_034_EN.webp",
     "hp": "60",
     "name": "Piplup",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -1256,8 +1256,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_035_EN.webp",
     "hp": "80",
     "name": "Turtwig",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -1295,8 +1295,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_036_EN.webp",
     "hp": "120",
     "name": "Electivire",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -1334,8 +1334,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_037_EN.webp",
     "hp": "140",
     "name": "Cresselia ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic", "Colorless"],
@@ -1369,8 +1369,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_038_EN.webp",
     "hp": "60",
     "name": "Misdreavus",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -1404,8 +1404,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_039_EN.webp",
     "hp": "80",
     "name": "Skarmory",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal"],
@@ -1443,8 +1443,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_040_EN.webp",
     "hp": "60",
     "name": "Chimchar",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -1482,8 +1482,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_041_EN.webp",
     "hp": "50",
     "name": "Togepi",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -1521,8 +1521,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_042_EN.webp",
     "hp": "140",
     "name": "Darkrai ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness", "Colorless"],
@@ -1568,8 +1568,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_043_EN.webp",
     "hp": "80",
     "name": "Cherrim",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Grass"],
@@ -1607,8 +1607,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_044_EN.webp",
     "hp": "90",
     "name": "Raichu",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -1646,8 +1646,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_045_EN.webp",
     "hp": "60",
     "name": "Nosepass",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -1681,8 +1681,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_046_EN.webp",
     "hp": "60",
     "name": "Gible",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -1720,8 +1720,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_047_EN.webp",
     "hp": "140",
     "name": "Staraptor",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -1755,8 +1755,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_048_EN.webp",
     "hp": "50",
     "name": "Manaphy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1798,8 +1798,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_049_EN.webp",
     "hp": "140",
     "name": "Snorlax",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],

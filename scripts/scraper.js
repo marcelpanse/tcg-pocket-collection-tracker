@@ -5,7 +5,7 @@ import fetch from 'node-fetch'
 
 const BASE_URL = 'https://pocket.limitlesstcg.com'
 const targetDir = 'frontend/assets/cards/'
-const expansion = 'P-A'
+const expansions = ['A1', 'A1a', 'A2', 'A2a', 'P-A']
 const packs = ['Pikachu pack', 'Charizard pack', 'Mewtwo pack', 'Dialga pack', 'Palkia pack', 'Mew pack', 'Arceus pack', 'All cards']
 
 const typeMapping = {
@@ -102,8 +102,8 @@ function extractCardInfo($, cardUrl) {
   cardInfo.name = titleParts[0].trim()
 
   const typeAndEvolution = $('p.card-text-type').text().trim().split('-')
-  cardInfo.card_type = typeAndEvolution[0].trim()
-  cardInfo.evolution_type = typeAndEvolution[1] ? typeAndEvolution[1].trim() : 'Basic'
+  cardInfo.card_type = typeAndEvolution[0].toLowerCase().trim()
+  cardInfo.evolution_type = typeAndEvolution[1] ? typeAndEvolution[1].toLowerCase().trim().replace(' ', '') : 'basic'
 
   cardInfo.attacks = []
   $('div.card-text-attack').each((_i, attackElem) => {
@@ -220,52 +220,54 @@ async function getCardLinks(mainUrl) {
 }
 
 async function scrapeCards() {
-  try {
-    const mainUrl = `${BASE_URL}/cards/${expansion}`
-    const cardLinks = await getCardLinks(mainUrl)
-    console.log(`Found ${cardLinks.length} card links.`)
+  for (const expansion of expansions) {
+    try {
+      const mainUrl = `${BASE_URL}/cards/${expansion}`
+      const cardLinks = await getCardLinks(mainUrl)
+      console.log(`Found ${cardLinks.length} card links.`)
 
-    const concurrencyLimit = 10
-    const cards = []
-    let index = 0 // Track the current index of the cardLinks being processed
+      const concurrencyLimit = 10
+      const cards = []
+      let index = 0 // Track the current index of the cardLinks being processed
 
-    fs.mkdirSync(targetDir, { recursive: true })
+      fs.mkdirSync(targetDir, { recursive: true })
 
-    // Function to process a batch of tasks with a given concurrency limit
-    async function processBatch() {
-      // Queue up to `concurrencyLimit` promises at the same time
-      const promises = []
-      while (index < cardLinks.length && promises.length < concurrencyLimit) {
-        const link = cardLinks[index++]
-        promises.push(
-          getCardDetails(link).then((card) => {
-            if (card) {
-              cards.push(card)
-            }
-          }),
-        )
+      // Function to process a batch of tasks with a given concurrency limit
+      async function processBatch() {
+        // Queue up to `concurrencyLimit` promises at the same time
+        const promises = []
+        while (index < cardLinks.length && promises.length < concurrencyLimit) {
+          const link = cardLinks[index++]
+          promises.push(
+            getCardDetails(link).then((card) => {
+              if (card) {
+                cards.push(card)
+              }
+            }),
+          )
+        }
+        // Wait for the batch of promises to resolve
+        await Promise.all(promises)
+
+        // Process the next batch if there are more links remaining
+        if (index < cardLinks.length) {
+          await processBatch()
+        }
       }
-      // Wait for the batch of promises to resolve
-      await Promise.all(promises)
 
-      // Process the next batch if there are more links remaining
-      if (index < cardLinks.length) {
-        await processBatch()
-      }
+      // Start processing the batches
+      await processBatch()
+
+      console.log(`Scraping completed. Found ${cards.length} cards.`)
+
+      // Sort the cards array by id as a number
+      cards.sort((a, b) => Number.parseInt(a.id, 10) - Number.parseInt(b.id, 10))
+
+      fs.writeFileSync(path.join(targetDir, `${expansion}.json`), JSON.stringify(cards, null, 2))
+      console.log('Cards saved to cards.json')
+    } catch (error) {
+      console.error('Error scraping cards:', error)
     }
-
-    // Start processing the batches
-    await processBatch()
-
-    console.log(`Scraping completed. Found ${cards.length} cards.`)
-
-    // Sort the cards array by id as a number
-    cards.sort((a, b) => Number.parseInt(a.id, 10) - Number.parseInt(b.id, 10))
-
-    fs.writeFileSync(path.join(targetDir, `${expansion}.json`), JSON.stringify(cards, null, 2))
-    console.log('Cards saved to cards.json')
-  } catch (error) {
-    console.error('Error scraping cards:', error)
   }
 }
 
