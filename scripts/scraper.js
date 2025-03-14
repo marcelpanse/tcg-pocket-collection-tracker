@@ -74,11 +74,11 @@ function extractSetAndPackInfo($) {
 
   if (setInfo.length) {
     const setDetailsElement = setInfo.find('span.text-lg')
-    const setDetails = setDetailsElement.length ? setDetailsElement.text().trim() : 'Unknown'
+    const setDetails = setDetailsElement.length ? setDetailsElement.text().replaceAll(' ', '').toLowerCase().trim() : 'Unknown'
 
     const packTemp = setInfo.find('span').last().text().trim()
     const packInfo = packTemp.split('·').pop().trim().split(/\s+/).join(' ')
-    const pack = packs.includes(packInfo) ? packInfo : 'Every pack'
+    const pack = packs.includes(packInfo) ? packInfo.replace(' ', '').toLowerCase() : 'Every pack'
 
     return { setDetails, pack }
   }
@@ -137,14 +137,14 @@ function extractCardInfo($, cardUrl) {
 
   cardInfo.ability = extractAbility($)
   const weaknessAndRetreat = $('p.card-text-wrr').text().trim().split('\n')
-  cardInfo.weakness = weaknessAndRetreat[0]?.split(': ')[1]?.trim() || 'N/A'
-  cardInfo.retreat = weaknessAndRetreat[1]?.split(': ')[1]?.trim() || 'N/A'
+  cardInfo.weakness = weaknessAndRetreat[0]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
+  cardInfo.retreat = weaknessAndRetreat[1]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
 
   const raritySection = $('table.card-prints-versions tr.current')
   cardInfo.rarity = raritySection.find('td:last-child').text().trim() || 'Unknown'
   cardInfo.fullart = fullArtRarities.includes(cardInfo.rarity) ? 'Yes' : 'No'
 
-  cardInfo.ex = cardInfo.name.includes('ex') ? 'Yes' : 'No'
+  cardInfo.ex = cardInfo.name.includes('ex') ? 'yes' : 'no'
 
   const { setDetails, pack } = extractSetAndPackInfo($)
   cardInfo.set_details = setDetails
@@ -199,7 +199,10 @@ function extractAbility($) {
       // Remove text within square brackets, similar to Python's re.sub(r'\[.*?\]', '')
       abilityEffect = abilityEffect.replace(/\[.*?]/g, '').trim()
 
-      return { name: abilityName || 'No ability', effect: abilityEffect || 'No effect' }
+      return {
+        name: abilityName || 'No ability',
+        effect: abilityEffect || 'No effect',
+      }
     }
     return { name: 'No ability', effect: 'N/A' }
   }
