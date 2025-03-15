@@ -39,11 +39,6 @@ We maintain code standards with Biome, ensuring up-to-date formatting and lintin
 
 We encourage contributors to incrementally improve the project by making small changes and submitting pull requests for review and potential merging.
 
-## Support us
-If you like this project, consider donating to help us keep it running.
-
-<a href="https://buymeacoffee.com/pocketcollectiontracker" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
@@ -54,6 +49,11 @@ If you like this project, consider donating to help us keep it running.
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+## Support us
+If you like this project, consider donating to help us keep it running.
+
+<a href="https://buymeacoffee.com/pocketcollectiontracker" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## License
 
