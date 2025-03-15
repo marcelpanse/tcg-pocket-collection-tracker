@@ -5,6 +5,7 @@ import { AlertTitle } from '@/components/ui/alert.tsx'
 import * as CardsDB from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
+import type { Rarity } from '@/types'
 import { Siren } from 'lucide-react'
 import { use, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -22,7 +23,7 @@ function Overview() {
 
   const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
   const ownedCardsCount = useMemo(() => ownedCards.reduce((total, card) => total + card.amount_owned, 0), [ownedCards])
-  const [rarityFilter, setRarityFilter] = useState<string[]>(() => {
+  const [rarityFilter, setRarityFilter] = useState<Rarity[]>(() => {
     const savedRarityFilter = localStorage.getItem('rarityFilter')
     return savedRarityFilter ? JSON.parse(savedRarityFilter) : []
   })

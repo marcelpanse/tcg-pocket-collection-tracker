@@ -10,6 +10,7 @@ import { UserContext } from '@/lib/context/UserContext'
 import { NoCardsNeeded } from '@/pages/trade/components/NoCardsNeeded.tsx'
 import { NoSellableCards } from '@/pages/trade/components/NoSellableCards.tsx'
 import { NoTradeableCards } from '@/pages/trade/components/NoTradeableCards.tsx'
+import type { Card, Rarity } from '@/types'
 import { type MouseEvent, use, useMemo, useState } from 'react'
 import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 
@@ -18,13 +19,18 @@ function Trade() {
   const { ownedCards } = use(CollectionContext)
   const { toast } = useToast()
 
-  const [rarityFilter, setRarityFilter] = useState<string[]>([])
+  const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [forTradeMinCards, setForTradeMinCards] = useState<number>(0)
   const [lookingForMinCards, setLookingForMinCards] = useState<number>(2)
   const [buyingTokensMinCards, setBuyingTokensMinCards] = useState<number>(3)
   const [currentTab, setCurrentTab] = useState('looking_for')
 
   const tradeableExpansions = useMemo(() => expansions.filter((e) => e.tradeable).map((e) => e.id), [])
+
+  const filterRarities = (c: Card) => {
+    if (rarityFilter.length === 0) return true
+    return c.rarity !== 'Unknown' && c.rarity !== '' && rarityFilter.includes(c.rarity)
+  }
 
   // LOOKING FOR CARDS
   const lookingForCards = useMemo(
@@ -35,11 +41,11 @@ function Trade() {
             ownedCards.findIndex((oc) => oc.card_id === ac.card_id) === -1 ||
             ownedCards[ownedCards.findIndex((oc) => oc.card_id === ac.card_id)].amount_owned <= forTradeMinCards,
         )
-        .filter((c) => Object.keys(tradeableRaritiesDictionary).includes(c.rarity) && tradeableExpansions.includes(c.expansion)),
+        .filter((c) => tradeableRaritiesDictionary[c.rarity] !== null && tradeableExpansions.includes(c.expansion)),
     [ownedCards, forTradeMinCards],
   )
   const lookingForCardsFiltered = useMemo(() => {
-    return lookingForCards.filter((c) => rarityFilter.length === 0 || rarityFilter.includes(c.rarity))
+    return lookingForCards.filter(filterRarities)
   }, [lookingForCards, rarityFilter])
 
   // FOR TRADE CARDS
@@ -51,11 +57,11 @@ function Trade() {
         ...ac,
         amount_owned: myCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned,
       }))
-      .filter((c) => Object.keys(tradeableRaritiesDictionary).includes(c.rarity) && tradeableExpansions.includes(c.expansion))
+      .filter((c) => tradeableRaritiesDictionary[c.rarity] !== null && tradeableExpansions.includes(c.expansion))
   }, [ownedCards, lookingForMinCards])
 
   const forTradeCardsFiltered = useMemo(() => {
-    return forTradeCards.filter((c) => rarityFilter.length === 0 || rarityFilter.includes(c.rarity))
+    return forTradeCards.filter(filterRarities)
   }, [forTradeCards, rarityFilter])
 
   // BUYING TOKENS
@@ -68,13 +74,10 @@ function Trade() {
         ...ac,
         amount_owned: myCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned,
       }))
-      .filter((c) => Object.keys(sellableForTokensDictionary).includes(c.rarity))
+      .filter((c) => sellableForTokensDictionary[c.rarity] !== null)
   }, [ownedCards, buyingTokensMinCards])
 
-  const buyingTokensCardsFiltered = useMemo(
-    () => buyingTokensCards.filter((c) => rarityFilter.length === 0 || rarityFilter.includes(c.rarity)),
-    [buyingTokensCards, rarityFilter],
-  )
+  const buyingTokensCardsFiltered = useMemo(() => buyingTokensCards.filter(filterRarities), [buyingTokensCards, rarityFilter])
 
   const getCardValues = () => {
     let cardValues = ''

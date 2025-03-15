@@ -2,12 +2,13 @@ import { Button } from '@/components/ui/button'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
+import type { Rarity } from '@/types'
 import { type FC, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
 interface Props {
-  rarityFilter: string[]
-  setRarityFilter: (rarityFilter: string[]) => void
+  rarityFilter: Rarity[]
+  setRarityFilter: (rarityFilter: Rarity[]) => void
 }
 const RarityFilter: FC<Props> = ({ rarityFilter, setRarityFilter }) => {
   const { width } = useWindowDimensions()
@@ -21,7 +22,7 @@ const RarityFilter: FC<Props> = ({ rarityFilter, setRarityFilter }) => {
         type="multiple"
         size="sm"
         value={rarityFilter}
-        onValueChange={(value) => setRarityFilter(value)}
+        onValueChange={(value: Rarity[]) => setRarityFilter(value)}
         className={`justify-end shadow-none border-2 border-slate-600 rounded-md ${isMobile ? 'flex-col' : 'flex-row'}`}
       >
         <ToggleGroupItem value="◊" aria-label="◊" className="text-gray-400 hover:text-gray-500">
