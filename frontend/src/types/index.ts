@@ -1,3 +1,12 @@
+const expansionIds = ['A1', 'A1a', 'A2', 'A2a', 'P-A'] as const
+
+const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', 'Crown Rare', 'Unknown', ''] as const
+
+export type Rarity = (typeof rarities)[number]
+export type PickableRarity = Exclude<Rarity, '' | 'Unknown'>
+export type TradeableRarity = Exclude<Rarity, '☆☆' | '☆☆☆' | 'Crown Rare' | '' | 'Unknown'>
+export type SellableForTokensRarity = Exclude<PickableRarity, '◊' | '◊◊' | '' | 'Unknown'>
+
 export interface AccountRow {
   $id: string
   username: string
@@ -8,11 +17,12 @@ export interface CollectionRow {
   email: string
   card_id: string
   amount_owned: number
+  rarity?: Rarity
 }
 
 export interface Expansion {
   name: string
-  id: string
+  id: (typeof expansionIds)[number]
   cards: Card[]
   packs: Pack[]
   tradeable?: boolean
@@ -45,7 +55,7 @@ export interface Card {
   }
   weakness: string
   retreat: string
-  rarity: string
+  rarity: Rarity
   fullart: string
   ex: string
   set_details: string
