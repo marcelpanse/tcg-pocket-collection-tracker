@@ -10,7 +10,7 @@ interface CardDetailProps {
 }
 
 function CardDetail({ cardId, onClose }: CardDetailProps) {
-  const { t } = useTranslation(['pages/card-detail', 'common/types'])
+  const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs'])
   const card: Card = getCardById(cardId) || ({} as Card)
 
   return (
@@ -62,7 +62,7 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
               <strong>{t('text.expansion')}:</strong> {card.expansion}
             </p>
             <p className="text-lg mb-1">
-              <strong>{t('text.pack')}:</strong> {t(`pack.${card.pack}`)}
+              <strong>{t('text.pack')}:</strong> {t(`${card.pack}`, { ns: 'common/packs' })}
             </p>
 
             <div className="mt-4">
