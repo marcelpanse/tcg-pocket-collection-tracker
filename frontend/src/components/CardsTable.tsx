@@ -97,7 +97,7 @@ export function CardsTable({ cards, resetScrollTrigger }: Props) {
   return (
     <div ref={scrollRef} className="h-[calc(100vh-270px)] overflow-y-auto mt-4 sm:mt-8 px-4 flex flex-col justify-end" style={{ scrollbarWidth: 'none' }}>
       <small className="text-right hidden md:block">
-        {cards.length} selected, {cards.filter((card) => (card.amount_owned ?? 0) > 0).length} uniques owned,{' '}
+        {cards.filter((c) => !c.linkedCardID).length} selected, {cards.filter((card) => (card.amount_owned ?? 0) > 0).length} uniques owned,{' '}
         {cards.reduce((acc, card) => acc + (card.amount_owned ?? 0), 0)} total owned
       </small>
       <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
