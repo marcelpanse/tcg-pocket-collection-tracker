@@ -10,7 +10,7 @@ interface CardDetailProps {
 }
 
 function CardDetail({ cardId, onClose }: CardDetailProps) {
-  const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs'])
+  const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
   const card: Card = getCardById(cardId) || ({} as Card)
 
   return (
@@ -56,7 +56,7 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
               <strong>{t('text.artist')}:</strong> {card.artist}
             </p>
             <p className="text-lg mb-1">
-              <strong>{t('text.setDetails')}:</strong> {t(`setDetails.${card.set_details}`)}
+              <strong>{t('text.setDetails')}:</strong> {t(card.set_details, { ns: 'common/sets' })}
             </p>
             <p className="text-lg mb-1">
               <strong>{t('text.expansion')}:</strong> {card.expansion}
