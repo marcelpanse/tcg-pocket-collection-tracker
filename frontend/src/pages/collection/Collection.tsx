@@ -83,7 +83,7 @@ function Collection() {
       </div>
 
       <div>
-        <CardsTable cards={getFilteredCards} resetScrollTrigger={resetScrollTrigger} />
+        <CardsTable cards={getFilteredCards} resetScrollTrigger={resetScrollTrigger} showStats />
       </div>
     </div>
   )

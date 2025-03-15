@@ -10,9 +10,10 @@ const columnHelper = createColumnHelper<CardType>()
 interface Props {
   cards: CardType[]
   resetScrollTrigger?: boolean
+  showStats?: boolean
 }
 
-export function CardsTable({ cards, resetScrollTrigger }: Props) {
+export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
 
@@ -96,10 +97,12 @@ export function CardsTable({ cards, resetScrollTrigger }: Props) {
 
   return (
     <div ref={scrollRef} className="h-[calc(100vh-270px)] overflow-y-auto mt-4 sm:mt-8 px-4 flex flex-col justify-end" style={{ scrollbarWidth: 'none' }}>
-      <small className="text-right hidden md:block">
-        {cards.filter((c) => !c.linkedCardID).length} selected, {cards.filter((card) => (card.amount_owned ?? 0) > 0).length} uniques owned,{' '}
-        {cards.reduce((acc, card) => acc + (card.amount_owned ?? 0), 0)} total owned
-      </small>
+      {showStats && (
+        <small className="text-right hidden md:block">
+          {cards.filter((c) => !c.linkedCardID).length} selected, {cards.filter((card) => (card.amount_owned ?? 0) > 0).length} uniques owned,{' '}
+          {cards.reduce((acc, card) => acc + (card.amount_owned ?? 0), 0)} total owned
+        </small>
+      )}
       <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
         {rowVirtualizer.getVirtualItems().map((virtualRow) => {
           const row = flattenedRows[virtualRow.index]
