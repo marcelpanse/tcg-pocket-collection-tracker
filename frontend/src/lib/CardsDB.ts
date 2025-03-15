@@ -1,11 +1,11 @@
-import type { Card, CollectionRow, Expansion, Pack, PickableRarity, Rarity, SellableForTokensRarity, TradeableRarity } from '@/types'
+import type { Card, CollectionRow, Expansion, ExpansionId, Pack, PickableRarity, Rarity } from '@/types'
 import A1 from '../../assets/cards/A1.json'
 import A1a from '../../assets/cards/A1a.json'
 import A2 from '../../assets/cards/A2.json'
 import A2a from '../../assets/cards/A2a.json'
 import PA from '../../assets/cards/P-A.json'
 
-const update = (cards: Card[], expansionName: Expansion['id']) => {
+const update = (cards: Card[], expansionName: ExpansionId) => {
   for (const card of cards) {
     // we set the card_id to the linkedCardID if it exists, so we really threat it as a single card eventhough it appears in multiple expansions.
     // @ts-ignore there is an ID in the JSON, but I don't want it in the Type because you should always use the card_id, having both is confusing.
@@ -74,21 +74,30 @@ export const expansions: Expansion[] = [
   },
 ]
 
-export const tradeableRaritiesDictionary: Record<TradeableRarity, number> = {
+export const tradeableRaritiesDictionary: Record<Rarity, number | null> = {
   '◊': 0,
   '◊◊': 0,
   '◊◊◊': 120,
   '◊◊◊◊': 500,
   '☆': 500,
+  '☆☆': null,
+  '☆☆☆': null,
+  'Crown Rare': null,
+  Unknown: null,
+  '': null,
 }
 
-export const sellableForTokensDictionary: Record<SellableForTokensRarity, number> = {
+export const sellableForTokensDictionary: Record<Rarity, number | null> = {
+  '◊': null,
+  '◊◊': null,
   '◊◊◊': 25,
   '◊◊◊◊': 125,
   '☆': 100,
   '☆☆': 300,
   '☆☆☆': 300,
   'Crown Rare': 1500,
+  Unknown: null,
+  '': null,
 }
 
 interface NrOfCardsOwnedProps {
@@ -106,11 +115,17 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
       if (!rarityFilter.length || !cardRarity) return true
       return rarityFilter.includes(cardRarity)
     },
-    expansion: (card: CollectionRow) => (expansion ? expansion.cards.find((c) => card.card_id === c.card_id) : true),
-    pack: (card: CollectionRow) => (expansion && packName ? expansion.cards.find((c) => c.pack === packName && card.card_id === c.card_id) : true),
+    expansion: (cr: CollectionRow) => (expansion ? expansion.cards.find((c) => cr.card_id === c.card_id) : true),
+    pack: (cr: CollectionRow) => (expansion && packName ? expansion.cards.find((c) => c.pack === packName && cr.card_id === c.card_id) : true),
   }
 
-  return ownedCards.filter(filters.number).filter(filters.rarity).filter(filters.expansion).filter(filters.pack).length
+  // biome-ignore format: improve readability for filters
+  return ownedCards
+    .filter(filters.number)
+    .filter(filters.rarity)
+    .filter(filters.expansion)
+    .filter(filters.pack)
+    .length
 }
 
 interface TotalNrOfCardsProps {

@@ -1,7 +1,7 @@
 import { Progress } from '@/components/ui/progress.tsx'
 import { getNrOfCardsOwned, getTotalNrOfCards } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
-import type { Expansion } from '@/types'
+import type { Expansion, Rarity } from '@/types'
 import { use, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -9,7 +9,7 @@ interface CompleteProgressProps {
   title: string
   expansion: Expansion
   packName?: string
-  rarityFilter?: string[]
+  rarityFilter?: Rarity[]
   numberFilter?: number
 }
 
