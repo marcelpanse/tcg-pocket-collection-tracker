@@ -1,6 +1,6 @@
 # TCG Pocket Collection Tracker
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 TCG Pocket Collection Tracker is an application designed to help users efficiently track their Pokémon Pocket game cards, identify optimal card packs to open, manage trades, and engage with both friends and the community at large. Our application is completely free, open-source, and prioritizes user privacy by not selling data, tracking analytics or using advertisements.
@@ -24,7 +24,7 @@ Our backend infrastructure utilizes Supabase. The backend manages user authentic
 - Optimal pack calculation tool
 - Trade facilitation support
 - Automatic card scanner from screenshots - take a look at the [details here](https://github.com/1vcian/Pokemon-TCGP-Card-Scanner)
-- Community forum (thanks @stephvane for hosting)
+- Community forum
 
 For upcoming features and tasks, please consult our [issues list](https://github.com/marcelpanse/tcg-pocket-collection-tracker/issues).
 
@@ -65,6 +65,7 @@ We encourage contributors to incrementally improve the project by making small c
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dahbar"><img src="https://avatars.githubusercontent.com/u/33298582?v=4?s=100" width="100px;" alt="Nicolas Dahbar"/><br /><sub><b>Nicolas Dahbar</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=dahbar" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Bilhalv"><img src="https://avatars.githubusercontent.com/u/128099321?v=4?s=100" width="100px;" alt="Pedro Bilhalva Oliveira"/><br /><sub><b>Pedro Bilhalva Oliveira</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=Bilhalv" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/vmdumont93"><img src="https://avatars.githubusercontent.com/u/180430210?v=4?s=100" width="100px;" alt="Virginia Dumont"/><br /><sub><b>Virginia Dumont</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=vmdumont93" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/stephanvane"><img src="https://avatars.githubusercontent.com/u/411353?v=4?s=100" width="100px;" alt="Stephan van Eijkelenburg"/><br /><sub><b>Stephan van Eijkelenburg</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=stephanvane" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

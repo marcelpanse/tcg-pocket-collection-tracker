@@ -8,6 +8,7 @@ import SearchInput from '@/components/SearchInput.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
+import type { Card, Rarity } from '@/types'
 import { useEffect, useMemo, useState } from 'react'
 import { useContext } from 'react'
 
@@ -16,9 +17,14 @@ function Collection() {
   const { ownedCards, setOwnedCards } = useContext(CollectionContext)
   const [searchValue, setSearchValue] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<string>('all')
-  const [rarityFilter, setRarityFilter] = useState<string[]>([])
+  const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
+
+  const filterRarities = (c: Card) => {
+    if (rarityFilter.length === 0) return true
+    return c.rarity !== 'Unknown' && c.rarity !== '' && rarityFilter.includes(c.rarity)
+  }
 
   const getFilteredCards = useMemo(() => {
     let filteredCards = allCards
@@ -33,9 +39,7 @@ function Collection() {
         filteredCards = filteredCards.filter((card) => !ownedCards.find((oc) => oc.card_id === card.card_id && oc.amount_owned > 0))
       }
     }
-    if (rarityFilter.length > 0) {
-      filteredCards = filteredCards.filter((card) => rarityFilter.includes(card.rarity))
-    }
+    filteredCards = filteredCards.filter(filterRarities)
     if (searchValue) {
       filteredCards = filteredCards.filter((card) => {
         return card.name.toLowerCase().includes(searchValue.toLowerCase()) || card.card_id.toLowerCase().includes(searchValue.toLowerCase())
@@ -45,7 +49,11 @@ function Collection() {
     setResetScrollTrigger(true)
 
     for (const card of filteredCards) {
-      card.amount_owned = ownedCards.find((oc) => oc.card_id === card.card_id)?.amount_owned || 0
+      if (!card.linkedCardID) {
+        card.amount_owned = ownedCards.find((oc) => oc.card_id === card.card_id)?.amount_owned || 0
+      } else {
+        card.amount_owned = 0
+      }
     }
 
     return filteredCards

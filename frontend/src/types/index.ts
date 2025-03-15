@@ -1,3 +1,10 @@
+const expansionIds = ['A1', 'A1a', 'A2', 'A2a', 'P-A'] as const
+export type ExpansionId = (typeof expansionIds)[number]
+
+const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', 'Crown Rare', 'Unknown', ''] as const
+
+export type Rarity = (typeof rarities)[number]
+
 export interface AccountRow {
   $id: string
   username: string
@@ -8,11 +15,12 @@ export interface CollectionRow {
   email: string
   card_id: string
   amount_owned: number
+  rarity?: Rarity
 }
 
 export interface Expansion {
   name: string
-  id: string
+  id: ExpansionId
   cards: Card[]
   packs: Pack[]
   tradeable?: boolean
@@ -27,7 +35,7 @@ export interface Pack {
 export interface Card {
   card_id: string
   linkedCardID?: string
-  expansion: string
+  expansion: ExpansionId
   name: string
   hp: string
   card_type: string
@@ -45,14 +53,14 @@ export interface Card {
   }
   weakness: string
   retreat: string
-  rarity: string
+  rarity: Rarity
   fullart: string
   ex: string
   set_details: string
   pack: string
   alternate_versions: {
     version: string
-    rarity: string
+    rarity: Rarity
   }[]
   artist: string
   probability: {
