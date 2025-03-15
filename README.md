@@ -1,6 +1,6 @@
 # TCG Pocket Collection Tracker
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 TCG Pocket Collection Tracker is an application designed to help users efficiently track their Pokémon Pocket game cards, identify optimal card packs to open, manage trades, and engage with both friends and the community at large. Our application is completely free, open-source, and prioritizes user privacy by not selling data, tracking analytics or using advertisements.
@@ -56,6 +56,7 @@ We encourage contributors to incrementally improve the project by making small c
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/graylewis"><img src="https://avatars.githubusercontent.com/u/10010793?v=4?s=100" width="100px;" alt="Gray Lewis"/><br /><sub><b>Gray Lewis</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=graylewis" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/robertfoster550"><img src="https://avatars.githubusercontent.com/u/54109737?v=4?s=100" width="100px;" alt="robertfoster550"/><br /><sub><b>robertfoster550</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=robertfoster550" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.alexandre.work/"><img src="https://avatars.githubusercontent.com/u/18624067?v=4?s=100" width="100px;" alt="Alexandre Moreau-Lemay"/><br /><sub><b>Alexandre Moreau-Lemay</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=amoreaulemay" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/afu-dev"><img src="https://avatars.githubusercontent.com/u/15209405?v=4?s=100" width="100px;" alt="Adrien Furnari"/><br /><sub><b>Adrien Furnari</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=afu-dev" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
