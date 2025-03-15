@@ -16,7 +16,7 @@ interface ExpansionOverviewProps {
 }
 export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: ExpansionOverviewProps) {
   const { ownedCards } = use(CollectionContext)
-  const { t } = useTranslation('expansion-overview')
+  const { t } = useTranslation(['expansion-overview', 'common/sets'])
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
@@ -41,7 +41,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: Exp
 
   return (
     <>
-      <h2 className="col-span-8 text-2xl pl-8">{expansion.name}</h2>
+      <h2 className="col-span-8 text-2xl pl-8">{t(expansion.name, { ns: 'common/sets' })}</h2>
       {isMobile ? (
         <div className="col-span-full">
           <Carousel padding="2rem">
