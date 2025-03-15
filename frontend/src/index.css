@@ -85,3 +85,9 @@
   overflow-y: auto;
   border-radius: 4px;
 }
+
+@media (max-width: 768px) {
+  #bmc-wbtn {
+    display: none !important;
+  }
+}

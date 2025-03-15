@@ -48,6 +48,10 @@ function Collection() {
 
     setResetScrollTrigger(true)
 
+    for (const card of filteredCards) {
+      card.amount_owned = ownedCards.find((oc) => oc.card_id === card.card_id)?.amount_owned || 0
+    }
+
     return filteredCards
   }, [expansionFilter, rarityFilter, searchValue, ownedFilter])
 
