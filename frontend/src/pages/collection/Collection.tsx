@@ -8,7 +8,7 @@ import SearchInput from '@/components/SearchInput.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
-import type { Card, PickableRarity } from '@/types'
+import type { Card, Rarity } from '@/types'
 import { useEffect, useMemo, useState } from 'react'
 import { useContext } from 'react'
 
@@ -17,7 +17,7 @@ function Collection() {
   const { ownedCards, setOwnedCards } = useContext(CollectionContext)
   const [searchValue, setSearchValue] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<string>('all')
-  const [rarityFilter, setRarityFilter] = useState<PickableRarity[]>([])
+  const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
 

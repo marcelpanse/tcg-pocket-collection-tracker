@@ -1,4 +1,4 @@
-import type { Card, CollectionRow, Expansion, ExpansionId, Pack, PickableRarity, Rarity } from '@/types'
+import type { Card, CollectionRow, Expansion, ExpansionId, Pack, Rarity } from '@/types'
 import A1 from '../../assets/cards/A1.json'
 import A1a from '../../assets/cards/A1a.json'
 import A2 from '../../assets/cards/A2.json'
@@ -152,7 +152,7 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName }: TotalNr
   return filteredCards.length
 }
 
-const probabilityPerRarity1_3: Record<PickableRarity, number> = {
+const probabilityPerRarity1_3: Record<Rarity, number> = {
   '◊': 100,
   '◊◊': 0,
   '◊◊◊': 0,
@@ -161,8 +161,10 @@ const probabilityPerRarity1_3: Record<PickableRarity, number> = {
   '☆☆': 0,
   '☆☆☆': 0,
   'Crown Rare': 0,
+  Unknown: 0,
+  '': 0,
 }
-const probabilityPerRarity4: Record<PickableRarity, number> = {
+const probabilityPerRarity4: Record<Rarity, number> = {
   '◊': 0,
   '◊◊': 90,
   '◊◊◊': 5,
@@ -171,8 +173,10 @@ const probabilityPerRarity4: Record<PickableRarity, number> = {
   '☆☆': 0.5,
   '☆☆☆': 0.222,
   'Crown Rare': 0.04,
+  Unknown: 0,
+  '': 0,
 }
-const probabilityPerRarity5: Record<PickableRarity, number> = {
+const probabilityPerRarity5: Record<Rarity, number> = {
   '◊': 0,
   '◊◊': 60,
   '◊◊◊': 20,
@@ -181,13 +185,15 @@ const probabilityPerRarity5: Record<PickableRarity, number> = {
   '☆☆': 2,
   '☆☆☆': 0.888,
   'Crown Rare': 0.16,
+  Unknown: 0,
+  '': 0,
 }
 
 interface PullRateProps {
   ownedCards: CollectionRow[]
   expansion: Expansion
   pack: Pack
-  rarityFilter?: PickableRarity[]
+  rarityFilter?: Rarity[]
   numberFilter?: number
 }
 export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numberFilter = 1 }: PullRateProps) => {

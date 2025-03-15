@@ -4,7 +4,6 @@ export type ExpansionId = (typeof expansionIds)[number]
 const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', 'Crown Rare', 'Unknown', ''] as const
 
 export type Rarity = (typeof rarities)[number]
-export type PickableRarity = Exclude<Rarity, '' | 'Unknown'>
 
 export interface AccountRow {
   $id: string

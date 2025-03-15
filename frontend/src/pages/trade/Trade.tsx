@@ -10,7 +10,7 @@ import { UserContext } from '@/lib/context/UserContext'
 import { NoCardsNeeded } from '@/pages/trade/components/NoCardsNeeded.tsx'
 import { NoSellableCards } from '@/pages/trade/components/NoSellableCards.tsx'
 import { NoTradeableCards } from '@/pages/trade/components/NoTradeableCards.tsx'
-import type { Card, PickableRarity } from '@/types'
+import type { Card, Rarity } from '@/types'
 import { type MouseEvent, use, useMemo, useState } from 'react'
 import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 
@@ -19,7 +19,7 @@ function Trade() {
   const { ownedCards } = use(CollectionContext)
   const { toast } = useToast()
 
-  const [rarityFilter, setRarityFilter] = useState<PickableRarity[]>([])
+  const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [forTradeMinCards, setForTradeMinCards] = useState<number>(0)
   const [lookingForMinCards, setLookingForMinCards] = useState<number>(2)
   const [buyingTokensMinCards, setBuyingTokensMinCards] = useState<number>(3)
