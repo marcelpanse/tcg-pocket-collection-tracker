@@ -43,8 +43,8 @@ importers:
         specifier: ^1.10.11
         version: 1.10.11
       vite-plugin-mkcert:
-        specifier: ^1.17.7
-        version: 1.17.7(vite@6.2.2(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1))
+        specifier: ^1.17.8
+        version: 1.17.8(vite@6.2.2(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1))
 
   frontend:
     dependencies:
@@ -182,8 +182,8 @@ importers:
         specifier: ^6.2.2
         version: 6.2.2(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)
       vite-plugin-mkcert:
-        specifier: ^1.17.7
-        version: 1.17.7(vite@6.2.2(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1))
+        specifier: ^1.17.8
+        version: 1.17.8(vite@6.2.2(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1))
       vite-plugin-strip-comments:
         specifier: ^0.0.5
         version: 0.0.5
@@ -1280,8 +1280,8 @@ packages:
     resolution: {integrity: sha512-0bDNnY/u6pPwHDMoF0FieU354oBi0a8rD9FcsLwzcGWbc8KS8KPIi7y+s13OlVY+gMWc/9xEMUgNE6Qm8ZllYQ==}
     engines: {node: '>=4'}
 
-  axios@1.8.1:
-    resolution: {integrity: sha512-NN+fvwH/kV01dYUQ3PTOZns4LWtWhOFCAhQ/pHb88WQ1hNe5V/dvFwc4VJcDL11LT9xSX0QtsR8sWUuyOuOq7g==}
+  axios@1.8.3:
+    resolution: {integrity: sha512-iP4DebzoNlP/YN2dpwCgb8zoCmhtkajzS48JvwmkSkXvPI3DHc7m+XYL5tGnSlJtR6nImXZmdCuN5aP8dh1d8A==}
 
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
@@ -2202,8 +2202,8 @@ packages:
   victory-vendor@36.9.2:
     resolution: {integrity: sha512-PnpQQMuxlwYdocC8fIJqVXvkeViHYzotI+NJrCuav0ZYFoq912ZHBk3mCeuj+5/VpodOjPe1z0Fk2ihgzlXqjQ==}
 
-  vite-plugin-mkcert@1.17.7:
-    resolution: {integrity: sha512-w6897ZmEbn1dzQxY9fxXZBMEFNxeHWYDLJb42DBHSbLx+ASRnq5Mfy4v9bDMhqIGDz9ufhm2qXbVoCFe+8dazg==}
+  vite-plugin-mkcert@1.17.8:
+    resolution: {integrity: sha512-S+4tNEyGqdZQ3RLAG54ETeO2qyURHWrVjUWKYikLAbmhh/iJ+36gDEja4OWwFyXNuvyXcZwNt5TZZR9itPeG5Q==}
     engines: {node: '>=v16.7.0'}
     peerDependencies:
       vite: '>=3'
@@ -3300,7 +3300,7 @@ snapshots:
 
   attr-accept@2.2.5: {}
 
-  axios@1.8.1(debug@4.4.0):
+  axios@1.8.3(debug@4.4.0):
     dependencies:
       follow-redirects: 1.15.9(debug@4.4.0)
       form-data: 4.0.2
@@ -4192,9 +4192,9 @@ snapshots:
       d3-time: 3.1.0
       d3-timer: 3.0.1
 
-  vite-plugin-mkcert@1.17.7(vite@6.2.2(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)):
+  vite-plugin-mkcert@1.17.8(vite@6.2.2(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)):
     dependencies:
-      axios: 1.8.1(debug@4.4.0)
+      axios: 1.8.3(debug@4.4.0)
       debug: 4.4.0
       picocolors: 1.1.1
       vite: 6.2.2(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)
