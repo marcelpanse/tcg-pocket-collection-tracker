@@ -5,8 +5,8 @@
     "hp": "60",
     "energy": "Grass",
     "name": "Oddish",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -19,12 +19,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -41,8 +41,8 @@
     "hp": "80",
     "energy": "Grass",
     "name": "Gloom",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -55,12 +55,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -77,8 +77,8 @@
     "hp": "130",
     "energy": "Grass",
     "name": "Bellossom",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Grass", "Grass"],
@@ -91,12 +91,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -113,8 +113,8 @@
     "hp": "70",
     "energy": "Grass",
     "name": "Tangela",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -127,13 +127,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #4",
@@ -149,8 +149,8 @@
     "hp": "130",
     "energy": "Grass",
     "name": "Tangrowth",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Grass", "Colorless"],
@@ -163,13 +163,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #5",
@@ -189,8 +189,8 @@
     "hp": "50",
     "energy": "Grass",
     "name": "Yanma",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -203,13 +203,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #6",
@@ -225,8 +225,8 @@
     "hp": "140",
     "energy": "Grass",
     "name": "Yanmega ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -239,13 +239,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #7",
@@ -269,8 +269,8 @@
     "hp": "70",
     "energy": "Grass",
     "name": "Roselia",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -283,12 +283,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -305,8 +305,8 @@
     "hp": "100",
     "energy": "Grass",
     "name": "Roserade",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -319,12 +319,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -341,8 +341,8 @@
     "hp": "80",
     "energy": "Grass",
     "name": "Turtwig",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -355,13 +355,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #10",
@@ -381,8 +381,8 @@
     "hp": "100",
     "energy": "Grass",
     "name": "Grotle",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Colorless"],
@@ -395,13 +395,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #11",
@@ -417,8 +417,8 @@
     "hp": "160",
     "energy": "Grass",
     "name": "Torterra",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Colorless", "Colorless"],
@@ -431,13 +431,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "4",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #12",
@@ -453,8 +453,8 @@
     "hp": "60",
     "energy": "Grass",
     "name": "Kricketot",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -467,13 +467,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #13",
@@ -489,8 +489,8 @@
     "hp": "90",
     "energy": "Grass",
     "name": "Kricketune",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -503,13 +503,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #14",
@@ -525,8 +525,8 @@
     "hp": "60",
     "energy": "Grass",
     "name": "Burmy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -539,12 +539,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -561,8 +561,8 @@
     "hp": "120",
     "energy": "Grass",
     "name": "Wormadam",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless", "Colorless"],
@@ -575,12 +575,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -597,8 +597,8 @@
     "hp": "50",
     "energy": "Grass",
     "name": "Combee",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -611,13 +611,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #17",
@@ -637,8 +637,8 @@
     "hp": "100",
     "energy": "Grass",
     "name": "Vespiquen",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Grass"],
@@ -651,13 +651,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #18",
@@ -673,8 +673,8 @@
     "hp": "90",
     "energy": "Grass",
     "name": "Carnivine",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Colorless"],
@@ -687,13 +687,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #19",
@@ -713,8 +713,8 @@
     "hp": "90",
     "energy": "Grass",
     "name": "Leafeon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -727,13 +727,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #20",
@@ -749,8 +749,8 @@
     "hp": "80",
     "energy": "Grass",
     "name": "Mow Rotom",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -763,12 +763,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -785,8 +785,8 @@
     "hp": "60",
     "energy": "Grass",
     "name": "Shaymin",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -799,13 +799,13 @@
       "name": "Fragrant Flower Garden",
       "effect": "Once during your turn, you may heal 10 damage from each of your Pokémon."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #22",
@@ -825,8 +825,8 @@
     "hp": "80",
     "energy": "Fire",
     "name": "Magmar",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -839,13 +839,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #23",
@@ -861,8 +861,8 @@
     "hp": "130",
     "energy": "Fire",
     "name": "Magmortar",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fire", "Fire", "Fire", "Fire"],
@@ -875,13 +875,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #24",
@@ -897,8 +897,8 @@
     "hp": "70",
     "energy": "Fire",
     "name": "Slugma",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -911,12 +911,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -933,8 +933,8 @@
     "hp": "120",
     "energy": "Fire",
     "name": "Magcargo",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fire", "Colorless"],
@@ -947,12 +947,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -969,8 +969,8 @@
     "hp": "60",
     "energy": "Fire",
     "name": "Chimchar",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -983,13 +983,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #27",
@@ -1009,8 +1009,8 @@
     "hp": "80",
     "energy": "Fire",
     "name": "Monferno",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -1023,13 +1023,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #28",
@@ -1045,8 +1045,8 @@
     "hp": "170",
     "energy": "Fire",
     "name": "Infernape ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fire", "Fire"],
@@ -1059,13 +1059,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "0",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #29",
@@ -1089,8 +1089,8 @@
     "hp": "80",
     "energy": "Fire",
     "name": "Heat Rotom",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire", "Colorless"],
@@ -1103,12 +1103,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1125,8 +1125,8 @@
     "hp": "60",
     "energy": "Water",
     "name": "Swinub",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
@@ -1139,13 +1139,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #31",
@@ -1161,8 +1161,8 @@
     "hp": "110",
     "energy": "Water",
     "name": "Piloswine",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
@@ -1175,13 +1175,13 @@
       "name": "Thick Fat",
       "effect": "This Pokémon takes −20 damage from attacks from  or  Pokémon."
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #32",
@@ -1197,8 +1197,8 @@
     "hp": "160",
     "energy": "Water",
     "name": "Mamoswine",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless", "Colorless"],
@@ -1211,13 +1211,13 @@
       "name": "Thick Fat",
       "effect": "This Pokémon takes −30 damage from attacks from  or  Pokémon."
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "4",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #33",
@@ -1237,8 +1237,8 @@
     "hp": "110",
     "energy": "Water",
     "name": "Regice",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water", "Water"],
@@ -1251,13 +1251,13 @@
       "name": "Crystal Body",
       "effect": "Prevent all effects of attacks used by your opponent's Pokémon done to this Pokémon."
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #34",
@@ -1273,8 +1273,8 @@
     "hp": "60",
     "energy": "Water",
     "name": "Piplup",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -1287,13 +1287,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #35",
@@ -1313,8 +1313,8 @@
     "hp": "90",
     "energy": "Water",
     "name": "Prinplup",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
@@ -1327,13 +1327,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #36",
@@ -1349,8 +1349,8 @@
     "hp": "150",
     "energy": "Water",
     "name": "Empoleon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
@@ -1363,13 +1363,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #37",
@@ -1385,8 +1385,8 @@
     "hp": "60",
     "energy": "Water",
     "name": "Buizel",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1399,12 +1399,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1421,8 +1421,8 @@
     "hp": "90",
     "energy": "Water",
     "name": "Floatzel",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1435,12 +1435,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1457,8 +1457,8 @@
     "hp": "70",
     "energy": "Water",
     "name": "Shellos",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
@@ -1471,13 +1471,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #40",
@@ -1493,8 +1493,8 @@
     "hp": "120",
     "energy": "Water",
     "name": "Gastrodon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Colorless", "Colorless"],
@@ -1507,13 +1507,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #41",
@@ -1533,8 +1533,8 @@
     "hp": "50",
     "energy": "Water",
     "name": "Finneon",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1547,12 +1547,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1569,8 +1569,8 @@
     "hp": "90",
     "energy": "Water",
     "name": "Lumineon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1583,12 +1583,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1605,8 +1605,8 @@
     "hp": "70",
     "energy": "Water",
     "name": "Snover",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1619,12 +1619,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1641,8 +1641,8 @@
     "hp": "140",
     "energy": "Water",
     "name": "Abomasnow",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Water", "Water", "Colorless"],
@@ -1655,12 +1655,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "4",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1677,8 +1677,8 @@
     "hp": "90",
     "energy": "Water",
     "name": "Glaceon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Water"],
@@ -1691,13 +1691,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #46",
@@ -1713,8 +1713,8 @@
     "hp": "80",
     "energy": "Water",
     "name": "Wash Rotom",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1727,12 +1727,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1749,8 +1749,8 @@
     "hp": "80",
     "energy": "Water",
     "name": "Frost Rotom",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water", "Water"],
@@ -1763,12 +1763,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1785,8 +1785,8 @@
     "hp": "150",
     "energy": "Water",
     "name": "Palkia ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1805,13 +1805,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #49",
@@ -1839,8 +1839,8 @@
     "hp": "50",
     "energy": "Water",
     "name": "Manaphy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1853,13 +1853,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #50",
@@ -1883,8 +1883,8 @@
     "hp": "60",
     "energy": "Lightning",
     "name": "Magnemite",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -1897,12 +1897,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1919,8 +1919,8 @@
     "hp": "80",
     "energy": "Lightning",
     "name": "Magneton",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -1933,12 +1933,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1955,8 +1955,8 @@
     "hp": "140",
     "energy": "Lightning",
     "name": "Magnezone",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Lightning", "Colorless", "Colorless"],
@@ -1969,12 +1969,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1991,8 +1991,8 @@
     "hp": "60",
     "energy": "Lightning",
     "name": "Voltorb",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -2005,12 +2005,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -2027,8 +2027,8 @@
     "hp": "80",
     "energy": "Lightning",
     "name": "Electrode",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -2041,12 +2041,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -2063,8 +2063,8 @@
     "hp": "80",
     "energy": "Lightning",
     "name": "Electabuzz",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -2077,13 +2077,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #56",
@@ -2099,8 +2099,8 @@
     "hp": "120",
     "energy": "Lightning",
     "name": "Electivire",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -2113,13 +2113,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #57",
@@ -2139,8 +2139,8 @@
     "hp": "60",
     "energy": "Lightning",
     "name": "Shinx",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -2153,13 +2153,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #58",
@@ -2179,8 +2179,8 @@
     "hp": "90",
     "energy": "Lightning",
     "name": "Luxio",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Lightning", "Colorless"],
@@ -2193,13 +2193,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #59",
@@ -2215,8 +2215,8 @@
     "hp": "130",
     "energy": "Lightning",
     "name": "Luxray",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning", "Lightning"],
@@ -2229,13 +2229,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "0",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #60",
@@ -2251,8 +2251,8 @@
     "hp": "120",
     "energy": "Lightning",
     "name": "Pachirisu ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -2265,13 +2265,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #61",
@@ -2295,8 +2295,8 @@
     "hp": "70",
     "energy": "Lightning",
     "name": "Rotom",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2309,13 +2309,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #62",
@@ -2335,8 +2335,8 @@
     "hp": "50",
     "energy": "Psychic",
     "name": "Togepi",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -2349,12 +2349,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -2375,8 +2375,8 @@
     "hp": "80",
     "energy": "Psychic",
     "name": "Togetic",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -2389,12 +2389,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -2411,8 +2411,8 @@
     "hp": "140",
     "energy": "Psychic",
     "name": "Togekiss",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -2425,12 +2425,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -2447,8 +2447,8 @@
     "hp": "60",
     "energy": "Psychic",
     "name": "Misdreavus",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -2461,13 +2461,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #66",
@@ -2483,8 +2483,8 @@
     "hp": "140",
     "energy": "Psychic",
     "name": "Mismagius ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -2497,13 +2497,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #67",
@@ -2527,8 +2527,8 @@
     "hp": "60",
     "energy": "Psychic",
     "name": "Ralts",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2541,13 +2541,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #68",
@@ -2563,8 +2563,8 @@
     "hp": "80",
     "energy": "Psychic",
     "name": "Kirlia",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2577,13 +2577,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #69",
@@ -2599,8 +2599,8 @@
     "hp": "60",
     "energy": "Psychic",
     "name": "Duskull",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -2613,13 +2613,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #70",
@@ -2635,8 +2635,8 @@
     "hp": "90",
     "energy": "Psychic",
     "name": "Dusclops",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic", "Colorless", "Colorless"],
@@ -2649,13 +2649,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #71",
@@ -2671,8 +2671,8 @@
     "hp": "130",
     "energy": "Psychic",
     "name": "Dusknoir",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Psychic", "Colorless", "Colorless"],
@@ -2685,13 +2685,13 @@
       "name": "Shadow Void",
       "effect": "As often as you like during your turn, you may choose 1 of your Pokémon that has damage on it, and move all of its damage to this Pokémon."
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #72",
@@ -2707,8 +2707,8 @@
     "hp": "50",
     "energy": "Psychic",
     "name": "Drifloon",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -2721,13 +2721,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #73",
@@ -2747,8 +2747,8 @@
     "hp": "100",
     "energy": "Psychic",
     "name": "Drifblim",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -2761,13 +2761,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #74",
@@ -2783,8 +2783,8 @@
     "hp": "70",
     "energy": "Psychic",
     "name": "Uxie",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -2797,12 +2797,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -2819,8 +2819,8 @@
     "hp": "70",
     "energy": "Psychic",
     "name": "Mesprit",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic", "Psychic"],
@@ -2833,12 +2833,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -2859,8 +2859,8 @@
     "hp": "70",
     "energy": "Psychic",
     "name": "Azelf",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -2873,12 +2873,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -2895,8 +2895,8 @@
     "hp": "120",
     "energy": "Psychic",
     "name": "Giratina",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic", "Colorless"],
@@ -2909,13 +2909,13 @@
       "name": "Levitate",
       "effect": "If this Pokémon has any Energy attached, it has no Retreat Cost."
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #78",
@@ -2935,8 +2935,8 @@
     "hp": "110",
     "energy": "Psychic",
     "name": "Cresselia",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -2949,13 +2949,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #79",
@@ -2975,8 +2975,8 @@
     "hp": "80",
     "energy": "Fighting",
     "name": "Rhyhorn",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless"],
@@ -2989,13 +2989,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "3",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #80",
@@ -3011,8 +3011,8 @@
     "hp": "110",
     "energy": "Fighting",
     "name": "Rhydon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Colorless"],
@@ -3025,13 +3025,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #81",
@@ -3047,8 +3047,8 @@
     "hp": "160",
     "energy": "Fighting",
     "name": "Rhyperior",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
@@ -3061,13 +3061,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #82",
@@ -3087,8 +3087,8 @@
     "hp": "60",
     "energy": "Fighting",
     "name": "Gligar",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -3101,13 +3101,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #83",
@@ -3123,8 +3123,8 @@
     "hp": "100",
     "energy": "Fighting",
     "name": "Gliscor",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -3137,13 +3137,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #84",
@@ -3159,8 +3159,8 @@
     "hp": "80",
     "energy": "Fighting",
     "name": "Hitmontop",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting"],
@@ -3173,13 +3173,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #85",
@@ -3195,8 +3195,8 @@
     "hp": "70",
     "energy": "Fighting",
     "name": "Nosepass",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -3209,12 +3209,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -3231,8 +3231,8 @@
     "hp": "120",
     "energy": "Fighting",
     "name": "Regirock",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
@@ -3245,12 +3245,12 @@
       "name": "Exoskeleton",
       "effect": "This Pokémon takes −20 damage from attacks."
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -3267,8 +3267,8 @@
     "hp": "90",
     "energy": "Fighting",
     "name": "Cranidos",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -3281,13 +3281,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #88",
@@ -3303,8 +3303,8 @@
     "hp": "150",
     "energy": "Fighting",
     "name": "Rampardos",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -3317,13 +3317,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #89",
@@ -3339,8 +3339,8 @@
     "hp": "120",
     "energy": "Fighting",
     "name": "Wormadam",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless", "Colorless"],
@@ -3353,13 +3353,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #90",
@@ -3375,8 +3375,8 @@
     "hp": "60",
     "energy": "Fighting",
     "name": "Riolu",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -3389,13 +3389,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #91",
@@ -3411,8 +3411,8 @@
     "hp": "100",
     "energy": "Fighting",
     "name": "Lucario",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting"],
@@ -3425,13 +3425,13 @@
       "name": "Fighting Coach",
       "effect": "Attacks used by your  Pokémon do +20 damage to your opponent's Active Pokémon."
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #92",
@@ -3451,8 +3451,8 @@
     "hp": "80",
     "energy": "Fighting",
     "name": "Hippopotas",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Colorless"],
@@ -3465,13 +3465,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "3",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #93",
@@ -3491,8 +3491,8 @@
     "hp": "140",
     "energy": "Fighting",
     "name": "Hippowdon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
@@ -3505,13 +3505,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #94",
@@ -3527,8 +3527,8 @@
     "hp": "170",
     "energy": "Fighting",
     "name": "Gallade ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting"],
@@ -3541,13 +3541,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #95",
@@ -3571,8 +3571,8 @@
     "hp": "60",
     "energy": "Darkness",
     "name": "Murkrow",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -3585,13 +3585,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #96",
@@ -3607,8 +3607,8 @@
     "hp": "100",
     "energy": "Darkness",
     "name": "Honchkrow",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness"],
@@ -3621,13 +3621,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #97",
@@ -3643,8 +3643,8 @@
     "hp": "60",
     "energy": "Darkness",
     "name": "Sneasel",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -3657,13 +3657,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #98",
@@ -3679,8 +3679,8 @@
     "hp": "140",
     "energy": "Darkness",
     "name": "Weavile ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -3693,13 +3693,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #99",
@@ -3723,8 +3723,8 @@
     "hp": "60",
     "energy": "Darkness",
     "name": "Poochyena",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -3737,12 +3737,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -3759,8 +3759,8 @@
     "hp": "90",
     "energy": "Darkness",
     "name": "Mightyena",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness", "Colorless"],
@@ -3773,12 +3773,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -3795,8 +3795,8 @@
     "hp": "70",
     "energy": "Darkness",
     "name": "Stunky",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -3809,13 +3809,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #102",
@@ -3831,8 +3831,8 @@
     "hp": "100",
     "energy": "Darkness",
     "name": "Skuntank",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness", "Colorless"],
@@ -3845,13 +3845,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #103",
@@ -3867,8 +3867,8 @@
     "hp": "80",
     "energy": "Darkness",
     "name": "Spiritomb",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -3881,13 +3881,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #104",
@@ -3907,8 +3907,8 @@
     "hp": "70",
     "energy": "Darkness",
     "name": "Skorupi",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness", "Colorless"],
@@ -3921,12 +3921,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -3943,8 +3943,8 @@
     "hp": "120",
     "energy": "Darkness",
     "name": "Drapion",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness", "Darkness"],
@@ -3957,12 +3957,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -3979,8 +3979,8 @@
     "hp": "60",
     "energy": "Darkness",
     "name": "Croagunk",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness"],
@@ -3993,13 +3993,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #107",
@@ -4019,8 +4019,8 @@
     "hp": "90",
     "energy": "Darkness",
     "name": "Toxicroak",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness"],
@@ -4033,13 +4033,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #108",
@@ -4055,8 +4055,8 @@
     "hp": "110",
     "energy": "Darkness",
     "name": "Darkrai",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness", "Colorless"],
@@ -4069,13 +4069,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #109",
@@ -4091,8 +4091,8 @@
     "hp": "140",
     "energy": "Darkness",
     "name": "Darkrai ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness", "Colorless"],
@@ -4105,13 +4105,13 @@
       "name": "Nightmare Aura",
       "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #110",
@@ -4139,8 +4139,8 @@
     "hp": "80",
     "energy": "Metal",
     "name": "Skarmory",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal"],
@@ -4153,12 +4153,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -4179,8 +4179,8 @@
     "hp": "110",
     "energy": "Metal",
     "name": "Registeel",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Metal"],
@@ -4193,13 +4193,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #112",
@@ -4215,8 +4215,8 @@
     "hp": "100",
     "energy": "Metal",
     "name": "Shieldon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Metal", "Colorless"],
@@ -4229,13 +4229,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #113",
@@ -4251,8 +4251,8 @@
     "hp": "160",
     "energy": "Metal",
     "name": "Bastiodon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Colorless"],
@@ -4265,13 +4265,13 @@
       "name": "Guarded Grill",
       "effect": "If any damage is done to this Pokémon by attacks, flip a coin. If heads, this Pokémon takes −100 damage from that attack."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "4",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #114",
@@ -4287,8 +4287,8 @@
     "hp": "110",
     "energy": "Metal",
     "name": "Wormadam",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Metal", "Metal"],
@@ -4301,13 +4301,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #115",
@@ -4323,8 +4323,8 @@
     "hp": "60",
     "energy": "Metal",
     "name": "Bronzor",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal", "Colorless"],
@@ -4337,13 +4337,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #116",
@@ -4359,8 +4359,8 @@
     "hp": "120",
     "energy": "Metal",
     "name": "Bronzong",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Colorless"],
@@ -4373,13 +4373,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #117",
@@ -4395,8 +4395,8 @@
     "hp": "130",
     "energy": "Metal",
     "name": "Probopass",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Metal", "Colorless"],
@@ -4409,12 +4409,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "4",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -4431,8 +4431,8 @@
     "hp": "150",
     "energy": "Metal",
     "name": "Dialga ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal"],
@@ -4451,13 +4451,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #119",
@@ -4485,8 +4485,8 @@
     "hp": "120",
     "energy": "Metal",
     "name": "Heatran",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Metal"],
@@ -4499,13 +4499,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #120",
@@ -4525,8 +4525,8 @@
     "hp": "60",
     "energy": "Dragon",
     "name": "Gible",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -4543,9 +4543,9 @@
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #121",
@@ -4561,8 +4561,8 @@
     "hp": "90",
     "energy": "Dragon",
     "name": "Gabite",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Fighting"],
@@ -4579,9 +4579,9 @@
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #122",
@@ -4597,8 +4597,8 @@
     "hp": "140",
     "energy": "Dragon",
     "name": "Garchomp",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Water", "Fighting"],
@@ -4615,9 +4615,9 @@
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #123",
@@ -4637,8 +4637,8 @@
     "hp": "80",
     "energy": "Colorless",
     "name": "Lickitung",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -4651,13 +4651,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #124",
@@ -4673,8 +4673,8 @@
     "hp": "160",
     "energy": "Colorless",
     "name": "Lickilicky ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -4687,13 +4687,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "4",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #125",
@@ -4717,8 +4717,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Eevee",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -4731,12 +4731,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -4753,8 +4753,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Porygon",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -4767,13 +4767,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #127",
@@ -4789,8 +4789,8 @@
     "hp": "80",
     "energy": "Colorless",
     "name": "Porygon2",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -4803,13 +4803,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #128",
@@ -4825,8 +4825,8 @@
     "hp": "140",
     "energy": "Colorless",
     "name": "Porygon-Z",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -4839,13 +4839,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #129",
@@ -4861,8 +4861,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Aipom",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -4875,12 +4875,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -4897,8 +4897,8 @@
     "hp": "90",
     "energy": "Colorless",
     "name": "Ambipom",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -4911,12 +4911,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -4933,8 +4933,8 @@
     "hp": "50",
     "energy": "Colorless",
     "name": "Starly",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -4947,13 +4947,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #132",
@@ -4969,8 +4969,8 @@
     "hp": "80",
     "energy": "Colorless",
     "name": "Staravia",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -4983,13 +4983,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #133",
@@ -5005,8 +5005,8 @@
     "hp": "140",
     "energy": "Colorless",
     "name": "Staraptor",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -5019,13 +5019,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #134",
@@ -5045,8 +5045,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Bidoof",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -5059,13 +5059,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #135",
@@ -5085,8 +5085,8 @@
     "hp": "110",
     "energy": "Colorless",
     "name": "Bibarel",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -5099,13 +5099,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #136",
@@ -5121,8 +5121,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Buneary",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -5135,13 +5135,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #137",
@@ -5157,8 +5157,8 @@
     "hp": "90",
     "energy": "Colorless",
     "name": "Lopunny",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -5171,13 +5171,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #138",
@@ -5193,8 +5193,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Glameow",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -5207,13 +5207,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #139",
@@ -5233,8 +5233,8 @@
     "hp": "110",
     "energy": "Colorless",
     "name": "Purugly",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -5247,13 +5247,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #140",
@@ -5269,8 +5269,8 @@
     "hp": "70",
     "energy": "Colorless",
     "name": "Chatot",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -5283,13 +5283,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #141",
@@ -5305,8 +5305,8 @@
     "hp": "80",
     "energy": "Colorless",
     "name": "Fan Rotom",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -5319,12 +5319,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -5341,8 +5341,8 @@
     "hp": "140",
     "energy": "Colorless",
     "name": "Regigigas",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -5355,12 +5355,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "4",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -5381,17 +5381,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Skull Fossil",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #144",
@@ -5407,17 +5407,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Armor Fossil",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #145",
@@ -5433,17 +5433,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Pokémon Communication",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Choose a Pokémon in your hand and switch it with a random Pokémon in your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ayaka Yoshida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #146",
@@ -5459,17 +5459,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Giant Cape",
-    "card_type": "Trainer",
-    "evolution_type": "Tool",
+    "card_type": "trainer",
+    "evolution_type": "tool",
     "attacks": [],
     "ability": "The Pokémon this card is attached to gets +20 HP.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #147",
@@ -5485,17 +5485,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Rocky Helmet",
-    "card_type": "Trainer",
-    "evolution_type": "Tool",
+    "card_type": "trainer",
+    "evolution_type": "tool",
     "attacks": [],
     "ability": "If the Pokémon this card is attached to is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the Attacking Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ayaka Yoshida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #148",
@@ -5511,17 +5511,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Lum Berry",
-    "card_type": "Trainer",
-    "evolution_type": "Tool",
+    "card_type": "trainer",
+    "evolution_type": "tool",
     "attacks": [],
     "ability": "At the end of each turn, if the Pokémon this card is attached to is affected by any Special Conditions, it recovers from all of them, and discard this card.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yoshinobu Saito",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #149",
@@ -5537,17 +5537,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Cyrus",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #150",
@@ -5567,17 +5567,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Team Galactic Grunt",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Put 1 random Glameow, Stunky, or Croagunk from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #151",
@@ -5597,17 +5597,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Cynthia",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "During this turn, attacks used by your Garchomp or Togekiss do +50 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #152",
@@ -5627,17 +5627,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Volkner",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Choose 1 of your Electivire or Luxray. Attach 2 [L] Energy from your discard pile to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #153",
@@ -5657,17 +5657,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Dawn",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Move an Energy from 1 of your Benched Pokémon to your Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #154",
@@ -5687,17 +5687,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Mars",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Your opponent shuffles their hand into their deck and draws a card for each of their remaining points needed to win.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #155",
@@ -5717,8 +5717,8 @@
     "hp": "130",
     "energy": "Grass",
     "name": "Tangrowth",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Grass", "Colorless"],
@@ -5731,13 +5731,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #5",
@@ -5757,8 +5757,8 @@
     "hp": "50",
     "energy": "Grass",
     "name": "Combee",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -5771,13 +5771,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #17",
@@ -5797,8 +5797,8 @@
     "hp": "90",
     "energy": "Grass",
     "name": "Carnivine",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Colorless"],
@@ -5811,13 +5811,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #19",
@@ -5837,8 +5837,8 @@
     "hp": "60",
     "energy": "Grass",
     "name": "Shaymin",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -5851,13 +5851,13 @@
       "name": "Fragrant Flower Garden",
       "effect": "Once during your turn, you may heal 10 damage from each of your Pokémon."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #22",
@@ -5877,8 +5877,8 @@
     "hp": "160",
     "energy": "Water",
     "name": "Mamoswine",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless", "Colorless"],
@@ -5891,13 +5891,13 @@
       "name": "Thick Fat",
       "effect": "This Pokémon takes −30 damage from attacks from  or  Pokémon."
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "4",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #33",
@@ -5917,8 +5917,8 @@
     "hp": "120",
     "energy": "Water",
     "name": "Gastrodon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Colorless", "Colorless"],
@@ -5931,13 +5931,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #41",
@@ -5957,8 +5957,8 @@
     "hp": "50",
     "energy": "Water",
     "name": "Manaphy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -5971,13 +5971,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #50",
@@ -6001,8 +6001,8 @@
     "hp": "60",
     "energy": "Lightning",
     "name": "Shinx",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -6015,13 +6015,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #58",
@@ -6041,8 +6041,8 @@
     "hp": "70",
     "energy": "Lightning",
     "name": "Rotom",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -6055,13 +6055,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #62",
@@ -6081,8 +6081,8 @@
     "hp": "50",
     "energy": "Psychic",
     "name": "Drifloon",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -6095,13 +6095,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #73",
@@ -6121,8 +6121,8 @@
     "hp": "70",
     "energy": "Psychic",
     "name": "Mesprit",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic", "Psychic"],
@@ -6135,13 +6135,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #76",
@@ -6161,8 +6161,8 @@
     "hp": "120",
     "energy": "Psychic",
     "name": "Giratina",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic", "Colorless"],
@@ -6175,13 +6175,13 @@
       "name": "Levitate",
       "effect": "If this Pokémon has any Energy attached, it has no Retreat Cost."
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "3",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #78",
@@ -6201,8 +6201,8 @@
     "hp": "110",
     "energy": "Psychic",
     "name": "Cresselia",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -6215,13 +6215,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #79",
@@ -6241,8 +6241,8 @@
     "hp": "160",
     "energy": "Fighting",
     "name": "Rhyperior",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
@@ -6255,13 +6255,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "4",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #82",
@@ -6281,8 +6281,8 @@
     "hp": "100",
     "energy": "Fighting",
     "name": "Lucario",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting"],
@@ -6295,13 +6295,13 @@
       "name": "Fighting Coach",
       "effect": "Attacks used by your  Pokémon do +20 damage to your opponent's Active Pokémon."
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #92",
@@ -6321,8 +6321,8 @@
     "hp": "80",
     "energy": "Fighting",
     "name": "Hippopotas",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Colorless"],
@@ -6335,13 +6335,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "3",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #93",
@@ -6361,8 +6361,8 @@
     "hp": "80",
     "energy": "Darkness",
     "name": "Spiritomb",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -6375,13 +6375,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #104",
@@ -6401,8 +6401,8 @@
     "hp": "60",
     "energy": "Darkness",
     "name": "Croagunk",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness"],
@@ -6415,13 +6415,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #107",
@@ -6441,8 +6441,8 @@
     "hp": "120",
     "energy": "Metal",
     "name": "Heatran",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Metal"],
@@ -6455,13 +6455,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #120",
@@ -6481,8 +6481,8 @@
     "hp": "140",
     "energy": "Dragon",
     "name": "Garchomp",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Water", "Fighting"],
@@ -6499,9 +6499,9 @@
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #123",
@@ -6521,8 +6521,8 @@
     "hp": "140",
     "energy": "Colorless",
     "name": "Staraptor",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -6535,13 +6535,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #134",
@@ -6561,8 +6561,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Bidoof",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -6575,13 +6575,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #135",
@@ -6601,8 +6601,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Glameow",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -6615,13 +6615,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #139",
@@ -6641,8 +6641,8 @@
     "hp": "140",
     "energy": "Colorless",
     "name": "Regigigas",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -6655,13 +6655,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "4",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #143",
@@ -6681,8 +6681,8 @@
     "hp": "140",
     "energy": "Grass",
     "name": "Yanmega ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -6695,13 +6695,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #7",
@@ -6725,8 +6725,8 @@
     "hp": "170",
     "energy": "Fire",
     "name": "Infernape ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fire", "Fire"],
@@ -6739,13 +6739,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "0",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #29",
@@ -6769,8 +6769,8 @@
     "hp": "150",
     "energy": "Water",
     "name": "Palkia ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -6789,13 +6789,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #49",
@@ -6823,8 +6823,8 @@
     "hp": "120",
     "energy": "Lightning",
     "name": "Pachirisu ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -6837,13 +6837,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #61",
@@ -6867,8 +6867,8 @@
     "hp": "140",
     "energy": "Psychic",
     "name": "Mismagius ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -6881,13 +6881,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #67",
@@ -6911,8 +6911,8 @@
     "hp": "170",
     "energy": "Fighting",
     "name": "Gallade ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting"],
@@ -6925,13 +6925,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #95",
@@ -6955,8 +6955,8 @@
     "hp": "140",
     "energy": "Darkness",
     "name": "Weavile ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -6969,13 +6969,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #99",
@@ -6999,8 +6999,8 @@
     "hp": "140",
     "energy": "Darkness",
     "name": "Darkrai ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness", "Colorless"],
@@ -7013,13 +7013,13 @@
       "name": "Nightmare Aura",
       "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #110",
@@ -7047,8 +7047,8 @@
     "hp": "150",
     "energy": "Metal",
     "name": "Dialga ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal"],
@@ -7067,13 +7067,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #119",
@@ -7101,8 +7101,8 @@
     "hp": "160",
     "energy": "Colorless",
     "name": "Lickilicky ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -7115,13 +7115,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "4",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #125",
@@ -7145,17 +7145,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Cyrus",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #150",
@@ -7175,17 +7175,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Team Galactic Grunt",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Put 1 random Glameow, Stunky, or Croagunk from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #151",
@@ -7205,17 +7205,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Cynthia",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "During this turn, attacks used by your Garchomp or Togekiss do +50 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #152",
@@ -7235,17 +7235,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Volkner",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Choose 1 of your Electivire or Luxray. Attach 2 [L] Energy from your discard pile to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #153",
@@ -7265,17 +7265,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Dawn",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Move an Energy from 1 of your Benched Pokémon to your Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #154",
@@ -7295,17 +7295,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Mars",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Your opponent shuffles their hand into their deck and draws a card for each of their remaining points needed to win.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "no",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #155",
@@ -7325,8 +7325,8 @@
     "hp": "140",
     "energy": "Grass",
     "name": "Yanmega ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -7339,13 +7339,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #7",
@@ -7369,8 +7369,8 @@
     "hp": "170",
     "energy": "Fire",
     "name": "Infernape ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fire", "Fire"],
@@ -7383,13 +7383,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "0",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #29",
@@ -7413,8 +7413,8 @@
     "hp": "120",
     "energy": "Lightning",
     "name": "Pachirisu ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -7427,13 +7427,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #61",
@@ -7457,8 +7457,8 @@
     "hp": "140",
     "energy": "Psychic",
     "name": "Mismagius ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -7471,13 +7471,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #67",
@@ -7501,8 +7501,8 @@
     "hp": "170",
     "energy": "Fighting",
     "name": "Gallade ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting"],
@@ -7515,13 +7515,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #95",
@@ -7545,8 +7545,8 @@
     "hp": "140",
     "energy": "Darkness",
     "name": "Weavile ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -7559,13 +7559,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #99",
@@ -7589,8 +7589,8 @@
     "hp": "140",
     "energy": "Darkness",
     "name": "Darkrai ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness", "Colorless"],
@@ -7603,13 +7603,13 @@
       "name": "Nightmare Aura",
       "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #110",
@@ -7637,8 +7637,8 @@
     "hp": "160",
     "energy": "Colorless",
     "name": "Lickilicky ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -7651,13 +7651,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "4",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #125",
@@ -7681,8 +7681,8 @@
     "hp": "150",
     "energy": "Water",
     "name": "Palkia ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -7701,13 +7701,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Palkia pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "palkiapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #49",
@@ -7735,8 +7735,8 @@
     "hp": "150",
     "energy": "Metal",
     "name": "Dialga ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal"],
@@ -7755,13 +7755,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "☆☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
-    "pack": "Dialga pack",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
+    "pack": "dialgapack",
     "alternate_versions": [
       {
         "version": "Space-Time Smackdown #119",
@@ -7789,8 +7789,8 @@
     "hp": "150",
     "energy": "Water",
     "name": "Palkia ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -7809,12 +7809,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "Crown Rare",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -7843,8 +7843,8 @@
     "hp": "150",
     "energy": "Metal",
     "name": "Dialga ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal"],
@@ -7863,12 +7863,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "Crown Rare",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Space-Time Smackdown  (A2)",
+    "ex": "yes",
+    "set_details": "space-timesmackdown(a2)",
     "pack": "Every pack",
     "alternate_versions": [
       {

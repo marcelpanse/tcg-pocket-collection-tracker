@@ -3,6 +3,7 @@ import type { Card as CardType } from '@/types'
 import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { useEffect, useMemo, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Card } from './Card.tsx'
 
 const columnHelper = createColumnHelper<CardType>()
@@ -16,6 +17,7 @@ interface Props {
 export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
+  const { t } = useTranslation('common/sets')
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -114,7 +116,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
             >
               {row.type === 'header' ? (
                 <h2 className="mx-auto mt-10 text-center w-full max-w-[900px] scroll-m-20 border-b-2 border-slate-600 pb-2 font-semibold text-md sm:text-lg md:text-2xl tracking-tight transition-colors first:mt-0">
-                  {(row.data as { type: string; row: Row<CardType> }).row.getValue('set_details')}
+                  {t((row.data as { type: string; row: Row<CardType> }).row.getValue('set_details') as string)}
                 </h2>
               ) : (
                 <div className="flex justify-center gap-x-3">

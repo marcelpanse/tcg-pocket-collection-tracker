@@ -1,0 +1,35 @@
+{
+  "text": {
+    "tradeTokens": "Tokens de intercambio",
+    "hp": "PS",
+    "cardType": "Tipo de carta",
+    "evolutionType": "Tipo de evolución",
+    "ex": "EX",
+    "craftingCost": "Puntos abresobres",
+    "artist": "Artista",
+    "setDetails": "Detalles de la expansión",
+    "expansion": "Expansión",
+    "pack": "Sobre",
+    "weakness": "Debilidad",
+    "retreat": "Coste de retirada",
+    "ability": "Habilidad",
+    "abilityEffect": "Efecto de la habilidad",
+    "details": "Detalles"
+  },
+  "cardType": {
+    "pokémon": "Pokémon",
+    "trainer": "Entrenador"
+  },
+  "evolutionType": {
+    "basic": "Básico",
+    "stage1": "Fase 1",
+    "stage2": "Fase 2",
+    "item": "Objeto",
+    "tool": "Herramienta Pokémon",
+    "supporter": "Partidario"
+  },
+  "ex": {
+    "yes": "Sí",
+    "no": "No"
+  }
+}

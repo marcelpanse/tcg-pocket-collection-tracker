@@ -1,0 +1,35 @@
+{
+  "text": {
+    "tradeTokens": "Trade tokens",
+    "hp": "HP",
+    "cardType": "Card Type",
+    "evolutionType": "Evolution Type",
+    "ex": "EX",
+    "craftingCost": "Crafting Cost",
+    "artist": "Artist",
+    "setDetails": "Set Details",
+    "expansion": "Expansion",
+    "pack": "Pack",
+    "weakness": "Weakness",
+    "retreat": "Retreat",
+    "ability": "Ability",
+    "abilityEffect": "Ability Effect",
+    "details": "Details"
+  },
+  "cardType": {
+    "pokémon": "Pokémon",
+    "trainer": "Trainer"
+  },
+  "evolutionType": {
+    "basic": "Basic",
+    "stage1": "Stage 1",
+    "stage2": "Stage 2",
+    "item": "Item",
+    "tool": "Tool",
+    "supporter": "Supporter"
+  },
+  "ex": {
+    "yes": "Yes",
+    "no": "No"
+  }
+}

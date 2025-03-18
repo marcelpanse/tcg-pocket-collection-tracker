@@ -15,8 +15,8 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "all-contributors-cli": "^6.26.1",
-    "lefthook": "^1.10.11",
-    "vite-plugin-mkcert": "^1.17.7"
+    "lefthook": "^1.11.3",
+    "vite-plugin-mkcert": "^1.17.8"
   },
   "type": "module",
   "packageManager": "pnpm@10.5.2",
@@ -34,7 +34,7 @@
     "@tensorflow/tfjs": "^4.22.0",
     "cheerio": "^1.0.0",
     "fs-extra": "^11.3.0",
-    "i18next": "^24.2.2",
+    "i18next": "^24.2.3",
     "i18next-browser-languagedetector": "^8.0.4",
     "i18next-http-backend": "^3.0.2",
     "node-fetch": "^3.3.2",

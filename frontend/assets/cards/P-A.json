@@ -5,16 +5,16 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Potion",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Heal 20 damage from 1 of your Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -31,16 +31,16 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "X Speed",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "During this turn, the Retreat Cost of your Active Pokémon is 1 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -57,16 +57,16 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Hand Scope",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Your opponent reveals their hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -83,16 +83,16 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Pokédex",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Look at the top 3 cards of your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Promo-A",
+    "ex": "yes",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -113,16 +113,16 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Poké Ball",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Put 1 random Basic Pokemon from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -139,16 +139,16 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Red Card",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Your opponent shuffles their hand into their deck and draws 3 cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -165,16 +165,16 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Professor's Research",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Draw 2 cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                Naoki Saito",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -191,16 +191,16 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Pokédex",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Look at the top 3 cards of your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Promo-A",
+    "ex": "yes",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -221,8 +221,8 @@
     "hp": "60",
     "energy": "Lightning",
     "name": "Pikachu",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -235,12 +235,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -269,8 +269,8 @@
     "hp": "120",
     "energy": "Psychic",
     "name": "Mewtwo",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
@@ -283,12 +283,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -309,8 +309,8 @@
     "hp": "120",
     "energy": "Colorless",
     "name": "Chansey",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -323,12 +323,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -349,8 +349,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Meowth",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -363,12 +363,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -393,8 +393,8 @@
     "hp": "120",
     "energy": "Grass",
     "name": "Butterfree",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Grass", "Colorless", "Colorless"],
@@ -407,12 +407,12 @@
       "name": "Powder Heal",
       "effect": "Once during your turn, you may heal 20 damage from each of your Pokémon."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -433,8 +433,8 @@
     "hp": "140",
     "energy": "Water",
     "name": "Lapras ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
@@ -447,12 +447,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Promo-A",
+    "ex": "yes",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -469,8 +469,8 @@
     "hp": "60",
     "energy": "Lightning",
     "name": "Pikachu",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -483,12 +483,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -517,8 +517,8 @@
     "hp": "60",
     "energy": "Psychic",
     "name": "Clefairy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -531,12 +531,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -557,8 +557,8 @@
     "hp": "60",
     "energy": "Fighting",
     "name": "Mankey",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -571,12 +571,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -593,8 +593,8 @@
     "hp": "160",
     "energy": "Grass",
     "name": "Venusaur",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Colorless", "Colorless"],
@@ -607,12 +607,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -633,8 +633,8 @@
     "hp": "120",
     "energy": "Water",
     "name": "Greninja",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
@@ -647,12 +647,12 @@
       "name": "Water Shuriken",
       "effect": "Once during your turn, you may do 20 damage to 1 of your opponent's Pokémon."
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -673,8 +673,8 @@
     "hp": "70",
     "energy": "Psychic",
     "name": "Haunter",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -687,12 +687,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -709,8 +709,8 @@
     "hp": "110",
     "energy": "Fighting",
     "name": "Onix",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting"],
@@ -723,12 +723,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "4",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -749,8 +749,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Jigglypuff",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -763,12 +763,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -785,8 +785,8 @@
     "hp": "70",
     "energy": "Grass",
     "name": "Bulbasaur",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -799,12 +799,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -829,8 +829,8 @@
     "hp": "60",
     "energy": "Lightning",
     "name": "Magnemite",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -843,12 +843,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -869,8 +869,8 @@
     "hp": "140",
     "energy": "Fire",
     "name": "Moltres ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -889,12 +889,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Promo-A",
+    "ex": "yes",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -923,8 +923,8 @@
     "hp": "60",
     "energy": "Lightning",
     "name": "Pikachu",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -937,12 +937,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -971,8 +971,8 @@
     "hp": "60",
     "energy": "Grass",
     "name": "Snivy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -985,12 +985,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1007,8 +1007,8 @@
     "hp": "120",
     "energy": "Fire",
     "name": "Volcarona",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fire", "Fire", "Colorless"],
@@ -1021,12 +1021,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1047,8 +1047,8 @@
     "hp": "150",
     "energy": "Water",
     "name": "Blastoise",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
@@ -1061,12 +1061,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1087,8 +1087,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Eevee",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -1101,12 +1101,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1123,8 +1123,8 @@
     "hp": "90",
     "energy": "Colorless",
     "name": "Cinccino",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -1137,12 +1137,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1163,8 +1163,8 @@
     "hp": "60",
     "energy": "Fire",
     "name": "Charmander",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -1177,12 +1177,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1207,8 +1207,8 @@
     "hp": "60",
     "energy": "Water",
     "name": "Squirtle",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1221,12 +1221,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1251,8 +1251,8 @@
     "hp": "60",
     "energy": "Water",
     "name": "Piplup",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -1265,12 +1265,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1291,8 +1291,8 @@
     "hp": "80",
     "energy": "Grass",
     "name": "Turtwig",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -1305,12 +1305,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1331,8 +1331,8 @@
     "hp": "120",
     "energy": "Lightning",
     "name": "Electivire",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -1345,12 +1345,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1371,8 +1371,8 @@
     "hp": "140",
     "energy": "Psychic",
     "name": "Cresselia ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic", "Colorless"],
@@ -1385,12 +1385,12 @@
       "name": "Lunar Plumage",
       "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, heal 20 damage from this Pokémon."
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "2",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Promo-A",
+    "ex": "yes",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1407,8 +1407,8 @@
     "hp": "60",
     "energy": "Psychic",
     "name": "Misdreavus",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -1421,12 +1421,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1443,8 +1443,8 @@
     "hp": "80",
     "energy": "Metal",
     "name": "Skarmory",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal"],
@@ -1457,12 +1457,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1483,8 +1483,8 @@
     "hp": "60",
     "energy": "Fire",
     "name": "Chimchar",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -1497,12 +1497,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1523,8 +1523,8 @@
     "hp": "50",
     "energy": "Psychic",
     "name": "Togepi",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -1537,12 +1537,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1563,8 +1563,8 @@
     "hp": "140",
     "energy": "Darkness",
     "name": "Darkrai ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness", "Colorless"],
@@ -1577,12 +1577,12 @@
       "name": "Nightmare Aura",
       "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Promo-A",
+    "ex": "yes",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1611,8 +1611,8 @@
     "hp": "80",
     "energy": "Grass",
     "name": "Cherrim",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Grass"],
@@ -1625,12 +1625,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1651,8 +1651,8 @@
     "hp": "90",
     "energy": "Lightning",
     "name": "Raichu",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -1665,12 +1665,12 @@
       "name": "Resilience Link",
       "effect": "If you have Arceus or Arceus ex in play, this Pokémon takes −30 damage from attacks."
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1691,8 +1691,8 @@
     "hp": "60",
     "energy": "Fighting",
     "name": "Nosepass",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -1705,12 +1705,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1727,8 +1727,8 @@
     "hp": "60",
     "energy": "Fighting",
     "name": "Gible",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -1741,12 +1741,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1767,8 +1767,8 @@
     "hp": "140",
     "energy": "Colorless",
     "name": "Staraptor",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -1781,12 +1781,12 @@
       "name": "Defensive Whirlwind",
       "effect": "This Pokémon takes −30 damage from attacks from  Pokémon."
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1803,8 +1803,8 @@
     "hp": "50",
     "energy": "Water",
     "name": "Manaphy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -1817,12 +1817,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {
@@ -1847,8 +1847,8 @@
     "hp": "140",
     "energy": "Colorless",
     "name": "Snorlax",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -1861,12 +1861,12 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "4",
     "rarity": "Unknown",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Promo-A",
+    "ex": "no",
+    "set_details": "promo-a",
     "pack": "Every pack",
     "alternate_versions": [
       {

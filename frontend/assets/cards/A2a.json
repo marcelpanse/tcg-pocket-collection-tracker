@@ -5,8 +5,8 @@
     "hp": "100",
     "energy": "Grass",
     "name": "Heracross",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless", "Colorless"],
@@ -19,13 +19,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #1",
@@ -41,8 +41,8 @@
     "hp": "50",
     "energy": "Grass",
     "name": "Burmy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -55,13 +55,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #2",
@@ -77,8 +77,8 @@
     "hp": "90",
     "energy": "Grass",
     "name": "Mothim",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -91,13 +91,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "0",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #3",
@@ -113,8 +113,8 @@
     "hp": "50",
     "energy": "Grass",
     "name": "Combee",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -127,13 +127,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #4",
@@ -149,8 +149,8 @@
     "hp": "100",
     "energy": "Grass",
     "name": "Vespiquen",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Grass", "Grass"],
@@ -163,13 +163,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #5",
@@ -185,8 +185,8 @@
     "hp": "50",
     "energy": "Grass",
     "name": "Cherubi",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -199,13 +199,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #6",
@@ -221,8 +221,8 @@
     "hp": "80",
     "energy": "Grass",
     "name": "Cherrim",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -235,13 +235,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #7",
@@ -257,8 +257,8 @@
     "hp": "80",
     "energy": "Grass",
     "name": "Cherrim",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Grass"],
@@ -271,13 +271,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #8",
@@ -297,8 +297,8 @@
     "hp": "80",
     "energy": "Grass",
     "name": "Carnivine",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -311,13 +311,13 @@
       "name": "Power Link",
       "effect": "If you have Arceus or Arceus ex in play, attacks used by this Pokémon do +30 damage to your opponent's Active Pokémon."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #9",
@@ -333,8 +333,8 @@
     "hp": "140",
     "energy": "Grass",
     "name": "Leafeon ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless", "Colorless"],
@@ -347,13 +347,13 @@
       "name": "Forest Breath",
       "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a  Energy from your Energy Zone and attach it to 1 of your  Pokémon."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #10",
@@ -377,8 +377,8 @@
     "hp": "60",
     "energy": "Fire",
     "name": "Houndour",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -391,13 +391,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #11",
@@ -413,8 +413,8 @@
     "hp": "100",
     "energy": "Fire",
     "name": "Houndoom",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fire", "Colorless"],
@@ -427,13 +427,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #12",
@@ -453,8 +453,8 @@
     "hp": "110",
     "energy": "Fire",
     "name": "Heatran",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire", "Fire"],
@@ -467,13 +467,13 @@
       "name": "Speed Link",
       "effect": "If you have Arceus or Arceus ex in play, this Pokémon has no Retreat Cost."
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #13",
@@ -489,8 +489,8 @@
     "hp": "60",
     "energy": "Water",
     "name": "Marill",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -503,13 +503,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #14",
@@ -529,8 +529,8 @@
     "hp": "100",
     "energy": "Water",
     "name": "Azumarill",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
@@ -543,13 +543,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #15",
@@ -565,8 +565,8 @@
     "hp": "60",
     "energy": "Water",
     "name": "Barboach",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
@@ -579,13 +579,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #16",
@@ -601,8 +601,8 @@
     "hp": "120",
     "energy": "Water",
     "name": "Whiscash",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless", "Colorless"],
@@ -615,13 +615,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #17",
@@ -637,8 +637,8 @@
     "hp": "60",
     "energy": "Water",
     "name": "Snorunt",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -651,13 +651,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #18",
@@ -673,8 +673,8 @@
     "hp": "90",
     "energy": "Water",
     "name": "Froslass",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
@@ -687,13 +687,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #19",
@@ -709,8 +709,8 @@
     "hp": "70",
     "energy": "Water",
     "name": "Snover",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
@@ -723,13 +723,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #20",
@@ -745,8 +745,8 @@
     "hp": "120",
     "energy": "Water",
     "name": "Abomasnow",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
@@ -759,13 +759,13 @@
       "name": "Vigor Link",
       "effect": "If you have Arceus or Arceus ex in play, attacks used by this Pokémon cost 1 less  Energy."
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #21",
@@ -781,8 +781,8 @@
     "hp": "140",
     "energy": "Water",
     "name": "Glaceon ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
@@ -795,13 +795,13 @@
       "name": "Snowy Terrain",
       "effect": "During Pokémon Checkup, if this Pokémon is in the Active Spot, do 10 damage to your opponent's Active Pokémon."
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #22",
@@ -825,8 +825,8 @@
     "hp": "120",
     "energy": "Water",
     "name": "Origin Forme Palkia",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water", "Water", "Water"],
@@ -839,13 +839,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #23",
@@ -861,8 +861,8 @@
     "hp": "60",
     "energy": "Water",
     "name": "Phione",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water", "Water"],
@@ -875,13 +875,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #24",
@@ -897,8 +897,8 @@
     "hp": "60",
     "energy": "Lightning",
     "name": "Pikachu",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -911,13 +911,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #25",
@@ -933,8 +933,8 @@
     "hp": "90",
     "energy": "Lightning",
     "name": "Raichu",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -947,13 +947,13 @@
       "name": "Resilience Link",
       "effect": "If you have Arceus or Arceus ex in play, this Pokémon takes −30 damage from attacks."
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #26",
@@ -973,8 +973,8 @@
     "hp": "60",
     "energy": "Lightning",
     "name": "Electrike",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -987,13 +987,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #27",
@@ -1009,8 +1009,8 @@
     "hp": "90",
     "energy": "Lightning",
     "name": "Manectric",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -1023,13 +1023,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #28",
@@ -1045,8 +1045,8 @@
     "hp": "60",
     "energy": "Psychic",
     "name": "Clefairy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic", "Colorless"],
@@ -1059,13 +1059,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #29",
@@ -1081,8 +1081,8 @@
     "hp": "100",
     "energy": "Psychic",
     "name": "Clefable",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic", "Colorless", "Colorless"],
@@ -1095,13 +1095,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #30",
@@ -1117,8 +1117,8 @@
     "hp": "50",
     "energy": "Psychic",
     "name": "Gastly",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -1131,13 +1131,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #31",
@@ -1153,8 +1153,8 @@
     "hp": "80",
     "energy": "Psychic",
     "name": "Haunter",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -1167,13 +1167,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #32",
@@ -1189,8 +1189,8 @@
     "hp": "140",
     "energy": "Psychic",
     "name": "Gengar",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -1203,13 +1203,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #33",
@@ -1225,8 +1225,8 @@
     "hp": "60",
     "energy": "Psychic",
     "name": "Unown",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -1239,13 +1239,13 @@
       "name": "CHECK",
       "effect": "Once during your turn, you may choose either player. Look at the top card of that player's deck."
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #34",
@@ -1265,8 +1265,8 @@
     "hp": "70",
     "energy": "Psychic",
     "name": "Rotom",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -1279,13 +1279,13 @@
       "name": "Speed Link",
       "effect": "If you have Arceus or Arceus ex in play, this Pokémon has no Retreat Cost."
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #35",
@@ -1301,8 +1301,8 @@
     "hp": "80",
     "energy": "Fighting",
     "name": "Sudowoodo",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -1315,13 +1315,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #36",
@@ -1341,8 +1341,8 @@
     "hp": "60",
     "energy": "Fighting",
     "name": "Phanpy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -1355,13 +1355,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #37",
@@ -1377,8 +1377,8 @@
     "hp": "120",
     "energy": "Fighting",
     "name": "Donphan",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting"],
@@ -1391,13 +1391,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #38",
@@ -1413,8 +1413,8 @@
     "hp": "60",
     "energy": "Fighting",
     "name": "Larvitar",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless"],
@@ -1427,13 +1427,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #39",
@@ -1449,8 +1449,8 @@
     "hp": "80",
     "energy": "Fighting",
     "name": "Pupitar",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless", "Colorless"],
@@ -1463,13 +1463,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #40",
@@ -1485,8 +1485,8 @@
     "hp": "160",
     "energy": "Fighting",
     "name": "Tyranitar",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
@@ -1499,13 +1499,13 @@
       "name": "Power Link",
       "effect": "If you have Arceus or Arceus ex in play, attacks used by this Pokémon do +30 damage to your opponent's Active Pokémon."
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #41",
@@ -1521,8 +1521,8 @@
     "hp": "80",
     "energy": "Fighting",
     "name": "Nosepass",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -1535,13 +1535,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "3",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #42",
@@ -1557,8 +1557,8 @@
     "hp": "60",
     "energy": "Fighting",
     "name": "Meditite",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -1571,13 +1571,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #43",
@@ -1593,8 +1593,8 @@
     "hp": "100",
     "energy": "Fighting",
     "name": "Medicham",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -1607,13 +1607,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #44",
@@ -1629,8 +1629,8 @@
     "hp": "60",
     "energy": "Fighting",
     "name": "Gible",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -1643,13 +1643,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #45",
@@ -1669,8 +1669,8 @@
     "hp": "80",
     "energy": "Fighting",
     "name": "Gabite",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -1683,13 +1683,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #46",
@@ -1705,8 +1705,8 @@
     "hp": "170",
     "energy": "Fighting",
     "name": "Garchomp ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -1725,13 +1725,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #47",
@@ -1755,8 +1755,8 @@
     "hp": "50",
     "energy": "Darkness",
     "name": "Zubat",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -1769,13 +1769,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #48",
@@ -1791,8 +1791,8 @@
     "hp": "80",
     "energy": "Darkness",
     "name": "Golbat",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -1805,13 +1805,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #49",
@@ -1827,8 +1827,8 @@
     "hp": "110",
     "energy": "Darkness",
     "name": "Crobat",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -1841,13 +1841,13 @@
       "name": "Cunning Link",
       "effect": "Once during your turn, if you have Arceus or Arceus ex in play, you may do 30 damage to your opponent's Active Pokémon."
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "0",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #50",
@@ -1863,8 +1863,8 @@
     "hp": "60",
     "energy": "Darkness",
     "name": "Croagunk",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -1877,13 +1877,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #51",
@@ -1899,8 +1899,8 @@
     "hp": "100",
     "energy": "Darkness",
     "name": "Toxicroak",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -1913,13 +1913,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #52",
@@ -1935,8 +1935,8 @@
     "hp": "60",
     "energy": "Metal",
     "name": "Magnemite",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal"],
@@ -1949,13 +1949,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #53",
@@ -1975,8 +1975,8 @@
     "hp": "90",
     "energy": "Metal",
     "name": "Magneton",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Metal", "Colorless"],
@@ -1989,13 +1989,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #54",
@@ -2011,8 +2011,8 @@
     "hp": "140",
     "energy": "Metal",
     "name": "Magnezone",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Colorless"],
@@ -2025,13 +2025,13 @@
       "name": "Resilience Link",
       "effect": "If you have Arceus or Arceus ex in play, this Pokémon takes −30 damage from attacks."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #55",
@@ -2047,8 +2047,8 @@
     "hp": "70",
     "energy": "Metal",
     "name": "Mawile",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2061,13 +2061,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #56",
@@ -2083,8 +2083,8 @@
     "hp": "160",
     "energy": "Metal",
     "name": "Probopass ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Colorless"],
@@ -2097,13 +2097,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #57",
@@ -2127,8 +2127,8 @@
     "hp": "60",
     "energy": "Metal",
     "name": "Bronzor",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2141,13 +2141,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #58",
@@ -2163,8 +2163,8 @@
     "hp": "120",
     "energy": "Metal",
     "name": "Bronzong",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -2177,13 +2177,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #59",
@@ -2199,8 +2199,8 @@
     "hp": "120",
     "energy": "Metal",
     "name": "Origin Forme Dialga",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Colorless"],
@@ -2213,13 +2213,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #60",
@@ -2235,8 +2235,8 @@
     "hp": "120",
     "energy": "Dragon",
     "name": "Giratina",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Psychic", "Colorless"],
@@ -2253,9 +2253,9 @@
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #61",
@@ -2271,8 +2271,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Eevee",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -2285,13 +2285,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #62",
@@ -2307,8 +2307,8 @@
     "hp": "140",
     "energy": "Colorless",
     "name": "Snorlax",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -2321,13 +2321,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "4",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #63",
@@ -2347,8 +2347,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Hoothoot",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2361,13 +2361,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #64",
@@ -2383,8 +2383,8 @@
     "hp": "100",
     "energy": "Colorless",
     "name": "Noctowl",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -2397,13 +2397,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #65",
@@ -2419,8 +2419,8 @@
     "hp": "60",
     "energy": "Colorless",
     "name": "Starly",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2433,13 +2433,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #66",
@@ -2455,8 +2455,8 @@
     "hp": "80",
     "energy": "Colorless",
     "name": "Staravia",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2469,13 +2469,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #67",
@@ -2491,8 +2491,8 @@
     "hp": "150",
     "energy": "Colorless",
     "name": "Staraptor",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -2505,13 +2505,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #68",
@@ -2527,8 +2527,8 @@
     "hp": "70",
     "energy": "Colorless",
     "name": "Shaymin",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -2541,13 +2541,13 @@
       "name": "Sky Support",
       "effect": "As long as this Pokémon is on your Bench, your Active Basic Pokemon's Retreat Cost is 1 less."
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #69",
@@ -2567,8 +2567,8 @@
     "hp": "120",
     "energy": "Colorless",
     "name": "Arceus",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
@@ -2581,13 +2581,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #70",
@@ -2603,8 +2603,8 @@
     "hp": "140",
     "energy": "Colorless",
     "name": "Arceus ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -2617,13 +2617,13 @@
       "name": "Fabled Luster",
       "effect": "This Pokémon can't be affected by any Special Conditions."
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #71",
@@ -2651,17 +2651,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Irida",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Heal 40 damage from each of your Pokémon that has any [W] Energy attached.\n\n            \n                    \n    \n            Illustrated by \n            \n                Atsushi Furusawa",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #72",
@@ -2681,17 +2681,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Celestic Town Elder",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Put 1 random Basic Pokemon from your discard pile into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #73",
@@ -2711,17 +2711,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Barry",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "During this turn, attacks used by your Snorlax, Heracross, and Staraptor cost 2 less [C] Energy.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #74",
@@ -2741,17 +2741,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Adaman",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "During your opponent's next turn, all of your [M] Pokémon take −20 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #75",
@@ -2771,8 +2771,8 @@
     "hp": "100",
     "energy": "Fire",
     "name": "Houndoom",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fire", "Colorless"],
@@ -2785,13 +2785,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #12",
@@ -2811,8 +2811,8 @@
     "hp": "60",
     "energy": "Water",
     "name": "Marill",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -2825,13 +2825,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #14",
@@ -2851,8 +2851,8 @@
     "hp": "60",
     "energy": "Psychic",
     "name": "Unown",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2865,13 +2865,13 @@
       "name": "CHECK",
       "effect": "Once during your turn, you may choose either player. Look at the top card of that player's deck."
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #34",
@@ -2891,8 +2891,8 @@
     "hp": "80",
     "energy": "Fighting",
     "name": "Sudowoodo",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -2905,13 +2905,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #36",
@@ -2931,8 +2931,8 @@
     "hp": "60",
     "energy": "Metal",
     "name": "Magnemite",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Metal"],
@@ -2945,13 +2945,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #53",
@@ -2971,8 +2971,8 @@
     "hp": "70",
     "energy": "Colorless",
     "name": "Shaymin",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
@@ -2985,13 +2985,13 @@
       "name": "Sky Support",
       "effect": "As long as this Pokémon is on your Bench, your Active Basic Pokemon's Retreat Cost is 1 less."
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #69",
@@ -3011,8 +3011,8 @@
     "hp": "140",
     "energy": "Grass",
     "name": "Leafeon ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless", "Colorless"],
@@ -3025,13 +3025,13 @@
       "name": "Forest Breath",
       "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a  Energy from your Energy Zone and attach it to 1 of your  Pokémon."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #10",
@@ -3055,8 +3055,8 @@
     "hp": "140",
     "energy": "Water",
     "name": "Glaceon ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
@@ -3069,13 +3069,13 @@
       "name": "Snowy Terrain",
       "effect": "During Pokémon Checkup, if this Pokémon is in the Active Spot, do 10 damage to your opponent's Active Pokémon."
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #22",
@@ -3099,8 +3099,8 @@
     "hp": "170",
     "energy": "Fighting",
     "name": "Garchomp ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -3119,13 +3119,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #47",
@@ -3149,8 +3149,8 @@
     "hp": "160",
     "energy": "Metal",
     "name": "Probopass ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Colorless"],
@@ -3163,13 +3163,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #57",
@@ -3193,8 +3193,8 @@
     "hp": "140",
     "energy": "Colorless",
     "name": "Arceus ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -3207,13 +3207,13 @@
       "name": "Fabled Luster",
       "effect": "This Pokémon can't be affected by any Special Conditions."
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #71",
@@ -3241,17 +3241,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Irida",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Heal 40 damage from each of your Pokémon that has any [W] Energy attached.\n\n            \n                    \n    \n            Illustrated by \n            \n                Atsushi Furusawa",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #72",
@@ -3271,17 +3271,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Celestic Town Elder",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Put 1 random Basic Pokemon from your discard pile into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #73",
@@ -3301,17 +3301,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Barry",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "During this turn, attacks used by your Snorlax, Heracross, and Staraptor cost 2 less [C] Energy.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #74",
@@ -3331,17 +3331,17 @@
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Adaman",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "During your opponent's next turn, all of your [M] Pokémon take −20 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "no",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #75",
@@ -3361,8 +3361,8 @@
     "hp": "140",
     "energy": "Grass",
     "name": "Leafeon ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless", "Colorless"],
@@ -3375,13 +3375,13 @@
       "name": "Forest Breath",
       "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a  Energy from your Energy Zone and attach it to 1 of your  Pokémon."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #10",
@@ -3405,8 +3405,8 @@
     "hp": "140",
     "energy": "Water",
     "name": "Glaceon ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
@@ -3419,13 +3419,13 @@
       "name": "Snowy Terrain",
       "effect": "During Pokémon Checkup, if this Pokémon is in the Active Spot, do 10 damage to your opponent's Active Pokémon."
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #22",
@@ -3449,8 +3449,8 @@
     "hp": "170",
     "energy": "Fighting",
     "name": "Garchomp ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -3469,13 +3469,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #47",
@@ -3499,8 +3499,8 @@
     "hp": "160",
     "energy": "Metal",
     "name": "Probopass ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Metal", "Metal", "Colorless"],
@@ -3513,13 +3513,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #57",
@@ -3543,8 +3543,8 @@
     "hp": "140",
     "energy": "Colorless",
     "name": "Arceus ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -3557,13 +3557,13 @@
       "name": "Fabled Luster",
       "effect": "This Pokémon can't be affected by any Special Conditions."
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #71",
@@ -3591,8 +3591,8 @@
     "hp": "140",
     "energy": "Colorless",
     "name": "Arceus ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -3605,13 +3605,13 @@
       "name": "Fabled Luster",
       "effect": "This Pokémon can't be affected by any Special Conditions."
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "Crown Rare",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Triumphant Light  (A2a)",
-    "pack": "Arceus pack",
+    "ex": "yes",
+    "set_details": "triumphantlight(a2a)",
+    "pack": "arceuspack",
     "alternate_versions": [
       {
         "version": "Triumphant Light #71",
