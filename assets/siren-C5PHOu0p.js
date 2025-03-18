@@ -1,5 +1,5 @@
-import{a4 as a}from"./index-BXRXQNAJ.js";/**
- * @license lucide-react v0.477.0 - ISC
+import{a4 as a}from"./index-DK27buLB.js";/**
+ * @license lucide-react v0.482.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
