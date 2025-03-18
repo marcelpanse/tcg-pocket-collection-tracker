@@ -4,8 +4,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_001_EN.webp",
     "hp": "50",
     "name": "Exeggcute",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -18,13 +18,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #1",
@@ -39,8 +39,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_002_EN.webp",
     "hp": "130",
     "name": "Exeggutor",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless", "Colorless", "Colorless"],
@@ -53,13 +53,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #2",
@@ -78,8 +78,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_003_EN.webp",
     "hp": "130",
     "name": "Celebi ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -92,13 +92,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #3",
@@ -121,8 +121,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_004_EN.webp",
     "hp": "70",
     "name": "Snivy",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -135,13 +135,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #4",
@@ -156,8 +156,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_005_EN.webp",
     "hp": "80",
     "name": "Servine",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -170,13 +170,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #5",
@@ -191,8 +191,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_006_EN.webp",
     "hp": "110",
     "name": "Serperior",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Grass", "Colorless", "Colorless", "Colorless"],
@@ -205,13 +205,13 @@
       "name": "Jungle Totem",
       "effect": "Each  Energy attached to your  Pokémon provides 2  Energy. This effect doesn't stack."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #6",
@@ -230,8 +230,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_007_EN.webp",
     "hp": "60",
     "name": "Morelull",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -244,13 +244,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #7",
@@ -265,8 +265,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_008_EN.webp",
     "hp": "90",
     "name": "Shiinotic",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Grass"],
@@ -279,13 +279,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #8",
@@ -300,8 +300,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_009_EN.webp",
     "hp": "100",
     "name": "Dhelmise",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass"],
@@ -314,13 +314,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #9",
@@ -335,8 +335,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_010_EN.webp",
     "hp": "60",
     "name": "Ponyta",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -349,13 +349,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #10",
@@ -370,8 +370,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_011_EN.webp",
     "hp": "100",
     "name": "Rapidash",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fire", "Colorless"],
@@ -384,13 +384,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #11",
@@ -405,8 +405,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_012_EN.webp",
     "hp": "80",
     "name": "Magmar",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire", "Fire"],
@@ -419,13 +419,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #12",
@@ -440,8 +440,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_013_EN.webp",
     "hp": "80",
     "name": "Larvesta",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire", "Colorless"],
@@ -454,13 +454,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #13",
@@ -475,8 +475,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_014_EN.webp",
     "hp": "120",
     "name": "Volcarona",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fire", "Fire", "Colorless"],
@@ -489,13 +489,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #14",
@@ -514,8 +514,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_015_EN.webp",
     "hp": "60",
     "name": "Salandit",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -528,13 +528,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #15",
@@ -553,8 +553,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_016_EN.webp",
     "hp": "80",
     "name": "Salazzle",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fire"],
@@ -567,13 +567,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #16",
@@ -588,8 +588,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_017_EN.webp",
     "hp": "30",
     "name": "Magikarp",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -602,13 +602,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #17",
@@ -623,8 +623,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_018_EN.webp",
     "hp": "180",
     "name": "Gyarados ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Water", "Water", "Colorless"],
@@ -637,13 +637,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #18",
@@ -662,8 +662,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_019_EN.webp",
     "hp": "120",
     "name": "Vaporeon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Colorless", "Colorless"],
@@ -676,13 +676,13 @@
       "name": "Wash Out",
       "effect": "As often as you like during your turn, you may move a  Energy from 1 of your Benched  Pokémon to your Active  Pokémon."
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #19",
@@ -701,8 +701,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_020_EN.webp",
     "hp": "60",
     "name": "Finneon",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water"],
@@ -715,13 +715,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #20",
@@ -736,8 +736,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_021_EN.webp",
     "hp": "80",
     "name": "Lumineon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Water"],
@@ -750,13 +750,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "0",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #21",
@@ -771,8 +771,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_022_EN.webp",
     "hp": "80",
     "name": "Chewtle",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water", "Colorless"],
@@ -785,13 +785,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #22",
@@ -806,8 +806,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_023_EN.webp",
     "hp": "130",
     "name": "Drednaw",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Water", "Water"],
@@ -820,13 +820,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #23",
@@ -841,8 +841,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_024_EN.webp",
     "hp": "80",
     "name": "Cramorant",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Water", "Water", "Colorless"],
@@ -855,13 +855,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #24",
@@ -876,8 +876,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_025_EN.webp",
     "hp": "60",
     "name": "Pikachu",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -890,13 +890,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #25",
@@ -911,8 +911,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_026_EN.webp",
     "hp": "120",
     "name": "Raichu",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning", "Lightning"],
@@ -925,13 +925,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #26",
@@ -946,8 +946,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_027_EN.webp",
     "hp": "70",
     "name": "Electabuzz",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -960,13 +960,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #27",
@@ -981,8 +981,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_028_EN.webp",
     "hp": "40",
     "name": "Joltik",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -995,13 +995,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #28",
@@ -1016,8 +1016,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_029_EN.webp",
     "hp": "80",
     "name": "Galvantula",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Lightning", "Lightning"],
@@ -1030,13 +1030,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #29",
@@ -1051,8 +1051,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_030_EN.webp",
     "hp": "60",
     "name": "Dedenne",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -1065,13 +1065,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #30",
@@ -1090,8 +1090,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_031_EN.webp",
     "hp": "60",
     "name": "Mew",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -1104,13 +1104,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Genetic Apex #283",
@@ -1129,8 +1129,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_032_EN.webp",
     "hp": "130",
     "name": "Mew ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -1149,13 +1149,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #32",
@@ -1182,8 +1182,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_033_EN.webp",
     "hp": "80",
     "name": "Sigilyph",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -1196,13 +1196,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #33",
@@ -1217,8 +1217,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_034_EN.webp",
     "hp": "60",
     "name": "Elgyem",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -1231,13 +1231,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #34",
@@ -1252,8 +1252,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_035_EN.webp",
     "hp": "90",
     "name": "Beheeyem",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -1266,13 +1266,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #35",
@@ -1287,8 +1287,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_036_EN.webp",
     "hp": "40",
     "name": "Flabébé",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -1301,13 +1301,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #36",
@@ -1322,8 +1322,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_037_EN.webp",
     "hp": "70",
     "name": "Floette",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -1336,13 +1336,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #37",
@@ -1357,8 +1357,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_038_EN.webp",
     "hp": "120",
     "name": "Florges",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Psychic", "Psychic"],
@@ -1371,13 +1371,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #38",
@@ -1392,8 +1392,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_039_EN.webp",
     "hp": "60",
     "name": "Swirlix",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -1406,13 +1406,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #39",
@@ -1427,8 +1427,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_040_EN.webp",
     "hp": "100",
     "name": "Slurpuff",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Psychic", "Colorless"],
@@ -1441,13 +1441,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Metal",
+    "weakness": "metal",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #40",
@@ -1462,8 +1462,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_041_EN.webp",
     "hp": "50",
     "name": "Mankey",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -1476,13 +1476,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #41",
@@ -1497,8 +1497,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_042_EN.webp",
     "hp": "80",
     "name": "Primeape",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting"],
@@ -1511,13 +1511,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #42",
@@ -1532,8 +1532,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_043_EN.webp",
     "hp": "70",
     "name": "Geodude",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless"],
@@ -1546,13 +1546,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #43",
@@ -1567,8 +1567,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_044_EN.webp",
     "hp": "100",
     "name": "Graveler",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless"],
@@ -1581,13 +1581,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #44",
@@ -1602,8 +1602,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_045_EN.webp",
     "hp": "160",
     "name": "Golem",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
@@ -1616,13 +1616,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #45",
@@ -1637,8 +1637,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_046_EN.webp",
     "hp": "140",
     "name": "Aerodactyl ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless"],
@@ -1651,13 +1651,13 @@
       "name": "Primeval Law",
       "effect": "Your opponent can't play any Pokémon from their hand to evolve their Active Pokémon."
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #46",
@@ -1680,8 +1680,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_047_EN.webp",
     "hp": "80",
     "name": "Marshadow",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless"],
@@ -1694,13 +1694,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #47",
@@ -1719,8 +1719,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_048_EN.webp",
     "hp": "120",
     "name": "Stonjourner",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting", "Fighting", "Fighting"],
@@ -1733,13 +1733,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #48",
@@ -1754,8 +1754,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_049_EN.webp",
     "hp": "70",
     "name": "Koffing",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -1768,13 +1768,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #49",
@@ -1789,8 +1789,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_050_EN.webp",
     "hp": "110",
     "name": "Weezing",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness", "Darkness"],
@@ -1803,13 +1803,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #50",
@@ -1824,8 +1824,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_051_EN.webp",
     "hp": "60",
     "name": "Purrloin",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -1838,13 +1838,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #51",
@@ -1859,8 +1859,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_052_EN.webp",
     "hp": "90",
     "name": "Liepard",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -1873,13 +1873,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Grass",
+    "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #52",
@@ -1894,8 +1894,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_053_EN.webp",
     "hp": "60",
     "name": "Venipede",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -1908,13 +1908,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #53",
@@ -1929,8 +1929,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_054_EN.webp",
     "hp": "90",
     "name": "Whirlipede",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Darkness"],
@@ -1943,13 +1943,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #54",
@@ -1964,8 +1964,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_055_EN.webp",
     "hp": "140",
     "name": "Scolipede",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Darkness", "Colorless"],
@@ -1978,13 +1978,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #55",
@@ -1999,8 +1999,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_056_EN.webp",
     "hp": "100",
     "name": "Druddigon",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fire", "Water", "Colorless"],
@@ -2017,9 +2017,9 @@
     "retreat": "2",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #56",
@@ -2034,8 +2034,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_057_EN.webp",
     "hp": "50",
     "name": "Pidgey",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2048,13 +2048,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #57",
@@ -2069,8 +2069,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_058_EN.webp",
     "hp": "90",
     "name": "Pidgeotto",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -2083,13 +2083,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #58",
@@ -2104,8 +2104,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_059_EN.webp",
     "hp": "170",
     "name": "Pidgeot ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -2118,13 +2118,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊◊",
     "fullart": "No",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #59",
@@ -2143,8 +2143,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_060_EN.webp",
     "hp": "100",
     "name": "Tauros",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -2157,13 +2157,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #60",
@@ -2178,8 +2178,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_061_EN.webp",
     "hp": "60",
     "name": "Eevee",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2192,13 +2192,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #61",
@@ -2213,8 +2213,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_062_EN.webp",
     "hp": "60",
     "name": "Chatot",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2227,13 +2227,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #62",
@@ -2248,17 +2248,17 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_063_EN.webp",
     "hp": "40",
     "name": "Old Amber",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Genetic Apex #218",
@@ -2270,25 +2270,24 @@
       }
     ],
     "artist": "Toyste Beach",
-    "crafting_cost": 35,
-    "linkedCardID": "A1-218"
+    "crafting_cost": 35
   },
   {
     "id": "64",
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_064_EN.webp",
     "hp": "Unknown",
     "name": "Pokémon Flute",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Put a Basic Pokémon from your opponent's discard pile onto their Bench.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #64",
@@ -2303,17 +2302,17 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_065_EN.webp",
     "hp": "Unknown",
     "name": "Mythical Slab",
-    "card_type": "Trainer",
-    "evolution_type": "Item",
+    "card_type": "trainer",
+    "evolution_type": "item",
     "attacks": [],
     "ability": "Look at the top card of your deck. If that card is a [P] Pokémon, put it into your hand. If it is not a [P] Pokémon, put it on the bottom of your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                AYUMI ODASHIMA",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #65",
@@ -2328,17 +2327,17 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_066_EN.webp",
     "hp": "Unknown",
     "name": "Budding Expeditioner",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Put your Mew ex in the Active Spot into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #66",
@@ -2357,17 +2356,17 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_067_EN.webp",
     "hp": "Unknown",
     "name": "Blue",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "During your opponent's next turn, all of your Pokémon take −10 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #67",
@@ -2386,17 +2385,17 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_068_EN.webp",
     "hp": "Unknown",
     "name": "Leaf",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "During this turn, the Retreat Cost of your Active Pokémon is 2 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                En Morikura",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #68",
@@ -2415,8 +2414,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_069_EN.webp",
     "hp": "130",
     "name": "Exeggutor",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Grass", "Colorless", "Colorless", "Colorless"],
@@ -2429,13 +2428,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "3",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #2",
@@ -2454,8 +2453,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_070_EN.webp",
     "hp": "110",
     "name": "Serperior",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Grass", "Colorless", "Colorless", "Colorless"],
@@ -2468,13 +2467,13 @@
       "name": "Jungle Totem",
       "effect": "Each  Energy attached to your  Pokémon provides 2  Energy. This effect doesn't stack."
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #6",
@@ -2493,8 +2492,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_071_EN.webp",
     "hp": "60",
     "name": "Salandit",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Colorless"],
@@ -2507,13 +2506,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Water",
+    "weakness": "water",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #15",
@@ -2532,8 +2531,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_072_EN.webp",
     "hp": "120",
     "name": "Vaporeon",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Colorless", "Colorless"],
@@ -2546,13 +2545,13 @@
       "name": "Wash Out",
       "effect": "As often as you like during your turn, you may move a  Energy from 1 of your Benched  Pokémon to your Active  Pokémon."
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #19",
@@ -2571,8 +2570,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_073_EN.webp",
     "hp": "60",
     "name": "Dedenne",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Lightning"],
@@ -2585,13 +2584,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fighting",
+    "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #30",
@@ -2610,8 +2609,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_074_EN.webp",
     "hp": "80",
     "name": "Marshadow",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless"],
@@ -2624,13 +2623,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Psychic",
+    "weakness": "psychic",
     "retreat": "1",
     "rarity": "☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #47",
@@ -2649,8 +2648,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_075_EN.webp",
     "hp": "130",
     "name": "Celebi ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -2663,13 +2662,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #3",
@@ -2692,8 +2691,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_076_EN.webp",
     "hp": "180",
     "name": "Gyarados ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Water", "Water", "Water", "Colorless"],
@@ -2706,13 +2705,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "3",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #18",
@@ -2731,8 +2730,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_077_EN.webp",
     "hp": "130",
     "name": "Mew ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -2751,13 +2750,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #32",
@@ -2784,8 +2783,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_078_EN.webp",
     "hp": "140",
     "name": "Aerodactyl ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless"],
@@ -2798,13 +2797,13 @@
       "name": "Primeval Law",
       "effect": "Your opponent can't play any Pokémon from their hand to evolve their Active Pokémon."
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #46",
@@ -2827,8 +2826,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_079_EN.webp",
     "hp": "170",
     "name": "Pidgeot ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 2",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
     "attacks": [
       {
         "cost": ["Colorless", "Colorless", "Colorless"],
@@ -2841,13 +2840,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #59",
@@ -2866,17 +2865,17 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_080_EN.webp",
     "hp": "Unknown",
     "name": "Budding Expeditioner",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "Put your Mew ex in the Active Spot into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #66",
@@ -2895,17 +2894,17 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_081_EN.webp",
     "hp": "Unknown",
     "name": "Blue",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "During your opponent's next turn, all of your Pokémon take −10 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #67",
@@ -2924,17 +2923,17 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_082_EN.webp",
     "hp": "Unknown",
     "name": "Leaf",
-    "card_type": "Trainer",
-    "evolution_type": "Supporter",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
     "attacks": [],
     "ability": "During this turn, the Retreat Cost of your Active Pokémon is 2 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                En Morikura",
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "No",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "no",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #68",
@@ -2953,8 +2952,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_083_EN.webp",
     "hp": "130",
     "name": "Mew ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -2973,13 +2972,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #32",
@@ -3006,8 +3005,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_084_EN.webp",
     "hp": "140",
     "name": "Aerodactyl ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Stage 1",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": ["Fighting", "Colorless"],
@@ -3020,13 +3019,13 @@
       "name": "Primeval Law",
       "effect": "Your opponent can't play any Pokémon from their hand to evolve their Active Pokémon."
     },
-    "weakness": "Lightning",
+    "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #46",
@@ -3049,8 +3048,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_085_EN.webp",
     "hp": "130",
     "name": "Celebi ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Grass", "Colorless"],
@@ -3063,13 +3062,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Fire",
+    "weakness": "fire",
     "retreat": "1",
     "rarity": "☆☆☆",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #3",
@@ -3092,8 +3091,8 @@
     "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_086_EN.webp",
     "hp": "130",
     "name": "Mew ex",
-    "card_type": "Pokémon",
-    "evolution_type": "Basic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["Psychic"],
@@ -3112,13 +3111,13 @@
       "name": "No ability",
       "effect": "N/A"
     },
-    "weakness": "Darkness",
+    "weakness": "darkness",
     "retreat": "1",
     "rarity": "Crown Rare",
     "fullart": "Yes",
-    "ex": "Yes",
-    "set_details": "Mythical Island  (A1a)",
-    "pack": "Mew pack",
+    "ex": "yes",
+    "set_details": "mythicalisland(a1a)",
+    "pack": "mewpack",
     "alternate_versions": [
       {
         "version": "Mythical Island #32",

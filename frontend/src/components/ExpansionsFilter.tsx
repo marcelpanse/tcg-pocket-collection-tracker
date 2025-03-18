@@ -1,19 +1,22 @@
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
 import { expansions } from '@/lib/CardsDB.ts'
 import type { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface Props {
   expansionFilter: string
   setExpansionFilter: (expansionFilter: string) => void
 }
 const ExpansionsFilter: FC<Props> = ({ expansionFilter, setExpansionFilter }) => {
+  const { t } = useTranslation('common/sets')
+
   return (
     <Tabs value={expansionFilter} onValueChange={(value) => setExpansionFilter(value)} className="w-full">
       <TabsList className="w-full flex-wrap h-auto lg:h-[40px] border-2 border-slate-600 rounded-md">
-        <TabsTrigger value="all">All</TabsTrigger>
+        <TabsTrigger value="all">{t('all')}</TabsTrigger>
         {expansions.map((expansion) => (
           <TabsTrigger key={`tab_trigger_${expansion.id}`} value={expansion.id}>
-            {expansion.name}
+            {t(expansion.name)}
           </TabsTrigger>
         ))}
       </TabsList>

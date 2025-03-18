@@ -2,6 +2,7 @@ import { Card as CardComponent } from '@/components/Card'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { getCardById, sellableForTokensDictionary } from '@/lib/CardsDB.ts'
 import type { Card } from '@/types'
+import { useTranslation } from 'react-i18next'
 
 interface CardDetailProps {
   cardId: string
@@ -9,6 +10,7 @@ interface CardDetailProps {
 }
 
 function CardDetail({ cardId, onClose }: CardDetailProps) {
+  const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
   const card: Card = getCardById(cardId) || ({} as Card)
 
   return (
@@ -33,49 +35,49 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
 
           <div className="p-4 w-full">
             <p className="text-lg mb-1">
-              <strong>Trade tokens:</strong> {sellableForTokensDictionary[card.rarity] || 'N/A'}
+              <strong>{t('text.tradeTokens')}:</strong> {sellableForTokensDictionary[card.rarity] || 'N/A'}
             </p>
             <p className="text-lg mb-1">
-              <strong>HP:</strong> {card.hp}
+              <strong>{t('text.hp')}:</strong> {card.hp}
             </p>
             <p className="text-lg mb-1">
-              <strong>Card Type:</strong> {card.card_type}
+              <strong>{t('text.cardType')}:</strong> {t(`cardType.${card.card_type}`)}
             </p>
             <p className="text-lg mb-1">
-              <strong>Evolution Type:</strong> {card.evolution_type}
+              <strong>{t('text.evolutionType')}:</strong> {t(`evolutionType.${card.evolution_type}`)}
             </p>
             <p className="text-lg mb-1">
-              <strong>EX:</strong> {card.ex}
+              <strong>{t('text.ex')}:</strong> {t(`ex.${card.ex}`)}
             </p>
             <p className="text-lg mb-1">
-              <strong>Crafting Cost:</strong> {card.crafting_cost}
+              <strong>{t('text.craftingCost')}:</strong> {card.crafting_cost}
             </p>
             <p className="text-lg mb-1">
-              <strong>Artist:</strong> {card.artist}
+              <strong>{t('text.artist')}:</strong> {card.artist}
             </p>
             <p className="text-lg mb-1">
-              <strong>Set Details:</strong> {card.set_details}
+              <strong>{t('text.setDetails')}:</strong> {t(card.set_details, { ns: 'common/sets' })}
             </p>
             <p className="text-lg mb-1">
-              <strong>Expansion:</strong> {card.expansion}
+              <strong>{t('text.expansion')}:</strong> {card.expansion}
             </p>
             <p className="text-lg mb-1">
-              <strong>Pack:</strong> {card.pack}
+              <strong>{t('text.pack')}:</strong> {t(`${card.pack}`, { ns: 'common/packs' })}
             </p>
 
             <div className="mt-4">
-              <h2 className="text-xl font-semibold">Details</h2>
+              <h2 className="text-xl font-semibold">{t('text.details')}</h2>
               <p>
-                <strong>Weakness:</strong> {card.weakness || 'N/A'}
+                <strong>{t('text.weakness')}:</strong> {t(`${card.weakness}`, { ns: 'common/types' }) || 'N/A'}
               </p>
               <p>
-                <strong>Retreat:</strong> {card.retreat || 'N/A'}
+                <strong>{t('text.retreat')}:</strong> {card.retreat || 'N/A'}
               </p>
               <p>
-                <strong>Ability:</strong> {card.ability?.name || 'No ability'}
+                <strong>{t('text.ability')}:</strong> {card.ability?.name || 'No ability'}
               </p>
               <p>
-                <strong>Ability Effect:</strong> {card.ability?.effect || 'N/A'}
+                <strong>{t('text.abilityEffect')}:</strong> {card.ability?.effect || 'N/A'}
               </p>
             </div>
           </div>
