@@ -98,6 +98,9 @@ function extractCardInfo($, cardUrl) {
   // Extract the last part for HP and remove non-digit characters
   cardInfo.hp = titleParts.length > 1 ? titleParts[titleParts.length - 1].replace(/\D/g, '') : 'Unknown'
 
+  // Assign the energy type from the second part if it exists
+  cardInfo.energy = titleParts.length > 1 ? titleParts[1].trim() : 'N/A'
+
   // Assign the name from the first part
   cardInfo.name = titleParts[0].trim()
 

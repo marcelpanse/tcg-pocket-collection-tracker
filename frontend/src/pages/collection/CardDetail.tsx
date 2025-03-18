@@ -33,6 +33,9 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
 
           <div className="p-4 w-full">
             <p className="text-lg mb-1">
+              <strong>Energy:</strong> {card.energy}
+            </p>
+            <p className="text-lg mb-1">
               <strong>Trade tokens:</strong> {sellableForTokensDictionary[card.rarity] || 'N/A'}
             </p>
             <p className="text-lg mb-1">

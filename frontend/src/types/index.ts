@@ -38,6 +38,7 @@ export interface Card {
   expansion: ExpansionId
   name: string
   hp: string
+  energy: string
   card_type: string
   evolution_type: string
   image: string
