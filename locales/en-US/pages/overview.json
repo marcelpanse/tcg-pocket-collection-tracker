@@ -1,4 +1,8 @@
 {
+  "stats": {
+    "title": "Welcome to the community",
+    "description": "Already {{usersCount}} active users have tracked {{collectionCount}} cards in total!"
+  },
   "dontHaveCards": {
     "title": "You don't have any cards logged yet!",
     "description": "Head over to the collection page to add your first card or hit the login button to create an account."
