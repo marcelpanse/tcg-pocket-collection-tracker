@@ -1,7 +1,7 @@
 {
   "stats": {
-    "title": "Welcome to the community",
-    "description": "Already {{usersCount}} active users have tracked {{collectionCount}} cards in total!"
+    "title": "Thank you for being part of our community",
+    "description": "At present, our community of {{usersCount}} users has collectively tracked {{collectionCount}} unique cards!"
   },
   "dontHaveCards": {
     "title": "You don't have any cards logged yet!",
