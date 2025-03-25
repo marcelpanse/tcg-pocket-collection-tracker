@@ -78,7 +78,7 @@ function extractSetAndPackInfo($) {
 
     const packTemp = setInfo.find('span').last().text().trim()
     const packInfo = packTemp.split('·').pop().trim().split(/\s+/).join(' ')
-    const pack = packs.includes(packInfo) ? packInfo.replace(' ', '').toLowerCase() : 'Every pack'
+    const pack = packs.includes(packInfo) ? packInfo.replace(' ', '').toLowerCase() : 'everypack'
 
     return { setDetails, pack }
   }

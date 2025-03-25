@@ -16,15 +16,17 @@ interface ExpansionOverviewProps {
 }
 export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: ExpansionOverviewProps) {
   const { ownedCards } = use(CollectionContext)
-  const { t } = useTranslation(['expansion-overview', 'common/sets'])
+  const { t } = useTranslation(['expansion-overview', 'common/sets', 'common/packs'])
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
   const { highestProbabilityPack, chartData } = useMemo(() => {
     let { packs } = expansion
-    if (expansion.packs.length > 1) {
-      packs = expansion.packs.filter((pack) => pack.name !== 'Every pack')
+
+    if (packs.length > 1) {
+      packs = packs.filter((pack) => pack.name !== 'everypack')
     }
+    console.log('packs', packs)
     const chartData = packs.map((pack) => ({
       packName: pack.name.replace(' pack', '').replace('Every', 'Promo-A'),
       percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter }),
@@ -66,7 +68,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: Exp
                   <CompleteProgress
                     key={pack.name}
                     rarityFilter={rarityFilter}
-                    title={pack.name}
+                    title={t(pack.name, { ns: 'common/packs' })}
                     expansion={expansion}
                     packName={pack.name}
                     numberFilter={numberFilter}
@@ -99,7 +101,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: Exp
                   key={pack.name}
                   rarityFilter={rarityFilter}
                   numberFilter={numberFilter}
-                  title={pack.name}
+                  title={t(pack.name, { ns: 'common/packs' })}
                   expansion={expansion}
                   packName={pack.name}
                 />

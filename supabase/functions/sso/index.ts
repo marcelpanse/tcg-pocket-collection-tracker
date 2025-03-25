@@ -40,7 +40,6 @@ Deno.serve(async (req) => {
   const authHeader = req.headers.get('Authorization') || ''
   const token = authHeader.replace('Bearer ', '')
 
-  // deno-lint-ignore
   const { data, error } = await supabaseClient.auth.getUser(token)
   const loggedInUser = data.user
   if (error || !loggedInUser) {

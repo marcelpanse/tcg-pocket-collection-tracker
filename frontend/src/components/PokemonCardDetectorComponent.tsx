@@ -9,6 +9,7 @@ import { CardHashStorageService } from '@/services/CardHashStorageService'
 import { ImageSimilarityService } from '@/services/ImageHashingService'
 import PokemonCardDetectorService, { type DetectionResult } from '@/services/PokemonCardDetectionServices'
 import type { Card } from '@/types'
+import i18n from 'i18next'
 import { MinusIcon, PlusIcon } from 'lucide-react'
 import type { ChangeEvent, FC } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
@@ -110,8 +111,26 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                 return existingHash
               }
 
-              // Calculate new hash only if it doesn't exist
-              const hash = await hashingService.calculatePerceptualHash(`/images/${card.image?.split('/').at(-1)}`)
+              async function getRightPathOfImage(url: string): Promise<string> {
+                return new Promise((resolve) => {
+                  const img = new Image()
+
+                  img.onload = () => resolve(url)
+                  img.onerror = () => resolve(`/images/en-US/${card.image?.split('/').at(-1)}`)
+
+                  img.src = url
+                })
+              }
+
+              const langCode = i18n.language.split('-')[0].toUpperCase()
+              const baseName = card.image
+                ?.split('/')
+                .at(-1)
+                ?.replace(/_[A-Z]{2}\.webp$/, `_${langCode}.webp`)
+              const imagePath = `/images/${i18n.language}/${baseName}`
+
+              const resolvedImagePath = await getRightPathOfImage(imagePath)
+              const hash = await hashingService.calculatePerceptualHash(resolvedImagePath)
               return { id: card.card_id, hash }
             } catch (error) {
               console.error(`Error generating hash for card ${card.card_id}:`, error)

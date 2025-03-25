@@ -1,4 +1,5 @@
 import type { Card } from '@/types'
+import i18n from 'i18next'
 import { type CSSProperties, type Dispatch, type SetStateAction, useCallback, useRef, useState } from 'react'
 
 interface Props {
@@ -59,6 +60,13 @@ function FancyCard({ selected, setIsSelected, card, size = 'default' }: Props) {
     height: size === 'small' ? '112px' : 'auto', // Adjust size based on prop
   }
 
+  const langCode = i18n.language.split('-')[0].toUpperCase()
+  const baseName = card.image
+    ?.split('/')
+    .at(-1)
+    ?.replace(/_[A-Z]{2}\.webp$/, `_${langCode}.webp`)
+  const imagePath = `/images/${i18n.language}/${baseName}`
+
   return (
     <div
       style={{
@@ -71,17 +79,22 @@ function FancyCard({ selected, setIsSelected, card, size = 'default' }: Props) {
         zIndex: isHovering ? 10 : 0,
       }}
     >
-      <img
-        draggable={false}
-        onMouseDown={() => setIsSelected?.(!selected)}
-        ref={cardRef}
-        className="card-test"
-        style={cardTestStyle}
-        src={`/images/${card.image?.split('/').at(-1)}`}
-        alt={card.name}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      />
+      {baseName && (
+        <img
+          draggable={false}
+          onMouseDown={() => setIsSelected?.(!selected)}
+          ref={cardRef}
+          className="card-test"
+          style={cardTestStyle}
+          src={`${imagePath}`}
+          alt={card.name}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onError={(e) => {
+            ;(e.target as HTMLImageElement).src = `/images/en-US/${card.image?.split('/').at(-1)}` // Default card image to English if localized image is missing
+          }}
+        />
+      )}
     </div>
   )
 }

@@ -16,7 +16,7 @@ const cardFiles = [
   'frontend/assets/cards/P-A.json',
 ]
 
-const targetDir = 'frontend/public/images/'
+const targetDir = 'frontend/public/images/en-US/'
 
 async function downloadImage(imageUrl, dest) {
   const response = await fetch(imageUrl)
