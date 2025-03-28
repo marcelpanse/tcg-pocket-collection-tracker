@@ -115,8 +115,27 @@ interface NrOfCardsOwnedProps {
   numberFilter: number
   expansion?: Expansion
   packName?: string
+  deckbuildingMode?: boolean
 }
-export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expansion, packName }: NrOfCardsOwnedProps): number => {
+export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expansion, packName, deckbuildingMode }: NrOfCardsOwnedProps): number => {
+  let allCardsWithAmounts = allCards.map((ac) => {
+    const amount = ownedCards.find((oc) => ac.card_id === oc.card_id)?.amount_owned || 0
+    return { ...ac, amount_owned: amount }
+  })
+  if (deckbuildingMode) {
+    allCardsWithAmounts = allCardsWithAmounts
+      .map((ac) => {
+        let amount_owned = ac.amount_owned
+        if (ac.alternate_versions.length > 1) {
+          amount_owned = allCardsWithAmounts
+            .filter((ov) => ov.name === ac.name && ov.pack === ac.pack && ov.expansion === ac.expansion) // can't use card ID, because we are specifically looking for cards with the same name but different arts
+            .reduce((acc, rc) => acc + (rc.amount_owned || 0), 0)
+        }
+        return { ...ac, amount_owned }
+      })
+      .filter((x) => x.fullart === 'No')
+  }
+
   const filters = {
     number: (cr: CollectionRow) => cr.amount_owned > numberFilter - 1,
     rarity: (cr: CollectionRow) => {
@@ -126,6 +145,8 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
     },
     expansion: (cr: CollectionRow) => (expansion ? expansion.cards.find((c) => cr.card_id === c.card_id) : true),
     pack: (cr: CollectionRow) => (expansion && packName ? expansion.cards.find((c) => c.pack === packName && cr.card_id === c.card_id) : true),
+    deckbuildingMode: (cr: CollectionRow) =>
+      deckbuildingMode ? allCardsWithAmounts.find((c) => c.card_id === cr.card_id && c.amount_owned > numberFilter - 1) : true,
   }
 
   // biome-ignore format: improve readability for filters
@@ -134,6 +155,7 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
     .filter(filters.rarity)
     .filter(filters.expansion)
     .filter(filters.pack)
+    .filter(filters.deckbuildingMode)
     .length
 }
 
@@ -141,8 +163,9 @@ interface TotalNrOfCardsProps {
   rarityFilter: Rarity[]
   expansion?: Expansion
   packName?: string
+  deckbuildingMode?: boolean
 }
-export const getTotalNrOfCards = ({ rarityFilter, expansion, packName }: TotalNrOfCardsProps) => {
+export const getTotalNrOfCards = ({ rarityFilter, expansion, packName, deckbuildingMode }: TotalNrOfCardsProps) => {
   // note we have to filter out the cards with a linked card ID (Old Amber) because they are counted as the same card.
   let filteredCards = [...allCards].filter((c) => !c.linkedCardID)
 
@@ -156,6 +179,11 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName }: TotalNr
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter
     filteredCards = filteredCards.filter((c) => rarityFilter.includes(c.rarity))
+  }
+
+  // console.log('dbm:', deckbuildingMode)
+  if (deckbuildingMode) {
+    filteredCards = filteredCards.filter((c) => c.fullart === 'No')
   }
 
   return filteredCards.length
@@ -204,18 +232,30 @@ interface PullRateProps {
   pack: Pack
   rarityFilter?: Rarity[]
   numberFilter?: number
+  deckbuildingMode?: boolean
 }
-export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numberFilter = 1 }: PullRateProps) => {
+export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numberFilter = 1, deckbuildingMode = false }: PullRateProps) => {
   if (ownedCards.length === 0) {
     return 1
   }
 
-  //probabilities
-  // console.log('calc pull rate for', pack.name, ownedCards.length, rarityFilter)
-
   const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'everypack')
-  // console.log('cards in pack', cardsInPack.length) //79
-  let missingCards = cardsInPack.filter((c) => !ownedCards.find((oc) => oc.card_id === c.card_id && oc.amount_owned > numberFilter - 1))
+
+  const cardsInPackWithAmounts = cardsInPack.map((cip) => {
+    const amount = ownedCards.find((oc) => cip.card_id === oc.card_id)?.amount_owned || 0
+    return { ...cip, amount_owned: amount }
+  })
+
+  let missingCards = cardsInPackWithAmounts.filter(
+    (c) =>
+      !ownedCards.find((oc) => {
+        let { amount_owned } = oc
+        if (deckbuildingMode && c.alternate_versions.length > 1) {
+          amount_owned = cardsInPackWithAmounts.filter((ov) => ov.name === c.name).reduce((acc, rc) => acc + (rc.amount_owned || 0), 0)
+        }
+        return oc.card_id === c.card_id && amount_owned > numberFilter - 1
+      }),
+  )
 
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter
@@ -232,7 +272,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
     const rarity = card.rarity
     if (rarity === 'Unknown' || rarity === '') continue // Skip cards that cannot be picked
 
-    const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity).length
+    const nrOfcardsOfThisRarity = cardsInPackWithAmounts.filter((c) => c.rarity === rarity).length
     // console.log('nr of cards of this rarity', rarity, nrOfcardsOfThisRarity) //nrOfcardsOfThisRarity = 25
 
     // the chance to get this card is the probability of getting this card in the pack divided by the number of cards of this rarity

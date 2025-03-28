@@ -35,8 +35,9 @@ function Overview() {
     const savedNumberFilter = localStorage.getItem('numberFilter')
     return savedNumberFilter ? Number.parseInt(savedNumberFilter) : 1
   })
+  const [deckbuildingMode, setDeckbuildingMode] = useState(false)
 
-  const totalUniqueCards = CardsDB.getTotalNrOfCards({ rarityFilter })
+  const totalUniqueCards = CardsDB.getTotalNrOfCards({ rarityFilter, deckbuildingMode })
 
   useEffect(() => {
     fetch('https://vcwloujmsjuacqpwthee.supabase.co/storage/v1/object/public/stats/stats.json')
@@ -60,7 +61,7 @@ function Overview() {
         .filter((p) => p.name !== 'everypack')
         .map((pack) => ({
           packName: pack.name.replace('pack', ''),
-          percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter }),
+          percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter, deckbuildingMode }),
           fill: pack.color,
         }))
       const highestProbabilityPackCandidate = pullRates.sort((a, b) => b.percentage - a.percentage)[0]
@@ -70,7 +71,7 @@ function Overview() {
     }
 
     setHighestProbabilityPack(newHighestProbabilityPack)
-  }, [ownedCards, rarityFilter, numberFilter])
+  }, [ownedCards, rarityFilter, numberFilter, deckbuildingMode])
 
   return (
     <main className="fade-in-up">
@@ -94,13 +95,19 @@ function Overview() {
         <div className="mb-8 flex items-center gap-2">
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
           <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[1, 2, 3, 4, 5]} />
+          <div className="flex items-center space-x-2">
+            <input type="checkbox" id="checkbox" checked={deckbuildingMode} onChange={() => setDeckbuildingMode(!deckbuildingMode)} className="w-5 h-5" />
+            <label htmlFor="checkbox" className="text-lg">
+              Deck-building Mode
+            </label>
+          </div>
         </div>
 
         <section className="grid grid-cols-8 gap-6">
           <div className="col-span-8 flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-4 sm:p-8 md:col-span-2">
             <h2 className="mb-2 text-center text-lg sm:text-2xl">{t('youHave')}</h2>
             <h1 className="mb-3 text-balance text-center font-semibold text-3xl sm:text-7xl">
-              {CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter })}
+              {CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode })}
             </h1>
             <h2 className="text-balance text-center text-lg sm:text-2xl">{t('uniqueCards', { totalUniqueCards: totalUniqueCards })}</h2>
             <h2 className="text-balance text-center text-md sm:text-lg">
@@ -123,7 +130,13 @@ function Overview() {
       </article>
       <article className="mx-auto min-h-screen max-w-7xl sm:p-6 p-0 pt-6 grid grid-cols-8 gap-6">
         {CardsDB.expansions.map((expansion) => (
-          <ExpansionOverview key={expansion.id} expansion={expansion} rarityFilter={rarityFilter} numberFilter={numberFilter} />
+          <ExpansionOverview
+            key={expansion.id}
+            expansion={expansion}
+            rarityFilter={rarityFilter}
+            numberFilter={numberFilter}
+            deckbuildingMode={deckbuildingMode}
+          />
         ))}
       </article>
     </main>
