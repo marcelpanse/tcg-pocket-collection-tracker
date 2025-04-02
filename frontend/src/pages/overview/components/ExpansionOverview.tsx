@@ -27,7 +27,6 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
     if (packs.length > 1) {
       packs = packs.filter((pack) => pack.name !== 'everypack')
     }
-    console.log('packs', packs)
     const chartData = packs.map((pack) => ({
       packName: pack.name.replace('pack', ''),
       percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter, deckbuildingMode }),
