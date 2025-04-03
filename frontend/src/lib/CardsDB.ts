@@ -263,8 +263,6 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
 
   let missingCards = cardsInPackWithAmounts.filter((c) => c.amount_owned <= numberFilter - 1)
 
-  // console.log(missingCards.filter((mc) => mc.name === 'Exeggutor ex'))
-
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter
     missingCards = missingCards.filter((c) => {
