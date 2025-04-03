@@ -13,8 +13,8 @@ interface Props {
 }
 const RarityFilter: FC<Props> = ({ rarityFilter, setRarityFilter, deckbuildingMode }) => {
   const { width } = useWindowDimensions()
-  const { t } = useTranslation('rarity-filter')
   const isMobile = width < 768
+  const { t } = useTranslation('rarity-filter')
 
   useEffect(() => {
     if (deckbuildingMode) {

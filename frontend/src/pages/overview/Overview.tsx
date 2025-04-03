@@ -1,3 +1,4 @@
+import DeckbuildingFilter from '@/components/DeckbuildingFilter'
 import NumberFilter from '@/components/NumberFilter'
 import RarityFilter from '@/components/RarityFilter.tsx'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -35,7 +36,10 @@ function Overview() {
     const savedNumberFilter = localStorage.getItem('numberFilter')
     return savedNumberFilter ? Number.parseInt(savedNumberFilter) : 1
   })
-  const [deckbuildingMode, setDeckbuildingMode] = useState(false)
+  const [deckbuildingMode, setDeckbuildingMode] = useState(() => {
+    const savedDeckbuildingFilter = localStorage.getItem('deckbuildingFilter')
+    return savedDeckbuildingFilter === 'true'
+  })
 
   const totalUniqueCards = CardsDB.getTotalNrOfCards({ rarityFilter, deckbuildingMode })
 
@@ -51,7 +55,8 @@ function Overview() {
   useEffect(() => {
     localStorage.setItem('rarityFilter', JSON.stringify(rarityFilter))
     localStorage.setItem('numberFilter', numberFilter.toString())
-  }, [rarityFilter, numberFilter])
+    localStorage.setItem('deckbuildingFilter', JSON.stringify(deckbuildingMode))
+  }, [rarityFilter, numberFilter, deckbuildingMode])
 
   useEffect(() => {
     let newHighestProbabilityPack: Pack | undefined
@@ -95,12 +100,7 @@ function Overview() {
         <div className="mb-8 flex items-center gap-2">
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} deckbuildingMode={deckbuildingMode} />
           <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[1, 2, 3, 4, 5]} />
-          <div className="flex items-center space-x-2">
-            <input type="checkbox" id="checkbox" checked={deckbuildingMode} onChange={() => setDeckbuildingMode(!deckbuildingMode)} className="w-5 h-5" />
-            <label htmlFor="checkbox" className="text-lg">
-              Deck-building Mode
-            </label>
-          </div>
+          <DeckbuildingFilter deckbuildingMode={deckbuildingMode} setDeckbuildingMode={setDeckbuildingMode} />
         </div>
 
         <section className="grid grid-cols-8 gap-6">

@@ -109,6 +109,8 @@ export const sellableForTokensDictionary: Record<Rarity, number | null> = {
   '': null,
 }
 
+const basicCards: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊']
+
 interface NrOfCardsOwnedProps {
   ownedCards: CollectionRow[]
   rarityFilter: Rarity[]
@@ -126,12 +128,12 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
         const amount_owned = allCardsWithAmounts
-          .filter((ov) => ov.name === ac.name && ov.expansion === ac.expansion) // can't use card ID, because we are specifically looking for cards with the same name but different arts
+          .filter((c) => c.name === ac.name && c.expansion === ac.expansion) // can't use card ID, because we are specifically looking for cards with the same name but different arts
           .reduce((acc, rc) => acc + (rc.amount_owned || 0), 0)
 
         return { ...ac, amount_owned }
       })
-      .filter((x) => x.fullart === 'No')
+      .filter((c) => basicCards.includes(c.rarity))
   }
 
   const filters = {
@@ -244,7 +246,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
   })
 
   if (deckbuildingMode) {
-    const basicCards: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊']
+    // This function adds all the full-art cards amounts to the basic versions, then removes the full-art ones from the list
     cardsInPackWithAmounts = cardsInPack
       .map((cip) => {
         const amount = cardsInPackWithAmounts
@@ -280,6 +282,9 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
     if (rarityList[0] === 'Unknown' || rarityList[0] === '') continue
 
     if (deckbuildingMode) {
+      // while in deckbuilding mode, we only have diamond cards in the list,
+      // but want to include the chance of getting one of the missing cards as a more rare version,
+      // so we add the rarities here
       const matchingCards = cardsInPack.filter((cip) => cip.name === card.name && cip.expansion === card.expansion)
 
       for (const mc of matchingCards) {
