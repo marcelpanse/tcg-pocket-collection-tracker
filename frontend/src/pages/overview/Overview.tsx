@@ -93,7 +93,7 @@ function Overview() {
         )}
 
         <div className="mb-8 flex items-center gap-2">
-          <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
+          <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} deckbuildingMode={deckbuildingMode} />
           <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[1, 2, 3, 4, 5]} />
           <div className="flex items-center space-x-2">
             <input type="checkbox" id="checkbox" checked={deckbuildingMode} onChange={() => setDeckbuildingMode(!deckbuildingMode)} className="w-5 h-5" />

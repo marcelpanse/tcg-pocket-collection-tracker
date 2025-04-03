@@ -19,8 +19,8 @@ export function CompleteProgress({ title, expansion, packName, rarityFilter = []
   const { t } = useTranslation('complete-progress')
 
   const nrOfCardsOwned = useMemo(() => {
-    return getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, expansion, packName })
-  }, [ownedCards, expansion, packName, rarityFilter, numberFilter])
+    return getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, expansion, packName, deckbuildingMode })
+  }, [ownedCards, expansion, packName, rarityFilter, numberFilter, deckbuildingMode])
 
   const totalNrOfCards = useMemo(
     () => getTotalNrOfCards({ rarityFilter, expansion, packName, deckbuildingMode }),

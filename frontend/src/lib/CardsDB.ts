@@ -276,11 +276,10 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
   let totalProbability5 = 0
   for (const card of missingCards) {
     const rarityList = [card.rarity]
+    // Skip cards that cannot be picked
     if (rarityList[0] === 'Unknown' || rarityList[0] === '') continue
 
     if (deckbuildingMode) {
-      // Skip cards that cannot be picked
-
       const matchingCards = cardsInPack.filter((cip) => cip.name === card.name && cip.expansion === card.expansion)
 
       for (const mc of matchingCards) {
@@ -290,14 +289,12 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
       }
     }
 
-    console.log('rarityList:', rarityList)
-
     let chanceToGetThisCard1_3 = 0
     let chanceToGetThisCard4 = 0
     let chanceToGetThisCard5 = 0
 
     for (const rarity of rarityList) {
-      const nrOfcardsOfThisRarity = cardsInPackWithAmounts.filter((c) => c.rarity === rarity).length
+      const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity).length
 
       // the chance to get this card is the probability of getting this card in the pack divided by the number of cards of this rarity
       chanceToGetThisCard1_3 += probabilityPerRarity1_3[rarity] / 100 / nrOfcardsOfThisRarity
@@ -305,20 +302,11 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
       chanceToGetThisCard5 += probabilityPerRarity5[rarity] / 100 / nrOfcardsOfThisRarity
     }
 
-    if (card.name === 'Exeggutor ex') {
-      console.log('totalProbability1_3', chanceToGetThisCard1_3)
-      console.log('totalProbability4', chanceToGetThisCard4)
-      console.log('totalProbability5', chanceToGetThisCard5)
-    }
-
     // add up the chances to get this card
     totalProbability1_3 += chanceToGetThisCard1_3
     totalProbability4 += chanceToGetThisCard4
     totalProbability5 += chanceToGetThisCard5
   }
-  // console.log('totalProbability1_3', totalProbability1_3)
-  // console.log('totalProbability4', totalProbability4)
-  // console.log('totalProbability5', totalProbability5)
 
   // take the total probabilities per card draw (for the 1-3 you need to take the cube root of the probability) and multiply
   const chanceToGetNewCard = 1 - (1 - totalProbability1_3) ** 3 * (1 - totalProbability4) * (1 - totalProbability5)
