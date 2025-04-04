@@ -13,8 +13,9 @@ interface ExpansionOverviewProps {
   expansion: Expansion
   rarityFilter: Rarity[]
   numberFilter: number
+  deckbuildingMode: boolean
 }
-export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: ExpansionOverviewProps) {
+export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckbuildingMode }: ExpansionOverviewProps) {
   const { ownedCards } = use(CollectionContext)
   const { t } = useTranslation(['expansion-overview', 'common/sets', 'common/packs'])
 
@@ -26,10 +27,9 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: Exp
     if (packs.length > 1) {
       packs = packs.filter((pack) => pack.name !== 'everypack')
     }
-    console.log('packs', packs)
     const chartData = packs.map((pack) => ({
       packName: pack.name.replace('pack', ''),
-      percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter }),
+      percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter, deckbuildingMode }),
       fill: pack.color,
     }))
 
@@ -39,7 +39,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: Exp
       highestProbabilityPack,
       chartData,
     }
-  }, [ownedCards, expansion, rarityFilter, numberFilter])
+  }, [ownedCards, expansion, rarityFilter, numberFilter, deckbuildingMode])
 
   return (
     <>
@@ -62,7 +62,13 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: Exp
               </>
             )}
             <div className="col-span-8 snap-start flex-shrink-0 w-full border-2 border-slate-600 border-solid rounded-4xl p-4 sm:p-8">
-              <CompleteProgress title={t('totalCards')} expansion={expansion} rarityFilter={rarityFilter} numberFilter={numberFilter} />
+              <CompleteProgress
+                title={t('totalCards')}
+                expansion={expansion}
+                rarityFilter={rarityFilter}
+                numberFilter={numberFilter}
+                deckbuildingMode={deckbuildingMode}
+              />
               {expansion.packs.length > 1 &&
                 expansion.packs.map((pack) => (
                   <CompleteProgress
@@ -72,6 +78,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: Exp
                     expansion={expansion}
                     packName={pack.name}
                     numberFilter={numberFilter}
+                    deckbuildingMode={deckbuildingMode}
                   />
                 ))}
             </div>
@@ -94,7 +101,13 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: Exp
             </>
           )}
           <div className="col-span-4 lg:col-span-2">
-            <CompleteProgress title={t('totalCards')} expansion={expansion} rarityFilter={rarityFilter} numberFilter={numberFilter} />
+            <CompleteProgress
+              title={t('totalCards')}
+              expansion={expansion}
+              rarityFilter={rarityFilter}
+              numberFilter={numberFilter}
+              deckbuildingMode={deckbuildingMode}
+            />
             {expansion.packs.length > 1 &&
               expansion.packs.map((pack) => (
                 <CompleteProgress
@@ -104,6 +117,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter }: Exp
                   title={t(pack.name, { ns: 'common/packs' })}
                   expansion={expansion}
                   packName={pack.name}
+                  deckbuildingMode={deckbuildingMode}
                 />
               ))}
           </div>
