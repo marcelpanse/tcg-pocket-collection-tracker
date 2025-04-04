@@ -44,11 +44,9 @@ const InstallPrompt = () => {
   }, [])
 
   const handleInstallClick = async () => {
-    console.log('install clicked', deferredPrompt)
     if (deferredPrompt) {
-      console.log('prompting')
       await deferredPrompt.prompt()
-      console.log('awaiting user choice')
+
       const choiceResult = await deferredPrompt.userChoice
 
       if (choiceResult.outcome === 'accepted') {
