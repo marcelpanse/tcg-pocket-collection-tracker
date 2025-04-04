@@ -173,8 +173,6 @@ export const incrementMultipleCards = async (
   setOwnedCards: React.Dispatch<React.SetStateAction<CollectionRow[]>>,
   user: User | null,
 ) => {
-  console.log('incrementing multiple cards', cardIds, incrementAmount)
-
   if (!user || !user.user.email) {
     throw new Error('User not logged in')
   }
