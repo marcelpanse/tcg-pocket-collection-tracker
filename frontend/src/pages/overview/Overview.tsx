@@ -97,9 +97,10 @@ function Overview() {
           </Alert>
         )}
 
-        <div className="mb-8 flex items-center gap-2">
+        <div className="mb-8 flex items-center gap-2 flex-wrap">
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} deckbuildingMode={deckbuildingMode} />
           <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[1, 2, 3, 4, 5]} />
+          <div className="grow" />
           <DeckbuildingFilter deckbuildingMode={deckbuildingMode} setDeckbuildingMode={setDeckbuildingMode} />
         </div>
 
