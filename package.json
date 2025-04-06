@@ -34,10 +34,14 @@
     "@tensorflow/tfjs": "^4.22.0",
     "cheerio": "^1.0.0",
     "fs-extra": "^11.3.0",
+    "googleapis": "^148.0.0",
     "i18next": "^24.2.3",
     "i18next-browser-languagedetector": "^8.0.4",
     "i18next-http-backend": "^3.0.2",
     "node-fetch": "^3.3.2",
-    "react-i18next": "^15.4.1"
+    "p-limit": "^6.2.0",
+    "react-i18next": "^15.4.1",
+    "sharp": "^0.34.0",
+    "xlsx": "^0.18.5"
   }
 }
