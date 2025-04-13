@@ -72,6 +72,7 @@ export const expansions: Expansion[] = [
     cards: a2bCards,
     packs: [{ name: 'shiningrevelrypack', color: '#99F6E4' }],
     tradeable: false,
+    containsShinies: true,
   },
   {
     name: 'promo-a',
@@ -115,6 +116,8 @@ export const sellableForTokensDictionary: Record<Rarity, number | null> = {
 
 const basicCards: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊']
 
+type CardWithAmount = Card & { amount_owned: number }
+
 interface NrOfCardsOwnedProps {
   ownedCards: CollectionRow[]
   rarityFilter: Rarity[]
@@ -124,10 +127,12 @@ interface NrOfCardsOwnedProps {
   deckbuildingMode?: boolean
 }
 export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expansion, packName, deckbuildingMode }: NrOfCardsOwnedProps): number => {
-  let allCardsWithAmounts = allCards.map((ac) => {
-    const amount = ownedCards.find((oc) => ac.card_id === oc.card_id)?.amount_owned || 0
-    return { ...ac, amount_owned: amount }
-  })
+  let allCardsWithAmounts = allCards
+    .filter((a) => !a.linkedCardID)
+    .map((ac) => {
+      const amount = ownedCards.find((oc) => ac.card_id === oc.card_id)?.amount_owned || 0
+      return { ...ac, amount_owned: amount }
+    })
   if (deckbuildingMode) {
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
@@ -141,20 +146,20 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
   }
 
   const filters = {
-    number: (cr: CollectionRow) => cr.amount_owned > numberFilter - 1,
-    rarity: (cr: CollectionRow) => {
+    number: (cr: CardWithAmount) => cr.amount_owned > numberFilter - 1,
+    rarity: (cr: CardWithAmount) => {
       const cardRarity = getCardById(cr.card_id)?.rarity
       if (!rarityFilter.length || !cardRarity) return true
       return rarityFilter.includes(cardRarity)
     },
-    expansion: (cr: CollectionRow) => (expansion ? expansion.cards.find((c) => cr.card_id === c.card_id) : true),
-    pack: (cr: CollectionRow) => (expansion && packName ? expansion.cards.find((c) => c.pack === packName && cr.card_id === c.card_id) : true),
-    deckbuildingMode: (cr: CollectionRow) =>
+    expansion: (cr: CardWithAmount) => (expansion ? expansion.cards.find((c) => cr.card_id === c.card_id) : true),
+    pack: (cr: CardWithAmount) => (expansion && packName ? expansion.cards.find((c) => c.pack === packName && cr.card_id === c.card_id) : true),
+    deckbuildingMode: (cr: CardWithAmount) =>
       deckbuildingMode ? allCardsWithAmounts.find((c) => c.card_id === cr.card_id && c.amount_owned > numberFilter - 1) : true,
   }
 
   // biome-ignore format: improve readability for filters
-  return ownedCards
+  return allCardsWithAmounts
     .filter(filters.number)
     .filter(filters.rarity)
     .filter(filters.expansion)
@@ -214,8 +219,8 @@ const probabilityPerRarity4: Record<Rarity, number> = {
   '☆': 2.572,
   '☆☆': 0.5,
   '☆☆☆': 0.222,
-  '✵': 0.714,
-  '✵✵': 0.33,
+  '✵': 0,
+  '✵✵': 0,
   'Crown Rare': 0.04,
   Unknown: 0,
   '': 0,
@@ -228,9 +233,51 @@ const probabilityPerRarity5: Record<Rarity, number> = {
   '☆': 10.288,
   '☆☆': 2,
   '☆☆☆': 0.888,
+  '✵': 0,
+  '✵✵': 0,
+  'Crown Rare': 0.16,
+  Unknown: 0,
+  '': 0,
+}
+const probabilityPerRarity4Shiny: Record<Rarity, number> = {
+  '◊': 0,
+  '◊◊': 89,
+  '◊◊◊': 4.9525,
+  '◊◊◊◊': 1.666,
+  '☆': 2.572,
+  '☆☆': 0.5,
+  '☆☆☆': 0.222,
+  '✵': 0.71425,
+  '✵✵': 0.33325,
+  'Crown Rare': 0.04,
+  Unknown: 0,
+  '': 0,
+}
+const probabilityPerRarity5Shiny: Record<Rarity, number> = {
+  '◊': 0,
+  '◊◊': 56,
+  '◊◊◊': 19.81,
+  '◊◊◊◊': 6.664,
+  '☆': 10.288,
+  '☆☆': 2,
+  '☆☆☆': 0.888,
   '✵': 2.857,
   '✵✵': 1.333,
   'Crown Rare': 0.16,
+  Unknown: 0,
+  '': 0,
+}
+const abilityByRarityToBeInRarePack: Record<Rarity, number> = {
+  '◊': 0,
+  '◊◊': 0,
+  '◊◊◊': 0,
+  '◊◊◊◊': 0,
+  '☆': 1,
+  '☆☆': 1,
+  '☆☆☆': 1,
+  '✵': 1,
+  '✵✵': 1,
+  'Crown Rare': 1,
   Unknown: 0,
   '': 0,
 }
@@ -249,6 +296,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
   }
 
   const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'everypack')
+  const cardsInRarePack = cardsInPack.filter((c) => abilityByRarityToBeInRarePack[c.rarity] === 1)
 
   let cardsInPackWithAmounts = cardsInPack.map((cip) => {
     const amount = ownedCards.find((oc) => cip.card_id === oc.card_id)?.amount_owned || 0
@@ -284,6 +332,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
   let totalProbability1_3 = 0
   let totalProbability4 = 0
   let totalProbability5 = 0
+  let rareProbability1_5 = 0
   for (const card of missingCards) {
     const rarityList = [card.rarity]
     // Skip cards that cannot be picked
@@ -305,26 +354,36 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
     let chanceToGetThisCard1_3 = 0
     let chanceToGetThisCard4 = 0
     let chanceToGetThisCard5 = 0
+    let chanceToGetThisCardRare1_5 = 0
 
     for (const rarity of rarityList) {
       const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity).length
 
       // the chance to get this card is the probability of getting this card in the pack divided by the number of cards of this rarity
       chanceToGetThisCard1_3 += probabilityPerRarity1_3[rarity] / 100 / nrOfcardsOfThisRarity
-      chanceToGetThisCard4 += probabilityPerRarity4[rarity] / 100 / nrOfcardsOfThisRarity
-      chanceToGetThisCard5 += probabilityPerRarity5[rarity] / 100 / nrOfcardsOfThisRarity
+      if (expansion.containsShinies) {
+        chanceToGetThisCard4 += probabilityPerRarity4Shiny[rarity] / 100 / nrOfcardsOfThisRarity
+        chanceToGetThisCard5 += probabilityPerRarity5Shiny[rarity] / 100 / nrOfcardsOfThisRarity
+      } else {
+        chanceToGetThisCard4 += probabilityPerRarity4[rarity] / 100 / nrOfcardsOfThisRarity
+        chanceToGetThisCard5 += probabilityPerRarity5[rarity] / 100 / nrOfcardsOfThisRarity
+      }
+      chanceToGetThisCardRare1_5 += abilityByRarityToBeInRarePack[rarity] / cardsInRarePack.length
     }
 
     // add up the chances to get this card
     totalProbability1_3 += chanceToGetThisCard1_3
     totalProbability4 += chanceToGetThisCard4
     totalProbability5 += chanceToGetThisCard5
+    rareProbability1_5 += chanceToGetThisCardRare1_5
   }
 
-  // take the total probabilities per card draw (for the 1-3 you need to take the cube root of the probability) and multiply
-  const chanceToGetNewCard = 1 - (1 - totalProbability1_3) ** 3 * (1 - totalProbability4) * (1 - totalProbability5)
+  // take the total probabilities per card draw (for the 1-3 you need to cube the probability) and multiply
+  const chanceToGetNewCard = 0.9995 * (1 - (1 - totalProbability1_3) ** 3 * (1 - totalProbability4) * (1 - totalProbability5))
+  const chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - rareProbability1_5) ** 5)
 
-  return chanceToGetNewCard
+  // disjoint union of probabilities
+  return chanceToGetNewCard + chanceToGetNewCardInRarePack
 }
 
 export const pullRateForSpecificCard = (expansion: Expansion, packName: string, card: Card) => {

@@ -5,13 +5,14 @@ let _searchDebounce: number | null = null
 
 type Props = {
   setSearchValue: (searchValue: string) => void
+  fullWidth?: boolean
 }
-const SearchInput: FC<Props> = ({ setSearchValue }) => {
+const SearchInput: FC<Props> = ({ setSearchValue, fullWidth }) => {
   return (
     <Input
       type="search"
       placeholder="Search..."
-      className="w-full md:w-32 border-2 h-[38px]"
+      className={`w-full ${!fullWidth ? 'sm:w-32' : ''} border-2 h-[38px]`}
       style={{ borderColor: '#45556C' }}
       onChange={(e) => {
         if (_searchDebounce) {

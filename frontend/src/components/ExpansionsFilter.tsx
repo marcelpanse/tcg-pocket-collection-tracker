@@ -12,7 +12,7 @@ const ExpansionsFilter: FC<Props> = ({ expansionFilter, setExpansionFilter }) =>
 
   return (
     <Tabs value={expansionFilter} onValueChange={(value) => setExpansionFilter(value)} className="w-full">
-      <TabsList className="w-full flex-wrap h-auto lg:h-[40px] border-2 border-slate-600 rounded-md">
+      <TabsList className="w-full flex-wrap h-auto border-2 border-slate-600 rounded-md">
         <TabsTrigger value="all">{t('all')}</TabsTrigger>
         {expansions.map((expansion) => (
           <TabsTrigger key={`tab_trigger_${expansion.id}`} value={expansion.id}>

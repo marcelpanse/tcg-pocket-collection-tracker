@@ -29,7 +29,7 @@ const RarityFilter: FC<Props> = ({ rarityFilter, setRarityFilter, deckbuildingMo
         size="sm"
         value={rarityFilter}
         onValueChange={(value: Rarity[]) => setRarityFilter(value)}
-        className={`justify-end shadow-none border-2 border-slate-600 rounded-md ${collapse ? 'flex-col' : 'flex-row'}`}
+        className={`justify-center shadow-none border-2 border-slate-600 rounded-md flex-wrap ${collapse ? 'flex-col' : 'flex-row'}`}
       >
         <ToggleGroupItem value="◊" aria-label="◊" className="text-gray-400 hover:text-gray-500">
           ♢

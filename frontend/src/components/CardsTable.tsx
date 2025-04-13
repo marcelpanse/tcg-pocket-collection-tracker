@@ -120,11 +120,11 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
   return (
     <div
       ref={scrollRef}
-      className="overflow-y-auto mt-4 sm:mt-8 px-4 flex flex-col justify-start"
+      className="overflow-y-auto mt-2 sm:mt-4 px-4 flex flex-col justify-start"
       style={{ scrollbarWidth: 'none', height: scrollContainerHeight }}
     >
       {showStats && (
-        <small className="text-right hidden md:block">
+        <small className="text-center md:text-right mb-2 md:mb-0">
           {cards.filter((c) => !c.linkedCardID).length} selected, {cards.filter((card) => (card.amount_owned ?? 0) > 0).length} uniques owned,{' '}
           {cards.reduce((acc, card) => acc + (card.amount_owned ?? 0), 0)} total owned
         </small>
