@@ -26,6 +26,7 @@ export interface Expansion {
   packs: Pack[]
   tradeable?: boolean
   promo?: boolean
+  containsShinies?: boolean
 }
 
 export interface Pack {

@@ -72,6 +72,7 @@ export const expansions: Expansion[] = [
     cards: a2bCards,
     packs: [{ name: 'shiningrevelrypack', color: '#99F6E4' }],
     tradeable: false,
+    containsShinies: true,
   },
   {
     name: 'promo-a',
@@ -360,7 +361,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
 
       // the chance to get this card is the probability of getting this card in the pack divided by the number of cards of this rarity
       chanceToGetThisCard1_3 += probabilityPerRarity1_3[rarity] / 100 / nrOfcardsOfThisRarity
-      if (expansion.id === 'A2b') {
+      if (expansion.containsShinies) {
         chanceToGetThisCard4 += probabilityPerRarity4Shiny[rarity] / 100 / nrOfcardsOfThisRarity
         chanceToGetThisCard5 += probabilityPerRarity5Shiny[rarity] / 100 / nrOfcardsOfThisRarity
       } else {
