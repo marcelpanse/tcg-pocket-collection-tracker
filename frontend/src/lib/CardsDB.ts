@@ -31,6 +31,7 @@ export const getCardById = (cardId: string): Card | undefined => {
 export const expansions: Expansion[] = [
   {
     name: 'geneticapex',
+    prettyName: 'Genetic Apex',
     id: 'A1',
     cards: a1Cards,
     packs: [
@@ -43,6 +44,7 @@ export const expansions: Expansion[] = [
   },
   {
     name: 'mythicalisland',
+    prettyName: 'Mythical Island',
     id: 'A1a',
     cards: a1aCards,
     packs: [{ name: 'mewpack', color: '#FFC1EA' }],
@@ -50,6 +52,7 @@ export const expansions: Expansion[] = [
   },
   {
     name: 'space-timesmackdown',
+    prettyName: 'Space-Time SmackDown',
     id: 'A2',
     cards: a2Cards,
     packs: [
@@ -61,6 +64,7 @@ export const expansions: Expansion[] = [
   },
   {
     name: 'triumphantlight',
+    prettyName: 'Triumphant Light',
     id: 'A2a',
     cards: a2aCards,
     packs: [{ name: 'arceuspack', color: '#E4D7CA' }],
@@ -68,6 +72,7 @@ export const expansions: Expansion[] = [
   },
   {
     name: 'shiningrevelry',
+    prettyName: 'Shining Revelry',
     id: 'A2b',
     cards: a2bCards,
     packs: [{ name: 'shiningrevelrypack', color: '#99F6E4' }],
@@ -75,6 +80,7 @@ export const expansions: Expansion[] = [
   },
   {
     name: 'promo-a',
+    prettyName: 'Promo-A',
     id: 'P-A',
     cards: paCards,
     packs: [{ name: 'everypack', color: '#CCCCCC' }],
@@ -255,4 +261,41 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
   // console.log('chance to get new card', chanceToGetNewCard)
 
   return chanceToGetNewCard
+}
+
+///////////////////////
+/// TRADE FUNCTIONS ///
+///////////////////////
+
+export const tradeableExpansions = expansions.filter((e) => e.tradeable).map((e) => e.id)
+
+interface LookingForTradeCardsProps {
+  cardCollection: CollectionRow[]
+  numberOfCards?: number
+}
+export const getLookingForTradeCards = ({ cardCollection, numberOfCards = 0 }: LookingForTradeCardsProps) => {
+  const lookingForCards = allCards
+    .filter(
+      (ac) =>
+        cardCollection.findIndex((cc) => cc.card_id === ac.card_id) === -1 ||
+        cardCollection[cardCollection.findIndex((cc) => cc.card_id === ac.card_id)].amount_owned <= numberOfCards,
+    )
+    .filter((c) => tradeableRaritiesDictionary[c.rarity] !== null && tradeableExpansions.includes(c.expansion))
+  return lookingForCards
+}
+
+interface ForTradeCardsProps {
+  cardCollection: CollectionRow[]
+  numberOfCards?: number
+}
+export const getForTradeCards = ({ cardCollection, numberOfCards = 2 }: ForTradeCardsProps) => {
+  const myCards = cardCollection.filter((c) => c.amount_owned >= numberOfCards)
+  const forTradeCards = allCards
+    .filter((ac) => myCards.findIndex((oc) => oc.card_id === ac.card_id) > -1)
+    .map((ac) => ({
+      ...ac,
+      amount_owned: myCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned,
+    }))
+    .filter((c) => tradeableRaritiesDictionary[c.rarity] !== null && tradeableExpansions.includes(c.expansion))
+  return forTradeCards
 }

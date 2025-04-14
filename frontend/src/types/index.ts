@@ -21,6 +21,7 @@ export interface CollectionRow {
 
 export interface Expansion {
   name: string
+  prettyName: string
   id: ExpansionId
   cards: Card[]
   packs: Pack[]

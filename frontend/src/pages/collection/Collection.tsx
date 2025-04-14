@@ -2,6 +2,7 @@ import { BatchUpdateDialog } from '@/components/BatchUpdateDialog'
 import { updateMultipleCards } from '@/components/Card.tsx'
 import { CardsTable } from '@/components/CardsTable.tsx'
 import ExpansionsFilter from '@/components/ExpansionsFilter.tsx'
+import { FriendTradeDialog } from '@/components/FriendTradeDialog'
 import OwnedFilter from '@/components/OwnedFilter.tsx'
 import RarityFilter from '@/components/RarityFilter.tsx'
 import SearchInput from '@/components/SearchInput.tsx'
@@ -118,6 +119,7 @@ function Collection() {
         <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
 
         {!friendCards && <BatchUpdateDialog filteredCards={getFilteredCards} onBatchUpdate={handleBatchUpdate} disabled={getFilteredCards.length === 0} />}
+        {friendCards && <FriendTradeDialog userCards={ownedCards} friendCards={friendCards} disabled={getFilteredCards.length === 0} />}
       </div>
 
       <div>
