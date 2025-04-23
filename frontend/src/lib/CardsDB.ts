@@ -16,6 +16,14 @@ const update = (cards: Card[], expansionName: ExpansionId) => {
   return cards
 }
 
+const equivalent = (firstCard: Card, secondCard: Card) => {
+  return (
+    firstCard.name === secondCard.name &&
+    firstCard.attacks.length === secondCard.attacks.length &&
+    firstCard.attacks.every((a) => secondCard.attacks.some((atk) => atk.name === a.name))
+  )
+}
+
 export const a1Cards: Card[] = update(A1 as unknown as Card[], 'A1')
 export const a1aCards: Card[] = update(A1a as unknown as Card[], 'A1a')
 export const a2Cards: Card[] = update(A2 as unknown as Card[], 'A2')
@@ -134,11 +142,10 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
       return { ...ac, amount_owned: amount }
     })
   if (deckbuildingMode) {
+    // can't filter by card ID, because we are specifically looking for cards with the same name, attacks, and ability but different arts
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
-        const amount_owned = allCardsWithAmounts
-          .filter((c) => c.name === ac.name && c.expansion === ac.expansion) // can't use card ID, because we are specifically looking for cards with the same name but different arts
-          .reduce((acc, rc) => acc + (rc.amount_owned || 0), 0)
+        const amount_owned = allCardsWithAmounts.filter((c) => equivalent(c, ac)).reduce((acc, rc) => acc + (rc.amount_owned || 0), 0)
 
         return { ...ac, amount_owned }
       })
@@ -307,9 +314,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
     // This function adds all the full-art cards amounts to the basic versions, then removes the full-art ones from the list
     cardsInPackWithAmounts = cardsInPack
       .map((cip) => {
-        const amount = cardsInPackWithAmounts
-          .filter((innerCard) => cip.name === innerCard.name && cip.expansion === innerCard.expansion)
-          .reduce((acc, rc) => acc + (rc.amount_owned || 0), 0)
+        const amount = cardsInPackWithAmounts.filter((innerCard) => equivalent(cip, innerCard)).reduce((acc, rc) => acc + (rc.amount_owned || 0), 0)
 
         return {
           ...cip,
@@ -342,7 +347,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
       // while in deckbuilding mode, we only have diamond cards in the list,
       // but want to include the chance of getting one of the missing cards as a more rare version,
       // so we add the rarities here
-      const matchingCards = cardsInPack.filter((cip) => cip.name === card.name && cip.expansion === card.expansion)
+      const matchingCards = cardsInPack.filter((cip) => equivalent(cip, card))
 
       for (const mc of matchingCards) {
         if (!rarityList.includes(mc.rarity)) {
