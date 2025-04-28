@@ -1,0 +1,21 @@
+{
+  "stats": {
+    "title": "Grazie per essere parte della nostra community",
+    "description": "Al momento, la nostra community di {{usersCount}} utenti ha complessivamente tenuto traccia di {{collectionCount}} carte in totale!"
+  },
+  "dontHaveCards": {
+    "title": "Non hai ancora nessuna carta salvata!",
+    "description": "Vai alla pagina della collezione per aggiungere la tua prima carta o premi il pulsante di login per creare un account."
+  },
+  "usersOurCommunity": {
+    "youAre": "Fantastico, sei parte del",
+    "join": "Unisciti al",
+    "text": "utenti nella nostra community! 🎉"
+  },
+  "all": "tutte le buste",
+  "youHave": "Hai",
+  "uniqueCards": " carte su {{totalUniqueCards}} carte uniche",
+  "numberOfCopies-single": "con almeno 1 copia",
+  "numberOfCopies-plural": "con almeno {{numberFilter}} copie",
+  "cardsTotal": "carte in totale"
+}
