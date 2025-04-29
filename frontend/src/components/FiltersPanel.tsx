@@ -3,6 +3,7 @@ import { updateMultipleCards } from '@/components/Card.tsx'
 import ExpansionsFilter from '@/components/filters/ExpansionsFilter.tsx'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import OwnedFilter from '@/components/filters/OwnedFilter.tsx'
+import PackFilter from '@/components/filters/PackFilter.tsx'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
@@ -29,6 +30,7 @@ interface Props {
 
   filtersDialog?: {
     expansions?: boolean
+    pack?: boolean
     search?: boolean
     owned?: boolean
     rarity?: boolean
@@ -45,6 +47,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
   const [langState, setLangState] = useState(i18n.language)
   const [searchValue, setSearchValue] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<string>('all')
+  const [packFilter, setPackFilter] = useState<string>('all')
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
   const [numberFilter, setNumberFilter] = useState(0)
@@ -63,6 +66,9 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
 
     if (expansionFilter !== 'all') {
       filteredCards = filteredCards.filter((card) => card.expansion === expansionFilter)
+    }
+    if (packFilter !== 'all') {
+      filteredCards = filteredCards.filter((card) => card.pack === packFilter || card.pack === 'everypack')
     }
     if (ownedFilter !== 'all') {
       if (ownedFilter === 'owned') {
@@ -91,7 +97,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
     filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) >= numberFilter)
 
     return filteredCards
-  }, [cards, expansionFilter, rarityFilter, searchValue, ownedFilter, numberFilter, langState])
+  }, [cards, expansionFilter, packFilter, rarityFilter, searchValue, ownedFilter, numberFilter, langState])
 
   useEffect(() => {
     onFiltersChanged(getFilteredCards)
@@ -115,7 +121,9 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
       {children}
 
       <div className="flex items-center gap-2 flex-col md:flex-row gap-y-1 px-4 mb-2">
-        {visibleFilters?.expansions && <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} />}
+        {visibleFilters?.expansions && (
+          <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} setPackFilter={setPackFilter} />
+        )}
       </div>
       <div className="items-center gap-2 flex-row gap-y-1 px-4 flex">
         {visibleFilters?.search && <SearchInput setSearchValue={setSearchValue} />}
@@ -133,7 +141,10 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
               </DialogHeader>
               <div className="flex flex-col gap-3">
                 {filtersDialog.search && <SearchInput setSearchValue={setSearchValue} fullWidth />}
-                {filtersDialog.expansions && <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} />}
+                {filtersDialog.expansions && (
+                  <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} setPackFilter={setPackFilter} />
+                )}
+                {filtersDialog.pack && <PackFilter packFilter={packFilter} setPackFilter={setPackFilter} expansion={expansionFilter} />}
                 {filtersDialog.rarity && <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />}
                 {filtersDialog.owned && <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} fullWidth />}
                 {filtersDialog.amount && (

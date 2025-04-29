@@ -61,7 +61,7 @@ function Collection() {
         cards={cardCollection}
         onFiltersChanged={(cards) => setFilteredCards(cards)}
         visibleFilters={{ expansions: !isMobile, search: true, owned: !isMobile, rarity: !isMobile }}
-        filtersDialog={{ expansions: true, search: true, owned: true, rarity: true, amount: true }}
+        filtersDialog={{ expansions: true, pack: true, search: true, owned: true, rarity: true, amount: true }}
         batchUpdate={Boolean(!friendCards)}
       >
         <div>

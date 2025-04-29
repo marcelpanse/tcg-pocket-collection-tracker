@@ -65,7 +65,7 @@ function Overview() {
       const pullRates = expansion.packs
         .filter((p) => p.name !== 'everypack')
         .map((pack) => ({
-          packName: pack.name.replace('pack', ''),
+          packName: pack.name,
           percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter, deckbuildingMode }),
           fill: pack.color,
         }))
