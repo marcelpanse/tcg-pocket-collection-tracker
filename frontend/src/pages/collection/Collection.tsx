@@ -1,16 +1,20 @@
 import { CardsTable } from '@/components/CardsTable.tsx'
 import FilterPanel from '@/components/FiltersPanel'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
+import { Button } from '@/components/ui/button.tsx'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { fetchCollection } from '@/lib/fetchCollection.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
 import type { Card, CollectionRow } from '@/types'
+import loadable from '@loadable/component'
 import { Siren } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
 import { useParams } from 'react-router'
+
+const TradeMatches = loadable(() => import('./TradeMatches.tsx'))
 
 function Collection() {
   const params = useParams()
@@ -21,6 +25,7 @@ function Collection() {
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
   const [friendCards, setFriendCards] = useState<CollectionRow[] | null>(null)
   const [filteredCards, setFilteredCards] = useState<Card[] | null>(null)
+  const [tradeMatchesDialogOpen, setTradeMatchesDialogOpen] = useState(false)
 
   useEffect(() => {
     const friendId = params.friendId
@@ -30,6 +35,10 @@ function Collection() {
     } else if (!friendId && friendCards) {
       // NOTE: because the card table is hard to refresh, we have to reload the page. This is a bit of a hack, but it works. If you figure  a better way, please let me know.
       window.location.reload()
+    }
+
+    if (new URLSearchParams(window.location.search).get('view') === 'trade/') {
+      setTradeMatchesDialogOpen(true)
     }
   }, [params])
 
@@ -69,13 +78,26 @@ function Collection() {
             <Alert className="mb-2 border-2 border-slate-600 shadow-none">
               <Siren className="h-4 w-4" />
               <AlertTitle>{t('publicCollectionTitle')}</AlertTitle>
-              <AlertDescription>{t('publicCollectionDescription')}</AlertDescription>
+              <AlertDescription>
+                <div className="flex items-center">
+                  {t('publicCollectionDescription')}
+                  <Button className="mb-4" onClick={() => setTradeMatchesDialogOpen(true)}>
+                    Show possible trades
+                  </Button>
+                </div>
+              </AlertDescription>
             </Alert>
           )}
         </div>
       </FilterPanel>
       <div>{filteredCards && <CardsTable cards={filteredCards} resetScrollTrigger={resetScrollTrigger} showStats />}</div>
       <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
+      <TradeMatches
+        isTradeMatchesDialogOpen={tradeMatchesDialogOpen}
+        setIsTradeMatchesDialogOpen={setTradeMatchesDialogOpen}
+        ownedCards={ownedCards}
+        friendCards={friendCards || []}
+      />
     </div>
   )
 }
