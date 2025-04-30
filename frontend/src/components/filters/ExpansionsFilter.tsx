@@ -6,12 +6,20 @@ import { useTranslation } from 'react-i18next'
 interface Props {
   expansionFilter: string
   setExpansionFilter: (expansionFilter: string) => void
+  setPackFilter: (expansionFilter: string) => void
 }
-const ExpansionsFilter: FC<Props> = ({ expansionFilter, setExpansionFilter }) => {
+const ExpansionsFilter: FC<Props> = ({ expansionFilter, setExpansionFilter, setPackFilter }) => {
   const { t } = useTranslation('common/sets')
 
   return (
-    <Tabs value={expansionFilter} onValueChange={(value) => setExpansionFilter(value)} className="w-full">
+    <Tabs
+      value={expansionFilter}
+      onValueChange={(value) => {
+        setExpansionFilter(value)
+        setPackFilter('all')
+      }}
+      className="w-full"
+    >
       <TabsList className="w-full flex-wrap h-auto border-2 border-slate-600 rounded-md">
         <TabsTrigger value="all">{t('all')}</TabsTrigger>
         {expansions.map((expansion) => (

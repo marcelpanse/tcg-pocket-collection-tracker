@@ -1,0 +1,35 @@
+{
+  "text": {
+    "tradeTokens": "Gettoni scambio",
+    "hp": "PS",
+    "cardType": "Tipo di carta",
+    "evolutionType": "Tipo di evoluzione",
+    "ex": "EX",
+    "craftingCost": "Costo punti busta",
+    "artist": "Artista",
+    "setDetails": "Dettagli espansione",
+    "expansion": "Espansione",
+    "pack": "Busta",
+    "weakness": "Debolezza",
+    "retreat": "Costo di ritirata",
+    "ability": "Abilità",
+    "abilityEffect": "Effetto abilità",
+    "details": "Dettagli"
+  },
+  "cardType": {
+    "pokémon": "Pokémon",
+    "trainer": "Allenatore"
+  },
+  "evolutionType": {
+    "basic": "Base",
+    "stage1": "Fase 1",
+    "stage2": "Fase 2",
+    "item": "Strumento",
+    "tool": "Oggetto Pokémon",
+    "supporter": "Aiuto"
+  },
+  "ex": {
+    "yes": "Sì",
+    "no": "No"
+  }
+}

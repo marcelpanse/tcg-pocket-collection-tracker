@@ -1,0 +1,29 @@
+{
+  "overview": "Panoramica",
+  "collection": "Collezione",
+  "trade": "Scambio",
+  "selectLanguage": "Seleziona lingua",
+  "languages": {
+    "es-ES": "Spagnolo",
+    "en-US": "Inglese",
+    "pt-BR": "Portoghese",
+    "fr-FR": "Francese",
+    "it-IT": "Italiano"
+  },
+  "community": "Community",
+  "login": "Login",
+  "signUp": "Login / Registrazione",
+  "myAccount": "Il mio account",
+  "editProfile": "Modifica profilo",
+  "logOut": "Logout",
+  "install": "🌟 Ti piace TCG Pocket Tracker? Aggiungilo alla tua schermata home per un accesso veloce!",
+  "accept": "🚀 Sì, installalo ora!",
+  "cancel": "😊 No, grazie",
+  "export": "Esporta",
+  "import": "Importa",
+  "aboutUs": "Su di noi",
+  "aboutUsDialog": {
+    "title": "Su di noi",
+    "content": "TCG Pocket Tracker è un progetto gratuito e open source il cui scopo è aiutarti a tenere traccia della tua collezione di Pokémon Pocket. Fornisce un'interfaccia semplice e intuitiva per gestire la propria collezione. Il progetto è open source e accoglie contributi dalla community. Se hai qualsiasi domanda o feedback, entra in contatto con noi sul <a href=\"https://community.tcgpocketcollectiontracker.com\" style=\"text-decoration: underline;\">nostro forum della community</a> o su <a href=\"https://github.com/marcelpanse/tcg-pocket-collection-tracker\" style=\"text-decoration: underline;\">GitHub</a>."
+  }
+}

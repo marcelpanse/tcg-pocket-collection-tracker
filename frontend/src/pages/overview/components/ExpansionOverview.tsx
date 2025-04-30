@@ -28,7 +28,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
       packs = packs.filter((pack) => pack.name !== 'everypack')
     }
     const chartData = packs.map((pack) => ({
-      packName: pack.name.replace('pack', ''),
+      packName: pack.name,
       percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter, deckbuildingMode }),
       fill: pack.color,
     }))
@@ -51,7 +51,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
               <>
                 <GradientCard
                   title={highestProbabilityPack.packName}
-                  packNames={chartData.map((cd) => cd.packName).join(', ')}
+                  packNames={chartData.map((cd) => t(cd.packName, { ns: 'common/packs' })).join(', ')}
                   percentage={highestProbabilityPack.percentage}
                   className="col-span-8 snap-start flex-shrink-0 w-full"
                   backgroundColor={highestProbabilityPack.fill}
@@ -90,7 +90,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
             <>
               <GradientCard
                 title={highestProbabilityPack.packName}
-                packNames={chartData.map((cd) => cd.packName).join(', ')}
+                packNames={chartData.map((cd) => t(cd.packName, { ns: 'common/packs' })).join(', ')}
                 percentage={highestProbabilityPack.percentage}
                 className="col-span-8 lg:col-span-4"
                 backgroundColor={highestProbabilityPack.fill}
