@@ -37,7 +37,7 @@ function Collection() {
       window.location.reload()
     }
 
-    if (new URLSearchParams(window.location.search).get('view') === 'trade/') {
+    if (new URLSearchParams(window.location.search).get('view') === 'trade/' && friendId) {
       setTradeMatchesDialogOpen(true)
     }
   }, [params])

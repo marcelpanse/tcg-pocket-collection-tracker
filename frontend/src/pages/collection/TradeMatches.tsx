@@ -100,7 +100,7 @@ const TradeMatches: FC<Props> = ({ isTradeMatchesDialogOpen, setIsTradeMatchesDi
 
   return (
     <Dialog open={isTradeMatchesDialogOpen} onOpenChange={setIsTradeMatchesDialogOpen}>
-      <DialogContent className="border-2 border-slate-600 shadow-none max-w-4xl">
+      <DialogContent className="border-2 border-slate-600 shadow-none max-w-4xl h-[90vh]">
         <DialogHeader>
           <DialogTitle>{t('title')}</DialogTitle>
         </DialogHeader>
