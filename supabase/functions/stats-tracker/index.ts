@@ -51,7 +51,7 @@ Deno.serve(async (_req) => {
       connection.release()
     }
   } catch (err) {
-    console.error(err)
-    return new Response(String(err), { status: 500 })
+    console.error('An error occurred:', err)
+    return new Response('An internal server error occurred', { status: 500 })
   }
 })
