@@ -89,10 +89,10 @@ export const expansions: Expansion[] = [
     id: 'A3',
     cards: a3Cards,
     packs: [
-      { name: 'lunalapack', color: '#362572' },
+      { name: 'lunalapack', color: '#A0ABE0' },
       { name: 'solgaleopack', color: '#CA793F' },
     ],
-    tradeable: true,
+    tradeable: false,
     containsShinies: true,
   },
   {
