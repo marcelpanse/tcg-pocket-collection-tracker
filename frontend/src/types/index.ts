@@ -1,4 +1,4 @@
-const expansionIds = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'P-A'] as const
+const expansionIds = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'P-A'] as const
 export type ExpansionId = (typeof expansionIds)[number]
 
 const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', '✵', '✵✵', 'Crown Rare', 'Unknown', ''] as const

@@ -14,6 +14,7 @@ const cardFiles = [
   'frontend/assets/cards/A2.json',
   'frontend/assets/cards/A2a.json',
   'frontend/assets/cards/A2b.json',
+  'frontend/assets/cards/A3.json',
   'frontend/assets/cards/P-A.json',
 ]
 

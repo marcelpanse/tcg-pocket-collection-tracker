@@ -626,6 +626,10 @@
       {
         "version": "Promo-A #18",
         "rarity": ""
+      },
+      {
+        "version": "Celestial Guardians #212",
+        "rarity": "☆"
       }
     ],
     "artist": "Kuroimori",
@@ -822,6 +826,10 @@
       {
         "version": "Promo-A #23",
         "rarity": ""
+      },
+      {
+        "version": "Celestial Guardians #210",
+        "rarity": "☆"
       }
     ],
     "artist": "Kouki Saitou",
@@ -1080,6 +1088,10 @@
       {
         "version": "Promo-A #29",
         "rarity": ""
+      },
+      {
+        "version": "Celestial Guardians #217",
+        "rarity": "☆"
       }
     ],
     "artist": "danciao",
@@ -1244,6 +1256,10 @@
       {
         "version": "Promo-A #33",
         "rarity": ""
+      },
+      {
+        "version": "Celestial Guardians #215",
+        "rarity": "☆"
       }
     ],
     "artist": "Kanako Eo",
@@ -2134,6 +2150,10 @@
       {
         "version": "Promo-A #55",
         "rarity": ""
+      },
+      {
+        "version": "Celestial Guardians #225",
+        "rarity": "☆"
       }
     ],
     "artist": "Masakazu Fukuda",
@@ -2301,6 +2321,562 @@
       }
     ],
     "artist": "Akira Komayama",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "60",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_060_EN.webp",
+    "hp": "50",
+    "energy": "Grass",
+    "name": "Exeggcute",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Growth",
+        "damage": "Spurt",
+        "effect": "Take a [G] Energy from your Energy Zone and attach it to this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fire",
+    "retreat": "1",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Mythical Island #1",
+        "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #60",
+        "rarity": ""
+      }
+    ],
+    "artist": "0313",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "61",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_061_EN.webp",
+    "hp": "60",
+    "energy": "Water",
+    "name": "Froakie",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Flop",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #87",
+        "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #61",
+        "rarity": ""
+      }
+    ],
+    "artist": "Sanosuke Sakuma",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "62",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_062_EN.webp",
+    "hp": "60",
+    "energy": "Colorless",
+    "name": "Farfetch'd",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Leek Slap",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Genetic Apex #198",
+        "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #62",
+        "rarity": ""
+      }
+    ],
+    "artist": "Eri Yamaki",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "63",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_063_EN.webp",
+    "hp": "100",
+    "energy": "Colorless",
+    "name": "Rayquaza",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
+        "name": "Spiral Rush",
+        "damage": "70+",
+        "effect": "Flip a coin until you get tails. This attack does 30 more damage for each heads."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Promo-A #63",
+        "rarity": ""
+      }
+    ],
+    "artist": "Yoshinobu Saito",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "64",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_064_EN.webp",
+    "hp": "140",
+    "energy": "Colorless",
+    "name": "Rayquaza ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
+        "name": "Draco",
+        "damage": "Meteor",
+        "effect": "1 of your opponent's Pokémon is chosen at random 4 times. For each time a Pokémon was chosen, do 40 damage to it."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "2",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "yes",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Promo-A #64",
+        "rarity": ""
+      },
+      {
+        "version": "Promo-A #65",
+        "rarity": ""
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "65",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_065_EN.webp",
+    "hp": "140",
+    "energy": "Colorless",
+    "name": "Rayquaza ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
+        "name": "Draco",
+        "damage": "Meteor",
+        "effect": "1 of your opponent's Pokémon is chosen at random 4 times. For each time a Pokémon was chosen, do 40 damage to it."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "2",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "yes",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Promo-A #64",
+        "rarity": ""
+      },
+      {
+        "version": "Promo-A #65",
+        "rarity": ""
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "66",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_066_EN.webp",
+    "hp": "70",
+    "energy": "Psychic",
+    "name": "Mimikyu",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Colorless"],
+        "name": "Shadow Hit",
+        "damage": "60",
+        "effect": "This attack also does 20 damage to 1 of your Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "darkness",
+    "retreat": "1",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Celestial Guardians #83",
+        "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #66",
+        "rarity": ""
+      }
+    ],
+    "artist": "Amelicart",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "67",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_067_EN.webp",
+    "hp": "60",
+    "energy": "Psychic",
+    "name": "Cosmog",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Unknown",
+        "damage": "Teleport",
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "darkness",
+    "retreat": "1",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Celestial Guardians #85",
+        "rarity": "◊"
+      },
+      {
+        "version": "Celestial Guardians #171",
+        "rarity": "☆"
+      },
+      {
+        "version": "Promo-A #67",
+        "rarity": ""
+      }
+    ],
+    "artist": "Mizue",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "68",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_068_EN.webp",
+    "hp": "100",
+    "energy": "Fighting",
+    "name": "Lycanroc",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Fighting", "Colorless"],
+        "name": "Crunch",
+        "damage": "80",
+        "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "1",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Celestial Guardians #100",
+        "rarity": "◊◊◊"
+      },
+      {
+        "version": "Promo-A #68",
+        "rarity": ""
+      }
+    ],
+    "artist": "Ryuta Fuse",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "69",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_069_EN.webp",
+    "hp": "150",
+    "energy": "Grass",
+    "name": "Alolan Exeggutor",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless", "Colorless"],
+        "name": "Tropical Hammer",
+        "damage": "150",
+        "effect": "Flip a coin. If tails, this attack does nothing."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fire",
+    "retreat": "4",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Celestial Guardians #2",
+        "rarity": "◊◊◊"
+      },
+      {
+        "version": "Celestial Guardians #156",
+        "rarity": "☆"
+      },
+      {
+        "version": "Promo-A #69",
+        "rarity": ""
+      }
+    ],
+    "artist": "Satoshi Shirai",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "70",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_070_EN.webp",
+    "hp": "110",
+    "energy": "Water",
+    "name": "Alolan Ninetales",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Water"],
+        "name": "Blizzard",
+        "damage": "60",
+        "effect": "This attack also does 20 damage to each of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "metal",
+    "retreat": "1",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Celestial Guardians #41",
+        "rarity": "◊◊◊"
+      },
+      {
+        "version": "Promo-A #70",
+        "rarity": ""
+      }
+    ],
+    "artist": "tono",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "71",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_071_EN.webp",
+    "hp": "70",
+    "energy": "Fighting",
+    "name": "Crabrawler",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Punch",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "psychic",
+    "retreat": "2",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Celestial Guardians #97",
+        "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #71",
+        "rarity": ""
+      }
+    ],
+    "artist": "Miki Tanaka",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "72",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_072_EN.webp",
+    "hp": "70",
+    "energy": "Darkness",
+    "name": "Alolan Grimer",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Poison",
+        "damage": "Gas",
+        "effect": "Your opponent's Active Pokémon is now Poisoned."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "2",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Promo-A #72",
+        "rarity": ""
+      }
+    ],
+    "artist": "Naoki Saito",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "id": "73",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_073_EN.webp",
+    "hp": "140",
+    "energy": "Colorless",
+    "name": "Toucannon",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Beak Blast",
+        "damage": "80",
+        "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Burned."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "2",
+    "rarity": "Unknown",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Promo-A #73",
+        "rarity": ""
+      }
+    ],
+    "artist": "Sekio",
     "crafting_cost": "Unknown"
   }
 ]

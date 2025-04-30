@@ -4,6 +4,7 @@ import A1a from '../../assets/cards/A1a.json'
 import A2 from '../../assets/cards/A2.json'
 import A2a from '../../assets/cards/A2a.json'
 import A2b from '../../assets/cards/A2b.json'
+import A3 from '../../assets/cards/A3.json'
 import PA from '../../assets/cards/P-A.json'
 
 const update = (cards: Card[], expansionName: ExpansionId) => {
@@ -29,8 +30,9 @@ export const a1aCards: Card[] = update(A1a as unknown as Card[], 'A1a')
 export const a2Cards: Card[] = update(A2 as unknown as Card[], 'A2')
 export const a2aCards: Card[] = update(A2a as unknown as Card[], 'A2a')
 export const a2bCards: Card[] = update(A2b as unknown as Card[], 'A2b')
+export const a3Cards: Card[] = update(A3 as unknown as Card[], 'A3')
 export const paCards: Card[] = update(PA as unknown as Card[], 'P-A')
-export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...a2aCards, ...a2bCards, ...paCards]
+export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...a2aCards, ...a2bCards, ...a3Cards, ...paCards]
 
 export const getCardById = (cardId: string): Card | undefined => {
   return allCards.find((card) => card.card_id === cardId)
@@ -79,7 +81,18 @@ export const expansions: Expansion[] = [
     id: 'A2b',
     cards: a2bCards,
     packs: [{ name: 'shiningrevelrypack', color: '#99F6E4' }],
-    tradeable: false,
+    tradeable: true,
+    containsShinies: true,
+  },
+  {
+    name: 'celestialguardians',
+    id: 'A3',
+    cards: a3Cards,
+    packs: [
+      { name: 'lunalapack', color: '#362572' },
+      { name: 'solgaleopack', color: '#CA793F' },
+    ],
+    tradeable: true,
     containsShinies: true,
   },
   {
