@@ -40,7 +40,7 @@ interface Props {
   batchUpdate?: boolean
 }
 
-const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilters, filtersDialog, batchUpdate }) => {
+const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilters, filtersDialog, batchUpdate }: Props) => {
   const { user } = useContext(UserContext)
   const { ownedCards, setOwnedCards } = useContext(CollectionContext)
 
@@ -51,6 +51,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
   const [numberFilter, setNumberFilter] = useState(0)
+  const [maxNumberFilter, setMaxNumberFilter] = useState<number | null>(null)
 
   const filterRarities = (c: Card) => {
     if (rarityFilter.length === 0) return true
@@ -72,9 +73,9 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
     }
     if (ownedFilter !== 'all') {
       if (ownedFilter === 'owned') {
-        filteredCards = filteredCards.filter((card) => cards.find((oc) => oc.card_id === card.card_id && oc.amount_owned > 0))
+        filteredCards = filteredCards.filter((card) => cards.find((oc: CollectionRow) => oc.card_id === card.card_id && oc.amount_owned > 0))
       } else if (ownedFilter === 'missing') {
-        filteredCards = filteredCards.filter((card) => !cards.find((oc) => oc.card_id === card.card_id && oc.amount_owned > 0))
+        filteredCards = filteredCards.filter((card) => !cards.find((oc: CollectionRow) => oc.card_id === card.card_id && oc.amount_owned > 0))
       }
     }
     filteredCards = filteredCards.filter(filterRarities)
@@ -89,15 +90,18 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
 
     for (const card of filteredCards) {
       if (!card.linkedCardID) {
-        card.amount_owned = cards.find((oc) => oc.card_id === card.card_id)?.amount_owned || 0
+        card.amount_owned = cards.find((oc: CollectionRow) => oc.card_id === card.card_id)?.amount_owned || 0
       } else {
         card.amount_owned = 0
       }
     }
     filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) >= numberFilter)
+    if (maxNumberFilter !== null) {
+      filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) <= maxNumberFilter)
+    }
 
     return filteredCards
-  }, [cards, expansionFilter, packFilter, rarityFilter, searchValue, ownedFilter, numberFilter, langState])
+  }, [cards, expansionFilter, packFilter, rarityFilter, searchValue, ownedFilter, numberFilter, maxNumberFilter, langState])
 
   useEffect(() => {
     onFiltersChanged(getFilteredCards)
@@ -148,7 +152,15 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
                 {filtersDialog.rarity && <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />}
                 {filtersDialog.owned && <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} fullWidth />}
                 {filtersDialog.amount && (
-                  <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]} />
+                  <>
+                    <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]} />
+                    <NumberFilter
+                      numberFilter={maxNumberFilter}
+                      setNumberFilter={setMaxNumberFilter}
+                      options={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+                      label="Max Number of Cards"
+                    />
+                  </>
                 )}
               </div>
             </DialogContent>
