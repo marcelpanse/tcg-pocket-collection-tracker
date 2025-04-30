@@ -51,7 +51,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
   const [numberFilter, setNumberFilter] = useState(0)
-  const [maxNumberFilter, setMaxNumberFilter] = useState<number | null>(null)
+  const [maxNumberFilter, setMaxNumberFilter] = useState(100)
 
   const filterRarities = (c: Card) => {
     if (rarityFilter.length === 0) return true
@@ -96,9 +96,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
       }
     }
     filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) >= numberFilter)
-    if (maxNumberFilter !== null) {
-      filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) <= maxNumberFilter)
-    }
+    filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) <= maxNumberFilter)
 
     return filteredCards
   }, [cards, expansionFilter, packFilter, rarityFilter, searchValue, ownedFilter, numberFilter, maxNumberFilter, langState])
@@ -153,11 +151,12 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
                 {filtersDialog.owned && <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} fullWidth />}
                 {filtersDialog.amount && (
                   <>
-                    <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]} />
+                    <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]} labelKey="minNum" />
                     <NumberFilter
                       numberFilter={maxNumberFilter}
                       setNumberFilter={setMaxNumberFilter}
-                      options={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+                      options={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
+                      labelKey="maxNum"
                     />
                   </>
                 )}
