@@ -28,7 +28,7 @@ export const ImportReader = () => {
         const r = data[i]
         console.log('Row', r)
         console.log('First Owned Card', ownedCards[0])
-        const newAmount = Number(r.NumberOwned)
+        const newAmount = Math.max(0, Number(r.NumberOwned))
         const cardId = r.Id
         const ownedCard = ownedCards.find((row) => row.card_id === r.Id)
         console.log('Owned Card', ownedCard)

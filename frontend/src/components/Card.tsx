@@ -36,8 +36,9 @@ export function Card({ card, useMaxWidth = false }: Props) {
   }, [amountOwned])
 
   const updateCardCount = useCallback(
-    async (cardId: string, newAmount: number) => {
-      setAmountOwned(Math.max(0, newAmount))
+    async (cardId: string, newAmountIn: number) => {
+      const newAmount = Math.max(0, newAmountIn)
+      setAmountOwned(newAmount)
 
       if (_inputDebounce[cardId]) {
         window.clearTimeout(_inputDebounce[cardId])
@@ -49,7 +50,7 @@ export function Card({ card, useMaxWidth = false }: Props) {
 
         const ownedCard = ownedCards.find((row) => row.card_id === cardId)
         if (ownedCard) {
-          ownedCard.amount_owned = Math.max(0, newAmount)
+          ownedCard.amount_owned = newAmount
         } else {
           ownedCards.push({ email: user.user.email, card_id: cardId, amount_owned: newAmount })
         }
