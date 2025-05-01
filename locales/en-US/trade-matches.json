@@ -1,5 +1,7 @@
 {
   "title": "Possible trade matches",
   "friendHas": "Cards you need (and friend has)",
-  "youHave": "Cards your friend needs (and you have)"
+  "youHave": "Cards your friend needs (and you have)",
+  "noPossibleTrades": "No possible trades found.",
+  "noPossibleTradesDescription": "No trades between you and your friend are currently possible."
 }
