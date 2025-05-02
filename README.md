@@ -1,6 +1,6 @@
 # TCG Pocket Collection Tracker
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 TCG Pocket Collection Tracker is an application designed to help users efficiently track their Pokémon Pocket game cards, identify optimal card packs to open, manage trades, and engage with both friends and the community at large. Our application is completely free, open-source, and prioritizes user privacy by not selling data, tracking analytics or using advertisements.
@@ -74,6 +74,7 @@ We encourage contributors to incrementally improve the project by making small c
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mpierrez"><img src="https://avatars.githubusercontent.com/u/34892045?v=4?s=100" width="100px;" alt="Mathys PIERREZ"/><br /><sub><b>Mathys PIERREZ</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=mpierrez" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jejnaj"><img src="https://avatars.githubusercontent.com/u/73377131?v=4?s=100" width="100px;" alt="jejnaj"/><br /><sub><b>jejnaj</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=jejnaj" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://matteosilvestro.com/"><img src="https://avatars.githubusercontent.com/u/25161825?v=4?s=100" width="100px;" alt="Matteo Silvestro"/><br /><sub><b>Matteo Silvestro</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=msilvestro" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/javijec"><img src="https://avatars.githubusercontent.com/u/368592?v=4?s=100" width="100px;" alt="JaViJeC"/><br /><sub><b>JaViJeC</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=javijec" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
