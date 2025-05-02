@@ -1,13 +1,12 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog.tsx'
 import { expansions, getCardById } from '@/lib/CardsDB'
 import type { Card, CollectionRow, Rarity } from '@/types'
-import type { FC } from 'react'
+import { type FC, useEffect, useState } from 'react'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useLocation, useNavigate } from 'react-router'
 
 interface Props {
-  isTradeMatchesDialogOpen: boolean
-  setIsTradeMatchesDialogOpen: (isTradeMatchesDialogOpen: boolean) => void
   ownedCards: CollectionRow[]
   friendCards: CollectionRow[]
 }
@@ -19,8 +18,22 @@ interface TradeCard extends Card {
   amount_owned: number
 }
 
-const TradeMatches: FC<Props> = ({ isTradeMatchesDialogOpen, setIsTradeMatchesDialogOpen, ownedCards, friendCards }) => {
+const TradeMatches: FC<Props> = ({ ownedCards, friendCards }) => {
   const { t } = useTranslation('trade-matches')
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const [isTradeMatchesDialogOpen, setIsTradeMatchesDialogOpen] = useState(false)
+
+  useEffect(() => {
+    if (location.pathname.includes('/collection') && location.pathname.includes('/trade')) {
+      if (!isTradeMatchesDialogOpen) {
+        setIsTradeMatchesDialogOpen(true)
+      }
+    } else {
+      setIsTradeMatchesDialogOpen(false)
+    }
+  }, [location])
 
   const tradeableExpansions = useMemo(() => expansions.filter((e) => e.tradeable).map((e) => e.id), [])
 
@@ -106,7 +119,14 @@ const TradeMatches: FC<Props> = ({ isTradeMatchesDialogOpen, setIsTradeMatchesDi
   }, [friendExtraCards, userExtraCards])
 
   return (
-    <Dialog open={isTradeMatchesDialogOpen} onOpenChange={setIsTradeMatchesDialogOpen}>
+    <Dialog
+      open={isTradeMatchesDialogOpen}
+      onOpenChange={(isOpen) => {
+        if (!isOpen) {
+          navigate(location.pathname.replace('/trade', ''))
+        }
+      }}
+    >
       <DialogContent className="border-2 border-slate-600 shadow-none max-w-4xl h-[90vh]">
         <DialogHeader>
           <DialogTitle>{t('title')}</DialogTitle>
@@ -147,7 +167,10 @@ const TradeMatches: FC<Props> = ({ isTradeMatchesDialogOpen, setIsTradeMatchesDi
                         <ul className="space-y-1">
                           {userExtraCards[rarity].map((card) => (
                             <li key={card.card_id} className="flex justify-between">
-                              <span>{card.name}</span>
+                              <div className="flex items-center">
+                                <div className="min-w-14 me-4">{card.card_id}</div>
+                                <div>{card.name}</div>
+                              </div>
                               <span className="text-gray-500">×{card.amount_owned}</span>
                             </li>
                           ))}

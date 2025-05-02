@@ -12,12 +12,14 @@ import { useEffect, useMemo, useState } from 'react'
 import { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
-import { useParams } from 'react-router'
+import { useLocation, useNavigate, useParams } from 'react-router'
 
 const TradeMatches = loadable(() => import('./TradeMatches.tsx'))
 
 function Collection() {
   const params = useParams()
+  const navigate = useNavigate()
+  const location = useLocation()
   const { t } = useTranslation(['pages/collection'])
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
@@ -25,20 +27,24 @@ function Collection() {
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
   const [friendCards, setFriendCards] = useState<CollectionRow[] | null>(null)
   const [filteredCards, setFilteredCards] = useState<Card[] | null>(null)
-  const [tradeMatchesDialogOpen, setTradeMatchesDialogOpen] = useState(false)
 
   useEffect(() => {
     const friendId = params.friendId
     if (friendId && !friendCards) {
       console.log('fetching collection by friend id', friendId)
-      fetchCollection(undefined, friendId).then(setFriendCards).catch(console.error)
+      fetchCollection(undefined, friendId)
+        .then((cards) => {
+          if (cards.length === 0) {
+            console.log('not a public collection, going back to normal mode.')
+            navigate('/collection')
+          }
+          console.log('cards', cards)
+          setFriendCards(cards)
+        })
+        .catch(console.error)
     } else if (!friendId && friendCards) {
       // NOTE: because the card table is hard to refresh, we have to reload the page. This is a bit of a hack, but it works. If you figure  a better way, please let me know.
       window.location.reload()
-    }
-
-    if (new URLSearchParams(window.location.search).get('view') === 'trade/' && friendId) {
-      setTradeMatchesDialogOpen(true)
     }
   }, [params])
 
@@ -81,7 +87,12 @@ function Collection() {
               <AlertDescription>
                 <div className="flex items-center">
                   {t('publicCollectionDescription')}
-                  <Button className="mb-4" onClick={() => setTradeMatchesDialogOpen(true)}>
+                  <Button
+                    className="mb-4"
+                    onClick={() => {
+                      navigate(`${location.pathname}/trade`)
+                    }}
+                  >
                     Show possible trades
                   </Button>
                 </div>
@@ -92,12 +103,7 @@ function Collection() {
       </FilterPanel>
       <div>{filteredCards && <CardsTable cards={filteredCards} resetScrollTrigger={resetScrollTrigger} showStats />}</div>
       <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
-      <TradeMatches
-        isTradeMatchesDialogOpen={tradeMatchesDialogOpen}
-        setIsTradeMatchesDialogOpen={setTradeMatchesDialogOpen}
-        ownedCards={ownedCards}
-        friendCards={friendCards || []}
-      />
+      <TradeMatches ownedCards={ownedCards} friendCards={friendCards || []} />
     </div>
   )
 }

@@ -65,7 +65,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Overview />} />
-            <Route path="/collection/:friendId?" element={<Collection />} />
+            <Route path="/collection/:friendId?/trade?" element={<Collection />} />
             <Route path="/trade" element={<Trade />} />
           </Routes>
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
