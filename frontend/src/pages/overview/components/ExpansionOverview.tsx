@@ -45,7 +45,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
     <>
       <h2 className="col-span-8 text-2xl pl-8 flex items-center">
         {t(expansion.name, { ns: 'common/sets' })}
-        <img src={`https://s3.limitlesstcg.com/pocket/sets/${expansion.id}.webp`} alt={`${expansion.id}`} className="ml-2 inline" />
+        <img src={`/images/sets/${expansion.id}.webp`} alt={`${expansion.id}`} className="ml-2 inline" />
       </h2>
       {isMobile ? (
         <div className="col-span-full">
