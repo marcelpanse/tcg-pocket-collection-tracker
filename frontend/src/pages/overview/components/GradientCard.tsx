@@ -50,5 +50,5 @@ const getPokemonImageUrl = (packName: string) => {
 
   const pokemon = pokemonMap[packName]
 
-  return `/images/pokemon/${pokemon}.png`
+  return `/images/pokemon/${pokemon}.webp`
 }
