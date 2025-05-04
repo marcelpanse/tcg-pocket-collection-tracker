@@ -1,0 +1,684 @@
+[
+  {
+    "name": "First Choice",
+    "requiredCards": [
+      {
+        "options": [1, 227],
+        "amount": 1
+      },
+      {
+        "options": [33, 230],
+        "amount": 1
+      },
+      {
+        "options": [53, 232],
+        "amount": 1
+      }
+    ],
+    "reward": " Wonder Hourglass×12 Shop Ticket×2 Emblem Ticket (Genetic Apex) ×1\n"
+  },
+  {
+    "name": "Electabuzz and Magmar",
+    "requiredCards": [
+      {
+        "options": [44],
+        "amount": 1
+      },
+      {
+        "options": [101],
+        "amount": 1
+      }
+    ],
+    "reward": " Wonder Hourglass×12 Shop Ticket×2 Emblem Ticket (Genetic Apex) ×1\n"
+  },
+  {
+    "name": "Viridian Forest",
+    "requiredCards": [
+      {
+        "options": [5],
+        "amount": 1
+      },
+      {
+        "options": [6],
+        "amount": 1
+      },
+      {
+        "options": [8],
+        "amount": 1
+      },
+      {
+        "options": [9],
+        "amount": 1
+      },
+      {
+        "options": [94],
+        "amount": 1
+      },
+      {
+        "options": [96, 259, 281, 285],
+        "amount": 1
+      }
+    ],
+    "reward": " Wonder Hourglass×12 Shop Ticket×2 Emblem Ticket (Genetic Apex) ×2\n"
+  },
+  {
+    "name": "Pidgey Squad",
+    "requiredCards": [
+      {
+        "options": [186],
+        "amount": 1
+      },
+      {
+        "options": [187],
+        "amount": 1
+      },
+      {
+        "options": [188, 245],
+        "amount": 1
+      }
+    ],
+    "reward": " Emblem Ticket (Genetic Apex) ×7\n"
+  },
+  {
+    "name": "A Day with Family",
+    "requiredCards": [
+      {
+        "options": [166],
+        "amount": 1
+      },
+      {
+        "options": [167],
+        "amount": 1
+      },
+      {
+        "options": [168, 240],
+        "amount": 1
+      },
+      {
+        "options": [169],
+        "amount": 1
+      },
+      {
+        "options": [170],
+        "amount": 1
+      },
+      {
+        "options": [171, 241],
+        "amount": 1
+      }
+    ],
+    "reward": " Emblem Ticket (Genetic Apex) ×14\n"
+  },
+  {
+    "name": "Pokémon of Ancient Times",
+    "requiredCards": [
+      {
+        "options": [81],
+        "amount": 1
+      },
+      {
+        "options": [82],
+        "amount": 1
+      },
+      {
+        "options": [158],
+        "amount": 1
+      },
+      {
+        "options": [159],
+        "amount": 1
+      },
+      {
+        "options": [210],
+        "amount": 1
+      }
+    ],
+    "reward": " Emblem Ticket (Genetic Apex) ×20\n"
+  },
+  {
+    "name": "The Legendary Flight",
+    "requiredCards": [
+      {
+        "options": [46],
+        "amount": 1
+      },
+      {
+        "options": [47, 255, 274],
+        "amount": 1
+      },
+      {
+        "options": [83],
+        "amount": 1
+      },
+      {
+        "options": [84, 258, 275],
+        "amount": 1
+      },
+      {
+        "options": [103],
+        "amount": 1
+      },
+      {
+        "options": [104, 260, 276],
+        "amount": 1
+      }
+    ],
+    "reward": " Emblem Ticket (Genetic Apex) ×17\n"
+  },
+  {
+    "name": "Triple Power",
+    "requiredCards": [
+      {
+        "options": [22],
+        "amount": 1
+      },
+      {
+        "options": [23, 252],
+        "amount": 1
+      },
+      {
+        "options": [98],
+        "amount": 1
+      },
+      {
+        "options": [140],
+        "amount": 1
+      },
+      {
+        "options": [200],
+        "amount": 1
+      }
+    ],
+    "reward": " Emblem Ticket (Genetic Apex) ×12\n"
+  },
+  {
+    "name": "A Big Snorlax Nuisance",
+    "requiredCards": [
+      {
+        "options": [11],
+        "amount": 1
+      },
+      {
+        "options": [16],
+        "amount": 1
+      },
+      {
+        "options": [18],
+        "amount": 1
+      },
+      {
+        "options": [250],
+        "amount": 1
+      }
+    ],
+    "reward": " Emblem Ticket (Genetic Apex) ×14\n"
+  },
+  {
+    "name": "Touring the Kanto Region",
+    "requiredCards": [
+      {
+        "options": [62],
+        "amount": 1
+      },
+      {
+        "options": [121],
+        "amount": 1
+      },
+      {
+        "options": [127],
+        "amount": 1
+      },
+      {
+        "options": [174],
+        "amount": 1
+      },
+      {
+        "options": [189],
+        "amount": 1
+      },
+      {
+        "options": [191],
+        "amount": 1
+      },
+      {
+        "options": [199],
+        "amount": 1
+      }
+    ],
+    "reward": " Wonder Hourglass×24 Shop Ticket×5 Emblem Ticket (Genetic Apex) ×4\n"
+  },
+  {
+    "name": "The Gym Leaders of the Kanto Region",
+    "requiredCards": [
+      {
+        "options": [219, 266],
+        "amount": 1
+      },
+      {
+        "options": [220, 267],
+        "amount": 1
+      },
+      {
+        "options": [221, 268],
+        "amount": 1
+      },
+      {
+        "options": [222, 269],
+        "amount": 1
+      },
+      {
+        "options": [223, 270],
+        "amount": 1
+      },
+      {
+        "options": [224, 271],
+        "amount": 1
+      },
+      {
+        "options": [225, 272],
+        "amount": 1
+      },
+      {
+        "options": [226, 273],
+        "amount": 1
+      }
+    ],
+    "reward": " Wonder Hourglass×24 Shop Ticket×5 Emblem Ticket (Genetic Apex) ×8\n"
+  },
+  {
+    "name": "Different Journeys, Different Growth",
+    "requiredCards": [
+      {
+        "options": [1, 227],
+        "amount": 1
+      },
+      {
+        "options": [2],
+        "amount": 1
+      },
+      {
+        "options": [3],
+        "amount": 1
+      },
+      {
+        "options": [4, 251],
+        "amount": 1
+      },
+      {
+        "options": [33, 230],
+        "amount": 1
+      },
+      {
+        "options": [34],
+        "amount": 1
+      },
+      {
+        "options": [35],
+        "amount": 1
+      },
+      {
+        "options": [36, 253, 280, 284],
+        "amount": 1
+      },
+      {
+        "options": [53, 232],
+        "amount": 1
+      },
+      {
+        "options": [54],
+        "amount": 1
+      },
+      {
+        "options": [55],
+        "amount": 1
+      },
+      {
+        "options": [56, 256],
+        "amount": 1
+      }
+    ],
+    "reward": " Emblem Ticket (Genetic Apex) ×22\n"
+  },
+  {
+    "name": "Safari Zone",
+    "requiredCards": [
+      {
+        "options": [21],
+        "amount": 1
+      },
+      {
+        "options": [25],
+        "amount": 1
+      },
+      {
+        "options": [26, 229],
+        "amount": 1
+      },
+      {
+        "options": [118, 237],
+        "amount": 1
+      },
+      {
+        "options": [156],
+        "amount": 1
+      },
+      {
+        "options": [183],
+        "amount": 1
+      },
+      {
+        "options": [184],
+        "amount": 1
+      },
+      {
+        "options": [199],
+        "amount": 1
+      },
+      {
+        "options": [202],
+        "amount": 1
+      },
+      {
+        "options": [203],
+        "amount": 1
+      },
+      {
+        "options": [204],
+        "amount": 1
+      }
+    ],
+    "reward": " Emblem Ticket (Genetic Apex) ×12\n"
+  },
+  {
+    "name": "Category: Mouse Pokémon",
+    "requiredCards": [
+      {
+        "options": [94],
+        "amount": 1
+      },
+      {
+        "options": [96, 259, 281, 285],
+        "amount": 1
+      },
+      {
+        "options": [95],
+        "amount": 1
+      },
+      {
+        "options": [137],
+        "amount": 1
+      },
+      {
+        "options": [138],
+        "amount": 1
+      },
+      {
+        "options": [189],
+        "amount": 1
+      },
+      {
+        "options": [190],
+        "amount": 1
+      }
+    ],
+    "reward": " Emblem Ticket (Genetic Apex) ×3\n"
+  },
+  {
+    "name": "Pokémon Super Express",
+    "requiredCards": [
+      {
+        "options": [40],
+        "amount": 1
+      },
+      {
+        "options": [41, 254],
+        "amount": 1
+      },
+      {
+        "options": [43, 231],
+        "amount": 1
+      },
+      {
+        "options": [106],
+        "amount": 1
+      },
+      {
+        "options": [185, 244],
+        "amount": 1
+      }
+    ],
+    "reward": " Emblem Ticket (Genetic Apex) ×13\n"
+  },
+  {
+    "name": "Collect 3 Electrode cards",
+    "requiredCards": [
+      {
+        "options": [100, 235],
+        "amount": 3
+      }
+    ],
+    "reward": " Electrode (profile icon)\n"
+  },
+  {
+    "name": "Collect 5 Gardevoir cards",
+    "requiredCards": [
+      {
+        "options": [132],
+        "amount": 5
+      }
+    ],
+    "reward": " Gardevoir (profile icon)\n"
+  },
+  {
+    "name": "Collect 5 Charizard cards",
+    "requiredCards": [
+      {
+        "options": [35],
+        "amount": 5
+      }
+    ],
+    "reward": " Charizard (profile icon)\n"
+  },
+  {
+    "name": "Collect 5 Mewtwo cards",
+    "requiredCards": [
+      {
+        "options": [128],
+        "amount": 5
+      }
+    ],
+    "reward": " Mewtwo (profile icon)\n"
+  },
+  {
+    "name": "Genetic Apex Museum 1 (Mewtwo)",
+    "requiredCards": [
+      {
+        "options": [227],
+        "amount": 1
+      },
+      {
+        "options": [239],
+        "amount": 1
+      },
+      {
+        "options": [242],
+        "amount": 1
+      },
+      {
+        "options": [243],
+        "amount": 1
+      },
+      {
+        "options": [244],
+        "amount": 1
+      },
+      {
+        "options": [245],
+        "amount": 1
+      },
+      {
+        "options": [247],
+        "amount": 1
+      },
+      {
+        "options": [249],
+        "amount": 1
+      }
+    ],
+    "reward": " Pack Hourglass×12 Wonder Hourglass×36 Shop Ticket×20\n"
+  },
+  {
+    "name": "Genetic Apex Museum 2 (Charizard)",
+    "requiredCards": [
+      {
+        "options": [228],
+        "amount": 1
+      },
+      {
+        "options": [229],
+        "amount": 1
+      },
+      {
+        "options": [230],
+        "amount": 1
+      },
+      {
+        "options": [231],
+        "amount": 1
+      },
+      {
+        "options": [234],
+        "amount": 1
+      },
+      {
+        "options": [236],
+        "amount": 1
+      },
+      {
+        "options": [237],
+        "amount": 1
+      },
+      {
+        "options": [246],
+        "amount": 1
+      }
+    ],
+    "reward": " Pack Hourglass×12 Wonder Hourglass×36 Shop Ticket×20\n"
+  },
+  {
+    "name": "Genetic Apex Museum 3 (Pikachu)",
+    "requiredCards": [
+      {
+        "options": [232],
+        "amount": 1
+      },
+      {
+        "options": [233],
+        "amount": 1
+      },
+      {
+        "options": [235],
+        "amount": 1
+      },
+      {
+        "options": [238],
+        "amount": 1
+      },
+      {
+        "options": [240],
+        "amount": 1
+      },
+      {
+        "options": [241],
+        "amount": 1
+      },
+      {
+        "options": [248],
+        "amount": 1
+      },
+      {
+        "options": [250],
+        "amount": 1
+      }
+    ],
+    "reward": " Pack Hourglass×12 Wonder Hourglass×36 Shop Ticket×20\n"
+  },
+  {
+    "name": "The Gym Leaders of the Kanto Region 2",
+    "requiredCards": [
+      {
+        "options": [266],
+        "amount": 1
+      },
+      {
+        "options": [267],
+        "amount": 1
+      },
+      {
+        "options": [268],
+        "amount": 1
+      },
+      {
+        "options": [269],
+        "amount": 1
+      },
+      {
+        "options": [270],
+        "amount": 1
+      },
+      {
+        "options": [271],
+        "amount": 1
+      },
+      {
+        "options": [272],
+        "amount": 1
+      },
+      {
+        "options": [273],
+        "amount": 1
+      }
+    ],
+    "reward": " Pack Hourglass×12 Wonder Hourglass×48 Shop Ticket×10\n"
+  },
+  {
+    "name": "The Legendary Flight Continues",
+    "requiredCards": [
+      {
+        "options": [274],
+        "amount": 1
+      },
+      {
+        "options": [275],
+        "amount": 1
+      },
+      {
+        "options": [276],
+        "amount": 1
+      }
+    ],
+    "reward": " Pack Hourglass×12 Wonder Hourglass×36 Moltres, Zapdos, and Articuno (emblem)\n"
+  },
+  {
+    "name": "The Immersive 4",
+    "requiredCards": [
+      {
+        "options": [280],
+        "amount": 1
+      },
+      {
+        "options": [281],
+        "amount": 1
+      },
+      {
+        "options": [282],
+        "amount": 1
+      },
+      {
+        "options": [283],
+        "amount": 1
+      }
+    ],
+    "reward": " Pack Hourglass×12 Wonder Hourglass×48 Shop Ticket×20\n"
+  }
+]

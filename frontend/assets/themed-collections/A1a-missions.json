@@ -1,0 +1,358 @@
+[
+  {
+    "name": "Untouched Forest",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": [2, 69, 8, 26, 28, 41, 52, 53, 62]
+      }
+    ],
+    "reward": " Emblem Ticket (Mythical Island) ×5 Untouched Forest (cover)\n"
+  },
+  {
+    "name": "Tranquil Lake",
+    "requiredCards": [
+      {
+        "amount": "7",
+        "options": [11, 17, 18, 76, 23, 24]
+      }
+    ],
+    "reward": " Emblem Ticket (Mythical Island) ×13 Tranquil Lake (cover)\n"
+  },
+  {
+    "name": "Scorching Wilderness",
+    "requiredCards": [
+      {
+        "amount": "10",
+        "options": [12, 14, 15, 71, 43, 50]
+      }
+    ],
+    "reward": " Emblem Ticket (Mythical Island) ×7 Scorching Wilderness (cover)\n"
+  },
+  {
+    "name": "Forgotten Ruins",
+    "requiredCards": [
+      {
+        "options": [65],
+        "amount": 1
+      },
+      {
+        "amount": "9",
+        "options": [6, 70, 35, 48]
+      }
+    ],
+    "reward": " Emblem Ticket (Mythical Island) ×15 Forgotten Ruins (cover)\n"
+  },
+  {
+    "name": "Catching Bugs",
+    "requiredCards": [
+      {
+        "options": [13],
+        "amount": 1
+      },
+      {
+        "options": [28],
+        "amount": 1
+      },
+      {
+        "options": [14],
+        "amount": 1
+      },
+      {
+        "options": [29],
+        "amount": 1
+      },
+      {
+        "options": [55],
+        "amount": 1
+      }
+    ],
+    "reward": " Wonder Hourglass×12 Emblem Ticket (Mythical Island) ×2 Shop Ticket×2\n"
+  },
+  {
+    "name": "Pokémon That Fly",
+    "requiredCards": [
+      {
+        "options": [14],
+        "amount": 1
+      },
+      {
+        "options": [37],
+        "amount": 1
+      },
+      {
+        "options": [18],
+        "amount": 1
+      },
+      {
+        "options": [62],
+        "amount": 1
+      },
+      {
+        "options": [24],
+        "amount": 1
+      },
+      {
+        "options": [46],
+        "amount": 1
+      },
+      {
+        "options": [33],
+        "amount": 1
+      },
+      {
+        "options": [36],
+        "amount": 1
+      },
+      {
+        "options": [57],
+        "amount": 1
+      },
+      {
+        "options": [58],
+        "amount": 1
+      },
+      {
+        "options": [59],
+        "amount": 1
+      }
+    ],
+    "reward": " Wonder Hourglass×12 Emblem Ticket (Mythical Island) ×2 Shop Ticket×2\n"
+  },
+  {
+    "name": "Attacks with 20 Damage",
+    "requiredCards": [
+      {
+        "options": [7],
+        "amount": 1
+      },
+      {
+        "options": [20],
+        "amount": 1
+      },
+      {
+        "options": [31],
+        "amount": 1
+      },
+      {
+        "options": [34],
+        "amount": 1
+      },
+      {
+        "options": [32],
+        "amount": 1
+      },
+      {
+        "options": [39],
+        "amount": 1
+      },
+      {
+        "options": [51],
+        "amount": 1
+      },
+      {
+        "options": [53],
+        "amount": 1
+      },
+      {
+        "options": [54],
+        "amount": 1
+      },
+      {
+        "options": [57],
+        "amount": 1
+      }
+    ],
+    "reward": " Wonder Hourglass×12 Emblem Ticket (Mythical Island) ×2 Shop Ticket×2\n"
+  },
+  {
+    "name": "Small Pokémon",
+    "requiredCards": [
+      {
+        "options": [7],
+        "amount": 1
+      },
+      {
+        "options": [57],
+        "amount": 1
+      },
+      {
+        "options": [22],
+        "amount": 1
+      },
+      {
+        "options": [36],
+        "amount": 1
+      },
+      {
+        "options": [37],
+        "amount": 1
+      },
+      {
+        "options": [28],
+        "amount": 1
+      },
+      {
+        "options": [30],
+        "amount": 1
+      },
+      {
+        "options": [61],
+        "amount": 1
+      },
+      {
+        "options": [62],
+        "amount": 1
+      }
+    ],
+    "reward": " Wonder Hourglass×12 Emblem Ticket (Mythical Island) ×2 Shop Ticket×2\n"
+  },
+  {
+    "name": "Tree of Repose",
+    "requiredCards": [
+      {
+        "options": [22],
+        "amount": 1
+      },
+      {
+        "options": [30],
+        "amount": 1
+      },
+      {
+        "options": [42],
+        "amount": 1
+      },
+      {
+        "options": [58],
+        "amount": 1
+      }
+    ],
+    "reward": " Tree of Repose (cover)\n"
+  },
+  {
+    "name": "Flower Travelers",
+    "requiredCards": [
+      {
+        "options": [36],
+        "amount": 1
+      },
+      {
+        "options": [37],
+        "amount": 1
+      },
+      {
+        "options": [38],
+        "amount": 1
+      }
+    ],
+    "reward": " Wonder Hourglass×12 Emblem Ticket (Mythical Island) ×2 Shop Ticket×2\n"
+  },
+  {
+    "name": "Collect 3 Mew cards",
+    "requiredCards": [
+      {
+        "options": [31],
+        "amount": 3
+      }
+    ],
+    "reward": " Mew (icon)\n"
+  },
+  {
+    "name": "Collect 3 Blue cards",
+    "requiredCards": [
+      {
+        "options": [67, 81],
+        "amount": 3
+      }
+    ],
+    "reward": " Blue (icon)\n"
+  },
+  {
+    "name": "Mythical Island Museum 1",
+    "requiredCards": [
+      {
+        "options": [69],
+        "amount": 1
+      },
+      {
+        "options": [70],
+        "amount": 1
+      },
+      {
+        "options": [71],
+        "amount": 1
+      },
+      {
+        "options": [72],
+        "amount": 1
+      },
+      {
+        "options": [73],
+        "amount": 1
+      },
+      {
+        "options": [74],
+        "amount": 1
+      }
+    ],
+    "reward": " Pack Hourglass×12 Wonder Hourglass×36 Shop Ticket×10\n"
+  },
+  {
+    "name": "Mythical Island Museum 2",
+    "requiredCards": [
+      {
+        "options": [83],
+        "amount": 1
+      },
+      {
+        "options": [84],
+        "amount": 1
+      }
+    ],
+    "reward": " Pack Hourglass×12 Wonder Hourglass×36 Shop Ticket×10\n"
+  },
+  {
+    "name": "Mew ex Museum",
+    "requiredCards": [
+      {
+        "options": [32],
+        "amount": 1
+      },
+      {
+        "options": [83],
+        "amount": 1
+      },
+      {
+        "options": [77],
+        "amount": 1
+      },
+      {
+        "options": [86],
+        "amount": 1
+      }
+    ],
+    "reward": " Pack Hourglass×12 Wonder Hourglass×36 Shop Ticket×10\n"
+  },
+  {
+    "name": "Mythical Island Tale of Adventure",
+    "requiredCards": [
+      {
+        "options": [66],
+        "amount": 1
+      },
+      {
+        "options": [65],
+        "amount": 1
+      },
+      {
+        "options": [83],
+        "amount": 1
+      },
+      {
+        "options": [85],
+        "amount": 1
+      }
+    ],
+    "reward": " Celebi (emblem)\n"
+  }
+]
