@@ -28,6 +28,7 @@ const PackFilter: FC<Props> = ({ packFilter, setPackFilter, expansion }) => {
                 ))
             }
           })}
+        <TabsTrigger value="missions">{t('missions')}</TabsTrigger>
       </TabsList>
     </Tabs>
   )

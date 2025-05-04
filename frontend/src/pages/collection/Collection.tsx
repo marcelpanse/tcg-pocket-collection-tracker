@@ -1,12 +1,13 @@
 import { CardsTable } from '@/components/CardsTable.tsx'
 import FilterPanel from '@/components/FiltersPanel'
+import { MissionsTable } from '@/components/MissionsTable.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { fetchCollection } from '@/lib/fetchCollection.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
-import type { Card, CollectionRow } from '@/types'
+import type { Card, CollectionRow, Mission } from '@/types'
 import loadable from '@loadable/component'
 import { Siren } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
@@ -29,6 +30,7 @@ function Collection() {
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
   const [friendCards, setFriendCards] = useState<CollectionRow[] | null>(null)
   const [filteredCards, setFilteredCards] = useState<Card[] | null>(null)
+  const [missions, setMissions] = useState<Mission[] | null>(null)
 
   useEffect(() => {
     const friendId = params.friendId
@@ -77,6 +79,7 @@ function Collection() {
       <FilterPanel
         cards={cardCollection}
         onFiltersChanged={(cards) => setFilteredCards(cards)}
+        onChangeToMissions={(missions) => setMissions(missions)}
         visibleFilters={{ expansions: !isMobile, search: true, owned: !isMobile, rarity: !isMobile }}
         filtersDialog={{ expansions: true, pack: true, search: true, owned: true, rarity: true, amount: true }}
         batchUpdate={Boolean(!friendCards)}
@@ -104,7 +107,8 @@ function Collection() {
           )}
         </div>
       </FilterPanel>
-      <div>{filteredCards && <CardsTable cards={filteredCards} resetScrollTrigger={resetScrollTrigger} showStats />}</div>
+      <div>{filteredCards && !missions && <CardsTable cards={filteredCards} resetScrollTrigger={resetScrollTrigger} showStats />}</div>
+      <div>{missions && <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} />}</div>
       <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
       <TradeMatches ownedCards={ownedCards} friendCards={friendCards || []} ownCollection={params.friendId === account?.friend_id} />
     </div>
