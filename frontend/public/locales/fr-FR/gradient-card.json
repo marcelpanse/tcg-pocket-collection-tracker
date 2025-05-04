@@ -1,3 +1,5 @@
 {
-  "text": "est le paquet le plus probable pour obtenir une nouvelle carte parmi {{packNames}}. Vous avez {{chancePercentage}} % de chances d'obtenir une nouvelle carte."
+  "text": "est le paquet le plus probable pour obtenir une nouvelle carte parmi {{packNames}}. Vous avez {{chancePercentage}} % de chances d'obtenir une nouvelle carte.",
+  "otherPacks": "Probabilité dans d'autres paquets",
+  "mostProbablePack": "Plus de probabilité de nouvelle carte"
 }
