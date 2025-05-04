@@ -1,3 +1,4 @@
+import { RadialChart } from '@/components/RadialChart'
 import DeckbuildingFilter from '@/components/filters/DeckbuildingFilter'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
@@ -104,14 +105,18 @@ function Overview() {
           <DeckbuildingFilter deckbuildingMode={deckbuildingMode} setDeckbuildingMode={setDeckbuildingMode} />
         </div>
 
-        <section className="grid grid-cols-8 gap-6">
-          <div className="col-span-8 flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-4 sm:p-8 md:col-span-2">
-            <h2 className="mb-2 text-center text-lg sm:text-2xl">{t('youHave')}</h2>
-            <h1 className="mb-3 text-balance text-center font-semibold text-3xl sm:text-7xl">
-              {CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode })}
-            </h1>
-            <h2 className="text-balance text-center text-lg sm:text-2xl">{t('uniqueCards', { totalUniqueCards: totalUniqueCards })}</h2>
-            <h2 className="text-balance text-center text-md sm:text-lg">
+        <section className="grid grid-cols-8 gap-4 sm:gap-6">
+          <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-3 sm:p-6 md:p-8 mb-4 md:mb-0">
+            <h2 className="mb-1 text-center text-base sm:text-lg md:text-2xl">{t('youHave')}</h2>
+            <RadialChart
+              value={totalUniqueCards === 0 ? 0 : CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode }) / totalUniqueCards}
+              label={String(CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode }))}
+              color="#38bdf8"
+              size={120}
+              strokeWidth={12}
+            />
+            <h2 className="mt-2 text-balance text-center text-base sm:text-lg md:text-2xl">{t('uniqueCards', { totalUniqueCards: totalUniqueCards })}</h2>
+            <h2 className="text-balance text-center text-sm sm:text-md md:text-lg">
               {numberFilter === 1 ? t('numberOfCopies-single') : t('numberOfCopies-plural', { numberFilter: numberFilter })}
             </h2>
           </div>
@@ -119,13 +124,13 @@ function Overview() {
             title={highestProbabilityPack?.packName || ''}
             packNames={t('all')}
             percentage={highestProbabilityPack?.percentage || 0}
-            className="col-span-8 md:col-span-4 col-start-1 md:col-start-3"
+            className="col-span-8 md:col-span-4 col-start-1 md:col-start-3 mb-4 md:mb-0"
             backgroundColor={highestProbabilityPack?.fill}
           />
-          <div className="col-span-8 flex h-full w-full flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-4 sm:p-8 md:col-span-2">
-            <h2 className="mb-2 text-center text-lg sm:text-2xl">{t('youHave')}</h2>
-            <h1 className="mb-3 text-balance text-center font-semibold text-3xl sm:text-7xl">{ownedCardsCount}</h1>
-            <h2 className="text-balance text-center text-lg sm:text-2xl">{t('cardsTotal')}</h2>
+          <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-3 sm:p-6 md:p-8">
+            <h2 className="mb-1 text-center text-base sm:text-lg md:text-2xl">{t('youHave')}</h2>
+            <h1 className="mb-2 text-balance text-center font-semibold text-2xl sm:text-3xl md:text-7xl">{ownedCardsCount}</h1>
+            <h2 className="text-balance text-center text-base sm:text-lg md:text-2xl">{t('cardsTotal')}</h2>
           </div>
         </section>
       </article>
