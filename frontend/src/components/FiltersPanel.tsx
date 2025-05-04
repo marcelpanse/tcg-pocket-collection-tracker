@@ -79,6 +79,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
       }
     }
     filteredCards = filteredCards.filter(filterRarities)
+
     if (searchValue) {
       filteredCards = filteredCards.filter((card) => {
         return (
@@ -96,12 +97,15 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
       }
     }
     filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) >= numberFilter)
-    filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) <= maxNumberFilter)
+    if (maxNumberFilter !== 100) {
+      filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) <= maxNumberFilter)
+    }
 
     return filteredCards
   }, [cards, expansionFilter, packFilter, rarityFilter, searchValue, ownedFilter, numberFilter, maxNumberFilter, langState])
 
   useEffect(() => {
+    console.log('filtere', getFilteredCards)
     onFiltersChanged(getFilteredCards)
     const handleLanguageChange = (lng: string) => {
       setLangState(lng)
