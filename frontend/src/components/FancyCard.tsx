@@ -83,6 +83,7 @@ function FancyCard({ selected, setIsSelected, card, size = 'default' }: Props) {
       {baseName && (
         <img
           draggable={false}
+          loading="lazy"
           onMouseDown={() => setIsSelected?.(!selected)}
           ref={cardRef}
           className="card-test"
