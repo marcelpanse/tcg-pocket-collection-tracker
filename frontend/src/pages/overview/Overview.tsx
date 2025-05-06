@@ -6,12 +6,12 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTitle } from '@/components/ui/alert.tsx'
 import * as CardsDB from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
-import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import type { Rarity } from '@/types'
 import { Heart, Siren } from 'lucide-react'
 import { use, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ExpansionOverview } from './components/ExpansionOverview'
+import { ProbabilityCard } from './components/ProbabilityCard'
 
 interface Pack {
   packName: string
@@ -106,30 +106,29 @@ function Overview() {
         </div>
 
         <section className="grid grid-cols-8 gap-4 sm:gap-6">
-          <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-3 sm:p-6 md:p-8 mb-4 md:mb-0">
-            <h2 className="mb-1 text-center text-base sm:text-lg md:text-2xl">{t('youHave')}</h2>
+          <div className="col-span-8 md:col-span-4 mb-4 md:mb-0 flex flex-col justify-between">
+            <ProbabilityCard packName={highestProbabilityPack?.packName || ''} percentage={highestProbabilityPack?.percentage || 0} />
+          </div>
+
+          <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-between rounded-4xl border-1 border-white border-solid p-3 sm:p-6 md:p-8 mb-4 md:mb-0">
+            <p className="mb-1 text-center text-base sm:text-lg md:text-lg">{t('youHave')}</p>
             <RadialChart
               value={totalUniqueCards === 0 ? 0 : CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode }) / totalUniqueCards}
               label={`${CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode })} / ${totalUniqueCards}`}
-              color="#38bdf8"
+              color="#2635fa"
               size={120}
-              strokeWidth={12}
+              strokeWidth={10}
             />
-            <h2 className="mt-2 text-balance text-center text-base sm:text-lg md:text-2xl">{t('uniqueCards')}</h2>
-            <h2 className="text-balance text-center text-sm sm:text-md md:text-lg">
+            <p className="mt-2 text-balance text-center text-base sm:text-lg md:text-lg">{t('uniqueCards')}</p>
+            <p className="text-balance text-center text-sm sm:text-md md:text-lg">
               {numberFilter === 1 ? t('numberOfCopies-single') : t('numberOfCopies-plural', { numberFilter: numberFilter })}
-            </h2>
+            </p>
           </div>
-          <GradientCard
-            title={highestProbabilityPack?.packName || ''}
-            percentage={highestProbabilityPack?.percentage || 0}
-            className="col-span-8 md:col-span-4 col-start-1 md:col-start-3 mb-4 md:mb-0"
-            backgroundColor={highestProbabilityPack?.fill}
-          />
-          <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-3 sm:p-6 md:p-8">
-            <h2 className="mb-1 text-center text-base sm:text-lg md:text-2xl">{t('youHave')}</h2>
-            <h1 className="mb-2 text-balance text-center font-semibold text-2xl sm:text-3xl md:text-7xl">{ownedCardsCount}</h1>
-            <h2 className="text-balance text-center text-base sm:text-lg md:text-2xl">{t('cardsTotal')}</h2>
+
+          <div className="flex flex-col col-span-8 md:col-span-2 items-center justify-between rounded-3xl bg-[#2734ff] border border-white p-6">
+            <h2 className="mb-1 text-center text-base text-white">{t('youHave')}</h2>
+            <h1 className="mb-2 text-center font-semibold text-5xl text-white">{ownedCardsCount}</h1>
+            <h2 className="text-center text-lg text-white opacity-80">{t('cardsTotal')}</h2>
           </div>
         </section>
       </article>

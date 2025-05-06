@@ -10,7 +10,7 @@
     "prepare": "lefthook install",
     "dev": "pnpm --filter frontend run dev",
     "build": "pnpm --filter frontend run build",
-    "scraper": "node scripts/scraper.js && node scripts/download-images.js && node scripts/download-packs.js"
+    "scraper": "node scripts/scraper.js && node scripts/download-images.js && node scripts/download-packs.js && node scripts/download-pokemon-images.js"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -41,6 +41,7 @@
     "i18next-browser-languagedetector": "^8.1.0",
     "i18next-http-backend": "^3.0.2",
     "node-fetch": "^3.3.2",
-    "react-i18next": "^15.5.1"
+    "react-i18next": "^15.5.1",
+    "sharp": "^0.34.1"
   }
 }

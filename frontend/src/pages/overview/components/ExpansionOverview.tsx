@@ -1,4 +1,3 @@
-import { BarChartComponent } from '@/components/BarChart.tsx'
 import * as CardsDB from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { CompleteProgress } from '@/pages/overview/components/CompleteProgress.tsx'
@@ -33,7 +32,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
       fill: pack.color,
     }))
 
-    const highestProbabilityPack = chartData.sort((a, b) => b.percentage - a.percentage)[0]
+    const highestProbabilityPack = chartData.length > 0 ? chartData.sort((a, b) => b.percentage - a.percentage)[0] : null
 
     return {
       highestProbabilityPack,
@@ -43,27 +42,24 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
 
   return (
     <>
-      <h2 className="col-span-8 text-2xl pl-8 flex items-center">
-        <img src={`/images/sets/${expansion.id}.webp`} alt={`${expansion.id}`} className="mr-2 inline" />
-        {t(expansion.name, { ns: 'common/sets' })}
-      </h2>
+      <div className="col-span-full flex items-center justify-start ">
+        <h2 className="col-span-8 text-4xl pl-8 flex items-center text-white">{t(expansion.name, { ns: 'common/sets' })}</h2>
+        <img src={`/images/sets/${expansion.id}.webp`} alt={`${expansion.id}`} className="mx-4 inline" />
+      </div>
       {isMobile ? (
         <div className="col-span-full">
           <Carousel padding="2rem">
-            {!expansion.promo && (
-              <>
-                <GradientCard
-                  title={highestProbabilityPack.packName}
-                  percentage={highestProbabilityPack.percentage}
-                  className="col-span-8 snap-start flex-shrink-0 w-full"
-                  backgroundColor={highestProbabilityPack.fill}
-                />
-                <div className="col-span-8 snap-start flex-shrink-0 w-full">
-                  <BarChartComponent title={t('probabilityNewCard')} data={chartData} />
-                </div>
-              </>
+            {!expansion.promo && highestProbabilityPack && (
+              <GradientCard
+                title={highestProbabilityPack.packName}
+                packNames={chartData.map((cd) => t(cd.packName, { ns: 'common/packs' })).join(', ')}
+                percentage={highestProbabilityPack.percentage}
+                className="col-span-8 snap-start flex-shrink-0 w-full"
+                backgroundColor={highestProbabilityPack.fill}
+                otherPacks={chartData}
+              />
             )}
-            <div className="col-span-8 snap-start flex-shrink-0 w-full border-2 border-slate-600 border-solid rounded-4xl p-4 sm:p-8">
+            <div className="col-span-8 snap-start flex-shrink-0 w-full border border-white border-solid rounded-4xl p-4 sm:p-8">
               <CompleteProgress
                 title={t('totalCards')}
                 expansion={expansion}
@@ -76,11 +72,12 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
                   <CompleteProgress
                     key={pack.name}
                     rarityFilter={rarityFilter}
+                    numberFilter={numberFilter}
                     title={t(pack.name, { ns: 'common/packs' })}
                     expansion={expansion}
                     packName={pack.name}
-                    numberFilter={numberFilter}
                     deckbuildingMode={deckbuildingMode}
+                    barColor={pack.color}
                   />
                 ))}
             </div>
@@ -88,20 +85,17 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
         </div>
       ) : (
         <>
-          {!expansion.promo && (
-            <>
-              <GradientCard
-                title={highestProbabilityPack.packName}
-                percentage={highestProbabilityPack.percentage}
-                className="col-span-8 lg:col-span-4"
-                backgroundColor={highestProbabilityPack.fill}
-              />
-              <div className="col-span-4 lg:col-span-2">
-                <BarChartComponent title={t('probabilityNewCard')} data={chartData} />
-              </div>
-            </>
+          {!expansion.promo && highestProbabilityPack && (
+            <GradientCard
+              title={highestProbabilityPack.packName}
+              packNames={chartData.map((cd) => t(cd.packName, { ns: 'common/packs' })).join(', ')}
+              percentage={highestProbabilityPack.percentage}
+              className="col-span-4 lg"
+              backgroundColor={highestProbabilityPack.fill}
+              otherPacks={chartData}
+            />
           )}
-          <div className="col-span-4 lg:col-span-2">
+          <div className="col-span-4 flex flex-col p-3 sm:p-6 md:p-8">
             <CompleteProgress
               title={t('totalCards')}
               expansion={expansion}
@@ -119,6 +113,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
                   expansion={expansion}
                   packName={pack.name}
                   deckbuildingMode={deckbuildingMode}
+                  barColor={pack.color}
                 />
               ))}
           </div>

@@ -13,13 +13,7 @@ interface RadialChartProps {
   strokeWidth?: number
 }
 
-export const RadialChart: React.FC<RadialChartProps> = ({
-  value,
-  label,
-  color = '#38bdf8', // tailwind sky-400
-  size = 96,
-  strokeWidth = 10,
-}) => {
+export const RadialChart: React.FC<RadialChartProps> = ({ value, label, color = '#2635fa', size = 96, strokeWidth = 12 }) => {
   const radius = (size - strokeWidth) / 2
   const circumference = 2 * Math.PI * radius
   const offset = circumference * (1 - value)
@@ -32,7 +26,7 @@ export const RadialChart: React.FC<RadialChartProps> = ({
         cy={size / 2}
         r={radius}
         fill="none"
-        stroke="#e5e7eb" // tailwind slate-200
+        stroke="#FFFFFF" // tailwind slate-200
         strokeWidth={strokeWidth}
       />
       <circle
@@ -53,7 +47,7 @@ export const RadialChart: React.FC<RadialChartProps> = ({
         y="50%"
         textAnchor="middle"
         dominantBaseline="central"
-        className="font-semibold text-md"
+        className="font-bold text-xl"
         fill="#FFFFFF" // tailwind slate-700
       >
         {label ?? `${Math.round(value * 100)}%`}
