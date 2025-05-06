@@ -18,7 +18,6 @@ const pokemonMap = {
   shiningrevelrypack: 'rayquaza',
   lunalapack: 'lunala',
   solgaleopack: 'solgaleo',
-  everypack: 'eevee',
   all: 'mew',
 }
 

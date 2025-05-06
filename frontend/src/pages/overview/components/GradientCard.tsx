@@ -28,14 +28,7 @@ export function GradientCard({ title, packNames, percentage, className, backgrou
       </div>
       {/* Main pack card */}
       <div className="w-full flex items-center bg-black/90 rounded-full px-4 py-2 mb-2">
-        <img
-          src={getPokemonImageUrl(title)}
-          alt={title}
-          className="h-12 w-12"
-          onError={(e) => {
-            ;(e.currentTarget as HTMLImageElement).src = '/images/pokemon/eevee.webp'
-          }}
-        />
+        <img src={getPokemonImageUrl(title)} alt={title} className="h-12 w-12" />
         <span className="flex-1 text-white text-2xl font-semibold ml-3">{t(title, { ns: 'common/packs', defaultValue: title })}</span>
         <span className="text-white font-bold text-xl">{chancePercentage}%</span>
       </div>
@@ -55,14 +48,7 @@ export function GradientCard({ title, packNames, percentage, className, backgrou
               <div className="flex flex-col gap-2 w-full">
                 {filteredPacks.map((pack) => (
                   <div key={pack.packName} className="flex items-center bg-white rounded-full px-4 py-2">
-                    <img
-                      src={getPokemonImageUrl(pack.packName)}
-                      alt={pack.packName}
-                      className="h-12 w-12"
-                      onError={(e) => {
-                        ;(e.currentTarget as HTMLImageElement).src = '/images/pokemon/eevee.webp'
-                      }}
-                    />
+                    <img src={getPokemonImageUrl(pack.packName)} alt={pack.packName} className="h-12 w-12" />
                     <span className="flex-1 text-black text-xl font-semibold ml-3">
                       {t(pack.packName, { ns: 'common/packs', defaultValue: pack.packName })}
                     </span>
@@ -91,10 +77,9 @@ const getPokemonImageUrl = (packName: string) => {
     shiningrevelrypack: 'rayquaza',
     lunalapack: 'lunala',
     solgaleopack: 'solgaleo',
-    everypack: 'eevee',
     all: 'mew',
   }
 
-  const pokemon = pokemonMap[normalizedPackName] || 'eevee'
+  const pokemon = pokemonMap[normalizedPackName]
   return `/images/pokemon/${pokemon}.webp`
 }
