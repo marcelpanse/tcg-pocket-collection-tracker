@@ -6,6 +6,7 @@ import App from './App.tsx'
 import i18n from './i18n.tsx'
 import './index.css'
 import './registerServiceWorker.js'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 const root = document.getElementById('root')
 if (!root) {
@@ -16,6 +17,7 @@ createRoot(root).render(
   <Suspense fallback={<div />}>
     <I18nextProvider i18n={i18n}>
       <HashRouter>
+        <SpeedInsights />
         <App />
       </HashRouter>
     </I18nextProvider>
