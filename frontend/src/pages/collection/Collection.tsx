@@ -116,6 +116,7 @@ function Collection() {
         </div>
       </FilterPanel>
       <div>{filteredCards && !missions && <CardsTable cards={filteredCards} resetScrollTrigger={resetScrollTrigger} showStats />}</div>
+      {!missions && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}
       <div>{missions && <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} />}</div>
       <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
       <TradeMatches

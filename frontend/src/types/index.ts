@@ -97,5 +97,5 @@ export interface MissionCard {
   amount: number
   options: number[]
   cards?: Card[]
-  owned?: boolean
+  owned?: number
 }

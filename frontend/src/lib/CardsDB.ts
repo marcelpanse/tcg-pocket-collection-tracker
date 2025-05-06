@@ -251,6 +251,34 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName, deckbuild
   return filteredCards.length
 }
 
+interface MissionStatsProps {
+  ownedCards: CollectionRow[]
+  expansion?: Expansion
+}
+export const getMissionCompletion = ({ ownedCards, expansion }: MissionStatsProps) => {
+  const allMissionsWithCompletion = allMissions.map((mission) => {
+    let completed = true
+    for (const card of mission.requiredCards) {
+      card.owned = ownedCards.reduce((existing, lookingAtCard) => {
+        let currCardAmount = 0
+        if (card.cards) {
+          currCardAmount = card.cards.find((c) => c.card_id === lookingAtCard.card_id)?.amount_owned || 0
+        }
+        return existing + currCardAmount
+      }, 0)
+      completed = completed && card.owned >= card.amount
+    }
+    mission.completed = completed
+    return mission
+  })
+
+  if (expansion) {
+    allMissionsWithCompletion.filter((mission) => mission.expansion === expansion.id)
+  }
+
+  return allMissionsWithCompletion
+}
+
 const probabilityPerRarity1_3: Record<Rarity, number> = {
   '◊': 100,
   '◊◊': 0,
