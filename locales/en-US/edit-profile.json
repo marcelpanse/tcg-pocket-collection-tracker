@@ -10,7 +10,9 @@
   "usernameDescription": "Match your Pokémon Pocket display name here.",
   "friendID": "Friend ID",
   "friendIDDescription": "Match your Pokémon Pocket friend ID here (without dashes)",
-  "isPublicDescription": "If you want to share your collection, you can do so here.",
-  "isPublicButton": "Open public page",
+  "isPublicDescription": "If you want to share your collection or trading page, you can do so here.",
+  "isPublicButton": "Share collection",
+  "isPublicTradeButton": "Share trading page",
+  "isPublicToggle": "Is public",
   "save": "Save"
 }
