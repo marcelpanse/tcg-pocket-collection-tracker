@@ -150,34 +150,36 @@ function Trade() {
   return (
     <div className="flex flex-col gap-y-4">
       <Tabs defaultValue={currentTab} onValueChange={(value) => setCurrentTab(value)}>
-        <div className="mx-auto max-w-[900px] flex flex-row flex-wrap align-center gap-x-4 gap-y-1 px-4">
+        <div className="mx-auto max-w-[900px] flex flex-row flex-wrap align-center gap-x-4 gap-y-2 px-4">
           <TabsList className="flex-grow m-auto flex-wrap h-auto border-2 border-slate-600 rounded-md">
             <TabsTrigger value="looking_for">Looking For</TabsTrigger>
             <TabsTrigger value="for_trade">For Trade</TabsTrigger>
             <TabsTrigger value="buying_tokens">Buying Tokens</TabsTrigger>
           </TabsList>
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
-          {currentTab === 'looking_for' && (
-            <NumberFilter numberFilter={forTradeMinCards} setNumberFilter={setForTradeMinCards} options={[0, 1, 2, 3, 4, 5]} labelKey="maxNum" />
-          )}
-          {currentTab === 'for_trade' && (
-            <NumberFilter numberFilter={lookingForMinCards} setNumberFilter={setLookingForMinCards} options={[2, 3, 4, 5]} labelKey="minNum" />
-          )}
-          {currentTab === 'buying_tokens' && (
-            <NumberFilter numberFilter={buyingTokensMinCards} setNumberFilter={setBuyingTokensMinCards} options={[2, 3, 4, 5]} labelKey="minNum" />
-          )}
-          <Button variant="outline" onClick={(e) => copyToClipboard(e)}>
-            Copy to clipboard
-          </Button>
-          {!account?.is_public ? (
-            <Button variant="outline" onClick={() => enableTradingPage()}>
-              Enable trading page
+          <div className="sm:mt-1 flex flex-row flex-wrap align-center gap-x-4 gap-y-1">
+            {currentTab === 'looking_for' && (
+              <NumberFilter numberFilter={forTradeMinCards} setNumberFilter={setForTradeMinCards} options={[0, 1, 2, 3, 4, 5]} labelKey="maxNum" />
+            )}
+            {currentTab === 'for_trade' && (
+              <NumberFilter numberFilter={lookingForMinCards} setNumberFilter={setLookingForMinCards} options={[2, 3, 4, 5]} labelKey="minNum" />
+            )}
+            {currentTab === 'buying_tokens' && (
+              <NumberFilter numberFilter={buyingTokensMinCards} setNumberFilter={setBuyingTokensMinCards} options={[2, 3, 4, 5]} labelKey="minNum" />
+            )}
+            <Button variant="outline" onClick={(e) => copyToClipboard(e)}>
+              Copy to clipboard
             </Button>
-          ) : (
-            <Button variant="outline" onClick={(e) => copyTradingLink(e)}>
-              Share trading page
-            </Button>
-          )}
+            {!account?.is_public ? (
+              <Button variant="outline" onClick={() => enableTradingPage()}>
+                Enable trading page
+              </Button>
+            ) : (
+              <Button variant="outline" onClick={(e) => copyTradingLink(e)}>
+                Share trading page
+              </Button>
+            )}
+          </div>
         </div>
         <div className="max-w-auto mx-4 md:mx-8">
           <TabsContent value="looking_for">
