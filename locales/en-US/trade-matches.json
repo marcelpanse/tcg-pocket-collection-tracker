@@ -4,5 +4,7 @@
   "youHave": "Cards your friend needs (and you have)",
   "noPossibleTrades": "No possible trades found.",
   "noPossibleTradesDescription": "No trades between you and your friend are currently possible.",
-  "featureDescription": "This dialog will show you the possible trades between your cards and that of the select friend ID. It shows you duplicate cards that the other party doesn't own yet."
+  "featureDescription": "This dialog will show you the possible trades between your cards and that of the select friend ID. It shows you duplicate cards that the other party doesn't own yet.",
+  "ownCollection": "You're viewing your own collection.",
+  "ownCollectionDescription": "Consider sharing this page with others to let them find possible trades."
 }
