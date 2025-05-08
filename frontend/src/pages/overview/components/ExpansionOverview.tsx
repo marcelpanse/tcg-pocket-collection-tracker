@@ -81,6 +81,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
                     packName={pack.name}
                     numberFilter={numberFilter}
                     deckbuildingMode={deckbuildingMode}
+                    barColor={pack.color}
                   />
                 ))}
             </div>
@@ -119,6 +120,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
                   expansion={expansion}
                   packName={pack.name}
                   deckbuildingMode={deckbuildingMode}
+                  barColor={pack.color}
                 />
               ))}
           </div>
