@@ -66,13 +66,13 @@ export function Header() {
                 <Button variant="ghost">{t('trade')}</Button>
               </Link>
             </NavigationMenuLink>
+            <PokemonCardDetector />
             <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden sm:block">
                 <Button variant="ghost">{t('Community ↗')}</Button>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuList>
-          <PokemonCardDetector />
         </NavigationMenu>
         <div className="items-center gap-2 flex">
           <DropdownMenu>
