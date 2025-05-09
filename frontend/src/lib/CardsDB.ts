@@ -44,25 +44,12 @@ export const getCardById = (cardId: string): Card | undefined => {
   return allCards.find((card) => card.card_id === cardId)
 }
 
-const updateMissions = (missions: Mission[], expansionName: ExpansionId) => {
-  for (const mission of missions) {
-    for (const card of mission.requiredCards) {
-      card.cards = []
-      for (const id of card.options) {
-        const maybeFindCard = getCardById(`${expansionName}-${id}`)
-        maybeFindCard && card.cards.push(maybeFindCard)
-      }
-    }
-  }
-  return missions
-}
-
-export const a1Missions: Mission[] = updateMissions(A1Missions as unknown as Mission[], 'A1')
-export const a1aMissions: Mission[] = updateMissions(A1aMissions as unknown as Mission[], 'A1a')
-export const a2Missions: Mission[] = updateMissions(A2Missions as unknown as Mission[], 'A2')
-export const a2aMissions: Mission[] = updateMissions(A2aMissions as unknown as Mission[], 'A2a')
-export const a2bMissions: Mission[] = updateMissions(A2bMissions as unknown as Mission[], 'A2b')
-export const a3Missions: Mission[] = updateMissions(A3Missions as unknown as Mission[], 'A3')
+export const a1Missions: Mission[] = A1Missions as unknown as Mission[]
+export const a1aMissions: Mission[] = A1aMissions as unknown as Mission[]
+export const a2Missions: Mission[] = A2Missions as unknown as Mission[]
+export const a2aMissions: Mission[] = A2aMissions as unknown as Mission[]
+export const a2bMissions: Mission[] = A2bMissions as unknown as Mission[]
+export const a3Missions: Mission[] = A3Missions as unknown as Mission[]
 export const allMissions: Mission[] = [...a1Missions, ...a1aMissions, ...a2Missions, ...a2aMissions, ...a2bMissions, ...a3Missions]
 
 export const expansions: Expansion[] = [
@@ -249,34 +236,6 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName, deckbuild
   }
 
   return filteredCards.length
-}
-
-interface MissionStatsProps {
-  ownedCards: CollectionRow[]
-  expansion?: Expansion
-}
-export const getMissionCompletion = ({ ownedCards, expansion }: MissionStatsProps) => {
-  const allMissionsWithCompletion = allMissions.map((mission) => {
-    let completed = true
-    for (const card of mission.requiredCards) {
-      card.owned = ownedCards.reduce((existing, lookingAtCard) => {
-        let currCardAmount = 0
-        if (card.cards) {
-          currCardAmount = card.cards.find((c) => c.card_id === lookingAtCard.card_id)?.amount_owned || 0
-        }
-        return existing + currCardAmount
-      }, 0)
-      completed = completed && card.owned >= card.amount
-    }
-    mission.completed = completed
-    return mission
-  })
-
-  if (expansion) {
-    allMissionsWithCompletion.filter((mission) => mission.expansion === expansion.id)
-  }
-
-  return allMissionsWithCompletion
 }
 
 const probabilityPerRarity1_3: Record<Rarity, number> = {

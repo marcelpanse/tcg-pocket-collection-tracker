@@ -3,15 +3,15 @@
     "name": "Burning Desire",
     "requiredCards": [
       {
-        "options": [8, 99],
+        "options": ["A2b-8", "A2b-99"],
         "amount": 1
       },
       {
-        "options": [9, 100],
+        "options": ["A2b-9", "A2b-100"],
         "amount": 1
       },
       {
-        "options": [10, 80, 108],
+        "options": ["A2b-10", "A2b-80", "A2b-108"],
         "amount": 1
       }
     ],
@@ -21,11 +21,11 @@
     "name": "Magmar's Evolution",
     "requiredCards": [
       {
-        "options": [11],
+        "options": ["A2b-11"],
         "amount": 1
       },
       {
-        "options": [12],
+        "options": ["A2b-12"],
         "amount": 1
       }
     ],
@@ -35,7 +35,7 @@
     "name": "Collect Paldean Tauros",
     "requiredCards": [
       {
-        "options": [13],
+        "options": ["A2b-13"],
         "amount": 2
       }
     ],
@@ -45,11 +45,11 @@
     "name": "Beach Peekaboo",
     "requiredCards": [
       {
-        "options": [18, 101],
+        "options": ["A2b-18", "A2b-101"],
         "amount": 1
       },
       {
-        "options": [19, 109],
+        "options": ["A2b-19", "A2b-109"],
         "amount": 1
       }
     ],
@@ -59,11 +59,11 @@
     "name": "Henchman and Boss?",
     "requiredCards": [
       {
-        "options": [20, 102],
+        "options": ["A2b-20", "A2b-102"],
         "amount": 1
       },
       {
-        "options": [21, 75],
+        "options": ["A2b-21", "A2b-75"],
         "amount": 1
       }
     ],
@@ -73,11 +73,11 @@
     "name": "Tangle of Tentacles",
     "requiredCards": [
       {
-        "options": [14],
+        "options": ["A2b-14"],
         "amount": 1
       },
       {
-        "options": [15],
+        "options": ["A2b-15"],
         "amount": 1
       }
     ],
@@ -87,11 +87,11 @@
     "name": "Bobbing in the Waves",
     "requiredCards": [
       {
-        "options": [16, 74],
+        "options": ["A2b-16", "A2b-74"],
         "amount": 1
       },
       {
-        "options": [17],
+        "options": ["A2b-17"],
         "amount": 1
       }
     ],
@@ -101,7 +101,7 @@
     "name": "Shadows of the Distortion World",
     "requiredCards": [
       {
-        "options": [35, 83, 96],
+        "options": ["A2b-35", "A2b-83", "A2b-96"],
         "amount": 2
       }
     ],
@@ -111,15 +111,15 @@
     "name": "Bewitching World",
     "requiredCards": [
       {
-        "options": [29],
+        "options": ["A2b-29"],
         "amount": 1
       },
       {
-        "options": [30],
+        "options": ["A2b-30"],
         "amount": 1
       },
       {
-        "options": [31],
+        "options": ["A2b-31"],
         "amount": 1
       }
     ],
@@ -129,7 +129,7 @@
     "name": "Collect Mr. Mime",
     "requiredCards": [
       {
-        "options": [32],
+        "options": ["A2b-32"],
         "amount": 1
       }
     ],
@@ -139,11 +139,11 @@
     "name": "As the Wind Blows",
     "requiredCards": [
       {
-        "options": [33],
+        "options": ["A2b-33"],
         "amount": 1
       },
       {
-        "options": [34],
+        "options": ["A2b-34"],
         "amount": 1
       }
     ],
@@ -153,15 +153,15 @@
     "name": "Needling Frenzy",
     "requiredCards": [
       {
-        "options": [1, 97],
+        "options": ["A2b-1", "A2b-97"],
         "amount": 1
       },
       {
-        "options": [2, 98],
+        "options": ["A2b-2", "A2b-98"],
         "amount": 1
       },
       {
-        "options": [3, 79, 107],
+        "options": ["A2b-3", "A2b-79", "A2b-107"],
         "amount": 1
       }
     ],
@@ -171,15 +171,15 @@
     "name": "Sprigatito's Green Sprouting",
     "requiredCards": [
       {
-        "options": [5],
+        "options": ["A2b-5"],
         "amount": 1
       },
       {
-        "options": [6],
+        "options": ["A2b-6"],
         "amount": 1
       },
       {
-        "options": [7, 73],
+        "options": ["A2b-7", "A2b-73"],
         "amount": 1
       }
     ],
@@ -189,7 +189,7 @@
     "name": "Collect Pinsir",
     "requiredCards": [
       {
-        "options": [4],
+        "options": ["A2b-4"],
         "amount": 2
       }
     ],
@@ -199,15 +199,15 @@
     "name": "Huge Hammer",
     "requiredCards": [
       {
-        "options": [52],
+        "options": ["A2b-52"],
         "amount": 1
       },
       {
-        "options": [53],
+        "options": ["A2b-53"],
         "amount": 1
       },
       {
-        "options": [54, 86, 94],
+        "options": ["A2b-54", "A2b-86", "A2b-94"],
         "amount": 1
       }
     ],
@@ -217,11 +217,11 @@
     "name": "Pile of Coins",
     "requiredCards": [
       {
-        "options": [36],
+        "options": ["A2b-36"],
         "amount": 1
       },
       {
-        "options": [57],
+        "options": ["A2b-57"],
         "amount": 1
       }
     ],
@@ -231,11 +231,11 @@
     "name": "Menacing Motor Noise",
     "requiredCards": [
       {
-        "options": [55, 105],
+        "options": ["A2b-55", "A2b-105"],
         "amount": 1
       },
       {
-        "options": [56, 106],
+        "options": ["A2b-56", "A2b-106"],
         "amount": 1
       }
     ],
@@ -245,11 +245,11 @@
     "name": "Aura Masters",
     "requiredCards": [
       {
-        "options": [42, 104],
+        "options": ["A2b-42", "A2b-104"],
         "amount": 1
       },
       {
-        "options": [43, 84, 110],
+        "options": ["A2b-43", "A2b-84", "A2b-110"],
         "amount": 1
       }
     ],
@@ -259,15 +259,15 @@
     "name": "1,000 Punches",
     "requiredCards": [
       {
-        "options": [37],
+        "options": ["A2b-37"],
         "amount": 1
       },
       {
-        "options": [38],
+        "options": ["A2b-38"],
         "amount": 1
       },
       {
-        "options": [39],
+        "options": ["A2b-39"],
         "amount": 1
       }
     ],
@@ -277,11 +277,11 @@
     "name": "Punching & Kicking",
     "requiredCards": [
       {
-        "options": [40],
+        "options": ["A2b-40"],
         "amount": 1
       },
       {
-        "options": [41],
+        "options": ["A2b-41"],
         "amount": 1
       }
     ],
@@ -291,7 +291,7 @@
     "name": "Collect Flamigo",
     "requiredCards": [
       {
-        "options": [44],
+        "options": ["A2b-44"],
         "amount": 2
       }
     ],
@@ -301,7 +301,7 @@
     "name": "Electric Cheeks",
     "requiredCards": [
       {
-        "options": [22, 82, 92],
+        "options": ["A2b-22", "A2b-82", "A2b-92"],
         "amount": 1
       }
     ],
@@ -311,15 +311,15 @@
     "name": "Extra Electrifying",
     "requiredCards": [
       {
-        "options": [26],
+        "options": ["A2b-26"],
         "amount": 1
       },
       {
-        "options": [27],
+        "options": ["A2b-27"],
         "amount": 1
       },
       {
-        "options": [28],
+        "options": ["A2b-28"],
         "amount": 1
       }
     ],
@@ -329,11 +329,11 @@
     "name": "Exploding All Over the Place",
     "requiredCards": [
       {
-        "options": [23],
+        "options": ["A2b-23"],
         "amount": 1
       },
       {
-        "options": [24],
+        "options": ["A2b-24"],
         "amount": 1
       }
     ],
@@ -343,11 +343,11 @@
     "name": "Dangerous Poison Spikes",
     "requiredCards": [
       {
-        "options": [47],
+        "options": ["A2b-47"],
         "amount": 1
       },
       {
-        "options": [48, 85, 93],
+        "options": ["A2b-48", "A2b-85", "A2b-93"],
         "amount": 1
       }
     ],
@@ -357,11 +357,11 @@
     "name": "Deep Forest Poison Patterns",
     "requiredCards": [
       {
-        "options": [50],
+        "options": ["A2b-50"],
         "amount": 1
       },
       {
-        "options": [51, 76],
+        "options": ["A2b-51", "A2b-76"],
         "amount": 1
       }
     ],
@@ -371,11 +371,11 @@
     "name": "Intimidating Patterns",
     "requiredCards": [
       {
-        "options": [45],
+        "options": ["A2b-45"],
         "amount": 1
       },
       {
-        "options": [46],
+        "options": ["A2b-46"],
         "amount": 1
       }
     ],
@@ -385,7 +385,7 @@
     "name": "Collect Spiritomb",
     "requiredCards": [
       {
-        "options": [49],
+        "options": ["A2b-49"],
         "amount": 2
       }
     ],
@@ -395,11 +395,11 @@
     "name": "Diligent Nest-Building",
     "requiredCards": [
       {
-        "options": [64],
+        "options": ["A2b-64"],
         "amount": 1
       },
       {
-        "options": [65, 87, 95],
+        "options": ["A2b-65", "A2b-87", "A2b-95"],
         "amount": 1
       }
     ],
@@ -409,11 +409,11 @@
     "name": "Expanding Body",
     "requiredCards": [
       {
-        "options": [60],
+        "options": ["A2b-60"],
         "amount": 1
       },
       {
-        "options": [61],
+        "options": ["A2b-61"],
         "amount": 1
       }
     ],
@@ -424,7 +424,7 @@
     "requiredCards": [
       {
         "amount": "1",
-        "options": [97, 98, 99, 100, 101, 102, 103, 104, 105, 106]
+        "options": ["A2b-97", "A2b-98", "A2b-99", "A2b-100", "A2b-101", "A2b-102", "A2b-103", "A2b-104", "A2b-105", "A2b-106"]
       }
     ],
     "reward": " Emblem Ticket (Shining Revelry) ×1\n"
@@ -433,7 +433,7 @@
     "name": "Collect 3 Sprigatito cards",
     "requiredCards": [
       {
-        "options": [5],
+        "options": ["A2b-5"],
         "amount": 3
       }
     ],
@@ -444,7 +444,7 @@
     "requiredCards": [
       {
         "amount": "2",
-        "options": [97, 98, 99, 100, 101, 102, 103, 104, 105, 106]
+        "options": ["A2b-97", "A2b-98", "A2b-99", "A2b-100", "A2b-101", "A2b-102", "A2b-103", "A2b-104", "A2b-105", "A2b-106"]
       }
     ],
     "reward": " Wonder Hourglass×36 Pack Hourglass×12 Shop Ticket×10\n"
@@ -454,7 +454,7 @@
     "requiredCards": [
       {
         "amount": "3",
-        "options": [97, 98, 99, 100, 101, 102, 103, 104, 105, 106]
+        "options": ["A2b-97", "A2b-98", "A2b-99", "A2b-100", "A2b-101", "A2b-102", "A2b-103", "A2b-104", "A2b-105", "A2b-106"]
       }
     ],
     "reward": " Wonder Hourglass×36 Pack Hourglass×12 Shop Ticket×10\n"
@@ -464,7 +464,7 @@
     "requiredCards": [
       {
         "amount": "1",
-        "options": [107, 108, 109, 110]
+        "options": ["A2b-107", "A2b-108", "A2b-109", "A2b-110"]
       }
     ],
     "reward": " Wonder Hourglass×36 Pack Hourglass×12 Shop Ticket×10\n"
@@ -474,7 +474,7 @@
     "requiredCards": [
       {
         "amount": "2",
-        "options": [107, 108, 109, 110]
+        "options": ["A2b-107", "A2b-108", "A2b-109", "A2b-110"]
       }
     ],
     "reward": " Wonder Hourglass×36 Pack Hourglass×12 Shop Ticket×10\n"
@@ -484,7 +484,7 @@
     "requiredCards": [
       {
         "amount": "3",
-        "options": [107, 108, 109, 110]
+        "options": ["A2b-107", "A2b-108", "A2b-109", "A2b-110"]
       }
     ],
     "reward": " Wonder Hourglass×36 Pack Hourglass×12 Shop Ticket×10\n"
@@ -493,27 +493,27 @@
     "name": "Shining Revelry Museum 1",
     "requiredCards": [
       {
-        "options": [73],
+        "options": ["A2b-73"],
         "amount": 1
       },
       {
-        "options": [74],
+        "options": ["A2b-74"],
         "amount": 1
       },
       {
-        "options": [75],
+        "options": ["A2b-75"],
         "amount": 1
       },
       {
-        "options": [76],
+        "options": ["A2b-76"],
         "amount": 1
       },
       {
-        "options": [77],
+        "options": ["A2b-77"],
         "amount": 1
       },
       {
-        "options": [78],
+        "options": ["A2b-78"],
         "amount": 1
       }
     ],
@@ -523,19 +523,19 @@
     "name": "Shining Revelry Museum 2",
     "requiredCards": [
       {
-        "options": [92],
+        "options": ["A2b-92"],
         "amount": 1
       },
       {
-        "options": [93],
+        "options": ["A2b-93"],
         "amount": 1
       },
       {
-        "options": [94],
+        "options": ["A2b-94"],
         "amount": 1
       },
       {
-        "options": [95],
+        "options": ["A2b-95"],
         "amount": 1
       }
     ],
@@ -545,7 +545,7 @@
     "name": "Gimmighoul Collection",
     "requiredCards": [
       {
-        "options": [36],
+        "options": ["A2b-36"],
         "amount": 99
       }
     ],

@@ -1,7 +1,11 @@
+import FancyCard from '@/components/FancyCard.tsx'
+import { allCards } from '@/lib/CardsDB.ts'
+import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
+import { getCardNameByLang } from '@/lib/utils.ts'
 import type { Mission as MissionType } from '@/types'
-import { useMemo } from 'react'
-import { Card } from './Card.tsx'
+import i18n from 'i18next'
+import { use, useMemo } from 'react'
 
 interface Props {
   mission: MissionType
@@ -10,6 +14,8 @@ interface Props {
 
 export function Mission({ mission }: Props) {
   const { width } = useWindowDimensions()
+
+  const { ownedCards, setSelectedCardId } = use(CollectionContext)
 
   let cardsPerRow = 5
   let cardHeight = Math.min(width, 890) / 5 + 120
@@ -21,10 +27,33 @@ export function Mission({ mission }: Props) {
     cardHeight = width / 3 + 100
   }
 
+  interface CardDetailProps {
+    cardId: string
+    owned: boolean
+  }
+
   const missionGridRows = useMemo(() => {
+    const shownCards = mission.requiredCards.flatMap((missionCard) => {
+      const ownedMissionCards = ownedCards.reduce((acc, ownedCard) => {
+        const hasCard = missionCard.options.find((cardId) => cardId === ownedCard.card_id)
+        if (hasCard) {
+          for (let i = 0; i < ownedCard.amount_owned; i++) {
+            acc.push({ cardId: hasCard, owned: true })
+          }
+        }
+        return acc
+      }, [] as CardDetailProps[])
+
+      const amountToAppend = missionCard.amount - ownedMissionCards.length
+      for (let i = 0; i < amountToAppend; i++) {
+        ownedMissionCards.push({ cardId: missionCard.options[0], owned: false })
+      }
+      return ownedMissionCards
+    })
+
     const gridRows = []
-    for (let i = 0; i < mission.requiredCards.length; i += cardsPerRow) {
-      gridRows.push(mission.requiredCards.slice(i, i + cardsPerRow))
+    for (let i = 0; i < shownCards.length; i += cardsPerRow) {
+      gridRows.push(shownCards.slice(i, i + cardsPerRow))
     }
     return gridRows
   }, [cardsPerRow])
@@ -43,9 +72,19 @@ export function Mission({ mission }: Props) {
             <div key={i} style={{ height: `${cardHeight}px`, transform: `translateY(${cardHeight * i + 72}px)` }} className="absolute top-0 left-0 w-full">
               <div className="flex justify-center gap-x-3">
                 {gridRow.map((card) => {
-                  if (card.cards) {
-                    return <Card key={card.cards[0].card_id} card={card.cards[0]} />
-                  }
+                  const foundCard = allCards.find((c) => c.card_id === card.cardId)
+                  return (
+                    foundCard && (
+                      <div className={'group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer'}>
+                        <div onClick={() => setSelectedCardId(card.cardId)}>
+                          <FancyCard card={foundCard} selected={card.owned} />
+                        </div>
+                        <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">
+                          {card.cardId} - {getCardNameByLang(foundCard, i18n.language)}
+                        </p>
+                      </div>
+                    )
+                  )
                 })}
               </div>
             </div>
