@@ -1,4 +1,3 @@
-import { BarChartComponent } from '@/components/BarChart.tsx'
 import * as CardsDB from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { CompleteProgress } from '@/pages/overview/components/CompleteProgress.tsx'
@@ -8,6 +7,7 @@ import { use, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
 import { Carousel } from './Carousel'
+import { ProbabilityCard } from './ProbabilityCard'
 
 interface ExpansionOverviewProps {
   expansion: Expansion
@@ -59,7 +59,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
                   backgroundColor={highestProbabilityPack.fill}
                 />
                 <div className="col-span-8 snap-start flex-shrink-0 w-full">
-                  <BarChartComponent title={t('probabilityNewCard')} data={chartData} />
+                  <ProbabilityCard title={t('probabilityNewCard')} data={chartData} />
                 </div>
               </>
             )}
@@ -96,8 +96,9 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
                 className="col-span-8 lg:col-span-4"
                 backgroundColor={highestProbabilityPack.fill}
               />
-              <div className="col-span-4 lg:col-span-2">
-                <BarChartComponent title={t('probabilityNewCard')} data={chartData} />
+
+              <div className="col-span-4 lg:col-span-2 snap-start flex-shrink-0 w-full">
+                <ProbabilityCard title={t('probabilityNewCard')} data={chartData} />
               </div>
             </>
           )}

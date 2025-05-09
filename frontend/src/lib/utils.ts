@@ -42,3 +42,23 @@ export const getPokemonImageUrl = (packName: string) => {
   const pokemon = pokemonMap[normalizedPackName]
   return `/images/pokemon/${pokemon}.webp`
 }
+
+export const getPokemonName = (packName: string) => {
+  // Normalize the packName (lowercase and remove spaces)
+  const normalizedPackName = packName.toLowerCase().replace(/\s+/g, '')
+  const pokemonMap: Record<string, string> = {
+    pikachupack: 'Pikachu',
+    charizardpack: 'Charizard',
+    mewtwopack: 'Mewtwo',
+    dialgapack: 'Dialga',
+    palkiapack: 'Palkia',
+    mewpack: 'Mew',
+    arceuspack: 'Arceus',
+    shiningrevelrypack: 'Rayquaza',
+    lunalapack: 'Lunala',
+    solgaleopack: 'Solgaleo',
+    all: 'Mew',
+  }
+
+  return pokemonMap[normalizedPackName]
+}
