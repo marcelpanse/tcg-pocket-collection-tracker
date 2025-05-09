@@ -22,7 +22,7 @@ async function fetchHTML(url) {
   return cheerio.load(text)
 }
 
-function parseCards($, cards) {
+function parseCards($, cards, expansion) {
   const cardsList = []
   let isOfTheFollowing = false
   const combinationCard = {}
@@ -41,7 +41,7 @@ function parseCards($, cards) {
     } else {
       const ids = line.match(/#\d\d\d/g)
       if (ids != null) {
-        const options = ids.map((id) => Number.parseInt(id.slice(1)))
+        const options = ids.map((id) => `${expansion}-${Number.parseInt(id.slice(1))}`)
         if (isOfTheFollowing) {
           combinationCard.options = combinationCard.options.concat(options)
         } else {
@@ -64,7 +64,8 @@ function parseCards($, cards) {
   return cardsList
 }
 
-async function getExpansionMissions(expansionUrl) {
+async function getExpansionMissions(expansion) {
+  const expansionUrl = `${BASE_URL}/${expansionToName[expansion]}_(TCG_Pocket)#Themed_Collections`
   console.log(`Fetching details for ${expansionUrl}...`)
   try {
     const $ = await fetchHTML(expansionUrl)
@@ -78,7 +79,7 @@ async function getExpansionMissions(expansionUrl) {
             const mission = {}
             mission.name = tableRow.eq(0).text()
             // mission.requiredCards = tableRow.eq(1).text()
-            mission.requiredCards = parseCards($, tableRow.eq(1))
+            mission.requiredCards = parseCards($, tableRow.eq(1), expansion)
             mission.reward = tableRow.eq(2).text().replace(/ /g, '')
             if (mission.name !== '') {
               missions.push(mission)
@@ -98,8 +99,7 @@ async function scrapeMissions() {
     try {
       fs.mkdirSync(targetDir, { recursive: true })
 
-      const mainUrl = `${BASE_URL}/${expansionToName[expansion]}_(TCG_Pocket)#Themed_Collections`
-      const missions = await getExpansionMissions(mainUrl)
+      const missions = await getExpansionMissions(expansion)
       console.log(`Scraping completed. Found ${missions.length} missions for ${expansion}.`)
 
       fs.writeFileSync(path.join(targetDir, `${expansion}-missions.json`), JSON.stringify(missions, null, 2))

@@ -3,19 +3,19 @@
     "name": "Daytime Pack and Nighttime Pack",
     "requiredCards": [
       {
-        "options": [106],
+        "options": ["A3-106"],
         "amount": 1
       },
       {
-        "options": [107],
+        "options": ["A3-107"],
         "amount": 1
       },
       {
-        "options": [136],
+        "options": ["A3-136"],
         "amount": 1
       },
       {
-        "options": [137],
+        "options": ["A3-137"],
         "amount": 1
       }
     ],
@@ -25,19 +25,19 @@
     "name": "Evolution Split by Day and Night",
     "requiredCards": [
       {
-        "options": [98],
+        "options": ["A3-98"],
         "amount": 1
       },
       {
-        "options": [99],
+        "options": ["A3-99"],
         "amount": 1
       },
       {
-        "options": [100],
+        "options": ["A3-100"],
         "amount": 1
       },
       {
-        "options": [101],
+        "options": ["A3-101"],
         "amount": 1
       }
     ],
@@ -47,19 +47,19 @@
     "name": "Alolan Dancers",
     "requiredCards": [
       {
-        "options": [34],
+        "options": ["A3-34"],
         "amount": 1
       },
       {
-        "options": [66],
+        "options": ["A3-66"],
         "amount": 1
       },
       {
-        "options": [76],
+        "options": ["A3-76"],
         "amount": 1
       },
       {
-        "options": [77],
+        "options": ["A3-77"],
         "amount": 1
       }
     ],
@@ -69,11 +69,11 @@
     "name": "Descended from the Sun and the Moon?",
     "requiredCards": [
       {
-        "options": [73],
+        "options": ["A3-73"],
         "amount": 1
       },
       {
-        "options": [92],
+        "options": ["A3-92"],
         "amount": 1
       }
     ],
@@ -83,11 +83,11 @@
     "name": "Komala, Always Sleeping",
     "requiredCards": [
       {
-        "options": [105],
+        "options": ["A3-105"],
         "amount": 1
       },
       {
-        "options": [141],
+        "options": ["A3-141"],
         "amount": 1
       }
     ],
@@ -97,11 +97,11 @@
     "name": "A Beach Scene, Day and Night",
     "requiredCards": [
       {
-        "options": [81],
+        "options": ["A3-81"],
         "amount": 1
       },
       {
-        "options": [110],
+        "options": ["A3-110"],
         "amount": 1
       }
     ],
@@ -111,11 +111,11 @@
     "name": "A Day in the Life of Rowlet",
     "requiredCards": [
       {
-        "options": [9],
+        "options": ["A3-9"],
         "amount": 1
       },
       {
-        "options": [10],
+        "options": ["A3-10"],
         "amount": 1
       }
     ],
@@ -125,11 +125,11 @@
     "name": "A Day in the Life of Litten",
     "requiredCards": [
       {
-        "options": [30],
+        "options": ["A3-30"],
         "amount": 1
       },
       {
-        "options": [31],
+        "options": ["A3-31"],
         "amount": 1
       }
     ],
@@ -139,11 +139,11 @@
     "name": "A Day in the Life of Popplio",
     "requiredCards": [
       {
-        "options": [45],
+        "options": ["A3-45"],
         "amount": 1
       },
       {
-        "options": [46],
+        "options": ["A3-46"],
         "amount": 1
       }
     ],
@@ -153,15 +153,15 @@
     "name": "Kiawe and Volcano Park Pokémon",
     "requiredCards": [
       {
-        "options": [150, 192],
+        "options": ["A3-150", "A3-192"],
         "amount": 1
       },
       {
-        "options": [27, 160],
+        "options": ["A3-27", "A3-160"],
         "amount": 3
       },
       {
-        "options": [36],
+        "options": ["A3-36"],
         "amount": 1
       }
     ],
@@ -171,23 +171,23 @@
     "name": "Mallow and Jungle Pokémon",
     "requiredCards": [
       {
-        "options": [154, 196],
+        "options": ["A3-154", "A3-196"],
         "amount": 1
       },
       {
-        "options": [14],
+        "options": ["A3-14"],
         "amount": 1
       },
       {
-        "options": [15],
+        "options": ["A3-15"],
         "amount": 1
       },
       {
-        "options": [18],
+        "options": ["A3-18"],
         "amount": 1
       },
       {
-        "options": [80, 168],
+        "options": ["A3-80", "A3-168"],
         "amount": 1
       }
     ],
@@ -197,15 +197,15 @@
     "name": "Ilima and Cave Pokémon",
     "requiredCards": [
       {
-        "options": [149, 191],
+        "options": ["A3-149", "A3-191"],
         "amount": 1
       },
       {
-        "options": [136],
+        "options": ["A3-136"],
         "amount": 2
       },
       {
-        "options": [137],
+        "options": ["A3-137"],
         "amount": 2
       }
     ],
@@ -215,19 +215,19 @@
     "name": "Acerola and Spooky Pokémon",
     "requiredCards": [
       {
-        "options": [148, 190],
+        "options": ["A3-148", "A3-190"],
         "amount": 1
       },
       {
-        "options": [23, 181, 199],
+        "options": ["A3-23", "A3-181", "A3-199"],
         "amount": 1
       },
       {
-        "options": [82],
+        "options": ["A3-82"],
         "amount": 1
       },
       {
-        "options": [83],
+        "options": ["A3-83"],
         "amount": 1
       }
     ],
@@ -237,19 +237,19 @@
     "name": "Lana and Waterside Pokémon",
     "requiredCards": [
       {
-        "options": [152, 194],
+        "options": ["A3-152", "A3-194"],
         "amount": 1
       },
       {
-        "options": [51, 184, 202],
+        "options": ["A3-51", "A3-184", "A3-202"],
         "amount": 1
       },
       {
-        "options": [52],
+        "options": ["A3-52"],
         "amount": 1
       },
       {
-        "options": [53],
+        "options": ["A3-53"],
         "amount": 1
       }
     ],
@@ -259,19 +259,19 @@
     "name": "Sophocles and Electric Discharge Pokémon",
     "requiredCards": [
       {
-        "options": [153, 195],
+        "options": ["A3-153", "A3-195"],
         "amount": 1
       },
       {
-        "options": [61],
+        "options": ["A3-61"],
         "amount": 1
       },
       {
-        "options": [65],
+        "options": ["A3-65"],
         "amount": 1
       },
       {
-        "options": [67],
+        "options": ["A3-67"],
         "amount": 1
       }
     ],
@@ -281,27 +281,27 @@
     "name": "Captains of the Alola Region",
     "requiredCards": [
       {
-        "options": [148, 190],
+        "options": ["A3-148", "A3-190"],
         "amount": 1
       },
       {
-        "options": [149, 191],
+        "options": ["A3-149", "A3-191"],
         "amount": 1
       },
       {
-        "options": [150, 192],
+        "options": ["A3-150", "A3-192"],
         "amount": 1
       },
       {
-        "options": [152, 194],
+        "options": ["A3-152", "A3-194"],
         "amount": 1
       },
       {
-        "options": [153, 195],
+        "options": ["A3-153", "A3-195"],
         "amount": 1
       },
       {
-        "options": [154, 196],
+        "options": ["A3-154", "A3-196"],
         "amount": 1
       }
     ],
@@ -311,16 +311,16 @@
     "name": "Team Skull's Nasty Plot",
     "requiredCards": [
       {
-        "options": [151, 193, 208],
+        "options": ["A3-151", "A3-193", "A3-208"],
         "amount": 1
       },
       {
-        "options": [22],
+        "options": ["A3-22"],
         "amount": 1
       },
       {
         "amount": "1",
-        "options": [35, 107, 110, 115]
+        "options": ["A3-35", "A3-107", "A3-110", "A3-115"]
       }
     ],
     "reward": " Emblem Ticket (Celestial Guardians)×1\n"
@@ -329,20 +329,20 @@
     "name": "Lillie and Nebby's Growth",
     "requiredCards": [
       {
-        "options": [155, 197, 209],
+        "options": ["A3-155", "A3-197", "A3-209"],
         "amount": 1
       },
       {
-        "options": [85, 171],
+        "options": ["A3-85", "A3-171"],
         "amount": 1
       },
       {
-        "options": [86],
+        "options": ["A3-86"],
         "amount": 1
       },
       {
         "amount": "1",
-        "options": [87, 186, 204, 238, 122, 189, 207, 239]
+        "options": ["A3-87", "A3-186", "A3-204", "A3-238", "A3-122", "A3-189", "A3-207", "A3-239"]
       }
     ],
     "reward": " Emblem Ticket (Celestial Guardians)×7\n"
@@ -351,19 +351,19 @@
     "name": "Guardian Deities of the Four Islands",
     "requiredCards": [
       {
-        "options": [159],
+        "options": ["A3-159"],
         "amount": 1
       },
       {
-        "options": [164],
+        "options": ["A3-164"],
         "amount": 1
       },
       {
-        "options": [166],
+        "options": ["A3-166"],
         "amount": 1
       },
       {
-        "options": [170],
+        "options": ["A3-170"],
         "amount": 1
       }
     ],
@@ -373,31 +373,31 @@
     "name": "Standing Before You: Totem Pokémon",
     "requiredCards": [
       {
-        "options": [15],
+        "options": ["A3-15"],
         "amount": 1
       },
       {
-        "options": [36],
+        "options": ["A3-36"],
         "amount": 1
       },
       {
-        "options": [51, 184, 202],
+        "options": ["A3-51", "A3-184", "A3-202"],
         "amount": 1
       },
       {
-        "options": [65],
+        "options": ["A3-65"],
         "amount": 1
       },
       {
-        "options": [83],
+        "options": ["A3-83"],
         "amount": 1
       },
       {
-        "options": [107],
+        "options": ["A3-107"],
         "amount": 1
       },
       {
-        "options": [127],
+        "options": ["A3-127"],
         "amount": 1
       }
     ],
@@ -407,39 +407,39 @@
     "name": "An Assembly of Alolan Forms 1",
     "requiredCards": [
       {
-        "options": [2, 156],
+        "options": ["A3-2", "A3-156"],
         "amount": 1
       },
       {
-        "options": [27, 160],
+        "options": ["A3-27", "A3-160"],
         "amount": 1
       },
       {
-        "options": [40, 162],
+        "options": ["A3-40", "A3-162"],
         "amount": 1
       },
       {
-        "options": [41],
+        "options": ["A3-41"],
         "amount": 1
       },
       {
-        "options": [58, 185, 203],
+        "options": ["A3-58", "A3-185", "A3-203"],
         "amount": 1
       },
       {
-        "options": [108],
+        "options": ["A3-108"],
         "amount": 1
       },
       {
-        "options": [109],
+        "options": ["A3-109"],
         "amount": 1
       },
       {
-        "options": [117],
+        "options": ["A3-117"],
         "amount": 1
       },
       {
-        "options": [118],
+        "options": ["A3-118"],
         "amount": 1
       }
     ],
@@ -449,39 +449,39 @@
     "name": "An Assembly of Alolan Forms 2",
     "requiredCards": [
       {
-        "options": [38],
+        "options": ["A3-38"],
         "amount": 1
       },
       {
-        "options": [39],
+        "options": ["A3-39"],
         "amount": 1
       },
       {
-        "options": [59],
+        "options": ["A3-59"],
         "amount": 1
       },
       {
-        "options": [60],
+        "options": ["A3-60"],
         "amount": 1
       },
       {
-        "options": [61],
+        "options": ["A3-61"],
         "amount": 1
       },
       {
-        "options": [106],
+        "options": ["A3-106"],
         "amount": 1
       },
       {
-        "options": [107],
+        "options": ["A3-107"],
         "amount": 1
       },
       {
-        "options": [110],
+        "options": ["A3-110"],
         "amount": 1
       },
       {
-        "options": [111, 188, 206],
+        "options": ["A3-111", "A3-188", "A3-206"],
         "amount": 1
       }
     ],
@@ -492,7 +492,7 @@
     "requiredCards": [
       {
         "amount": "3",
-        "options": [9, 10]
+        "options": ["A3-9", "A3-10"]
       }
     ],
     "reward": " Rowlet (profile icon)\n"
@@ -502,7 +502,7 @@
     "requiredCards": [
       {
         "amount": "3",
-        "options": [30, 31]
+        "options": ["A3-30", "A3-31"]
       }
     ],
     "reward": " Litten (profile icon)\n"
@@ -512,7 +512,7 @@
     "requiredCards": [
       {
         "amount": "3",
-        "options": [45, 46]
+        "options": ["A3-45", "A3-46"]
       }
     ],
     "reward": " Popplio (profile icon)\n"
@@ -521,109 +521,109 @@
     "name": "Sun Collection",
     "requiredCards": [
       {
-        "options": [9],
+        "options": ["A3-9"],
         "amount": 1
       },
       {
-        "options": [30],
+        "options": ["A3-30"],
         "amount": 1
       },
       {
-        "options": [46],
+        "options": ["A3-46"],
         "amount": 1
       },
       {
-        "options": [66],
+        "options": ["A3-66"],
         "amount": 1
       },
       {
-        "options": [76],
+        "options": ["A3-76"],
         "amount": 1
       },
       {
-        "options": [81],
+        "options": ["A3-81"],
         "amount": 1
       },
       {
-        "options": [92],
+        "options": ["A3-92"],
         "amount": 1
       },
       {
-        "options": [99],
+        "options": ["A3-99"],
         "amount": 1
       },
       {
-        "options": [100],
+        "options": ["A3-100"],
         "amount": 1
       },
       {
-        "options": [136],
+        "options": ["A3-136"],
         "amount": 1
       },
       {
-        "options": [137],
+        "options": ["A3-137"],
         "amount": 1
       },
       {
-        "options": [141],
+        "options": ["A3-141"],
         "amount": 1
       },
       {
-        "options": [207],
+        "options": ["A3-207"],
         "amount": 1
       }
     ],
     "reward": " Wonder Hourglass×36 Pack Hourglass×12 Shop Ticket×10\n"
   },
   {
-    "name": "Sun Collection",
+    "name": "Moon Collection",
     "requiredCards": [
       {
-        "options": [10],
+        "options": ["A3-10"],
         "amount": 1
       },
       {
-        "options": [31],
+        "options": ["A3-31"],
         "amount": 1
       },
       {
-        "options": [34],
+        "options": ["A3-34"],
         "amount": 1
       },
       {
-        "options": [45],
+        "options": ["A3-45"],
         "amount": 1
       },
       {
-        "options": [73],
+        "options": ["A3-73"],
         "amount": 1
       },
       {
-        "options": [98],
+        "options": ["A3-98"],
         "amount": 1
       },
       {
-        "options": [101],
+        "options": ["A3-101"],
         "amount": 1
       },
       {
-        "options": [105],
+        "options": ["A3-105"],
         "amount": 1
       },
       {
-        "options": [106],
+        "options": ["A3-106"],
         "amount": 1
       },
       {
-        "options": [107],
+        "options": ["A3-107"],
         "amount": 1
       },
       {
-        "options": [110],
+        "options": ["A3-110"],
         "amount": 1
       },
       {
-        "options": [204],
+        "options": ["A3-204"],
         "amount": 1
       }
     ],
@@ -633,51 +633,51 @@
     "name": "Celestial Guardians Museum 1",
     "requiredCards": [
       {
-        "options": [158],
+        "options": ["A3-158"],
         "amount": 1
       },
       {
-        "options": [159],
+        "options": ["A3-159"],
         "amount": 1
       },
       {
-        "options": [165],
+        "options": ["A3-165"],
         "amount": 1
       },
       {
-        "options": [166],
+        "options": ["A3-166"],
         "amount": 1
       },
       {
-        "options": [167],
+        "options": ["A3-167"],
         "amount": 1
       },
       {
-        "options": [168],
+        "options": ["A3-168"],
         "amount": 1
       },
       {
-        "options": [169],
+        "options": ["A3-169"],
         "amount": 1
       },
       {
-        "options": [172],
+        "options": ["A3-172"],
         "amount": 1
       },
       {
-        "options": [173],
+        "options": ["A3-173"],
         "amount": 1
       },
       {
-        "options": [175],
+        "options": ["A3-175"],
         "amount": 1
       },
       {
-        "options": [176],
+        "options": ["A3-176"],
         "amount": 1
       },
       {
-        "options": [179],
+        "options": ["A3-179"],
         "amount": 1
       }
     ],
@@ -687,51 +687,51 @@
     "name": "Celestial Guardians Museum 2",
     "requiredCards": [
       {
-        "options": [156],
+        "options": ["A3-156"],
         "amount": 1
       },
       {
-        "options": [157],
+        "options": ["A3-157"],
         "amount": 1
       },
       {
-        "options": [160],
+        "options": ["A3-160"],
         "amount": 1
       },
       {
-        "options": [161],
+        "options": ["A3-161"],
         "amount": 1
       },
       {
-        "options": [162],
+        "options": ["A3-162"],
         "amount": 1
       },
       {
-        "options": [163],
+        "options": ["A3-163"],
         "amount": 1
       },
       {
-        "options": [164],
+        "options": ["A3-164"],
         "amount": 1
       },
       {
-        "options": [170],
+        "options": ["A3-170"],
         "amount": 1
       },
       {
-        "options": [171],
+        "options": ["A3-171"],
         "amount": 1
       },
       {
-        "options": [174],
+        "options": ["A3-174"],
         "amount": 1
       },
       {
-        "options": [177],
+        "options": ["A3-177"],
         "amount": 1
       },
       {
-        "options": [178],
+        "options": ["A3-178"],
         "amount": 1
       }
     ],
@@ -741,23 +741,23 @@
     "name": "Celestial Guardians Museum 3",
     "requiredCards": [
       {
-        "options": [199],
+        "options": ["A3-199"],
         "amount": 1
       },
       {
-        "options": [200],
+        "options": ["A3-200"],
         "amount": 1
       },
       {
-        "options": [201],
+        "options": ["A3-201"],
         "amount": 1
       },
       {
-        "options": [203],
+        "options": ["A3-203"],
         "amount": 1
       },
       {
-        "options": [207],
+        "options": ["A3-207"],
         "amount": 1
       }
     ],
@@ -767,23 +767,23 @@
     "name": "Celestial Guardians Museum 4",
     "requiredCards": [
       {
-        "options": [198],
+        "options": ["A3-198"],
         "amount": 1
       },
       {
-        "options": [202],
+        "options": ["A3-202"],
         "amount": 1
       },
       {
-        "options": [204],
+        "options": ["A3-204"],
         "amount": 1
       },
       {
-        "options": [205],
+        "options": ["A3-205"],
         "amount": 1
       },
       {
-        "options": [206],
+        "options": ["A3-206"],
         "amount": 1
       }
     ],
@@ -793,27 +793,27 @@
     "name": "Lana and Wishiwashi's School",
     "requiredCards": [
       {
-        "options": [50],
+        "options": ["A3-50"],
         "amount": 1
       },
       {
-        "options": [51],
+        "options": ["A3-51"],
         "amount": 1
       },
       {
-        "options": [152],
+        "options": ["A3-152"],
         "amount": 1
       },
       {
-        "options": [184],
+        "options": ["A3-184"],
         "amount": 1
       },
       {
-        "options": [194],
+        "options": ["A3-194"],
         "amount": 1
       },
       {
-        "options": [202],
+        "options": ["A3-202"],
         "amount": 1
       }
     ],
@@ -823,11 +823,11 @@
     "name": "Guidance of the Sun and Moon",
     "requiredCards": [
       {
-        "options": [204],
+        "options": ["A3-204"],
         "amount": 1
       },
       {
-        "options": [207],
+        "options": ["A3-207"],
         "amount": 1
       }
     ],

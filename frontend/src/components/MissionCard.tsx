@@ -1,14 +1,10 @@
 // import FancyCard from '@/components/FancyCard.tsx'
-// import { Button } from '@/components/ui/button.tsx'
-// import { supabase } from '@/lib/Auth.ts'
 // import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-// import { type User, UserContext } from '@/lib/context/UserContext.ts'
+// import { UserContext } from '@/lib/context/UserContext.ts'
 // import { getCardNameByLang } from '@/lib/utils'
 // import type { MissionCard as MissionCardType } from '@/types'
-// import type { CollectionRow } from '@/types'
 // import i18n from 'i18next'
-// import { MinusIcon, PlusIcon } from 'lucide-react'
-// import { use, useCallback, useEffect, useState } from 'react'
+// import { use, useState } from 'react'
 // import { useParams } from 'react-router'
 //
 // interface Props {

@@ -3,15 +3,15 @@
     "name": "First Choice",
     "requiredCards": [
       {
-        "options": [1, 227],
+        "options": ["A1-1", "A1-227"],
         "amount": 1
       },
       {
-        "options": [33, 230],
+        "options": ["A1-33", "A1-230"],
         "amount": 1
       },
       {
-        "options": [53, 232],
+        "options": ["A1-53", "A1-232"],
         "amount": 1
       }
     ],
@@ -21,11 +21,11 @@
     "name": "Electabuzz and Magmar",
     "requiredCards": [
       {
-        "options": [44],
+        "options": ["A1-44"],
         "amount": 1
       },
       {
-        "options": [101],
+        "options": ["A1-101"],
         "amount": 1
       }
     ],
@@ -35,27 +35,27 @@
     "name": "Viridian Forest",
     "requiredCards": [
       {
-        "options": [5],
+        "options": ["A1-5"],
         "amount": 1
       },
       {
-        "options": [6],
+        "options": ["A1-6"],
         "amount": 1
       },
       {
-        "options": [8],
+        "options": ["A1-8"],
         "amount": 1
       },
       {
-        "options": [9],
+        "options": ["A1-9"],
         "amount": 1
       },
       {
-        "options": [94],
+        "options": ["A1-94"],
         "amount": 1
       },
       {
-        "options": [96, 259, 281, 285],
+        "options": ["A1-96", "A1-259", "A1-281", "A1-285"],
         "amount": 1
       }
     ],
@@ -65,15 +65,15 @@
     "name": "Pidgey Squad",
     "requiredCards": [
       {
-        "options": [186],
+        "options": ["A1-186"],
         "amount": 1
       },
       {
-        "options": [187],
+        "options": ["A1-187"],
         "amount": 1
       },
       {
-        "options": [188, 245],
+        "options": ["A1-188", "A1-245"],
         "amount": 1
       }
     ],
@@ -83,27 +83,27 @@
     "name": "A Day with Family",
     "requiredCards": [
       {
-        "options": [166],
+        "options": ["A1-166"],
         "amount": 1
       },
       {
-        "options": [167],
+        "options": ["A1-167"],
         "amount": 1
       },
       {
-        "options": [168, 240],
+        "options": ["A1-168", "A1-240"],
         "amount": 1
       },
       {
-        "options": [169],
+        "options": ["A1-169"],
         "amount": 1
       },
       {
-        "options": [170],
+        "options": ["A1-170"],
         "amount": 1
       },
       {
-        "options": [171, 241],
+        "options": ["A1-171", "A1-241"],
         "amount": 1
       }
     ],
@@ -113,23 +113,23 @@
     "name": "Pokémon of Ancient Times",
     "requiredCards": [
       {
-        "options": [81],
+        "options": ["A1-81"],
         "amount": 1
       },
       {
-        "options": [82],
+        "options": ["A1-82"],
         "amount": 1
       },
       {
-        "options": [158],
+        "options": ["A1-158"],
         "amount": 1
       },
       {
-        "options": [159],
+        "options": ["A1-159"],
         "amount": 1
       },
       {
-        "options": [210],
+        "options": ["A1-210"],
         "amount": 1
       }
     ],
@@ -139,27 +139,27 @@
     "name": "The Legendary Flight",
     "requiredCards": [
       {
-        "options": [46],
+        "options": ["A1-46"],
         "amount": 1
       },
       {
-        "options": [47, 255, 274],
+        "options": ["A1-47", "A1-255", "A1-274"],
         "amount": 1
       },
       {
-        "options": [83],
+        "options": ["A1-83"],
         "amount": 1
       },
       {
-        "options": [84, 258, 275],
+        "options": ["A1-84", "A1-258", "A1-275"],
         "amount": 1
       },
       {
-        "options": [103],
+        "options": ["A1-103"],
         "amount": 1
       },
       {
-        "options": [104, 260, 276],
+        "options": ["A1-104", "A1-260", "A1-276"],
         "amount": 1
       }
     ],
@@ -169,23 +169,23 @@
     "name": "Triple Power",
     "requiredCards": [
       {
-        "options": [22],
+        "options": ["A1-22"],
         "amount": 1
       },
       {
-        "options": [23, 252],
+        "options": ["A1-23", "A1-252"],
         "amount": 1
       },
       {
-        "options": [98],
+        "options": ["A1-98"],
         "amount": 1
       },
       {
-        "options": [140],
+        "options": ["A1-140"],
         "amount": 1
       },
       {
-        "options": [200],
+        "options": ["A1-200"],
         "amount": 1
       }
     ],
@@ -195,19 +195,19 @@
     "name": "A Big Snorlax Nuisance",
     "requiredCards": [
       {
-        "options": [11],
+        "options": ["A1-11"],
         "amount": 1
       },
       {
-        "options": [16],
+        "options": ["A1-16"],
         "amount": 1
       },
       {
-        "options": [18],
+        "options": ["A1-18"],
         "amount": 1
       },
       {
-        "options": [250],
+        "options": ["A1-250"],
         "amount": 1
       }
     ],
@@ -217,31 +217,31 @@
     "name": "Touring the Kanto Region",
     "requiredCards": [
       {
-        "options": [62],
+        "options": ["A1-62"],
         "amount": 1
       },
       {
-        "options": [121],
+        "options": ["A1-121"],
         "amount": 1
       },
       {
-        "options": [127],
+        "options": ["A1-127"],
         "amount": 1
       },
       {
-        "options": [174],
+        "options": ["A1-174"],
         "amount": 1
       },
       {
-        "options": [189],
+        "options": ["A1-189"],
         "amount": 1
       },
       {
-        "options": [191],
+        "options": ["A1-191"],
         "amount": 1
       },
       {
-        "options": [199],
+        "options": ["A1-199"],
         "amount": 1
       }
     ],
@@ -251,35 +251,35 @@
     "name": "The Gym Leaders of the Kanto Region",
     "requiredCards": [
       {
-        "options": [219, 266],
+        "options": ["A1-219", "A1-266"],
         "amount": 1
       },
       {
-        "options": [220, 267],
+        "options": ["A1-220", "A1-267"],
         "amount": 1
       },
       {
-        "options": [221, 268],
+        "options": ["A1-221", "A1-268"],
         "amount": 1
       },
       {
-        "options": [222, 269],
+        "options": ["A1-222", "A1-269"],
         "amount": 1
       },
       {
-        "options": [223, 270],
+        "options": ["A1-223", "A1-270"],
         "amount": 1
       },
       {
-        "options": [224, 271],
+        "options": ["A1-224", "A1-271"],
         "amount": 1
       },
       {
-        "options": [225, 272],
+        "options": ["A1-225", "A1-272"],
         "amount": 1
       },
       {
-        "options": [226, 273],
+        "options": ["A1-226", "A1-273"],
         "amount": 1
       }
     ],
@@ -289,51 +289,51 @@
     "name": "Different Journeys, Different Growth",
     "requiredCards": [
       {
-        "options": [1, 227],
+        "options": ["A1-1", "A1-227"],
         "amount": 1
       },
       {
-        "options": [2],
+        "options": ["A1-2"],
         "amount": 1
       },
       {
-        "options": [3],
+        "options": ["A1-3"],
         "amount": 1
       },
       {
-        "options": [4, 251],
+        "options": ["A1-4", "A1-251"],
         "amount": 1
       },
       {
-        "options": [33, 230],
+        "options": ["A1-33", "A1-230"],
         "amount": 1
       },
       {
-        "options": [34],
+        "options": ["A1-34"],
         "amount": 1
       },
       {
-        "options": [35],
+        "options": ["A1-35"],
         "amount": 1
       },
       {
-        "options": [36, 253, 280, 284],
+        "options": ["A1-36", "A1-253", "A1-280", "A1-284"],
         "amount": 1
       },
       {
-        "options": [53, 232],
+        "options": ["A1-53", "A1-232"],
         "amount": 1
       },
       {
-        "options": [54],
+        "options": ["A1-54"],
         "amount": 1
       },
       {
-        "options": [55],
+        "options": ["A1-55"],
         "amount": 1
       },
       {
-        "options": [56, 256],
+        "options": ["A1-56", "A1-256"],
         "amount": 1
       }
     ],
@@ -343,47 +343,47 @@
     "name": "Safari Zone",
     "requiredCards": [
       {
-        "options": [21],
+        "options": ["A1-21"],
         "amount": 1
       },
       {
-        "options": [25],
+        "options": ["A1-25"],
         "amount": 1
       },
       {
-        "options": [26, 229],
+        "options": ["A1-26", "A1-229"],
         "amount": 1
       },
       {
-        "options": [118, 237],
+        "options": ["A1-118", "A1-237"],
         "amount": 1
       },
       {
-        "options": [156],
+        "options": ["A1-156"],
         "amount": 1
       },
       {
-        "options": [183],
+        "options": ["A1-183"],
         "amount": 1
       },
       {
-        "options": [184],
+        "options": ["A1-184"],
         "amount": 1
       },
       {
-        "options": [199],
+        "options": ["A1-199"],
         "amount": 1
       },
       {
-        "options": [202],
+        "options": ["A1-202"],
         "amount": 1
       },
       {
-        "options": [203],
+        "options": ["A1-203"],
         "amount": 1
       },
       {
-        "options": [204],
+        "options": ["A1-204"],
         "amount": 1
       }
     ],
@@ -393,31 +393,31 @@
     "name": "Category: Mouse Pokémon",
     "requiredCards": [
       {
-        "options": [94],
+        "options": ["A1-94"],
         "amount": 1
       },
       {
-        "options": [96, 259, 281, 285],
+        "options": ["A1-96", "A1-259", "A1-281", "A1-285"],
         "amount": 1
       },
       {
-        "options": [95],
+        "options": ["A1-95"],
         "amount": 1
       },
       {
-        "options": [137],
+        "options": ["A1-137"],
         "amount": 1
       },
       {
-        "options": [138],
+        "options": ["A1-138"],
         "amount": 1
       },
       {
-        "options": [189],
+        "options": ["A1-189"],
         "amount": 1
       },
       {
-        "options": [190],
+        "options": ["A1-190"],
         "amount": 1
       }
     ],
@@ -427,23 +427,23 @@
     "name": "Pokémon Super Express",
     "requiredCards": [
       {
-        "options": [40],
+        "options": ["A1-40"],
         "amount": 1
       },
       {
-        "options": [41, 254],
+        "options": ["A1-41", "A1-254"],
         "amount": 1
       },
       {
-        "options": [43, 231],
+        "options": ["A1-43", "A1-231"],
         "amount": 1
       },
       {
-        "options": [106],
+        "options": ["A1-106"],
         "amount": 1
       },
       {
-        "options": [185, 244],
+        "options": ["A1-185", "A1-244"],
         "amount": 1
       }
     ],
@@ -453,7 +453,7 @@
     "name": "Collect 3 Electrode cards",
     "requiredCards": [
       {
-        "options": [100, 235],
+        "options": ["A1-100", "A1-235"],
         "amount": 3
       }
     ],
@@ -463,7 +463,7 @@
     "name": "Collect 5 Gardevoir cards",
     "requiredCards": [
       {
-        "options": [132],
+        "options": ["A1-132"],
         "amount": 5
       }
     ],
@@ -473,7 +473,7 @@
     "name": "Collect 5 Charizard cards",
     "requiredCards": [
       {
-        "options": [35],
+        "options": ["A1-35"],
         "amount": 5
       }
     ],
@@ -483,7 +483,7 @@
     "name": "Collect 5 Mewtwo cards",
     "requiredCards": [
       {
-        "options": [128],
+        "options": ["A1-128"],
         "amount": 5
       }
     ],
@@ -493,35 +493,35 @@
     "name": "Genetic Apex Museum 1 (Mewtwo)",
     "requiredCards": [
       {
-        "options": [227],
+        "options": ["A1-227"],
         "amount": 1
       },
       {
-        "options": [239],
+        "options": ["A1-239"],
         "amount": 1
       },
       {
-        "options": [242],
+        "options": ["A1-242"],
         "amount": 1
       },
       {
-        "options": [243],
+        "options": ["A1-243"],
         "amount": 1
       },
       {
-        "options": [244],
+        "options": ["A1-244"],
         "amount": 1
       },
       {
-        "options": [245],
+        "options": ["A1-245"],
         "amount": 1
       },
       {
-        "options": [247],
+        "options": ["A1-247"],
         "amount": 1
       },
       {
-        "options": [249],
+        "options": ["A1-249"],
         "amount": 1
       }
     ],
@@ -531,35 +531,35 @@
     "name": "Genetic Apex Museum 2 (Charizard)",
     "requiredCards": [
       {
-        "options": [228],
+        "options": ["A1-228"],
         "amount": 1
       },
       {
-        "options": [229],
+        "options": ["A1-229"],
         "amount": 1
       },
       {
-        "options": [230],
+        "options": ["A1-230"],
         "amount": 1
       },
       {
-        "options": [231],
+        "options": ["A1-231"],
         "amount": 1
       },
       {
-        "options": [234],
+        "options": ["A1-234"],
         "amount": 1
       },
       {
-        "options": [236],
+        "options": ["A1-236"],
         "amount": 1
       },
       {
-        "options": [237],
+        "options": ["A1-237"],
         "amount": 1
       },
       {
-        "options": [246],
+        "options": ["A1-246"],
         "amount": 1
       }
     ],
@@ -569,35 +569,35 @@
     "name": "Genetic Apex Museum 3 (Pikachu)",
     "requiredCards": [
       {
-        "options": [232],
+        "options": ["A1-232"],
         "amount": 1
       },
       {
-        "options": [233],
+        "options": ["A1-233"],
         "amount": 1
       },
       {
-        "options": [235],
+        "options": ["A1-235"],
         "amount": 1
       },
       {
-        "options": [238],
+        "options": ["A1-238"],
         "amount": 1
       },
       {
-        "options": [240],
+        "options": ["A1-240"],
         "amount": 1
       },
       {
-        "options": [241],
+        "options": ["A1-241"],
         "amount": 1
       },
       {
-        "options": [248],
+        "options": ["A1-248"],
         "amount": 1
       },
       {
-        "options": [250],
+        "options": ["A1-250"],
         "amount": 1
       }
     ],
@@ -607,35 +607,35 @@
     "name": "The Gym Leaders of the Kanto Region 2",
     "requiredCards": [
       {
-        "options": [266],
+        "options": ["A1-266"],
         "amount": 1
       },
       {
-        "options": [267],
+        "options": ["A1-267"],
         "amount": 1
       },
       {
-        "options": [268],
+        "options": ["A1-268"],
         "amount": 1
       },
       {
-        "options": [269],
+        "options": ["A1-269"],
         "amount": 1
       },
       {
-        "options": [270],
+        "options": ["A1-270"],
         "amount": 1
       },
       {
-        "options": [271],
+        "options": ["A1-271"],
         "amount": 1
       },
       {
-        "options": [272],
+        "options": ["A1-272"],
         "amount": 1
       },
       {
-        "options": [273],
+        "options": ["A1-273"],
         "amount": 1
       }
     ],
@@ -645,15 +645,15 @@
     "name": "The Legendary Flight Continues",
     "requiredCards": [
       {
-        "options": [274],
+        "options": ["A1-274"],
         "amount": 1
       },
       {
-        "options": [275],
+        "options": ["A1-275"],
         "amount": 1
       },
       {
-        "options": [276],
+        "options": ["A1-276"],
         "amount": 1
       }
     ],
@@ -663,19 +663,19 @@
     "name": "The Immersive 4",
     "requiredCards": [
       {
-        "options": [280],
+        "options": ["A1-280"],
         "amount": 1
       },
       {
-        "options": [281],
+        "options": ["A1-281"],
         "amount": 1
       },
       {
-        "options": [282],
+        "options": ["A1-282"],
         "amount": 1
       },
       {
-        "options": [283],
+        "options": ["A1-283"],
         "amount": 1
       }
     ],
