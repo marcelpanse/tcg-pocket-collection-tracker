@@ -32,7 +32,7 @@ export const RadialChart: React.FC<RadialChartProps> = ({
         cy={size / 2}
         r={radius}
         fill="none"
-        stroke="#e5e7eb" // tailwind slate-200
+        stroke="#262626" // tailwind slate-200
         strokeWidth={strokeWidth}
       />
       <circle
