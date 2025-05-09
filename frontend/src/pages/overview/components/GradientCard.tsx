@@ -1,3 +1,4 @@
+import { getPokemonImageUrl } from '@/lib/utils'
 import { Trans, useTranslation } from 'react-i18next'
 
 interface GradientCardProps {
@@ -17,7 +18,10 @@ export function GradientCard({ title, percentage, className, backgroundColor }: 
       style={{ backgroundColor }}
     >
       <p className="mb-1 text-center text-md sm:text-xl text-slate-900">You should open a</p>
-      <header className="font-semibold text-center text-2xl sm:text-6xl text-slate-900">{t(title, { ns: 'common/packs' })}</header>
+      <div className="flex gap-2">
+        <header className="font-semibold text-center text-2xl sm:text-6xl text-slate-900">{t(title, { ns: 'common/packs' })}</header>
+        <img src={getPokemonImageUrl(title)} alt={title} className="h-18 w-18" />
+      </div>
       <p className="mt-2 text-center text-md sm:text-xl text-slate-900">
         <Trans
           i18nKey="text"
