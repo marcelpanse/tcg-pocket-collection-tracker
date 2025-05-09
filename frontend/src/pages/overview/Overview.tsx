@@ -111,7 +111,7 @@ function Overview() {
             <RadialChart
               value={totalUniqueCards === 0 ? 0 : CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode }) / totalUniqueCards}
               label={`${CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode })} / ${totalUniqueCards}`}
-              color="#38bdf8"
+              color="#2463eb"
               size={120}
               strokeWidth={12}
             />
