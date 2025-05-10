@@ -1,4 +1,8 @@
 {
+  "stats": {
+    "title": "Gracias por ser parte de nuestra comunidad",
+    "description": "En la actualidad, nuestra comunidad de {{usersCount}} usuarios ha rastreado colectivamente {{collectionCount}} cartas en total!"
+  },
   "dontHaveCards": {
     "title": "¡Todavía no tienes ninguna tarjeta!",
     "description": "Ve a la página de colección para añadir tu primera tarjeta o inicia sesión para crearte una cuenta."

@@ -16,8 +16,9 @@ export function GradientCard({ title, percentage, className, backgroundColor }: 
       className={`${className} text flex flex-col items-center justify-center rounded-4xl p-4 sm:p-8 transition-all duration-200`}
       style={{ backgroundColor }}
     >
-      <p className="mb-1 text-center text-md sm:text-xl text-slate-900">You should open a</p>
-      <img src={`/images/packs/${t('language')}/${title}.png`} alt="" />
+      <p className="mb-1 text-center text-md sm:text-xl text-slate-900">
+        <img src={`/images/packs/${t('language')}/${title}.png`} alt="" />
+      </p>
       <p className="mt-2 text-center text-md sm:text-xl text-slate-900">
         <Trans
           i18nKey="text"
