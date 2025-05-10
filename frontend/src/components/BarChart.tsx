@@ -25,6 +25,19 @@ const chartConfig = {
     },
 } satisfies ChartConfig */
 
+const packNameMap: Record<string, string> = {
+  pikachupack: 'Pikachu',
+  charizardpack: 'Charizard',
+  mewtwopack: 'Mewtwo',
+  dialgapack: 'Dialga',
+  palkiapack: 'Palkia',
+  mewpack: 'Mew',
+  arceuspack: 'Arceus',
+  shiningrevelrypack: 'Shining Revelry',
+  lunalapack: 'Lunala',
+  solgaleopack: 'Solgaleo',
+}
+
 interface PercentageBarChartProps {
   title: string
   data: { packName: string; percentage: number; fill: string }[]
@@ -32,7 +45,7 @@ interface PercentageBarChartProps {
   footer?: string
 }
 export const BarChartComponent: FC<PercentageBarChartProps> = ({ title, data, config = {}, footer }) => (
-  <Card className="rounded-4xl border-2 border-slate-600 border-solid shadow-none">
+  <Card className="rounded-4xl border-2 border-slate-600 border-solid shadow-none dark:bg-neutral-800">
     <CardHeader className="text-balance text-center">
       <CardTitle>{title}</CardTitle>
     </CardHeader>
@@ -40,7 +53,7 @@ export const BarChartComponent: FC<PercentageBarChartProps> = ({ title, data, co
       <ChartContainer config={config}>
         <BarChart accessibilityLayer data={data.map((d) => ({ ...d, percentage: d.percentage * 100 }))}>
           <CartesianGrid vertical={false} />
-          <XAxis dataKey="packName" tickLine={false} tickMargin={10} axisLine={false} />
+          <XAxis dataKey="packName" tickLine={false} tickMargin={10} axisLine={false} tickFormatter={(value) => packNameMap[value] || value} />
           <YAxis type="number" domain={[0, 100]} width={25} />
           <ChartTooltip cursor={false} content={<CustomTooltipContent payload={[]} active={false} />} />
           <Bar dataKey="percentage" strokeWidth={2} radius={8} />
