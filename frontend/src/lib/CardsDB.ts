@@ -91,6 +91,7 @@ export const expansions: Expansion[] = [
     packs: [
       { name: 'lunalapack', color: '#A0ABE0' },
       { name: 'solgaleopack', color: '#CA793F' },
+      { name: 'everypack', color: '#CCCCCC' },
     ],
     tradeable: false,
     containsShinies: true,
