@@ -86,11 +86,26 @@ export function Header() {
             <DropdownMenuContent className="w-56">
               <DropdownMenuLabel>{t('selectLanguage')}</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => changeLanguage('en-US')}>{t('languages.en-US')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('es-ES')}>{t('languages.es-ES')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('pt-BR')}>{t('languages.pt-BR')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('fr-FR')}>{t('languages.fr-FR')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('it-IT')}>{t('languages.it-IT')}</DropdownMenuItem>
+
+              <DropdownMenuItem selected={i18n.language === 'en-US'} onClick={() => changeLanguage('en-US')}>
+                {t('languages.en-US')}
+              </DropdownMenuItem>
+
+              <DropdownMenuItem selected={i18n.language === 'es-ES'} onClick={() => changeLanguage('es-ES')}>
+                {t('languages.es-ES')}
+              </DropdownMenuItem>
+
+              <DropdownMenuItem selected={i18n.language === 'pt-BR'} onClick={() => changeLanguage('pt-BR')}>
+                {t('languages.pt-BR')}
+              </DropdownMenuItem>
+
+              <DropdownMenuItem selected={i18n.language === 'fr-FR'} onClick={() => changeLanguage('fr-FR')}>
+                {t('languages.fr-FR')}
+              </DropdownMenuItem>
+
+              <DropdownMenuItem selected={i18n.language === 'it-IT'} onClick={() => changeLanguage('it-IT')}>
+                {t('languages.it-IT')}
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
