@@ -71,7 +71,7 @@ export function Header() {
             <PokemonCardDetector />
             <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden sm:block">
-                <Button variant="ghost">{t('Community ↗')}</Button>
+                <Button variant="ghost">{t('community')}</Button>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuList>
