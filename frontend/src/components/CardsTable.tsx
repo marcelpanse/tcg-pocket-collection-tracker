@@ -150,7 +150,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
                   </h2>
                 </div>
               ) : (
-                <div className="flex justify-center gap-x-3">
+                <div className="flex justify-start gap-x-3 ml-2">
                   {(row.data as { type: string; row: Row<CardType> }[]).map(({ row: subRow }) => (
                     <Card key={subRow.original.card_id} card={subRow.original} />
                   ))}
