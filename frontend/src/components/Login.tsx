@@ -98,6 +98,8 @@ export const Login = () => {
 
         <Button onClick={submitEmail}>{t('button')}</Button>
       </div>
+
+      <p className="mt-3 text-sm text-white/25">We'll only use your email for login.</p>
     </div>
   )
 }
