@@ -405,20 +405,26 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
 }
 
 export const pullRateForSpecificCard = (expansion: Expansion, packName: string, card: Card) => {
-  const nrOfcardsOfThisRarity = expansion.cards.filter((c) => (c.pack === packName || c.pack === 'everypack') && c.rarity === card.rarity).length
-  // console.log('nrOfcardsOfThisRarity', nrOfcardsOfThisRarity)
+  const cardsInPack = expansion.cards.filter((c) => c.pack === packName || c.pack === 'everypack')
+  const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === card.rarity).length
+  const cardsInRarePack = cardsInPack.filter((c) => abilityByRarityToBeInRarePack[c.rarity] === 1)
 
   const chanceToGetThisCard1_3 = probabilityPerRarity1_3[card.rarity] / 100 / nrOfcardsOfThisRarity
-  const chanceToGetThisCard4 = probabilityPerRarity4[card.rarity] / 100 / nrOfcardsOfThisRarity
-  const chanceToGetThisCard5 = probabilityPerRarity5[card.rarity] / 100 / nrOfcardsOfThisRarity
-
-  // console.log('totalProbability1_3', chanceToGetThisCard1_3)
-  // console.log('totalProbability4', chanceToGetThisCard4)
-  // console.log('totalProbability5', chanceToGetThisCard5)
+  let chanceToGetThisCard4: number
+  let chanceToGetThisCard5: number
+  if (expansion.containsShinies) {
+    chanceToGetThisCard4 = probabilityPerRarity4Shiny[card.rarity] / 100 / nrOfcardsOfThisRarity
+    chanceToGetThisCard5 = probabilityPerRarity5Shiny[card.rarity] / 100 / nrOfcardsOfThisRarity
+  } else {
+    chanceToGetThisCard4 = probabilityPerRarity4[card.rarity] / 100 / nrOfcardsOfThisRarity
+    chanceToGetThisCard5 = probabilityPerRarity5[card.rarity] / 100 / nrOfcardsOfThisRarity
+  }
+  const chanceToGetThisCardRare1_5 = abilityByRarityToBeInRarePack[card.rarity] / cardsInRarePack.length
 
   // take the total probabilities per card draw (for the 1-3 you need to take the cube root of the probability) and multiply
-  const chanceToGetNewCard = 1 - (1 - chanceToGetThisCard1_3) ** 3 * (1 - chanceToGetThisCard4) * (1 - chanceToGetThisCard5)
-  // console.log('chance to get new card', chanceToGetNewCard)
+  const chanceToGetNewCard = 0.9995 * (1 - (1 - chanceToGetThisCard1_3) ** 3 * (1 - chanceToGetThisCard4) * (1 - chanceToGetThisCard5))
+  const chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - chanceToGetThisCardRare1_5) ** 5)
 
-  return chanceToGetNewCard * 100
+  // disjoint union of probabilities
+  return (chanceToGetNewCard + chanceToGetNewCardInRarePack) * 100
 }
