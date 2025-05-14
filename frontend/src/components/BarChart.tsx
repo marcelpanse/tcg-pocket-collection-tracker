@@ -45,8 +45,8 @@ export const BarChartComponent: FC<PercentageBarChartProps> = ({ title, data, co
 
   return (
     <Card className="rounded-lg border-1 border-neutral-700 border-solid shadow-none dark:bg-neutral-800">
-      <CardHeader className="text-balance text-center">
-        <CardTitle>{title}</CardTitle>
+      <CardHeader className="text-center">
+        <CardTitle className="text-xl">{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <ChartContainer config={config}>
