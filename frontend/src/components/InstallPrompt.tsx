@@ -74,7 +74,7 @@ const InstallPrompt = () => {
         left: '50%',
         transform: 'translateX(-50%)',
       }}
-      className="block sm:hidden border-2 border-slate-600 p-2 shadow-sm bg-gray-900 rounded-md"
+      className="block sm:hidden border-1 border-neutral-700 p-2 shadow-sm bg-gray-900 rounded-md"
     >
       <p className="pb-2">{t('install')}</p>
       <div className="justify-between flex">

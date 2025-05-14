@@ -13,7 +13,7 @@ const PackFilter: FC<Props> = ({ packFilter, setPackFilter, expansion }) => {
 
   return (
     <Tabs value={packFilter} onValueChange={(value) => setPackFilter(value)} className="w-full">
-      <TabsList className="w-full flex-wrap h-auto border-2 border-slate-600 rounded-md">
+      <TabsList className="w-full flex-wrap h-auto border-1 border-neutral-700 rounded-md">
         <TabsTrigger value="all">{t('all')}</TabsTrigger>
         {expansions
           .filter((exp) => exp.id === expansion)

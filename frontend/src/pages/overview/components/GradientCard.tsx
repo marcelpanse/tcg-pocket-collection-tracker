@@ -12,10 +12,7 @@ export function GradientCard({ title, percentage, className, backgroundColor }: 
   const chancePercentage = Math.round(percentage * 1000) / 10
 
   return (
-    <div
-      className={`${className} tex flex flex-col items-center justify-center rounded-4xl p-4 sm:p-8 transition-all duration-200`}
-      style={{ backgroundColor }}
-    >
+    <div className={`${className} tex flex flex-col items-center justify-center rounded-lg p-4 sm:p-8 transition-all duration-200`} style={{ backgroundColor }}>
       <p className="mb-1 text-center text-md sm:text-xl text-slate-900">
         <Trans i18nKey="open" ns="gradient-card" />
       </p>

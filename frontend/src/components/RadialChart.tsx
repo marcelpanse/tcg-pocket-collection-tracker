@@ -5,6 +5,7 @@ interface RadialChartProps {
   value: number
   /** Texto central */
   label?: string
+  sublabel?: string
   /** Color del círculo de progreso */
   color?: string
   /** Tamaño en px */
@@ -16,6 +17,7 @@ interface RadialChartProps {
 export const RadialChart: React.FC<RadialChartProps> = ({
   value,
   label,
+  sublabel,
   color = '#38bdf8', // tailwind sky-400
   size = 96,
   strokeWidth = 10,
@@ -27,14 +29,7 @@ export const RadialChart: React.FC<RadialChartProps> = ({
   return (
     <svg width={size} height={size} className="block mx-auto" style={{ display: 'block' }}>
       <title>{label ? label : `Radial chart showing ${Math.round(value * 100)}%`}</title>
-      <circle
-        cx={size / 2}
-        cy={size / 2}
-        r={radius}
-        fill="none"
-        stroke="#262626" // tailwind slate-200
-        strokeWidth={strokeWidth}
-      />
+      <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="#404040" strokeWidth={strokeWidth / 2} />
       <circle
         cx={size / 2}
         cy={size / 2}
@@ -44,20 +39,18 @@ export const RadialChart: React.FC<RadialChartProps> = ({
         strokeWidth={strokeWidth}
         strokeDasharray={circumference}
         strokeDashoffset={offset}
-        strokeLinecap="round"
+        strokeLinecap="butt"
         transform={`rotate(-90 ${size / 2} ${size / 2})`}
         style={{ transition: 'stroke-dashoffset 0.5s' }}
       />
-      <text
-        x="50%"
-        y="50%"
-        textAnchor="middle"
-        dominantBaseline="central"
-        className="font-semibold text-md"
-        fill="#FFFFFF" // tailwind slate-700
-      >
+      <text x="50%" y="45%" textAnchor="middle" dominantBaseline="central" className="font-semibold text-4xl" fill="#FFFFFF">
         {label ?? `${Math.round(value * 100)}%`}
       </text>
+      {sublabel && (
+        <text x="50%" y="63%" textAnchor="middle" dominantBaseline="central" className="font-semibold text-sm" fill="#A3A3A3">
+          {sublabel}
+        </text>
+      )}
     </svg>
   )
 }

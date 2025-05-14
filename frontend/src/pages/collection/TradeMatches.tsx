@@ -194,7 +194,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection }) => 
         }
       }}
     >
-      <DialogContent className="border-2 border-slate-600 shadow-none max-w-4xl h-[90vh] content-start flex flex-col">
+      <DialogContent className="border-1 border-neutral-700 shadow-none max-w-4xl h-[90vh] content-start flex flex-col">
         <DialogHeader>
           <DialogTitle>{t('title')}</DialogTitle>
         </DialogHeader>

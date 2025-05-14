@@ -147,7 +147,7 @@ export function Header() {
               <DialogTrigger asChild>
                 <Button>{t('login')}</Button>
               </DialogTrigger>
-              <DialogContent className="border-2 border-slate-600 shadow-none">
+              <DialogContent className="border-1 border-neutral-700 shadow-none">
                 <DialogHeader>
                   <DialogTitle>{t('signUp')}</DialogTitle>
                 </DialogHeader>
@@ -158,7 +158,7 @@ export function Header() {
         </div>
       </header>
       <Dialog open={isImportDialogOpen} onOpenChange={setIsImportDialogOpen}>
-        <DialogContent className="border-2 border-slate-600 shadow-none">
+        <DialogContent className="border-1 border-neutral-700 shadow-none">
           <DialogHeader>
             <DialogTitle>{t('import')}</DialogTitle>
           </DialogHeader>
@@ -166,7 +166,7 @@ export function Header() {
         </DialogContent>
       </Dialog>
       <Dialog open={isExportDialogOpen} onOpenChange={setIsExportDialogOpen}>
-        <DialogContent className="border-2 border-slate-600 shadow-none">
+        <DialogContent className="border-1 border-neutral-700 shadow-none">
           <DialogHeader>
             <DialogTitle>{t('export')}</DialogTitle>
           </DialogHeader>
@@ -174,7 +174,7 @@ export function Header() {
         </DialogContent>
       </Dialog>
       <Dialog open={isAboutUsDialogOpen} onOpenChange={setIsAboutUsDialogOpen}>
-        <DialogContent className="border-2 border-slate-600 shadow-none">
+        <DialogContent className="border-1 border-neutral-700 shadow-none">
           <DialogHeader>
             <DialogTitle>{t('aboutUsDialog.title')}</DialogTitle>
           </DialogHeader>

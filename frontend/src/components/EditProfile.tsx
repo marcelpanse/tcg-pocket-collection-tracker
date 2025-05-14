@@ -72,12 +72,12 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
 
   return (
     <Dialog open={isProfileDialogOpen} onOpenChange={setIsProfileDialogOpen}>
-      <DialogContent className="border-2 border-slate-600 shadow-none h-[90vh] content-start">
+      <DialogContent className="border-1 border-neutral-700 shadow-none h-[90vh] content-start">
         <DialogHeader>
           <DialogTitle>{t('editProfile')}</DialogTitle>
         </DialogHeader>
 
-        <Alert className="mb-2 border-2 border-slate-600 shadow-none">
+        <Alert className="mb-2 border-1 border-neutral-700 shadow-none">
           <Siren className="h-4 w-4" />
           <AlertTitle>{t('updateProfile.title')}</AlertTitle>
           <AlertDescription>{t('updateProfile.description')}</AlertDescription>

@@ -83,7 +83,7 @@ function Overview() {
     <main className="fade-in-up">
       <article className="mx-auto max-w-7xl px-8">
         {ownedCards.length === 0 && (
-          <Alert className="mb-8 border-2 border-slate-600 shadow-none">
+          <Alert className="mb-8 border-1 border-neutral-700 shadow-none">
             <Siren className="h-4 w-4" />
             <AlertTitle>{t('dontHaveCards.title')}</AlertTitle>
             <AlertDescription>{t('dontHaveCards.description')}</AlertDescription>
@@ -91,7 +91,7 @@ function Overview() {
         )}
 
         {ownedCards.length > 0 && (
-          <Alert className="mb-8 border-2 border-slate-600 shadow-none">
+          <Alert className="mb-8 border-1 border-neutral-700 shadow-none">
             <Heart className="h-4 w-4" />
             <AlertTitle>{t('stats.title')}</AlertTitle>
             <AlertDescription>{t('stats.description', { usersCount, collectionCount })}</AlertDescription>
@@ -106,17 +106,17 @@ function Overview() {
         </div>
 
         <section className="grid grid-cols-8 gap-4 sm:gap-6">
-          <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-3 sm:p-6 md:p-8 mb-4 md:mb-0">
-            <h2 className="mb-1 text-center text-base sm:text-lg md:text-2xl">{t('youHave')}</h2>
+          <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-lg border-1 border-neutral-700 bg-neutral-800 border-solid p-3 sm:p-6 md:p-8 mb-4 md:mb-0">
+            <h2 className="font-bold mb-4 text-center text-base sm:text-lg md:text-3xl">{t('uniqueCards')}</h2>
             <RadialChart
               value={totalUniqueCards === 0 ? 0 : CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode }) / totalUniqueCards}
-              label={`${CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode })} / ${totalUniqueCards}`}
-              color="#2463eb"
-              size={120}
-              strokeWidth={12}
+              label={`${CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode })}`}
+              sublabel={`/ ${totalUniqueCards}`}
+              color="#92C5FD"
+              size={180}
+              strokeWidth={24}
             />
-            <h2 className="mt-2 text-balance text-center text-base sm:text-lg md:text-2xl">{t('uniqueCards')}</h2>
-            <h2 className="text-balance text-center text-sm sm:text-md md:text-lg">
+            <h2 className="mt-6 text-balance text-center text-sm sm:text-md md:text-md">
               {numberFilter === 1 ? t('numberOfCopies-single') : t('numberOfCopies-plural', { numberFilter: numberFilter })}
             </h2>
           </div>
@@ -126,7 +126,7 @@ function Overview() {
             className="col-span-8 md:col-span-4 col-start-1 md:col-start-3 mb-4 md:mb-0"
             backgroundColor={highestProbabilityPack?.fill}
           />
-          <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-4xl border-2 border-slate-600 border-solid p-3 sm:p-6 md:p-8">
+          <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-lg border-1 border-neutral-700 bg-neutral-800 border-solid p-3 sm:p-6 md:p-8">
             <h2 className="mb-1 text-center text-base sm:text-lg md:text-2xl">{t('youHave')}</h2>
             <h1 className="mb-2 text-balance text-center font-semibold text-2xl sm:text-3xl md:text-7xl">{ownedCardsCount}</h1>
             <h2 className="text-balance text-center text-base sm:text-lg md:text-2xl">{t('cardsTotal')}</h2>

@@ -63,13 +63,13 @@ export const Login = () => {
         <p className="pt-4">{t('fill6Digit')}</p>
         <div>
           <InputOTP maxLength={6} autoFocus onComplete={otpEntered} className="max-w-max">
-            <InputOTPGroup className="border-2 border-slate-600 shadow-none">
+            <InputOTPGroup className="border-1 border-neutral-700 shadow-none">
               <InputOTPSlot index={0} />
               <InputOTPSlot index={1} />
               <InputOTPSlot index={2} />
             </InputOTPGroup>
             <InputOTPSeparator />
-            <InputOTPGroup className="border-2 border-slate-600 shadow-none">
+            <InputOTPGroup className="border-1 border-neutral-700 shadow-none">
               <InputOTPSlot index={3} />
               <InputOTPSlot index={4} />
               <InputOTPSlot index={5} />
