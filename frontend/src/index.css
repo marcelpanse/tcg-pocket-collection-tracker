@@ -66,6 +66,10 @@
   }
 }
 
+div[role="dialog"] {
+  overflow-y: auto;
+}
+
 .DialogOverlay {
   background: rgba(0 0 0 / 0.5);
   position: fixed;

@@ -21,25 +21,39 @@ import { Globe, LogOut, UserRoundPen } from 'lucide-react'
 import { use, useState } from 'react'
 import GitHubButton from 'react-github-btn'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router'
+import { Link, useLocation } from 'react-router'
 
 const PokemonCardDetector = loadable(() => import('@/components/PokemonCardDetectorComponent.tsx'))
 
 export function Header() {
   const { user, setUser, isLoginDialogOpen, setIsLoginDialogOpen, setIsProfileDialogOpen } = use(UserContext)
+  const location = useLocation()
   const [isImportDialogOpen, setIsImportDialogOpen] = useState<boolean>(false)
   const [isExportDialogOpen, setIsExportDialogOpen] = useState<boolean>(false)
   const [isAboutUsDialogOpen, setIsAboutUsDialogOpen] = useState<boolean>(false)
   const { t, i18n } = useTranslation('header')
   const changeLanguage = (lng: string) => i18n.changeLanguage(lng)
 
+  const isOverviewPage = location.pathname === '/'
+
   return (
     <>
-      <header id="header" className="flex h-14 md:h-20 w-full shrink-0 flex-wrap items-center px-4 md:px-6">
-        <div className="shrink font-bold pr-4 hidden md:block">TCG Pocket Collection Tracker</div>
+      <header id="header" className="flex max-w-7xl mx-auto h-14 md:h-20 shrink-0 flex-wrap items-center px-4 md:px-6">
+        <HamburgerMenu />
+        <Link to="/" className="flex items-center gap-2">
+          <img src="\pokemon-icon128.png" alt="Logo" className="h-5" />
+          <div className="shrink font-bold pr-4 hidden md:block">TCG Pocket Collection Tracker</div>
+        </Link>
         <NavigationMenu className="max-w-full justify-start">
           <NavigationMenuList>
-            <NavigationMenuLink asChild>
+            {/* dynamic item for mobile that switches between overview and collection depending on the current page */}
+            <NavigationMenuLink asChild className="block sm:hidden">
+              <Link to={isOverviewPage ? '/collection' : '/'}>
+                <Button variant="ghost">{isOverviewPage ? t('collection') : t('overview')}</Button>
+              </Link>
+            </NavigationMenuLink>
+
+            <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/">
                 <Button variant="ghost">{t('overview')}</Button>
               </Link>
@@ -54,13 +68,15 @@ export function Header() {
                 <Button variant="ghost">{t('trade')}</Button>
               </Link>
             </NavigationMenuLink>
+            <PokemonCardDetector />
+            <NavigationMenuLink asChild className="hidden sm:block">
+              <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden sm:block">
+                <Button variant="ghost">{t('community')}</Button>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuList>
-          <PokemonCardDetector />
         </NavigationMenu>
         <div className="items-center gap-2 flex">
-          <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden sm:block">
-            <Button variant="ghost">{t('community')}</Button>
-          </Link>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -70,11 +86,26 @@ export function Header() {
             <DropdownMenuContent className="w-56">
               <DropdownMenuLabel>{t('selectLanguage')}</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => changeLanguage('en-US')}>{t('languages.en-US')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('es-ES')}>{t('languages.es-ES')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('pt-BR')}>{t('languages.pt-BR')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('fr-FR')}>{t('languages.fr-FR')}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage('it-IT')}>{t('languages.it-IT')}</DropdownMenuItem>
+
+              <DropdownMenuItem selected={i18n.language === 'en-US'} onClick={() => changeLanguage('en-US')}>
+                {t('languages.en-US')}
+              </DropdownMenuItem>
+
+              <DropdownMenuItem selected={i18n.language === 'es-ES'} onClick={() => changeLanguage('es-ES')}>
+                {t('languages.es-ES')}
+              </DropdownMenuItem>
+
+              <DropdownMenuItem selected={i18n.language === 'pt-BR'} onClick={() => changeLanguage('pt-BR')}>
+                {t('languages.pt-BR')}
+              </DropdownMenuItem>
+
+              <DropdownMenuItem selected={i18n.language === 'fr-FR'} onClick={() => changeLanguage('fr-FR')}>
+                {t('languages.fr-FR')}
+              </DropdownMenuItem>
+
+              <DropdownMenuItem selected={i18n.language === 'it-IT'} onClick={() => changeLanguage('it-IT')}>
+                {t('languages.it-IT')}
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
@@ -125,7 +156,6 @@ export function Header() {
             </Dialog>
           )}
         </div>
-        <HamburgerMenu />
       </header>
       <Dialog open={isImportDialogOpen} onOpenChange={setIsImportDialogOpen}>
         <DialogContent className="border-2 border-slate-600 shadow-none">

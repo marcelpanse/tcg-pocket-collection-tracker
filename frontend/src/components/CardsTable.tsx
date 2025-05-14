@@ -113,7 +113,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
   const rowVirtualizer = useVirtualizer({
     getScrollElement: () => scrollRef.current,
     count: flattenedRows.length,
-    estimateSize: (index) => (flattenedRows[index].type === 'header' ? 60 : cardHeight) + 12,
+    estimateSize: (index) => (flattenedRows[index].type === 'header' ? 50 : cardHeight) + 12,
     overscan: 5,
   })
 
@@ -124,7 +124,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
       style={{ scrollbarWidth: 'none', height: scrollContainerHeight }}
     >
       {showStats && (
-        <small className="text-center md:text-right mb-2 md:mb-0">
+        <small className="text-left md:text-right mb-3 md:mb-[-25px] md:mt-[10px]">
           {cards.filter((c) => !c.linkedCardID).length} selected, {cards.filter((card) => (card.amount_owned ?? 0) > 0).length} uniques owned,{' '}
           {cards.reduce((acc, card) => acc + (card.amount_owned ?? 0), 0)} total owned
         </small>
@@ -139,11 +139,18 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
               className="absolute top-0 left-0 w-full"
             >
               {row.type === 'header' ? (
-                <h2 className="mx-auto mt-10 text-center w-full max-w-[900px] scroll-m-20 border-b-2 border-slate-600 pb-2 font-semibold text-md sm:text-lg md:text-2xl tracking-tight transition-colors first:mt-0">
-                  {t((row.data as { type: string; row: Row<CardType> }).row.getValue('set_details') as string)}
-                </h2>
+                <div className="flex items-center justify-start gap-2 mx-auto max-w-[900px] scroll-m-20 border-b-2 border-slate-600 pb-2 tracking-tight transition-colors first:mt-0">
+                  <img
+                    src={`/images/sets/${(row.data as { type: string; row: Row<CardType> }).row.original.expansion}.webp`}
+                    alt={(row.data as { type: string; row: Row<CardType> }).row.getValue('set_details') as string}
+                    className="h-6 sm:h-8"
+                  />
+                  <h2 className="text-center font-semibold text-md sm:text-lg md:text-2xl ">
+                    {t((row.data as { type: string; row: Row<CardType> }).row.getValue('set_details') as string)}
+                  </h2>
+                </div>
               ) : (
-                <div className="flex justify-center gap-x-3">
+                <div className="flex justify-start gap-x-3 ml-2">
                   {(row.data as { type: string; row: Row<CardType> }[]).map(({ row: subRow }) => (
                     <Card key={subRow.original.card_id} card={subRow.original} />
                   ))}

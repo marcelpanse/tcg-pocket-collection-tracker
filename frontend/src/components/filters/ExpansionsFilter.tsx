@@ -24,7 +24,9 @@ const ExpansionsFilter: FC<Props> = ({ expansionFilter, setExpansionFilter, setP
         <TabsTrigger value="all">{t('all')}</TabsTrigger>
         {expansions.map((expansion) => (
           <TabsTrigger key={`tab_trigger_${expansion.id}`} value={expansion.id}>
-            {t(expansion.name)}
+            <div className="flex flex-col items-center gap-1">
+              <span>{t(expansion.name)}</span>
+            </div>
           </TabsTrigger>
         ))}
       </TabsList>

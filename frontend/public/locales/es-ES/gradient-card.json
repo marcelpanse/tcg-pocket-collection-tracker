@@ -1,3 +1,4 @@
 {
-  "text": "es el sobre con más probabilidades de tener una nueva carta entre {{packNames}}. Tienes un {{chancePercentage}}% de probabilidades de conseguir una nueva carta."
+  "open": "Deberias abrir",
+  "text": "¡Hay un <strong>{{chancePercentage}}%</strong> de probabilidades de que aparezca una nueva carta!"
 }

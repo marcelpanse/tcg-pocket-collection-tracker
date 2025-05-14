@@ -1,3 +1,4 @@
 {
-  "text": "is the most probable pack to get a new card from among {{packNames}}. You have a {{chancePercentage}}% chance of getting a new card."
+  "open": "You should open a",
+  "text": "there's a <strong>{{chancePercentage}}%</strong> chance of a new card!"
 }

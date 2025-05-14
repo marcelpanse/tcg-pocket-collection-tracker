@@ -1,23 +1,31 @@
 import { CardsTable } from '@/components/CardsTable.tsx'
 import FilterPanel from '@/components/FiltersPanel'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
+import { Button } from '@/components/ui/button.tsx'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
+import { UserContext } from '@/lib/context/UserContext.ts'
 import { fetchCollection } from '@/lib/fetchCollection.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
 import type { Card, CollectionRow } from '@/types'
+import loadable from '@loadable/component'
 import { Siren } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
-import { useParams } from 'react-router'
+import { useLocation, useNavigate, useParams } from 'react-router'
+
+const TradeMatches = loadable(() => import('./TradeMatches.tsx'))
 
 function Collection() {
   const params = useParams()
+  const navigate = useNavigate()
+  const location = useLocation()
   const { t } = useTranslation(['pages/collection'])
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
   const { ownedCards, selectedCardId, setSelectedCardId } = useContext(CollectionContext)
+  const { account } = useContext(UserContext)
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
   const [friendCards, setFriendCards] = useState<CollectionRow[] | null>(null)
   const [filteredCards, setFilteredCards] = useState<Card[] | null>(null)
@@ -26,7 +34,16 @@ function Collection() {
     const friendId = params.friendId
     if (friendId && !friendCards) {
       console.log('fetching collection by friend id', friendId)
-      fetchCollection(undefined, friendId).then(setFriendCards).catch(console.error)
+      fetchCollection(undefined, friendId)
+        .then((cards) => {
+          if (cards.length === 0) {
+            console.log('not a public collection, going back to normal mode.')
+            navigate('/collection')
+          }
+          console.log('cards', cards)
+          setFriendCards(cards)
+        })
+        .catch(console.error)
     } else if (!friendId && friendCards) {
       // NOTE: because the card table is hard to refresh, we have to reload the page. This is a bit of a hack, but it works. If you figure  a better way, please let me know.
       window.location.reload()
@@ -63,19 +80,33 @@ function Collection() {
         visibleFilters={{ expansions: !isMobile, search: true, owned: !isMobile, rarity: !isMobile }}
         filtersDialog={{ expansions: true, pack: true, search: true, owned: true, rarity: true, amount: true }}
         batchUpdate={Boolean(!friendCards)}
+        share
       >
         <div>
           {friendCards && (
-            <Alert className="mb-2 border-2 border-slate-600 shadow-none">
+            <Alert className="mb-4 border-2 border-slate-600 shadow-none">
               <Siren className="h-4 w-4" />
               <AlertTitle>{t('publicCollectionTitle')}</AlertTitle>
-              <AlertDescription>{t('publicCollectionDescription')}</AlertDescription>
+              <AlertDescription>
+                <div className="flex items-center">
+                  {t('publicCollectionDescription')}
+                  <Button
+                    className="mb-4"
+                    onClick={() => {
+                      navigate(`${location.pathname}/trade`)
+                    }}
+                  >
+                    Show possible trades
+                  </Button>
+                </div>
+              </AlertDescription>
             </Alert>
           )}
         </div>
       </FilterPanel>
       <div>{filteredCards && <CardsTable cards={filteredCards} resetScrollTrigger={resetScrollTrigger} showStats />}</div>
       <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
+      <TradeMatches ownedCards={ownedCards} friendCards={friendCards || []} ownCollection={params.friendId === account?.friend_id} />
     </div>
   )
 }

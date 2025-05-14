@@ -75,8 +75,9 @@ const DropdownMenuItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {
     inset?: boolean
+    selected?: boolean
   }
->(({ className, inset, ...props }, ref) => (
+>(({ className, inset, selected, children, ...props }, ref) => (
   <DropdownMenuPrimitive.Item
     ref={ref}
     className={cn(
@@ -85,7 +86,12 @@ const DropdownMenuItem = React.forwardRef<
       className,
     )}
     {...props}
-  />
+  >
+    <div className="flex flex-1 justify-between">
+      {children}
+      {selected && <Check className="text-primary" />}
+    </div>
+  </DropdownMenuPrimitive.Item>
 ))
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName
 

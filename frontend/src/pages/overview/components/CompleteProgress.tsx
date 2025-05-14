@@ -1,4 +1,4 @@
-import { Progress } from '@/components/ui/progress.tsx'
+import { Progress } from '@/components/ui/progress-custom.tsx'
 import { getNrOfCardsOwned, getTotalNrOfCards } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import type { Expansion, Rarity } from '@/types'
@@ -12,9 +12,10 @@ interface CompleteProgressProps {
   rarityFilter?: Rarity[]
   numberFilter?: number
   deckbuildingMode?: boolean
+  barColor?: string
 }
 
-export function CompleteProgress({ title, expansion, packName, rarityFilter = [], numberFilter = 1, deckbuildingMode }: CompleteProgressProps) {
+export function CompleteProgress({ title, expansion, packName, rarityFilter = [], numberFilter = 1, deckbuildingMode, barColor }: CompleteProgressProps) {
   const { ownedCards } = use(CollectionContext)
   const { t } = useTranslation('complete-progress')
 
@@ -31,7 +32,7 @@ export function CompleteProgress({ title, expansion, packName, rarityFilter = []
   return (
     <div className="sm:mt-4">
       {title}
-      <Progress value={progressValue || 100} />
+      <Progress value={progressValue || 100} barColor={barColor} />
       {t('youHave', { nCardsOwned: nrOfCardsOwned, nTotalCards: totalNrOfCards })}
     </div>
   )

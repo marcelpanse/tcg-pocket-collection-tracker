@@ -43,7 +43,10 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
 
   return (
     <>
-      <h2 className="col-span-8 text-2xl pl-8">{t(expansion.name, { ns: 'common/sets' })}</h2>
+      <h2 className="mt-6 col-span-8 text-3xl flex items-center">
+        <img src={`/images/sets/${expansion.id}.webp`} alt={`${expansion.id}`} className="mr-2 inline" />
+        {t(expansion.name, { ns: 'common/sets' })}
+      </h2>
       {isMobile ? (
         <div className="col-span-full">
           <Carousel padding="2rem">
@@ -51,7 +54,6 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
               <>
                 <GradientCard
                   title={highestProbabilityPack.packName}
-                  packNames={chartData.map((cd) => t(cd.packName, { ns: 'common/packs' })).join(', ')}
                   percentage={highestProbabilityPack.percentage}
                   className="col-span-8 snap-start flex-shrink-0 w-full"
                   backgroundColor={highestProbabilityPack.fill}
@@ -79,6 +81,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
                     packName={pack.name}
                     numberFilter={numberFilter}
                     deckbuildingMode={deckbuildingMode}
+                    barColor={pack.color}
                   />
                 ))}
             </div>
@@ -90,7 +93,6 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
             <>
               <GradientCard
                 title={highestProbabilityPack.packName}
-                packNames={chartData.map((cd) => t(cd.packName, { ns: 'common/packs' })).join(', ')}
                 percentage={highestProbabilityPack.percentage}
                 className="col-span-8 lg:col-span-4"
                 backgroundColor={highestProbabilityPack.fill}
@@ -118,6 +120,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
                   expansion={expansion}
                   packName={pack.name}
                   deckbuildingMode={deckbuildingMode}
+                  barColor={pack.color}
                 />
               ))}
           </div>

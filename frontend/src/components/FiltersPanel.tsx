@@ -38,10 +38,11 @@ interface Props {
   }
 
   batchUpdate?: boolean
+  share?: boolean
 }
 
-const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilters, filtersDialog, batchUpdate }: Props) => {
-  const { user } = useContext(UserContext)
+const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilters, filtersDialog, batchUpdate, share }: Props) => {
+  const { user, setIsProfileDialogOpen } = useContext(UserContext)
   const { ownedCards, setOwnedCards } = useContext(CollectionContext)
 
   const [langState, setLangState] = useState(i18n.language)
@@ -79,6 +80,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
       }
     }
     filteredCards = filteredCards.filter(filterRarities)
+
     if (searchValue) {
       filteredCards = filteredCards.filter((card) => {
         return (
@@ -96,7 +98,9 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
       }
     }
     filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) >= numberFilter)
-    filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) <= maxNumberFilter)
+    if (maxNumberFilter !== 100) {
+      filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) <= maxNumberFilter)
+    }
 
     return filteredCards
   }, [cards, expansionFilter, packFilter, rarityFilter, searchValue, ownedFilter, numberFilter, maxNumberFilter, langState])
@@ -171,6 +175,12 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
             onBatchUpdate={handleBatchUpdate}
             disabled={!getFilteredCards || getFilteredCards.length === 0}
           />
+        )}
+
+        {share && (
+          <Button variant="outline" onClick={() => setIsProfileDialogOpen(true)}>
+            Share
+          </Button>
         )}
       </div>
     </div>

@@ -1,3 +1,4 @@
 {
-  "text": "è la busta da cui è più probabile ottenere una nuova carta scegliendo tra {{packNames}}. Hai una probabilità del {{chancePercentage}}% di ottenere una nuova carta."
+  "open": "Dovresti aprire",
+  "text": "c'è una probabilità del <strong>{{chancePercentage}}%</strong> di trovare una nuova carta!"
 }

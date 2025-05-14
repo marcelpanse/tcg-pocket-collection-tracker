@@ -14,6 +14,7 @@ import { type FC, use } from 'react'
 import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { z } from 'zod'
+import { SocialShareButtons } from './SocialShareButtons'
 
 interface Props {
   account: AccountRow | null
@@ -67,9 +68,11 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
     }
   }
 
+  const shareUrl = `https://tcgpocketcollectiontracker.com/#/collection/${account?.friend_id}`
+
   return (
     <Dialog open={isProfileDialogOpen} onOpenChange={setIsProfileDialogOpen}>
-      <DialogContent className="border-2 border-slate-600 shadow-none">
+      <DialogContent className="border-2 border-slate-600 shadow-none h-[90vh] content-start">
         <DialogHeader>
           <DialogTitle>{t('editProfile')}</DialogTitle>
         </DialogHeader>
@@ -128,16 +131,32 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
               render={({ field }) => (
                 <FormItem className="flex flex-col items-start">
                   <FormControl className="mt-2">
-                    <div className="flex items-center gap-x-2 w-full">
-                      <FormLabel>{t('isPublic')}</FormLabel>
+                    <div className="flex items-center gap-x-2 w-full flex-wrap">
+                      <FormLabel>{t('isPublicToggle')}</FormLabel>
                       <div className="grow-1">
                         <Switch checked={field.value} onCheckedChange={field.onChange} />
                       </div>
                       <Button
                         disabled={!account?.is_public}
-                        onClick={() => window.open(`https://tcgpocketcollectiontracker.com/#/collection/${form.getValues().friend_id}`)}
+                        onClick={async (e) => {
+                          e.preventDefault()
+
+                          toast({ title: 'Copied public collection page URL to clipboard!', variant: 'default', duration: 3000 })
+                          await navigator.clipboard.writeText(shareUrl)
+                        }}
                       >
                         {t('isPublicButton')}
+                      </Button>
+                      <Button
+                        disabled={!account?.is_public}
+                        onClick={async (e) => {
+                          e.preventDefault()
+
+                          toast({ title: 'Copied trading page URL to clipboard!', variant: 'default', duration: 3000 })
+                          await navigator.clipboard.writeText(`${shareUrl}/trade`)
+                        }}
+                      >
+                        {t('isPublicTradeButton')}
                       </Button>
                     </div>
                   </FormControl>
@@ -145,6 +164,7 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
                 </FormItem>
               )}
             />
+            {account?.is_public && <SocialShareButtons />}
             <Button type="submit">{t('save')}</Button>
           </form>
         </Form>
