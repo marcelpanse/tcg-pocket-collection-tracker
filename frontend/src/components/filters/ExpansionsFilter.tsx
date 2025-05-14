@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 interface Props {
   expansionFilter: string
   setExpansionFilter: (expansionFilter: string) => void
-  setPackFilter: (expansionFilter: string) => void
+  setPackFilter?: (expansionFilter: string) => void
 }
 const ExpansionsFilter: FC<Props> = ({ expansionFilter, setExpansionFilter, setPackFilter }) => {
   const { t } = useTranslation('common/sets')
@@ -16,7 +16,7 @@ const ExpansionsFilter: FC<Props> = ({ expansionFilter, setExpansionFilter, setP
       value={expansionFilter}
       onValueChange={(value) => {
         setExpansionFilter(value)
-        setPackFilter('all')
+        setPackFilter?.('all')
       }}
       className="w-full"
     >

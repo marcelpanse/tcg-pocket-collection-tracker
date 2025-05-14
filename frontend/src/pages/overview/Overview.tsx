@@ -1,5 +1,6 @@
 import { RadialChart } from '@/components/RadialChart'
 import DeckbuildingFilter from '@/components/filters/DeckbuildingFilter'
+import ExpansionsFilter from '@/components/filters/ExpansionsFilter.tsx'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -26,6 +27,7 @@ function Overview() {
   const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
   const [collectionCount, setCollectionCount] = useState('')
   const [usersCount, setUsersCount] = useState('')
+  const [expansionFilter, setExpansionFilter] = useState<string>('all')
 
   const ownedCardsCount = useMemo(() => ownedCards.reduce((total, card) => total + card.amount_owned, 0), [ownedCards])
 
@@ -133,16 +135,23 @@ function Overview() {
           </div>
         </section>
       </article>
-      <article className="mx-auto min-h-screen max-w-7xl sm:p-6 p-0 pt-6 grid grid-cols-8 gap-6">
-        {CardsDB.expansions.map((expansion) => (
-          <ExpansionOverview
-            key={expansion.id}
-            expansion={expansion}
-            rarityFilter={rarityFilter}
-            numberFilter={numberFilter}
-            deckbuildingMode={deckbuildingMode}
-          />
-        ))}
+
+      <article className="flex mx-auto max-w-7xl px-8 pt-10">
+        <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} />
+      </article>
+
+      <article className="mx-auto max-w-7xl sm:p-6 p-0 pt-6 grid grid-cols-8 gap-6">
+        {CardsDB.expansions
+          .filter((expansion) => expansionFilter === 'all' || expansionFilter === expansion.id)
+          .map((expansion) => (
+            <ExpansionOverview
+              key={expansion.id}
+              expansion={expansion}
+              rarityFilter={rarityFilter}
+              numberFilter={numberFilter}
+              deckbuildingMode={deckbuildingMode}
+            />
+          ))}
       </article>
     </main>
   )
