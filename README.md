@@ -18,6 +18,8 @@ Our backend infrastructure utilizes Supabase. The backend manages user authentic
 ### Technical overview
 For an exstensive technical overview of the project, take a look at [this wiki page](https://deepwiki.com/marcelpanse/tcg-pocket-collection-tracker).
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/marcelpanse/tcg-pocket-collection-tracker)
+
 ## Features
 
 - Card tracker
