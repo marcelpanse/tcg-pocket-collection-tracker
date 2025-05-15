@@ -43,7 +43,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
 
   return (
     <>
-      <h2 className="mt-6 col-span-8 text-3xl flex items-center">
+      <h2 className="ml-6 md:ml-0 mt-6 col-span-8 text-3xl flex items-center">
         <img src={`/images/sets/${expansion.id}.webp`} alt={`${expansion.id}`} className="mr-2 inline h-10" />
         {t(expansion.name, { ns: 'common/sets' })}
       </h2>
