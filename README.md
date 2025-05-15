@@ -15,6 +15,9 @@ The frontend is built as a static HTML site, powered by React and TypeScript. We
 ### Backend
 Our backend infrastructure utilizes Supabase. The backend manages user authentication (via OTP email) and includes a database for card storage.
 
+### Technical overview
+For an exstensive technical overview of the project, take a look at [this wiki page](https://deepwiki.com/marcelpanse/tcg-pocket-collection-tracker).
+
 ## Features
 
 - Card tracker
