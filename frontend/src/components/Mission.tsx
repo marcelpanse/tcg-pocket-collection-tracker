@@ -1,5 +1,5 @@
 import FancyCard from '@/components/FancyCard.tsx'
-import { allCards } from '@/lib/CardsDB.ts'
+import { getCardById } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
 import { getCardNameByLang } from '@/lib/utils.ts'
@@ -15,7 +15,7 @@ interface Props {
 export function Mission({ mission }: Props) {
   const { width } = useWindowDimensions()
 
-  const { ownedCards, setSelectedCardId } = use(CollectionContext)
+  const { ownedCards, setSelectedCardId, setSelectedMissionCardOptions } = use(CollectionContext)
 
   let cardsPerRow = 5
   let cardHeight = Math.min(width, 890) / 5 + 120
@@ -27,9 +27,10 @@ export function Mission({ mission }: Props) {
     cardHeight = width / 3 + 100
   }
 
-  interface CardDetailProps {
+  interface MissionDetailProps {
     cardId: string
     owned: boolean
+    missionCardOptions: string[]
   }
 
   const missionGridRows = useMemo(() => {
@@ -38,15 +39,15 @@ export function Mission({ mission }: Props) {
         const hasCard = missionCard.options.find((cardId) => cardId === ownedCard.card_id)
         if (hasCard) {
           for (let i = 0; i < ownedCard.amount_owned; i++) {
-            acc.push({ cardId: hasCard, owned: true })
+            acc.push({ cardId: hasCard, owned: true, missionCardOptions: missionCard.options })
           }
         }
         return acc
-      }, [] as CardDetailProps[])
+      }, [] as MissionDetailProps[])
 
       const amountToAppend = missionCard.amount - ownedMissionCards.length
       for (let i = 0; i < amountToAppend; i++) {
-        ownedMissionCards.push({ cardId: missionCard.options[0], owned: false })
+        ownedMissionCards.push({ cardId: missionCard.options[0], owned: false, missionCardOptions: missionCard.options })
       }
       return ownedMissionCards
     })
@@ -72,11 +73,11 @@ export function Mission({ mission }: Props) {
             <div key={i} style={{ height: `${cardHeight}px`, transform: `translateY(${cardHeight * i + 72}px)` }} className="absolute top-0 left-0 w-full">
               <div className="flex justify-center gap-x-3">
                 {gridRow.map((card) => {
-                  const foundCard = allCards.find((c) => c.card_id === card.cardId)
+                  const foundCard = getCardById(card.cardId)
                   return (
                     foundCard && (
                       <div className={'group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer'}>
-                        <div onClick={() => setSelectedCardId(card.cardId)}>
+                        <div onClick={() => (card.owned ? setSelectedCardId(card.cardId) : setSelectedMissionCardOptions(card.missionCardOptions))}>
                           <FancyCard card={foundCard} selected={card.owned} />
                         </div>
                         <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">

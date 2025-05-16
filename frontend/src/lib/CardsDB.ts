@@ -40,8 +40,10 @@ export const a3Cards: Card[] = update(A3 as unknown as Card[], 'A3')
 export const paCards: Card[] = update(PA as unknown as Card[], 'P-A')
 export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...a2aCards, ...a2bCards, ...a3Cards, ...paCards]
 
+export const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
+
 export const getCardById = (cardId: string): Card | undefined => {
-  return allCards.find((card) => card.card_id === cardId)
+  return allCardsDict.get(cardId)
 }
 
 export const a1Missions: Mission[] = A1Missions as unknown as Mission[]
@@ -125,6 +127,12 @@ export const expansions: Expansion[] = [
     promo: true,
   },
 ]
+
+export const expansionsDict: Map<string, Expansion> = new Map(expansions.map((expansion) => [expansion.id, expansion]))
+
+export const getExpansionById = (expansion: string): Expansion | undefined => {
+  return expansionsDict.get(expansion)
+}
 
 export const tradeableRaritiesDictionary: Record<Rarity, number | null> = {
   '◊': 0,

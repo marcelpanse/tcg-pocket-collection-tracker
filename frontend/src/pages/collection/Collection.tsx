@@ -7,6 +7,7 @@ import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { fetchCollection } from '@/lib/fetchCollection.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
+import MissionDetail from '@/pages/collection/MissionDetail.tsx'
 import type { Card, CollectionRow, Mission } from '@/types'
 import loadable from '@loadable/component'
 import { Siren } from 'lucide-react'
@@ -25,7 +26,7 @@ function Collection() {
   const { t } = useTranslation(['pages/collection'])
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
-  const { ownedCards, selectedCardId, setSelectedCardId } = useContext(CollectionContext)
+  const { ownedCards, selectedCardId, setSelectedCardId, selectedMissionCardOptions, setSelectedMissionCardOptions } = useContext(CollectionContext)
   const { account } = useContext(UserContext)
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
   const [friendCards, setFriendCards] = useState<CollectionRow[] | null>(null)
@@ -108,9 +109,9 @@ function Collection() {
         </div>
       </FilterPanel>
       <div>{filteredCards && !missions && <CardsTable cards={filteredCards} resetScrollTrigger={resetScrollTrigger} showStats />}</div>
-      {!missions && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}
+      {<CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}
       <div>{missions && <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} />}</div>
-      {/*{missions && <MissionDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')}/>}*/}
+      {missions && <MissionDetail missionCardOptions={selectedMissionCardOptions} onClose={() => setSelectedMissionCardOptions([])} />}
       <TradeMatches ownedCards={ownedCards} friendCards={friendCards || []} ownCollection={params.friendId === account?.friend_id} />
     </div>
   )

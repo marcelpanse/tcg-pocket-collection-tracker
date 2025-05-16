@@ -7,6 +7,8 @@ interface ICollectionContext {
   setOwnedCards: Dispatch<SetStateAction<CollectionRow[]>>
   selectedCardId: string
   setSelectedCardId: (cardId: string) => void
+  selectedMissionCardOptions: string[]
+  setSelectedMissionCardOptions: (missionCardOptions: string[]) => void
 }
 
 export const CollectionContext = createContext<ICollectionContext>({
@@ -14,4 +16,6 @@ export const CollectionContext = createContext<ICollectionContext>({
   setOwnedCards: () => {},
   selectedCardId: '',
   setSelectedCardId: () => {},
+  selectedMissionCardOptions: [],
+  setSelectedMissionCardOptions: () => {},
 })
