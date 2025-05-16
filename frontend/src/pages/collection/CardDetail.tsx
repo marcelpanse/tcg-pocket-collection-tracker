@@ -1,6 +1,6 @@
 import { Card as CardComponent } from '@/components/Card'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
-import { expansions, getCardById, pullRateForSpecificCard, sellableForTokensDictionary } from '@/lib/CardsDB.ts'
+import { getCardById, getExpansionById, pullRateForSpecificCard, sellableForTokensDictionary } from '@/lib/CardsDB.ts'
 import { getCardNameByLang } from '@/lib/utils'
 import type { Card } from '@/types'
 import i18n from 'i18next'
@@ -14,7 +14,7 @@ interface CardDetailProps {
 function CardDetail({ cardId, onClose }: CardDetailProps) {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
   const card: Card = getCardById(cardId) || ({} as Card)
-  const expansion = expansions.find((e) => e.id === card.expansion)
+  const expansion = getExpansionById(card.expansion)
 
   // if we draw from 'everypack' we need to take one of the packs to calculated based on
   const packName = card.pack === 'everypack' ? expansion?.packs[0].name : card.pack

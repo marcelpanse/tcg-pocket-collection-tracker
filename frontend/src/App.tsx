@@ -28,6 +28,7 @@ function App() {
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false)
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false)
   const [selectedCardId, setSelectedCardId] = useState('')
+  const [selectedMissionCardOptions, setSelectedMissionCardOptions] = useState<string[]>([])
 
   useEffect(() => {
     const {
@@ -59,7 +60,9 @@ function App() {
 
   return (
     <UserContext.Provider value={{ user, setUser, account, setAccount, isLoginDialogOpen, setIsLoginDialogOpen, isProfileDialogOpen, setIsProfileDialogOpen }}>
-      <CollectionContext.Provider value={{ ownedCards, setOwnedCards, selectedCardId, setSelectedCardId }}>
+      <CollectionContext.Provider
+        value={{ ownedCards, setOwnedCards, selectedCardId, setSelectedCardId, selectedMissionCardOptions, setSelectedMissionCardOptions }}
+      >
         <ErrorBoundary fallback={<div className="m-4">A new version was deployed, please refresh the page to see the latest changes.</div>}>
           <Toaster />
           <Header />

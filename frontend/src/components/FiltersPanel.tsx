@@ -8,7 +8,7 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
-import { allCards, expansions } from '@/lib/CardsDB.ts'
+import { allCards, expansionsDict } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { getCardNameByLang } from '@/lib/utils'
@@ -43,7 +43,7 @@ interface Props {
 }
 
 const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToMissions, visibleFilters, filtersDialog, batchUpdate, share }: Props) => {
-  const { user } = useContext(UserContext)
+  const { user, setIsProfileDialogOpen } = useContext(UserContext)
   const { ownedCards, setOwnedCards } = useContext(CollectionContext)
 
   const [langState, setLangState] = useState(i18n.language)
@@ -110,7 +110,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
 
   useEffect(() => {
     if (packFilter === 'missions') {
-      onChangeToMissions(expansions.find((e) => e.id === expansionFilter)?.missions || null)
+      onChangeToMissions(expansionsDict.get(expansionFilter)?.missions || null)
     } else {
       onChangeToMissions(null)
     }
