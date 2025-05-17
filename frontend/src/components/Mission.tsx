@@ -49,6 +49,7 @@ export function Mission({ mission }: Props) {
       for (let i = 0; i < amountToAppend; i++) {
         ownedMissionCards.push({ cardId: missionCard.options[0], owned: false, missionCardOptions: missionCard.options })
       }
+      mission.completed = amountToAppend === 0
       return ownedMissionCards
     })
 

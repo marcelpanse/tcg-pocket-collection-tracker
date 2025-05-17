@@ -110,11 +110,19 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
 
   useEffect(() => {
     if (packFilter === 'missions') {
-      onChangeToMissions(expansionsDict.get(expansionFilter)?.missions || null)
+      let missions = expansionsDict.get(expansionFilter)?.missions || null
+      if (missions) {
+        if (ownedFilter === 'owned') {
+          missions = missions.filter((mission) => mission.completed)
+        } else if (ownedFilter === 'missing') {
+          missions = missions.filter((mission) => !mission.completed)
+        }
+      }
+      onChangeToMissions(missions)
     } else {
       onChangeToMissions(null)
     }
-  }, [expansionFilter, packFilter === 'missions'])
+  }, [expansionFilter, packFilter === 'missions', ownedFilter])
 
   useEffect(() => {
     onFiltersChanged(getFilteredCards)
