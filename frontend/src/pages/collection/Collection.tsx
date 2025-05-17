@@ -1,12 +1,14 @@
 import { CardsTable } from '@/components/CardsTable.tsx'
 import FilterPanel from '@/components/FiltersPanel'
+import { MissionsTable } from '@/components/MissionsTable.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { fetchCollection } from '@/lib/fetchCollection.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
-import type { Card, CollectionRow } from '@/types'
+import MissionDetail from '@/pages/collection/MissionDetail.tsx'
+import type { Card, CollectionRow, Mission } from '@/types'
 import loadable from '@loadable/component'
 import { Siren } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
@@ -24,11 +26,12 @@ function Collection() {
   const { t } = useTranslation(['pages/collection'])
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
-  const { ownedCards, selectedCardId, setSelectedCardId } = useContext(CollectionContext)
+  const { ownedCards, selectedCardId, setSelectedCardId, selectedMissionCardOptions, setSelectedMissionCardOptions } = useContext(CollectionContext)
   const { account } = useContext(UserContext)
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
   const [friendCards, setFriendCards] = useState<CollectionRow[] | null>(null)
   const [filteredCards, setFilteredCards] = useState<Card[] | null>(null)
+  const [missions, setMissions] = useState<Mission[] | null>(null)
 
   useEffect(() => {
     const friendId = params.friendId
@@ -77,6 +80,7 @@ function Collection() {
       <FilterPanel
         cards={cardCollection}
         onFiltersChanged={(cards) => setFilteredCards(cards)}
+        onChangeToMissions={(missions) => setMissions(missions)}
         visibleFilters={{ expansions: !isMobile, search: true, owned: !isMobile, rarity: !isMobile }}
         filtersDialog={{ expansions: true, pack: true, search: true, owned: true, rarity: true, amount: true }}
         batchUpdate={Boolean(!friendCards)}
@@ -104,8 +108,10 @@ function Collection() {
           )}
         </div>
       </FilterPanel>
-      <div>{filteredCards && <CardsTable cards={filteredCards} resetScrollTrigger={resetScrollTrigger} showStats />}</div>
-      <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
+      <div>{filteredCards && !missions && <CardsTable cards={filteredCards} resetScrollTrigger={resetScrollTrigger} showStats />}</div>
+      {<CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}
+      <div>{missions && <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} />}</div>
+      {missions && <MissionDetail missionCardOptions={selectedMissionCardOptions} onClose={() => setSelectedMissionCardOptions([])} />}
       <TradeMatches ownedCards={ownedCards} friendCards={friendCards || []} ownCollection={params.friendId === account?.friend_id} />
     </div>
   )

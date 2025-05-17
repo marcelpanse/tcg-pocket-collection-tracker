@@ -8,17 +8,18 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
-import { allCards } from '@/lib/CardsDB.ts'
+import { allCards, expansionsDict } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { getCardNameByLang } from '@/lib/utils'
-import type { Card, CollectionRow, Rarity } from '@/types'
+import type { Card, CollectionRow, Mission, Rarity } from '@/types'
 import i18n from 'i18next'
 import { type FC, type JSX, useContext, useEffect, useMemo, useState } from 'react'
 
 interface Props {
   children?: JSX.Element
   onFiltersChanged: (cards: Card[] | null) => void
+  onChangeToMissions: (missions: Mission[] | null) => void
   cards: CollectionRow[] | null
 
   visibleFilters?: {
@@ -41,7 +42,7 @@ interface Props {
   share?: boolean
 }
 
-const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilters, filtersDialog, batchUpdate, share }: Props) => {
+const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToMissions, visibleFilters, filtersDialog, batchUpdate, share }: Props) => {
   const { user, setIsProfileDialogOpen } = useContext(UserContext)
   const { ownedCards, setOwnedCards } = useContext(CollectionContext)
 
@@ -69,7 +70,9 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
     if (expansionFilter !== 'all') {
       filteredCards = filteredCards.filter((card) => card.expansion === expansionFilter)
     }
-    if (packFilter !== 'all') {
+    if (packFilter === 'missions') {
+      filteredCards = []
+    } else if (packFilter !== 'all') {
       filteredCards = filteredCards.filter((card) => card.pack === packFilter || card.pack === 'everypack')
     }
     if (ownedFilter !== 'all') {
@@ -104,6 +107,22 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
 
     return filteredCards
   }, [cards, expansionFilter, packFilter, rarityFilter, searchValue, ownedFilter, numberFilter, maxNumberFilter, langState])
+
+  useEffect(() => {
+    if (packFilter === 'missions') {
+      let missions = expansionsDict.get(expansionFilter)?.missions || null
+      if (missions) {
+        if (ownedFilter === 'owned') {
+          missions = missions.filter((mission) => mission.completed)
+        } else if (ownedFilter === 'missing') {
+          missions = missions.filter((mission) => !mission.completed)
+        }
+      }
+      onChangeToMissions(missions)
+    } else {
+      onChangeToMissions(null)
+    }
+  }, [expansionFilter, packFilter === 'missions', ownedFilter])
 
   useEffect(() => {
     onFiltersChanged(getFilteredCards)
