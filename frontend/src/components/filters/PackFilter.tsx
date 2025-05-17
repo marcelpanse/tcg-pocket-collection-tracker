@@ -12,7 +12,8 @@ const PackFilter: FC<Props> = ({ packFilter, setPackFilter, expansion }) => {
   const { t } = useTranslation('common/packs')
 
   let packsToShow = getExpansionById(expansion)?.packs
-  if (packsToShow === undefined || packsToShow.length < 1) {
+  const showMissions = !(packsToShow === undefined || expansion === 'P-A')
+  if (packsToShow === undefined || packsToShow.length <= 1) {
     packsToShow = []
   }
 
@@ -20,12 +21,14 @@ const PackFilter: FC<Props> = ({ packFilter, setPackFilter, expansion }) => {
     <Tabs value={packFilter} onValueChange={(value) => setPackFilter(value)} className="w-full">
       <TabsList className="w-full flex-wrap h-auto border-1 border-neutral-700 rounded-md">
         <TabsTrigger value="all">{t('all')}</TabsTrigger>
-        {packsToShow.map((pack) => (
-          <TabsTrigger key={`tab_trigger_${pack.name}`} value={pack.name}>
-            {t(pack.name)}
-          </TabsTrigger>
-        ))}
-        <TabsTrigger value="missions">{t('missions')}</TabsTrigger>
+        {packsToShow
+          .filter((pack) => pack.name !== 'everypack')
+          .map((pack) => (
+            <TabsTrigger key={`tab_trigger_${pack.name}`} value={pack.name}>
+              {t(pack.name)}
+            </TabsTrigger>
+          ))}
+        {showMissions && <TabsTrigger value="missions">{t('missions')}</TabsTrigger>}
       </TabsList>
     </Tabs>
   )
