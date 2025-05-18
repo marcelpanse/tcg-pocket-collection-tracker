@@ -34,8 +34,9 @@ export function Mission({ mission }: Props) {
   }
 
   const missionGridRows = useMemo(() => {
+    let isMissionCompleted = true
     const shownCards = mission.requiredCards.flatMap((missionCard) => {
-      const ownedMissionCards = ownedCards.reduce((acc, ownedCard) => {
+      let ownedMissionCards = ownedCards.reduce((acc, ownedCard) => {
         const hasCard = missionCard.options.find((cardId) => cardId === ownedCard.card_id)
         if (hasCard) {
           for (let i = 0; i < ownedCard.amount_owned; i++) {
@@ -45,14 +46,19 @@ export function Mission({ mission }: Props) {
         return acc
       }, [] as MissionDetailProps[])
 
+      if (ownedMissionCards.length > missionCard.amount) {
+        ownedMissionCards = ownedMissionCards.slice(0, missionCard.amount)
+      }
+
       const amountToAppend = missionCard.amount - ownedMissionCards.length
       for (let i = 0; i < amountToAppend; i++) {
         ownedMissionCards.push({ cardId: missionCard.options[0], owned: false, missionCardOptions: missionCard.options })
       }
-      mission.completed = amountToAppend === 0
+      isMissionCompleted = isMissionCompleted && amountToAppend === 0
       return ownedMissionCards
     })
 
+    mission.completed = isMissionCompleted
     const gridRows = []
     for (let i = 0; i < shownCards.length; i += cardsPerRow) {
       gridRows.push(shownCards.slice(i, i + cardsPerRow))

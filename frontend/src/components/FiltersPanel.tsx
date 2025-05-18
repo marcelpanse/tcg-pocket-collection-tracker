@@ -72,8 +72,20 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
     }
     if (packFilter === 'missions') {
       filteredCards = []
-    } else if (packFilter !== 'all') {
-      filteredCards = filteredCards.filter((card) => card.pack === packFilter || card.pack === 'everypack')
+      let missions = expansionsDict.get(expansionFilter)?.missions || null
+      if (missions) {
+        if (ownedFilter === 'owned') {
+          missions = missions.filter((mission) => mission.completed)
+        } else if (ownedFilter === 'missing') {
+          missions = missions.filter((mission) => !mission.completed)
+        }
+      }
+      onChangeToMissions(missions)
+    } else {
+      onChangeToMissions(null)
+      if (packFilter !== 'all') {
+        filteredCards = filteredCards.filter((card) => card.pack === packFilter || card.pack === 'everypack')
+      }
     }
     if (ownedFilter !== 'all') {
       if (ownedFilter === 'owned') {
@@ -107,22 +119,6 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
 
     return filteredCards
   }, [cards, expansionFilter, packFilter, rarityFilter, searchValue, ownedFilter, numberFilter, maxNumberFilter, langState])
-
-  useEffect(() => {
-    if (packFilter === 'missions') {
-      let missions = expansionsDict.get(expansionFilter)?.missions || null
-      if (missions) {
-        if (ownedFilter === 'owned') {
-          missions = missions.filter((mission) => mission.completed)
-        } else if (ownedFilter === 'missing') {
-          missions = missions.filter((mission) => !mission.completed)
-        }
-      }
-      onChangeToMissions(missions)
-    } else {
-      onChangeToMissions(null)
-    }
-  }, [expansionFilter, packFilter === 'missions', ownedFilter])
 
   useEffect(() => {
     onFiltersChanged(getFilteredCards)
