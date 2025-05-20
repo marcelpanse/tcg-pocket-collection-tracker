@@ -143,7 +143,13 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
 
       <div className="flex items-center gap-2 flex-col md:flex-row gap-y-1 px-4 mb-2">
         {visibleFilters?.expansions && (
-          <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} setPackFilter={setPackFilter} />
+          <ExpansionsFilter
+            expansionFilter={expansionFilter}
+            setExpansionFilter={setExpansionFilter}
+            setPackFilter={setPackFilter}
+            packFilter={packFilter}
+            showPacks
+          />
         )}
       </div>
       <div className="items-center gap-2 flex-row gap-y-1 px-4 flex">
@@ -163,9 +169,14 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
               <div className="flex flex-col gap-3">
                 {filtersDialog.search && <SearchInput setSearchValue={setSearchValue} fullWidth />}
                 {filtersDialog.expansions && (
-                  <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} setPackFilter={setPackFilter} />
+                  <ExpansionsFilter
+                    expansionFilter={expansionFilter}
+                    setExpansionFilter={setExpansionFilter}
+                    setPackFilter={setPackFilter}
+                    packFilter={packFilter}
+                  />
                 )}
-                {filtersDialog.pack && <PackFilter packFilter={packFilter} setPackFilter={setPackFilter} expansion={expansionFilter} />}
+                {filtersDialog.pack && <PackFilter packFilter={packFilter} setPackFilter={setPackFilter} expansion={expansionFilter} fullWidth />}
                 {filtersDialog.rarity && <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />}
                 {filtersDialog.owned && <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} fullWidth />}
                 {filtersDialog.amount && (

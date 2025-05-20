@@ -7,8 +7,9 @@ interface Props {
   packFilter: string
   setPackFilter: (packFilter: string) => void
   expansion: string
+  fullWidth?: boolean
 }
-const PackFilter: FC<Props> = ({ packFilter, setPackFilter, expansion }) => {
+const PackFilter: FC<Props> = ({ packFilter, setPackFilter, expansion, fullWidth }) => {
   const { t } = useTranslation('common/packs')
 
   let packsToShow = getExpansionById(expansion)?.packs
@@ -17,9 +18,13 @@ const PackFilter: FC<Props> = ({ packFilter, setPackFilter, expansion }) => {
     packsToShow = []
   }
 
+  if (expansion === 'all' || expansion === 'P-A') {
+    return null
+  }
+
   return (
-    <Tabs value={packFilter} onValueChange={(value) => setPackFilter(value)} className="w-full">
-      <TabsList className="w-full flex-wrap h-auto border-1 border-neutral-700 rounded-md">
+    <Tabs value={packFilter} onValueChange={(value) => setPackFilter(value)} className={`h-auto ${fullWidth ? 'w-full' : 'w-[440px]'}`}>
+      <TabsList className="h-full flex-wrap w-full border-1 border-neutral-700 rounded-md flex-row justify-start content-start">
         <TabsTrigger value="all">{t('all')}</TabsTrigger>
         {packsToShow
           .filter((pack) => pack.name !== 'everypack')
