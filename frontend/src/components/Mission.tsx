@@ -75,7 +75,7 @@ export function Mission({ mission }: Props) {
         {missionGridRows.map((gridRow, i) => {
           return (
             <div key={i} style={{ height: `${cardHeight}px`, transform: `translateY(${cardHeight * i + 72}px)` }} className="absolute top-0 left-0 w-full">
-              <div className="flex justify-center gap-x-3">
+              <div className="flex justify-start gap-x-3">
                 {gridRow.map((card) => {
                   const foundCard = getCardById(card.cardId)
                   return (
