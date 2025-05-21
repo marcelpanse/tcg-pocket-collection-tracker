@@ -10,6 +10,8 @@ export interface AccountRow {
   username: string
   friend_id: string
   is_public: boolean
+  is_active_trading: boolean
+  min_number_of_cards_to_keep: number
 }
 
 export interface CollectionRow {

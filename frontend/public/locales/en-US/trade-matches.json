@@ -4,7 +4,16 @@
   "youHave": "Cards your friend needs (and you have)",
   "noPossibleTrades": "No possible trades found.",
   "noPossibleTradesDescription": "No trades between you and your friend are currently possible.",
-  "featureDescription": "This dialog will show you the possible trades between your cards and that of the select friend ID. It shows you duplicate cards that the other party doesn't own yet.",
-  "ownCollection": "You're viewing your own collection.",
-  "ownCollectionDescription": "Consider sharing this page with others to let them find possible trades."
+  "featureDescription": "This dialog will show you the possible trades between your cards and that of the selected friend ID. It shows you duplicate cards that the other party doesn't own yet.",
+  "ownCollection": "You're viewing your own trading page.",
+  "ownCollectionDescription": "Consider sharing this page with others to let them find possible trades.",
+  "isActiveTrading": "Trading page status",
+  "minNumberOfCardsToKeep": "Minimum number of cards to keep",
+  "inActiveTradePage": "The user \"{{username}}\" is currently not accepting any trades.",
+  "inActiveTradeDescription": "Their trading page is set to disabled. Please contact them if you want to trade.",
+  "friendAccountDetails": "Friend ID: {{friend_id}} ({{username}}).",
+  "minFilterTooltip": "The maximum amount of cards you'd like to collect through trading.",
+  "maxFilterTooltip": "The minimum amount of cards you need to own before appearing as a trade option.",
+  "minInputTooltip": "The minimum amount of cards you want to trade down to.",
+  "activeTradingInputTooltip": "Tip: You can (temporarily) switch off your trading page in case you run out of trading tokens."
 }

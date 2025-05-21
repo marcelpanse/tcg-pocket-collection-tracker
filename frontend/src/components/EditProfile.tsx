@@ -13,6 +13,7 @@ import { Siren } from 'lucide-react'
 import { type FC, use } from 'react'
 import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router'
 import { z } from 'zod'
 import { SocialShareButtons } from './SocialShareButtons'
 
@@ -23,6 +24,7 @@ interface Props {
   setIsProfileDialogOpen: (isProfileDialogOpen: boolean) => void
 }
 const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setIsProfileDialogOpen }) => {
+  const navigate = useNavigate()
   const { user } = use(UserContext)
   const { toast } = useToast()
   const { t } = useTranslation('edit-profile')
@@ -152,8 +154,8 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
                         onClick={async (e) => {
                           e.preventDefault()
 
-                          toast({ title: 'Copied trading page URL to clipboard!', variant: 'default', duration: 3000 })
-                          await navigator.clipboard.writeText(`${shareUrl}/trade`)
+                          setIsProfileDialogOpen(false)
+                          navigate(`/collection/${account?.friend_id}/trade`)
                         }}
                       >
                         {t('isPublicTradeButton')}

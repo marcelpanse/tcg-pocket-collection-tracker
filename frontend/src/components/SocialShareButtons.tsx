@@ -1,3 +1,5 @@
+import { Button } from '@/components/ui/button.tsx'
+import { toast } from '@/hooks/use-toast'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { type FC, useContext } from 'react'
 import {
@@ -31,6 +33,16 @@ export const SocialShareButtons: FC = () => {
   return (
     <div className="flex gap-2 mt-0 items-center flex-wrap">
       <small>Share on</small>
+      <Button
+        variant="outline"
+        onClick={async () => {
+          toast({ title: 'Copied trading page URL to clipboard!', variant: 'default', duration: 3000 })
+          await navigator.clipboard.writeText(`${shareUrl}/trade`)
+        }}
+      >
+        Copy link
+      </Button>
+
       <FacebookShareButton url={shareUrl}>
         <FacebookIcon size={32} round />
       </FacebookShareButton>

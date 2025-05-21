@@ -1,17 +1,30 @@
 import { SocialShareButtons } from '@/components/SocialShareButtons.tsx'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
+import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog.tsx'
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel } from '@/components/ui/form'
+import { Input } from '@/components/ui/input.tsx'
+import { Switch } from '@/components/ui/switch.tsx'
+import { toast } from '@/hooks/use-toast.ts'
+import { supabase } from '@/lib/Auth.ts'
 import { expansions, getCardById } from '@/lib/CardsDB'
-import type { Card, CollectionRow, Rarity } from '@/types'
-import { type FC, useEffect, useState } from 'react'
+import { UserContext } from '@/lib/context/UserContext.ts'
+import type { AccountRow, Card, CollectionRow, Rarity } from '@/types'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { CircleHelp } from 'lucide-react'
+import { type FC, useContext, useEffect, useState } from 'react'
 import { useMemo } from 'react'
+import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { useLocation, useNavigate } from 'react-router'
+import { Tooltip } from 'react-tooltip'
+import { z } from 'zod'
 
 interface Props {
   ownedCards: CollectionRow[]
   friendCards: CollectionRow[]
   ownCollection: boolean
+  friendAccount: AccountRow | null
 }
 
 // Order of rarities for display
@@ -21,10 +34,11 @@ interface TradeCard extends Card {
   amount_owned: number
 }
 
-const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection }) => {
+const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, friendAccount }) => {
   const { t } = useTranslation('trade-matches')
   const location = useLocation()
   const navigate = useNavigate()
+  const { user, account, setAccount } = useContext(UserContext)
 
   const [isTradeMatchesDialogOpen, setIsTradeMatchesDialogOpen] = useState(false)
   const [userCardsMinFilter, setUserCardsMinFilter] = useState<number>(0)
@@ -59,7 +73,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection }) => 
       '': [],
     }
 
-    const friendExtraCards = friendCards.filter((card) => card.amount_owned >= 2)
+    const friendExtraCards = friendCards.filter((card) => card.amount_owned >= (friendAccount?.min_number_of_cards_to_keep || 1) + 1)
     const userCardIds = new Set(ownedCards.filter((card) => card.amount_owned > userCardsMinFilter).map((card) => card.card_id))
     const cardsUserNeeds = friendExtraCards.filter((card) => !userCardIds.has(card.card_id))
 
@@ -117,12 +131,109 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection }) => 
     return rarityOrder.some((rarity) => friendExtraCards[rarity].length > 0 && userExtraCards[rarity].length > 0)
   }, [friendExtraCards, userExtraCards])
 
+  const formSchema = z.object({
+    is_active_trading: z.boolean(),
+    min_number_of_cards_to_keep: z.coerce.number().min(1).max(10),
+  })
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    values: {
+      is_active_trading: account?.is_active_trading || false,
+      min_number_of_cards_to_keep: account?.min_number_of_cards_to_keep || 1,
+    },
+  })
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      const updatedAccount = await supabase
+        .from('accounts')
+        .upsert({
+          email: user?.user.email,
+          username: account?.username,
+          is_active_trading: values.is_active_trading,
+          min_number_of_cards_to_keep: values.min_number_of_cards_to_keep,
+        })
+        .select()
+        .single()
+
+      if (!updatedAccount.data) {
+        console.error('Could not save account', account)
+        throw new Error('Could not save account')
+      }
+      setAccount(updatedAccount.data as AccountRow)
+
+      toast({ title: 'Account saved.', variant: 'default' })
+    } catch (e) {
+      console.error('error saving account', e)
+      toast({ title: 'Error saving your account.', variant: 'destructive' })
+    }
+  }
+
   const tradeMatchesContent = () => {
     if (ownCollection) {
       return (
         <div className="text-center py-8">
-          <p className="text-xl text-gray-500">{t('ownCollection')}</p>
-          <p className="text-sm text-gray-400 mt-2">{t('ownCollectionDescription')}</p>
+          <p className="text-xl ">{t('ownCollection')}</p>
+          <p className="text-sm text-gray-300 mt-2">{t('ownCollectionDescription')}</p>
+
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 flex justify-center">
+              <div className="border-1 border-neutral-700 p-4 space-y-2">
+                <FormField
+                  control={form.control}
+                  name="is_active_trading"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col items-start">
+                      <FormControl>
+                        <div className="flex items-center gap-x-4 flex-wrap">
+                          <FormLabel className="flex sm:w-72">{t('isActiveTrading')}</FormLabel>
+                          <div className="grow-1">
+                            <Switch checked={field.value} onCheckedChange={field.onChange} />
+                          </div>
+                          <FormDescription className="grow">{field.value ? 'active' : 'disabled'}</FormDescription>
+                          <Tooltip id="activeInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
+                          <CircleHelp className="h-4 w-4" data-tooltip-id="activeInput" data-tooltip-content={t('activeTradingInputTooltip')} />
+                        </div>
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="min_number_of_cards_to_keep"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col items-start">
+                      <FormControl>
+                        <div className="flex items-center gap-x-4 flex-wrap">
+                          <FormLabel className="flex sm:w-72">{t('minNumberOfCardsToKeep')}</FormLabel>
+                          <div className="grow-1">
+                            <Input type="number" {...field} />
+                          </div>
+                          <Tooltip id="minInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
+                          <CircleHelp className="h-4 w-4" data-tooltip-id="minInput" data-tooltip-content={t('minInputTooltip')} />
+                        </div>
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+
+                <div className="w-full flex justify-end mt-8">
+                  <Button type="submit">{t('save')}</Button>
+                </div>
+              </div>
+            </form>
+          </Form>
+        </div>
+      )
+    }
+
+    if (!friendAccount?.is_active_trading) {
+      return (
+        <div className="text-center py-8">
+          <p className="text-xl ">{t('inActiveTradePage', { username: friendAccount?.username })}</p>
+          <p className="text-sm text-gray-300 mt-2">{t('inActiveTradeDescription')}</p>
         </div>
       )
     }
@@ -130,8 +241,8 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection }) => 
     if (!hasPossibleTrades) {
       return (
         <div className="text-center py-8">
-          <p className="text-xl text-gray-500">{t('noPossibleTrades')}</p>
-          <p className="text-sm text-gray-400 mt-2">{t('noPossibleTradesDescription')}</p>
+          <p className="text-xl ">{t('noPossibleTrades')}</p>
+          <p className="text-sm text-gray-300 mt-2">{t('noPossibleTradesDescription')}</p>
         </div>
       )
     }
@@ -200,14 +311,22 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection }) => 
         </DialogHeader>
         <div className="flex flex-col gap-4 grow">
           <p className="pb-2">{t('featureDescription')}</p>
-          <div className="flex flex-row gap-4 mb-4 justify-between">
-            <div>
-              <NumberFilter numberFilter={userCardsMinFilter} setNumberFilter={setUserCardsMinFilter} options={[0, 1, 2, 3, 4, 5]} labelKey="maxNum" />
+          <p className="pb-2">{t('friendAccountDetails', { ...friendAccount })}</p>
+
+          {!ownCollection && (
+            <div className="flex flex-row gap-4 mb-4 justify-between">
+              <div className="flex items-center gap-2">
+                <NumberFilter numberFilter={userCardsMinFilter} setNumberFilter={setUserCardsMinFilter} options={[0, 1, 2, 3, 4, 5]} labelKey="maxNum" />
+                <Tooltip id="minFilter" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
+                <CircleHelp className="h-4 w-4" data-tooltip-id="minFilter" data-tooltip-content={t('minFilterTooltip')} />
+              </div>
+              <div className="flex items-center gap-2">
+                <Tooltip id="maxFilter" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
+                <CircleHelp className="h-4 w-4" data-tooltip-id="maxFilter" data-tooltip-content={t('maxFilterTooltip')} />
+                <NumberFilter numberFilter={friendCardsMinFilter} setNumberFilter={setFriendCardsMinFilter} options={[2, 3, 4, 5]} labelKey="minNum" />
+              </div>
             </div>
-            <div>
-              <NumberFilter numberFilter={friendCardsMinFilter} setNumberFilter={setFriendCardsMinFilter} options={[2, 3, 4, 5]} labelKey="minNum" />
-            </div>
-          </div>
+          )}
 
           {tradeMatchesContent()}
         </div>

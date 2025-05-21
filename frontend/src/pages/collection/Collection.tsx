@@ -4,9 +4,10 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
+import { fetchPublicAccount } from '@/lib/fetchAccount.ts'
 import { fetchCollection } from '@/lib/fetchCollection.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
-import type { Card, CollectionRow } from '@/types'
+import type { AccountRow, Card, CollectionRow } from '@/types'
 import loadable from '@loadable/component'
 import { Siren } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
@@ -27,6 +28,7 @@ function Collection() {
   const { ownedCards, selectedCardId, setSelectedCardId } = useContext(CollectionContext)
   const { account } = useContext(UserContext)
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
+  const [friendAccount, setFriendAccount] = useState<AccountRow | null>(null)
   const [friendCards, setFriendCards] = useState<CollectionRow[] | null>(null)
   const [filteredCards, setFilteredCards] = useState<Card[] | null>(null)
 
@@ -34,13 +36,19 @@ function Collection() {
     const friendId = params.friendId
     if (friendId && !friendCards) {
       console.log('fetching collection by friend id', friendId)
+      fetchPublicAccount(friendId)
+        .then((account) => {
+          console.log('friend account', account)
+          setFriendAccount(account)
+        })
+        .catch(console.error)
+
       fetchCollection(undefined, friendId)
         .then((cards) => {
           if (cards.length === 0) {
             console.log('not a public collection, going back to normal mode.')
             navigate('/collection')
           }
-          console.log('cards', cards)
           setFriendCards(cards)
         })
         .catch(console.error)
@@ -86,7 +94,7 @@ function Collection() {
           {friendCards && (
             <Alert className="mb-4 border-1 border-neutral-700 shadow-none">
               <Siren className="h-4 w-4" />
-              <AlertTitle>{t('publicCollectionTitle')}</AlertTitle>
+              <AlertTitle>{t('publicCollectionTitle', { username: friendAccount?.username })}</AlertTitle>
               <AlertDescription>
                 <div className="flex items-center">
                   {t('publicCollectionDescription')}
@@ -106,7 +114,12 @@ function Collection() {
       </FilterPanel>
       <div>{filteredCards && <CardsTable cards={filteredCards} resetScrollTrigger={resetScrollTrigger} showStats />}</div>
       <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
-      <TradeMatches ownedCards={ownedCards} friendCards={friendCards || []} ownCollection={params.friendId === account?.friend_id} />
+      <TradeMatches
+        ownedCards={ownedCards}
+        friendCards={friendCards || []}
+        ownCollection={params.friendId === account?.friend_id}
+        friendAccount={friendAccount}
+      />
     </div>
   )
 }
