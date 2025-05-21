@@ -5,7 +5,9 @@ import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
 import { getCardNameByLang } from '@/lib/utils.ts'
 import type { Mission as MissionType } from '@/types'
 import i18n from 'i18next'
+import { Trophy } from 'lucide-react'
 import { use, useMemo } from 'react'
+import { Tooltip } from 'react-tooltip'
 
 interface Props {
   mission: MissionType
@@ -69,11 +71,6 @@ export function Mission({ mission }: Props) {
   const missionHeight = cardHeight * missionGridRows.length + 72
   return (
     <div style={{ height: `${missionHeight}px` }} className="relative w-full">
-      <div key={'header'} style={{ height: '72px' }} className="absolute top-0 left-0 w-full">
-        <h2 className="mx-auto mt-10 text-center w-full max-w-[900px] scroll-m-20 border-b-2 border-slate-600 pb-2 font-semibold text-md sm:text-lg md:text-2xl tracking-tight transition-colors first:mt-0">
-          {mission.name}
-        </h2>
-      </div>
       <div style={{ height: `${missionHeight}px` }} className="relative w-full">
         {missionGridRows.map((gridRow, i) => {
           return (
@@ -98,6 +95,16 @@ export function Mission({ mission }: Props) {
             </div>
           )
         })}
+      </div>
+
+      {/* note header is absolute and has to be below table for the tooltip to work */}
+      <div key={'header'} style={{ height: '72px' }} className="absolute top-0 left-0 w-full">
+        <h2 className="flex items-center gap-x-4 mx-auto mt-10 w-full max-w-[900px] scroll-m-20 border-b-2 border-slate-600 pb-2 font-semibold text-md sm:text-lg md:text-2xl tracking-tight transition-colors first:mt-0">
+          {mission.name}
+
+          <Tooltip id={`rewardDescription${mission.name}`} style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 16 }} clickable={true} />
+          <Trophy className="h-6 w-6" data-tooltip-id={`rewardDescription${mission.name}`} data-tooltip-html={mission.reward} />
+        </h2>
       </div>
     </div>
   )

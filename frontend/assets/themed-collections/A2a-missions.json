@@ -1,5 +1,10 @@
 [
   {
+    "name": "Use pack stamina to open 4 Triumphant Light booster packs",
+    "requiredCards": [],
+    "reward": "Arceus<br />(#070) ×1"
+  },
+  {
     "name": "Pokémon with Abilities that \"Link\" with Arceus",
     "requiredCards": [
       {
@@ -43,7 +48,7 @@
         "amount": 1
       }
     ],
-    "reward": " Emblem Ticket (Triumphant Light) ×25\n"
+    "reward": "Emblem Ticket (Triumphant Light) ×25"
   },
   {
     "name": "Magnezone of Fuego Ironworks",
@@ -57,7 +62,7 @@
         "options": ["A2a-53", "A2a-80", "A2a-54"]
       }
     ],
-    "reward": " Emblem Ticket (Triumphant Light) ×3\n"
+    "reward": "Emblem Ticket (Triumphant Light) ×3"
   },
   {
     "name": "Rotom of the Old Chateau",
@@ -71,7 +76,7 @@
         "amount": 4
       }
     ],
-    "reward": " Emblem Ticket (Triumphant Light) ×3\n"
+    "reward": "Emblem Ticket (Triumphant Light) ×3"
   },
   {
     "name": "Carnivine of the Pastoria Great Marsh",
@@ -93,7 +98,7 @@
         "amount": 1
       }
     ],
-    "reward": " Emblem Ticket (Triumphant Light) ×3\n"
+    "reward": "Emblem Ticket (Triumphant Light) ×3"
   },
   {
     "name": "Abomasnow of Mt. Coronet",
@@ -115,7 +120,7 @@
         "amount": 1
       }
     ],
-    "reward": " Emblem Ticket (Triumphant Light) ×3\n"
+    "reward": "Emblem Ticket (Triumphant Light) ×3"
   },
   {
     "name": "Pokémon Tempted by Sweet Honey",
@@ -133,7 +138,7 @@
         "amount": 1
       }
     ],
-    "reward": " Wonder Hourglass×12 Emblem Ticket (Triumphant Light) ×1 Shop Ticket×2\n"
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Triumphant Light) ×1<br />Shop Ticket ×2"
   },
   {
     "name": "Pokémon with 60 HP",
@@ -166,7 +171,7 @@
         ]
       }
     ],
-    "reward": " Wonder Hourglass×12 Emblem Ticket (Triumphant Light) ×1 Shop Ticket×2\n"
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Triumphant Light) ×1<br />Shop Ticket ×2"
   },
   {
     "name": "Barry, the Rival",
@@ -188,7 +193,7 @@
         "amount": 1
       }
     ],
-    "reward": " Wonder Hourglass×12 Emblem Ticket (Triumphant Light) ×1 Shop Ticket×2\n"
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Triumphant Light) ×1<br />Shop Ticket ×2"
   },
   {
     "name": "Water-type Pokémon",
@@ -198,7 +203,7 @@
         "options": ["A2a-14", "A2a-77", "A2a-15", "A2a-16", "A2a-17", "A2a-18", "A2a-19", "A2a-20", "A2a-22", "A2a-23"]
       }
     ],
-    "reward": " Wonder Hourglass×12 Emblem Ticket (Triumphant Light) ×1 Shop Ticket×2\n"
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Triumphant Light) ×1<br />Shop Ticket ×2"
   },
   {
     "name": "The Two Forms of Cherrim",
@@ -216,7 +221,7 @@
         "amount": 1
       }
     ],
-    "reward": " Wonder Hourglass×12 Emblem Ticket (Triumphant Light) ×1 Shop Ticket×2\n"
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Triumphant Light) ×1<br />Shop Ticket ×2"
   },
   {
     "name": "Hard-Bodied Pokémon",
@@ -226,7 +231,7 @@
         "options": ["A2a-38", "A2a-42", "A2a-65", "A2a-80", "A2a-55", "A2a-57", "A2a-85", "A2a-94"]
       }
     ],
-    "reward": " Emblem Ticket (Triumphant Light) ×8\n"
+    "reward": "Emblem Ticket (Triumphant Light) ×8"
   },
   {
     "name": "Collect 3 Marill cards",
@@ -236,7 +241,7 @@
         "amount": 3
       }
     ],
-    "reward": " Marill (icon)\n"
+    "reward": "Marill (icon)"
   },
   {
     "name": "Triumphant Light Museum 1",
@@ -266,7 +271,7 @@
         "amount": 1
       }
     ],
-    "reward": " Wonder Hourglass×36 Pack Hourglass×12 Shop Ticket×10\n"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
   },
   {
     "name": "Triumphant Light Museum 2",
@@ -288,7 +293,7 @@
         "amount": 1
       }
     ],
-    "reward": " Wonder Hourglass×36 Pack Hourglass×12 Shop Ticket×10\n"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
   },
   {
     "name": "Triumphant Light Museum 3",
@@ -314,7 +319,7 @@
         "amount": 1
       }
     ],
-    "reward": " Wonder Hourglass×36 Pack Hourglass×12 Shop Ticket×10\n"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
   },
   {
     "name": "Pokémon from Ancient Records",
@@ -348,6 +353,6 @@
         "amount": 1
       }
     ],
-    "reward": " Shaymin\n"
+    "reward": "Shaymin"
   }
 ]

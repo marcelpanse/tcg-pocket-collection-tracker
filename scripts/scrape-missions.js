@@ -4,7 +4,7 @@ import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
 
 const BASE_URL = 'https://bulbapedia.bulbagarden.net/wiki'
-const targetDir = '../frontend/assets/themed-collections/'
+const targetDir = 'frontend/assets/themed-collections/'
 const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3']
 // const expansions = ['A3']
 const expansionToName = {
@@ -80,7 +80,27 @@ async function getExpansionMissions(expansion) {
             mission.name = tableRow.eq(0).text()
             // mission.requiredCards = tableRow.eq(1).text()
             mission.requiredCards = parseCards($, tableRow.eq(1), expansion)
-            mission.reward = tableRow.eq(2).text().replace(/ /g, '')
+            const rewardCell = tableRow.eq(2)
+            const rewardItems = []
+
+            // Get text content from each child node or text node, respecting <br> tags
+            rewardCell.contents().each((_k, node) => {
+              if (node.type === 'text') {
+                // Add text content to rewards array if it's not just whitespace
+                const text = $(node).text().trim()
+                if (text) rewardItems.push(text)
+              } else if (node.name === 'br') {
+                // Don't need to do anything special for <br> tags as we're collecting items separately
+              } else if (node.name) {
+                // Handle other HTML elements (spans with images, etc.)
+                const text = $(node).text().trim()
+                if (text) rewardItems.push(text)
+              }
+            })
+
+            // Join the reward items with newlines and remove extra spaces
+            mission.reward = rewardItems.map((item) => item.replace(/\s+/g, ' ').trim()).join('<br />')
+            console.log('reward', mission.reward)
             if (mission.name !== '') {
               missions.push(mission)
             }

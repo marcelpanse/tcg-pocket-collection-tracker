@@ -7,7 +7,7 @@
         "options": ["A1a-2", "A1a-69", "A1a-8", "A1a-26", "A1a-28", "A1a-41", "A1a-52", "A1a-53", "A1a-62"]
       }
     ],
-    "reward": " Emblem Ticket (Mythical Island) ×5 Untouched Forest (cover)\n"
+    "reward": "Emblem Ticket (Mythical Island) ×5<br />Untouched Forest (cover)"
   },
   {
     "name": "Tranquil Lake",
@@ -17,7 +17,7 @@
         "options": ["A1a-11", "A1a-17", "A1a-18", "A1a-76", "A1a-23", "A1a-24"]
       }
     ],
-    "reward": " Emblem Ticket (Mythical Island) ×13 Tranquil Lake (cover)\n"
+    "reward": "Emblem Ticket (Mythical Island) ×13<br />Tranquil Lake (cover)"
   },
   {
     "name": "Scorching Wilderness",
@@ -27,7 +27,7 @@
         "options": ["A1a-12", "A1a-14", "A1a-15", "A1a-71", "A1a-43", "A1a-50"]
       }
     ],
-    "reward": " Emblem Ticket (Mythical Island) ×7 Scorching Wilderness (cover)\n"
+    "reward": "Emblem Ticket (Mythical Island) ×7<br />Scorching Wilderness (cover)"
   },
   {
     "name": "Forgotten Ruins",
@@ -41,7 +41,7 @@
         "options": ["A1a-6", "A1a-70", "A1a-35", "A1a-48"]
       }
     ],
-    "reward": " Emblem Ticket (Mythical Island) ×15 Forgotten Ruins (cover)\n"
+    "reward": "Emblem Ticket (Mythical Island) ×15<br />Forgotten Ruins (cover)"
   },
   {
     "name": "Catching Bugs",
@@ -67,7 +67,7 @@
         "amount": 1
       }
     ],
-    "reward": " Wonder Hourglass×12 Emblem Ticket (Mythical Island) ×2 Shop Ticket×2\n"
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Mythical Island) ×2<br />Shop Ticket ×2"
   },
   {
     "name": "Pokémon That Fly",
@@ -117,7 +117,7 @@
         "amount": 1
       }
     ],
-    "reward": " Wonder Hourglass×12 Emblem Ticket (Mythical Island) ×2 Shop Ticket×2\n"
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Mythical Island) ×2<br />Shop Ticket ×2"
   },
   {
     "name": "Attacks with 20 Damage",
@@ -163,7 +163,7 @@
         "amount": 1
       }
     ],
-    "reward": " Wonder Hourglass×12 Emblem Ticket (Mythical Island) ×2 Shop Ticket×2\n"
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Mythical Island) ×2<br />Shop Ticket ×2"
   },
   {
     "name": "Small Pokémon",
@@ -205,7 +205,7 @@
         "amount": 1
       }
     ],
-    "reward": " Wonder Hourglass×12 Emblem Ticket (Mythical Island) ×2 Shop Ticket×2\n"
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Mythical Island) ×2<br />Shop Ticket ×2"
   },
   {
     "name": "Tree of Repose",
@@ -227,7 +227,7 @@
         "amount": 1
       }
     ],
-    "reward": " Tree of Repose (cover)\n"
+    "reward": "Tree of Repose (cover)"
   },
   {
     "name": "Flower Travelers",
@@ -245,7 +245,12 @@
         "amount": 1
       }
     ],
-    "reward": " Wonder Hourglass×12 Emblem Ticket (Mythical Island) ×2 Shop Ticket×2\n"
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Mythical Island) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Use pack stamina to open 60 Mythical Island booster packs",
+    "requiredCards": [],
+    "reward": "Mythical Island: Mew (playmat)<br />Mythical Island: Mew (card sleeve)<br />Mew (Pokémon coin)<br />Mythical Island: Mew (cover)"
   },
   {
     "name": "Collect 3 Mew cards",
@@ -255,7 +260,7 @@
         "amount": 3
       }
     ],
-    "reward": " Mew (icon)\n"
+    "reward": "Mew (icon)"
   },
   {
     "name": "Collect 3 Blue cards",
@@ -265,7 +270,7 @@
         "amount": 3
       }
     ],
-    "reward": " Blue (icon)\n"
+    "reward": "Blue (icon)"
   },
   {
     "name": "Mythical Island Museum 1",
@@ -295,7 +300,7 @@
         "amount": 1
       }
     ],
-    "reward": " Pack Hourglass×12 Wonder Hourglass×36 Shop Ticket×10\n"
+    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
   },
   {
     "name": "Mythical Island Museum 2",
@@ -309,7 +314,7 @@
         "amount": 1
       }
     ],
-    "reward": " Pack Hourglass×12 Wonder Hourglass×36 Shop Ticket×10\n"
+    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
   },
   {
     "name": "Mew ex Museum",
@@ -331,7 +336,7 @@
         "amount": 1
       }
     ],
-    "reward": " Pack Hourglass×12 Wonder Hourglass×36 Shop Ticket×10\n"
+    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
   },
   {
     "name": "Mythical Island Tale of Adventure",
@@ -353,6 +358,6 @@
         "amount": 1
       }
     ],
-    "reward": " Celebi (emblem)\n"
+    "reward": "Celebi (emblem)"
   }
 ]
