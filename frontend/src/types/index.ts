@@ -26,6 +26,7 @@ export interface Expansion {
   id: ExpansionId
   cards: Card[]
   packs: Pack[]
+  missions?: Mission[]
   tradeable?: boolean
   promo?: boolean
   containsShinies?: boolean
@@ -82,4 +83,18 @@ export interface ImportExportRow {
   Id: string
   CardName: string
   NumberOwned: number
+}
+
+export interface Mission {
+  name: string
+  requiredCards: MissionCard[]
+  expansion?: ExpansionId
+  reward?: string
+  completed?: boolean
+}
+
+export interface MissionCard {
+  amount: number
+  options: string[]
+  owned?: number
 }

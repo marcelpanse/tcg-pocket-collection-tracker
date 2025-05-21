@@ -1,0 +1,363 @@
+[
+  {
+    "name": "Untouched Forest",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": ["A1a-2", "A1a-69", "A1a-8", "A1a-26", "A1a-28", "A1a-41", "A1a-52", "A1a-53", "A1a-62"]
+      }
+    ],
+    "reward": "Emblem Ticket (Mythical Island) ×5<br />Untouched Forest (cover)"
+  },
+  {
+    "name": "Tranquil Lake",
+    "requiredCards": [
+      {
+        "amount": "7",
+        "options": ["A1a-11", "A1a-17", "A1a-18", "A1a-76", "A1a-23", "A1a-24"]
+      }
+    ],
+    "reward": "Emblem Ticket (Mythical Island) ×13<br />Tranquil Lake (cover)"
+  },
+  {
+    "name": "Scorching Wilderness",
+    "requiredCards": [
+      {
+        "amount": "10",
+        "options": ["A1a-12", "A1a-14", "A1a-15", "A1a-71", "A1a-43", "A1a-50"]
+      }
+    ],
+    "reward": "Emblem Ticket (Mythical Island) ×7<br />Scorching Wilderness (cover)"
+  },
+  {
+    "name": "Forgotten Ruins",
+    "requiredCards": [
+      {
+        "options": ["A1a-65"],
+        "amount": 1
+      },
+      {
+        "amount": "9",
+        "options": ["A1a-6", "A1a-70", "A1a-35", "A1a-48"]
+      }
+    ],
+    "reward": "Emblem Ticket (Mythical Island) ×15<br />Forgotten Ruins (cover)"
+  },
+  {
+    "name": "Catching Bugs",
+    "requiredCards": [
+      {
+        "options": ["A1a-13"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-28"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-14"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-29"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-55"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Mythical Island) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Pokémon That Fly",
+    "requiredCards": [
+      {
+        "options": ["A1a-14"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-37"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-18"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-62"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-24"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-46"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-33"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-36"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-57"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-58"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-59"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Mythical Island) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Attacks with 20 Damage",
+    "requiredCards": [
+      {
+        "options": ["A1a-7"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-20"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-31"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-34"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-32"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-39"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-51"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-53"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-54"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-57"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Mythical Island) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Small Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A1a-7"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-57"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-22"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-36"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-37"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-28"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-30"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-61"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-62"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Mythical Island) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Tree of Repose",
+    "requiredCards": [
+      {
+        "options": ["A1a-22"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-30"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-42"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-58"],
+        "amount": 1
+      }
+    ],
+    "reward": "Tree of Repose (cover)"
+  },
+  {
+    "name": "Flower Travelers",
+    "requiredCards": [
+      {
+        "options": ["A1a-36"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-37"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-38"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Mythical Island) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Use pack stamina to open 60 Mythical Island booster packs",
+    "requiredCards": [],
+    "reward": "Mythical Island: Mew (playmat)<br />Mythical Island: Mew (card sleeve)<br />Mew (Pokémon coin)<br />Mythical Island: Mew (cover)"
+  },
+  {
+    "name": "Collect 3 Mew cards",
+    "requiredCards": [
+      {
+        "options": ["A1a-31"],
+        "amount": 3
+      }
+    ],
+    "reward": "Mew (icon)"
+  },
+  {
+    "name": "Collect 3 Blue cards",
+    "requiredCards": [
+      {
+        "options": ["A1a-67", "A1a-81"],
+        "amount": 3
+      }
+    ],
+    "reward": "Blue (icon)"
+  },
+  {
+    "name": "Mythical Island Museum 1",
+    "requiredCards": [
+      {
+        "options": ["A1a-69"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-70"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-71"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-72"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-73"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-74"],
+        "amount": 1
+      }
+    ],
+    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Mythical Island Museum 2",
+    "requiredCards": [
+      {
+        "options": ["A1a-83"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-84"],
+        "amount": 1
+      }
+    ],
+    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Mew ex Museum",
+    "requiredCards": [
+      {
+        "options": ["A1a-32"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-83"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-77"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-86"],
+        "amount": 1
+      }
+    ],
+    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Mythical Island Tale of Adventure",
+    "requiredCards": [
+      {
+        "options": ["A1a-66"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-65"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-83"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-85"],
+        "amount": 1
+      }
+    ],
+    "reward": "Celebi (emblem)"
+  }
+]

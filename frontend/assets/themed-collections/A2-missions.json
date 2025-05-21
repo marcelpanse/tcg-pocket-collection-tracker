@@ -1,0 +1,609 @@
+[
+  {
+    "name": "Myths of Sinnoh Resurrected",
+    "requiredCards": [
+      {
+        "options": ["A2-49", "A2-182", "A2-204", "A2-206"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-75"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-76", "A2-166"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-77"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-78", "A2-167"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-119", "A2-188", "A2-205", "A2-207"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Space-Time Smackdown) ×22"
+  },
+  {
+    "name": "Unknown Distortion World",
+    "requiredCards": [
+      {
+        "options": ["A2-75"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-76"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-77"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-78", "A2-167"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Space-Time Smackdown) ×6"
+  },
+  {
+    "name": "Legends of Newmoon Island and Fullmoon Island",
+    "requiredCards": [
+      {
+        "options": ["A2-79"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-109"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Space-Time Smackdown) ×5"
+  },
+  {
+    "name": "Giants Unleashed",
+    "requiredCards": [
+      {
+        "options": ["A2-34"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-87"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-112"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-143", "A2-179"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Space-Time Smackdown) ×4"
+  },
+  {
+    "name": "Garden of Smiling Flowers",
+    "requiredCards": [
+      {
+        "options": ["A2-4"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-22", "A2-159"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-63"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-137"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Space-Time Smackdown) ×4"
+  },
+  {
+    "name": "Manaphy Travelogue",
+    "requiredCards": [
+      {
+        "options": ["A2-38"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-40"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-43"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-50", "A2-162"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-133"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Space-Time Smackdown) ×2"
+  },
+  {
+    "name": "Ecosystem of Stark Mountain",
+    "requiredCards": [
+      {
+        "options": ["A2-26"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-81"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-111"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-120", "A2-174"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Space-Time Smackdown) ×4"
+  },
+  {
+    "name": "Spiritomb of Hallowed Tower",
+    "requiredCards": [
+      {
+        "options": ["A2-96"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-97"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-98"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-99", "A2-186", "A2-201"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-102"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-103"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-105"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-106"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-107", "A2-173"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-108"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-172"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Space-Time Smackdown) ×16"
+  },
+  {
+    "name": "Battle with Champion Cynthia",
+    "requiredCards": [
+      {
+        "options": ["A2-152", "A2-192"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-123", "A2-175"],
+        "amount": 1
+      },
+      {
+        "amount": "2",
+        "options": ["A2-9", "A2-41", "A2-161", "A2-92", "A2-170", "A2-104", "A2-172"]
+      }
+    ],
+    "reward": "Emblem Ticket (Space-Time Smackdown) ×4"
+  },
+  {
+    "name": "A Variety of Pokémon Abilities",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": [
+          "A2-22",
+          "A2-159",
+          "A2-32",
+          "A2-33",
+          "A2-160",
+          "A2-34",
+          "A2-72",
+          "A2-78",
+          "A2-167",
+          "A2-87",
+          "A2-92",
+          "A2-170",
+          "A2-110",
+          "A2-187",
+          "A2-202",
+          "A2-114",
+          "A2-123",
+          "A2-175"
+        ]
+      }
+    ],
+    "reward": "Emblem Ticket (Space-Time Smackdown) ×4"
+  },
+  {
+    "name": "Slightly Scary Pokémon",
+    "requiredCards": [
+      {
+        "amount": "4",
+        "options": ["A2-66", "A2-67", "A2-185", "A2-199", "A2-70", "A2-71", "A2-72", "A2-73", "A2-165", "A2-74", "A2-110", "A2-187", "A2-202"]
+      }
+    ],
+    "reward": "Emblem Ticket (Space-Time Smackdown) ×9"
+  },
+  {
+    "name": "Pokémon Grown Large",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": [
+          "A2-5",
+          "A2-12",
+          "A2-24",
+          "A2-33",
+          "A2-160",
+          "A2-45",
+          "A2-53",
+          "A2-57",
+          "A2-72",
+          "A2-82",
+          "A2-169",
+          "A2-89",
+          "A2-94",
+          "A2-114",
+          "A2-117",
+          "A2-118",
+          "A2-125",
+          "A2-189",
+          "A2-203"
+        ]
+      }
+    ],
+    "reward": "Emblem Ticket (Space-Time Smackdown) ×4"
+  },
+  {
+    "name": "New Discoveries of the Sinnoh Region",
+    "requiredCards": [
+      {
+        "amount": "10",
+        "options": [
+          "A2-5",
+          "A2-7",
+          "A2-180",
+          "A2-196",
+          "A2-9",
+          "A2-20",
+          "A2-24",
+          "A2-33",
+          "A2-160",
+          "A2-46",
+          "A2-53",
+          "A2-57",
+          "A2-65",
+          "A2-67",
+          "A2-185",
+          "A2-199",
+          "A2-72",
+          "A2-82",
+          "A2-169",
+          "A2-84",
+          "A2-95",
+          "A2-185",
+          "A2-200",
+          "A2-97",
+          "A2-99",
+          "A2-186",
+          "A2-201",
+          "A2-118",
+          "A2-125",
+          "A2-189",
+          "A2-203",
+          "A2-129",
+          "A2-118"
+        ]
+      }
+    ],
+    "reward": "Emblem Ticket (Space-Time Smackdown) ×12"
+  },
+  {
+    "name": "Mischievous Shapeshifters",
+    "requiredCards": [
+      {
+        "options": ["A2-21"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-30"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-47"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-48"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-62", "A2-164"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-142"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Space-Time Smackdown) ×2"
+  },
+  {
+    "name": "Team Galactic, Assemble!",
+    "requiredCards": [
+      {
+        "options": ["A2-102"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-107", "A2-173"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-139", "A2-178"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-150", "A2-190"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-151", "A2-191"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-155", "A2-195"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Space-Time Smackdown) ×2"
+  },
+  {
+    "name": "Collect 3 Turtwig cards",
+    "requiredCards": [
+      {
+        "options": ["A2-10"],
+        "amount": 3
+      }
+    ],
+    "reward": "Turtwig (profile icon)"
+  },
+  {
+    "name": "Collect 3 Chimchar cards",
+    "requiredCards": [
+      {
+        "options": ["A2-27"],
+        "amount": 3
+      }
+    ],
+    "reward": "Chimchar (profile icon)"
+  },
+  {
+    "name": "Collect 3 Piplup cards",
+    "requiredCards": [
+      {
+        "options": ["A2-35"],
+        "amount": 3
+      }
+    ],
+    "reward": "Piplup (profile icon)"
+  },
+  {
+    "name": "Space-Time Smackdown Museum 1",
+    "requiredCards": [
+      {
+        "options": ["A2-156"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-157"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-159"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-160"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-163"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-165"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-166"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-170"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-173"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-174"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-177"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-179"],
+        "amount": 1
+      }
+    ],
+    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Space-Time Smackdown Museum 2",
+    "requiredCards": [
+      {
+        "options": ["A2-158"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-161"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-162"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-164"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-167"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-168"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-169"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-171"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-172"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-175"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-176"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-178"],
+        "amount": 1
+      }
+    ],
+    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Space-Time Smackdown Museum 3",
+    "requiredCards": [
+      {
+        "options": ["A2-196"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-198"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-200"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-202"],
+        "amount": 1
+      }
+    ],
+    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Space-Time Smackdown Museum 4",
+    "requiredCards": [
+      {
+        "options": ["A2-197"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-199"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-201"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-203"],
+        "amount": 1
+      }
+    ],
+    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Champion of the Sinnoh Region",
+    "requiredCards": [
+      {
+        "options": ["A2-161"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-170"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-172"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-175"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-192"],
+        "amount": 1
+      }
+    ],
+    "reward": "Garchomp (emblem)"
+  }
+]

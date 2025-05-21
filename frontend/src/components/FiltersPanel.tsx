@@ -8,17 +8,18 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
-import { allCards } from '@/lib/CardsDB.ts'
+import { allCards, expansionsDict } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { getCardNameByLang } from '@/lib/utils'
-import type { Card, CollectionRow, Rarity } from '@/types'
+import type { Card, CollectionRow, Mission, Rarity } from '@/types'
 import i18n from 'i18next'
 import { type FC, type JSX, useContext, useEffect, useMemo, useState } from 'react'
 
 interface Props {
   children?: JSX.Element
   onFiltersChanged: (cards: Card[] | null) => void
+  onChangeToMissions: (missions: Mission[] | null) => void
   cards: CollectionRow[] | null
 
   visibleFilters?: {
@@ -41,7 +42,7 @@ interface Props {
   share?: boolean
 }
 
-const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilters, filtersDialog, batchUpdate, share }: Props) => {
+const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToMissions, visibleFilters, filtersDialog, batchUpdate, share }: Props) => {
   const { user, setIsProfileDialogOpen } = useContext(UserContext)
   const { ownedCards, setOwnedCards } = useContext(CollectionContext)
 
@@ -69,8 +70,22 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
     if (expansionFilter !== 'all') {
       filteredCards = filteredCards.filter((card) => card.expansion === expansionFilter)
     }
-    if (packFilter !== 'all') {
-      filteredCards = filteredCards.filter((card) => card.pack === packFilter || card.pack === 'everypack')
+    if (packFilter === 'missions') {
+      filteredCards = []
+      let missions = expansionsDict.get(expansionFilter)?.missions || null
+      if (missions) {
+        if (ownedFilter === 'owned') {
+          missions = missions.filter((mission) => mission.completed)
+        } else if (ownedFilter === 'missing') {
+          missions = missions.filter((mission) => !mission.completed)
+        }
+      }
+      onChangeToMissions(missions)
+    } else {
+      onChangeToMissions(null)
+      if (packFilter !== 'all') {
+        filteredCards = filteredCards.filter((card) => card.pack === packFilter || card.pack === 'everypack')
+      }
     }
     if (ownedFilter !== 'all') {
       if (ownedFilter === 'owned') {
@@ -128,7 +143,13 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
 
       <div className="flex items-center gap-2 flex-col md:flex-row gap-y-1 px-4 mb-2">
         {visibleFilters?.expansions && (
-          <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} setPackFilter={setPackFilter} />
+          <ExpansionsFilter
+            expansionFilter={expansionFilter}
+            setExpansionFilter={setExpansionFilter}
+            setPackFilter={setPackFilter}
+            packFilter={packFilter}
+            showPacks
+          />
         )}
       </div>
       <div className="items-center gap-2 flex-row gap-y-1 px-4 flex">
@@ -148,9 +169,14 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, visibleFilt
               <div className="flex flex-col gap-3">
                 {filtersDialog.search && <SearchInput setSearchValue={setSearchValue} fullWidth />}
                 {filtersDialog.expansions && (
-                  <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} setPackFilter={setPackFilter} />
+                  <ExpansionsFilter
+                    expansionFilter={expansionFilter}
+                    setExpansionFilter={setExpansionFilter}
+                    setPackFilter={setPackFilter}
+                    packFilter={packFilter}
+                  />
                 )}
-                {filtersDialog.pack && <PackFilter packFilter={packFilter} setPackFilter={setPackFilter} expansion={expansionFilter} />}
+                {filtersDialog.pack && <PackFilter packFilter={packFilter} setPackFilter={setPackFilter} expansion={expansionFilter} fullWidth />}
                 {filtersDialog.rarity && <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />}
                 {filtersDialog.owned && <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} fullWidth />}
                 {filtersDialog.amount && (

@@ -1,0 +1,836 @@
+[
+  {
+    "name": "Daytime Pack and Nighttime Pack",
+    "requiredCards": [
+      {
+        "options": ["A3-106"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-107"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-136"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-137"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Celestial Guardians) ×1"
+  },
+  {
+    "name": "Evolution Split by Day and Night",
+    "requiredCards": [
+      {
+        "options": ["A3-98"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-99"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-100"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-101"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Celestial Guardians) ×5"
+  },
+  {
+    "name": "Alolan Dancers",
+    "requiredCards": [
+      {
+        "options": ["A3-34"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-66"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-76"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-77"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Celestial Guardians) ×3"
+  },
+  {
+    "name": "Descended from the Sun and the Moon?",
+    "requiredCards": [
+      {
+        "options": ["A3-73"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-92"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Celestial Guardians) ×1"
+  },
+  {
+    "name": "Komala, Always Sleeping",
+    "requiredCards": [
+      {
+        "options": ["A3-105"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-141"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Celestial Guardians) ×1"
+  },
+  {
+    "name": "A Beach Scene, Day and Night",
+    "requiredCards": [
+      {
+        "options": ["A3-81"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-110"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Celestial Guardians) ×1"
+  },
+  {
+    "name": "A Day in the Life of Rowlet",
+    "requiredCards": [
+      {
+        "options": ["A3-9"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-10"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Celestial Guardians) ×1"
+  },
+  {
+    "name": "A Day in the Life of Litten",
+    "requiredCards": [
+      {
+        "options": ["A3-30"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-31"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Celestial Guardians) ×1"
+  },
+  {
+    "name": "A Day in the Life of Popplio",
+    "requiredCards": [
+      {
+        "options": ["A3-45"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-46"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Celestial Guardians) ×1"
+  },
+  {
+    "name": "Kiawe and Volcano Park Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A3-150", "A3-192"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-27", "A3-160"],
+        "amount": 3
+      },
+      {
+        "options": ["A3-36"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Celestial Guardians) ×1"
+  },
+  {
+    "name": "Mallow and Jungle Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A3-154", "A3-196"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-14"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-15"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-18"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-80", "A3-168"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Celestial Guardians) ×3"
+  },
+  {
+    "name": "Ilima and Cave Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A3-149", "A3-191"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-136"],
+        "amount": 2
+      },
+      {
+        "options": ["A3-137"],
+        "amount": 2
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Celestial Guardians) ×1"
+  },
+  {
+    "name": "Acerola and Spooky Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A3-148", "A3-190"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-23", "A3-181", "A3-199"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-82"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-83"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Celestial Guardians) ×8"
+  },
+  {
+    "name": "Lana and Waterside Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A3-152", "A3-194"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-51", "A3-184", "A3-202"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-52"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-53"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Celestial Guardians) ×6"
+  },
+  {
+    "name": "Sophocles and Electric Discharge Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A3-153", "A3-195"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-61"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-65"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-67"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Celestial Guardians) ×5"
+  },
+  {
+    "name": "Captains of the Alola Region",
+    "requiredCards": [
+      {
+        "options": ["A3-148", "A3-190"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-149", "A3-191"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-150", "A3-192"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-152", "A3-194"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-153", "A3-195"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-154", "A3-196"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Celestial Guardians) ×2"
+  },
+  {
+    "name": "Team Skull's Nasty Plot",
+    "requiredCards": [
+      {
+        "options": ["A3-151", "A3-193", "A3-208"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-22"],
+        "amount": 1
+      },
+      {
+        "amount": "1",
+        "options": ["A3-35", "A3-107", "A3-110", "A3-115"]
+      }
+    ],
+    "reward": "Emblem Ticket (Celestial Guardians) ×1"
+  },
+  {
+    "name": "Lillie and Nebby's Growth",
+    "requiredCards": [
+      {
+        "options": ["A3-155", "A3-197", "A3-209"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-85", "A3-171"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-86"],
+        "amount": 1
+      },
+      {
+        "amount": "1",
+        "options": ["A3-87", "A3-186", "A3-204", "A3-238", "A3-122", "A3-189", "A3-207", "A3-239"]
+      }
+    ],
+    "reward": "Emblem Ticket (Celestial Guardians) ×7"
+  },
+  {
+    "name": "Guardian Deities of the Four Islands",
+    "requiredCards": [
+      {
+        "options": ["A3-159"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-164"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-166"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-170"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Celestial Guardians) ×14"
+  },
+  {
+    "name": "Standing Before You: Totem Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A3-15"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-36"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-51", "A3-184", "A3-202"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-65"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-83"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-107"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-127"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Celestial Guardians) ×12"
+  },
+  {
+    "name": "An Assembly of Alolan Forms 1",
+    "requiredCards": [
+      {
+        "options": ["A3-2", "A3-156"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-27", "A3-160"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-40", "A3-162"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-41"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-58", "A3-185", "A3-203"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-108"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-109"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-117"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-118"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Celestial Guardians) ×14"
+  },
+  {
+    "name": "An Assembly of Alolan Forms 2",
+    "requiredCards": [
+      {
+        "options": ["A3-38"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-39"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-59"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-60"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-61"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-106"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-107"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-110"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-111", "A3-188", "A3-206"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Celestial Guardians) ×10"
+  },
+  {
+    "name": "Collect 3 Rowlet cards",
+    "requiredCards": [
+      {
+        "amount": "3",
+        "options": ["A3-9", "A3-10"]
+      }
+    ],
+    "reward": "Rowlet (profile icon)"
+  },
+  {
+    "name": "Collect 3 Litten cards",
+    "requiredCards": [
+      {
+        "amount": "3",
+        "options": ["A3-30", "A3-31"]
+      }
+    ],
+    "reward": "Litten (profile icon)"
+  },
+  {
+    "name": "Collect 3 Popplio cards",
+    "requiredCards": [
+      {
+        "amount": "3",
+        "options": ["A3-45", "A3-46"]
+      }
+    ],
+    "reward": "Popplio (profile icon)"
+  },
+  {
+    "name": "Sun Collection",
+    "requiredCards": [
+      {
+        "options": ["A3-9"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-30"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-46"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-66"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-76"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-81"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-92"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-99"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-100"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-136"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-137"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-141"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-207"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Moon Collection",
+    "requiredCards": [
+      {
+        "options": ["A3-10"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-31"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-34"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-45"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-73"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-98"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-101"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-105"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-106"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-107"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-110"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-204"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Celestial Guardians Museum 1",
+    "requiredCards": [
+      {
+        "options": ["A3-158"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-159"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-165"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-166"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-167"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-168"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-169"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-172"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-173"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-175"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-176"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-179"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Celestial Guardians Museum 2",
+    "requiredCards": [
+      {
+        "options": ["A3-156"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-157"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-160"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-161"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-162"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-163"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-164"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-170"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-171"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-174"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-177"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-178"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Celestial Guardians Museum 3",
+    "requiredCards": [
+      {
+        "options": ["A3-199"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-200"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-201"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-203"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-207"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Celestial Guardians Museum 4",
+    "requiredCards": [
+      {
+        "options": ["A3-198"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-202"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-204"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-205"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-206"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Lana and Wishiwashi's School",
+    "requiredCards": [
+      {
+        "options": ["A3-50"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-51"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-152"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-184"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-194"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-202"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wishiwashi (emblem)"
+  },
+  {
+    "name": "Guidance of the Sun and Moon",
+    "requiredCards": [
+      {
+        "options": ["A3-204"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-207"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  }
+]

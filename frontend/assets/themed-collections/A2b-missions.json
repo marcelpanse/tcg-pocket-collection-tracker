@@ -1,0 +1,554 @@
+[
+  {
+    "name": "Burning Desire",
+    "requiredCards": [
+      {
+        "options": ["A2b-8", "A2b-99"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-9", "A2b-100"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-10", "A2b-80", "A2b-108"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×3"
+  },
+  {
+    "name": "Magmar's Evolution",
+    "requiredCards": [
+      {
+        "options": ["A2b-11"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-12"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×1"
+  },
+  {
+    "name": "Collect Paldean Tauros",
+    "requiredCards": [
+      {
+        "options": ["A2b-13"],
+        "amount": 2
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Beach Peekaboo",
+    "requiredCards": [
+      {
+        "options": ["A2b-18", "A2b-101"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-19", "A2b-109"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×3"
+  },
+  {
+    "name": "Henchman and Boss?",
+    "requiredCards": [
+      {
+        "options": ["A2b-20", "A2b-102"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-21", "A2b-75"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×1"
+  },
+  {
+    "name": "Tangle of Tentacles",
+    "requiredCards": [
+      {
+        "options": ["A2b-14"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-15"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Bobbing in the Waves",
+    "requiredCards": [
+      {
+        "options": ["A2b-16", "A2b-74"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-17"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Shadows of the Distortion World",
+    "requiredCards": [
+      {
+        "options": ["A2b-35", "A2b-83", "A2b-96"],
+        "amount": 2
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×1"
+  },
+  {
+    "name": "Bewitching World",
+    "requiredCards": [
+      {
+        "options": ["A2b-29"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-30"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-31"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×2"
+  },
+  {
+    "name": "Collect Mr. Mime",
+    "requiredCards": [
+      {
+        "options": ["A2b-32"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+  },
+  {
+    "name": "As the Wind Blows",
+    "requiredCards": [
+      {
+        "options": ["A2b-33"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-34"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Needling Frenzy",
+    "requiredCards": [
+      {
+        "options": ["A2b-1", "A2b-97"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-2", "A2b-98"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-3", "A2b-79", "A2b-107"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×3"
+  },
+  {
+    "name": "Sprigatito's Green Sprouting",
+    "requiredCards": [
+      {
+        "options": ["A2b-5"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-6"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-7", "A2b-73"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×2"
+  },
+  {
+    "name": "Collect Pinsir",
+    "requiredCards": [
+      {
+        "options": ["A2b-4"],
+        "amount": 2
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Huge Hammer",
+    "requiredCards": [
+      {
+        "options": ["A2b-52"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-53"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-54", "A2b-86", "A2b-94"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×3"
+  },
+  {
+    "name": "Pile of Coins",
+    "requiredCards": [
+      {
+        "options": ["A2b-36"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-57"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×1"
+  },
+  {
+    "name": "Menacing Motor Noise",
+    "requiredCards": [
+      {
+        "options": ["A2b-55", "A2b-105"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-56", "A2b-106"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Aura Masters",
+    "requiredCards": [
+      {
+        "options": ["A2b-42", "A2b-104"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-43", "A2b-84", "A2b-110"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×3"
+  },
+  {
+    "name": "1,000 Punches",
+    "requiredCards": [
+      {
+        "options": ["A2b-37"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-38"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-39"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×1"
+  },
+  {
+    "name": "Punching & Kicking",
+    "requiredCards": [
+      {
+        "options": ["A2b-40"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-41"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Collect Flamigo",
+    "requiredCards": [
+      {
+        "options": ["A2b-44"],
+        "amount": 2
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Electric Cheeks",
+    "requiredCards": [
+      {
+        "options": ["A2b-22", "A2b-82", "A2b-92"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×3"
+  },
+  {
+    "name": "Extra Electrifying",
+    "requiredCards": [
+      {
+        "options": ["A2b-26"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-27"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-28"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×2"
+  },
+  {
+    "name": "Exploding All Over the Place",
+    "requiredCards": [
+      {
+        "options": ["A2b-23"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-24"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Dangerous Poison Spikes",
+    "requiredCards": [
+      {
+        "options": ["A2b-47"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-48", "A2b-85", "A2b-93"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×3"
+  },
+  {
+    "name": "Deep Forest Poison Patterns",
+    "requiredCards": [
+      {
+        "options": ["A2b-50"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-51", "A2b-76"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×1"
+  },
+  {
+    "name": "Intimidating Patterns",
+    "requiredCards": [
+      {
+        "options": ["A2b-45"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-46"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×1"
+  },
+  {
+    "name": "Collect Spiritomb",
+    "requiredCards": [
+      {
+        "options": ["A2b-49"],
+        "amount": 2
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+  },
+  {
+    "name": "Diligent Nest-Building",
+    "requiredCards": [
+      {
+        "options": ["A2b-64"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-65", "A2b-87", "A2b-95"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×3"
+  },
+  {
+    "name": "Expanding Body",
+    "requiredCards": [
+      {
+        "options": ["A2b-60"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-61"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×1"
+  },
+  {
+    "name": "Shiny Museum 1",
+    "requiredCards": [
+      {
+        "amount": "1",
+        "options": ["A2b-97", "A2b-98", "A2b-99", "A2b-100", "A2b-101", "A2b-102", "A2b-103", "A2b-104", "A2b-105", "A2b-106"]
+      }
+    ],
+    "reward": "Emblem Ticket (Shining Revelry) ×1"
+  },
+  {
+    "name": "Collect 3 Sprigatito cards",
+    "requiredCards": [
+      {
+        "options": ["A2b-5"],
+        "amount": 3
+      }
+    ],
+    "reward": "Sprigatito (icon)"
+  },
+  {
+    "name": "Shiny Museum 2",
+    "requiredCards": [
+      {
+        "amount": "2",
+        "options": ["A2b-97", "A2b-98", "A2b-99", "A2b-100", "A2b-101", "A2b-102", "A2b-103", "A2b-104", "A2b-105", "A2b-106"]
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Shiny Museum 3",
+    "requiredCards": [
+      {
+        "amount": "3",
+        "options": ["A2b-97", "A2b-98", "A2b-99", "A2b-100", "A2b-101", "A2b-102", "A2b-103", "A2b-104", "A2b-105", "A2b-106"]
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Shiny Museum 4",
+    "requiredCards": [
+      {
+        "amount": "1",
+        "options": ["A2b-107", "A2b-108", "A2b-109", "A2b-110"]
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Shiny Museum 5",
+    "requiredCards": [
+      {
+        "amount": "2",
+        "options": ["A2b-107", "A2b-108", "A2b-109", "A2b-110"]
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Shiny Museum 6",
+    "requiredCards": [
+      {
+        "amount": "3",
+        "options": ["A2b-107", "A2b-108", "A2b-109", "A2b-110"]
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Shining Revelry Museum 1",
+    "requiredCards": [
+      {
+        "options": ["A2b-73"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-74"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-75"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-76"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-77"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-78"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Shining Revelry Museum 2",
+    "requiredCards": [
+      {
+        "options": ["A2b-92"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-93"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-94"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-95"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "name": "Gimmighoul Collection",
+    "requiredCards": [
+      {
+        "options": ["A2b-36"],
+        "amount": 99
+      }
+    ],
+    "reward": "Gholdengo (emblem)"
+  }
+]
