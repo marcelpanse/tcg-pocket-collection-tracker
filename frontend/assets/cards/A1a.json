@@ -30,6 +30,10 @@
       {
         "version": "Mythical Island #1",
         "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #60",
+        "rarity": ""
       }
     ],
     "artist": "Yuka Morii",
@@ -69,6 +73,10 @@
       },
       {
         "version": "Mythical Island #69",
+        "rarity": "☆"
+      },
+      {
+        "version": "Celestial Guardians #214",
         "rarity": "☆"
       }
     ],
@@ -1808,8 +1816,8 @@
     "attacks": [
       {
         "cost": ["Darkness"],
-        "name": "Unknown",
-        "damage": "Division",
+        "name": "Division",
+        "damage": "0",
         "effect": "Put 1 random Koffing from your deck onto your Bench."
       }
     ],
@@ -2280,8 +2288,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Mimic",
+        "name": "Mimic",
+        "damage": "0",
         "effect": "Shuffle your hand into your deck. Draw a card for each card in your opponent's hand."
       }
     ],
@@ -2512,6 +2520,10 @@
       },
       {
         "version": "Mythical Island #69",
+        "rarity": "☆"
+      },
+      {
+        "version": "Celestial Guardians #214",
         "rarity": "☆"
       }
     ],

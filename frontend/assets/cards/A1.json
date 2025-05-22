@@ -38,6 +38,10 @@
       {
         "version": "Promo-A #23",
         "rarity": ""
+      },
+      {
+        "version": "Celestial Guardians #210",
+        "rarity": "☆"
       }
     ],
     "artist": "Narumi Sato",
@@ -74,6 +78,10 @@
       {
         "version": "Genetic Apex #2",
         "rarity": "◊◊"
+      },
+      {
+        "version": "Celestial Guardians #211",
+        "rarity": "☆"
       }
     ],
     "artist": "Kurata So",
@@ -114,6 +122,10 @@
       {
         "version": "Promo-A #18",
         "rarity": ""
+      },
+      {
+        "version": "Celestial Guardians #212",
+        "rarity": "☆"
       }
     ],
     "artist": "Ryota Murayama",
@@ -159,6 +171,10 @@
       },
       {
         "version": "Genetic Apex #251",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #230",
         "rarity": "☆☆"
       }
     ],
@@ -855,6 +871,10 @@
       },
       {
         "version": "Genetic Apex #252",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #231",
         "rarity": "☆☆"
       }
     ],
@@ -2000,6 +2020,10 @@
       {
         "version": "Promo-A #33",
         "rarity": ""
+      },
+      {
+        "version": "Celestial Guardians #215",
+        "rarity": "☆"
       }
     ],
     "artist": "Mizue",
@@ -2036,6 +2060,10 @@
       {
         "version": "Genetic Apex #54",
         "rarity": "◊◊"
+      },
+      {
+        "version": "Celestial Guardians #216",
+        "rarity": "☆"
       }
     ],
     "artist": "Nelnal",
@@ -2076,6 +2104,10 @@
       {
         "version": "Promo-A #29",
         "rarity": ""
+      },
+      {
+        "version": "Celestial Guardians #217",
+        "rarity": "☆"
       }
     ],
     "artist": "Nurikabe",
@@ -2121,6 +2153,10 @@
       },
       {
         "version": "Genetic Apex #256",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #232",
         "rarity": "☆☆"
       }
     ],
@@ -2289,7 +2325,7 @@
     ],
     "ability": {
       "name": "Counterattack",
-      "effect": "If this Pokémon is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the attacking Pokémon."
+      "effect": "If this Pokémon is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the Attacking Pokémon."
     },
     "weakness": "lightning",
     "retreat": "2",
@@ -2770,6 +2806,10 @@
       {
         "version": "Genetic Apex #74",
         "rarity": "◊"
+      },
+      {
+        "version": "Celestial Guardians #218",
+        "rarity": "☆"
       }
     ],
     "artist": "Hiroki Asanuma",
@@ -2806,6 +2846,10 @@
       {
         "version": "Genetic Apex #75",
         "rarity": "◊◊"
+      },
+      {
+        "version": "Celestial Guardians #219",
+        "rarity": "☆"
       }
     ],
     "artist": "Yukiko Baba",
@@ -2845,6 +2889,10 @@
       },
       {
         "version": "Genetic Apex #257",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #233",
         "rarity": "☆☆"
       }
     ],
@@ -3264,6 +3312,10 @@
       {
         "version": "Genetic Apex #87",
         "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #61",
+        "rarity": ""
       }
     ],
     "artist": "Aya Kusube",
@@ -4306,8 +4358,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Teleport",
+        "name": "Teleport",
+        "damage": "0",
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
@@ -4550,6 +4602,10 @@
       {
         "version": "Genetic Apex #121",
         "rarity": "◊◊"
+      },
+      {
+        "version": "Celestial Guardians #221",
+        "rarity": "☆"
       }
     ],
     "artist": "Nisata Niso",
@@ -4586,6 +4642,10 @@
       {
         "version": "Genetic Apex #122",
         "rarity": "◊◊◊"
+      },
+      {
+        "version": "Celestial Guardians #222",
+        "rarity": "☆"
       }
     ],
     "artist": "Naoyo Kimura",
@@ -4629,6 +4689,10 @@
       },
       {
         "version": "Genetic Apex #277",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #234",
         "rarity": "☆☆"
       }
     ],
@@ -5380,6 +5444,10 @@
       {
         "version": "Genetic Apex #143",
         "rarity": "◊"
+      },
+      {
+        "version": "Celestial Guardians #223",
+        "rarity": "☆"
       }
     ],
     "artist": "Kyoko Umemoto",
@@ -5416,6 +5484,10 @@
       {
         "version": "Genetic Apex #144",
         "rarity": "◊◊"
+      },
+      {
+        "version": "Celestial Guardians #224",
+        "rarity": "☆"
       }
     ],
     "artist": "match",
@@ -5495,6 +5567,10 @@
       },
       {
         "version": "Genetic Apex #278",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #235",
         "rarity": "☆☆"
       }
     ],
@@ -5660,8 +5736,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Growl",
+        "name": "Growl",
+        "damage": "0",
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do -20 damage."
       }
     ],
@@ -5683,6 +5759,10 @@
       },
       {
         "version": "Genetic Apex #239",
+        "rarity": "☆"
+      },
+      {
+        "version": "Celestial Guardians #226",
         "rarity": "☆"
       }
     ],
@@ -5720,6 +5800,10 @@
       {
         "version": "Genetic Apex #152",
         "rarity": "◊◊"
+      },
+      {
+        "version": "Celestial Guardians #227",
+        "rarity": "☆"
       }
     ],
     "artist": "Shin Nagasawa",
@@ -5759,6 +5843,10 @@
       },
       {
         "version": "Genetic Apex #264",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #236",
         "rarity": "☆☆"
       }
     ],
@@ -6764,8 +6852,8 @@
     "attacks": [
       {
         "cost": ["Metal"],
-        "name": "Unknown",
-        "damage": "Amass",
+        "name": "Amass",
+        "damage": "0",
         "effect": "Take 1 [M] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
@@ -7304,6 +7392,10 @@
       {
         "version": "Genetic Apex #279",
         "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #237",
+        "rarity": "☆☆"
       }
     ],
     "artist": "PLANETA Igarashi",
@@ -7420,6 +7512,10 @@
       {
         "version": "Genetic Apex #198",
         "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #62",
+        "rarity": ""
       }
     ],
     "artist": "Miki Tanaka",
@@ -8454,6 +8550,10 @@
       {
         "version": "Promo-A #23",
         "rarity": ""
+      },
+      {
+        "version": "Celestial Guardians #210",
+        "rarity": "☆"
       }
     ],
     "artist": "Ryota Murayama",
@@ -8662,6 +8762,10 @@
       {
         "version": "Promo-A #33",
         "rarity": ""
+      },
+      {
+        "version": "Celestial Guardians #215",
+        "rarity": "☆"
       }
     ],
     "artist": "Taira Akitsu",
@@ -8918,8 +9022,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Growl",
+        "name": "Growl",
+        "damage": "0",
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do -20 damage."
       }
     ],
@@ -8941,6 +9045,10 @@
       },
       {
         "version": "Genetic Apex #239",
+        "rarity": "☆"
+      },
+      {
+        "version": "Celestial Guardians #226",
         "rarity": "☆"
       }
     ],
@@ -9440,6 +9548,10 @@
       {
         "version": "Genetic Apex #251",
         "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #230",
+        "rarity": "☆☆"
       }
     ],
     "artist": "PLANETA CG Works",
@@ -9479,6 +9591,10 @@
       },
       {
         "version": "Genetic Apex #252",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #231",
         "rarity": "☆☆"
       }
     ],
@@ -9674,6 +9790,10 @@
       {
         "version": "Genetic Apex #256",
         "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #232",
+        "rarity": "☆☆"
       }
     ],
     "artist": "PLANETA CG Works",
@@ -9713,6 +9833,10 @@
       },
       {
         "version": "Genetic Apex #257",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #233",
         "rarity": "☆☆"
       }
     ],
@@ -9906,6 +10030,10 @@
       {
         "version": "Genetic Apex #277",
         "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #234",
+        "rarity": "☆☆"
       }
     ],
     "artist": "PLANETA CG Works",
@@ -10008,6 +10136,10 @@
       {
         "version": "Genetic Apex #278",
         "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #235",
+        "rarity": "☆☆"
       }
     ],
     "artist": "PLANETA Igarashi",
@@ -10047,6 +10179,10 @@
       },
       {
         "version": "Genetic Apex #264",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #236",
         "rarity": "☆☆"
       }
     ],
@@ -10091,6 +10227,10 @@
       },
       {
         "version": "Genetic Apex #279",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #237",
         "rarity": "☆☆"
       }
     ],
@@ -10530,6 +10670,10 @@
       {
         "version": "Genetic Apex #277",
         "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #234",
+        "rarity": "☆☆"
       }
     ],
     "artist": "NC Empire",
@@ -10574,6 +10718,10 @@
       {
         "version": "Genetic Apex #278",
         "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #235",
+        "rarity": "☆☆"
       }
     ],
     "artist": "AKIRA EGAWA",
@@ -10617,6 +10765,10 @@
       },
       {
         "version": "Genetic Apex #279",
+        "rarity": "☆☆"
+      },
+      {
+        "version": "Celestial Guardians #237",
         "rarity": "☆☆"
       }
     ],

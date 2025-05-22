@@ -142,8 +142,8 @@ function extractCardInfo($, cardUrl) {
       })
 
       const attackParts = attackText.split(' ')
-      const attackName = attackParts.slice(0, -1).join(' ').trim() || 'Unknown'
-      const attackDamage = attackParts.slice(-1)[0].trim() || '0'
+      const attackName = (attackParts.length > 1 ? attackParts.slice(0, -1).join(' ').trim() : attackParts.slice(-1)[0].trim()) || 'defaultAttackName'
+      const attackDamage = (attackParts.length > 1 ? attackParts.slice(-1)[0].trim() : '0') || '0'
       const attackEffect = attackEffectSection.text().trim() || 'No effect'
 
       cardInfo.attacks.push({
@@ -161,7 +161,7 @@ function extractCardInfo($, cardUrl) {
   cardInfo.retreat = weaknessAndRetreat[1]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
 
   const raritySection = $('table.card-prints-versions tr.current')
-  cardInfo.rarity = raritySection.find('td:last-child').text().trim() || 'Unknown'
+  cardInfo.rarity = raritySection.find('td:last-child').text().trim() || 'P'
   cardInfo.fullart = fullArtRarities.includes(cardInfo.rarity) ? 'Yes' : 'No'
 
   cardInfo.ex = cardInfo.name.includes('ex') ? 'yes' : 'no'

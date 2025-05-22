@@ -10,8 +10,8 @@
     "attacks": [
       {
         "cost": ["Grass"],
-        "name": "Unknown",
-        "damage": "Multiply",
+        "name": "Multiply",
+        "damage": "0",
         "effect": "Put 1 random Weedle from your deck onto your Bench."
       }
     ],
@@ -366,8 +366,8 @@
     "attacks": [
       {
         "cost": ["Fire"],
-        "name": "Unknown",
-        "damage": "Stoke",
+        "name": "Stoke",
+        "damage": "0",
         "effect": "Take 3 [R] Energy from your Energy Zone and attach it to this Pokémon."
       },
       {
@@ -1368,8 +1368,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Chest-ouflage",
+        "name": "Chest-ouflage",
+        "damage": "0",
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
@@ -1500,6 +1500,10 @@
       {
         "version": "Promo-A #55",
         "rarity": ""
+      },
+      {
+        "version": "Celestial Guardians #225",
+        "rarity": "☆"
       }
     ],
     "artist": "Kouki Saitou",
@@ -2304,6 +2308,10 @@
       {
         "version": "Shining Revelry #60",
         "rarity": "◊"
+      },
+      {
+        "version": "Celestial Guardians #228",
+        "rarity": "☆"
       }
     ],
     "artist": "Kanako Eo",
@@ -2343,6 +2351,10 @@
       },
       {
         "version": "Shining Revelry #78",
+        "rarity": "☆"
+      },
+      {
+        "version": "Celestial Guardians #229",
         "rarity": "☆"
       }
     ],
@@ -2972,6 +2984,10 @@
       {
         "version": "Shining Revelry #78",
         "rarity": "☆"
+      },
+      {
+        "version": "Celestial Guardians #229",
+        "rarity": "☆"
       }
     ],
     "artist": "5ban Graphics",
@@ -3032,8 +3048,8 @@
     "attacks": [
       {
         "cost": ["Fire"],
-        "name": "Unknown",
-        "damage": "Stoke",
+        "name": "Stoke",
+        "damage": "0",
         "effect": "Take 3 [R] Energy from your Energy Zone and attach it to this Pokémon."
       },
       {
@@ -3730,8 +3746,8 @@
     "attacks": [
       {
         "cost": ["Grass"],
-        "name": "Unknown",
-        "damage": "Multiply",
+        "name": "Multiply",
+        "damage": "0",
         "effect": "Put 1 random Weedle from your deck onto your Bench."
       }
     ],
@@ -4182,8 +4198,8 @@
     "attacks": [
       {
         "cost": ["Fire"],
-        "name": "Unknown",
-        "damage": "Stoke",
+        "name": "Stoke",
+        "damage": "0",
         "effect": "Take 3 [R] Energy from your Energy Zone and attach it to this Pokémon."
       },
       {
