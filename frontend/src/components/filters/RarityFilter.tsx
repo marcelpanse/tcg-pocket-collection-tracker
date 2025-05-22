@@ -63,6 +63,9 @@ const RarityFilter: FC<Props> = ({ rarityFilter, setRarityFilter, deckbuildingMo
             <ToggleGroupItem value="Crown Rare" aria-label="♛">
               👑
             </ToggleGroupItem>
+            <ToggleGroupItem value="P" aria-label="P">
+              P
+            </ToggleGroupItem>
           </>
         )}
       </ToggleGroup>

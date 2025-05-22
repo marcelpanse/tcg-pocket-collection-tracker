@@ -145,7 +145,7 @@ export const tradeableRaritiesDictionary: Record<Rarity, number | null> = {
   '✵': null,
   '✵✵': null,
   'Crown Rare': null,
-  Unknown: null,
+  P: null,
   '': null,
 }
 
@@ -160,7 +160,7 @@ export const sellableForTokensDictionary: Record<Rarity, number | null> = {
   '✵': 250,
   '✵✵': 650,
   'Crown Rare': 1500,
-  Unknown: null,
+  P: null,
   '': null,
 }
 
@@ -257,7 +257,7 @@ const probabilityPerRarity1_3: Record<Rarity, number> = {
   '✵': 0,
   '✵✵': 0,
   'Crown Rare': 0,
-  Unknown: 0,
+  P: 0,
   '': 0,
 }
 const probabilityPerRarity4: Record<Rarity, number> = {
@@ -271,7 +271,7 @@ const probabilityPerRarity4: Record<Rarity, number> = {
   '✵': 0,
   '✵✵': 0,
   'Crown Rare': 0.04,
-  Unknown: 0,
+  P: 0,
   '': 0,
 }
 const probabilityPerRarity5: Record<Rarity, number> = {
@@ -285,7 +285,7 @@ const probabilityPerRarity5: Record<Rarity, number> = {
   '✵': 0,
   '✵✵': 0,
   'Crown Rare': 0.16,
-  Unknown: 0,
+  P: 0,
   '': 0,
 }
 const probabilityPerRarity4Shiny: Record<Rarity, number> = {
@@ -299,7 +299,7 @@ const probabilityPerRarity4Shiny: Record<Rarity, number> = {
   '✵': 0.71425,
   '✵✵': 0.33325,
   'Crown Rare': 0.04,
-  Unknown: 0,
+  P: 0,
   '': 0,
 }
 const probabilityPerRarity5Shiny: Record<Rarity, number> = {
@@ -313,7 +313,7 @@ const probabilityPerRarity5Shiny: Record<Rarity, number> = {
   '✵': 2.857,
   '✵✵': 1.333,
   'Crown Rare': 0.16,
-  Unknown: 0,
+  P: 0,
   '': 0,
 }
 const abilityByRarityToBeInRarePack: Record<Rarity, number> = {
@@ -327,7 +327,7 @@ const abilityByRarityToBeInRarePack: Record<Rarity, number> = {
   '✵': 1,
   '✵✵': 1,
   'Crown Rare': 1,
-  Unknown: 0,
+  P: 0,
   '': 0,
 }
 
@@ -371,7 +371,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
   if (rarityFilter.length > 0) {
     //filter out cards that are not in the rarity filter
     missingCards = missingCards.filter((c) => {
-      if (c.rarity === 'Unknown' || c.rarity === '') return false
+      if (c.rarity === '') return false
       return rarityFilter.includes(c.rarity)
     })
   }
@@ -383,7 +383,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
   for (const card of missingCards) {
     const rarityList = [card.rarity]
     // Skip cards that cannot be picked
-    if (rarityList[0] === 'Unknown' || rarityList[0] === '') continue
+    if (rarityList[0] === 'P' || rarityList[0] === '') continue
 
     if (deckbuildingMode) {
       // while in deckbuilding mode, we only have diamond cards in the list,

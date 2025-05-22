@@ -57,7 +57,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
 
   const filterRarities = (c: Card) => {
     if (rarityFilter.length === 0) return true
-    return c.rarity !== 'Unknown' && c.rarity !== '' && rarityFilter.includes(c.rarity)
+    return c.rarity !== '' && rarityFilter.includes(c.rarity)
   }
 
   const getFilteredCards = useMemo(() => {
