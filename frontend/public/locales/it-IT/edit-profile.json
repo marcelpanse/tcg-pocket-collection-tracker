@@ -5,14 +5,14 @@
     "description": "Assicurati di aggiornare il tuo profilo con gli stessi dati della tua app di Pokémon Pocket. Useremo queste informazioni per organizzare gli scambi e la tua pagina pubblica della collezione."
   },
   "email": "Email",
-  "registeredEmail": "La tua email registrata.",
+  "registeredEmail": "La tua email di registrazione.",
   "username": "Nome utente",
   "usernameDescription": "Usa lo stesso nome utente che hai su Pokémon Pocket qui.",
   "friendID": "ID amico",
   "friendIDDescription": "Usa lo stessso ID amico che hai su Pokémon Pocket qui (senza trattini)",
-  "isPublicDescription": "If you want to share your collection, you can do so here.",
+  "isPublicDescription": "Se vuoi condividere la tua collezione o pagina di scambi, puoi farlo da qui.",
   "isPublicButton": "Condividi collezione",
-  "isPublicTradeButton": "Condividi pagina scambi",
+  "isPublicTradeButton": "Apri pagina scambi",
   "isPublicToggle": "Pubblico",
   "save": "Salva"
 }
