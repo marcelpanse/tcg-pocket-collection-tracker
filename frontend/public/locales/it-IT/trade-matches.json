@@ -1,10 +1,19 @@
 {
   "title": "Possibili abbinamenti per gli scambi",
-  "friendHas": "Carte di cui hai bisogno (e il tuo amico ha)",
-  "youHave": "Carte di cui il tuo amico ha bisogno (e tu hai)",
+  "friendHas": "Carte di cui hai bisogno (che il tuo amico ha)",
+  "youHave": "Carte di cui il tuo amico ha bisogno (che tu hai)",
   "noPossibleTrades": "Nessuno scambio possibile trovato.",
-  "noPossibleTradesDescription": "Nessuno scambio tra te e il tuo amico è attualmente possibile.",
-  "featureDescription": "Questa finestra mostrerà gli scambi possibili tra le tue carte e quelle del tuo ID amico selezionato. Mostra le tue carte duplicate che l'altro non possiede.",
+  "noPossibleTradesDescription": "Nessuno scambio attualmente possibile fra te e il tuo amico.",
+  "featureDescription": "Questa finestra mostrerà gli scambi possibili tra le tue carte e quelle dell'ID dell'amico selezionato. Mostra le tue carte duplicate che l'altro non possiede.",
   "ownCollection": "Stai osservando la tua collezione.",
-  "ownCollectionDescription": "Condividi questa pagina con altri per permettergli di trovare scambi possibili."
+  "ownCollectionDescription": "Condividi questa pagina con altri per permettergli di trovare scambi possibili.",
+  "isActiveTrading": "Status pagina scambi",
+  "minNumberOfCardsToKeep": "Numero minimo di carte da tenere",
+  "inActiveTradePage": "Al momento l'utente \"{{username}}\" non accetta scambi.",
+  "inActiveTradeDescription": "La pagina di scambi è disabilitata. Contatta l'utente se desideri scambiare.",
+  "friendAccountDetails": "ID amico: {{friend_id}} ({{username}}).",
+  "minFilterTooltip": "La quantità massima di carte che si desidera ottenere attraverso gli scambi.",
+  "maxFilterTooltip": "La quantità minima di carte che è necessario possedere prima di apparire come opzione per gli scambi.",
+  "minInputTooltip": "La quantità minima di carte che vuoi mantenere dopo lo scambio.",
+  "activeTradingInputTooltip": "Suggerimento: puoi disattivare (temporaneamente) la pagina di scambi nel caso in cui tu esaurisca i Gettoni scambio."
 }
