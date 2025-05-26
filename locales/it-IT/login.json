@@ -1,7 +1,7 @@
 {
-  "invalidCode": "Codice invalido",
+  "invalidCode": "Codice non valido",
   "validEmail": "Inserisci un indirizzo email valido",
-  "fill6Digit": "Grazie. Inserisci il codice a 6 cifre che trovi nella email che ti abbiamo inviato.",
-  "fillEmail": "Inserisci il tuo indirizzo email per ricevere un link magico per il login. Se non hai ancora un account, ne creeremo uno in automatico per te. Non usiamo il tuo indirizzo mail per altri motivi.",
-  "button": "Login / Registrazione"
+  "fill6Digit": "Inserisci il codice a 6 cifre che ti abbiamo inviato.",
+  "fillEmail": "Inserisci il tuo indirizzo email e ti invieremo un codice di accesso. Se non hai un account, ne creeremo uno in automatico per te. Non usiamo il tuo indirizzo email per altri scopi.",
+  "button": "Continua"
 }
