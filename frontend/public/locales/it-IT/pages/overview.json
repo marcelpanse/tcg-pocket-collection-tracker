@@ -1,7 +1,7 @@
 {
   "stats": {
     "title": "Grazie per essere parte della nostra community",
-    "description": "Al momento, la nostra comunità di {{usersCount}} utenti ha registrato collettivamente {collectionCount}} carte in totale!"
+    "description": "Al momento, la nostra comunità di {{usersCount}} utenti ha registrato ben {{collectionCount}} carte in totale!"
   },
   "dontHaveCards": {
     "title": "Non hai ancora registrato alcuna carta!",
