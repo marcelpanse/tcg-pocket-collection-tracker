@@ -41,7 +41,7 @@ export const a2bCards: Card[] = update(A2b as unknown as Card[], 'A2b')
 export const a3Cards: Card[] = update(A3 as unknown as Card[], 'A3')
 export const a3aCards: Card[] = update(A3a as unknown as Card[], 'A3a')
 export const paCards: Card[] = update(PA as unknown as Card[], 'P-A')
-export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...a2aCards, ...a2bCards, ...a3Cards, ...paCards]
+export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...a2aCards, ...a2bCards, ...a3Cards, ...a3aCards, ...paCards]
 
 export const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
 
