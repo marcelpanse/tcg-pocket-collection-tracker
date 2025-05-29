@@ -6,7 +6,7 @@ import fetch from 'node-fetch'
 const BASE_URL = 'https://pocket.limitlesstcg.com'
 const targetDir = 'frontend/assets/cards/'
 // const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'P-A']
-const expansions = ['A3', 'P-A']
+const expansions = ['P-A']
 const packs = [
   'Pikachu pack',
   'Charizard pack',
@@ -45,7 +45,7 @@ const craftingCost = {
   '♛': 2500,
 }
 
-const fullArtRarities = ['☆', '☆☆', '☆☆☆', 'Crown Rare']
+const fullArtRarities = ['☆', '☆☆', '☆☆☆', 'Crown Rare', 'P']
 
 /* Helper Functions */
 
@@ -142,8 +142,8 @@ function extractCardInfo($, cardUrl) {
       })
 
       const attackParts = attackText.split(' ')
-      const attackName = attackParts.slice(0, -1).join(' ').trim() || 'Unknown'
-      const attackDamage = attackParts.slice(-1)[0].trim() || '0'
+      const attackName = (attackParts.length > 1 ? attackParts.slice(0, -1).join(' ').trim() : attackParts.slice(-1)[0].trim()) || 'defaultAttackName'
+      const attackDamage = (attackParts.length > 1 ? attackParts.slice(-1)[0].trim() : '0') || '0'
       const attackEffect = attackEffectSection.text().trim() || 'No effect'
 
       cardInfo.attacks.push({
@@ -161,7 +161,7 @@ function extractCardInfo($, cardUrl) {
   cardInfo.retreat = weaknessAndRetreat[1]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
 
   const raritySection = $('table.card-prints-versions tr.current')
-  cardInfo.rarity = raritySection.find('td:last-child').text().trim() || 'Unknown'
+  cardInfo.rarity = raritySection.find('td:last-child').text().trim() || 'P'
   cardInfo.fullart = fullArtRarities.includes(cardInfo.rarity) ? 'Yes' : 'No'
 
   cardInfo.ex = cardInfo.name.includes('ex') ? 'yes' : 'no'

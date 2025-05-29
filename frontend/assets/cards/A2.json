@@ -830,8 +830,8 @@
     "attacks": [
       {
         "cost": ["Fire"],
-        "name": "Unknown",
-        "damage": "Stoke",
+        "name": "Stoke",
+        "damage": "0",
         "effect": "Take a [R] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
@@ -1278,8 +1278,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Nap",
+        "name": "Nap",
+        "damage": "0",
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
@@ -2068,8 +2068,8 @@
     "attacks": [
       {
         "cost": ["Lightning"],
-        "name": "Unknown",
-        "damage": "Charge",
+        "name": "Charge",
+        "damage": "0",
         "effect": "Take a [L] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
@@ -2144,8 +2144,8 @@
     "attacks": [
       {
         "cost": ["Lightning"],
-        "name": "Unknown",
-        "damage": "Hide",
+        "name": "Hide",
+        "damage": "0",
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
@@ -2532,8 +2532,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Teleport",
+        "name": "Teleport",
+        "damage": "0",
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
@@ -6006,8 +6006,8 @@
     "attacks": [
       {
         "cost": ["Lightning"],
-        "name": "Unknown",
-        "damage": "Hide",
+        "name": "Hide",
+        "damage": "0",
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],

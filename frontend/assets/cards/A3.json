@@ -1670,8 +1670,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Sing",
+        "name": "Sing",
+        "damage": "0",
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
@@ -2646,8 +2646,8 @@
     "attacks": [
       {
         "cost": ["Psychic"],
-        "name": "Unknown",
-        "damage": "Psycharge",
+        "name": "Psycharge",
+        "damage": "0",
         "effect": "Take a [P] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
@@ -3170,8 +3170,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Teleport",
+        "name": "Teleport",
+        "damage": "0",
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
@@ -3214,8 +3214,8 @@
     "attacks": [
       {
         "cost": ["Colorless", "Colorless"],
-        "name": "Unknown",
-        "damage": "Stiffen",
+        "name": "Stiffen",
+        "damage": "0",
         "effect": "During your opponent's next turn, this Pokémon takes −50 damage from attacks."
       }
     ],
@@ -6318,8 +6318,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Teleport",
+        "name": "Teleport",
+        "damage": "0",
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
@@ -8346,8 +8346,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Astonish",
+        "name": "Astonish",
+        "damage": "0",
         "effect": "Flip a coin. If heads, your opponent reveals a random card from their hand and shuffles it into their deck."
       }
     ],
@@ -8590,8 +8590,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Growl",
+        "name": "Growl",
+        "damage": "0",
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do -20 damage."
       }
     ],

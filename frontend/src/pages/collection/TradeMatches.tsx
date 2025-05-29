@@ -69,7 +69,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
       '✵': [],
       '✵✵': [],
       'Crown Rare': [],
-      Unknown: [],
+      P: [],
       '': [],
     }
 
@@ -104,7 +104,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
       '✵': [],
       '✵✵': [],
       'Crown Rare': [],
-      Unknown: [],
+      P: [],
       '': [],
     }
 

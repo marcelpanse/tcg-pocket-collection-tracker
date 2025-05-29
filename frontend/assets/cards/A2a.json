@@ -1122,8 +1122,8 @@
     "attacks": [
       {
         "cost": ["Colorless"],
-        "name": "Unknown",
-        "damage": "Astonish",
+        "name": "Astonish",
+        "damage": "0",
         "effect": "Flip a coin. If heads, your opponent reveals a random card from their hand and shuffles it into their deck."
       }
     ],
@@ -1142,6 +1142,10 @@
       {
         "version": "Triumphant Light #31",
         "rarity": "◊"
+      },
+      {
+        "version": "Celestial Guardians #220",
+        "rarity": "☆"
       }
     ],
     "artist": "Yuu Nishida",
@@ -1904,8 +1908,8 @@
     "attacks": [
       {
         "cost": ["Darkness"],
-        "name": "Unknown",
-        "damage": "Toxic",
+        "name": "Toxic",
+        "damage": "0",
         "effect": "Your opponent's Active Pokémon is now Poisoned. Do 20 damage to this Pokémon instead of the usual amount for this Special Condition."
       }
     ],
