@@ -670,6 +670,10 @@
       {
         "version": "Promo-A #19",
         "rarity": ""
+      },
+      {
+        "version": "Extradimensional Crisis #93",
+        "rarity": "☆"
       }
     ],
     "artist": "Sanosuke Sakuma",
@@ -2398,6 +2402,10 @@
       {
         "version": "Promo-A #61",
         "rarity": ""
+      },
+      {
+        "version": "Extradimensional Crisis #91",
+        "rarity": "☆"
       }
     ],
     "artist": "Sanosuke Sakuma",
@@ -2878,5 +2886,403 @@
     ],
     "artist": "Sekio",
     "crafting_cost": "Unknown"
+  },
+  {
+    "id": "74",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_074_EN.webp",
+    "hp": "90",
+    "energy": "Lightning",
+    "name": "Zeraora",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Lightning"],
+        "name": "Lightning Claw",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Thunderclap Flash",
+      "effect": "At the end of your first turn, take a  Energy from your Energy Zone and attach it to this Pokémon."
+    },
+    "weakness": "fighting",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Extradimensional Crisis #21",
+        "rarity": "◊◊◊"
+      },
+      {
+        "version": "Promo-A #74",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "GIDORA",
+    "crafting_cost": 400
+  },
+  {
+    "id": "75",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_075_EN.webp",
+    "hp": "60",
+    "energy": "Grass",
+    "name": "Kartana",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Grass"],
+        "name": "Thrash Metal",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fire",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Extradimensional Crisis #8",
+        "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #75",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Hasuno",
+    "crafting_cost": 35
+  },
+  {
+    "id": "76",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_076_EN.webp",
+    "hp": "100",
+    "energy": "Fire",
+    "name": "Blacephalon",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Fire", "Fire", "Colorless"],
+        "name": "Beat Punk",
+        "damage": "130",
+        "effect": "This Pokémon also does 70 damage to itself."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "water",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Extradimensional Crisis #9",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Extradimensional Crisis #72",
+        "rarity": "☆"
+      },
+      {
+        "version": "Promo-A #76",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Hasuno",
+    "crafting_cost": 35
+  },
+  {
+    "id": "77",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_077_EN.webp",
+    "hp": "100",
+    "energy": "Lightning",
+    "name": "Xurkitree",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Colorless", "Colorless"],
+        "name": "Electronica",
+        "damage": "60",
+        "effect": "Your opponent's Active Pokémon is now Confused."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Extradimensional Crisis #20",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Promo-A #77",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Shin Nagasawa",
+    "crafting_cost": 35
+  },
+  {
+    "id": "78",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_078_EN.webp",
+    "hp": "110",
+    "energy": "Psychic",
+    "name": "Dawn Wings Necrozma",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Colorless", "Colorless"],
+        "name": "Psychobilly",
+        "damage": "100",
+        "effect": "This Pokémon also does 30 damage to itself."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "darkness",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Promo-A #78",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "nagimiso",
+    "crafting_cost": 150
+  },
+  {
+    "id": "79",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_079_EN.webp",
+    "hp": "110",
+    "energy": "Metal",
+    "name": "Dusk Mane Necrozma",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Metal", "Colorless", "Colorless"],
+        "name": "Black Metal",
+        "damage": "100",
+        "effect": "Discard a [M] Energy from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fire",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Promo-A #79",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "nagimiso",
+    "crafting_cost": 150
+  },
+  {
+    "id": "80",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_080_EN.webp",
+    "hp": "110",
+    "energy": "Metal",
+    "name": "Stakataka",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Metal", "Colorless"],
+        "name": "Brass Rock",
+        "damage": "40",
+        "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fire",
+    "retreat": "3",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Extradimensional Crisis #53",
+        "rarity": "◊◊"
+      },
+      {
+        "version": "Promo-A #80",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Shin Nagasawa",
+    "crafting_cost": 35
+  },
+  {
+    "id": "81",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_081_EN.webp",
+    "hp": "150",
+    "energy": "Dragon",
+    "name": "Ultra Necrozma ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Photon Claw",
+        "damage": "60",
+        "effect": "No effect"
+      },
+      {
+        "cost": ["Psychic", "Psychic", "Metal", "Metal"],
+        "name": "Shoegaze",
+        "damage": "120",
+        "effect": "Discard the top 5 cards of each player's deck."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "none",
+    "retreat": "2",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "yes",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Promo-A #81",
+        "rarity": "◊◊◊◊"
+      }
+    ],
+    "artist": "PLANETA Tsuji",
+    "crafting_cost": 500
+  },
+  {
+    "id": "82",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_082_EN.webp",
+    "hp": "60",
+    "energy": "Darkness",
+    "name": "Poipole",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "2-Step",
+        "damage": "20x",
+        "effect": "Flip 2 coins. This attack does 20 damage for each heads."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "1",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Extradimensional Crisis #44",
+        "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #82",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Megumi Mizutani",
+    "crafting_cost": 150
+  },
+  {
+    "id": "83",
+    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_083_EN.webp",
+    "hp": "70",
+    "energy": "Colorless",
+    "name": "Stufful",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Ram",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "version": "Extradimensional Crisis #57",
+        "rarity": "◊"
+      },
+      {
+        "version": "Promo-A #83",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Kanako Eo",
+    "crafting_cost": 150
   }
 ]

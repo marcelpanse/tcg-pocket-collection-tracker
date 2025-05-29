@@ -6,7 +6,7 @@ import fsExtra from 'fs-extra'
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
 
 // Define the expansions you want to process. You can use the same array as in scraper.js if applicable.
-const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'P-A']
+const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'P-A']
 
 // Base URL for expansion images
 const expansionImageBaseUrl = 'https://s3.limitlesstcg.com/pocket/sets/'

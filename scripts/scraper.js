@@ -6,7 +6,7 @@ import fetch from 'node-fetch'
 const BASE_URL = 'https://pocket.limitlesstcg.com'
 const targetDir = 'frontend/assets/cards/'
 // const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'P-A']
-const expansions = ['P-A']
+const expansions = ['A3a', 'P-A']
 const packs = [
   'Pikachu pack',
   'Charizard pack',
@@ -18,6 +18,7 @@ const packs = [
   'Shining revelry pack',
   'Lunala pack',
   'Solgaleo pack',
+  'Buzzwole pack',
   'All cards',
 ]
 
