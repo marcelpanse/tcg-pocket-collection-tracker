@@ -14,7 +14,7 @@ const expansionToName = {
   A2a: 'Triumphant_Light',
   A2b: 'Shining_Revelry',
   A3: 'Celestial_Guardians',
-  A3a: 'Extradimensional Crisis',
+  A3a: 'Extradimensional_Crisis',
 }
 
 async function fetchHTML(url) {
@@ -78,6 +78,7 @@ async function getExpansionMissions(expansion) {
           .each((_j, row) => {
             const tableRow = $(row).find('td')
             const mission = {}
+            mission.expansionId = expansion
             mission.name = tableRow.eq(0).text()
             // mission.requiredCards = tableRow.eq(1).text()
             mission.requiredCards = parseCards($, tableRow.eq(1), expansion)

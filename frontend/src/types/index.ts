@@ -88,7 +88,7 @@ export interface ImportExportRow {
 export interface Mission {
   name: string
   requiredCards: MissionCard[]
-  expansion?: ExpansionId
+  expansionId: ExpansionId
   reward?: string
   completed?: boolean
 }

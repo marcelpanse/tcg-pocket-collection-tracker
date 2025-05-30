@@ -1,3 +1,4 @@
+import type { MissionDetailProps } from '@/components/Mission.tsx'
 import type { Card, CollectionRow, Expansion, ExpansionId, Mission, Pack, Rarity } from '@/types'
 import A1 from '../../assets/cards/A1.json'
 import A1a from '../../assets/cards/A1a.json'
@@ -17,7 +18,7 @@ import A3aMissions from '../../assets/themed-collections/A3a-missions.json'
 
 const update = (cards: Card[], expansionName: ExpansionId) => {
   for (const card of cards) {
-    // we set the card_id to the linkedCardID if it exists, so we really threat it as a single card eventhough it appears in multiple expansions.
+    // we set the card_id to the linkedCardID if it exists, so we really treat it as a single card even though it appears in multiple expansions.
     // @ts-ignore there is an ID in the JSON, but I don't want it in the Type because you should always use the card_id, having both is confusing.
     card.card_id = card.linkedCardID || `${expansionName}-${card.id}`
     card.expansion = expansionName
@@ -358,7 +359,6 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
   }
 
   const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'everypack')
-  const cardsInRarePack = cardsInPack.filter((c) => abilityByRarityToBeInRarePack[c.rarity] === 1)
 
   let cardsInPackWithAmounts = cardsInPack.map((cip) => {
     const amount = ownedCards.find((oc) => cip.card_id === oc.card_id)?.amount_owned || 0
@@ -389,11 +389,52 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
     })
   }
 
+  return pullRateForCardSubset(missingCards, expansion, cardsInPack, deckbuildingMode)
+}
+
+export const pullRateForSpecificCard = (expansion: Expansion, packName: string, card: Card) => {
+  const validatedPackName = packName === 'everypack' ? expansion?.packs[0].name : packName
+  const cardsInPack = expansion.cards.filter((c) => c.pack === validatedPackName || c.pack === 'everypack')
+  return pullRateForCardSubset([card], expansion, cardsInPack, false) * 100
+}
+
+export const pullRateForSpecificMission = (mission: Mission, missionGridRows: MissionDetailProps[][]) => {
+  const expansion = getExpansionById(mission.expansionId)
+  const missingCards = [
+    ...new Set(
+      missionGridRows
+        .flat()
+        .filter((card) => !card.owned)
+        .flatMap((card) => card.missionCardOptions)
+        .map((cardId) => getCardById(cardId))
+        .filter((card) => card !== undefined),
+    ),
+  ]
+  return (
+    expansion?.packs.map(
+      (pack) =>
+        [
+          pack.name,
+          pullRateForCardSubset(
+            missingCards,
+            expansion,
+            expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'everypack'),
+            false,
+          ) * 100,
+        ] as const,
+    ) || []
+  )
+}
+
+const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cardsInPack: Card[], deckbuildingMode: boolean) => {
+  const cardsInRarePack = cardsInPack.filter((c) => abilityByRarityToBeInRarePack[c.rarity] === 1)
+  const missingCardsFromPack = missingCards.filter((c) => cardsInPack.some((card) => c.card_id === card.card_id))
+
   let totalProbability1_3 = 0
   let totalProbability4 = 0
   let totalProbability5 = 0
   let rareProbability1_5 = 0
-  for (const card of missingCards) {
+  for (const card of missingCardsFromPack) {
     const rarityList = [card.rarity]
     // Skip cards that cannot be picked
     if (rarityList[0] === 'P' || rarityList[0] === '') continue
@@ -444,29 +485,4 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
 
   // disjoint union of probabilities
   return chanceToGetNewCard + chanceToGetNewCardInRarePack
-}
-
-export const pullRateForSpecificCard = (expansion: Expansion, packName: string, card: Card) => {
-  const cardsInPack = expansion.cards.filter((c) => c.pack === packName || c.pack === 'everypack')
-  const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === card.rarity).length
-  const cardsInRarePack = cardsInPack.filter((c) => abilityByRarityToBeInRarePack[c.rarity] === 1)
-
-  const chanceToGetThisCard1_3 = probabilityPerRarity1_3[card.rarity] / 100 / nrOfcardsOfThisRarity
-  let chanceToGetThisCard4: number
-  let chanceToGetThisCard5: number
-  if (expansion.containsShinies) {
-    chanceToGetThisCard4 = probabilityPerRarity4Shiny[card.rarity] / 100 / nrOfcardsOfThisRarity
-    chanceToGetThisCard5 = probabilityPerRarity5Shiny[card.rarity] / 100 / nrOfcardsOfThisRarity
-  } else {
-    chanceToGetThisCard4 = probabilityPerRarity4[card.rarity] / 100 / nrOfcardsOfThisRarity
-    chanceToGetThisCard5 = probabilityPerRarity5[card.rarity] / 100 / nrOfcardsOfThisRarity
-  }
-  const chanceToGetThisCardRare1_5 = abilityByRarityToBeInRarePack[card.rarity] / cardsInRarePack.length
-
-  // take the total probabilities per card draw (for the 1-3 you need to take the cube root of the probability) and multiply
-  const chanceToGetNewCard = 0.9995 * (1 - (1 - chanceToGetThisCard1_3) ** 3 * (1 - chanceToGetThisCard4) * (1 - chanceToGetThisCard5))
-  const chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - chanceToGetThisCardRare1_5) ** 5)
-
-  // disjoint union of probabilities
-  return (chanceToGetNewCard + chanceToGetNewCardInRarePack) * 100
 }
