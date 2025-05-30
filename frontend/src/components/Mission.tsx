@@ -1,12 +1,13 @@
 import FancyCard from '@/components/FancyCard.tsx'
-import { getCardById } from '@/lib/CardsDB.ts'
+import { getCardById, pullRateForSpecificMission } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
 import { getCardNameByLang } from '@/lib/utils.ts'
 import type { Mission as MissionType } from '@/types'
 import i18n from 'i18next'
-import { Trophy } from 'lucide-react'
+import { CircleHelp, Trophy } from 'lucide-react'
 import { use, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 
 interface Props {
@@ -14,8 +15,15 @@ interface Props {
   resetScrollTrigger?: boolean
 }
 
+export interface MissionDetailProps {
+  cardId: string
+  owned: boolean
+  missionCardOptions: string[]
+}
+
 export function Mission({ mission }: Props) {
   const { width } = useWindowDimensions()
+  const { t } = useTranslation('common/packs')
 
   const { ownedCards, setSelectedCardId, setSelectedMissionCardOptions } = use(CollectionContext)
 
@@ -27,12 +35,6 @@ export function Mission({ mission }: Props) {
   } else if (width <= 600) {
     cardsPerRow = 3
     cardHeight = width / 3 + 100
-  }
-
-  interface MissionDetailProps {
-    cardId: string
-    owned: boolean
-    missionCardOptions: string[]
   }
 
   const missionGridRows = useMemo(() => {
@@ -104,6 +106,19 @@ export function Mission({ mission }: Props) {
 
           <Tooltip id={`rewardDescription${mission.name}`} style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 16 }} clickable={true} />
           <Trophy className="h-6 w-6" data-tooltip-id={`rewardDescription${mission.name}`} data-tooltip-html={mission.reward} />
+          <Tooltip id={`probability${mission.name}`} style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 16 }} clickable={true} />
+          <CircleHelp
+            className="h-6 w-6"
+            data-tooltip-id={`probability${mission.name}`}
+            data-tooltip-html={
+              mission.completed
+                ? 'Completed!'
+                : pullRateForSpecificMission(mission, missionGridRows)
+                    .filter(([packName, probability]) => packName !== 'everypack' && probability > 0)
+                    .map(([packName, probability]) => `${t(packName)}: ${probability.toFixed(2)}%`)
+                    .join('<br/>')
+            }
+          />
         </h2>
       </div>
     </div>

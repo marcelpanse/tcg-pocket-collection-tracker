@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { allCards, expansions, sellableForTokensDictionary, tradeableRaritiesDictionary } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext'
+import CardDetail from '@/pages/collection/CardDetail.tsx'
 import { NoCardsNeeded } from '@/pages/trade/components/NoCardsNeeded.tsx'
 import { NoSellableCards } from '@/pages/trade/components/NoSellableCards.tsx'
 import { NoTradeableCards } from '@/pages/trade/components/NoTradeableCards.tsx'
@@ -17,7 +18,7 @@ import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 function Trade() {
   const navigate = useNavigate()
   const { user, account, setIsProfileDialogOpen } = use(UserContext)
-  const { ownedCards } = use(CollectionContext)
+  const { ownedCards, selectedCardId, setSelectedCardId } = use(CollectionContext)
 
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [forTradeMinCards, setForTradeMinCards] = useState<number>(0)
@@ -130,6 +131,7 @@ function Trade() {
           </TabsContent>
         </div>
       </Tabs>
+      <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
     </div>
   )
 }
