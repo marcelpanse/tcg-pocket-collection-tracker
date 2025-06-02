@@ -260,12 +260,12 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
                   <ul className="space-y-1">
                     {friendExtraCards[rarity].map((card) => (
                       <li key={card.card_id} className="flex justify-between">
-                        <div className="flex items-center">
-                          <div className="min-w-14 me-4">{card.card_id}</div>
-                          <div>{card.name}</div>
-                        </div>
+                        <span className="flex items-center">
+                          <span className="min-w-14 me-4">{card.card_id} </span>
+                          <span>{card.name}</span>
+                        </span>
                         <span title="Amount you own" className="text-gray-500">
-                          ×{ownedCards.find((c) => c.card_id === card.card_id)?.amount_owned || 0}
+                          <span style={{ userSelect: 'none' }}>×{ownedCards.find((c) => c.card_id === card.card_id)?.amount_owned || 0}</span>
                         </span>
                       </li>
                     ))}
@@ -278,12 +278,12 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
                   <ul className="space-y-1">
                     {userExtraCards[rarity].map((card) => (
                       <li key={card.card_id} className="flex justify-between">
-                        <div className="flex items-center">
-                          <div className="min-w-14 me-4">{card.card_id}</div>
-                          <div>{card.name}</div>
-                        </div>
+                        <span className="flex items-center">
+                          <span className="min-w-14 me-4">{card.card_id}</span>
+                          <span>{card.name}</span>
+                        </span>
                         <span title="Amount your friend owns" className="text-gray-500">
-                          ×{card.amount_owned}
+                          <span style={{ userSelect: 'none' }}>×{card.amount_owned}</span>
                         </span>
                       </li>
                     ))}
