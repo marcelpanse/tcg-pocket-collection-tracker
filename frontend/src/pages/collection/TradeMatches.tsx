@@ -303,7 +303,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
                     {userExtraCards[rarity].map((card) => (
                       <li key={card.card_id} className="flex justify-between">
                         <span className="flex items-center">
-                          <span className="min-w-14 me-4">{card.card_id}</span>
+                          <span className="min-w-14 me-4">{card.card_id} </span>
                           <span>{card.name}</span>
                         </span>
                         <span title="Amount your friend owns" className="text-gray-500">
