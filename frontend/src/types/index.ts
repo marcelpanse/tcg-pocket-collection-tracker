@@ -12,6 +12,7 @@ export interface AccountRow {
   is_public: boolean
   is_active_trading: boolean
   min_number_of_cards_to_keep: number
+  max_number_of_cards_wanted: number
 }
 
 export interface CollectionRow {
