@@ -73,7 +73,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
       '': [],
     }
 
-    const friendExtraCards = friendCards.filter((card) => card.amount_owned >= (friendAccount?.min_number_of_cards_to_keep || 1) + 1)
+    const friendExtraCards = friendCards.filter((card) => card.amount_owned > (friendAccount?.min_number_of_cards_to_keep || 1))
     const userCardIds = new Set(ownedCards.filter((card) => card.amount_owned > userCardsMinFilter).map((card) => card.card_id))
     const cardsUserNeeds = friendExtraCards.filter((card) => !userCardIds.has(card.card_id))
 
@@ -109,7 +109,9 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
     }
 
     const userExtraCards = ownedCards.filter((card) => card.amount_owned >= friendCardsMinFilter)
-    const friendCardIds = new Set(friendCards.filter((card) => card.amount_owned > 0).map((card) => card.card_id))
+    const friendCardIds = new Set(
+      friendCards.filter((card) => card.amount_owned >= (friendAccount?.max_number_of_cards_wanted || 1)).map((card) => card.card_id),
+    )
     const cardsFriendNeeds = userExtraCards.filter((card) => !friendCardIds.has(card.card_id))
 
     // Get full card info and group by rarity
@@ -134,6 +136,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
   const formSchema = z.object({
     is_active_trading: z.boolean(),
     min_number_of_cards_to_keep: z.coerce.number().min(1).max(10),
+    max_number_of_cards_wanted: z.coerce.number().min(1).max(10),
   })
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -141,6 +144,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
     values: {
       is_active_trading: account?.is_active_trading || false,
       min_number_of_cards_to_keep: account?.min_number_of_cards_to_keep || 1,
+      max_number_of_cards_wanted: account?.max_number_of_cards_wanted || 1,
     },
   })
 
@@ -153,6 +157,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
           username: account?.username,
           is_active_trading: values.is_active_trading,
           min_number_of_cards_to_keep: values.min_number_of_cards_to_keep,
+          max_number_of_cards_wanted: values.max_number_of_cards_wanted,
         })
         .select()
         .single()
@@ -213,6 +218,25 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
                           </div>
                           <Tooltip id="minInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
                           <CircleHelp className="h-4 w-4" data-tooltip-id="minInput" data-tooltip-content={t('minInputTooltip')} />
+                        </div>
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="max_number_of_cards_wanted"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col items-start">
+                      <FormControl>
+                        <div className="flex items-center gap-x-4 flex-wrap">
+                          <FormLabel className="flex sm:w-72">{t('maxNumberOfCardsWanted')}</FormLabel>
+                          <div className="grow-1">
+                            <Input type="number" {...field} />
+                          </div>
+                          <Tooltip id="maxInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
+                          <CircleHelp className="h-4 w-4" data-tooltip-id="maxInput" data-tooltip-content={t('maxInputTooltip')} />
                         </div>
                       </FormControl>
                     </FormItem>
