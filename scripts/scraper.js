@@ -5,8 +5,8 @@ import fetch from 'node-fetch'
 
 const BASE_URL = 'https://pocket.limitlesstcg.com'
 const targetDir = 'frontend/assets/cards/'
-// const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'P-A']
-const expansions = ['A3a', 'P-A']
+// const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'P-A']
+const expansions = ['P-A']
 const packs = [
   'Pikachu pack',
   'Charizard pack',
@@ -162,7 +162,8 @@ function extractCardInfo($, cardUrl) {
   cardInfo.retreat = weaknessAndRetreat[1]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
 
   const raritySection = $('table.card-prints-versions tr.current')
-  cardInfo.rarity = raritySection.find('td:last-child').text().trim() || 'P'
+  cardInfo.rarity = cardUrl.toString().includes('P-A') ? 'P' : raritySection.find('td:last-child').text().trim() || 'P'
+
   cardInfo.fullart = fullArtRarities.includes(cardInfo.rarity) ? 'Yes' : 'No'
 
   cardInfo.ex = cardInfo.name.includes('ex') ? 'yes' : 'no'
