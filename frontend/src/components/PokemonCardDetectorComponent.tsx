@@ -24,7 +24,7 @@ interface PokemonCardDetectorProps {
 interface ExtractedCard {
   imageUrl: string
   confidence: number
-  hash?: string
+  hash?: ArrayBuffer
   matchedCard?: {
     id: string
     distance: number
@@ -109,13 +109,14 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
       await hashStorageService.initDB()
       const storedHashCount = await hashStorageService.getHashCount()
 
-      if (storedHashCount !== uniqueCards.length) {
+      const foo = true
+      if (storedHashCount !== uniqueCards.length || foo) {
         console.log('Checking and generating missing card hashes...')
 
-        const batchSize = 80
+        const batchSize = 32
         const totalCards = uniqueCards.length
         const allHashes = []
-        const existingHashes = await hashStorageService.getAllHashes()
+        // const existingHashes = await hashStorageService.getAllHashes()
 
         for (let i = 0; i < totalCards; i += batchSize) {
           const batch = uniqueCards.slice(i, i + batchSize)
@@ -124,10 +125,10 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
           const batchPromises = batch.map(async (card) => {
             try {
               // Check if hash already exists for this card
-              const existingHash = existingHashes.find((h) => h.id === card.card_id)
-              if (existingHash) {
-                return existingHash
-              }
+              // const existingHash = existingHashes.find((h) => h.id === card.card_id)
+              // if (existingHash) {
+              //   return existingHash
+              // }
 
               const resolvedImagePath = getRightPathOfImage(card.image)
               const hash = await hashingService.calculatePerceptualHash(resolvedImagePath)
@@ -139,7 +140,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
           })
 
           const batchResults = await Promise.all(batchPromises)
-          const validResults = batchResults.filter((hash): hash is { id: string; hash: string } => hash !== null)
+          const validResults = batchResults.filter((hash): hash is { id: string; hash: ArrayBuffer } => hash !== null)
           allHashes.push(...validResults)
 
           // Allow UI to update between batches
@@ -402,7 +403,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                         alt={getCardNameByLang(match.card, i18n.language)}
                         className="w-full h-auto object-contain"
                       />
-                      <div className="text-xs text-center mt-1 bg-black/60 text-white py-0.5 rounded">{(100 - (match.distance / 128) * 100).toFixed(0)}%</div>
+                      <div className="text-xs text-center mt-1 bg-black/60 text-white py-0.5 rounded">{(100 - (match.distance / 192) * 100).toFixed(0)}%</div>
                     </div>
                   ))}
               </div>
@@ -422,7 +423,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
               <div className="w-1/2 relative">
                 <img src={getRightPathOfImage(card.matchedCard.imageUrl)} alt="Best match" className="w-full h-auto object-contain" />
                 <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
-                  {(100 - (card.matchedCard.distance / 128) * 100).toFixed(0)}% match
+                  {(100 - (card.matchedCard.distance / 192) * 100).toFixed(0)}% match
                 </div>
               </div>
             )}
