@@ -32,7 +32,7 @@ export class CardHashStorageService {
     })
   }
 
-  public async storeHashes(hashes: { id: string; hash: string }[]): Promise<void> {
+  public async storeHashes(hashes: { id: string; hash: ArrayBuffer }[]): Promise<void> {
     if (!this.db) throw new Error('Database not initialized')
 
     const transaction = this.db.transaction(this.STORE_NAME, 'readwrite')
@@ -47,7 +47,7 @@ export class CardHashStorageService {
     })
   }
 
-  public async getAllHashes(): Promise<{ id: string; hash: string }[]> {
+  public async getAllHashes(): Promise<{ id: string; hash: ArrayBuffer }[]> {
     if (!this.db) throw new Error('Database not initialized')
 
     const transaction = this.db.transaction(this.STORE_NAME, 'readonly')
