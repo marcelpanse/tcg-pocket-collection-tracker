@@ -2909,7 +2909,7 @@
     },
     "weakness": "fighting",
     "retreat": "1",
-    "rarity": "☆",
+    "rarity": "P",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "promo-a",
@@ -2925,7 +2925,7 @@
       }
     ],
     "artist": "GIDORA",
-    "crafting_cost": 400
+    "crafting_cost": "Unknown"
   },
   {
     "id": "75",
@@ -2949,8 +2949,8 @@
     },
     "weakness": "fire",
     "retreat": "1",
-    "rarity": "◊",
-    "fullart": "No",
+    "rarity": "P",
+    "fullart": "Yes",
     "ex": "no",
     "set_details": "promo-a",
     "pack": "everypack",
@@ -2965,7 +2965,7 @@
       }
     ],
     "artist": "Hasuno",
-    "crafting_cost": 35
+    "crafting_cost": "Unknown"
   },
   {
     "id": "76",
@@ -2989,8 +2989,8 @@
     },
     "weakness": "water",
     "retreat": "2",
-    "rarity": "◊",
-    "fullart": "No",
+    "rarity": "P",
+    "fullart": "Yes",
     "ex": "no",
     "set_details": "promo-a",
     "pack": "everypack",
@@ -3009,7 +3009,7 @@
       }
     ],
     "artist": "Hasuno",
-    "crafting_cost": 35
+    "crafting_cost": "Unknown"
   },
   {
     "id": "77",
@@ -3033,8 +3033,8 @@
     },
     "weakness": "fighting",
     "retreat": "2",
-    "rarity": "◊",
-    "fullart": "No",
+    "rarity": "P",
+    "fullart": "Yes",
     "ex": "no",
     "set_details": "promo-a",
     "pack": "everypack",
@@ -3049,7 +3049,7 @@
       }
     ],
     "artist": "Shin Nagasawa",
-    "crafting_cost": 35
+    "crafting_cost": "Unknown"
   },
   {
     "id": "78",
@@ -3073,8 +3073,8 @@
     },
     "weakness": "darkness",
     "retreat": "2",
-    "rarity": "◊◊◊",
-    "fullart": "No",
+    "rarity": "P",
+    "fullart": "Yes",
     "ex": "no",
     "set_details": "promo-a",
     "pack": "everypack",
@@ -3085,7 +3085,7 @@
       }
     ],
     "artist": "nagimiso",
-    "crafting_cost": 150
+    "crafting_cost": "Unknown"
   },
   {
     "id": "79",
@@ -3109,8 +3109,8 @@
     },
     "weakness": "fire",
     "retreat": "2",
-    "rarity": "◊◊◊",
-    "fullart": "No",
+    "rarity": "P",
+    "fullart": "Yes",
     "ex": "no",
     "set_details": "promo-a",
     "pack": "everypack",
@@ -3121,7 +3121,7 @@
       }
     ],
     "artist": "nagimiso",
-    "crafting_cost": 150
+    "crafting_cost": "Unknown"
   },
   {
     "id": "80",
@@ -3145,8 +3145,8 @@
     },
     "weakness": "fire",
     "retreat": "3",
-    "rarity": "◊",
-    "fullart": "No",
+    "rarity": "P",
+    "fullart": "Yes",
     "ex": "no",
     "set_details": "promo-a",
     "pack": "everypack",
@@ -3161,7 +3161,7 @@
       }
     ],
     "artist": "Shin Nagasawa",
-    "crafting_cost": 35
+    "crafting_cost": "Unknown"
   },
   {
     "id": "81",
@@ -3191,8 +3191,8 @@
     },
     "weakness": "none",
     "retreat": "2",
-    "rarity": "◊◊◊◊",
-    "fullart": "No",
+    "rarity": "P",
+    "fullart": "Yes",
     "ex": "yes",
     "set_details": "promo-a",
     "pack": "everypack",
@@ -3203,7 +3203,7 @@
       }
     ],
     "artist": "PLANETA Tsuji",
-    "crafting_cost": 500
+    "crafting_cost": "Unknown"
   },
   {
     "id": "82",
@@ -3227,8 +3227,8 @@
     },
     "weakness": "fighting",
     "retreat": "1",
-    "rarity": "◊◊◊",
-    "fullart": "No",
+    "rarity": "P",
+    "fullart": "Yes",
     "ex": "no",
     "set_details": "promo-a",
     "pack": "everypack",
@@ -3243,7 +3243,7 @@
       }
     ],
     "artist": "Megumi Mizutani",
-    "crafting_cost": 150
+    "crafting_cost": "Unknown"
   },
   {
     "id": "83",
@@ -3267,8 +3267,8 @@
     },
     "weakness": "fighting",
     "retreat": "2",
-    "rarity": "◊◊◊",
-    "fullart": "No",
+    "rarity": "P",
+    "fullart": "Yes",
     "ex": "no",
     "set_details": "promo-a",
     "pack": "everypack",
@@ -3283,6 +3283,6 @@
       }
     ],
     "artist": "Kanako Eo",
-    "crafting_cost": 150
+    "crafting_cost": "Unknown"
   }
 ]
