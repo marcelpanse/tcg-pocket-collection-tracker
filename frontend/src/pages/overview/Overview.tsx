@@ -73,7 +73,6 @@ function Overview() {
           fill: pack.color,
         }))
       const highestProbabilityPackCandidate = pullRates.sort((a, b) => b.percentage - a.percentage)[0]
-
       if (highestProbabilityPackCandidate.percentage > (newHighestProbabilityPack?.percentage ?? 0)) {
         newHighestProbabilityPack = highestProbabilityPackCandidate
       }
