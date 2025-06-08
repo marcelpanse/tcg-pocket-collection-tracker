@@ -13,8 +13,7 @@ import type { Card } from '@/types'
 import i18n from 'i18next'
 import { MinusIcon, PlusIcon } from 'lucide-react'
 import type { ChangeEvent, FC } from 'react'
-import { useEffect, useMemo, useRef, useState } from 'react'
-import { use } from 'react'
+import { use, useEffect, useMemo, useRef, useState } from 'react'
 
 interface PokemonCardDetectorProps {
   onDetectionComplete?: (results: DetectionResult[]) => void
