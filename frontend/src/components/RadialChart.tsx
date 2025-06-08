@@ -8,8 +8,6 @@ interface RadialChartProps {
   sublabel?: string
   /** Color del círculo de progreso */
   color?: string
-  /** Tamaño en px */
-  size?: number
   /** Grosor del círculo */
   strokeWidth?: number
 }
@@ -19,16 +17,16 @@ export const RadialChart: React.FC<RadialChartProps> = ({
   label,
   sublabel,
   color = '#38bdf8', // tailwind sky-400
-  size = 96,
   strokeWidth = 10,
 }) => {
+  const size = 180
   const radius = (size - strokeWidth) / 2
   const circumference = 2 * Math.PI * radius
   const offset = circumference * (1 - value)
 
   return (
-    <svg width={size} height={size} className="block mx-auto" style={{ display: 'block' }}>
-      <title>{label ? label : `Radial chart showing ${Math.round(value * 100)}%`}</title>
+    <svg width={size} height={size}>
+      <title>{label ?? `Radial chart showing ${Math.round(value * 100)}%`}</title>
       <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="#404040" strokeWidth={strokeWidth / 2} />
       <circle
         cx={size / 2}

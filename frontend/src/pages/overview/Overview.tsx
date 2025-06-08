@@ -73,7 +73,8 @@ function Overview() {
           fill: pack.color,
         }))
       const highestProbabilityPackCandidate = pullRates.sort((a, b) => b.percentage - a.percentage)[0]
-      if (highestProbabilityPackCandidate.percentage > (newHighestProbabilityPack?.percentage || 0)) {
+
+      if (highestProbabilityPackCandidate.percentage > (newHighestProbabilityPack?.percentage ?? 0)) {
         newHighestProbabilityPack = highestProbabilityPackCandidate
       }
     }
@@ -115,7 +116,6 @@ function Overview() {
               label={`${CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode })}`}
               sublabel={`/ ${totalUniqueCards}`}
               color="#92C5FD"
-              size={180}
               strokeWidth={24}
             />
             <h2 className="mt-6 text-balance text-center text-sm sm:text-md md:text-md">
@@ -123,8 +123,8 @@ function Overview() {
             </h2>
           </div>
           <GradientCard
-            title={highestProbabilityPack?.packName || ''}
-            percentage={highestProbabilityPack?.percentage || 0}
+            title={highestProbabilityPack?.packName ?? ''}
+            percentage={highestProbabilityPack?.percentage ?? 0}
             className="col-span-8 md:col-span-4 col-start-1 md:col-start-3 mb-4 md:mb-0"
             backgroundColor={highestProbabilityPack?.fill}
           />
