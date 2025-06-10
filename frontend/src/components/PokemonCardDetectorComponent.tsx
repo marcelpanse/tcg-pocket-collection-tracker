@@ -116,7 +116,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
         const batchSize = 32
         const totalCards = uniqueCards.length
         const allHashes = []
-        // const existingHashes = await hashStorageService.getAllHashes()
+        const existingHashes = await hashStorageService.getAllHashes()
 
         for (let i = 0; i < totalCards; i += batchSize) {
           const batch = uniqueCards.slice(i, i + batchSize)
@@ -125,10 +125,10 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
           const batchPromises = batch.map(async (card) => {
             try {
               // Check if hash already exists for this card
-              // const existingHash = existingHashes.find((h) => h.id === card.card_id)
-              // if (existingHash) {
-              //   return existingHash
-              // }
+              const existingHash = existingHashes.find((h) => h.id === card.card_id)
+              if (existingHash) {
+                return existingHash
+              }
 
               const resolvedImagePath = getRightPathOfImage(card.image)
               const hash = await hashingService.calculatePerceptualHash(resolvedImagePath)

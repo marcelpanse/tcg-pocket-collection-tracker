@@ -2,7 +2,7 @@ export class CardHashStorageService {
   private static instance: CardHashStorageService
   private db: IDBDatabase | null = null
   private readonly DB_NAME = 'PokemonCardHashes'
-  private readonly STORE_NAME = 'cardHashes'
+  private readonly STORE_NAME = 'cardHashes2'
 
   private constructor() {}
 
@@ -15,7 +15,7 @@ export class CardHashStorageService {
 
   public async initDB(): Promise<void> {
     return new Promise((resolve, reject) => {
-      const request = indexedDB.open(this.DB_NAME, 1)
+      const request = indexedDB.open(this.DB_NAME, 2)
 
       request.onerror = () => reject(request.error)
       request.onsuccess = () => {
@@ -25,6 +25,11 @@ export class CardHashStorageService {
 
       request.onupgradeneeded = (event) => {
         const db = (event.target as IDBOpenDBRequest).result
+        console.log(`Upgrading card hashes IndexedDB from version ${event.oldVersion} to ${db.version}`)
+
+        if (event.oldVersion < 2 && db.objectStoreNames.contains('cardHashes')) {
+          db.deleteObjectStore('cardHashes')
+        }
         if (!db.objectStoreNames.contains(this.STORE_NAME)) {
           db.createObjectStore(this.STORE_NAME, { keyPath: 'id' })
         }
