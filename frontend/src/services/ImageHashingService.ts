@@ -44,43 +44,31 @@ export class ImageSimilarityService {
       const dctG = this.computeDCT(colorPixels.g)
       const dctB = this.computeDCT(colorPixels.b)
 
-      const averages = this.calculateChannelAverages(dctR, dctG, dctB)
-
-      const len = dctR.length
-      const buffer = new ArrayBuffer(Math.ceil(len / 10) * 4)
+      const buffer = new ArrayBuffer(Math.ceil((3 * (dctR.length - 1)) / 32) * 4)
       const arr = new Uint32Array(buffer)
-      for (let i = 0; i + 1 < len; i++) {
-        let a = 0
-        if (dctR[i + 1] > averages.r) a += 4
-        if (dctG[i + 1] > averages.g) a += 2
-        if (dctB[i + 1] > averages.b) a += 1
-        arr[Math.floor(i / 10)] += a << (3 * (i % 10))
+
+      let j = 0
+      const fillBuffer = (dct: number[]) => {
+        let avg = 0
+        for (let i = 1; i < dct.length; i++) {
+          avg += dct[i]
+        }
+        avg /= dct.length - 1
+        for (let i = 1; i < dct.length; i++, j++) {
+          if (dct[i] > avg) {
+            arr[Math.floor(j / 32)] |= 1 << (j % 32)
+          }
+        }
       }
+
+      fillBuffer(dctR)
+      fillBuffer(dctG)
+      fillBuffer(dctB)
 
       return buffer
     }
 
     throw new Error('Failed to process image')
-  }
-
-  private calculateChannelAverages(dctR: number[], dctG: number[], dctB: number[]) {
-    let sumR = 0
-    let sumG = 0
-    let sumB = 0
-    const len = dctR.length
-
-    for (let i = 1; i < len; i++) {
-      sumR += dctR[i]
-      sumG += dctG[i]
-      sumB += dctB[i]
-    }
-
-    const count = len - 1
-    return {
-      r: sumR / count,
-      g: sumG / count,
-      b: sumB / count,
-    }
   }
 
   private computeDCT(pixels: number[]): number[] {
@@ -106,7 +94,9 @@ export class ImageSimilarityService {
     return result
   }
 
-  public calculateHammingDistance(hash1: ArrayBuffer, hash2: ArrayBuffer): number {
+  public calculateSimilarity(hash1: ArrayBuffer, hash2: ArrayBuffer): number {
+    // Calcuate hamming distance and map it to [0,1] similarity score
+
     let distance = 0
     const arr1 = new Uint32Array(hash1)
     const arr2 = new Uint32Array(hash2)
@@ -120,7 +110,7 @@ export class ImageSimilarityService {
       }
     }
 
-    return distance
+    return 1 - distance / (3 * (this.freqSize * this.freqSize - 1))
   }
 
   private ensureImage(source: string | HTMLImageElement): Promise<HTMLImageElement> {
