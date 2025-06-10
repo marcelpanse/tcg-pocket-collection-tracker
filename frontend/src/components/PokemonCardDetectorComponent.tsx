@@ -109,8 +109,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
       await hashStorageService.initDB()
       const storedHashCount = await hashStorageService.getHashCount()
 
-      const foo = true
-      if (storedHashCount !== uniqueCards.length || foo) {
+      if (storedHashCount !== uniqueCards.length) {
         console.log('Checking and generating missing card hashes...')
 
         const batchSize = 80
