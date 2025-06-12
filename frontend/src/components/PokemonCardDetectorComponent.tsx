@@ -23,15 +23,15 @@ interface PokemonCardDetectorProps {
 interface ExtractedCard {
   imageUrl: string
   confidence: number
-  hash?: string
+  hash?: ArrayBuffer
   matchedCard?: {
     id: string
-    distance: number
+    similarity: number
     imageUrl?: string
   }
   topMatches?: Array<{
     id: string
-    distance: number
+    similarity: number
     card: Card
   }>
   selected?: boolean
@@ -138,7 +138,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
           })
 
           const batchResults = await Promise.all(batchPromises)
-          const validResults = batchResults.filter((hash): hash is { id: string; hash: string } => hash !== null)
+          const validResults = batchResults.filter((hash): hash is { id: string; hash: ArrayBuffer } => hash !== null)
           allHashes.push(...validResults)
 
           // Allow UI to update between batches
@@ -195,18 +195,18 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
               const cardImageUrl = canvas.toDataURL('image/png')
               const hash = await hashingService.calculatePerceptualHash(cardImageUrl)
 
-              // Calculate distances for all cards and sort them
+              // Calculate similarityes for all cards and sort them
               const matches = storedHashes
                 .map((storedHash) => {
-                  const distance = hashingService.calculateHammingDistance(hash, storedHash.hash)
+                  const similarity = hashingService.calculateSimilarity(hash, storedHash.hash)
                   const matchedCard = uniqueCards.find((card) => card.card_id === storedHash.id)
                   return {
                     id: storedHash.id,
-                    distance,
+                    similarity,
                     card: matchedCard as Card,
                   }
                 })
-                .sort((a, b) => a.distance - b.distance)
+                .sort((a, b) => b.similarity - a.similarity)
 
               // Get top 5 matches
               const topMatches = matches.slice(0, 5)
@@ -221,7 +221,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                 matchedCard: bestMatch
                   ? {
                       id: bestMatch.id,
-                      distance: bestMatch.distance,
+                      similarity: bestMatch.similarity,
                       imageUrl: getRightPathOfImage(bestMatch.card.image),
                     }
                   : undefined,
@@ -320,7 +320,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
             ...card,
             matchedCard: {
               id: newMatch.id,
-              distance: newMatch.distance,
+              similarity: newMatch.similarity,
               imageUrl: getRightPathOfImage(newMatch.card.image),
             },
           }
@@ -401,7 +401,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                         alt={getCardNameByLang(match.card, i18n.language)}
                         className="w-full h-auto object-contain"
                       />
-                      <div className="text-xs text-center mt-1 bg-black/60 text-white py-0.5 rounded">{(100 - (match.distance / 128) * 100).toFixed(0)}%</div>
+                      <div className="text-xs text-center mt-1 bg-black/60 text-white py-0.5 rounded">{(match.similarity * 100).toFixed(0)}%</div>
                     </div>
                   ))}
               </div>
@@ -421,7 +421,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
               <div className="w-1/2 relative">
                 <img src={getRightPathOfImage(card.matchedCard.imageUrl)} alt="Best match" className="w-full h-auto object-contain" />
                 <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
-                  {(100 - (card.matchedCard.distance / 128) * 100).toFixed(0)}% match
+                  {(card.matchedCard.similarity * 100).toFixed(0)}% match
                 </div>
               </div>
             )}

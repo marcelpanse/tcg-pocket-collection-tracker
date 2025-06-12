@@ -1,6 +1,7 @@
 export class ImageSimilarityService {
   private static instance: ImageSimilarityService
-  private readonly hashSize: number = 24
+  private readonly hashSize: number = 48
+  private readonly freqSize: number = 12
 
   private constructor() {}
 
@@ -11,7 +12,7 @@ export class ImageSimilarityService {
     return ImageSimilarityService.instance
   }
 
-  public async calculatePerceptualHash(imageData: string | HTMLImageElement): Promise<string> {
+  public async calculatePerceptualHash(imageData: string | HTMLImageElement): Promise<ArrayBuffer> {
     const img = await this.ensureImage(imageData)
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
@@ -43,58 +44,39 @@ export class ImageSimilarityService {
       const dctG = this.computeDCT(colorPixels.g)
       const dctB = this.computeDCT(colorPixels.b)
 
-      const freqSize = Math.floor(this.hashSize / 4)
-      const averages = this.calculateChannelAverages(dctR, dctG, dctB, freqSize)
+      const buffer = new ArrayBuffer(Math.ceil((3 * (dctR.length - 1)) / 32) * 4)
+      const arr = new Uint32Array(buffer)
 
-      let hash = ''
-      for (let y = 0; y < freqSize; y++) {
-        for (let x = 0; x < freqSize; x++) {
-          if (!(x === 0 && y === 0)) {
-            const pos = y * this.hashSize + x
-            hash += dctR[pos] > averages.r ? '1' : '0'
-            hash += dctG[pos] > averages.g ? '1' : '0'
-            hash += dctB[pos] > averages.b ? '1' : '0'
+      let j = 0
+      const fillBuffer = (dct: number[]) => {
+        let avg = 0
+        for (let i = 1; i < dct.length; i++) {
+          avg += dct[i]
+        }
+        avg /= dct.length - 1
+        for (let i = 1; i < dct.length; i++, j++) {
+          if (dct[i] > avg) {
+            arr[Math.floor(j / 32)] |= 1 << (j % 32)
           }
         }
       }
 
-      return hash
+      fillBuffer(dctR)
+      fillBuffer(dctG)
+      fillBuffer(dctB)
+
+      return buffer
     }
 
     throw new Error('Failed to process image')
   }
 
-  private calculateChannelAverages(dctR: number[], dctG: number[], dctB: number[], freqSize: number) {
-    let sumR = 0
-    let sumG = 0
-    let sumB = 0
-    let count = 0
-
-    for (let y = 0; y < freqSize; y++) {
-      for (let x = 0; x < freqSize; x++) {
-        if (!(x === 0 && y === 0)) {
-          const pos = y * this.hashSize + x
-          sumR += dctR[pos]
-          sumG += dctG[pos]
-          sumB += dctB[pos]
-          count++
-        }
-      }
-    }
-
-    return {
-      r: sumR / count,
-      g: sumG / count,
-      b: sumB / count,
-    }
-  }
-
   private computeDCT(pixels: number[]): number[] {
     const n = this.hashSize
-    const result = new Array(n * n)
+    const result = new Array(this.freqSize * this.freqSize)
 
-    for (let u = 0; u < n; u++) {
-      for (let v = 0; v < n; v++) {
+    for (let u = 0; u < this.freqSize; u++) {
+      for (let v = 0; v < this.freqSize; v++) {
         let sum = 0
         for (let y = 0; y < n; y++) {
           for (let x = 0; x < n; x++) {
@@ -105,26 +87,30 @@ export class ImageSimilarityService {
         const cu = u === 0 ? 1 / Math.sqrt(2) : 1
         const cv = v === 0 ? 1 / Math.sqrt(2) : 1
 
-        result[u * n + v] = ((2 * cu * cv) / n) * sum
+        result[u * this.freqSize + v] = ((2 * cu * cv) / n) * sum
       }
     }
 
     return result
   }
 
-  public calculateHammingDistance(hash1: string, hash2: string): number {
-    let distance = 0
-    const minLength = Math.min(hash1.length, hash2.length)
+  public calculateSimilarity(hash1: ArrayBuffer, hash2: ArrayBuffer): number {
+    // Calcuate hamming distance and map it to [0,1] similarity score
 
-    for (let i = 0; i < minLength; i++) {
-      if (hash1[i] !== hash2[i]) {
+    let distance = 0
+    const arr1 = new Uint32Array(hash1)
+    const arr2 = new Uint32Array(hash2)
+    const len = Math.min(arr1.length, arr2.length)
+
+    for (let i = 0; i < len; i++) {
+      let diff = arr1[i] ^ arr2[i]
+      while (diff) {
+        diff &= diff - 1
         distance++
       }
     }
 
-    distance += Math.abs(hash1.length - hash2.length)
-
-    return distance
+    return 1 - distance / (3 * (this.freqSize * this.freqSize - 1))
   }
 
   private ensureImage(source: string | HTMLImageElement): Promise<HTMLImageElement> {
