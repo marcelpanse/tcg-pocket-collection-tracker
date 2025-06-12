@@ -22,7 +22,7 @@ const menuItems: MenuItem[] = [
 ]
 
 const MenuItemComponent: React.FC<{ item: MenuItem; setOpen: (open: boolean) => void }> = ({ item, setOpen }) => {
-  const { t } = useTranslation('hamburguer-menu')
+  const { t } = useTranslation('hamburger-menu')
 
   return (
     <Link
@@ -38,7 +38,7 @@ const MenuItemComponent: React.FC<{ item: MenuItem; setOpen: (open: boolean) => 
 }
 
 export default function HamburgerMenu() {
-  const { t } = useTranslation('hamburguer-menu')
+  const { t } = useTranslation('hamburger-menu')
 
   const [open, setOpen] = useState(false)
   const { user, setUser, setIsLoginDialogOpen, setIsProfileDialogOpen } = use(UserContext)
