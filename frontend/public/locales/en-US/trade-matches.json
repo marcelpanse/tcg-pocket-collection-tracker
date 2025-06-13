@@ -9,11 +9,13 @@
   "ownCollectionDescription": "Consider sharing this page with others to let them find possible trades.",
   "isActiveTrading": "Trading page status",
   "minNumberOfCardsToKeep": "Minimum number of cards to keep",
+  "maxNumberOfCardsWanted": "Maximum number of cards wanted",
   "inActiveTradePage": "The user \"{{username}}\" is currently not accepting any trades.",
   "inActiveTradeDescription": "Their trading page is set to disabled. Please contact them if you want to trade.",
   "friendAccountDetails": "Friend ID: {{friend_id}} ({{username}}).",
   "minFilterTooltip": "The maximum amount of cards you'd like to collect through trading.",
   "maxFilterTooltip": "The minimum amount of cards you need to own before appearing as a trade option.",
   "minInputTooltip": "The minimum amount of cards you want to trade down to.",
+  "maxInputTooltip": "The maximum amount of cards you want to collect by trading.",
   "activeTradingInputTooltip": "Tip: You can (temporarily) switch off your trading page in case you run out of trading tokens."
 }
