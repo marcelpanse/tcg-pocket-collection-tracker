@@ -4,14 +4,13 @@ import { supabase } from '@/lib/Auth.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { type User, UserContext } from '@/lib/context/UserContext.ts'
 import { getCardNameByLang } from '@/lib/utils'
-import type { Card as CardType } from '@/types'
-import type { CollectionRow } from '@/types'
+import type { Card as CardType, CollectionRow } from '@/types'
 import i18n from 'i18next'
 import { MinusIcon, PlusIcon } from 'lucide-react'
 import { use, useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 
-interface Props {
+interface CardProps {
   card: CardType
   useMaxWidth?: boolean
 }
@@ -19,7 +18,7 @@ interface Props {
 // keep track of the debounce timeouts for each card
 const _inputDebounce: Record<string, number | null> = {}
 
-export function Card({ card, useMaxWidth = false }: Props) {
+export function Card({ card, useMaxWidth = false }: CardProps) {
   const params = useParams()
 
   if (card.linkedCardID) {
@@ -96,7 +95,7 @@ export function Card({ card, useMaxWidth = false }: Props) {
   return (
     <div className={`group flex w-fit ${!useMaxWidth ? 'max-w-32 md:max-w-40' : ''} flex-col items-center rounded-lg cursor-pointer`}>
       <div onClick={() => setSelectedCardId(card.card_id)}>
-        <FancyCard card={card} selected={amountOwned > 0} />
+        <FancyCard card={card} selected={amountOwned > 0} clickable={!useMaxWidth} />
       </div>
       <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">
         {card.card_id} - {getCardNameByLang(card, i18n.language)}

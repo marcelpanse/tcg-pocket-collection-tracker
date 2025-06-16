@@ -3,14 +3,15 @@ import type { Card } from '@/types'
 import i18n from 'i18next'
 import { type CSSProperties, type Dispatch, type SetStateAction, useCallback, useRef, useState } from 'react'
 
-interface Props {
+interface FancyCardProps {
   card: Card
   selected: boolean
   setIsSelected?: Dispatch<SetStateAction<boolean>>
+  clickable?: boolean
   size?: 'default' | 'small'
 }
 
-function FancyCard({ selected, setIsSelected, card, size = 'default' }: Props) {
+function FancyCard({ selected, setIsSelected, card, size = 'default', clickable = true }: Readonly<FancyCardProps>) {
   const cardRef = useRef<HTMLImageElement>(null)
   const [throttledPos, setThrottledPos] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
@@ -55,7 +56,7 @@ function FancyCard({ selected, setIsSelected, card, size = 'default' }: Props) {
                    scale(${isHovering ? 1.04 : 1})`,
     transition: 'transform 0.3s cubic-bezier(0.17, 0.67, 0.5, 1.03)',
     transformStyle: 'preserve-3d',
-    cursor: 'pointer',
+    cursor: clickable ? 'pointer' : 'default',
     opacity: selected ? 1 : 0.5,
     width: size === 'small' ? '80px' : '100%', // Adjust size based on prop
     height: size === 'small' ? '112px' : 'auto', // Adjust size based on prop
