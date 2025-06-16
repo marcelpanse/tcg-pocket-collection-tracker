@@ -4,7 +4,7 @@ import { authSSO, supabase } from '@/lib/Auth.ts'
 import { fetchAccount } from '@/lib/fetchAccount.ts'
 import type { AccountRow, CollectionRow } from '@/types'
 import loadable from '@loadable/component'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { Route, Routes } from 'react-router'
 import { Header } from './components/Header.tsx'
@@ -58,11 +58,35 @@ function App() {
     }
   }, [user])
 
+  const userContextValue = useMemo(
+    () => ({
+      user,
+      setUser,
+      account,
+      setAccount,
+      isLoginDialogOpen,
+      setIsLoginDialogOpen,
+      isProfileDialogOpen,
+      setIsProfileDialogOpen,
+    }),
+    [user, account, isLoginDialogOpen, isProfileDialogOpen],
+  )
+
+  const collectionContextValue = useMemo(
+    () => ({
+      ownedCards,
+      setOwnedCards,
+      selectedCardId,
+      setSelectedCardId,
+      selectedMissionCardOptions,
+      setSelectedMissionCardOptions,
+    }),
+    [ownedCards, selectedCardId, selectedMissionCardOptions],
+  )
+
   return (
-    <UserContext.Provider value={{ user, setUser, account, setAccount, isLoginDialogOpen, setIsLoginDialogOpen, isProfileDialogOpen, setIsProfileDialogOpen }}>
-      <CollectionContext.Provider
-        value={{ ownedCards, setOwnedCards, selectedCardId, setSelectedCardId, selectedMissionCardOptions, setSelectedMissionCardOptions }}
-      >
+    <UserContext.Provider value={userContextValue}>
+      <CollectionContext.Provider value={collectionContextValue}>
         <ErrorBoundary fallback={<div className="m-4">A new version was deployed, please refresh the page to see the latest changes.</div>}>
           <Toaster />
           <Header />

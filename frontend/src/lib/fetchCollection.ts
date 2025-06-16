@@ -6,7 +6,7 @@ const PAGE_SIZE = 500
 export async function fetchCollection(email?: string, friendId?: string) {
   const tableName = friendId ? 'public_cards' : 'collection'
   const key = friendId ? 'friend_id' : 'email'
-  const value = friendId ? friendId : email || ''
+  const value = friendId ?? email ?? ''
   const { count, error } = await supabase.from(tableName).select('*', { count: 'exact', head: true }).eq(key, value)
 
   if (error) throw new Error('Error fetching collection')
