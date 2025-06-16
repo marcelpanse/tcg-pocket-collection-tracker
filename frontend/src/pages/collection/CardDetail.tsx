@@ -11,7 +11,7 @@ interface CardDetailProps {
   onClose: () => void // Function to close the sidebar
 }
 
-function CardDetail({ cardId, onClose }: CardDetailProps) {
+function CardDetail({ cardId, onClose }: Readonly<CardDetailProps>) {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
   const card: Card = getCardById(cardId) || ({} as Card)
   const expansion = getExpansionById(card.expansion)
@@ -46,7 +46,7 @@ function CardDetail({ cardId, onClose }: CardDetailProps) {
               </p>
             )}
             <p className="text-lg mb-1">
-              <strong>{t('text.tradeTokens')}:</strong> {sellableForTokensDictionary[card.rarity] || 'N/A'}
+              <strong>{t('text.tradeTokens')}:</strong> {sellableForTokensDictionary[card.rarity] ?? 'N/A'}
             </p>
             <p className="text-lg mb-1">
               <strong>{t('text.expansion')}:</strong> {card.expansion}
