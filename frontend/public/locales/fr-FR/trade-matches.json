@@ -1,0 +1,19 @@
+{
+  "title": "Échanges possibles",
+  "friendHas": "Cartes dont vous avez besoin (et que votre ami(e) possède)",
+  "youHave": "Cartes dont votre ami(e) a besoin (et que vous possédez)",
+  "noPossibleTrades": "Aucun échange possible.",
+  "noPossibleTradesDescription": "Aucun échange entre vous et votre ami(e) n'est actuellement possible.",
+  "featureDescription": "Cette boîte de dialogue affiche les échanges possibles entre vos cartes et celles de l'ID de l'ami(e) sélectionné(e). Elle montre les cartes en double que l'autre personne ne possède pas encore.",
+  "ownCollection": "Vous consultez votre propre page d'échanges.",
+  "ownCollectionDescription": "Pensez à partager cette page avec d'autres personnes pour leur permettre de trouver des échanges possibles.",
+  "isActiveTrading": "Statut de la page d'échanges",
+  "minNumberOfCardsToKeep": "Nombre minimum de cartes à conserver",
+  "inActiveTradePage": "L'utilisateur « {{username}} » n'accepte actuellement aucun échange.",
+  "inActiveTradeDescription": "Leur page d'échanges est désactivée. Veuillez les contacter si vous souhaitez faire un échange.",
+  "friendAccountDetails": "ID de l'ami(e) : {{friend_id}} ({{username}}).",
+  "minFilterTooltip": "La quantité maximale de cartes que vous souhaitez collectionner via les échanges.",
+  "maxFilterTooltip": "La quantité minimale de cartes que vous devez posséder avant qu'elles n'apparaissent comme une option d'échange.",
+  "minInputTooltip": "Le nombre minimum de cartes que vous souhaitez conserver après l'échange.",
+  "activeTradingInputTooltip": "Astuce : Vous pouvez désactiver (temporairement) votre page d'échanges si vous manquez de jetons d'échange."
+}

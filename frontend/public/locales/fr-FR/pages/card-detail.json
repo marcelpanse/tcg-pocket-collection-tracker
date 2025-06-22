@@ -1,0 +1,35 @@
+{
+  "text": {
+    "tradeTokens": "Jetons d'échange",
+    "hp": "PV",
+    "cardType": "Type de carte",
+    "evolutionType": "Type d'évolution",
+    "ex": "EX",
+    "craftingCost": "Coût de fabrication",
+    "artist": "Illustrateur",
+    "setDetails": "Détails de l'extension",
+    "expansion": "Extension",
+    "pack": "Booster",
+    "weakness": "Faiblesse",
+    "retreat": "Retraite",
+    "ability": "Talent",
+    "abilityEffect": "Effet du talent",
+    "details": "Détails"
+  },
+  "cardType": {
+    "pokémon": "Pokémon",
+    "trainer": "Dresseur"
+  },
+  "evolutionType": {
+    "basic": "Base",
+    "stage1": "Niveau 1",
+    "stage2": "Niveau 2",
+    "item": "Objet",
+    "tool": "Outil",
+    "supporter": "Supporter"
+  },
+  "ex": {
+    "yes": "Oui",
+    "no": "Non"
+  }
+}
