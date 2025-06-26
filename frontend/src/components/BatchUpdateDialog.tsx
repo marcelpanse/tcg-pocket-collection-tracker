@@ -7,6 +7,7 @@ import type { Card } from '@/types'
 import { MinusIcon, PlusIcon } from 'lucide-react'
 // src/components/BatchUpdateDialog.tsx
 import { useEffect, useMemo, useState } from 'react' // Add useEffect
+import { useTranslation } from 'react-i18next'
 
 interface BatchUpdateDialogProps {
   filteredCards: Card[]
@@ -15,6 +16,7 @@ interface BatchUpdateDialogProps {
 }
 
 export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateDialogProps) {
+  const { t } = useTranslation('bulk-update')
   const [isOpen, setIsOpen] = useState(false)
   const [amount, setAmount] = useState(0)
   const [selectedCards, setSelectedCards] = useState<Record<string, boolean>>({})
@@ -123,18 +125,18 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
   return (
     <>
       <Button className="hidden sm:block" variant="outline" onClick={() => setIsOpen(true)} disabled={isBatchUpdateDisabled}>
-        Bulk update
+        {t('buttonTitle')}
       </Button>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
-            <DialogTitle>Bulk update cards</DialogTitle>
+            <DialogTitle>{t('title')}</DialogTitle>
           </DialogHeader>
 
           <Alert variant="destructive">
             <AlertDescription>
-              You are about to batch update{' '}
+              {t('alert.beforeCount')}
               <strong>
                 <span
                   style={{
@@ -147,18 +149,18 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
                 >
                   {selectedCount}
                 </span>{' '}
-                cards
+                {t('alert.cards')}
               </strong>{' '}
-              based on your selected filters. Select the amount you'd like to set for each of the cards below. You can also select or deselect individual cards
-              if you don’t want to update all of them. <strong>Beware that this will overwrite all current values of the selected cards!</strong>{' '}
+              {t('alert.afterCount')}
+              <strong>{t('alert.warning')}</strong>
             </AlertDescription>
           </Alert>
           <div className="flex gap-2 justify-between">
             <Button variant="outline" onClick={handleDeselectAll}>
-              Deselect All
+              {t('deselectAll')}
             </Button>
             <Button variant="outline" onClick={handleSelectAll}>
-              Select All
+              {t('selectAll')}
             </Button>
           </div>
 
@@ -179,7 +181,7 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
               min="0"
               value={amount ?? 0}
               onChange={handleInputChange}
-              placeholder="Enter amount"
+              placeholder={t('enterAmount')}
               className="w-7 text-center border-none rounded"
               onFocus={(event) => event.target.select()}
             />
@@ -190,7 +192,7 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
 
           <DialogFooter>
             <Button variant="outline" onClick={() => setIsOpen(false)}>
-              Cancel
+              {t('cancel')}
             </Button>
             <Button onClick={handleConfirm} disabled={selectedCount === 0 || isProcessing || !changesMade} variant="default">
               {isProcessing && (
@@ -211,7 +213,7 @@ export function BatchUpdateDialog({ filteredCards, onBatchUpdate }: BatchUpdateD
                   />
                 </svg>
               )}
-              Batch {isProcessing ? 'processing...' : 'update'}
+              {isProcessing ? t('batchProcessing') : t('batchUpdate')}
             </Button>
           </DialogFooter>
         </DialogContent>

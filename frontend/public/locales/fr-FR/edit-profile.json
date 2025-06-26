@@ -14,5 +14,9 @@
   "isPublicButton": "Partager la collection",
   "isPublicTradeButton": "Ouvrir la page d'échanges",
   "isPublicToggle": "Public",
-  "save": "Enregistrer"
+  "save": "Enregistrer",
+  "usernameTooShort": "Le nom d'utilisateur doit contenir au moins 2 caractères.",
+  "friendIdInvalid": "L'ID d'ami(e) n'est pas valide, il doit contenir 16 chiffres sans tirets.",
+  "accountSaved": "Compte enregistré.",
+  "accountSavingError": "Erreur lors de l'enregistrement de votre compte."
 }

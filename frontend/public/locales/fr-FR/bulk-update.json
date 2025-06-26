@@ -1,0 +1,16 @@
+{
+  "buttonTitle": "Mise à jour en masse",
+  "title": "Mise à jour en masse des cartes",
+  "selectAll": "Tout sélectionner",
+  "deselectAll": "Tout désélectionner",
+  "enterAmount": "Saisir la quantité",
+  "cancel": "Annuler",
+  "batchProcessing": "Traitement en masse en cours...",
+  "batchUpdate": "Mise à jour en masse",
+  "alert": {
+    "beforeCount": "Vous êtes sur le point de mettre à jour en masse ",
+    "cards": "cartes",
+    "afterCount": " en fonction de vos filtres sélectionnés. Sélectionnez la quantité que vous souhaitez définir pour chacune des cartes ci-dessous. Vous pouvez également sélectionner ou désélectionner des cartes individuellement si vous ne souhaitez pas toutes les mettre à jour. ",
+    "warning": "Attention, cette action écrasera toutes les valeurs actuelles des cartes sélectionnées !"
+  }
+}

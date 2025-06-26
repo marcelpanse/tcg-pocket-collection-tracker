@@ -169,10 +169,10 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownAccount, friendAc
       }
       setAccount(updatedAccount.data as AccountRow)
 
-      toast({ title: 'Account saved.', variant: 'default' })
+      toast({ title: t('accountSaved'), variant: 'default' })
     } catch (e) {
       console.error('error saving account', e)
-      toast({ title: 'Error saving your account.', variant: 'destructive' })
+      toast({ title: t('errorSavingAccount'), variant: 'destructive' })
     }
   }
 
@@ -289,7 +289,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownAccount, friendAc
                           <span className="min-w-14 me-4">{card.card_id} </span>
                           <span>{card.name}</span>
                         </span>
-                        <span title="Amount you own" className="text-gray-500">
+                        <span title={t('amountYouOwn')} className="text-gray-500">
                           <span style={{ userSelect: 'none' }}>×{ownedCards.find((c) => c.card_id === card.card_id)?.amount_owned || 0}</span>
                         </span>
                       </li>
@@ -307,7 +307,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownAccount, friendAc
                           <span className="min-w-14 me-4">{card.card_id} </span>
                           <span>{card.name}</span>
                         </span>
-                        <span title="Amount your friend owns" className="text-gray-500">
+                        <span title={t('amountFriendOwns')} className="text-gray-500">
                           <span style={{ userSelect: 'none' }}>×{card.amount_owned}</span>
                         </span>
                       </li>

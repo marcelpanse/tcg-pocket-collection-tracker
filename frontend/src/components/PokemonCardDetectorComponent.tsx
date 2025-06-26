@@ -14,6 +14,7 @@ import i18n from 'i18next'
 import { MinusIcon, PlusIcon } from 'lucide-react'
 import type { ChangeEvent, FC } from 'react'
 import { use, useEffect, useMemo, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface PokemonCardDetectorProps {
   onDetectionComplete?: (results: DetectionResult[]) => void
@@ -38,6 +39,7 @@ interface ExtractedCard {
 }
 
 const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
+  const { t } = useTranslation('scan')
   const { user } = use(UserContext)
   const { ownedCards, setOwnedCards } = use(CollectionContext)
 
@@ -382,7 +384,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
           {/* Selection indicator */}
           {card.matchedCard && card.topMatches && showPotentialMatches && (
             <div className="mt-2 mb-2 w-full">
-              <p className="text-sm font-medium mb-4">Other potential matches:</p>
+              <p className="text-sm font-medium mb-4">{t('otherPotentialMatch')}</p>
               <div className="grid grid-cols-4 gap-1">
                 {card.topMatches
                   .filter((match) => match.id !== card.matchedCard?.id)
@@ -413,7 +415,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
             {/* Extracted card */}
             <div className="w-1/2 relative">
               <img src={card.imageUrl} alt={`Detected card ${index + 1}`} className="w-full h-auto object-contain" />
-              <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs px-1 py-0.5 text-center">Extracted Card</div>
+              <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs px-1 py-0.5 text-center">{t('extractedCard')}</div>
             </div>
 
             {/* Best match card */}
@@ -421,7 +423,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
               <div className="w-1/2 relative">
                 <img src={getRightPathOfImage(card.matchedCard.imageUrl)} alt="Best match" className="w-full h-auto object-contain" />
                 <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
-                  {(card.matchedCard.similarity * 100).toFixed(0)}% match
+                  {t('percentMatch', { match: (card.matchedCard.similarity * 100).toFixed(0) })}
                 </div>
               </div>
             )}
@@ -430,7 +432,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
           {/* Potential matches thumbnails */}
           <div className="flex justify-between items-center mb-2 w-full">
             <span className="text-sm font-medium">
-              {card.selected ? 'Selected' : 'Click to select'}{' '}
+              {card.selected ? t('selected') : t('clickToSelect')}{' '}
               {card.matchedCard &&
                 card.topMatches &&
                 card.topMatches
@@ -466,14 +468,14 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
   return (
     <div className="pokemon-card-detector flex justify-end">
       <Button onClick={() => setIsOpen(true)} variant="ghost">
-        Scan
+        {t('scan')}
       </Button>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogOverlay className="DialogOverlay">
           <DialogContent className="DialogContent max-w-4xl">
             <DialogHeader>
-              <DialogTitle>Pokemon card scanner</DialogTitle>
+              <DialogTitle>{t('title')}</DialogTitle>
             </DialogHeader>
 
             {!isLoadingModel && !isGeneratingHashes && extractedCards.length === 0 && (
@@ -482,10 +484,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                 onClick={() => fileInputRef.current?.click()}
               >
                 <AlertDescription>
-                  <p className="mb-4 text-center">
-                    You can upload multiple images at once. The system will scan each image for Pokemon cards and display the results. You can verify the
-                    matches, select or deselect detected cards, and choose how much to increment the quantity for selected cards.
-                  </p>
+                  <p className="mb-4 text-center">{t('description')}</p>
                 </AlertDescription>
                 <input
                   type="file"
@@ -497,7 +496,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                   className="w-full hidden"
                 />
                 <Button variant="outline" className="mt-2" disabled={isUploadingImages}>
-                  {isUploadingImages && <Spinner />} Select images
+                  {isUploadingImages && <Spinner />} {t('selectImages')}
                 </Button>
               </div>
             )}
@@ -507,7 +506,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                 <AlertDescription>
                   <div className="flex items-center space-x-2">
                     <Spinner />
-                    <p>Downloading and initializing scan model, please wait... ({initProgress})</p>
+                    <p>{t('loading', { initProgress })}</p>
                   </div>
                 </AlertDescription>
               </Alert>
@@ -517,13 +516,13 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
               <div>
                 <div className="flex gap-2 justify-between my-4 flex-wrap">
                   <Button variant="outline" onClick={handleDeselectAll} className="hidden sm:block">
-                    Deselect all
+                    {t('deselectAll')}
                   </Button>
                   <Button variant="outline" onClick={() => setShowPotentialMatches((prev) => !prev)}>
-                    {showPotentialMatches ? 'Hide' : 'Show'} edit matches
+                    {showPotentialMatches ? t('hideEditMatches') : t('showEditMatches')}
                   </Button>
                   <Button variant="outline" onClick={handleSelectAll} className="hidden sm:block">
-                    Select all
+                    {t('selectAll')}
                   </Button>
                 </div>
 
@@ -533,7 +532,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
 
                 {
                   <div className="flex flex-col items-center gap-2">
-                    <p className="text-sm font-medium pt-4">Set increment for selected cards</p>
+                    <p className="text-sm font-medium pt-4">{t('setIncrement')}</p>
                     <div className="flex items-center gap-x-1">
                       <Button variant="ghost" size="icon" onClick={handleDecrement} disabled={amount === 0} className="rounded-full">
                         <MinusIcon size={14} />
@@ -543,7 +542,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                         min="0"
                         value={amount}
                         onChange={handleInputChange}
-                        placeholder="Enter amount"
+                        placeholder={t('enterAmount')}
                         className="w-10 text-center border-none rounded"
                         onFocus={(event) => event.target.select()}
                       />
@@ -568,7 +567,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                   }
                 }}
               >
-                {extractedCards.length > 0 ? 'Cancel' : 'Close'}
+                {extractedCards.length > 0 ? t('cancel') : t('close')}
               </Button>
               {extractedCards.length > 0 && (
                 <Button onClick={handleConfirm} disabled={selectedCount === 0 || isProcessingCardUpdates || isLoadingModel} variant="default">
@@ -590,7 +589,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                       />
                     </svg>
                   ) : (
-                    'Update selected cards'
+                    t('updateSelectedCards')
                   )}
                 </Button>
               )}

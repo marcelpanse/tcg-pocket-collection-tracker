@@ -17,5 +17,9 @@
   "maxFilterTooltip": "The minimum amount of cards you need to own before appearing as a trade option.",
   "minInputTooltip": "The minimum amount of cards you want to trade down to.",
   "maxInputTooltip": "The maximum amount of cards you want to collect by trading.",
-  "activeTradingInputTooltip": "Tip: You can (temporarily) switch off your trading page in case you run out of trading tokens."
+  "activeTradingInputTooltip": "Tip: You can (temporarily) switch off your trading page in case you run out of trading tokens.",
+  "accountSaved": "Account saved.",
+  "errorSavingAccount": "Error saving your account.",
+  "amountYouOwn": "Amount you own",
+  "amountFriendOwns": "Amount your friend owns"
 }

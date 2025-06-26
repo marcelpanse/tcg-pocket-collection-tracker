@@ -107,7 +107,7 @@ function Collection() {
                       navigate(`${location.pathname}/trade`)
                     }}
                   >
-                    Show possible trades
+                    {t('showPossibleTrades')}
                   </Button>
                 </div>
               </AlertDescription>

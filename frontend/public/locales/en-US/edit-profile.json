@@ -14,5 +14,9 @@
   "isPublicButton": "Share collection",
   "isPublicTradeButton": "Open trading page",
   "isPublicToggle": "Is public",
-  "save": "Save"
+  "save": "Save",
+  "usernameTooShort": "Username must be at least 2 characters.",
+  "friendIdInvalid": "Friend ID is not valid, it must be 16 digits without dashes.",
+  "accountSaved": "Account saved.",
+  "accountSavingError": "Error saving your account."
 }
