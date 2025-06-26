@@ -23,7 +23,7 @@ import { z } from 'zod'
 interface Props {
   ownedCards: CollectionRow[]
   friendCards: CollectionRow[]
-  ownCollection: boolean
+  ownAccount: AccountRow | null
   friendAccount: AccountRow | null
 }
 
@@ -34,15 +34,16 @@ interface TradeCard extends Card {
   amount_owned: number
 }
 
-const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, friendAccount }) => {
+const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownAccount, friendAccount }) => {
   const { t } = useTranslation('trade-matches')
   const location = useLocation()
   const navigate = useNavigate()
   const { user, account, setAccount } = useContext(UserContext)
 
+  const ownCollection = ownAccount?.friend_id === friendAccount?.friend_id
   const [isTradeMatchesDialogOpen, setIsTradeMatchesDialogOpen] = useState(false)
-  const [userCardsMinFilter, setUserCardsMinFilter] = useState<number>(0)
-  const [friendCardsMinFilter, setFriendCardsMinFilter] = useState<number>(2)
+  const [userCardsMaxFilter, setUserCardsMaxFilter] = useState<number>((ownAccount?.max_number_of_cards_wanted || 1) - 1)
+  const [friendCardsMinFilter, setFriendCardsMinFilter] = useState<number>((ownAccount?.min_number_of_cards_to_keep || 1) + 1)
 
   useEffect(() => {
     if (location.pathname.includes('/collection') && location.pathname.includes('/trade')) {
@@ -56,7 +57,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
 
   const tradeableExpansions = useMemo(() => expansions.filter((e) => e.tradeable).map((e) => e.id), [])
 
-  // Cards the friend has 2+ copies of that the user doesn't own
+  // Cards the friend has extra copies of that the user doesn't own
   const friendExtraCards = useMemo(() => {
     const result: Record<Rarity, TradeCard[]> = {
       '◊': [],
@@ -74,7 +75,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
     }
 
     const friendExtraCards = friendCards.filter((card) => card.amount_owned > (friendAccount?.min_number_of_cards_to_keep || 1))
-    const userCardIds = new Set(ownedCards.filter((card) => card.amount_owned > userCardsMinFilter).map((card) => card.card_id))
+    const userCardIds = new Set(ownedCards.filter((card) => card.amount_owned > userCardsMaxFilter).map((card) => card.card_id))
     const cardsUserNeeds = friendExtraCards.filter((card) => !userCardIds.has(card.card_id))
 
     // Get full card info and group by rarity
@@ -89,9 +90,9 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
     }
 
     return result
-  }, [ownedCards, friendCards, userCardsMinFilter, friendCardsMinFilter])
+  }, [ownedCards, friendCards, userCardsMaxFilter, friendCardsMinFilter])
 
-  // Cards the user has 2+ copies of that the friend doesn't own
+  // Cards the user has extra copies of that the friend doesn't own
   const userExtraCards = useMemo(() => {
     const result: Record<Rarity, TradeCard[]> = {
       '◊': [],
@@ -126,7 +127,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
     }
 
     return result
-  }, [ownedCards, friendCards, userCardsMinFilter, friendCardsMinFilter])
+  }, [ownedCards, friendCards, userCardsMaxFilter, friendCardsMinFilter])
 
   // Check if there are any possible trades across all rarities
   const hasPossibleTrades = useMemo(() => {
@@ -340,7 +341,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownCollection, frien
           {!ownCollection && (
             <div className="flex flex-row gap-4 mb-4 justify-between">
               <div className="flex items-center gap-2">
-                <NumberFilter numberFilter={userCardsMinFilter} setNumberFilter={setUserCardsMinFilter} options={[0, 1, 2, 3, 4, 5]} labelKey="maxNum" />
+                <NumberFilter numberFilter={userCardsMaxFilter} setNumberFilter={setUserCardsMaxFilter} options={[0, 1, 2, 3, 4, 5]} labelKey="maxNum" />
                 <Tooltip id="minFilter" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
                 <CircleHelp className="h-4 w-4" data-tooltip-id="minFilter" data-tooltip-content={t('minFilterTooltip')} />
               </div>

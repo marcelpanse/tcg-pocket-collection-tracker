@@ -119,12 +119,7 @@ function Collection() {
       <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
       <div>{missions && <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} />}</div>
       {missions && <MissionDetail missionCardOptions={selectedMissionCardOptions} onClose={() => setSelectedMissionCardOptions([])} />}
-      <TradeMatches
-        ownedCards={ownedCards}
-        friendCards={friendCards || []}
-        ownCollection={params.friendId === account?.friend_id}
-        friendAccount={friendAccount}
-      />
+      <TradeMatches ownedCards={ownedCards} friendCards={friendCards || []} ownAccount={account} friendAccount={friendAccount} />
     </div>
   )
 }
