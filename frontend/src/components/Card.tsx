@@ -179,31 +179,30 @@ export const incrementMultipleCards = async (
     throw new Error('User not logged in')
   }
 
+  const counts = new Map()
+  for (const cardId of cardIds) {
+    counts.set(cardId, (counts.get(cardId) || 0) + incrementAmount)
+  }
+
   const ownedCardsCopy = [...ownedCards]
   const cardArray: CollectionRow[] = []
 
-  for (const cardId of cardIds) {
+  for (const [cardId, increment] of counts) {
     const ownedCard = ownedCardsCopy.find((row) => row.card_id === cardId)
-    const currentAmount = ownedCard?.amount_owned || 0
-    const newAmount = Math.max(0, currentAmount + incrementAmount)
-
-    const duplicateScannedCard = cardArray.find((row) => row.card_id === cardId)
-    if (duplicateScannedCard) {
-      duplicateScannedCard.amount_owned = newAmount
-    } else {
-      cardArray.push({ card_id: cardId, amount_owned: newAmount, email: user.user.email })
-    }
 
     if (ownedCard) {
-      console.log('Incrementing existing card:', cardId, 'from', currentAmount, 'to', newAmount)
-      ownedCard.amount_owned = newAmount
-    } else if (!ownedCard && newAmount > 0) {
-      console.log('Adding new card:', cardId, 'with amount', newAmount)
-      ownedCardsCopy.push({
+      console.log('Incrementing existing card:', cardId, 'from', ownedCard.amount_owned, 'to', ownedCard.amount_owned + increment)
+      ownedCard.amount_owned += increment
+      cardArray.push(ownedCard)
+    } else if (!ownedCard && increment > 0) {
+      console.log('Adding new card:', cardId, 'with amount', increment)
+      const card: CollectionRow = {
         email: user.user.email,
         card_id: cardId,
-        amount_owned: newAmount,
-      })
+        amount_owned: increment,
+      }
+      ownedCardsCopy.push(card)
+      cardArray.push(card)
     }
   }
 
@@ -212,4 +211,6 @@ export const incrementMultipleCards = async (
     throw new Error('Error bulk updating collection')
   }
   setOwnedCards([...ownedCardsCopy]) // rerender the component
+
+  return cardArray
 }
