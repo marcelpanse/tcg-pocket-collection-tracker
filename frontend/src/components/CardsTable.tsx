@@ -2,7 +2,7 @@ import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
 import type { Card as CardType } from '@/types'
 import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Card } from './Card.tsx'
 
@@ -18,30 +18,10 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
   const { t } = useTranslation('common/sets')
-  const [scrollContainerHeight, setScrollContainerHeight] = useState('auto')
-
-  useLayoutEffect(() => {
-    const updateScrollContainerHeight = () => {
-      if (scrollRef.current) {
-        const headerHeight = (document.querySelector('#header') as HTMLElement | null)?.offsetHeight || 0
-        const filterbarHeight = (document.querySelector('#filterbar') as HTMLElement | null)?.offsetHeight || 0
-        const maxHeight = window.innerHeight - headerHeight - filterbarHeight
-
-        setScrollContainerHeight(`${maxHeight}px`)
-      }
-    }
-
-    updateScrollContainerHeight() // initial calculation
-    window.addEventListener('resize', updateScrollContainerHeight)
-
-    return () => {
-      window.removeEventListener('resize', updateScrollContainerHeight)
-    }
-  }, []) // You can add dependencies here if needed
 
   useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = 0
+    if (resetScrollTrigger) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }, [resetScrollTrigger])
 
@@ -118,11 +98,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
   })
 
   return (
-    <div
-      ref={scrollRef}
-      className="overflow-y-auto mt-2 sm:mt-4 px-4 flex flex-col justify-start"
-      style={{ scrollbarWidth: 'none', height: scrollContainerHeight }}
-    >
+    <div ref={scrollRef} className="mt-2 sm:mt-4 px-4 flex flex-col justify-start min-h-screen">
       {showStats && (
         <small className="text-left md:text-right mb-3 md:mb-[-25px] md:mt-[10px]">
           {cards.filter((c) => !c.linkedCardID).length} selected, {cards.filter((card) => (card.amount_owned ?? 0) > 0).length} uniques owned,{' '}
