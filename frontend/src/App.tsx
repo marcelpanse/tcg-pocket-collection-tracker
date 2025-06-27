@@ -17,6 +17,8 @@ import { fetchCollection } from './lib/fetchCollection.ts'
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
 const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
+const Trade2 = loadable(() => import('./pages/trade2/Trade2.tsx'))
+const Trade3 = loadable(() => import('./pages/trade2/Trade3.tsx'))
 const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
 
 function App() {
@@ -94,6 +96,8 @@ function App() {
             <Route path="/" element={<Overview />} />
             <Route path="/collection/:friendId?/trade?" element={<Collection />} />
             <Route path="/trade" element={<Trade />} />
+            <Route path="/trade/:friendId" element={<Trade2 />} />
+            <Route path="/trade2" element={<Trade3 />} />
           </Routes>
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
           <InstallPrompt />
