@@ -168,7 +168,7 @@ function Trade() {
                 Enable trading page
               </Button>
             ) : (
-              <Button variant="outline" onClick={() => navigate(`/collection/${account?.friend_id}/trade`)}>
+              <Button variant="outline" onClick={() => navigate('/trade2')}>
                 Open trading page
               </Button>
             )}
