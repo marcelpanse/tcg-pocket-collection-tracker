@@ -1,0 +1,32 @@
+{
+  "publicTradePage": "Public trade page:",
+  "friendID": "Friend ID:",
+  "lookingForCards": "Looking for cards:",
+  "forTradeCards": "For trade cards:",
+  "copiedInClipboard": "Copied cards for trading to clipboard!",
+  "lookingFor": "Looking For",
+  "forTrade": "For Trade",
+  "buyingTokens": "Buying Tokens",
+  "enableTradingPage": "Enable trading page",
+  "openTradingPage": "Open trading page",
+  "notLoggedIn": {
+    "title": "Sign up to view your tradeable cards",
+    "description": "By registering, you can keep track of your collection, trade with other users, and access exclusive features."
+  },
+  "noTradeableCards": {
+    "title": "You have no tradeable cards!",
+    "description": "Go to the collections page and input your collected cards to see what you can trade."
+  },
+  "noSellableCards": {
+    "title": "You have no sellable cards!",
+    "description": "If you believe you have sellable cards, go to the collections page and input your collected cards to see what you can sell."
+  },
+  "noCardsNeeded": {
+    "title": "You have all tradeable cards!",
+    "description": "Make sure you come back here when new rarities and packs are available for trade."
+  },
+  "goTrackYourCards": {
+    "title": "Go track your cards",
+    "description": "By tracking your cards, you can see what cards you still need to get, what cards you can trade with friends, and how many trade tokens you can earn with your current collection."
+  }
+}

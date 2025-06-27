@@ -1,0 +1,23 @@
+{
+  "title": "Importer",
+  "description": "Cette action ÉCRASERA votre collection actuelle avec les valeurs du fichier CSV importé. N'effectuez cette opération SEULEMENT si votre feuille de calcul contient les quantités exactes que vous souhaitez dans votre collection.",
+  "fileWasAborted": "Chargement du fichier annulé",
+  "errorWithFile": "Erreur avec le fichier",
+  "errorProcessingExcel": "Erreur lors du traitement du fichier Excel :",
+  "dragNDrop": "Glissez-déposez des fichiers ici, ou cliquez pour sélectionner des fichiers",
+  "loading": "Chargement du fichier Excel en cours",
+  "dataUpdated": "Données mises à jour :",
+  "expansionName": "Nom de l'extension",
+  "id": "ID",
+  "cardName": "Nom de la carte",
+  "statusCount": "Statut (Quantité)",
+  "added": "Ajouté(s) ({{count}})",
+  "updated": "Mis à jour ({{count}})",
+  "removed": "Supprimé",
+  "unknown": "Inconnu",
+  "noDataUpdated": "Aucune donnée mise à jour.",
+  "loggedOut": {
+    "title": "Inscrivez-vous pour importer vos cartes",
+    "description": "Pour importer votre feuille de calcul, veuillez vous connecter."
+  }
+}

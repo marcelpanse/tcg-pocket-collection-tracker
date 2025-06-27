@@ -9,11 +9,17 @@
   "ownCollectionDescription": "Pensez à partager cette page avec d'autres personnes pour leur permettre de trouver des échanges possibles.",
   "isActiveTrading": "Statut de la page d'échanges",
   "minNumberOfCardsToKeep": "Nombre minimum de cartes à conserver",
+  "maxNumberOfCardsWanted": "Nombre maximum de cartes désirées",
   "inActiveTradePage": "L'utilisateur « {{username}} » n'accepte actuellement aucun échange.",
   "inActiveTradeDescription": "Leur page d'échanges est désactivée. Veuillez les contacter si vous souhaitez faire un échange.",
   "friendAccountDetails": "ID de l'ami(e) : {{friend_id}} ({{username}}).",
   "minFilterTooltip": "La quantité maximale de cartes que vous souhaitez collectionner via les échanges.",
   "maxFilterTooltip": "La quantité minimale de cartes que vous devez posséder avant qu'elles n'apparaissent comme une option d'échange.",
   "minInputTooltip": "Le nombre minimum de cartes que vous souhaitez conserver après l'échange.",
-  "activeTradingInputTooltip": "Astuce : Vous pouvez désactiver (temporairement) votre page d'échanges si vous manquez de jetons d'échange."
+  "maxInputTooltip": "Le nombre maximum de cartes que vous souhaitez collectionner avec les échanges.",
+  "activeTradingInputTooltip": "Astuce : Vous pouvez désactiver (temporairement) votre page d'échanges si vous manquez de jetons d'échange.",
+  "accountSaved": "Compte enregistré.",
+  "errorSavingAccount": "Erreur lors de l'enregistrement de votre compte.",
+  "amountYouOwn": "Quantité que vous possédez",
+  "amountFriendOwns": "Quantité que votre ami(e) possède"
 }
