@@ -138,7 +138,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
   }
 
   return (
-    <div id="filterbar" className="flex flex-col gap-x-2 flex-wrap">
+    <div id="filterbar" className="sticky top-0 z-10 bg-neutral-900 border-b flex flex-col gap-x-2 flex-wrap">
       {children}
 
       <div className="flex items-center gap-2 flex-col md:flex-row gap-y-1 px-4 mb-2">
@@ -152,7 +152,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
           />
         )}
       </div>
-      <div className="items-center gap-2 flex-row gap-y-1 px-4 flex">
+      <div className="items-center gap-2 flex-row gap-y-1 px-4 flex pb-2">
         {visibleFilters?.search && <SearchInput setSearchValue={setSearchValue} />}
         {visibleFilters?.owned && <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />}
         {visibleFilters?.rarity && <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} collapse />}
