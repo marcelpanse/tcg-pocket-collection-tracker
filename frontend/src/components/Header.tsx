@@ -68,6 +68,11 @@ export function Header() {
                 <Button variant="ghost">{t('trade')}</Button>
               </Link>
             </NavigationMenuLink>
+            <NavigationMenuLink asChild className="hidden sm:block">
+              <Link to="/offers">
+                <Button variant="ghost">{t('offers')}</Button>
+              </Link>
+            </NavigationMenuLink>
             <PokemonCardDetector />
             <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden sm:block">

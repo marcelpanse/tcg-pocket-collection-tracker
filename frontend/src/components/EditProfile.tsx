@@ -155,7 +155,7 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
                           e.preventDefault()
 
                           setIsProfileDialogOpen(false)
-                          navigate(`/collection/${account?.friend_id}/trade`)
+                          navigate(`/trade/${account?.friend_id}`)
                         }}
                       >
                         {t('isPublicTradeButton')}
