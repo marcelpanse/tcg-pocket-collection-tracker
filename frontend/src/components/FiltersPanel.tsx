@@ -138,7 +138,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
   }
 
   return (
-    <div id="filterbar" className="sticky top-0 z-10 bg-neutral-900 border-b flex flex-col gap-x-2 flex-wrap">
+    <div id="filterbar" className="sticky top-0 z-10 bg-neutral-900 border-b border-neutral-700 flex flex-col gap-x-2 flex-wrap">
       {children}
 
       <div className="flex items-center gap-2 flex-col md:flex-row gap-y-1 px-4 mb-2">
