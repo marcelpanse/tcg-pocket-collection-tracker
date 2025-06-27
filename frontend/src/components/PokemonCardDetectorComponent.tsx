@@ -446,24 +446,6 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
     )
   }
 
-  const renderIncrementedCard = (row: CollectionRow) => {
-    const card: Card | undefined = allCards.find((x) => x.card_id === row.card_id)
-    if (card === undefined) {
-      return (
-        <div>
-          {row.card_id} → {row.amount_owned}
-        </div>
-      )
-    }
-
-    return (
-      <div className="w-1/5 relative">
-        <img src={getRightPathOfImage(card.image)} alt={getCardNameByLang(card, i18n.language)} className="w-full h-auto object-contain" />
-        <span>new copies → {row.amount_owned}</span>
-      </div>
-    )
-  }
-
   const Spinner = () => (
     <svg
       aria-hidden="true"
@@ -577,13 +559,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
               </Alert>
             )}
 
-            {state === State.Confirmation && (
-              <div>
-                <h3>Cards added successfully!</h3>
-                {incrementedCards.length === 0 && <p>No cards changed.</p>}
-                <div>{incrementedCards.map(renderIncrementedCard)}</div>
-              </div>
-            )}
+            {state === State.Confirmation && <p>Successfully added {incrementedCards.length * amount} cards!</p>}
 
             <DialogFooter className="gap-y-4">
               <Button
