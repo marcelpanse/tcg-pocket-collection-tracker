@@ -23,6 +23,12 @@ export interface CollectionRow {
   updated_at: string
 }
 
+export interface TradeRow {
+  from: string
+  to: string
+  card_id: string
+}
+
 export interface Expansion {
   name: string
   id: ExpansionId
