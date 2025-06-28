@@ -496,7 +496,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
               <Alert variant="default">
                 <AlertDescription className="flex items-center space-x-2">
                   <Spinner />
-                  <p>Downloading and initializing scan model, please wait... ({(initProgress * 100).toFixed(0)}%)</p>
+                  <p>{t('loading', { initProgress: (initProgress * 100).toFixed(0) })}</p>
                 </AlertDescription>
               </Alert>
             )}
@@ -556,12 +556,12 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
               <Alert variant="default">
                 <AlertDescription className="flex items-center space-x-2">
                   <Spinner />
-                  <p>Processing images...</p>
+                  <p>{t('processing')}</p>
                 </AlertDescription>
               </Alert>
             )}
 
-            {state === State.Confirmation && <p>Successfully added {incrementedCards.length * amount} cards!</p>}
+            {state === State.Confirmation && <p>{t('success', { n: incrementedCards.length * amount })}</p>}
 
             <DialogFooter className="gap-y-4">
               <Button
@@ -579,7 +579,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
               )}
               {state === State.Confirmation && (
                 <Button onClick={() => setState(State.Closed + 1)} variant="default">
-                  Scan more
+                  {t('scanMore')}
                 </Button>
               )}
             </DialogFooter>
