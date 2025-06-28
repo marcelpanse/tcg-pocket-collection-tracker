@@ -8,12 +8,12 @@ import { z } from 'zod'
 import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from './ui/input-otp.tsx'
 import { Input } from './ui/input.tsx'
 
-const EmailSchema = z.string().nonempty('Email is required').email('Email must be valid').max(255, 'Email must be less than 255 characters')
-
 export const Login = () => {
   const { setIsLoginDialogOpen } = use(UserContext)
   const { toast } = useToast()
   const { t } = useTranslation('login')
+
+  const EmailSchema = z.string().nonempty(t('emailRequired')).email(t('emailInvalid')).max(255, t('emailTooLong'))
 
   const [emailInput, setEmailInput] = useState('')
   const [emailSubmitted, setEmailSubmitted] = useState(false)
@@ -31,7 +31,7 @@ export const Login = () => {
 
       if (error) {
         console.log('supa OTP error', error)
-        toast({ title: 'There was an error verifying your OTP. Please try again.', variant: 'destructive' })
+        toast({ title: t('otpVerifyError'), variant: 'destructive' })
       } else {
         console.log('supa session', session)
         setIsLoginDialogOpen(false)
@@ -51,7 +51,7 @@ export const Login = () => {
     const { error } = await supabase.auth.signInWithOtp({ email: emailInput })
     if (error) {
       console.log('supa OTP error', error)
-      toast({ title: 'There was an error sending your OTP email. Please try again.', variant: 'destructive' })
+      toast({ title: t('otpSendError'), variant: 'destructive' })
     } else {
       setEmailSubmitted(true)
     }
@@ -87,7 +87,7 @@ export const Login = () => {
       <div className="flex justify-center gap-2 pt-4 align-center">
         <Input
           type="email"
-          placeholder="Email"
+          placeholder={t('email')}
           onChange={(e) => setEmailInput(e.target.value)}
           onKeyDown={async (e) => {
             if (e.key === 'Enter') {
@@ -99,7 +99,7 @@ export const Login = () => {
         <Button onClick={submitEmail}>{t('button')}</Button>
       </div>
 
-      <p className="mt-3 text-sm text-white/25">We'll only use your email for login.</p>
+      <p className="mt-3 text-sm text-white/25">{t('onlyEmail')}</p>
     </div>
   )
 }

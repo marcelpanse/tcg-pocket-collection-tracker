@@ -4,9 +4,11 @@ import { UserContext } from '@/lib/context/UserContext'
 import type { CollectionRow, ImportExportRow } from '@/types'
 import { use, useCallback, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
+import { useTranslation } from 'react-i18next'
 import XLSX from 'xlsx'
 
 export const ImportReader = () => {
+  const { t } = useTranslation('pages/import')
   const { user } = use(UserContext)
   const { ownedCards, setOwnedCards } = use(CollectionContext)
 
@@ -72,12 +74,12 @@ export const ImportReader = () => {
 
     reader.onabort = () => {
       setIsLoading(false)
-      setErrorMessage('File Was Aborted')
+      setErrorMessage(t('fileWasAborted'))
     }
 
     reader.onerror = () => {
       setIsLoading(false)
-      setErrorMessage('Error With File')
+      setErrorMessage(t('errorWithFile'))
     }
 
     reader.onload = async (e) => {
@@ -91,7 +93,7 @@ export const ImportReader = () => {
         console.log('Processed File Rows')
       } catch (error) {
         console.error('Error processing Excel file:', error)
-        setErrorMessage(`Error processing Excel file: ${error}`)
+        setErrorMessage(`${t('errorProcessingExcel')}: ${error}`)
       } finally {
         setIsLoading(false)
       }
@@ -105,11 +107,11 @@ export const ImportReader = () => {
     <>
       <div {...getRootProps()}>
         <input {...getInputProps()} />
-        <p>Drag 'n' drop some files here, or click to select files</p>
+        <p>{t('dragNDrop')}</p>
       </div>
       {isLoading && (
         <>
-          <p>Excel file is loading</p>
+          <p>{t('loading')}</p>
           <progress className="w-full" value={numberProcessed} />
         </>
       )}
@@ -119,14 +121,14 @@ export const ImportReader = () => {
         <div>
           {processedData.length > 0 ? (
             <pre>
-              Data updated:
+              {t('dataUpdated')}
               <table className="w-full text-left table-auto">
                 <thead>
                   <tr>
-                    <th>Expansion Name</th>
-                    <th>ID</th>
-                    <th>Card Name</th>
-                    <th>Status (Count)</th>
+                    <th>{t('expansionName')}</th>
+                    <th>{t('id')}</th>
+                    <th>{t('cardName')}</th>
+                    <th>{t('statusCount')}</th>
                   </tr>
                 </thead>
                 {processedData.map((d, index) => (
@@ -134,14 +136,22 @@ export const ImportReader = () => {
                     <tr>
                       <td>{d.Id}</td>
                       <td>{d.CardName}</td>
-                      <td>{d.added ? `Added (${d.NumberOwned})` : d.updated ? `Updated (${d.NumberOwned})` : d.removed ? 'Removed' : 'Unknown'}</td>
+                      <td>
+                        {d.added
+                          ? t('added', { count: d.NumberOwned })
+                          : d.updated
+                            ? t('updated', { count: d.NumberOwned })
+                            : d.removed
+                              ? t('removed')
+                              : t('unknown')}
+                      </td>
                     </tr>
                   </tbody>
                 ))}
               </table>
             </pre>
           ) : (
-            <pre>No Data Updated.</pre>
+            <pre>{t('noDataUpdated')}</pre>
           )}
         </div>
       )}

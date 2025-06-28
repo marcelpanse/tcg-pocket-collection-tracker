@@ -3,9 +3,11 @@ import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import type { ImportExportRow } from '@/types'
 import { use } from 'react'
+import { useTranslation } from 'react-i18next'
 import XLSX from 'xlsx'
 
 export const ExportWriter = () => {
+  const { t } = useTranslation('pages/export')
   const { ownedCards } = use(CollectionContext)
 
   const createFile = () => {
@@ -28,7 +30,7 @@ export const ExportWriter = () => {
 
   return (
     <Button onClick={() => createFile()} type="submit" className="w-40">
-      Download CSV file
+      {t('downloadCSV')}
     </Button>
   )
 }

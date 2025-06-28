@@ -11,7 +11,7 @@ interface MissionDetailProps {
 }
 
 function MissionDetail({ missionCardOptions, onClose }: MissionDetailProps) {
-  const { t } = useTranslation(['common/sets', 'common/packs'])
+  const { t } = useTranslation(['common/sets', 'common/packs', 'pages/collection'])
   const gettingExpansion = missionCardOptions[0] || ''
   const expansionId = gettingExpansion.length > 0 ? gettingExpansion.split('-')[0] : 'Unknown'
   const expansion = getExpansionById(expansionId) || expansions[0]
@@ -28,7 +28,9 @@ function MissionDetail({ missionCardOptions, onClose }: MissionDetailProps) {
       <SheetContent className="transition-all duration-300 ease-in-out border-slate-600 overflow-y-auto">
         <SheetHeader>
           <SheetTitle>
-            List of eligible cards: {missionCardOptions.length} option{missionCardOptions.length === 1 ? '' : 's'}
+            {missionCardOptions.length === 1
+              ? t('missionDetail.eligibleCards-singular', { options: 1 })
+              : t('missionDetail.eligibleCards-singular', { options: missionCardOptions.length })}
           </SheetTitle>
         </SheetHeader>
         {t(expansionName)}
@@ -43,7 +45,10 @@ function MissionDetail({ missionCardOptions, onClose }: MissionDetailProps) {
                 <p className="max-w-[130px] whitespace-nowrap font-semibold text-[12px] pt-2">
                   {cardId} - {getCardNameByLang(foundCard, i18n.language)}
                   <br />
-                  Chance from {t(foundCard.pack, { ns: 'common/packs' })}: {pullRateForSpecificCard(expansion, foundCard.pack, foundCard).toFixed(2)}%
+                  {t('missionDetail.chanceFrom', {
+                    pack: t(foundCard.pack, { ns: 'common/packs' }),
+                    chance: pullRateForSpecificCard(expansion, foundCard.pack, foundCard).toFixed(2),
+                  })}
                 </p>
               </div>
             )

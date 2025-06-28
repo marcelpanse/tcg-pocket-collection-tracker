@@ -1,0 +1,21 @@
+{
+  "cancel": "Cancel",
+  "clickToSelect": "Click to select",
+  "close": "Close",
+  "description": "You can upload multiple images at once. The system will scan each image for Pokemon cards and display the results. You can verify the matches, select or deselect detected cards, and choose how much to increment the quantity for selected cards.",
+  "deselectAll": "Deselect all",
+  "enterAmount": "Enter amount",
+  "extractedCard": "Extracted Card",
+  "hideEditMatches": "Hide edit matches",
+  "loading": "Downloading and initializing scan model, please wait... ({{initProgress}})",
+  "otherPotentialMatch": "Other potential matches:",
+  "percentMatch": "{{match}}% match",
+  "scan": "Scan",
+  "selectAll": "Select all",
+  "selectImages": "Select images",
+  "selected": "Selected",
+  "setIncrement": "Set increment for selected cards",
+  "showEditMatches": "Show edit matches",
+  "title": "Pokemon card scanner",
+  "updateSelectedCards": "Update selected cards"
+}

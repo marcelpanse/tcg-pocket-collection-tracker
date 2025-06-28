@@ -3,5 +3,12 @@
   "validEmail": "Veuillez entrer une adresse mail valide",
   "fill6Digit": "Merci. Entrez le code à 6 chiffres envoyé par mail.",
   "fillEmail": "Entrez votre adresse mail afin d'obtenir un lien de connexion. Si vous n'avez pas encore de compte, nous allons en créer un automatiquement pour vous. Nous n'utiliserons pas votre adresse mail pour autre chose.",
-  "button": "Se connecter / Créer un compte"
+  "button": "Se connecter / Créer un compte",
+  "emailRequired": "Une adresse e-mail est requise",
+  "emailInvalid": "L'adresse e-mail doit être valide",
+  "emailTooLong": "L'adresse e-mail doit contenir moins de 255 caractères",
+  "otpVerifyError": "Une erreur s'est produite lors de la vérification de votre code OTP. Veuillez réessayer.",
+  "otpSendError": "Une erreur s'est produite lors de l'envoi de votre e-mail OTP. Veuillez réessayer.",
+  "onlyEmail": "Nous utiliserons votre e-mail uniquement pour la connexion.",
+  "email": "Email"
 }

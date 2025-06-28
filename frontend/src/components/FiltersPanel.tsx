@@ -15,6 +15,7 @@ import { getCardNameByLang } from '@/lib/utils'
 import type { Card, CollectionRow, Mission, Rarity } from '@/types'
 import i18n from 'i18next'
 import { type FC, type JSX, useContext, useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface Props {
   children?: JSX.Element
@@ -43,6 +44,7 @@ interface Props {
 }
 
 const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToMissions, visibleFilters, filtersDialog, batchUpdate, share }: Props) => {
+  const { t } = useTranslation(['pages/collection'])
   const { user, setIsProfileDialogOpen } = useContext(UserContext)
   const { ownedCards, setOwnedCards } = useContext(CollectionContext)
 
@@ -160,11 +162,11 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
         {filtersDialog && (
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="outline">All filters</Button>
+              <Button variant="outline">{t('filters.allFilters')}</Button>
             </DialogTrigger>
             <DialogContent className="border-1 border-neutral-700 shadow-none">
               <DialogHeader>
-                <DialogTitle>Filters ({(getFilteredCards || []).filter((c) => !c.linkedCardID).length})</DialogTitle>
+                <DialogTitle>{t('filters.filtersCount', { count: (getFilteredCards || []).filter((c) => !c.linkedCardID).length })}</DialogTitle>
               </DialogHeader>
               <div className="flex flex-col gap-3">
                 {filtersDialog.search && <SearchInput setSearchValue={setSearchValue} fullWidth />}
@@ -205,7 +207,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
 
         {share && (
           <Button variant="outline" onClick={() => setIsProfileDialogOpen(true)}>
-            Share
+            {t('filters.share')}
           </Button>
         )}
       </div>

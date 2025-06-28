@@ -3,5 +3,12 @@
   "validEmail": "Please enter a valid email address",
   "fill6Digit": "Please enter the 6-digit code here.",
   "fillEmail": "Enter your email and we’ll send you a login code. If you’re new, we’ll set up your account automatically.",
-  "button": "Continue"
+  "button": "Continue",
+  "emailRequired": "Email is required",
+  "emailInvalid": "Email must be valid",
+  "emailTooLong": "Email must be less than 255 characters",
+  "otpVerifyError": "There was an error verifying your OTP. Please try again.",
+  "otpSendError": "There was an error sending your OTP email. Please try again.",
+  "onlyEmail": "We'll only use your email for login.",
+  "email": "Email"
 }

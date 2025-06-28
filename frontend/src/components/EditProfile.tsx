@@ -31,10 +31,10 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
 
   const formSchema = z.object({
     username: z.string().min(2, {
-      message: 'Username must be at least 2 characters.',
+      message: t('usernameTooShort'),
     }),
     friend_id: z.string().regex(/^[0-9]{16}$/, {
-      message: 'Friend ID is not valid, it must be 16 digits without dashes.',
+      message: t('friendIdInvalid'),
     }),
     is_public: z.boolean().optional(),
   })
@@ -63,10 +63,10 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
 
       setAccount(account.data as AccountRow)
 
-      toast({ title: 'Account saved.', variant: 'default' })
+      toast({ title: t('accountSaved'), variant: 'default' })
     } catch (e) {
       console.error('error saving account', e)
-      toast({ title: 'Error saving your account.', variant: 'destructive' })
+      toast({ title: t('accountSavingError'), variant: 'destructive' })
     }
   }
 
@@ -93,7 +93,7 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
                 <FormItem>
                   <FormLabel>{t('email')}</FormLabel>
                   <FormControl className="mt-2">
-                    <Input placeholder="Email" disabled value={user?.user.email} />
+                    <Input placeholder={t('email')} disabled value={user?.user.email} />
                   </FormControl>
                   <FormDescription>{t('registeredEmail')}</FormDescription>
                 </FormItem>
@@ -106,7 +106,7 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
                 <FormItem>
                   <FormLabel>{t('username')}</FormLabel>
                   <FormControl className="mt-2">
-                    <Input placeholder="Username" {...field} />
+                    <Input placeholder={t('username')} {...field} />
                   </FormControl>
                   <FormDescription>{t('usernameDescription')}</FormDescription>
                   <FormMessage />
@@ -120,7 +120,7 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
                 <FormItem>
                   <FormLabel>{t('friendID')}</FormLabel>
                   <FormControl className="mt-2">
-                    <Input placeholder="Friend ID" {...field} />
+                    <Input placeholder={t('friendID')} {...field} />
                   </FormControl>
                   <FormDescription>{t('friendIDDescription')}</FormDescription>
                   <FormMessage />

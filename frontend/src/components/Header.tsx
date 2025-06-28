@@ -184,8 +184,7 @@ export function Header() {
             <span className="text-md">
               <br />
               <br />
-              The site is hosted on Github Pages and Supabase. Costs are covered by me as a hobby project. If you like the project, please consider supporting
-              me using the coffee button in the bottom right corner.
+              {t('support')}
             </span>
 
             <span className="flex mt-6 justify-center gap-4">

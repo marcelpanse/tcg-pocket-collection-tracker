@@ -13,10 +13,12 @@ import { NoSellableCards } from '@/pages/trade/components/NoSellableCards.tsx'
 import { NoTradeableCards } from '@/pages/trade/components/NoTradeableCards.tsx'
 import type { Card, Rarity } from '@/types'
 import { use, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
 import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 
 function Trade() {
+  const { t } = useTranslation('pages/trade')
   const navigate = useNavigate()
   const { user, account, setIsProfileDialogOpen } = use(UserContext)
   const { ownedCards, selectedCardId, setSelectedCardId } = use(CollectionContext)
@@ -85,13 +87,13 @@ function Trade() {
     let cardValues = ''
 
     if (account?.is_public) {
-      cardValues += `Public trade page: https://tcgpocketcollectiontracker.com/#/collection/${account?.friend_id}/trade\n`
+      cardValues += `${t('publicTradePage')} https://tcgpocketcollectiontracker.com/#/collection/${account?.friend_id}/trade\n`
     }
     if (account?.username) {
-      cardValues += `Friend ID: ${account.friend_id} (${account.username})\n\n`
+      cardValues += `${t('friendID')} ${account.friend_id} (${account.username})\n\n`
     }
 
-    cardValues += 'Looking for cards:\n'
+    cardValues += `${t('lookingForCards')}\n`
 
     const lookingForCardsSorted = lookingForCardsFiltered.sort((a, b) => {
       const expansionComparison = a.expansion.localeCompare(b.expansion)
@@ -111,7 +113,7 @@ function Trade() {
 
     const raritiesLookingFor = lookingForCardsFiltered.map((c) => c.rarity)
 
-    cardValues += '\n\nFor trade cards:\n'
+    cardValues += `\n\n${t('forTradeCards')}\n`
     const forTradeCardsSorted = forTradeCardsFiltered.filter((c) => raritiesLookingFor.includes(c.rarity)).sort((a, b) => a.rarity.localeCompare(b.rarity))
 
     for (let i = 0; i < forTradeCardsSorted.length; i++) {
@@ -127,7 +129,7 @@ function Trade() {
 
   const copyToClipboard = async () => {
     const cardValues = getCardValues()
-    toast({ title: 'Copied cards for trading to clipboard!', variant: 'default', duration: 3000 })
+    toast({ title: t('copiedInClipboard'), variant: 'default', duration: 3000 })
 
     await navigator.clipboard.writeText(cardValues)
   }
@@ -145,9 +147,9 @@ function Trade() {
       <Tabs defaultValue={currentTab} onValueChange={(value) => setCurrentTab(value)}>
         <div className="mx-auto max-w-[900px] flex flex-row flex-wrap align-center gap-x-4 gap-y-2 px-4">
           <TabsList className="flex-grow m-auto flex-wrap h-auto border-1 border-neutral-700 rounded-md">
-            <TabsTrigger value="looking_for">Looking For</TabsTrigger>
-            <TabsTrigger value="for_trade">For Trade</TabsTrigger>
-            <TabsTrigger value="buying_tokens">Buying Tokens</TabsTrigger>
+            <TabsTrigger value="looking_for">{t('lookingFor')}</TabsTrigger>
+            <TabsTrigger value="for_trade">{t('forTrade')}</TabsTrigger>
+            <TabsTrigger value="buying_tokens">{t('buyingTokens')}</TabsTrigger>
           </TabsList>
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
           <div className="sm:mt-1 flex flex-row flex-wrap align-center gap-x-4 gap-y-1">
@@ -165,11 +167,11 @@ function Trade() {
             </Button>
             {!account?.is_public ? (
               <Button variant="outline" onClick={() => enableTradingPage()}>
-                Enable trading page
+                {t('enableTradingPage')}
               </Button>
             ) : (
               <Button variant="outline" onClick={() => navigate(`/collection/${account?.friend_id}/trade`)}>
-                Open trading page
+                {t('openTradingPage')}
               </Button>
             )}
           </div>
