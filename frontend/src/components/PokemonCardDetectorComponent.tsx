@@ -2,7 +2,6 @@ import { incrementMultipleCards } from '@/components/Card'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogOverlay, DialogTitle } from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
@@ -64,7 +63,6 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
 
   const [initProgress, setInitProgress] = useState(0)
   const [amount, setAmount] = useState(1)
-  const [showPotentialMatches, setShowPotentialMatches] = useState<boolean>(false)
 
   const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
   const [incrementedCards, setIncrementedCards] = useState<CollectionRow[]>([])
@@ -76,7 +74,6 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
       if (extractedCards.length > 0) {
         setExtractedCards([])
         setAmount(1)
-        setShowPotentialMatches(false)
       }
     }
     if (state !== State.Closed) {
@@ -98,7 +95,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
     }
   }
 
-  function getRightPathOfImage(imageUrl: string | undefined): string {
+  function getRightPathOfImage(imageUrl: string | undefined): Promise<string> {
     const langCode = i18n.language.split('-')[0].toUpperCase()
     const baseName = imageUrl
       ?.split('/')
@@ -106,13 +103,22 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
       ?.replace(/_[A-Z]{2}\.webp$/, `_${langCode}.webp`)
     const imagePath = `/images/${i18n.language}/${baseName}`
 
-    const img = new Image()
-    img.src = imagePath
-    img.onerror = () => {
-      return `/images/en-US/${imageUrl?.split('/').at(-1)}`
-    }
+    return new Promise((resolve) => {
+      const img = new Image()
 
-    return imagePath
+      img.onload = () => {
+        console.log('right path returning', imagePath)
+        resolve(imagePath)
+      }
+
+      img.onerror = () => {
+        const fallbackPath = `/images/en-US/${imageUrl?.split('/').at(-1)}`
+        console.log('right path error returning', fallbackPath)
+        resolve(fallbackPath)
+      }
+
+      img.src = imagePath
+    })
   }
 
   const hashingService = ImageSimilarityService.getInstance()
@@ -152,7 +158,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                 return existingHash
               }
 
-              const resolvedImagePath = getRightPathOfImage(card.image)
+              const resolvedImagePath = await getRightPathOfImage(card.image)
               const hash = await hashingService.calculatePerceptualHash(resolvedImagePath)
               return { id: card.card_id, hash }
             } catch (error) {
@@ -244,7 +250,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                   ? {
                       id: bestMatch.id,
                       similarity: bestMatch.similarity,
-                      imageUrl: getRightPathOfImage(bestMatch.card.image),
+                      imageUrl: await getRightPathOfImage(bestMatch.card.image),
                     }
                   : undefined,
                 topMatches,
@@ -320,29 +326,6 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
 
   const selectedCount = extractedCards.filter((card) => card.selected).length
 
-  const handleChangeMatch = (cardIndex: number, matchId: string) => {
-    setExtractedCards((prev) => {
-      const updated = [...prev]
-      const card = updated[cardIndex]
-
-      if (card.topMatches) {
-        const newMatch = card.topMatches.find((match) => match.id === matchId)
-        if (newMatch) {
-          updated[cardIndex] = {
-            ...card,
-            matchedCard: {
-              id: newMatch.id,
-              similarity: newMatch.similarity,
-              imageUrl: getRightPathOfImage(newMatch.card.image),
-            },
-          }
-        }
-      }
-
-      return updated
-    })
-  }
-
   const handleConfirm = async () => {
     if (amount === 0) {
       setState(State.ProcessUpdates + 1)
@@ -373,7 +356,9 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
     setState(State.ProcessUpdates + 1)
   }
 
-  const renderPotentialMatches = (card: ExtractedCard, index: number) => {
+  const renderPotentialMatches = async (card: ExtractedCard, index: number) => {
+    const matchedCardImageUrl = card.matchedCard ? await getRightPathOfImage(card.matchedCard.imageUrl) : ''
+
     return (
       <div
         key={index}
@@ -383,35 +368,6 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
         onClick={() => handleSelect(index, !card.selected)}
       >
         <div className="flex flex-col items-center">
-          {/* Selection indicator */}
-          {card.matchedCard && card.topMatches && showPotentialMatches && (
-            <div className="mt-2 mb-2 w-full">
-              <p className="text-sm font-medium mb-4">{t('otherPotentialMatch')}</p>
-              <div className="grid grid-cols-4 gap-1">
-                {card.topMatches
-                  .filter((match) => match.id !== card.matchedCard?.id)
-                  .map((match) => (
-                    <div
-                      key={match.id}
-                      className="p-1 border rounded cursor-pointer hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 transform hover:scale-150 hover:z-50 transition-all duration-200 ease-in-out"
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        handleChangeMatch(index, match.id)
-                      }}
-                      title={getCardNameByLang(match.card, i18n.language)}
-                    >
-                      <img
-                        src={getRightPathOfImage(match.card.image)}
-                        alt={getCardNameByLang(match.card, i18n.language)}
-                        className="w-full h-auto object-contain"
-                      />
-                      <div className="text-xs text-center mt-1 bg-black/60 text-white py-0.5 rounded">{(match.similarity * 100).toFixed(0)}%</div>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          )}
-
           {/* Extracted card and best match side by side */}
           <div className="flex w-full gap-2 mb-2">
             {/* Extracted card */}
@@ -423,7 +379,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
             {/* Best match card */}
             {card.matchedCard && (
               <div className="w-1/2 relative">
-                <img src={getRightPathOfImage(card.matchedCard.imageUrl)} alt="Best match" className="w-full h-auto object-contain" />
+                <img src={matchedCardImageUrl} alt="Best match" className="w-full h-auto object-contain" />
                 <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
                   {t('percentMatch', { match: (card.matchedCard.similarity * 100).toFixed(0) })}
                 </div>
@@ -531,9 +487,6 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                   <Button variant="outline" onClick={handleDeselectAll} className="hidden sm:block">
                     {t('deselectAll')}
                   </Button>
-                  <Button variant="outline" onClick={() => setShowPotentialMatches((prev) => !prev)}>
-                    {showPotentialMatches ? t('hideEditMatches') : t('showEditMatches')}
-                  </Button>
                   <Button variant="outline" onClick={handleSelectAll} className="hidden sm:block">
                     {t('selectAll')}
                   </Button>
@@ -544,10 +497,16 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                 </div>
 
                 <div className="flex flex-col items-center text-center">
-                  <label htmlFor="increment">
-                    {t('setIncrement')}
-                    <Input name="increment" type="number" min="0" value={amount} onChange={(e) => setAmount(Number(e.target.value))} />
-                  </label>
+                  <div className="flex gap-4">
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input type="radio" name="incrementType" value="increment" checked={amount === 1} onChange={() => setAmount(1)} />
+                      <span>{t('increment')}</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input type="radio" name="incrementType" value="decrement" checked={amount === -1} onChange={() => setAmount(-1)} />
+                      <span>{t('decrement')}</span>
+                    </label>
+                  </div>
                 </div>
               </div>
             )}
