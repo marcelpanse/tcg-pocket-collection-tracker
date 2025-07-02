@@ -74,7 +74,7 @@ function FancyCard({ selected, setIsSelected, card, size = 'default', clickable 
       style={{
         flex: '1 0 20%',
         perspective: '1000px',
-        transformStyle: 'preserve-3d',
+        transformStyle: typeof navigator !== 'undefined' && navigator.userAgent.toLowerCase().includes('firefox') ? 'flat' : 'preserve-3d', // Transform override to fix firefox issue
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
