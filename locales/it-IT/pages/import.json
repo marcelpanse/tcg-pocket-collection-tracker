@@ -1,0 +1,23 @@
+{
+  "title": "Importa",
+  "description": "This will OVERWRITE your current collection with the values from the imported CSV file. ONLY do this process if your spreadsheet contains the exact count values you want in your collection.",
+  "fileWasAborted": "Il file è stato interrotto",
+  "errorWithFile": "Errore con il file",
+  "errorProcessingExcel": "Errore di elaborazione del file Excel:",
+  "dragNDrop": "Trascina e rilascia qui i file, o clicca per selezionarli",
+  "loading": "File Excel in caricamento",
+  "dataUpdated": "Dati aggiornati:",
+  "expansionName": "Nome espansione",
+  "id": "ID",
+  "cardName": "Nome carta",
+  "statusCount": "Status (Count)",
+  "added": "Aggiunto ({{count}})",
+  "updated": "Aggiornato ({{count}})",
+  "removed": "Rimosso",
+  "unknown": "Sconosciuto",
+  "noDataUpdated": "Nessun dato aggiornato.",
+  "loggedOut": {
+    "title": "Iscriviti per importare le tue carte",
+    "description": "Accedi per importare il tuo foglio di calcolo."
+  }
+}
