@@ -12,10 +12,11 @@ import { allCards, expansionsDict } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { getCardNameByLang } from '@/lib/utils'
-import type { Card, CollectionRow, Mission, Rarity } from '@/types'
+import type { Card, CardType, CollectionRow, Mission, Rarity } from '@/types'
 import i18n from 'i18next'
 import { type FC, type JSX, useContext, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import CardTypeFilter from './filters/CardTypeFilter'
 
 interface Props {
   children?: JSX.Element
@@ -35,6 +36,7 @@ interface Props {
     pack?: boolean
     search?: boolean
     owned?: boolean
+    cardType?: boolean
     rarity?: boolean
     amount?: boolean
   }
@@ -52,6 +54,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
   const [searchValue, setSearchValue] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<string>('all')
   const [packFilter, setPackFilter] = useState<string>('all')
+  const [cardTypeFilter, setCardTypeFilter] = useState<CardType[]>([])
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
   const [numberFilter, setNumberFilter] = useState(0)
@@ -60,6 +63,14 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
   const filterRarities = (c: Card) => {
     if (rarityFilter.length === 0) return true
     return c.rarity !== '' && rarityFilter.includes(c.rarity)
+  }
+
+  const filterCardTypes = (c: Card) => {
+    if (cardTypeFilter.length === 0) return true
+    if (c.card_type.toLowerCase() === 'trainer') {
+      return cardTypeFilter.includes('trainer')
+    }
+    return c.energy !== '' && cardTypeFilter.includes(c.energy.toLowerCase() as CardType)
   }
 
   const getFilteredCards = useMemo(() => {
@@ -97,6 +108,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
       }
     }
     filteredCards = filteredCards.filter(filterRarities)
+    filteredCards = filteredCards.filter(filterCardTypes)
 
     if (searchValue) {
       filteredCards = filteredCards.filter((card) => {
@@ -120,7 +132,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
     }
 
     return filteredCards
-  }, [cards, expansionFilter, packFilter, rarityFilter, searchValue, ownedFilter, numberFilter, maxNumberFilter, langState])
+  }, [cards, expansionFilter, packFilter, rarityFilter, searchValue, ownedFilter, cardTypeFilter, numberFilter, maxNumberFilter, langState])
 
   useEffect(() => {
     onFiltersChanged(getFilteredCards)
@@ -180,6 +192,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
                 )}
                 {filtersDialog.pack && <PackFilter packFilter={packFilter} setPackFilter={setPackFilter} expansion={expansionFilter} fullWidth />}
                 {filtersDialog.rarity && <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />}
+                {filtersDialog.cardType && <CardTypeFilter cardTypeFilter={cardTypeFilter} setCardTypeFilter={setCardTypeFilter} />}
                 {filtersDialog.owned && <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} fullWidth />}
                 {filtersDialog.amount && (
                   <>

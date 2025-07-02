@@ -89,7 +89,7 @@ function Collection() {
         onFiltersChanged={(cards) => setFilteredCards(cards)}
         onChangeToMissions={(missions) => setMissions(missions)}
         visibleFilters={{ expansions: !isMobile, search: true, owned: !isMobile, rarity: !isMobile }}
-        filtersDialog={{ expansions: true, pack: true, search: true, owned: true, rarity: true, amount: true }}
+        filtersDialog={{ expansions: true, pack: true, search: true, owned: true, rarity: true, cardType: true, amount: true }}
         batchUpdate={Boolean(!friendCards)}
         share
       >
