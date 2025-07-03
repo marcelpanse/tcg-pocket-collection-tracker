@@ -1,9 +1,11 @@
 import { Card as CardComponent } from '@/components/Card'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { getCardById, getExpansionById, pullRateForSpecificCard, sellableForTokensDictionary } from '@/lib/CardsDB.ts'
+import { CollectionContext } from '@/lib/context/CollectionContext'
 import { getCardNameByLang } from '@/lib/utils'
-import type { Card } from '@/types'
+import type { Card, CollectionRow } from '@/types'
 import i18n from 'i18next'
+import { use } from 'react'
 import { useTranslation } from 'react-i18next'
 
 interface CardDetailProps {
@@ -15,9 +17,19 @@ function CardDetail({ cardId, onClose }: Readonly<CardDetailProps>) {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
   const card: Card = getCardById(cardId) || ({} as Card)
   const expansion = getExpansionById(card.expansion)
+  const { ownedCards } = use(CollectionContext)
 
   // if we draw from 'everypack' we need to take one of the packs to calculated based on
   const packName = card.pack === 'everypack' ? expansion?.packs[0].name : card.pack
+
+  const updatedTimestamp = ownedCards.find((oc: CollectionRow) => oc.card_id === cardId)?.updated_at
+
+  const formatTimestamp = (timestamp: string) => {
+    return new Intl.DateTimeFormat(undefined, {
+      dateStyle: 'long',
+      timeStyle: 'long',
+    }).format(new Date(timestamp))
+  }
 
   return (
     <Sheet
@@ -92,6 +104,12 @@ function CardDetail({ cardId, onClose }: Readonly<CardDetailProps>) {
               </p>
               <p>
                 <strong>{t('text.abilityEffect')}:</strong> {card.ability?.effect || 'N/A'}
+              </p>
+            </div>
+
+            <div className="mt-4">
+              <p className="text-neutral-400 text-sm">
+                <strong className="font-semibold">{t('text.updated')}:</strong> {updatedTimestamp ? formatTimestamp(updatedTimestamp) : 'N/A'}
               </p>
             </div>
           </div>
