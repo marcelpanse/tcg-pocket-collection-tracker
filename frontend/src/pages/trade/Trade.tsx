@@ -188,7 +188,7 @@ function Trade() {
           </TabsContent>
         </div>
       </Tabs>
-      <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
+      {selectedCardId && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}
     </div>
   )
 }

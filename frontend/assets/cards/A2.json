@@ -1,7 +1,7 @@
 [
   {
-    "id": "1",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_001_EN.webp",
+    "card_id": "A2-1",
+    "image": "/images/en-US/A2-1.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Oddish",
@@ -28,6 +28,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-1",
         "version": "Space-Time Smackdown #1",
         "rarity": "◊"
       }
@@ -36,8 +37,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "2",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_002_EN.webp",
+    "card_id": "A2-2",
+    "image": "/images/en-US/A2-2.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Gloom",
@@ -64,6 +65,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-2",
         "version": "Space-Time Smackdown #2",
         "rarity": "◊"
       }
@@ -72,8 +74,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "3",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_003_EN.webp",
+    "card_id": "A2-3",
+    "image": "/images/en-US/A2-3.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Bellossom",
@@ -100,6 +102,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-3",
         "version": "Space-Time Smackdown #3",
         "rarity": "◊◊"
       }
@@ -108,8 +111,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "4",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_004_EN.webp",
+    "card_id": "A2-4",
+    "image": "/images/en-US/A2-4.webp",
     "hp": "70",
     "energy": "Grass",
     "name": "Tangela",
@@ -136,6 +139,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-4",
         "version": "Space-Time Smackdown #4",
         "rarity": "◊"
       }
@@ -144,8 +148,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "5",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_005_EN.webp",
+    "card_id": "A2-5",
+    "image": "/images/en-US/A2-5.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Tangrowth",
@@ -172,10 +176,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-5",
         "version": "Space-Time Smackdown #5",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-156",
         "version": "Space-Time Smackdown #156",
         "rarity": "☆"
       }
@@ -184,8 +190,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "6",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_006_EN.webp",
+    "card_id": "A2-6",
+    "image": "/images/en-US/A2-6.webp",
     "hp": "50",
     "energy": "Grass",
     "name": "Yanma",
@@ -212,6 +218,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-6",
         "version": "Space-Time Smackdown #6",
         "rarity": "◊"
       }
@@ -220,8 +227,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "7",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_007_EN.webp",
+    "card_id": "A2-7",
+    "image": "/images/en-US/A2-7.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Yanmega ex",
@@ -248,14 +255,17 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-7",
         "version": "Space-Time Smackdown #7",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-180",
         "version": "Space-Time Smackdown #180",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-196",
         "version": "Space-Time Smackdown #196",
         "rarity": "☆☆"
       }
@@ -264,8 +274,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "8",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_008_EN.webp",
+    "card_id": "A2-8",
+    "image": "/images/en-US/A2-8.webp",
     "hp": "70",
     "energy": "Grass",
     "name": "Roselia",
@@ -292,6 +302,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-8",
         "version": "Space-Time Smackdown #8",
         "rarity": "◊"
       }
@@ -300,8 +311,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "9",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_009_EN.webp",
+    "card_id": "A2-9",
+    "image": "/images/en-US/A2-9.webp",
     "hp": "100",
     "energy": "Grass",
     "name": "Roserade",
@@ -328,6 +339,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-9",
         "version": "Space-Time Smackdown #9",
         "rarity": "◊◊"
       }
@@ -336,8 +348,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "10",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_010_EN.webp",
+    "card_id": "A2-10",
+    "image": "/images/en-US/A2-10.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Turtwig",
@@ -364,10 +376,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-10",
         "version": "Space-Time Smackdown #10",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-35",
         "version": "Promo-A #35",
         "rarity": ""
       }
@@ -376,8 +390,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "11",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_011_EN.webp",
+    "card_id": "A2-11",
+    "image": "/images/en-US/A2-11.webp",
     "hp": "100",
     "energy": "Grass",
     "name": "Grotle",
@@ -404,6 +418,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-11",
         "version": "Space-Time Smackdown #11",
         "rarity": "◊◊"
       }
@@ -412,8 +427,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "12",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_012_EN.webp",
+    "card_id": "A2-12",
+    "image": "/images/en-US/A2-12.webp",
     "hp": "160",
     "energy": "Grass",
     "name": "Torterra",
@@ -440,6 +455,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-12",
         "version": "Space-Time Smackdown #12",
         "rarity": "◊◊◊"
       }
@@ -448,8 +464,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "13",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_013_EN.webp",
+    "card_id": "A2-13",
+    "image": "/images/en-US/A2-13.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Kricketot",
@@ -476,6 +492,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-13",
         "version": "Space-Time Smackdown #13",
         "rarity": "◊"
       }
@@ -484,8 +501,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "14",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_014_EN.webp",
+    "card_id": "A2-14",
+    "image": "/images/en-US/A2-14.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Kricketune",
@@ -512,6 +529,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-14",
         "version": "Space-Time Smackdown #14",
         "rarity": "◊"
       }
@@ -520,8 +538,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "15",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_015_EN.webp",
+    "card_id": "A2-15",
+    "image": "/images/en-US/A2-15.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Burmy",
@@ -548,6 +566,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-15",
         "version": "Space-Time Smackdown #15",
         "rarity": "◊"
       }
@@ -556,8 +575,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "16",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_016_EN.webp",
+    "card_id": "A2-16",
+    "image": "/images/en-US/A2-16.webp",
     "hp": "120",
     "energy": "Grass",
     "name": "Wormadam",
@@ -584,6 +603,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-16",
         "version": "Space-Time Smackdown #16",
         "rarity": "◊"
       }
@@ -592,8 +612,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "17",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_017_EN.webp",
+    "card_id": "A2-17",
+    "image": "/images/en-US/A2-17.webp",
     "hp": "50",
     "energy": "Grass",
     "name": "Combee",
@@ -620,10 +640,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-17",
         "version": "Space-Time Smackdown #17",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-157",
         "version": "Space-Time Smackdown #157",
         "rarity": "☆"
       }
@@ -632,8 +654,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "18",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_018_EN.webp",
+    "card_id": "A2-18",
+    "image": "/images/en-US/A2-18.webp",
     "hp": "100",
     "energy": "Grass",
     "name": "Vespiquen",
@@ -660,6 +682,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-18",
         "version": "Space-Time Smackdown #18",
         "rarity": "◊◊"
       }
@@ -668,8 +691,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "19",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_019_EN.webp",
+    "card_id": "A2-19",
+    "image": "/images/en-US/A2-19.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Carnivine",
@@ -696,10 +719,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-19",
         "version": "Space-Time Smackdown #19",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-158",
         "version": "Space-Time Smackdown #158",
         "rarity": "☆"
       }
@@ -708,8 +733,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "20",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_020_EN.webp",
+    "card_id": "A2-20",
+    "image": "/images/en-US/A2-20.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Leafeon",
@@ -736,6 +761,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-20",
         "version": "Space-Time Smackdown #20",
         "rarity": "◊◊◊"
       }
@@ -744,8 +770,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "21",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_021_EN.webp",
+    "card_id": "A2-21",
+    "image": "/images/en-US/A2-21.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Mow Rotom",
@@ -772,6 +798,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-21",
         "version": "Space-Time Smackdown #21",
         "rarity": "◊"
       }
@@ -780,8 +807,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "22",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_022_EN.webp",
+    "card_id": "A2-22",
+    "image": "/images/en-US/A2-22.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Shaymin",
@@ -808,10 +835,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-22",
         "version": "Space-Time Smackdown #22",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-159",
         "version": "Space-Time Smackdown #159",
         "rarity": "☆"
       }
@@ -820,8 +849,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "23",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_023_EN.webp",
+    "card_id": "A2-23",
+    "image": "/images/en-US/A2-23.webp",
     "hp": "80",
     "energy": "Fire",
     "name": "Magmar",
@@ -848,6 +877,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-23",
         "version": "Space-Time Smackdown #23",
         "rarity": "◊"
       }
@@ -856,8 +886,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "24",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_024_EN.webp",
+    "card_id": "A2-24",
+    "image": "/images/en-US/A2-24.webp",
     "hp": "130",
     "energy": "Fire",
     "name": "Magmortar",
@@ -884,6 +914,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-24",
         "version": "Space-Time Smackdown #24",
         "rarity": "◊◊◊"
       }
@@ -892,8 +923,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "25",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_025_EN.webp",
+    "card_id": "A2-25",
+    "image": "/images/en-US/A2-25.webp",
     "hp": "70",
     "energy": "Fire",
     "name": "Slugma",
@@ -920,6 +951,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-25",
         "version": "Space-Time Smackdown #25",
         "rarity": "◊"
       }
@@ -928,8 +960,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "26",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_026_EN.webp",
+    "card_id": "A2-26",
+    "image": "/images/en-US/A2-26.webp",
     "hp": "120",
     "energy": "Fire",
     "name": "Magcargo",
@@ -956,6 +988,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-26",
         "version": "Space-Time Smackdown #26",
         "rarity": "◊◊"
       }
@@ -964,8 +997,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "27",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_027_EN.webp",
+    "card_id": "A2-27",
+    "image": "/images/en-US/A2-27.webp",
     "hp": "60",
     "energy": "Fire",
     "name": "Chimchar",
@@ -992,10 +1025,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-27",
         "version": "Space-Time Smackdown #27",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-40",
         "version": "Promo-A #40",
         "rarity": ""
       }
@@ -1004,8 +1039,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "28",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_028_EN.webp",
+    "card_id": "A2-28",
+    "image": "/images/en-US/A2-28.webp",
     "hp": "80",
     "energy": "Fire",
     "name": "Monferno",
@@ -1032,6 +1067,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-28",
         "version": "Space-Time Smackdown #28",
         "rarity": "◊◊"
       }
@@ -1040,8 +1076,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "29",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_029_EN.webp",
+    "card_id": "A2-29",
+    "image": "/images/en-US/A2-29.webp",
     "hp": "170",
     "energy": "Fire",
     "name": "Infernape ex",
@@ -1068,14 +1104,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-29",
         "version": "Space-Time Smackdown #29",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-181",
         "version": "Space-Time Smackdown #181",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-197",
         "version": "Space-Time Smackdown #197",
         "rarity": "☆☆"
       }
@@ -1084,8 +1123,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "30",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_030_EN.webp",
+    "card_id": "A2-30",
+    "image": "/images/en-US/A2-30.webp",
     "hp": "80",
     "energy": "Fire",
     "name": "Heat Rotom",
@@ -1112,6 +1151,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-30",
         "version": "Space-Time Smackdown #30",
         "rarity": "◊"
       }
@@ -1120,8 +1160,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "31",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_031_EN.webp",
+    "card_id": "A2-31",
+    "image": "/images/en-US/A2-31.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Swinub",
@@ -1148,6 +1188,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-31",
         "version": "Space-Time Smackdown #31",
         "rarity": "◊"
       }
@@ -1156,8 +1197,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "32",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_032_EN.webp",
+    "card_id": "A2-32",
+    "image": "/images/en-US/A2-32.webp",
     "hp": "110",
     "energy": "Water",
     "name": "Piloswine",
@@ -1184,6 +1225,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-32",
         "version": "Space-Time Smackdown #32",
         "rarity": "◊◊"
       }
@@ -1192,8 +1234,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "33",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_033_EN.webp",
+    "card_id": "A2-33",
+    "image": "/images/en-US/A2-33.webp",
     "hp": "160",
     "energy": "Water",
     "name": "Mamoswine",
@@ -1220,10 +1262,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-33",
         "version": "Space-Time Smackdown #33",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-160",
         "version": "Space-Time Smackdown #160",
         "rarity": "☆"
       }
@@ -1232,8 +1276,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "34",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_034_EN.webp",
+    "card_id": "A2-34",
+    "image": "/images/en-US/A2-34.webp",
     "hp": "110",
     "energy": "Water",
     "name": "Regice",
@@ -1260,6 +1304,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-34",
         "version": "Space-Time Smackdown #34",
         "rarity": "◊◊"
       }
@@ -1268,8 +1313,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "35",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_035_EN.webp",
+    "card_id": "A2-35",
+    "image": "/images/en-US/A2-35.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Piplup",
@@ -1296,10 +1341,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-35",
         "version": "Space-Time Smackdown #35",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-34",
         "version": "Promo-A #34",
         "rarity": ""
       }
@@ -1308,8 +1355,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "36",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_036_EN.webp",
+    "card_id": "A2-36",
+    "image": "/images/en-US/A2-36.webp",
     "hp": "90",
     "energy": "Water",
     "name": "Prinplup",
@@ -1336,6 +1383,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-36",
         "version": "Space-Time Smackdown #36",
         "rarity": "◊◊"
       }
@@ -1344,8 +1392,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "37",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_037_EN.webp",
+    "card_id": "A2-37",
+    "image": "/images/en-US/A2-37.webp",
     "hp": "150",
     "energy": "Water",
     "name": "Empoleon",
@@ -1372,6 +1420,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-37",
         "version": "Space-Time Smackdown #37",
         "rarity": "◊◊◊"
       }
@@ -1380,8 +1429,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "38",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_038_EN.webp",
+    "card_id": "A2-38",
+    "image": "/images/en-US/A2-38.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Buizel",
@@ -1408,6 +1457,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-38",
         "version": "Space-Time Smackdown #38",
         "rarity": "◊"
       }
@@ -1416,8 +1466,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "39",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_039_EN.webp",
+    "card_id": "A2-39",
+    "image": "/images/en-US/A2-39.webp",
     "hp": "90",
     "energy": "Water",
     "name": "Floatzel",
@@ -1444,6 +1494,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-39",
         "version": "Space-Time Smackdown #39",
         "rarity": "◊◊"
       }
@@ -1452,8 +1503,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "40",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_040_EN.webp",
+    "card_id": "A2-40",
+    "image": "/images/en-US/A2-40.webp",
     "hp": "70",
     "energy": "Water",
     "name": "Shellos",
@@ -1480,6 +1531,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-40",
         "version": "Space-Time Smackdown #40",
         "rarity": "◊"
       }
@@ -1488,8 +1540,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "41",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_041_EN.webp",
+    "card_id": "A2-41",
+    "image": "/images/en-US/A2-41.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Gastrodon",
@@ -1516,10 +1568,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-41",
         "version": "Space-Time Smackdown #41",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-161",
         "version": "Space-Time Smackdown #161",
         "rarity": "☆"
       }
@@ -1528,8 +1582,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "42",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_042_EN.webp",
+    "card_id": "A2-42",
+    "image": "/images/en-US/A2-42.webp",
     "hp": "50",
     "energy": "Water",
     "name": "Finneon",
@@ -1556,6 +1610,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-42",
         "version": "Space-Time Smackdown #42",
         "rarity": "◊"
       }
@@ -1564,8 +1619,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "43",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_043_EN.webp",
+    "card_id": "A2-43",
+    "image": "/images/en-US/A2-43.webp",
     "hp": "90",
     "energy": "Water",
     "name": "Lumineon",
@@ -1592,6 +1647,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-43",
         "version": "Space-Time Smackdown #43",
         "rarity": "◊◊"
       }
@@ -1600,8 +1656,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "44",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_044_EN.webp",
+    "card_id": "A2-44",
+    "image": "/images/en-US/A2-44.webp",
     "hp": "70",
     "energy": "Water",
     "name": "Snover",
@@ -1628,6 +1684,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-44",
         "version": "Space-Time Smackdown #44",
         "rarity": "◊"
       }
@@ -1636,8 +1693,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "45",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_045_EN.webp",
+    "card_id": "A2-45",
+    "image": "/images/en-US/A2-45.webp",
     "hp": "140",
     "energy": "Water",
     "name": "Abomasnow",
@@ -1664,6 +1721,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-45",
         "version": "Space-Time Smackdown #45",
         "rarity": "◊◊"
       }
@@ -1672,8 +1730,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "46",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_046_EN.webp",
+    "card_id": "A2-46",
+    "image": "/images/en-US/A2-46.webp",
     "hp": "90",
     "energy": "Water",
     "name": "Glaceon",
@@ -1700,6 +1758,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-46",
         "version": "Space-Time Smackdown #46",
         "rarity": "◊◊◊"
       }
@@ -1708,8 +1767,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "47",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_047_EN.webp",
+    "card_id": "A2-47",
+    "image": "/images/en-US/A2-47.webp",
     "hp": "80",
     "energy": "Water",
     "name": "Wash Rotom",
@@ -1736,6 +1795,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-47",
         "version": "Space-Time Smackdown #47",
         "rarity": "◊"
       }
@@ -1744,8 +1804,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "48",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_048_EN.webp",
+    "card_id": "A2-48",
+    "image": "/images/en-US/A2-48.webp",
     "hp": "80",
     "energy": "Water",
     "name": "Frost Rotom",
@@ -1772,6 +1832,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-48",
         "version": "Space-Time Smackdown #48",
         "rarity": "◊"
       }
@@ -1780,8 +1841,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "49",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_049_EN.webp",
+    "card_id": "A2-49",
+    "image": "/images/en-US/A2-49.webp",
     "hp": "150",
     "energy": "Water",
     "name": "Palkia ex",
@@ -1814,18 +1875,22 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-49",
         "version": "Space-Time Smackdown #49",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-182",
         "version": "Space-Time Smackdown #182",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-204",
         "version": "Space-Time Smackdown #204",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A2-206",
         "version": "Space-Time Smackdown #206",
         "rarity": "♛"
       }
@@ -1834,8 +1899,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "50",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_050_EN.webp",
+    "card_id": "A2-50",
+    "image": "/images/en-US/A2-50.webp",
     "hp": "50",
     "energy": "Water",
     "name": "Manaphy",
@@ -1862,14 +1927,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-50",
         "version": "Space-Time Smackdown #50",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-162",
         "version": "Space-Time Smackdown #162",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-48",
         "version": "Promo-A #48",
         "rarity": ""
       }
@@ -1878,8 +1946,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "51",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_051_EN.webp",
+    "card_id": "A2-51",
+    "image": "/images/en-US/A2-51.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Magnemite",
@@ -1906,6 +1974,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-51",
         "version": "Space-Time Smackdown #51",
         "rarity": "◊"
       }
@@ -1914,8 +1983,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "52",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_052_EN.webp",
+    "card_id": "A2-52",
+    "image": "/images/en-US/A2-52.webp",
     "hp": "80",
     "energy": "Lightning",
     "name": "Magneton",
@@ -1942,6 +2011,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-52",
         "version": "Space-Time Smackdown #52",
         "rarity": "◊◊"
       }
@@ -1950,8 +2020,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "53",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_053_EN.webp",
+    "card_id": "A2-53",
+    "image": "/images/en-US/A2-53.webp",
     "hp": "140",
     "energy": "Lightning",
     "name": "Magnezone",
@@ -1978,6 +2048,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-53",
         "version": "Space-Time Smackdown #53",
         "rarity": "◊◊◊"
       }
@@ -1986,8 +2057,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "54",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_054_EN.webp",
+    "card_id": "A2-54",
+    "image": "/images/en-US/A2-54.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Voltorb",
@@ -2014,16 +2085,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-54",
         "version": "Space-Time Smackdown #54",
         "rarity": "◊"
+      },
+      {
+        "card_id": "A3b-95",
+        "version": "Eevee Grove #95",
+        "rarity": "☆"
       }
     ],
     "artist": "Midori Harada",
     "crafting_cost": 35
   },
   {
-    "id": "55",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_055_EN.webp",
+    "card_id": "A2-55",
+    "image": "/images/en-US/A2-55.webp",
     "hp": "80",
     "energy": "Lightning",
     "name": "Electrode",
@@ -2050,16 +2127,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-55",
         "version": "Space-Time Smackdown #55",
         "rarity": "◊◊"
+      },
+      {
+        "card_id": "A3b-96",
+        "version": "Eevee Grove #96",
+        "rarity": "☆"
       }
     ],
     "artist": "Anesaki Dynamic",
     "crafting_cost": 70
   },
   {
-    "id": "56",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_056_EN.webp",
+    "card_id": "A2-56",
+    "image": "/images/en-US/A2-56.webp",
     "hp": "80",
     "energy": "Lightning",
     "name": "Electabuzz",
@@ -2086,6 +2169,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-56",
         "version": "Space-Time Smackdown #56",
         "rarity": "◊"
       }
@@ -2094,8 +2178,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "57",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_057_EN.webp",
+    "card_id": "A2-57",
+    "image": "/images/en-US/A2-57.webp",
     "hp": "120",
     "energy": "Lightning",
     "name": "Electivire",
@@ -2122,10 +2206,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-57",
         "version": "Space-Time Smackdown #57",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-36",
         "version": "Promo-A #36",
         "rarity": ""
       }
@@ -2134,8 +2220,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "58",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_058_EN.webp",
+    "card_id": "A2-58",
+    "image": "/images/en-US/A2-58.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Shinx",
@@ -2162,10 +2248,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-58",
         "version": "Space-Time Smackdown #58",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-163",
         "version": "Space-Time Smackdown #163",
         "rarity": "☆"
       }
@@ -2174,8 +2262,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "59",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_059_EN.webp",
+    "card_id": "A2-59",
+    "image": "/images/en-US/A2-59.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Luxio",
@@ -2202,6 +2290,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-59",
         "version": "Space-Time Smackdown #59",
         "rarity": "◊◊"
       }
@@ -2210,8 +2299,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "60",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_060_EN.webp",
+    "card_id": "A2-60",
+    "image": "/images/en-US/A2-60.webp",
     "hp": "130",
     "energy": "Lightning",
     "name": "Luxray",
@@ -2238,6 +2327,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-60",
         "version": "Space-Time Smackdown #60",
         "rarity": "◊◊◊"
       }
@@ -2246,8 +2336,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "61",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_061_EN.webp",
+    "card_id": "A2-61",
+    "image": "/images/en-US/A2-61.webp",
     "hp": "120",
     "energy": "Lightning",
     "name": "Pachirisu ex",
@@ -2274,14 +2364,17 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-61",
         "version": "Space-Time Smackdown #61",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-183",
         "version": "Space-Time Smackdown #183",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-198",
         "version": "Space-Time Smackdown #198",
         "rarity": "☆☆"
       }
@@ -2290,8 +2383,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "62",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_062_EN.webp",
+    "card_id": "A2-62",
+    "image": "/images/en-US/A2-62.webp",
     "hp": "70",
     "energy": "Lightning",
     "name": "Rotom",
@@ -2318,10 +2411,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-62",
         "version": "Space-Time Smackdown #62",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-164",
         "version": "Space-Time Smackdown #164",
         "rarity": "☆"
       }
@@ -2330,8 +2425,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "63",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_063_EN.webp",
+    "card_id": "A2-63",
+    "image": "/images/en-US/A2-63.webp",
     "hp": "50",
     "energy": "Psychic",
     "name": "Togepi",
@@ -2358,10 +2453,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-63",
         "version": "Space-Time Smackdown #63",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-41",
         "version": "Promo-A #41",
         "rarity": ""
       }
@@ -2370,8 +2467,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "64",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_064_EN.webp",
+    "card_id": "A2-64",
+    "image": "/images/en-US/A2-64.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Togetic",
@@ -2398,6 +2495,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-64",
         "version": "Space-Time Smackdown #64",
         "rarity": "◊◊"
       }
@@ -2406,8 +2504,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "65",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_065_EN.webp",
+    "card_id": "A2-65",
+    "image": "/images/en-US/A2-65.webp",
     "hp": "140",
     "energy": "Psychic",
     "name": "Togekiss",
@@ -2434,6 +2532,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-65",
         "version": "Space-Time Smackdown #65",
         "rarity": "◊◊◊"
       }
@@ -2442,8 +2541,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "66",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_066_EN.webp",
+    "card_id": "A2-66",
+    "image": "/images/en-US/A2-66.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Misdreavus",
@@ -2470,6 +2569,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-66",
         "version": "Space-Time Smackdown #66",
         "rarity": "◊"
       }
@@ -2478,8 +2578,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "67",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_067_EN.webp",
+    "card_id": "A2-67",
+    "image": "/images/en-US/A2-67.webp",
     "hp": "140",
     "energy": "Psychic",
     "name": "Mismagius ex",
@@ -2506,14 +2606,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-67",
         "version": "Space-Time Smackdown #67",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-184",
         "version": "Space-Time Smackdown #184",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-199",
         "version": "Space-Time Smackdown #199",
         "rarity": "☆☆"
       }
@@ -2522,8 +2625,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "68",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_068_EN.webp",
+    "card_id": "A2-68",
+    "image": "/images/en-US/A2-68.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Ralts",
@@ -2550,16 +2653,22 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-68",
         "version": "Space-Time Smackdown #68",
         "rarity": "◊"
+      },
+      {
+        "card_id": "A3b-97",
+        "version": "Eevee Grove #97",
+        "rarity": "☆"
       }
     ],
     "artist": "Miki Tanaka",
     "crafting_cost": 35
   },
   {
-    "id": "69",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_069_EN.webp",
+    "card_id": "A2-69",
+    "image": "/images/en-US/A2-69.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Kirlia",
@@ -2586,16 +2695,22 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-69",
         "version": "Space-Time Smackdown #69",
         "rarity": "◊"
+      },
+      {
+        "card_id": "A3b-98",
+        "version": "Eevee Grove #98",
+        "rarity": "☆"
       }
     ],
     "artist": "Yukiko Baba",
     "crafting_cost": 35
   },
   {
-    "id": "70",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_070_EN.webp",
+    "card_id": "A2-70",
+    "image": "/images/en-US/A2-70.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Duskull",
@@ -2622,6 +2737,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-70",
         "version": "Space-Time Smackdown #70",
         "rarity": "◊"
       }
@@ -2630,8 +2746,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "71",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_071_EN.webp",
+    "card_id": "A2-71",
+    "image": "/images/en-US/A2-71.webp",
     "hp": "90",
     "energy": "Psychic",
     "name": "Dusclops",
@@ -2658,6 +2774,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-71",
         "version": "Space-Time Smackdown #71",
         "rarity": "◊◊"
       }
@@ -2666,8 +2783,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "72",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_072_EN.webp",
+    "card_id": "A2-72",
+    "image": "/images/en-US/A2-72.webp",
     "hp": "130",
     "energy": "Psychic",
     "name": "Dusknoir",
@@ -2694,6 +2811,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-72",
         "version": "Space-Time Smackdown #72",
         "rarity": "◊◊◊"
       }
@@ -2702,8 +2820,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "73",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_073_EN.webp",
+    "card_id": "A2-73",
+    "image": "/images/en-US/A2-73.webp",
     "hp": "50",
     "energy": "Psychic",
     "name": "Drifloon",
@@ -2730,10 +2848,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-73",
         "version": "Space-Time Smackdown #73",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-165",
         "version": "Space-Time Smackdown #165",
         "rarity": "☆"
       }
@@ -2742,8 +2862,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "74",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_074_EN.webp",
+    "card_id": "A2-74",
+    "image": "/images/en-US/A2-74.webp",
     "hp": "100",
     "energy": "Psychic",
     "name": "Drifblim",
@@ -2770,6 +2890,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-74",
         "version": "Space-Time Smackdown #74",
         "rarity": "◊◊"
       }
@@ -2778,8 +2899,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "75",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_075_EN.webp",
+    "card_id": "A2-75",
+    "image": "/images/en-US/A2-75.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Uxie",
@@ -2806,6 +2927,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-75",
         "version": "Space-Time Smackdown #75",
         "rarity": "◊◊"
       }
@@ -2814,8 +2936,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "76",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_076_EN.webp",
+    "card_id": "A2-76",
+    "image": "/images/en-US/A2-76.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Mesprit",
@@ -2842,10 +2964,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-76",
         "version": "Space-Time Smackdown #76",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-166",
         "version": "Space-Time Smackdown #166",
         "rarity": "☆"
       }
@@ -2854,8 +2978,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "77",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_077_EN.webp",
+    "card_id": "A2-77",
+    "image": "/images/en-US/A2-77.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Azelf",
@@ -2882,6 +3006,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-77",
         "version": "Space-Time Smackdown #77",
         "rarity": "◊◊"
       }
@@ -2890,8 +3015,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "78",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_078_EN.webp",
+    "card_id": "A2-78",
+    "image": "/images/en-US/A2-78.webp",
     "hp": "120",
     "energy": "Psychic",
     "name": "Giratina",
@@ -2918,10 +3043,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-78",
         "version": "Space-Time Smackdown #78",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-167",
         "version": "Space-Time Smackdown #167",
         "rarity": "☆"
       }
@@ -2930,8 +3057,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "79",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_079_EN.webp",
+    "card_id": "A2-79",
+    "image": "/images/en-US/A2-79.webp",
     "hp": "110",
     "energy": "Psychic",
     "name": "Cresselia",
@@ -2958,10 +3085,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-79",
         "version": "Space-Time Smackdown #79",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-168",
         "version": "Space-Time Smackdown #168",
         "rarity": "☆"
       }
@@ -2970,8 +3099,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "80",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_080_EN.webp",
+    "card_id": "A2-80",
+    "image": "/images/en-US/A2-80.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Rhyhorn",
@@ -2998,6 +3127,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-80",
         "version": "Space-Time Smackdown #80",
         "rarity": "◊"
       }
@@ -3006,8 +3136,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "81",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_081_EN.webp",
+    "card_id": "A2-81",
+    "image": "/images/en-US/A2-81.webp",
     "hp": "110",
     "energy": "Fighting",
     "name": "Rhydon",
@@ -3034,6 +3164,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-81",
         "version": "Space-Time Smackdown #81",
         "rarity": "◊◊"
       }
@@ -3042,8 +3173,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "82",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_082_EN.webp",
+    "card_id": "A2-82",
+    "image": "/images/en-US/A2-82.webp",
     "hp": "160",
     "energy": "Fighting",
     "name": "Rhyperior",
@@ -3070,10 +3201,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-82",
         "version": "Space-Time Smackdown #82",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-169",
         "version": "Space-Time Smackdown #169",
         "rarity": "☆"
       }
@@ -3082,8 +3215,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "83",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_083_EN.webp",
+    "card_id": "A2-83",
+    "image": "/images/en-US/A2-83.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Gligar",
@@ -3110,6 +3243,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-83",
         "version": "Space-Time Smackdown #83",
         "rarity": "◊"
       }
@@ -3118,8 +3252,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "84",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_084_EN.webp",
+    "card_id": "A2-84",
+    "image": "/images/en-US/A2-84.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Gliscor",
@@ -3146,6 +3280,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-84",
         "version": "Space-Time Smackdown #84",
         "rarity": "◊◊"
       }
@@ -3154,8 +3289,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "85",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_085_EN.webp",
+    "card_id": "A2-85",
+    "image": "/images/en-US/A2-85.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Hitmontop",
@@ -3182,6 +3317,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-85",
         "version": "Space-Time Smackdown #85",
         "rarity": "◊"
       }
@@ -3190,8 +3326,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "86",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_086_EN.webp",
+    "card_id": "A2-86",
+    "image": "/images/en-US/A2-86.webp",
     "hp": "70",
     "energy": "Fighting",
     "name": "Nosepass",
@@ -3218,6 +3354,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-86",
         "version": "Space-Time Smackdown #86",
         "rarity": "◊"
       }
@@ -3226,8 +3363,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "87",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_087_EN.webp",
+    "card_id": "A2-87",
+    "image": "/images/en-US/A2-87.webp",
     "hp": "120",
     "energy": "Fighting",
     "name": "Regirock",
@@ -3254,6 +3391,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-87",
         "version": "Space-Time Smackdown #87",
         "rarity": "◊◊"
       }
@@ -3262,8 +3400,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "88",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_088_EN.webp",
+    "card_id": "A2-88",
+    "image": "/images/en-US/A2-88.webp",
     "hp": "90",
     "energy": "Fighting",
     "name": "Cranidos",
@@ -3290,6 +3428,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-88",
         "version": "Space-Time Smackdown #88",
         "rarity": "◊◊"
       }
@@ -3298,8 +3437,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "89",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_089_EN.webp",
+    "card_id": "A2-89",
+    "image": "/images/en-US/A2-89.webp",
     "hp": "150",
     "energy": "Fighting",
     "name": "Rampardos",
@@ -3326,6 +3465,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-89",
         "version": "Space-Time Smackdown #89",
         "rarity": "◊◊◊"
       }
@@ -3334,8 +3474,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "90",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_090_EN.webp",
+    "card_id": "A2-90",
+    "image": "/images/en-US/A2-90.webp",
     "hp": "120",
     "energy": "Fighting",
     "name": "Wormadam",
@@ -3362,6 +3502,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-90",
         "version": "Space-Time Smackdown #90",
         "rarity": "◊"
       }
@@ -3370,8 +3511,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "91",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_091_EN.webp",
+    "card_id": "A2-91",
+    "image": "/images/en-US/A2-91.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Riolu",
@@ -3398,6 +3539,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-91",
         "version": "Space-Time Smackdown #91",
         "rarity": "◊"
       }
@@ -3406,8 +3548,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "92",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_092_EN.webp",
+    "card_id": "A2-92",
+    "image": "/images/en-US/A2-92.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Lucario",
@@ -3434,10 +3576,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-92",
         "version": "Space-Time Smackdown #92",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-170",
         "version": "Space-Time Smackdown #170",
         "rarity": "☆"
       }
@@ -3446,8 +3590,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "93",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_093_EN.webp",
+    "card_id": "A2-93",
+    "image": "/images/en-US/A2-93.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Hippopotas",
@@ -3474,10 +3618,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-93",
         "version": "Space-Time Smackdown #93",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-171",
         "version": "Space-Time Smackdown #171",
         "rarity": "☆"
       }
@@ -3486,8 +3632,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "94",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_094_EN.webp",
+    "card_id": "A2-94",
+    "image": "/images/en-US/A2-94.webp",
     "hp": "140",
     "energy": "Fighting",
     "name": "Hippowdon",
@@ -3514,6 +3660,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-94",
         "version": "Space-Time Smackdown #94",
         "rarity": "◊◊"
       }
@@ -3522,8 +3669,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "95",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_095_EN.webp",
+    "card_id": "A2-95",
+    "image": "/images/en-US/A2-95.webp",
     "hp": "170",
     "energy": "Fighting",
     "name": "Gallade ex",
@@ -3550,15 +3697,23 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-95",
         "version": "Space-Time Smackdown #95",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-185",
         "version": "Space-Time Smackdown #185",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-200",
         "version": "Space-Time Smackdown #200",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A3b-106",
+        "version": "Eevee Grove #106",
         "rarity": "☆☆"
       }
     ],
@@ -3566,8 +3721,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "96",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_096_EN.webp",
+    "card_id": "A2-96",
+    "image": "/images/en-US/A2-96.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Murkrow",
@@ -3594,6 +3749,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-96",
         "version": "Space-Time Smackdown #96",
         "rarity": "◊"
       }
@@ -3602,8 +3758,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "97",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_097_EN.webp",
+    "card_id": "A2-97",
+    "image": "/images/en-US/A2-97.webp",
     "hp": "100",
     "energy": "Darkness",
     "name": "Honchkrow",
@@ -3630,6 +3786,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-97",
         "version": "Space-Time Smackdown #97",
         "rarity": "◊◊"
       }
@@ -3638,8 +3795,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "98",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_098_EN.webp",
+    "card_id": "A2-98",
+    "image": "/images/en-US/A2-98.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Sneasel",
@@ -3666,6 +3823,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-98",
         "version": "Space-Time Smackdown #98",
         "rarity": "◊"
       }
@@ -3674,8 +3832,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "99",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_099_EN.webp",
+    "card_id": "A2-99",
+    "image": "/images/en-US/A2-99.webp",
     "hp": "140",
     "energy": "Darkness",
     "name": "Weavile ex",
@@ -3702,14 +3860,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-99",
         "version": "Space-Time Smackdown #99",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-186",
         "version": "Space-Time Smackdown #186",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-201",
         "version": "Space-Time Smackdown #201",
         "rarity": "☆☆"
       }
@@ -3718,8 +3879,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "100",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_100_EN.webp",
+    "card_id": "A2-100",
+    "image": "/images/en-US/A2-100.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Poochyena",
@@ -3746,6 +3907,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-100",
         "version": "Space-Time Smackdown #100",
         "rarity": "◊"
       }
@@ -3754,8 +3916,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "101",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_101_EN.webp",
+    "card_id": "A2-101",
+    "image": "/images/en-US/A2-101.webp",
     "hp": "90",
     "energy": "Darkness",
     "name": "Mightyena",
@@ -3782,6 +3944,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-101",
         "version": "Space-Time Smackdown #101",
         "rarity": "◊◊"
       }
@@ -3790,8 +3953,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "102",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_102_EN.webp",
+    "card_id": "A2-102",
+    "image": "/images/en-US/A2-102.webp",
     "hp": "70",
     "energy": "Darkness",
     "name": "Stunky",
@@ -3818,6 +3981,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-102",
         "version": "Space-Time Smackdown #102",
         "rarity": "◊"
       }
@@ -3826,8 +3990,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "103",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_103_EN.webp",
+    "card_id": "A2-103",
+    "image": "/images/en-US/A2-103.webp",
     "hp": "100",
     "energy": "Darkness",
     "name": "Skuntank",
@@ -3854,6 +4018,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-103",
         "version": "Space-Time Smackdown #103",
         "rarity": "◊◊"
       }
@@ -3862,8 +4027,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "104",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_104_EN.webp",
+    "card_id": "A2-104",
+    "image": "/images/en-US/A2-104.webp",
     "hp": "80",
     "energy": "Darkness",
     "name": "Spiritomb",
@@ -3890,10 +4055,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-104",
         "version": "Space-Time Smackdown #104",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-172",
         "version": "Space-Time Smackdown #172",
         "rarity": "☆"
       }
@@ -3902,8 +4069,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "105",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_105_EN.webp",
+    "card_id": "A2-105",
+    "image": "/images/en-US/A2-105.webp",
     "hp": "70",
     "energy": "Darkness",
     "name": "Skorupi",
@@ -3930,6 +4097,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-105",
         "version": "Space-Time Smackdown #105",
         "rarity": "◊"
       }
@@ -3938,8 +4106,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "106",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_106_EN.webp",
+    "card_id": "A2-106",
+    "image": "/images/en-US/A2-106.webp",
     "hp": "120",
     "energy": "Darkness",
     "name": "Drapion",
@@ -3966,6 +4134,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-106",
         "version": "Space-Time Smackdown #106",
         "rarity": "◊◊"
       }
@@ -3974,8 +4143,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "107",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_107_EN.webp",
+    "card_id": "A2-107",
+    "image": "/images/en-US/A2-107.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Croagunk",
@@ -4002,10 +4171,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-107",
         "version": "Space-Time Smackdown #107",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-173",
         "version": "Space-Time Smackdown #173",
         "rarity": "☆"
       }
@@ -4014,8 +4185,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "108",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_108_EN.webp",
+    "card_id": "A2-108",
+    "image": "/images/en-US/A2-108.webp",
     "hp": "90",
     "energy": "Darkness",
     "name": "Toxicroak",
@@ -4042,6 +4213,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-108",
         "version": "Space-Time Smackdown #108",
         "rarity": "◊◊"
       }
@@ -4050,8 +4222,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "109",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_109_EN.webp",
+    "card_id": "A2-109",
+    "image": "/images/en-US/A2-109.webp",
     "hp": "110",
     "energy": "Darkness",
     "name": "Darkrai",
@@ -4078,6 +4250,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-109",
         "version": "Space-Time Smackdown #109",
         "rarity": "◊◊◊"
       }
@@ -4086,8 +4259,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "110",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_110_EN.webp",
+    "card_id": "A2-110",
+    "image": "/images/en-US/A2-110.webp",
     "hp": "140",
     "energy": "Darkness",
     "name": "Darkrai ex",
@@ -4114,18 +4287,22 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-110",
         "version": "Space-Time Smackdown #110",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-187",
         "version": "Space-Time Smackdown #187",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-202",
         "version": "Space-Time Smackdown #202",
         "rarity": "☆☆"
       },
       {
+        "card_id": "P-A-42",
         "version": "Promo-A #42",
         "rarity": ""
       }
@@ -4134,8 +4311,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "111",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_111_EN.webp",
+    "card_id": "A2-111",
+    "image": "/images/en-US/A2-111.webp",
     "hp": "80",
     "energy": "Metal",
     "name": "Skarmory",
@@ -4162,10 +4339,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-111",
         "version": "Space-Time Smackdown #111",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-39",
         "version": "Promo-A #39",
         "rarity": ""
       }
@@ -4174,8 +4353,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "112",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_112_EN.webp",
+    "card_id": "A2-112",
+    "image": "/images/en-US/A2-112.webp",
     "hp": "110",
     "energy": "Metal",
     "name": "Registeel",
@@ -4202,6 +4381,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-112",
         "version": "Space-Time Smackdown #112",
         "rarity": "◊◊"
       }
@@ -4210,8 +4390,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "113",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_113_EN.webp",
+    "card_id": "A2-113",
+    "image": "/images/en-US/A2-113.webp",
     "hp": "100",
     "energy": "Metal",
     "name": "Shieldon",
@@ -4238,6 +4418,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-113",
         "version": "Space-Time Smackdown #113",
         "rarity": "◊◊"
       }
@@ -4246,8 +4427,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "114",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_114_EN.webp",
+    "card_id": "A2-114",
+    "image": "/images/en-US/A2-114.webp",
     "hp": "160",
     "energy": "Metal",
     "name": "Bastiodon",
@@ -4274,6 +4455,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-114",
         "version": "Space-Time Smackdown #114",
         "rarity": "◊◊◊"
       }
@@ -4282,8 +4464,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "115",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_115_EN.webp",
+    "card_id": "A2-115",
+    "image": "/images/en-US/A2-115.webp",
     "hp": "110",
     "energy": "Metal",
     "name": "Wormadam",
@@ -4310,6 +4492,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-115",
         "version": "Space-Time Smackdown #115",
         "rarity": "◊"
       }
@@ -4318,8 +4501,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "116",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_116_EN.webp",
+    "card_id": "A2-116",
+    "image": "/images/en-US/A2-116.webp",
     "hp": "60",
     "energy": "Metal",
     "name": "Bronzor",
@@ -4346,6 +4529,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-116",
         "version": "Space-Time Smackdown #116",
         "rarity": "◊"
       }
@@ -4354,8 +4538,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "117",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_117_EN.webp",
+    "card_id": "A2-117",
+    "image": "/images/en-US/A2-117.webp",
     "hp": "120",
     "energy": "Metal",
     "name": "Bronzong",
@@ -4382,6 +4566,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-117",
         "version": "Space-Time Smackdown #117",
         "rarity": "◊◊"
       }
@@ -4390,8 +4575,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "118",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_118_EN.webp",
+    "card_id": "A2-118",
+    "image": "/images/en-US/A2-118.webp",
     "hp": "130",
     "energy": "Metal",
     "name": "Probopass",
@@ -4418,6 +4603,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-118",
         "version": "Space-Time Smackdown #118",
         "rarity": "◊◊"
       }
@@ -4426,8 +4612,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "119",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_119_EN.webp",
+    "card_id": "A2-119",
+    "image": "/images/en-US/A2-119.webp",
     "hp": "150",
     "energy": "Metal",
     "name": "Dialga ex",
@@ -4460,18 +4646,22 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-119",
         "version": "Space-Time Smackdown #119",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-188",
         "version": "Space-Time Smackdown #188",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-205",
         "version": "Space-Time Smackdown #205",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A2-207",
         "version": "Space-Time Smackdown #207",
         "rarity": "♛"
       }
@@ -4480,8 +4670,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "120",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_120_EN.webp",
+    "card_id": "A2-120",
+    "image": "/images/en-US/A2-120.webp",
     "hp": "120",
     "energy": "Metal",
     "name": "Heatran",
@@ -4508,10 +4698,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-120",
         "version": "Space-Time Smackdown #120",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-174",
         "version": "Space-Time Smackdown #174",
         "rarity": "☆"
       }
@@ -4520,8 +4712,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "121",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_121_EN.webp",
+    "card_id": "A2-121",
+    "image": "/images/en-US/A2-121.webp",
     "hp": "60",
     "energy": "Dragon",
     "name": "Gible",
@@ -4548,6 +4740,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-121",
         "version": "Space-Time Smackdown #121",
         "rarity": "◊"
       }
@@ -4556,8 +4749,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "122",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_122_EN.webp",
+    "card_id": "A2-122",
+    "image": "/images/en-US/A2-122.webp",
     "hp": "90",
     "energy": "Dragon",
     "name": "Gabite",
@@ -4584,6 +4777,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-122",
         "version": "Space-Time Smackdown #122",
         "rarity": "◊◊"
       }
@@ -4592,8 +4786,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "123",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_123_EN.webp",
+    "card_id": "A2-123",
+    "image": "/images/en-US/A2-123.webp",
     "hp": "140",
     "energy": "Dragon",
     "name": "Garchomp",
@@ -4620,10 +4814,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-123",
         "version": "Space-Time Smackdown #123",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-175",
         "version": "Space-Time Smackdown #175",
         "rarity": "☆"
       }
@@ -4632,8 +4828,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "124",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_124_EN.webp",
+    "card_id": "A2-124",
+    "image": "/images/en-US/A2-124.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Lickitung",
@@ -4660,6 +4856,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-124",
         "version": "Space-Time Smackdown #124",
         "rarity": "◊"
       }
@@ -4668,8 +4865,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "125",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_125_EN.webp",
+    "card_id": "A2-125",
+    "image": "/images/en-US/A2-125.webp",
     "hp": "160",
     "energy": "Colorless",
     "name": "Lickilicky ex",
@@ -4696,14 +4893,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-125",
         "version": "Space-Time Smackdown #125",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-189",
         "version": "Space-Time Smackdown #189",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-203",
         "version": "Space-Time Smackdown #203",
         "rarity": "☆☆"
       }
@@ -4712,8 +4912,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "126",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_126_EN.webp",
+    "card_id": "A2-126",
+    "image": "/images/en-US/A2-126.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Eevee",
@@ -4740,6 +4940,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-126",
         "version": "Space-Time Smackdown #126",
         "rarity": "◊"
       }
@@ -4748,8 +4949,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "127",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_127_EN.webp",
+    "card_id": "A2-127",
+    "image": "/images/en-US/A2-127.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Porygon",
@@ -4776,6 +4977,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-127",
         "version": "Space-Time Smackdown #127",
         "rarity": "◊"
       }
@@ -4784,8 +4986,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "128",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_128_EN.webp",
+    "card_id": "A2-128",
+    "image": "/images/en-US/A2-128.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Porygon2",
@@ -4812,6 +5014,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-128",
         "version": "Space-Time Smackdown #128",
         "rarity": "◊◊"
       }
@@ -4820,8 +5023,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "129",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_129_EN.webp",
+    "card_id": "A2-129",
+    "image": "/images/en-US/A2-129.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Porygon-Z",
@@ -4848,6 +5051,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-129",
         "version": "Space-Time Smackdown #129",
         "rarity": "◊◊◊"
       }
@@ -4856,8 +5060,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "130",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_130_EN.webp",
+    "card_id": "A2-130",
+    "image": "/images/en-US/A2-130.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Aipom",
@@ -4884,6 +5088,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-130",
         "version": "Space-Time Smackdown #130",
         "rarity": "◊"
       }
@@ -4892,8 +5097,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "131",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_131_EN.webp",
+    "card_id": "A2-131",
+    "image": "/images/en-US/A2-131.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Ambipom",
@@ -4920,6 +5125,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-131",
         "version": "Space-Time Smackdown #131",
         "rarity": "◊"
       }
@@ -4928,8 +5134,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "132",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_132_EN.webp",
+    "card_id": "A2-132",
+    "image": "/images/en-US/A2-132.webp",
     "hp": "50",
     "energy": "Colorless",
     "name": "Starly",
@@ -4956,6 +5162,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-132",
         "version": "Space-Time Smackdown #132",
         "rarity": "◊"
       }
@@ -4964,8 +5171,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "133",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_133_EN.webp",
+    "card_id": "A2-133",
+    "image": "/images/en-US/A2-133.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Staravia",
@@ -4992,6 +5199,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-133",
         "version": "Space-Time Smackdown #133",
         "rarity": "◊"
       }
@@ -5000,8 +5208,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "134",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_134_EN.webp",
+    "card_id": "A2-134",
+    "image": "/images/en-US/A2-134.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Staraptor",
@@ -5028,10 +5236,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-134",
         "version": "Space-Time Smackdown #134",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-176",
         "version": "Space-Time Smackdown #176",
         "rarity": "☆"
       }
@@ -5040,8 +5250,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "135",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_135_EN.webp",
+    "card_id": "A2-135",
+    "image": "/images/en-US/A2-135.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Bidoof",
@@ -5068,10 +5278,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-135",
         "version": "Space-Time Smackdown #135",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-177",
         "version": "Space-Time Smackdown #177",
         "rarity": "☆"
       }
@@ -5080,8 +5292,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "136",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_136_EN.webp",
+    "card_id": "A2-136",
+    "image": "/images/en-US/A2-136.webp",
     "hp": "110",
     "energy": "Colorless",
     "name": "Bibarel",
@@ -5108,6 +5320,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-136",
         "version": "Space-Time Smackdown #136",
         "rarity": "◊"
       }
@@ -5116,8 +5329,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "137",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_137_EN.webp",
+    "card_id": "A2-137",
+    "image": "/images/en-US/A2-137.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Buneary",
@@ -5144,6 +5357,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-137",
         "version": "Space-Time Smackdown #137",
         "rarity": "◊"
       }
@@ -5152,8 +5366,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "138",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_138_EN.webp",
+    "card_id": "A2-138",
+    "image": "/images/en-US/A2-138.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Lopunny",
@@ -5180,6 +5394,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-138",
         "version": "Space-Time Smackdown #138",
         "rarity": "◊"
       }
@@ -5188,8 +5403,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "139",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_139_EN.webp",
+    "card_id": "A2-139",
+    "image": "/images/en-US/A2-139.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Glameow",
@@ -5216,10 +5431,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-139",
         "version": "Space-Time Smackdown #139",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-178",
         "version": "Space-Time Smackdown #178",
         "rarity": "☆"
       }
@@ -5228,8 +5445,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "140",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_140_EN.webp",
+    "card_id": "A2-140",
+    "image": "/images/en-US/A2-140.webp",
     "hp": "110",
     "energy": "Colorless",
     "name": "Purugly",
@@ -5256,6 +5473,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-140",
         "version": "Space-Time Smackdown #140",
         "rarity": "◊◊"
       }
@@ -5264,8 +5482,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "141",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_141_EN.webp",
+    "card_id": "A2-141",
+    "image": "/images/en-US/A2-141.webp",
     "hp": "70",
     "energy": "Colorless",
     "name": "Chatot",
@@ -5292,6 +5510,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-141",
         "version": "Space-Time Smackdown #141",
         "rarity": "◊"
       }
@@ -5300,8 +5519,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "142",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_142_EN.webp",
+    "card_id": "A2-142",
+    "image": "/images/en-US/A2-142.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Fan Rotom",
@@ -5328,6 +5547,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-142",
         "version": "Space-Time Smackdown #142",
         "rarity": "◊"
       }
@@ -5336,8 +5556,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "143",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_143_EN.webp",
+    "card_id": "A2-143",
+    "image": "/images/en-US/A2-143.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Regigigas",
@@ -5364,10 +5584,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-143",
         "version": "Space-Time Smackdown #143",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-179",
         "version": "Space-Time Smackdown #179",
         "rarity": "☆"
       }
@@ -5376,8 +5598,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "144",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_144_EN.webp",
+    "card_id": "A2-144",
+    "image": "/images/en-US/A2-144.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Skull Fossil",
@@ -5394,6 +5616,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-144",
         "version": "Space-Time Smackdown #144",
         "rarity": "◊"
       }
@@ -5402,8 +5625,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "145",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_145_EN.webp",
+    "card_id": "A2-145",
+    "image": "/images/en-US/A2-145.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Armor Fossil",
@@ -5420,6 +5643,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-145",
         "version": "Space-Time Smackdown #145",
         "rarity": "◊"
       }
@@ -5428,8 +5652,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "146",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_146_EN.webp",
+    "card_id": "A2-146",
+    "image": "/images/en-US/A2-146.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Pokémon Communication",
@@ -5446,6 +5670,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-146",
         "version": "Space-Time Smackdown #146",
         "rarity": "◊◊"
       }
@@ -5454,8 +5679,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "147",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_147_EN.webp",
+    "card_id": "A2-147",
+    "image": "/images/en-US/A2-147.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Giant Cape",
@@ -5472,6 +5697,7 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-147",
         "version": "Space-Time Smackdown #147",
         "rarity": "◊◊"
       }
@@ -5480,8 +5706,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "148",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_148_EN.webp",
+    "card_id": "A2-148",
+    "image": "/images/en-US/A2-148.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Rocky Helmet",
@@ -5498,6 +5724,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-148",
         "version": "Space-Time Smackdown #148",
         "rarity": "◊◊"
       }
@@ -5506,8 +5733,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "149",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_149_EN.webp",
+    "card_id": "A2-149",
+    "image": "/images/en-US/A2-149.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Lum Berry",
@@ -5524,6 +5751,7 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-149",
         "version": "Space-Time Smackdown #149",
         "rarity": "◊◊"
       }
@@ -5532,8 +5760,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "150",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_150_EN.webp",
+    "card_id": "A2-150",
+    "image": "/images/en-US/A2-150.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Cyrus",
@@ -5550,10 +5778,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-150",
         "version": "Space-Time Smackdown #150",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-190",
         "version": "Space-Time Smackdown #190",
         "rarity": "☆☆"
       }
@@ -5562,8 +5792,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "151",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_151_EN.webp",
+    "card_id": "A2-151",
+    "image": "/images/en-US/A2-151.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Team Galactic Grunt",
@@ -5580,10 +5810,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-151",
         "version": "Space-Time Smackdown #151",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-191",
         "version": "Space-Time Smackdown #191",
         "rarity": "☆☆"
       }
@@ -5592,8 +5824,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "152",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_152_EN.webp",
+    "card_id": "A2-152",
+    "image": "/images/en-US/A2-152.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Cynthia",
@@ -5610,10 +5842,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-152",
         "version": "Space-Time Smackdown #152",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-192",
         "version": "Space-Time Smackdown #192",
         "rarity": "☆☆"
       }
@@ -5622,8 +5856,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "153",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_153_EN.webp",
+    "card_id": "A2-153",
+    "image": "/images/en-US/A2-153.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Volkner",
@@ -5640,10 +5874,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-153",
         "version": "Space-Time Smackdown #153",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-193",
         "version": "Space-Time Smackdown #193",
         "rarity": "☆☆"
       }
@@ -5652,8 +5888,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "154",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_154_EN.webp",
+    "card_id": "A2-154",
+    "image": "/images/en-US/A2-154.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Dawn",
@@ -5670,10 +5906,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-154",
         "version": "Space-Time Smackdown #154",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-194",
         "version": "Space-Time Smackdown #194",
         "rarity": "☆☆"
       }
@@ -5682,8 +5920,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "155",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_155_EN.webp",
+    "card_id": "A2-155",
+    "image": "/images/en-US/A2-155.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Mars",
@@ -5700,10 +5938,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-155",
         "version": "Space-Time Smackdown #155",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-195",
         "version": "Space-Time Smackdown #195",
         "rarity": "☆☆"
       }
@@ -5712,8 +5952,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "156",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_156_EN.webp",
+    "card_id": "A2-156",
+    "image": "/images/en-US/A2-156.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Tangrowth",
@@ -5740,10 +5980,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-5",
         "version": "Space-Time Smackdown #5",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-156",
         "version": "Space-Time Smackdown #156",
         "rarity": "☆"
       }
@@ -5752,8 +5994,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "157",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_157_EN.webp",
+    "card_id": "A2-157",
+    "image": "/images/en-US/A2-157.webp",
     "hp": "50",
     "energy": "Grass",
     "name": "Combee",
@@ -5780,10 +6022,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-17",
         "version": "Space-Time Smackdown #17",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-157",
         "version": "Space-Time Smackdown #157",
         "rarity": "☆"
       }
@@ -5792,8 +6036,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "158",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_158_EN.webp",
+    "card_id": "A2-158",
+    "image": "/images/en-US/A2-158.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Carnivine",
@@ -5820,10 +6064,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-19",
         "version": "Space-Time Smackdown #19",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-158",
         "version": "Space-Time Smackdown #158",
         "rarity": "☆"
       }
@@ -5832,8 +6078,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "159",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_159_EN.webp",
+    "card_id": "A2-159",
+    "image": "/images/en-US/A2-159.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Shaymin",
@@ -5860,10 +6106,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-22",
         "version": "Space-Time Smackdown #22",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-159",
         "version": "Space-Time Smackdown #159",
         "rarity": "☆"
       }
@@ -5872,8 +6120,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "160",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_160_EN.webp",
+    "card_id": "A2-160",
+    "image": "/images/en-US/A2-160.webp",
     "hp": "160",
     "energy": "Water",
     "name": "Mamoswine",
@@ -5900,10 +6148,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-33",
         "version": "Space-Time Smackdown #33",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-160",
         "version": "Space-Time Smackdown #160",
         "rarity": "☆"
       }
@@ -5912,8 +6162,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "161",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_161_EN.webp",
+    "card_id": "A2-161",
+    "image": "/images/en-US/A2-161.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Gastrodon",
@@ -5940,10 +6190,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-41",
         "version": "Space-Time Smackdown #41",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-161",
         "version": "Space-Time Smackdown #161",
         "rarity": "☆"
       }
@@ -5952,8 +6204,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "162",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_162_EN.webp",
+    "card_id": "A2-162",
+    "image": "/images/en-US/A2-162.webp",
     "hp": "50",
     "energy": "Water",
     "name": "Manaphy",
@@ -5980,14 +6232,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-50",
         "version": "Space-Time Smackdown #50",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-162",
         "version": "Space-Time Smackdown #162",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-48",
         "version": "Promo-A #48",
         "rarity": ""
       }
@@ -5996,8 +6251,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "163",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_163_EN.webp",
+    "card_id": "A2-163",
+    "image": "/images/en-US/A2-163.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Shinx",
@@ -6024,10 +6279,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-58",
         "version": "Space-Time Smackdown #58",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-163",
         "version": "Space-Time Smackdown #163",
         "rarity": "☆"
       }
@@ -6036,8 +6293,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "164",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_164_EN.webp",
+    "card_id": "A2-164",
+    "image": "/images/en-US/A2-164.webp",
     "hp": "70",
     "energy": "Lightning",
     "name": "Rotom",
@@ -6064,10 +6321,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-62",
         "version": "Space-Time Smackdown #62",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-164",
         "version": "Space-Time Smackdown #164",
         "rarity": "☆"
       }
@@ -6076,8 +6335,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "165",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_165_EN.webp",
+    "card_id": "A2-165",
+    "image": "/images/en-US/A2-165.webp",
     "hp": "50",
     "energy": "Psychic",
     "name": "Drifloon",
@@ -6104,10 +6363,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-73",
         "version": "Space-Time Smackdown #73",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-165",
         "version": "Space-Time Smackdown #165",
         "rarity": "☆"
       }
@@ -6116,8 +6377,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "166",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_166_EN.webp",
+    "card_id": "A2-166",
+    "image": "/images/en-US/A2-166.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Mesprit",
@@ -6144,10 +6405,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-76",
         "version": "Space-Time Smackdown #76",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-166",
         "version": "Space-Time Smackdown #166",
         "rarity": "☆"
       }
@@ -6156,8 +6419,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "167",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_167_EN.webp",
+    "card_id": "A2-167",
+    "image": "/images/en-US/A2-167.webp",
     "hp": "120",
     "energy": "Psychic",
     "name": "Giratina",
@@ -6184,10 +6447,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-78",
         "version": "Space-Time Smackdown #78",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-167",
         "version": "Space-Time Smackdown #167",
         "rarity": "☆"
       }
@@ -6196,8 +6461,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "168",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_168_EN.webp",
+    "card_id": "A2-168",
+    "image": "/images/en-US/A2-168.webp",
     "hp": "110",
     "energy": "Psychic",
     "name": "Cresselia",
@@ -6224,10 +6489,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-79",
         "version": "Space-Time Smackdown #79",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-168",
         "version": "Space-Time Smackdown #168",
         "rarity": "☆"
       }
@@ -6236,8 +6503,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "169",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_169_EN.webp",
+    "card_id": "A2-169",
+    "image": "/images/en-US/A2-169.webp",
     "hp": "160",
     "energy": "Fighting",
     "name": "Rhyperior",
@@ -6264,10 +6531,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-82",
         "version": "Space-Time Smackdown #82",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-169",
         "version": "Space-Time Smackdown #169",
         "rarity": "☆"
       }
@@ -6276,8 +6545,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "170",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_170_EN.webp",
+    "card_id": "A2-170",
+    "image": "/images/en-US/A2-170.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Lucario",
@@ -6304,10 +6573,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-92",
         "version": "Space-Time Smackdown #92",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-170",
         "version": "Space-Time Smackdown #170",
         "rarity": "☆"
       }
@@ -6316,8 +6587,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "171",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_171_EN.webp",
+    "card_id": "A2-171",
+    "image": "/images/en-US/A2-171.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Hippopotas",
@@ -6344,10 +6615,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-93",
         "version": "Space-Time Smackdown #93",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-171",
         "version": "Space-Time Smackdown #171",
         "rarity": "☆"
       }
@@ -6356,8 +6629,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "172",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_172_EN.webp",
+    "card_id": "A2-172",
+    "image": "/images/en-US/A2-172.webp",
     "hp": "80",
     "energy": "Darkness",
     "name": "Spiritomb",
@@ -6384,10 +6657,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-104",
         "version": "Space-Time Smackdown #104",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-172",
         "version": "Space-Time Smackdown #172",
         "rarity": "☆"
       }
@@ -6396,8 +6671,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "173",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_173_EN.webp",
+    "card_id": "A2-173",
+    "image": "/images/en-US/A2-173.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Croagunk",
@@ -6424,10 +6699,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-107",
         "version": "Space-Time Smackdown #107",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-173",
         "version": "Space-Time Smackdown #173",
         "rarity": "☆"
       }
@@ -6436,8 +6713,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "174",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_174_EN.webp",
+    "card_id": "A2-174",
+    "image": "/images/en-US/A2-174.webp",
     "hp": "120",
     "energy": "Metal",
     "name": "Heatran",
@@ -6464,10 +6741,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-120",
         "version": "Space-Time Smackdown #120",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-174",
         "version": "Space-Time Smackdown #174",
         "rarity": "☆"
       }
@@ -6476,8 +6755,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "175",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_175_EN.webp",
+    "card_id": "A2-175",
+    "image": "/images/en-US/A2-175.webp",
     "hp": "140",
     "energy": "Dragon",
     "name": "Garchomp",
@@ -6504,10 +6783,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-123",
         "version": "Space-Time Smackdown #123",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-175",
         "version": "Space-Time Smackdown #175",
         "rarity": "☆"
       }
@@ -6516,8 +6797,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "176",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_176_EN.webp",
+    "card_id": "A2-176",
+    "image": "/images/en-US/A2-176.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Staraptor",
@@ -6544,10 +6825,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-134",
         "version": "Space-Time Smackdown #134",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-176",
         "version": "Space-Time Smackdown #176",
         "rarity": "☆"
       }
@@ -6556,8 +6839,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "177",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_177_EN.webp",
+    "card_id": "A2-177",
+    "image": "/images/en-US/A2-177.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Bidoof",
@@ -6584,10 +6867,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-135",
         "version": "Space-Time Smackdown #135",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-177",
         "version": "Space-Time Smackdown #177",
         "rarity": "☆"
       }
@@ -6596,8 +6881,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "178",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_178_EN.webp",
+    "card_id": "A2-178",
+    "image": "/images/en-US/A2-178.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Glameow",
@@ -6624,10 +6909,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-139",
         "version": "Space-Time Smackdown #139",
         "rarity": "◊"
       },
       {
+        "card_id": "A2-178",
         "version": "Space-Time Smackdown #178",
         "rarity": "☆"
       }
@@ -6636,8 +6923,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "179",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_179_EN.webp",
+    "card_id": "A2-179",
+    "image": "/images/en-US/A2-179.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Regigigas",
@@ -6664,10 +6951,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-143",
         "version": "Space-Time Smackdown #143",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2-179",
         "version": "Space-Time Smackdown #179",
         "rarity": "☆"
       }
@@ -6676,8 +6965,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "180",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_180_EN.webp",
+    "card_id": "A2-180",
+    "image": "/images/en-US/A2-180.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Yanmega ex",
@@ -6704,14 +6993,17 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-7",
         "version": "Space-Time Smackdown #7",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-180",
         "version": "Space-Time Smackdown #180",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-196",
         "version": "Space-Time Smackdown #196",
         "rarity": "☆☆"
       }
@@ -6720,8 +7012,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "181",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_181_EN.webp",
+    "card_id": "A2-181",
+    "image": "/images/en-US/A2-181.webp",
     "hp": "170",
     "energy": "Fire",
     "name": "Infernape ex",
@@ -6748,14 +7040,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-29",
         "version": "Space-Time Smackdown #29",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-181",
         "version": "Space-Time Smackdown #181",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-197",
         "version": "Space-Time Smackdown #197",
         "rarity": "☆☆"
       }
@@ -6764,8 +7059,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "182",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_182_EN.webp",
+    "card_id": "A2-182",
+    "image": "/images/en-US/A2-182.webp",
     "hp": "150",
     "energy": "Water",
     "name": "Palkia ex",
@@ -6798,18 +7093,22 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-49",
         "version": "Space-Time Smackdown #49",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-182",
         "version": "Space-Time Smackdown #182",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-204",
         "version": "Space-Time Smackdown #204",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A2-206",
         "version": "Space-Time Smackdown #206",
         "rarity": "♛"
       }
@@ -6818,8 +7117,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "183",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_183_EN.webp",
+    "card_id": "A2-183",
+    "image": "/images/en-US/A2-183.webp",
     "hp": "120",
     "energy": "Lightning",
     "name": "Pachirisu ex",
@@ -6846,14 +7145,17 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-61",
         "version": "Space-Time Smackdown #61",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-183",
         "version": "Space-Time Smackdown #183",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-198",
         "version": "Space-Time Smackdown #198",
         "rarity": "☆☆"
       }
@@ -6862,8 +7164,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "184",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_184_EN.webp",
+    "card_id": "A2-184",
+    "image": "/images/en-US/A2-184.webp",
     "hp": "140",
     "energy": "Psychic",
     "name": "Mismagius ex",
@@ -6890,14 +7192,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-67",
         "version": "Space-Time Smackdown #67",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-184",
         "version": "Space-Time Smackdown #184",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-199",
         "version": "Space-Time Smackdown #199",
         "rarity": "☆☆"
       }
@@ -6906,8 +7211,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "185",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_185_EN.webp",
+    "card_id": "A2-185",
+    "image": "/images/en-US/A2-185.webp",
     "hp": "170",
     "energy": "Fighting",
     "name": "Gallade ex",
@@ -6934,15 +7239,23 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-95",
         "version": "Space-Time Smackdown #95",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-185",
         "version": "Space-Time Smackdown #185",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-200",
         "version": "Space-Time Smackdown #200",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A3b-106",
+        "version": "Eevee Grove #106",
         "rarity": "☆☆"
       }
     ],
@@ -6950,8 +7263,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "186",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_186_EN.webp",
+    "card_id": "A2-186",
+    "image": "/images/en-US/A2-186.webp",
     "hp": "140",
     "energy": "Darkness",
     "name": "Weavile ex",
@@ -6978,14 +7291,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-99",
         "version": "Space-Time Smackdown #99",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-186",
         "version": "Space-Time Smackdown #186",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-201",
         "version": "Space-Time Smackdown #201",
         "rarity": "☆☆"
       }
@@ -6994,8 +7310,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "187",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_187_EN.webp",
+    "card_id": "A2-187",
+    "image": "/images/en-US/A2-187.webp",
     "hp": "140",
     "energy": "Darkness",
     "name": "Darkrai ex",
@@ -7022,18 +7338,22 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-110",
         "version": "Space-Time Smackdown #110",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-187",
         "version": "Space-Time Smackdown #187",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-202",
         "version": "Space-Time Smackdown #202",
         "rarity": "☆☆"
       },
       {
+        "card_id": "P-A-42",
         "version": "Promo-A #42",
         "rarity": ""
       }
@@ -7042,8 +7362,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "188",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_188_EN.webp",
+    "card_id": "A2-188",
+    "image": "/images/en-US/A2-188.webp",
     "hp": "150",
     "energy": "Metal",
     "name": "Dialga ex",
@@ -7076,18 +7396,22 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-119",
         "version": "Space-Time Smackdown #119",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-188",
         "version": "Space-Time Smackdown #188",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-205",
         "version": "Space-Time Smackdown #205",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A2-207",
         "version": "Space-Time Smackdown #207",
         "rarity": "♛"
       }
@@ -7096,8 +7420,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "189",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_189_EN.webp",
+    "card_id": "A2-189",
+    "image": "/images/en-US/A2-189.webp",
     "hp": "160",
     "energy": "Colorless",
     "name": "Lickilicky ex",
@@ -7124,14 +7448,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-125",
         "version": "Space-Time Smackdown #125",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-189",
         "version": "Space-Time Smackdown #189",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-203",
         "version": "Space-Time Smackdown #203",
         "rarity": "☆☆"
       }
@@ -7140,8 +7467,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "190",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_190_EN.webp",
+    "card_id": "A2-190",
+    "image": "/images/en-US/A2-190.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Cyrus",
@@ -7158,10 +7485,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-150",
         "version": "Space-Time Smackdown #150",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-190",
         "version": "Space-Time Smackdown #190",
         "rarity": "☆☆"
       }
@@ -7170,8 +7499,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "191",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_191_EN.webp",
+    "card_id": "A2-191",
+    "image": "/images/en-US/A2-191.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Team Galactic Grunt",
@@ -7188,10 +7517,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-151",
         "version": "Space-Time Smackdown #151",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-191",
         "version": "Space-Time Smackdown #191",
         "rarity": "☆☆"
       }
@@ -7200,8 +7531,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "192",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_192_EN.webp",
+    "card_id": "A2-192",
+    "image": "/images/en-US/A2-192.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Cynthia",
@@ -7218,10 +7549,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-152",
         "version": "Space-Time Smackdown #152",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-192",
         "version": "Space-Time Smackdown #192",
         "rarity": "☆☆"
       }
@@ -7230,8 +7563,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "193",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_193_EN.webp",
+    "card_id": "A2-193",
+    "image": "/images/en-US/A2-193.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Volkner",
@@ -7248,10 +7581,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-153",
         "version": "Space-Time Smackdown #153",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-193",
         "version": "Space-Time Smackdown #193",
         "rarity": "☆☆"
       }
@@ -7260,8 +7595,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "194",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_194_EN.webp",
+    "card_id": "A2-194",
+    "image": "/images/en-US/A2-194.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Dawn",
@@ -7278,10 +7613,12 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-154",
         "version": "Space-Time Smackdown #154",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-194",
         "version": "Space-Time Smackdown #194",
         "rarity": "☆☆"
       }
@@ -7290,8 +7627,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "195",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_195_EN.webp",
+    "card_id": "A2-195",
+    "image": "/images/en-US/A2-195.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Mars",
@@ -7308,10 +7645,12 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-155",
         "version": "Space-Time Smackdown #155",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-195",
         "version": "Space-Time Smackdown #195",
         "rarity": "☆☆"
       }
@@ -7320,8 +7659,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "196",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_196_EN.webp",
+    "card_id": "A2-196",
+    "image": "/images/en-US/A2-196.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Yanmega ex",
@@ -7348,14 +7687,17 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-7",
         "version": "Space-Time Smackdown #7",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-180",
         "version": "Space-Time Smackdown #180",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-196",
         "version": "Space-Time Smackdown #196",
         "rarity": "☆☆"
       }
@@ -7364,8 +7706,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "197",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_197_EN.webp",
+    "card_id": "A2-197",
+    "image": "/images/en-US/A2-197.webp",
     "hp": "170",
     "energy": "Fire",
     "name": "Infernape ex",
@@ -7392,14 +7734,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-29",
         "version": "Space-Time Smackdown #29",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-181",
         "version": "Space-Time Smackdown #181",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-197",
         "version": "Space-Time Smackdown #197",
         "rarity": "☆☆"
       }
@@ -7408,8 +7753,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "198",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_198_EN.webp",
+    "card_id": "A2-198",
+    "image": "/images/en-US/A2-198.webp",
     "hp": "120",
     "energy": "Lightning",
     "name": "Pachirisu ex",
@@ -7436,14 +7781,17 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-61",
         "version": "Space-Time Smackdown #61",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-183",
         "version": "Space-Time Smackdown #183",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-198",
         "version": "Space-Time Smackdown #198",
         "rarity": "☆☆"
       }
@@ -7452,8 +7800,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "199",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_199_EN.webp",
+    "card_id": "A2-199",
+    "image": "/images/en-US/A2-199.webp",
     "hp": "140",
     "energy": "Psychic",
     "name": "Mismagius ex",
@@ -7480,14 +7828,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-67",
         "version": "Space-Time Smackdown #67",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-184",
         "version": "Space-Time Smackdown #184",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-199",
         "version": "Space-Time Smackdown #199",
         "rarity": "☆☆"
       }
@@ -7496,8 +7847,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "200",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_200_EN.webp",
+    "card_id": "A2-200",
+    "image": "/images/en-US/A2-200.webp",
     "hp": "170",
     "energy": "Fighting",
     "name": "Gallade ex",
@@ -7524,15 +7875,23 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-95",
         "version": "Space-Time Smackdown #95",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-185",
         "version": "Space-Time Smackdown #185",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-200",
         "version": "Space-Time Smackdown #200",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A3b-106",
+        "version": "Eevee Grove #106",
         "rarity": "☆☆"
       }
     ],
@@ -7540,8 +7899,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "201",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_201_EN.webp",
+    "card_id": "A2-201",
+    "image": "/images/en-US/A2-201.webp",
     "hp": "140",
     "energy": "Darkness",
     "name": "Weavile ex",
@@ -7568,14 +7927,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-99",
         "version": "Space-Time Smackdown #99",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-186",
         "version": "Space-Time Smackdown #186",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-201",
         "version": "Space-Time Smackdown #201",
         "rarity": "☆☆"
       }
@@ -7584,8 +7946,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "202",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_202_EN.webp",
+    "card_id": "A2-202",
+    "image": "/images/en-US/A2-202.webp",
     "hp": "140",
     "energy": "Darkness",
     "name": "Darkrai ex",
@@ -7612,18 +7974,22 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-110",
         "version": "Space-Time Smackdown #110",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-187",
         "version": "Space-Time Smackdown #187",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-202",
         "version": "Space-Time Smackdown #202",
         "rarity": "☆☆"
       },
       {
+        "card_id": "P-A-42",
         "version": "Promo-A #42",
         "rarity": ""
       }
@@ -7632,8 +7998,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "203",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_203_EN.webp",
+    "card_id": "A2-203",
+    "image": "/images/en-US/A2-203.webp",
     "hp": "160",
     "energy": "Colorless",
     "name": "Lickilicky ex",
@@ -7660,14 +8026,17 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-125",
         "version": "Space-Time Smackdown #125",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-189",
         "version": "Space-Time Smackdown #189",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-203",
         "version": "Space-Time Smackdown #203",
         "rarity": "☆☆"
       }
@@ -7676,8 +8045,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "204",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_204_EN.webp",
+    "card_id": "A2-204",
+    "image": "/images/en-US/A2-204.webp",
     "hp": "150",
     "energy": "Water",
     "name": "Palkia ex",
@@ -7710,18 +8079,22 @@
     "pack": "palkiapack",
     "alternate_versions": [
       {
+        "card_id": "A2-49",
         "version": "Space-Time Smackdown #49",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-182",
         "version": "Space-Time Smackdown #182",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-204",
         "version": "Space-Time Smackdown #204",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A2-206",
         "version": "Space-Time Smackdown #206",
         "rarity": "♛"
       }
@@ -7730,8 +8103,8 @@
     "crafting_cost": 1500
   },
   {
-    "id": "205",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_205_EN.webp",
+    "card_id": "A2-205",
+    "image": "/images/en-US/A2-205.webp",
     "hp": "150",
     "energy": "Metal",
     "name": "Dialga ex",
@@ -7764,18 +8137,22 @@
     "pack": "dialgapack",
     "alternate_versions": [
       {
+        "card_id": "A2-119",
         "version": "Space-Time Smackdown #119",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-188",
         "version": "Space-Time Smackdown #188",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-205",
         "version": "Space-Time Smackdown #205",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A2-207",
         "version": "Space-Time Smackdown #207",
         "rarity": "♛"
       }
@@ -7784,8 +8161,8 @@
     "crafting_cost": 1500
   },
   {
-    "id": "206",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_206_EN.webp",
+    "card_id": "A2-206",
+    "image": "/images/en-US/A2-206.webp",
     "hp": "150",
     "energy": "Water",
     "name": "Palkia ex",
@@ -7818,18 +8195,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-49",
         "version": "Space-Time Smackdown #49",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-182",
         "version": "Space-Time Smackdown #182",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-204",
         "version": "Space-Time Smackdown #204",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A2-206",
         "version": "Space-Time Smackdown #206",
         "rarity": "♛"
       }
@@ -7838,8 +8219,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "207",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2/A2_207_EN.webp",
+    "card_id": "A2-207",
+    "image": "/images/en-US/A2-207.webp",
     "hp": "150",
     "energy": "Metal",
     "name": "Dialga ex",
@@ -7872,18 +8253,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-119",
         "version": "Space-Time Smackdown #119",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-188",
         "version": "Space-Time Smackdown #188",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-205",
         "version": "Space-Time Smackdown #205",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A2-207",
         "version": "Space-Time Smackdown #207",
         "rarity": "♛"
       }

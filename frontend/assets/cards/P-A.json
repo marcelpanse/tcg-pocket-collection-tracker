@@ -1,7 +1,7 @@
 [
   {
-    "id": "1",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_001_EN.webp",
+    "card_id": "P-A-1",
+    "image": "/images/en-US/P-A-1.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Potion",
@@ -18,6 +18,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-1",
         "version": "Promo-A #1",
         "rarity": ""
       }
@@ -26,8 +27,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "2",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_002_EN.webp",
+    "card_id": "P-A-2",
+    "image": "/images/en-US/P-A-2.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "X Speed",
@@ -44,6 +45,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-2",
         "version": "Promo-A #2",
         "rarity": ""
       }
@@ -52,8 +54,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "3",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_003_EN.webp",
+    "card_id": "P-A-3",
+    "image": "/images/en-US/P-A-3.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Hand Scope",
@@ -70,6 +72,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-3",
         "version": "Promo-A #3",
         "rarity": ""
       }
@@ -78,8 +81,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "4",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_004_EN.webp",
+    "card_id": "P-A-4",
+    "image": "/images/en-US/P-A-4.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Pokédex",
@@ -96,10 +99,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-4",
         "version": "Promo-A #4",
         "rarity": ""
       },
       {
+        "card_id": "P-A-8",
         "version": "Promo-A #8",
         "rarity": ""
       }
@@ -108,8 +113,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "5",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_005_EN.webp",
+    "card_id": "P-A-5",
+    "image": "/images/en-US/P-A-5.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Poké Ball",
@@ -126,10 +131,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-5",
         "version": "Promo-A #5",
         "rarity": ""
       },
       {
+        "card_id": "A2b-111",
         "version": "Shining Revelry #111",
         "rarity": "♛"
       }
@@ -138,8 +145,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "6",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_006_EN.webp",
+    "card_id": "P-A-6",
+    "image": "/images/en-US/P-A-6.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Red Card",
@@ -156,6 +163,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-6",
         "version": "Promo-A #6",
         "rarity": ""
       }
@@ -164,8 +172,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "7",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_007_EN.webp",
+    "card_id": "P-A-7",
+    "image": "/images/en-US/P-A-7.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Professor's Research",
@@ -182,6 +190,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-7",
         "version": "Promo-A #7",
         "rarity": ""
       }
@@ -190,8 +199,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "8",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_008_EN.webp",
+    "card_id": "P-A-8",
+    "image": "/images/en-US/P-A-8.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Pokédex",
@@ -208,10 +217,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-4",
         "version": "Promo-A #4",
         "rarity": ""
       },
       {
+        "card_id": "P-A-8",
         "version": "Promo-A #8",
         "rarity": ""
       }
@@ -220,8 +231,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "9",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_009_EN.webp",
+    "card_id": "P-A-9",
+    "image": "/images/en-US/P-A-9.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Pikachu",
@@ -248,18 +259,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-94",
         "version": "Genetic Apex #94",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-9",
         "version": "Promo-A #9",
         "rarity": ""
       },
       {
+        "card_id": "P-A-15",
         "version": "Promo-A #15",
         "rarity": ""
       },
       {
+        "card_id": "P-A-26",
         "version": "Promo-A #26",
         "rarity": ""
       }
@@ -268,8 +283,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "10",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_010_EN.webp",
+    "card_id": "P-A-10",
+    "image": "/images/en-US/P-A-10.webp",
     "hp": "120",
     "energy": "Psychic",
     "name": "Mewtwo",
@@ -296,10 +311,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-128",
         "version": "Genetic Apex #128",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-10",
         "version": "Promo-A #10",
         "rarity": ""
       }
@@ -308,8 +325,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "11",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_011_EN.webp",
+    "card_id": "P-A-11",
+    "image": "/images/en-US/P-A-11.webp",
     "hp": "120",
     "energy": "Colorless",
     "name": "Chansey",
@@ -336,10 +353,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-202",
         "version": "Genetic Apex #202",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-11",
         "version": "Promo-A #11",
         "rarity": ""
       }
@@ -348,8 +367,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "12",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_012_EN.webp",
+    "card_id": "P-A-12",
+    "image": "/images/en-US/P-A-12.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Meowth",
@@ -376,14 +395,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-196",
         "version": "Genetic Apex #196",
         "rarity": "◊"
       },
       {
+        "card_id": "A1-246",
         "version": "Genetic Apex #246",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-12",
         "version": "Promo-A #12",
         "rarity": ""
       }
@@ -392,8 +414,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "13",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_013_EN.webp",
+    "card_id": "P-A-13",
+    "image": "/images/en-US/P-A-13.webp",
     "hp": "120",
     "energy": "Grass",
     "name": "Butterfree",
@@ -420,10 +442,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-7",
         "version": "Genetic Apex #7",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-13",
         "version": "Promo-A #13",
         "rarity": ""
       }
@@ -432,8 +456,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "14",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_014_EN.webp",
+    "card_id": "P-A-14",
+    "image": "/images/en-US/P-A-14.webp",
     "hp": "140",
     "energy": "Water",
     "name": "Lapras ex",
@@ -460,6 +484,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-14",
         "version": "Promo-A #14",
         "rarity": ""
       }
@@ -468,8 +493,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "15",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_015_EN.webp",
+    "card_id": "P-A-15",
+    "image": "/images/en-US/P-A-15.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Pikachu",
@@ -496,18 +521,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-94",
         "version": "Genetic Apex #94",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-9",
         "version": "Promo-A #9",
         "rarity": ""
       },
       {
+        "card_id": "P-A-15",
         "version": "Promo-A #15",
         "rarity": ""
       },
       {
+        "card_id": "P-A-26",
         "version": "Promo-A #26",
         "rarity": ""
       }
@@ -516,8 +545,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "16",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_016_EN.webp",
+    "card_id": "P-A-16",
+    "image": "/images/en-US/P-A-16.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Clefairy",
@@ -544,10 +573,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-113",
         "version": "Genetic Apex #113",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-16",
         "version": "Promo-A #16",
         "rarity": ""
       }
@@ -556,8 +587,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "17",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_017_EN.webp",
+    "card_id": "P-A-17",
+    "image": "/images/en-US/P-A-17.webp",
     "hp": "50",
     "energy": "Fighting",
     "name": "Mankey",
@@ -584,6 +615,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-17",
         "version": "Promo-A #17",
         "rarity": ""
       }
@@ -592,8 +624,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "18",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_018_EN.webp",
+    "card_id": "P-A-18",
+    "image": "/images/en-US/P-A-18.webp",
     "hp": "160",
     "energy": "Grass",
     "name": "Venusaur",
@@ -620,14 +652,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-3",
         "version": "Genetic Apex #3",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-18",
         "version": "Promo-A #18",
         "rarity": ""
       },
       {
+        "card_id": "A3-212",
         "version": "Celestial Guardians #212",
         "rarity": "☆"
       }
@@ -636,8 +671,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "19",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_019_EN.webp",
+    "card_id": "P-A-19",
+    "image": "/images/en-US/P-A-19.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Greninja",
@@ -664,14 +699,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-89",
         "version": "Genetic Apex #89",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-19",
         "version": "Promo-A #19",
         "rarity": ""
       },
       {
+        "card_id": "A3a-93",
         "version": "Extradimensional Crisis #93",
         "rarity": "☆"
       }
@@ -680,8 +718,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "20",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_020_EN.webp",
+    "card_id": "P-A-20",
+    "image": "/images/en-US/P-A-20.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Haunter",
@@ -708,6 +746,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-20",
         "version": "Promo-A #20",
         "rarity": ""
       }
@@ -716,8 +755,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "21",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_021_EN.webp",
+    "card_id": "P-A-21",
+    "image": "/images/en-US/P-A-21.webp",
     "hp": "110",
     "energy": "Fighting",
     "name": "Onix",
@@ -744,10 +783,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-150",
         "version": "Genetic Apex #150",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-21",
         "version": "Promo-A #21",
         "rarity": ""
       }
@@ -756,8 +797,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "22",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_022_EN.webp",
+    "card_id": "P-A-22",
+    "image": "/images/en-US/P-A-22.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Jigglypuff",
@@ -784,6 +825,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-22",
         "version": "Promo-A #22",
         "rarity": ""
       }
@@ -792,8 +834,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "23",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_023_EN.webp",
+    "card_id": "P-A-23",
+    "image": "/images/en-US/P-A-23.webp",
     "hp": "70",
     "energy": "Grass",
     "name": "Bulbasaur",
@@ -820,18 +862,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-1",
         "version": "Genetic Apex #1",
         "rarity": "◊"
       },
       {
+        "card_id": "A1-227",
         "version": "Genetic Apex #227",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-23",
         "version": "Promo-A #23",
         "rarity": ""
       },
       {
+        "card_id": "A3-210",
         "version": "Celestial Guardians #210",
         "rarity": "☆"
       }
@@ -840,8 +886,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "24",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_024_EN.webp",
+    "card_id": "P-A-24",
+    "image": "/images/en-US/P-A-24.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Magnemite",
@@ -868,10 +914,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-97",
         "version": "Genetic Apex #97",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-24",
         "version": "Promo-A #24",
         "rarity": ""
       }
@@ -880,8 +928,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "25",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_025_EN.webp",
+    "card_id": "P-A-25",
+    "image": "/images/en-US/P-A-25.webp",
     "hp": "140",
     "energy": "Fire",
     "name": "Moltres ex",
@@ -914,22 +962,27 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-47",
         "version": "Genetic Apex #47",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-255",
         "version": "Genetic Apex #255",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1-274",
         "version": "Genetic Apex #274",
         "rarity": "☆☆"
       },
       {
+        "card_id": "P-A-25",
         "version": "Promo-A #25",
         "rarity": ""
       },
       {
+        "card_id": "A3b-103",
         "version": "Eevee Grove #103",
         "rarity": "☆☆"
       }
@@ -938,8 +991,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "26",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_026_EN.webp",
+    "card_id": "P-A-26",
+    "image": "/images/en-US/P-A-26.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Pikachu",
@@ -966,18 +1019,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-94",
         "version": "Genetic Apex #94",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-9",
         "version": "Promo-A #9",
         "rarity": ""
       },
       {
+        "card_id": "P-A-15",
         "version": "Promo-A #15",
         "rarity": ""
       },
       {
+        "card_id": "P-A-26",
         "version": "Promo-A #26",
         "rarity": ""
       }
@@ -986,8 +1043,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "27",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_027_EN.webp",
+    "card_id": "P-A-27",
+    "image": "/images/en-US/P-A-27.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Snivy",
@@ -1014,6 +1071,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-27",
         "version": "Promo-A #27",
         "rarity": ""
       }
@@ -1022,8 +1080,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "28",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_028_EN.webp",
+    "card_id": "P-A-28",
+    "image": "/images/en-US/P-A-28.webp",
     "hp": "120",
     "energy": "Fire",
     "name": "Volcarona",
@@ -1050,10 +1108,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1a-14",
         "version": "Mythical Island #14",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-28",
         "version": "Promo-A #28",
         "rarity": ""
       }
@@ -1062,8 +1122,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "29",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_029_EN.webp",
+    "card_id": "P-A-29",
+    "image": "/images/en-US/P-A-29.webp",
     "hp": "150",
     "energy": "Water",
     "name": "Blastoise",
@@ -1090,14 +1150,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-55",
         "version": "Genetic Apex #55",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-29",
         "version": "Promo-A #29",
         "rarity": ""
       },
       {
+        "card_id": "A3-217",
         "version": "Celestial Guardians #217",
         "rarity": "☆"
       }
@@ -1106,8 +1169,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "30",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_030_EN.webp",
+    "card_id": "P-A-30",
+    "image": "/images/en-US/P-A-30.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Eevee",
@@ -1134,6 +1197,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-30",
         "version": "Promo-A #30",
         "rarity": ""
       }
@@ -1142,8 +1206,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "31",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_031_EN.webp",
+    "card_id": "P-A-31",
+    "image": "/images/en-US/P-A-31.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Cinccino",
@@ -1170,10 +1234,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-213",
         "version": "Genetic Apex #213",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-31",
         "version": "Promo-A #31",
         "rarity": ""
       }
@@ -1182,8 +1248,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "32",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_032_EN.webp",
+    "card_id": "P-A-32",
+    "image": "/images/en-US/P-A-32.webp",
     "hp": "60",
     "energy": "Fire",
     "name": "Charmander",
@@ -1210,14 +1276,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-33",
         "version": "Genetic Apex #33",
         "rarity": "◊"
       },
       {
+        "card_id": "A1-230",
         "version": "Genetic Apex #230",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-32",
         "version": "Promo-A #32",
         "rarity": ""
       }
@@ -1226,8 +1295,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "33",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_033_EN.webp",
+    "card_id": "P-A-33",
+    "image": "/images/en-US/P-A-33.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Squirtle",
@@ -1254,18 +1323,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-53",
         "version": "Genetic Apex #53",
         "rarity": "◊"
       },
       {
+        "card_id": "A1-232",
         "version": "Genetic Apex #232",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-33",
         "version": "Promo-A #33",
         "rarity": ""
       },
       {
+        "card_id": "A3-215",
         "version": "Celestial Guardians #215",
         "rarity": "☆"
       }
@@ -1274,8 +1347,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "34",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_034_EN.webp",
+    "card_id": "P-A-34",
+    "image": "/images/en-US/P-A-34.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Piplup",
@@ -1302,10 +1375,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-35",
         "version": "Space-Time Smackdown #35",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-34",
         "version": "Promo-A #34",
         "rarity": ""
       }
@@ -1314,8 +1389,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "35",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_035_EN.webp",
+    "card_id": "P-A-35",
+    "image": "/images/en-US/P-A-35.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Turtwig",
@@ -1342,10 +1417,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-10",
         "version": "Space-Time Smackdown #10",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-35",
         "version": "Promo-A #35",
         "rarity": ""
       }
@@ -1354,8 +1431,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "36",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_036_EN.webp",
+    "card_id": "P-A-36",
+    "image": "/images/en-US/P-A-36.webp",
     "hp": "120",
     "energy": "Lightning",
     "name": "Electivire",
@@ -1382,10 +1459,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-57",
         "version": "Space-Time Smackdown #57",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-36",
         "version": "Promo-A #36",
         "rarity": ""
       }
@@ -1394,8 +1473,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "37",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_037_EN.webp",
+    "card_id": "P-A-37",
+    "image": "/images/en-US/P-A-37.webp",
     "hp": "140",
     "energy": "Psychic",
     "name": "Cresselia ex",
@@ -1422,6 +1501,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-37",
         "version": "Promo-A #37",
         "rarity": ""
       }
@@ -1430,8 +1510,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "38",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_038_EN.webp",
+    "card_id": "P-A-38",
+    "image": "/images/en-US/P-A-38.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Misdreavus",
@@ -1458,6 +1538,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-38",
         "version": "Promo-A #38",
         "rarity": ""
       }
@@ -1466,8 +1547,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "39",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_039_EN.webp",
+    "card_id": "P-A-39",
+    "image": "/images/en-US/P-A-39.webp",
     "hp": "80",
     "energy": "Metal",
     "name": "Skarmory",
@@ -1494,10 +1575,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-111",
         "version": "Space-Time Smackdown #111",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-39",
         "version": "Promo-A #39",
         "rarity": ""
       }
@@ -1506,8 +1589,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "40",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_040_EN.webp",
+    "card_id": "P-A-40",
+    "image": "/images/en-US/P-A-40.webp",
     "hp": "60",
     "energy": "Fire",
     "name": "Chimchar",
@@ -1534,10 +1617,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-27",
         "version": "Space-Time Smackdown #27",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-40",
         "version": "Promo-A #40",
         "rarity": ""
       }
@@ -1546,8 +1631,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "41",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_041_EN.webp",
+    "card_id": "P-A-41",
+    "image": "/images/en-US/P-A-41.webp",
     "hp": "50",
     "energy": "Psychic",
     "name": "Togepi",
@@ -1574,10 +1659,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-63",
         "version": "Space-Time Smackdown #63",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-41",
         "version": "Promo-A #41",
         "rarity": ""
       }
@@ -1586,8 +1673,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "42",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_042_EN.webp",
+    "card_id": "P-A-42",
+    "image": "/images/en-US/P-A-42.webp",
     "hp": "140",
     "energy": "Darkness",
     "name": "Darkrai ex",
@@ -1614,18 +1701,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-110",
         "version": "Space-Time Smackdown #110",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-187",
         "version": "Space-Time Smackdown #187",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-202",
         "version": "Space-Time Smackdown #202",
         "rarity": "☆☆"
       },
       {
+        "card_id": "P-A-42",
         "version": "Promo-A #42",
         "rarity": ""
       }
@@ -1634,8 +1725,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "43",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_043_EN.webp",
+    "card_id": "P-A-43",
+    "image": "/images/en-US/P-A-43.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Cherrim",
@@ -1662,10 +1753,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2a-8",
         "version": "Triumphant Light #8",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-43",
         "version": "Promo-A #43",
         "rarity": ""
       }
@@ -1674,8 +1767,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "44",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_044_EN.webp",
+    "card_id": "P-A-44",
+    "image": "/images/en-US/P-A-44.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Raichu",
@@ -1702,10 +1795,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2a-26",
         "version": "Triumphant Light #26",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-44",
         "version": "Promo-A #44",
         "rarity": ""
       }
@@ -1714,8 +1809,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "45",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_045_EN.webp",
+    "card_id": "P-A-45",
+    "image": "/images/en-US/P-A-45.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Nosepass",
@@ -1742,6 +1837,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-45",
         "version": "Promo-A #45",
         "rarity": ""
       }
@@ -1750,8 +1846,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "46",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_046_EN.webp",
+    "card_id": "P-A-46",
+    "image": "/images/en-US/P-A-46.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Gible",
@@ -1778,10 +1874,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2a-45",
         "version": "Triumphant Light #45",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-46",
         "version": "Promo-A #46",
         "rarity": ""
       }
@@ -1790,8 +1888,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "47",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_047_EN.webp",
+    "card_id": "P-A-47",
+    "image": "/images/en-US/P-A-47.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Staraptor",
@@ -1818,6 +1916,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-47",
         "version": "Promo-A #47",
         "rarity": ""
       }
@@ -1826,8 +1925,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "48",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_048_EN.webp",
+    "card_id": "P-A-48",
+    "image": "/images/en-US/P-A-48.webp",
     "hp": "50",
     "energy": "Water",
     "name": "Manaphy",
@@ -1854,14 +1953,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-50",
         "version": "Space-Time Smackdown #50",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2-162",
         "version": "Space-Time Smackdown #162",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-48",
         "version": "Promo-A #48",
         "rarity": ""
       }
@@ -1870,8 +1972,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "49",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_049_EN.webp",
+    "card_id": "P-A-49",
+    "image": "/images/en-US/P-A-49.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Snorlax",
@@ -1898,10 +2000,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2a-63",
         "version": "Triumphant Light #63",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-49",
         "version": "Promo-A #49",
         "rarity": ""
       }
@@ -1910,8 +2014,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "50",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_050_EN.webp",
+    "card_id": "P-A-50",
+    "image": "/images/en-US/P-A-50.webp",
     "hp": "150",
     "energy": "Psychic",
     "name": "Mewtwo ex",
@@ -1944,22 +2048,27 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-129",
         "version": "Genetic Apex #129",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-262",
         "version": "Genetic Apex #262",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1-282",
         "version": "Genetic Apex #282",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A1-286",
         "version": "Genetic Apex #286",
         "rarity": "♛"
       },
       {
+        "card_id": "P-A-50",
         "version": "Promo-A #50",
         "rarity": ""
       }
@@ -1968,8 +2077,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "51",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_051_EN.webp",
+    "card_id": "P-A-51",
+    "image": "/images/en-US/P-A-51.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Cyclizar",
@@ -1996,10 +2105,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-68",
         "version": "Shining Revelry #68",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-51",
         "version": "Promo-A #51",
         "rarity": ""
       }
@@ -2008,8 +2119,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "52",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_052_EN.webp",
+    "card_id": "P-A-52",
+    "image": "/images/en-US/P-A-52.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Sprigatito",
@@ -2036,10 +2147,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-5",
         "version": "Shining Revelry #5",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-52",
         "version": "Promo-A #52",
         "rarity": ""
       }
@@ -2048,8 +2161,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "53",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_053_EN.webp",
+    "card_id": "P-A-53",
+    "image": "/images/en-US/P-A-53.webp",
     "hp": "100",
     "energy": "Water",
     "name": "Floatzel",
@@ -2076,6 +2189,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-53",
         "version": "Promo-A #53",
         "rarity": ""
       }
@@ -2084,8 +2198,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "54",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_054_EN.webp",
+    "card_id": "P-A-54",
+    "image": "/images/en-US/P-A-54.webp",
     "hp": "140",
     "energy": "Lightning",
     "name": "Pawmot",
@@ -2112,10 +2226,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-28",
         "version": "Shining Revelry #28",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-54",
         "version": "Promo-A #54",
         "rarity": ""
       }
@@ -2124,8 +2240,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "55",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_055_EN.webp",
+    "card_id": "P-A-55",
+    "image": "/images/en-US/P-A-55.webp",
     "hp": "150",
     "energy": "Fighting",
     "name": "Machamp",
@@ -2152,14 +2268,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-39",
         "version": "Shining Revelry #39",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-55",
         "version": "Promo-A #55",
         "rarity": ""
       },
       {
+        "card_id": "A3-225",
         "version": "Celestial Guardians #225",
         "rarity": "☆"
       }
@@ -2168,8 +2287,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "56",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_056_EN.webp",
+    "card_id": "P-A-56",
+    "image": "/images/en-US/P-A-56.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Ekans",
@@ -2196,6 +2315,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-56",
         "version": "Promo-A #56",
         "rarity": ""
       }
@@ -2204,8 +2324,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "57",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_057_EN.webp",
+    "card_id": "P-A-57",
+    "image": "/images/en-US/P-A-57.webp",
     "hp": "70",
     "energy": "Colorless",
     "name": "Bidoof",
@@ -2232,10 +2352,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-64",
         "version": "Shining Revelry #64",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-57",
         "version": "Promo-A #57",
         "rarity": ""
       }
@@ -2244,8 +2366,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "58",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_058_EN.webp",
+    "card_id": "P-A-58",
+    "image": "/images/en-US/P-A-58.webp",
     "hp": "70",
     "energy": "Lightning",
     "name": "Pachirisu",
@@ -2272,14 +2394,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-25",
         "version": "Shining Revelry #25",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-103",
         "version": "Shining Revelry #103",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-58",
         "version": "Promo-A #58",
         "rarity": ""
       }
@@ -2288,8 +2413,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "59",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_059_EN.webp",
+    "card_id": "P-A-59",
+    "image": "/images/en-US/P-A-59.webp",
     "hp": "70",
     "energy": "Fighting",
     "name": "Riolu",
@@ -2316,14 +2441,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-42",
         "version": "Shining Revelry #42",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-104",
         "version": "Shining Revelry #104",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-59",
         "version": "Promo-A #59",
         "rarity": ""
       }
@@ -2332,8 +2460,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "60",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_060_EN.webp",
+    "card_id": "P-A-60",
+    "image": "/images/en-US/P-A-60.webp",
     "hp": "50",
     "energy": "Grass",
     "name": "Exeggcute",
@@ -2360,10 +2488,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1a-1",
         "version": "Mythical Island #1",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-60",
         "version": "Promo-A #60",
         "rarity": ""
       }
@@ -2372,8 +2502,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "61",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_061_EN.webp",
+    "card_id": "P-A-61",
+    "image": "/images/en-US/P-A-61.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Froakie",
@@ -2400,14 +2530,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-87",
         "version": "Genetic Apex #87",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-61",
         "version": "Promo-A #61",
         "rarity": ""
       },
       {
+        "card_id": "A3a-91",
         "version": "Extradimensional Crisis #91",
         "rarity": "☆"
       }
@@ -2416,8 +2549,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "62",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_062_EN.webp",
+    "card_id": "P-A-62",
+    "image": "/images/en-US/P-A-62.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Farfetch'd",
@@ -2444,14 +2577,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-198",
         "version": "Genetic Apex #198",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-62",
         "version": "Promo-A #62",
         "rarity": ""
       },
       {
+        "card_id": "A3b-102",
         "version": "Eevee Grove #102",
         "rarity": "☆"
       }
@@ -2460,8 +2596,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "63",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_063_EN.webp",
+    "card_id": "P-A-63",
+    "image": "/images/en-US/P-A-63.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Rayquaza",
@@ -2488,6 +2624,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-63",
         "version": "Promo-A #63",
         "rarity": ""
       }
@@ -2496,8 +2633,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "64",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_064_EN.webp",
+    "card_id": "P-A-64",
+    "image": "/images/en-US/P-A-64.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Rayquaza ex",
@@ -2524,10 +2661,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-64",
         "version": "Promo-A #64",
         "rarity": ""
       },
       {
+        "card_id": "P-A-65",
         "version": "Promo-A #65",
         "rarity": ""
       }
@@ -2536,8 +2675,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "65",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_065_EN.webp",
+    "card_id": "P-A-65",
+    "image": "/images/en-US/P-A-65.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Rayquaza ex",
@@ -2564,10 +2703,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-64",
         "version": "Promo-A #64",
         "rarity": ""
       },
       {
+        "card_id": "P-A-65",
         "version": "Promo-A #65",
         "rarity": ""
       }
@@ -2576,8 +2717,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "66",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_066_EN.webp",
+    "card_id": "P-A-66",
+    "image": "/images/en-US/P-A-66.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Mimikyu",
@@ -2604,10 +2745,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-83",
         "version": "Celestial Guardians #83",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-66",
         "version": "Promo-A #66",
         "rarity": ""
       }
@@ -2616,8 +2759,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "67",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_067_EN.webp",
+    "card_id": "P-A-67",
+    "image": "/images/en-US/P-A-67.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Cosmog",
@@ -2644,14 +2787,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-85",
         "version": "Celestial Guardians #85",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-171",
         "version": "Celestial Guardians #171",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-67",
         "version": "Promo-A #67",
         "rarity": ""
       }
@@ -2660,8 +2806,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "68",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_068_EN.webp",
+    "card_id": "P-A-68",
+    "image": "/images/en-US/P-A-68.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Lycanroc",
@@ -2688,10 +2834,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-100",
         "version": "Celestial Guardians #100",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-68",
         "version": "Promo-A #68",
         "rarity": ""
       }
@@ -2700,8 +2848,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "69",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_069_EN.webp",
+    "card_id": "P-A-69",
+    "image": "/images/en-US/P-A-69.webp",
     "hp": "150",
     "energy": "Grass",
     "name": "Alolan Exeggutor",
@@ -2728,14 +2876,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-2",
         "version": "Celestial Guardians #2",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-156",
         "version": "Celestial Guardians #156",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-69",
         "version": "Promo-A #69",
         "rarity": ""
       }
@@ -2744,8 +2895,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "70",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_070_EN.webp",
+    "card_id": "P-A-70",
+    "image": "/images/en-US/P-A-70.webp",
     "hp": "110",
     "energy": "Water",
     "name": "Alolan Ninetales",
@@ -2772,10 +2923,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-41",
         "version": "Celestial Guardians #41",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-70",
         "version": "Promo-A #70",
         "rarity": ""
       }
@@ -2784,8 +2937,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "71",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_071_EN.webp",
+    "card_id": "P-A-71",
+    "image": "/images/en-US/P-A-71.webp",
     "hp": "70",
     "energy": "Fighting",
     "name": "Crabrawler",
@@ -2812,10 +2965,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-97",
         "version": "Celestial Guardians #97",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-71",
         "version": "Promo-A #71",
         "rarity": ""
       }
@@ -2824,8 +2979,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "72",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_072_EN.webp",
+    "card_id": "P-A-72",
+    "image": "/images/en-US/P-A-72.webp",
     "hp": "70",
     "energy": "Darkness",
     "name": "Alolan Grimer",
@@ -2852,6 +3007,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-72",
         "version": "Promo-A #72",
         "rarity": ""
       }
@@ -2860,8 +3016,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "73",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_073_EN.webp",
+    "card_id": "P-A-73",
+    "image": "/images/en-US/P-A-73.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Toucannon",
@@ -2888,6 +3044,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-73",
         "version": "Promo-A #73",
         "rarity": ""
       }
@@ -2896,8 +3053,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "74",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_074_EN.webp",
+    "card_id": "P-A-74",
+    "image": "/images/en-US/P-A-74.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Zeraora",
@@ -2924,10 +3081,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-21",
         "version": "Extradimensional Crisis #21",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-74",
         "version": "Promo-A #74",
         "rarity": ""
       }
@@ -2936,8 +3095,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "75",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_075_EN.webp",
+    "card_id": "P-A-75",
+    "image": "/images/en-US/P-A-75.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Kartana",
@@ -2964,10 +3123,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-8",
         "version": "Extradimensional Crisis #8",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-75",
         "version": "Promo-A #75",
         "rarity": ""
       }
@@ -2976,8 +3137,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "76",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_076_EN.webp",
+    "card_id": "P-A-76",
+    "image": "/images/en-US/P-A-76.webp",
     "hp": "100",
     "energy": "Fire",
     "name": "Blacephalon",
@@ -3004,14 +3165,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-9",
         "version": "Extradimensional Crisis #9",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3a-72",
         "version": "Extradimensional Crisis #72",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-76",
         "version": "Promo-A #76",
         "rarity": ""
       }
@@ -3020,8 +3184,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "77",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_077_EN.webp",
+    "card_id": "P-A-77",
+    "image": "/images/en-US/P-A-77.webp",
     "hp": "100",
     "energy": "Lightning",
     "name": "Xurkitree",
@@ -3048,10 +3212,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-20",
         "version": "Extradimensional Crisis #20",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-77",
         "version": "Promo-A #77",
         "rarity": ""
       }
@@ -3060,8 +3226,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "78",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_078_EN.webp",
+    "card_id": "P-A-78",
+    "image": "/images/en-US/P-A-78.webp",
     "hp": "110",
     "energy": "Psychic",
     "name": "Dawn Wings Necrozma",
@@ -3088,6 +3254,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-78",
         "version": "Promo-A #78",
         "rarity": "◊◊◊"
       }
@@ -3096,8 +3263,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "79",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_079_EN.webp",
+    "card_id": "P-A-79",
+    "image": "/images/en-US/P-A-79.webp",
     "hp": "110",
     "energy": "Metal",
     "name": "Dusk Mane Necrozma",
@@ -3124,6 +3291,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-79",
         "version": "Promo-A #79",
         "rarity": "◊◊◊"
       }
@@ -3132,8 +3300,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "80",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_080_EN.webp",
+    "card_id": "P-A-80",
+    "image": "/images/en-US/P-A-80.webp",
     "hp": "110",
     "energy": "Metal",
     "name": "Stakataka",
@@ -3160,10 +3328,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-53",
         "version": "Extradimensional Crisis #53",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-80",
         "version": "Promo-A #80",
         "rarity": ""
       }
@@ -3172,8 +3342,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "81",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_081_EN.webp",
+    "card_id": "P-A-81",
+    "image": "/images/en-US/P-A-81.webp",
     "hp": "150",
     "energy": "Dragon",
     "name": "Ultra Necrozma ex",
@@ -3206,6 +3376,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-81",
         "version": "Promo-A #81",
         "rarity": "◊◊◊◊"
       }
@@ -3214,8 +3385,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "82",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_082_EN.webp",
+    "card_id": "P-A-82",
+    "image": "/images/en-US/P-A-82.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Poipole",
@@ -3242,10 +3413,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-44",
         "version": "Extradimensional Crisis #44",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-82",
         "version": "Promo-A #82",
         "rarity": ""
       }
@@ -3254,8 +3427,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "83",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_083_EN.webp",
+    "card_id": "P-A-83",
+    "image": "/images/en-US/P-A-83.webp",
     "hp": "70",
     "energy": "Colorless",
     "name": "Stufful",
@@ -3282,10 +3455,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-57",
         "version": "Extradimensional Crisis #57",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-83",
         "version": "Promo-A #83",
         "rarity": ""
       }
@@ -3294,8 +3469,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "84",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_084_EN.webp",
+    "card_id": "P-A-84",
+    "image": "/images/en-US/P-A-84.webp",
     "hp": "130",
     "energy": "Lightning",
     "name": "Tapu Koko ex",
@@ -3328,18 +3503,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-19",
         "version": "Extradimensional Crisis #19",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-77",
         "version": "Extradimensional Crisis #77",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-84",
         "version": "Extradimensional Crisis #84",
         "rarity": "☆☆"
       },
       {
+        "card_id": "P-A-84",
         "version": "Promo-A #84",
         "rarity": ""
       }
@@ -3348,8 +3527,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "85",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_085_EN.webp",
+    "card_id": "P-A-85",
+    "image": "/images/en-US/P-A-85.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Vanillite",
@@ -3376,10 +3555,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-18",
         "version": "Eevee Grove #18",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-85",
         "version": "Promo-A #85",
         "rarity": ""
       }
@@ -3388,8 +3569,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "86",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_086_EN.webp",
+    "card_id": "P-A-86",
+    "image": "/images/en-US/P-A-86.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Jolteon",
@@ -3416,14 +3597,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-25",
         "version": "Eevee Grove #25",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-74",
         "version": "Eevee Grove #74",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-86",
         "version": "Promo-A #86",
         "rarity": ""
       }
@@ -3432,8 +3616,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "87",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_087_EN.webp",
+    "card_id": "P-A-87",
+    "image": "/images/en-US/P-A-87.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Alcremie",
@@ -3460,10 +3644,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-37",
         "version": "Eevee Grove #37",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-87",
         "version": "Promo-A #87",
         "rarity": ""
       }
@@ -3472,8 +3658,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "88",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_088_EN.webp",
+    "card_id": "P-A-88",
+    "image": "/images/en-US/P-A-88.webp",
     "hp": "100",
     "energy": "Dragon",
     "name": "Dragonair",
@@ -3500,6 +3686,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-88",
         "version": "Promo-A #88",
         "rarity": ""
       }
@@ -3508,8 +3695,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "89",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_089_EN.webp",
+    "card_id": "P-A-89",
+    "image": "/images/en-US/P-A-89.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Audino",
@@ -3536,6 +3723,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-89",
         "version": "Promo-A #89",
         "rarity": ""
       }
@@ -3544,8 +3732,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "90",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_090_EN.webp",
+    "card_id": "P-A-90",
+    "image": "/images/en-US/P-A-90.webp",
     "hp": "80",
     "energy": "Metal",
     "name": "Togedemaru",
@@ -3572,10 +3760,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-48",
         "version": "Eevee Grove #48",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-90",
         "version": "Promo-A #90",
         "rarity": ""
       }
@@ -3584,8 +3774,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "91",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_091_EN.webp",
+    "card_id": "P-A-91",
+    "image": "/images/en-US/P-A-91.webp",
     "hp": "120",
     "energy": "Colorless",
     "name": "Greedent",
@@ -3612,10 +3802,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-65",
         "version": "Eevee Grove #65",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-91",
         "version": "Promo-A #91",
         "rarity": ""
       }
@@ -3624,8 +3816,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "92",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/P-A/P-A_092_EN.webp",
+    "card_id": "P-A-92",
+    "image": "/images/en-US/P-A-92.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Eevee",
@@ -3652,22 +3844,27 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-206",
         "version": "Genetic Apex #206",
         "rarity": "◊"
       },
       {
+        "card_id": "A1-207",
         "version": "Genetic Apex #207",
         "rarity": "◊"
       },
       {
+        "card_id": "A1-208",
         "version": "Genetic Apex #208",
         "rarity": "◊"
       },
       {
+        "card_id": "A1-248",
         "version": "Genetic Apex #248",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-92",
         "version": "Promo-A #92",
         "rarity": ""
       }

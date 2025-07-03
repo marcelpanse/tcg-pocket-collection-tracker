@@ -1,7 +1,7 @@
 [
   {
-    "id": "1",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_001_EN.webp",
+    "card_id": "A1a-1",
+    "image": "/images/en-US/A1a-1.webp",
     "hp": "50",
     "energy": "Grass",
     "name": "Exeggcute",
@@ -28,10 +28,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-1",
         "version": "Mythical Island #1",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-60",
         "version": "Promo-A #60",
         "rarity": ""
       }
@@ -40,8 +42,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "2",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_002_EN.webp",
+    "card_id": "A1a-2",
+    "image": "/images/en-US/A1a-2.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Exeggutor",
@@ -68,14 +70,17 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-2",
         "version": "Mythical Island #2",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A1a-69",
         "version": "Mythical Island #69",
         "rarity": "☆"
       },
       {
+        "card_id": "A3-214",
         "version": "Celestial Guardians #214",
         "rarity": "☆"
       }
@@ -84,8 +89,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "3",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_003_EN.webp",
+    "card_id": "A1a-3",
+    "image": "/images/en-US/A1a-3.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Celebi ex",
@@ -112,24 +117,32 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-3",
         "version": "Mythical Island #3",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-75",
         "version": "Mythical Island #75",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-85",
         "version": "Mythical Island #85",
         "rarity": "☆☆☆"
+      },
+      {
+        "card_id": "A3a-99",
+        "version": "Extradimensional Crisis #99",
+        "rarity": "☆☆"
       }
     ],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
   {
-    "id": "4",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_004_EN.webp",
+    "card_id": "A1a-4",
+    "image": "/images/en-US/A1a-4.webp",
     "hp": "70",
     "energy": "Grass",
     "name": "Snivy",
@@ -156,6 +169,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-4",
         "version": "Mythical Island #4",
         "rarity": "◊"
       }
@@ -164,8 +178,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "5",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_005_EN.webp",
+    "card_id": "A1a-5",
+    "image": "/images/en-US/A1a-5.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Servine",
@@ -192,6 +206,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-5",
         "version": "Mythical Island #5",
         "rarity": "◊◊"
       }
@@ -200,8 +215,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "6",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_006_EN.webp",
+    "card_id": "A1a-6",
+    "image": "/images/en-US/A1a-6.webp",
     "hp": "110",
     "energy": "Grass",
     "name": "Serperior",
@@ -228,10 +243,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-6",
         "version": "Mythical Island #6",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A1a-70",
         "version": "Mythical Island #70",
         "rarity": "☆"
       }
@@ -240,8 +257,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "7",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_007_EN.webp",
+    "card_id": "A1a-7",
+    "image": "/images/en-US/A1a-7.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Morelull",
@@ -268,6 +285,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-7",
         "version": "Mythical Island #7",
         "rarity": "◊"
       }
@@ -276,8 +294,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "8",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_008_EN.webp",
+    "card_id": "A1a-8",
+    "image": "/images/en-US/A1a-8.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Shiinotic",
@@ -304,6 +322,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-8",
         "version": "Mythical Island #8",
         "rarity": "◊◊"
       }
@@ -312,8 +331,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "9",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_009_EN.webp",
+    "card_id": "A1a-9",
+    "image": "/images/en-US/A1a-9.webp",
     "hp": "100",
     "energy": "Grass",
     "name": "Dhelmise",
@@ -340,6 +359,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-9",
         "version": "Mythical Island #9",
         "rarity": "◊◊"
       }
@@ -348,8 +368,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "10",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_010_EN.webp",
+    "card_id": "A1a-10",
+    "image": "/images/en-US/A1a-10.webp",
     "hp": "60",
     "energy": "Fire",
     "name": "Ponyta",
@@ -376,6 +396,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-10",
         "version": "Mythical Island #10",
         "rarity": "◊"
       }
@@ -384,8 +405,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "11",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_011_EN.webp",
+    "card_id": "A1a-11",
+    "image": "/images/en-US/A1a-11.webp",
     "hp": "100",
     "energy": "Fire",
     "name": "Rapidash",
@@ -412,6 +433,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-11",
         "version": "Mythical Island #11",
         "rarity": "◊◊"
       }
@@ -420,8 +442,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "12",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_012_EN.webp",
+    "card_id": "A1a-12",
+    "image": "/images/en-US/A1a-12.webp",
     "hp": "80",
     "energy": "Fire",
     "name": "Magmar",
@@ -448,6 +470,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-12",
         "version": "Mythical Island #12",
         "rarity": "◊◊"
       }
@@ -456,8 +479,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "13",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_013_EN.webp",
+    "card_id": "A1a-13",
+    "image": "/images/en-US/A1a-13.webp",
     "hp": "80",
     "energy": "Fire",
     "name": "Larvesta",
@@ -484,6 +507,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-13",
         "version": "Mythical Island #13",
         "rarity": "◊"
       }
@@ -492,8 +516,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "14",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_014_EN.webp",
+    "card_id": "A1a-14",
+    "image": "/images/en-US/A1a-14.webp",
     "hp": "120",
     "energy": "Fire",
     "name": "Volcarona",
@@ -520,10 +544,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-14",
         "version": "Mythical Island #14",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-28",
         "version": "Promo-A #28",
         "rarity": ""
       }
@@ -532,8 +558,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "15",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_015_EN.webp",
+    "card_id": "A1a-15",
+    "image": "/images/en-US/A1a-15.webp",
     "hp": "60",
     "energy": "Fire",
     "name": "Salandit",
@@ -560,10 +586,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-15",
         "version": "Mythical Island #15",
         "rarity": "◊"
       },
       {
+        "card_id": "A1a-71",
         "version": "Mythical Island #71",
         "rarity": "☆"
       }
@@ -572,8 +600,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "16",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_016_EN.webp",
+    "card_id": "A1a-16",
+    "image": "/images/en-US/A1a-16.webp",
     "hp": "80",
     "energy": "Fire",
     "name": "Salazzle",
@@ -600,6 +628,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-16",
         "version": "Mythical Island #16",
         "rarity": "◊"
       }
@@ -608,8 +637,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "17",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_017_EN.webp",
+    "card_id": "A1a-17",
+    "image": "/images/en-US/A1a-17.webp",
     "hp": "30",
     "energy": "Water",
     "name": "Magikarp",
@@ -636,6 +665,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-17",
         "version": "Mythical Island #17",
         "rarity": "◊"
       }
@@ -644,8 +674,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "18",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_018_EN.webp",
+    "card_id": "A1a-18",
+    "image": "/images/en-US/A1a-18.webp",
     "hp": "180",
     "energy": "Water",
     "name": "Gyarados ex",
@@ -672,10 +702,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-18",
         "version": "Mythical Island #18",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-76",
         "version": "Mythical Island #76",
         "rarity": "☆☆"
       }
@@ -684,8 +716,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "19",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_019_EN.webp",
+    "card_id": "A1a-19",
+    "image": "/images/en-US/A1a-19.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Vaporeon",
@@ -712,10 +744,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-19",
         "version": "Mythical Island #19",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A1a-72",
         "version": "Mythical Island #72",
         "rarity": "☆"
       }
@@ -724,8 +758,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "20",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_020_EN.webp",
+    "card_id": "A1a-20",
+    "image": "/images/en-US/A1a-20.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Finneon",
@@ -752,6 +786,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-20",
         "version": "Mythical Island #20",
         "rarity": "◊"
       }
@@ -760,8 +795,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "21",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_021_EN.webp",
+    "card_id": "A1a-21",
+    "image": "/images/en-US/A1a-21.webp",
     "hp": "80",
     "energy": "Water",
     "name": "Lumineon",
@@ -788,6 +823,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-21",
         "version": "Mythical Island #21",
         "rarity": "◊◊"
       }
@@ -796,8 +832,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "22",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_022_EN.webp",
+    "card_id": "A1a-22",
+    "image": "/images/en-US/A1a-22.webp",
     "hp": "80",
     "energy": "Water",
     "name": "Chewtle",
@@ -824,6 +860,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-22",
         "version": "Mythical Island #22",
         "rarity": "◊"
       }
@@ -832,8 +869,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "23",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_023_EN.webp",
+    "card_id": "A1a-23",
+    "image": "/images/en-US/A1a-23.webp",
     "hp": "130",
     "energy": "Water",
     "name": "Drednaw",
@@ -860,6 +897,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-23",
         "version": "Mythical Island #23",
         "rarity": "◊◊"
       }
@@ -868,8 +906,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "24",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_024_EN.webp",
+    "card_id": "A1a-24",
+    "image": "/images/en-US/A1a-24.webp",
     "hp": "80",
     "energy": "Water",
     "name": "Cramorant",
@@ -896,6 +934,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-24",
         "version": "Mythical Island #24",
         "rarity": "◊"
       }
@@ -904,8 +943,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "25",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_025_EN.webp",
+    "card_id": "A1a-25",
+    "image": "/images/en-US/A1a-25.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Pikachu",
@@ -932,6 +971,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-25",
         "version": "Mythical Island #25",
         "rarity": "◊"
       }
@@ -940,8 +980,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "26",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_026_EN.webp",
+    "card_id": "A1a-26",
+    "image": "/images/en-US/A1a-26.webp",
     "hp": "120",
     "energy": "Lightning",
     "name": "Raichu",
@@ -968,6 +1008,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-26",
         "version": "Mythical Island #26",
         "rarity": "◊◊◊"
       }
@@ -976,8 +1017,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "27",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_027_EN.webp",
+    "card_id": "A1a-27",
+    "image": "/images/en-US/A1a-27.webp",
     "hp": "70",
     "energy": "Lightning",
     "name": "Electabuzz",
@@ -1004,6 +1045,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-27",
         "version": "Mythical Island #27",
         "rarity": "◊◊"
       }
@@ -1012,8 +1054,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "28",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_028_EN.webp",
+    "card_id": "A1a-28",
+    "image": "/images/en-US/A1a-28.webp",
     "hp": "40",
     "energy": "Lightning",
     "name": "Joltik",
@@ -1040,6 +1082,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-28",
         "version": "Mythical Island #28",
         "rarity": "◊"
       }
@@ -1048,8 +1091,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "29",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_029_EN.webp",
+    "card_id": "A1a-29",
+    "image": "/images/en-US/A1a-29.webp",
     "hp": "80",
     "energy": "Lightning",
     "name": "Galvantula",
@@ -1076,6 +1119,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-29",
         "version": "Mythical Island #29",
         "rarity": "◊◊"
       }
@@ -1084,8 +1128,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "30",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_030_EN.webp",
+    "card_id": "A1a-30",
+    "image": "/images/en-US/A1a-30.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Dedenne",
@@ -1112,10 +1156,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-30",
         "version": "Mythical Island #30",
         "rarity": "◊"
       },
       {
+        "card_id": "A1a-73",
         "version": "Mythical Island #73",
         "rarity": "☆"
       }
@@ -1124,8 +1170,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "31",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_031_EN.webp",
+    "card_id": "A1a-31",
+    "image": "/images/en-US/A1a-31.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Mew",
@@ -1152,10 +1198,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1-283",
         "version": "Genetic Apex #283",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A1a-31",
         "version": "Mythical Island #31",
         "rarity": "◊◊◊"
       }
@@ -1164,8 +1212,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "32",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_032_EN.webp",
+    "card_id": "A1a-32",
+    "image": "/images/en-US/A1a-32.webp",
     "hp": "130",
     "energy": "Psychic",
     "name": "Mew ex",
@@ -1198,18 +1246,22 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-32",
         "version": "Mythical Island #32",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-77",
         "version": "Mythical Island #77",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-83",
         "version": "Mythical Island #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-86",
         "version": "Mythical Island #86",
         "rarity": "♛"
       }
@@ -1218,8 +1270,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "33",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_033_EN.webp",
+    "card_id": "A1a-33",
+    "image": "/images/en-US/A1a-33.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Sigilyph",
@@ -1246,6 +1298,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-33",
         "version": "Mythical Island #33",
         "rarity": "◊◊"
       }
@@ -1254,8 +1307,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "34",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_034_EN.webp",
+    "card_id": "A1a-34",
+    "image": "/images/en-US/A1a-34.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Elgyem",
@@ -1282,6 +1335,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-34",
         "version": "Mythical Island #34",
         "rarity": "◊"
       }
@@ -1290,8 +1344,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "35",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_035_EN.webp",
+    "card_id": "A1a-35",
+    "image": "/images/en-US/A1a-35.webp",
     "hp": "90",
     "energy": "Psychic",
     "name": "Beheeyem",
@@ -1318,6 +1372,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-35",
         "version": "Mythical Island #35",
         "rarity": "◊◊"
       }
@@ -1326,8 +1381,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "36",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_036_EN.webp",
+    "card_id": "A1a-36",
+    "image": "/images/en-US/A1a-36.webp",
     "hp": "40",
     "energy": "Psychic",
     "name": "Flabébé",
@@ -1354,6 +1409,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-36",
         "version": "Mythical Island #36",
         "rarity": "◊"
       }
@@ -1362,8 +1418,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "37",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_037_EN.webp",
+    "card_id": "A1a-37",
+    "image": "/images/en-US/A1a-37.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Floette",
@@ -1390,6 +1446,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-37",
         "version": "Mythical Island #37",
         "rarity": "◊"
       }
@@ -1398,8 +1455,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "38",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_038_EN.webp",
+    "card_id": "A1a-38",
+    "image": "/images/en-US/A1a-38.webp",
     "hp": "120",
     "energy": "Psychic",
     "name": "Florges",
@@ -1426,6 +1483,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-38",
         "version": "Mythical Island #38",
         "rarity": "◊◊"
       }
@@ -1434,8 +1492,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "39",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_039_EN.webp",
+    "card_id": "A1a-39",
+    "image": "/images/en-US/A1a-39.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Swirlix",
@@ -1462,6 +1520,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-39",
         "version": "Mythical Island #39",
         "rarity": "◊"
       }
@@ -1470,8 +1529,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "40",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_040_EN.webp",
+    "card_id": "A1a-40",
+    "image": "/images/en-US/A1a-40.webp",
     "hp": "100",
     "energy": "Psychic",
     "name": "Slurpuff",
@@ -1498,6 +1557,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-40",
         "version": "Mythical Island #40",
         "rarity": "◊"
       }
@@ -1506,8 +1566,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "41",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_041_EN.webp",
+    "card_id": "A1a-41",
+    "image": "/images/en-US/A1a-41.webp",
     "hp": "50",
     "energy": "Fighting",
     "name": "Mankey",
@@ -1534,6 +1594,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-41",
         "version": "Mythical Island #41",
         "rarity": "◊"
       }
@@ -1542,8 +1603,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "42",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_042_EN.webp",
+    "card_id": "A1a-42",
+    "image": "/images/en-US/A1a-42.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Primeape",
@@ -1570,6 +1631,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-42",
         "version": "Mythical Island #42",
         "rarity": "◊"
       }
@@ -1578,8 +1640,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "43",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_043_EN.webp",
+    "card_id": "A1a-43",
+    "image": "/images/en-US/A1a-43.webp",
     "hp": "70",
     "energy": "Fighting",
     "name": "Geodude",
@@ -1606,6 +1668,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-43",
         "version": "Mythical Island #43",
         "rarity": "◊"
       }
@@ -1614,8 +1677,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "44",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_044_EN.webp",
+    "card_id": "A1a-44",
+    "image": "/images/en-US/A1a-44.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Graveler",
@@ -1642,6 +1705,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-44",
         "version": "Mythical Island #44",
         "rarity": "◊◊"
       }
@@ -1650,8 +1714,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "45",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_045_EN.webp",
+    "card_id": "A1a-45",
+    "image": "/images/en-US/A1a-45.webp",
     "hp": "160",
     "energy": "Fighting",
     "name": "Golem",
@@ -1678,6 +1742,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-45",
         "version": "Mythical Island #45",
         "rarity": "◊◊◊"
       }
@@ -1686,8 +1751,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "46",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_046_EN.webp",
+    "card_id": "A1a-46",
+    "image": "/images/en-US/A1a-46.webp",
     "hp": "140",
     "energy": "Fighting",
     "name": "Aerodactyl ex",
@@ -1714,15 +1779,23 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-46",
         "version": "Mythical Island #46",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-78",
         "version": "Mythical Island #78",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-84",
         "version": "Mythical Island #84",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A3a-101",
+        "version": "Extradimensional Crisis #101",
         "rarity": "☆☆"
       }
     ],
@@ -1730,8 +1803,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "47",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_047_EN.webp",
+    "card_id": "A1a-47",
+    "image": "/images/en-US/A1a-47.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Marshadow",
@@ -1758,10 +1831,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-47",
         "version": "Mythical Island #47",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A1a-74",
         "version": "Mythical Island #74",
         "rarity": "☆"
       }
@@ -1770,8 +1845,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "48",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_048_EN.webp",
+    "card_id": "A1a-48",
+    "image": "/images/en-US/A1a-48.webp",
     "hp": "120",
     "energy": "Fighting",
     "name": "Stonjourner",
@@ -1798,6 +1873,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-48",
         "version": "Mythical Island #48",
         "rarity": "◊◊"
       }
@@ -1806,8 +1882,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "49",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_049_EN.webp",
+    "card_id": "A1a-49",
+    "image": "/images/en-US/A1a-49.webp",
     "hp": "70",
     "energy": "Darkness",
     "name": "Koffing",
@@ -1834,6 +1910,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-49",
         "version": "Mythical Island #49",
         "rarity": "◊"
       }
@@ -1842,8 +1919,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "50",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_050_EN.webp",
+    "card_id": "A1a-50",
+    "image": "/images/en-US/A1a-50.webp",
     "hp": "110",
     "energy": "Darkness",
     "name": "Weezing",
@@ -1870,6 +1947,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-50",
         "version": "Mythical Island #50",
         "rarity": "◊◊"
       }
@@ -1878,8 +1956,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "51",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_051_EN.webp",
+    "card_id": "A1a-51",
+    "image": "/images/en-US/A1a-51.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Purrloin",
@@ -1906,6 +1984,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-51",
         "version": "Mythical Island #51",
         "rarity": "◊"
       }
@@ -1914,8 +1993,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "52",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_052_EN.webp",
+    "card_id": "A1a-52",
+    "image": "/images/en-US/A1a-52.webp",
     "hp": "90",
     "energy": "Darkness",
     "name": "Liepard",
@@ -1942,6 +2021,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-52",
         "version": "Mythical Island #52",
         "rarity": "◊"
       }
@@ -1950,8 +2030,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "53",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_053_EN.webp",
+    "card_id": "A1a-53",
+    "image": "/images/en-US/A1a-53.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Venipede",
@@ -1978,6 +2058,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-53",
         "version": "Mythical Island #53",
         "rarity": "◊"
       }
@@ -1986,8 +2067,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "54",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_054_EN.webp",
+    "card_id": "A1a-54",
+    "image": "/images/en-US/A1a-54.webp",
     "hp": "90",
     "energy": "Darkness",
     "name": "Whirlipede",
@@ -2014,6 +2095,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-54",
         "version": "Mythical Island #54",
         "rarity": "◊"
       }
@@ -2022,8 +2104,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "55",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_055_EN.webp",
+    "card_id": "A1a-55",
+    "image": "/images/en-US/A1a-55.webp",
     "hp": "140",
     "energy": "Darkness",
     "name": "Scolipede",
@@ -2050,6 +2132,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-55",
         "version": "Mythical Island #55",
         "rarity": "◊◊"
       }
@@ -2058,8 +2141,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "56",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_056_EN.webp",
+    "card_id": "A1a-56",
+    "image": "/images/en-US/A1a-56.webp",
     "hp": "100",
     "energy": "Dragon",
     "name": "Druddigon",
@@ -2086,6 +2169,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-56",
         "version": "Mythical Island #56",
         "rarity": "◊◊"
       }
@@ -2094,8 +2178,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "57",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_057_EN.webp",
+    "card_id": "A1a-57",
+    "image": "/images/en-US/A1a-57.webp",
     "hp": "50",
     "energy": "Colorless",
     "name": "Pidgey",
@@ -2122,6 +2206,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-57",
         "version": "Mythical Island #57",
         "rarity": "◊"
       }
@@ -2130,8 +2215,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "58",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_058_EN.webp",
+    "card_id": "A1a-58",
+    "image": "/images/en-US/A1a-58.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Pidgeotto",
@@ -2158,6 +2243,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-58",
         "version": "Mythical Island #58",
         "rarity": "◊"
       }
@@ -2166,8 +2252,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "59",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_059_EN.webp",
+    "card_id": "A1a-59",
+    "image": "/images/en-US/A1a-59.webp",
     "hp": "170",
     "energy": "Colorless",
     "name": "Pidgeot ex",
@@ -2194,11 +2280,18 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-59",
         "version": "Mythical Island #59",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-79",
         "version": "Mythical Island #79",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A3a-102",
+        "version": "Extradimensional Crisis #102",
         "rarity": "☆☆"
       }
     ],
@@ -2206,8 +2299,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "60",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_060_EN.webp",
+    "card_id": "A1a-60",
+    "image": "/images/en-US/A1a-60.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Tauros",
@@ -2234,6 +2327,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-60",
         "version": "Mythical Island #60",
         "rarity": "◊◊◊"
       }
@@ -2242,8 +2336,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "61",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_061_EN.webp",
+    "card_id": "A1a-61",
+    "image": "/images/en-US/A1a-61.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Eevee",
@@ -2270,6 +2364,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-61",
         "version": "Mythical Island #61",
         "rarity": "◊"
       }
@@ -2278,8 +2373,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "62",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_062_EN.webp",
+    "card_id": "A1a-62",
+    "image": "/images/en-US/A1a-62.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Chatot",
@@ -2306,6 +2401,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-62",
         "version": "Mythical Island #62",
         "rarity": "◊"
       }
@@ -2314,8 +2410,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "63",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_063_EN.webp",
+    "card_id": "A1a-63",
+    "image": "/images/en-US/A1a-63.webp",
     "hp": "40",
     "energy": "40 HP",
     "name": "Old Amber",
@@ -2333,10 +2429,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1-218",
         "version": "Genetic Apex #218",
         "rarity": "◊"
       },
       {
+        "card_id": "A1a-63",
         "version": "Mythical Island #63",
         "rarity": "◊"
       }
@@ -2345,8 +2443,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "64",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_064_EN.webp",
+    "card_id": "A1a-64",
+    "image": "/images/en-US/A1a-64.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Pokémon Flute",
@@ -2363,6 +2461,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-64",
         "version": "Mythical Island #64",
         "rarity": "◊◊"
       }
@@ -2371,8 +2470,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "65",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_065_EN.webp",
+    "card_id": "A1a-65",
+    "image": "/images/en-US/A1a-65.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Mythical Slab",
@@ -2389,6 +2488,7 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-65",
         "version": "Mythical Island #65",
         "rarity": "◊◊"
       }
@@ -2397,8 +2497,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "66",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_066_EN.webp",
+    "card_id": "A1a-66",
+    "image": "/images/en-US/A1a-66.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Budding Expeditioner",
@@ -2415,10 +2515,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-66",
         "version": "Mythical Island #66",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A1a-80",
         "version": "Mythical Island #80",
         "rarity": "☆☆"
       }
@@ -2427,8 +2529,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "67",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_067_EN.webp",
+    "card_id": "A1a-67",
+    "image": "/images/en-US/A1a-67.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Blue",
@@ -2445,10 +2547,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-67",
         "version": "Mythical Island #67",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A1a-81",
         "version": "Mythical Island #81",
         "rarity": "☆☆"
       }
@@ -2457,8 +2561,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "68",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_068_EN.webp",
+    "card_id": "A1a-68",
+    "image": "/images/en-US/A1a-68.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Leaf",
@@ -2475,10 +2579,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-68",
         "version": "Mythical Island #68",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A1a-82",
         "version": "Mythical Island #82",
         "rarity": "☆☆"
       }
@@ -2487,8 +2593,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "69",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_069_EN.webp",
+    "card_id": "A1a-69",
+    "image": "/images/en-US/A1a-69.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Exeggutor",
@@ -2515,14 +2621,17 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-2",
         "version": "Mythical Island #2",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A1a-69",
         "version": "Mythical Island #69",
         "rarity": "☆"
       },
       {
+        "card_id": "A3-214",
         "version": "Celestial Guardians #214",
         "rarity": "☆"
       }
@@ -2531,8 +2640,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "70",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_070_EN.webp",
+    "card_id": "A1a-70",
+    "image": "/images/en-US/A1a-70.webp",
     "hp": "110",
     "energy": "Grass",
     "name": "Serperior",
@@ -2559,10 +2668,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-6",
         "version": "Mythical Island #6",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A1a-70",
         "version": "Mythical Island #70",
         "rarity": "☆"
       }
@@ -2571,8 +2682,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "71",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_071_EN.webp",
+    "card_id": "A1a-71",
+    "image": "/images/en-US/A1a-71.webp",
     "hp": "60",
     "energy": "Fire",
     "name": "Salandit",
@@ -2599,10 +2710,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-15",
         "version": "Mythical Island #15",
         "rarity": "◊"
       },
       {
+        "card_id": "A1a-71",
         "version": "Mythical Island #71",
         "rarity": "☆"
       }
@@ -2611,8 +2724,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "72",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_072_EN.webp",
+    "card_id": "A1a-72",
+    "image": "/images/en-US/A1a-72.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Vaporeon",
@@ -2639,10 +2752,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-19",
         "version": "Mythical Island #19",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A1a-72",
         "version": "Mythical Island #72",
         "rarity": "☆"
       }
@@ -2651,8 +2766,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "73",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_073_EN.webp",
+    "card_id": "A1a-73",
+    "image": "/images/en-US/A1a-73.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Dedenne",
@@ -2679,10 +2794,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-30",
         "version": "Mythical Island #30",
         "rarity": "◊"
       },
       {
+        "card_id": "A1a-73",
         "version": "Mythical Island #73",
         "rarity": "☆"
       }
@@ -2691,8 +2808,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "74",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_074_EN.webp",
+    "card_id": "A1a-74",
+    "image": "/images/en-US/A1a-74.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Marshadow",
@@ -2719,10 +2836,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-47",
         "version": "Mythical Island #47",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A1a-74",
         "version": "Mythical Island #74",
         "rarity": "☆"
       }
@@ -2731,8 +2850,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "75",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_075_EN.webp",
+    "card_id": "A1a-75",
+    "image": "/images/en-US/A1a-75.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Celebi ex",
@@ -2759,24 +2878,32 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-3",
         "version": "Mythical Island #3",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-75",
         "version": "Mythical Island #75",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-85",
         "version": "Mythical Island #85",
         "rarity": "☆☆☆"
+      },
+      {
+        "card_id": "A3a-99",
+        "version": "Extradimensional Crisis #99",
+        "rarity": "☆☆"
       }
     ],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
   {
-    "id": "76",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_076_EN.webp",
+    "card_id": "A1a-76",
+    "image": "/images/en-US/A1a-76.webp",
     "hp": "180",
     "energy": "Water",
     "name": "Gyarados ex",
@@ -2803,10 +2930,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-18",
         "version": "Mythical Island #18",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-76",
         "version": "Mythical Island #76",
         "rarity": "☆☆"
       }
@@ -2815,8 +2944,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "77",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_077_EN.webp",
+    "card_id": "A1a-77",
+    "image": "/images/en-US/A1a-77.webp",
     "hp": "130",
     "energy": "Psychic",
     "name": "Mew ex",
@@ -2849,18 +2978,22 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-32",
         "version": "Mythical Island #32",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-77",
         "version": "Mythical Island #77",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-83",
         "version": "Mythical Island #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-86",
         "version": "Mythical Island #86",
         "rarity": "♛"
       }
@@ -2869,8 +3002,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "78",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_078_EN.webp",
+    "card_id": "A1a-78",
+    "image": "/images/en-US/A1a-78.webp",
     "hp": "140",
     "energy": "Fighting",
     "name": "Aerodactyl ex",
@@ -2897,15 +3030,23 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-46",
         "version": "Mythical Island #46",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-78",
         "version": "Mythical Island #78",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-84",
         "version": "Mythical Island #84",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A3a-101",
+        "version": "Extradimensional Crisis #101",
         "rarity": "☆☆"
       }
     ],
@@ -2913,8 +3054,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "79",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_079_EN.webp",
+    "card_id": "A1a-79",
+    "image": "/images/en-US/A1a-79.webp",
     "hp": "170",
     "energy": "Colorless",
     "name": "Pidgeot ex",
@@ -2941,11 +3082,18 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-59",
         "version": "Mythical Island #59",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-79",
         "version": "Mythical Island #79",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A3a-102",
+        "version": "Extradimensional Crisis #102",
         "rarity": "☆☆"
       }
     ],
@@ -2953,8 +3101,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "80",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_080_EN.webp",
+    "card_id": "A1a-80",
+    "image": "/images/en-US/A1a-80.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Budding Expeditioner",
@@ -2971,10 +3119,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-66",
         "version": "Mythical Island #66",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A1a-80",
         "version": "Mythical Island #80",
         "rarity": "☆☆"
       }
@@ -2983,8 +3133,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "81",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_081_EN.webp",
+    "card_id": "A1a-81",
+    "image": "/images/en-US/A1a-81.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Blue",
@@ -3001,10 +3151,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-67",
         "version": "Mythical Island #67",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A1a-81",
         "version": "Mythical Island #81",
         "rarity": "☆☆"
       }
@@ -3013,8 +3165,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "82",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_082_EN.webp",
+    "card_id": "A1a-82",
+    "image": "/images/en-US/A1a-82.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Leaf",
@@ -3031,10 +3183,12 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-68",
         "version": "Mythical Island #68",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A1a-82",
         "version": "Mythical Island #82",
         "rarity": "☆☆"
       }
@@ -3043,8 +3197,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "83",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_083_EN.webp",
+    "card_id": "A1a-83",
+    "image": "/images/en-US/A1a-83.webp",
     "hp": "130",
     "energy": "Psychic",
     "name": "Mew ex",
@@ -3077,18 +3231,22 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-32",
         "version": "Mythical Island #32",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-77",
         "version": "Mythical Island #77",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-83",
         "version": "Mythical Island #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-86",
         "version": "Mythical Island #86",
         "rarity": "♛"
       }
@@ -3097,8 +3255,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "84",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_084_EN.webp",
+    "card_id": "A1a-84",
+    "image": "/images/en-US/A1a-84.webp",
     "hp": "140",
     "energy": "Fighting",
     "name": "Aerodactyl ex",
@@ -3125,15 +3283,23 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-46",
         "version": "Mythical Island #46",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-78",
         "version": "Mythical Island #78",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-84",
         "version": "Mythical Island #84",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A3a-101",
+        "version": "Extradimensional Crisis #101",
         "rarity": "☆☆"
       }
     ],
@@ -3141,8 +3307,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "85",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_085_EN.webp",
+    "card_id": "A1a-85",
+    "image": "/images/en-US/A1a-85.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Celebi ex",
@@ -3169,24 +3335,32 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-3",
         "version": "Mythical Island #3",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-75",
         "version": "Mythical Island #75",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-85",
         "version": "Mythical Island #85",
         "rarity": "☆☆☆"
+      },
+      {
+        "card_id": "A3a-99",
+        "version": "Extradimensional Crisis #99",
+        "rarity": "☆☆"
       }
     ],
     "artist": "kantaro",
     "crafting_cost": 1500
   },
   {
-    "id": "86",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A1a/A1a_086_EN.webp",
+    "card_id": "A1a-86",
+    "image": "/images/en-US/A1a-86.webp",
     "hp": "130",
     "energy": "Psychic",
     "name": "Mew ex",
@@ -3219,18 +3393,22 @@
     "pack": "mewpack",
     "alternate_versions": [
       {
+        "card_id": "A1a-32",
         "version": "Mythical Island #32",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-77",
         "version": "Mythical Island #77",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-83",
         "version": "Mythical Island #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-86",
         "version": "Mythical Island #86",
         "rarity": "♛"
       }

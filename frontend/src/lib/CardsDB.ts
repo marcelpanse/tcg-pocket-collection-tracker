@@ -21,19 +21,14 @@ import A3bMissions from '../../assets/themed-collections/A3b-missions.json'
 const update = (cards: Card[], expansionName: ExpansionId) => {
   for (const card of cards) {
     // we set the card_id to the linkedCardID if it exists, so we really treat it as a single card even though it appears in multiple expansions.
-    // @ts-ignore there is an ID in the JSON, but I don't want it in the Type because you should always use the card_id, having both is confusing.
-    card.card_id = card.linkedCardID || `${expansionName}-${card.id}`
+    if (card.linkedCardID) card.card_id = card.linkedCardID
     card.expansion = expansionName
   }
   return cards
 }
 
 const equivalent = (firstCard: Card, secondCard: Card) => {
-  return (
-    firstCard.name === secondCard.name &&
-    firstCard.attacks.length === secondCard.attacks.length &&
-    firstCard.attacks.every((a) => secondCard.attacks.some((atk) => atk.name === a.name))
-  )
+  return firstCard.alternate_versions.some((x) => x.card_id === secondCard.card_id)
 }
 
 export const a1Cards: Card[] = update(A1 as unknown as Card[], 'A1')
@@ -204,18 +199,19 @@ interface NrOfCardsOwnedProps {
   deckbuildingMode?: boolean
 }
 export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expansion, packName, deckbuildingMode }: NrOfCardsOwnedProps): number => {
+  const amounts = new Map(ownedCards.map((x) => [x.card_id, x.amount_owned]))
+
   let allCardsWithAmounts = allCards
     .filter((a) => !a.linkedCardID)
     .map((ac) => {
-      const amount = ownedCards.find((oc) => ac.card_id === oc.card_id)?.amount_owned || 0
+      const amount = amounts.get(ac.card_id) || 0
       return { ...ac, amount_owned: amount }
     })
   if (deckbuildingMode) {
     // can't filter by card ID, because we are specifically looking for cards with the same name, attacks, and ability but different arts
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
-        const amount_owned = allCardsWithAmounts.filter((c) => equivalent(c, ac)).reduce((acc, rc) => acc + (rc.amount_owned || 0), 0)
-
+        const amount_owned = ac.alternate_versions.reduce((acc, rc) => acc + (amounts.get(rc.card_id) || 0), 0)
         return { ...ac, amount_owned }
       })
       .filter((c) => basicCards.includes(c.rarity))

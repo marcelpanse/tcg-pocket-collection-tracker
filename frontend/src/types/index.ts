@@ -67,6 +67,7 @@ export interface Card {
   set_details: string
   pack: string
   alternate_versions: {
+    card_id: string
     version: string
     rarity: Rarity
   }[]

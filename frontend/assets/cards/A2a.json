@@ -1,7 +1,7 @@
 [
   {
-    "id": "1",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_001_EN.webp",
+    "card_id": "A2a-1",
+    "image": "/images/en-US/A2a-1.webp",
     "hp": "100",
     "energy": "Grass",
     "name": "Heracross",
@@ -28,6 +28,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-1",
         "version": "Triumphant Light #1",
         "rarity": "◊◊"
       }
@@ -36,8 +37,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "2",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_002_EN.webp",
+    "card_id": "A2a-2",
+    "image": "/images/en-US/A2a-2.webp",
     "hp": "50",
     "energy": "Grass",
     "name": "Burmy",
@@ -64,6 +65,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-2",
         "version": "Triumphant Light #2",
         "rarity": "◊"
       }
@@ -72,8 +74,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "3",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_003_EN.webp",
+    "card_id": "A2a-3",
+    "image": "/images/en-US/A2a-3.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Mothim",
@@ -100,6 +102,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-3",
         "version": "Triumphant Light #3",
         "rarity": "◊◊"
       }
@@ -108,8 +111,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "4",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_004_EN.webp",
+    "card_id": "A2a-4",
+    "image": "/images/en-US/A2a-4.webp",
     "hp": "50",
     "energy": "Grass",
     "name": "Combee",
@@ -136,6 +139,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-4",
         "version": "Triumphant Light #4",
         "rarity": "◊"
       }
@@ -144,8 +148,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "5",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_005_EN.webp",
+    "card_id": "A2a-5",
+    "image": "/images/en-US/A2a-5.webp",
     "hp": "100",
     "energy": "Grass",
     "name": "Vespiquen",
@@ -172,6 +176,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-5",
         "version": "Triumphant Light #5",
         "rarity": "◊◊"
       }
@@ -180,8 +185,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "6",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_006_EN.webp",
+    "card_id": "A2a-6",
+    "image": "/images/en-US/A2a-6.webp",
     "hp": "50",
     "energy": "Grass",
     "name": "Cherubi",
@@ -208,6 +213,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-6",
         "version": "Triumphant Light #6",
         "rarity": "◊"
       }
@@ -216,8 +222,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "7",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_007_EN.webp",
+    "card_id": "A2a-7",
+    "image": "/images/en-US/A2a-7.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Cherrim",
@@ -244,6 +250,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-7",
         "version": "Triumphant Light #7",
         "rarity": "◊◊"
       }
@@ -252,8 +259,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "8",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_008_EN.webp",
+    "card_id": "A2a-8",
+    "image": "/images/en-US/A2a-8.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Cherrim",
@@ -280,10 +287,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-8",
         "version": "Triumphant Light #8",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-43",
         "version": "Promo-A #43",
         "rarity": ""
       }
@@ -292,8 +301,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "9",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_009_EN.webp",
+    "card_id": "A2a-9",
+    "image": "/images/en-US/A2a-9.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Carnivine",
@@ -320,6 +329,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-9",
         "version": "Triumphant Light #9",
         "rarity": "◊◊◊"
       }
@@ -328,8 +338,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "10",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_010_EN.webp",
+    "card_id": "A2a-10",
+    "image": "/images/en-US/A2a-10.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Leafeon ex",
@@ -356,14 +366,17 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-10",
         "version": "Triumphant Light #10",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-82",
         "version": "Triumphant Light #82",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-91",
         "version": "Triumphant Light #91",
         "rarity": "☆☆"
       }
@@ -372,8 +385,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "11",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_011_EN.webp",
+    "card_id": "A2a-11",
+    "image": "/images/en-US/A2a-11.webp",
     "hp": "60",
     "energy": "Fire",
     "name": "Houndour",
@@ -400,6 +413,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-11",
         "version": "Triumphant Light #11",
         "rarity": "◊"
       }
@@ -408,8 +422,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "12",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_012_EN.webp",
+    "card_id": "A2a-12",
+    "image": "/images/en-US/A2a-12.webp",
     "hp": "100",
     "energy": "Fire",
     "name": "Houndoom",
@@ -436,10 +450,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-12",
         "version": "Triumphant Light #12",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-76",
         "version": "Triumphant Light #76",
         "rarity": "☆"
       }
@@ -448,8 +464,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "13",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_013_EN.webp",
+    "card_id": "A2a-13",
+    "image": "/images/en-US/A2a-13.webp",
     "hp": "110",
     "energy": "Fire",
     "name": "Heatran",
@@ -476,6 +492,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-13",
         "version": "Triumphant Light #13",
         "rarity": "◊◊◊"
       }
@@ -484,8 +501,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "14",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_014_EN.webp",
+    "card_id": "A2a-14",
+    "image": "/images/en-US/A2a-14.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Marill",
@@ -512,10 +529,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-14",
         "version": "Triumphant Light #14",
         "rarity": "◊"
       },
       {
+        "card_id": "A2a-77",
         "version": "Triumphant Light #77",
         "rarity": "☆"
       }
@@ -524,8 +543,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "15",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_015_EN.webp",
+    "card_id": "A2a-15",
+    "image": "/images/en-US/A2a-15.webp",
     "hp": "100",
     "energy": "Water",
     "name": "Azumarill",
@@ -552,6 +571,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-15",
         "version": "Triumphant Light #15",
         "rarity": "◊"
       }
@@ -560,8 +580,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "16",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_016_EN.webp",
+    "card_id": "A2a-16",
+    "image": "/images/en-US/A2a-16.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Barboach",
@@ -588,6 +608,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-16",
         "version": "Triumphant Light #16",
         "rarity": "◊"
       }
@@ -596,8 +617,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "17",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_017_EN.webp",
+    "card_id": "A2a-17",
+    "image": "/images/en-US/A2a-17.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Whiscash",
@@ -624,6 +645,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-17",
         "version": "Triumphant Light #17",
         "rarity": "◊◊"
       }
@@ -632,8 +654,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "18",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_018_EN.webp",
+    "card_id": "A2a-18",
+    "image": "/images/en-US/A2a-18.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Snorunt",
@@ -660,6 +682,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-18",
         "version": "Triumphant Light #18",
         "rarity": "◊"
       }
@@ -668,8 +691,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "19",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_019_EN.webp",
+    "card_id": "A2a-19",
+    "image": "/images/en-US/A2a-19.webp",
     "hp": "90",
     "energy": "Water",
     "name": "Froslass",
@@ -696,6 +719,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-19",
         "version": "Triumphant Light #19",
         "rarity": "◊◊"
       }
@@ -704,8 +728,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "20",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_020_EN.webp",
+    "card_id": "A2a-20",
+    "image": "/images/en-US/A2a-20.webp",
     "hp": "70",
     "energy": "Water",
     "name": "Snover",
@@ -732,6 +756,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-20",
         "version": "Triumphant Light #20",
         "rarity": "◊"
       }
@@ -740,8 +765,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "21",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_021_EN.webp",
+    "card_id": "A2a-21",
+    "image": "/images/en-US/A2a-21.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Abomasnow",
@@ -768,6 +793,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-21",
         "version": "Triumphant Light #21",
         "rarity": "◊◊◊"
       }
@@ -776,8 +802,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "22",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_022_EN.webp",
+    "card_id": "A2a-22",
+    "image": "/images/en-US/A2a-22.webp",
     "hp": "140",
     "energy": "Water",
     "name": "Glaceon ex",
@@ -804,14 +830,17 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-22",
         "version": "Triumphant Light #22",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-83",
         "version": "Triumphant Light #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-92",
         "version": "Triumphant Light #92",
         "rarity": "☆☆"
       }
@@ -820,8 +849,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "23",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_023_EN.webp",
+    "card_id": "A2a-23",
+    "image": "/images/en-US/A2a-23.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Origin Forme Palkia",
@@ -848,6 +877,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-23",
         "version": "Triumphant Light #23",
         "rarity": "◊◊◊"
       }
@@ -856,8 +886,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "24",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_024_EN.webp",
+    "card_id": "A2a-24",
+    "image": "/images/en-US/A2a-24.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Phione",
@@ -884,6 +914,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-24",
         "version": "Triumphant Light #24",
         "rarity": "◊◊"
       }
@@ -892,8 +923,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "25",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_025_EN.webp",
+    "card_id": "A2a-25",
+    "image": "/images/en-US/A2a-25.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Pikachu",
@@ -920,6 +951,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-25",
         "version": "Triumphant Light #25",
         "rarity": "◊"
       }
@@ -928,8 +960,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "26",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_026_EN.webp",
+    "card_id": "A2a-26",
+    "image": "/images/en-US/A2a-26.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Raichu",
@@ -956,10 +988,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-26",
         "version": "Triumphant Light #26",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-44",
         "version": "Promo-A #44",
         "rarity": ""
       }
@@ -968,8 +1002,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "27",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_027_EN.webp",
+    "card_id": "A2a-27",
+    "image": "/images/en-US/A2a-27.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Electrike",
@@ -996,6 +1030,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-27",
         "version": "Triumphant Light #27",
         "rarity": "◊"
       }
@@ -1004,8 +1039,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "28",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_028_EN.webp",
+    "card_id": "A2a-28",
+    "image": "/images/en-US/A2a-28.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Manectric",
@@ -1032,6 +1067,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-28",
         "version": "Triumphant Light #28",
         "rarity": "◊◊"
       }
@@ -1040,8 +1076,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "29",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_029_EN.webp",
+    "card_id": "A2a-29",
+    "image": "/images/en-US/A2a-29.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Clefairy",
@@ -1068,6 +1104,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-29",
         "version": "Triumphant Light #29",
         "rarity": "◊"
       }
@@ -1076,8 +1113,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "30",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_030_EN.webp",
+    "card_id": "A2a-30",
+    "image": "/images/en-US/A2a-30.webp",
     "hp": "100",
     "energy": "Psychic",
     "name": "Clefable",
@@ -1104,6 +1141,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-30",
         "version": "Triumphant Light #30",
         "rarity": "◊◊"
       }
@@ -1112,8 +1150,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "31",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_031_EN.webp",
+    "card_id": "A2a-31",
+    "image": "/images/en-US/A2a-31.webp",
     "hp": "50",
     "energy": "Psychic",
     "name": "Gastly",
@@ -1140,10 +1178,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-31",
         "version": "Triumphant Light #31",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-220",
         "version": "Celestial Guardians #220",
         "rarity": "☆"
       }
@@ -1152,8 +1192,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "32",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_032_EN.webp",
+    "card_id": "A2a-32",
+    "image": "/images/en-US/A2a-32.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Haunter",
@@ -1180,6 +1220,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-32",
         "version": "Triumphant Light #32",
         "rarity": "◊"
       }
@@ -1188,8 +1229,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "33",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_033_EN.webp",
+    "card_id": "A2a-33",
+    "image": "/images/en-US/A2a-33.webp",
     "hp": "140",
     "energy": "Psychic",
     "name": "Gengar",
@@ -1216,6 +1257,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-33",
         "version": "Triumphant Light #33",
         "rarity": "◊◊"
       }
@@ -1224,8 +1266,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "34",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_034_EN.webp",
+    "card_id": "A2a-34",
+    "image": "/images/en-US/A2a-34.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Unown",
@@ -1252,10 +1294,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-34",
         "version": "Triumphant Light #34",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-78",
         "version": "Triumphant Light #78",
         "rarity": "☆"
       }
@@ -1264,8 +1308,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "35",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_035_EN.webp",
+    "card_id": "A2a-35",
+    "image": "/images/en-US/A2a-35.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Rotom",
@@ -1292,6 +1336,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-35",
         "version": "Triumphant Light #35",
         "rarity": "◊◊◊"
       }
@@ -1300,8 +1345,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "36",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_036_EN.webp",
+    "card_id": "A2a-36",
+    "image": "/images/en-US/A2a-36.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Sudowoodo",
@@ -1328,10 +1373,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-36",
         "version": "Triumphant Light #36",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-79",
         "version": "Triumphant Light #79",
         "rarity": "☆"
       }
@@ -1340,8 +1387,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "37",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_037_EN.webp",
+    "card_id": "A2a-37",
+    "image": "/images/en-US/A2a-37.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Phanpy",
@@ -1368,6 +1415,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-37",
         "version": "Triumphant Light #37",
         "rarity": "◊"
       }
@@ -1376,8 +1424,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "38",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_038_EN.webp",
+    "card_id": "A2a-38",
+    "image": "/images/en-US/A2a-38.webp",
     "hp": "120",
     "energy": "Fighting",
     "name": "Donphan",
@@ -1404,6 +1452,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-38",
         "version": "Triumphant Light #38",
         "rarity": "◊◊"
       }
@@ -1412,8 +1461,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "39",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_039_EN.webp",
+    "card_id": "A2a-39",
+    "image": "/images/en-US/A2a-39.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Larvitar",
@@ -1440,6 +1489,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-39",
         "version": "Triumphant Light #39",
         "rarity": "◊"
       }
@@ -1448,8 +1498,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "40",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_040_EN.webp",
+    "card_id": "A2a-40",
+    "image": "/images/en-US/A2a-40.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Pupitar",
@@ -1476,6 +1526,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-40",
         "version": "Triumphant Light #40",
         "rarity": "◊◊"
       }
@@ -1484,8 +1535,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "41",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_041_EN.webp",
+    "card_id": "A2a-41",
+    "image": "/images/en-US/A2a-41.webp",
     "hp": "160",
     "energy": "Fighting",
     "name": "Tyranitar",
@@ -1512,6 +1563,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-41",
         "version": "Triumphant Light #41",
         "rarity": "◊◊◊"
       }
@@ -1520,8 +1572,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "42",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_042_EN.webp",
+    "card_id": "A2a-42",
+    "image": "/images/en-US/A2a-42.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Nosepass",
@@ -1548,6 +1600,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-42",
         "version": "Triumphant Light #42",
         "rarity": "◊"
       }
@@ -1556,8 +1609,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "43",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_043_EN.webp",
+    "card_id": "A2a-43",
+    "image": "/images/en-US/A2a-43.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Meditite",
@@ -1584,6 +1637,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-43",
         "version": "Triumphant Light #43",
         "rarity": "◊"
       }
@@ -1592,8 +1646,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "44",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_044_EN.webp",
+    "card_id": "A2a-44",
+    "image": "/images/en-US/A2a-44.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Medicham",
@@ -1620,6 +1674,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-44",
         "version": "Triumphant Light #44",
         "rarity": "◊◊"
       }
@@ -1628,8 +1683,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "45",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_045_EN.webp",
+    "card_id": "A2a-45",
+    "image": "/images/en-US/A2a-45.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Gible",
@@ -1656,10 +1711,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-45",
         "version": "Triumphant Light #45",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-46",
         "version": "Promo-A #46",
         "rarity": ""
       }
@@ -1668,8 +1725,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "46",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_046_EN.webp",
+    "card_id": "A2a-46",
+    "image": "/images/en-US/A2a-46.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Gabite",
@@ -1696,6 +1753,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-46",
         "version": "Triumphant Light #46",
         "rarity": "◊"
       }
@@ -1704,8 +1762,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "47",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_047_EN.webp",
+    "card_id": "A2a-47",
+    "image": "/images/en-US/A2a-47.webp",
     "hp": "170",
     "energy": "Fighting",
     "name": "Garchomp ex",
@@ -1738,14 +1796,17 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-47",
         "version": "Triumphant Light #47",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-84",
         "version": "Triumphant Light #84",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-93",
         "version": "Triumphant Light #93",
         "rarity": "☆☆"
       }
@@ -1754,8 +1815,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "48",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_048_EN.webp",
+    "card_id": "A2a-48",
+    "image": "/images/en-US/A2a-48.webp",
     "hp": "50",
     "energy": "Darkness",
     "name": "Zubat",
@@ -1782,6 +1843,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-48",
         "version": "Triumphant Light #48",
         "rarity": "◊"
       }
@@ -1790,8 +1852,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "49",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_049_EN.webp",
+    "card_id": "A2a-49",
+    "image": "/images/en-US/A2a-49.webp",
     "hp": "80",
     "energy": "Darkness",
     "name": "Golbat",
@@ -1818,6 +1880,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-49",
         "version": "Triumphant Light #49",
         "rarity": "◊"
       }
@@ -1826,8 +1889,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "50",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_050_EN.webp",
+    "card_id": "A2a-50",
+    "image": "/images/en-US/A2a-50.webp",
     "hp": "110",
     "energy": "Darkness",
     "name": "Crobat",
@@ -1854,6 +1917,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-50",
         "version": "Triumphant Light #50",
         "rarity": "◊◊◊"
       }
@@ -1862,8 +1926,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "51",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_051_EN.webp",
+    "card_id": "A2a-51",
+    "image": "/images/en-US/A2a-51.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Croagunk",
@@ -1890,6 +1954,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-51",
         "version": "Triumphant Light #51",
         "rarity": "◊"
       }
@@ -1898,8 +1963,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "52",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_052_EN.webp",
+    "card_id": "A2a-52",
+    "image": "/images/en-US/A2a-52.webp",
     "hp": "100",
     "energy": "Darkness",
     "name": "Toxicroak",
@@ -1926,6 +1991,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-52",
         "version": "Triumphant Light #52",
         "rarity": "◊◊"
       }
@@ -1934,8 +2000,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "53",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_053_EN.webp",
+    "card_id": "A2a-53",
+    "image": "/images/en-US/A2a-53.webp",
     "hp": "60",
     "energy": "Metal",
     "name": "Magnemite",
@@ -1962,10 +2028,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-53",
         "version": "Triumphant Light #53",
         "rarity": "◊"
       },
       {
+        "card_id": "A2a-80",
         "version": "Triumphant Light #80",
         "rarity": "☆"
       }
@@ -1974,8 +2042,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "54",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_054_EN.webp",
+    "card_id": "A2a-54",
+    "image": "/images/en-US/A2a-54.webp",
     "hp": "90",
     "energy": "Metal",
     "name": "Magneton",
@@ -2002,6 +2070,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-54",
         "version": "Triumphant Light #54",
         "rarity": "◊"
       }
@@ -2010,8 +2079,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "55",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_055_EN.webp",
+    "card_id": "A2a-55",
+    "image": "/images/en-US/A2a-55.webp",
     "hp": "140",
     "energy": "Metal",
     "name": "Magnezone",
@@ -2038,6 +2107,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-55",
         "version": "Triumphant Light #55",
         "rarity": "◊◊◊"
       }
@@ -2046,8 +2116,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "56",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_056_EN.webp",
+    "card_id": "A2a-56",
+    "image": "/images/en-US/A2a-56.webp",
     "hp": "70",
     "energy": "Metal",
     "name": "Mawile",
@@ -2074,6 +2144,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-56",
         "version": "Triumphant Light #56",
         "rarity": "◊"
       }
@@ -2082,8 +2153,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "57",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_057_EN.webp",
+    "card_id": "A2a-57",
+    "image": "/images/en-US/A2a-57.webp",
     "hp": "160",
     "energy": "Metal",
     "name": "Probopass ex",
@@ -2110,14 +2181,17 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-57",
         "version": "Triumphant Light #57",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-85",
         "version": "Triumphant Light #85",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-94",
         "version": "Triumphant Light #94",
         "rarity": "☆☆"
       }
@@ -2126,8 +2200,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "58",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_058_EN.webp",
+    "card_id": "A2a-58",
+    "image": "/images/en-US/A2a-58.webp",
     "hp": "60",
     "energy": "Metal",
     "name": "Bronzor",
@@ -2154,6 +2228,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-58",
         "version": "Triumphant Light #58",
         "rarity": "◊"
       }
@@ -2162,8 +2237,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "59",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_059_EN.webp",
+    "card_id": "A2a-59",
+    "image": "/images/en-US/A2a-59.webp",
     "hp": "120",
     "energy": "Metal",
     "name": "Bronzong",
@@ -2190,6 +2265,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-59",
         "version": "Triumphant Light #59",
         "rarity": "◊◊"
       }
@@ -2198,8 +2274,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "60",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_060_EN.webp",
+    "card_id": "A2a-60",
+    "image": "/images/en-US/A2a-60.webp",
     "hp": "120",
     "energy": "Metal",
     "name": "Origin Forme Dialga",
@@ -2226,6 +2302,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-60",
         "version": "Triumphant Light #60",
         "rarity": "◊◊◊"
       }
@@ -2234,8 +2311,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "61",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_061_EN.webp",
+    "card_id": "A2a-61",
+    "image": "/images/en-US/A2a-61.webp",
     "hp": "120",
     "energy": "Dragon",
     "name": "Giratina",
@@ -2262,6 +2339,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-61",
         "version": "Triumphant Light #61",
         "rarity": "◊◊◊"
       }
@@ -2270,8 +2348,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "62",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_062_EN.webp",
+    "card_id": "A2a-62",
+    "image": "/images/en-US/A2a-62.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Eevee",
@@ -2298,6 +2376,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-62",
         "version": "Triumphant Light #62",
         "rarity": "◊"
       }
@@ -2306,8 +2385,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "63",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_063_EN.webp",
+    "card_id": "A2a-63",
+    "image": "/images/en-US/A2a-63.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Snorlax",
@@ -2334,10 +2413,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-63",
         "version": "Triumphant Light #63",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-49",
         "version": "Promo-A #49",
         "rarity": ""
       }
@@ -2346,8 +2427,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "64",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_064_EN.webp",
+    "card_id": "A2a-64",
+    "image": "/images/en-US/A2a-64.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Hoothoot",
@@ -2374,6 +2455,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-64",
         "version": "Triumphant Light #64",
         "rarity": "◊"
       }
@@ -2382,8 +2464,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "65",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_065_EN.webp",
+    "card_id": "A2a-65",
+    "image": "/images/en-US/A2a-65.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Noctowl",
@@ -2410,6 +2492,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-65",
         "version": "Triumphant Light #65",
         "rarity": "◊◊"
       }
@@ -2418,8 +2501,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "66",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_066_EN.webp",
+    "card_id": "A2a-66",
+    "image": "/images/en-US/A2a-66.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Starly",
@@ -2446,6 +2529,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-66",
         "version": "Triumphant Light #66",
         "rarity": "◊"
       }
@@ -2454,8 +2538,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "67",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_067_EN.webp",
+    "card_id": "A2a-67",
+    "image": "/images/en-US/A2a-67.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Staravia",
@@ -2482,6 +2566,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-67",
         "version": "Triumphant Light #67",
         "rarity": "◊"
       }
@@ -2490,8 +2575,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "68",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_068_EN.webp",
+    "card_id": "A2a-68",
+    "image": "/images/en-US/A2a-68.webp",
     "hp": "150",
     "energy": "Colorless",
     "name": "Staraptor",
@@ -2518,6 +2603,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-68",
         "version": "Triumphant Light #68",
         "rarity": "◊◊"
       }
@@ -2526,8 +2612,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "69",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_069_EN.webp",
+    "card_id": "A2a-69",
+    "image": "/images/en-US/A2a-69.webp",
     "hp": "70",
     "energy": "Colorless",
     "name": "Shaymin",
@@ -2554,10 +2640,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-69",
         "version": "Triumphant Light #69",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2a-81",
         "version": "Triumphant Light #81",
         "rarity": "☆"
       }
@@ -2566,8 +2654,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "70",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_070_EN.webp",
+    "card_id": "A2a-70",
+    "image": "/images/en-US/A2a-70.webp",
     "hp": "120",
     "energy": "Colorless",
     "name": "Arceus",
@@ -2594,6 +2682,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-70",
         "version": "Triumphant Light #70",
         "rarity": "◊◊◊"
       }
@@ -2602,8 +2691,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "71",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_071_EN.webp",
+    "card_id": "A2a-71",
+    "image": "/images/en-US/A2a-71.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Arceus ex",
@@ -2630,18 +2719,22 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-71",
         "version": "Triumphant Light #71",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-86",
         "version": "Triumphant Light #86",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-95",
         "version": "Triumphant Light #95",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A2a-96",
         "version": "Triumphant Light #96",
         "rarity": "♛"
       }
@@ -2650,8 +2743,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "72",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_072_EN.webp",
+    "card_id": "A2a-72",
+    "image": "/images/en-US/A2a-72.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Irida",
@@ -2668,10 +2761,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-72",
         "version": "Triumphant Light #72",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-87",
         "version": "Triumphant Light #87",
         "rarity": "☆☆"
       }
@@ -2680,8 +2775,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "73",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_073_EN.webp",
+    "card_id": "A2a-73",
+    "image": "/images/en-US/A2a-73.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Celestic Town Elder",
@@ -2698,10 +2793,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-73",
         "version": "Triumphant Light #73",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-88",
         "version": "Triumphant Light #88",
         "rarity": "☆☆"
       }
@@ -2710,8 +2807,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "74",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_074_EN.webp",
+    "card_id": "A2a-74",
+    "image": "/images/en-US/A2a-74.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Barry",
@@ -2728,10 +2825,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-74",
         "version": "Triumphant Light #74",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-89",
         "version": "Triumphant Light #89",
         "rarity": "☆☆"
       }
@@ -2740,8 +2839,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "75",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_075_EN.webp",
+    "card_id": "A2a-75",
+    "image": "/images/en-US/A2a-75.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Adaman",
@@ -2758,10 +2857,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-75",
         "version": "Triumphant Light #75",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-90",
         "version": "Triumphant Light #90",
         "rarity": "☆☆"
       }
@@ -2770,8 +2871,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "76",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_076_EN.webp",
+    "card_id": "A2a-76",
+    "image": "/images/en-US/A2a-76.webp",
     "hp": "100",
     "energy": "Fire",
     "name": "Houndoom",
@@ -2798,10 +2899,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-12",
         "version": "Triumphant Light #12",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-76",
         "version": "Triumphant Light #76",
         "rarity": "☆"
       }
@@ -2810,8 +2913,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "77",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_077_EN.webp",
+    "card_id": "A2a-77",
+    "image": "/images/en-US/A2a-77.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Marill",
@@ -2838,10 +2941,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-14",
         "version": "Triumphant Light #14",
         "rarity": "◊"
       },
       {
+        "card_id": "A2a-77",
         "version": "Triumphant Light #77",
         "rarity": "☆"
       }
@@ -2850,8 +2955,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "78",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_078_EN.webp",
+    "card_id": "A2a-78",
+    "image": "/images/en-US/A2a-78.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Unown",
@@ -2878,10 +2983,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-34",
         "version": "Triumphant Light #34",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-78",
         "version": "Triumphant Light #78",
         "rarity": "☆"
       }
@@ -2890,8 +2997,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "79",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_079_EN.webp",
+    "card_id": "A2a-79",
+    "image": "/images/en-US/A2a-79.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Sudowoodo",
@@ -2918,10 +3025,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-36",
         "version": "Triumphant Light #36",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-79",
         "version": "Triumphant Light #79",
         "rarity": "☆"
       }
@@ -2930,8 +3039,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "80",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_080_EN.webp",
+    "card_id": "A2a-80",
+    "image": "/images/en-US/A2a-80.webp",
     "hp": "60",
     "energy": "Metal",
     "name": "Magnemite",
@@ -2958,10 +3067,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-53",
         "version": "Triumphant Light #53",
         "rarity": "◊"
       },
       {
+        "card_id": "A2a-80",
         "version": "Triumphant Light #80",
         "rarity": "☆"
       }
@@ -2970,8 +3081,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "81",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_081_EN.webp",
+    "card_id": "A2a-81",
+    "image": "/images/en-US/A2a-81.webp",
     "hp": "70",
     "energy": "Colorless",
     "name": "Shaymin",
@@ -2998,10 +3109,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-69",
         "version": "Triumphant Light #69",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2a-81",
         "version": "Triumphant Light #81",
         "rarity": "☆"
       }
@@ -3010,8 +3123,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "82",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_082_EN.webp",
+    "card_id": "A2a-82",
+    "image": "/images/en-US/A2a-82.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Leafeon ex",
@@ -3038,14 +3151,17 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-10",
         "version": "Triumphant Light #10",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-82",
         "version": "Triumphant Light #82",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-91",
         "version": "Triumphant Light #91",
         "rarity": "☆☆"
       }
@@ -3054,8 +3170,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "83",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_083_EN.webp",
+    "card_id": "A2a-83",
+    "image": "/images/en-US/A2a-83.webp",
     "hp": "140",
     "energy": "Water",
     "name": "Glaceon ex",
@@ -3082,14 +3198,17 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-22",
         "version": "Triumphant Light #22",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-83",
         "version": "Triumphant Light #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-92",
         "version": "Triumphant Light #92",
         "rarity": "☆☆"
       }
@@ -3098,8 +3217,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "84",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_084_EN.webp",
+    "card_id": "A2a-84",
+    "image": "/images/en-US/A2a-84.webp",
     "hp": "170",
     "energy": "Fighting",
     "name": "Garchomp ex",
@@ -3132,14 +3251,17 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-47",
         "version": "Triumphant Light #47",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-84",
         "version": "Triumphant Light #84",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-93",
         "version": "Triumphant Light #93",
         "rarity": "☆☆"
       }
@@ -3148,8 +3270,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "85",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_085_EN.webp",
+    "card_id": "A2a-85",
+    "image": "/images/en-US/A2a-85.webp",
     "hp": "160",
     "energy": "Metal",
     "name": "Probopass ex",
@@ -3176,14 +3298,17 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-57",
         "version": "Triumphant Light #57",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-85",
         "version": "Triumphant Light #85",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-94",
         "version": "Triumphant Light #94",
         "rarity": "☆☆"
       }
@@ -3192,8 +3317,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "86",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_086_EN.webp",
+    "card_id": "A2a-86",
+    "image": "/images/en-US/A2a-86.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Arceus ex",
@@ -3220,18 +3345,22 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-71",
         "version": "Triumphant Light #71",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-86",
         "version": "Triumphant Light #86",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-95",
         "version": "Triumphant Light #95",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A2a-96",
         "version": "Triumphant Light #96",
         "rarity": "♛"
       }
@@ -3240,8 +3369,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "87",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_087_EN.webp",
+    "card_id": "A2a-87",
+    "image": "/images/en-US/A2a-87.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Irida",
@@ -3258,10 +3387,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-72",
         "version": "Triumphant Light #72",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-87",
         "version": "Triumphant Light #87",
         "rarity": "☆☆"
       }
@@ -3270,8 +3401,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "88",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_088_EN.webp",
+    "card_id": "A2a-88",
+    "image": "/images/en-US/A2a-88.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Celestic Town Elder",
@@ -3288,10 +3419,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-73",
         "version": "Triumphant Light #73",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-88",
         "version": "Triumphant Light #88",
         "rarity": "☆☆"
       }
@@ -3300,8 +3433,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "89",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_089_EN.webp",
+    "card_id": "A2a-89",
+    "image": "/images/en-US/A2a-89.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Barry",
@@ -3318,10 +3451,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-74",
         "version": "Triumphant Light #74",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-89",
         "version": "Triumphant Light #89",
         "rarity": "☆☆"
       }
@@ -3330,8 +3465,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "90",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_090_EN.webp",
+    "card_id": "A2a-90",
+    "image": "/images/en-US/A2a-90.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Adaman",
@@ -3348,10 +3483,12 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-75",
         "version": "Triumphant Light #75",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2a-90",
         "version": "Triumphant Light #90",
         "rarity": "☆☆"
       }
@@ -3360,8 +3497,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "91",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_091_EN.webp",
+    "card_id": "A2a-91",
+    "image": "/images/en-US/A2a-91.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Leafeon ex",
@@ -3388,14 +3525,17 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-10",
         "version": "Triumphant Light #10",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-82",
         "version": "Triumphant Light #82",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-91",
         "version": "Triumphant Light #91",
         "rarity": "☆☆"
       }
@@ -3404,8 +3544,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "92",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_092_EN.webp",
+    "card_id": "A2a-92",
+    "image": "/images/en-US/A2a-92.webp",
     "hp": "140",
     "energy": "Water",
     "name": "Glaceon ex",
@@ -3432,14 +3572,17 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-22",
         "version": "Triumphant Light #22",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-83",
         "version": "Triumphant Light #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-92",
         "version": "Triumphant Light #92",
         "rarity": "☆☆"
       }
@@ -3448,8 +3591,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "93",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_093_EN.webp",
+    "card_id": "A2a-93",
+    "image": "/images/en-US/A2a-93.webp",
     "hp": "170",
     "energy": "Fighting",
     "name": "Garchomp ex",
@@ -3482,14 +3625,17 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-47",
         "version": "Triumphant Light #47",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-84",
         "version": "Triumphant Light #84",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-93",
         "version": "Triumphant Light #93",
         "rarity": "☆☆"
       }
@@ -3498,8 +3644,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "94",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_094_EN.webp",
+    "card_id": "A2a-94",
+    "image": "/images/en-US/A2a-94.webp",
     "hp": "160",
     "energy": "Metal",
     "name": "Probopass ex",
@@ -3526,14 +3672,17 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-57",
         "version": "Triumphant Light #57",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-85",
         "version": "Triumphant Light #85",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-94",
         "version": "Triumphant Light #94",
         "rarity": "☆☆"
       }
@@ -3542,8 +3691,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "95",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_095_EN.webp",
+    "card_id": "A2a-95",
+    "image": "/images/en-US/A2a-95.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Arceus ex",
@@ -3570,18 +3719,22 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-71",
         "version": "Triumphant Light #71",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-86",
         "version": "Triumphant Light #86",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-95",
         "version": "Triumphant Light #95",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A2a-96",
         "version": "Triumphant Light #96",
         "rarity": "♛"
       }
@@ -3590,8 +3743,8 @@
     "crafting_cost": 1500
   },
   {
-    "id": "96",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2a/A2a_096_EN.webp",
+    "card_id": "A2a-96",
+    "image": "/images/en-US/A2a-96.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Arceus ex",
@@ -3618,18 +3771,22 @@
     "pack": "arceuspack",
     "alternate_versions": [
       {
+        "card_id": "A2a-71",
         "version": "Triumphant Light #71",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2a-86",
         "version": "Triumphant Light #86",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2a-95",
         "version": "Triumphant Light #95",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A2a-96",
         "version": "Triumphant Light #96",
         "rarity": "♛"
       }

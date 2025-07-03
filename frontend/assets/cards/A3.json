@@ -1,7 +1,7 @@
 [
   {
-    "id": "1",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_001_EN.webp",
+    "card_id": "A3-1",
+    "image": "/images/en-US/A3-1.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Exeggcute",
@@ -28,10 +28,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-1",
         "version": "Celestial Guardians #1",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-213",
         "version": "Celestial Guardians #213",
         "rarity": "☆"
       }
@@ -40,8 +42,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "2",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_002_EN.webp",
+    "card_id": "A3-2",
+    "image": "/images/en-US/A3-2.webp",
     "hp": "150",
     "energy": "Grass",
     "name": "Alolan Exeggutor",
@@ -68,14 +70,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-2",
         "version": "Celestial Guardians #2",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-156",
         "version": "Celestial Guardians #156",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-69",
         "version": "Promo-A #69",
         "rarity": ""
       }
@@ -84,8 +89,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "3",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_003_EN.webp",
+    "card_id": "A3-3",
+    "image": "/images/en-US/A3-3.webp",
     "hp": "50",
     "energy": "Grass",
     "name": "Surskit",
@@ -112,6 +117,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-3",
         "version": "Celestial Guardians #3",
         "rarity": "◊"
       }
@@ -120,8 +126,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "4",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_004_EN.webp",
+    "card_id": "A3-4",
+    "image": "/images/en-US/A3-4.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Masquerain",
@@ -148,6 +154,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-4",
         "version": "Celestial Guardians #4",
         "rarity": "◊◊"
       }
@@ -156,8 +163,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "5",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_005_EN.webp",
+    "card_id": "A3-5",
+    "image": "/images/en-US/A3-5.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Maractus",
@@ -184,6 +191,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-5",
         "version": "Celestial Guardians #5",
         "rarity": "◊"
       }
@@ -192,8 +200,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "6",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_006_EN.webp",
+    "card_id": "A3-6",
+    "image": "/images/en-US/A3-6.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Karrablast",
@@ -220,6 +228,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-6",
         "version": "Celestial Guardians #6",
         "rarity": "◊"
       }
@@ -228,8 +237,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "7",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_007_EN.webp",
+    "card_id": "A3-7",
+    "image": "/images/en-US/A3-7.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Phantump",
@@ -256,6 +265,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-7",
         "version": "Celestial Guardians #7",
         "rarity": "◊"
       }
@@ -264,8 +274,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "8",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_008_EN.webp",
+    "card_id": "A3-8",
+    "image": "/images/en-US/A3-8.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Trevenant",
@@ -292,6 +302,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-8",
         "version": "Celestial Guardians #8",
         "rarity": "◊◊"
       }
@@ -300,8 +311,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "9",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_009_EN.webp",
+    "card_id": "A3-9",
+    "image": "/images/en-US/A3-9.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Rowlet",
@@ -328,6 +339,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-9",
         "version": "Celestial Guardians #9",
         "rarity": "◊"
       }
@@ -336,8 +348,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "10",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_010_EN.webp",
+    "card_id": "A3-10",
+    "image": "/images/en-US/A3-10.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Rowlet",
@@ -364,6 +376,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-10",
         "version": "Celestial Guardians #10",
         "rarity": "◊"
       }
@@ -372,8 +385,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "11",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_011_EN.webp",
+    "card_id": "A3-11",
+    "image": "/images/en-US/A3-11.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Dartrix",
@@ -400,6 +413,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-11",
         "version": "Celestial Guardians #11",
         "rarity": "◊◊"
       }
@@ -408,8 +422,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "12",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_012_EN.webp",
+    "card_id": "A3-12",
+    "image": "/images/en-US/A3-12.webp",
     "hp": "170",
     "energy": "Grass",
     "name": "Decidueye ex",
@@ -442,14 +456,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-12",
         "version": "Celestial Guardians #12",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-180",
         "version": "Celestial Guardians #180",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-198",
         "version": "Celestial Guardians #198",
         "rarity": "☆☆"
       }
@@ -458,8 +475,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "13",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_013_EN.webp",
+    "card_id": "A3-13",
+    "image": "/images/en-US/A3-13.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Grubbin",
@@ -486,6 +503,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-13",
         "version": "Celestial Guardians #13",
         "rarity": "◊"
       }
@@ -494,8 +512,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "14",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_014_EN.webp",
+    "card_id": "A3-14",
+    "image": "/images/en-US/A3-14.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Fomantis",
@@ -522,6 +540,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-14",
         "version": "Celestial Guardians #14",
         "rarity": "◊"
       }
@@ -530,8 +549,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "15",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_015_EN.webp",
+    "card_id": "A3-15",
+    "image": "/images/en-US/A3-15.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Lurantis",
@@ -558,6 +577,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-15",
         "version": "Celestial Guardians #15",
         "rarity": "◊◊"
       }
@@ -566,8 +586,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "16",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_016_EN.webp",
+    "card_id": "A3-16",
+    "image": "/images/en-US/A3-16.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Morelull",
@@ -594,10 +614,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-16",
         "version": "Celestial Guardians #16",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-157",
         "version": "Celestial Guardians #157",
         "rarity": "☆"
       }
@@ -606,8 +628,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "17",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_017_EN.webp",
+    "card_id": "A3-17",
+    "image": "/images/en-US/A3-17.webp",
     "hp": "100",
     "energy": "Grass",
     "name": "Shiinotic",
@@ -634,6 +656,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-17",
         "version": "Celestial Guardians #17",
         "rarity": "◊◊"
       }
@@ -642,8 +665,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "18",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_018_EN.webp",
+    "card_id": "A3-18",
+    "image": "/images/en-US/A3-18.webp",
     "hp": "50",
     "energy": "Grass",
     "name": "Bounsweet",
@@ -670,6 +693,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-18",
         "version": "Celestial Guardians #18",
         "rarity": "◊"
       }
@@ -678,8 +702,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "19",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_019_EN.webp",
+    "card_id": "A3-19",
+    "image": "/images/en-US/A3-19.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Steenee",
@@ -706,6 +730,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-19",
         "version": "Celestial Guardians #19",
         "rarity": "◊◊"
       }
@@ -714,8 +739,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "20",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_020_EN.webp",
+    "card_id": "A3-20",
+    "image": "/images/en-US/A3-20.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Tsareena",
@@ -742,10 +767,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-20",
         "version": "Celestial Guardians #20",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-158",
         "version": "Celestial Guardians #158",
         "rarity": "☆"
       }
@@ -754,8 +781,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "21",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_021_EN.webp",
+    "card_id": "A3-21",
+    "image": "/images/en-US/A3-21.webp",
     "hp": "70",
     "energy": "Grass",
     "name": "Wimpod",
@@ -782,6 +809,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-21",
         "version": "Celestial Guardians #21",
         "rarity": "◊"
       }
@@ -790,8 +818,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "22",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_022_EN.webp",
+    "card_id": "A3-22",
+    "image": "/images/en-US/A3-22.webp",
     "hp": "120",
     "energy": "Grass",
     "name": "Golisopod",
@@ -818,6 +846,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-22",
         "version": "Celestial Guardians #22",
         "rarity": "◊◊◊"
       }
@@ -826,8 +855,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "23",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_023_EN.webp",
+    "card_id": "A3-23",
+    "image": "/images/en-US/A3-23.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Dhelmise ex",
@@ -854,14 +883,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-23",
         "version": "Celestial Guardians #23",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-181",
         "version": "Celestial Guardians #181",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-199",
         "version": "Celestial Guardians #199",
         "rarity": "☆☆"
       }
@@ -870,8 +902,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "24",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_024_EN.webp",
+    "card_id": "A3-24",
+    "image": "/images/en-US/A3-24.webp",
     "hp": "120",
     "energy": "Grass",
     "name": "Tapu Bulu",
@@ -898,10 +930,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-24",
         "version": "Celestial Guardians #24",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-159",
         "version": "Celestial Guardians #159",
         "rarity": "☆"
       }
@@ -910,8 +944,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "25",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_025_EN.webp",
+    "card_id": "A3-25",
+    "image": "/images/en-US/A3-25.webp",
     "hp": "70",
     "energy": "Fire",
     "name": "Growlithe",
@@ -938,6 +972,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-25",
         "version": "Celestial Guardians #25",
         "rarity": "◊"
       }
@@ -946,8 +981,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "26",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_026_EN.webp",
+    "card_id": "A3-26",
+    "image": "/images/en-US/A3-26.webp",
     "hp": "130",
     "energy": "Fire",
     "name": "Arcanine",
@@ -974,6 +1009,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-26",
         "version": "Celestial Guardians #26",
         "rarity": "◊◊"
       }
@@ -982,8 +1018,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "27",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_027_EN.webp",
+    "card_id": "A3-27",
+    "image": "/images/en-US/A3-27.webp",
     "hp": "110",
     "energy": "Fire",
     "name": "Alolan Marowak",
@@ -1010,10 +1046,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-27",
         "version": "Celestial Guardians #27",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-160",
         "version": "Celestial Guardians #160",
         "rarity": "☆"
       }
@@ -1022,8 +1060,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "28",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_028_EN.webp",
+    "card_id": "A3-28",
+    "image": "/images/en-US/A3-28.webp",
     "hp": "80",
     "energy": "Fire",
     "name": "Fletchinder",
@@ -1050,6 +1088,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-28",
         "version": "Celestial Guardians #28",
         "rarity": "◊"
       }
@@ -1058,8 +1097,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "29",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_029_EN.webp",
+    "card_id": "A3-29",
+    "image": "/images/en-US/A3-29.webp",
     "hp": "120",
     "energy": "Fire",
     "name": "Talonflame",
@@ -1086,6 +1125,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-29",
         "version": "Celestial Guardians #29",
         "rarity": "◊◊◊"
       }
@@ -1094,8 +1134,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "30",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_030_EN.webp",
+    "card_id": "A3-30",
+    "image": "/images/en-US/A3-30.webp",
     "hp": "60",
     "energy": "Fire",
     "name": "Litten",
@@ -1122,6 +1162,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-30",
         "version": "Celestial Guardians #30",
         "rarity": "◊"
       }
@@ -1130,8 +1171,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "31",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_031_EN.webp",
+    "card_id": "A3-31",
+    "image": "/images/en-US/A3-31.webp",
     "hp": "60",
     "energy": "Fire",
     "name": "Litten",
@@ -1158,6 +1199,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-31",
         "version": "Celestial Guardians #31",
         "rarity": "◊"
       }
@@ -1166,8 +1208,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "32",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_032_EN.webp",
+    "card_id": "A3-32",
+    "image": "/images/en-US/A3-32.webp",
     "hp": "80",
     "energy": "Fire",
     "name": "Torracat",
@@ -1194,6 +1236,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-32",
         "version": "Celestial Guardians #32",
         "rarity": "◊◊"
       }
@@ -1202,8 +1245,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "33",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_033_EN.webp",
+    "card_id": "A3-33",
+    "image": "/images/en-US/A3-33.webp",
     "hp": "180",
     "energy": "Fire",
     "name": "Incineroar ex",
@@ -1236,14 +1279,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-33",
         "version": "Celestial Guardians #33",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-182",
         "version": "Celestial Guardians #182",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-200",
         "version": "Celestial Guardians #200",
         "rarity": "☆☆"
       }
@@ -1252,8 +1298,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "34",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_034_EN.webp",
+    "card_id": "A3-34",
+    "image": "/images/en-US/A3-34.webp",
     "hp": "70",
     "energy": "Fire",
     "name": "Oricorio",
@@ -1280,6 +1326,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-34",
         "version": "Celestial Guardians #34",
         "rarity": "◊◊"
       }
@@ -1288,8 +1335,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "35",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_035_EN.webp",
+    "card_id": "A3-35",
+    "image": "/images/en-US/A3-35.webp",
     "hp": "50",
     "energy": "Fire",
     "name": "Salandit",
@@ -1316,6 +1363,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-35",
         "version": "Celestial Guardians #35",
         "rarity": "◊"
       }
@@ -1324,8 +1372,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "36",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_036_EN.webp",
+    "card_id": "A3-36",
+    "image": "/images/en-US/A3-36.webp",
     "hp": "90",
     "energy": "Fire",
     "name": "Salazzle",
@@ -1352,6 +1400,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-36",
         "version": "Celestial Guardians #36",
         "rarity": "◊"
       }
@@ -1360,8 +1409,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "37",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_037_EN.webp",
+    "card_id": "A3-37",
+    "image": "/images/en-US/A3-37.webp",
     "hp": "120",
     "energy": "Fire",
     "name": "Turtonator",
@@ -1388,10 +1437,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-37",
         "version": "Celestial Guardians #37",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-161",
         "version": "Celestial Guardians #161",
         "rarity": "☆"
       }
@@ -1400,8 +1451,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "38",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_038_EN.webp",
+    "card_id": "A3-38",
+    "image": "/images/en-US/A3-38.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Alolan Sandshrew",
@@ -1428,6 +1479,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-38",
         "version": "Celestial Guardians #38",
         "rarity": "◊"
       }
@@ -1436,8 +1488,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "39",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_039_EN.webp",
+    "card_id": "A3-39",
+    "image": "/images/en-US/A3-39.webp",
     "hp": "100",
     "energy": "Water",
     "name": "Alolan Sandslash",
@@ -1464,6 +1516,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-39",
         "version": "Celestial Guardians #39",
         "rarity": "◊◊"
       }
@@ -1472,8 +1525,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "40",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_040_EN.webp",
+    "card_id": "A3-40",
+    "image": "/images/en-US/A3-40.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Alolan Vulpix",
@@ -1500,10 +1553,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-40",
         "version": "Celestial Guardians #40",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-162",
         "version": "Celestial Guardians #162",
         "rarity": "☆"
       }
@@ -1512,8 +1567,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "41",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_041_EN.webp",
+    "card_id": "A3-41",
+    "image": "/images/en-US/A3-41.webp",
     "hp": "110",
     "energy": "Water",
     "name": "Alolan Ninetales",
@@ -1540,10 +1595,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-41",
         "version": "Celestial Guardians #41",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-70",
         "version": "Promo-A #70",
         "rarity": ""
       }
@@ -1552,8 +1609,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "42",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_042_EN.webp",
+    "card_id": "A3-42",
+    "image": "/images/en-US/A3-42.webp",
     "hp": "70",
     "energy": "Water",
     "name": "Shellder",
@@ -1580,6 +1637,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-42",
         "version": "Celestial Guardians #42",
         "rarity": "◊"
       }
@@ -1588,8 +1646,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "43",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_043_EN.webp",
+    "card_id": "A3-43",
+    "image": "/images/en-US/A3-43.webp",
     "hp": "110",
     "energy": "Water",
     "name": "Cloyster",
@@ -1616,6 +1674,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-43",
         "version": "Celestial Guardians #43",
         "rarity": "◊◊"
       }
@@ -1624,8 +1683,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "44",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_044_EN.webp",
+    "card_id": "A3-44",
+    "image": "/images/en-US/A3-44.webp",
     "hp": "110",
     "energy": "Water",
     "name": "Lapras",
@@ -1652,6 +1711,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-44",
         "version": "Celestial Guardians #44",
         "rarity": "◊◊"
       }
@@ -1660,8 +1720,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "45",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_045_EN.webp",
+    "card_id": "A3-45",
+    "image": "/images/en-US/A3-45.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Popplio",
@@ -1688,6 +1748,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-45",
         "version": "Celestial Guardians #45",
         "rarity": "◊"
       }
@@ -1696,8 +1757,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "46",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_046_EN.webp",
+    "card_id": "A3-46",
+    "image": "/images/en-US/A3-46.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Popplio",
@@ -1724,6 +1785,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-46",
         "version": "Celestial Guardians #46",
         "rarity": "◊"
       }
@@ -1732,8 +1794,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "47",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_047_EN.webp",
+    "card_id": "A3-47",
+    "image": "/images/en-US/A3-47.webp",
     "hp": "80",
     "energy": "Water",
     "name": "Brionne",
@@ -1760,6 +1822,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-47",
         "version": "Celestial Guardians #47",
         "rarity": "◊◊"
       }
@@ -1768,8 +1831,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "48",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_048_EN.webp",
+    "card_id": "A3-48",
+    "image": "/images/en-US/A3-48.webp",
     "hp": "140",
     "energy": "Water",
     "name": "Primarina",
@@ -1796,6 +1859,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-48",
         "version": "Celestial Guardians #48",
         "rarity": "◊◊◊"
       }
@@ -1804,8 +1868,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "49",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_049_EN.webp",
+    "card_id": "A3-49",
+    "image": "/images/en-US/A3-49.webp",
     "hp": "160",
     "energy": "Water",
     "name": "Crabominable ex",
@@ -1832,14 +1896,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-49",
         "version": "Celestial Guardians #49",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-183",
         "version": "Celestial Guardians #183",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-201",
         "version": "Celestial Guardians #201",
         "rarity": "☆☆"
       }
@@ -1848,8 +1915,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "50",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_050_EN.webp",
+    "card_id": "A3-50",
+    "image": "/images/en-US/A3-50.webp",
     "hp": "30",
     "energy": "Water",
     "name": "Wishiwashi",
@@ -1876,6 +1943,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-50",
         "version": "Celestial Guardians #50",
         "rarity": "◊"
       }
@@ -1884,8 +1952,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "51",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_051_EN.webp",
+    "card_id": "A3-51",
+    "image": "/images/en-US/A3-51.webp",
     "hp": "170",
     "energy": "Water",
     "name": "Wishiwashi ex",
@@ -1912,14 +1980,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-51",
         "version": "Celestial Guardians #51",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-184",
         "version": "Celestial Guardians #184",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-202",
         "version": "Celestial Guardians #202",
         "rarity": "☆☆"
       }
@@ -1928,8 +1999,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "52",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_052_EN.webp",
+    "card_id": "A3-52",
+    "image": "/images/en-US/A3-52.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Dewpider",
@@ -1956,6 +2027,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-52",
         "version": "Celestial Guardians #52",
         "rarity": "◊"
       }
@@ -1964,8 +2036,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "53",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_053_EN.webp",
+    "card_id": "A3-53",
+    "image": "/images/en-US/A3-53.webp",
     "hp": "110",
     "energy": "Water",
     "name": "Araquanid",
@@ -1992,6 +2064,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-53",
         "version": "Celestial Guardians #53",
         "rarity": "◊◊"
       }
@@ -2000,8 +2073,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "54",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_054_EN.webp",
+    "card_id": "A3-54",
+    "image": "/images/en-US/A3-54.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Pyukumuku",
@@ -2028,10 +2101,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-54",
         "version": "Celestial Guardians #54",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-163",
         "version": "Celestial Guardians #163",
         "rarity": "☆"
       }
@@ -2040,8 +2115,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "55",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_055_EN.webp",
+    "card_id": "A3-55",
+    "image": "/images/en-US/A3-55.webp",
     "hp": "80",
     "energy": "Water",
     "name": "Bruxish",
@@ -2068,6 +2143,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-55",
         "version": "Celestial Guardians #55",
         "rarity": "◊"
       }
@@ -2076,8 +2152,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "56",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_056_EN.webp",
+    "card_id": "A3-56",
+    "image": "/images/en-US/A3-56.webp",
     "hp": "100",
     "energy": "Water",
     "name": "Tapu Fini",
@@ -2104,10 +2180,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-56",
         "version": "Celestial Guardians #56",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-164",
         "version": "Celestial Guardians #164",
         "rarity": "☆"
       }
@@ -2116,8 +2194,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "57",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_057_EN.webp",
+    "card_id": "A3-57",
+    "image": "/images/en-US/A3-57.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Pikachu",
@@ -2144,6 +2222,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-57",
         "version": "Celestial Guardians #57",
         "rarity": "◊"
       }
@@ -2152,8 +2231,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "58",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_058_EN.webp",
+    "card_id": "A3-58",
+    "image": "/images/en-US/A3-58.webp",
     "hp": "140",
     "energy": "Lightning",
     "name": "Alolan Raichu ex",
@@ -2180,14 +2259,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-58",
         "version": "Celestial Guardians #58",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-185",
         "version": "Celestial Guardians #185",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-203",
         "version": "Celestial Guardians #203",
         "rarity": "☆☆"
       }
@@ -2196,8 +2278,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "59",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_059_EN.webp",
+    "card_id": "A3-59",
+    "image": "/images/en-US/A3-59.webp",
     "hp": "70",
     "energy": "Lightning",
     "name": "Alolan Geodude",
@@ -2224,6 +2306,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-59",
         "version": "Celestial Guardians #59",
         "rarity": "◊"
       }
@@ -2232,8 +2315,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "60",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_060_EN.webp",
+    "card_id": "A3-60",
+    "image": "/images/en-US/A3-60.webp",
     "hp": "110",
     "energy": "Lightning",
     "name": "Alolan Graveler",
@@ -2260,6 +2343,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-60",
         "version": "Celestial Guardians #60",
         "rarity": "◊◊"
       }
@@ -2268,8 +2352,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "61",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_061_EN.webp",
+    "card_id": "A3-61",
+    "image": "/images/en-US/A3-61.webp",
     "hp": "160",
     "energy": "Lightning",
     "name": "Alolan Golem",
@@ -2296,6 +2380,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-61",
         "version": "Celestial Guardians #61",
         "rarity": "◊◊◊"
       }
@@ -2304,8 +2389,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "62",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_062_EN.webp",
+    "card_id": "A3-62",
+    "image": "/images/en-US/A3-62.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Helioptile",
@@ -2332,6 +2417,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-62",
         "version": "Celestial Guardians #62",
         "rarity": "◊"
       }
@@ -2340,8 +2426,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "63",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_063_EN.webp",
+    "card_id": "A3-63",
+    "image": "/images/en-US/A3-63.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Heliolisk",
@@ -2368,6 +2454,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-63",
         "version": "Celestial Guardians #63",
         "rarity": "◊"
       }
@@ -2376,8 +2463,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "64",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_064_EN.webp",
+    "card_id": "A3-64",
+    "image": "/images/en-US/A3-64.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Charjabug",
@@ -2404,6 +2491,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-64",
         "version": "Celestial Guardians #64",
         "rarity": "◊◊"
       }
@@ -2412,8 +2500,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "65",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_065_EN.webp",
+    "card_id": "A3-65",
+    "image": "/images/en-US/A3-65.webp",
     "hp": "140",
     "energy": "Lightning",
     "name": "Vikavolt",
@@ -2440,6 +2528,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-65",
         "version": "Celestial Guardians #65",
         "rarity": "◊◊◊"
       }
@@ -2448,8 +2537,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "66",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_066_EN.webp",
+    "card_id": "A3-66",
+    "image": "/images/en-US/A3-66.webp",
     "hp": "70",
     "energy": "Lightning",
     "name": "Oricorio",
@@ -2476,10 +2565,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-66",
         "version": "Celestial Guardians #66",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-165",
         "version": "Celestial Guardians #165",
         "rarity": "☆"
       }
@@ -2488,8 +2579,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "67",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_067_EN.webp",
+    "card_id": "A3-67",
+    "image": "/images/en-US/A3-67.webp",
     "hp": "70",
     "energy": "Lightning",
     "name": "Togedemaru",
@@ -2516,6 +2607,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-67",
         "version": "Celestial Guardians #67",
         "rarity": "◊"
       }
@@ -2524,8 +2616,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "68",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_068_EN.webp",
+    "card_id": "A3-68",
+    "image": "/images/en-US/A3-68.webp",
     "hp": "100",
     "energy": "Lightning",
     "name": "Tapu Koko",
@@ -2552,10 +2644,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-68",
         "version": "Celestial Guardians #68",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-166",
         "version": "Celestial Guardians #166",
         "rarity": "☆"
       }
@@ -2564,8 +2658,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "69",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_069_EN.webp",
+    "card_id": "A3-69",
+    "image": "/images/en-US/A3-69.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Mr. Mime",
@@ -2592,6 +2686,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-69",
         "version": "Celestial Guardians #69",
         "rarity": "◊◊"
       }
@@ -2600,8 +2695,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "70",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_070_EN.webp",
+    "card_id": "A3-70",
+    "image": "/images/en-US/A3-70.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Sableye",
@@ -2628,6 +2723,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-70",
         "version": "Celestial Guardians #70",
         "rarity": "◊◊"
       }
@@ -2636,8 +2732,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "71",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_071_EN.webp",
+    "card_id": "A3-71",
+    "image": "/images/en-US/A3-71.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Spoink",
@@ -2664,6 +2760,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-71",
         "version": "Celestial Guardians #71",
         "rarity": "◊"
       }
@@ -2672,8 +2769,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "72",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_072_EN.webp",
+    "card_id": "A3-72",
+    "image": "/images/en-US/A3-72.webp",
     "hp": "110",
     "energy": "Psychic",
     "name": "Grumpig",
@@ -2700,6 +2797,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-72",
         "version": "Celestial Guardians #72",
         "rarity": "◊◊"
       }
@@ -2708,8 +2806,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "73",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_073_EN.webp",
+    "card_id": "A3-73",
+    "image": "/images/en-US/A3-73.webp",
     "hp": "90",
     "energy": "Psychic",
     "name": "Lunatone",
@@ -2736,6 +2834,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-73",
         "version": "Celestial Guardians #73",
         "rarity": "◊"
       }
@@ -2744,8 +2843,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "74",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_074_EN.webp",
+    "card_id": "A3-74",
+    "image": "/images/en-US/A3-74.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Shuppet",
@@ -2772,6 +2871,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-74",
         "version": "Celestial Guardians #74",
         "rarity": "◊"
       }
@@ -2780,8 +2880,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "75",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_075_EN.webp",
+    "card_id": "A3-75",
+    "image": "/images/en-US/A3-75.webp",
     "hp": "90",
     "energy": "Psychic",
     "name": "Banette",
@@ -2808,6 +2908,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-75",
         "version": "Celestial Guardians #75",
         "rarity": "◊"
       }
@@ -2816,8 +2917,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "76",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_076_EN.webp",
+    "card_id": "A3-76",
+    "image": "/images/en-US/A3-76.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Oricorio",
@@ -2844,6 +2945,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-76",
         "version": "Celestial Guardians #76",
         "rarity": "◊◊"
       }
@@ -2852,8 +2954,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "77",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_077_EN.webp",
+    "card_id": "A3-77",
+    "image": "/images/en-US/A3-77.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Oricorio",
@@ -2880,6 +2982,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-77",
         "version": "Celestial Guardians #77",
         "rarity": "◊◊"
       }
@@ -2888,8 +2991,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "78",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_078_EN.webp",
+    "card_id": "A3-78",
+    "image": "/images/en-US/A3-78.webp",
     "hp": "30",
     "energy": "Psychic",
     "name": "Cutiefly",
@@ -2916,10 +3019,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-78",
         "version": "Celestial Guardians #78",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-167",
         "version": "Celestial Guardians #167",
         "rarity": "☆"
       }
@@ -2928,8 +3033,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "79",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_079_EN.webp",
+    "card_id": "A3-79",
+    "image": "/images/en-US/A3-79.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Ribombee",
@@ -2956,6 +3061,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-79",
         "version": "Celestial Guardians #79",
         "rarity": "◊"
       }
@@ -2964,8 +3070,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "80",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_080_EN.webp",
+    "card_id": "A3-80",
+    "image": "/images/en-US/A3-80.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Comfey",
@@ -2992,10 +3098,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-80",
         "version": "Celestial Guardians #80",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-168",
         "version": "Celestial Guardians #168",
         "rarity": "☆"
       }
@@ -3004,8 +3112,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "81",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_081_EN.webp",
+    "card_id": "A3-81",
+    "image": "/images/en-US/A3-81.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Sandygast",
@@ -3032,10 +3140,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-81",
         "version": "Celestial Guardians #81",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-169",
         "version": "Celestial Guardians #169",
         "rarity": "☆"
       }
@@ -3044,8 +3154,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "82",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_082_EN.webp",
+    "card_id": "A3-82",
+    "image": "/images/en-US/A3-82.webp",
     "hp": "130",
     "energy": "Psychic",
     "name": "Palossand",
@@ -3072,6 +3182,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-82",
         "version": "Celestial Guardians #82",
         "rarity": "◊◊◊"
       }
@@ -3080,8 +3191,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "83",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_083_EN.webp",
+    "card_id": "A3-83",
+    "image": "/images/en-US/A3-83.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Mimikyu",
@@ -3108,10 +3219,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-83",
         "version": "Celestial Guardians #83",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-66",
         "version": "Promo-A #66",
         "rarity": ""
       }
@@ -3120,8 +3233,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "84",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_084_EN.webp",
+    "card_id": "A3-84",
+    "image": "/images/en-US/A3-84.webp",
     "hp": "90",
     "energy": "Psychic",
     "name": "Tapu Lele",
@@ -3148,10 +3261,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-84",
         "version": "Celestial Guardians #84",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-170",
         "version": "Celestial Guardians #170",
         "rarity": "☆"
       }
@@ -3160,8 +3275,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "85",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_085_EN.webp",
+    "card_id": "A3-85",
+    "image": "/images/en-US/A3-85.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Cosmog",
@@ -3188,14 +3303,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-85",
         "version": "Celestial Guardians #85",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-171",
         "version": "Celestial Guardians #171",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-67",
         "version": "Promo-A #67",
         "rarity": ""
       }
@@ -3204,8 +3322,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "86",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_086_EN.webp",
+    "card_id": "A3-86",
+    "image": "/images/en-US/A3-86.webp",
     "hp": "100",
     "energy": "Psychic",
     "name": "Cosmoem",
@@ -3232,6 +3350,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-86",
         "version": "Celestial Guardians #86",
         "rarity": "◊◊"
       }
@@ -3240,8 +3359,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "87",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_087_EN.webp",
+    "card_id": "A3-87",
+    "image": "/images/en-US/A3-87.webp",
     "hp": "180",
     "energy": "Psychic",
     "name": "Lunala ex",
@@ -3268,18 +3387,22 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-87",
         "version": "Celestial Guardians #87",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-186",
         "version": "Celestial Guardians #186",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-204",
         "version": "Celestial Guardians #204",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-238",
         "version": "Celestial Guardians #238",
         "rarity": "♛"
       }
@@ -3288,8 +3411,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "88",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_088_EN.webp",
+    "card_id": "A3-88",
+    "image": "/images/en-US/A3-88.webp",
     "hp": "120",
     "energy": "Psychic",
     "name": "Necrozma",
@@ -3316,6 +3439,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-88",
         "version": "Celestial Guardians #88",
         "rarity": "◊◊◊"
       }
@@ -3324,8 +3448,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "89",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_089_EN.webp",
+    "card_id": "A3-89",
+    "image": "/images/en-US/A3-89.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Cubone",
@@ -3352,6 +3476,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-89",
         "version": "Celestial Guardians #89",
         "rarity": "◊"
       }
@@ -3360,8 +3485,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "90",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_090_EN.webp",
+    "card_id": "A3-90",
+    "image": "/images/en-US/A3-90.webp",
     "hp": "70",
     "energy": "Fighting",
     "name": "Makuhita",
@@ -3388,6 +3513,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-90",
         "version": "Celestial Guardians #90",
         "rarity": "◊"
       }
@@ -3396,8 +3522,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "91",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_091_EN.webp",
+    "card_id": "A3-91",
+    "image": "/images/en-US/A3-91.webp",
     "hp": "120",
     "energy": "Fighting",
     "name": "Hariyama",
@@ -3424,6 +3550,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-91",
         "version": "Celestial Guardians #91",
         "rarity": "◊◊"
       }
@@ -3432,8 +3559,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "92",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_092_EN.webp",
+    "card_id": "A3-92",
+    "image": "/images/en-US/A3-92.webp",
     "hp": "90",
     "energy": "Fighting",
     "name": "Solrock",
@@ -3460,6 +3587,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-92",
         "version": "Celestial Guardians #92",
         "rarity": "◊"
       }
@@ -3468,8 +3596,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "93",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_093_EN.webp",
+    "card_id": "A3-93",
+    "image": "/images/en-US/A3-93.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Drilbur",
@@ -3496,6 +3624,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-93",
         "version": "Celestial Guardians #93",
         "rarity": "◊"
       }
@@ -3504,8 +3633,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "94",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_094_EN.webp",
+    "card_id": "A3-94",
+    "image": "/images/en-US/A3-94.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Timburr",
@@ -3532,6 +3661,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-94",
         "version": "Celestial Guardians #94",
         "rarity": "◊"
       }
@@ -3540,8 +3670,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "95",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_095_EN.webp",
+    "card_id": "A3-95",
+    "image": "/images/en-US/A3-95.webp",
     "hp": "90",
     "energy": "Fighting",
     "name": "Gurdurr",
@@ -3568,6 +3698,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-95",
         "version": "Celestial Guardians #95",
         "rarity": "◊◊"
       }
@@ -3576,8 +3707,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "96",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_096_EN.webp",
+    "card_id": "A3-96",
+    "image": "/images/en-US/A3-96.webp",
     "hp": "150",
     "energy": "Fighting",
     "name": "Conkeldurr",
@@ -3604,6 +3735,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-96",
         "version": "Celestial Guardians #96",
         "rarity": "◊◊◊"
       }
@@ -3612,8 +3744,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "97",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_097_EN.webp",
+    "card_id": "A3-97",
+    "image": "/images/en-US/A3-97.webp",
     "hp": "70",
     "energy": "Fighting",
     "name": "Crabrawler",
@@ -3640,10 +3772,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-97",
         "version": "Celestial Guardians #97",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-71",
         "version": "Promo-A #71",
         "rarity": ""
       }
@@ -3652,8 +3786,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "98",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_098_EN.webp",
+    "card_id": "A3-98",
+    "image": "/images/en-US/A3-98.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Rockruff",
@@ -3680,10 +3814,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-98",
         "version": "Celestial Guardians #98",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-172",
         "version": "Celestial Guardians #172",
         "rarity": "☆"
       }
@@ -3692,8 +3828,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "99",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_099_EN.webp",
+    "card_id": "A3-99",
+    "image": "/images/en-US/A3-99.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Rockruff",
@@ -3720,6 +3856,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-99",
         "version": "Celestial Guardians #99",
         "rarity": "◊"
       }
@@ -3728,8 +3865,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "100",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_100_EN.webp",
+    "card_id": "A3-100",
+    "image": "/images/en-US/A3-100.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Lycanroc",
@@ -3756,10 +3893,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-100",
         "version": "Celestial Guardians #100",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-68",
         "version": "Promo-A #68",
         "rarity": ""
       }
@@ -3768,8 +3907,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "101",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_101_EN.webp",
+    "card_id": "A3-101",
+    "image": "/images/en-US/A3-101.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Lycanroc",
@@ -3796,6 +3935,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-101",
         "version": "Celestial Guardians #101",
         "rarity": "◊◊◊"
       }
@@ -3804,8 +3944,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "102",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_102_EN.webp",
+    "card_id": "A3-102",
+    "image": "/images/en-US/A3-102.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Mudbray",
@@ -3832,6 +3972,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-102",
         "version": "Celestial Guardians #102",
         "rarity": "◊"
       }
@@ -3840,8 +3981,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "103",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_103_EN.webp",
+    "card_id": "A3-103",
+    "image": "/images/en-US/A3-103.webp",
     "hp": "140",
     "energy": "Fighting",
     "name": "Mudsdale",
@@ -3868,10 +4009,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-103",
         "version": "Celestial Guardians #103",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-173",
         "version": "Celestial Guardians #173",
         "rarity": "☆"
       }
@@ -3880,8 +4023,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "104",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_104_EN.webp",
+    "card_id": "A3-104",
+    "image": "/images/en-US/A3-104.webp",
     "hp": "130",
     "energy": "Fighting",
     "name": "Passimian ex",
@@ -3908,14 +4051,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-104",
         "version": "Celestial Guardians #104",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-187",
         "version": "Celestial Guardians #187",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-205",
         "version": "Celestial Guardians #205",
         "rarity": "☆☆"
       }
@@ -3924,8 +4070,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "105",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_105_EN.webp",
+    "card_id": "A3-105",
+    "image": "/images/en-US/A3-105.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Minior",
@@ -3952,10 +4098,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-105",
         "version": "Celestial Guardians #105",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-174",
         "version": "Celestial Guardians #174",
         "rarity": "☆"
       }
@@ -3964,8 +4112,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "106",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_106_EN.webp",
+    "card_id": "A3-106",
+    "image": "/images/en-US/A3-106.webp",
     "hp": "50",
     "energy": "Darkness",
     "name": "Alolan Rattata",
@@ -3992,6 +4140,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-106",
         "version": "Celestial Guardians #106",
         "rarity": "◊"
       }
@@ -4000,8 +4149,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "107",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_107_EN.webp",
+    "card_id": "A3-107",
+    "image": "/images/en-US/A3-107.webp",
     "hp": "110",
     "energy": "Darkness",
     "name": "Alolan Raticate",
@@ -4028,6 +4177,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-107",
         "version": "Celestial Guardians #107",
         "rarity": "◊◊"
       }
@@ -4036,8 +4186,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "108",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_108_EN.webp",
+    "card_id": "A3-108",
+    "image": "/images/en-US/A3-108.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Alolan Meowth",
@@ -4064,6 +4214,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-108",
         "version": "Celestial Guardians #108",
         "rarity": "◊"
       }
@@ -4072,8 +4223,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "109",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_109_EN.webp",
+    "card_id": "A3-109",
+    "image": "/images/en-US/A3-109.webp",
     "hp": "100",
     "energy": "Darkness",
     "name": "Alolan Persian",
@@ -4100,6 +4251,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-109",
         "version": "Celestial Guardians #109",
         "rarity": "◊◊◊"
       }
@@ -4108,8 +4260,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "110",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_110_EN.webp",
+    "card_id": "A3-110",
+    "image": "/images/en-US/A3-110.webp",
     "hp": "70",
     "energy": "Darkness",
     "name": "Alolan Grimer",
@@ -4136,6 +4288,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-110",
         "version": "Celestial Guardians #110",
         "rarity": "◊"
       }
@@ -4144,8 +4297,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "111",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_111_EN.webp",
+    "card_id": "A3-111",
+    "image": "/images/en-US/A3-111.webp",
     "hp": "160",
     "energy": "Darkness",
     "name": "Alolan Muk ex",
@@ -4172,14 +4325,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-111",
         "version": "Celestial Guardians #111",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-188",
         "version": "Celestial Guardians #188",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-206",
         "version": "Celestial Guardians #206",
         "rarity": "☆☆"
       }
@@ -4188,8 +4344,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "112",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_112_EN.webp",
+    "card_id": "A3-112",
+    "image": "/images/en-US/A3-112.webp",
     "hp": "80",
     "energy": "Darkness",
     "name": "Absol",
@@ -4216,6 +4372,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-112",
         "version": "Celestial Guardians #112",
         "rarity": "◊◊◊"
       }
@@ -4224,8 +4381,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "113",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_113_EN.webp",
+    "card_id": "A3-113",
+    "image": "/images/en-US/A3-113.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Trubbish",
@@ -4252,6 +4409,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-113",
         "version": "Celestial Guardians #113",
         "rarity": "◊"
       }
@@ -4260,8 +4418,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "114",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_114_EN.webp",
+    "card_id": "A3-114",
+    "image": "/images/en-US/A3-114.webp",
     "hp": "120",
     "energy": "Darkness",
     "name": "Garbodor",
@@ -4288,6 +4446,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-114",
         "version": "Celestial Guardians #114",
         "rarity": "◊◊"
       }
@@ -4296,8 +4455,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "115",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_115_EN.webp",
+    "card_id": "A3-115",
+    "image": "/images/en-US/A3-115.webp",
     "hp": "70",
     "energy": "Darkness",
     "name": "Mareanie",
@@ -4324,6 +4483,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-115",
         "version": "Celestial Guardians #115",
         "rarity": "◊"
       }
@@ -4332,8 +4492,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "116",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_116_EN.webp",
+    "card_id": "A3-116",
+    "image": "/images/en-US/A3-116.webp",
     "hp": "110",
     "energy": "Darkness",
     "name": "Toxapex",
@@ -4355,11 +4515,12 @@
     "retreat": "2",
     "rarity": "◊",
     "fullart": "No",
-    "ex": "no",
+    "ex": "yes",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-116",
         "version": "Celestial Guardians #116",
         "rarity": "◊"
       }
@@ -4368,8 +4529,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "117",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_117_EN.webp",
+    "card_id": "A3-117",
+    "image": "/images/en-US/A3-117.webp",
     "hp": "50",
     "energy": "Metal",
     "name": "Alolan Diglett",
@@ -4396,6 +4557,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-117",
         "version": "Celestial Guardians #117",
         "rarity": "◊"
       }
@@ -4404,8 +4566,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "118",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_118_EN.webp",
+    "card_id": "A3-118",
+    "image": "/images/en-US/A3-118.webp",
     "hp": "90",
     "energy": "Metal",
     "name": "Alolan Dugtrio",
@@ -4432,6 +4594,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-118",
         "version": "Celestial Guardians #118",
         "rarity": "◊"
       }
@@ -4440,8 +4603,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "119",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_119_EN.webp",
+    "card_id": "A3-119",
+    "image": "/images/en-US/A3-119.webp",
     "hp": "110",
     "energy": "Metal",
     "name": "Excadrill",
@@ -4468,6 +4631,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-119",
         "version": "Celestial Guardians #119",
         "rarity": "◊◊"
       }
@@ -4476,8 +4640,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "120",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_120_EN.webp",
+    "card_id": "A3-120",
+    "image": "/images/en-US/A3-120.webp",
     "hp": "110",
     "energy": "Metal",
     "name": "Escavalier",
@@ -4504,6 +4668,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-120",
         "version": "Celestial Guardians #120",
         "rarity": "◊◊"
       }
@@ -4512,8 +4677,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "121",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_121_EN.webp",
+    "card_id": "A3-121",
+    "image": "/images/en-US/A3-121.webp",
     "hp": "70",
     "energy": "Metal",
     "name": "Klefki",
@@ -4540,6 +4705,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-121",
         "version": "Celestial Guardians #121",
         "rarity": "◊◊◊"
       }
@@ -4548,8 +4714,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "122",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_122_EN.webp",
+    "card_id": "A3-122",
+    "image": "/images/en-US/A3-122.webp",
     "hp": "180",
     "energy": "Metal",
     "name": "Solgaleo ex",
@@ -4576,18 +4742,22 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-122",
         "version": "Celestial Guardians #122",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-189",
         "version": "Celestial Guardians #189",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-207",
         "version": "Celestial Guardians #207",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-239",
         "version": "Celestial Guardians #239",
         "rarity": "♛"
       }
@@ -4596,8 +4766,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "123",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_123_EN.webp",
+    "card_id": "A3-123",
+    "image": "/images/en-US/A3-123.webp",
     "hp": "90",
     "energy": "Metal",
     "name": "Magearna",
@@ -4624,10 +4794,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-123",
         "version": "Celestial Guardians #123",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-175",
         "version": "Celestial Guardians #175",
         "rarity": "☆"
       }
@@ -4636,8 +4808,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "124",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_124_EN.webp",
+    "card_id": "A3-124",
+    "image": "/images/en-US/A3-124.webp",
     "hp": "100",
     "energy": "Dragon",
     "name": "Drampa",
@@ -4664,10 +4836,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-124",
         "version": "Celestial Guardians #124",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-176",
         "version": "Celestial Guardians #176",
         "rarity": "☆"
       }
@@ -4676,8 +4850,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "125",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_125_EN.webp",
+    "card_id": "A3-125",
+    "image": "/images/en-US/A3-125.webp",
     "hp": "60",
     "energy": "Dragon",
     "name": "Jangmo-o",
@@ -4704,6 +4878,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-125",
         "version": "Celestial Guardians #125",
         "rarity": "◊"
       }
@@ -4712,8 +4887,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "126",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_126_EN.webp",
+    "card_id": "A3-126",
+    "image": "/images/en-US/A3-126.webp",
     "hp": "100",
     "energy": "Dragon",
     "name": "Hakamo-o",
@@ -4740,6 +4915,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-126",
         "version": "Celestial Guardians #126",
         "rarity": "◊◊"
       }
@@ -4748,8 +4924,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "127",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_127_EN.webp",
+    "card_id": "A3-127",
+    "image": "/images/en-US/A3-127.webp",
     "hp": "150",
     "energy": "Dragon",
     "name": "Kommo-o",
@@ -4776,6 +4952,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-127",
         "version": "Celestial Guardians #127",
         "rarity": "◊◊◊"
       }
@@ -4784,8 +4961,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "128",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_128_EN.webp",
+    "card_id": "A3-128",
+    "image": "/images/en-US/A3-128.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Tauros",
@@ -4812,6 +4989,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-128",
         "version": "Celestial Guardians #128",
         "rarity": "◊◊"
       }
@@ -4820,8 +4998,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "129",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_129_EN.webp",
+    "card_id": "A3-129",
+    "image": "/images/en-US/A3-129.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Skitty",
@@ -4848,6 +5026,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-129",
         "version": "Celestial Guardians #129",
         "rarity": "◊"
       }
@@ -4856,8 +5035,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "130",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_130_EN.webp",
+    "card_id": "A3-130",
+    "image": "/images/en-US/A3-130.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Delcatty",
@@ -4884,6 +5063,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-130",
         "version": "Celestial Guardians #130",
         "rarity": "◊◊"
       }
@@ -4892,8 +5072,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "131",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_131_EN.webp",
+    "card_id": "A3-131",
+    "image": "/images/en-US/A3-131.webp",
     "hp": "50",
     "energy": "Colorless",
     "name": "Fletchling",
@@ -4920,6 +5100,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-131",
         "version": "Celestial Guardians #131",
         "rarity": "◊"
       }
@@ -4928,8 +5109,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "132",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_132_EN.webp",
+    "card_id": "A3-132",
+    "image": "/images/en-US/A3-132.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Hawlucha",
@@ -4956,6 +5137,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-132",
         "version": "Celestial Guardians #132",
         "rarity": "◊◊"
       }
@@ -4964,8 +5146,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "133",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_133_EN.webp",
+    "card_id": "A3-133",
+    "image": "/images/en-US/A3-133.webp",
     "hp": "50",
     "energy": "Colorless",
     "name": "Pikipek",
@@ -4992,10 +5174,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-133",
         "version": "Celestial Guardians #133",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-177",
         "version": "Celestial Guardians #177",
         "rarity": "☆"
       }
@@ -5004,8 +5188,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "134",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_134_EN.webp",
+    "card_id": "A3-134",
+    "image": "/images/en-US/A3-134.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Trumbeak",
@@ -5032,6 +5216,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-134",
         "version": "Celestial Guardians #134",
         "rarity": "◊"
       }
@@ -5040,8 +5225,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "135",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_135_EN.webp",
+    "card_id": "A3-135",
+    "image": "/images/en-US/A3-135.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Toucannon",
@@ -5068,6 +5253,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-135",
         "version": "Celestial Guardians #135",
         "rarity": "◊◊"
       }
@@ -5076,8 +5262,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "136",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_136_EN.webp",
+    "card_id": "A3-136",
+    "image": "/images/en-US/A3-136.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Yungoos",
@@ -5104,6 +5290,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-136",
         "version": "Celestial Guardians #136",
         "rarity": "◊"
       }
@@ -5112,8 +5299,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "137",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_137_EN.webp",
+    "card_id": "A3-137",
+    "image": "/images/en-US/A3-137.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Gumshoos",
@@ -5140,6 +5327,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-137",
         "version": "Celestial Guardians #137",
         "rarity": "◊"
       }
@@ -5148,8 +5336,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "138",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_138_EN.webp",
+    "card_id": "A3-138",
+    "image": "/images/en-US/A3-138.webp",
     "hp": "70",
     "energy": "Colorless",
     "name": "Stufful",
@@ -5176,6 +5364,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-138",
         "version": "Celestial Guardians #138",
         "rarity": "◊"
       }
@@ -5184,8 +5373,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "139",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_139_EN.webp",
+    "card_id": "A3-139",
+    "image": "/images/en-US/A3-139.webp",
     "hp": "130",
     "energy": "Colorless",
     "name": "Bewear",
@@ -5212,10 +5401,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-139",
         "version": "Celestial Guardians #139",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-178",
         "version": "Celestial Guardians #178",
         "rarity": "☆"
       }
@@ -5224,8 +5415,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "140",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_140_EN.webp",
+    "card_id": "A3-140",
+    "image": "/images/en-US/A3-140.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Oranguru",
@@ -5252,6 +5443,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-140",
         "version": "Celestial Guardians #140",
         "rarity": "◊◊◊"
       }
@@ -5260,8 +5452,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "141",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_141_EN.webp",
+    "card_id": "A3-141",
+    "image": "/images/en-US/A3-141.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Komala",
@@ -5288,10 +5480,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-141",
         "version": "Celestial Guardians #141",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-179",
         "version": "Celestial Guardians #179",
         "rarity": "☆"
       }
@@ -5300,8 +5494,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "142",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_142_EN.webp",
+    "card_id": "A3-142",
+    "image": "/images/en-US/A3-142.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Big Malasada",
@@ -5318,6 +5512,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-142",
         "version": "Celestial Guardians #142",
         "rarity": "◊◊"
       }
@@ -5326,8 +5521,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "143",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_143_EN.webp",
+    "card_id": "A3-143",
+    "image": "/images/en-US/A3-143.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Fishing Net",
@@ -5344,6 +5539,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-143",
         "version": "Celestial Guardians #143",
         "rarity": "◊◊"
       }
@@ -5352,8 +5548,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "144",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_144_EN.webp",
+    "card_id": "A3-144",
+    "image": "/images/en-US/A3-144.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Rare Candy",
@@ -5370,6 +5566,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-144",
         "version": "Celestial Guardians #144",
         "rarity": "◊◊"
       }
@@ -5378,8 +5575,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "145",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_145_EN.webp",
+    "card_id": "A3-145",
+    "image": "/images/en-US/A3-145.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Rotom Dex",
@@ -5391,11 +5588,12 @@
     "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": "No",
-    "ex": "no",
+    "ex": "yes",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-145",
         "version": "Celestial Guardians #145",
         "rarity": "◊◊"
       }
@@ -5404,8 +5602,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "146",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_146_EN.webp",
+    "card_id": "A3-146",
+    "image": "/images/en-US/A3-146.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Poison Barb",
@@ -5422,6 +5620,7 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-146",
         "version": "Celestial Guardians #146",
         "rarity": "◊◊"
       }
@@ -5430,8 +5629,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "147",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_147_EN.webp",
+    "card_id": "A3-147",
+    "image": "/images/en-US/A3-147.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Leaf Cape",
@@ -5448,6 +5647,7 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-147",
         "version": "Celestial Guardians #147",
         "rarity": "◊◊"
       }
@@ -5456,8 +5656,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "148",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_148_EN.webp",
+    "card_id": "A3-148",
+    "image": "/images/en-US/A3-148.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Acerola",
@@ -5474,10 +5674,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-148",
         "version": "Celestial Guardians #148",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-190",
         "version": "Celestial Guardians #190",
         "rarity": "☆☆"
       }
@@ -5486,8 +5688,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "149",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_149_EN.webp",
+    "card_id": "A3-149",
+    "image": "/images/en-US/A3-149.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Ilima",
@@ -5504,10 +5706,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-149",
         "version": "Celestial Guardians #149",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-191",
         "version": "Celestial Guardians #191",
         "rarity": "☆☆"
       }
@@ -5516,8 +5720,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "150",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_150_EN.webp",
+    "card_id": "A3-150",
+    "image": "/images/en-US/A3-150.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Kiawe",
@@ -5534,10 +5738,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-150",
         "version": "Celestial Guardians #150",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-192",
         "version": "Celestial Guardians #192",
         "rarity": "☆☆"
       }
@@ -5546,8 +5752,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "151",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_151_EN.webp",
+    "card_id": "A3-151",
+    "image": "/images/en-US/A3-151.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Guzma",
@@ -5564,14 +5770,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-151",
         "version": "Celestial Guardians #151",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-193",
         "version": "Celestial Guardians #193",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-208",
         "version": "Celestial Guardians #208",
         "rarity": "☆☆☆"
       }
@@ -5580,8 +5789,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "152",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_152_EN.webp",
+    "card_id": "A3-152",
+    "image": "/images/en-US/A3-152.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Lana",
@@ -5598,10 +5807,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-152",
         "version": "Celestial Guardians #152",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-194",
         "version": "Celestial Guardians #194",
         "rarity": "☆☆"
       }
@@ -5610,8 +5821,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "153",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_153_EN.webp",
+    "card_id": "A3-153",
+    "image": "/images/en-US/A3-153.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Sophocles",
@@ -5628,10 +5839,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-153",
         "version": "Celestial Guardians #153",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-195",
         "version": "Celestial Guardians #195",
         "rarity": "☆☆"
       }
@@ -5640,8 +5853,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "154",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_154_EN.webp",
+    "card_id": "A3-154",
+    "image": "/images/en-US/A3-154.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Mallow",
@@ -5658,10 +5871,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-154",
         "version": "Celestial Guardians #154",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-196",
         "version": "Celestial Guardians #196",
         "rarity": "☆☆"
       }
@@ -5670,8 +5885,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "155",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_155_EN.webp",
+    "card_id": "A3-155",
+    "image": "/images/en-US/A3-155.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Lillie",
@@ -5688,14 +5903,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-155",
         "version": "Celestial Guardians #155",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-197",
         "version": "Celestial Guardians #197",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-209",
         "version": "Celestial Guardians #209",
         "rarity": "☆☆☆"
       }
@@ -5704,8 +5922,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "156",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_156_EN.webp",
+    "card_id": "A3-156",
+    "image": "/images/en-US/A3-156.webp",
     "hp": "150",
     "energy": "Grass",
     "name": "Alolan Exeggutor",
@@ -5732,14 +5950,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-2",
         "version": "Celestial Guardians #2",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-156",
         "version": "Celestial Guardians #156",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-69",
         "version": "Promo-A #69",
         "rarity": ""
       }
@@ -5748,8 +5969,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "157",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_157_EN.webp",
+    "card_id": "A3-157",
+    "image": "/images/en-US/A3-157.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Morelull",
@@ -5776,10 +5997,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-16",
         "version": "Celestial Guardians #16",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-157",
         "version": "Celestial Guardians #157",
         "rarity": "☆"
       }
@@ -5788,8 +6011,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "158",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_158_EN.webp",
+    "card_id": "A3-158",
+    "image": "/images/en-US/A3-158.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Tsareena",
@@ -5816,10 +6039,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-20",
         "version": "Celestial Guardians #20",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-158",
         "version": "Celestial Guardians #158",
         "rarity": "☆"
       }
@@ -5828,8 +6053,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "159",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_159_EN.webp",
+    "card_id": "A3-159",
+    "image": "/images/en-US/A3-159.webp",
     "hp": "120",
     "energy": "Grass",
     "name": "Tapu Bulu",
@@ -5856,10 +6081,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-24",
         "version": "Celestial Guardians #24",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-159",
         "version": "Celestial Guardians #159",
         "rarity": "☆"
       }
@@ -5868,8 +6095,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "160",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_160_EN.webp",
+    "card_id": "A3-160",
+    "image": "/images/en-US/A3-160.webp",
     "hp": "110",
     "energy": "Fire",
     "name": "Alolan Marowak",
@@ -5896,10 +6123,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-27",
         "version": "Celestial Guardians #27",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-160",
         "version": "Celestial Guardians #160",
         "rarity": "☆"
       }
@@ -5908,8 +6137,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "161",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_161_EN.webp",
+    "card_id": "A3-161",
+    "image": "/images/en-US/A3-161.webp",
     "hp": "120",
     "energy": "Fire",
     "name": "Turtonator",
@@ -5936,10 +6165,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-37",
         "version": "Celestial Guardians #37",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-161",
         "version": "Celestial Guardians #161",
         "rarity": "☆"
       }
@@ -5948,8 +6179,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "162",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_162_EN.webp",
+    "card_id": "A3-162",
+    "image": "/images/en-US/A3-162.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Alolan Vulpix",
@@ -5976,10 +6207,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-40",
         "version": "Celestial Guardians #40",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-162",
         "version": "Celestial Guardians #162",
         "rarity": "☆"
       }
@@ -5988,8 +6221,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "163",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_163_EN.webp",
+    "card_id": "A3-163",
+    "image": "/images/en-US/A3-163.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Pyukumuku",
@@ -6016,10 +6249,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-54",
         "version": "Celestial Guardians #54",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-163",
         "version": "Celestial Guardians #163",
         "rarity": "☆"
       }
@@ -6028,8 +6263,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "164",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_164_EN.webp",
+    "card_id": "A3-164",
+    "image": "/images/en-US/A3-164.webp",
     "hp": "100",
     "energy": "Water",
     "name": "Tapu Fini",
@@ -6056,10 +6291,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-56",
         "version": "Celestial Guardians #56",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-164",
         "version": "Celestial Guardians #164",
         "rarity": "☆"
       }
@@ -6068,8 +6305,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "165",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_165_EN.webp",
+    "card_id": "A3-165",
+    "image": "/images/en-US/A3-165.webp",
     "hp": "70",
     "energy": "Lightning",
     "name": "Oricorio",
@@ -6096,10 +6333,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-66",
         "version": "Celestial Guardians #66",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-165",
         "version": "Celestial Guardians #165",
         "rarity": "☆"
       }
@@ -6108,8 +6347,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "166",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_166_EN.webp",
+    "card_id": "A3-166",
+    "image": "/images/en-US/A3-166.webp",
     "hp": "100",
     "energy": "Lightning",
     "name": "Tapu Koko",
@@ -6136,10 +6375,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-68",
         "version": "Celestial Guardians #68",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-166",
         "version": "Celestial Guardians #166",
         "rarity": "☆"
       }
@@ -6148,8 +6389,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "167",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_167_EN.webp",
+    "card_id": "A3-167",
+    "image": "/images/en-US/A3-167.webp",
     "hp": "30",
     "energy": "Psychic",
     "name": "Cutiefly",
@@ -6176,10 +6417,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-78",
         "version": "Celestial Guardians #78",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-167",
         "version": "Celestial Guardians #167",
         "rarity": "☆"
       }
@@ -6188,8 +6431,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "168",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_168_EN.webp",
+    "card_id": "A3-168",
+    "image": "/images/en-US/A3-168.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Comfey",
@@ -6216,10 +6459,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-80",
         "version": "Celestial Guardians #80",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-168",
         "version": "Celestial Guardians #168",
         "rarity": "☆"
       }
@@ -6228,8 +6473,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "169",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_169_EN.webp",
+    "card_id": "A3-169",
+    "image": "/images/en-US/A3-169.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Sandygast",
@@ -6256,10 +6501,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-81",
         "version": "Celestial Guardians #81",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-169",
         "version": "Celestial Guardians #169",
         "rarity": "☆"
       }
@@ -6268,8 +6515,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "170",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_170_EN.webp",
+    "card_id": "A3-170",
+    "image": "/images/en-US/A3-170.webp",
     "hp": "90",
     "energy": "Psychic",
     "name": "Tapu Lele",
@@ -6296,10 +6543,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-84",
         "version": "Celestial Guardians #84",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-170",
         "version": "Celestial Guardians #170",
         "rarity": "☆"
       }
@@ -6308,8 +6557,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "171",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_171_EN.webp",
+    "card_id": "A3-171",
+    "image": "/images/en-US/A3-171.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Cosmog",
@@ -6336,14 +6585,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-85",
         "version": "Celestial Guardians #85",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-171",
         "version": "Celestial Guardians #171",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-67",
         "version": "Promo-A #67",
         "rarity": ""
       }
@@ -6352,8 +6604,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "172",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_172_EN.webp",
+    "card_id": "A3-172",
+    "image": "/images/en-US/A3-172.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Rockruff",
@@ -6380,10 +6632,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-98",
         "version": "Celestial Guardians #98",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-172",
         "version": "Celestial Guardians #172",
         "rarity": "☆"
       }
@@ -6392,8 +6646,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "173",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_173_EN.webp",
+    "card_id": "A3-173",
+    "image": "/images/en-US/A3-173.webp",
     "hp": "140",
     "energy": "Fighting",
     "name": "Mudsdale",
@@ -6420,10 +6674,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-103",
         "version": "Celestial Guardians #103",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-173",
         "version": "Celestial Guardians #173",
         "rarity": "☆"
       }
@@ -6432,8 +6688,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "174",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_174_EN.webp",
+    "card_id": "A3-174",
+    "image": "/images/en-US/A3-174.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Minior",
@@ -6460,10 +6716,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-105",
         "version": "Celestial Guardians #105",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-174",
         "version": "Celestial Guardians #174",
         "rarity": "☆"
       }
@@ -6472,8 +6730,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "175",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_175_EN.webp",
+    "card_id": "A3-175",
+    "image": "/images/en-US/A3-175.webp",
     "hp": "90",
     "energy": "Metal",
     "name": "Magearna",
@@ -6500,10 +6758,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-123",
         "version": "Celestial Guardians #123",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-175",
         "version": "Celestial Guardians #175",
         "rarity": "☆"
       }
@@ -6512,8 +6772,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "176",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_176_EN.webp",
+    "card_id": "A3-176",
+    "image": "/images/en-US/A3-176.webp",
     "hp": "100",
     "energy": "Dragon",
     "name": "Drampa",
@@ -6540,10 +6800,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-124",
         "version": "Celestial Guardians #124",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-176",
         "version": "Celestial Guardians #176",
         "rarity": "☆"
       }
@@ -6552,8 +6814,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "177",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_177_EN.webp",
+    "card_id": "A3-177",
+    "image": "/images/en-US/A3-177.webp",
     "hp": "50",
     "energy": "Colorless",
     "name": "Pikipek",
@@ -6580,10 +6842,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-133",
         "version": "Celestial Guardians #133",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-177",
         "version": "Celestial Guardians #177",
         "rarity": "☆"
       }
@@ -6592,8 +6856,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "178",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_178_EN.webp",
+    "card_id": "A3-178",
+    "image": "/images/en-US/A3-178.webp",
     "hp": "130",
     "energy": "Colorless",
     "name": "Bewear",
@@ -6620,10 +6884,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-139",
         "version": "Celestial Guardians #139",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-178",
         "version": "Celestial Guardians #178",
         "rarity": "☆"
       }
@@ -6632,8 +6898,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "179",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_179_EN.webp",
+    "card_id": "A3-179",
+    "image": "/images/en-US/A3-179.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Komala",
@@ -6660,10 +6926,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-141",
         "version": "Celestial Guardians #141",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-179",
         "version": "Celestial Guardians #179",
         "rarity": "☆"
       }
@@ -6672,8 +6940,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "180",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_180_EN.webp",
+    "card_id": "A3-180",
+    "image": "/images/en-US/A3-180.webp",
     "hp": "170",
     "energy": "Grass",
     "name": "Decidueye ex",
@@ -6706,14 +6974,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-12",
         "version": "Celestial Guardians #12",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-180",
         "version": "Celestial Guardians #180",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-198",
         "version": "Celestial Guardians #198",
         "rarity": "☆☆"
       }
@@ -6722,8 +6993,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "181",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_181_EN.webp",
+    "card_id": "A3-181",
+    "image": "/images/en-US/A3-181.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Dhelmise ex",
@@ -6750,14 +7021,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-23",
         "version": "Celestial Guardians #23",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-181",
         "version": "Celestial Guardians #181",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-199",
         "version": "Celestial Guardians #199",
         "rarity": "☆☆"
       }
@@ -6766,8 +7040,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "182",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_182_EN.webp",
+    "card_id": "A3-182",
+    "image": "/images/en-US/A3-182.webp",
     "hp": "180",
     "energy": "Fire",
     "name": "Incineroar ex",
@@ -6800,14 +7074,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-33",
         "version": "Celestial Guardians #33",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-182",
         "version": "Celestial Guardians #182",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-200",
         "version": "Celestial Guardians #200",
         "rarity": "☆☆"
       }
@@ -6816,8 +7093,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "183",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_183_EN.webp",
+    "card_id": "A3-183",
+    "image": "/images/en-US/A3-183.webp",
     "hp": "160",
     "energy": "Water",
     "name": "Crabominable ex",
@@ -6844,14 +7121,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-49",
         "version": "Celestial Guardians #49",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-183",
         "version": "Celestial Guardians #183",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-201",
         "version": "Celestial Guardians #201",
         "rarity": "☆☆"
       }
@@ -6860,8 +7140,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "184",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_184_EN.webp",
+    "card_id": "A3-184",
+    "image": "/images/en-US/A3-184.webp",
     "hp": "170",
     "energy": "Water",
     "name": "Wishiwashi ex",
@@ -6888,14 +7168,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-51",
         "version": "Celestial Guardians #51",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-184",
         "version": "Celestial Guardians #184",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-202",
         "version": "Celestial Guardians #202",
         "rarity": "☆☆"
       }
@@ -6904,8 +7187,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "185",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_185_EN.webp",
+    "card_id": "A3-185",
+    "image": "/images/en-US/A3-185.webp",
     "hp": "140",
     "energy": "Lightning",
     "name": "Alolan Raichu ex",
@@ -6932,14 +7215,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-58",
         "version": "Celestial Guardians #58",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-185",
         "version": "Celestial Guardians #185",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-203",
         "version": "Celestial Guardians #203",
         "rarity": "☆☆"
       }
@@ -6948,8 +7234,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "186",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_186_EN.webp",
+    "card_id": "A3-186",
+    "image": "/images/en-US/A3-186.webp",
     "hp": "180",
     "energy": "Psychic",
     "name": "Lunala ex",
@@ -6976,18 +7262,22 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-87",
         "version": "Celestial Guardians #87",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-186",
         "version": "Celestial Guardians #186",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-204",
         "version": "Celestial Guardians #204",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-238",
         "version": "Celestial Guardians #238",
         "rarity": "♛"
       }
@@ -6996,8 +7286,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "187",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_187_EN.webp",
+    "card_id": "A3-187",
+    "image": "/images/en-US/A3-187.webp",
     "hp": "130",
     "energy": "Fighting",
     "name": "Passimian ex",
@@ -7024,14 +7314,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-104",
         "version": "Celestial Guardians #104",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-187",
         "version": "Celestial Guardians #187",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-205",
         "version": "Celestial Guardians #205",
         "rarity": "☆☆"
       }
@@ -7040,8 +7333,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "188",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_188_EN.webp",
+    "card_id": "A3-188",
+    "image": "/images/en-US/A3-188.webp",
     "hp": "160",
     "energy": "Darkness",
     "name": "Alolan Muk ex",
@@ -7068,14 +7361,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-111",
         "version": "Celestial Guardians #111",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-188",
         "version": "Celestial Guardians #188",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-206",
         "version": "Celestial Guardians #206",
         "rarity": "☆☆"
       }
@@ -7084,8 +7380,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "189",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_189_EN.webp",
+    "card_id": "A3-189",
+    "image": "/images/en-US/A3-189.webp",
     "hp": "180",
     "energy": "Metal",
     "name": "Solgaleo ex",
@@ -7112,18 +7408,22 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-122",
         "version": "Celestial Guardians #122",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-189",
         "version": "Celestial Guardians #189",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-207",
         "version": "Celestial Guardians #207",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-239",
         "version": "Celestial Guardians #239",
         "rarity": "♛"
       }
@@ -7132,8 +7432,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "190",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_190_EN.webp",
+    "card_id": "A3-190",
+    "image": "/images/en-US/A3-190.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Acerola",
@@ -7150,10 +7450,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-148",
         "version": "Celestial Guardians #148",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-190",
         "version": "Celestial Guardians #190",
         "rarity": "☆☆"
       }
@@ -7162,8 +7464,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "191",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_191_EN.webp",
+    "card_id": "A3-191",
+    "image": "/images/en-US/A3-191.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Ilima",
@@ -7180,10 +7482,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-149",
         "version": "Celestial Guardians #149",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-191",
         "version": "Celestial Guardians #191",
         "rarity": "☆☆"
       }
@@ -7192,8 +7496,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "192",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_192_EN.webp",
+    "card_id": "A3-192",
+    "image": "/images/en-US/A3-192.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Kiawe",
@@ -7210,10 +7514,12 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-150",
         "version": "Celestial Guardians #150",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-192",
         "version": "Celestial Guardians #192",
         "rarity": "☆☆"
       }
@@ -7222,8 +7528,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "193",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_193_EN.webp",
+    "card_id": "A3-193",
+    "image": "/images/en-US/A3-193.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Guzma",
@@ -7240,14 +7546,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-151",
         "version": "Celestial Guardians #151",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-193",
         "version": "Celestial Guardians #193",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-208",
         "version": "Celestial Guardians #208",
         "rarity": "☆☆☆"
       }
@@ -7256,8 +7565,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "194",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_194_EN.webp",
+    "card_id": "A3-194",
+    "image": "/images/en-US/A3-194.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Lana",
@@ -7274,10 +7583,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-152",
         "version": "Celestial Guardians #152",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-194",
         "version": "Celestial Guardians #194",
         "rarity": "☆☆"
       }
@@ -7286,8 +7597,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "195",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_195_EN.webp",
+    "card_id": "A3-195",
+    "image": "/images/en-US/A3-195.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Sophocles",
@@ -7304,10 +7615,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-153",
         "version": "Celestial Guardians #153",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-195",
         "version": "Celestial Guardians #195",
         "rarity": "☆☆"
       }
@@ -7316,8 +7629,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "196",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_196_EN.webp",
+    "card_id": "A3-196",
+    "image": "/images/en-US/A3-196.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Mallow",
@@ -7334,10 +7647,12 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-154",
         "version": "Celestial Guardians #154",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-196",
         "version": "Celestial Guardians #196",
         "rarity": "☆☆"
       }
@@ -7346,8 +7661,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "197",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_197_EN.webp",
+    "card_id": "A3-197",
+    "image": "/images/en-US/A3-197.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Lillie",
@@ -7364,14 +7679,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-155",
         "version": "Celestial Guardians #155",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-197",
         "version": "Celestial Guardians #197",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-209",
         "version": "Celestial Guardians #209",
         "rarity": "☆☆☆"
       }
@@ -7380,8 +7698,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "198",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_198_EN.webp",
+    "card_id": "A3-198",
+    "image": "/images/en-US/A3-198.webp",
     "hp": "170",
     "energy": "Grass",
     "name": "Decidueye ex",
@@ -7414,14 +7732,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-12",
         "version": "Celestial Guardians #12",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-180",
         "version": "Celestial Guardians #180",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-198",
         "version": "Celestial Guardians #198",
         "rarity": "☆☆"
       }
@@ -7430,8 +7751,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "199",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_199_EN.webp",
+    "card_id": "A3-199",
+    "image": "/images/en-US/A3-199.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Dhelmise ex",
@@ -7458,14 +7779,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-23",
         "version": "Celestial Guardians #23",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-181",
         "version": "Celestial Guardians #181",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-199",
         "version": "Celestial Guardians #199",
         "rarity": "☆☆"
       }
@@ -7474,8 +7798,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "200",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_200_EN.webp",
+    "card_id": "A3-200",
+    "image": "/images/en-US/A3-200.webp",
     "hp": "180",
     "energy": "Fire",
     "name": "Incineroar ex",
@@ -7508,14 +7832,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-33",
         "version": "Celestial Guardians #33",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-182",
         "version": "Celestial Guardians #182",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-200",
         "version": "Celestial Guardians #200",
         "rarity": "☆☆"
       }
@@ -7524,8 +7851,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "201",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_201_EN.webp",
+    "card_id": "A3-201",
+    "image": "/images/en-US/A3-201.webp",
     "hp": "160",
     "energy": "Water",
     "name": "Crabominable ex",
@@ -7552,14 +7879,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-49",
         "version": "Celestial Guardians #49",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-183",
         "version": "Celestial Guardians #183",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-201",
         "version": "Celestial Guardians #201",
         "rarity": "☆☆"
       }
@@ -7568,8 +7898,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "202",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_202_EN.webp",
+    "card_id": "A3-202",
+    "image": "/images/en-US/A3-202.webp",
     "hp": "170",
     "energy": "Water",
     "name": "Wishiwashi ex",
@@ -7596,14 +7926,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-51",
         "version": "Celestial Guardians #51",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-184",
         "version": "Celestial Guardians #184",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-202",
         "version": "Celestial Guardians #202",
         "rarity": "☆☆"
       }
@@ -7612,8 +7945,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "203",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_203_EN.webp",
+    "card_id": "A3-203",
+    "image": "/images/en-US/A3-203.webp",
     "hp": "140",
     "energy": "Lightning",
     "name": "Alolan Raichu ex",
@@ -7640,14 +7973,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-58",
         "version": "Celestial Guardians #58",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-185",
         "version": "Celestial Guardians #185",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-203",
         "version": "Celestial Guardians #203",
         "rarity": "☆☆"
       }
@@ -7656,8 +7992,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "204",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_204_EN.webp",
+    "card_id": "A3-204",
+    "image": "/images/en-US/A3-204.webp",
     "hp": "180",
     "energy": "Psychic",
     "name": "Lunala ex",
@@ -7684,18 +8020,22 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-87",
         "version": "Celestial Guardians #87",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-186",
         "version": "Celestial Guardians #186",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-204",
         "version": "Celestial Guardians #204",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-238",
         "version": "Celestial Guardians #238",
         "rarity": "♛"
       }
@@ -7704,8 +8044,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "205",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_205_EN.webp",
+    "card_id": "A3-205",
+    "image": "/images/en-US/A3-205.webp",
     "hp": "130",
     "energy": "Fighting",
     "name": "Passimian ex",
@@ -7732,14 +8072,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-104",
         "version": "Celestial Guardians #104",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-187",
         "version": "Celestial Guardians #187",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-205",
         "version": "Celestial Guardians #205",
         "rarity": "☆☆"
       }
@@ -7748,8 +8091,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "206",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_206_EN.webp",
+    "card_id": "A3-206",
+    "image": "/images/en-US/A3-206.webp",
     "hp": "160",
     "energy": "Darkness",
     "name": "Alolan Muk ex",
@@ -7776,14 +8119,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-111",
         "version": "Celestial Guardians #111",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-188",
         "version": "Celestial Guardians #188",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-206",
         "version": "Celestial Guardians #206",
         "rarity": "☆☆"
       }
@@ -7792,8 +8138,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "207",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_207_EN.webp",
+    "card_id": "A3-207",
+    "image": "/images/en-US/A3-207.webp",
     "hp": "180",
     "energy": "Metal",
     "name": "Solgaleo ex",
@@ -7820,18 +8166,22 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-122",
         "version": "Celestial Guardians #122",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-189",
         "version": "Celestial Guardians #189",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-207",
         "version": "Celestial Guardians #207",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-239",
         "version": "Celestial Guardians #239",
         "rarity": "♛"
       }
@@ -7840,8 +8190,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "208",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_208_EN.webp",
+    "card_id": "A3-208",
+    "image": "/images/en-US/A3-208.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Guzma",
@@ -7858,14 +8208,17 @@
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-151",
         "version": "Celestial Guardians #151",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-193",
         "version": "Celestial Guardians #193",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-208",
         "version": "Celestial Guardians #208",
         "rarity": "☆☆☆"
       }
@@ -7874,8 +8227,8 @@
     "crafting_cost": 1500
   },
   {
-    "id": "209",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_209_EN.webp",
+    "card_id": "A3-209",
+    "image": "/images/en-US/A3-209.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Lillie",
@@ -7892,14 +8245,17 @@
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A3-155",
         "version": "Celestial Guardians #155",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-197",
         "version": "Celestial Guardians #197",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-209",
         "version": "Celestial Guardians #209",
         "rarity": "☆☆☆"
       }
@@ -7908,8 +8264,8 @@
     "crafting_cost": 1500
   },
   {
-    "id": "210",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_210_EN.webp",
+    "card_id": "A3-210",
+    "image": "/images/en-US/A3-210.webp",
     "hp": "70",
     "energy": "Grass",
     "name": "Bulbasaur",
@@ -7929,25 +8285,29 @@
     },
     "weakness": "fire",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A1-1",
         "version": "Genetic Apex #1",
         "rarity": "◊"
       },
       {
+        "card_id": "A1-227",
         "version": "Genetic Apex #227",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-23",
         "version": "Promo-A #23",
         "rarity": ""
       },
       {
+        "card_id": "A3-210",
         "version": "Celestial Guardians #210",
         "rarity": "☆"
       }
@@ -7956,8 +8316,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "211",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_211_EN.webp",
+    "card_id": "A3-211",
+    "image": "/images/en-US/A3-211.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Ivysaur",
@@ -7977,17 +8337,19 @@
     },
     "weakness": "fire",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A1-2",
         "version": "Genetic Apex #2",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-211",
         "version": "Celestial Guardians #211",
         "rarity": "☆"
       }
@@ -7996,8 +8358,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "212",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_212_EN.webp",
+    "card_id": "A3-212",
+    "image": "/images/en-US/A3-212.webp",
     "hp": "160",
     "energy": "Grass",
     "name": "Venusaur",
@@ -8017,21 +8379,24 @@
     },
     "weakness": "fire",
     "retreat": "3",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A1-3",
         "version": "Genetic Apex #3",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-18",
         "version": "Promo-A #18",
         "rarity": ""
       },
       {
+        "card_id": "A3-212",
         "version": "Celestial Guardians #212",
         "rarity": "☆"
       }
@@ -8040,8 +8405,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "213",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_213_EN.webp",
+    "card_id": "A3-213",
+    "image": "/images/en-US/A3-213.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Exeggcute",
@@ -8061,17 +8426,19 @@
     },
     "weakness": "fire",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A3-1",
         "version": "Celestial Guardians #1",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-213",
         "version": "Celestial Guardians #213",
         "rarity": "☆"
       }
@@ -8080,8 +8447,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "214",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_214_EN.webp",
+    "card_id": "A3-214",
+    "image": "/images/en-US/A3-214.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Exeggutor",
@@ -8101,21 +8468,24 @@
     },
     "weakness": "fire",
     "retreat": "3",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A1a-2",
         "version": "Mythical Island #2",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A1a-69",
         "version": "Mythical Island #69",
         "rarity": "☆"
       },
       {
+        "card_id": "A3-214",
         "version": "Celestial Guardians #214",
         "rarity": "☆"
       }
@@ -8124,8 +8494,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "215",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_215_EN.webp",
+    "card_id": "A3-215",
+    "image": "/images/en-US/A3-215.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Squirtle",
@@ -8145,25 +8515,29 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A1-53",
         "version": "Genetic Apex #53",
         "rarity": "◊"
       },
       {
+        "card_id": "A1-232",
         "version": "Genetic Apex #232",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-33",
         "version": "Promo-A #33",
         "rarity": ""
       },
       {
+        "card_id": "A3-215",
         "version": "Celestial Guardians #215",
         "rarity": "☆"
       }
@@ -8172,8 +8546,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "216",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_216_EN.webp",
+    "card_id": "A3-216",
+    "image": "/images/en-US/A3-216.webp",
     "hp": "80",
     "energy": "Water",
     "name": "Wartortle",
@@ -8193,17 +8567,19 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A1-54",
         "version": "Genetic Apex #54",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-216",
         "version": "Celestial Guardians #216",
         "rarity": "☆"
       }
@@ -8212,8 +8588,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "217",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_217_EN.webp",
+    "card_id": "A3-217",
+    "image": "/images/en-US/A3-217.webp",
     "hp": "150",
     "energy": "Water",
     "name": "Blastoise",
@@ -8233,21 +8609,24 @@
     },
     "weakness": "lightning",
     "retreat": "3",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A1-55",
         "version": "Genetic Apex #55",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-29",
         "version": "Promo-A #29",
         "rarity": ""
       },
       {
+        "card_id": "A3-217",
         "version": "Celestial Guardians #217",
         "rarity": "☆"
       }
@@ -8256,8 +8635,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "218",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_218_EN.webp",
+    "card_id": "A3-218",
+    "image": "/images/en-US/A3-218.webp",
     "hp": "50",
     "energy": "Water",
     "name": "Staryu",
@@ -8277,17 +8656,19 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A1-74",
         "version": "Genetic Apex #74",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-218",
         "version": "Celestial Guardians #218",
         "rarity": "☆"
       }
@@ -8296,8 +8677,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "219",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_219_EN.webp",
+    "card_id": "A3-219",
+    "image": "/images/en-US/A3-219.webp",
     "hp": "90",
     "energy": "Water",
     "name": "Starmie",
@@ -8317,17 +8698,19 @@
     },
     "weakness": "lightning",
     "retreat": "0",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A1-75",
         "version": "Genetic Apex #75",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-219",
         "version": "Celestial Guardians #219",
         "rarity": "☆"
       }
@@ -8336,8 +8719,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "220",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_220_EN.webp",
+    "card_id": "A3-220",
+    "image": "/images/en-US/A3-220.webp",
     "hp": "50",
     "energy": "Psychic",
     "name": "Gastly",
@@ -8357,17 +8740,19 @@
     },
     "weakness": "darkness",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A2a-31",
         "version": "Triumphant Light #31",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-220",
         "version": "Celestial Guardians #220",
         "rarity": "☆"
       }
@@ -8376,8 +8761,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "221",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_221_EN.webp",
+    "card_id": "A3-221",
+    "image": "/images/en-US/A3-221.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Haunter",
@@ -8397,17 +8782,19 @@
     },
     "weakness": "darkness",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A1-121",
         "version": "Genetic Apex #121",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-221",
         "version": "Celestial Guardians #221",
         "rarity": "☆"
       }
@@ -8416,8 +8803,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "222",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_222_EN.webp",
+    "card_id": "A3-222",
+    "image": "/images/en-US/A3-222.webp",
     "hp": "130",
     "energy": "Psychic",
     "name": "Gengar",
@@ -8437,17 +8824,19 @@
     },
     "weakness": "darkness",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A1-122",
         "version": "Genetic Apex #122",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3-222",
         "version": "Celestial Guardians #222",
         "rarity": "☆"
       }
@@ -8456,8 +8845,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "223",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_223_EN.webp",
+    "card_id": "A3-223",
+    "image": "/images/en-US/A3-223.webp",
     "hp": "70",
     "energy": "Fighting",
     "name": "Machop",
@@ -8477,17 +8866,19 @@
     },
     "weakness": "psychic",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A1-143",
         "version": "Genetic Apex #143",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-223",
         "version": "Celestial Guardians #223",
         "rarity": "☆"
       }
@@ -8496,8 +8887,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "224",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_224_EN.webp",
+    "card_id": "A3-224",
+    "image": "/images/en-US/A3-224.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Machoke",
@@ -8517,17 +8908,19 @@
     },
     "weakness": "psychic",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A1-144",
         "version": "Genetic Apex #144",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-224",
         "version": "Celestial Guardians #224",
         "rarity": "☆"
       }
@@ -8536,8 +8929,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "225",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_225_EN.webp",
+    "card_id": "A3-225",
+    "image": "/images/en-US/A3-225.webp",
     "hp": "150",
     "energy": "Fighting",
     "name": "Machamp",
@@ -8557,21 +8950,24 @@
     },
     "weakness": "psychic",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A2b-39",
         "version": "Shining Revelry #39",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-55",
         "version": "Promo-A #55",
         "rarity": ""
       },
       {
+        "card_id": "A3-225",
         "version": "Celestial Guardians #225",
         "rarity": "☆"
       }
@@ -8580,8 +8976,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "226",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_226_EN.webp",
+    "card_id": "A3-226",
+    "image": "/images/en-US/A3-226.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Cubone",
@@ -8601,21 +8997,24 @@
     },
     "weakness": "grass",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A1-151",
         "version": "Genetic Apex #151",
         "rarity": "◊"
       },
       {
+        "card_id": "A1-239",
         "version": "Genetic Apex #239",
         "rarity": "☆"
       },
       {
+        "card_id": "A3-226",
         "version": "Celestial Guardians #226",
         "rarity": "☆"
       }
@@ -8624,8 +9023,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "227",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_227_EN.webp",
+    "card_id": "A3-227",
+    "image": "/images/en-US/A3-227.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Marowak",
@@ -8645,17 +9044,19 @@
     },
     "weakness": "grass",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A1-152",
         "version": "Genetic Apex #152",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3-227",
         "version": "Celestial Guardians #227",
         "rarity": "☆"
       }
@@ -8664,8 +9065,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "228",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_228_EN.webp",
+    "card_id": "A3-228",
+    "image": "/images/en-US/A3-228.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Jigglypuff",
@@ -8685,17 +9086,19 @@
     },
     "weakness": "fighting",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A2b-60",
         "version": "Shining Revelry #60",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-228",
         "version": "Celestial Guardians #228",
         "rarity": "☆"
       }
@@ -8704,8 +9107,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "229",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_229_EN.webp",
+    "card_id": "A3-229",
+    "image": "/images/en-US/A3-229.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Wigglytuff",
@@ -8725,21 +9128,24 @@
     },
     "weakness": "fighting",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A2b-61",
         "version": "Shining Revelry #61",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2b-78",
         "version": "Shining Revelry #78",
         "rarity": "☆"
       },
       {
+        "card_id": "A3-229",
         "version": "Celestial Guardians #229",
         "rarity": "☆"
       }
@@ -8748,8 +9154,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "230",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_230_EN.webp",
+    "card_id": "A3-230",
+    "image": "/images/en-US/A3-230.webp",
     "hp": "190",
     "energy": "Grass",
     "name": "Venusaur ex",
@@ -8775,21 +9181,24 @@
     },
     "weakness": "fire",
     "retreat": "3",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A1-4",
         "version": "Genetic Apex #4",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-251",
         "version": "Genetic Apex #251",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-230",
         "version": "Celestial Guardians #230",
         "rarity": "☆☆"
       }
@@ -8798,8 +9207,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "231",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_231_EN.webp",
+    "card_id": "A3-231",
+    "image": "/images/en-US/A3-231.webp",
     "hp": "160",
     "energy": "Grass",
     "name": "Exeggutor ex",
@@ -8819,21 +9228,24 @@
     },
     "weakness": "fire",
     "retreat": "3",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A1-23",
         "version": "Genetic Apex #23",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-252",
         "version": "Genetic Apex #252",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-231",
         "version": "Celestial Guardians #231",
         "rarity": "☆☆"
       }
@@ -8842,8 +9254,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "232",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_232_EN.webp",
+    "card_id": "A3-232",
+    "image": "/images/en-US/A3-232.webp",
     "hp": "180",
     "energy": "Water",
     "name": "Blastoise ex",
@@ -8869,21 +9281,24 @@
     },
     "weakness": "lightning",
     "retreat": "3",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A1-56",
         "version": "Genetic Apex #56",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-256",
         "version": "Genetic Apex #256",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-232",
         "version": "Celestial Guardians #232",
         "rarity": "☆☆"
       }
@@ -8892,8 +9307,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "233",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_233_EN.webp",
+    "card_id": "A3-233",
+    "image": "/images/en-US/A3-233.webp",
     "hp": "130",
     "energy": "Water",
     "name": "Starmie ex",
@@ -8913,21 +9328,24 @@
     },
     "weakness": "lightning",
     "retreat": "0",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A1-76",
         "version": "Genetic Apex #76",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-257",
         "version": "Genetic Apex #257",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-233",
         "version": "Celestial Guardians #233",
         "rarity": "☆☆"
       }
@@ -8936,8 +9354,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "234",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_234_EN.webp",
+    "card_id": "A3-234",
+    "image": "/images/en-US/A3-234.webp",
     "hp": "170",
     "energy": "Psychic",
     "name": "Gengar ex",
@@ -8957,25 +9375,29 @@
     },
     "weakness": "darkness",
     "retreat": "2",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A1-123",
         "version": "Genetic Apex #123",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-261",
         "version": "Genetic Apex #261",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1-277",
         "version": "Genetic Apex #277",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-234",
         "version": "Celestial Guardians #234",
         "rarity": "☆☆"
       }
@@ -8984,8 +9406,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "235",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_235_EN.webp",
+    "card_id": "A3-235",
+    "image": "/images/en-US/A3-235.webp",
     "hp": "180",
     "energy": "Fighting",
     "name": "Machamp ex",
@@ -9005,25 +9427,29 @@
     },
     "weakness": "psychic",
     "retreat": "3",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A1-146",
         "version": "Genetic Apex #146",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-263",
         "version": "Genetic Apex #263",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1-278",
         "version": "Genetic Apex #278",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-235",
         "version": "Celestial Guardians #235",
         "rarity": "☆☆"
       }
@@ -9032,8 +9458,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "236",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_236_EN.webp",
+    "card_id": "A3-236",
+    "image": "/images/en-US/A3-236.webp",
     "hp": "140",
     "energy": "Fighting",
     "name": "Marowak ex",
@@ -9053,21 +9479,24 @@
     },
     "weakness": "grass",
     "retreat": "1",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
     "alternate_versions": [
       {
+        "card_id": "A1-153",
         "version": "Genetic Apex #153",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-264",
         "version": "Genetic Apex #264",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-236",
         "version": "Celestial Guardians #236",
         "rarity": "☆☆"
       }
@@ -9076,8 +9505,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "237",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_237_EN.webp",
+    "card_id": "A3-237",
+    "image": "/images/en-US/A3-237.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Wigglytuff ex",
@@ -9097,25 +9526,29 @@
     },
     "weakness": "fighting",
     "retreat": "2",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
     "alternate_versions": [
       {
+        "card_id": "A1-195",
         "version": "Genetic Apex #195",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-265",
         "version": "Genetic Apex #265",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1-279",
         "version": "Genetic Apex #279",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-237",
         "version": "Celestial Guardians #237",
         "rarity": "☆☆"
       }
@@ -9124,8 +9557,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "238",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_238_EN.webp",
+    "card_id": "A3-238",
+    "image": "/images/en-US/A3-238.webp",
     "hp": "180",
     "energy": "Psychic",
     "name": "Lunala ex",
@@ -9152,18 +9585,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-87",
         "version": "Celestial Guardians #87",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-186",
         "version": "Celestial Guardians #186",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-204",
         "version": "Celestial Guardians #204",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-238",
         "version": "Celestial Guardians #238",
         "rarity": "♛"
       }
@@ -9172,8 +9609,8 @@
     "crafting_cost": "Unknown"
   },
   {
-    "id": "239",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3/A3_239_EN.webp",
+    "card_id": "A3-239",
+    "image": "/images/en-US/A3-239.webp",
     "hp": "180",
     "energy": "Metal",
     "name": "Solgaleo ex",
@@ -9200,18 +9637,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3-122",
         "version": "Celestial Guardians #122",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3-189",
         "version": "Celestial Guardians #189",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-207",
         "version": "Celestial Guardians #207",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3-239",
         "version": "Celestial Guardians #239",
         "rarity": "♛"
       }

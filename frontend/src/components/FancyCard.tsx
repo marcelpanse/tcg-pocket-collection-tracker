@@ -62,11 +62,7 @@ function FancyCard({ selected, setIsSelected, card, size = 'default', clickable 
     height: size === 'small' ? '112px' : 'auto', // Adjust size based on prop
   }
 
-  const langCode = i18n.language.split('-')[0].toUpperCase()
-  const baseName = card.image
-    ?.split('/')
-    .at(-1)
-    ?.replace(/_[A-Z]{2}\.webp$/, `_${langCode}.webp`)
+  const baseName = card.image?.split('/').at(-1)
   const imagePath = `/images/${i18n.language}/${baseName}`
 
   return (
@@ -89,12 +85,12 @@ function FancyCard({ selected, setIsSelected, card, size = 'default', clickable 
           ref={cardRef}
           className="card-test"
           style={cardTestStyle}
-          src={`${imagePath}`}
+          src={imagePath}
           alt={getCardNameByLang(card, i18n.language)}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           onError={(e) => {
-            ;(e.target as HTMLImageElement).src = `/images/en-US/${card.image?.split('/').at(-1)}` // Default card image to English if localized image is missing
+            ;(e.target as HTMLImageElement).src = card.image // Default card image to English if localized image is missing
           }}
         />
       )}

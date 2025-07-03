@@ -96,11 +96,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
   }
 
   function getRightPathOfImage(imageUrl: string | undefined): Promise<string> {
-    const langCode = i18n.language.split('-')[0].toUpperCase()
-    const baseName = imageUrl
-      ?.split('/')
-      .at(-1)
-      ?.replace(/_[A-Z]{2}\.webp$/, `_${langCode}.webp`)
+    const baseName = imageUrl?.split('/').at(-1)
     const imagePath = `/images/${i18n.language}/${baseName}`
 
     return new Promise((resolve) => {
@@ -113,7 +109,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
 
       img.onerror = () => {
         const fallbackPath = `/images/en-US/${imageUrl?.split('/').at(-1)}`
-        console.log('right path error returning', fallbackPath)
+        console.log('right path error', imagePath, 'returning', fallbackPath, 'instead')
         resolve(fallbackPath)
       }
 
