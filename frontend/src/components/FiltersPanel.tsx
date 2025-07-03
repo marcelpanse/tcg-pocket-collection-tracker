@@ -16,6 +16,7 @@ import type { Card, CollectionRow, Mission, Rarity } from '@/types'
 import i18n from 'i18next'
 import { type FC, type JSX, useContext, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import SortByRecent from './filters/SortByRecent'
 
 interface Props {
   children?: JSX.Element
@@ -37,6 +38,7 @@ interface Props {
     owned?: boolean
     rarity?: boolean
     amount?: boolean
+    sortBy?: boolean
   }
 
   batchUpdate?: boolean
@@ -54,6 +56,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
   const [packFilter, setPackFilter] = useState<string>('all')
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'missing'>('all')
+  const [sortBy, setSortBy] = useState<'default' | 'recent'>('default')
   const [numberFilter, setNumberFilter] = useState(0)
   const [maxNumberFilter, setMaxNumberFilter] = useState(100)
 
@@ -96,6 +99,21 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
         filteredCards = filteredCards.filter((card) => !cards.find((oc: CollectionRow) => oc.card_id === card.card_id && oc.amount_owned > 0))
       }
     }
+
+    if (sortBy === 'recent') {
+      filteredCards = [...filteredCards].sort((a: Card, b: Card) => {
+        const isUpdatedA = cards.find((oc: CollectionRow) => oc.card_id === a.card_id)?.updated_at
+        const isUpdatedB = cards.find((oc: CollectionRow) => oc.card_id === b.card_id)?.updated_at
+        if (isUpdatedA && isUpdatedB) {
+          return new Date(isUpdatedB).getTime() - new Date(isUpdatedA).getTime()
+        } else if (isUpdatedA && !isUpdatedB) {
+          return -1
+        } else {
+          return 1
+        }
+      })
+    }
+
     filteredCards = filteredCards.filter(filterRarities)
 
     if (searchValue) {
@@ -120,7 +138,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
     }
 
     return filteredCards
-  }, [cards, expansionFilter, packFilter, rarityFilter, searchValue, ownedFilter, numberFilter, maxNumberFilter, langState])
+  }, [cards, expansionFilter, packFilter, rarityFilter, searchValue, ownedFilter, numberFilter, maxNumberFilter, langState, sortBy])
 
   useEffect(() => {
     onFiltersChanged(getFilteredCards)
@@ -181,6 +199,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
                 {filtersDialog.pack && <PackFilter packFilter={packFilter} setPackFilter={setPackFilter} expansion={expansionFilter} fullWidth />}
                 {filtersDialog.rarity && <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />}
                 {filtersDialog.owned && <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} fullWidth />}
+                {filtersDialog.sortBy && <SortByRecent sortBy={sortBy} setSortBy={setSortBy} />}
                 {filtersDialog.amount && (
                   <>
                     <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]} labelKey="minNum" />
