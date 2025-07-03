@@ -3,7 +3,7 @@ export type ExpansionId = (typeof expansionIds)[number]
 
 const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', '✵', '✵✵', 'Crown Rare', 'P', ''] as const
 
-export const cardTypes = ['colorless', 'fire', 'water', 'grass', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'trainer', ''] as const
+export const cardTypes = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'dragon', 'colorless', 'trainer', ''] as const
 
 export type Rarity = (typeof rarities)[number]
 export type CardType = (typeof cardTypes)[number]
