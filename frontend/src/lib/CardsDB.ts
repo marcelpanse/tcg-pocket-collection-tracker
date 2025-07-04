@@ -18,11 +18,38 @@ import A3Missions from '../../assets/themed-collections/A3-missions.json'
 import A3aMissions from '../../assets/themed-collections/A3a-missions.json'
 import A3bMissions from '../../assets/themed-collections/A3b-missions.json'
 
+const rarityOverrides = {
+  A2b: [
+    { rarity: '✵', start: 97, end: 106 },
+    { rarity: '✵✵', start: 107, end: 110 },
+  ],
+  A3: [
+    { rarity: '✵', start: 210, end: 229 },
+    { rarity: '✵✵', start: 230, end: 237 },
+  ],
+  A3a: [
+    { rarity: '✵', start: 89, end: 98 },
+    { rarity: '✵✵', start: 99, end: 102 },
+  ],
+  A3b: [
+    { rarity: '✵', start: 93, end: 102 },
+    { rarity: '✵✵', start: 103, end: 106 },
+  ],
+} as Record<ExpansionId, { rarity: Rarity; start: number; end: number }[]>
+
 const update = (cards: Card[], expansionName: ExpansionId) => {
   for (const card of cards) {
     // we set the card_id to the linkedCardID if it exists, so we really treat it as a single card even though it appears in multiple expansions.
     if (card.linkedCardID) card.card_id = card.linkedCardID
     card.expansion = expansionName
+    if (rarityOverrides[expansionName]) {
+      const inPackId = Number(card.card_id.split('-').pop())
+      for (const { rarity, start, end } of rarityOverrides[expansionName]) {
+        if (start <= inPackId && inPackId <= end) {
+          card.rarity = rarity
+        }
+      }
+    }
   }
   return cards
 }
