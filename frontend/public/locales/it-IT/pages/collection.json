@@ -1,4 +1,15 @@
 {
   "publicCollectionTitle": "Stai osservando la collezione pubblica di \"{{username}}\".",
-  "publicCollectionDescription": "Al momento stai osservando una collezione pubblica. Clicca un qualsiasi elemento di navigazione per tornare alla tua collezione."
+  "publicCollectionDescription": "Al momento stai osservando una collezione pubblica. Clicca un qualsiasi elemento di navigazione per tornare alla tua collezione.",
+  "showPossibleTrades": "Mostra scambi possibili",
+  "missionDetail": {
+    "eligibleCards-singular": "Elenco delle carte idonee: {{options}} opzione",
+    "eligibleCards-plural": "Elenco delle carte idonee: {{options}} opzioni",
+    "chanceFrom": "Probabilità da {{pack}}: {{chance}}%"
+  },
+  "filters": {
+    "allFilters": "Tutti i filtri",
+    "filtersCount": "Filtri ({{count}})",
+    "share": "Condividi"
+  }
 }

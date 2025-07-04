@@ -1,7 +1,7 @@
 [
   {
-    "id": "1",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_001_EN.webp",
+    "card_id": "A3b-1",
+    "image": "/images/en-US/A3b-1.webp",
     "hp": "100",
     "energy": "Grass",
     "name": "Tropius",
@@ -28,6 +28,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-1",
         "version": "Eevee Grove #1",
         "rarity": "◊◊"
       }
@@ -36,8 +37,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "2",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_002_EN.webp",
+    "card_id": "A3b-2",
+    "image": "/images/en-US/A3b-2.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Leafeon",
@@ -64,10 +65,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-2",
         "version": "Eevee Grove #2",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-70",
         "version": "Eevee Grove #70",
         "rarity": "☆"
       }
@@ -76,8 +79,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "3",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_003_EN.webp",
+    "card_id": "A3b-3",
+    "image": "/images/en-US/A3b-3.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Bounsweet",
@@ -104,6 +107,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-3",
         "version": "Eevee Grove #3",
         "rarity": "◊"
       }
@@ -112,8 +116,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "4",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_004_EN.webp",
+    "card_id": "A3b-4",
+    "image": "/images/en-US/A3b-4.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Steenee",
@@ -140,6 +144,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-4",
         "version": "Eevee Grove #4",
         "rarity": "◊"
       }
@@ -148,8 +153,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "5",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_005_EN.webp",
+    "card_id": "A3b-5",
+    "image": "/images/en-US/A3b-5.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Tsareena",
@@ -176,6 +181,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-5",
         "version": "Eevee Grove #5",
         "rarity": "◊◊"
       }
@@ -184,8 +190,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "6",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_006_EN.webp",
+    "card_id": "A3b-6",
+    "image": "/images/en-US/A3b-6.webp",
     "hp": "40",
     "energy": "Grass",
     "name": "Applin",
@@ -212,6 +218,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-6",
         "version": "Eevee Grove #6",
         "rarity": "◊"
       }
@@ -220,8 +227,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "7",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_007_EN.webp",
+    "card_id": "A3b-7",
+    "image": "/images/en-US/A3b-7.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Appletun",
@@ -248,6 +255,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-7",
         "version": "Eevee Grove #7",
         "rarity": "◊◊"
       }
@@ -256,8 +264,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "8",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_008_EN.webp",
+    "card_id": "A3b-8",
+    "image": "/images/en-US/A3b-8.webp",
     "hp": "110",
     "energy": "Fire",
     "name": "Flareon",
@@ -284,10 +292,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-8",
         "version": "Eevee Grove #8",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-71",
         "version": "Eevee Grove #71",
         "rarity": "☆"
       }
@@ -296,8 +306,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "9",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_009_EN.webp",
+    "card_id": "A3b-9",
+    "image": "/images/en-US/A3b-9.webp",
     "hp": "150",
     "energy": "Fire",
     "name": "Flareon ex",
@@ -324,14 +334,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-9",
         "version": "Eevee Grove #9",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-79",
         "version": "Eevee Grove #79",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-87",
         "version": "Eevee Grove #87",
         "rarity": "☆☆"
       }
@@ -340,8 +353,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "10",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_010_EN.webp",
+    "card_id": "A3b-10",
+    "image": "/images/en-US/A3b-10.webp",
     "hp": "100",
     "energy": "Fire",
     "name": "Torkoal",
@@ -368,6 +381,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-10",
         "version": "Eevee Grove #10",
         "rarity": "◊"
       }
@@ -376,8 +390,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "11",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_011_EN.webp",
+    "card_id": "A3b-11",
+    "image": "/images/en-US/A3b-11.webp",
     "hp": "70",
     "energy": "Fire",
     "name": "Litten",
@@ -404,6 +418,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-11",
         "version": "Eevee Grove #11",
         "rarity": "◊"
       }
@@ -412,8 +427,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "12",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_012_EN.webp",
+    "card_id": "A3b-12",
+    "image": "/images/en-US/A3b-12.webp",
     "hp": "80",
     "energy": "Fire",
     "name": "Torracat",
@@ -440,6 +455,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-12",
         "version": "Eevee Grove #12",
         "rarity": "◊"
       }
@@ -448,8 +464,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "13",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_013_EN.webp",
+    "card_id": "A3b-13",
+    "image": "/images/en-US/A3b-13.webp",
     "hp": "150",
     "energy": "Fire",
     "name": "Incineroar",
@@ -476,6 +492,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-13",
         "version": "Eevee Grove #13",
         "rarity": "◊◊"
       }
@@ -484,8 +501,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "14",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_014_EN.webp",
+    "card_id": "A3b-14",
+    "image": "/images/en-US/A3b-14.webp",
     "hp": "60",
     "energy": "Fire",
     "name": "Salandit",
@@ -512,6 +529,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-14",
         "version": "Eevee Grove #14",
         "rarity": "◊"
       }
@@ -520,8 +538,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "15",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_015_EN.webp",
+    "card_id": "A3b-15",
+    "image": "/images/en-US/A3b-15.webp",
     "hp": "90",
     "energy": "Fire",
     "name": "Salazzle",
@@ -548,6 +566,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-15",
         "version": "Eevee Grove #15",
         "rarity": "◊◊"
       }
@@ -556,8 +575,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "16",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_016_EN.webp",
+    "card_id": "A3b-16",
+    "image": "/images/en-US/A3b-16.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Vaporeon",
@@ -584,10 +603,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-16",
         "version": "Eevee Grove #16",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-72",
         "version": "Eevee Grove #72",
         "rarity": "☆"
       }
@@ -596,8 +617,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "17",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_017_EN.webp",
+    "card_id": "A3b-17",
+    "image": "/images/en-US/A3b-17.webp",
     "hp": "100",
     "energy": "Water",
     "name": "Glaceon",
@@ -624,10 +645,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-17",
         "version": "Eevee Grove #17",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-73",
         "version": "Eevee Grove #73",
         "rarity": "☆"
       }
@@ -636,8 +659,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "18",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_018_EN.webp",
+    "card_id": "A3b-18",
+    "image": "/images/en-US/A3b-18.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Vanillite",
@@ -664,10 +687,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-18",
         "version": "Eevee Grove #18",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-85",
         "version": "Promo-A #85",
         "rarity": ""
       }
@@ -676,8 +701,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "19",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_019_EN.webp",
+    "card_id": "A3b-19",
+    "image": "/images/en-US/A3b-19.webp",
     "hp": "80",
     "energy": "Water",
     "name": "Vanillish",
@@ -704,6 +729,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-19",
         "version": "Eevee Grove #19",
         "rarity": "◊"
       }
@@ -712,8 +738,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "20",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_020_EN.webp",
+    "card_id": "A3b-20",
+    "image": "/images/en-US/A3b-20.webp",
     "hp": "140",
     "energy": "Water",
     "name": "Vanilluxe",
@@ -740,6 +766,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-20",
         "version": "Eevee Grove #20",
         "rarity": "◊◊"
       }
@@ -748,8 +775,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "21",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_021_EN.webp",
+    "card_id": "A3b-21",
+    "image": "/images/en-US/A3b-21.webp",
     "hp": "110",
     "energy": "Water",
     "name": "Alomomola",
@@ -776,6 +803,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-21",
         "version": "Eevee Grove #21",
         "rarity": "◊"
       }
@@ -784,8 +812,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "22",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_022_EN.webp",
+    "card_id": "A3b-22",
+    "image": "/images/en-US/A3b-22.webp",
     "hp": "70",
     "energy": "Water",
     "name": "Popplio",
@@ -812,6 +840,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-22",
         "version": "Eevee Grove #22",
         "rarity": "◊"
       }
@@ -820,8 +849,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "23",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_023_EN.webp",
+    "card_id": "A3b-23",
+    "image": "/images/en-US/A3b-23.webp",
     "hp": "90",
     "energy": "Water",
     "name": "Brionne",
@@ -848,6 +877,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-23",
         "version": "Eevee Grove #23",
         "rarity": "◊"
       }
@@ -856,8 +886,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "24",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_024_EN.webp",
+    "card_id": "A3b-24",
+    "image": "/images/en-US/A3b-24.webp",
     "hp": "180",
     "energy": "Water",
     "name": "Primarina ex",
@@ -890,14 +920,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-24",
         "version": "Eevee Grove #24",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-80",
         "version": "Eevee Grove #80",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-88",
         "version": "Eevee Grove #88",
         "rarity": "☆☆"
       }
@@ -906,8 +939,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "25",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_025_EN.webp",
+    "card_id": "A3b-25",
+    "image": "/images/en-US/A3b-25.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Jolteon",
@@ -934,14 +967,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-25",
         "version": "Eevee Grove #25",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-74",
         "version": "Eevee Grove #74",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-86",
         "version": "Promo-A #86",
         "rarity": ""
       }
@@ -950,8 +986,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "26",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_026_EN.webp",
+    "card_id": "A3b-26",
+    "image": "/images/en-US/A3b-26.webp",
     "hp": "40",
     "energy": "Lightning",
     "name": "Joltik",
@@ -978,6 +1014,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-26",
         "version": "Eevee Grove #26",
         "rarity": "◊"
       }
@@ -986,8 +1023,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "27",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_027_EN.webp",
+    "card_id": "A3b-27",
+    "image": "/images/en-US/A3b-27.webp",
     "hp": "80",
     "energy": "Lightning",
     "name": "Galvantula",
@@ -1014,6 +1051,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-27",
         "version": "Eevee Grove #27",
         "rarity": "◊◊"
       }
@@ -1022,8 +1060,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "28",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_028_EN.webp",
+    "card_id": "A3b-28",
+    "image": "/images/en-US/A3b-28.webp",
     "hp": "100",
     "energy": "Psychic",
     "name": "Espeon",
@@ -1050,10 +1088,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-28",
         "version": "Eevee Grove #28",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-75",
         "version": "Eevee Grove #75",
         "rarity": "☆"
       }
@@ -1062,8 +1102,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "29",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_029_EN.webp",
+    "card_id": "A3b-29",
+    "image": "/images/en-US/A3b-29.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Woobat",
@@ -1090,6 +1130,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-29",
         "version": "Eevee Grove #29",
         "rarity": "◊"
       }
@@ -1098,8 +1139,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "30",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_030_EN.webp",
+    "card_id": "A3b-30",
+    "image": "/images/en-US/A3b-30.webp",
     "hp": "100",
     "energy": "Psychic",
     "name": "Swoobat",
@@ -1126,6 +1167,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-30",
         "version": "Eevee Grove #30",
         "rarity": "◊◊"
       }
@@ -1134,8 +1176,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "31",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_031_EN.webp",
+    "card_id": "A3b-31",
+    "image": "/images/en-US/A3b-31.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Swirlix",
@@ -1162,6 +1204,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-31",
         "version": "Eevee Grove #31",
         "rarity": "◊"
       }
@@ -1170,8 +1213,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "32",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_032_EN.webp",
+    "card_id": "A3b-32",
+    "image": "/images/en-US/A3b-32.webp",
     "hp": "120",
     "energy": "Psychic",
     "name": "Slurpuff",
@@ -1198,6 +1241,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-32",
         "version": "Eevee Grove #32",
         "rarity": "◊◊"
       }
@@ -1206,8 +1250,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "33",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_033_EN.webp",
+    "card_id": "A3b-33",
+    "image": "/images/en-US/A3b-33.webp",
     "hp": "90",
     "energy": "Psychic",
     "name": "Sylveon",
@@ -1234,10 +1278,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-33",
         "version": "Eevee Grove #33",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-76",
         "version": "Eevee Grove #76",
         "rarity": "☆"
       }
@@ -1246,8 +1292,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "34",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_034_EN.webp",
+    "card_id": "A3b-34",
+    "image": "/images/en-US/A3b-34.webp",
     "hp": "140",
     "energy": "Psychic",
     "name": "Sylveon ex",
@@ -1274,14 +1320,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-34",
         "version": "Eevee Grove #34",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-81",
         "version": "Eevee Grove #81",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-89",
         "version": "Eevee Grove #89",
         "rarity": "☆☆"
       }
@@ -1290,8 +1339,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "35",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_035_EN.webp",
+    "card_id": "A3b-35",
+    "image": "/images/en-US/A3b-35.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Mimikyu",
@@ -1318,6 +1367,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-35",
         "version": "Eevee Grove #35",
         "rarity": "◊◊"
       }
@@ -1326,8 +1376,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "36",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_036_EN.webp",
+    "card_id": "A3b-36",
+    "image": "/images/en-US/A3b-36.webp",
     "hp": "50",
     "energy": "Psychic",
     "name": "Milcery",
@@ -1354,6 +1404,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-36",
         "version": "Eevee Grove #36",
         "rarity": "◊"
       }
@@ -1362,8 +1413,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "37",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_037_EN.webp",
+    "card_id": "A3b-37",
+    "image": "/images/en-US/A3b-37.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Alcremie",
@@ -1390,10 +1441,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-37",
         "version": "Eevee Grove #37",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-87",
         "version": "Promo-A #87",
         "rarity": ""
       }
@@ -1402,8 +1455,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "38",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_038_EN.webp",
+    "card_id": "A3b-38",
+    "image": "/images/en-US/A3b-38.webp",
     "hp": "70",
     "energy": "Fighting",
     "name": "Barboach",
@@ -1430,6 +1483,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-38",
         "version": "Eevee Grove #38",
         "rarity": "◊"
       }
@@ -1438,8 +1492,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "39",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_039_EN.webp",
+    "card_id": "A3b-39",
+    "image": "/images/en-US/A3b-39.webp",
     "hp": "130",
     "energy": "Fighting",
     "name": "Whiscash",
@@ -1466,6 +1520,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-39",
         "version": "Eevee Grove #39",
         "rarity": "◊◊"
       }
@@ -1474,8 +1529,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "40",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_040_EN.webp",
+    "card_id": "A3b-40",
+    "image": "/images/en-US/A3b-40.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Mienfoo",
@@ -1502,6 +1557,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-40",
         "version": "Eevee Grove #40",
         "rarity": "◊"
       }
@@ -1510,8 +1566,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "41",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_041_EN.webp",
+    "card_id": "A3b-41",
+    "image": "/images/en-US/A3b-41.webp",
     "hp": "90",
     "energy": "Fighting",
     "name": "Mienshao",
@@ -1538,6 +1594,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-41",
         "version": "Eevee Grove #41",
         "rarity": "◊◊"
       }
@@ -1546,8 +1603,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "42",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_042_EN.webp",
+    "card_id": "A3b-42",
+    "image": "/images/en-US/A3b-42.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Carbink",
@@ -1574,6 +1631,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-42",
         "version": "Eevee Grove #42",
         "rarity": "◊"
       }
@@ -1582,8 +1640,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "43",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_043_EN.webp",
+    "card_id": "A3b-43",
+    "image": "/images/en-US/A3b-43.webp",
     "hp": "100",
     "energy": "Darkness",
     "name": "Umbreon",
@@ -1610,10 +1668,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-43",
         "version": "Eevee Grove #43",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-77",
         "version": "Eevee Grove #77",
         "rarity": "☆"
       }
@@ -1622,8 +1682,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "44",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_044_EN.webp",
+    "card_id": "A3b-44",
+    "image": "/images/en-US/A3b-44.webp",
     "hp": "70",
     "energy": "Darkness",
     "name": "Sableye",
@@ -1650,6 +1710,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-44",
         "version": "Eevee Grove #44",
         "rarity": "◊"
       }
@@ -1658,8 +1719,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "45",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_045_EN.webp",
+    "card_id": "A3b-45",
+    "image": "/images/en-US/A3b-45.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Purrloin",
@@ -1686,6 +1747,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-45",
         "version": "Eevee Grove #45",
         "rarity": "◊"
       }
@@ -1694,8 +1756,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "46",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_046_EN.webp",
+    "card_id": "A3b-46",
+    "image": "/images/en-US/A3b-46.webp",
     "hp": "90",
     "energy": "Darkness",
     "name": "Liepard",
@@ -1722,6 +1784,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-46",
         "version": "Eevee Grove #46",
         "rarity": "◊◊"
       }
@@ -1730,8 +1793,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "47",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_047_EN.webp",
+    "card_id": "A3b-47",
+    "image": "/images/en-US/A3b-47.webp",
     "hp": "70",
     "energy": "Metal",
     "name": "Mawile",
@@ -1758,6 +1821,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-47",
         "version": "Eevee Grove #47",
         "rarity": "◊"
       }
@@ -1766,8 +1830,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "48",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_048_EN.webp",
+    "card_id": "A3b-48",
+    "image": "/images/en-US/A3b-48.webp",
     "hp": "80",
     "energy": "Metal",
     "name": "Togedemaru",
@@ -1794,10 +1858,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-48",
         "version": "Eevee Grove #48",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-90",
         "version": "Promo-A #90",
         "rarity": ""
       }
@@ -1806,8 +1872,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "49",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_049_EN.webp",
+    "card_id": "A3b-49",
+    "image": "/images/en-US/A3b-49.webp",
     "hp": "60",
     "energy": "Metal",
     "name": "Meltan",
@@ -1834,6 +1900,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-49",
         "version": "Eevee Grove #49",
         "rarity": "◊"
       }
@@ -1842,8 +1909,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "50",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_050_EN.webp",
+    "card_id": "A3b-50",
+    "image": "/images/en-US/A3b-50.webp",
     "hp": "140",
     "energy": "Metal",
     "name": "Melmetal",
@@ -1870,6 +1937,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-50",
         "version": "Eevee Grove #50",
         "rarity": "◊◊"
       }
@@ -1878,8 +1946,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "51",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_051_EN.webp",
+    "card_id": "A3b-51",
+    "image": "/images/en-US/A3b-51.webp",
     "hp": "60",
     "energy": "Dragon",
     "name": "Dratini",
@@ -1906,6 +1974,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-51",
         "version": "Eevee Grove #51",
         "rarity": "◊"
       }
@@ -1914,8 +1983,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "52",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_052_EN.webp",
+    "card_id": "A3b-52",
+    "image": "/images/en-US/A3b-52.webp",
     "hp": "90",
     "energy": "Dragon",
     "name": "Dragonair",
@@ -1942,6 +2011,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-52",
         "version": "Eevee Grove #52",
         "rarity": "◊"
       }
@@ -1950,8 +2020,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "53",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_053_EN.webp",
+    "card_id": "A3b-53",
+    "image": "/images/en-US/A3b-53.webp",
     "hp": "180",
     "energy": "Dragon",
     "name": "Dragonite ex",
@@ -1978,14 +2048,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-53",
         "version": "Eevee Grove #53",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-82",
         "version": "Eevee Grove #82",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-90",
         "version": "Eevee Grove #90",
         "rarity": "☆☆"
       }
@@ -1994,8 +2067,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "54",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_054_EN.webp",
+    "card_id": "A3b-54",
+    "image": "/images/en-US/A3b-54.webp",
     "hp": "100",
     "energy": "Dragon",
     "name": "Drampa",
@@ -2022,6 +2095,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-54",
         "version": "Eevee Grove #54",
         "rarity": "◊◊"
       }
@@ -2030,8 +2104,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "55",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_055_EN.webp",
+    "card_id": "A3b-55",
+    "image": "/images/en-US/A3b-55.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Eevee",
@@ -2058,10 +2132,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-55",
         "version": "Eevee Grove #55",
         "rarity": "◊"
       },
       {
+        "card_id": "A3b-78",
         "version": "Eevee Grove #78",
         "rarity": "☆"
       }
@@ -2070,8 +2146,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "56",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_056_EN.webp",
+    "card_id": "A3b-56",
+    "image": "/images/en-US/A3b-56.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Eevee ex",
@@ -2098,14 +2174,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-56",
         "version": "Eevee Grove #56",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-83",
         "version": "Eevee Grove #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-92",
         "version": "Eevee Grove #92",
         "rarity": "☆☆☆"
       }
@@ -2114,8 +2193,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "57",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_057_EN.webp",
+    "card_id": "A3b-57",
+    "image": "/images/en-US/A3b-57.webp",
     "hp": "160",
     "energy": "Colorless",
     "name": "Snorlax ex",
@@ -2142,14 +2221,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-57",
         "version": "Eevee Grove #57",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-84",
         "version": "Eevee Grove #84",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-91",
         "version": "Eevee Grove #91",
         "rarity": "☆☆"
       }
@@ -2158,8 +2240,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "58",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_058_EN.webp",
+    "card_id": "A3b-58",
+    "image": "/images/en-US/A3b-58.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Aipom",
@@ -2186,6 +2268,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-58",
         "version": "Eevee Grove #58",
         "rarity": "◊"
       }
@@ -2194,8 +2277,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "59",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_059_EN.webp",
+    "card_id": "A3b-59",
+    "image": "/images/en-US/A3b-59.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Ambipom",
@@ -2222,6 +2305,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-59",
         "version": "Eevee Grove #59",
         "rarity": "◊◊"
       }
@@ -2230,8 +2314,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "60",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_060_EN.webp",
+    "card_id": "A3b-60",
+    "image": "/images/en-US/A3b-60.webp",
     "hp": "70",
     "energy": "Colorless",
     "name": "Chatot",
@@ -2258,6 +2342,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-60",
         "version": "Eevee Grove #60",
         "rarity": "◊"
       }
@@ -2266,8 +2351,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "61",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_061_EN.webp",
+    "card_id": "A3b-61",
+    "image": "/images/en-US/A3b-61.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Audino",
@@ -2294,6 +2379,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-61",
         "version": "Eevee Grove #61",
         "rarity": "◊"
       }
@@ -2302,8 +2388,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "62",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_062_EN.webp",
+    "card_id": "A3b-62",
+    "image": "/images/en-US/A3b-62.webp",
     "hp": "70",
     "energy": "Colorless",
     "name": "Minccino",
@@ -2330,6 +2416,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-62",
         "version": "Eevee Grove #62",
         "rarity": "◊"
       }
@@ -2338,8 +2425,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "63",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_063_EN.webp",
+    "card_id": "A3b-63",
+    "image": "/images/en-US/A3b-63.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Cinccino",
@@ -2366,6 +2453,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-63",
         "version": "Eevee Grove #63",
         "rarity": "◊◊"
       }
@@ -2374,8 +2462,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "64",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_064_EN.webp",
+    "card_id": "A3b-64",
+    "image": "/images/en-US/A3b-64.webp",
     "hp": "70",
     "energy": "Colorless",
     "name": "Skwovet",
@@ -2402,6 +2490,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-64",
         "version": "Eevee Grove #64",
         "rarity": "◊"
       }
@@ -2410,8 +2499,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "65",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_065_EN.webp",
+    "card_id": "A3b-65",
+    "image": "/images/en-US/A3b-65.webp",
     "hp": "120",
     "energy": "Colorless",
     "name": "Greedent",
@@ -2438,10 +2527,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-65",
         "version": "Eevee Grove #65",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-91",
         "version": "Promo-A #91",
         "rarity": ""
       }
@@ -2450,8 +2541,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "66",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_066_EN.webp",
+    "card_id": "A3b-66",
+    "image": "/images/en-US/A3b-66.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Eevee Bag",
@@ -2468,10 +2559,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-66",
         "version": "Eevee Grove #66",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3b-107",
         "version": "Eevee Grove #107",
         "rarity": "♛"
       }
@@ -2480,8 +2573,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "67",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_067_EN.webp",
+    "card_id": "A3b-67",
+    "image": "/images/en-US/A3b-67.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Leftovers",
@@ -2498,6 +2591,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-67",
         "version": "Eevee Grove #67",
         "rarity": "◊◊"
       }
@@ -2506,8 +2600,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "68",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_068_EN.webp",
+    "card_id": "A3b-68",
+    "image": "/images/en-US/A3b-68.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Hau",
@@ -2524,10 +2618,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-68",
         "version": "Eevee Grove #68",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3b-85",
         "version": "Eevee Grove #85",
         "rarity": "☆☆"
       }
@@ -2536,8 +2632,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "69",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_069_EN.webp",
+    "card_id": "A3b-69",
+    "image": "/images/en-US/A3b-69.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Penny",
@@ -2554,10 +2650,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-69",
         "version": "Eevee Grove #69",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3b-86",
         "version": "Eevee Grove #86",
         "rarity": "☆☆"
       }
@@ -2566,8 +2664,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "70",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_070_EN.webp",
+    "card_id": "A3b-70",
+    "image": "/images/en-US/A3b-70.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Leafeon",
@@ -2594,10 +2692,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-2",
         "version": "Eevee Grove #2",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-70",
         "version": "Eevee Grove #70",
         "rarity": "☆"
       }
@@ -2606,8 +2706,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "71",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_071_EN.webp",
+    "card_id": "A3b-71",
+    "image": "/images/en-US/A3b-71.webp",
     "hp": "110",
     "energy": "Fire",
     "name": "Flareon",
@@ -2634,10 +2734,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-8",
         "version": "Eevee Grove #8",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-71",
         "version": "Eevee Grove #71",
         "rarity": "☆"
       }
@@ -2646,8 +2748,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "72",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_072_EN.webp",
+    "card_id": "A3b-72",
+    "image": "/images/en-US/A3b-72.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Vaporeon",
@@ -2674,10 +2776,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-16",
         "version": "Eevee Grove #16",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-72",
         "version": "Eevee Grove #72",
         "rarity": "☆"
       }
@@ -2686,8 +2790,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "73",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_073_EN.webp",
+    "card_id": "A3b-73",
+    "image": "/images/en-US/A3b-73.webp",
     "hp": "100",
     "energy": "Water",
     "name": "Glaceon",
@@ -2714,10 +2818,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-17",
         "version": "Eevee Grove #17",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-73",
         "version": "Eevee Grove #73",
         "rarity": "☆"
       }
@@ -2726,8 +2832,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "74",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_074_EN.webp",
+    "card_id": "A3b-74",
+    "image": "/images/en-US/A3b-74.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Jolteon",
@@ -2754,14 +2860,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-25",
         "version": "Eevee Grove #25",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-74",
         "version": "Eevee Grove #74",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-86",
         "version": "Promo-A #86",
         "rarity": ""
       }
@@ -2770,8 +2879,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "75",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_075_EN.webp",
+    "card_id": "A3b-75",
+    "image": "/images/en-US/A3b-75.webp",
     "hp": "100",
     "energy": "Psychic",
     "name": "Espeon",
@@ -2798,10 +2907,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-28",
         "version": "Eevee Grove #28",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-75",
         "version": "Eevee Grove #75",
         "rarity": "☆"
       }
@@ -2810,8 +2921,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "76",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_076_EN.webp",
+    "card_id": "A3b-76",
+    "image": "/images/en-US/A3b-76.webp",
     "hp": "90",
     "energy": "Psychic",
     "name": "Sylveon",
@@ -2838,10 +2949,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-33",
         "version": "Eevee Grove #33",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-76",
         "version": "Eevee Grove #76",
         "rarity": "☆"
       }
@@ -2850,8 +2963,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "77",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_077_EN.webp",
+    "card_id": "A3b-77",
+    "image": "/images/en-US/A3b-77.webp",
     "hp": "100",
     "energy": "Darkness",
     "name": "Umbreon",
@@ -2878,10 +2991,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-43",
         "version": "Eevee Grove #43",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3b-77",
         "version": "Eevee Grove #77",
         "rarity": "☆"
       }
@@ -2890,8 +3005,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "78",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_078_EN.webp",
+    "card_id": "A3b-78",
+    "image": "/images/en-US/A3b-78.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Eevee",
@@ -2918,10 +3033,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-55",
         "version": "Eevee Grove #55",
         "rarity": "◊"
       },
       {
+        "card_id": "A3b-78",
         "version": "Eevee Grove #78",
         "rarity": "☆"
       }
@@ -2930,8 +3047,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "79",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_079_EN.webp",
+    "card_id": "A3b-79",
+    "image": "/images/en-US/A3b-79.webp",
     "hp": "150",
     "energy": "Fire",
     "name": "Flareon ex",
@@ -2958,14 +3075,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-9",
         "version": "Eevee Grove #9",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-79",
         "version": "Eevee Grove #79",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-87",
         "version": "Eevee Grove #87",
         "rarity": "☆☆"
       }
@@ -2974,8 +3094,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "80",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_080_EN.webp",
+    "card_id": "A3b-80",
+    "image": "/images/en-US/A3b-80.webp",
     "hp": "180",
     "energy": "Water",
     "name": "Primarina ex",
@@ -3008,14 +3128,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-24",
         "version": "Eevee Grove #24",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-80",
         "version": "Eevee Grove #80",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-88",
         "version": "Eevee Grove #88",
         "rarity": "☆☆"
       }
@@ -3024,8 +3147,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "81",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_081_EN.webp",
+    "card_id": "A3b-81",
+    "image": "/images/en-US/A3b-81.webp",
     "hp": "140",
     "energy": "Psychic",
     "name": "Sylveon ex",
@@ -3052,14 +3175,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-34",
         "version": "Eevee Grove #34",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-81",
         "version": "Eevee Grove #81",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-89",
         "version": "Eevee Grove #89",
         "rarity": "☆☆"
       }
@@ -3068,8 +3194,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "82",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_082_EN.webp",
+    "card_id": "A3b-82",
+    "image": "/images/en-US/A3b-82.webp",
     "hp": "180",
     "energy": "Dragon",
     "name": "Dragonite ex",
@@ -3096,14 +3222,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-53",
         "version": "Eevee Grove #53",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-82",
         "version": "Eevee Grove #82",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-90",
         "version": "Eevee Grove #90",
         "rarity": "☆☆"
       }
@@ -3112,8 +3241,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "83",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_083_EN.webp",
+    "card_id": "A3b-83",
+    "image": "/images/en-US/A3b-83.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Eevee ex",
@@ -3140,14 +3269,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-56",
         "version": "Eevee Grove #56",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-83",
         "version": "Eevee Grove #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-92",
         "version": "Eevee Grove #92",
         "rarity": "☆☆☆"
       }
@@ -3156,8 +3288,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "84",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_084_EN.webp",
+    "card_id": "A3b-84",
+    "image": "/images/en-US/A3b-84.webp",
     "hp": "160",
     "energy": "Colorless",
     "name": "Snorlax ex",
@@ -3184,14 +3316,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-57",
         "version": "Eevee Grove #57",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-84",
         "version": "Eevee Grove #84",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-91",
         "version": "Eevee Grove #91",
         "rarity": "☆☆"
       }
@@ -3200,8 +3335,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "85",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_085_EN.webp",
+    "card_id": "A3b-85",
+    "image": "/images/en-US/A3b-85.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Hau",
@@ -3218,10 +3353,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-68",
         "version": "Eevee Grove #68",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3b-85",
         "version": "Eevee Grove #85",
         "rarity": "☆☆"
       }
@@ -3230,8 +3367,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "86",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_086_EN.webp",
+    "card_id": "A3b-86",
+    "image": "/images/en-US/A3b-86.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Penny",
@@ -3248,10 +3385,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-69",
         "version": "Eevee Grove #69",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3b-86",
         "version": "Eevee Grove #86",
         "rarity": "☆☆"
       }
@@ -3260,8 +3399,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "87",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_087_EN.webp",
+    "card_id": "A3b-87",
+    "image": "/images/en-US/A3b-87.webp",
     "hp": "150",
     "energy": "Fire",
     "name": "Flareon ex",
@@ -3288,14 +3427,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-9",
         "version": "Eevee Grove #9",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-79",
         "version": "Eevee Grove #79",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-87",
         "version": "Eevee Grove #87",
         "rarity": "☆☆"
       }
@@ -3304,8 +3446,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "88",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_088_EN.webp",
+    "card_id": "A3b-88",
+    "image": "/images/en-US/A3b-88.webp",
     "hp": "180",
     "energy": "Water",
     "name": "Primarina ex",
@@ -3338,14 +3480,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-24",
         "version": "Eevee Grove #24",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-80",
         "version": "Eevee Grove #80",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-88",
         "version": "Eevee Grove #88",
         "rarity": "☆☆"
       }
@@ -3354,8 +3499,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "89",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_089_EN.webp",
+    "card_id": "A3b-89",
+    "image": "/images/en-US/A3b-89.webp",
     "hp": "140",
     "energy": "Psychic",
     "name": "Sylveon ex",
@@ -3382,14 +3527,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-34",
         "version": "Eevee Grove #34",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-81",
         "version": "Eevee Grove #81",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-89",
         "version": "Eevee Grove #89",
         "rarity": "☆☆"
       }
@@ -3398,8 +3546,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "90",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_090_EN.webp",
+    "card_id": "A3b-90",
+    "image": "/images/en-US/A3b-90.webp",
     "hp": "180",
     "energy": "Dragon",
     "name": "Dragonite ex",
@@ -3426,14 +3574,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-53",
         "version": "Eevee Grove #53",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-82",
         "version": "Eevee Grove #82",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-90",
         "version": "Eevee Grove #90",
         "rarity": "☆☆"
       }
@@ -3442,8 +3593,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "91",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_091_EN.webp",
+    "card_id": "A3b-91",
+    "image": "/images/en-US/A3b-91.webp",
     "hp": "160",
     "energy": "Colorless",
     "name": "Snorlax ex",
@@ -3470,14 +3621,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-57",
         "version": "Eevee Grove #57",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-84",
         "version": "Eevee Grove #84",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-91",
         "version": "Eevee Grove #91",
         "rarity": "☆☆"
       }
@@ -3486,8 +3640,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "92",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_092_EN.webp",
+    "card_id": "A3b-92",
+    "image": "/images/en-US/A3b-92.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Eevee ex",
@@ -3514,14 +3668,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-56",
         "version": "Eevee Grove #56",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3b-83",
         "version": "Eevee Grove #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-92",
         "version": "Eevee Grove #92",
         "rarity": "☆☆☆"
       }
@@ -3530,8 +3687,8 @@
     "crafting_cost": 1500
   },
   {
-    "id": "93",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_093_EN.webp",
+    "card_id": "A3b-93",
+    "image": "/images/en-US/A3b-93.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Pinsir",
@@ -3551,17 +3708,19 @@
     },
     "weakness": "fire",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-4",
         "version": "Shining Revelry #4",
         "rarity": "◊"
       },
       {
+        "card_id": "A3b-93",
         "version": "Eevee Grove #93",
         "rarity": "☆"
       }
@@ -3570,8 +3729,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "94",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_094_EN.webp",
+    "card_id": "A3b-94",
+    "image": "/images/en-US/A3b-94.webp",
     "hp": "100",
     "energy": "Water",
     "name": "Lapras",
@@ -3591,21 +3750,24 @@
     },
     "weakness": "lightning",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-79",
         "version": "Genetic Apex #79",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A1-234",
         "version": "Genetic Apex #234",
         "rarity": "☆"
       },
       {
+        "card_id": "A3b-94",
         "version": "Eevee Grove #94",
         "rarity": "☆"
       }
@@ -3614,8 +3776,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "95",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_095_EN.webp",
+    "card_id": "A3b-95",
+    "image": "/images/en-US/A3b-95.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Voltorb",
@@ -3635,17 +3797,19 @@
     },
     "weakness": "fighting",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-54",
         "version": "Space-Time Smackdown #54",
         "rarity": "◊"
       },
       {
+        "card_id": "A3b-95",
         "version": "Eevee Grove #95",
         "rarity": "☆"
       }
@@ -3654,8 +3818,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "96",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_096_EN.webp",
+    "card_id": "A3b-96",
+    "image": "/images/en-US/A3b-96.webp",
     "hp": "80",
     "energy": "Lightning",
     "name": "Electrode",
@@ -3675,17 +3839,19 @@
     },
     "weakness": "fighting",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-55",
         "version": "Space-Time Smackdown #55",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3b-96",
         "version": "Eevee Grove #96",
         "rarity": "☆"
       }
@@ -3694,8 +3860,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "97",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_097_EN.webp",
+    "card_id": "A3b-97",
+    "image": "/images/en-US/A3b-97.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Ralts",
@@ -3715,17 +3881,19 @@
     },
     "weakness": "darkness",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-68",
         "version": "Space-Time Smackdown #68",
         "rarity": "◊"
       },
       {
+        "card_id": "A3b-97",
         "version": "Eevee Grove #97",
         "rarity": "☆"
       }
@@ -3734,8 +3902,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "98",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_098_EN.webp",
+    "card_id": "A3b-98",
+    "image": "/images/en-US/A3b-98.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Kirlia",
@@ -3755,17 +3923,19 @@
     },
     "weakness": "darkness",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-69",
         "version": "Space-Time Smackdown #69",
         "rarity": "◊"
       },
       {
+        "card_id": "A3b-98",
         "version": "Eevee Grove #98",
         "rarity": "☆"
       }
@@ -3774,8 +3944,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "99",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_099_EN.webp",
+    "card_id": "A3b-99",
+    "image": "/images/en-US/A3b-99.webp",
     "hp": "110",
     "energy": "Psychic",
     "name": "Gardevoir",
@@ -3795,13 +3965,14 @@
     },
     "weakness": "darkness",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-99",
         "version": "Eevee Grove #99",
         "rarity": "☆"
       }
@@ -3810,8 +3981,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "100",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_100_EN.webp",
+    "card_id": "A3b-100",
+    "image": "/images/en-US/A3b-100.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Ekans",
@@ -3831,17 +4002,19 @@
     },
     "weakness": "fighting",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-164",
         "version": "Genetic Apex #164",
         "rarity": "◊"
       },
       {
+        "card_id": "A3b-100",
         "version": "Eevee Grove #100",
         "rarity": "☆"
       }
@@ -3850,8 +4023,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "101",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_101_EN.webp",
+    "card_id": "A3b-101",
+    "image": "/images/en-US/A3b-101.webp",
     "hp": "100",
     "energy": "Darkness",
     "name": "Arbok",
@@ -3871,17 +4044,19 @@
     },
     "weakness": "fighting",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-165",
         "version": "Genetic Apex #165",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3b-101",
         "version": "Eevee Grove #101",
         "rarity": "☆"
       }
@@ -3890,8 +4065,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "102",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_102_EN.webp",
+    "card_id": "A3b-102",
+    "image": "/images/en-US/A3b-102.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Farfetch'd",
@@ -3911,21 +4086,24 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-198",
         "version": "Genetic Apex #198",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-62",
         "version": "Promo-A #62",
         "rarity": ""
       },
       {
+        "card_id": "A3b-102",
         "version": "Eevee Grove #102",
         "rarity": "☆"
       }
@@ -3934,8 +4112,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "103",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_103_EN.webp",
+    "card_id": "A3b-103",
+    "image": "/images/en-US/A3b-103.webp",
     "hp": "140",
     "energy": "Fire",
     "name": "Moltres ex",
@@ -3961,29 +4139,34 @@
     },
     "weakness": "lightning",
     "retreat": "2",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-47",
         "version": "Genetic Apex #47",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-255",
         "version": "Genetic Apex #255",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1-274",
         "version": "Genetic Apex #274",
         "rarity": "☆☆"
       },
       {
+        "card_id": "P-A-25",
         "version": "Promo-A #25",
         "rarity": ""
       },
       {
+        "card_id": "A3b-103",
         "version": "Eevee Grove #103",
         "rarity": "☆☆"
       }
@@ -3992,8 +4175,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "104",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_104_EN.webp",
+    "card_id": "A3b-104",
+    "image": "/images/en-US/A3b-104.webp",
     "hp": "140",
     "energy": "Water",
     "name": "Articuno ex",
@@ -4019,25 +4202,29 @@
     },
     "weakness": "lightning",
     "retreat": "2",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-84",
         "version": "Genetic Apex #84",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-258",
         "version": "Genetic Apex #258",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1-275",
         "version": "Genetic Apex #275",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-104",
         "version": "Eevee Grove #104",
         "rarity": "☆☆"
       }
@@ -4046,8 +4233,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "105",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_105_EN.webp",
+    "card_id": "A3b-105",
+    "image": "/images/en-US/A3b-105.webp",
     "hp": "130",
     "energy": "Lightning",
     "name": "Zapdos ex",
@@ -4073,25 +4260,29 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-104",
         "version": "Genetic Apex #104",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-260",
         "version": "Genetic Apex #260",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1-276",
         "version": "Genetic Apex #276",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-105",
         "version": "Eevee Grove #105",
         "rarity": "☆☆"
       }
@@ -4100,8 +4291,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "106",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_106_EN.webp",
+    "card_id": "A3b-106",
+    "image": "/images/en-US/A3b-106.webp",
     "hp": "170",
     "energy": "Fighting",
     "name": "Gallade ex",
@@ -4121,25 +4312,29 @@
     },
     "weakness": "psychic",
     "retreat": "1",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2-95",
         "version": "Space-Time Smackdown #95",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2-185",
         "version": "Space-Time Smackdown #185",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2-200",
         "version": "Space-Time Smackdown #200",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3b-106",
         "version": "Eevee Grove #106",
         "rarity": "☆☆"
       }
@@ -4148,8 +4343,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "107",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3b/A3b_107_EN.webp",
+    "card_id": "A3b-107",
+    "image": "/images/en-US/A3b-107.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Eevee Bag",
@@ -4166,10 +4361,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3b-66",
         "version": "Eevee Grove #66",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3b-107",
         "version": "Eevee Grove #107",
         "rarity": "♛"
       }

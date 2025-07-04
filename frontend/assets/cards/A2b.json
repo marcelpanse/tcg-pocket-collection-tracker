@@ -1,7 +1,7 @@
 [
   {
-    "id": "1",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_001_EN.webp",
+    "card_id": "A2b-1",
+    "image": "/images/en-US/A2b-1.webp",
     "hp": "50",
     "energy": "Grass",
     "name": "Weedle",
@@ -28,10 +28,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-1",
         "version": "Shining Revelry #1",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-97",
         "version": "Shining Revelry #97",
         "rarity": "☆"
       }
@@ -40,8 +42,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "2",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_002_EN.webp",
+    "card_id": "A2b-2",
+    "image": "/images/en-US/A2b-2.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Kakuna",
@@ -68,10 +70,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-2",
         "version": "Shining Revelry #2",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-98",
         "version": "Shining Revelry #98",
         "rarity": "☆"
       }
@@ -80,8 +84,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "3",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_003_EN.webp",
+    "card_id": "A2b-3",
+    "image": "/images/en-US/A2b-3.webp",
     "hp": "170",
     "energy": "Grass",
     "name": "Beedrill ex",
@@ -108,14 +112,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-3",
         "version": "Shining Revelry #3",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-79",
         "version": "Shining Revelry #79",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-107",
         "version": "Shining Revelry #107",
         "rarity": "☆☆"
       }
@@ -124,8 +131,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "4",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_004_EN.webp",
+    "card_id": "A2b-4",
+    "image": "/images/en-US/A2b-4.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Pinsir",
@@ -152,16 +159,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-4",
         "version": "Shining Revelry #4",
         "rarity": "◊"
+      },
+      {
+        "card_id": "A3b-93",
+        "version": "Eevee Grove #93",
+        "rarity": "☆"
       }
     ],
     "artist": "Satoshi Shirai",
     "crafting_cost": 35
   },
   {
-    "id": "5",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_005_EN.webp",
+    "card_id": "A2b-5",
+    "image": "/images/en-US/A2b-5.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Sprigatito",
@@ -188,10 +201,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-5",
         "version": "Shining Revelry #5",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-52",
         "version": "Promo-A #52",
         "rarity": ""
       }
@@ -200,8 +215,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "6",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_006_EN.webp",
+    "card_id": "A2b-6",
+    "image": "/images/en-US/A2b-6.webp",
     "hp": "90",
     "energy": "Grass",
     "name": "Floragato",
@@ -228,6 +243,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-6",
         "version": "Shining Revelry #6",
         "rarity": "◊◊"
       }
@@ -236,8 +252,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "7",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_007_EN.webp",
+    "card_id": "A2b-7",
+    "image": "/images/en-US/A2b-7.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Meowscarada",
@@ -264,10 +280,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-7",
         "version": "Shining Revelry #7",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2b-73",
         "version": "Shining Revelry #73",
         "rarity": "☆"
       }
@@ -276,8 +294,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "8",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_008_EN.webp",
+    "card_id": "A2b-8",
+    "image": "/images/en-US/A2b-8.webp",
     "hp": "60",
     "energy": "Fire",
     "name": "Charmander",
@@ -304,10 +322,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-8",
         "version": "Shining Revelry #8",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-99",
         "version": "Shining Revelry #99",
         "rarity": "☆"
       }
@@ -316,8 +336,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "9",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_009_EN.webp",
+    "card_id": "A2b-9",
+    "image": "/images/en-US/A2b-9.webp",
     "hp": "90",
     "energy": "Fire",
     "name": "Charmeleon",
@@ -344,10 +364,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-9",
         "version": "Shining Revelry #9",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-100",
         "version": "Shining Revelry #100",
         "rarity": "☆"
       }
@@ -356,8 +378,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "10",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_010_EN.webp",
+    "card_id": "A2b-10",
+    "image": "/images/en-US/A2b-10.webp",
     "hp": "180",
     "energy": "Fire",
     "name": "Charizard ex",
@@ -390,14 +412,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-10",
         "version": "Shining Revelry #10",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-80",
         "version": "Shining Revelry #80",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-108",
         "version": "Shining Revelry #108",
         "rarity": "☆☆"
       }
@@ -406,8 +431,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "11",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_011_EN.webp",
+    "card_id": "A2b-11",
+    "image": "/images/en-US/A2b-11.webp",
     "hp": "70",
     "energy": "Fire",
     "name": "Magmar",
@@ -434,6 +459,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-11",
         "version": "Shining Revelry #11",
         "rarity": "◊"
       }
@@ -442,8 +468,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "12",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_012_EN.webp",
+    "card_id": "A2b-12",
+    "image": "/images/en-US/A2b-12.webp",
     "hp": "120",
     "energy": "Fire",
     "name": "Magmortar",
@@ -470,6 +496,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-12",
         "version": "Shining Revelry #12",
         "rarity": "◊◊◊"
       }
@@ -478,8 +505,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "13",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_013_EN.webp",
+    "card_id": "A2b-13",
+    "image": "/images/en-US/A2b-13.webp",
     "hp": "110",
     "energy": "Fire",
     "name": "Paldean Tauros",
@@ -506,6 +533,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-13",
         "version": "Shining Revelry #13",
         "rarity": "◊◊"
       }
@@ -514,8 +542,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "14",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_014_EN.webp",
+    "card_id": "A2b-14",
+    "image": "/images/en-US/A2b-14.webp",
     "hp": "70",
     "energy": "Water",
     "name": "Tentacool",
@@ -542,6 +570,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-14",
         "version": "Shining Revelry #14",
         "rarity": "◊"
       }
@@ -550,8 +579,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "15",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_015_EN.webp",
+    "card_id": "A2b-15",
+    "image": "/images/en-US/A2b-15.webp",
     "hp": "100",
     "energy": "Water",
     "name": "Tentacruel",
@@ -578,6 +607,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-15",
         "version": "Shining Revelry #15",
         "rarity": "◊◊"
       }
@@ -586,8 +616,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "16",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_016_EN.webp",
+    "card_id": "A2b-16",
+    "image": "/images/en-US/A2b-16.webp",
     "hp": "70",
     "energy": "Water",
     "name": "Buizel",
@@ -614,10 +644,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-16",
         "version": "Shining Revelry #16",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-74",
         "version": "Shining Revelry #74",
         "rarity": "☆"
       }
@@ -626,8 +658,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "17",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_017_EN.webp",
+    "card_id": "A2b-17",
+    "image": "/images/en-US/A2b-17.webp",
     "hp": "90",
     "energy": "Water",
     "name": "Floatzel",
@@ -654,6 +686,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-17",
         "version": "Shining Revelry #17",
         "rarity": "◊◊"
       }
@@ -662,8 +695,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "18",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_018_EN.webp",
+    "card_id": "A2b-18",
+    "image": "/images/en-US/A2b-18.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Wiglett",
@@ -690,10 +723,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-18",
         "version": "Shining Revelry #18",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-101",
         "version": "Shining Revelry #101",
         "rarity": "☆"
       }
@@ -702,8 +737,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "19",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_019_EN.webp",
+    "card_id": "A2b-19",
+    "image": "/images/en-US/A2b-19.webp",
     "hp": "140",
     "energy": "Water",
     "name": "Wugtrio ex",
@@ -730,14 +765,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-19",
         "version": "Shining Revelry #19",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-81",
         "version": "Shining Revelry #81",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-109",
         "version": "Shining Revelry #109",
         "rarity": "☆☆"
       }
@@ -746,8 +784,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "20",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_020_EN.webp",
+    "card_id": "A2b-20",
+    "image": "/images/en-US/A2b-20.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Dondozo",
@@ -774,10 +812,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-20",
         "version": "Shining Revelry #20",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2b-102",
         "version": "Shining Revelry #102",
         "rarity": "☆"
       }
@@ -786,8 +826,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "21",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_021_EN.webp",
+    "card_id": "A2b-21",
+    "image": "/images/en-US/A2b-21.webp",
     "hp": "70",
     "energy": "Water",
     "name": "Tatsugiri",
@@ -814,10 +854,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-21",
         "version": "Shining Revelry #21",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-75",
         "version": "Shining Revelry #75",
         "rarity": "☆"
       }
@@ -826,8 +868,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "22",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_022_EN.webp",
+    "card_id": "A2b-22",
+    "image": "/images/en-US/A2b-22.webp",
     "hp": "120",
     "energy": "Lightning",
     "name": "Pikachu ex",
@@ -854,14 +896,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-22",
         "version": "Shining Revelry #22",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-82",
         "version": "Shining Revelry #82",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-92",
         "version": "Shining Revelry #92",
         "rarity": "☆☆"
       }
@@ -870,8 +915,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "23",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_023_EN.webp",
+    "card_id": "A2b-23",
+    "image": "/images/en-US/A2b-23.webp",
     "hp": "70",
     "energy": "Lightning",
     "name": "Voltorb",
@@ -898,6 +943,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-23",
         "version": "Shining Revelry #23",
         "rarity": "◊"
       }
@@ -906,8 +952,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "24",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_024_EN.webp",
+    "card_id": "A2b-24",
+    "image": "/images/en-US/A2b-24.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Electrode",
@@ -934,6 +980,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-24",
         "version": "Shining Revelry #24",
         "rarity": "◊◊"
       }
@@ -942,8 +989,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "25",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_025_EN.webp",
+    "card_id": "A2b-25",
+    "image": "/images/en-US/A2b-25.webp",
     "hp": "70",
     "energy": "Lightning",
     "name": "Pachirisu",
@@ -970,14 +1017,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-25",
         "version": "Shining Revelry #25",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-103",
         "version": "Shining Revelry #103",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-58",
         "version": "Promo-A #58",
         "rarity": ""
       }
@@ -986,8 +1036,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "26",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_026_EN.webp",
+    "card_id": "A2b-26",
+    "image": "/images/en-US/A2b-26.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Pawmi",
@@ -1014,6 +1064,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-26",
         "version": "Shining Revelry #26",
         "rarity": "◊"
       }
@@ -1022,8 +1073,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "27",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_027_EN.webp",
+    "card_id": "A2b-27",
+    "image": "/images/en-US/A2b-27.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Pawmo",
@@ -1050,6 +1101,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-27",
         "version": "Shining Revelry #27",
         "rarity": "◊◊"
       }
@@ -1058,8 +1110,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "28",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_028_EN.webp",
+    "card_id": "A2b-28",
+    "image": "/images/en-US/A2b-28.webp",
     "hp": "140",
     "energy": "Lightning",
     "name": "Pawmot",
@@ -1086,10 +1138,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-28",
         "version": "Shining Revelry #28",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-54",
         "version": "Promo-A #54",
         "rarity": ""
       }
@@ -1098,8 +1152,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "29",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_029_EN.webp",
+    "card_id": "A2b-29",
+    "image": "/images/en-US/A2b-29.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Abra",
@@ -1126,6 +1180,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-29",
         "version": "Shining Revelry #29",
         "rarity": "◊"
       }
@@ -1134,8 +1189,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "30",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_030_EN.webp",
+    "card_id": "A2b-30",
+    "image": "/images/en-US/A2b-30.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Kadabra",
@@ -1162,6 +1217,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-30",
         "version": "Shining Revelry #30",
         "rarity": "◊◊"
       }
@@ -1170,8 +1226,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "31",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_031_EN.webp",
+    "card_id": "A2b-31",
+    "image": "/images/en-US/A2b-31.webp",
     "hp": "130",
     "energy": "Psychic",
     "name": "Alakazam",
@@ -1198,6 +1254,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-31",
         "version": "Shining Revelry #31",
         "rarity": "◊◊◊"
       }
@@ -1206,8 +1263,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "32",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_032_EN.webp",
+    "card_id": "A2b-32",
+    "image": "/images/en-US/A2b-32.webp",
     "hp": "90",
     "energy": "Psychic",
     "name": "Mr. Mime",
@@ -1234,6 +1291,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-32",
         "version": "Shining Revelry #32",
         "rarity": "◊"
       }
@@ -1242,8 +1300,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "33",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_033_EN.webp",
+    "card_id": "A2b-33",
+    "image": "/images/en-US/A2b-33.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Drifloon",
@@ -1270,6 +1328,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-33",
         "version": "Shining Revelry #33",
         "rarity": "◊"
       }
@@ -1278,8 +1337,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "34",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_034_EN.webp",
+    "card_id": "A2b-34",
+    "image": "/images/en-US/A2b-34.webp",
     "hp": "90",
     "energy": "Psychic",
     "name": "Drifblim",
@@ -1306,6 +1365,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-34",
         "version": "Shining Revelry #34",
         "rarity": "◊◊"
       }
@@ -1314,8 +1374,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "35",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_035_EN.webp",
+    "card_id": "A2b-35",
+    "image": "/images/en-US/A2b-35.webp",
     "hp": "150",
     "energy": "Psychic",
     "name": "Giratina ex",
@@ -1342,14 +1402,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-35",
         "version": "Shining Revelry #35",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-83",
         "version": "Shining Revelry #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-96",
         "version": "Shining Revelry #96",
         "rarity": "☆☆☆"
       }
@@ -1358,8 +1421,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "36",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_036_EN.webp",
+    "card_id": "A2b-36",
+    "image": "/images/en-US/A2b-36.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Gimmighoul",
@@ -1386,6 +1449,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-36",
         "version": "Shining Revelry #36",
         "rarity": "◊"
       }
@@ -1394,8 +1458,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "37",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_037_EN.webp",
+    "card_id": "A2b-37",
+    "image": "/images/en-US/A2b-37.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Machop",
@@ -1422,6 +1486,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-37",
         "version": "Shining Revelry #37",
         "rarity": "◊"
       }
@@ -1430,8 +1495,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "38",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_038_EN.webp",
+    "card_id": "A2b-38",
+    "image": "/images/en-US/A2b-38.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Machoke",
@@ -1458,6 +1523,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-38",
         "version": "Shining Revelry #38",
         "rarity": "◊"
       }
@@ -1466,8 +1532,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "39",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_039_EN.webp",
+    "card_id": "A2b-39",
+    "image": "/images/en-US/A2b-39.webp",
     "hp": "150",
     "energy": "Fighting",
     "name": "Machamp",
@@ -1494,14 +1560,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-39",
         "version": "Shining Revelry #39",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-55",
         "version": "Promo-A #55",
         "rarity": ""
       },
       {
+        "card_id": "A3-225",
         "version": "Celestial Guardians #225",
         "rarity": "☆"
       }
@@ -1510,8 +1579,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "40",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_040_EN.webp",
+    "card_id": "A2b-40",
+    "image": "/images/en-US/A2b-40.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Hitmonlee",
@@ -1538,6 +1607,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-40",
         "version": "Shining Revelry #40",
         "rarity": "◊"
       }
@@ -1546,8 +1616,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "41",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_041_EN.webp",
+    "card_id": "A2b-41",
+    "image": "/images/en-US/A2b-41.webp",
     "hp": "90",
     "energy": "Fighting",
     "name": "Hitmonchan",
@@ -1574,6 +1644,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-41",
         "version": "Shining Revelry #41",
         "rarity": "◊"
       }
@@ -1582,8 +1653,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "42",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_042_EN.webp",
+    "card_id": "A2b-42",
+    "image": "/images/en-US/A2b-42.webp",
     "hp": "70",
     "energy": "Fighting",
     "name": "Riolu",
@@ -1610,14 +1681,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-42",
         "version": "Shining Revelry #42",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-104",
         "version": "Shining Revelry #104",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-59",
         "version": "Promo-A #59",
         "rarity": ""
       }
@@ -1626,8 +1700,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "43",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_043_EN.webp",
+    "card_id": "A2b-43",
+    "image": "/images/en-US/A2b-43.webp",
     "hp": "150",
     "energy": "Fighting",
     "name": "Lucario ex",
@@ -1654,14 +1728,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-43",
         "version": "Shining Revelry #43",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-84",
         "version": "Shining Revelry #84",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-110",
         "version": "Shining Revelry #110",
         "rarity": "☆☆"
       }
@@ -1670,8 +1747,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "44",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_044_EN.webp",
+    "card_id": "A2b-44",
+    "image": "/images/en-US/A2b-44.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Flamigo",
@@ -1698,6 +1775,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-44",
         "version": "Shining Revelry #44",
         "rarity": "◊◊"
       }
@@ -1706,8 +1784,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "45",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_045_EN.webp",
+    "card_id": "A2b-45",
+    "image": "/images/en-US/A2b-45.webp",
     "hp": "70",
     "energy": "Darkness",
     "name": "Ekans",
@@ -1734,6 +1812,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-45",
         "version": "Shining Revelry #45",
         "rarity": "◊"
       }
@@ -1742,8 +1821,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "46",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_046_EN.webp",
+    "card_id": "A2b-46",
+    "image": "/images/en-US/A2b-46.webp",
     "hp": "110",
     "energy": "Darkness",
     "name": "Arbok",
@@ -1770,6 +1849,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-46",
         "version": "Shining Revelry #46",
         "rarity": "◊◊"
       }
@@ -1778,8 +1858,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "47",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_047_EN.webp",
+    "card_id": "A2b-47",
+    "image": "/images/en-US/A2b-47.webp",
     "hp": "50",
     "energy": "Darkness",
     "name": "Paldean Wooper",
@@ -1806,6 +1886,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-47",
         "version": "Shining Revelry #47",
         "rarity": "◊"
       }
@@ -1814,8 +1895,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "48",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_048_EN.webp",
+    "card_id": "A2b-48",
+    "image": "/images/en-US/A2b-48.webp",
     "hp": "160",
     "energy": "Darkness",
     "name": "Paldean Clodsire ex",
@@ -1842,14 +1923,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-48",
         "version": "Shining Revelry #48",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-85",
         "version": "Shining Revelry #85",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-93",
         "version": "Shining Revelry #93",
         "rarity": "☆☆"
       }
@@ -1858,8 +1942,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "49",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_049_EN.webp",
+    "card_id": "A2b-49",
+    "image": "/images/en-US/A2b-49.webp",
     "hp": "80",
     "energy": "Darkness",
     "name": "Spiritomb",
@@ -1886,6 +1970,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-49",
         "version": "Shining Revelry #49",
         "rarity": "◊◊"
       }
@@ -1894,8 +1979,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "50",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_050_EN.webp",
+    "card_id": "A2b-50",
+    "image": "/images/en-US/A2b-50.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Shroodle",
@@ -1922,6 +2007,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-50",
         "version": "Shining Revelry #50",
         "rarity": "◊"
       }
@@ -1930,8 +2016,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "51",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_051_EN.webp",
+    "card_id": "A2b-51",
+    "image": "/images/en-US/A2b-51.webp",
     "hp": "90",
     "energy": "Darkness",
     "name": "Grafaiai",
@@ -1958,10 +2044,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-51",
         "version": "Shining Revelry #51",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2b-76",
         "version": "Shining Revelry #76",
         "rarity": "☆"
       }
@@ -1970,8 +2058,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "52",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_052_EN.webp",
+    "card_id": "A2b-52",
+    "image": "/images/en-US/A2b-52.webp",
     "hp": "60",
     "energy": "Metal",
     "name": "Tinkatink",
@@ -1998,6 +2086,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-52",
         "version": "Shining Revelry #52",
         "rarity": "◊"
       }
@@ -2006,8 +2095,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "53",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_053_EN.webp",
+    "card_id": "A2b-53",
+    "image": "/images/en-US/A2b-53.webp",
     "hp": "90",
     "energy": "Metal",
     "name": "Tinkatuff",
@@ -2034,6 +2123,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-53",
         "version": "Shining Revelry #53",
         "rarity": "◊◊"
       }
@@ -2042,8 +2132,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "54",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_054_EN.webp",
+    "card_id": "A2b-54",
+    "image": "/images/en-US/A2b-54.webp",
     "hp": "170",
     "energy": "Metal",
     "name": "Tinkaton ex",
@@ -2070,14 +2160,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-54",
         "version": "Shining Revelry #54",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-86",
         "version": "Shining Revelry #86",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-94",
         "version": "Shining Revelry #94",
         "rarity": "☆☆"
       }
@@ -2086,8 +2179,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "55",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_055_EN.webp",
+    "card_id": "A2b-55",
+    "image": "/images/en-US/A2b-55.webp",
     "hp": "70",
     "energy": "Metal",
     "name": "Varoom",
@@ -2114,10 +2207,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-55",
         "version": "Shining Revelry #55",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-105",
         "version": "Shining Revelry #105",
         "rarity": "☆"
       }
@@ -2126,8 +2221,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "56",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_056_EN.webp",
+    "card_id": "A2b-56",
+    "image": "/images/en-US/A2b-56.webp",
     "hp": "110",
     "energy": "Metal",
     "name": "Revavroom",
@@ -2154,10 +2249,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-56",
         "version": "Shining Revelry #56",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-106",
         "version": "Shining Revelry #106",
         "rarity": "☆"
       }
@@ -2166,8 +2263,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "57",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_057_EN.webp",
+    "card_id": "A2b-57",
+    "image": "/images/en-US/A2b-57.webp",
     "hp": "120",
     "energy": "Metal",
     "name": "Gholdengo",
@@ -2194,10 +2291,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-57",
         "version": "Shining Revelry #57",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2b-77",
         "version": "Shining Revelry #77",
         "rarity": "☆"
       }
@@ -2206,8 +2305,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "58",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_058_EN.webp",
+    "card_id": "A2b-58",
+    "image": "/images/en-US/A2b-58.webp",
     "hp": "50",
     "energy": "Colorless",
     "name": "Rattata",
@@ -2234,6 +2333,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-58",
         "version": "Shining Revelry #58",
         "rarity": "◊"
       }
@@ -2242,8 +2342,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "59",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_059_EN.webp",
+    "card_id": "A2b-59",
+    "image": "/images/en-US/A2b-59.webp",
     "hp": "90",
     "energy": "Colorless",
     "name": "Raticate",
@@ -2270,6 +2370,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-59",
         "version": "Shining Revelry #59",
         "rarity": "◊"
       }
@@ -2278,8 +2379,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "60",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_060_EN.webp",
+    "card_id": "A2b-60",
+    "image": "/images/en-US/A2b-60.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Jigglypuff",
@@ -2306,10 +2407,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-60",
         "version": "Shining Revelry #60",
         "rarity": "◊"
       },
       {
+        "card_id": "A3-228",
         "version": "Celestial Guardians #228",
         "rarity": "☆"
       }
@@ -2318,8 +2421,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "61",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_061_EN.webp",
+    "card_id": "A2b-61",
+    "image": "/images/en-US/A2b-61.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Wigglytuff",
@@ -2346,14 +2449,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-61",
         "version": "Shining Revelry #61",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2b-78",
         "version": "Shining Revelry #78",
         "rarity": "☆"
       },
       {
+        "card_id": "A3-229",
         "version": "Celestial Guardians #229",
         "rarity": "☆"
       }
@@ -2362,8 +2468,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "62",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_062_EN.webp",
+    "card_id": "A2b-62",
+    "image": "/images/en-US/A2b-62.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Lickitung",
@@ -2390,6 +2496,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-62",
         "version": "Shining Revelry #62",
         "rarity": "◊"
       }
@@ -2398,8 +2505,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "63",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_063_EN.webp",
+    "card_id": "A2b-63",
+    "image": "/images/en-US/A2b-63.webp",
     "hp": "130",
     "energy": "Colorless",
     "name": "Lickilicky",
@@ -2426,6 +2533,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-63",
         "version": "Shining Revelry #63",
         "rarity": "◊"
       }
@@ -2434,8 +2542,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "64",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_064_EN.webp",
+    "card_id": "A2b-64",
+    "image": "/images/en-US/A2b-64.webp",
     "hp": "70",
     "energy": "Colorless",
     "name": "Bidoof",
@@ -2462,10 +2570,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-64",
         "version": "Shining Revelry #64",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-57",
         "version": "Promo-A #57",
         "rarity": ""
       }
@@ -2474,8 +2584,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "65",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_065_EN.webp",
+    "card_id": "A2b-65",
+    "image": "/images/en-US/A2b-65.webp",
     "hp": "160",
     "energy": "Colorless",
     "name": "Bibarel ex",
@@ -2502,14 +2612,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-65",
         "version": "Shining Revelry #65",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-87",
         "version": "Shining Revelry #87",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-95",
         "version": "Shining Revelry #95",
         "rarity": "☆☆"
       }
@@ -2518,8 +2631,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "66",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_066_EN.webp",
+    "card_id": "A2b-66",
+    "image": "/images/en-US/A2b-66.webp",
     "hp": "50",
     "energy": "Colorless",
     "name": "Buneary",
@@ -2546,6 +2659,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-66",
         "version": "Shining Revelry #66",
         "rarity": "◊"
       }
@@ -2554,8 +2668,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "67",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_067_EN.webp",
+    "card_id": "A2b-67",
+    "image": "/images/en-US/A2b-67.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Lopunny",
@@ -2582,6 +2696,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-67",
         "version": "Shining Revelry #67",
         "rarity": "◊"
       }
@@ -2590,8 +2705,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "68",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_068_EN.webp",
+    "card_id": "A2b-68",
+    "image": "/images/en-US/A2b-68.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Cyclizar",
@@ -2618,10 +2733,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-68",
         "version": "Shining Revelry #68",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-51",
         "version": "Promo-A #51",
         "rarity": ""
       }
@@ -2630,8 +2747,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "69",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_069_EN.webp",
+    "card_id": "A2b-69",
+    "image": "/images/en-US/A2b-69.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Iono",
@@ -2648,10 +2765,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-69",
         "version": "Shining Revelry #69",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-88",
         "version": "Shining Revelry #88",
         "rarity": "☆☆"
       }
@@ -2660,8 +2779,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "70",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_070_EN.webp",
+    "card_id": "A2b-70",
+    "image": "/images/en-US/A2b-70.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Pokémon Center Lady",
@@ -2678,10 +2797,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-70",
         "version": "Shining Revelry #70",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-89",
         "version": "Shining Revelry #89",
         "rarity": "☆☆"
       }
@@ -2690,8 +2811,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "71",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_071_EN.webp",
+    "card_id": "A2b-71",
+    "image": "/images/en-US/A2b-71.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Red",
@@ -2708,10 +2829,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-71",
         "version": "Shining Revelry #71",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-90",
         "version": "Shining Revelry #90",
         "rarity": "☆☆"
       }
@@ -2720,8 +2843,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "72",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_072_EN.webp",
+    "card_id": "A2b-72",
+    "image": "/images/en-US/A2b-72.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Team Rocket Grunt",
@@ -2738,10 +2861,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-72",
         "version": "Shining Revelry #72",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-91",
         "version": "Shining Revelry #91",
         "rarity": "☆☆"
       }
@@ -2750,8 +2875,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "73",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_073_EN.webp",
+    "card_id": "A2b-73",
+    "image": "/images/en-US/A2b-73.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Meowscarada",
@@ -2778,10 +2903,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-7",
         "version": "Shining Revelry #7",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2b-73",
         "version": "Shining Revelry #73",
         "rarity": "☆"
       }
@@ -2790,8 +2917,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "74",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_074_EN.webp",
+    "card_id": "A2b-74",
+    "image": "/images/en-US/A2b-74.webp",
     "hp": "70",
     "energy": "Water",
     "name": "Buizel",
@@ -2818,10 +2945,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-16",
         "version": "Shining Revelry #16",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-74",
         "version": "Shining Revelry #74",
         "rarity": "☆"
       }
@@ -2830,8 +2959,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "75",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_075_EN.webp",
+    "card_id": "A2b-75",
+    "image": "/images/en-US/A2b-75.webp",
     "hp": "70",
     "energy": "Water",
     "name": "Tatsugiri",
@@ -2858,10 +2987,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-21",
         "version": "Shining Revelry #21",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-75",
         "version": "Shining Revelry #75",
         "rarity": "☆"
       }
@@ -2870,8 +3001,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "76",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_076_EN.webp",
+    "card_id": "A2b-76",
+    "image": "/images/en-US/A2b-76.webp",
     "hp": "90",
     "energy": "Darkness",
     "name": "Grafaiai",
@@ -2898,10 +3029,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-51",
         "version": "Shining Revelry #51",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2b-76",
         "version": "Shining Revelry #76",
         "rarity": "☆"
       }
@@ -2910,8 +3043,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "77",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_077_EN.webp",
+    "card_id": "A2b-77",
+    "image": "/images/en-US/A2b-77.webp",
     "hp": "120",
     "energy": "Metal",
     "name": "Gholdengo",
@@ -2938,10 +3071,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-57",
         "version": "Shining Revelry #57",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2b-77",
         "version": "Shining Revelry #77",
         "rarity": "☆"
       }
@@ -2950,8 +3085,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "78",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_078_EN.webp",
+    "card_id": "A2b-78",
+    "image": "/images/en-US/A2b-78.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Wigglytuff",
@@ -2978,14 +3113,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-61",
         "version": "Shining Revelry #61",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2b-78",
         "version": "Shining Revelry #78",
         "rarity": "☆"
       },
       {
+        "card_id": "A3-229",
         "version": "Celestial Guardians #229",
         "rarity": "☆"
       }
@@ -2994,8 +3132,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "79",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_079_EN.webp",
+    "card_id": "A2b-79",
+    "image": "/images/en-US/A2b-79.webp",
     "hp": "170",
     "energy": "Grass",
     "name": "Beedrill ex",
@@ -3022,14 +3160,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-3",
         "version": "Shining Revelry #3",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-79",
         "version": "Shining Revelry #79",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-107",
         "version": "Shining Revelry #107",
         "rarity": "☆☆"
       }
@@ -3038,8 +3179,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "80",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_080_EN.webp",
+    "card_id": "A2b-80",
+    "image": "/images/en-US/A2b-80.webp",
     "hp": "180",
     "energy": "Fire",
     "name": "Charizard ex",
@@ -3072,14 +3213,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-10",
         "version": "Shining Revelry #10",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-80",
         "version": "Shining Revelry #80",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-108",
         "version": "Shining Revelry #108",
         "rarity": "☆☆"
       }
@@ -3088,8 +3232,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "81",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_081_EN.webp",
+    "card_id": "A2b-81",
+    "image": "/images/en-US/A2b-81.webp",
     "hp": "140",
     "energy": "Water",
     "name": "Wugtrio ex",
@@ -3116,14 +3260,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-19",
         "version": "Shining Revelry #19",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-81",
         "version": "Shining Revelry #81",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-109",
         "version": "Shining Revelry #109",
         "rarity": "☆☆"
       }
@@ -3132,8 +3279,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "82",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_082_EN.webp",
+    "card_id": "A2b-82",
+    "image": "/images/en-US/A2b-82.webp",
     "hp": "120",
     "energy": "Lightning",
     "name": "Pikachu ex",
@@ -3160,14 +3307,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-22",
         "version": "Shining Revelry #22",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-82",
         "version": "Shining Revelry #82",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-92",
         "version": "Shining Revelry #92",
         "rarity": "☆☆"
       }
@@ -3176,8 +3326,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "83",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_083_EN.webp",
+    "card_id": "A2b-83",
+    "image": "/images/en-US/A2b-83.webp",
     "hp": "150",
     "energy": "Psychic",
     "name": "Giratina ex",
@@ -3204,14 +3354,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-35",
         "version": "Shining Revelry #35",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-83",
         "version": "Shining Revelry #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-96",
         "version": "Shining Revelry #96",
         "rarity": "☆☆☆"
       }
@@ -3220,8 +3373,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "84",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_084_EN.webp",
+    "card_id": "A2b-84",
+    "image": "/images/en-US/A2b-84.webp",
     "hp": "150",
     "energy": "Fighting",
     "name": "Lucario ex",
@@ -3248,14 +3401,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-43",
         "version": "Shining Revelry #43",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-84",
         "version": "Shining Revelry #84",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-110",
         "version": "Shining Revelry #110",
         "rarity": "☆☆"
       }
@@ -3264,8 +3420,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "85",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_085_EN.webp",
+    "card_id": "A2b-85",
+    "image": "/images/en-US/A2b-85.webp",
     "hp": "160",
     "energy": "Darkness",
     "name": "Paldean Clodsire ex",
@@ -3292,14 +3448,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-48",
         "version": "Shining Revelry #48",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-85",
         "version": "Shining Revelry #85",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-93",
         "version": "Shining Revelry #93",
         "rarity": "☆☆"
       }
@@ -3308,8 +3467,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "86",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_086_EN.webp",
+    "card_id": "A2b-86",
+    "image": "/images/en-US/A2b-86.webp",
     "hp": "170",
     "energy": "Metal",
     "name": "Tinkaton ex",
@@ -3336,14 +3495,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-54",
         "version": "Shining Revelry #54",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-86",
         "version": "Shining Revelry #86",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-94",
         "version": "Shining Revelry #94",
         "rarity": "☆☆"
       }
@@ -3352,8 +3514,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "87",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_087_EN.webp",
+    "card_id": "A2b-87",
+    "image": "/images/en-US/A2b-87.webp",
     "hp": "160",
     "energy": "Colorless",
     "name": "Bibarel ex",
@@ -3380,14 +3542,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-65",
         "version": "Shining Revelry #65",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-87",
         "version": "Shining Revelry #87",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-95",
         "version": "Shining Revelry #95",
         "rarity": "☆☆"
       }
@@ -3396,8 +3561,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "88",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_088_EN.webp",
+    "card_id": "A2b-88",
+    "image": "/images/en-US/A2b-88.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Iono",
@@ -3414,10 +3579,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-69",
         "version": "Shining Revelry #69",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-88",
         "version": "Shining Revelry #88",
         "rarity": "☆☆"
       }
@@ -3426,8 +3593,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "89",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_089_EN.webp",
+    "card_id": "A2b-89",
+    "image": "/images/en-US/A2b-89.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Pokémon Center Lady",
@@ -3444,10 +3611,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-70",
         "version": "Shining Revelry #70",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-89",
         "version": "Shining Revelry #89",
         "rarity": "☆☆"
       }
@@ -3456,8 +3625,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "90",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_090_EN.webp",
+    "card_id": "A2b-90",
+    "image": "/images/en-US/A2b-90.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Red",
@@ -3474,10 +3643,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-71",
         "version": "Shining Revelry #71",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-90",
         "version": "Shining Revelry #90",
         "rarity": "☆☆"
       }
@@ -3486,8 +3657,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "91",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_091_EN.webp",
+    "card_id": "A2b-91",
+    "image": "/images/en-US/A2b-91.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Team Rocket Grunt",
@@ -3504,10 +3675,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-72",
         "version": "Shining Revelry #72",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-91",
         "version": "Shining Revelry #91",
         "rarity": "☆☆"
       }
@@ -3516,8 +3689,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "92",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_092_EN.webp",
+    "card_id": "A2b-92",
+    "image": "/images/en-US/A2b-92.webp",
     "hp": "120",
     "energy": "Lightning",
     "name": "Pikachu ex",
@@ -3544,14 +3717,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-22",
         "version": "Shining Revelry #22",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-82",
         "version": "Shining Revelry #82",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-92",
         "version": "Shining Revelry #92",
         "rarity": "☆☆"
       }
@@ -3560,8 +3736,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "93",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_093_EN.webp",
+    "card_id": "A2b-93",
+    "image": "/images/en-US/A2b-93.webp",
     "hp": "160",
     "energy": "Darkness",
     "name": "Paldean Clodsire ex",
@@ -3588,14 +3764,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-48",
         "version": "Shining Revelry #48",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-85",
         "version": "Shining Revelry #85",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-93",
         "version": "Shining Revelry #93",
         "rarity": "☆☆"
       }
@@ -3604,8 +3783,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "94",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_094_EN.webp",
+    "card_id": "A2b-94",
+    "image": "/images/en-US/A2b-94.webp",
     "hp": "170",
     "energy": "Metal",
     "name": "Tinkaton ex",
@@ -3632,14 +3811,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-54",
         "version": "Shining Revelry #54",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-86",
         "version": "Shining Revelry #86",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-94",
         "version": "Shining Revelry #94",
         "rarity": "☆☆"
       }
@@ -3648,8 +3830,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "95",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_095_EN.webp",
+    "card_id": "A2b-95",
+    "image": "/images/en-US/A2b-95.webp",
     "hp": "160",
     "energy": "Colorless",
     "name": "Bibarel ex",
@@ -3676,14 +3858,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-65",
         "version": "Shining Revelry #65",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-87",
         "version": "Shining Revelry #87",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-95",
         "version": "Shining Revelry #95",
         "rarity": "☆☆"
       }
@@ -3692,8 +3877,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "96",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_096_EN.webp",
+    "card_id": "A2b-96",
+    "image": "/images/en-US/A2b-96.webp",
     "hp": "150",
     "energy": "Psychic",
     "name": "Giratina ex",
@@ -3720,14 +3905,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-35",
         "version": "Shining Revelry #35",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-83",
         "version": "Shining Revelry #83",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-96",
         "version": "Shining Revelry #96",
         "rarity": "☆☆☆"
       }
@@ -3736,8 +3924,8 @@
     "crafting_cost": 1500
   },
   {
-    "id": "97",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_097_EN.webp",
+    "card_id": "A2b-97",
+    "image": "/images/en-US/A2b-97.webp",
     "hp": "50",
     "energy": "Grass",
     "name": "Weedle",
@@ -3757,17 +3945,19 @@
     },
     "weakness": "fire",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-1",
         "version": "Shining Revelry #1",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-97",
         "version": "Shining Revelry #97",
         "rarity": "☆"
       }
@@ -3776,8 +3966,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "98",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_098_EN.webp",
+    "card_id": "A2b-98",
+    "image": "/images/en-US/A2b-98.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Kakuna",
@@ -3797,17 +3987,19 @@
     },
     "weakness": "fire",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-2",
         "version": "Shining Revelry #2",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-98",
         "version": "Shining Revelry #98",
         "rarity": "☆"
       }
@@ -3816,8 +4008,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "99",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_099_EN.webp",
+    "card_id": "A2b-99",
+    "image": "/images/en-US/A2b-99.webp",
     "hp": "60",
     "energy": "Fire",
     "name": "Charmander",
@@ -3837,17 +4029,19 @@
     },
     "weakness": "water",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-8",
         "version": "Shining Revelry #8",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-99",
         "version": "Shining Revelry #99",
         "rarity": "☆"
       }
@@ -3856,8 +4050,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "100",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_100_EN.webp",
+    "card_id": "A2b-100",
+    "image": "/images/en-US/A2b-100.webp",
     "hp": "90",
     "energy": "Fire",
     "name": "Charmeleon",
@@ -3877,17 +4071,19 @@
     },
     "weakness": "water",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-9",
         "version": "Shining Revelry #9",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-100",
         "version": "Shining Revelry #100",
         "rarity": "☆"
       }
@@ -3896,8 +4092,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "101",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_101_EN.webp",
+    "card_id": "A2b-101",
+    "image": "/images/en-US/A2b-101.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Wiglett",
@@ -3917,17 +4113,19 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-18",
         "version": "Shining Revelry #18",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-101",
         "version": "Shining Revelry #101",
         "rarity": "☆"
       }
@@ -3936,8 +4134,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "102",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_102_EN.webp",
+    "card_id": "A2b-102",
+    "image": "/images/en-US/A2b-102.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Dondozo",
@@ -3957,17 +4155,19 @@
     },
     "weakness": "lightning",
     "retreat": "3",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-20",
         "version": "Shining Revelry #20",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A2b-102",
         "version": "Shining Revelry #102",
         "rarity": "☆"
       }
@@ -3976,8 +4176,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "103",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_103_EN.webp",
+    "card_id": "A2b-103",
+    "image": "/images/en-US/A2b-103.webp",
     "hp": "70",
     "energy": "Lightning",
     "name": "Pachirisu",
@@ -3997,21 +4197,24 @@
     },
     "weakness": "fighting",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-25",
         "version": "Shining Revelry #25",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-103",
         "version": "Shining Revelry #103",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-58",
         "version": "Promo-A #58",
         "rarity": ""
       }
@@ -4020,8 +4223,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "104",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_104_EN.webp",
+    "card_id": "A2b-104",
+    "image": "/images/en-US/A2b-104.webp",
     "hp": "70",
     "energy": "Fighting",
     "name": "Riolu",
@@ -4041,21 +4244,24 @@
     },
     "weakness": "psychic",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-42",
         "version": "Shining Revelry #42",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-104",
         "version": "Shining Revelry #104",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-59",
         "version": "Promo-A #59",
         "rarity": ""
       }
@@ -4064,8 +4270,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "105",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_105_EN.webp",
+    "card_id": "A2b-105",
+    "image": "/images/en-US/A2b-105.webp",
     "hp": "70",
     "energy": "Metal",
     "name": "Varoom",
@@ -4085,17 +4291,19 @@
     },
     "weakness": "fire",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-55",
         "version": "Shining Revelry #55",
         "rarity": "◊"
       },
       {
+        "card_id": "A2b-105",
         "version": "Shining Revelry #105",
         "rarity": "☆"
       }
@@ -4104,8 +4312,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "106",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_106_EN.webp",
+    "card_id": "A2b-106",
+    "image": "/images/en-US/A2b-106.webp",
     "hp": "110",
     "energy": "Metal",
     "name": "Revavroom",
@@ -4125,17 +4333,19 @@
     },
     "weakness": "fire",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-56",
         "version": "Shining Revelry #56",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A2b-106",
         "version": "Shining Revelry #106",
         "rarity": "☆"
       }
@@ -4144,8 +4354,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "107",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_107_EN.webp",
+    "card_id": "A2b-107",
+    "image": "/images/en-US/A2b-107.webp",
     "hp": "170",
     "energy": "Grass",
     "name": "Beedrill ex",
@@ -4165,21 +4375,24 @@
     },
     "weakness": "fire",
     "retreat": "1",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-3",
         "version": "Shining Revelry #3",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-79",
         "version": "Shining Revelry #79",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-107",
         "version": "Shining Revelry #107",
         "rarity": "☆☆"
       }
@@ -4188,8 +4401,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "108",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_108_EN.webp",
+    "card_id": "A2b-108",
+    "image": "/images/en-US/A2b-108.webp",
     "hp": "180",
     "energy": "Fire",
     "name": "Charizard ex",
@@ -4215,21 +4428,24 @@
     },
     "weakness": "water",
     "retreat": "3",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-10",
         "version": "Shining Revelry #10",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-80",
         "version": "Shining Revelry #80",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-108",
         "version": "Shining Revelry #108",
         "rarity": "☆☆"
       }
@@ -4238,8 +4454,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "109",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_109_EN.webp",
+    "card_id": "A2b-109",
+    "image": "/images/en-US/A2b-109.webp",
     "hp": "140",
     "energy": "Water",
     "name": "Wugtrio ex",
@@ -4259,21 +4475,24 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-19",
         "version": "Shining Revelry #19",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-81",
         "version": "Shining Revelry #81",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-109",
         "version": "Shining Revelry #109",
         "rarity": "☆☆"
       }
@@ -4282,8 +4501,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "110",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_110_EN.webp",
+    "card_id": "A2b-110",
+    "image": "/images/en-US/A2b-110.webp",
     "hp": "150",
     "energy": "Fighting",
     "name": "Lucario ex",
@@ -4303,21 +4522,24 @@
     },
     "weakness": "psychic",
     "retreat": "2",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A2b-43",
         "version": "Shining Revelry #43",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A2b-84",
         "version": "Shining Revelry #84",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A2b-110",
         "version": "Shining Revelry #110",
         "rarity": "☆☆"
       }
@@ -4326,8 +4548,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "111",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A2b/A2b_111_EN.webp",
+    "card_id": "A2b-111",
+    "image": "/images/en-US/A2b-111.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Poké Ball",
@@ -4344,10 +4566,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "P-A-5",
         "version": "Promo-A #5",
         "rarity": ""
       },
       {
+        "card_id": "A2b-111",
         "version": "Shining Revelry #111",
         "rarity": "♛"
       }

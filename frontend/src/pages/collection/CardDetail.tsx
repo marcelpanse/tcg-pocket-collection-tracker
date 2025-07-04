@@ -5,7 +5,7 @@ import { CollectionContext } from '@/lib/context/CollectionContext'
 import { getCardNameByLang } from '@/lib/utils'
 import type { Card, CollectionRow } from '@/types'
 import i18n from 'i18next'
-import { use } from 'react'
+import { use, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 interface CardDetailProps {
@@ -13,8 +13,9 @@ interface CardDetailProps {
   onClose: () => void // Function to close the sidebar
 }
 
-function CardDetail({ cardId, onClose }: Readonly<CardDetailProps>) {
+function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps>) {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
+  const [cardId, setCardId] = useState(initialCardId)
   const card: Card = getCardById(cardId) || ({} as Card)
   const expansion = getExpansionById(card.expansion)
   const { ownedCards } = use(CollectionContext)
@@ -33,7 +34,7 @@ function CardDetail({ cardId, onClose }: Readonly<CardDetailProps>) {
 
   return (
     <Sheet
-      open={!!cardId}
+      open={true}
       onOpenChange={(open) => {
         if (!open) {
           onClose()
@@ -105,6 +106,15 @@ function CardDetail({ cardId, onClose }: Readonly<CardDetailProps>) {
               <p>
                 <strong>{t('text.abilityEffect')}:</strong> {card.ability?.effect || 'N/A'}
               </p>
+            </div>
+
+            <div className="mt-4">
+              <h2 className="text-xl font-semibold">Alternate versions</h2>
+              {card.alternate_versions.map((x) => (
+                <p key={x.card_id} onClick={() => setCardId(x.card_id)}>
+                  {x.card_id === cardId ? '✓' : '→'} {x.version}
+                </p>
+              ))}
             </div>
 
             <div className="mt-4">

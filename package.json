@@ -10,7 +10,7 @@
     "prepare": "lefthook install",
     "dev": "pnpm --filter frontend run dev",
     "build": "pnpm --filter frontend run build",
-    "scraper": "node scripts/scraper.js && node scripts/download-images.js && node scripts/download-packs.js && node scripts/scrape-missions.js"
+    "scraper": "node scripts/scraper.js && node scripts/download-packs.js && node scripts/scrape-missions.js"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
