@@ -1,0 +1,32 @@
+{
+  "publicTradePage": "Pagina di scambio pubblica:",
+  "friendID": "ID Amico:",
+  "lookingForCards": "In cerca di:",
+  "forTradeCards": "Carte in scambio:",
+  "copiedInClipboard": "Carte per scambio copiate negli appunti!",
+  "lookingFor": "Cercando",
+  "forTrade": "In scambio",
+  "buyingTokens": "Acquisto gettoni",
+  "enableTradingPage": "Abilita pagina di scambio",
+  "openTradingPage": "Apri pagina di scambio",
+  "notLoggedIn": {
+    "title": "Iscriviti per vedere le tue carte scambiabili",
+    "description": "Registrandoti, potrai tenere traccia della tua collezione, scambiare con altri utenti ed accedere a funzioni esclusive."
+  },
+  "noTradeableCards": {
+    "title": "Non hai carte scambiabili!",
+    "description": "Vai alla pagina di collezione e aggiungi le carte in tuo possesso per vedere cosa puoi scambiare."
+  },
+  "noSellableCards": {
+    "title": "Non hai carte vendibili!",
+    "description": "Se pensi di avere carte vendibili vai alla pagina di collezione e aggiungi le carte in tuo possesso per vedere cosa puoi vendere."
+  },
+  "noCardsNeeded": {
+    "title": "Hai tutte le carte scambiabili!",
+    "description": "Assicurati di tornare qui quando saranno disponibili nuove rarità e pacchetti per lo scambio."
+  },
+  "goTrackYourCards": {
+    "title": "Traccia le tue carte",
+    "description": "Tenendo traccia delle tue carte, puoi vedere quali devi ancora ottenere, quali puoi scambiare con gli amici e quanti gettoni di scambio puoi guadagnare con la tua collezione attuale."
+  }
+}
