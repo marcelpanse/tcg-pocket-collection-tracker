@@ -16,7 +16,16 @@ export function LicenseModal({ onClose }: { onClose: () => void }) {
       <div className="bg-white text-gray-800 p-6 sm:p-8 rounded-lg shadow-lg w-full max-w-lg mx-4">
         <h2 className="text-xl font-semibold mb-4">License & Legal Disclaimer</h2>
         <p className="text-sm mb-2">
-          This project, <strong>TCG Pocket Collection Tracker</strong>, is open source and licensed under the{' '}
+          This project, <strong>TCG Pocket Collection Tracker</strong>, is open source (
+          <a
+            href="https://https://github.com/marcelpanse/tcg-pocket-collection-tracker"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-blue-600"
+          >
+            GitHub repoository
+          </a>
+          ) and licensed under the{' '}
           <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener noreferrer" className="underline text-blue-600">
             GNU General Public License v3.0
           </a>
