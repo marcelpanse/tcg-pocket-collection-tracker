@@ -7,6 +7,7 @@ import loadable from '@loadable/component'
 import { useEffect, useMemo, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { Route, Routes, useLocation } from 'react-router'
+import Footer from './components/Footer.tsx'
 import { Header } from './components/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { CollectionContext } from './lib/context/CollectionContext.ts'
@@ -22,6 +23,7 @@ const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
 function App() {
   const { toast } = useToast()
   const location = useLocation()
+  const isOverviewPage = location.pathname === '/'
 
   const [user, setUser] = useState<User | null>(null)
   const [account, setAccount] = useState<AccountRow | null>(null)
@@ -103,6 +105,7 @@ function App() {
           </Routes>
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
           <InstallPrompt />
+          {isOverviewPage && <Footer />}
         </ErrorBoundary>
       </CollectionContext.Provider>
     </UserContext.Provider>
