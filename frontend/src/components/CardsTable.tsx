@@ -25,8 +25,9 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
       if (scrollRef.current) {
         const headerHeight = (document.querySelector('#header') as HTMLElement | null)?.offsetHeight || 0
         const filterbarHeight = (document.querySelector('#filterbar') as HTMLElement | null)?.offsetHeight || 0
-        const maxHeight = window.innerHeight - headerHeight - filterbarHeight
-
+        const isMobileDevice = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) // Detect phones and tablets using user agent
+        const extraOffset = isMobileDevice ? 0 : 24 // if not Mobile then applies -24 extraOffset to avoid scrollbars in Collection Page
+        const maxHeight = window.innerHeight - headerHeight - filterbarHeight - extraOffset
         setScrollContainerHeight(`${maxHeight}px`)
       }
     }
@@ -120,7 +121,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
   return (
     <div
       ref={scrollRef}
-      className="overflow-y-auto mt-2 sm:mt-4 px-4 flex flex-col justify-start"
+      className="overflow-y-auto overflow-x-hidden mt-2 sm:mt-4 px-4 flex flex-col justify-start w-full"
       style={{ scrollbarWidth: 'none', height: scrollContainerHeight }}
     >
       {showStats && (
