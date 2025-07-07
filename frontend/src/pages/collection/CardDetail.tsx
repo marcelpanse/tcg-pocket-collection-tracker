@@ -55,7 +55,7 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
           <div className="p-4 w-full">
             {expansion && packName && (
               <p className="text-lg mb-1">
-                <strong>{t('', { percent: pullRateForSpecificCard(expansion, packName, card).toFixed(2) })}</strong>
+                <strong>{t('text.chanceToPull', { ns: 'pages/card-detail', percent: pullRateForSpecificCard(expansion, packName, card).toFixed(2) })}</strong>
               </p>
             )}
             <p className="text-lg mb-1">

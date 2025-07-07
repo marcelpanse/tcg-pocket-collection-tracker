@@ -28,10 +28,9 @@ function MissionDetail({ missionCardOptions, onClose }: Readonly<MissionDetailPr
       <SheetContent className="transition-all duration-300 ease-in-out border-slate-600 overflow-y-auto">
         <SheetHeader>
           <SheetTitle>
-            {t('missionDetail.eligibleCards-singular', {
-              options: missionCardOptions.length,
-              ns: 'pages/collection',
-            })}
+            {missionCardOptions.length === 1
+              ? t('missionDetail.eligibleCards-singular', { ns: 'pages/collection', options: 1 })
+              : t('missionDetail.eligibleCards-plural', { ns: 'pages/collection', options: missionCardOptions.length })}
           </SheetTitle>
         </SheetHeader>
         {t(expansionName)}
