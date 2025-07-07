@@ -1,1 +1,294 @@
-[]
+[
+  {
+    "expansionId": "A3b",
+    "name": "Eevee and its Evolutions 1",
+    "requiredCards": [
+      {
+        "options": ["A3b-55", "A3b-56", "A3b-83"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-16"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-25"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-8", "A3b-9", "A3b-79"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-28"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-43"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-2"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-17"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-33", "A3b-34", "A3b-81"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Eevee Grove) ×13"
+  },
+  {
+    "expansionId": "A3b",
+    "name": "Eevee and its Evolutions 2",
+    "requiredCards": [
+      {
+        "options": ["A3b-78", "A3b-92"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-72"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-74"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-71", "A3b-87"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-75"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-77"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-70"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-73"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-76", "A3b-89"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Eevee Grove) ×26"
+  },
+  {
+    "expansionId": "A3b",
+    "name": "Pokémon with Gems in their Bodies",
+    "requiredCards": [
+      {
+        "options": ["A3b-42"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-44"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Eevee Grove) ×1"
+  },
+  {
+    "expansionId": "A3b",
+    "name": "Pokémon that Use their Tails",
+    "requiredCards": [
+      {
+        "options": ["A3b-58"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-59"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-62"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-65"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Eevee Grove) ×1"
+  },
+  {
+    "expansionId": "A3b",
+    "name": "Category: Fruit Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A3b-1"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-3"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-4"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-5"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Eevee Grove) ×1"
+  },
+  {
+    "expansionId": "A3b",
+    "name": "Sweets Relay",
+    "requiredCards": [
+      {
+        "options": ["A3b-7"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-18"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-19"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-31"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-32"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-36"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-37"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Eevee Grove) ×1"
+  },
+  {
+    "expansionId": "A3b",
+    "name": "Soothing and Healing Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A3b-21"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-33", "A3b-76"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-61"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Eevee Grove) ×2"
+  },
+  {
+    "expansionId": "A3b",
+    "name": "A Gluttonous Snorlax",
+    "requiredCards": [
+      {
+        "options": ["A3b-57", "A3b-84", "A3b-91"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-67"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Eevee Grove) ×5"
+  },
+  {
+    "expansionId": "A3b",
+    "name": "Collect 3 Alcremie cards",
+    "requiredCards": [
+      {
+        "options": ["A3b-37"],
+        "amount": 3
+      }
+    ],
+    "reward": "Alcremie (profile icon)"
+  },
+  {
+    "expansionId": "A3b",
+    "name": "Eevee Museum",
+    "requiredCards": [
+      {
+        "options": ["A3b-55"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-56"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-78"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-83"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-92"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "expansionId": "A3b",
+    "name": "Eevee Grove Museum",
+    "requiredCards": [
+      {
+        "options": ["A3b-87"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-88"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-89"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-90"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-91"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "expansionId": "A3b",
+    "name": "A Sweet Party of Epic Proportions",
+    "requiredCards": [
+      {
+        "amount": "100",
+        "options": ["A3b-7", "A3b-18", "A3b-19", "A3b-31", "A3b-32", "A3b-36", "A3b-37"]
+      }
+    ],
+    "reward": "Alcremie (emblem)"
+  }
+]

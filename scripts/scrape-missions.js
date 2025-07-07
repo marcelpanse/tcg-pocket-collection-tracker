@@ -28,8 +28,9 @@ function parseCards($, cards, expansion) {
   const cardsList = []
   let isOfTheFollowing = false
   const combinationCard = {}
-  cards.contents().each((_i, elem) => {
+  cards.cards.contents().each((_i, elem) => {
     const line = $(elem).text()
+    console.log('hi', line)
     const numOfFollowing = line.match(/\d+ of the following:/)
     const numOfCombination = line.match(/\d+ in any combination of:/)
     if (numOfFollowing != null) {
