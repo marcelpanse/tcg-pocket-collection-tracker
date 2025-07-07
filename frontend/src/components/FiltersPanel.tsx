@@ -199,7 +199,27 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
                 <DialogTitle>{t('filters.filtersCount', { count: (getFilteredCards || []).filter((c) => !c.linkedCardID).length })}</DialogTitle>
               </DialogHeader>
               <div className="flex flex-col gap-3">
-                {filtersDialog.search && <SearchInput setSearchValue={setSearchValue} fullWidth />}
+                {filtersDialog.search && (
+                  <div className="flex items-center gap-2">
+                    <SearchInput setSearchValue={setSearchValue} fullWidth />
+                    <Button
+                      variant="outline"
+                      onClick={() => {
+                        setSearchValue('')
+                        setExpansionFilter('all')
+                        setPackFilter('all')
+                        setCardTypeFilter([])
+                        setRarityFilter([])
+                        setOwnedFilter('all')
+                        setSortBy('default')
+                        setNumberFilter(0)
+                        setMaxNumberFilter(100)
+                      }}
+                    >
+                      ↩️
+                    </Button>
+                  </div>
+                )}
                 {filtersDialog.expansions && (
                   <ExpansionsFilter
                     expansionFilter={expansionFilter}
