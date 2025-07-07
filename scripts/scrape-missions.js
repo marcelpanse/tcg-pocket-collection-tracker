@@ -6,7 +6,7 @@ import fetch from 'node-fetch'
 const BASE_URL = 'https://bulbapedia.bulbagarden.net/wiki'
 const targetDir = '../frontend/assets/themed-collections/'
 const expansions = ['A3b']
-// const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b]
+// const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b']
 const expansionToName = {
   A1: 'Genetic_Apex',
   A1a: 'Mythical_Island',
@@ -103,7 +103,6 @@ async function getExpansionMissions(expansion) {
 
             // Join the reward items with newlines and remove extra spaces
             mission.reward = rewardItems.map((item) => item.replace(/\s+/g, ' ').trim()).join('<br />')
-            console.log('reward', mission.reward)
             if (mission.name !== '') {
               missions.push(mission)
             }
