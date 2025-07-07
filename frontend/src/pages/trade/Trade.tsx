@@ -178,13 +178,14 @@ function Trade() {
         </div>
         <div className="mx-auto max-w-[900px] ">
           <TabsContent value="looking_for">
-            {lookingForCards && lookingForCards.length > 0 ? <CardsTable cards={lookingForCardsFiltered} /> : <NoCardsNeeded />}
+            {lookingForCards && lookingForCards.length > 0 ? <CardsTable cards={lookingForCardsFiltered} extraOffset={105} /> : <NoCardsNeeded />}
           </TabsContent>
           <TabsContent value="for_trade">
-            {forTradeCards && forTradeCards.length > 0 ? <CardsTable cards={forTradeCardsFiltered} /> : <NoTradeableCards />}
+            {forTradeCards && forTradeCards.length > 0 ? <CardsTable cards={forTradeCardsFiltered} extraOffset={105} /> : <NoTradeableCards />}
           </TabsContent>
+
           <TabsContent value="buying_tokens">
-            {buyingTokensCards && buyingTokensCards.length > 0 ? <CardsTable cards={buyingTokensCardsFiltered} /> : <NoSellableCards />}
+            {buyingTokensCards && buyingTokensCards.length > 0 ? <CardsTable cards={buyingTokensCardsFiltered} extraOffset={105} /> : <NoSellableCards />}
           </TabsContent>
         </div>
       </Tabs>

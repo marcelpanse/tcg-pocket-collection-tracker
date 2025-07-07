@@ -12,9 +12,10 @@ interface Props {
   cards: CardType[]
   resetScrollTrigger?: boolean
   showStats?: boolean
+  extraOffset: number
 }
 
-export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
+export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
   const { t } = useTranslation('common/sets')
@@ -26,8 +27,8 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
         const headerHeight = (document.querySelector('#header') as HTMLElement | null)?.offsetHeight || 0
         const filterbarHeight = (document.querySelector('#filterbar') as HTMLElement | null)?.offsetHeight || 0
         const isMobileDevice = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) // Detect phones and tablets using user agent
-        const extraOffset = isMobileDevice ? 0 : 24 // if not Mobile then applies -24 extraOffset to avoid scrollbars in Collection Page
-        const maxHeight = window.innerHeight - headerHeight - filterbarHeight - extraOffset
+        const offset = isMobileDevice ? 0 : extraOffset // Offset is ignored on mobile, but needed on desktop to keep CardsTable in the viewport. Collection uses 24, Trade uses 105.
+        const maxHeight = window.innerHeight - headerHeight - filterbarHeight - offset
         setScrollContainerHeight(`${maxHeight}px`)
       }
     }
