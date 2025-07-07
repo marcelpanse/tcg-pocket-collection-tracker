@@ -10,7 +10,7 @@ interface MissionDetailProps {
   onClose: () => void // Function to close the sidebar
 }
 
-function MissionDetail({ missionCardOptions, onClose }: MissionDetailProps) {
+function MissionDetail({ missionCardOptions, onClose }: Readonly<MissionDetailProps>) {
   const { t } = useTranslation(['common/sets', 'common/packs', 'pages/collection'])
   const gettingExpansion = missionCardOptions[0] || ''
   const expansionId = gettingExpansion.length > 0 ? gettingExpansion.split('-')[0] : 'Unknown'
@@ -28,9 +28,10 @@ function MissionDetail({ missionCardOptions, onClose }: MissionDetailProps) {
       <SheetContent className="transition-all duration-300 ease-in-out border-slate-600 overflow-y-auto">
         <SheetHeader>
           <SheetTitle>
-            {missionCardOptions.length === 1
-              ? t('missionDetail.eligibleCards-singular', { options: 1 })
-              : t('missionDetail.eligibleCards-singular', { options: missionCardOptions.length })}
+            {t('missionDetail.eligibleCards-singular', {
+              options: missionCardOptions.length,
+              ns: 'pages/collection',
+            })}
           </SheetTitle>
         </SheetHeader>
         {t(expansionName)}
@@ -46,6 +47,7 @@ function MissionDetail({ missionCardOptions, onClose }: MissionDetailProps) {
                   {cardId} - {getCardNameByLang(foundCard, i18n.language)}
                   <br />
                   {t('missionDetail.chanceFrom', {
+                    ns: 'pages/collection',
                     pack: t(foundCard.pack, { ns: 'common/packs' }),
                     chance: pullRateForSpecificCard(expansion, foundCard.pack, foundCard).toFixed(2),
                   })}
