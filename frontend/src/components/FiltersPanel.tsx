@@ -194,16 +194,12 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
             <DialogTrigger asChild>
               <Button variant="outline">{t('filters.allFilters')}</Button>
             </DialogTrigger>
-            <DialogContent className="border-1 border-neutral-700 shadow-none h-[90vh] content-start">
+            <DialogContent className="border-1 border-neutral-700 shadow-none max-h-[90vh] overflow-y-auto content-start">
               <DialogHeader>
                 <DialogTitle>{t('filters.filtersCount', { count: (getFilteredCards || []).filter((c) => !c.linkedCardID).length })}</DialogTitle>
               </DialogHeader>
               <div className="flex flex-col gap-3">
-                {filtersDialog.search && (
-                  <div className="flex items-center gap-2">
-                    <SearchInput setSearchValue={setSearchValue} fullWidth />
-                  </div>
-                )}
+                {filtersDialog.search && <SearchInput setSearchValue={setSearchValue} fullWidth />}
                 {filtersDialog.expansions && (
                   <ExpansionsFilter
                     expansionFilter={expansionFilter}
