@@ -194,7 +194,7 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
             <DialogTrigger asChild>
               <Button variant="outline">{t('filters.allFilters')}</Button>
             </DialogTrigger>
-            <DialogContent className="border-1 border-neutral-700 shadow-none h-[90vh] content-start">
+            <DialogContent className="border-1 border-neutral-700 shadow-none max-h-[90vh] overflow-y-auto content-start">
               <DialogHeader>
                 <DialogTitle>{t('filters.filtersCount', { count: (getFilteredCards || []).filter((c) => !c.linkedCardID).length })}</DialogTitle>
               </DialogHeader>
@@ -224,6 +224,23 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
                     />
                   </>
                 )}
+                <Button
+                  variant="outline"
+                  className="!text-red-700"
+                  onClick={() => {
+                    setSearchValue('')
+                    setExpansionFilter('all')
+                    setPackFilter('all')
+                    setCardTypeFilter([])
+                    setRarityFilter([])
+                    setOwnedFilter('all')
+                    setSortBy('default')
+                    setNumberFilter(0)
+                    setMaxNumberFilter(100)
+                  }}
+                >
+                  {t('filters.clear')}
+                </Button>
               </div>
             </DialogContent>
           </Dialog>
