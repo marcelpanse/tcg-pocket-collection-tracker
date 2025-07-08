@@ -202,22 +202,6 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
                 {filtersDialog.search && (
                   <div className="flex items-center gap-2">
                     <SearchInput setSearchValue={setSearchValue} fullWidth />
-                    <Button
-                      variant="outline"
-                      onClick={() => {
-                        setSearchValue('')
-                        setExpansionFilter('all')
-                        setPackFilter('all')
-                        setCardTypeFilter([])
-                        setRarityFilter([])
-                        setOwnedFilter('all')
-                        setSortBy('default')
-                        setNumberFilter(0)
-                        setMaxNumberFilter(100)
-                      }}
-                    >
-                      ↩️
-                    </Button>
                   </div>
                 )}
                 {filtersDialog.expansions && (
@@ -244,6 +228,23 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
                     />
                   </>
                 )}
+                <Button
+                  variant="outline"
+                  className="!text-red-700"
+                  onClick={() => {
+                    setSearchValue('')
+                    setExpansionFilter('all')
+                    setPackFilter('all')
+                    setCardTypeFilter([])
+                    setRarityFilter([])
+                    setOwnedFilter('all')
+                    setSortBy('default')
+                    setNumberFilter(0)
+                    setMaxNumberFilter(100)
+                  }}
+                >
+                  {t('filters.clear')}
+                </Button>
               </div>
             </DialogContent>
           </Dialog>
