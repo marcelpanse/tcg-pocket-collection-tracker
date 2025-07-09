@@ -13,9 +13,10 @@ interface Props {
   resetScrollTrigger?: boolean
   showStats?: boolean
   extraOffset: number
+  editable?: boolean
 }
 
-export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset }: Props) {
+export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, editable = true }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
   const { t } = useTranslation('common/sets')
@@ -154,7 +155,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset }
               ) : (
                 <div className="flex justify-start gap-x-3 ml-2">
                   {(row.data as { type: string; row: Row<CardType> }[]).map(({ row: subRow }) => (
-                    <Card key={subRow.original.card_id} card={subRow.original} />
+                    <Card key={subRow.original.card_id + subRow.original.amount_owned} card={subRow.original} editable={editable} />
                   ))}
                 </div>
               )}
