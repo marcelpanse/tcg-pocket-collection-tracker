@@ -213,7 +213,7 @@ export const sellableForTokensDictionary: Record<Rarity, number | null> = {
   '': null,
 }
 
-const basicCards: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊']
+export const basicRarities: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊']
 
 type CardWithAmount = Card & { amount_owned: number }
 
@@ -235,13 +235,12 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
       return { ...ac, amount_owned: amount }
     })
   if (deckbuildingMode) {
-    // can't filter by card ID, because we are specifically looking for cards with the same name, attacks, and ability but different arts
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
         const amount_owned = ac.alternate_versions.reduce((acc, rc) => acc + (amounts.get(rc.card_id) || 0), 0)
         return { ...ac, amount_owned }
       })
-      .filter((c) => basicCards.includes(c.rarity))
+      .filter((c) => basicRarities.includes(c.rarity))
   }
 
   const filters = {
@@ -412,7 +411,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
           amount_owned: amount,
         }
       })
-      .filter((c) => basicCards.includes(c.rarity))
+      .filter((c) => basicRarities.includes(c.rarity))
   }
 
   let missingCards = cardsInPackWithAmounts.filter((c) => c.amount_owned <= numberFilter - 1)
