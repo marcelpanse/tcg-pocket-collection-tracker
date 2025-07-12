@@ -13,12 +13,13 @@ import { useParams } from 'react-router'
 interface CardProps {
   card: CardType
   useMaxWidth?: boolean
+  editable?: boolean
 }
 
 // keep track of the debounce timeouts for each card
 const _inputDebounce: Record<string, number | null> = {}
 
-export function Card({ card, useMaxWidth = false }: CardProps) {
+export function Card({ card, useMaxWidth = false, editable = true }: CardProps) {
   const params = useParams()
 
   if (card.linkedCardID) {
@@ -95,8 +96,8 @@ export function Card({ card, useMaxWidth = false }: CardProps) {
   }
 
   return (
-    <div className={`group flex w-fit ${!useMaxWidth ? 'max-w-32 md:max-w-40' : ''} flex-col items-center rounded-lg cursor-pointer`}>
-      <div onClick={() => setSelectedCardId(card.card_id)}>
+    <div className={`group flex w-fit ${!useMaxWidth ? 'max-w-32 md:max-w-40' : ''} flex-col items-center rounded-lg`}>
+      <div className="cursor-pointer" onClick={() => setSelectedCardId(card.card_id)}>
         <FancyCard card={card} selected={amountOwned > 0} clickable={!useMaxWidth} />
       </div>
       <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">
@@ -104,25 +105,27 @@ export function Card({ card, useMaxWidth = false }: CardProps) {
       </p>
 
       <div className="flex items-center gap-x-1">
-        {!params.friendId && (
-          <Button variant="ghost" size="icon" onClick={() => removeCard(card.card_id)} className="rounded-full" tabIndex={-1}>
-            <MinusIcon />
-          </Button>
-        )}
-        <input
-          min="0"
-          max="99"
-          type="text"
-          disabled={Boolean(params.friendId)}
-          value={inputValue}
-          onChange={handleInputChange}
-          className="w-7 text-center border-none rounded"
-          onFocus={(event) => event.target.select()}
-        />
-        {!params.friendId && (
-          <Button variant="ghost" size="icon" className="rounded-full" onClick={() => addCard(card.card_id)} tabIndex={-1}>
-            <PlusIcon />
-          </Button>
+        {editable && !params.friendId ? (
+          <>
+            <Button variant="ghost" size="icon" onClick={() => removeCard(card.card_id)} className="rounded-full" tabIndex={-1}>
+              <MinusIcon />
+            </Button>
+            <input
+              min="0"
+              max="99"
+              type="text"
+              disabled={Boolean(params.friendId)}
+              value={inputValue}
+              onChange={handleInputChange}
+              className="w-7 text-center border-none rounded"
+              onFocus={(event) => event.target.select()}
+            />
+            <Button variant="ghost" size="icon" className="rounded-full" onClick={() => addCard(card.card_id)} tabIndex={-1}>
+              <PlusIcon />
+            </Button>
+          </>
+        ) : (
+          <span className="mt-1">{amountOwned}</span>
         )}
       </div>
     </div>

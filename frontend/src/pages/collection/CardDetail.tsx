@@ -23,7 +23,7 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
   // if we draw from 'everypack' we need to take one of the packs to calculated based on
   const packName = card.pack === 'everypack' ? expansion?.packs[0].name : card.pack
 
-  const updatedTimestamp = ownedCards.find((oc: CollectionRow) => oc.card_id === cardId)?.updated_at
+  const row = ownedCards.find((oc: CollectionRow) => oc.card_id === cardId)
 
   const formatTimestamp = (timestamp: string) => {
     return new Intl.DateTimeFormat(undefined, {
@@ -49,10 +49,19 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
         </SheetHeader>
         <div className="flex flex-col items-center">
           <div className="px-10 py-4 w-full">
-            <CardComponent card={card} useMaxWidth />
+            <CardComponent key={cardId} card={{ ...card, amount_owned: row?.amount_owned || 0 }} useMaxWidth />
           </div>
 
           <div className="p-4 w-full">
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold">Alternate versions</h2>
+              {card.alternate_versions.map((x) => (
+                <p key={x.card_id} onClick={() => setCardId(x.card_id)}>
+                  {x.card_id === cardId ? '✓' : '→'} {x.version}
+                </p>
+              ))}
+            </div>
+
             {expansion && packName && (
               <p className="text-lg mb-1">
                 <strong>{t('text.chanceToPull', { ns: 'pages/card-detail', percent: pullRateForSpecificCard(expansion, packName, card).toFixed(2) })}</strong>
@@ -109,17 +118,8 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
             </div>
 
             <div className="mt-4">
-              <h2 className="text-xl font-semibold">Alternate versions</h2>
-              {card.alternate_versions.map((x) => (
-                <p key={x.card_id} onClick={() => setCardId(x.card_id)}>
-                  {x.card_id === cardId ? '✓' : '→'} {x.version}
-                </p>
-              ))}
-            </div>
-
-            <div className="mt-4">
               <p className="text-neutral-400 text-sm">
-                <strong className="font-semibold">{t('text.updated')}:</strong> {updatedTimestamp ? formatTimestamp(updatedTimestamp) : 'N/A'}
+                <strong className="font-semibold">{t('text.updated')}:</strong> {row?.updated_at ? formatTimestamp(row.updated_at) : 'N/A'}
               </p>
             </div>
           </div>
