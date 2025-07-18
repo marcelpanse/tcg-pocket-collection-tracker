@@ -29,6 +29,7 @@ interface ExtractedCard {
     similarity: number
     imageUrl?: string
   }
+  resolvedImageUrl?: string
   topMatches?: Array<{
     id: string
     similarity: number
@@ -95,25 +96,22 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
     }
   }
 
-  function getRightPathOfImage(imageUrl: string | undefined): Promise<string> {
+  function getRightPathOfImage(imageUrl?: string): Promise<string> {
     const baseName = imageUrl?.split('/').at(-1)
-    const imagePath = `/images/${i18n.language}/${baseName}`
+    const localizedPath = `/images/${i18n.language}/${baseName}`
+    const fallbackPath = `/images/en-US/${baseName}`
 
     return new Promise((resolve) => {
       const img = new Image()
-
       img.onload = () => {
-        console.log('right path returning', imagePath)
-        resolve(imagePath)
+        console.log('[Image Load] Success:', localizedPath)
+        resolve(localizedPath)
       }
-
       img.onerror = () => {
-        const fallbackPath = `/images/en-US/${imageUrl?.split('/').at(-1)}`
-        console.log('right path error', imagePath, 'returning', fallbackPath, 'instead')
+        console.warn('[Image Load] Failed:', localizedPath, 'returning', fallbackPath, 'instead')
         resolve(fallbackPath)
       }
-
-      img.src = imagePath
+      img.src = localizedPath
     })
   }
 
@@ -238,6 +236,8 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
               // Best match is the first one
               const bestMatch = topMatches[0]
 
+              const resolvedImageUrl = bestMatch ? await getRightPathOfImage(bestMatch.card.image) : undefined
+
               return {
                 imageUrl: cardImageUrl,
                 confidence: detection.confidence,
@@ -246,9 +246,10 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
                   ? {
                       id: bestMatch.id,
                       similarity: bestMatch.similarity,
-                      imageUrl: await getRightPathOfImage(bestMatch.card.image),
+                      imageUrl: bestMatch.card.image,
                     }
                   : undefined,
+                resolvedImageUrl,
                 topMatches,
                 selected: true, // Default to selected
               }
@@ -353,8 +354,6 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
   }
 
   const renderPotentialMatches = async (card: ExtractedCard, index: number) => {
-    const matchedCardImageUrl = card.matchedCard ? await getRightPathOfImage(card.matchedCard.imageUrl) : ''
-
     return (
       <div
         key={index}
@@ -375,7 +374,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
             {/* Best match card */}
             {card.matchedCard && (
               <div className="w-1/2 relative">
-                <img src={matchedCardImageUrl} alt="Best match" className="w-full h-auto object-contain" />
+                <img src={card.resolvedImageUrl} alt="Best match" className="w-full h-auto object-contain" />
                 <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
                   {t('percentMatch', { match: (card.matchedCard.similarity * 100).toFixed(0) })}
                 </div>
