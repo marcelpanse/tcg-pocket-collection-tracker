@@ -11,6 +11,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { allCards, expansionsDict } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
+import { levenshtein } from '@/lib/levenshtein'
 import { getCardNameByLang } from '@/lib/utils'
 import type { Card, CardType, CollectionRow, Mission, Rarity } from '@/types'
 import i18n from 'i18next'
@@ -18,7 +19,6 @@ import { type FC, type JSX, useContext, useEffect, useMemo, useState } from 'rea
 import { useTranslation } from 'react-i18next'
 import CardTypeFilter from './filters/CardTypeFilter'
 import SortByRecent from './filters/SortByRecent'
-import { levenshtein } from '@/lib/levenshtein'
 
 interface Props {
   children?: JSX.Element
