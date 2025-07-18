@@ -18,6 +18,7 @@ import { type FC, type JSX, useContext, useEffect, useMemo, useState } from 'rea
 import { useTranslation } from 'react-i18next'
 import CardTypeFilter from './filters/CardTypeFilter'
 import SortByRecent from './filters/SortByRecent'
+import { levenshtein } from '@/lib/levenshtein'
 
 interface Props {
   children?: JSX.Element
@@ -129,11 +130,16 @@ const FilterPanel: FC<Props> = ({ children, cards, onFiltersChanged, onChangeToM
     filteredCards = filteredCards.filter(filterCardTypes)
 
     if (searchValue) {
+      const threshold = 2 // tweak if needed
+
       filteredCards = filteredCards.filter((card) => {
-        return (
-          getCardNameByLang(card, i18n.language).toLowerCase().includes(searchValue.toLowerCase()) ||
-          card.card_id.toLowerCase().includes(searchValue.toLowerCase())
-        )
+        const name = getCardNameByLang(card, i18n.language).toLowerCase()
+        const query = searchValue.toLowerCase()
+        const isExactMatch = name.includes(query)
+        const isFuzzyMatch = levenshtein(name, query) <= threshold
+        const isIdMatch = card.card_id.toLowerCase().includes(query)
+
+        return isExactMatch || isFuzzyMatch || isIdMatch
       })
     }
 
