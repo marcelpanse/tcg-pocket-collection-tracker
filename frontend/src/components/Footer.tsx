@@ -1,24 +1,23 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { LicenseModal } from './LicenseModal'
 
 export default function Footer() {
   const [showLicense, setShowLicense] = useState(false)
+  const { t } = useTranslation('footer')
 
   return (
     <>
-      <footer className="text-center py-2 bg-[#1a1a1a] text-gray-400 text-xs leading-snug">
-        <p className="m-0">
+      <footer className="text-center py-4 mx-2 text-gray-300 text-xs leading-snug">
+        <p className="m-1">
           © 2025 TCG Pocket Collection Tracker.{' '}
-          <button
-            type="button"
-            onClick={() => setShowLicense(true)}
-            className="text-blue-500 underline hover:text-blue-600 bg-transparent border-none cursor-pointer p-0"
-          >
-            License & Disclaimer
+          <button type="button" onClick={() => setShowLicense(true)} className="text-blue-300 underline hover:text-blue-500 cursor-pointer">
+            {t('licenseDisclaimer')}
           </button>
         </p>
-        <p className="m-0 mt-1">
-          Not affiliated with Nintendo, Creatures Inc., GAME FREAK Inc., or DeNA Co., Ltd. All trademarks and assets belong to their respective owners.
+        <p className="text-gray-400 mx-4 mb-1 whitespace-pre-line text-center text-xs">
+          {/* Bottom spacing accounts for navbar when installed as app */}
+          {t('notAffiliated')}
         </p>
       </footer>
 
