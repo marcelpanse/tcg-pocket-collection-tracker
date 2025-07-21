@@ -54,6 +54,8 @@ const craftingCost = {
 
 const fullArtRarities = ['☆', '☆☆', '☆☆☆', 'Crown Rare', 'P']
 
+const nonExCardsWithEx = ['Toxapex', 'Rotom Dex']
+
 /* Helper Functions */
 
 async function downloadImage(imageUrl, dest) {
@@ -205,7 +207,7 @@ async function extractCardInfo($, cardUrl) {
 
   cardInfo.fullart = fullArtRarities.includes(cardInfo.rarity) ? 'Yes' : 'No'
 
-  cardInfo.ex = cardInfo.name.includes('ex') ? 'yes' : 'no'
+  cardInfo.ex = cardInfo.name.includes('ex') && !nonExCardsWithEx.includes(cardInfo.name) ? 'yes' : 'no'
 
   const { setDetails, pack } = extractSetAndPackInfo($)
   cardInfo.set_details = setDetails
