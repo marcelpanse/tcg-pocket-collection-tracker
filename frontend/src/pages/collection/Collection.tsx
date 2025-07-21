@@ -1,5 +1,5 @@
 import { CardsTable } from '@/components/CardsTable.tsx'
-import FilterPanel from '@/components/FiltersPanel'
+import FilterPanel, { type Filters } from '@/components/FiltersPanel'
 import { MissionsTable } from '@/components/MissionsTable.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button.tsx'
@@ -28,6 +28,18 @@ function Collection() {
 
   const { ownedCards, selectedCardId, setSelectedCardId, selectedMissionCardOptions, setSelectedMissionCardOptions } = useContext(CollectionContext)
   const { account } = useContext(UserContext)
+  const [filters, setFilters] = useState<Filters>({
+    search: '',
+    expansion: 'all',
+    pack: 'all',
+    cardType: [],
+    rarity: [],
+    owned: 'all',
+    sortBy: 'default',
+    minNumber: 0,
+    maxNumber: 100,
+    deckbuildingMode: false,
+  })
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
   const [friendAccount, setFriendAccount] = useState<AccountRow | null>(null)
   const [friendCards, setFriendCards] = useState<CollectionRow[] | null>(null)
@@ -86,10 +98,22 @@ function Collection() {
     <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">
       <FilterPanel
         cards={cardCollection}
+        filters={filters}
+        setFilters={setFilters}
         onFiltersChanged={(cards) => setFilteredCards(cards)}
         onChangeToMissions={(missions) => setMissions(missions)}
         visibleFilters={{ expansions: !isMobile, search: true, owned: !isMobile, rarity: !isMobile }}
-        filtersDialog={{ expansions: true, pack: true, search: true, owned: true, sortBy: true, rarity: true, cardType: true, amount: true }}
+        filtersDialog={{
+          expansions: true,
+          pack: true,
+          search: true,
+          owned: true,
+          sortBy: true,
+          rarity: true,
+          cardType: true,
+          amount: true,
+          deckBuildingMode: true,
+        }}
         batchUpdate={Boolean(!friendCards)}
         share
       >
@@ -116,7 +140,15 @@ function Collection() {
         </div>
       </FilterPanel>
       <div>
-        {filteredCards && !missions && <CardsTable cards={filteredCards} resetScrollTrigger={resetScrollTrigger} showStats extraOffset={24} />}
+        {filteredCards && !missions && (
+          <CardsTable
+            cards={filteredCards}
+            resetScrollTrigger={resetScrollTrigger}
+            showStats={!filters.deckbuildingMode}
+            extraOffset={24}
+            editable={!filters.deckbuildingMode}
+          />
+        )}
         {selectedCardId && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}
       </div>
       <div>{missions && <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} />}</div>
