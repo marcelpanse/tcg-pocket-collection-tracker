@@ -60,6 +60,7 @@ interface Props {
     rarity?: boolean
     amount?: boolean
     sortBy?: boolean
+    deckBuildingMode?: boolean
   }
 
   batchUpdate?: boolean
@@ -214,9 +215,6 @@ const FilterPanel: FC<Props> = ({
     <div id="filterbar" className="flex flex-col gap-x-2 flex-wrap">
       {children}
 
-      <span className="ml-8 mb-1">
-        <DeckbuildingFilter deckbuildingMode={filters.deckbuildingMode} setDeckbuildingMode={setDeckbuildingMode} />
-      </span>
       <div className="flex items-center gap-2 flex-col md:flex-row gap-y-1 px-4 mb-2">
         {visibleFilters?.expansions && (
           <ExpansionsFilter expansionFilter={filters.expansion} setExpansionFilter={setExpansion} setPackFilter={setPack} packFilter={filters.pack} showPacks />
@@ -257,6 +255,7 @@ const FilterPanel: FC<Props> = ({
                     />
                   </>
                 )}
+                {filtersDialog.deckBuildingMode && <DeckbuildingFilter deckbuildingMode={filters.deckbuildingMode} setDeckbuildingMode={setDeckbuildingMode} />}
                 <Button
                   variant="outline"
                   className="!text-red-700"
