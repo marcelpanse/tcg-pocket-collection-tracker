@@ -17,6 +17,7 @@ import type { Card, CardType, CollectionRow, Mission, Rarity } from '@/types'
 import i18n from 'i18next'
 import { type FC, type JSX, useContext, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import AllTextSearchFilter from './filters/AllTextSearchFilter'
 import CardTypeFilter from './filters/CardTypeFilter'
 import DeckbuildingFilter from './filters/DeckbuildingFilter'
 import SortByRecent from './filters/SortByRecent'
@@ -32,6 +33,7 @@ export interface Filters {
   minNumber: number
   maxNumber: number
   deckbuildingMode: boolean
+  allTextSearch: boolean
 }
 
 interface Props {
@@ -48,6 +50,7 @@ interface Props {
   visibleFilters?: {
     expansions?: boolean
     search?: boolean
+    allTextSearch?: boolean
     owned?: boolean
     rarity?: boolean
   }
@@ -56,6 +59,7 @@ interface Props {
     expansions?: boolean
     pack?: boolean
     search?: boolean
+    allTextSearch?: boolean
     owned?: boolean
     cardType?: boolean
     rarity?: boolean
@@ -86,6 +90,7 @@ const FilterPanel: FC<Props> = ({
 
   const [langState, setLangState] = useState(i18n.language)
   const setSearchValue = (x: string) => setFilters((f) => ({ ...f, search: x }))
+  const setAllTextSearch = (x: boolean) => setFilters((f) => ({ ...f, allTextSearch: x }))
   const setExpansion = (x: string) => setFilters((f) => ({ ...f, expansion: x }))
   const setPack = (x: string) => setFilters((f) => ({ ...f, pack: x }))
   const setCardType = (x: CardType[]) => setFilters((f) => ({ ...f, cardType: x }))
@@ -171,11 +176,24 @@ const FilterPanel: FC<Props> = ({
       filteredCards = filteredCards.filter((card) => {
         const name = getCardNameByLang(card, i18n.language).toLowerCase()
         const query = filters.search.toLowerCase()
+
+        let filterAllText = false
+        if (filters.allTextSearch) {
+          const cardAbilityName = card.ability.name?.toLowerCase()
+          const cardAbilityEffect = card.ability.effect?.toLowerCase()
+
+          filterAllText =
+            (cardAbilityName && cardAbilityName !== 'no ability' && (cardAbilityName.includes(query) || cardAbilityEffect.includes(query))) ||
+            card.attacks.some(
+              (attack) =>
+                attack.name?.toLowerCase().includes(query) || (attack.effect?.toLowerCase() !== 'no effect' && attack.effect?.toLowerCase()?.includes(query)),
+            )
+        }
         const isExactMatch = name.includes(query)
         const isFuzzyMatch = levenshtein(name, query) <= threshold
         const isIdMatch = card.card_id.toLowerCase().includes(query)
 
-        return isExactMatch || isFuzzyMatch || isIdMatch
+        return filterAllText || isExactMatch || isFuzzyMatch || isIdMatch
       })
     }
 
@@ -226,7 +244,7 @@ const FilterPanel: FC<Props> = ({
           <ExpansionsFilter expansionFilter={filters.expansion} setExpansionFilter={setExpansion} setPackFilter={setPack} packFilter={filters.pack} showPacks />
         )}
       </div>
-      <div className="items-center gap-2 flex-row gap-y-1 px-4 flex">
+      <div className="gap-2 flex-row gap-y-1 px-4 flex">
         {visibleFilters?.search && <SearchInput setSearchValue={setSearchValue} />}
         {visibleFilters?.owned && <OwnedFilter ownedFilter={filters.owned} setOwnedFilter={setOwned} />}
         {visibleFilters?.rarity && <RarityFilter rarityFilter={filters.rarity} setRarityFilter={setRarity} collapse />}
@@ -242,6 +260,7 @@ const FilterPanel: FC<Props> = ({
               </DialogHeader>
               <div className="flex flex-col gap-3">
                 {filtersDialog.search && <SearchInput setSearchValue={setSearchValue} fullWidth />}
+                {filtersDialog.allTextSearch && <AllTextSearchFilter allTextSearch={filters.allTextSearch} setAllTextSearch={setAllTextSearch} />}
                 {filtersDialog.expansions && (
                   <ExpansionsFilter expansionFilter={filters.expansion} setExpansionFilter={setExpansion} setPackFilter={setPack} packFilter={filters.pack} />
                 )}
@@ -277,6 +296,7 @@ const FilterPanel: FC<Props> = ({
                       minNumber: 0,
                       maxNumber: 100,
                       deckbuildingMode: false,
+                      allTextSearch: false,
                     })
                   }
                 >

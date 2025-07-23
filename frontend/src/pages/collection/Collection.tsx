@@ -39,6 +39,7 @@ function Collection() {
     minNumber: 0,
     maxNumber: 100,
     deckbuildingMode: false,
+    allTextSearch: false,
   })
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
   const [friendAccount, setFriendAccount] = useState<AccountRow | null>(null)
@@ -102,7 +103,7 @@ function Collection() {
         setFilters={setFilters}
         onFiltersChanged={(cards) => setFilteredCards(cards)}
         onChangeToMissions={(missions) => setMissions(missions)}
-        visibleFilters={{ expansions: !isMobile, search: true, owned: !isMobile, rarity: !isMobile }}
+        visibleFilters={{ expansions: !isMobile, allTextSearch: !isMobile, search: true, owned: !isMobile, rarity: !isMobile }}
         filtersDialog={{
           expansions: true,
           pack: true,
@@ -113,6 +114,7 @@ function Collection() {
           cardType: true,
           amount: true,
           deckBuildingMode: true,
+          allTextSearch: true,
         }}
         batchUpdate={Boolean(!friendCards)}
         share
