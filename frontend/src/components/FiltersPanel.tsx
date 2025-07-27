@@ -217,15 +217,21 @@ const FilterPanel: FC<Props> = ({
     await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)
   }
 
+  function onExpansionChange(x: string) {
+    setExpansion(x)
+    setPack('all')
+  }
+
   return (
     <div id="filterbar" className="flex flex-col gap-x-2 flex-wrap">
       {children}
 
-      <div className="flex items-center gap-2 flex-col md:flex-row gap-y-1 px-4 mb-2">
-        {visibleFilters?.expansions && (
-          <ExpansionsFilter expansionFilter={filters.expansion} setExpansionFilter={setExpansion} setPackFilter={setPack} packFilter={filters.pack} showPacks />
-        )}
-      </div>
+      {visibleFilters?.expansions && (
+        <div className="flex gap-x-2 px-4 mb-2">
+          <ExpansionsFilter expansionFilter={filters.expansion} onChange={onExpansionChange} />
+          <PackFilter packFilter={filters.pack} setPackFilter={setPack} expansion={filters.expansion} />
+        </div>
+      )}
       <div className="items-center gap-2 flex-row gap-y-1 px-4 flex">
         {visibleFilters?.search && <SearchInput setSearchValue={setSearchValue} />}
         {visibleFilters?.owned && <OwnedFilter ownedFilter={filters.owned} setOwnedFilter={setOwned} />}
@@ -242,9 +248,7 @@ const FilterPanel: FC<Props> = ({
               </DialogHeader>
               <div className="flex flex-col gap-3">
                 {filtersDialog.search && <SearchInput setSearchValue={setSearchValue} fullWidth />}
-                {filtersDialog.expansions && (
-                  <ExpansionsFilter expansionFilter={filters.expansion} setExpansionFilter={setExpansion} setPackFilter={setPack} packFilter={filters.pack} />
-                )}
+                {filtersDialog.expansions && <ExpansionsFilter expansionFilter={filters.expansion} onChange={onExpansionChange} />}
                 {filtersDialog.pack && <PackFilter packFilter={filters.pack} setPackFilter={setPack} expansion={filters.expansion} fullWidth />}
                 {filtersDialog.rarity && <RarityFilter rarityFilter={filters.rarity} setRarityFilter={setRarity} />}
                 {filtersDialog.cardType && <CardTypeFilter cardTypeFilter={filters.cardType} setCardTypeFilter={setCardType} />}
