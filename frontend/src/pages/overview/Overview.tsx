@@ -136,7 +136,7 @@ function Overview() {
       </article>
 
       <article className="flex mx-auto max-w-7xl px-8 pt-10">
-        <ExpansionsFilter expansionFilter={expansionFilter} onChange={setExpansionFilter} />
+        <ExpansionsFilter value={expansionFilter} onChange={setExpansionFilter} />
       </article>
 
       <article className="mx-auto max-w-7xl sm:p-6 p-0 pt-6 grid grid-cols-8 gap-6">
