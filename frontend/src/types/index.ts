@@ -35,6 +35,7 @@ export interface Expansion {
   tradeable?: boolean
   promo?: boolean
   containsShinies?: boolean
+  containsBabies?: boolean
 }
 
 export interface Pack {
@@ -67,6 +68,7 @@ export interface Card {
   rarity: Rarity
   fullart: string
   ex: string
+  baby: 'yes' | 'no'
   set_details: string
   pack: string
   alternate_versions: {

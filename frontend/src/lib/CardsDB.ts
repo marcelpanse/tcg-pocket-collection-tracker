@@ -185,6 +185,7 @@ export const expansions: Expansion[] = [
     missions: a4Missions,
     tradeable: false,
     containsShinies: true,
+    containsBabies: true,
   },
 
   {
