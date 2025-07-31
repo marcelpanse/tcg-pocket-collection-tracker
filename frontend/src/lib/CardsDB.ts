@@ -400,6 +400,20 @@ const abilityByRarityToBeInRarePack: Record<Rarity, number> = {
   P: 0,
   '': 0,
 }
+const probabilityPerRarityBaby: Record<Rarity, number> = {
+  '◊': 0,
+  '◊◊': 0,
+  '◊◊◊': 87.1,
+  '◊◊◊◊': 0,
+  '☆': 12.9,
+  '☆☆': 0,
+  '☆☆☆': 0,
+  '✵': 0,
+  '✵✵': 0,
+  'Crown Rare': 0,
+  P: 0,
+  '': 0,
+}
 
 interface PullRateProps {
   ownedCards: CollectionRow[]
@@ -490,6 +504,7 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
   let totalProbability4 = 0
   let totalProbability5 = 0
   let rareProbability1_5 = 0
+  let babyProbability = 0
   for (const card of missingCardsFromPack) {
     const rarityList = [card.rarity]
     // Skip cards that cannot be picked
@@ -512,20 +527,29 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
     let chanceToGetThisCard4 = 0
     let chanceToGetThisCard5 = 0
     let chanceToGetThisCardRare1_5 = 0
+    let chanceToGetThisCardBaby = 0
 
     for (const rarity of rarityList) {
-      const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity).length
+      if (card.baby === 'yes') {
+        // if the card is a baby, we only consider 6-card packs
+        const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && c.baby === 'yes').length
 
-      // the chance to get this card is the probability of getting this card in the pack divided by the number of cards of this rarity
-      chanceToGetThisCard1_3 += probabilityPerRarity1_3[rarity] / 100 / nrOfcardsOfThisRarity
-      if (expansion.containsShinies) {
-        chanceToGetThisCard4 += probabilityPerRarity4Shiny[rarity] / 100 / nrOfcardsOfThisRarity
-        chanceToGetThisCard5 += probabilityPerRarity5Shiny[rarity] / 100 / nrOfcardsOfThisRarity
+        chanceToGetThisCardBaby += probabilityPerRarityBaby[rarity] / 100 / nrOfcardsOfThisRarity
       } else {
-        chanceToGetThisCard4 += probabilityPerRarity4[rarity] / 100 / nrOfcardsOfThisRarity
-        chanceToGetThisCard5 += probabilityPerRarity5[rarity] / 100 / nrOfcardsOfThisRarity
+        // specify baby !== 'yes' to handle issue where baby field is undefined
+        const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && c.baby !== 'yes').length
+
+        // the chance to get this card is the probability of getting this card in the pack divided by the number of cards of this rarity
+        chanceToGetThisCard1_3 += probabilityPerRarity1_3[rarity] / 100 / nrOfcardsOfThisRarity
+        if (expansion.containsShinies) {
+          chanceToGetThisCard4 += probabilityPerRarity4Shiny[rarity] / 100 / nrOfcardsOfThisRarity
+          chanceToGetThisCard5 += probabilityPerRarity5Shiny[rarity] / 100 / nrOfcardsOfThisRarity
+        } else {
+          chanceToGetThisCard4 += probabilityPerRarity4[rarity] / 100 / nrOfcardsOfThisRarity
+          chanceToGetThisCard5 += probabilityPerRarity5[rarity] / 100 / nrOfcardsOfThisRarity
+        }
+        chanceToGetThisCardRare1_5 += abilityByRarityToBeInRarePack[rarity] / cardsInRarePack.length
       }
-      chanceToGetThisCardRare1_5 += abilityByRarityToBeInRarePack[rarity] / cardsInRarePack.length
     }
 
     // add up the chances to get this card
@@ -533,12 +557,25 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
     totalProbability4 += chanceToGetThisCard4
     totalProbability5 += chanceToGetThisCard5
     rareProbability1_5 += chanceToGetThisCardRare1_5
+    babyProbability += chanceToGetThisCardBaby
   }
 
+  let chanceToGetNewCard = 0
+  let chanceToGetNewCardInRarePack = 0
+  let changeToGetNewCardIn6CardPack = 0
+
   // take the total probabilities per card draw (for the 1-3 you need to cube the probability) and multiply
-  const chanceToGetNewCard = 0.9995 * (1 - (1 - totalProbability1_3) ** 3 * (1 - totalProbability4) * (1 - totalProbability5))
-  const chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - rareProbability1_5) ** 5)
+  const chanceToGetInStandard5Cards = 1 - (1 - totalProbability1_3) ** 3 * (1 - totalProbability4) * (1 - totalProbability5)
+
+  if (expansion.containsBabies) {
+    chanceToGetNewCard = 0.9162 * chanceToGetInStandard5Cards
+    chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - rareProbability1_5) ** 5)
+    changeToGetNewCardIn6CardPack = 0.0833 * (1 - (1 - chanceToGetInStandard5Cards) * (1 - babyProbability))
+  } else {
+    chanceToGetNewCard = 0.9995 * chanceToGetInStandard5Cards
+    chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - rareProbability1_5) ** 5)
+  }
 
   // disjoint union of probabilities
-  return chanceToGetNewCard + chanceToGetNewCardInRarePack
+  return chanceToGetNewCard + chanceToGetNewCardInRarePack + changeToGetNewCardIn6CardPack
 }
