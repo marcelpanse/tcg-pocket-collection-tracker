@@ -68,7 +68,7 @@ export interface Card {
   rarity: Rarity
   fullart: string
   ex: string
-  baby: 'yes' | 'no'
+  baby: boolean
   set_details: string
   pack: string
   alternate_versions: {

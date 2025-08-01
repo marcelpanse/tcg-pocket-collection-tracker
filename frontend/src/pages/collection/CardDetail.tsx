@@ -92,7 +92,7 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
               <strong>{t('text.ex')}:</strong> {t(`ex.${card.ex}`)}
             </p>
             <p className="text-lg mb-1">
-              <strong>{t('text.baby')}:</strong> {t(`ex.${card.baby || 'no'}`)}
+              <strong>{t('text.baby')}:</strong> {t(`ex.${card.baby ? 'yes' : 'no'}`)}
             </p>
             <p className="text-lg mb-1">
               <strong>{t('text.craftingCost')}:</strong> {card.crafting_cost}

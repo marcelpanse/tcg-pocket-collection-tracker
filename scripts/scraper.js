@@ -212,7 +212,7 @@ async function extractCardInfo($, cardUrl) {
   cardInfo.ex = cardInfo.name.includes('ex') && !nonExCardsWithEx.includes(cardInfo.name) ? 'yes' : 'no'
 
   // Check if card is a baby pokemon (Not currently specified exactly on Limitless TCG page)
-  cardInfo.baby = cardInfo.weakness === 'none' && cardInfo.hp === '30' && cardInfo.energy !== 'Dragon' ? 'yes' : 'no'
+  cardInfo.baby = cardInfo.weakness === 'none' && cardInfo.hp === '30' && cardInfo.energy !== 'Dragon'
 
   const { setDetails, pack } = extractSetAndPackInfo($)
   cardInfo.set_details = setDetails

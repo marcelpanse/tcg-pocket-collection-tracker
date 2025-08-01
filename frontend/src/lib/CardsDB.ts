@@ -530,14 +530,14 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
     let chanceToGetThisCardBaby = 0
 
     for (const rarity of rarityList) {
-      if (card.baby === 'yes') {
+      if (card.baby) {
         // if the card is a baby, we only consider 6-card packs
-        const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && c.baby === 'yes').length
+        const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && c.baby).length
 
         chanceToGetThisCardBaby += probabilityPerRarityBaby[rarity] / 100 / nrOfcardsOfThisRarity
       } else {
         // specify baby !== 'yes' to handle issue where baby field is undefined
-        const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && c.baby !== 'yes').length
+        const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && !c.baby).length
 
         // the chance to get this card is the probability of getting this card in the pack divided by the number of cards of this rarity
         chanceToGetThisCard1_3 += probabilityPerRarity1_3[rarity] / 100 / nrOfcardsOfThisRarity
