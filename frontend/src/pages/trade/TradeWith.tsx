@@ -21,55 +21,28 @@ interface TradeCard extends Card {
 }
 
 interface TradeOfferProps {
-  yourCards: Card[]
-  friendCards: Card[]
   yourId: string
   friendId: string
-}
-
-function groupByRarity(cards: Card[]): Record<Rarity, Card[]> {
-  const res: Record<Rarity, Card[]> = {
-    '◊': [],
-    '◊◊': [],
-    '◊◊◊': [],
-    '◊◊◊◊': [],
-    '☆': [],
-    '☆☆': [],
-    '☆☆☆': [],
-    '✵': [],
-    '✵✵': [],
-    'Crown Rare': [],
-    P: [],
-    '': [],
-  }
-
-  for (const c of cards) {
-    res[c.rarity].push(c)
-  }
-
-  return res
 }
 
 interface CardListProps {
   cards: Card[]
   ownedCards: CollectionRow[]
-  tradeOffer: Card[]
-  setTradeOffer: Dispatch<SetStateAction<Card[]>>
+  selected: Card | null
+  setSelected: Dispatch<SetStateAction<Card | null>>
 }
 
-function CardList({ cards, ownedCards, tradeOffer: tradeProposition, setTradeOffer: setTradeProposition }: CardListProps) {
+function CardList({ cards, ownedCards, selected, setSelected }: CardListProps) {
   function item(card: Card) {
-    const selected = tradeProposition.some((c) => c.card_id === card.card_id)
     function onClick() {
-      const i = tradeProposition.findIndex((c) => c.card_id === card.card_id)
-      if (i >= 0) {
-        setTradeProposition((arr: Card[]) => arr.filter((c) => c.card_id !== card.card_id))
+      if (selected?.card_id === card.card_id) {
+        setSelected(null)
       } else {
-        setTradeProposition((arr: Card[]) => [...arr, card])
+        setSelected(card)
       }
     }
     return (
-      <li key={card.card_id} className={`flex rounded px-2 ${selected && 'bg-green-900'} hover:bg-gray-500`} onClick={onClick}>
+      <li key={card.card_id} className={`flex rounded px-2 ${selected?.card_id === card.card_id && 'bg-green-900'} hover:bg-gray-500`} onClick={onClick}>
         <span className="min-w-14 me-4">{card.card_id} </span>
         <span>{card.name}</span>
         <span title="Amount you own" className="text-gray-400 ml-auto">
@@ -99,8 +72,8 @@ function Trade2() {
 
   const [userCardsMaxFilter, setUserCardsMaxFilter] = useState<number>((account?.max_number_of_cards_wanted || 1) - 1)
   const [friendCardsMinFilter, setFriendCardsMinFilter] = useState<number>((account?.min_number_of_cards_to_keep || 1) + 1)
-  const [tradeProposition1, setTradeProposition1] = useState<Card[]>([])
-  const [tradeProposition2, setTradeProposition2] = useState<Card[]>([])
+  const [yourCard, setYourCard] = useState<Card | null>(null)
+  const [friendCard, setFriendCard] = useState<Card | null>(null)
 
   useEffect(() => {
     if (!friendAccount) fetchPublicAccount(friendId).then(setFriendAccount)
@@ -181,18 +154,8 @@ function Trade2() {
     return result
   }, [ownedCards, friendCards, userCardsMaxFilter, friendCardsMinFilter])
 
-  function TradeOffer({ yourCards, friendCards, yourId, friendId }: TradeOfferProps) {
-    const cards1 = groupByRarity(yourCards)
-    const cards2 = groupByRarity(friendCards)
-    const offers: { yourCard: Card | undefined; friendCard: Card | undefined }[] = []
-
-    for (const r of rarityOrder) {
-      for (let i = 0; i < Math.max(cards1[r].length, cards2[r].length); i++) {
-        offers.push({ yourCard: cards1[r][i], friendCard: cards2[r][i] })
-      }
-    }
-
-    function card(c: Card | undefined) {
+  function TradeOffer({ yourId, friendId }: TradeOfferProps) {
+    function card(c: Card | null) {
       if (!c) {
         return <span className="w-1/2 text-center">–</span>
       }
@@ -205,50 +168,45 @@ function Trade2() {
       )
     }
 
+    const enabled = yourCard && friendCard && yourCard.rarity === friendCard.rarity
+
     async function submit() {
-      const trades = offers
-        .map(
-          ({ yourCard, friendCard }) =>
-            ({
-              offering_friend_id: yourId,
-              receiving_friend_id: friendId,
-              offer_card_id: yourCard?.card_id,
-              receiver_card_id: friendCard?.card_id,
-              status: 'offered',
-            }) as TradeRow,
-        )
-        .filter((row) => row.offer_card_id && row.receiver_card_id)
-      const { error } = await supabase.from('trades').insert(trades)
+      if (!enabled) return
+      const trade: TradeRow = {
+        offering_friend_id: yourId,
+        receiving_friend_id: friendId,
+        offer_card_id: yourCard.card_id,
+        receiver_card_id: friendCard.card_id,
+        status: 'offered',
+      } as TradeRow
+      const { error } = await supabase.from('trades').insert(trade)
       if (error) {
         console.log(error)
       } else {
-        setTradeProposition1([])
-        setTradeProposition2([])
+        setYourCard(null)
+        setFriendCard(null)
       }
     }
 
     return (
-      <div>
-        <h2 className="text-center mt-4 text-2xl mb-2">Trade offer</h2>
-        <div className="border rounded p-2">
-          <div className="flex justify-between mx-2 mb-2">
-            <h4 className="text-lg font-medium">{t('youGive')}</h4>
-            <h4 className="text-lg font-medium">{t('youReceive')}</h4>
-          </div>
-          <ul className="min-h-22">
-            {offers.map(({ yourCard, friendCard }, i) => (
-              <li key={i} className="flex justify-between rounded bg-zinc-800 px-1 mt-2">
-                {card(yourCard)}
-                {card(friendCard)}
-              </li>
-            ))}
-          </ul>
+      <div className="border rounded p-2">
+        <div className="flex justify-between mx-2 mb-2">
+          <h4 className="text-lg font-medium">{t('youGive')}</h4>
+          <h4 className="text-lg font-medium">{t('youReceive')}</h4>
         </div>
-        <div className="text-center mt-2">
-          <Button type="button" onClick={submit} disabled={offers.length === 0 || rarityOrder.some((r) => cards1[r].length !== cards2[r].length)}>
-            {t('offerTrades', { n: offers.length })}
-          </Button>
+        <div className="flex justify-between rounded bg-zinc-800 px-1 mt-2">
+          {yourCard || friendCard ? (
+            <>
+              {card(yourCard)}
+              {card(friendCard)}
+            </>
+          ) : (
+            <span className="w-full text-center">Select cards to trade below</span>
+          )}
         </div>
+        <Button className="text-center mt-4 w-full" type="button" variant="outline" onClick={submit} disabled={!enabled}>
+          {t('offerTrades', { n: 1 })}
+        </Button>
       </div>
     )
   }
@@ -265,18 +223,15 @@ function Trade2() {
   }
 
   return (
-    <div className="gap-4 justify-center max-w-2xl m-auto">
+    <div className="kap-4 justify-center max-w-2xl m-auto">
       <h1 className="mb-4">
-        <p className="text-2xl font-light">{t('tradingWith')}</p>
-        <p className="text-4xl font-bold">{friendAccount.username}</p>
-        <p>
-          <span className="text-sm">Friend ID </span>
-          <span className="text-md">{friendAccount.friend_id}</span>
-        </p>
+        <span className="text-2xl font-likht">{t('tradingWith')}</span>
+        <span className="text-4xl font-bold"> {friendAccount.username} </span>
+        <span>
+          <span className="text-md">({friendAccount.friend_id})</span>
+        </span>
       </h1>
-      <TradeOffer yourCards={tradeProposition2} friendCards={tradeProposition1} yourId={account.friend_id} friendId={friendAccount.friend_id} />
-      <h2 className="text-center mt-8 text-2xl mb-2">Choose cards</h2>
-      <div className="flex gap-4 mb-2 justify-between">
+      <div className="flex gap-4 mb-2 mt-4 justify-between">
         <div className="flex items-center gap-2">
           <NumberFilter numberFilter={userCardsMaxFilter} setNumberFilter={setUserCardsMaxFilter} options={[0, 1, 2, 3, 4, 5]} labelKey="maxNum" />
           <Tooltip id="minFilter" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
@@ -288,6 +243,7 @@ function Trade2() {
           <NumberFilter numberFilter={friendCardsMinFilter} setNumberFilter={setFriendCardsMinFilter} options={[2, 3, 4, 5]} labelKey="minNum" />
         </div>
       </div>
+      <TradeOffer yourId={account.friend_id} friendId={friendAccount.friend_id} />
       {rarityOrder.map(
         (rarity) =>
           friendExtraCards[rarity].length > 0 &&
@@ -297,11 +253,11 @@ function Trade2() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <h4 className="text-md font-medium mb-2">{t('youHave')}</h4>
-                  <CardList cards={userExtraCards[rarity]} ownedCards={ownedCards} tradeOffer={tradeProposition2} setTradeOffer={setTradeProposition2} />
+                  <CardList cards={userExtraCards[rarity]} ownedCards={ownedCards} selected={yourCard} setSelected={setYourCard} />
                 </div>
                 <div>
                   <h4 className="text-md font-medium mb-2">{t('friendHas')}</h4>
-                  <CardList cards={friendExtraCards[rarity]} ownedCards={ownedCards} tradeOffer={tradeProposition1} setTradeOffer={setTradeProposition1} />
+                  <CardList cards={friendExtraCards[rarity]} ownedCards={ownedCards} selected={friendCard} setSelected={setFriendCard} />
                 </div>
               </div>
             </div>

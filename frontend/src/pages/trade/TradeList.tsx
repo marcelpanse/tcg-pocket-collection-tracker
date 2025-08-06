@@ -4,6 +4,7 @@ import { getCardById } from '@/lib/CardsDB'
 import type { AccountRow, CollectionRow, TradeRow, TradeStatus } from '@/types'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Tooltip } from 'react-tooltip'
 
 interface Props {
   account: AccountRow
@@ -32,7 +33,14 @@ function TradeList({ initialTrades, account, ownedCards }: Props) {
       declined: { icon: 'X', color: 'bg-stone-600' },
       finished: { icon: '✓', color: 'bg-indigo-600' },
     }
-    return <span className={`rounded-full text-center w-9 ${style[row.status].color}`}>{style[row.status].icon}</span>
+    return (
+      <>
+        <Tooltip id={`tooltip-${row.id}`} />
+        <span className={`rounded-full text-center w-9 ${style[row.status].color}`} data-tooltip-id={`tooltip-${row.id}`} data-tooltip-content={row.status}>
+          {style[row.status].icon}
+        </span>
+      </>
+    )
   }
 
   function card(card_id: string) {
@@ -56,7 +64,7 @@ function TradeList({ initialTrades, account, ownedCards }: Props) {
     return (
       <li
         key={row.id}
-        className={`flex justify-between rounded gap-4 p-1 my-1 ${selectedTrade?.id === row.id && 'bg-green-900'} hover:bg-gray-500`}
+        className={`flex cursor-pointer justify-between rounded gap-4 p-1 my-1 ${selectedTrade?.id === row.id && 'bg-green-900'} hover:bg-gray-500`}
         onClick={() => onClick(row)}
       >
         {status(row)}
@@ -90,34 +98,54 @@ function TradeList({ initialTrades, account, ownedCards }: Props) {
       })
   }
 
+  function actions() {
+    switch (selectedTrade?.status) {
+      case null:
+        return null
+      case 'offered':
+        return (
+          <>
+            {selectedTrade.receiving_friend_id === account.friend_id && (
+              <Button type="button" onClick={() => update('accepted')}>
+                Accept
+              </Button>
+            )}
+            <Button type="button" onClick={() => update('declined')}>
+              {selectedTrade.receiving_friend_id === account.friend_id ? 'Decline' : 'Cancel'}
+            </Button>
+          </>
+        )
+      case 'accepted':
+        return (
+          <>
+            <Button type="button" onClick={() => update('finished')}>
+              Mark as complete
+            </Button>
+            <Button type="button" onClick={() => update('declined')}>
+              Cancel
+            </Button>
+          </>
+        )
+      case 'declined':
+        return null
+      case 'finished':
+        return null
+      default:
+        console.log(`Unknown trade status ${selectedTrade?.status}`)
+        return null
+    }
+  }
+  const buttons = actions()
+
   return (
     <div className="border rounded p-2">
-      <div className="flex justify-between mb-2 px-4">
-        <h4 className="text-lg font-medium ml-12">{t('youGive')}</h4>
-        <h4 className="text-lg font-medium">{t('youReceive')}</h4>
+      <div className="flex gap-4 px-1">
+        <div className="w-9" />
+        <h4 className="text-lg font-medium w-1/2 pl-1">{t('youGive')}</h4>
+        <h4 className="text-lg font-medium w-1/2 pl-1">{t('youReceive')}</h4>
       </div>
       <ul>{trades.toSorted((a, b) => (a.created_at > b.created_at ? -1 : 1)).map(row)}</ul>
-      <div className="flex justify-between text-center items-center mt-4">
-        <Button
-          className="w-1/4"
-          type="button"
-          onClick={() => update('accepted')}
-          disabled={!selectedTrade || selectedTrade.status !== 'offered' || selectedTrade.receiving_friend_id !== account.friend_id}
-        >
-          Accept
-        </Button>
-        <Button
-          className="w-1/4"
-          type="button"
-          onClick={() => update('declined')}
-          disabled={!selectedTrade || (selectedTrade.status !== 'offered' && selectedTrade.status !== 'accepted')}
-        >
-          Decline
-        </Button>
-        <Button className="w-1/4" type="button" onClick={() => update('finished')} disabled={!selectedTrade || selectedTrade.status !== 'accepted'}>
-          Mark as complete
-        </Button>
-      </div>
+      {buttons && <div className="flex gap-4 text-center items-center mt-2">{buttons}</div>}
     </div>
   )
 }

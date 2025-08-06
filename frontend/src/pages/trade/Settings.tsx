@@ -1,7 +1,5 @@
 import { SocialShareButtons } from '@/components/SocialShareButtons'
 import { Button } from '@/components/ui/button'
-import { Dialog, DialogContent, DialogOverlay, DialogTitle } from '@/components/ui/dialog'
-import { DialogFooter, DialogHeader } from '@/components/ui/dialog'
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel } from '@/components/ui/form'
 import { Input } from '@/components/ui/input.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
@@ -11,7 +9,7 @@ import { UserContext } from '@/lib/context/UserContext'
 import type { AccountRow } from '@/types'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { CircleHelp } from 'lucide-react'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
@@ -20,8 +18,6 @@ import { z } from 'zod'
 function TradeSettings() {
   const { t } = useTranslation('trade-matches')
   const { user, account, setAccount } = useContext(UserContext)
-
-  const [isOpen, setIsOpen] = useState(false)
 
   const formSchema = z.object({
     is_active_trading: z.boolean(),
@@ -66,90 +62,74 @@ function TradeSettings() {
   }
 
   return (
-    <>
-      <Button onClick={() => setIsOpen(true)}>{t('openSettings')}</Button>
-      <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogOverlay className="DialogOverlay">
-          <DialogContent className="DialogContent max-w-4xl">
-            <DialogHeader>
-              <DialogTitle>{t('settingsTitle')}</DialogTitle>
-            </DialogHeader>
-            <div className="text-center py-8">
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 flex justify-center">
-                  <div className="border-1 border-neutral-700 p-4 space-y-2">
-                    <FormField
-                      control={form.control}
-                      name="is_active_trading"
-                      render={({ field }) => (
-                        <FormItem className="flex flex-col items-start">
-                          <FormControl>
-                            <div className="flex items-center gap-x-4 flex-wrap">
-                              <FormLabel className="flex sm:w-72">{t('isActiveTrading')}</FormLabel>
-                              <div className="grow-1">
-                                <Switch checked={field.value} onCheckedChange={field.onChange} />
-                              </div>
-                              <FormDescription className="grow">{field.value ? 'active' : 'disabled'}</FormDescription>
-                              <Tooltip id="activeInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
-                              <CircleHelp className="h-4 w-4" data-tooltip-id="activeInput" data-tooltip-content={t('activeTradingInputTooltip')} />
-                            </div>
-                          </FormControl>
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="min_number_of_cards_to_keep"
-                      render={({ field }) => (
-                        <FormItem className="flex flex-col items-start">
-                          <FormControl>
-                            <div className="flex items-center gap-x-4 flex-wrap">
-                              <FormLabel className="flex sm:w-72">{t('minNumberOfCardsToKeep')}</FormLabel>
-                              <div className="grow-1">
-                                <Input type="number" {...field} />
-                              </div>
-                              <Tooltip id="minInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
-                              <CircleHelp className="h-4 w-4" data-tooltip-id="minInput" data-tooltip-content={t('minInputTooltip')} />
-                            </div>
-                          </FormControl>
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="max_number_of_cards_wanted"
-                      render={({ field }) => (
-                        <FormItem className="flex flex-col items-start">
-                          <FormControl>
-                            <div className="flex items-center gap-x-4 flex-wrap">
-                              <FormLabel className="flex sm:w-72">{t('maxNumberOfCardsWanted')}</FormLabel>
-                              <div className="grow-1">
-                                <Input type="number" {...field} />
-                              </div>
-                              <Tooltip id="maxInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
-                              <CircleHelp className="h-4 w-4" data-tooltip-id="maxInput" data-tooltip-content={t('maxInputTooltip')} />
-                            </div>
-                          </FormControl>
-                        </FormItem>
-                      )}
-                    />
-
-                    <div className="w-full flex justify-end mt-8">
-                      <Button type="submit">{t('save')}</Button>
+    <div>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="border-1 border-neutral-700 space-y-2 p-4 max-w-lg mx-auto">
+          <FormField
+            control={form.control}
+            name="is_active_trading"
+            render={({ field }) => (
+              <FormItem className="flex flex-col items-start">
+                <FormControl>
+                  <div className="flex items-center gap-x-4 flex-wrap">
+                    <FormLabel className="flex sm:w-72">{t('isActiveTrading')}</FormLabel>
+                    <div className="grow-1">
+                      <Switch checked={field.value} onCheckedChange={field.onChange} />
                     </div>
+                    <FormDescription className="grow">{field.value ? 'active' : 'disabled'}</FormDescription>
+                    <Tooltip id="activeInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
+                    <CircleHelp className="h-4 w-4" data-tooltip-id="activeInput" data-tooltip-content={t('activeTradingInputTooltip')} />
                   </div>
-                </form>
-              </Form>
-              <DialogFooter className="mt-16">
-                <SocialShareButtons />
-              </DialogFooter>
-            </div>
-          </DialogContent>
-        </DialogOverlay>
-      </Dialog>
-    </>
+                </FormControl>
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="min_number_of_cards_to_keep"
+            render={({ field }) => (
+              <FormItem className="flex flex-col items-start">
+                <FormControl>
+                  <div className="flex items-center gap-x-4 flex-wrap">
+                    <FormLabel className="flex sm:w-72">{t('minNumberOfCardsToKeep')}</FormLabel>
+                    <div className="grow-1">
+                      <Input className="w-24" type="number" {...field} />
+                    </div>
+                    <Tooltip id="minInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
+                    <CircleHelp className="h-4 w-4" data-tooltip-id="minInput" data-tooltip-content={t('minInputTooltip')} />
+                  </div>
+                </FormControl>
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="max_number_of_cards_wanted"
+            render={({ field }) => (
+              <FormItem className="flex flex-col items-start">
+                <FormControl>
+                  <div className="flex items-center gap-x-4 flex-wrap">
+                    <FormLabel className="flex sm:w-72">{t('maxNumberOfCardsWanted')}</FormLabel>
+                    <div className="grow-1">
+                      <Input className="w-24" type="number" {...field} />
+                    </div>
+                    <Tooltip id="maxInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
+                    <CircleHelp className="h-4 w-4" data-tooltip-id="maxInput" data-tooltip-content={t('maxInputTooltip')} />
+                  </div>
+                </FormControl>
+              </FormItem>
+            )}
+          />
+
+          <div className="w-full flex justify-end mt-8">
+            <Button type="submit">{t('save')}</Button>
+          </div>
+        </form>
+      </Form>
+      <SocialShareButtons className="mt-4" />
+    </div>
   )
 }
 

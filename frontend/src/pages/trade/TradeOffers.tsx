@@ -7,7 +7,6 @@ import type { AccountRow, CollectionRow, TradeRow } from '@/types'
 import { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
-import TradeSettings from './Settings'
 import TradeList from './TradeList'
 
 function groupTrades(arr: TradeRow[], id: string) {
@@ -25,7 +24,7 @@ interface TradePartnerProps {
   ownedCards: CollectionRow[]
 }
 
-function TradePropositions() {
+function TradeOffers() {
   const { t } = useTranslation('trade-matches')
 
   const { account } = useContext(UserContext)
@@ -60,9 +59,9 @@ function TradePropositions() {
       <div className="w-full">
         <div className="flex justify-between items-center mb-1 mx-1">
           <p>
-            <span className="text-sm">{t('tradingWith')} </span>
-            <span className="text-xl font-medium">{friendAccount?.username || 'loading'}</span>
-            <span className="text-xs"> Friend ID {friendId}</span>
+            <span className="text-sm">{t('tradingWith')}</span>
+            <span className="text-xl font-medium"> {friendAccount?.username || 'loading'} </span>
+            <span className="text-xs">({friendId})</span>
           </p>
           <Button className="ml-auto" onClick={() => navigate(`/trade/${friendId}`)}>
             {t('openTradeWith')}
@@ -85,15 +84,10 @@ function TradePropositions() {
   }
 
   return (
-    <div>
-      <div className="text-center mb-4">
-        <TradeSettings />
-      </div>
-      <div className="flex flex-col items-center max-w-2xl mx-auto gap-12">
-        {trades === null || !account ? <p>Loading...</p> : trades.length === 0 ? <p>{t('noTradeOffers')}</p> : content(trades, account)}
-      </div>
+    <div className="flex flex-col items-center max-w-2xl mx-auto gap-12">
+      {trades === null || !account ? <p>Loading...</p> : trades.length === 0 ? <p>{t('noTradeOffers')}</p> : content(trades, account)}
     </div>
   )
 }
 
-export default TradePropositions
+export default TradeOffers
