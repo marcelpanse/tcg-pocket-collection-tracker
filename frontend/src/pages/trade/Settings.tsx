@@ -1,7 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { CircleHelp } from 'lucide-react'
 import { useContext } from 'react'
-import { useForm } from 'react-hook-form'
+import { type Resolver, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import { z } from 'zod'
@@ -24,9 +24,10 @@ function TradeSettings() {
     min_number_of_cards_to_keep: z.coerce.number().min(1).max(10),
     max_number_of_cards_wanted: z.coerce.number().min(1).max(10),
   })
+  type FormSchema = z.infer<typeof formSchema>
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<FormSchema>({
+    resolver: zodResolver(formSchema) as Resolver<FormSchema>,
     values: {
       is_active_trading: account?.is_active_trading || false,
       min_number_of_cards_to_keep: account?.min_number_of_cards_to_keep || 1,
