@@ -75,7 +75,7 @@ function Trade2() {
   const [friendCard, setFriendCard] = useState<Card | null>(null)
 
   useEffect(() => {
-    if (!friendAccount) fetchPublicAccount(friendId).then(setFriendAccount)
+    if (!friendAccount && friendId) fetchPublicAccount(friendId).then(setFriendAccount)
     if (!friendCards) fetchCollection(undefined, friendId).then(setFriendCards)
   })
 
