@@ -1,5 +1,5 @@
-import type { Mission as MissionType } from '@/types'
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import type { Mission as MissionType } from '@/types'
 import { Mission } from './Mission.tsx'
 
 interface Props {

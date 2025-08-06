@@ -1,3 +1,9 @@
+import { CircleHelp } from 'lucide-react'
+import type { Dispatch, SetStateAction } from 'react'
+import { useContext, useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useParams } from 'react-router'
+import { Tooltip } from 'react-tooltip'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import { Button } from '@/components/ui/button'
 import { supabase } from '@/lib/Auth'
@@ -7,12 +13,6 @@ import { UserContext } from '@/lib/context/UserContext'
 import { fetchPublicAccount } from '@/lib/fetchAccount'
 import { fetchCollection } from '@/lib/fetchCollection'
 import type { AccountRow, Card, CollectionRow, Rarity, TradeRow } from '@/types'
-import { CircleHelp } from 'lucide-react'
-import { useContext, useEffect, useMemo, useState } from 'react'
-import type { Dispatch, SetStateAction } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useParams } from 'react-router'
-import { Tooltip } from 'react-tooltip'
 
 const rarityOrder: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆']
 
@@ -63,7 +63,6 @@ function Trade2() {
   const { t } = useTranslation('trade-matches')
 
   const { friendId } = useParams()
-  if (!friendId) return 'Wrong friend id'
 
   const { account } = useContext(UserContext)
   const { ownedCards } = useContext(CollectionContext)
@@ -153,6 +152,8 @@ function Trade2() {
 
     return result
   }, [ownedCards, friendCards, userCardsMaxFilter, friendCardsMinFilter])
+
+  if (!friendId) return 'Wrong friend id'
 
   function TradeOffer({ yourId, friendId }: TradeOfferProps) {
     function card(c: Card | null) {

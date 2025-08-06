@@ -1,9 +1,9 @@
+import { type FC, useEffect, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button.tsx'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover.tsx'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group.tsx'
 import type { Rarity } from '@/types'
-import { type FC, useEffect, useMemo } from 'react'
-import { useTranslation } from 'react-i18next'
 
 interface Props {
   rarityFilter: Rarity[]

@@ -1,6 +1,6 @@
-import type { Card } from '@/types'
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
+import type { Card } from '@/types'
 import pokemonTranslations from '../../assets/pokemon_translations.json'
 import toolTranslations from '../../assets/tools_translations.json'
 import trainerTranslations from '../../assets/trainers_translations.json'

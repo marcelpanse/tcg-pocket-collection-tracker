@@ -1,6 +1,6 @@
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
 import { Siren } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
 
 export function NoSellableCards() {
   const { t } = useTranslation('pages/trade')

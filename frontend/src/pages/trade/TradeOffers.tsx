@@ -1,12 +1,12 @@
+import { useContext, useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { supabase } from '@/lib/Auth.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
 import { fetchPublicAccount } from '@/lib/fetchAccount'
 import type { AccountRow, CollectionRow, TradeRow } from '@/types'
-import { useContext, useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router'
 import TradeList from './TradeList'
 
 function groupTrades(arr: TradeRow[], id: string) {

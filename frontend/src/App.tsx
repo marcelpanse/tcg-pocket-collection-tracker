@@ -1,12 +1,14 @@
+import loadable from '@loadable/component'
+import { useEffect, useMemo, useState } from 'react'
+import { ErrorBoundary } from 'react-error-boundary'
+import { Route, Routes, useLocation } from 'react-router'
+import DonationPopup from '@/components/DonationPopup.tsx'
 import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { authSSO, supabase } from '@/lib/Auth.ts'
 import { fetchAccount } from '@/lib/fetchAccount.ts'
 import type { AccountRow, CollectionRow } from '@/types'
-import loadable from '@loadable/component'
-import { useEffect, useMemo, useState } from 'react'
-import { ErrorBoundary } from 'react-error-boundary'
-import { Route, Routes } from 'react-router'
+import Footer from './components/Footer.tsx'
 import { Header } from './components/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { CollectionContext } from './lib/context/CollectionContext.ts'
@@ -22,6 +24,8 @@ const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
 
 function App() {
   const { toast } = useToast()
+  const location = useLocation()
+  const isOverviewPage = location.pathname === '/'
 
   const [user, setUser] = useState<User | null>(null)
   const [account, setAccount] = useState<AccountRow | null>(null)
@@ -40,6 +44,11 @@ function App() {
 
     return () => subscription.unsubscribe()
   }, [])
+
+  useEffect(() => {
+    // @ts-ignore
+    window.umami?.track((props) => ({ ...props, url: location.pathname }))
+  }, [location])
 
   useEffect(() => {
     if (user) {
@@ -99,6 +108,8 @@ function App() {
           </Routes>
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
           <InstallPrompt />
+          <DonationPopup />
+          {isOverviewPage && <Footer />}
         </ErrorBoundary>
       </CollectionContext.Provider>
     </UserContext.Provider>

@@ -11,9 +11,9 @@ const DeckbuildingFilter: FC<Props> = ({ deckbuildingMode, setDeckbuildingMode }
   const { t } = useTranslation('deckbuilding-filter')
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-2 text-white/50">
       <input type="checkbox" id="checkbox" checked={deckbuildingMode} onChange={() => setDeckbuildingMode(!deckbuildingMode)} className="w-5 h-5" />
-      <label htmlFor="checkbox" className="text-lg">
+      <label htmlFor="checkbox" className="text-md">
         {t('deckbuildingModeLabel')}
       </label>
       <Tooltip id="deckbuildingMode" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />

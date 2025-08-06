@@ -1,10 +1,10 @@
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { Tooltip } from 'react-tooltip'
 import { Button } from '@/components/ui/button'
 import { supabase } from '@/lib/Auth'
 import { getCardById } from '@/lib/CardsDB'
 import type { AccountRow, CollectionRow, TradeRow, TradeStatus } from '@/types'
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { Tooltip } from 'react-tooltip'
 
 interface Props {
   account: AccountRow

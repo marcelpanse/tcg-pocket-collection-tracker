@@ -1,9 +1,9 @@
-import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
-import type { Card as CardType } from '@/types'
-import { type Row, createColumnHelper, getCoreRowModel, getGroupedRowModel, useReactTable } from '@tanstack/react-table'
+import { createColumnHelper, getCoreRowModel, getGroupedRowModel, type Row, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
+import type { Card as CardType } from '@/types'
 import { Card } from './Card.tsx'
 
 const columnHelper = createColumnHelper<CardType>()
@@ -12,9 +12,11 @@ interface Props {
   cards: CardType[]
   resetScrollTrigger?: boolean
   showStats?: boolean
+  extraOffset: number
+  editable?: boolean
 }
 
-export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
+export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, editable = true }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
   const { t } = useTranslation('common/sets')
@@ -25,8 +27,9 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
       if (scrollRef.current) {
         const headerHeight = (document.querySelector('#header') as HTMLElement | null)?.offsetHeight || 0
         const filterbarHeight = (document.querySelector('#filterbar') as HTMLElement | null)?.offsetHeight || 0
-        const maxHeight = window.innerHeight - headerHeight - filterbarHeight
-
+        const isMobileDevice = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) // Detect phones and tablets using user agent
+        const offset = isMobileDevice ? 0 : extraOffset // Offset is ignored on mobile, but needed on desktop to keep CardsTable in the viewport. Collection uses 24, Trade uses 105.
+        const maxHeight = window.innerHeight - headerHeight - filterbarHeight - offset
         setScrollContainerHeight(`${maxHeight}px`)
       }
     }
@@ -120,7 +123,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
   return (
     <div
       ref={scrollRef}
-      className="overflow-y-auto mt-2 sm:mt-4 px-4 flex flex-col justify-start"
+      className="overflow-y-auto overflow-x-hidden mt-2 sm:mt-4 px-4 flex flex-col justify-start w-full"
       style={{ scrollbarWidth: 'none', height: scrollContainerHeight }}
     >
       {showStats && (
@@ -152,7 +155,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats }: Props) {
               ) : (
                 <div className="flex justify-start gap-x-3 ml-2">
                   {(row.data as { type: string; row: Row<CardType> }[]).map(({ row: subRow }) => (
-                    <Card key={subRow.original.card_id} card={subRow.original} />
+                    <Card key={subRow.original.card_id + subRow.original.amount_owned} card={subRow.original} editable={editable} />
                   ))}
                 </div>
               )}

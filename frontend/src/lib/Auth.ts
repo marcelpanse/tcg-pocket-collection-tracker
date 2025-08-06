@@ -1,5 +1,5 @@
-import type { User } from '@/lib/context/UserContext.ts'
 import { createClient } from '@supabase/supabase-js'
+import type { User } from '@/lib/context/UserContext.ts'
 
 export const SUPABASE_URL = 'https://vcwloujmsjuacqpwthee.supabase.co'
 export const SUPABASE_ANON_KEY =

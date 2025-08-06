@@ -1,8 +1,9 @@
 // src/components/CardMiniature.tsx
+
+import i18n from 'i18next'
 import FancyCard from '@/components/FancyCard'
 import { getCardNameByLang } from '@/lib/utils'
 import type { Card } from '@/types'
-import i18n from 'i18next'
 
 interface CardMiniatureProps {
   card: Card

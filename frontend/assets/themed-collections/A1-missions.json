@@ -54,11 +54,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-94"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-96", "A1-259", "A1-281", "A1-285"],
+        "options": ["A1-94", "A1-96", "A1-259", "A1-281", "A1-285"],
         "amount": 1
       }
     ],
@@ -146,27 +142,15 @@
     "name": "The Legendary Flight",
     "requiredCards": [
       {
-        "options": ["A1-46"],
+        "options": ["A1-46", "A1-47", "A1-255", "A1-274"],
         "amount": 1
       },
       {
-        "options": ["A1-47", "A1-255", "A1-274"],
+        "options": ["A1-83", "A1-84", "A1-258", "A1-275"],
         "amount": 1
       },
       {
-        "options": ["A1-83"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-84", "A1-258", "A1-275"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-103"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-104", "A1-260", "A1-276"],
+        "options": ["A1-103", "A1-104", "A1-260", "A1-276"],
         "amount": 1
       }
     ],
@@ -177,11 +161,7 @@
     "name": "Triple Power",
     "requiredCards": [
       {
-        "options": ["A1-22"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-23", "A1-252"],
+        "options": ["A1-22", "A1-23", "A1-252"],
         "amount": 1
       },
       {
@@ -309,11 +289,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-3"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-4", "A1-251"],
+        "options": ["A1-3", "A1-4", "A1-251"],
         "amount": 1
       },
       {
@@ -325,11 +301,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-35"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-36", "A1-253", "A1-280", "A1-284"],
+        "options": ["A1-35", "A1-36", "A1-253", "A1-280", "A1-284"],
         "amount": 1
       },
       {
@@ -341,11 +313,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-55"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-56", "A1-256"],
+        "options": ["A1-55", "A1-56", "A1-256"],
         "amount": 1
       }
     ],
@@ -407,11 +375,7 @@
     "name": "Category: Mouse Pokémon",
     "requiredCards": [
       {
-        "options": ["A1-94"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-96", "A1-259", "A1-281", "A1-285"],
+        "options": ["A1-94", "A1-96", "A1-259", "A1-281", "A1-285"],
         "amount": 1
       },
       {
@@ -442,11 +406,7 @@
     "name": "Pokémon Super Express",
     "requiredCards": [
       {
-        "options": ["A1-40"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-41", "A1-254"],
+        "options": ["A1-40", "A1-41", "A1-254"],
         "amount": 1
       },
       {

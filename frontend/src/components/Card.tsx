@@ -1,29 +1,27 @@
+import i18n from 'i18next'
+import { MinusIcon, PlusIcon } from 'lucide-react'
+import { use, useCallback, useEffect, useState } from 'react'
+import { useParams } from 'react-router'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { supabase } from '@/lib/Auth.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { type User, UserContext } from '@/lib/context/UserContext.ts'
+import { updateCollectionCache } from '@/lib/fetchCollection.ts'
 import { getCardNameByLang } from '@/lib/utils'
 import type { Card as CardType, CollectionRow } from '@/types'
-import i18n from 'i18next'
-import { MinusIcon, PlusIcon } from 'lucide-react'
-import { use, useCallback, useEffect, useState } from 'react'
-import { useParams } from 'react-router'
 
 interface CardProps {
   card: CardType
   useMaxWidth?: boolean
+  editable?: boolean
 }
 
 // keep track of the debounce timeouts for each card
 const _inputDebounce: Record<string, number | null> = {}
 
-export function Card({ card, useMaxWidth = false }: CardProps) {
+export function Card({ card, useMaxWidth = false, editable = true }: CardProps) {
   const params = useParams()
-
-  if (card.linkedCardID) {
-    return null
-  }
 
   const { user, setIsLoginDialogOpen } = use(UserContext)
   const { ownedCards, setOwnedCards, setSelectedCardId } = use(CollectionContext)
@@ -60,6 +58,8 @@ export function Card({ card, useMaxWidth = false }: CardProps) {
         if (error) {
           throw new Error('Error updating collection')
         }
+
+        updateCollectionCache(ownedCards, user.user.email)
       }, 1000)
     },
     [ownedCards, user, setOwnedCards, amountOwned],
@@ -94,35 +94,41 @@ export function Card({ card, useMaxWidth = false }: CardProps) {
     }
   }
 
+  if (card.linkedCardID) {
+    return null
+  }
+
   return (
-    <div className={`group flex w-fit ${!useMaxWidth ? 'max-w-32 md:max-w-40' : ''} flex-col items-center rounded-lg cursor-pointer`}>
-      <div onClick={() => setSelectedCardId(card.card_id)}>
+    <div className={`group flex w-fit ${!useMaxWidth ? 'max-w-32 md:max-w-40' : ''} flex-col items-center rounded-lg`}>
+      <button type="button" className="cursor-pointer" onClick={() => setSelectedCardId(card.card_id)}>
         <FancyCard card={card} selected={amountOwned > 0} clickable={!useMaxWidth} />
-      </div>
+      </button>
       <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">
         {card.card_id} - {getCardNameByLang(card, i18n.language)}
       </p>
 
       <div className="flex items-center gap-x-1">
-        {!params.friendId && (
-          <Button variant="ghost" size="icon" onClick={() => removeCard(card.card_id)} className="rounded-full" tabIndex={-1}>
-            <MinusIcon />
-          </Button>
-        )}
-        <input
-          min="0"
-          max="99"
-          type="text"
-          disabled={Boolean(params.friendId)}
-          value={inputValue}
-          onChange={handleInputChange}
-          className="w-7 text-center border-none rounded"
-          onFocus={(event) => event.target.select()}
-        />
-        {!params.friendId && (
-          <Button variant="ghost" size="icon" className="rounded-full" onClick={() => addCard(card.card_id)} tabIndex={-1}>
-            <PlusIcon />
-          </Button>
+        {editable && !params.friendId ? (
+          <>
+            <Button variant="ghost" size="icon" onClick={() => removeCard(card.card_id)} className="rounded-full" tabIndex={-1}>
+              <MinusIcon />
+            </Button>
+            <input
+              min="0"
+              max="99"
+              type="text"
+              disabled={Boolean(params.friendId)}
+              value={inputValue}
+              onChange={handleInputChange}
+              className="w-7 text-center border-none rounded"
+              onFocus={(event) => event.target.select()}
+            />
+            <Button variant="ghost" size="icon" className="rounded-full" onClick={() => addCard(card.card_id)} tabIndex={-1}>
+              <PlusIcon />
+            </Button>
+          </>
+        ) : (
+          <span className="mt-1">{amountOwned}</span>
         )}
       </div>
     </div>
@@ -151,6 +157,8 @@ export const updateMultipleCards = async (
   if (error) {
     throw new Error('Error bulk updating collection')
   }
+
+  updateCollectionCache(ownedCardsCopy, user.user.email)
 
   // update the UI
   for (const cardId of cardIds) {
@@ -215,6 +223,9 @@ export const incrementMultipleCards = async (
   if (error) {
     throw new Error(`Error bulk updating collection: ${error.message}`)
   }
+
+  updateCollectionCache(ownedCardsCopy, user.user.email)
+
   setOwnedCards([...ownedCardsCopy]) // rerender the component
 
   return cardArray

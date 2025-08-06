@@ -8,6 +8,7 @@ import A2b from '../../assets/cards/A2b.json'
 import A3 from '../../assets/cards/A3.json'
 import A3a from '../../assets/cards/A3a.json'
 import A3b from '../../assets/cards/A3b.json'
+import A4 from '../../assets/cards/A4.json'
 import PA from '../../assets/cards/P-A.json'
 import A1Missions from '../../assets/themed-collections/A1-missions.json'
 import A1aMissions from '../../assets/themed-collections/A1a-missions.json'
@@ -17,23 +18,50 @@ import A2bMissions from '../../assets/themed-collections/A2b-missions.json'
 import A3Missions from '../../assets/themed-collections/A3-missions.json'
 import A3aMissions from '../../assets/themed-collections/A3a-missions.json'
 import A3bMissions from '../../assets/themed-collections/A3b-missions.json'
+import A4Missions from '../../assets/themed-collections/A4-missions.json'
+
+const rarityOverrides = {
+  A2b: [
+    { rarity: '✵', start: 97, end: 106 },
+    { rarity: '✵✵', start: 107, end: 110 },
+  ],
+  A3: [
+    { rarity: '✵', start: 210, end: 229 },
+    { rarity: '✵✵', start: 230, end: 237 },
+  ],
+  A3a: [
+    { rarity: '✵', start: 89, end: 98 },
+    { rarity: '✵✵', start: 99, end: 102 },
+  ],
+  A3b: [
+    { rarity: '✵', start: 93, end: 102 },
+    { rarity: '✵✵', start: 103, end: 106 },
+  ],
+  A4: [
+    { rarity: '✵', start: 212, end: 231 },
+    { rarity: '✵✵', start: 232, end: 239 },
+  ],
+} as Record<ExpansionId, { rarity: Rarity; start: number; end: number }[]>
 
 const update = (cards: Card[], expansionName: ExpansionId) => {
   for (const card of cards) {
     // we set the card_id to the linkedCardID if it exists, so we really treat it as a single card even though it appears in multiple expansions.
-    // @ts-ignore there is an ID in the JSON, but I don't want it in the Type because you should always use the card_id, having both is confusing.
-    card.card_id = card.linkedCardID || `${expansionName}-${card.id}`
+    if (card.linkedCardID) card.card_id = card.linkedCardID
     card.expansion = expansionName
+    if (rarityOverrides[expansionName]) {
+      const inPackId = Number(card.card_id.split('-').pop())
+      for (const { rarity, start, end } of rarityOverrides[expansionName]) {
+        if (start <= inPackId && inPackId <= end) {
+          card.rarity = rarity
+        }
+      }
+    }
   }
   return cards
 }
 
 const equivalent = (firstCard: Card, secondCard: Card) => {
-  return (
-    firstCard.name === secondCard.name &&
-    firstCard.attacks.length === secondCard.attacks.length &&
-    firstCard.attacks.every((a) => secondCard.attacks.some((atk) => atk.name === a.name))
-  )
+  return firstCard.alternate_versions.some((x) => x.card_id === secondCard.card_id)
 }
 
 export const a1Cards: Card[] = update(A1 as unknown as Card[], 'A1')
@@ -44,8 +72,9 @@ export const a2bCards: Card[] = update(A2b as unknown as Card[], 'A2b')
 export const a3Cards: Card[] = update(A3 as unknown as Card[], 'A3')
 export const a3aCards: Card[] = update(A3a as unknown as Card[], 'A3a')
 export const a3bCards: Card[] = update(A3b as unknown as Card[], 'A3b')
+export const a4Cards: Card[] = update(A4 as unknown as Card[], 'A4')
 export const paCards: Card[] = update(PA as unknown as Card[], 'P-A')
-export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...a2aCards, ...a2bCards, ...a3Cards, ...a3aCards, ...a3bCards, ...paCards]
+export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...a2aCards, ...a2bCards, ...a3Cards, ...a3aCards, ...a3bCards, ...a4Cards, ...paCards]
 
 export const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
 
@@ -61,6 +90,7 @@ export const a2bMissions: Mission[] = A2bMissions as unknown as Mission[]
 export const a3Missions: Mission[] = A3Missions as unknown as Mission[]
 export const a3aMissions: Mission[] = A3aMissions as unknown as Mission[]
 export const a3bMissions: Mission[] = A3bMissions as unknown as Mission[]
+export const a4Missions: Mission[] = A4Missions as unknown as Mission[]
 
 export const expansions: Expansion[] = [
   {
@@ -141,8 +171,21 @@ export const expansions: Expansion[] = [
     cards: a3bCards,
     packs: [{ name: 'eeveegrovepack', color: '#b45309' }],
     missions: a3bMissions,
+    tradeable: true,
+    containsShinies: true,
+  },
+  {
+    name: 'wisdomofseaandsky',
+    id: 'A4',
+    cards: a4Cards,
+    packs: [
+      { name: 'ho-ohpack', color: '#FE3A2B' },
+      { name: 'lugiapack', color: '#E9EEFA' },
+    ],
+    missions: a4Missions,
     tradeable: false,
     containsShinies: true,
+    containsBabies: true,
   },
 
   {
@@ -191,7 +234,7 @@ export const sellableForTokensDictionary: Record<Rarity, number | null> = {
   '': null,
 }
 
-const basicCards: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊']
+export const basicRarities: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊']
 
 type CardWithAmount = Card & { amount_owned: number }
 
@@ -204,21 +247,21 @@ interface NrOfCardsOwnedProps {
   deckbuildingMode?: boolean
 }
 export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expansion, packName, deckbuildingMode }: NrOfCardsOwnedProps): number => {
+  const amounts = new Map(ownedCards.map((x) => [x.card_id, x.amount_owned]))
+
   let allCardsWithAmounts = allCards
     .filter((a) => !a.linkedCardID)
     .map((ac) => {
-      const amount = ownedCards.find((oc) => ac.card_id === oc.card_id)?.amount_owned || 0
+      const amount = amounts.get(ac.card_id) || 0
       return { ...ac, amount_owned: amount }
     })
   if (deckbuildingMode) {
-    // can't filter by card ID, because we are specifically looking for cards with the same name, attacks, and ability but different arts
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
-        const amount_owned = allCardsWithAmounts.filter((c) => equivalent(c, ac)).reduce((acc, rc) => acc + (rc.amount_owned || 0), 0)
-
+        const amount_owned = ac.alternate_versions.reduce((acc, rc) => acc + (amounts.get(rc.card_id) || 0), 0)
         return { ...ac, amount_owned }
       })
-      .filter((c) => basicCards.includes(c.rarity))
+      .filter((c) => basicRarities.includes(c.rarity))
   }
 
   const filters = {
@@ -357,6 +400,20 @@ const abilityByRarityToBeInRarePack: Record<Rarity, number> = {
   P: 0,
   '': 0,
 }
+const probabilityPerRarityBaby: Record<Rarity, number> = {
+  '◊': 0,
+  '◊◊': 0,
+  '◊◊◊': 87.1,
+  '◊◊◊◊': 0,
+  '☆': 12.9,
+  '☆☆': 0,
+  '☆☆☆': 0,
+  '✵': 0,
+  '✵✵': 0,
+  'Crown Rare': 0,
+  P: 0,
+  '': 0,
+}
 
 interface PullRateProps {
   ownedCards: CollectionRow[]
@@ -389,7 +446,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
           amount_owned: amount,
         }
       })
-      .filter((c) => basicCards.includes(c.rarity))
+      .filter((c) => basicRarities.includes(c.rarity))
   }
 
   let missingCards = cardsInPackWithAmounts.filter((c) => c.amount_owned <= numberFilter - 1)
@@ -447,6 +504,7 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
   let totalProbability4 = 0
   let totalProbability5 = 0
   let rareProbability1_5 = 0
+  let babyProbability = 0
   for (const card of missingCardsFromPack) {
     const rarityList = [card.rarity]
     // Skip cards that cannot be picked
@@ -469,20 +527,28 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
     let chanceToGetThisCard4 = 0
     let chanceToGetThisCard5 = 0
     let chanceToGetThisCardRare1_5 = 0
+    let chanceToGetThisCardBaby = 0
 
     for (const rarity of rarityList) {
-      const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity).length
+      if (card.baby) {
+        // if the card is a baby, we only consider 6-card packs
+        const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && c.baby).length
 
-      // the chance to get this card is the probability of getting this card in the pack divided by the number of cards of this rarity
-      chanceToGetThisCard1_3 += probabilityPerRarity1_3[rarity] / 100 / nrOfcardsOfThisRarity
-      if (expansion.containsShinies) {
-        chanceToGetThisCard4 += probabilityPerRarity4Shiny[rarity] / 100 / nrOfcardsOfThisRarity
-        chanceToGetThisCard5 += probabilityPerRarity5Shiny[rarity] / 100 / nrOfcardsOfThisRarity
+        chanceToGetThisCardBaby += probabilityPerRarityBaby[rarity] / 100 / nrOfcardsOfThisRarity
       } else {
-        chanceToGetThisCard4 += probabilityPerRarity4[rarity] / 100 / nrOfcardsOfThisRarity
-        chanceToGetThisCard5 += probabilityPerRarity5[rarity] / 100 / nrOfcardsOfThisRarity
+        const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && !c.baby).length
+
+        // the chance to get this card is the probability of getting this card in the pack divided by the number of cards of this rarity
+        chanceToGetThisCard1_3 += probabilityPerRarity1_3[rarity] / 100 / nrOfcardsOfThisRarity
+        if (expansion.containsShinies) {
+          chanceToGetThisCard4 += probabilityPerRarity4Shiny[rarity] / 100 / nrOfcardsOfThisRarity
+          chanceToGetThisCard5 += probabilityPerRarity5Shiny[rarity] / 100 / nrOfcardsOfThisRarity
+        } else {
+          chanceToGetThisCard4 += probabilityPerRarity4[rarity] / 100 / nrOfcardsOfThisRarity
+          chanceToGetThisCard5 += probabilityPerRarity5[rarity] / 100 / nrOfcardsOfThisRarity
+        }
+        chanceToGetThisCardRare1_5 += abilityByRarityToBeInRarePack[rarity] / cardsInRarePack.length
       }
-      chanceToGetThisCardRare1_5 += abilityByRarityToBeInRarePack[rarity] / cardsInRarePack.length
     }
 
     // add up the chances to get this card
@@ -490,12 +556,25 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
     totalProbability4 += chanceToGetThisCard4
     totalProbability5 += chanceToGetThisCard5
     rareProbability1_5 += chanceToGetThisCardRare1_5
+    babyProbability += chanceToGetThisCardBaby
   }
 
+  let chanceToGetNewCard = 0
+  let chanceToGetNewCardInRarePack = 0
+  let changeToGetNewCardIn6CardPack = 0
+
   // take the total probabilities per card draw (for the 1-3 you need to cube the probability) and multiply
-  const chanceToGetNewCard = 0.9995 * (1 - (1 - totalProbability1_3) ** 3 * (1 - totalProbability4) * (1 - totalProbability5))
-  const chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - rareProbability1_5) ** 5)
+  const chanceToGetInStandard5Cards = 1 - (1 - totalProbability1_3) ** 3 * (1 - totalProbability4) * (1 - totalProbability5)
+
+  if (expansion.containsBabies) {
+    chanceToGetNewCard = 0.9162 * chanceToGetInStandard5Cards
+    chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - rareProbability1_5) ** 5)
+    changeToGetNewCardIn6CardPack = 0.0833 * (1 - (1 - chanceToGetInStandard5Cards) * (1 - babyProbability))
+  } else {
+    chanceToGetNewCard = 0.9995 * chanceToGetInStandard5Cards
+    chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - rareProbability1_5) ** 5)
+  }
 
   // disjoint union of probabilities
-  return chanceToGetNewCard + chanceToGetNewCardInRarePack
+  return chanceToGetNewCard + chanceToGetNewCardInRarePack + changeToGetNewCardIn6CardPack
 }

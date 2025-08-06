@@ -1,5 +1,10 @@
+import { Siren } from 'lucide-react'
+import { useContext, useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useMediaQuery } from 'react-responsive'
+import { useNavigate, useParams } from 'react-router'
 import { CardsTable } from '@/components/CardsTable.tsx'
-import FilterPanel from '@/components/FiltersPanel'
+import FilterPanel, { type Filters } from '@/components/FiltersPanel'
 import { MissionsTable } from '@/components/MissionsTable.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button.tsx'
@@ -9,11 +14,6 @@ import { fetchCollection } from '@/lib/fetchCollection.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
 import MissionDetail from '@/pages/collection/MissionDetail.tsx'
 import type { AccountRow, Card, CollectionRow, Mission } from '@/types'
-import { Siren } from 'lucide-react'
-import { useContext, useEffect, useMemo, useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useMediaQuery } from 'react-responsive'
-import { useNavigate, useParams } from 'react-router'
 
 function Collection() {
   const params = useParams()
@@ -22,6 +22,19 @@ function Collection() {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
   const { ownedCards, selectedCardId, setSelectedCardId, selectedMissionCardOptions, setSelectedMissionCardOptions } = useContext(CollectionContext)
+  const [filters, setFilters] = useState<Filters>({
+    search: '',
+    expansion: 'all',
+    pack: 'all',
+    cardType: [],
+    rarity: [],
+    owned: 'all',
+    sortBy: 'default',
+    minNumber: 0,
+    maxNumber: 100,
+    deckbuildingMode: false,
+    allTextSearch: false,
+  })
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
   const [friendAccount, setFriendAccount] = useState<AccountRow | null>(null)
   const [friendCards, setFriendCards] = useState<CollectionRow[] | null>(null)
@@ -80,10 +93,23 @@ function Collection() {
     <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">
       <FilterPanel
         cards={cardCollection}
+        filters={filters}
+        setFilters={setFilters}
         onFiltersChanged={(cards) => setFilteredCards(cards)}
         onChangeToMissions={(missions) => setMissions(missions)}
-        visibleFilters={{ expansions: !isMobile, search: true, owned: !isMobile, rarity: !isMobile }}
-        filtersDialog={{ expansions: true, pack: true, search: true, owned: true, rarity: true, amount: true }}
+        visibleFilters={{ expansions: !isMobile, allTextSearch: !isMobile, search: true, owned: !isMobile, rarity: !isMobile }}
+        filtersDialog={{
+          expansions: true,
+          pack: true,
+          search: true,
+          owned: true,
+          sortBy: true,
+          rarity: true,
+          cardType: true,
+          amount: true,
+          deckBuildingMode: true,
+          allTextSearch: true,
+        }}
         batchUpdate={Boolean(!friendCards)}
         share
       >
@@ -109,8 +135,18 @@ function Collection() {
           )}
         </div>
       </FilterPanel>
-      <div>{filteredCards && !missions && <CardsTable cards={filteredCards} resetScrollTrigger={resetScrollTrigger} showStats />}</div>
-      <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
+      <div>
+        {filteredCards && !missions && (
+          <CardsTable
+            cards={filteredCards}
+            resetScrollTrigger={resetScrollTrigger}
+            showStats={!filters.deckbuildingMode}
+            extraOffset={24}
+            editable={!filters.deckbuildingMode}
+          />
+        )}
+        {selectedCardId && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}
+      </div>
       <div>{missions && <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} />}</div>
       {missions && <MissionDetail missionCardOptions={selectedMissionCardOptions} onClose={() => setSelectedMissionCardOptions([])} />}
     </div>

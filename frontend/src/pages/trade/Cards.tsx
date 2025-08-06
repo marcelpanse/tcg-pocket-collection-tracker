@@ -1,3 +1,5 @@
+import { use, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { CardsTable } from '@/components/CardsTable'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
@@ -12,15 +14,11 @@ import { NoCardsNeeded } from '@/pages/trade/components/NoCardsNeeded.tsx'
 import { NoSellableCards } from '@/pages/trade/components/NoSellableCards.tsx'
 import { NoTradeableCards } from '@/pages/trade/components/NoTradeableCards.tsx'
 import type { Card, Rarity } from '@/types'
-import { use, useMemo, useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router'
 import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 
 function Cards() {
   const { t } = useTranslation('pages/trade')
-  const navigate = useNavigate()
-  const { user, account, setIsProfileDialogOpen } = use(UserContext)
+  const { user, account } = use(UserContext)
   const { ownedCards, selectedCardId, setSelectedCardId } = use(CollectionContext)
 
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
@@ -134,10 +132,6 @@ function Cards() {
     await navigator.clipboard.writeText(cardValues)
   }
 
-  const enableTradingPage = () => {
-    setIsProfileDialogOpen(true)
-  }
-
   if (!user) {
     return <UserNotLoggedIn />
   }
@@ -165,15 +159,6 @@ function Cards() {
             <Button variant="outline" onClick={copyToClipboard}>
               Copy to clipboard
             </Button>
-            {!account?.is_public ? (
-              <Button variant="outline" onClick={enableTradingPage}>
-                {t('enableTradingPage')}
-              </Button>
-            ) : (
-              <Button variant="outline" onClick={() => navigate('/offers')}>
-                {t('openTradingPage')}
-              </Button>
-            )}
           </div>
         </div>
         <div className="mx-auto max-w-[900px] ">
@@ -188,7 +173,7 @@ function Cards() {
           </TabsContent>
         </div>
       </Tabs>
-      <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
+      {selectedCardId && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}
     </div>
   )
 }

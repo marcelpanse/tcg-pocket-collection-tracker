@@ -1,7 +1,7 @@
 [
   {
-    "id": "1",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_001_EN.webp",
+    "card_id": "A3a-1",
+    "image": "/images/en-US/A3a-1.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Petilil",
@@ -28,6 +28,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-1",
         "version": "Extradimensional Crisis #1",
         "rarity": "◊"
       }
@@ -36,8 +37,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "2",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_002_EN.webp",
+    "card_id": "A3a-2",
+    "image": "/images/en-US/A3a-2.webp",
     "hp": "110",
     "energy": "Grass",
     "name": "Lilligant",
@@ -64,6 +65,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-2",
         "version": "Extradimensional Crisis #2",
         "rarity": "◊"
       }
@@ -72,8 +74,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "3",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_003_EN.webp",
+    "card_id": "A3a-3",
+    "image": "/images/en-US/A3a-3.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Rowlet",
@@ -100,10 +102,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-3",
         "version": "Extradimensional Crisis #3",
         "rarity": "◊"
       },
       {
+        "card_id": "A3a-70",
         "version": "Extradimensional Crisis #70",
         "rarity": "☆"
       }
@@ -112,8 +116,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "4",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_004_EN.webp",
+    "card_id": "A3a-4",
+    "image": "/images/en-US/A3a-4.webp",
     "hp": "80",
     "energy": "Grass",
     "name": "Dartrix",
@@ -140,6 +144,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-4",
         "version": "Extradimensional Crisis #4",
         "rarity": "◊◊"
       }
@@ -148,8 +153,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "5",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_005_EN.webp",
+    "card_id": "A3a-5",
+    "image": "/images/en-US/A3a-5.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Decidueye",
@@ -176,6 +181,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-5",
         "version": "Extradimensional Crisis #5",
         "rarity": "◊◊◊"
       }
@@ -184,8 +190,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "6",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_006_EN.webp",
+    "card_id": "A3a-6",
+    "image": "/images/en-US/A3a-6.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Buzzwole ex",
@@ -218,14 +224,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-6",
         "version": "Extradimensional Crisis #6",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-76",
         "version": "Extradimensional Crisis #76",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-88",
         "version": "Extradimensional Crisis #88",
         "rarity": "☆☆☆"
       }
@@ -234,8 +243,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "7",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_007_EN.webp",
+    "card_id": "A3a-7",
+    "image": "/images/en-US/A3a-7.webp",
     "hp": "70",
     "energy": "Grass",
     "name": "Pheromosa",
@@ -262,10 +271,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-7",
         "version": "Extradimensional Crisis #7",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3a-71",
         "version": "Extradimensional Crisis #71",
         "rarity": "☆"
       }
@@ -274,8 +285,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "8",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_008_EN.webp",
+    "card_id": "A3a-8",
+    "image": "/images/en-US/A3a-8.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Kartana",
@@ -302,20 +313,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-8",
         "version": "Extradimensional Crisis #8",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-75",
         "version": "Promo-A #75",
-        "rarity": "◊"
+        "rarity": ""
       }
     ],
     "artist": "nagimiso",
     "crafting_cost": 35
   },
   {
-    "id": "9",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_009_EN.webp",
+    "card_id": "A3a-9",
+    "image": "/images/en-US/A3a-9.webp",
     "hp": "100",
     "energy": "Fire",
     "name": "Blacephalon",
@@ -342,24 +355,27 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-9",
         "version": "Extradimensional Crisis #9",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3a-72",
         "version": "Extradimensional Crisis #72",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-76",
         "version": "Promo-A #76",
-        "rarity": "◊"
+        "rarity": ""
       }
     ],
     "artist": "Anesaki Dynamic",
     "crafting_cost": 70
   },
   {
-    "id": "10",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_010_EN.webp",
+    "card_id": "A3a-10",
+    "image": "/images/en-US/A3a-10.webp",
     "hp": "90",
     "energy": "Water",
     "name": "Mantine",
@@ -386,6 +402,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-10",
         "version": "Extradimensional Crisis #10",
         "rarity": "◊"
       }
@@ -394,8 +411,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "11",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_011_EN.webp",
+    "card_id": "A3a-11",
+    "image": "/images/en-US/A3a-11.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Carvanha",
@@ -422,6 +439,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-11",
         "version": "Extradimensional Crisis #11",
         "rarity": "◊"
       }
@@ -430,8 +448,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "12",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_012_EN.webp",
+    "card_id": "A3a-12",
+    "image": "/images/en-US/A3a-12.webp",
     "hp": "90",
     "energy": "Water",
     "name": "Sharpedo",
@@ -458,6 +476,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-12",
         "version": "Extradimensional Crisis #12",
         "rarity": "◊◊"
       }
@@ -466,8 +485,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "13",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_013_EN.webp",
+    "card_id": "A3a-13",
+    "image": "/images/en-US/A3a-13.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Shinx",
@@ -494,6 +513,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-13",
         "version": "Extradimensional Crisis #13",
         "rarity": "◊"
       }
@@ -502,8 +522,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "14",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_014_EN.webp",
+    "card_id": "A3a-14",
+    "image": "/images/en-US/A3a-14.webp",
     "hp": "80",
     "energy": "Lightning",
     "name": "Luxio",
@@ -530,6 +550,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-14",
         "version": "Extradimensional Crisis #14",
         "rarity": "◊"
       }
@@ -538,8 +559,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "15",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_015_EN.webp",
+    "card_id": "A3a-15",
+    "image": "/images/en-US/A3a-15.webp",
     "hp": "130",
     "energy": "Lightning",
     "name": "Luxray",
@@ -566,6 +587,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-15",
         "version": "Extradimensional Crisis #15",
         "rarity": "◊◊◊"
       }
@@ -574,8 +596,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "16",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_016_EN.webp",
+    "card_id": "A3a-16",
+    "image": "/images/en-US/A3a-16.webp",
     "hp": "60",
     "energy": "Lightning",
     "name": "Blitzle",
@@ -602,6 +624,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-16",
         "version": "Extradimensional Crisis #16",
         "rarity": "◊"
       }
@@ -610,8 +633,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "17",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_017_EN.webp",
+    "card_id": "A3a-17",
+    "image": "/images/en-US/A3a-17.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Zebstrika",
@@ -638,6 +661,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-17",
         "version": "Extradimensional Crisis #17",
         "rarity": "◊"
       }
@@ -646,8 +670,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "18",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_018_EN.webp",
+    "card_id": "A3a-18",
+    "image": "/images/en-US/A3a-18.webp",
     "hp": "70",
     "energy": "Lightning",
     "name": "Emolga",
@@ -674,6 +698,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-18",
         "version": "Extradimensional Crisis #18",
         "rarity": "◊"
       }
@@ -682,8 +707,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "19",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_019_EN.webp",
+    "card_id": "A3a-19",
+    "image": "/images/en-US/A3a-19.webp",
     "hp": "130",
     "energy": "Lightning",
     "name": "Tapu Koko ex",
@@ -716,24 +741,32 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-19",
         "version": "Extradimensional Crisis #19",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-77",
         "version": "Extradimensional Crisis #77",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-84",
         "version": "Extradimensional Crisis #84",
         "rarity": "☆☆"
+      },
+      {
+        "card_id": "P-A-84",
+        "version": "Promo-A #84",
+        "rarity": ""
       }
     ],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 500
   },
   {
-    "id": "20",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_020_EN.webp",
+    "card_id": "A3a-20",
+    "image": "/images/en-US/A3a-20.webp",
     "hp": "100",
     "energy": "Lightning",
     "name": "Xurkitree",
@@ -760,20 +793,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-20",
         "version": "Extradimensional Crisis #20",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-77",
         "version": "Promo-A #77",
-        "rarity": "◊"
+        "rarity": ""
       }
     ],
     "artist": "Satoshi Shirai",
     "crafting_cost": 70
   },
   {
-    "id": "21",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_021_EN.webp",
+    "card_id": "A3a-21",
+    "image": "/images/en-US/A3a-21.webp",
     "hp": "90",
     "energy": "Lightning",
     "name": "Zeraora",
@@ -800,20 +835,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-21",
         "version": "Extradimensional Crisis #21",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-74",
         "version": "Promo-A #74",
-        "rarity": "☆"
+        "rarity": ""
       }
     ],
     "artist": "kawayoo",
     "crafting_cost": 150
   },
   {
-    "id": "22",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_022_EN.webp",
+    "card_id": "A3a-22",
+    "image": "/images/en-US/A3a-22.webp",
     "hp": "60",
     "energy": "Psychic",
     "name": "Clefairy",
@@ -840,6 +877,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-22",
         "version": "Extradimensional Crisis #22",
         "rarity": "◊"
       }
@@ -848,8 +886,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "23",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_023_EN.webp",
+    "card_id": "A3a-23",
+    "image": "/images/en-US/A3a-23.webp",
     "hp": "100",
     "energy": "Psychic",
     "name": "Clefable",
@@ -876,6 +914,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-23",
         "version": "Extradimensional Crisis #23",
         "rarity": "◊◊"
       }
@@ -884,8 +923,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "24",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_024_EN.webp",
+    "card_id": "A3a-24",
+    "image": "/images/en-US/A3a-24.webp",
     "hp": "70",
     "energy": "Psychic",
     "name": "Phantump",
@@ -912,6 +951,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-24",
         "version": "Extradimensional Crisis #24",
         "rarity": "◊"
       }
@@ -920,8 +960,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "25",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_025_EN.webp",
+    "card_id": "A3a-25",
+    "image": "/images/en-US/A3a-25.webp",
     "hp": "120",
     "energy": "Psychic",
     "name": "Trevenant",
@@ -948,6 +988,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-25",
         "version": "Extradimensional Crisis #25",
         "rarity": "◊"
       }
@@ -956,8 +997,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "26",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_026_EN.webp",
+    "card_id": "A3a-26",
+    "image": "/images/en-US/A3a-26.webp",
     "hp": "50",
     "energy": "Psychic",
     "name": "Morelull",
@@ -984,6 +1025,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-26",
         "version": "Extradimensional Crisis #26",
         "rarity": "◊"
       }
@@ -992,8 +1034,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "27",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_027_EN.webp",
+    "card_id": "A3a-27",
+    "image": "/images/en-US/A3a-27.webp",
     "hp": "90",
     "energy": "Psychic",
     "name": "Shiinotic",
@@ -1020,6 +1062,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-27",
         "version": "Extradimensional Crisis #27",
         "rarity": "◊◊◊"
       }
@@ -1028,8 +1071,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "28",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_028_EN.webp",
+    "card_id": "A3a-28",
+    "image": "/images/en-US/A3a-28.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Meditite",
@@ -1056,6 +1099,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-28",
         "version": "Extradimensional Crisis #28",
         "rarity": "◊"
       }
@@ -1064,8 +1108,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "29",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_029_EN.webp",
+    "card_id": "A3a-29",
+    "image": "/images/en-US/A3a-29.webp",
     "hp": "90",
     "energy": "Fighting",
     "name": "Medicham",
@@ -1092,6 +1136,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-29",
         "version": "Extradimensional Crisis #29",
         "rarity": "◊◊"
       }
@@ -1100,8 +1145,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "30",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_030_EN.webp",
+    "card_id": "A3a-30",
+    "image": "/images/en-US/A3a-30.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Baltoy",
@@ -1128,6 +1173,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-30",
         "version": "Extradimensional Crisis #30",
         "rarity": "◊"
       }
@@ -1136,8 +1182,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "31",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_031_EN.webp",
+    "card_id": "A3a-31",
+    "image": "/images/en-US/A3a-31.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Claydol",
@@ -1164,6 +1210,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-31",
         "version": "Extradimensional Crisis #31",
         "rarity": "◊◊"
       }
@@ -1172,8 +1219,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "32",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_032_EN.webp",
+    "card_id": "A3a-32",
+    "image": "/images/en-US/A3a-32.webp",
     "hp": "60",
     "energy": "Fighting",
     "name": "Rockruff",
@@ -1200,6 +1247,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-32",
         "version": "Extradimensional Crisis #32",
         "rarity": "◊"
       }
@@ -1208,8 +1256,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "33",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_033_EN.webp",
+    "card_id": "A3a-33",
+    "image": "/images/en-US/A3a-33.webp",
     "hp": "150",
     "energy": "Fighting",
     "name": "Lycanroc ex",
@@ -1236,14 +1284,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-33",
         "version": "Extradimensional Crisis #33",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-78",
         "version": "Extradimensional Crisis #78",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-85",
         "version": "Extradimensional Crisis #85",
         "rarity": "☆☆"
       }
@@ -1252,8 +1303,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "34",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_034_EN.webp",
+    "card_id": "A3a-34",
+    "image": "/images/en-US/A3a-34.webp",
     "hp": "100",
     "energy": "Fighting",
     "name": "Passimian",
@@ -1280,6 +1331,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-34",
         "version": "Extradimensional Crisis #34",
         "rarity": "◊"
       }
@@ -1288,8 +1340,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "35",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_035_EN.webp",
+    "card_id": "A3a-35",
+    "image": "/images/en-US/A3a-35.webp",
     "hp": "80",
     "energy": "Fighting",
     "name": "Sandygast",
@@ -1316,6 +1368,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-35",
         "version": "Extradimensional Crisis #35",
         "rarity": "◊"
       }
@@ -1324,8 +1377,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "36",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_036_EN.webp",
+    "card_id": "A3a-36",
+    "image": "/images/en-US/A3a-36.webp",
     "hp": "130",
     "energy": "Fighting",
     "name": "Palossand",
@@ -1352,6 +1405,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-36",
         "version": "Extradimensional Crisis #36",
         "rarity": "◊◊"
       }
@@ -1360,8 +1414,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "37",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_037_EN.webp",
+    "card_id": "A3a-37",
+    "image": "/images/en-US/A3a-37.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Alolan Meowth",
@@ -1388,10 +1442,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-37",
         "version": "Extradimensional Crisis #37",
         "rarity": "◊"
       },
       {
+        "card_id": "A3a-73",
         "version": "Extradimensional Crisis #73",
         "rarity": "☆"
       }
@@ -1400,8 +1456,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "38",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_038_EN.webp",
+    "card_id": "A3a-38",
+    "image": "/images/en-US/A3a-38.webp",
     "hp": "100",
     "energy": "Darkness",
     "name": "Alolan Persian",
@@ -1428,6 +1484,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-38",
         "version": "Extradimensional Crisis #38",
         "rarity": "◊◊"
       }
@@ -1436,8 +1493,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "39",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_039_EN.webp",
+    "card_id": "A3a-39",
+    "image": "/images/en-US/A3a-39.webp",
     "hp": "70",
     "energy": "Darkness",
     "name": "Sandile",
@@ -1464,6 +1521,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-39",
         "version": "Extradimensional Crisis #39",
         "rarity": "◊"
       }
@@ -1472,8 +1530,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "40",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_040_EN.webp",
+    "card_id": "A3a-40",
+    "image": "/images/en-US/A3a-40.webp",
     "hp": "90",
     "energy": "Darkness",
     "name": "Krokorok",
@@ -1500,6 +1558,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-40",
         "version": "Extradimensional Crisis #40",
         "rarity": "◊"
       }
@@ -1508,8 +1567,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "41",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_041_EN.webp",
+    "card_id": "A3a-41",
+    "image": "/images/en-US/A3a-41.webp",
     "hp": "140",
     "energy": "Darkness",
     "name": "Krookodile",
@@ -1536,6 +1595,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-41",
         "version": "Extradimensional Crisis #41",
         "rarity": "◊◊"
       }
@@ -1544,8 +1604,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "42",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_042_EN.webp",
+    "card_id": "A3a-42",
+    "image": "/images/en-US/A3a-42.webp",
     "hp": "70",
     "energy": "Darkness",
     "name": "Nihilego",
@@ -1572,10 +1632,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-42",
         "version": "Extradimensional Crisis #42",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3a-103",
         "version": "Extradimensional Crisis #103",
         "rarity": "♛"
       }
@@ -1584,8 +1646,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "43",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_043_EN.webp",
+    "card_id": "A3a-43",
+    "image": "/images/en-US/A3a-43.webp",
     "hp": "170",
     "energy": "Darkness",
     "name": "Guzzlord ex",
@@ -1618,14 +1680,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-43",
         "version": "Extradimensional Crisis #43",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-79",
         "version": "Extradimensional Crisis #79",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-86",
         "version": "Extradimensional Crisis #86",
         "rarity": "☆☆"
       }
@@ -1634,8 +1699,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "44",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_044_EN.webp",
+    "card_id": "A3a-44",
+    "image": "/images/en-US/A3a-44.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Poipole",
@@ -1662,20 +1727,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-44",
         "version": "Extradimensional Crisis #44",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-82",
         "version": "Promo-A #82",
-        "rarity": "◊◊◊"
+        "rarity": ""
       }
     ],
     "artist": "Shin Nagasawa",
     "crafting_cost": 35
   },
   {
-    "id": "45",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_045_EN.webp",
+    "card_id": "A3a-45",
+    "image": "/images/en-US/A3a-45.webp",
     "hp": "100",
     "energy": "Darkness",
     "name": "Naganadel",
@@ -1702,6 +1769,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-45",
         "version": "Extradimensional Crisis #45",
         "rarity": "◊◊◊"
       }
@@ -1710,8 +1778,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "46",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_046_EN.webp",
+    "card_id": "A3a-46",
+    "image": "/images/en-US/A3a-46.webp",
     "hp": "60",
     "energy": "Metal",
     "name": "Alolan Diglett",
@@ -1738,6 +1806,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-46",
         "version": "Extradimensional Crisis #46",
         "rarity": "◊"
       }
@@ -1746,8 +1815,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "47",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_047_EN.webp",
+    "card_id": "A3a-47",
+    "image": "/images/en-US/A3a-47.webp",
     "hp": "130",
     "energy": "Metal",
     "name": "Alolan Dugtrio ex",
@@ -1774,14 +1843,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-47",
         "version": "Extradimensional Crisis #47",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-80",
         "version": "Extradimensional Crisis #80",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-87",
         "version": "Extradimensional Crisis #87",
         "rarity": "☆☆"
       }
@@ -1790,8 +1862,8 @@
     "crafting_cost": 500
   },
   {
-    "id": "48",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_048_EN.webp",
+    "card_id": "A3a-48",
+    "image": "/images/en-US/A3a-48.webp",
     "hp": "70",
     "energy": "Metal",
     "name": "Aron",
@@ -1818,6 +1890,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-48",
         "version": "Extradimensional Crisis #48",
         "rarity": "◊"
       }
@@ -1826,8 +1899,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "49",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_049_EN.webp",
+    "card_id": "A3a-49",
+    "image": "/images/en-US/A3a-49.webp",
     "hp": "100",
     "energy": "Metal",
     "name": "Lairon",
@@ -1854,6 +1927,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-49",
         "version": "Extradimensional Crisis #49",
         "rarity": "◊"
       }
@@ -1862,8 +1936,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "50",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_050_EN.webp",
+    "card_id": "A3a-50",
+    "image": "/images/en-US/A3a-50.webp",
     "hp": "160",
     "energy": "Metal",
     "name": "Aggron",
@@ -1890,6 +1964,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-50",
         "version": "Extradimensional Crisis #50",
         "rarity": "◊◊"
       }
@@ -1898,8 +1973,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "51",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_051_EN.webp",
+    "card_id": "A3a-51",
+    "image": "/images/en-US/A3a-51.webp",
     "hp": "60",
     "energy": "Metal",
     "name": "Ferroseed",
@@ -1926,6 +2001,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-51",
         "version": "Extradimensional Crisis #51",
         "rarity": "◊"
       }
@@ -1934,8 +2010,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "52",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_052_EN.webp",
+    "card_id": "A3a-52",
+    "image": "/images/en-US/A3a-52.webp",
     "hp": "110",
     "energy": "Metal",
     "name": "Ferrothorn",
@@ -1962,6 +2038,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-52",
         "version": "Extradimensional Crisis #52",
         "rarity": "◊◊"
       }
@@ -1970,8 +2047,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "53",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_053_EN.webp",
+    "card_id": "A3a-53",
+    "image": "/images/en-US/A3a-53.webp",
     "hp": "110",
     "energy": "Metal",
     "name": "Stakataka",
@@ -1998,20 +2075,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-53",
         "version": "Extradimensional Crisis #53",
         "rarity": "◊◊"
       },
       {
+        "card_id": "P-A-80",
         "version": "Promo-A #80",
-        "rarity": "◊"
+        "rarity": ""
       }
     ],
     "artist": "Anesaki Dynamic",
     "crafting_cost": 70
   },
   {
-    "id": "54",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_054_EN.webp",
+    "card_id": "A3a-54",
+    "image": "/images/en-US/A3a-54.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Lillipup",
@@ -2038,6 +2117,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-54",
         "version": "Extradimensional Crisis #54",
         "rarity": "◊"
       }
@@ -2046,8 +2126,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "55",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_055_EN.webp",
+    "card_id": "A3a-55",
+    "image": "/images/en-US/A3a-55.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Herdier",
@@ -2074,6 +2154,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-55",
         "version": "Extradimensional Crisis #55",
         "rarity": "◊"
       }
@@ -2082,8 +2163,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "56",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_056_EN.webp",
+    "card_id": "A3a-56",
+    "image": "/images/en-US/A3a-56.webp",
     "hp": "140",
     "energy": "Colorless",
     "name": "Stoutland",
@@ -2110,6 +2191,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-56",
         "version": "Extradimensional Crisis #56",
         "rarity": "◊◊"
       }
@@ -2118,8 +2200,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "57",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_057_EN.webp",
+    "card_id": "A3a-57",
+    "image": "/images/en-US/A3a-57.webp",
     "hp": "70",
     "energy": "Colorless",
     "name": "Stufful",
@@ -2146,20 +2228,22 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-57",
         "version": "Extradimensional Crisis #57",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-83",
         "version": "Promo-A #83",
-        "rarity": "◊◊◊"
+        "rarity": ""
       }
     ],
     "artist": "Sekio",
     "crafting_cost": 35
   },
   {
-    "id": "58",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_058_EN.webp",
+    "card_id": "A3a-58",
+    "image": "/images/en-US/A3a-58.webp",
     "hp": "120",
     "energy": "Colorless",
     "name": "Bewear",
@@ -2186,6 +2270,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-58",
         "version": "Extradimensional Crisis #58",
         "rarity": "◊◊"
       }
@@ -2194,8 +2279,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "59",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_059_EN.webp",
+    "card_id": "A3a-59",
+    "image": "/images/en-US/A3a-59.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Oranguru",
@@ -2222,6 +2307,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-59",
         "version": "Extradimensional Crisis #59",
         "rarity": "◊"
       }
@@ -2230,8 +2316,8 @@
     "crafting_cost": 35
   },
   {
-    "id": "60",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_060_EN.webp",
+    "card_id": "A3a-60",
+    "image": "/images/en-US/A3a-60.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Type: Null",
@@ -2258,6 +2344,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-60",
         "version": "Extradimensional Crisis #60",
         "rarity": "◊◊"
       }
@@ -2266,8 +2353,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "61",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_061_EN.webp",
+    "card_id": "A3a-61",
+    "image": "/images/en-US/A3a-61.webp",
     "hp": "110",
     "energy": "Colorless",
     "name": "Silvally",
@@ -2294,10 +2381,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-61",
         "version": "Extradimensional Crisis #61",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3a-74",
         "version": "Extradimensional Crisis #74",
         "rarity": "☆"
       }
@@ -2306,8 +2395,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "62",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_062_EN.webp",
+    "card_id": "A3a-62",
+    "image": "/images/en-US/A3a-62.webp",
     "hp": "120",
     "energy": "Colorless",
     "name": "Celesteela",
@@ -2334,10 +2423,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-62",
         "version": "Extradimensional Crisis #62",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3a-75",
         "version": "Extradimensional Crisis #75",
         "rarity": "☆"
       }
@@ -2346,8 +2437,8 @@
     "crafting_cost": 150
   },
   {
-    "id": "63",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_063_EN.webp",
+    "card_id": "A3a-63",
+    "image": "/images/en-US/A3a-63.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Beast Wall",
@@ -2364,6 +2455,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-63",
         "version": "Extradimensional Crisis #63",
         "rarity": "◊◊"
       }
@@ -2372,8 +2464,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "64",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_064_EN.webp",
+    "card_id": "A3a-64",
+    "image": "/images/en-US/A3a-64.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Repel",
@@ -2390,6 +2482,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-64",
         "version": "Extradimensional Crisis #64",
         "rarity": "◊◊"
       }
@@ -2398,8 +2491,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "65",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_065_EN.webp",
+    "card_id": "A3a-65",
+    "image": "/images/en-US/A3a-65.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Electrical Cord",
@@ -2416,6 +2509,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-65",
         "version": "Extradimensional Crisis #65",
         "rarity": "◊◊"
       }
@@ -2424,8 +2518,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "66",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_066_EN.webp",
+    "card_id": "A3a-66",
+    "image": "/images/en-US/A3a-66.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Beastite",
@@ -2442,6 +2536,7 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-66",
         "version": "Extradimensional Crisis #66",
         "rarity": "◊◊"
       }
@@ -2450,8 +2545,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "67",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_067_EN.webp",
+    "card_id": "A3a-67",
+    "image": "/images/en-US/A3a-67.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Gladion",
@@ -2468,10 +2563,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-67",
         "version": "Extradimensional Crisis #67",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3a-81",
         "version": "Extradimensional Crisis #81",
         "rarity": "☆☆"
       }
@@ -2480,8 +2577,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "68",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_068_EN.webp",
+    "card_id": "A3a-68",
+    "image": "/images/en-US/A3a-68.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Looker",
@@ -2498,10 +2595,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-68",
         "version": "Extradimensional Crisis #68",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3a-82",
         "version": "Extradimensional Crisis #82",
         "rarity": "☆☆"
       }
@@ -2510,8 +2609,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "69",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_069_EN.webp",
+    "card_id": "A3a-69",
+    "image": "/images/en-US/A3a-69.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Lusamine",
@@ -2528,10 +2627,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-69",
         "version": "Extradimensional Crisis #69",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3a-83",
         "version": "Extradimensional Crisis #83",
         "rarity": "☆☆"
       }
@@ -2540,8 +2641,8 @@
     "crafting_cost": 70
   },
   {
-    "id": "70",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_070_EN.webp",
+    "card_id": "A3a-70",
+    "image": "/images/en-US/A3a-70.webp",
     "hp": "60",
     "energy": "Grass",
     "name": "Rowlet",
@@ -2568,10 +2669,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-3",
         "version": "Extradimensional Crisis #3",
         "rarity": "◊"
       },
       {
+        "card_id": "A3a-70",
         "version": "Extradimensional Crisis #70",
         "rarity": "☆"
       }
@@ -2580,8 +2683,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "71",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_071_EN.webp",
+    "card_id": "A3a-71",
+    "image": "/images/en-US/A3a-71.webp",
     "hp": "70",
     "energy": "Grass",
     "name": "Pheromosa",
@@ -2608,10 +2711,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-7",
         "version": "Extradimensional Crisis #7",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3a-71",
         "version": "Extradimensional Crisis #71",
         "rarity": "☆"
       }
@@ -2620,8 +2725,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "72",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_072_EN.webp",
+    "card_id": "A3a-72",
+    "image": "/images/en-US/A3a-72.webp",
     "hp": "100",
     "energy": "Fire",
     "name": "Blacephalon",
@@ -2648,24 +2753,27 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-9",
         "version": "Extradimensional Crisis #9",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3a-72",
         "version": "Extradimensional Crisis #72",
         "rarity": "☆"
       },
       {
+        "card_id": "P-A-76",
         "version": "Promo-A #76",
-        "rarity": "◊"
+        "rarity": ""
       }
     ],
     "artist": "akagi",
     "crafting_cost": 400
   },
   {
-    "id": "73",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_073_EN.webp",
+    "card_id": "A3a-73",
+    "image": "/images/en-US/A3a-73.webp",
     "hp": "60",
     "energy": "Darkness",
     "name": "Alolan Meowth",
@@ -2692,10 +2800,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-37",
         "version": "Extradimensional Crisis #37",
         "rarity": "◊"
       },
       {
+        "card_id": "A3a-73",
         "version": "Extradimensional Crisis #73",
         "rarity": "☆"
       }
@@ -2704,8 +2814,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "74",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_074_EN.webp",
+    "card_id": "A3a-74",
+    "image": "/images/en-US/A3a-74.webp",
     "hp": "110",
     "energy": "Colorless",
     "name": "Silvally",
@@ -2732,10 +2842,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-61",
         "version": "Extradimensional Crisis #61",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3a-74",
         "version": "Extradimensional Crisis #74",
         "rarity": "☆"
       }
@@ -2744,8 +2856,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "75",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_075_EN.webp",
+    "card_id": "A3a-75",
+    "image": "/images/en-US/A3a-75.webp",
     "hp": "120",
     "energy": "Colorless",
     "name": "Celesteela",
@@ -2772,10 +2884,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-62",
         "version": "Extradimensional Crisis #62",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3a-75",
         "version": "Extradimensional Crisis #75",
         "rarity": "☆"
       }
@@ -2784,8 +2898,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "76",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_076_EN.webp",
+    "card_id": "A3a-76",
+    "image": "/images/en-US/A3a-76.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Buzzwole ex",
@@ -2818,14 +2932,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-6",
         "version": "Extradimensional Crisis #6",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-76",
         "version": "Extradimensional Crisis #76",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-88",
         "version": "Extradimensional Crisis #88",
         "rarity": "☆☆☆"
       }
@@ -2834,8 +2951,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "77",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_077_EN.webp",
+    "card_id": "A3a-77",
+    "image": "/images/en-US/A3a-77.webp",
     "hp": "130",
     "energy": "Lightning",
     "name": "Tapu Koko ex",
@@ -2868,24 +2985,32 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-19",
         "version": "Extradimensional Crisis #19",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-77",
         "version": "Extradimensional Crisis #77",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-84",
         "version": "Extradimensional Crisis #84",
         "rarity": "☆☆"
+      },
+      {
+        "card_id": "P-A-84",
+        "version": "Promo-A #84",
+        "rarity": ""
       }
     ],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
   {
-    "id": "78",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_078_EN.webp",
+    "card_id": "A3a-78",
+    "image": "/images/en-US/A3a-78.webp",
     "hp": "150",
     "energy": "Fighting",
     "name": "Lycanroc ex",
@@ -2912,14 +3037,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-33",
         "version": "Extradimensional Crisis #33",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-78",
         "version": "Extradimensional Crisis #78",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-85",
         "version": "Extradimensional Crisis #85",
         "rarity": "☆☆"
       }
@@ -2928,8 +3056,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "79",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_079_EN.webp",
+    "card_id": "A3a-79",
+    "image": "/images/en-US/A3a-79.webp",
     "hp": "170",
     "energy": "Darkness",
     "name": "Guzzlord ex",
@@ -2962,14 +3090,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-43",
         "version": "Extradimensional Crisis #43",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-79",
         "version": "Extradimensional Crisis #79",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-86",
         "version": "Extradimensional Crisis #86",
         "rarity": "☆☆"
       }
@@ -2978,8 +3109,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "80",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_080_EN.webp",
+    "card_id": "A3a-80",
+    "image": "/images/en-US/A3a-80.webp",
     "hp": "130",
     "energy": "Metal",
     "name": "Alolan Dugtrio ex",
@@ -3006,14 +3137,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-47",
         "version": "Extradimensional Crisis #47",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-80",
         "version": "Extradimensional Crisis #80",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-87",
         "version": "Extradimensional Crisis #87",
         "rarity": "☆☆"
       }
@@ -3022,8 +3156,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "81",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_081_EN.webp",
+    "card_id": "A3a-81",
+    "image": "/images/en-US/A3a-81.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Gladion",
@@ -3040,10 +3174,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-67",
         "version": "Extradimensional Crisis #67",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3a-81",
         "version": "Extradimensional Crisis #81",
         "rarity": "☆☆"
       }
@@ -3052,8 +3188,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "82",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_082_EN.webp",
+    "card_id": "A3a-82",
+    "image": "/images/en-US/A3a-82.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Looker",
@@ -3070,10 +3206,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-68",
         "version": "Extradimensional Crisis #68",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3a-82",
         "version": "Extradimensional Crisis #82",
         "rarity": "☆☆"
       }
@@ -3082,8 +3220,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "83",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_083_EN.webp",
+    "card_id": "A3a-83",
+    "image": "/images/en-US/A3a-83.webp",
     "hp": "Unknown",
     "energy": "N/A",
     "name": "Lusamine",
@@ -3100,10 +3238,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-69",
         "version": "Extradimensional Crisis #69",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3a-83",
         "version": "Extradimensional Crisis #83",
         "rarity": "☆☆"
       }
@@ -3112,8 +3252,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "84",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_084_EN.webp",
+    "card_id": "A3a-84",
+    "image": "/images/en-US/A3a-84.webp",
     "hp": "130",
     "energy": "Lightning",
     "name": "Tapu Koko ex",
@@ -3146,24 +3286,32 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-19",
         "version": "Extradimensional Crisis #19",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-77",
         "version": "Extradimensional Crisis #77",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-84",
         "version": "Extradimensional Crisis #84",
         "rarity": "☆☆"
+      },
+      {
+        "card_id": "P-A-84",
+        "version": "Promo-A #84",
+        "rarity": ""
       }
     ],
     "artist": "Dsuke",
     "crafting_cost": 1250
   },
   {
-    "id": "85",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_085_EN.webp",
+    "card_id": "A3a-85",
+    "image": "/images/en-US/A3a-85.webp",
     "hp": "150",
     "energy": "Fighting",
     "name": "Lycanroc ex",
@@ -3190,14 +3338,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-33",
         "version": "Extradimensional Crisis #33",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-78",
         "version": "Extradimensional Crisis #78",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-85",
         "version": "Extradimensional Crisis #85",
         "rarity": "☆☆"
       }
@@ -3206,8 +3357,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "86",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_086_EN.webp",
+    "card_id": "A3a-86",
+    "image": "/images/en-US/A3a-86.webp",
     "hp": "170",
     "energy": "Darkness",
     "name": "Guzzlord ex",
@@ -3240,14 +3391,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-43",
         "version": "Extradimensional Crisis #43",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-79",
         "version": "Extradimensional Crisis #79",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-86",
         "version": "Extradimensional Crisis #86",
         "rarity": "☆☆"
       }
@@ -3256,8 +3410,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "87",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_087_EN.webp",
+    "card_id": "A3a-87",
+    "image": "/images/en-US/A3a-87.webp",
     "hp": "130",
     "energy": "Metal",
     "name": "Alolan Dugtrio ex",
@@ -3284,14 +3438,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-47",
         "version": "Extradimensional Crisis #47",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-80",
         "version": "Extradimensional Crisis #80",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-87",
         "version": "Extradimensional Crisis #87",
         "rarity": "☆☆"
       }
@@ -3300,8 +3457,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "88",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_088_EN.webp",
+    "card_id": "A3a-88",
+    "image": "/images/en-US/A3a-88.webp",
     "hp": "140",
     "energy": "Grass",
     "name": "Buzzwole ex",
@@ -3334,14 +3491,17 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-6",
         "version": "Extradimensional Crisis #6",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A3a-76",
         "version": "Extradimensional Crisis #76",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-88",
         "version": "Extradimensional Crisis #88",
         "rarity": "☆☆☆"
       }
@@ -3350,8 +3510,8 @@
     "crafting_cost": 1500
   },
   {
-    "id": "89",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_089_EN.webp",
+    "card_id": "A3a-89",
+    "image": "/images/en-US/A3a-89.webp",
     "hp": "70",
     "energy": "Fire",
     "name": "Growlithe",
@@ -3371,17 +3531,19 @@
     },
     "weakness": "water",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-39",
         "version": "Genetic Apex #39",
         "rarity": "◊"
       },
       {
+        "card_id": "A3a-89",
         "version": "Extradimensional Crisis #89",
         "rarity": "☆"
       }
@@ -3390,8 +3552,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "90",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_090_EN.webp",
+    "card_id": "A3a-90",
+    "image": "/images/en-US/A3a-90.webp",
     "hp": "130",
     "energy": "Fire",
     "name": "Arcanine",
@@ -3411,17 +3573,19 @@
     },
     "weakness": "water",
     "retreat": "2",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-40",
         "version": "Genetic Apex #40",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3a-90",
         "version": "Extradimensional Crisis #90",
         "rarity": "☆"
       }
@@ -3430,8 +3594,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "91",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_091_EN.webp",
+    "card_id": "A3a-91",
+    "image": "/images/en-US/A3a-91.webp",
     "hp": "60",
     "energy": "Water",
     "name": "Froakie",
@@ -3451,21 +3615,24 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-87",
         "version": "Genetic Apex #87",
         "rarity": "◊"
       },
       {
+        "card_id": "P-A-61",
         "version": "Promo-A #61",
         "rarity": ""
       },
       {
+        "card_id": "A3a-91",
         "version": "Extradimensional Crisis #91",
         "rarity": "☆"
       }
@@ -3474,8 +3641,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "92",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_092_EN.webp",
+    "card_id": "A3a-92",
+    "image": "/images/en-US/A3a-92.webp",
     "hp": "80",
     "energy": "Water",
     "name": "Frogadier",
@@ -3495,17 +3662,19 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-88",
         "version": "Genetic Apex #88",
         "rarity": "◊◊"
       },
       {
+        "card_id": "A3a-92",
         "version": "Extradimensional Crisis #92",
         "rarity": "☆"
       }
@@ -3514,8 +3683,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "93",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_093_EN.webp",
+    "card_id": "A3a-93",
+    "image": "/images/en-US/A3a-93.webp",
     "hp": "120",
     "energy": "Water",
     "name": "Greninja",
@@ -3535,21 +3704,24 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-89",
         "version": "Genetic Apex #89",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "P-A-19",
         "version": "Promo-A #19",
         "rarity": ""
       },
       {
+        "card_id": "A3a-93",
         "version": "Extradimensional Crisis #93",
         "rarity": "☆"
       }
@@ -3558,8 +3730,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "94",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_094_EN.webp",
+    "card_id": "A3a-94",
+    "image": "/images/en-US/A3a-94.webp",
     "hp": "80",
     "energy": "Psychic",
     "name": "Jynx",
@@ -3579,17 +3751,19 @@
     },
     "weakness": "darkness",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-127",
         "version": "Genetic Apex #127",
         "rarity": "◊"
       },
       {
+        "card_id": "A3a-94",
         "version": "Extradimensional Crisis #94",
         "rarity": "☆"
       }
@@ -3598,8 +3772,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "95",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_095_EN.webp",
+    "card_id": "A3a-95",
+    "image": "/images/en-US/A3a-95.webp",
     "hp": "60",
     "energy": "Colorless",
     "name": "Pidgey",
@@ -3619,17 +3793,19 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-186",
         "version": "Genetic Apex #186",
         "rarity": "◊"
       },
       {
+        "card_id": "A3a-95",
         "version": "Extradimensional Crisis #95",
         "rarity": "☆"
       }
@@ -3638,8 +3814,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "96",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_096_EN.webp",
+    "card_id": "A3a-96",
+    "image": "/images/en-US/A3a-96.webp",
     "hp": "80",
     "energy": "Colorless",
     "name": "Pidgeotto",
@@ -3659,17 +3835,19 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-187",
         "version": "Genetic Apex #187",
         "rarity": "◊"
       },
       {
+        "card_id": "A3a-96",
         "version": "Extradimensional Crisis #96",
         "rarity": "☆"
       }
@@ -3678,8 +3856,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "97",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_097_EN.webp",
+    "card_id": "A3a-97",
+    "image": "/images/en-US/A3a-97.webp",
     "hp": "130",
     "energy": "Colorless",
     "name": "Pidgeot",
@@ -3699,21 +3877,24 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-188",
         "version": "Genetic Apex #188",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A1-245",
         "version": "Genetic Apex #245",
         "rarity": "☆"
       },
       {
+        "card_id": "A3a-97",
         "version": "Extradimensional Crisis #97",
         "rarity": "☆"
       }
@@ -3722,8 +3903,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "98",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_098_EN.webp",
+    "card_id": "A3a-98",
+    "image": "/images/en-US/A3a-98.webp",
     "hp": "100",
     "energy": "Colorless",
     "name": "Aerodactyl",
@@ -3743,17 +3924,19 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵",
+    "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-210",
         "version": "Genetic Apex #210",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3a-98",
         "version": "Extradimensional Crisis #98",
         "rarity": "☆"
       }
@@ -3762,8 +3945,8 @@
     "crafting_cost": 400
   },
   {
-    "id": "99",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_099_EN.webp",
+    "card_id": "A3a-99",
+    "image": "/images/en-US/A3a-99.webp",
     "hp": "130",
     "energy": "Grass",
     "name": "Celebi ex",
@@ -3783,25 +3966,29 @@
     },
     "weakness": "fire",
     "retreat": "1",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1a-3",
         "version": "Mythical Island #3",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-75",
         "version": "Mythical Island #75",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-85",
         "version": "Mythical Island #85",
         "rarity": "☆☆☆"
       },
       {
+        "card_id": "A3a-99",
         "version": "Extradimensional Crisis #99",
         "rarity": "☆☆"
       }
@@ -3810,8 +3997,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "100",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_100_EN.webp",
+    "card_id": "A3a-100",
+    "image": "/images/en-US/A3a-100.webp",
     "hp": "150",
     "energy": "Fire",
     "name": "Arcanine ex",
@@ -3831,21 +4018,24 @@
     },
     "weakness": "water",
     "retreat": "2",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1-41",
         "version": "Genetic Apex #41",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1-254",
         "version": "Genetic Apex #254",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-100",
         "version": "Extradimensional Crisis #100",
         "rarity": "☆☆"
       }
@@ -3854,8 +4044,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "101",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_101_EN.webp",
+    "card_id": "A3a-101",
+    "image": "/images/en-US/A3a-101.webp",
     "hp": "140",
     "energy": "Fighting",
     "name": "Aerodactyl ex",
@@ -3875,25 +4065,29 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1a-46",
         "version": "Mythical Island #46",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-78",
         "version": "Mythical Island #78",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A1a-84",
         "version": "Mythical Island #84",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-101",
         "version": "Extradimensional Crisis #101",
         "rarity": "☆☆"
       }
@@ -3902,8 +4096,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "102",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_102_EN.webp",
+    "card_id": "A3a-102",
+    "image": "/images/en-US/A3a-102.webp",
     "hp": "170",
     "energy": "Colorless",
     "name": "Pidgeot ex",
@@ -3923,21 +4117,24 @@
     },
     "weakness": "lightning",
     "retreat": "1",
-    "rarity": "✵✵",
+    "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
     "set_details": "extradimensionalcrisis(a3a)",
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A1a-59",
         "version": "Mythical Island #59",
         "rarity": "◊◊◊◊"
       },
       {
+        "card_id": "A1a-79",
         "version": "Mythical Island #79",
         "rarity": "☆☆"
       },
       {
+        "card_id": "A3a-102",
         "version": "Extradimensional Crisis #102",
         "rarity": "☆☆"
       }
@@ -3946,8 +4143,8 @@
     "crafting_cost": 1250
   },
   {
-    "id": "103",
-    "image": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/A3a/A3a_103_EN.webp",
+    "card_id": "A3a-103",
+    "image": "/images/en-US/A3a-103.webp",
     "hp": "70",
     "energy": "Darkness",
     "name": "Nihilego",
@@ -3974,10 +4171,12 @@
     "pack": "everypack",
     "alternate_versions": [
       {
+        "card_id": "A3a-42",
         "version": "Extradimensional Crisis #42",
         "rarity": "◊◊◊"
       },
       {
+        "card_id": "A3a-103",
         "version": "Extradimensional Crisis #103",
         "rarity": "♛"
       }

@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Button } from '@/components/ui/button'
 
 // Define the type for the beforeinstallprompt event
 interface BeforeInstallPromptEvent extends Event {

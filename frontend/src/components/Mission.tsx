@@ -1,14 +1,14 @@
+import i18n from 'i18next'
+import { CircleHelp, Trophy } from 'lucide-react'
+import { use, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
+import { Tooltip } from 'react-tooltip'
 import FancyCard from '@/components/FancyCard.tsx'
 import { getCardById, pullRateForSpecificMission } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
 import { getCardNameByLang } from '@/lib/utils.ts'
 import type { Mission as MissionType } from '@/types'
-import i18n from 'i18next'
-import { CircleHelp, Trophy } from 'lucide-react'
-import { use, useMemo } from 'react'
-import { useTranslation } from 'react-i18next'
-import { Tooltip } from 'react-tooltip'
 
 interface Props {
   mission: MissionType
@@ -83,9 +83,12 @@ export function Mission({ mission }: Props) {
                   return (
                     foundCard && (
                       <div className={'group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer'}>
-                        <div onClick={() => (card.owned ? setSelectedCardId(card.cardId) : setSelectedMissionCardOptions(card.missionCardOptions))}>
+                        <button
+                          type="button"
+                          onClick={() => (card.owned ? setSelectedCardId(card.cardId) : setSelectedMissionCardOptions(card.missionCardOptions))}
+                        >
                           <FancyCard card={foundCard} selected={card.owned} />
-                        </div>
+                        </button>
                         <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">
                           {card.cardId} - {getCardNameByLang(foundCard, i18n.language)}
                         </p>

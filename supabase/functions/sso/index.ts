@@ -1,7 +1,7 @@
 import 'jsr:@supabase/functions-js/edge-runtime.d.ts'
+import { createClient } from 'jsr:@supabase/supabase-js@2'
 import { Buffer } from 'node:buffer'
 import { createHmac } from 'node:crypto'
-import { createClient } from 'jsr:@supabase/supabase-js@2'
 
 Deno.serve(async (req) => {
   const origin = req.headers.get('Origin') || ''
@@ -20,7 +20,7 @@ Deno.serve(async (req) => {
 
   const { sso, sig } = await req.json()
 
-  console.log('Current time', new Date(), new Date().valueOf())
+  console.log('Current time', new Date(), Date.now())
   console.log('Starting SSO', sso, sig)
 
   const discourseConnectSecret = Deno.env.get('DISCOURSE_CONNECT') || ''

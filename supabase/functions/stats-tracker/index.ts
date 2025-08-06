@@ -1,6 +1,6 @@
 import 'jsr:@supabase/functions-js/edge-runtime.d.ts'
-import { createClient } from 'jsr:@supabase/supabase-js@2'
 import * as postgres from 'https://deno.land/x/postgres@v0.17.0/mod.ts'
+import { createClient } from 'jsr:@supabase/supabase-js@2'
 
 // Get the connection string from the environment variable "SUPABASE_DB_URL"
 const databaseUrl = Deno.env.get('SUPABASE_DB_URL') || ''

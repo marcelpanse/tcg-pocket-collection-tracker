@@ -5,10 +5,6 @@ self.addEventListener('activate', (_event) => {
   console.log('Service Worker activated.')
 })
 
-self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll([IMAGE_CACHE])))
-})
-
 self.addEventListener('fetch', (event) => {
   if (event.request.url.includes(IMAGE_CACHE)) {
     event.respondWith(

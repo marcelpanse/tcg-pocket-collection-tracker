@@ -1,5 +1,5 @@
-import { useRef } from 'react'
 import type { ReactNode } from 'react'
+import { useRef } from 'react'
 
 interface CarouselComponentProps {
   padding: string

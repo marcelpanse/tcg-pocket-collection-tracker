@@ -1,6 +1,6 @@
-import { Input } from '@/components/ui/input.tsx'
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Input } from '@/components/ui/input.tsx'
 
 let _searchDebounce: number | null = null
 

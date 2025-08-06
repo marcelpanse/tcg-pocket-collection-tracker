@@ -1,11 +1,16 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { pipeline } from 'node:stream/promises'
 import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
 
 const BASE_URL = 'https://pocket.limitlesstcg.com'
+
 const targetDir = 'frontend/assets/cards/'
-// const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'P-A']
+const imagesDir = 'frontend/public/images/en-US/'
+const imagesPath = '/images/en-US/'
+
+// const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'P-A']
 const expansions = ['P-A']
 const packs = [
   'Pikachu pack',
@@ -20,6 +25,8 @@ const packs = [
   'Solgaleo pack',
   'Buzzwole pack',
   'Eevee grove pack',
+  'Ho-Oh pack',
+  'Lugia pack',
   'All cards',
 ]
 
@@ -49,7 +56,22 @@ const craftingCost = {
 
 const fullArtRarities = ['☆', '☆☆', '☆☆☆', 'Crown Rare', 'P']
 
+const nonExCardsWithEx = ['Toxapex', 'Rotom Dex']
+
 /* Helper Functions */
+
+async function downloadImage(imageUrl, dest) {
+  const response = await fetch(imageUrl)
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch image: ${response.statusText}`)
+  }
+
+  const stream = response.body
+  const writer = fs.createWriteStream(dest)
+
+  await pipeline(stream, writer)
+}
 
 async function fetchHTML(url) {
   const response = await fetch(url)
@@ -100,13 +122,33 @@ function extractSetAndPackInfo($) {
   return { setDetails: 'Unknown', pack: 'Unknown' }
 }
 
-function extractCardInfo($, cardUrl) {
+function urlToCardId(url) {
+  if (!url) throw new Error('url is false')
+
+  // Assumes the url ends with /cards/expansion/number
+  const regex = /.*\/cards\/([a-zA-Z0-9-]+)\/(\d+)/g
+  const matches = [...url.matchAll(regex)]
+
+  if (matches.length === 0) throw new Error(`couldn't extract card id from '${url}'`)
+  return `${matches[0][1]}-${matches[0][2]}`
+}
+
+async function extractCardInfo($, cardUrl) {
   const cardInfo = {}
 
-  // Extract card ID from the URL (assuming the ID is the last segment of the URL path)
-  cardInfo.id = cardUrl.split('/').pop()
+  cardInfo.card_id = urlToCardId(cardUrl)
 
-  cardInfo.image = $('img.card').attr('src')
+  const imageUrl = $('img.card').attr('src')
+  const imageName = cardInfo.card_id + path.extname(imageUrl)
+  const imageDest = path.join(imagesDir, imageName)
+  if (!fs.existsSync(imageDest)) {
+    console.log(`Downloading: ${imageUrl}`)
+    await downloadImage(imageUrl, imageDest)
+  } else {
+    console.log(`Skipping image, already exists: ${imageName}`)
+  }
+  cardInfo.image = imagesPath + imageName
+
   const title = $('p.card-text-title').text().trim()
   const titleParts = title.split(' - ')
 
@@ -119,7 +161,7 @@ function extractCardInfo($, cardUrl) {
   // Assign the name from the first part
   cardInfo.name = titleParts[0].trim()
 
-  if (cardInfo.name === 'Old Amber' && cardInfo.id === '63') {
+  if (cardInfo.name === 'Old Amber' && cardInfo.card_id === 'A1a-63') {
     cardInfo.linkedCardID = 'A1-218'
   }
 
@@ -167,7 +209,10 @@ function extractCardInfo($, cardUrl) {
 
   cardInfo.fullart = fullArtRarities.includes(cardInfo.rarity) ? 'Yes' : 'No'
 
-  cardInfo.ex = cardInfo.name.includes('ex') ? 'yes' : 'no'
+  cardInfo.ex = cardInfo.name.includes('ex') && !nonExCardsWithEx.includes(cardInfo.name) ? 'yes' : 'no'
+
+  // Check if card is a baby pokemon (Not currently specified exactly on Limitless TCG page)
+  cardInfo.baby = cardInfo.weakness === 'none' && cardInfo.hp === '30' && cardInfo.energy !== 'Dragon'
 
   const { setDetails, pack } = extractSetAndPackInfo($)
   cardInfo.set_details = setDetails
@@ -177,8 +222,10 @@ function extractCardInfo($, cardUrl) {
   $('table.card-prints-versions tr').each((_i, version) => {
     const versionName = $(version).find('a').text().trim().replace(/\s+/g, ' ')
     const rarityText = $(version).find('td:last-child').text().trim()
+    const alternate_card_id = $(version).find('a').attr('href')
     if (versionName) {
       cardInfo.alternate_versions.push({
+        card_id: alternate_card_id ? urlToCardId(alternate_card_id) : cardInfo.card_id,
         version: versionName,
         rarity: rarityText === 'Crown Rare' ? '♛' : rarityText,
       })
@@ -188,7 +235,7 @@ function extractCardInfo($, cardUrl) {
   cardInfo.artist = $('div.card-text-section.card-text-artist a').text().trim() || 'Unknown'
   cardInfo.crafting_cost = craftingCost[cardInfo.rarity] || 'Unknown'
 
-  console.log('returning card info', cardInfo.id)
+  console.log('returning card info', cardInfo.card_id)
   return cardInfo
 }
 
@@ -196,7 +243,7 @@ async function getCardDetails(cardUrl) {
   try {
     console.log(`Fetching details for ${cardUrl}...`)
     const $ = await fetchHTML(cardUrl)
-    return extractCardInfo($, cardUrl)
+    return await extractCardInfo($, cardUrl)
   } catch (error) {
     console.error(`Error fetching details for ${cardUrl}:`, error)
     return null // Return null or a default object to continue the process for other cards
@@ -287,7 +334,7 @@ async function scrapeCards() {
       console.log(`Scraping completed. Found ${cards.length} cards.`)
 
       // Sort the cards array by id as a number
-      cards.sort((a, b) => Number.parseInt(a.id, 10) - Number.parseInt(b.id, 10))
+      cards.sort((a, b) => Number.parseInt(a.card_id.split('-').pop(), 10) - Number.parseInt(b.card_id.split('-').pop(), 10))
 
       fs.writeFileSync(path.join(targetDir, `${expansion}.json`), JSON.stringify(cards, null, 2))
       console.log('Cards saved to cards.json')

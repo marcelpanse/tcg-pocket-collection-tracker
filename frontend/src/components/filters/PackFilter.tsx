@@ -1,15 +1,15 @@
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
-import { getExpansionById } from '@/lib/CardsDB.ts'
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
+import { getExpansionById } from '@/lib/CardsDB.ts'
 
 interface Props {
-  packFilter: string
-  setPackFilter: (packFilter: string) => void
+  value: string
+  onChange: (v: string) => void
   expansion: string
   fullWidth?: boolean
 }
-const PackFilter: FC<Props> = ({ packFilter, setPackFilter, expansion, fullWidth }) => {
+const PackFilter: FC<Props> = ({ value, onChange, expansion, fullWidth }) => {
   const { t } = useTranslation('common/packs')
 
   let packsToShow = getExpansionById(expansion)?.packs
@@ -23,7 +23,7 @@ const PackFilter: FC<Props> = ({ packFilter, setPackFilter, expansion, fullWidth
   }
 
   return (
-    <Tabs value={packFilter} onValueChange={(value) => setPackFilter(value)} className={`h-auto ${fullWidth ? 'w-full' : 'w-[440px]'}`}>
+    <Tabs value={value} onValueChange={onChange} className={`h-auto ${fullWidth ? 'w-full' : 'w-[440px]'}`}>
       <TabsList className="h-full flex-wrap w-full border-1 border-neutral-700 rounded-md flex-row justify-start content-start">
         <TabsTrigger value="all">{t('all')}</TabsTrigger>
         {packsToShow

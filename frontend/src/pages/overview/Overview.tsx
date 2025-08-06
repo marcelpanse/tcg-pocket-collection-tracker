@@ -1,17 +1,17 @@
-import { RadialChart } from '@/components/RadialChart'
+import { Heart, Siren } from 'lucide-react'
+import { use, useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import DeckbuildingFilter from '@/components/filters/DeckbuildingFilter'
 import ExpansionsFilter from '@/components/filters/ExpansionsFilter.tsx'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
+import { RadialChart } from '@/components/RadialChart'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTitle } from '@/components/ui/alert.tsx'
 import * as CardsDB from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import type { Rarity } from '@/types'
-import { Heart, Siren } from 'lucide-react'
-import { use, useEffect, useMemo, useState } from 'react'
-import { useTranslation } from 'react-i18next'
 import { ExpansionOverview } from './components/ExpansionOverview'
 
 interface Pack {
@@ -136,7 +136,7 @@ function Overview() {
       </article>
 
       <article className="flex mx-auto max-w-7xl px-8 pt-10">
-        <ExpansionsFilter expansionFilter={expansionFilter} setExpansionFilter={setExpansionFilter} setPackFilter={() => {}} packFilter={'all'} />
+        <ExpansionsFilter value={expansionFilter} onChange={setExpansionFilter} />
       </article>
 
       <article className="mx-auto max-w-7xl sm:p-6 p-0 pt-6 grid grid-cols-8 gap-6">

@@ -4,9 +4,9 @@ import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
 
 const BASE_URL = 'https://bulbapedia.bulbagarden.net/wiki'
-const targetDir = '../frontend/assets/themed-collections/'
-const expansions = ['A3b']
-// const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b]
+const targetDir = './frontend/assets/themed-collections/'
+const expansions = ['A4']
+// const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4']
 const expansionToName = {
   A1: 'Genetic_Apex',
   A1a: 'Mythical_Island',
@@ -16,6 +16,7 @@ const expansionToName = {
   A3: 'Celestial_Guardians',
   A3a: 'Extradimensional_Crisis',
   A3b: 'Eevee_Grove',
+  A4: 'Wisdom of Sea and Sky',
 }
 
 async function fetchHTML(url) {
@@ -103,7 +104,6 @@ async function getExpansionMissions(expansion) {
 
             // Join the reward items with newlines and remove extra spaces
             mission.reward = rewardItems.map((item) => item.replace(/\s+/g, ' ').trim()).join('<br />')
-            console.log('reward', mission.reward)
             if (mission.name !== '') {
               missions.push(mission)
             }

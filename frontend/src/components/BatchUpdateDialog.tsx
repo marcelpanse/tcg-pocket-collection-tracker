@@ -1,13 +1,13 @@
+import { MinusIcon, PlusIcon } from 'lucide-react'
+// src/components/BatchUpdateDialog.tsx
+import { useEffect, useMemo, useState } from 'react' // Add useEffect
+import { useTranslation } from 'react-i18next'
 import { CardMiniature } from '@/components/CardMiniature'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import ScrollArea from '@/components/ui/scroll-area'
 import type { Card } from '@/types'
-import { MinusIcon, PlusIcon } from 'lucide-react'
-// src/components/BatchUpdateDialog.tsx
-import { useEffect, useMemo, useState } from 'react' // Add useEffect
-import { useTranslation } from 'react-i18next'
 
 interface BatchUpdateDialogProps {
   filteredCards: Card[]
