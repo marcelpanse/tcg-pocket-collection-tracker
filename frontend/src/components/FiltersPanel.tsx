@@ -100,6 +100,7 @@ const FilterPanel: FC<Props> = ({
   const setMinNumber = (x: number) => setFilters((f) => ({ ...f, minNumber: x }))
   const setMaxNumber = (x: number) => setFilters((f) => ({ ...f, maxNumber: x }))
   const setDeckbuildingMode = (x: boolean) => setFilters((f) => ({ ...f, deckbuildingMode: x }))
+  const [missions, setMissions] = useState<Mission[] | null>(null)
 
   const filterRarities = (c: Card) => {
     if (filters.rarity.length === 0) return true
@@ -138,9 +139,9 @@ const FilterPanel: FC<Props> = ({
           missions = missions.filter((mission) => !mission.completed)
         }
       }
-      onChangeToMissions(missions)
+      setMissions(missions)
     } else {
-      onChangeToMissions(null)
+      setMissions(null)
       if (filters.pack !== 'all') {
         filteredCards = filteredCards.filter((card) => card.pack === filters.pack || card.pack === 'everypack')
       }
@@ -166,7 +167,10 @@ const FilterPanel: FC<Props> = ({
         }
       })
     } else if (filters.sortBy === 'expansion-newest') {
-      const reversedExpansions = [...expansions].reverse()
+      const reversedExpansions = [...expansions]
+        .reverse()
+        .slice(1)
+        .concat(expansions[expansions.length - 1])
       filteredCards = [...filteredCards].sort((a: Card, b: Card) => {
         const expansionIndexA = reversedExpansions.findIndex((e) => e.id === a.expansion)
         const expansionIndexB = reversedExpansions.findIndex((e) => e.id === b.expansion)
@@ -243,6 +247,10 @@ const FilterPanel: FC<Props> = ({
     }
   }, [getFilteredCards])
 
+  useEffect(() => {
+    onChangeToMissions(missions)
+  }, [missions])
+
   const handleBatchUpdate = async (cardIds: string[], amount: number) => {
     await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)
   }
@@ -308,7 +316,7 @@ const FilterPanel: FC<Props> = ({
                       cardType: [],
                       rarity: [],
                       owned: 'all',
-                      sortBy: 'default',
+                      sortBy: 'expansion-newest',
                       minNumber: 0,
                       maxNumber: 100,
                       deckbuildingMode: false,
