@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "overrides": {
+    "form-data": ">=4.0.4"
+  },
   "scripts": {
     "dev": "vite",
     "build": "pnpm run lint && tsc -b && vite build",
