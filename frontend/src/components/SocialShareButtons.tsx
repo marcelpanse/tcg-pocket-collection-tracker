@@ -1,4 +1,4 @@
-import { type FC, useContext } from 'react'
+import { useContext } from 'react'
 import {
   BlueskyIcon,
   BlueskyShareButton,
@@ -24,14 +24,15 @@ import {
 import { Button } from '@/components/ui/button.tsx'
 import { toast } from '@/hooks/use-toast'
 import { UserContext } from '@/lib/context/UserContext.ts'
+import { cn } from '@/lib/utils'
 
-export const SocialShareButtons: FC = () => {
+export const SocialShareButtons = ({ className }: { className?: string }) => {
   const { account } = useContext(UserContext)
   const shareUrl = `https://tcgpocketcollectiontracker.com/#/collection/${account?.friend_id}`
   const title = 'My Pokemon Pocket collection'
 
   return (
-    <div className="flex gap-2 mt-0 items-center flex-wrap">
+    <div className={cn('flex gap-2 items-center flex-wrap', className)}>
       <small>Share on</small>
       <Button
         variant="outline"

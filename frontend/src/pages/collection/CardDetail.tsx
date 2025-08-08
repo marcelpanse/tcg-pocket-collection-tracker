@@ -20,6 +20,8 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
   const expansion = getExpansionById(card.expansion)
   const { ownedCards } = use(CollectionContext)
 
+  if (!card) return null
+
   // if we draw from 'everypack' we need to take one of the packs to calculated based on
   const packName = card.pack === 'everypack' ? expansion?.packs[0].name : card.pack
 

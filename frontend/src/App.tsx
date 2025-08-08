@@ -19,6 +19,7 @@ import { fetchCollection } from './lib/fetchCollection.ts'
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
 const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
+const TradeWith = loadable(() => import('./pages/trade/TradeWith.tsx'))
 const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
 
 function App() {
@@ -103,6 +104,7 @@ function App() {
             <Route path="/" element={<Overview />} />
             <Route path="/collection/:friendId?/trade?" element={<Collection />} />
             <Route path="/trade" element={<Trade />} />
+            <Route path="/trade/:friendId" element={<TradeWith />} />
           </Routes>
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
           <InstallPrompt />
