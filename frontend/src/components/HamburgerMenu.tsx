@@ -17,6 +17,7 @@ type MenuItem = {
 const menuItems: MenuItem[] = [
   { title: 'overview', href: '/' },
   { title: 'collection', href: '/collection' },
+  { title: 'deck', href: '/deck' },
   { title: 'trade', href: '/trade' },
   { title: 'community', href: 'https://community.tcgpocketcollectiontracker.com' },
 ]
