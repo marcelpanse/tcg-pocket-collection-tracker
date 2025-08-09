@@ -18,6 +18,7 @@ import { fetchCollection } from './lib/fetchCollection.ts'
 // Lazy import for chunking
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
 const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
+const Deck = loadable(() => import('./pages/deck/Deck.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
 
@@ -102,6 +103,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Overview />} />
             <Route path="/collection/:friendId?/trade?" element={<Collection />} />
+            <Route path="/deck" element={<Deck />} />
             <Route path="/trade" element={<Trade />} />
           </Routes>
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />

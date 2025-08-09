@@ -64,6 +64,11 @@ export function Header() {
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden sm:block">
+              <Link to="/deck">
+                <Button variant="ghost">{t('Deck')}</Button>
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/trade">
                 <Button variant="ghost">{t('trade')}</Button>
               </Link>
