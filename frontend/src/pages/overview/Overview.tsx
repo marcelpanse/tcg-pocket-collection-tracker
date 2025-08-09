@@ -9,9 +9,11 @@ import { RadialChart } from '@/components/RadialChart'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTitle } from '@/components/ui/alert.tsx'
 import * as CardsDB from '@/lib/CardsDB.ts'
+import { expansions } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import type { Rarity } from '@/types'
+import { BlogOverview } from './components/BlogOverview'
 import { ExpansionOverview } from './components/ExpansionOverview'
 
 interface Pack {
@@ -27,7 +29,7 @@ function Overview() {
   const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
   const [collectionCount, setCollectionCount] = useState('')
   const [usersCount, setUsersCount] = useState('')
-  const [expansionFilter, setExpansionFilter] = useState<string>('all')
+  const [expansionFilter, setExpansionFilter] = useState<string>(expansions[expansions.length - 2].id)
 
   const ownedCardsCount = useMemo(() => ownedCards.reduce((total, card) => total + card.amount_owned, 0), [ownedCards])
 
@@ -92,14 +94,6 @@ function Overview() {
           </Alert>
         )}
 
-        {ownedCards.length > 0 && (
-          <Alert className="mb-8 border-1 border-neutral-700 shadow-none">
-            <Heart className="h-4 w-4" />
-            <AlertTitle>{t('stats.title')}</AlertTitle>
-            <AlertDescription>{t('stats.description', { usersCount, collectionCount })}</AlertDescription>
-          </Alert>
-        )}
-
         <div className="mb-8 flex items-center gap-2 flex-wrap">
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} deckbuildingMode={deckbuildingMode} />
           <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[1, 2, 3, 4, 5]} />
@@ -135,7 +129,9 @@ function Overview() {
         </section>
       </article>
 
-      <article className="flex mx-auto max-w-7xl px-8 pt-10">
+      <BlogOverview />
+
+      <article className="flex mx-auto max-w-7xl px-8 pt-10 -mb-4">
         <ExpansionsFilter value={expansionFilter} onChange={setExpansionFilter} />
       </article>
 
@@ -152,6 +148,16 @@ function Overview() {
             />
           ))}
       </article>
+
+      {ownedCards.length > 0 && (
+        <div className="max-w-7xl my-8 mx-8 ">
+          <Alert className="border-1 border-neutral-700 shadow-none">
+            <Heart className="h-4 w-4" />
+            <AlertTitle>{t('stats.title')}</AlertTitle>
+            <AlertDescription>{t('stats.description', { usersCount, collectionCount })}</AlertDescription>
+          </Alert>
+        </div>
+      )}
     </main>
   )
 }
