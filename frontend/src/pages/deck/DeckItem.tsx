@@ -4,6 +4,7 @@ import { RankBadge } from '@/components/ui/rank-badge'
 import { getCardById } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import type { Card } from '@/types'
+import CardDetail from '../collection/CardDetail'
 
 export interface IDeck {
   name: string
@@ -17,7 +18,7 @@ export interface IDeck {
 }
 
 export const DeckItem = ({ deck }: { deck: IDeck }) => {
-  const { ownedCards } = useContext(CollectionContext)
+  const { ownedCards, selectedCardId, setSelectedCardId } = useContext(CollectionContext)
   const [isOpen, setIsOpen] = useState(false)
 
   const missingCards: Card[] = deck.cards
@@ -38,14 +39,13 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
   }
 
   return (
-    // biome-ignore lint/a11y/useSemanticElements: want to manage click on all div but can't use button for easthetic reasons
-    <div role="button" tabIndex={0} key={deck.name} className="flex flex-col mt-5 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+    <div key={deck.name} className="flex flex-col mt-5 cursor-pointer">
+      {/* biome-ignore lint/a11y/useSemanticElements: want to manage click on all div but can't use button for easthetic reasons */}
       <div
-        className="
-    border-b-2 border-slate-600 tracking-tight mb-5 pb-2
-    flex flex-col gap-3
-    lg:grid lg:grid-cols-[auto_minmax(0,35%)_auto] lg:items-center lg:gap-2 lg:justify-evenly
-  "
+        className="border-b-2 border-slate-600 tracking-tight mb-5 pb-2 flex flex-col sm:flex-row gap-x-2"
+        role="button"
+        tabIndex={0}
+        onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex justify-center items-center gap-2">
           <img src={deck.img_url} alt={deck.name} className="w-20 object-cover object-[0%_20%]" />
@@ -71,35 +71,27 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
 
       {isOpen && (
         <div>
-          <div
-            id="deck-cards"
-            className="flex gap-x-2 gap-y-1 flex-1 flex-wrap items-start p-4 bg-neural-800 border-solid border-neutral-600 border-1 rounded-lg justify-center"
-          >
+          <div id="deck-cards" className="flex gap-x-2 gap-y-2 flex-1 flex-wrap items-start justify-between sm:justify-center mb-5">
             {deck.cards.map((cardId, idx) => {
               const cardObj = getCardById(cardId)
               const selected = cardObj ? isSelected(deck.cards, cardObj, idx) : false
               return (
                 cardObj && (
                   <div
-                    className={'group flex w-fit max-w-11 sm:max-w-20 md:max-w-29 flex-col items-center rounded-lg cursor-pointer'}
+                    className={'group flex w-fit max-w-11 sm:max-w-20 md:max-w-30 flex-col items-center rounded-lg cursor-pointer'}
                     key={`${cardObj.name}-${idx}`}
                   >
-                    <FancyCard card={cardObj} selected={selected} />
+                    <button type="button" className="cursor-pointer" onClick={() => setSelectedCardId(`${cardObj.card_id}`)}>
+                      <FancyCard card={cardObj} selected={selected} clickable={true} />
+                    </button>
 
-                    {selected ? (
-                      ''
-                    ) : (
-                      <div className="relative w-full z-1">
-                        <img src={`/images/sets/${cardObj.expansion}.webp`} alt={cardObj.expansion} className="h-4 sm:h-6 md:h-8 mr-2 absolute bottom-0" />
-                      </div>
-                    )}
                     <span className="font-semibold max-w-[130px] overflow-hidden pt-2 text-[12px] text-ellipsis">{cardObj.name}</span>
-                    {selected ? '' : <span className="text-[12px]">({cardObj.pack.replace('pack', '')})</span>}
                   </div>
                 )
               )
             })}
           </div>
+          <div>{selectedCardId && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}</div>
         </div>
       )}
     </div>
