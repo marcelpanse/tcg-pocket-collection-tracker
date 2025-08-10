@@ -38,6 +38,8 @@ export interface TradeRow {
   receiving_friend_id: string
   offer_card_id: string
   receiver_card_id: string
+  offerer_ended: boolean
+  receiver_ended: boolean
   status: TradeStatus
 }
 

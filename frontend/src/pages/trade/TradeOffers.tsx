@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
+import { Switch } from '@/components/ui/switch'
 import { supabase } from '@/lib/Auth.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
@@ -21,14 +22,15 @@ interface TradePartnerProps {
   account: AccountRow
   friendId: string
   initialTrades: TradeRow[]
+  initialHistory: TradeRow[]
   ownedCards: CollectionRow[]
 }
 
 function TradeOffers() {
   const { t } = useTranslation('trade-matches')
 
-  const { account } = useContext(UserContext)
-  const { ownedCards } = useContext(CollectionContext)
+  const { account, user } = useContext(UserContext)
+  const { ownedCards, setOwnedCards } = useContext(CollectionContext)
 
   const [trades, setTrades] = useState<TradeRow[] | null>(null)
 
@@ -47,14 +49,24 @@ function TradeOffers() {
     }
   })
 
-  function TradePartner({ friendId, initialTrades, account, ownedCards }: TradePartnerProps) {
+  if (trades === null || !account) return <p>Loading...</p>
+
+  function TradePartner({ friendId, initialTrades, initialHistory, account, ownedCards }: TradePartnerProps) {
     const [friendAccount, setFriendAccount] = useState<AccountRow | null>(null)
     const navigate = useNavigate()
+    const [trades, setTrades] = useState<TradeRow[]>(initialTrades)
+    const [history, setHistory] = useState<TradeRow[]>(initialHistory)
+    const [viewHistory, setViewHistory] = useState<boolean>(false)
 
     useEffect(() => {
       if (!friendAccount) fetchPublicAccount(friendId).then(setFriendAccount)
     })
 
+    if (!user) return <p>User not logged in</p>
+
+    console.log(viewHistory, initialTrades, history)
+
+    // TODO: fix completed trades not appearing in history
     return (
       <div className="w-full">
         <div className="flex justify-between items-center mb-1 mx-1">
@@ -63,29 +75,49 @@ function TradeOffers() {
             <span className="text-xl font-medium"> {friendAccount?.username || 'loading'} </span>
             <span className="text-xs">({friendId})</span>
           </p>
-          <Button className="ml-auto" onClick={() => navigate(`/trade/${friendId}`)}>
-            {t('openTradeWith')}
-          </Button>
+          <span className="flex gap-2">
+            <label htmlFor={`history-${friendId}`} className="my-auto">
+              View history
+              <Switch id={`history-${friendId}`} className="ml-2 my-auto" checked={viewHistory} onCheckedChange={setViewHistory} />
+            </label>
+            <Button className="my-auto" onClick={() => navigate(`/trade/${friendId}`)}>
+              {t('openTradeWith')}
+            </Button>
+          </span>
         </div>
-        {friendAccount !== null && <TradeList account={account} initialTrades={initialTrades} ownedCards={ownedCards} />}
+        {friendAccount !== null && (
+          <TradeList
+            account={account}
+            trades={viewHistory ? history : trades}
+            setTrades={viewHistory ? setHistory : setTrades}
+            ownedCards={ownedCards}
+            setOwnedCards={setOwnedCards}
+            user={user}
+          />
+        )}
       </div>
     )
   }
 
-  function content(trades: TradeRow[], account: AccountRow) {
-    const friends = groupTrades(trades, account.friend_id)
-    return (
-      <>
-        {Object.keys(friends).map((friend_id) => (
-          <TradePartner key={friend_id} friendId={friend_id} initialTrades={friends[friend_id] as TradeRow[]} account={account} ownedCards={ownedCards} />
-        ))}
-      </>
-    )
+  if (trades.length === 0) return <p>{t('noTradeOffers')}</p>
+
+  function interesting(row: TradeRow) {
+    return (row.offering_friend_id === account?.friend_id && !row.offerer_ended) || (row.receiving_friend_id === account?.friend_id && !row.receiver_ended)
   }
 
+  const friends = groupTrades(trades, account.friend_id)
   return (
     <div className="flex flex-col items-center max-w-2xl mx-auto gap-12">
-      {trades === null || !account ? <p>Loading...</p> : trades.length === 0 ? <p>{t('noTradeOffers')}</p> : content(trades, account)}
+      {Object.keys(friends).map((friend_id) => (
+        <TradePartner
+          key={friend_id}
+          friendId={friend_id}
+          initialTrades={(friends[friend_id] as TradeRow[]).filter(interesting)}
+          initialHistory={(friends[friend_id] as TradeRow[]).filter((x) => !interesting(x))}
+          account={account}
+          ownedCards={ownedCards}
+        />
+      ))}
     </div>
   )
 }
