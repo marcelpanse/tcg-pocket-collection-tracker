@@ -139,7 +139,7 @@ function Cards() {
   return (
     <div className="flex flex-col gap-y-4">
       <Tabs defaultValue={currentTab} onValueChange={setCurrentTab}>
-        <div className="mx-auto max-w-[900px] flex flex-row flex-wrap align-center gap-x-4 gap-y-2 px-4">
+        <div className="mx-auto max-w-[900px] flex flex-row flex-wrap align-center gap-x-4 gap-y-2">
           <TabsList className="flex-grow m-auto flex-wrap h-auto border-1 border-neutral-700 rounded-md">
             <TabsTrigger value="looking_for">{t('lookingFor')}</TabsTrigger>
             <TabsTrigger value="for_trade">{t('forTrade')}</TabsTrigger>
@@ -161,7 +161,7 @@ function Cards() {
             </Button>
           </div>
         </div>
-        <div className="mx-auto max-w-[900px] ">
+        <div className="mx-auto max-w-[900px] mt-6">
           <TabsContent value="looking_for">
             {lookingForCards && lookingForCards.length > 0 ? <CardsTable cards={lookingForCardsFiltered} extraOffset={105} /> : <NoCardsNeeded />}
           </TabsContent>

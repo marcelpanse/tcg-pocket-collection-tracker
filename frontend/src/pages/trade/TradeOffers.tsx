@@ -49,7 +49,7 @@ function TradeOffers() {
     }
   })
 
-  if (trades === null || !account) return <p>Loading...</p>
+  if (trades === null || !account) return null
 
   function TradePartner({ friendId, initialTrades, initialHistory, account, ownedCards }: TradePartnerProps) {
     const [friendAccount, setFriendAccount] = useState<AccountRow | null>(null)
@@ -69,14 +69,14 @@ function TradeOffers() {
     // TODO: fix completed trades not appearing in history
     return (
       <div className="w-full">
-        <div className="flex justify-between items-center mb-1 mx-1">
+        <div className="flex justify-between items-center mb-2 mx-1">
           <p>
             <span className="text-sm">{t('tradingWith')}</span>
             <span className="text-xl font-medium"> {friendAccount?.username || 'loading'} </span>
             <span className="text-xs">({friendId})</span>
           </p>
-          <span className="flex gap-2">
-            <label htmlFor={`history-${friendId}`} className="my-auto">
+          <span className="flex gap-4">
+            <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">
               View history
               <Switch id={`history-${friendId}`} className="ml-2 my-auto" checked={viewHistory} onCheckedChange={setViewHistory} />
             </label>
@@ -107,7 +107,7 @@ function TradeOffers() {
 
   const friends = groupTrades(trades, account.friend_id)
   return (
-    <div className="flex flex-col items-center max-w-2xl mx-auto gap-12">
+    <div className="flex flex-col items-center mx-auto gap-12">
       {Object.keys(friends).map((friend_id) => (
         <TradePartner
           key={friend_id}

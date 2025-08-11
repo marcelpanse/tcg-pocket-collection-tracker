@@ -6,14 +6,14 @@ import TradeOffers from './TradeOffers'
 function Trade() {
   return (
     <Tabs className="flex flex-col mx-auto max-w-[900px]" defaultValue="offers">
-      <TabsList className="gap-4">
-        <TabsTrigger className="text-lg" value="cards">
+      <TabsList className="gap-4 mb-6 rounded-lg border-b-1 border-neutral-700 border-solid dark:bg-transparent pb-2">
+        <TabsTrigger className="text-md" value="cards">
           Cards
         </TabsTrigger>
-        <TabsTrigger className="text-lg" value="offers">
+        <TabsTrigger className="text-md" value="offers">
           Offers
         </TabsTrigger>
-        <TabsTrigger className="text-lg" value="settings">
+        <TabsTrigger className="text-md" value="settings">
           Settings
         </TabsTrigger>
       </TabsList>

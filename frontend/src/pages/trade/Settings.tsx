@@ -65,7 +65,7 @@ function TradeSettings() {
   return (
     <div>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="border-1 border-neutral-700 space-y-2 p-4 max-w-lg mx-auto">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="border-1 border-neutral-700 space-y-2 p-4 mx-auto">
           <FormField
             control={form.control}
             name="is_active_trading"

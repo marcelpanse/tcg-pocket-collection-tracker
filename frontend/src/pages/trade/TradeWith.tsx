@@ -53,7 +53,7 @@ function CardList({ cards, ownedCards, selected, setSelected }: CardListProps) {
   }
 
   return (
-    <div className="border rounded p-2 overflow-y-auto">
+    <div className="rounded-lg border-1 border-neutral-700 border-solid p-2 overflow-y-auto">
       <ul className="space-y-1">{cards.map(item)}</ul>
     </div>
   )
@@ -153,6 +153,11 @@ function Trade2() {
     return result
   }, [ownedCards, friendCards, userCardsMaxFilter, friendCardsMinFilter])
 
+  // Check if there are any possible trades across all rarities
+  const hasPossibleTrades = useMemo(() => {
+    return rarityOrder.some((rarity) => friendExtraCards && friendExtraCards[rarity].length > 0 && userExtraCards && userExtraCards[rarity].length > 0)
+  }, [friendExtraCards, userExtraCards])
+
   if (!friendId) return 'Wrong friend id'
 
   function TradeOffer({ yourId, friendId }: TradeOfferProps) {
@@ -190,7 +195,7 @@ function Trade2() {
     }
 
     return (
-      <div className="border rounded p-2">
+      <div className="rounded-lg border-1 border-neutral-700 border-solid p-2 text-center">
         <div className="flex justify-between mx-2 mb-2">
           <h4 className="text-lg font-medium">{t('youGive')}</h4>
           <h4 className="text-lg font-medium">{t('youReceive')}</h4>
@@ -205,14 +210,14 @@ function Trade2() {
             <span className="w-full text-center">Select cards to trade below</span>
           )}
         </div>
-        <Button className="text-center mt-4 w-full" type="button" variant="outline" onClick={submit} disabled={!enabled}>
+        <Button className="text-center mt-4" type="button" variant="outline" onClick={submit} disabled={!enabled}>
           {t('offerTrades', { n: 1 })}
         </Button>
       </div>
     )
   }
 
-  if (!account || !friendAccount || friendExtraCards === null || userExtraCards === null) return 'loading'
+  if (!account || !friendAccount || friendExtraCards === null || userExtraCards === null) return null
 
   if (!friendAccount.is_active_trading) {
     return (
@@ -245,12 +250,20 @@ function Trade2() {
         </div>
       </div>
       <TradeOffer yourId={account.friend_id} friendId={friendAccount.friend_id} />
+
+      {!hasPossibleTrades && (
+        <div className="text-center py-8">
+          <p className="text-xl ">{t('noPossibleTrades')}</p>
+          <p className="text-sm text-gray-300 mt-2">{t('noPossibleTradesDescription')}</p>
+        </div>
+      )}
+
       {rarityOrder.map(
         (rarity) =>
           friendExtraCards[rarity].length > 0 &&
           userExtraCards[rarity].length > 0 && (
             <div key={rarity} className="mb-4">
-              <h3 className="text-lg font-semibold mb-2">{rarity}</h3>
+              <h3 className="text-lg font-semibold mb-2 mt-6">{rarity}</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <h4 className="text-md font-medium mb-2">{t('youHave')}</h4>

@@ -136,7 +136,7 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
           <>
             {row.receiving_friend_id === account.friend_id && (
               <Button type="button" onClick={() => update(row, 'accepted')}>
-                Accept
+                Accept trade
               </Button>
             )}
             <Button
@@ -146,7 +146,7 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
                 end(row)
               }}
             >
-              {row.receiving_friend_id === account.friend_id ? 'Decline' : 'Cancel'}
+              {row.receiving_friend_id === account.friend_id ? 'Decline trade' : 'Cancel trade'}
             </Button>
           </>
         )
@@ -176,7 +176,7 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
         if (i_ended) return null
         return (
           <Button type="button" onClick={() => end(row)}>
-            Hide
+            Hide from list
           </Button>
         )
       case 'finished':
@@ -204,10 +204,10 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
   }
   const buttons = selectedTrade && actions(selectedTrade)
 
-  if (trades.length === 0) return <div className="border rounded p-2 text-center">No active trades</div>
+  if (trades.length === 0) return <div className="rounded-lg border-1 border-neutral-700 border-solid p-2 text-center">No active trades</div>
 
   return (
-    <div className="border rounded p-2">
+    <div className="rounded-lg border-1 border-neutral-700 border-solid p-2">
       <div className="flex gap-4 px-1">
         <div className="w-9" />
         <h4 className="text-lg font-medium w-1/2 pl-1">{t('youGive')}</h4>
