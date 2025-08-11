@@ -66,7 +66,7 @@
     "content-api": "link:@types/tryghost/content-api",
     "globals": "^16.3.0",
     "typescript": "~5.9.2",
-    "vite": "^7.0.6",
+    "vite": "^7.1.1",
     "vite-plugin-mkcert": "^1.17.8",
     "vite-plugin-strip-comments": "^0.0.6"
   },
