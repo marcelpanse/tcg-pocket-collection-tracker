@@ -78,11 +78,11 @@ export function Mission({ mission }: Props) {
           return (
             <div key={i} style={{ height: `${cardHeight}px`, transform: `translateY(${cardHeight * i + 72}px)` }} className="absolute top-0 left-0 w-full">
               <div className="flex justify-start gap-x-3">
-                {gridRow.map((card) => {
+                {gridRow.map((card, j) => {
                   const foundCard = getCardById(card.cardId)
                   return (
                     foundCard && (
-                      <div className={'group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer'}>
+                      <div key={`${mission.name}__${j}`} className={'group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer'}>
                         <button
                           type="button"
                           onClick={() => (card.owned ? setSelectedCardId(card.cardId) : setSelectedMissionCardOptions(card.missionCardOptions))}

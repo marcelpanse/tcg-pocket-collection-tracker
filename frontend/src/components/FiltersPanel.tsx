@@ -11,7 +11,7 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
-import { allCards, basicRarities, expansionsDict } from '@/lib/CardsDB.ts'
+import { allCards, basicRarities, expansions, expansionsDict } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { levenshtein } from '@/lib/levenshtein'
@@ -29,7 +29,7 @@ export interface Filters {
   cardType: CardType[]
   rarity: Rarity[]
   owned: 'all' | 'owned' | 'missing'
-  sortBy: 'default' | 'recent'
+  sortBy: 'default' | 'recent' | 'expansion-newest'
   minNumber: number
   maxNumber: number
   deckbuildingMode: boolean
@@ -96,10 +96,11 @@ const FilterPanel: FC<Props> = ({
   const setCardType = (x: CardType[]) => setFilters((f) => ({ ...f, cardType: x }))
   const setRarity = (x: Rarity[]) => setFilters((f) => ({ ...f, rarity: x }))
   const setOwned = (x: 'all' | 'owned' | 'missing') => setFilters((f) => ({ ...f, owned: x }))
-  const setSortBy = (x: 'default' | 'recent') => setFilters((f) => ({ ...f, sortBy: x }))
+  const setSortBy = (x: 'default' | 'recent' | 'expansion-newest') => setFilters((f) => ({ ...f, sortBy: x }))
   const setMinNumber = (x: number) => setFilters((f) => ({ ...f, minNumber: x }))
   const setMaxNumber = (x: number) => setFilters((f) => ({ ...f, maxNumber: x }))
   const setDeckbuildingMode = (x: boolean) => setFilters((f) => ({ ...f, deckbuildingMode: x }))
+  const [missions, setMissions] = useState<Mission[] | null>(null)
 
   const filterRarities = (c: Card) => {
     if (filters.rarity.length === 0) return true
@@ -138,9 +139,9 @@ const FilterPanel: FC<Props> = ({
           missions = missions.filter((mission) => !mission.completed)
         }
       }
-      onChangeToMissions(missions)
+      setMissions(missions)
     } else {
-      onChangeToMissions(null)
+      setMissions(null)
       if (filters.pack !== 'all') {
         filteredCards = filteredCards.filter((card) => card.pack === filters.pack || card.pack === 'everypack')
       }
@@ -164,6 +165,21 @@ const FilterPanel: FC<Props> = ({
         } else {
           return 1
         }
+      })
+    } else if (filters.sortBy === 'expansion-newest') {
+      const reversedExpansions = [...expansions]
+        .reverse()
+        .slice(1)
+        .concat(expansions[expansions.length - 1])
+      filteredCards = [...filteredCards].sort((a: Card, b: Card) => {
+        const expansionIndexA = reversedExpansions.findIndex((e) => e.id === a.expansion)
+        const expansionIndexB = reversedExpansions.findIndex((e) => e.id === b.expansion)
+
+        if (expansionIndexA !== expansionIndexB) {
+          return expansionIndexA - expansionIndexB
+        }
+
+        return a.card_id.localeCompare(b.card_id, i18n.language || 'en', { numeric: true })
       })
     }
 
@@ -231,6 +247,10 @@ const FilterPanel: FC<Props> = ({
     }
   }, [getFilteredCards])
 
+  useEffect(() => {
+    onChangeToMissions(missions)
+  }, [missions])
+
   const handleBatchUpdate = async (cardIds: string[], amount: number) => {
     await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)
   }
@@ -296,7 +316,7 @@ const FilterPanel: FC<Props> = ({
                       cardType: [],
                       rarity: [],
                       owned: 'all',
-                      sortBy: 'default',
+                      sortBy: 'expansion-newest',
                       minNumber: 0,
                       maxNumber: 100,
                       deckbuildingMode: false,

@@ -3973,5 +3973,334 @@
     ],
     "artist": "nisimono",
     "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-93",
+    "image": "/images/en-US/P-A-93.webp",
+    "hp": "30",
+    "energy": "Psychic",
+    "name": "Cleffa",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Unknown"],
+        "name": "Twinkly",
+        "damage": "Call",
+        "effect": "Put a random Pokémon from your deck into your hand."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "none",
+    "retreat": "0",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": true,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4-77",
+        "version": "Wisdom of Sea and Sky #77",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "P-A-93",
+        "version": "Promo-A #93",
+        "rarity": ""
+      }
+    ],
+    "artist": "Tika Matsuno",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-94",
+    "image": "/images/en-US/P-A-94.webp",
+    "hp": "60",
+    "energy": "Water",
+    "name": "Horsea",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Water"],
+        "name": "Water",
+        "damage": "Arrow",
+        "effect": "This attack does 10 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "P-A-94",
+        "version": "Promo-A #94",
+        "rarity": ""
+      }
+    ],
+    "artist": "Taira Akitsu",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-95",
+    "image": "/images/en-US/P-A-95.webp",
+    "hp": "60",
+    "energy": "Lightning",
+    "name": "Chinchou",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Luring",
+        "damage": "Glow",
+        "effect": "Flip a coin. If heads, switch in 1 of your opponent's Benched Pokémon to the Active Spot."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "1",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "P-A-95",
+        "version": "Promo-A #95",
+        "rarity": ""
+      }
+    ],
+    "artist": "Aya Kusube",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-96",
+    "image": "/images/en-US/P-A-96.webp",
+    "hp": "110",
+    "energy": "Darkness",
+    "name": "Houndoom",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Darkness", "Darkness", "Darkness"],
+        "name": "Diving Swipe",
+        "damage": "70",
+        "effect": "Discard a random card from your opponent's hand."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "2",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4-118",
+        "version": "Wisdom of Sea and Sky #118",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "P-A-96",
+        "version": "Promo-A #96",
+        "rarity": ""
+      }
+    ],
+    "artist": "Kagemaru Himeno",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-97",
+    "image": "/images/en-US/P-A-97.webp",
+    "hp": "100",
+    "energy": "Colorless",
+    "name": "Kangaskhan",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Cross-Cut",
+        "damage": "20+",
+        "effect": "If your opponent's Active Pokémon is an Evolution Pokémon, this attack does 40 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "3",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4-133",
+        "version": "Wisdom of Sea and Sky #133",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "P-A-97",
+        "version": "Promo-A #97",
+        "rarity": ""
+      }
+    ],
+    "artist": "Kouki Saitou",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-98",
+    "image": "/images/en-US/P-A-98.webp",
+    "hp": "180",
+    "energy": "Colorless",
+    "name": "Blissey ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
+        "name": "Happy Punch",
+        "damage": "100",
+        "effect": "Flip a coin. If heads, heal 60 damage from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "3",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "P-A-98",
+        "version": "Promo-A #98",
+        "rarity": ""
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-99",
+    "image": "/images/en-US/P-A-99.webp",
+    "hp": "60",
+    "energy": "Water",
+    "name": "Marill",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Tackle",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4-49",
+        "version": "Wisdom of Sea and Sky #49",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "P-A-99",
+        "version": "Promo-A #99",
+        "rarity": ""
+      }
+    ],
+    "artist": "Shibuzoh.",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-100",
+    "image": "/images/en-US/P-A-100.webp",
+    "hp": "80",
+    "energy": "Darkness",
+    "name": "Weavile",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Slash",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "0",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4-116",
+        "version": "Wisdom of Sea and Sky #116",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "P-A-100",
+        "version": "Promo-A #100",
+        "rarity": ""
+      }
+    ],
+    "artist": "Satoshi Shirai",
+    "crafting_cost": "Unknown"
   }
 ]

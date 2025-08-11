@@ -79,47 +79,23 @@
     "name": "Pokémon That Fly",
     "requiredCards": [
       {
-        "options": ["A1a-14"],
+        "options": ["A1a-24", "A1a-46"],
         "amount": 1
       },
       {
-        "options": ["A1a-37"],
+        "options": ["A1a-36", "A1a-33"],
         "amount": 1
       },
       {
-        "options": ["A1a-18"],
+        "options": ["A1a-37", "A1a-14"],
         "amount": 1
       },
       {
-        "options": ["A1a-62"],
+        "options": ["A1a-57", "A1a-58", "A1a-59"],
         "amount": 1
       },
       {
-        "options": ["A1a-24"],
-        "amount": 1
-      },
-      {
-        "options": ["A1a-46"],
-        "amount": 1
-      },
-      {
-        "options": ["A1a-33"],
-        "amount": 1
-      },
-      {
-        "options": ["A1a-36"],
-        "amount": 1
-      },
-      {
-        "options": ["A1a-57"],
-        "amount": 1
-      },
-      {
-        "options": ["A1a-58"],
-        "amount": 1
-      },
-      {
-        "options": ["A1a-59"],
+        "options": ["A1a-62", "A1a-18"],
         "amount": 1
       }
     ],

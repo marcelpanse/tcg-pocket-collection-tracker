@@ -29,7 +29,7 @@ function Collection() {
     cardType: [],
     rarity: [],
     owned: 'all',
-    sortBy: 'default',
+    sortBy: 'expansion-newest',
     minNumber: 0,
     maxNumber: 100,
     deckbuildingMode: false,

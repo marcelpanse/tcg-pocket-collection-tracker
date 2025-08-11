@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.1.3",
-    "all-contributors-cli": "^6.26.1",
+    "all-contributors-cli": "github:marcelpanse/all-contributors",
     "lefthook": "^1.12.2",
     "vite-plugin-mkcert": "^1.17.8"
   },

@@ -38,7 +38,7 @@ export function Header() {
 
   return (
     <>
-      <header id="header" className="flex max-w-7xl mx-auto h-14 md:h-20 shrink-0 flex-wrap items-center px-4 md:px-6">
+      <header id="header" className="flex max-w-7xl mx-auto min-h-fit h-14 md:h-20 shrink-0 flex-wrap items-center px-4 md:px-6">
         <HamburgerMenu />
         <Link to="/" className="flex items-center gap-2">
           <img src="\pokemon-icon128.png" alt="Logo" className="h-5" />
@@ -69,6 +69,11 @@ export function Header() {
               </Link>
             </NavigationMenuLink>
             <PokemonCardDetector />
+            <NavigationMenuLink asChild className="hidden sm:block">
+              <Link to="https://blog.tcgpocketcollectiontracker.com" className="hidden sm:block">
+                <Button variant="ghost">{t('blog')}</Button>
+              </Link>
+            </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden sm:block">
                 <Button variant="ghost">{t('community')}</Button>
