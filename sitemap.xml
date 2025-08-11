@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://tcgpocketcollectiontracker.com/</loc>
-    <lastmod>2025-08-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://tcgpocketcollectiontracker.com/sitemaps/main-pages.xml</loc>
+    <lastmod>2025-08-11</lastmod>
+  </sitemap>
   <sitemap>
     <loc>https://blog.tcgpocketcollectiontracker.com/sitemap.xml</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-11</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://community.tcgpocketcollectiontracker.com/sitemap.xml</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-11</lastmod>
   </sitemap>
-</urlset>
+</sitemapindex>
