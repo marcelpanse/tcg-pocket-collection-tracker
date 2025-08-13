@@ -78,20 +78,8 @@ export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...a2aCard
 
 export const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
 
-export const allCardsDictName = new Map(
-  allCards
-    .filter(
-      (card) =>
-        card.rarity === '◊' || card.rarity === '◊◊' || card.rarity === '◊◊◊' || card.rarity === '◊◊◊◊' || (card.rarity === 'P' && card.card_type !== 'pokémon'),
-    )
-    .map((card) => [card.name, card]),
-)
-
 export const getCardById = (cardId: string): Card | undefined => {
   return allCardsDict.get(cardId)
-}
-export const getCardByName = (cardName: string): Card | undefined => {
-  return allCardsDictName.get(cardName)
 }
 
 export const a1Missions: Mission[] = A1Missions as unknown as Mission[]

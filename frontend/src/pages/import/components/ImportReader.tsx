@@ -33,11 +33,10 @@ export const ImportReader = () => {
         console.log('First Owned Card', ownedCards[0])
         const newAmount = Math.max(0, Number(r.NumberOwned))
         const cardId = r.Id
-        const cardname = r.CardName
         const ownedCard = ownedCards.find((row) => row.card_id === r.Id)
         console.log('Owned Card', ownedCard)
 
-        cardArray.push({ card_id: cardId, englishName: cardname, amount_owned: newAmount, email: user?.user.email, updated_at: new Date().toISOString() })
+        cardArray.push({ card_id: cardId, amount_owned: newAmount, email: user?.user.email, updated_at: new Date().toISOString() })
 
         // update UI
         if (ownedCard && ownedCard.amount_owned !== newAmount) {
@@ -51,7 +50,6 @@ export const ImportReader = () => {
             ...ownedCards,
             {
               email: user?.user.email,
-              englishName: cardname,
               card_id: cardId,
               amount_owned: newAmount,
               updated_at: new Date().toISOString(),

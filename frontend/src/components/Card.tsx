@@ -49,7 +49,7 @@ export function Card({ card, useMaxWidth = false, editable = true }: CardProps) 
         if (ownedCard) {
           ownedCard.amount_owned = newAmount
         } else {
-          ownedCards.push({ email: user.user.email, card_id: cardId, englishName: '', amount_owned: newAmount, updated_at: new Date().toISOString() })
+          ownedCards.push({ email: user.user.email, card_id: cardId, amount_owned: newAmount, updated_at: new Date().toISOString() })
         }
 
         const { error } = await supabase
@@ -171,7 +171,6 @@ export const updateMultipleCards = async (
       console.log('Adding new card:', cardId)
       ownedCardsCopy.push({
         email: user.user.email,
-        englishName: '',
         card_id: cardId,
         amount_owned: newAmount,
         updated_at: new Date().toISOString(),
@@ -211,7 +210,6 @@ export const incrementMultipleCards = async (
       console.log('Adding new card:', cardId, 'with amount', increment)
       const card: CollectionRow = {
         email: user.user.email,
-        englishName: '',
         card_id: cardId,
         amount_owned: increment,
         updated_at: new Date().toISOString(),

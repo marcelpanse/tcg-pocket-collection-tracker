@@ -19,7 +19,6 @@ export interface AccountRow {
 }
 
 export interface CollectionRow {
-  englishName: string
   email: string
   card_id: string
   amount_owned: number
