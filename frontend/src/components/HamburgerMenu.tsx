@@ -19,6 +19,7 @@ const menuItems: MenuItem[] = [
   { title: 'collection', href: '/collection' },
   { title: 'deck', href: '/deck' },
   { title: 'trade', href: '/trade' },
+  { title: 'blog', href: 'https://blog.tcgpocketcollectiontracker.com' },
   { title: 'community', href: 'https://community.tcgpocketcollectiontracker.com' },
 ]
 

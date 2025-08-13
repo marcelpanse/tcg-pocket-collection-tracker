@@ -179,7 +179,7 @@ const FilterPanel: FC<Props> = ({
           return expansionIndexA - expansionIndexB
         }
 
-        return a.card_id.localeCompare(b.card_id)
+        return a.card_id.localeCompare(b.card_id, i18n.language || 'en', { numeric: true })
       })
     }
 

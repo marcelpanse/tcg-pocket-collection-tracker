@@ -5,6 +5,8 @@ on:
       - main
 permissions:
   contents: write
+env:
+  VITE_GHOST_API_KEY: ${{ secrets.VITE_GHOST_API_KEY }}
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

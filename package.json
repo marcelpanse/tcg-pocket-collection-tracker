@@ -13,10 +13,8 @@
     "scraper": "node scripts/scraper.js && node scripts/download-packs.js && node scripts/scrape-missions.js"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.1.3",
-    "all-contributors-cli": "github:marcelpanse/all-contributors",
-    "lefthook": "^1.12.2",
-    "vite-plugin-mkcert": "^1.17.8"
+    "@biomejs/biome": "2.1.4",
+    "lefthook": "^1.12.3"
   },
   "type": "module",
   "packageManager": "pnpm@10.14.0",
@@ -30,18 +28,12 @@
       }
     },
     "overrides": {
-      "@babel/runtime": "7.27.1"
+      "form-data": ">=4.0.4"
     }
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^4.22.0",
     "cheerio": "^1.1.2",
-    "fs-extra": "^11.3.0",
-    "i18next": "^25.3.2",
-    "i18next-browser-languagedetector": "^8.2.0",
-    "i18next-http-backend": "^3.0.2",
-    "node-fetch": "^3.3.2",
-    "react-i18next": "^15.6.1",
-    "react-share": "^5.2.2"
+    "fs-extra": "^11.3.1",
+    "node-fetch": "^3.3.2"
   }
 }
