@@ -7,5 +7,5 @@ const rankClassMap: Record<string, string> = {
   S: 'bg-red-600 font-bold',
 }
 export function RankBadge({ rank }: { rank: string }) {
-  return <span className={`${rankClassMap[rank] || 'rank-d'} text-white p-1 h-fit rounded`}>{rank}</span>
+  return <span className={`${rankClassMap[rank] || 'rank-d'} text-white p-1 h-fit rounded w-7 text-center`}>{rank}</span>
 }

@@ -39,7 +39,7 @@ const rankInfo: Record<string, { title: string; tooltip: string }> = {
   },
 }
 
-function Deck() {
+function Decks() {
   const decksMeta8 = sampleDecks8 as IDeck[]
 
   const [searchValue, setSearchValue] = useState('')
@@ -61,8 +61,8 @@ function Deck() {
 
   return (
     <div className="px-8 md:mx-auto max-w-[1336px]">
-      <div className="flex">
-        <SearchInput setSearchValue={setSearchValue} />
+      <div className="flex mb-8 w-80">
+        <SearchInput setSearchValue={setSearchValue} fullWidth />
       </div>
       {Object.keys(groupedDecks)
         .sort((a, b) => (rankOrder[b] ?? 999) - (rankOrder[a] ?? 999)) // Ensure group order matches your sorting
@@ -75,7 +75,7 @@ function Deck() {
                   {rank} Tier Decks ({info.title})
                 </h2>
                 {info.tooltip && (
-                  <span className="cursor-pointer" title={info.tooltip}>
+                  <span className="cursor-default" title={info.tooltip}>
                     ⓘ
                   </span>
                 )}
@@ -90,4 +90,4 @@ function Deck() {
     </div>
   )
 }
-export default Deck
+export default Decks

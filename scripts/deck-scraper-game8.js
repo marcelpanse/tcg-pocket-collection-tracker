@@ -19,6 +19,7 @@ async function fetchHTML(url) {
 }
 
 async function scrapeDeckSource() {
+  console.log('Scraping decks from Game8.co')
   const $ = await fetchHTML(BASE_URL + ALL_DECK_URL)
 
   //For Debug purposes
@@ -33,6 +34,7 @@ async function scrapeDeckSource() {
   const rows = tableTopDeck.find('tr')
   let currentRank = null
 
+  console.log(`Found ${rows.length / 2} tiers.`)
   for (let i = 0; i < rows.length; i++) {
     const row = rows[i] // élément natif
     if (i % 2 === 0) {
@@ -41,12 +43,17 @@ async function scrapeDeckSource() {
     } else {
       const decksA = $(row).find('a')
 
+      console.log(`Found ${decksA.length} decks in ${currentRank} tier.`)
+      let deckCount = 0
       for (const a of decksA) {
+        deckCount++
         const deck = { cards: [], rank: currentRank }
         deck.name = $(a).find('img').attr('alt').replace('Deck', '').replace(' and ', ' & ').trim()
         deck.img_url = $(a).find('img').attr('data-src')
         //third a is deck id
         deck.deck_id = $(a).attr('href').split('/').pop()
+
+        console.log(`Scraping deck ${deck.name}. (${deckCount} of ${decksA.length})`)
         await scrapeDeck(deck)
         myDecks.push(deck)
       }
@@ -106,8 +113,6 @@ async function scrapeDeck(deck) {
 function formatCardId(cardName) {
   //Pokemon TCG Pocket- A1 033 Card
   let cardId = cardName.replace('Pokemon TCG Pocket- ', '').replace(' Card', '')
-  //special case steel energy
-  cardId = cardId.replace('metal', 'steel')
   cardId = `${cardId.split(' ')[0]}-${Number(cardId.split(' ')[1])}`
   return cardId
 }
