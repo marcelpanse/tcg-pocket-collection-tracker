@@ -1,33 +1,27 @@
-import loadable from '@loadable/component'
 import { Siren } from 'lucide-react'
 import { useContext, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
-import { useLocation, useNavigate, useParams } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
 import { CardsTable } from '@/components/CardsTable.tsx'
 import FilterPanel, { type Filters } from '@/components/FiltersPanel'
 import { MissionsTable } from '@/components/MissionsTable.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import { UserContext } from '@/lib/context/UserContext.ts'
 import { fetchPublicAccount } from '@/lib/fetchAccount.ts'
 import { fetchCollection } from '@/lib/fetchCollection.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
 import MissionDetail from '@/pages/collection/MissionDetail.tsx'
 import type { AccountRow, Card, CollectionRow, Mission } from '@/types'
 
-const TradeMatches = loadable(() => import('./TradeMatches.tsx'))
-
 function Collection() {
   const params = useParams()
   const navigate = useNavigate()
-  const location = useLocation()
   const { t } = useTranslation(['pages/collection'])
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
   const { ownedCards, selectedCardId, setSelectedCardId, selectedMissionCardOptions, setSelectedMissionCardOptions } = useContext(CollectionContext)
-  const { account } = useContext(UserContext)
   const [filters, setFilters] = useState<Filters>({
     search: '',
     expansion: 'all',
@@ -130,7 +124,7 @@ function Collection() {
                   <Button
                     className="mb-4"
                     onClick={() => {
-                      navigate(`${location.pathname}/trade`)
+                      navigate(`/trade/${friendAccount?.friend_id}`)
                     }}
                   >
                     {t('showPossibleTrades')}
@@ -155,7 +149,6 @@ function Collection() {
       </div>
       <div>{missions && <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} />}</div>
       {missions && <MissionDetail missionCardOptions={selectedMissionCardOptions} onClose={() => setSelectedMissionCardOptions([])} />}
-      <TradeMatches ownedCards={ownedCards} friendCards={friendCards || []} ownAccount={account} friendAccount={friendAccount} />
     </div>
   )
 }

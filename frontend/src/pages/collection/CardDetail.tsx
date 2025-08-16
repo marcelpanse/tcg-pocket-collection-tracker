@@ -22,6 +22,8 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
   const { ownedCards } = use(CollectionContext)
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
 
+  if (!card) return null
+
   // if we draw from 'everypack' we need to take one of the packs to calculated based on
   const packName = card.pack === 'everypack' ? expansion?.packs[0].name : card.pack
 

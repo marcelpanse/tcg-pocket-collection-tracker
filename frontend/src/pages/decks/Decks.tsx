@@ -65,7 +65,7 @@ function Decks() {
 
   return (
     <div className="px-8 md:mx-auto max-w-[1336px]">
-      <div className="flex mb-8 w-full sm:w-80">
+      <div className="flex mb-8 w-full sm:w-96">
         <SearchInput setSearchValue={setSearchValue} fullWidth />
       </div>
       {Object.keys(groupedDecks)

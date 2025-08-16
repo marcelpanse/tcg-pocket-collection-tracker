@@ -26,6 +26,23 @@ export interface CollectionRow {
   updated_at: string
 }
 
+const tradeStatuses = ['offered', 'accepted', 'declined', 'finished'] as const
+
+export type TradeStatus = (typeof tradeStatuses)[number]
+
+export interface TradeRow {
+  id: number
+  created_at: Date
+  updated_at: Date
+  offering_friend_id: string
+  receiving_friend_id: string
+  offer_card_id: string
+  receiver_card_id: string
+  offerer_ended: boolean
+  receiver_ended: boolean
+  status: TradeStatus
+}
+
 export interface Expansion {
   name: string
   id: ExpansionId
