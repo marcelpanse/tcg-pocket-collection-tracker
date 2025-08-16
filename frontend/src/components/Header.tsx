@@ -42,7 +42,7 @@ export function Header() {
         <HamburgerMenu />
         <Link to="/" className="flex items-center gap-2">
           <img src="\pokemon-icon128.png" alt="Logo" className="h-5" />
-          <div className="shrink font-bold pr-4 hidden md:block">TCG Pocket Collection Tracker</div>
+          <div className="shrink font-bold pr-4 hidden lg:block">TCG Pocket Collection Tracker</div>
         </Link>
         <NavigationMenu className="max-w-full justify-start">
           <NavigationMenuList>
@@ -64,18 +64,23 @@ export function Header() {
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden sm:block">
+              <Link to="/decks">
+                <Button variant="ghost">{t('Decks')}</Button>
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/trade">
                 <Button variant="ghost">{t('trade')}</Button>
               </Link>
             </NavigationMenuLink>
             <PokemonCardDetector />
-            <NavigationMenuLink asChild className="hidden sm:block">
-              <Link to="https://blog.tcgpocketcollectiontracker.com" className="hidden sm:block">
+            <NavigationMenuLink asChild className="hidden md:block">
+              <Link to="https://blog.tcgpocketcollectiontracker.com" className="hidden md:block">
                 <Button variant="ghost">{t('blog')}</Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild className="hidden sm:block">
-              <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden sm:block">
+            <NavigationMenuLink asChild className="hidden md:block">
+              <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden md:block">
                 <Button variant="ghost">{t('community')}</Button>
               </Link>
             </NavigationMenuLink>

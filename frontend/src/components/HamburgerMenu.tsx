@@ -17,6 +17,7 @@ type MenuItem = {
 const menuItems: MenuItem[] = [
   { title: 'overview', href: '/' },
   { title: 'collection', href: '/collection' },
+  { title: 'decks', href: '/decks' },
   { title: 'trade', href: '/trade' },
   { title: 'blog', href: 'https://blog.tcgpocketcollectiontracker.com' },
   { title: 'community', href: 'https://community.tcgpocketcollectiontracker.com' },
@@ -47,7 +48,7 @@ export default function HamburgerMenu() {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="sm:hidden">
+        <Button variant="ghost" size="icon" className="md:hidden">
           <Menu className="h-5 w-5" />
           <span className="sr-only">{t('toggle')}</span>
         </Button>

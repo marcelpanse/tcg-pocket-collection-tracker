@@ -27,20 +27,20 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
       if (scrollRef.current) {
         const headerHeight = (document.querySelector('#header') as HTMLElement | null)?.offsetHeight || 0
         const filterbarHeight = (document.querySelector('#filterbar') as HTMLElement | null)?.offsetHeight || 0
-        const isMobileDevice = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) // Detect phones and tablets using user agent
-        const offset = isMobileDevice ? 0 : extraOffset // Offset is ignored on mobile, but needed on desktop to keep CardsTable in the viewport. Collection uses 24, Trade uses 105.
+        const isMobileDevice = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
+        const offset = isMobileDevice ? 0 : extraOffset
         const maxHeight = window.innerHeight - headerHeight - filterbarHeight - offset
         setScrollContainerHeight(`${maxHeight}px`)
       }
     }
 
-    updateScrollContainerHeight() // initial calculation
+    updateScrollContainerHeight()
     window.addEventListener('resize', updateScrollContainerHeight)
 
     return () => {
       window.removeEventListener('resize', updateScrollContainerHeight)
     }
-  }, []) // You can add dependencies here if needed
+  }, [])
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -74,8 +74,9 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
     initialState: {
       grouping: ['set_details'],
     },
-    autoResetPageIndex: false, //we need this to prevent a React state update when the component is not yet mounted
+    autoResetPageIndex: false,
   })
+
   const groupedRows = useMemo(() => table.getGroupedRowModel().rows, [table.getGroupedRowModel().rows])
 
   let cardsPerRow = 5
@@ -88,35 +89,49 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
     cardHeight = width / 3 + 100
   }
 
+  // Build groups and keep a stable group key (Row has an .id)
   const groupedGridRows = useMemo(
     () =>
       groupedRows.map((groupRow) => {
-        const header = { type: 'header', row: groupRow }
-        const dataRows = groupRow.subRows.map((subRow) => ({ type: 'data', row: subRow }))
+        const header = { type: 'header' as const, row: groupRow }
+        const dataRows = groupRow.subRows.map((subRow) => ({ type: 'data' as const, row: subRow }))
 
-        const gridRows = []
+        const gridRows: Array<{ type: 'data'; row: Row<CardType> }[]> = []
         for (let i = 0; i < dataRows.length; i += cardsPerRow) {
           gridRows.push(dataRows.slice(i, i + cardsPerRow))
         }
 
-        return { header, gridRows }
+        // groupRow.id is stable for the group
+        return { groupId: groupRow.id, header, gridRows }
       }),
     [groupedRows, cardsPerRow],
   )
 
+  // Create flattened rows with stable keys for virtualization
   const flattenedRows = useMemo(
     () =>
       groupedGridRows.flatMap((group) => [
-        { type: 'header', height: 60, data: group.header },
-        ...group.gridRows.map((gridRow) => ({ type: 'gridRow', height: cardHeight, data: gridRow })),
+        {
+          id: `header-${group.groupId}`,
+          type: 'header' as const,
+          height: 60,
+          data: group.header,
+        },
+        ...group.gridRows.map((gridRow, i) => ({
+          id: `grid-${group.groupId}-${i}`,
+          type: 'gridRow' as const,
+          height: cardHeight,
+          data: gridRow,
+        })),
       ]),
-    [groupedGridRows],
+    [groupedGridRows, cardHeight],
   )
 
   const rowVirtualizer = useVirtualizer({
     getScrollElement: () => scrollRef.current,
     count: flattenedRows.length,
-    estimateSize: (index) => (flattenedRows[index].type === 'header' ? 50 : cardHeight) + 12,
+    getItemKey: (index) => flattenedRows[index].id, // critical: stable keys per logical row
+    estimateSize: (index) => (flattenedRows[index].type === 'header' ? 60 : cardHeight) + 12,
     overscan: 5,
   })
 
