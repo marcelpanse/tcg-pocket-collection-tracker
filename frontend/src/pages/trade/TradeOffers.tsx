@@ -49,7 +49,9 @@ function TradeOffers() {
     }
   })
 
-  if (trades === null || !account) return null
+  if (trades === null || !account) {
+    return null
+  }
 
   function TradePartner({ friendId, initialTrades, initialHistory, account, ownedCards }: TradePartnerProps) {
     const [friendAccount, setFriendAccount] = useState<AccountRow | null>(null)
@@ -59,12 +61,14 @@ function TradeOffers() {
     const [viewHistory, setViewHistory] = useState<boolean>(false)
 
     useEffect(() => {
-      if (!friendAccount) fetchPublicAccount(friendId).then(setFriendAccount)
+      if (!friendAccount) {
+        fetchPublicAccount(friendId).then(setFriendAccount)
+      }
     })
 
-    if (!user) return <p>User not logged in</p>
-
-    console.log(viewHistory, initialTrades, history)
+    if (!user) {
+      return <p>User not logged in</p>
+    }
 
     // TODO: fix completed trades not appearing in history
     return (

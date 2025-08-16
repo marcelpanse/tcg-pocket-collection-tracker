@@ -1,17 +1,18 @@
 import { CircleHelp } from 'lucide-react'
-import type { Dispatch, SetStateAction } from 'react'
-import { useContext, useEffect, useMemo, useState } from 'react'
+import { type FC, useContext, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router'
 import { Tooltip } from 'react-tooltip'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import { Button } from '@/components/ui/button'
+import { useToast } from '@/hooks/use-toast.ts'
 import { supabase } from '@/lib/Auth'
 import { expansions, getCardById } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
 import { fetchPublicAccount } from '@/lib/fetchAccount'
 import { fetchCollection } from '@/lib/fetchCollection'
+import { CardList } from '@/pages/trade/components/CardList.tsx'
 import type { AccountRow, Card, CollectionRow, Rarity, TradeRow } from '@/types'
 
 const rarityOrder: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆']
@@ -20,47 +21,9 @@ interface TradeCard extends Card {
   amount_owned: number
 }
 
-interface TradeOfferProps {
-  yourId: string
-  friendId: string
-}
-
-interface CardListProps {
-  cards: Card[]
-  ownedCards: CollectionRow[]
-  selected: Card | null
-  setSelected: Dispatch<SetStateAction<Card | null>>
-}
-
-function CardList({ cards, ownedCards, selected, setSelected }: CardListProps) {
-  function item(card: Card) {
-    function onClick() {
-      if (selected?.card_id === card.card_id) {
-        setSelected(null)
-      } else {
-        setSelected(card)
-      }
-    }
-    return (
-      <li key={card.card_id} className={`flex rounded px-2 ${selected?.card_id === card.card_id && 'bg-green-900'} hover:bg-gray-500`} onClick={onClick}>
-        <span className="min-w-14 me-4">{card.card_id} </span>
-        <span>{card.name}</span>
-        <span title="Amount you own" className="text-gray-400 ml-auto">
-          <span style={{ userSelect: 'none' }}>×{ownedCards.find((c) => c.card_id === card.card_id)?.amount_owned || 0}</span>
-        </span>
-      </li>
-    )
-  }
-
-  return (
-    <div className="rounded-lg border-1 border-neutral-700 border-solid p-2 overflow-y-auto">
-      <ul className="space-y-1">{cards.map(item)}</ul>
-    </div>
-  )
-}
-
-function Trade2() {
+const TradeWith: FC = () => {
   const { t } = useTranslation('trade-matches')
+  const { toast } = useToast()
 
   const { friendId } = useParams()
 
@@ -160,7 +123,7 @@ function Trade2() {
 
   if (!friendId) return 'Wrong friend id'
 
-  function TradeOffer({ yourId, friendId }: TradeOfferProps) {
+  function TradeOffer({ yourId, friendId }: { yourId: string; friendId: string }) {
     function card(c: Card | null) {
       if (!c) {
         return <span className="w-1/2 text-center">–</span>
@@ -177,7 +140,9 @@ function Trade2() {
     const enabled = yourCard && friendCard && yourCard.rarity === friendCard.rarity
 
     async function submit() {
-      if (!enabled) return
+      if (!enabled) {
+        return
+      }
       const trade: TradeRow = {
         offering_friend_id: yourId,
         receiving_friend_id: friendId,
@@ -188,9 +153,11 @@ function Trade2() {
       const { error } = await supabase.from('trades').insert(trade)
       if (error) {
         console.log(error)
+        toast({ title: t('tradeFailed'), variant: 'default' })
       } else {
         setYourCard(null)
         setFriendCard(null)
+        toast({ title: t('tradeOffered'), variant: 'default' })
       }
     }
 
@@ -281,4 +248,4 @@ function Trade2() {
   )
 }
 
-export default Trade2
+export default TradeWith

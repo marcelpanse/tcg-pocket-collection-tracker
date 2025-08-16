@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import { incrementMultipleCards } from '@/components/Card'
 import { Button } from '@/components/ui/button'
+import { useToast } from '@/hooks/use-toast.ts'
 import { supabase } from '@/lib/Auth'
 import { getCardById } from '@/lib/CardsDB'
 import type { User } from '@/lib/context/UserContext'
@@ -19,6 +20,7 @@ interface Props {
 
 function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user }: Props) {
   const { t } = useTranslation('trade-matches')
+  const { toast } = useToast()
 
   const [selectedTrade, setSelectedTrade] = useState<TradeRow | null>(null)
 
@@ -116,13 +118,15 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
       })
   }
 
-  function increment(row: TradeRow) {
+  async function increment(row: TradeRow) {
     if (row.offering_friend_id === account.friend_id) {
-      incrementMultipleCards([row.offer_card_id], -1, ownedCards, setOwnedCards, user)
-      incrementMultipleCards([row.receiver_card_id], 1, ownedCards, setOwnedCards, user)
+      await incrementMultipleCards([row.offer_card_id], -1, ownedCards, setOwnedCards, user)
+      await incrementMultipleCards([row.receiver_card_id], 1, ownedCards, setOwnedCards, user)
+      toast({ title: t('collectionUpdated'), variant: 'default' })
     } else if (row.receiving_friend_id === account.friend_id) {
-      incrementMultipleCards([row.offer_card_id], 1, ownedCards, setOwnedCards, user)
-      incrementMultipleCards([row.receiver_card_id], -1, ownedCards, setOwnedCards, user)
+      await incrementMultipleCards([row.offer_card_id], 1, ownedCards, setOwnedCards, user)
+      await incrementMultipleCards([row.receiver_card_id], -1, ownedCards, setOwnedCards, user)
+      toast({ title: t('collectionUpdated'), variant: 'default' })
     } else {
       console.log(row, "can't match friend id")
     }
@@ -185,12 +189,12 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
           <>
             <Button
               type="button"
-              onClick={() => {
-                increment(row)
+              onClick={async () => {
+                await increment(row)
                 end(row)
               }}
             >
-              Increment
+              Update collection
             </Button>
             <Button type="button" onClick={() => end(row)}>
               Hide
