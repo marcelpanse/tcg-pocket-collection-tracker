@@ -165,7 +165,7 @@ function Trade() {
               <NumberFilter numberFilter={buyingTokensMinCards} setNumberFilter={setBuyingTokensMinCards} options={[2, 3, 4, 5]} labelKey="minNum" />
             )}
             <Button variant="outline" onClick={() => copyToClipboard()}>
-              Copy to clipboard
+              {t('copyToClipboard')}
             </Button>
             {!account?.is_public ? (
               <Button variant="outline" onClick={() => enableTradingPage()}>
