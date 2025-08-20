@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 
+// Usage: node sync-locales.js [--locale <locale>]
+//
+// Examples:
+//   node sync-locales.js                # Sync all locales
+//   node sync-locales.js --locale es-ES # Sync only Spanish locale
+
 import fs from 'node:fs'
 import path from 'node:path'
 import { glob } from 'glob'
@@ -7,6 +13,11 @@ import { glob } from 'glob'
 const BASE_LOCALE = 'en-US'
 const LOCALES_DIR = './frontend/public/locales'
 const TARGET_LOCALES = ['es-ES', 'fr-FR', 'it-IT', 'pt-BR']
+
+// Parse command line arguments
+const args = process.argv.slice(2)
+const localeIndex = args.indexOf('--locale')
+const specificLocale = localeIndex !== -1 ? args[localeIndex + 1] : null
 
 function mergeTranslations(source, target, addedKeys = []) {
   const result = { ...target }
@@ -49,9 +60,19 @@ async function syncLocales() {
     process.exit(1)
   }
 
-  console.log(`Syncing ${baseFiles.length} files to ${TARGET_LOCALES.length} locales...`)
+  // Determine which locales to sync
+  let localesToSync = TARGET_LOCALES
+  if (specificLocale) {
+    if (!TARGET_LOCALES.includes(specificLocale)) {
+      console.error(`Invalid locale: ${specificLocale}. Available locales: ${TARGET_LOCALES.join(', ')}`)
+      process.exit(1)
+    }
+    localesToSync = [specificLocale]
+  }
 
-  for (const locale of TARGET_LOCALES) {
+  console.log(`Syncing ${baseFiles.length} files to ${localesToSync.length} locale(s): ${localesToSync.join(', ')}`)
+
+  for (const locale of localesToSync) {
     let totalAdded = 0
 
     for (const baseFile of baseFiles) {
