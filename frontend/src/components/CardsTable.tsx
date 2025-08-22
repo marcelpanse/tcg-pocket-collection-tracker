@@ -162,7 +162,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
                   <img
                     src={`/images/sets/${i18n.language}/${(row.data as { type: string; row: Row<CardType> }).row.original.expansion}.webp`}
                     alt={(row.data as { type: string; row: Row<CardType> }).row.getValue('set_details') as string}
-                    className="h-6 sm:h-8"
+                    className="max-w-[60px]"
                     onError={(e) => {
                       ;(e.target as HTMLImageElement).src =
                         `/images/sets/en-US/${(row.data as { type: string; row: Row<CardType> }).row.original.expansion}.webp`

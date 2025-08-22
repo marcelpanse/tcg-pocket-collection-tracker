@@ -48,7 +48,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
         <img
           src={`/images/sets/${i18n.language}/${expansion.id}.webp`}
           alt={`${expansion.id}`}
-          className="mr-2 inline h-10"
+          className="mr-2 inline max-w-[80px]"
           onError={(e) => {
             ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${expansion.id}.webp`
           }}
