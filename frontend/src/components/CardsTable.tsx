@@ -20,7 +20,7 @@ interface Props {
 export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, editable = true }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
-  const { t } = useTranslation('common/sets')
+  const { t } = useTranslation(['common/sets', 'pages/collection'])
   const [scrollContainerHeight, setScrollContainerHeight] = useState('auto')
 
   useLayoutEffect(() => {
@@ -144,8 +144,12 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
     >
       {showStats && (
         <small className="text-left md:text-right mb-3 md:mb-[-25px] md:mt-[10px]">
-          {cards.filter((c) => !c.linkedCardID).length} selected, {cards.filter((card) => (card.amount_owned ?? 0) > 0).length} uniques owned,{' '}
-          {cards.reduce((acc, card) => acc + (card.amount_owned ?? 0), 0)} total owned
+          {t('stats.summary', {
+            ns: 'pages/collection',
+            selected: cards.filter((c) => !c.linkedCardID).length,
+            uniquesOwned: cards.filter((card) => (card.amount_owned ?? 0) > 0).length,
+            totalOwned: cards.reduce((acc, card) => acc + (card.amount_owned ?? 0), 0),
+          })}
         </small>
       )}
       <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">

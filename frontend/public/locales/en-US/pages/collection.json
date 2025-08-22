@@ -12,5 +12,8 @@
     "filtersCount": "Filters ({{count}})",
     "clear": "Clear filters",
     "share": "Share"
+  },
+  "stats": {
+    "summary": "{{selected}} selected, {{uniquesOwned}} uniques owned, {{totalOwned}} total owned"
   }
 }
