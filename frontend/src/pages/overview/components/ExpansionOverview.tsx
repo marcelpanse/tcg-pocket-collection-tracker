@@ -29,7 +29,7 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
       packs = packs.filter((pack) => pack.name !== 'everypack')
     }
     const chartData = packs.map((pack) => ({
-      packName: pack.name,
+      packName: t(pack.name, { ns: 'common/packs' }),
       percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter, deckbuildingMode }),
       fill: pack.color,
     }))

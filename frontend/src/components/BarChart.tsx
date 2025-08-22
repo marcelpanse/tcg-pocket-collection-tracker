@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from 'recharts'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart'
@@ -34,14 +34,7 @@ interface PercentageBarChartProps {
 }
 
 export const BarChartComponent: FC<PercentageBarChartProps> = ({ title, data, config = {}, footer }) => {
-  const [packNameMap, setPackNameMap] = useState<Record<string, string>>({})
-
-  useEffect(() => {
-    fetch('/locales/en-US/common/packs.json')
-      .then((res) => res.json())
-      .then(setPackNameMap)
-      .catch((err) => console.error('Failed to load packs.json:', err))
-  }, [])
+  const { t } = useTranslation(['common/packs', 'expansion-overview'])
 
   return (
     <Card className="rounded-lg border-1 border-neutral-700 border-solid shadow-none dark:bg-neutral-800">
@@ -50,12 +43,15 @@ export const BarChartComponent: FC<PercentageBarChartProps> = ({ title, data, co
       </CardHeader>
       <CardContent>
         <ChartContainer config={config}>
-          <BarChart accessibilityLayer data={data.map((d) => ({ ...d, percentage: d.percentage * 100 }))}>
+          <BarChart
+            accessibilityLayer
+            data={data.map((d) => ({ ...d, percentage: d.percentage * 100, [t('percentage', { ns: 'expansion-overview' })]: d.percentage * 100 }))}
+          >
             <CartesianGrid vertical={false} />
-            <XAxis dataKey="packName" tickLine={false} tickMargin={10} axisLine={false} tickFormatter={(value) => packNameMap[value] || value} />
+            <XAxis dataKey="packName" tickLine={false} tickMargin={10} axisLine={false} />
             <YAxis type="number" domain={[0, 100]} width={25} />
             <ChartTooltip cursor={false} content={<CustomTooltipContent payload={[]} active={false} />} />
-            <Bar dataKey="percentage" strokeWidth={2} radius={8} />
+            <Bar dataKey={t('percentage', { ns: 'expansion-overview' })} strokeWidth={2} radius={8} />
           </BarChart>
         </ChartContainer>
       </CardContent>
