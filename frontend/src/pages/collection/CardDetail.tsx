@@ -76,7 +76,7 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
 
           <div className="p-4 w-full">
             <div className="mb-8">
-              <h2 className="text-xl font-semibold">Alternate versions</h2>
+              <h2 className="text-xl font-semibold">{t('text.alternateVersions')}</h2>
               {card.alternate_versions?.map((x) => (
                 <p key={x.card_id} onClick={() => setCardId(x.card_id)} className="cursor-pointer">
                   {x.card_id === cardId ? '✓' : '→'} {x.version}
