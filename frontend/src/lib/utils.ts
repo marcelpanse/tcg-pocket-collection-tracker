@@ -9,6 +9,14 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+export function formatFriendId(friendId: string): string {
+  if (!friendId || friendId.length !== 16) {
+    return friendId
+  }
+
+  return friendId.match(/.{4}/g)?.join('-') || friendId
+}
+
 export function getCardNameByLang(card: Card, lang: string): string {
   if (card.name === undefined || card.name === null) return ''
 
