@@ -7,7 +7,7 @@ import { useToast } from '@/hooks/use-toast.ts'
 import { getCardById } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
-import type { TradeRow } from '@/types'
+import type { TradeRow, TradeStatus } from '@/types'
 
 interface Props {
   trades: TradeRow[]
@@ -19,22 +19,22 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
   const { t } = useTranslation('trade-matches')
   const { toast } = useToast()
 
-  const { ownedCards, setOwnedCards } = useContext(CollectionContext)
-  const { account, user } = useContext(UserContext)
-  const [selectedTrade, setSelectedTrade] = useState<TradeRow | null>(null)
-
   function interesting(row: TradeRow) {
     return (row.offering_friend_id === account?.friend_id && !row.offerer_ended) || (row.receiving_friend_id === account?.friend_id && !row.receiver_ended)
   }
+
+  const { ownedCards, setOwnedCards } = useContext(CollectionContext)
+  const { account, user } = useContext(UserContext)
   const trades = viewHistory ? allTrades.filter((x) => !interesting(x)) : allTrades.filter(interesting)
+  const [selectedTradeId, setSelectedTradeId] = useState<number | undefined>(undefined)
 
   if (!account || !user) return null
 
   function onClick(row: TradeRow) {
-    if (selectedTrade?.id === row.id) {
-      setSelectedTrade(null)
+    if (selectedTradeId === row.id) {
+      setSelectedTradeId(undefined)
     } else {
-      setSelectedTrade(row)
+      setSelectedTradeId(row.id)
     }
   }
 
@@ -75,7 +75,7 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
     const friendCard = row.offering_friend_id === account.friend_id ? row.receiver_card_id : row.offer_card_id
     return (
       <li
-        className={`flex cursor-pointer justify-between rounded gap-4 p-1 my-1 ${selectedTrade?.id === row.id && 'bg-green-900'} hover:bg-neutral-500`}
+        className={`flex cursor-pointer justify-between rounded gap-4 p-1 my-1 ${selectedTradeId === row.id && 'bg-green-900'} hover:bg-neutral-500`}
         onClick={() => onClick(row)}
       >
         {status(row)}
@@ -83,17 +83,6 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
         {card(friendCard)}
       </li>
     )
-  }
-
-  const end = async (row: TradeRow) => {
-    const obj =
-      row.offering_friend_id === account.friend_id ? { offerer_ended: true } : row.receiving_friend_id === account.friend_id ? { receiver_ended: true } : null
-    if (obj === null) {
-      console.log(row, " doesn't match your friend_id")
-      return
-    }
-    await update(row.id, obj)
-    setSelectedTrade(null)
   }
 
   const increment = async (row: TradeRow) => {
@@ -111,29 +100,33 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
   }
 
   const actions = (row: TradeRow) => {
+    const updateStatus = async (status: TradeStatus) => {
+      await update(row.id, { status: status })
+      setSelectedTradeId(row.id)
+    }
+
+    const end = async () => {
+      const obj =
+        row.offering_friend_id === account.friend_id ? { offerer_ended: true } : row.receiving_friend_id === account.friend_id ? { receiver_ended: true } : null
+      if (obj === null) {
+        console.log(row, " doesn't match your friend_id")
+        return
+      }
+      await update(row.id, obj)
+      setSelectedTradeId(undefined)
+    }
+
     const i_ended = (row.offering_friend_id === account.friend_id && row.offerer_ended) || (row.receiving_friend_id === account.friend_id && row.receiver_ended)
     switch (row.status) {
       case 'offered':
         return (
           <>
             {row.receiving_friend_id === account.friend_id && (
-              <Button
-                type="button"
-                onClick={async () => {
-                  await update(row.id, { status: 'accepted' })
-                  setSelectedTrade(null)
-                }}
-              >
+              <Button type="button" onClick={async () => updateStatus('accepted')}>
                 {t('actionAccept')}
               </Button>
             )}
-            <Button
-              type="button"
-              onClick={async () => {
-                await update(row.id, { status: 'declined' })
-                await end(row)
-              }}
-            >
+            <Button type="button" onClick={async () => updateStatus('declined')}>
               {row.receiving_friend_id === account.friend_id ? t('actionDecline') : t('actionCancel')}
             </Button>
           </>
@@ -141,22 +134,10 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
       case 'accepted':
         return (
           <>
-            <Button
-              type="button"
-              onClick={async () => {
-                await update(row.id, { status: 'finished' })
-                setSelectedTrade(null)
-              }}
-            >
+            <Button type="button" onClick={async () => updateStatus('finished')}>
               {t('actionComplete')}
             </Button>
-            <Button
-              type="button"
-              onClick={async () => {
-                await update(row.id, { status: 'declined' })
-                await end(row)
-              }}
-            >
+            <Button type="button" onClick={async () => updateStatus('declined')}>
               {t('actionCancel')}
             </Button>
           </>
@@ -164,7 +145,7 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
       case 'declined':
         if (i_ended) return null
         return (
-          <Button type="button" onClick={async () => await end(row)}>
+          <Button type="button" onClick={end}>
             {t('actionHide')}
           </Button>
         )
@@ -176,24 +157,25 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
               type="button"
               onClick={async () => {
                 await increment(row)
-                await end(row)
+                await end()
               }}
             >
               {t('actionUpdate')}
             </Button>
-            <Button type="button" onClick={async () => await end(row)}>
+            <Button type="button" onClick={end}>
               {t('actionHide')}
             </Button>
           </>
         )
       default:
-        console.log(`Unknown trade status ${selectedTrade?.status}`)
+        console.log(`Unknown trade status ${row.status}`)
         return null
     }
   }
-  const buttons = selectedTrade && actions(selectedTrade)
 
-  if (trades.length === 0) return <div className="rounded-lg border-1 border-neutral-700 border-solid p-2 text-center">No active trades</div>
+  const selectedTrade = trades.find((r) => r.id === selectedTradeId)
+
+  if (trades.length === 0) return <div className="rounded-lg border-1 border-neutral-700 border-solid p-2 text-center">{t('noActiveTrades')}</div>
 
   return (
     <div className="rounded-lg border-1 border-neutral-700 border-solid p-2">
@@ -209,7 +191,7 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
             <Row key={x.id} row={x} />
           ))}
       </ul>
-      {buttons && <div className="flex gap-4 text-center items-center mt-2">{buttons}</div>}
+      {selectedTrade && <div className="flex gap-4 text-center items-center mt-2">{actions(selectedTrade)}</div>}
     </div>
   )
 }

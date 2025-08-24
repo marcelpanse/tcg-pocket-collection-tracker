@@ -51,7 +51,6 @@ function TradePartner({ friendId, initialTrades }: TradePartnerProps) {
     }
   })
 
-  // TODO: fix completed trades not appearing in history
   return (
     <div className="w-full">
       <div className="flex justify-between items-center mb-2 mx-1">
