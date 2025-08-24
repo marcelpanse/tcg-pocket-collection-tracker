@@ -19,11 +19,12 @@ export async function fetchCollection(email?: string, friendId?: string) {
     if (cachedCollection) {
       // Validate cache by checking if count matches
       try {
-        const { count, error } = await supabase.from(tableName).select('*', { count: 'exact', head: true }).eq(key, value)
+        const { data: totalCardCount, error } = await supabase.rpc('total_amount_owned')
+        if (error) {
+          throw new Error('Error fetching collection count')
+        }
 
-        if (error) throw new Error('Error fetching collection count')
-
-        if (!count) {
+        if (!totalCardCount) {
           console.log('No collection found in database')
           return []
         }
@@ -32,16 +33,16 @@ export async function fetchCollection(email?: string, friendId?: string) {
         const cachedCount = localStorage.getItem(`${COLLECTION_COUNT_KEY}_${email}`)
 
         // If count matches cached count, return cached collection
-        if (cachedCount && Number.parseInt(cachedCount, 10) === count) {
-          console.log('Using cached collection data, count matches:', count)
+        if (cachedCount && Number.parseInt(cachedCount, 10) === totalCardCount) {
+          console.log('Using cached collection data, count matches:', totalCardCount)
           return cachedCollection
         }
 
-        console.log('Cache count mismatch - cached:', cachedCount, 'actual:', count)
+        console.log('Cache count mismatch - cached:', cachedCount, 'actual:', totalCardCount)
 
         // Count doesn't match, fetch fresh data
         console.log('Cache count mismatch, fetching fresh collection data')
-        return await fetchAndCacheCollection(tableName, key, value, count, email)
+        return await fetchAndCacheCollection(tableName, key, value, totalCardCount, email)
       } catch (error) {
         console.error('Error validating cache:', error)
         // On error, fall back to cached data
@@ -133,9 +134,14 @@ function getCollectionFromCache(email: string): CollectionRow[] | null {
 /**
  * Fetch collection data from API and update cache
  */
-async function fetchAndCacheCollection(tableName: string, key: string, value: string, count: number, email: string) {
-  const collection = await fetchRange({ tableName, key, value, total: count, start: 0, end: PAGE_SIZE })
-  saveCollectionToCache(email, collection, count)
+async function fetchAndCacheCollection(tableName: string, key: string, value: string, totalCardCount: number, email: string) {
+  const { count: rowCount, error: rowCountError } = await supabase.from(tableName).select('*', { count: 'exact', head: true }).eq(key, value)
+  if (rowCountError || !rowCount) {
+    throw new Error('Error fetching collection count')
+  }
+
+  const collection = await fetchRange({ tableName, key, value, total: rowCount, start: 0, end: PAGE_SIZE })
+  saveCollectionToCache(email, collection, totalCardCount)
   return collection
 }
 
@@ -144,7 +150,9 @@ async function fetchAndCacheCollection(tableName: string, key: string, value: st
  * This function is used when modifying the collection
  */
 export function updateCollectionCache(collection: CollectionRow[], email: string) {
-  if (!email) return
+  if (!email) {
+    return
+  }
 
   try {
     // Check if localStorage is available
@@ -157,7 +165,8 @@ export function updateCollectionCache(collection: CollectionRow[], email: string
     localStorage.setItem(`${COLLECTION_CACHE_KEY}_${email}`, JSON.stringify(collection))
 
     // Update count in cache
-    localStorage.setItem(`${COLLECTION_COUNT_KEY}_${email}`, collection.length.toString())
+    const totalOwned = collection.reduce((acc, row) => acc + (row.amount_owned ?? 0), 0)
+    localStorage.setItem(`${COLLECTION_COUNT_KEY}_${email}`, totalOwned.toString())
 
     console.log('Collection cache updated')
   } catch (error) {

@@ -34,6 +34,14 @@ export function Header() {
   const { t, i18n } = useTranslation('header')
   const changeLanguage = (lng: string) => i18n.changeLanguage(lng)
 
+  const languages = [
+    { code: 'en-US', name: t('languages.en-US') },
+    { code: 'es-ES', name: t('languages.es-ES') },
+    { code: 'pt-BR', name: t('languages.pt-BR') },
+    { code: 'fr-FR', name: t('languages.fr-FR') },
+    { code: 'it-IT', name: t('languages.it-IT') },
+  ].sort((a, b) => a.name.localeCompare(b.name))
+
   const isOverviewPage = location.pathname === '/'
 
   return (
@@ -97,25 +105,11 @@ export function Header() {
               <DropdownMenuLabel>{t('selectLanguage')}</DropdownMenuLabel>
               <DropdownMenuSeparator />
 
-              <DropdownMenuItem selected={i18n.language === 'en-US'} onClick={() => changeLanguage('en-US')}>
-                {t('languages.en-US')}
-              </DropdownMenuItem>
-
-              <DropdownMenuItem selected={i18n.language === 'es-ES'} onClick={() => changeLanguage('es-ES')}>
-                {t('languages.es-ES')}
-              </DropdownMenuItem>
-
-              <DropdownMenuItem selected={i18n.language === 'pt-BR'} onClick={() => changeLanguage('pt-BR')}>
-                {t('languages.pt-BR')}
-              </DropdownMenuItem>
-
-              <DropdownMenuItem selected={i18n.language === 'fr-FR'} onClick={() => changeLanguage('fr-FR')}>
-                {t('languages.fr-FR')}
-              </DropdownMenuItem>
-
-              <DropdownMenuItem selected={i18n.language === 'it-IT'} onClick={() => changeLanguage('it-IT')}>
-                {t('languages.it-IT')}
-              </DropdownMenuItem>
+              {languages.map((lang) => (
+                <DropdownMenuItem key={lang.code} selected={i18n.language === lang.code} onClick={() => changeLanguage(lang.code)}>
+                  {lang.name}
+                </DropdownMenuItem>
+              ))}
             </DropdownMenuContent>
           </DropdownMenu>
 

@@ -10,7 +10,8 @@
     "prepare": "lefthook install",
     "dev": "pnpm --filter frontend run dev",
     "build": "pnpm --filter frontend run build",
-    "scraper": "node scripts/scraper.js && node scripts/download-packs.js && node scripts/scrape-missions.js && node scripts/deck-scraper-game8.js"
+    "scraper": "node scripts/scraper.js && node scripts/download-packs.js && node scripts/scrape-missions.js && node scripts/deck-scraper-game8.js",
+    "sync-locales": "node scripts/sync-locales.js"
   },
   "devDependencies": {
     "@biomejs/biome": "2.1.4",
@@ -34,6 +35,7 @@
   "dependencies": {
     "cheerio": "^1.1.2",
     "fs-extra": "^11.3.1",
+    "glob": "^11.0.0",
     "node-fetch": "^3.3.2"
   }
 }

@@ -53,19 +53,6 @@ export const BlogOverview = () => {
 
           return (
             <Card key={post.url ?? post.title} className="overflow-hidden flex flex-col border-1 border-neutral-700 rounded-md bg-neutral-800 text-neutral-400">
-              {post.feature_image ? (
-                <a href={post.url} target="_blank" rel="noopener noreferrer" className="block">
-                  <img
-                    src={post.feature_image}
-                    alt={post.title}
-                    className="h-40 w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
-                    loading="lazy"
-                  />
-                </a>
-              ) : (
-                <div className="h-40 w-full bg-muted" />
-              )}
-
               <CardHeader className="space-y-1">
                 <CardTitle className="text-lg leading-snug">
                   <a href={post.url} target="_blank" rel="noopener noreferrer" className="hover:underline">

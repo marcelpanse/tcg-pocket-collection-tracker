@@ -24,6 +24,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -61,6 +62,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -98,6 +100,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -135,6 +138,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -172,6 +176,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -214,6 +219,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -251,6 +257,7 @@
     "rarity": "◊◊◊◊",
     "fullart": "No",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -267,6 +274,11 @@
       {
         "card_id": "A2-196",
         "version": "Space-Time Smackdown #196",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-232",
+        "version": "Wisdom of Sea and Sky #232",
         "rarity": "☆☆"
       }
     ],
@@ -298,6 +310,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -335,6 +348,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -372,6 +386,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -414,6 +429,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -451,6 +467,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -488,6 +505,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -525,6 +543,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -562,6 +581,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -599,6 +619,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -636,6 +657,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -678,6 +700,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -715,6 +738,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -757,6 +781,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -794,6 +819,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -831,6 +857,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -873,6 +900,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -910,6 +938,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -947,6 +976,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -984,6 +1014,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -1021,6 +1052,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -1063,6 +1095,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -1100,6 +1133,7 @@
     "rarity": "◊◊◊◊",
     "fullart": "No",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -1147,6 +1181,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -1184,6 +1219,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -1221,6 +1257,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -1258,6 +1295,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -1300,6 +1338,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -1337,6 +1376,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -1379,6 +1419,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -1416,6 +1457,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -1453,6 +1495,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -1490,6 +1533,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -1527,6 +1571,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -1564,6 +1609,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -1606,6 +1652,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -1643,6 +1690,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -1680,6 +1728,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -1717,6 +1766,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -1754,6 +1804,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -1791,6 +1842,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -1828,6 +1880,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -1871,6 +1924,7 @@
     "rarity": "◊◊◊◊",
     "fullart": "No",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -1923,6 +1977,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -1970,6 +2025,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -2007,6 +2063,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -2044,6 +2101,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -2081,6 +2139,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -2123,6 +2182,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -2165,6 +2225,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2202,6 +2263,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2244,6 +2306,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2286,6 +2349,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2323,6 +2387,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2360,6 +2425,7 @@
     "rarity": "◊◊◊◊",
     "fullart": "No",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2376,6 +2442,11 @@
       {
         "card_id": "A2-198",
         "version": "Space-Time Smackdown #198",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-236",
+        "version": "Wisdom of Sea and Sky #236",
         "rarity": "☆☆"
       }
     ],
@@ -2407,6 +2478,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -2449,6 +2521,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -2491,6 +2564,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -2528,6 +2602,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -2565,6 +2640,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -2572,6 +2648,11 @@
         "card_id": "A2-66",
         "version": "Space-Time Smackdown #66",
         "rarity": "◊"
+      },
+      {
+        "card_id": "A4-220",
+        "version": "Wisdom of Sea and Sky #220",
+        "rarity": "☆"
       }
     ],
     "artist": "Sumiyoshi Kizuki",
@@ -2602,6 +2683,7 @@
     "rarity": "◊◊◊◊",
     "fullart": "No",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -2618,6 +2700,11 @@
       {
         "card_id": "A2-199",
         "version": "Space-Time Smackdown #199",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-237",
+        "version": "Wisdom of Sea and Sky #237",
         "rarity": "☆☆"
       }
     ],
@@ -2649,6 +2736,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2691,6 +2779,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2733,6 +2822,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2770,6 +2860,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2807,6 +2898,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2844,6 +2936,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2886,6 +2979,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -2923,6 +3017,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -2960,6 +3055,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -3002,6 +3098,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -3039,6 +3136,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -3081,6 +3179,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -3123,6 +3222,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -3160,6 +3260,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -3197,6 +3298,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -3239,6 +3341,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -3276,6 +3379,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -3313,6 +3417,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -3350,6 +3455,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -3387,6 +3493,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -3424,6 +3531,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -3461,6 +3569,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -3498,6 +3607,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -3535,6 +3645,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -3572,6 +3683,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -3614,6 +3726,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -3656,6 +3769,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -3693,6 +3807,7 @@
     "rarity": "◊◊◊◊",
     "fullart": "No",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -3745,6 +3860,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -3782,6 +3898,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -3819,6 +3936,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -3856,6 +3974,7 @@
     "rarity": "◊◊◊◊",
     "fullart": "No",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -3872,6 +3991,11 @@
       {
         "card_id": "A2-201",
         "version": "Space-Time Smackdown #201",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-238",
+        "version": "Wisdom of Sea and Sky #238",
         "rarity": "☆☆"
       }
     ],
@@ -3903,6 +4027,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -3940,6 +4065,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -3977,6 +4103,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -4014,6 +4141,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -4051,6 +4179,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -4093,6 +4222,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -4130,6 +4260,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -4167,6 +4298,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -4209,6 +4341,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -4246,6 +4379,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -4283,6 +4417,7 @@
     "rarity": "◊◊◊◊",
     "fullart": "No",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -4335,6 +4470,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -4377,6 +4513,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -4414,6 +4551,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -4451,6 +4589,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -4488,6 +4627,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -4525,6 +4665,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -4562,6 +4703,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -4599,6 +4741,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -4642,6 +4785,7 @@
     "rarity": "◊◊◊◊",
     "fullart": "No",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -4694,6 +4838,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -4736,6 +4881,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -4773,6 +4919,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -4810,6 +4957,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -4852,6 +5000,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -4859,6 +5008,11 @@
         "card_id": "A2-124",
         "version": "Space-Time Smackdown #124",
         "rarity": "◊"
+      },
+      {
+        "card_id": "A4-230",
+        "version": "Wisdom of Sea and Sky #230",
+        "rarity": "☆"
       }
     ],
     "artist": "Yukiko Baba",
@@ -4889,6 +5043,7 @@
     "rarity": "◊◊◊◊",
     "fullart": "No",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -4905,6 +5060,11 @@
       {
         "card_id": "A2-203",
         "version": "Space-Time Smackdown #203",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-239",
+        "version": "Wisdom of Sea and Sky #239",
         "rarity": "☆☆"
       }
     ],
@@ -4936,6 +5096,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -4973,6 +5134,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5010,6 +5172,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5047,6 +5210,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5084,6 +5248,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -5121,6 +5286,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -5158,6 +5324,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5195,6 +5362,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5232,6 +5400,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5274,6 +5443,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -5316,6 +5486,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -5353,6 +5524,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -5390,6 +5562,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -5427,6 +5600,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5469,6 +5643,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5506,6 +5681,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5543,6 +5719,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -5580,6 +5757,7 @@
     "rarity": "◊◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -5612,6 +5790,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -5639,6 +5818,7 @@
     "rarity": "◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5666,6 +5846,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -5693,6 +5874,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -5720,6 +5902,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5747,6 +5930,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5774,6 +5958,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5806,6 +5991,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -5838,6 +6024,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5870,6 +6057,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -5902,6 +6090,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -5934,6 +6123,7 @@
     "rarity": "◊◊",
     "fullart": "No",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -5976,6 +6166,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -6018,6 +6209,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -6060,6 +6252,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -6102,6 +6295,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -6144,6 +6338,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -6186,6 +6381,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -6228,6 +6424,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -6275,6 +6472,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -6317,6 +6515,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -6359,6 +6558,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -6401,6 +6601,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -6443,6 +6644,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -6485,6 +6687,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -6527,6 +6730,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -6569,6 +6773,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -6611,6 +6816,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -6653,6 +6859,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -6695,6 +6902,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -6737,6 +6945,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -6779,6 +6988,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -6821,6 +7031,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -6863,6 +7074,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -6905,6 +7117,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -6947,6 +7160,7 @@
     "rarity": "☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -6989,6 +7203,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -7005,6 +7220,11 @@
       {
         "card_id": "A2-196",
         "version": "Space-Time Smackdown #196",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-232",
+        "version": "Wisdom of Sea and Sky #232",
         "rarity": "☆☆"
       }
     ],
@@ -7036,6 +7256,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -7089,6 +7310,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -7141,6 +7363,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -7157,6 +7380,11 @@
       {
         "card_id": "A2-198",
         "version": "Space-Time Smackdown #198",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-236",
+        "version": "Wisdom of Sea and Sky #236",
         "rarity": "☆☆"
       }
     ],
@@ -7188,6 +7416,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -7204,6 +7433,11 @@
       {
         "card_id": "A2-199",
         "version": "Space-Time Smackdown #199",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-237",
+        "version": "Wisdom of Sea and Sky #237",
         "rarity": "☆☆"
       }
     ],
@@ -7235,6 +7469,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -7287,6 +7522,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -7303,6 +7539,11 @@
       {
         "card_id": "A2-201",
         "version": "Space-Time Smackdown #201",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-238",
+        "version": "Wisdom of Sea and Sky #238",
         "rarity": "☆☆"
       }
     ],
@@ -7334,6 +7575,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -7392,6 +7634,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -7444,6 +7687,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -7460,6 +7704,11 @@
       {
         "card_id": "A2-203",
         "version": "Space-Time Smackdown #203",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-239",
+        "version": "Wisdom of Sea and Sky #239",
         "rarity": "☆☆"
       }
     ],
@@ -7481,6 +7730,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -7513,6 +7763,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -7545,6 +7796,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -7577,6 +7829,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -7609,6 +7862,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -7641,6 +7895,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "no",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -7683,6 +7938,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -7699,6 +7955,11 @@
       {
         "card_id": "A2-196",
         "version": "Space-Time Smackdown #196",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-232",
+        "version": "Wisdom of Sea and Sky #232",
         "rarity": "☆☆"
       }
     ],
@@ -7730,6 +7991,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -7777,6 +8039,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -7793,6 +8056,11 @@
       {
         "card_id": "A2-198",
         "version": "Space-Time Smackdown #198",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-236",
+        "version": "Wisdom of Sea and Sky #236",
         "rarity": "☆☆"
       }
     ],
@@ -7824,6 +8092,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -7840,6 +8109,11 @@
       {
         "card_id": "A2-199",
         "version": "Space-Time Smackdown #199",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-237",
+        "version": "Wisdom of Sea and Sky #237",
         "rarity": "☆☆"
       }
     ],
@@ -7871,6 +8145,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -7923,6 +8198,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -7939,6 +8215,11 @@
       {
         "card_id": "A2-201",
         "version": "Space-Time Smackdown #201",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-238",
+        "version": "Wisdom of Sea and Sky #238",
         "rarity": "☆☆"
       }
     ],
@@ -7970,6 +8251,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -8022,6 +8304,7 @@
     "rarity": "☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -8038,6 +8321,11 @@
       {
         "card_id": "A2-203",
         "version": "Space-Time Smackdown #203",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4-239",
+        "version": "Wisdom of Sea and Sky #239",
         "rarity": "☆☆"
       }
     ],
@@ -8075,6 +8363,7 @@
     "rarity": "☆☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
     "alternate_versions": [
@@ -8133,6 +8422,7 @@
     "rarity": "☆☆☆",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
     "alternate_versions": [
@@ -8191,6 +8481,7 @@
     "rarity": "Crown Rare",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [
@@ -8249,6 +8540,7 @@
     "rarity": "Crown Rare",
     "fullart": "Yes",
     "ex": "yes",
+    "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
     "alternate_versions": [

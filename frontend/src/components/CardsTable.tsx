@@ -1,5 +1,6 @@
 import { createColumnHelper, getCoreRowModel, getGroupedRowModel, type Row, useReactTable } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
+import i18n from 'i18next'
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
@@ -159,9 +160,13 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
               {row.type === 'header' ? (
                 <div className="flex items-center justify-start gap-2 mx-auto max-w-[900px] scroll-m-20 border-b-2 border-slate-600 pb-2 tracking-tight transition-colors first:mt-0">
                   <img
-                    src={`/images/sets/${(row.data as { type: string; row: Row<CardType> }).row.original.expansion}.webp`}
+                    src={`/images/sets/${i18n.language}/${(row.data as { type: string; row: Row<CardType> }).row.original.expansion}.webp`}
                     alt={(row.data as { type: string; row: Row<CardType> }).row.getValue('set_details') as string}
-                    className="h-6 sm:h-8"
+                    className="max-w-[60px]"
+                    onError={(e) => {
+                      ;(e.target as HTMLImageElement).src =
+                        `/images/sets/en-US/${(row.data as { type: string; row: Row<CardType> }).row.original.expansion}.webp`
+                    }}
                   />
                   <h2 className="text-center font-semibold text-md sm:text-lg md:text-2xl ">
                     {t((row.data as { type: string; row: Row<CardType> }).row.getValue('set_details') as string)}

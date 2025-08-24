@@ -26,9 +26,10 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
 
   function isSelected(deckCards: string[], cardObj: Card, idx: number): boolean {
     const countInDeckSoFar = deckCards.slice(0, idx + 1).filter((id) => id === cardObj.card_id).length
-    const cardIdOrAlternate: string[] = cardObj.alternate_versions.map((av) => av.card_id)
-    const owned = ownedCards.find((c) => cardIdOrAlternate.some((id) => id === c.card_id.replace('_', '-')) && c.amount_owned > 0)
-    const ownedAmount = owned ? owned.amount_owned : 0
+    const allVersionIds = cardObj.alternate_versions.map((av) => av.card_id)
+    const ownedAmount = ownedCards
+      .filter((c) => allVersionIds.includes(c.card_id.replace('_', '-')) && c.amount_owned > 0)
+      .reduce((total, card) => total + card.amount_owned, 0)
     return countInDeckSoFar <= ownedAmount
   }
 

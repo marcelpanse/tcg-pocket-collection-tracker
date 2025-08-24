@@ -15,12 +15,13 @@ interface CardProps {
   card: CardType
   useMaxWidth?: boolean
   editable?: boolean
+  onImageClick?: () => void
 }
 
 // keep track of the debounce timeouts for each card
 const _inputDebounce: Record<string, number | null> = {}
 
-export function Card({ card, useMaxWidth = false, editable = true }: CardProps) {
+export function Card({ card, onImageClick, useMaxWidth = false, editable = true }: CardProps) {
   const params = useParams()
 
   const { user, setIsLoginDialogOpen } = use(UserContext)
@@ -100,7 +101,14 @@ export function Card({ card, useMaxWidth = false, editable = true }: CardProps) 
 
   return (
     <div className={`group flex w-fit ${!useMaxWidth ? 'max-w-32 md:max-w-40' : ''} flex-col items-center rounded-lg`}>
-      <button type="button" className="cursor-pointer" onClick={() => setSelectedCardId(card.card_id)}>
+      <button
+        type="button"
+        className="cursor-pointer"
+        onClick={() => {
+          setSelectedCardId(card.card_id)
+          onImageClick?.()
+        }}
+      >
         <FancyCard card={card} selected={amountOwned > 0} clickable={!useMaxWidth} />
       </button>
       <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">

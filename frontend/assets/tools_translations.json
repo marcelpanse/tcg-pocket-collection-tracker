@@ -6,7 +6,6 @@
     "fr-FR": "Fossile Nautile",
     "it-IT": "Helixfossile"
   },
-
   "dome fossil": {
     "en-US": "Dome Fossil",
     "es-ES": "Fósil Domo",
@@ -14,7 +13,6 @@
     "fr-FR": "Fossile Dôme",
     "it-IT": "Domofossile"
   },
-
   "old amber": {
     "en-US": "Old Amber",
     "es-ES": "Ámbar Viejo",
@@ -22,7 +20,6 @@
     "fr-FR": "Vieil Ambre",
     "it-IT": "Ambra Antica"
   },
-
   "pokémon flute": {
     "en-US": "Pokémon Flute",
     "es-ES": "Pokéflauta",
@@ -30,7 +27,6 @@
     "fr-FR": "Flûte Pokémon",
     "it-IT": "Pokéflauto"
   },
-
   "mythical slab": {
     "en-US": "Mythical Slab",
     "es-ES": "Losa Singular",
@@ -38,7 +34,6 @@
     "fr-FR": "Dalle Fabuleuse",
     "it-IT": "Pietra Misteriosa"
   },
-
   "skull fossil": {
     "en-US": "Skull Fossil",
     "es-ES": "Fósil Cráneo",
@@ -46,7 +41,6 @@
     "fr-FR": "Fossile Crâne",
     "it-IT": "Fossilcranio"
   },
-
   "armor fossil": {
     "en-US": "Armor Fossil",
     "es-ES": "Fósil Coraza",
@@ -54,7 +48,6 @@
     "fr-FR": "Fossile Armure",
     "it-IT": "Fossilscudo"
   },
-
   "pokémon communication": {
     "en-US": "Pokémon Communication",
     "es-ES": "Comunicación Pokémon",
@@ -62,7 +55,6 @@
     "fr-FR": "Communication Pokémon",
     "it-IT": "Comunicazione Pokémon"
   },
-
   "giant cape": {
     "en-US": "Giant Cape",
     "es-ES": "Capa Gigante",
@@ -70,7 +62,6 @@
     "fr-FR": "Cape Géante",
     "it-IT": "Mantello Gigante"
   },
-
   "rocky helmet": {
     "en-US": "Rocky Helmet",
     "es-ES": "Casco Dentado",
@@ -78,7 +69,6 @@
     "fr-FR": "Casque Brut",
     "it-IT": "Bitorzolelmo"
   },
-
   "lum berry": {
     "en-US": "Lum Berry",
     "es-ES": "Baya Ziuela",
@@ -86,7 +76,6 @@
     "fr-FR": "Baie Prine",
     "it-IT": "Baccaprugna"
   },
-
   "big malasada": {
     "en-US": "Big Malasada",
     "es-ES": "Malasada Maxi",
@@ -94,7 +83,6 @@
     "fr-FR": "Malasada Maxi",
     "it-IT": "Malasada maxi"
   },
-
   "fishing net": {
     "en-US": "Fishing Net",
     "es-ES": "Red de Pesca",
@@ -102,7 +90,6 @@
     "fr-FR": "Filet de Pêche",
     "it-IT": "Rete da Pesca"
   },
-
   "rare candy": {
     "en-US": "Rare Candy",
     "es-ES": "Caramelo Raro",
@@ -110,7 +97,6 @@
     "fr-FR": "Super Bonbon",
     "it-IT": "Caramella Rara"
   },
-
   "rotom dex": {
     "en-US": "Rotom Dex",
     "es-ES": "RotomDex",
@@ -118,7 +104,6 @@
     "fr-FR": "Motisma-Dex",
     "it-IT": "Pokédex Rotom"
   },
-
   "poison barb": {
     "en-US": "Poison Barb",
     "es-ES": "Flecha Venenosa",
@@ -126,7 +111,6 @@
     "fr-FR": "Pic Venin",
     "it-IT": "Velenaculeo"
   },
-
   "leaf cape": {
     "en-US": "Leaf Cape",
     "es-ES": "Capa Hoja",
@@ -134,7 +118,6 @@
     "fr-FR": "Cape Sylvestre",
     "it-IT": "Mantello Silvestre"
   },
-
   "beast wall": {
     "en-US": "Beast Wall",
     "es-ES": "Muro Ente",
@@ -142,7 +125,6 @@
     "fr-FR": "Barrière Chimère",
     "it-IT": "Ultramuro"
   },
-
   "repel": {
     "en-US": "Repel",
     "es-ES": "Repelente",
@@ -150,7 +132,6 @@
     "fr-FR": "Repousse",
     "it-IT": "Repellente"
   },
-
   "electrical cord": {
     "en-US": "Electrical Cord",
     "es-ES": "Cable Eléctrico",
@@ -158,7 +139,6 @@
     "fr-FR": "Câble Électrique",
     "it-IT": "Prolunga"
   },
-
   "beastite": {
     "en-US": "Beastite",
     "es-ES": "Entita",
@@ -166,20 +146,95 @@
     "fr-FR": "Chimérite",
     "it-IT": "Pietra Ultracreatura"
   },
-
-  "evee bag": {
-    "en-US": "Eevee Bag",
-    "es-ES": "",
-    "pt-BR": "",
-    "fr-FR": "Sac Évoli",
-    "it-IT": ""
-  },
-
   "leftovers": {
     "en-US": "Leftovers",
     "es-ES": "Restos",
     "pt-BR": "Sobras",
     "fr-FR": "Restes",
     "it-IT": "Avanzi"
+  },
+  "poké ball": {
+    "en-US": "Poké Ball",
+    "es-ES": null,
+    "pt-BR": null,
+    "fr-FR": "Poké Ball",
+    "it-IT": null
+  },
+  "eevee bag": {
+    "en-US": "Eevee Bag",
+    "es-ES": null,
+    "pt-BR": null,
+    "fr-FR": "Sac Évoli",
+    "it-IT": null
+  },
+  "elemental switch": {
+    "en-US": "Elemental Switch",
+    "es-ES": null,
+    "pt-BR": null,
+    "fr-FR": "Échange Élémentaire",
+    "it-IT": null
+  },
+  "squirt bottle": {
+    "en-US": "Squirt Bottle",
+    "es-ES": null,
+    "pt-BR": null,
+    "fr-FR": "Carapuce à O",
+    "it-IT": null
+  },
+  "steel apron": {
+    "en-US": "Steel Apron",
+    "es-ES": null,
+    "pt-BR": null,
+    "fr-FR": "Tablier d'Acier",
+    "it-IT": null
+  },
+  "dark pendant": {
+    "en-US": "Dark Pendant",
+    "es-ES": null,
+    "pt-BR": null,
+    "fr-FR": "Pendentif des Ténèbres",
+    "it-IT": null
+  },
+  "rescue scarf": {
+    "en-US": "Rescue Scarf",
+    "es-ES": null,
+    "pt-BR": null,
+    "fr-FR": "Foulard de Sauvetage",
+    "it-IT": null
+  },
+  "potion": {
+    "en-US": "Potion",
+    "es-ES": null,
+    "pt-BR": null,
+    "fr-FR": "Potion",
+    "it-IT": null
+  },
+  "x speed": {
+    "en-US": "X Speed",
+    "es-ES": null,
+    "pt-BR": null,
+    "fr-FR": "Vitesse +",
+    "it-IT": null
+  },
+  "hand scope": {
+    "en-US": "Hand Scope",
+    "es-ES": null,
+    "pt-BR": null,
+    "fr-FR": "Scrute Main",
+    "it-IT": null
+  },
+  "pokédex": {
+    "en-US": "Pokédex",
+    "es-ES": null,
+    "pt-BR": null,
+    "fr-FR": "Pokédex",
+    "it-IT": null
+  },
+  "red card": {
+    "en-US": "Red Card",
+    "es-ES": null,
+    "pt-BR": null,
+    "fr-FR": "Carton Rouge",
+    "it-IT": null
   }
 }

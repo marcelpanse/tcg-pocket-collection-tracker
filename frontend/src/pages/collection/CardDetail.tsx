@@ -53,8 +53,13 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
         </SheetHeader>
         <div className="flex flex-col items-center">
           <div className="px-10 py-4 w-full">
-            <button type="button" onClick={() => setIsImageDialogOpen(true)} className="cursor-pointer">
-              <CardComponent key={cardId} card={{ ...card, amount_owned: row?.amount_owned || 0 }} useMaxWidth />
+            <button type="button" className="cursor-pointer">
+              <CardComponent
+                key={cardId}
+                card={{ ...card, amount_owned: row?.amount_owned || 0 }}
+                useMaxWidth
+                onImageClick={() => setIsImageDialogOpen(true)}
+              />
             </button>
           </div>
 
@@ -75,7 +80,7 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
             <div className="mb-8">
               <h2 className="text-xl font-semibold">Alternate versions</h2>
               {card.alternate_versions?.map((x) => (
-                <p key={x.card_id} onClick={() => setCardId(x.card_id)}>
+                <p key={x.card_id} onClick={() => setCardId(x.card_id)} className="cursor-pointer">
                   {x.card_id === cardId ? '✓' : '→'} {x.version}
                 </p>
               ))}

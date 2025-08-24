@@ -1,3 +1,4 @@
+import i18n from 'i18next'
 import { use, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
@@ -44,7 +45,14 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
   return (
     <>
       <h2 className="ml-6 md:ml-0 mt-6 col-span-8 text-3xl flex items-center">
-        <img src={`/images/sets/${expansion.id}.webp`} alt={`${expansion.id}`} className="mr-2 inline h-10" />
+        <img
+          src={`/images/sets/${i18n.language}/${expansion.id}.webp`}
+          alt={`${expansion.id}`}
+          className="mr-2 inline max-w-[80px]"
+          onError={(e) => {
+            ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${expansion.id}.webp`
+          }}
+        />
         {t(expansion.name, { ns: 'common/sets' })}
       </h2>
       {isMobile ? (
