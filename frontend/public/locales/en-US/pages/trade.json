@@ -6,7 +6,6 @@
   "copiedInClipboard": "Copied cards for trading to clipboard!",
   "lookingFor": "Looking For",
   "forTrade": "For Trade",
-  "buyingTokens": "Buying Tokens",
   "enableTradingPage": "Enable trading page",
   "openTradingPage": "Open trading page",
   "notLoggedIn": {
@@ -16,10 +15,6 @@
   "noTradeableCards": {
     "title": "You have no tradeable cards!",
     "description": "Go to the collections page and input your collected cards to see what you can trade."
-  },
-  "noSellableCards": {
-    "title": "You have no sellable cards!",
-    "description": "If you believe you have sellable cards, go to the collections page and input your collected cards to see what you can sell."
   },
   "noCardsNeeded": {
     "title": "You have all tradeable cards!",
