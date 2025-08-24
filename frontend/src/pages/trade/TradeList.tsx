@@ -1,28 +1,34 @@
-import { type Dispatch, type SetStateAction, useState } from 'react'
+import { useContext, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import { incrementMultipleCards } from '@/components/Card'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast.ts'
-import { supabase } from '@/lib/Auth'
 import { getCardById } from '@/lib/CardsDB'
-import type { User } from '@/lib/context/UserContext'
-import type { AccountRow, CollectionRow, TradeRow, TradeStatus } from '@/types'
+import { CollectionContext } from '@/lib/context/CollectionContext'
+import { UserContext } from '@/lib/context/UserContext'
+import type { TradeRow } from '@/types'
 
 interface Props {
-  account: AccountRow
   trades: TradeRow[]
-  setTrades: Dispatch<SetStateAction<TradeRow[]>>
-  ownedCards: CollectionRow[]
-  setOwnedCards: Dispatch<SetStateAction<CollectionRow[]>>
-  user: User
+  update: (id: number, fields: Partial<TradeRow>) => Promise<void>
+  viewHistory: boolean
 }
 
-function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user }: Props) {
+function TradeList({ trades: allTrades, update, viewHistory }: Props) {
   const { t } = useTranslation('trade-matches')
   const { toast } = useToast()
 
+  const { ownedCards, setOwnedCards } = useContext(CollectionContext)
+  const { account, user } = useContext(UserContext)
   const [selectedTrade, setSelectedTrade] = useState<TradeRow | null>(null)
+
+  function interesting(row: TradeRow) {
+    return (row.offering_friend_id === account?.friend_id && !row.offerer_ended) || (row.receiving_friend_id === account?.friend_id && !row.receiver_ended)
+  }
+  const trades = viewHistory ? allTrades.filter((x) => !interesting(x)) : allTrades.filter(interesting)
+
+  if (!account || !user) return null
 
   function onClick(row: TradeRow) {
     if (selectedTrade?.id === row.id) {
@@ -32,7 +38,7 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
     }
   }
 
-  function status(row: TradeRow) {
+  const status = (row: TradeRow) => {
     const style = {
       offered: { icon: row.offering_friend_id === account.friend_id ? '→' : '←', color: 'bg-amber-600' },
       accepted: { icon: '↔', color: 'bg-lime-600' },
@@ -64,7 +70,7 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
     )
   }
 
-  function Row({ row }: { row: TradeRow }) {
+  const Row = ({ row }: { row: TradeRow }) => {
     const yourCard = row.offering_friend_id === account.friend_id ? row.offer_card_id : row.receiver_card_id
     const friendCard = row.offering_friend_id === account.friend_id ? row.receiver_card_id : row.offer_card_id
     return (
@@ -79,46 +85,18 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
     )
   }
 
-  function update(row: TradeRow, status: TradeStatus) {
-    const now = new Date()
-    supabase
-      .from('trades')
-      .update({ status, updated_at: now })
-      .eq('id', row.id)
-      .then(({ error }) => {
-        if (error) {
-          console.log('Error updating trades: ', error)
-        } else {
-          setTrades((arr) => arr.map((r) => (r.id === row.id ? { ...r, status, updated_at: now } : r)))
-          setSelectedTrade(null)
-        }
-      })
-  }
-
-  function end(row: TradeRow) {
+  const end = async (row: TradeRow) => {
     const obj =
       row.offering_friend_id === account.friend_id ? { offerer_ended: true } : row.receiving_friend_id === account.friend_id ? { receiver_ended: true } : null
     if (obj === null) {
       console.log(row, " doesn't match your friend_id")
       return
     }
-
-    const now = new Date()
-    supabase
-      .from('trades')
-      .update({ updated_at: now, ...obj })
-      .eq('id', row.id)
-      .then(({ error }) => {
-        if (error) {
-          console.log('Error updating trades: ', error)
-        } else {
-          setTrades((arr) => arr.filter((r) => r.id !== row.id))
-          setSelectedTrade(null)
-        }
-      })
+    await update(row.id, obj)
+    setSelectedTrade(null)
   }
 
-  async function increment(row: TradeRow) {
+  const increment = async (row: TradeRow) => {
     if (row.offering_friend_id === account.friend_id) {
       await incrementMultipleCards([row.offer_card_id], -1, ownedCards, setOwnedCards, user)
       await incrementMultipleCards([row.receiver_card_id], 1, ownedCards, setOwnedCards, user)
@@ -132,22 +110,28 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
     }
   }
 
-  function actions(row: TradeRow) {
+  const actions = (row: TradeRow) => {
     const i_ended = (row.offering_friend_id === account.friend_id && row.offerer_ended) || (row.receiving_friend_id === account.friend_id && row.receiver_ended)
     switch (row.status) {
       case 'offered':
         return (
           <>
-            {row.receiving_friend_id === account.friend_id && (
-              <Button type="button" onClick={() => update(row, 'accepted')}>
+            {(row.receiving_friend_id === account.friend_id || true) && (
+              <Button
+                type="button"
+                onClick={async () => {
+                  await update(row.id, { status: 'accepted' })
+                  setSelectedTrade(null)
+                }}
+              >
                 Accept trade
               </Button>
             )}
             <Button
               type="button"
-              onClick={() => {
-                update(row, 'declined')
-                end(row)
+              onClick={async () => {
+                await update(row.id, { status: 'declined' })
+                await end(row)
               }}
             >
               {row.receiving_friend_id === account.friend_id ? 'Decline trade' : 'Cancel trade'}
@@ -159,17 +143,18 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
           <>
             <Button
               type="button"
-              onClick={() => {
-                update(row, 'finished')
+              onClick={async () => {
+                await update(row.id, { status: 'finished' })
+                setSelectedTrade(null)
               }}
             >
               Mark as complete
             </Button>
             <Button
               type="button"
-              onClick={() => {
-                update(row, 'declined')
-                end(row)
+              onClick={async () => {
+                await update(row.id, { status: 'declined' })
+                await end(row)
               }}
             >
               Cancel
@@ -179,7 +164,7 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
       case 'declined':
         if (i_ended) return null
         return (
-          <Button type="button" onClick={() => end(row)}>
+          <Button type="button" onClick={async () => await end(row)}>
             Hide from list
           </Button>
         )
@@ -191,12 +176,12 @@ function TradeList({ trades, setTrades, account, ownedCards, setOwnedCards, user
               type="button"
               onClick={async () => {
                 await increment(row)
-                end(row)
+                await end(row)
               }}
             >
               Update collection
             </Button>
-            <Button type="button" onClick={() => end(row)}>
+            <Button type="button" onClick={async () => await end(row)}>
               Hide
             </Button>
           </>
