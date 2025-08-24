@@ -178,7 +178,7 @@ const TradeWith: FC = () => {
           )}
         </div>
         <Button className="text-center mt-4" type="button" variant="outline" onClick={submit} disabled={!enabled}>
-          {t('offerTrades', { n: 1 })}
+          {t('offerTrades')}
         </Button>
       </div>
     )

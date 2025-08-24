@@ -116,7 +116,7 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
       case 'offered':
         return (
           <>
-            {(row.receiving_friend_id === account.friend_id || true) && (
+            {row.receiving_friend_id === account.friend_id && (
               <Button
                 type="button"
                 onClick={async () => {
@@ -124,7 +124,7 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
                   setSelectedTrade(null)
                 }}
               >
-                Accept trade
+                {t('actionAccept')}
               </Button>
             )}
             <Button
@@ -134,7 +134,7 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
                 await end(row)
               }}
             >
-              {row.receiving_friend_id === account.friend_id ? 'Decline trade' : 'Cancel trade'}
+              {row.receiving_friend_id === account.friend_id ? t('actionDecline') : t('actionCancel')}
             </Button>
           </>
         )
@@ -148,7 +148,7 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
                 setSelectedTrade(null)
               }}
             >
-              Mark as complete
+              {t('actionComplete')}
             </Button>
             <Button
               type="button"
@@ -157,7 +157,7 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
                 await end(row)
               }}
             >
-              Cancel
+              {t('actionCancel')}
             </Button>
           </>
         )
@@ -165,7 +165,7 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
         if (i_ended) return null
         return (
           <Button type="button" onClick={async () => await end(row)}>
-            Hide from list
+            {t('actionHide')}
           </Button>
         )
       case 'finished':
@@ -179,10 +179,10 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
                 await end(row)
               }}
             >
-              Update collection
+              {t('actionUpdate')}
             </Button>
             <Button type="button" onClick={async () => await end(row)}>
-              Hide
+              {t('actionHide')}
             </Button>
           </>
         )
