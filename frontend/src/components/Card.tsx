@@ -114,7 +114,7 @@ export function Card({ card, onImageClick, useMaxWidth = false, editable = true 
       <p className="max-w-[120px] md:max-w-[130px] text-[12px] pt-2 text-center font-semibold leading-tight md:overflow-hidden md:text-ellipsis md:whitespace-nowrap">
         <span className="block md:inline">{card.card_id}</span>
         <span className="hidden md:inline"> - </span>
-        <span className="block md:inline">{getCardNameByLang(card, i18n.language)}</span>
+        <span className="block md:inline overflow-hidden text-ellipsis whitespace-nowrap">{getCardNameByLang(card, i18n.language)}</span>
       </p>
 
       <div className="flex items-center gap-x-1">
