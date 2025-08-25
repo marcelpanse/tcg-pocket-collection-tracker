@@ -17,6 +17,7 @@ import { toast } from '@/hooks/use-toast.ts'
 import { supabase } from '@/lib/Auth.ts'
 import { expansions, getCardById } from '@/lib/CardsDB'
 import { UserContext } from '@/lib/context/UserContext.ts'
+import { formatFriendId } from '@/lib/utils.ts'
 import type { AccountRow, Card, CollectionRow, Rarity } from '@/types'
 
 interface Props {
@@ -337,7 +338,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownAccount, friendAc
         </DialogHeader>
         <div className="flex flex-col gap-4 grow">
           <p className="pb-2">{t('featureDescription')}</p>
-          <p className="pb-2">{t('friendAccountDetails', { ...friendAccount })}</p>
+          <p className="pb-2">{t('friendAccountDetails', { ...friendAccount, friend_id: formatFriendId(friendAccount?.friend_id || '') })}</p>
 
           {!ownCollection && (
             <div className="flex flex-row gap-4 mb-4 justify-between">

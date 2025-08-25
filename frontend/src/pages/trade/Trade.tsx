@@ -10,6 +10,7 @@ import { toast } from '@/hooks/use-toast.ts'
 import { allCards, expansions, sellableForTokensDictionary, tradeableRaritiesDictionary } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext'
+import { formatFriendId } from '@/lib/utils.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
 import { NoCardsNeeded } from '@/pages/trade/components/NoCardsNeeded.tsx'
 import { NoSellableCards } from '@/pages/trade/components/NoSellableCards.tsx'
@@ -90,7 +91,7 @@ function Trade() {
       cardValues += `${t('publicTradePage')} https://tcgpocketcollectiontracker.com/#/collection/${account?.friend_id}/trade\n`
     }
     if (account?.username) {
-      cardValues += `${t('friendID')} ${account.friend_id} (${account.username})\n\n`
+      cardValues += `${t('friendID')} ${formatFriendId(account.friend_id)} (${account.username})\n\n`
     }
 
     cardValues += `${t('lookingForCards')}\n`
