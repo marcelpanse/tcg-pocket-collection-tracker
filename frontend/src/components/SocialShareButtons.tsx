@@ -1,4 +1,4 @@
-import { type FC, useContext } from 'react'
+import { useContext } from 'react'
 import {
   BlueskyIcon,
   BlueskyShareButton,
@@ -24,53 +24,55 @@ import {
 import { Button } from '@/components/ui/button.tsx'
 import { toast } from '@/hooks/use-toast'
 import { UserContext } from '@/lib/context/UserContext.ts'
+import { cn } from '@/lib/utils'
 
-export const SocialShareButtons: FC = () => {
+export const SocialShareButtons = ({ className }: { className?: string }) => {
   const { account } = useContext(UserContext)
-  const shareUrl = `https://tcgpocketcollectiontracker.com/#/collection/${account?.friend_id}`
+  const collectionShareUrl = `https://tcgpocketcollectiontracker.com/#/collection/${account?.friend_id}`
+  const tradeShareUrl = `https://tcgpocketcollectiontracker.com/#/trade/${account?.friend_id}`
   const title = 'My Pokemon Pocket collection'
 
   return (
-    <div className="flex gap-2 mt-0 items-center flex-wrap">
+    <div className={cn('flex gap-2 items-center flex-wrap', className)}>
       <small>Share on</small>
       <Button
         variant="outline"
         onClick={async () => {
           toast({ title: 'Copied trading page URL to clipboard!', variant: 'default', duration: 3000 })
-          await navigator.clipboard.writeText(`${shareUrl}/trade`)
+          await navigator.clipboard.writeText(tradeShareUrl)
         }}
       >
         Copy link
       </Button>
 
-      <FacebookShareButton url={shareUrl}>
+      <FacebookShareButton url={collectionShareUrl}>
         <FacebookIcon size={32} round />
       </FacebookShareButton>
-      <TwitterShareButton url={shareUrl} title={title}>
+      <TwitterShareButton url={collectionShareUrl} title={title}>
         <XIcon size={32} round />
       </TwitterShareButton>
-      <RedditShareButton url={shareUrl} title={title} windowWidth={660} windowHeight={460}>
+      <RedditShareButton url={collectionShareUrl} title={title} windowWidth={660} windowHeight={460}>
         <RedditIcon size={32} round />
       </RedditShareButton>
       <PinterestShareButton url={String(window.location)} media="https://tcgpocketcollectiontracker.com/images/en-US/A1_285_EN.webp">
         <PinterestIcon size={32} round />
       </PinterestShareButton>
-      <LinkedinShareButton url={shareUrl}>
+      <LinkedinShareButton url={collectionShareUrl}>
         <LinkedinIcon size={32} round />
       </LinkedinShareButton>
-      <WhatsappShareButton url={shareUrl} title={title} separator=":: ">
+      <WhatsappShareButton url={collectionShareUrl} title={title} separator=":: ">
         <WhatsappIcon size={32} round />
       </WhatsappShareButton>
-      <TelegramShareButton url={shareUrl} title={title}>
+      <TelegramShareButton url={collectionShareUrl} title={title}>
         <TelegramIcon size={32} round />
       </TelegramShareButton>
-      <VKShareButton url={shareUrl} image="https://tcgpocketcollectiontracker.com/images/en-US/A1_285_EN.webp">
+      <VKShareButton url={collectionShareUrl} image="https://tcgpocketcollectiontracker.com/images/en-US/A1_285_EN.webp">
         <VKIcon size={32} round />
       </VKShareButton>
-      <ThreadsShareButton url={shareUrl} title={title}>
+      <ThreadsShareButton url={collectionShareUrl} title={title}>
         <ThreadsIcon size={32} round />
       </ThreadsShareButton>
-      <BlueskyShareButton url={shareUrl} title={title} windowWidth={660} windowHeight={460}>
+      <BlueskyShareButton url={collectionShareUrl} title={title} windowWidth={660} windowHeight={460}>
         <BlueskyIcon size={32} round />
       </BlueskyShareButton>
     </div>
