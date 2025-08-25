@@ -12,5 +12,8 @@
     "filtersCount": "Filtres ({{count}})",
     "share": "Partager",
     "clear": "Réinitialiser les filtres"
+  },
+  "stats": {
+    "summary": "{{selected}} sélectionnée(s), {{uniquesOwned}} unique(s) possédée(s), {{totalOwned}} total possédée(s)"
   }
 }
