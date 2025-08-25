@@ -1,3 +1,4 @@
+import i18n from 'i18next'
 import { use, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
@@ -10,6 +11,7 @@ import { toast } from '@/hooks/use-toast.ts'
 import { allCards, expansions, sellableForTokensDictionary, tradeableRaritiesDictionary } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext'
+import { getCardNameByLang } from '@/lib/utils'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
 import { NoCardsNeeded } from '@/pages/trade/components/NoCardsNeeded.tsx'
 import { NoSellableCards } from '@/pages/trade/components/NoSellableCards.tsx'
@@ -18,7 +20,7 @@ import type { Card, Rarity } from '@/types'
 import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 
 function Trade() {
-  const { t } = useTranslation('pages/trade')
+  const { t } = useTranslation(['pages/trade', 'common/sets'])
   const navigate = useNavigate()
   const { user, account, setIsProfileDialogOpen } = use(UserContext)
   const { ownedCards, selectedCardId, setSelectedCardId } = use(CollectionContext)
@@ -106,9 +108,9 @@ function Trade() {
     for (let i = 0; i < lookingForCardsSorted.length; i++) {
       const prevExpansion = i > 0 ? lookingForCardsSorted[i - 1].expansion : ''
       if (prevExpansion !== lookingForCardsSorted[i].expansion) {
-        cardValues += `\n${lookingForCardsSorted[i].set_details}:\n`
+        cardValues += `\n${t(`common/sets:${lookingForCardsSorted[i].set_details}`)}:\n`
       }
-      cardValues += `${lookingForCardsSorted[i].rarity} ${lookingForCardsSorted[i].card_id} - ${lookingForCardsSorted[i].name}\n`
+      cardValues += `${lookingForCardsSorted[i].rarity} ${lookingForCardsSorted[i].card_id} - ${getCardNameByLang(lookingForCardsSorted[i], i18n.language)}\n`
     }
 
     const raritiesLookingFor = lookingForCardsFiltered.map((c) => c.rarity)
@@ -119,9 +121,9 @@ function Trade() {
     for (let i = 0; i < forTradeCardsSorted.length; i++) {
       const prevExpansion = i > 0 ? forTradeCardsSorted[i - 1].expansion : ''
       if (prevExpansion !== forTradeCardsSorted[i].expansion) {
-        cardValues += `\n${forTradeCardsSorted[i].set_details}:\n`
+        cardValues += `\n${t(`common/sets:${forTradeCardsSorted[i].set_details}`)}:\n`
       }
-      cardValues += `${forTradeCardsSorted[i].rarity} ${forTradeCardsSorted[i].card_id} - ${forTradeCardsSorted[i].name}\n`
+      cardValues += `${forTradeCardsSorted[i].rarity} ${forTradeCardsSorted[i].card_id} - ${getCardNameByLang(forTradeCardsSorted[i], i18n.language)}\n`
     }
 
     return cardValues

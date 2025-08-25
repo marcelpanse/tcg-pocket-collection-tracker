@@ -1,4 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
+import i18n from 'i18next'
 import { CircleHelp } from 'lucide-react'
 import { type FC, useContext, useEffect, useMemo, useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -17,6 +18,7 @@ import { toast } from '@/hooks/use-toast.ts'
 import { supabase } from '@/lib/Auth.ts'
 import { expansions, getCardById } from '@/lib/CardsDB'
 import { UserContext } from '@/lib/context/UserContext.ts'
+import { getCardNameByLang } from '@/lib/utils'
 import type { AccountRow, Card, CollectionRow, Rarity } from '@/types'
 
 interface Props {
@@ -288,7 +290,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownAccount, friendAc
                       <li key={card.card_id} className="flex justify-between">
                         <span className="flex items-center">
                           <span className="min-w-14 me-4">{card.card_id} </span>
-                          <span>{card.name}</span>
+                          <span>{getCardNameByLang(card, i18n.language)}</span>
                         </span>
                         <span title={t('amountYouOwn')} className="text-gray-500">
                           <span style={{ userSelect: 'none' }}>×{ownedCards.find((c) => c.card_id === card.card_id)?.amount_owned || 0}</span>
@@ -306,7 +308,7 @@ const TradeMatches: FC<Props> = ({ ownedCards, friendCards, ownAccount, friendAc
                       <li key={card.card_id} className="flex justify-between">
                         <span className="flex items-center">
                           <span className="min-w-14 me-4">{card.card_id} </span>
-                          <span>{card.name}</span>
+                          <span>{getCardNameByLang(card, i18n.language)}</span>
                         </span>
                         <span title={t('amountFriendOwns')} className="text-gray-500">
                           <span style={{ userSelect: 'none' }}>×{card.amount_owned}</span>

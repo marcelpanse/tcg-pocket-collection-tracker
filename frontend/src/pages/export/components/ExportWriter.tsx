@@ -1,9 +1,11 @@
+import i18n from 'i18next'
 import { use } from 'react'
 import { useTranslation } from 'react-i18next'
 import XLSX from 'xlsx'
 import { Button } from '@/components/ui/button.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext'
+import { getCardNameByLang } from '@/lib/utils'
 import type { ImportExportRow } from '@/types'
 
 export const ExportWriter = () => {
@@ -16,7 +18,7 @@ export const ExportWriter = () => {
       .map((ac) => {
         return {
           Id: ac.card_id,
-          CardName: ac.name,
+          CardName: getCardNameByLang(ac, i18n.language),
           NumberOwned: ownedCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned ?? 0,
           Expansion: ac.expansion,
           Pack: ac.pack,

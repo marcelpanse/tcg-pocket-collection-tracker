@@ -1,8 +1,10 @@
+import i18n from 'i18next'
 import { useContext, useState } from 'react'
 import FancyCard from '@/components/FancyCard'
 import { RankBadge } from '@/components/ui/rank-badge'
 import { getCardById } from '@/lib/CardsDB'
 import { CollectionContext } from '@/lib/context/CollectionContext'
+import { getCardNameByLang } from '@/lib/utils'
 import type { Card } from '@/types'
 
 export interface IDeck {
@@ -80,7 +82,9 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
                 <div className={'group flex w-fit max-w-30 flex-col items-center rounded-lg cursor-pointer'} key={`${cardObj.name}-${idx}`}>
                   <FancyCard card={cardObj} selected={selected} setIsSelected={() => setSelectedCardId(`${cardObj.card_id}`)} clickable={true} />
 
-                  <span className="font-semibold max-w-[130px] overflow-hidden pt-2 text-[12px] text-ellipsis">{cardObj.name}</span>
+                  <span className="font-semibold max-w-[130px] overflow-hidden pt-2 text-[12px] text-ellipsis">
+                    {getCardNameByLang(cardObj, i18n.language)}
+                  </span>
                 </div>
               )
             )
