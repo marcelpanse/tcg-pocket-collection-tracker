@@ -29,8 +29,8 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
     }
     return (
       <span className="flex rounded px-1 w-1/2 bg-zinc-800">
-        <span className="min-w-10">{card.rarity} </span>
-        <span className="min-w-14 me-4">{card.card_id} </span>
+        <span className="mr-2 sm:min-w-10">{card.rarity} </span>
+        <span className="mr-2 sm:min-w-14 me-4">{card.card_id} </span>
         <span>{card.name}</span>
         <span className="text-neutral-400 ml-auto">×{ownedCards.find((c) => c.card_id === card.card_id)?.amount_owned || 0}</span>
       </span>
@@ -55,7 +55,11 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
     return (
       <>
         <Tooltip id={`tooltip-${row.id}`} />
-        <span className={`rounded-full text-center w-9 ${style[row.status].color}`} data-tooltip-id={`tooltip-${row.id}`} data-tooltip-content={row.status}>
+        <span
+          className={`rounded-full text-center w-9 min-w-6 ${style[row.status].color}`}
+          data-tooltip-id={`tooltip-${row.id}`}
+          data-tooltip-content={row.status}
+        >
           {style[row.status].icon}
         </span>
       </>
@@ -64,7 +68,7 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
 
   return (
     <li
-      className={`flex cursor-pointer justify-between rounded gap-4 p-1 my-1 ${selectedTradeId === row.id && 'bg-green-900'} hover:bg-neutral-500`}
+      className={`flex cursor-pointer justify-between rounded gap-1 sm:gap-4 sm:px-1 py-1 my-1 ${selectedTradeId === row.id && 'bg-green-900'} hover:bg-neutral-500`}
       onClick={() => onClick(row)}
     >
       {status(row)}

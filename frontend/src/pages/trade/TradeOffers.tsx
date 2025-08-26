@@ -110,7 +110,7 @@ function TradeOffers() {
 
   const friends = groupTrades(trades, account.friend_id)
   return (
-    <div className="flex flex-col items-center mx-auto gap-12">
+    <div className="flex flex-col items-center mx-auto gap-12 sm:px-4">
       {Object.keys(friends).map((friend_id) => (
         <TradePartner key={friend_id} friendId={friend_id} initialTrades={friends[friend_id] as TradeRow[]} account={account} />
       ))}
