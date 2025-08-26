@@ -7,7 +7,6 @@
   "copyToClipboard": "Copier dans le presse-papiers",
   "lookingFor": "Recherche",
   "forTrade": "À échanger",
-  "buyingTokens": "Achat de jetons",
   "enableTradingPage": "Activer la page d'échanges",
   "openTradingPage": "Ouvrir la page d'échanges",
   "notLoggedIn": {
@@ -18,16 +17,12 @@
     "title": "Vous n'avez aucune carte échangeable !",
     "description": "Allez sur la page de collection et saisissez les cartes que vous avez collectées pour voir ce que vous pouvez échanger."
   },
-  "noSellableCards": {
-    "title": "Vous n'avez aucune carte à vendre !",
-    "description": "Si vous pensez avoir des cartes à vendre, allez sur la page de collection et saisissez les cartes que vous avez collectées pour voir ce que vous pouvez vendre."
-  },
   "noCardsNeeded": {
     "title": "Vous avez toutes les cartes échangeables !",
     "description": "N'oubliez pas de revenir ici lorsque de nouvelles raretés et de nouveaux boosters seront disponibles à l'échange."
   },
   "goTrackYourCards": {
     "title": "Allez suivre vos cartes",
-    "description": "En suivant vos cartes, vous pouvez voir quelles cartes il vous manque, quelles cartes vous pouvez échanger avec des amis et combien de jetons d'échange vous pouvez gagner avec votre collection actuelle."
+    "description": "En suivant vos cartes, vous pouvez voir quelles cartes il vous manque, quelles cartes vous pouvez échanger avec des amis."
   }
 }
