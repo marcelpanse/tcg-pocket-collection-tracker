@@ -13,7 +13,7 @@ import type { Card as CardType, CollectionRow } from '@/types'
 
 interface CardProps {
   card: CardType
-  useMaxWidth?: boolean
+  className?: string
   editable?: boolean
   onImageClick?: () => void
 }
@@ -21,7 +21,7 @@ interface CardProps {
 // keep track of the debounce timeouts for each card
 const _inputDebounce: Record<string, number | null> = {}
 
-export function Card({ card, onImageClick, useMaxWidth = false, editable = true }: CardProps) {
+export function Card({ card, onImageClick, className, editable = true }: CardProps) {
   const params = useParams()
 
   const { user, setIsLoginDialogOpen } = use(UserContext)
@@ -100,7 +100,7 @@ export function Card({ card, onImageClick, useMaxWidth = false, editable = true 
   }
 
   return (
-    <div className={`group flex w-fit ${!useMaxWidth ? 'max-w-32 md:max-w-40' : ''} flex-col items-center rounded-lg`}>
+    <div className={`group flex flex-col items-center rounded-lg ${className}`}>
       <button
         type="button"
         className="cursor-pointer"
@@ -109,12 +109,12 @@ export function Card({ card, onImageClick, useMaxWidth = false, editable = true 
           onImageClick?.()
         }}
       >
-        <FancyCard card={card} selected={amountOwned > 0} clickable={!useMaxWidth} />
+        <FancyCard card={card} selected={amountOwned > 0} />
       </button>
-      <p className="max-w-[120px] md:max-w-[130px] text-[12px] pt-2 text-center font-semibold leading-tight md:whitespace-nowrap md:overflow-hidden md:text-ellipsis">
+      <p className="w-full min-w-0 text-[12px] pt-2 text-center font-semibold leading-tight">
         <span className="block md:inline">{card.card_id}</span>
-        <span className="hidden md:inline"> - </span>
-        <span className="block md:inline overflow-hidden text-ellipsis whitespace-nowrap">{getCardNameByLang(card, i18n.language)}</span>
+        <span className="hidden md:inline"> – </span>
+        <span className="block md:inline truncate">{getCardNameByLang(card, i18n.language)}</span>
       </p>
 
       <div className="flex items-center gap-x-1">

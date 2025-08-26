@@ -58,8 +58,8 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
             <div className="cursor-pointer">
               <CardComponent
                 key={cardId}
+                className="w-full"
                 card={{ ...card, amount_owned: row?.amount_owned || 0 }}
-                useMaxWidth
                 onImageClick={() => setIsImageDialogOpen(true)}
               />
             </div>
