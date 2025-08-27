@@ -80,15 +80,16 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
 
   const groupedRows = useMemo(() => table.getGroupedRowModel().rows, [table.getGroupedRowModel().rows])
 
-  let cardsPerRow = 5
-  let cardHeight = Math.min(width, 890) / 5 + 120
-  if (width > 600 && width < 800) {
-    cardsPerRow = 4
-    cardHeight = width / 3 + 50
-  } else if (width <= 600) {
-    cardsPerRow = 3
-    cardHeight = width / 3 + 100
-  }
+  const aspectRatio = 1.71
+  const extraPadding = 8
+  const trueWidth = Math.min(width, 900) - extraPadding
+  const cardsPerRow = Math.max(Math.min(Math.floor(trueWidth / 170), 5), 3)
+  const cardHeight = (aspectRatio * trueWidth) / cardsPerRow - 10
+  const basis = {
+    3: 'basis-1/3',
+    4: 'basis-1/4',
+    5: 'basis-1/5',
+  }[cardsPerRow] // Make sure Tailwind can see and actually generate the classes
 
   // Build groups and keep a stable group key (Row has an .id)
   const groupedGridRows = useMemo(
@@ -137,13 +138,9 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
   })
 
   return (
-    <div
-      ref={scrollRef}
-      className="overflow-y-auto overflow-x-hidden mt-2 sm:mt-4 px-4 flex flex-col justify-start w-full"
-      style={{ scrollbarWidth: 'none', height: scrollContainerHeight }}
-    >
+    <div ref={scrollRef} className="overflow-y-auto md:mt-4 px-4 flex flex-col" style={{ scrollbarWidth: 'none', height: scrollContainerHeight }}>
       {showStats && (
-        <small className="text-left md:text-right mb-3 md:mb-[-25px] md:mt-[10px]">
+        <small className="text-left mb-1 md:text-right md:mb-[-25px]">
           {t('stats.summary', {
             ns: 'pages/collection',
             selected: cards.filter((c) => !c.linkedCardID).length,
@@ -172,14 +169,19 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
                         `/images/sets/en-US/${(row.data as { type: string; row: Row<CardType> }).row.original.expansion}.webp`
                     }}
                   />
-                  <h2 className="text-center font-semibold text-md sm:text-lg md:text-2xl ">
+                  <h2 className="text-center font-semibold sm:text-lg md:text-2xl ">
                     {t((row.data as { type: string; row: Row<CardType> }).row.getValue('set_details') as string)}
                   </h2>
                 </div>
               ) : (
-                <div className="flex justify-start gap-x-3 ml-2">
+                <div className="w-full flex justify-start">
                   {(row.data as { type: string; row: Row<CardType> }[]).map(({ row: subRow }) => (
-                    <Card key={subRow.original.card_id + subRow.original.amount_owned} card={subRow.original} editable={editable} />
+                    <Card
+                      key={subRow.original.card_id + subRow.original.amount_owned}
+                      card={subRow.original}
+                      editable={editable}
+                      className={`${basis} min-w-0 px-1 sm:px-2`}
+                    />
                   ))}
                 </div>
               )}

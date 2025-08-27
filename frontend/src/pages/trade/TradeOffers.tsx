@@ -65,7 +65,7 @@ function TradePartner({ friendId, initialTrades }: TradePartnerProps) {
         </p>
         <span className="flex gap-4">
           <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">
-            View history
+            {t('viewHistory')}
             <Switch id={`history-${friendId}`} className="ml-2 my-auto" checked={viewHistory} onCheckedChange={setViewHistory} />
           </label>
           <Button className="my-auto" onClick={() => navigate(`/trade/${friendId}`)}>

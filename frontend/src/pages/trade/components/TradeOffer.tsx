@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { supabase } from '@/lib/Auth.ts'
+import { getCardNameByLang } from '@/lib/utils'
 import type { Card, TradeRow } from '@/types'
 
 interface Props {
@@ -15,7 +16,7 @@ interface Props {
 }
 
 export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, setYourCard, setFriendCard }) => {
-  const { t } = useTranslation('trade-matches')
+  const { t, i18n } = useTranslation('trade-matches')
   const { toast } = useToast()
 
   function card(c: Card | null) {
@@ -26,7 +27,7 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
       <span className="flex w-1/2">
         <span className="min-w-10">{c.rarity} </span>
         <span className="min-w-14 me-4">{c.card_id} </span>
-        <span>{c.name}</span>
+        <span>{getCardNameByLang(c, i18n.language)}</span>
       </span>
     )
   }
@@ -68,7 +69,7 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
             {card(friendCard)}
           </>
         ) : (
-          <span className="w-full text-center">Select cards to trade below</span>
+          <span className="w-full text-center">{t('selectCardsToTrade')}</span>
         )}
       </div>
       <Button className="text-center mt-4" type="button" variant="outline" onClick={submit} disabled={!enabled}>
