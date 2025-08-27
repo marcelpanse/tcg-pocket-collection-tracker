@@ -35,12 +35,12 @@ export function Header() {
   const changeLanguage = (lng: string) => i18n.changeLanguage(lng)
 
   const languages = [
-    { code: 'en-US', name: t('languages.en-US') },
-    { code: 'es-ES', name: t('languages.es-ES') },
-    { code: 'pt-BR', name: t('languages.pt-BR') },
-    { code: 'fr-FR', name: t('languages.fr-FR') },
-    { code: 'it-IT', name: t('languages.it-IT') },
-  ].sort((a, b) => a.name.localeCompare(b.name))
+    { code: 'en-US', name: 'English' },
+    { code: 'es-ES', name: 'Español' },
+    { code: 'fr-FR', name: 'Français' },
+    { code: 'it-IT', name: 'Italiano' },
+    { code: 'pt-BR', name: 'Português' },
+  ] // alphabetical language order in their native form for UX accessibility
 
   const isOverviewPage = location.pathname === '/'
 
