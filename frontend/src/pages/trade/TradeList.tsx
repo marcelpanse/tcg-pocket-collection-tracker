@@ -1,12 +1,11 @@
 import { useContext, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { incrementMultipleCards } from '@/components/Card'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
 import { TradeListRow } from '@/pages/trade/components/TradeListRow.tsx'
-import type { TradeRow, TradeStatus } from '@/types'
+import type { CollectionRowUpdate, TradeRow, TradeStatus } from '@/types'
 
 interface Props {
   trades: TradeRow[]
@@ -22,7 +21,7 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
     return (row.offering_friend_id === account?.friend_id && !row.offerer_ended) || (row.receiving_friend_id === account?.friend_id && !row.receiver_ended)
   }
 
-  const { ownedCards, setOwnedCards } = useContext(CollectionContext)
+  const { ownedCards, updateCards } = useContext(CollectionContext)
   const { account, user } = useContext(UserContext)
   const trades = viewHistory ? allTrades.filter((x) => !interesting(x)) : allTrades.filter(interesting)
   const [selectedTradeId, setSelectedTradeId] = useState<number | undefined>(undefined)
@@ -31,14 +30,20 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
     return null
   }
 
+  const getAndIncrement = (card_id: string, increment: number): CollectionRowUpdate => {
+    return { card_id, amount_owned: (ownedCards.find((r) => r.card_id === card_id)?.amount_owned ?? 0) + increment }
+  }
+
   const increment = async (row: TradeRow) => {
+    if (row.offer_card_id === row.receiver_card_id) {
+      return
+    }
+
     if (row.offering_friend_id === account.friend_id) {
-      await incrementMultipleCards([row.offer_card_id], -1, ownedCards, setOwnedCards, user)
-      await incrementMultipleCards([row.receiver_card_id], 1, ownedCards, setOwnedCards, user)
+      await updateCards([getAndIncrement(row.offer_card_id, -1), getAndIncrement(row.receiver_card_id, 1)])
       toast({ title: t('collectionUpdated'), variant: 'default' })
     } else if (row.receiving_friend_id === account.friend_id) {
-      await incrementMultipleCards([row.offer_card_id], 1, ownedCards, setOwnedCards, user)
-      await incrementMultipleCards([row.receiver_card_id], -1, ownedCards, setOwnedCards, user)
+      await updateCards([getAndIncrement(row.offer_card_id, 1), getAndIncrement(row.receiver_card_id, -1)])
       toast({ title: t('collectionUpdated'), variant: 'default' })
     } else {
       console.log(row, "can't match friend id")

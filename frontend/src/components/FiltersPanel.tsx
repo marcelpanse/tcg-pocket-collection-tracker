@@ -2,7 +2,6 @@ import i18n from 'i18next'
 import { type FC, type JSX, useContext, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BatchUpdateDialog } from '@/components/BatchUpdateDialog.tsx'
-import { updateMultipleCards } from '@/components/Card.tsx'
 import ExpansionsFilter from '@/components/filters/ExpansionsFilter.tsx'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import OwnedFilter from '@/components/filters/OwnedFilter.tsx'
@@ -12,7 +11,6 @@ import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
 import { allCards, basicRarities, expansions, expansionsDict } from '@/lib/CardsDB.ts'
-import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
 import { levenshtein } from '@/lib/levenshtein'
 import { getCardNameByLang } from '@/lib/utils'
@@ -85,8 +83,7 @@ const FilterPanel: FC<Props> = ({
   share,
 }: Props) => {
   const { t } = useTranslation(['pages/collection'])
-  const { user, setIsProfileDialogOpen } = useContext(UserContext)
-  const { ownedCards, setOwnedCards } = useContext(CollectionContext)
+  const { setIsProfileDialogOpen } = useContext(UserContext)
 
   const [langState, setLangState] = useState(i18n.language)
   const setSearchValue = (x: string) => setFilters((f) => ({ ...f, search: x }))
@@ -255,10 +252,6 @@ const FilterPanel: FC<Props> = ({
     onChangeToMissions(missions)
   }, [missions])
 
-  const handleBatchUpdate = async (cardIds: string[], amount: number) => {
-    await updateMultipleCards(cardIds, amount, ownedCards, setOwnedCards, user)
-  }
-
   function onExpansionChange(x: string) {
     setExpansion(x)
     setPack('all')
@@ -335,13 +328,7 @@ const FilterPanel: FC<Props> = ({
           </Dialog>
         )}
 
-        {batchUpdate && (
-          <BatchUpdateDialog
-            filteredCards={getFilteredCards || []}
-            onBatchUpdate={handleBatchUpdate}
-            disabled={!getFilteredCards || getFilteredCards.length === 0}
-          />
-        )}
+        {batchUpdate && <BatchUpdateDialog filteredCards={getFilteredCards || []} disabled={!getFilteredCards || getFilteredCards.length === 0} />}
 
         {share && (
           <Button variant="outline" onClick={() => setIsProfileDialogOpen(true)}>

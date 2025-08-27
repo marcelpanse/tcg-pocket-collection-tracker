@@ -2,7 +2,6 @@ import i18n from 'i18next'
 import type { ChangeEvent, FC } from 'react'
 import { use, useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { incrementMultipleCards } from '@/components/Card'
 import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
@@ -14,7 +13,7 @@ import { getCardNameByLang } from '@/lib/utils'
 import { CardHashStorageService } from '@/services/CardHashStorageService'
 import { ImageSimilarityService } from '@/services/ImageHashingService'
 import PokemonCardDetectorService, { type DetectionResult } from '@/services/PokemonCardDetectionServices'
-import type { Card, CollectionRow } from '@/types'
+import type { Card, CollectionRowUpdate } from '@/types'
 
 interface PokemonCardDetectorProps {
   onDetectionComplete?: (results: DetectionResult[]) => void
@@ -51,8 +50,8 @@ enum State {
 
 const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
   const { t } = useTranslation('scan')
+  const { ownedCards, updateCards } = use(CollectionContext)
   const { user } = use(UserContext)
-  const { ownedCards, setOwnedCards } = use(CollectionContext)
 
   const fileInputRef = useRef<HTMLInputElement>(null)
 
@@ -67,7 +66,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
   const [amount, setAmount] = useState(1)
 
   const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
-  const [incrementedCards, setIncrementedCards] = useState<CollectionRow[]>([])
+  const [incrementedCards, setIncrementedCards] = useState<number>(0)
 
   const detectorService = PokemonCardDetectorService.getInstance()
 
@@ -328,10 +327,34 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
 
   const selectedCount = extractedCards.filter((card) => card.selected).length
 
+  const incrementCards = async (cardIds: string[]) => {
+    if (!user || !user.user.email) {
+      setState(State.Error)
+      setError('User not logged in')
+      return 0
+    }
+
+    const counts = new Map()
+    for (const cardId of cardIds) {
+      counts.set(cardId, (counts.get(cardId) || 0) + amount)
+    }
+
+    const cardArray: CollectionRowUpdate[] = []
+
+    for (const [card_id, increment] of counts) {
+      const ownedCard = ownedCards.find((row) => row.card_id === card_id)
+      cardArray.push({ card_id, amount_owned: (ownedCard?.amount_owned ?? 0) + increment })
+    }
+
+    updateCards(cardArray)
+
+    return cardIds.length * amount
+  }
+
   const handleConfirm = async () => {
     if (amount === 0) {
       setState(State.ProcessUpdates + 1)
-      setIncrementedCards([])
+      setIncrementedCards(0)
       return
     }
 
@@ -341,13 +364,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
 
     if (cardIds.length > 0) {
       try {
-        const incrementedCards = await incrementMultipleCards(
-          cardIds.filter((id): id is string => id !== undefined),
-          amount,
-          ownedCards,
-          setOwnedCards,
-          user,
-        )
+        const incrementedCards = await incrementCards(cardIds.filter((id): id is string => id !== undefined))
         setIncrementedCards(incrementedCards)
       } catch (error) {
         setError(`Error incrementing card quantities: ${error}`)
@@ -505,7 +522,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
               </Alert>
             )}
 
-            {state === State.Confirmation && <p>{t('success', { n: incrementedCards.length * amount })}</p>}
+            {state === State.Confirmation && <p>{t('success', { n: incrementedCards })}</p>}
 
             <DialogFooter className="gap-y-4">
               <Button

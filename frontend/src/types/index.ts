@@ -12,6 +12,7 @@ export interface AccountRow {
   $id: string
   username: string
   friend_id: string
+  collection_last_updated: Date
   is_public: boolean
   is_active_trading: boolean
   min_number_of_cards_to_keep: number
@@ -24,6 +25,11 @@ export interface CollectionRow {
   amount_owned: number
   rarity?: Rarity
   updated_at: string
+}
+
+export interface CollectionRowUpdate {
+  card_id: string
+  amount_owned: number
 }
 
 const tradeStatuses = ['offered', 'accepted', 'declined', 'finished'] as const

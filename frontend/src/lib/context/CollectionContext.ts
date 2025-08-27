@@ -1,10 +1,9 @@
-import type { Dispatch, SetStateAction } from 'react'
 import { createContext } from 'react'
-import type { CollectionRow } from '@/types'
+import type { CollectionRow, CollectionRowUpdate } from '@/types'
 
 interface ICollectionContext {
   ownedCards: CollectionRow[]
-  setOwnedCards: Dispatch<SetStateAction<CollectionRow[]>>
+  updateCards: (rows: CollectionRowUpdate[]) => Promise<void>
   selectedCardId: string
   setSelectedCardId: (cardId: string) => void
   selectedMissionCardOptions: string[]
@@ -13,7 +12,7 @@ interface ICollectionContext {
 
 export const CollectionContext = createContext<ICollectionContext>({
   ownedCards: [],
-  setOwnedCards: () => {},
+  updateCards: async (_) => {},
   selectedCardId: '',
   setSelectedCardId: () => {},
   selectedMissionCardOptions: [],
