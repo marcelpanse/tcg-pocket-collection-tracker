@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Card as CardComponent } from '@/components/Card'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
-import { getCardById, getExpansionById, pullRateForSpecificCard, sellableForTokensDictionary } from '@/lib/CardsDB.ts'
+import { getCardById, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { getCardNameByLang } from '@/lib/utils'
 import type { Card, CollectionRow } from '@/types'
@@ -93,9 +93,6 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
                 <strong>{t('text.chanceToPull', { ns: 'pages/card-detail', percent: pullRateForSpecificCard(expansion, packName, card).toFixed(2) })}</strong>
               </p>
             )}
-            <p className="text-lg mb-1">
-              <strong>{t('text.tradeTokens')}:</strong> {sellableForTokensDictionary[card.rarity] ?? 'N/A'}
-            </p>
             <p className="text-lg mb-1">
               <strong>{t('text.expansion')}:</strong> {card.expansion}
             </p>

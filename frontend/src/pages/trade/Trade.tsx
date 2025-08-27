@@ -1,20 +1,22 @@
+import { useTranslation } from 'react-i18next'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import Cards from './Cards'
 import TradeSettings from './Settings'
 import TradeOffers from './TradeOffers'
 
 function Trade() {
+  const { t } = useTranslation('trade-matches')
   return (
     <Tabs className="flex flex-col mx-auto max-w-[900px]" defaultValue="offers">
       <TabsList className="gap-4 mb-6 rounded-lg border-b-1 border-neutral-700 border-solid dark:bg-transparent pb-2">
         <TabsTrigger className="text-md" value="cards">
-          Cards
+          {t('tabCards')}
         </TabsTrigger>
         <TabsTrigger className="text-md" value="offers">
-          Offers
+          {t('tabOffers')}
         </TabsTrigger>
         <TabsTrigger className="text-md" value="settings">
-          Settings
+          {t('tabSettings')}
         </TabsTrigger>
       </TabsList>
       <TabsContent value="cards">
