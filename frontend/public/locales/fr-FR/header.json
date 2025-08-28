@@ -3,13 +3,6 @@
   "collection": "Collection",
   "trade": "Échanges",
   "selectLanguage": "Sélectionner une langue",
-  "languages": {
-    "es-ES": "Espagnol",
-    "en-US": "Anglais",
-    "pt-BR": "Portugais",
-    "fr-FR": "Français",
-    "it-IT": "Italien"
-  },
   "community": "Communauté ↗",
   "login": "Se connecter",
   "signUp": "Se connecter / Créer un compte",
@@ -28,5 +21,6 @@
   },
   "support": "Le site est hébergé sur Github Pages et Supabase. Les frais sont couverts par mes soins, car il s'agit d'un projet personnel. Si le projet vous plaît, vous pouvez me soutenir en utilisant le bouton café en bas à droite.",
   "decks": "Decks",
-  "blog": "Blog ↗"
+  "blog": "Blog ↗",
+  "offers": "Offres"
 }

@@ -36,5 +36,16 @@
   "actionCancel": "Cancel trade",
   "actionComplete": "Mark as complete",
   "actionHide": "Hide trade",
-  "actionUpdate": "Update collection"
+  "actionUpdate": "Update collection",
+  "selectCardsToTrade": "Select cards to trade below",
+  "status": {
+    "offered": "Offered",
+    "accepted": "Accepted",
+    "declined": "Declined",
+    "finished": "Finished"
+  },
+  "viewHistory": "View history",
+  "tabCards": "Cards",
+  "tabOffers": "Offers",
+  "tabSettings": "Settings"
 }

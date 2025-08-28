@@ -65,7 +65,7 @@ function TradePartner({ friendId, initialTrades }: TradePartnerProps) {
         </p>
         <span className="flex gap-4">
           <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">
-            View history
+            {t('viewHistory')}
             <Switch id={`history-${friendId}`} className="ml-2 my-auto" checked={viewHistory} onCheckedChange={setViewHistory} />
           </label>
           <Button className="my-auto" onClick={() => navigate(`/trade/${friendId}`)}>
@@ -110,7 +110,7 @@ function TradeOffers() {
 
   const friends = groupTrades(trades, account.friend_id)
   return (
-    <div className="flex flex-col items-center mx-auto gap-12">
+    <div className="flex flex-col items-center mx-auto gap-12 sm:px-4">
       {Object.keys(friends).map((friend_id) => (
         <TradePartner key={friend_id} friendId={friend_id} initialTrades={friends[friend_id] as TradeRow[]} account={account} />
       ))}

@@ -80,7 +80,7 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
             return (
               cardObj && (
                 <div className={'group flex w-fit max-w-30 flex-col items-center rounded-lg cursor-pointer'} key={`${cardObj.name}-${idx}`}>
-                  <FancyCard card={cardObj} selected={selected} setIsSelected={() => setSelectedCardId(`${cardObj.card_id}`)} clickable={true} />
+                  <FancyCard card={cardObj} selected={selected} setIsSelected={() => setSelectedCardId(`${cardObj.card_id}`)} />
 
                   <span className="font-semibold max-w-[130px] overflow-hidden pt-2 text-[12px] text-ellipsis">
                     {getCardNameByLang(cardObj, i18n.language)}

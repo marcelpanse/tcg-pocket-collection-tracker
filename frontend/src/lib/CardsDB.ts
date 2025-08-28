@@ -209,29 +209,14 @@ export const getExpansionById = (expansion: string): Expansion | undefined => {
 export const tradeableRaritiesDictionary: Record<Rarity, number | null> = {
   '◊': 0,
   '◊◊': 0,
-  '◊◊◊': 120,
-  '◊◊◊◊': 500,
-  '☆': 500,
+  '◊◊◊': 1200,
+  '◊◊◊◊': 5000,
+  '☆': 4000,
   '☆☆': null,
   '☆☆☆': null,
   '✵': null,
   '✵✵': null,
   'Crown Rare': null,
-  P: null,
-  '': null,
-}
-
-export const sellableForTokensDictionary: Record<Rarity, number | null> = {
-  '◊': null,
-  '◊◊': null,
-  '◊◊◊': 25,
-  '◊◊◊◊': 125,
-  '☆': 100,
-  '☆☆': 300,
-  '☆☆☆': 300,
-  '✵': 250,
-  '✵✵': 650,
-  'Crown Rare': 1500,
   P: null,
   '': null,
 }
