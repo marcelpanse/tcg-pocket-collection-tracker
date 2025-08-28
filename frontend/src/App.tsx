@@ -64,14 +64,15 @@ function App() {
     if (error1) {
       throw new Error(`Error modyfing account: ${error1.message}`)
     }
-    setAccount(data as AccountRow)
     const { error: error2 } = await supabase.from('collection').upsert(rows)
     if (error2) {
+      setAccount(data as AccountRow)
       throw new Error(`Error bulk updating collection: ${error2.message}`)
     }
 
-    setOwnedCards([...ownedCardsCopy])
     updateCollectionCache(ownedCardsCopy, user.user.email, now)
+    setAccount(data as AccountRow)
+    setOwnedCards([...ownedCardsCopy])
   }
 
   useEffect(() => {
