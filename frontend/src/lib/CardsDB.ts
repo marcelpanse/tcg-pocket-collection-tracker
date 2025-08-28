@@ -41,6 +41,10 @@ const rarityOverrides = {
     { rarity: '✵', start: 212, end: 231 },
     { rarity: '✵✵', start: 232, end: 239 },
   ],
+  A4a: [
+    { rarity: '✵', start: 91, end: 100 },
+    { rarity: '✵✵', start: 101, end: 104 },
+  ],
 } as Record<ExpansionId, { rarity: Rarity; start: number; end: number }[]>
 
 const update = (cards: Card[], expansionName: ExpansionId) => {
@@ -75,8 +79,21 @@ export const a3Cards: Card[] = update(A3 as unknown as Card[], 'A3')
 export const a3aCards: Card[] = update(A3a as unknown as Card[], 'A3a')
 export const a3bCards: Card[] = update(A3b as unknown as Card[], 'A3b')
 export const a4Cards: Card[] = update(A4 as unknown as Card[], 'A4')
+export const a4aCards: Card[] = update(A4a as unknown as Card[], 'A4a')
 export const paCards: Card[] = update(PA as unknown as Card[], 'P-A')
-export const allCards: Card[] = [...a1Cards, ...a1aCards, ...a2Cards, ...a2aCards, ...a2bCards, ...a3Cards, ...a3aCards, ...a3bCards, ...a4Cards, ...paCards]
+export const allCards: Card[] = [
+  ...a1Cards,
+  ...a1aCards,
+  ...a2Cards,
+  ...a2aCards,
+  ...a2bCards,
+  ...a3Cards,
+  ...a3aCards,
+  ...a3bCards,
+  ...a4Cards,
+  ...a4aCards,
+  ...paCards,
+]
 
 export const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
 
@@ -93,6 +110,7 @@ export const a3Missions: Mission[] = A3Missions as unknown as Mission[]
 export const a3aMissions: Mission[] = A3aMissions as unknown as Mission[]
 export const a3bMissions: Mission[] = A3bMissions as unknown as Mission[]
 export const a4Missions: Mission[] = A4Missions as unknown as Mission[]
+export const a4aMissions: Mission[] = A4aMissions as unknown as Mission[]
 
 export const expansions: Expansion[] = [
   {
@@ -185,11 +203,20 @@ export const expansions: Expansion[] = [
       { name: 'lugiapack', color: '#E9EEFA' },
     ],
     missions: a4Missions,
-    tradeable: false,
+    tradeable: true,
     containsShinies: true,
     containsBabies: true,
   },
-
+  {
+    name: 'secludedsprings',
+    id: 'A4a',
+    cards: a4aCards,
+    packs: [{ name: 'suicunepack', color: '#E9B00D' }],
+    missions: a4Missions,
+    tradeable: true,
+    containsShinies: true,
+    containsBabies: true,
+  },
   {
     name: 'promo-a',
     id: 'P-A',
