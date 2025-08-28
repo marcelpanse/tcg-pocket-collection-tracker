@@ -9,6 +9,7 @@ import A3 from '../../assets/cards/A3.json'
 import A3a from '../../assets/cards/A3a.json'
 import A3b from '../../assets/cards/A3b.json'
 import A4 from '../../assets/cards/A4.json'
+import A4a from '../../assets/cards/A4a.json'
 import PA from '../../assets/cards/P-A.json'
 import A1Missions from '../../assets/themed-collections/A1-missions.json'
 import A1aMissions from '../../assets/themed-collections/A1a-missions.json'
@@ -19,6 +20,7 @@ import A3Missions from '../../assets/themed-collections/A3-missions.json'
 import A3aMissions from '../../assets/themed-collections/A3a-missions.json'
 import A3bMissions from '../../assets/themed-collections/A3b-missions.json'
 import A4Missions from '../../assets/themed-collections/A4-missions.json'
+import A4aMissions from '../../assets/themed-collections/A4a-missions.json'
 
 const rarityOverrides = {
   A2b: [
