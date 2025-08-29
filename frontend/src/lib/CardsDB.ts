@@ -552,13 +552,14 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
     let chanceToGetThisCardBaby = 0
 
     for (const rarity of rarityList) {
-      if (card.baby) {
-        // if the card is a baby, we only consider 6-card packs
+      if (card.baby && rarity !== 'Crown Rare') {
+        // if the card is a baby (but not Crown Rare), we only consider 6-card packs
         const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && c.baby).length
 
         chanceToGetThisCardBaby += probabilityPerRarityBaby[rarity] / 100 / nrOfcardsOfThisRarity
       } else {
-        const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && !c.baby).length
+        // Crown Rare babies and non-baby cards use normal probability distributions
+        const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && (rarity === 'Crown Rare' || !c.baby)).length
 
         // the chance to get this card is the probability of getting this card in the pack divided by the number of cards of this rarity
         chanceToGetThisCard1_3 += probabilityPerRarity1_3[rarity] / 100 / nrOfcardsOfThisRarity
