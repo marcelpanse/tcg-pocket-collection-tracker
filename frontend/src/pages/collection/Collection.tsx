@@ -10,7 +10,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { fetchPublicAccount } from '@/lib/fetchAccount.ts'
-import { fetchCollection } from '@/lib/fetchCollection.ts'
+import { fetchPublicCollection } from '@/lib/fetchCollection.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
 import MissionDetail from '@/pages/collection/MissionDetail.tsx'
 import type { AccountRow, Card, CollectionRow, Mission } from '@/types'
@@ -52,7 +52,7 @@ function Collection() {
         })
         .catch(console.error)
 
-      fetchCollection(undefined, friendId)
+      fetchPublicCollection(friendId)
         .then((cards) => {
           if (cards.length === 0) {
             console.log('not a public collection, going back to normal mode.')

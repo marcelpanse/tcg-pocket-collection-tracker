@@ -4,12 +4,10 @@ import { use, useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
-import { supabase } from '@/lib/Auth.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import { type User, UserContext } from '@/lib/context/UserContext.ts'
-import { updateCollectionCache } from '@/lib/fetchCollection.ts'
+import { UserContext } from '@/lib/context/UserContext.ts'
 import { getCardNameByLang } from '@/lib/utils'
-import type { Card as CardType, CollectionRow } from '@/types'
+import type { Card as CardType } from '@/types'
 
 interface CardProps {
   card: CardType
@@ -25,7 +23,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
   const params = useParams()
 
   const { user, setIsLoginDialogOpen } = use(UserContext)
-  const { ownedCards, setOwnedCards, setSelectedCardId } = use(CollectionContext)
+  const { setSelectedCardId, updateCards } = use(CollectionContext)
   const [amountOwned, setAmountOwned] = useState(card.amount_owned || 0)
   const [inputValue, setInputValue] = useState(0)
 
@@ -34,64 +32,47 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
   }, [amountOwned])
 
   const updateCardCount = useCallback(
-    async (cardId: string, newAmountIn: number) => {
+    async (newAmountIn: number) => {
+      if (!user?.user.email) {
+        return
+      }
+      const card_id = card.card_id
       const newAmount = Math.max(0, newAmountIn)
       setAmountOwned(newAmount)
 
-      if (_inputDebounce[cardId]) {
-        window.clearTimeout(_inputDebounce[cardId])
+      if (_inputDebounce[card_id]) {
+        window.clearTimeout(_inputDebounce[card_id])
       }
-      _inputDebounce[cardId] = window.setTimeout(async () => {
+      _inputDebounce[card_id] = window.setTimeout(async () => {
         if (!user || !user.user.email) {
           throw new Error('User not logged in')
         }
-
-        const ownedCard = ownedCards.find((row) => row.card_id === cardId)
-        if (ownedCard) {
-          ownedCard.amount_owned = newAmount
-        } else {
-          ownedCards.push({ email: user.user.email, card_id: cardId, amount_owned: newAmount, updated_at: new Date().toISOString() })
-        }
-
-        const { error } = await supabase
-          .from('collection')
-          .upsert({ card_id: cardId, amount_owned: newAmount, email: user.user.email, updated_at: new Date().toISOString() })
-        if (error) {
-          throw new Error('Error updating collection')
-        }
-
-        updateCollectionCache(ownedCards, user.user.email)
+        await updateCards([{ card_id, amount_owned: newAmount }])
       }, 1000)
     },
-    [ownedCards, user, setOwnedCards, amountOwned],
+    [user, amountOwned],
   )
 
-  const addCard = useCallback(
-    async (cardId: string) => {
-      if (!user) {
-        setIsLoginDialogOpen(true)
-        return
-      }
-      await updateCardCount(cardId, amountOwned + 1)
-    },
-    [updateCardCount],
-  )
+  const addCard = useCallback(async () => {
+    if (!user) {
+      setIsLoginDialogOpen(true)
+      return
+    }
+    await updateCardCount(amountOwned + 1)
+  }, [updateCardCount])
 
-  const removeCard = useCallback(
-    async (cardId: string) => {
-      if (!user) {
-        setIsLoginDialogOpen(true)
-        return
-      }
-      await updateCardCount(cardId, amountOwned - 1)
-    },
-    [updateCardCount],
-  )
+  const removeCard = useCallback(async () => {
+    if (!user) {
+      setIsLoginDialogOpen(true)
+      return
+    }
+    await updateCardCount(amountOwned - 1)
+  }, [updateCardCount])
 
   const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)
     if (!Number.isNaN(value) && value >= 0) {
-      await updateCardCount(card.card_id, value)
+      await updateCardCount(value)
     }
   }
 
@@ -120,7 +101,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
       <div className="flex items-center gap-x-1">
         {editable && !params.friendId ? (
           <>
-            <Button variant="ghost" size="icon" onClick={() => removeCard(card.card_id)} className="rounded-full" tabIndex={-1}>
+            <Button variant="ghost" size="icon" onClick={removeCard} className="rounded-full" tabIndex={-1}>
               <MinusIcon />
             </Button>
             <input
@@ -133,7 +114,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
               className="w-7 text-center border-none rounded"
               onFocus={(event) => event.target.select()}
             />
-            <Button variant="ghost" size="icon" className="rounded-full" onClick={() => addCard(card.card_id)} tabIndex={-1}>
+            <Button variant="ghost" size="icon" className="rounded-full" onClick={addCard} tabIndex={-1}>
               <PlusIcon />
             </Button>
           </>
@@ -143,100 +124,4 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
       </div>
     </div>
   )
-}
-
-export const updateMultipleCards = async (
-  cardIds: string[],
-  newAmount: number,
-  ownedCards: CollectionRow[],
-  setOwnedCards: React.Dispatch<React.SetStateAction<CollectionRow[]>>,
-  user: User | null,
-) => {
-  if (!user || !user.user.email) {
-    throw new Error('User not logged in')
-  }
-  if (newAmount < 0) {
-    throw new Error('New amount cannot be negative')
-  }
-
-  const ownedCardsCopy = [...ownedCards]
-
-  // update into the database
-  const cardArray = cardIds.map((cardId) => ({ card_id: cardId, amount_owned: newAmount, email: user.user.email, updated_at: new Date().toISOString() }))
-  const { error } = await supabase.from('collection').upsert(cardArray)
-  if (error) {
-    throw new Error('Error bulk updating collection')
-  }
-
-  updateCollectionCache(ownedCardsCopy, user.user.email)
-
-  // update the UI
-  for (const cardId of cardIds) {
-    const ownedCard = ownedCardsCopy.find((row) => row.card_id === cardId)
-
-    if (ownedCard) {
-      console.log('Updating existing card:', cardId)
-      ownedCard.amount_owned = newAmount
-    } else if (!ownedCard) {
-      console.log('Adding new card:', cardId)
-      ownedCardsCopy.push({
-        email: user.user.email,
-        card_id: cardId,
-        amount_owned: newAmount,
-        updated_at: new Date().toISOString(),
-      })
-    }
-  }
-  setOwnedCards([...ownedCardsCopy]) // rerender the component
-}
-export const incrementMultipleCards = async (
-  cardIds: string[],
-  incrementAmount: number,
-  ownedCards: CollectionRow[],
-  setOwnedCards: React.Dispatch<React.SetStateAction<CollectionRow[]>>,
-  user: User | null,
-) => {
-  if (!user || !user.user.email) {
-    throw new Error('User not logged in')
-  }
-
-  const counts = new Map()
-  for (const cardId of cardIds) {
-    counts.set(cardId, (counts.get(cardId) || 0) + incrementAmount)
-  }
-
-  const ownedCardsCopy = [...ownedCards]
-  const cardArray: CollectionRow[] = []
-
-  for (const [cardId, increment] of counts) {
-    const ownedCard = ownedCardsCopy.find((row) => row.card_id === cardId)
-
-    if (ownedCard) {
-      console.log('Incrementing existing card:', cardId, 'from', ownedCard.amount_owned, 'to', ownedCard.amount_owned + increment)
-      ownedCard.amount_owned += increment
-      ownedCard.updated_at = new Date().toISOString()
-      cardArray.push(ownedCard)
-    } else if (!ownedCard && increment > 0) {
-      console.log('Adding new card:', cardId, 'with amount', increment)
-      const card: CollectionRow = {
-        email: user.user.email,
-        card_id: cardId,
-        amount_owned: increment,
-        updated_at: new Date().toISOString(),
-      }
-      ownedCardsCopy.push(card)
-      cardArray.push(card)
-    }
-  }
-
-  const { error } = await supabase.from('collection').upsert(cardArray)
-  if (error) {
-    throw new Error(`Error bulk updating collection: ${error.message}`)
-  }
-
-  updateCollectionCache(ownedCardsCopy, user.user.email)
-
-  setOwnedCards([...ownedCardsCopy]) // rerender the component
-
-  return cardArray
 }

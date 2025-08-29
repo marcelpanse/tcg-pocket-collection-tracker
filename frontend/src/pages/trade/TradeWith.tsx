@@ -8,7 +8,7 @@ import { expansions, getCardById } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
 import { fetchPublicAccount } from '@/lib/fetchAccount'
-import { fetchCollection } from '@/lib/fetchCollection'
+import { fetchPublicCollection } from '@/lib/fetchCollection'
 import { CardList } from '@/pages/trade/components/CardList.tsx'
 import { TradeOffer } from '@/pages/trade/components/TradeOffer.tsx'
 import type { AccountRow, Card, CollectionRow, Rarity } from '@/types'
@@ -38,8 +38,8 @@ const TradeWith: FC = () => {
     if (!friendAccount && friendId) {
       fetchPublicAccount(friendId).then(setFriendAccount)
     }
-    if (!friendCards) {
-      fetchCollection(undefined, friendId).then(setFriendCards)
+    if (friendId && !friendCards) {
+      fetchPublicCollection(friendId).then(setFriendCards)
     }
   })
 

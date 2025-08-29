@@ -214,7 +214,7 @@ export const expansions: Expansion[] = [
     id: 'A4a',
     cards: a4aCards,
     packs: [{ name: 'suicunepack', color: '#E9B00D' }],
-    missions: a4Missions,
+    missions: a4aMissions,
     tradeable: false,
     containsShinies: true,
     containsBabies: true,

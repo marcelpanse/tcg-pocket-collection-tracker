@@ -2,80 +2,53 @@ import type { CollectionRow } from '@/types'
 import { supabase } from './Auth'
 
 const COLLECTION_CACHE_KEY = 'tcg_collection_cache'
-const COLLECTION_COUNT_KEY = 'tcg_collection_count'
+const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp'
 
 const PAGE_SIZE = 500
 
-export async function fetchCollection(email?: string, friendId?: string) {
-  const tableName = friendId ? 'public_cards' : 'collection'
-  const key = friendId ? 'friend_id' : 'email'
-  const value = friendId ?? email ?? ''
-
-  // Don't use cache for friend collections
-  if (!friendId && email) {
-    // Try to get from cache first
-    const cachedCollection = getCollectionFromCache(email)
-
-    if (cachedCollection) {
-      // Validate cache by checking if count matches
-      try {
-        const { data: totalCardCount, error } = await supabase.rpc('total_amount_owned')
-        if (error) {
-          throw new Error('Error fetching collection count')
-        }
-
-        if (!totalCardCount) {
-          console.log('No collection found in database')
-          return []
-        }
-
-        // Get the cached count
-        const cachedCount = localStorage.getItem(`${COLLECTION_COUNT_KEY}_${email}`)
-
-        // If count matches cached count, return cached collection
-        if (cachedCount && Number.parseInt(cachedCount, 10) === totalCardCount) {
-          console.log('Using cached collection data, count matches:', totalCardCount)
-          return cachedCollection
-        }
-
-        console.log('Cache count mismatch - cached:', cachedCount, 'actual:', totalCardCount)
-
-        // Count doesn't match, fetch fresh data
-        console.log('Cache count mismatch, fetching fresh collection data')
-        return await fetchAndCacheCollection(tableName, key, value, totalCardCount, email)
-      } catch (error) {
-        console.error('Error validating cache:', error)
-        // On error, fall back to cached data
-        return cachedCollection
-      }
-    }
-  }
-
-  // No cache available or friend collection, fetch from API
-  const { count, error } = await supabase.from(tableName).select('*', { count: 'exact', head: true }).eq(key, value)
-
+async function fetchCollection(table: string, key: string, value: string): Promise<CollectionRow[]> {
+  const { count, error } = await supabase.from(table).select('*', { count: 'exact', head: true }).eq(key, value)
   if (error) {
     throw new Error('Error fetching collection')
   }
-
   if (!count) {
     return []
   }
+  return await fetchRange(table, key, value, count, 0, PAGE_SIZE)
+}
 
-  const collection = await fetchRange({ tableName, key, value, total: count, start: 0, end: PAGE_SIZE })
+export async function fetchPublicCollection(friendId: string) {
+  return await fetchCollection('public_cards', 'friendId', friendId)
+}
 
-  // Cache the collection if it's not a friend's collection
-  if (!friendId && email) {
-    saveCollectionToCache(email, collection, count)
+export async function fetchOwnCollection(email: string, collectionLastUpdated: Date): Promise<CollectionRow[]> {
+  if (typeof localStorage === 'undefined') {
+    console.warn('localStorage is not available, cannot retrieve cached collection')
+    return await fetchCollection('collection', 'email', email)
   }
 
+  const cacheLastUpdatedRaw = localStorage.getItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
+  const cacheLastUpdated = cacheLastUpdatedRaw && new Date(cacheLastUpdatedRaw)
+  console.log(collectionLastUpdated, cacheLastUpdated)
+
+  if (cacheLastUpdated && !Number.isNaN(cacheLastUpdated.getTime()) && cacheLastUpdated >= collectionLastUpdated) {
+    const cachedCollection = getCollectionFromCache(email)
+    if (cachedCollection !== null) {
+      console.log('Using cached collection')
+      return cachedCollection
+    }
+  }
+
+  const collection = await fetchCollection('collection', 'email', email)
+  updateCollectionCache(collection, email, collectionLastUpdated)
   return collection
 }
 
-/**
- * Save collection data to localStorage
- */
-export function saveCollectionToCache(email: string, collection: CollectionRow[], count: number) {
+export function updateCollectionCache(collection: CollectionRow[], email: string, collectionLastUpdated: Date) {
+  if (!email) {
+    return
+  }
+
   try {
     // Check if localStorage is available
     if (typeof localStorage === 'undefined') {
@@ -83,11 +56,12 @@ export function saveCollectionToCache(email: string, collection: CollectionRow[]
       return
     }
 
+    localStorage.setItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`, collectionLastUpdated.toISOString())
     localStorage.setItem(`${COLLECTION_CACHE_KEY}_${email}`, JSON.stringify(collection))
-    localStorage.setItem(`${COLLECTION_COUNT_KEY}_${email}`, count.toString())
-    console.log('Collection saved to cache')
+
+    console.log('Collection cache updated')
   } catch (error) {
-    console.error('Error saving collection to cache:', error)
+    console.error('Error updating collection cache:', error)
     // Try to clear some space if quota exceeded
     if (error instanceof DOMException && error.name === 'QuotaExceededError') {
       try {
@@ -106,12 +80,6 @@ export function saveCollectionToCache(email: string, collection: CollectionRow[]
  */
 function getCollectionFromCache(email: string): CollectionRow[] | null {
   try {
-    // Check if localStorage is available
-    if (typeof localStorage === 'undefined') {
-      console.warn('localStorage is not available, cannot retrieve cached collection')
-      return null
-    }
-
     const cachedData = localStorage.getItem(`${COLLECTION_CACHE_KEY}_${email}`)
     if (cachedData) {
       return JSON.parse(cachedData)
@@ -122,8 +90,8 @@ function getCollectionFromCache(email: string): CollectionRow[] | null {
     // If parse error, try to clear the corrupted cache
     if (error instanceof SyntaxError) {
       try {
+        localStorage.removeItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
         localStorage.removeItem(`${COLLECTION_CACHE_KEY}_${email}`)
-        localStorage.removeItem(`${COLLECTION_COUNT_KEY}_${email}`)
         console.log('Cleared corrupted cache data')
       } catch (clearError) {
         console.error('Failed to clear corrupted cache:', clearError)
@@ -133,80 +101,18 @@ function getCollectionFromCache(email: string): CollectionRow[] | null {
   return null
 }
 
-/**
- * Fetch collection data from API and update cache
- */
-async function fetchAndCacheCollection(tableName: string, key: string, value: string, totalCardCount: number, email: string) {
-  const { count: rowCount, error: rowCountError } = await supabase.from(tableName).select('*', { count: 'exact', head: true }).eq(key, value)
-  if (rowCountError || !rowCount) {
-    throw new Error('Error fetching collection count')
-  }
-
-  const collection = await fetchRange({ tableName, key, value, total: rowCount, start: 0, end: PAGE_SIZE })
-  saveCollectionToCache(email, collection, totalCardCount)
-  return collection
-}
-
-/**
- * Update the collection cache with the latest collection data
- * This function is used when modifying the collection
- */
-export function updateCollectionCache(collection: CollectionRow[], email: string) {
-  if (!email) {
-    return
-  }
-
-  try {
-    // Check if localStorage is available
-    if (typeof localStorage === 'undefined') {
-      console.warn('localStorage is not available, cannot cache collection')
-      return
-    }
-
-    // Save collection to cache
-    localStorage.setItem(`${COLLECTION_CACHE_KEY}_${email}`, JSON.stringify(collection))
-
-    // Update count in cache
-    const totalOwned = collection.reduce((acc, row) => acc + (row.amount_owned ?? 0), 0)
-    localStorage.setItem(`${COLLECTION_COUNT_KEY}_${email}`, totalOwned.toString())
-
-    console.log('Collection cache updated')
-  } catch (error) {
-    console.error('Error updating collection cache:', error)
-    // Try to clear some space if quota exceeded
-    if (error instanceof DOMException && error.name === 'QuotaExceededError') {
-      try {
-        // Remove old cache entries to free up space
-        localStorage.removeItem(`${COLLECTION_CACHE_KEY}_${email}`)
-        console.log('Cleared old cache to free up space')
-      } catch (clearError) {
-        console.error('Failed to clear cache:', clearError)
-      }
-    }
-  }
-}
-
-interface FetchRangeParams {
-  tableName: string
-  key: string
-  value: string
-  total: number
-  start: number
-  end: number
-}
-
-const fetchRange = async ({ tableName, key, value, total, start, end }: FetchRangeParams): Promise<CollectionRow[]> => {
+async function fetchRange(table: string, key: string, value: string, total: number, start: number, end: number): Promise<CollectionRow[]> {
   console.log('fetching range', total, start, end)
 
-  const { data, error } = await supabase.from(tableName).select().eq(key, value).range(start, end)
+  const { data, error } = await supabase.from(table).select().eq(key, value).range(start, end)
   if (error) {
     console.log('supa error', error)
     throw new Error('Error fetching collection')
   }
 
   if (end < total) {
-    return [...data, ...(await fetchRange({ tableName, key, value, total, start: end + 1, end: Math.min(total, end + PAGE_SIZE) }))]
+    return [...data, ...(await fetchRange(table, key, value, total, end + 1, Math.min(total, end + PAGE_SIZE)))]
+  } else {
+    return data
   }
-
-  return data as CollectionRow[]
 }

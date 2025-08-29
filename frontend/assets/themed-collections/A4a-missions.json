@@ -1,1 +1,357 @@
-[]
+[
+  {
+    "expansionId": "A4a",
+    "name": "Suicune and Pokémon of the Lakes",
+    "requiredCards": [
+      {
+        "options": ["A4a-6"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-20", "A4a-80", "A4a-90"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-22", "A4a-72"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-33"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-58"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Secluded Springs) ×10"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Entei and Hot Spring Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A4a-8"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-10", "A4a-79", "A4a-87"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-55"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-56"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-60"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Secluded Springs) ×10"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Raikou and Waterside Lightning-type Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A4a-25", "A4a-81", "A4a-88"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-26"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-27"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-28"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-29", "A4a-73"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-31"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Secluded Springs) ×10"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Pokémon and Waterfalls",
+    "requiredCards": [
+      {
+        "options": ["A4a-1"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-2"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-4"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-5"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-32"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-50"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Secluded Springs) ×6"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Pokémon and Underwater Ruins",
+    "requiredCards": [
+      {
+        "options": ["A4a-15"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-11"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-45"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Secluded Springs) ×1"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Archrivals",
+    "requiredCards": [
+      {
+        "options": ["A4a-48"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-65"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Secluded Springs) ×1"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "The Mystic Seer of the Future",
+    "requiredCards": [
+      {
+        "options": ["A4a-33"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-71", "A4a-85"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Secluded Springs) ×1"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "The Incredibly Pretty Girl",
+    "requiredCards": [
+      {
+        "options": ["A4a-62"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-69", "A4a-83"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Secluded Springs) ×1"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Telepathically Connected Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A4a-36"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-37", "A4a-75"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Secluded Springs) ×4"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Durant Working Together",
+    "requiredCards": [
+      {
+        "options": ["A4a-7"],
+        "amount": 5
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Secluded Springs) ×1"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Pokémon that can Use Attacks Immediately",
+    "requiredCards": [
+      {
+        "options": ["A4a-23", "A4a-105"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-59"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-63", "A4a-77"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Secluded Springs) ×5"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Collect 3 Igglybuff cards",
+    "requiredCards": [
+      {
+        "options": ["A4a-59"],
+        "amount": 3
+      }
+    ],
+    "reward": "Igglybuff (profile icon)"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Soaring Jumpluff",
+    "requiredCards": [
+      {
+        "options": ["A4a-1"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-2"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-86"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Legends Racing Across the Land",
+    "requiredCards": [
+      {
+        "options": ["A4a-87"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-88"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-90"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Secluded Springs Museum 1",
+    "requiredCards": [
+      {
+        "options": ["A4a-72"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-73"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-74"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-75"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-76"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-77"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Secluded Springs Museum 2",
+    "requiredCards": [
+      {
+        "options": ["A4a-86"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-87"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-88"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-89"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "expansionId": "A4a",
+    "name": "Pokémon that can Use Attacks Immediately 2",
+    "requiredCards": [
+      {
+        "options": ["A4a-23"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-59"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-63"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-77"],
+        "amount": 1
+      },
+      {
+        "options": ["A4a-105"],
+        "amount": 1
+      }
+    ],
+    "reward": "Mantyke (emblem)"
+  }
+]

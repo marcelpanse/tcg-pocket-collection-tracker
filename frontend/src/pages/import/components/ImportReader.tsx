@@ -2,16 +2,12 @@ import { use, useCallback, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { useTranslation } from 'react-i18next'
 import XLSX from 'xlsx'
-import { supabase } from '@/lib/Auth.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
-import { UserContext } from '@/lib/context/UserContext'
-import { updateCollectionCache } from '@/lib/fetchCollection.ts'
-import type { CollectionRow, ImportExportRow } from '@/types'
+import type { CollectionRowUpdate, ImportExportRow } from '@/types'
 
 export const ImportReader = () => {
   const { t } = useTranslation('pages/import')
-  const { user } = use(UserContext)
-  const { ownedCards, setOwnedCards } = use(CollectionContext)
+  const { ownedCards, updateCards } = use(CollectionContext)
 
   const [processedData, setProcessedData] = useState<(ImportExportRow & { added?: boolean; updated?: boolean; removed?: boolean })[] | null>(null)
   const [numberProcessed, setNumberProcessed] = useState<number>(0)
@@ -20,54 +16,32 @@ export const ImportReader = () => {
   const [progressMessage, setProgressMessage] = useState<string>('')
 
   const processFileRows = async (data: ImportExportRow[]) => {
-    if (!user || !user.user.email) {
-      throw new Error('User not logged in')
+    const cardArray: CollectionRowUpdate[] = []
+
+    for (let i = 0; i < data.length; i++) {
+      const r = data[i]
+      console.log('Row', r)
+      const newAmount = Math.max(0, Number(r.NumberOwned))
+      const cardId = r.Id
+      const ownedCard = ownedCards.find((row) => row.card_id === r.Id)
+      console.log('Owned Card', ownedCard)
+
+      cardArray.push({ card_id: cardId, amount_owned: newAmount })
+
+      // update UI
+      if (ownedCard && ownedCard.amount_owned !== newAmount) {
+        console.log('updating card', ownedCard.card_id, newAmount)
+        ownedCard.amount_owned = Math.max(0, newAmount)
+        setProcessedData((p) => [...(p ?? []), { ...r, updated: newAmount > 0, removed: newAmount === 0 }])
+      } else if (!ownedCard && newAmount > 0) {
+        console.log('creating card', r.Id, newAmount)
+        setProcessedData((p) => [...(p ?? []), { ...r, added: true }])
+      }
+      setProgressMessage(`Processed ${i + 1} of ${data.length}`)
+      setNumberProcessed((n) => n + 1)
     }
 
-    if (data) {
-      const cardArray: CollectionRow[] = []
-
-      for (let i = 0; i < data.length; i++) {
-        const r = data[i]
-        console.log('Row', r)
-        console.log('First Owned Card', ownedCards[0])
-        const newAmount = Math.max(0, Number(r.NumberOwned))
-        const cardId = r.Id
-        const ownedCard = ownedCards.find((row) => row.card_id === r.Id)
-        console.log('Owned Card', ownedCard)
-
-        cardArray.push({ card_id: cardId, amount_owned: newAmount, email: user?.user.email, updated_at: new Date().toISOString() })
-
-        // update UI
-        if (ownedCard && ownedCard.amount_owned !== newAmount) {
-          console.log('updating card', ownedCard.card_id, newAmount)
-          ownedCard.amount_owned = Math.max(0, newAmount)
-          setOwnedCards([...ownedCards])
-          setProcessedData((p) => [...(p ?? []), { ...r, updated: newAmount > 0, removed: newAmount === 0 }])
-        } else if (!ownedCard && newAmount > 0) {
-          console.log('creating card', r.Id, newAmount)
-          setOwnedCards([
-            ...ownedCards,
-            {
-              email: user?.user.email,
-              card_id: cardId,
-              amount_owned: newAmount,
-              updated_at: new Date().toISOString(),
-            },
-          ])
-          setProcessedData((p) => [...(p ?? []), { ...r, added: true }])
-        }
-        setProgressMessage(`Processed ${i + 1} of ${data.length}`)
-        setNumberProcessed((n) => n + 1)
-      }
-
-      const { error } = await supabase.from('collection').upsert(cardArray)
-      if (error) {
-        throw new Error('Error updating collection')
-      }
-
-      updateCollectionCache(ownedCards, user.user.email)
-    }
+    updateCards(cardArray)
   }
 
   const onDrop = useCallback((acceptedFiles: File[]) => {

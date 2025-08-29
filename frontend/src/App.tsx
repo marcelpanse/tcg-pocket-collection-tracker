@@ -7,13 +7,13 @@ import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { authSSO, supabase } from '@/lib/Auth.ts'
 import { fetchAccount } from '@/lib/fetchAccount.ts'
-import type { AccountRow, CollectionRow } from '@/types'
+import type { AccountRow, CollectionRow, CollectionRowUpdate } from '@/types'
 import Footer from './components/Footer.tsx'
 import { Header } from './components/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { CollectionContext } from './lib/context/CollectionContext.ts'
 import { type User, UserContext } from './lib/context/UserContext.ts'
-import { fetchCollection } from './lib/fetchCollection.ts'
+import { fetchOwnCollection, updateCollectionCache } from './lib/fetchCollection.ts'
 
 // Lazy import for chunking
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
@@ -35,6 +35,45 @@ function App() {
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false)
   const [selectedCardId, setSelectedCardId] = useState('')
   const [selectedMissionCardOptions, setSelectedMissionCardOptions] = useState<string[]>([])
+
+  const updateCards = async (rowsToUpdate: CollectionRowUpdate[]) => {
+    if (!user || !user.user.email) {
+      throw new Error('User not logged in')
+    }
+
+    const now = new Date()
+    const nowString = now.toISOString()
+    const rows: CollectionRow[] = rowsToUpdate.map((row) => ({ ...row, email: user.user.email as string, updated_at: nowString }))
+
+    const ownedCardsCopy = [...ownedCards]
+    for (const row of rows) {
+      const i = ownedCardsCopy.findIndex((r) => r.card_id === row.card_id)
+      if (i < 0) {
+        ownedCardsCopy.push(row)
+      } else {
+        ownedCardsCopy[i].amount_owned = row.amount_owned
+        ownedCardsCopy[i].updated_at = nowString
+      }
+    }
+
+    const { error: error1, data } = await supabase
+      .from('accounts')
+      .upsert({ ...account, collection_last_updated: now })
+      .select()
+      .single()
+    if (error1) {
+      throw new Error(`Error modyfing account: ${error1.message}`)
+    }
+    const { error: error2 } = await supabase.from('collection').upsert(rows)
+    if (error2) {
+      setAccount(data as AccountRow)
+      throw new Error(`Error bulk updating collection: ${error2.message}`)
+    }
+
+    updateCollectionCache(ownedCardsCopy, user.user.email, now)
+    setAccount(data as AccountRow)
+    setOwnedCards([...ownedCardsCopy])
+  }
 
   useEffect(() => {
     const {
@@ -61,13 +100,27 @@ function App() {
         toast({ title: 'Logging in', description: 'Please wait...', variant: 'default' })
         authSSO(user, sso, sig).catch(console.error)
       } else if (user.user.email) {
-        fetchCollection(user.user.email).then(setOwnedCards).catch(console.error)
         fetchAccount(user.user.email).then(setAccount).catch(console.error)
       }
     } else {
       setOwnedCards([]) // in case the user is logged out, clear the cards
+      setAccount(null)
     }
   }, [user])
+
+  useEffect(() => {
+    if (account && user?.user.email) {
+      const email = user.user.email
+      if (!account.collection_last_updated) {
+        updateCards([]) // timetamp is missing from db, artifically update it
+          .then(() => fetchOwnCollection(email, new Date()))
+          .then(setOwnedCards)
+          .catch(console.error)
+      } else {
+        fetchOwnCollection(email, new Date(account.collection_last_updated)).then(setOwnedCards).catch(console.error)
+      }
+    }
+  }, [account])
 
   const userContextValue = useMemo(
     () => ({
@@ -86,7 +139,7 @@ function App() {
   const collectionContextValue = useMemo(
     () => ({
       ownedCards,
-      setOwnedCards,
+      updateCards,
       selectedCardId,
       setSelectedCardId,
       selectedMissionCardOptions,
