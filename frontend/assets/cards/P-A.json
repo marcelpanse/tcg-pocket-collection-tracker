@@ -1670,6 +1670,11 @@
         "card_id": "P-A-40",
         "version": "Promo-A #40",
         "rarity": ""
+      },
+      {
+        "card_id": "A4a-91",
+        "version": "Secluded Springs #91",
+        "rarity": "☆"
       }
     ],
     "artist": "sui",
@@ -1933,6 +1938,11 @@
         "card_id": "P-A-46",
         "version": "Promo-A #46",
         "rarity": ""
+      },
+      {
+        "card_id": "A4a-98",
+        "version": "Secluded Springs #98",
+        "rarity": "☆"
       }
     ],
     "artist": "Uninori",
@@ -4301,6 +4311,350 @@
       }
     ],
     "artist": "Satoshi Shirai",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-101",
+    "image": "/images/en-US/P-A-101.webp",
+    "hp": "90",
+    "energy": "Psychic",
+    "name": "Latias",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Crossing Flights",
+        "damage": "20+",
+        "effect": "If Latios is on your Bench, this attack does 20 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "darkness",
+    "retreat": "1",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-36",
+        "version": "Secluded Springs #36",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "P-A-101",
+        "version": "Promo-A #101",
+        "rarity": ""
+      }
+    ],
+    "artist": "Yuu Nishida",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-102",
+    "image": "/images/en-US/P-A-102.webp",
+    "hp": "100",
+    "energy": "Grass",
+    "name": "Tropius",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Double Smash",
+        "damage": "40x",
+        "effect": "Flip 2 coins. This attack does 40 damage for each heads."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fire",
+    "retreat": "2",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "P-A-102",
+        "version": "Promo-A #102",
+        "rarity": ""
+      }
+    ],
+    "artist": "sowsow",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-103",
+    "image": "/images/en-US/P-A-103.webp",
+    "hp": "60",
+    "energy": "Water",
+    "name": "Poliwag",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Surprise Attack",
+        "damage": "40",
+        "effect": "Flip a coin. If tails, this attack does nothing."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "P-A-103",
+        "version": "Promo-A #103",
+        "rarity": ""
+      }
+    ],
+    "artist": "MAHOU",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-104",
+    "image": "/images/en-US/P-A-104.webp",
+    "hp": "120",
+    "energy": "Water",
+    "name": "Milotic",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless"],
+        "name": "Aqua Edge",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Healing Ripples",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may heal 60 damage from 1 of your  Pokémon."
+    },
+    "weakness": "lightning",
+    "retreat": "2",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-22",
+        "version": "Secluded Springs #22",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "A4a-72",
+        "version": "Secluded Springs #72",
+        "rarity": "☆"
+      },
+      {
+        "card_id": "P-A-104",
+        "version": "Promo-A #104",
+        "rarity": ""
+      }
+    ],
+    "artist": "Hajime Kusajima",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-105",
+    "image": "/images/en-US/P-A-105.webp",
+    "hp": "60",
+    "energy": "Darkness",
+    "name": "Zorua",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Ram",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "1",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-49",
+        "version": "Secluded Springs #49",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "P-A-105",
+        "version": "Promo-A #105",
+        "rarity": ""
+      }
+    ],
+    "artist": "Naoyo Kimura",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-106",
+    "image": "/images/en-US/P-A-106.webp",
+    "hp": "100",
+    "energy": "Darkness",
+    "name": "Zoroark",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Darkness", "Darkness"],
+        "name": "Night Daze",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Illusive Trickery",
+      "effect": "If your opponent's Pokémon is Knocked Out by damage from this Pokémon's attacks, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
+    },
+    "weakness": "grass",
+    "retreat": "2",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-50",
+        "version": "Secluded Springs #50",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "P-A-106",
+        "version": "Promo-A #106",
+        "rarity": ""
+      }
+    ],
+    "artist": "matazo",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-107",
+    "image": "/images/en-US/P-A-107.webp",
+    "hp": "110",
+    "energy": "Colorless",
+    "name": "Miltank",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Rolling Frenzy",
+        "damage": "10",
+        "effect": "Until this Pokémon leaves the Active Spot, this Pokémon's Rolling Frenzy attack does +30 damage. This effect stacks."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "3",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-62",
+        "version": "Secluded Springs #62",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "P-A-107",
+        "version": "Promo-A #107",
+        "rarity": ""
+      }
+    ],
+    "artist": "Kanako Eo",
+    "crafting_cost": "Unknown"
+  },
+  {
+    "card_id": "P-A-108",
+    "image": "/images/en-US/P-A-108.webp",
+    "hp": "70",
+    "energy": "Fighting",
+    "name": "Phanpy",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Flail",
+        "damage": "0",
+        "effect": "This attack does damage to your opponent's Active Pokémon equal to the damage this Pokémon has on it."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "2",
+    "rarity": "P",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-43",
+        "version": "Secluded Springs #43",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "A4a-76",
+        "version": "Secluded Springs #76",
+        "rarity": "☆"
+      },
+      {
+        "card_id": "P-A-108",
+        "version": "Promo-A #108",
+        "rarity": ""
+      }
+    ],
+    "artist": "Asako Ito",
     "crafting_cost": "Unknown"
   }
 ]

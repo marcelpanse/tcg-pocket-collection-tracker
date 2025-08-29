@@ -1,0 +1,4344 @@
+[
+  {
+    "card_id": "A4a-1",
+    "image": "/images/en-US/A4a-1.webp",
+    "hp": "50",
+    "energy": "Grass",
+    "name": "Hoppip",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Splash",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-1",
+        "version": "Secluded Springs #1",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kyoko Umemoto",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-2",
+    "image": "/images/en-US/A4a-2.webp",
+    "hp": "60",
+    "energy": "Grass",
+    "name": "Skiploom",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Bounce",
+        "damage": "30",
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-2",
+        "version": "Secluded Springs #2",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Dsuke",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-3",
+    "image": "/images/en-US/A4a-3.webp",
+    "hp": "160",
+    "energy": "Grass",
+    "name": "Jumpluff ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Breeze-By Attack",
+        "damage": "70",
+        "effect": "You may switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-3",
+        "version": "Secluded Springs #3",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-78",
+        "version": "Secluded Springs #78",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-86",
+        "version": "Secluded Springs #86",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA Tsuji",
+    "crafting_cost": 500
+  },
+  {
+    "card_id": "A4a-4",
+    "image": "/images/en-US/A4a-4.webp",
+    "hp": "50",
+    "energy": "Grass",
+    "name": "Sunkern",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Tackle",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fire",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-4",
+        "version": "Secluded Springs #4",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Toshinao Aoki",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-5",
+    "image": "/images/en-US/A4a-5.webp",
+    "hp": "90",
+    "energy": "Grass",
+    "name": "Sunflora",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Grass", "Colorless"],
+        "name": "Trip Over",
+        "damage": "50+",
+        "effect": "Flip a coin. If heads, this attack does 30 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fire",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-5",
+        "version": "Secluded Springs #5",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Miki Tanaka",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-6",
+    "image": "/images/en-US/A4a-6.webp",
+    "hp": "70",
+    "energy": "Grass",
+    "name": "Celebi",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Grass", "Grass"],
+        "name": "Temporal Leaves",
+        "damage": "40",
+        "effect": "If your opponent's Active Pokémon is an evolved Pokémon, devolve it by putting the highest Stage Evolution card on it into your opponent's hand."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fire",
+    "retreat": "1",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-6",
+        "version": "Secluded Springs #6",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Yuu Nishida",
+    "crafting_cost": 150
+  },
+  {
+    "card_id": "A4a-7",
+    "image": "/images/en-US/A4a-7.webp",
+    "hp": "70",
+    "energy": "Grass",
+    "name": "Durant",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Grass", "Grass"],
+        "name": "Mountain Munch",
+        "damage": "40",
+        "effect": "Discard the top card of your opponent's deck."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fire",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-7",
+        "version": "Secluded Springs #7",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Midori Harada",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-8",
+    "image": "/images/en-US/A4a-8.webp",
+    "hp": "80",
+    "energy": "Fire",
+    "name": "Slugma",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Fire", "Fire"],
+        "name": "Combustion",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "water",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-8",
+        "version": "Secluded Springs #8",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Yukiko Baba",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-9",
+    "image": "/images/en-US/A4a-9.webp",
+    "hp": "120",
+    "energy": "Fire",
+    "name": "Magcargo",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Fire", "Fire", "Fire"],
+        "name": "Heat Blast",
+        "damage": "90",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "water",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-9",
+        "version": "Secluded Springs #9",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Eri Yamaki",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-10",
+    "image": "/images/en-US/A4a-10.webp",
+    "hp": "140",
+    "energy": "Fire",
+    "name": "Entei ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Fire", "Fire"],
+        "name": "Blazing Beatdown",
+        "damage": "60+",
+        "effect": "If this Pokémon has at least 2 extra [R] Energy attached, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "water",
+    "retreat": "2",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-10",
+        "version": "Secluded Springs #10",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-79",
+        "version": "Secluded Springs #79",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-87",
+        "version": "Secluded Springs #87",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": 500
+  },
+  {
+    "card_id": "A4a-11",
+    "image": "/images/en-US/A4a-11.webp",
+    "hp": "70",
+    "energy": "Fire",
+    "name": "Fletchinder",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Fire"],
+        "name": "Fire Wing",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-11",
+        "version": "Secluded Springs #11",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "5ban Graphics",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-12",
+    "image": "/images/en-US/A4a-12.webp",
+    "hp": "130",
+    "energy": "Fire",
+    "name": "Talonflame",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["Fire"],
+        "name": "Searing Flame",
+        "damage": "50",
+        "effect": "Your opponent's Active Pokémon is now Burned."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-12",
+        "version": "Secluded Springs #12",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "5ban Graphics",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-13",
+    "image": "/images/en-US/A4a-13.webp",
+    "hp": "60",
+    "energy": "Water",
+    "name": "Poliwag",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Call for",
+        "damage": "Family",
+        "effect": "Put 1 random Poliwag from your deck onto your Bench."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-13",
+        "version": "Secluded Springs #13",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Yuka Morii",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-14",
+    "image": "/images/en-US/A4a-14.webp",
+    "hp": "80",
+    "energy": "Water",
+    "name": "Poliwhirl",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Ram",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-14",
+        "version": "Secluded Springs #14",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Kanako Eo",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-15",
+    "image": "/images/en-US/A4a-15.webp",
+    "hp": "60",
+    "energy": "Water",
+    "name": "Tentacool",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless"],
+        "name": "Poison Sting",
+        "damage": "20",
+        "effect": "Your opponent's Active Pokémon is now Poisoned."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-15",
+        "version": "Secluded Springs #15",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Hajime Kusajima",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-16",
+    "image": "/images/en-US/A4a-16.webp",
+    "hp": "110",
+    "energy": "Water",
+    "name": "Tentacruel",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Colorless"],
+        "name": "Stun Poison",
+        "damage": "50",
+        "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Poisoned and Paralyzed."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-16",
+        "version": "Secluded Springs #16",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Hajime Kusajima",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-17",
+    "image": "/images/en-US/A4a-17.webp",
+    "hp": "60",
+    "energy": "Water",
+    "name": "Slowpoke",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Water"],
+        "name": "Water Gun",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-17",
+        "version": "Secluded Springs #17",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Saya Tsuruta",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-18",
+    "image": "/images/en-US/A4a-18.webp",
+    "hp": "130",
+    "energy": "Water",
+    "name": "Slowking",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Water"],
+        "name": "Litter",
+        "damage": "50x",
+        "effect": "Discard up to 2 Pokémon Tool cards from your hand. This attack does 50 damage for each card you discarded in this way."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-18",
+        "version": "Secluded Springs #18",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Aya Kusube",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-19",
+    "image": "/images/en-US/A4a-19.webp",
+    "hp": "70",
+    "energy": "Water",
+    "name": "Jynx",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Water", "Water"],
+        "name": "Dazzle Dance",
+        "damage": "40",
+        "effect": "Your opponent's Active Pokémon is now Confused."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "metal",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-19",
+        "version": "Secluded Springs #19",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Yukiko Baba",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-20",
+    "image": "/images/en-US/A4a-20.webp",
+    "hp": "140",
+    "energy": "Water",
+    "name": "Suicune ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Water", "Water"],
+        "name": "Crystal Waltz",
+        "damage": "20x",
+        "effect": "This attack does 20 damage for each Benched Pokémon (both yours and your opponent's)."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "lightning",
+    "retreat": "2",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-20",
+        "version": "Secluded Springs #20",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-80",
+        "version": "Secluded Springs #80",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-90",
+        "version": "Secluded Springs #90",
+        "rarity": "☆☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": 500
+  },
+  {
+    "card_id": "A4a-21",
+    "image": "/images/en-US/A4a-21.webp",
+    "hp": "30",
+    "energy": "Water",
+    "name": "Feebas",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Water"],
+        "name": "Leap",
+        "damage": "Out",
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-21",
+        "version": "Secluded Springs #21",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Suwama Chiaki",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-22",
+    "image": "/images/en-US/A4a-22.webp",
+    "hp": "120",
+    "energy": "Water",
+    "name": "Milotic",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless"],
+        "name": "Aqua Edge",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Healing Ripples",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may heal 60 damage from 1 of your  Pokémon."
+    },
+    "weakness": "lightning",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-22",
+        "version": "Secluded Springs #22",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "A4a-72",
+        "version": "Secluded Springs #72",
+        "rarity": "☆"
+      },
+      {
+        "card_id": "P-A-104",
+        "version": "Promo-A #104",
+        "rarity": ""
+      }
+    ],
+    "artist": "AKIRA EGAWA",
+    "crafting_cost": 150
+  },
+  {
+    "card_id": "A4a-23",
+    "image": "/images/en-US/A4a-23.webp",
+    "hp": "30",
+    "energy": "Water",
+    "name": "Mantyke",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Unknown"],
+        "name": "Splashy",
+        "damage": "Toss",
+        "effect": "Take a [W] Energy from your Energy Zone and attach it to 1 of your Benched Basic Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "none",
+    "retreat": "0",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": true,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-23",
+        "version": "Secluded Springs #23",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "A4a-105",
+        "version": "Secluded Springs #105",
+        "rarity": "♛"
+      }
+    ],
+    "artist": "Shibuzoh.",
+    "crafting_cost": 150
+  },
+  {
+    "card_id": "A4a-24",
+    "image": "/images/en-US/A4a-24.webp",
+    "hp": "80",
+    "energy": "Water",
+    "name": "Cryogonal",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Water", "Water"],
+        "name": "Ice",
+        "damage": "Blade",
+        "effect": "This attack does 40 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "metal",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-24",
+        "version": "Secluded Springs #24",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Masakazu Fukuda",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-25",
+    "image": "/images/en-US/A4a-25.webp",
+    "hp": "130",
+    "energy": "Lightning",
+    "name": "Raikou ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Lightning"],
+        "name": "Voltaic Bullet",
+        "damage": "60",
+        "effect": "This attack also does 10 damage to 1 of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "fighting",
+    "retreat": "2",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-25",
+        "version": "Secluded Springs #25",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-81",
+        "version": "Secluded Springs #81",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-88",
+        "version": "Secluded Springs #88",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": 500
+  },
+  {
+    "card_id": "A4a-26",
+    "image": "/images/en-US/A4a-26.webp",
+    "hp": "40",
+    "energy": "Lightning",
+    "name": "Tynamo",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Tiny Bolt",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "0",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-26",
+        "version": "Secluded Springs #26",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Naoki Saito",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-27",
+    "image": "/images/en-US/A4a-27.webp",
+    "hp": "90",
+    "energy": "Lightning",
+    "name": "Eelektrik",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Colorless"],
+        "name": "Electro Ball",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-27",
+        "version": "Secluded Springs #27",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Suwama Chiaki",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-28",
+    "image": "/images/en-US/A4a-28.webp",
+    "hp": "150",
+    "energy": "Lightning",
+    "name": "Eelektross",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Lightning", "Colorless"],
+        "name": "Wild Charge",
+        "damage": "120",
+        "effect": "This Pokémon also does 20 damage to itself."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-28",
+        "version": "Secluded Springs #28",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "tetsuya koizumi",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-29",
+    "image": "/images/en-US/A4a-29.webp",
+    "hp": "90",
+    "energy": "Lightning",
+    "name": "Stunfisk",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Colorless"],
+        "name": "Static Shock",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-29",
+        "version": "Secluded Springs #29",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "A4a-73",
+        "version": "Secluded Springs #73",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Naoki Saito",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-30",
+    "image": "/images/en-US/A4a-30.webp",
+    "hp": "60",
+    "energy": "Lightning",
+    "name": "Yamper",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Zap Kick",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-30",
+        "version": "Secluded Springs #30",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "A4a-74",
+        "version": "Secluded Springs #74",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Akira Komayama",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-31",
+    "image": "/images/en-US/A4a-31.webp",
+    "hp": "120",
+    "energy": "Lightning",
+    "name": "Boltund",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Colorless", "Colorless"],
+        "name": "Defiant Spark",
+        "damage": "70",
+        "effect": "If this Pokémon has damage on it, this attack can be used for 1 [L] Energy."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-31",
+        "version": "Secluded Springs #31",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Tomomi Ozaki",
+    "crafting_cost": 150
+  },
+  {
+    "card_id": "A4a-32",
+    "image": "/images/en-US/A4a-32.webp",
+    "hp": "50",
+    "energy": "Psychic",
+    "name": "Misdreavus",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Will-O-Wisp",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Infiltrating Inspection",
+      "effect": "Once during your turn, when you put this Pokémon from your hand onto your Bench, you may have your opponent reveal their hand."
+    },
+    "weakness": "darkness",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-32",
+        "version": "Secluded Springs #32",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Suwama Chiaki",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-33",
+    "image": "/images/en-US/A4a-33.webp",
+    "hp": "100",
+    "energy": "Psychic",
+    "name": "Mismagius",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Cursed",
+        "damage": "Prose",
+        "effect": "At the end of your opponent's next turn, do 90 damage to the Defending Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "darkness",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-33",
+        "version": "Secluded Springs #33",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "tono",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-34",
+    "image": "/images/en-US/A4a-34.webp",
+    "hp": "60",
+    "energy": "Psychic",
+    "name": "Galarian Corsola",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Tackle",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "darkness",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-34",
+        "version": "Secluded Springs #34",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kouki Saitou",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-35",
+    "image": "/images/en-US/A4a-35.webp",
+    "hp": "80",
+    "energy": "Psychic",
+    "name": "Galarian Cursola",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Psychic"],
+        "name": "Spooky Shot",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Perish Body",
+      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, flip a coin. If heads, the Attacking Pokémon is Knocked Out."
+    },
+    "weakness": "darkness",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-35",
+        "version": "Secluded Springs #35",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Kagemaru Himeno",
+    "crafting_cost": 150
+  },
+  {
+    "card_id": "A4a-36",
+    "image": "/images/en-US/A4a-36.webp",
+    "hp": "90",
+    "energy": "Psychic",
+    "name": "Latias",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Crossing Flights",
+        "damage": "20+",
+        "effect": "If Latios is on your Bench, this attack does 20 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "darkness",
+    "retreat": "1",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-36",
+        "version": "Secluded Springs #36",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "P-A-101",
+        "version": "Promo-A #101",
+        "rarity": ""
+      }
+    ],
+    "artist": "rika",
+    "crafting_cost": 150
+  },
+  {
+    "card_id": "A4a-37",
+    "image": "/images/en-US/A4a-37.webp",
+    "hp": "110",
+    "energy": "Psychic",
+    "name": "Latios",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Psychic", "Psychic"],
+        "name": "Luster Purge",
+        "damage": "120",
+        "effect": "Discard all Energy from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Fantastical Floating",
+      "effect": "If you have Latias in play, this Pokémon has no Retreat Cost."
+    },
+    "weakness": "darkness",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-37",
+        "version": "Secluded Springs #37",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "A4a-75",
+        "version": "Secluded Springs #75",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "rika",
+    "crafting_cost": 150
+  },
+  {
+    "card_id": "A4a-38",
+    "image": "/images/en-US/A4a-38.webp",
+    "hp": "60",
+    "energy": "Psychic",
+    "name": "Frillish",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Absorb",
+        "damage": "10",
+        "effect": "Heal 10 damage from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "darkness",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-38",
+        "version": "Secluded Springs #38",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Akira Komayama",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-39",
+    "image": "/images/en-US/A4a-39.webp",
+    "hp": "110",
+    "energy": "Psychic",
+    "name": "Jellicent",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Psychic", "Colorless"],
+        "name": "Devour Soul",
+        "damage": "80",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "darkness",
+    "retreat": "2",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-39",
+        "version": "Secluded Springs #39",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Kagemaru Himeno",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-40",
+    "image": "/images/en-US/A4a-40.webp",
+    "hp": "60",
+    "energy": "Fighting",
+    "name": "Diglett",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Headbutt",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-40",
+        "version": "Secluded Springs #40",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Tomokazu Komiya",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-41",
+    "image": "/images/en-US/A4a-41.webp",
+    "hp": "90",
+    "energy": "Fighting",
+    "name": "Dugtrio",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Cliff Crumbler",
+        "damage": "40+",
+        "effect": "Discard the top card of your deck. If that card is a [F] Pokémon, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-41",
+        "version": "Secluded Springs #41",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Tomokazu Komiya",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-42",
+    "image": "/images/en-US/A4a-42.webp",
+    "hp": "180",
+    "energy": "Fighting",
+    "name": "Poliwrath ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless", "Colorless"],
+        "name": "Hydro Knuckle",
+        "damage": "100+",
+        "effect": "If this Pokémon has any [W] Energy attached, this attack does 40 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "psychic",
+    "retreat": "3",
+    "rarity": "◊◊◊◊",
+    "fullart": "No",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-42",
+        "version": "Secluded Springs #42",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-82",
+        "version": "Secluded Springs #82",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-89",
+        "version": "Secluded Springs #89",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": 500
+  },
+  {
+    "card_id": "A4a-43",
+    "image": "/images/en-US/A4a-43.webp",
+    "hp": "70",
+    "energy": "Fighting",
+    "name": "Phanpy",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Flail",
+        "damage": "0",
+        "effect": "This attack does damage to your opponent's Active Pokémon equal to the damage this Pokémon has on it."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-43",
+        "version": "Secluded Springs #43",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "A4a-76",
+        "version": "Secluded Springs #76",
+        "rarity": "☆"
+      },
+      {
+        "card_id": "P-A-108",
+        "version": "Promo-A #108",
+        "rarity": ""
+      }
+    ],
+    "artist": "Naoyo Kimura",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-44",
+    "image": "/images/en-US/A4a-44.webp",
+    "hp": "120",
+    "energy": "Fighting",
+    "name": "Donphan",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Fighting", "Colorless"],
+        "name": "Land Crush",
+        "damage": "80",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Exoskeleton",
+      "effect": "This Pokémon takes −20 damage from attacks."
+    },
+    "weakness": "grass",
+    "retreat": "4",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-44",
+        "version": "Secluded Springs #44",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Kagemaru Himeno",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-45",
+    "image": "/images/en-US/A4a-45.webp",
+    "hp": "90",
+    "energy": "Fighting",
+    "name": "Relicanth",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Take Down",
+        "damage": "50",
+        "effect": "This Pokémon also does 10 damage to itself."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-45",
+        "version": "Secluded Springs #45",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kagemaru Himeno",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-46",
+    "image": "/images/en-US/A4a-46.webp",
+    "hp": "70",
+    "energy": "Fighting",
+    "name": "Dwebble",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless"],
+        "name": "Sand Spray",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-46",
+        "version": "Secluded Springs #46",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Shigenori Negishi",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-47",
+    "image": "/images/en-US/A4a-47.webp",
+    "hp": "140",
+    "energy": "Fighting",
+    "name": "Crustle",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
+        "name": "Stone Edge",
+        "damage": "100+",
+        "effect": "Flip a coin. If heads, this attack does 50 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "4",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-47",
+        "version": "Secluded Springs #47",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Naoki Saito",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-48",
+    "image": "/images/en-US/A4a-48.webp",
+    "hp": "80",
+    "energy": "Darkness",
+    "name": "Seviper",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Darkness", "Colorless"],
+        "name": "Fateful Fang",
+        "damage": "40+",
+        "effect": "If your opponent's Active Pokémon is Zangoose, this attack does 40 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "2",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-48",
+        "version": "Secluded Springs #48",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Sumiyoshi Kizuki",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-49",
+    "image": "/images/en-US/A4a-49.webp",
+    "hp": "60",
+    "energy": "Darkness",
+    "name": "Zorua",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Ram",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-49",
+        "version": "Secluded Springs #49",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "P-A-105",
+        "version": "Promo-A #105",
+        "rarity": ""
+      }
+    ],
+    "artist": "Tomokazu Komiya",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-50",
+    "image": "/images/en-US/A4a-50.webp",
+    "hp": "100",
+    "energy": "Darkness",
+    "name": "Zoroark",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Darkness", "Darkness"],
+        "name": "Night Daze",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Illusive Trickery",
+      "effect": "If your opponent's Pokémon is Knocked Out by damage from this Pokémon's attacks, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
+    },
+    "weakness": "grass",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-50",
+        "version": "Secluded Springs #50",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "P-A-106",
+        "version": "Promo-A #106",
+        "rarity": ""
+      }
+    ],
+    "artist": "Shin Nagasawa",
+    "crafting_cost": 150
+  },
+  {
+    "card_id": "A4a-51",
+    "image": "/images/en-US/A4a-51.webp",
+    "hp": "60",
+    "energy": "Darkness",
+    "name": "Inkay",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Tackle",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-51",
+        "version": "Secluded Springs #51",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "miki kudo",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-52",
+    "image": "/images/en-US/A4a-52.webp",
+    "hp": "90",
+    "energy": "Darkness",
+    "name": "Malamar",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Mental",
+        "damage": "Surge",
+        "effect": "This attack does 20 damage to each of your opponent's Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-52",
+        "version": "Secluded Springs #52",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Masakazu Fukuda",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-53",
+    "image": "/images/en-US/A4a-53.webp",
+    "hp": "50",
+    "energy": "Darkness",
+    "name": "Skrelp",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Melt",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-53",
+        "version": "Secluded Springs #53",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Yukiko Baba",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-54",
+    "image": "/images/en-US/A4a-54.webp",
+    "hp": "110",
+    "energy": "Darkness",
+    "name": "Dragalge",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Darkness", "Colorless", "Colorless"],
+        "name": "Sludge Bomb",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-54",
+        "version": "Secluded Springs #54",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "5ban Graphics",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-55",
+    "image": "/images/en-US/A4a-55.webp",
+    "hp": "120",
+    "energy": "Dragon",
+    "name": "Altaria",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Dragon Arcana",
+        "damage": "40+",
+        "effect": "If this Pokémon has 2 or more different types of Energy attached, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "none",
+    "retreat": "2",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-55",
+        "version": "Secluded Springs #55",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "miki kudo",
+    "crafting_cost": 150
+  },
+  {
+    "card_id": "A4a-56",
+    "image": "/images/en-US/A4a-56.webp",
+    "hp": "70",
+    "energy": "Colorless",
+    "name": "Farfetch'd",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Leek Slam",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-56",
+        "version": "Secluded Springs #56",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Midori Harada",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-57",
+    "image": "/images/en-US/A4a-57.webp",
+    "hp": "80",
+    "energy": "Colorless",
+    "name": "Lickitung",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Stretch",
+        "damage": "Tongue",
+        "effect": "This attack does 30 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "3",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-57",
+        "version": "Secluded Springs #57",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Masakazu Fukuda",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-58",
+    "image": "/images/en-US/A4a-58.webp",
+    "hp": "130",
+    "energy": "Colorless",
+    "name": "Lickilicky",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Stretch",
+        "damage": "Tongue",
+        "effect": "This attack does 60 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-58",
+        "version": "Secluded Springs #58",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Mina Nakai",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-59",
+    "image": "/images/en-US/A4a-59.webp",
+    "hp": "30",
+    "energy": "Colorless",
+    "name": "Igglybuff",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Unknown"],
+        "name": "Sleepy Lullaby",
+        "damage": "10",
+        "effect": "Your opponent's Active Pokémon is now Asleep."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "none",
+    "retreat": "0",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": true,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-59",
+        "version": "Secluded Springs #59",
+        "rarity": "◊◊◊"
+      }
+    ],
+    "artist": "Miki Tanaka",
+    "crafting_cost": 150
+  },
+  {
+    "card_id": "A4a-60",
+    "image": "/images/en-US/A4a-60.webp",
+    "hp": "60",
+    "energy": "Colorless",
+    "name": "Teddiursa",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Surprise Attack",
+        "damage": "40",
+        "effect": "Flip a coin. If tails, this attack does nothing."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-60",
+        "version": "Secluded Springs #60",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Kagemaru Himeno",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-61",
+    "image": "/images/en-US/A4a-61.webp",
+    "hp": "130",
+    "energy": "Colorless",
+    "name": "Ursaring",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
+        "name": "Claw Slash",
+        "damage": "110",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-61",
+        "version": "Secluded Springs #61",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Uta",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-62",
+    "image": "/images/en-US/A4a-62.webp",
+    "hp": "110",
+    "energy": "Colorless",
+    "name": "Miltank",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Rolling Frenzy",
+        "damage": "10",
+        "effect": "Until this Pokémon leaves the Active Spot, this Pokémon's Rolling Frenzy attack does +30 damage. This effect stacks."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "3",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-62",
+        "version": "Secluded Springs #62",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "P-A-107",
+        "version": "Promo-A #107",
+        "rarity": ""
+      }
+    ],
+    "artist": "Kouki Saitou",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-63",
+    "image": "/images/en-US/A4a-63.webp",
+    "hp": "30",
+    "energy": "Colorless",
+    "name": "Azurill",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Unknown"],
+        "name": "Squishy",
+        "damage": "Healing",
+        "effect": "Heal 50 damage from 1 of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "none",
+    "retreat": "0",
+    "rarity": "◊◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": true,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-63",
+        "version": "Secluded Springs #63",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "A4a-77",
+        "version": "Secluded Springs #77",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Rond",
+    "crafting_cost": 150
+  },
+  {
+    "card_id": "A4a-64",
+    "image": "/images/en-US/A4a-64.webp",
+    "hp": "50",
+    "energy": "Colorless",
+    "name": "Swablu",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Peck",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-64",
+        "version": "Secluded Springs #64",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "0313",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-65",
+    "image": "/images/en-US/A4a-65.webp",
+    "hp": "80",
+    "energy": "Colorless",
+    "name": "Zangoose",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless", "Colorless"],
+        "name": "Slash",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Counterattack",
+      "effect": "If this Pokémon is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the Attacking Pokémon."
+    },
+    "weakness": "fighting",
+    "retreat": "1",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-65",
+        "version": "Secluded Springs #65",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Misa Tsutsui",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-66",
+    "image": "/images/en-US/A4a-66.webp",
+    "hp": "50",
+    "energy": "Colorless",
+    "name": "Fletchling",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Quick Attack",
+        "damage": "10+",
+        "effect": "Flip a coin. If heads, this attack does 30 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-66",
+        "version": "Secluded Springs #66",
+        "rarity": "◊"
+      }
+    ],
+    "artist": "Shibuzoh.",
+    "crafting_cost": 35
+  },
+  {
+    "card_id": "A4a-67",
+    "image": "/images/en-US/A4a-67.webp",
+    "hp": "Unknown",
+    "energy": "N/A",
+    "name": "Inflatable Boat",
+    "card_type": "trainer",
+    "evolution_type": "tool",
+    "attacks": [],
+    "ability": "The Retreat Cost of the [W] Pokémon this card is attached to is 1 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-67",
+        "version": "Secluded Springs #67",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Toyste Beach",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-68",
+    "image": "/images/en-US/A4a-68.webp",
+    "hp": "Unknown",
+    "energy": "N/A",
+    "name": "Memory Light",
+    "card_type": "trainer",
+    "evolution_type": "tool",
+    "attacks": [],
+    "ability": "The Pokémon this card is attached to can use any attack from its previous Evolutions. (You still need the necessary Energy to use each attack.)\n\n            \n                    \n    \n            Illustrated by \n            \n                Studio Bora Inc.",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-68",
+        "version": "Secluded Springs #68",
+        "rarity": "◊◊"
+      }
+    ],
+    "artist": "Studio Bora Inc.",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-69",
+    "image": "/images/en-US/A4a-69.webp",
+    "hp": "Unknown",
+    "energy": "N/A",
+    "name": "Whitney",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": "Heal 60 damage from 1 of your Miltank, and it recovers from being Asleep, Paralyzed, and Confused.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-69",
+        "version": "Secluded Springs #69",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "A4a-83",
+        "version": "Secluded Springs #83",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Yuu Nishida",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-70",
+    "image": "/images/en-US/A4a-70.webp",
+    "hp": "Unknown",
+    "energy": "N/A",
+    "name": "Traveling Merchant",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": "Look at the top 4 cards of your deck. Put all Pokémon Tool cards you find there into your hand. Shuffle the other cards back into your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-70",
+        "version": "Secluded Springs #70",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "A4a-84",
+        "version": "Secluded Springs #84",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "GOSSAN",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-71",
+    "image": "/images/en-US/A4a-71.webp",
+    "hp": "Unknown",
+    "energy": "N/A",
+    "name": "Morty",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": "For each of your [P] Pokémon in play, look at that many cards from the top of your opponent's deck and put them back in any order.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "◊◊",
+    "fullart": "No",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-71",
+        "version": "Secluded Springs #71",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "A4a-85",
+        "version": "Secluded Springs #85",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Teeziro",
+    "crafting_cost": 70
+  },
+  {
+    "card_id": "A4a-72",
+    "image": "/images/en-US/A4a-72.webp",
+    "hp": "120",
+    "energy": "Water",
+    "name": "Milotic",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless"],
+        "name": "Aqua Edge",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Healing Ripples",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may heal 60 damage from 1 of your  Pokémon."
+    },
+    "weakness": "lightning",
+    "retreat": "2",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-22",
+        "version": "Secluded Springs #22",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "A4a-72",
+        "version": "Secluded Springs #72",
+        "rarity": "☆"
+      },
+      {
+        "card_id": "P-A-104",
+        "version": "Promo-A #104",
+        "rarity": ""
+      }
+    ],
+    "artist": "YASHIRO Nanaco",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-73",
+    "image": "/images/en-US/A4a-73.webp",
+    "hp": "90",
+    "energy": "Lightning",
+    "name": "Stunfisk",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Colorless"],
+        "name": "Static Shock",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "2",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-29",
+        "version": "Secluded Springs #29",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "A4a-73",
+        "version": "Secluded Springs #73",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Akira Komayama",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-74",
+    "image": "/images/en-US/A4a-74.webp",
+    "hp": "60",
+    "energy": "Lightning",
+    "name": "Yamper",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Lightning"],
+        "name": "Zap Kick",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-30",
+        "version": "Secluded Springs #30",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "A4a-74",
+        "version": "Secluded Springs #74",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Souichirou Gunjima",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-75",
+    "image": "/images/en-US/A4a-75.webp",
+    "hp": "110",
+    "energy": "Psychic",
+    "name": "Latios",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Psychic", "Psychic", "Psychic"],
+        "name": "Luster Purge",
+        "damage": "120",
+        "effect": "Discard all Energy from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Fantastical Floating",
+      "effect": "If you have Latias in play, this Pokémon has no Retreat Cost."
+    },
+    "weakness": "darkness",
+    "retreat": "2",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-37",
+        "version": "Secluded Springs #37",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "A4a-75",
+        "version": "Secluded Springs #75",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "kodama",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-76",
+    "image": "/images/en-US/A4a-76.webp",
+    "hp": "70",
+    "energy": "Fighting",
+    "name": "Phanpy",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Flail",
+        "damage": "0",
+        "effect": "This attack does damage to your opponent's Active Pokémon equal to the damage this Pokémon has on it."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "2",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-43",
+        "version": "Secluded Springs #43",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "A4a-76",
+        "version": "Secluded Springs #76",
+        "rarity": "☆"
+      },
+      {
+        "card_id": "P-A-108",
+        "version": "Promo-A #108",
+        "rarity": ""
+      }
+    ],
+    "artist": "OKACHEKE",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-77",
+    "image": "/images/en-US/A4a-77.webp",
+    "hp": "30",
+    "energy": "Colorless",
+    "name": "Azurill",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Unknown"],
+        "name": "Squishy",
+        "damage": "Healing",
+        "effect": "Heal 50 damage from 1 of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "none",
+    "retreat": "0",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": true,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-63",
+        "version": "Secluded Springs #63",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "A4a-77",
+        "version": "Secluded Springs #77",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "ryoma uratsuka",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-78",
+    "image": "/images/en-US/A4a-78.webp",
+    "hp": "160",
+    "energy": "Grass",
+    "name": "Jumpluff ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Breeze-By Attack",
+        "damage": "70",
+        "effect": "You may switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-3",
+        "version": "Secluded Springs #3",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-78",
+        "version": "Secluded Springs #78",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-86",
+        "version": "Secluded Springs #86",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA Tsuji",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-79",
+    "image": "/images/en-US/A4a-79.webp",
+    "hp": "140",
+    "energy": "Fire",
+    "name": "Entei ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Fire", "Fire"],
+        "name": "Blazing Beatdown",
+        "damage": "60+",
+        "effect": "If this Pokémon has at least 2 extra [R] Energy attached, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "water",
+    "retreat": "2",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-10",
+        "version": "Secluded Springs #10",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-79",
+        "version": "Secluded Springs #79",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-87",
+        "version": "Secluded Springs #87",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-80",
+    "image": "/images/en-US/A4a-80.webp",
+    "hp": "140",
+    "energy": "Water",
+    "name": "Suicune ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Water", "Water"],
+        "name": "Crystal Waltz",
+        "damage": "20x",
+        "effect": "This attack does 20 damage for each Benched Pokémon (both yours and your opponent's)."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "lightning",
+    "retreat": "2",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-20",
+        "version": "Secluded Springs #20",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-80",
+        "version": "Secluded Springs #80",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-90",
+        "version": "Secluded Springs #90",
+        "rarity": "☆☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-81",
+    "image": "/images/en-US/A4a-81.webp",
+    "hp": "130",
+    "energy": "Lightning",
+    "name": "Raikou ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Lightning"],
+        "name": "Voltaic Bullet",
+        "damage": "60",
+        "effect": "This attack also does 10 damage to 1 of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "fighting",
+    "retreat": "2",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-25",
+        "version": "Secluded Springs #25",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-81",
+        "version": "Secluded Springs #81",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-88",
+        "version": "Secluded Springs #88",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-82",
+    "image": "/images/en-US/A4a-82.webp",
+    "hp": "180",
+    "energy": "Fighting",
+    "name": "Poliwrath ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless", "Colorless"],
+        "name": "Hydro Knuckle",
+        "damage": "100+",
+        "effect": "If this Pokémon has any [W] Energy attached, this attack does 40 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "psychic",
+    "retreat": "3",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-42",
+        "version": "Secluded Springs #42",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-82",
+        "version": "Secluded Springs #82",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-89",
+        "version": "Secluded Springs #89",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA Mochizuki",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-83",
+    "image": "/images/en-US/A4a-83.webp",
+    "hp": "Unknown",
+    "energy": "N/A",
+    "name": "Whitney",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": "Heal 60 damage from 1 of your Miltank, and it recovers from being Asleep, Paralyzed, and Confused.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-69",
+        "version": "Secluded Springs #69",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "A4a-83",
+        "version": "Secluded Springs #83",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Yuu Nishida",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-84",
+    "image": "/images/en-US/A4a-84.webp",
+    "hp": "Unknown",
+    "energy": "N/A",
+    "name": "Traveling Merchant",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": "Look at the top 4 cards of your deck. Put all Pokémon Tool cards you find there into your hand. Shuffle the other cards back into your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-70",
+        "version": "Secluded Springs #70",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "A4a-84",
+        "version": "Secluded Springs #84",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "GOSSAN",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-85",
+    "image": "/images/en-US/A4a-85.webp",
+    "hp": "Unknown",
+    "energy": "N/A",
+    "name": "Morty",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": "For each of your [P] Pokémon in play, look at that many cards from the top of your opponent's deck and put them back in any order.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro",
+    "weakness": "N/A",
+    "retreat": "N/A",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-71",
+        "version": "Secluded Springs #71",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "A4a-85",
+        "version": "Secluded Springs #85",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Teeziro",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-86",
+    "image": "/images/en-US/A4a-86.webp",
+    "hp": "160",
+    "energy": "Grass",
+    "name": "Jumpluff ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Breeze-By Attack",
+        "damage": "70",
+        "effect": "You may switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-3",
+        "version": "Secluded Springs #3",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-78",
+        "version": "Secluded Springs #78",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-86",
+        "version": "Secluded Springs #86",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "takashi shiraishi",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-87",
+    "image": "/images/en-US/A4a-87.webp",
+    "hp": "140",
+    "energy": "Fire",
+    "name": "Entei ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Fire", "Fire"],
+        "name": "Blazing Beatdown",
+        "damage": "60+",
+        "effect": "If this Pokémon has at least 2 extra [R] Energy attached, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "water",
+    "retreat": "2",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-10",
+        "version": "Secluded Springs #10",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-79",
+        "version": "Secluded Springs #79",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-87",
+        "version": "Secluded Springs #87",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Tsuyoshi Nagano",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-88",
+    "image": "/images/en-US/A4a-88.webp",
+    "hp": "130",
+    "energy": "Lightning",
+    "name": "Raikou ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Lightning", "Lightning"],
+        "name": "Voltaic Bullet",
+        "damage": "60",
+        "effect": "This attack also does 10 damage to 1 of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "fighting",
+    "retreat": "2",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-25",
+        "version": "Secluded Springs #25",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-81",
+        "version": "Secluded Springs #81",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-88",
+        "version": "Secluded Springs #88",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Tsuyoshi Nagano",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-89",
+    "image": "/images/en-US/A4a-89.webp",
+    "hp": "180",
+    "energy": "Fighting",
+    "name": "Poliwrath ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["Fighting", "Colorless", "Colorless"],
+        "name": "Hydro Knuckle",
+        "damage": "100+",
+        "effect": "If this Pokémon has any [W] Energy attached, this attack does 40 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "psychic",
+    "retreat": "3",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-42",
+        "version": "Secluded Springs #42",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-82",
+        "version": "Secluded Springs #82",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-89",
+        "version": "Secluded Springs #89",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "Teeziro",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-90",
+    "image": "/images/en-US/A4a-90.webp",
+    "hp": "140",
+    "energy": "Water",
+    "name": "Suicune ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Water", "Water"],
+        "name": "Crystal Waltz",
+        "damage": "20x",
+        "effect": "This attack does 20 damage for each Benched Pokémon (both yours and your opponent's)."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "lightning",
+    "retreat": "2",
+    "rarity": "☆☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-20",
+        "version": "Secluded Springs #20",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A4a-80",
+        "version": "Secluded Springs #80",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-90",
+        "version": "Secluded Springs #90",
+        "rarity": "☆☆☆"
+      }
+    ],
+    "artist": "mele",
+    "crafting_cost": 1500
+  },
+  {
+    "card_id": "A4a-91",
+    "image": "/images/en-US/A4a-91.webp",
+    "hp": "60",
+    "energy": "Fire",
+    "name": "Chimchar",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Fire"],
+        "name": "Scratch",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "water",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A2-27",
+        "version": "Space-Time Smackdown #27",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "P-A-40",
+        "version": "Promo-A #40",
+        "rarity": ""
+      },
+      {
+        "card_id": "A4a-91",
+        "version": "Secluded Springs #91",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Souichirou Gunjima",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-92",
+    "image": "/images/en-US/A4a-92.webp",
+    "hp": "80",
+    "energy": "Fire",
+    "name": "Monferno",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Fire"],
+        "name": "Fiery Punch",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "water",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A2-28",
+        "version": "Space-Time Smackdown #28",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "A4a-92",
+        "version": "Secluded Springs #92",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Souichirou Gunjima",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-93",
+    "image": "/images/en-US/A4a-93.webp",
+    "hp": "60",
+    "energy": "Water",
+    "name": "Psyduck",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Colorless"],
+        "name": "Headache",
+        "damage": "10",
+        "effect": "Your opponent can't use any Supporter cards from their hand during their next turn."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A1-57",
+        "version": "Genetic Apex #57",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "A4a-93",
+        "version": "Secluded Springs #93",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Scav",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-94",
+    "image": "/images/en-US/A4a-94.webp",
+    "hp": "90",
+    "energy": "Water",
+    "name": "Golduck",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Water", "Water"],
+        "name": "Aqua Edge",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A1-58",
+        "version": "Genetic Apex #58",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "A4a-94",
+        "version": "Secluded Springs #94",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Scav",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-95",
+    "image": "/images/en-US/A4a-95.webp",
+    "hp": "70",
+    "energy": "Water",
+    "name": "Krabby",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Water", "Colorless"],
+        "name": "Vise Grip",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "2",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A1-68",
+        "version": "Genetic Apex #68",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "A4a-95",
+        "version": "Secluded Springs #95",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Shigenori Negishi",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-96",
+    "image": "/images/en-US/A4a-96.webp",
+    "hp": "120",
+    "energy": "Water",
+    "name": "Kingler",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Water", "Water", "Colorless"],
+        "name": "KO Crab",
+        "damage": "80+",
+        "effect": "Flip 2 coins. If both of them are heads, this attack does 80 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "lightning",
+    "retreat": "3",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A1-69",
+        "version": "Genetic Apex #69",
+        "rarity": "◊◊"
+      },
+      {
+        "card_id": "A4a-96",
+        "version": "Secluded Springs #96",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Shigenori Negishi",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-97",
+    "image": "/images/en-US/A4a-97.webp",
+    "hp": "60",
+    "energy": "Water",
+    "name": "Pyukumuku",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Water"],
+        "name": "Sprinkle Water",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Innards Out",
+      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, do 50 damage to the Attacking Pokémon."
+    },
+    "weakness": "lightning",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A3-54",
+        "version": "Celestial Guardians #54",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "A3-163",
+        "version": "Celestial Guardians #163",
+        "rarity": "☆"
+      },
+      {
+        "card_id": "A4a-97",
+        "version": "Secluded Springs #97",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Nisota Niso",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-98",
+    "image": "/images/en-US/A4a-98.webp",
+    "hp": "60",
+    "energy": "Fighting",
+    "name": "Gible",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Tackle",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A2a-45",
+        "version": "Triumphant Light #45",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "P-A-46",
+        "version": "Promo-A #46",
+        "rarity": ""
+      },
+      {
+        "card_id": "A4a-98",
+        "version": "Secluded Springs #98",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Souichirou Gunjima",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-99",
+    "image": "/images/en-US/A4a-99.webp",
+    "hp": "80",
+    "energy": "Fighting",
+    "name": "Gabite",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Sharp Scythe",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A2a-46",
+        "version": "Triumphant Light #46",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "A4a-99",
+        "version": "Secluded Springs #99",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "Souichirou Gunjima",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-100",
+    "image": "/images/en-US/A4a-100.webp",
+    "hp": "50",
+    "energy": "Darkness",
+    "name": "Paldean Wooper",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Darkness"],
+        "name": "Poison Jab",
+        "damage": "10",
+        "effect": "Your opponent's Active Pokémon is now Poisoned."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "1",
+    "rarity": "☆",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A2b-47",
+        "version": "Shining Revelry #47",
+        "rarity": "◊"
+      },
+      {
+        "card_id": "A4a-100",
+        "version": "Secluded Springs #100",
+        "rarity": "☆"
+      }
+    ],
+    "artist": "MAHOU",
+    "crafting_cost": 400
+  },
+  {
+    "card_id": "A4a-101",
+    "image": "/images/en-US/A4a-101.webp",
+    "hp": "170",
+    "energy": "Fire",
+    "name": "Infernape ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["Fire", "Fire"],
+        "name": "Flare Blitz",
+        "damage": "140",
+        "effect": "Discard all [R] Energy from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "water",
+    "retreat": "0",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A2-29",
+        "version": "Space-Time Smackdown #29",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A2-181",
+        "version": "Space-Time Smackdown #181",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A2-197",
+        "version": "Space-Time Smackdown #197",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-101",
+        "version": "Secluded Springs #101",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-102",
+    "image": "/images/en-US/A4a-102.webp",
+    "hp": "130",
+    "energy": "Psychic",
+    "name": "Mew ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Psychic"],
+        "name": "Psyshot",
+        "damage": "20",
+        "effect": "No effect"
+      },
+      {
+        "cost": ["Colorless", "Colorless", "Colorless"],
+        "name": "Genome",
+        "damage": "Hacking",
+        "effect": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "darkness",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A1a-32",
+        "version": "Mythical Island #32",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A1a-77",
+        "version": "Mythical Island #77",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A1a-83",
+        "version": "Mythical Island #83",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A1a-86",
+        "version": "Mythical Island #86",
+        "rarity": "♛"
+      },
+      {
+        "card_id": "A4a-102",
+        "version": "Secluded Springs #102",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-103",
+    "image": "/images/en-US/A4a-103.webp",
+    "hp": "170",
+    "energy": "Fighting",
+    "name": "Garchomp ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["Fighting"],
+        "name": "Linear",
+        "damage": "Attack",
+        "effect": "This attack does 50 damage to 1 of your opponent's Pokémon."
+      },
+      {
+        "cost": ["Fighting", "Fighting", "Colorless"],
+        "name": "Dragon Claw",
+        "damage": "100",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "grass",
+    "retreat": "1",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A2a-47",
+        "version": "Triumphant Light #47",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A2a-84",
+        "version": "Triumphant Light #84",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A2a-93",
+        "version": "Triumphant Light #93",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-103",
+        "version": "Secluded Springs #103",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA CG Works",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-104",
+    "image": "/images/en-US/A4a-104.webp",
+    "hp": "160",
+    "energy": "Darkness",
+    "name": "Paldean Clodsire ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["Darkness", "Darkness"],
+        "name": "Venoshock",
+        "damage": "60+",
+        "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "fighting",
+    "retreat": "3",
+    "rarity": "☆☆",
+    "fullart": "Yes",
+    "ex": "yes",
+    "baby": false,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A2b-48",
+        "version": "Shining Revelry #48",
+        "rarity": "◊◊◊◊"
+      },
+      {
+        "card_id": "A2b-85",
+        "version": "Shining Revelry #85",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A2b-93",
+        "version": "Shining Revelry #93",
+        "rarity": "☆☆"
+      },
+      {
+        "card_id": "A4a-104",
+        "version": "Secluded Springs #104",
+        "rarity": "☆☆"
+      }
+    ],
+    "artist": "PLANETA Igarashi",
+    "crafting_cost": 1250
+  },
+  {
+    "card_id": "A4a-105",
+    "image": "/images/en-US/A4a-105.webp",
+    "hp": "30",
+    "energy": "Water",
+    "name": "Mantyke",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["Unknown"],
+        "name": "Splashy",
+        "damage": "Toss",
+        "effect": "Take a [W] Energy from your Energy Zone and attach it to 1 of your Benched Basic Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "No ability",
+      "effect": "N/A"
+    },
+    "weakness": "none",
+    "retreat": "0",
+    "rarity": "Crown Rare",
+    "fullart": "Yes",
+    "ex": "no",
+    "baby": true,
+    "set_details": "secludedsprings(a4a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      {
+        "card_id": "A4a-23",
+        "version": "Secluded Springs #23",
+        "rarity": "◊◊◊"
+      },
+      {
+        "card_id": "A4a-105",
+        "version": "Secluded Springs #105",
+        "rarity": "♛"
+      }
+    ],
+    "artist": "PLANETA Tsuji",
+    "crafting_cost": "Unknown"
+  }
+]
