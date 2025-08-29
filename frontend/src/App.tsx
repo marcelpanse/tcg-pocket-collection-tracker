@@ -109,18 +109,12 @@ function App() {
   }, [user])
 
   useEffect(() => {
-    if (account && user?.user.email) {
-      const email = user.user.email
-      if (!account.collection_last_updated) {
-        updateCards([]) // timetamp is missing from db, artifically update it
-          .then(() => fetchOwnCollection(email, new Date()))
-          .then(setOwnedCards)
-          .catch(console.error)
-      } else {
-        fetchOwnCollection(email, new Date(account.collection_last_updated)).then(setOwnedCards).catch(console.error)
-      }
+    // Decouple collection fetching from account: always fetch if user is logged in and has an email
+    if (user?.user.email) {
+      const lastUpdated = account?.collection_last_updated ? new Date(account.collection_last_updated) : new Date(0)
+      fetchOwnCollection(user.user.email, lastUpdated).then(setOwnedCards).catch(console.error)
     }
-  }, [account])
+  }, [user, account])
 
   const userContextValue = useMemo(
     () => ({
