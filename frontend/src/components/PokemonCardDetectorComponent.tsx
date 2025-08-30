@@ -185,7 +185,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
   // Extract card images function
   const extractCardImages = async (file: File, detections: DetectionResult) => {
     if (!file.type.startsWith('image/')) {
-      throw new Error('Invalid file type')
+      throw new Error('PokemonCardDetectorComponent.tsx:extractCardImages: Invalid file type')
     }
     const image = new Image()
     const imageUrl = URL.createObjectURL(file)
@@ -264,7 +264,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
       } else {
         console.error('Invalid image URL:', imageUrl)
         URL.revokeObjectURL(imageUrl)
-        throw new Error('Invalid image URL')
+        throw new Error('PokemonCardDetectorComponent.tsx:extractCardImages: Invalid image URL')
       }
     })
   }

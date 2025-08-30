@@ -10,7 +10,7 @@ async function fetchCollection(table: string, key: string, value: string): Promi
   const { count, error } = await supabase.from(table).select('*', { count: 'exact', head: true }).eq(key, value)
   if (error) {
     console.log(error)
-    throw new Error('Error fetching collection')
+    throw new Error(`fetchCollection.ts:fetchCollection: Error fetching collection: ${error.message}`)
   }
   if (!count) {
     return []

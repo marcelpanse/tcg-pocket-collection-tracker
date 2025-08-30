@@ -1,20 +1,21 @@
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Input } from '@/components/ui/input.tsx'
+import { cn } from '@/lib/utils'
 
 let _searchDebounce: number | null = null
 
 type Props = {
   setSearchValue: (searchValue: string) => void
-  fullWidth?: boolean
+  className?: string
 }
-const SearchInput: FC<Props> = ({ setSearchValue, fullWidth }) => {
+const SearchInput: FC<Props> = ({ setSearchValue, className }) => {
   const { t } = useTranslation('search-input')
   return (
     <Input
       type="search"
       placeholder={t('search')}
-      className={`w-full ${!fullWidth ? 'sm:w-32' : ''} border-2 h-[38px] bg-neutral-800`}
+      className={cn('border-2 h-[38px] bg-neutral-800', className)}
       style={{ borderColor: '#45556C' }}
       onChange={(e) => {
         if (_searchDebounce) {

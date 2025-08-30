@@ -9,7 +9,6 @@ import { toast } from '@/hooks/use-toast.ts'
 import { allCards, expansions, tradeableRaritiesDictionary } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext'
-import CardDetail from '@/pages/collection/CardDetail.tsx'
 import { NoCardsNeeded } from '@/pages/trade/components/NoCardsNeeded.tsx'
 import { NoTradeableCards } from '@/pages/trade/components/NoTradeableCards.tsx'
 import type { Card, Rarity } from '@/types'
@@ -18,11 +17,11 @@ import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 function Cards() {
   const { t } = useTranslation('pages/trade')
   const { user, account } = use(UserContext)
-  const { ownedCards, selectedCardId, setSelectedCardId } = use(CollectionContext)
+  const { ownedCards } = use(CollectionContext)
 
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
-  const [forTradeMinCards, setForTradeMinCards] = useState<number>(0)
-  const [lookingForMinCards, setLookingForMinCards] = useState<number>(2)
+  const [lookingForMaxCards, setLookingForMaxCards] = useState<number>((account?.max_number_of_cards_wanted ?? 1) - 1)
+  const [forTradeMinCards, setForTradeMinCards] = useState<number>((account?.min_number_of_cards_to_keep ?? 1) + 1)
   const [currentTab, setCurrentTab] = useState('looking_for')
 
   const tradeableExpansions = useMemo(() => expansions.filter((e) => e.tradeable).map((e) => e.id), [])
@@ -41,10 +40,10 @@ function Cards() {
         .filter(
           (ac) =>
             ownedCards.findIndex((oc) => oc.card_id === ac.card_id) === -1 ||
-            ownedCards[ownedCards.findIndex((oc) => oc.card_id === ac.card_id)].amount_owned <= forTradeMinCards,
+            ownedCards[ownedCards.findIndex((oc) => oc.card_id === ac.card_id)].amount_owned <= lookingForMaxCards,
         )
         .filter((c) => tradeableRaritiesDictionary[c.rarity] !== null && tradeableExpansions.includes(c.expansion)),
-    [ownedCards, forTradeMinCards],
+    [ownedCards, lookingForMaxCards],
   )
   const lookingForCardsFiltered = useMemo(() => {
     return lookingForCards.filter(filterRarities)
@@ -52,7 +51,7 @@ function Cards() {
 
   // FOR TRADE CARDS
   const forTradeCards = useMemo(() => {
-    const myCards = ownedCards.filter((c) => c.amount_owned >= lookingForMinCards)
+    const myCards = ownedCards.filter((c) => c.amount_owned >= forTradeMinCards)
     return allCards
       .filter((ac) => myCards.findIndex((oc) => oc.card_id === ac.card_id) > -1)
       .map((ac) => ({
@@ -60,7 +59,7 @@ function Cards() {
         amount_owned: myCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned,
       }))
       .filter((c) => tradeableRaritiesDictionary[c.rarity] !== null && tradeableExpansions.includes(c.expansion))
-  }, [ownedCards, lookingForMinCards])
+  }, [ownedCards, forTradeMinCards])
 
   const forTradeCardsFiltered = useMemo(() => {
     return forTradeCards.filter(filterRarities)
@@ -132,10 +131,10 @@ function Cards() {
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} />
           <div className="sm:mt-1 flex flex-row flex-wrap align-center gap-x-4 gap-y-1">
             {currentTab === 'looking_for' && (
-              <NumberFilter numberFilter={forTradeMinCards} setNumberFilter={setForTradeMinCards} options={[0, 1, 2, 3, 4, 5]} labelKey="maxNum" />
+              <NumberFilter numberFilter={lookingForMaxCards} setNumberFilter={setLookingForMaxCards} options={[0, 1, 2, 3, 4, 5]} labelKey="maxNum" />
             )}
             {currentTab === 'for_trade' && (
-              <NumberFilter numberFilter={lookingForMinCards} setNumberFilter={setLookingForMinCards} options={[2, 3, 4, 5]} labelKey="minNum" />
+              <NumberFilter numberFilter={forTradeMinCards} setNumberFilter={setForTradeMinCards} options={[2, 3, 4, 5]} labelKey="minNum" />
             )}
             <Button variant="outline" onClick={copyToClipboard}>
               Copy to clipboard
@@ -151,7 +150,6 @@ function Cards() {
           </TabsContent>
         </div>
       </Tabs>
-      {selectedCardId && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}
     </div>
   )
 }

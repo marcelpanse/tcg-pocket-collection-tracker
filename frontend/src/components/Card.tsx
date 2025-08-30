@@ -1,12 +1,11 @@
 import i18n from 'i18next'
 import { MinusIcon, PlusIcon } from 'lucide-react'
 import { use, useCallback, useEffect, useState } from 'react'
-import { useParams } from 'react-router'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext.ts'
-import { getCardNameByLang } from '@/lib/utils'
+import { cn, getCardNameByLang } from '@/lib/utils'
 import type { Card as CardType } from '@/types'
 
 interface CardProps {
@@ -20,8 +19,6 @@ interface CardProps {
 const _inputDebounce: Record<string, number | null> = {}
 
 export function Card({ card, onImageClick, className, editable = true }: CardProps) {
-  const params = useParams()
-
   const { user, setIsLoginDialogOpen } = use(UserContext)
   const { setSelectedCardId, updateCards } = use(CollectionContext)
   const [amountOwned, setAmountOwned] = useState(card.amount_owned || 0)
@@ -34,7 +31,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
   const updateCardCount = useCallback(
     async (newAmountIn: number) => {
       if (!user?.user.email) {
-        return
+        throw new Error('Card.tsx:updateCardCount: User not logged in')
       }
       const card_id = card.card_id
       const newAmount = Math.max(0, newAmountIn)
@@ -45,7 +42,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
       }
       _inputDebounce[card_id] = window.setTimeout(async () => {
         if (!user || !user.user.email) {
-          throw new Error('User not logged in')
+          throw new Error('Card.tsx:updateCardCount: User not logged in')
         }
         await updateCards([{ card_id, amount_owned: newAmount }])
       }, 1000)
@@ -81,7 +78,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
   }
 
   return (
-    <div className={`group flex flex-col items-center rounded-lg ${className}`}>
+    <div className={cn('group flex flex-col items-center rounded-lg', className)}>
       <button
         type="button"
         className="cursor-pointer"
@@ -99,7 +96,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
       </p>
 
       <div className="flex items-center gap-x-1">
-        {editable && !params.friendId ? (
+        {editable ? (
           <>
             <Button variant="ghost" size="icon" onClick={removeCard} className="rounded-full" tabIndex={-1}>
               <MinusIcon />
@@ -108,7 +105,6 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
               min="0"
               max="99"
               type="text"
-              disabled={Boolean(params.friendId)}
               value={inputValue}
               onChange={handleInputChange}
               className="w-7 text-center border-none rounded"
