@@ -6,12 +6,13 @@ interface Props {
   ownedFilter: string
   setOwnedFilter: (ownedFilter: 'all' | 'owned' | 'missing') => void
   fullWidth?: boolean
+  className?: string
 }
-const OwnedFilter: FC<Props> = ({ ownedFilter, setOwnedFilter, fullWidth }) => {
+const OwnedFilter: FC<Props> = ({ ownedFilter, setOwnedFilter, className }) => {
   const { t } = useTranslation('owned-filter')
 
   return (
-    <Tabs value={ownedFilter} onValueChange={(value) => setOwnedFilter(value as 'all' | 'owned' | 'missing')} className={fullWidth ? 'w-full' : 'w-70'}>
+    <Tabs value={ownedFilter} onValueChange={(value) => setOwnedFilter(value as 'all' | 'owned' | 'missing')} className={className}>
       <TabsList className="w-full flex-wrap h-auto lg:h-10 bg-neutral-50 border-1 border-neutral-700 rounded-md">
         <TabsTrigger value="all">{t('all')}</TabsTrigger>
         <TabsTrigger value="missing">{t('missing')}</TabsTrigger>

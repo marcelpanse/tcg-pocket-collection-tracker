@@ -1,7 +1,5 @@
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import SearchInput from '@/components/filters/SearchInput'
-import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import CardDetail from '@/pages/collection/CardDetail.tsx'
 import sampleDecks8 from '../../../assets/decks/decks-game8.json'
 import { DeckItem, type IDeck } from './DeckItem'
 
@@ -42,8 +40,6 @@ const rankInfo: Record<string, { title: string; tooltip: string }> = {
 }
 
 function Decks() {
-  const { selectedCardId, setSelectedCardId } = useContext(CollectionContext)
-
   const decksMeta8 = sampleDecks8 as IDeck[]
 
   const [searchValue, setSearchValue] = useState('')
@@ -67,9 +63,7 @@ function Decks() {
 
   return (
     <div className="px-8 md:mx-auto max-w-[1336px]">
-      <div className="flex mb-8 w-full sm:w-96">
-        <SearchInput setSearchValue={setSearchValue} fullWidth />
-      </div>
+      <SearchInput className="mb-8 w-full sm:w-96" setSearchValue={setSearchValue} />
       {Object.keys(groupedDecks)
         .sort((a, b) => (rankOrder[b] ?? 999) - (rankOrder[a] ?? 999)) // Ensure group order matches your sorting
         .map((rank) => {
@@ -93,7 +87,6 @@ function Decks() {
             </div>
           )
         })}
-      <div>{selectedCardId && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}</div>
     </div>
   )
 }

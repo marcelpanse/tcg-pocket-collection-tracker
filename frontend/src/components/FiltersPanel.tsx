@@ -264,11 +264,11 @@ const FilterPanel: FC<Props> = ({
       {visibleFilters?.expansions && (
         <div className="flex gap-x-2 px-4 mb-2">
           <ExpansionsFilter value={filters.expansion} onChange={onExpansionChange} />
-          <PackFilter value={filters.pack} onChange={setPack} expansion={filters.expansion} />
+          <PackFilter className="w-[440px]" value={filters.pack} onChange={setPack} expansion={filters.expansion} />
         </div>
       )}
       <div className="gap-2 flex-row gap-y-1 px-4 flex">
-        {visibleFilters?.search && <SearchInput setSearchValue={setSearchValue} />}
+        {visibleFilters?.search && <SearchInput className="w-full sm:w-32" setSearchValue={setSearchValue} />}
         {visibleFilters?.owned && <OwnedFilter ownedFilter={filters.owned} setOwnedFilter={setOwned} />}
         {visibleFilters?.rarity && <RarityFilter rarityFilter={filters.rarity} setRarityFilter={setRarity} collapse />}
 
@@ -282,13 +282,13 @@ const FilterPanel: FC<Props> = ({
                 <DialogTitle>{t('filters.filtersCount', { count: (getFilteredCards || []).filter((c) => !c.linkedCardID).length })}</DialogTitle>
               </DialogHeader>
               <div className="flex flex-col gap-3">
-                {filtersDialog.search && <SearchInput setSearchValue={setSearchValue} fullWidth />}
+                {filtersDialog.search && <SearchInput className="w-full" setSearchValue={setSearchValue} />}
                 {filtersDialog.allTextSearch && <AllTextSearchFilter allTextSearch={filters.allTextSearch} setAllTextSearch={setAllTextSearch} />}
                 {filtersDialog.expansions && <ExpansionsFilter value={filters.expansion} onChange={onExpansionChange} />}
-                {filtersDialog.pack && <PackFilter value={filters.pack} onChange={setPack} expansion={filters.expansion} fullWidth />}
+                {filtersDialog.pack && <PackFilter className="w-full" value={filters.pack} onChange={setPack} expansion={filters.expansion} />}
                 {filtersDialog.rarity && <RarityFilter rarityFilter={filters.rarity} setRarityFilter={setRarity} />}
                 {filtersDialog.cardType && <CardTypeFilter cardTypeFilter={filters.cardType} setCardTypeFilter={setCardType} />}
-                {filtersDialog.owned && <OwnedFilter ownedFilter={filters.owned} setOwnedFilter={setOwned} fullWidth />}
+                {filtersDialog.owned && <OwnedFilter className="w-full" ownedFilter={filters.owned} setOwnedFilter={setOwned} />}
                 {filtersDialog.sortBy && <SortByRecent sortBy={filters.sortBy} setSortBy={setSortBy} />}
                 {filtersDialog.amount && (
                   <>
@@ -296,7 +296,7 @@ const FilterPanel: FC<Props> = ({
                     <NumberFilter
                       numberFilter={filters.maxNumber}
                       setNumberFilter={setMaxNumber}
-                      options={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
+                      options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
                       labelKey="maxNum"
                     />
                   </>

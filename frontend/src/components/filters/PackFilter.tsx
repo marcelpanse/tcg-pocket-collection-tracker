@@ -2,14 +2,15 @@ import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx'
 import { getExpansionById } from '@/lib/CardsDB.ts'
+import { cn } from '@/lib/utils'
 
 interface Props {
   value: string
   onChange: (v: string) => void
   expansion: string
-  fullWidth?: boolean
+  className?: string
 }
-const PackFilter: FC<Props> = ({ value, onChange, expansion, fullWidth }) => {
+const PackFilter: FC<Props> = ({ value, onChange, expansion, className }) => {
   const { t } = useTranslation('common/packs')
 
   let packsToShow = getExpansionById(expansion)?.packs
@@ -23,7 +24,7 @@ const PackFilter: FC<Props> = ({ value, onChange, expansion, fullWidth }) => {
   }
 
   return (
-    <Tabs value={value} onValueChange={onChange} className={`h-auto ${fullWidth ? 'w-full' : 'w-[440px]'}`}>
+    <Tabs value={value} onValueChange={onChange} className={cn('h-auto', className)}>
       <TabsList className="h-full flex-wrap w-full border-1 border-neutral-700 rounded-md flex-row justify-start content-start">
         <TabsTrigger value="all">{t('all')}</TabsTrigger>
         {packsToShow
