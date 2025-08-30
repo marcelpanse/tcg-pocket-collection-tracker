@@ -43,7 +43,7 @@ function Collection() {
     setResetScrollTrigger(true)
     const timeout = setTimeout(() => setResetScrollTrigger(false), 100)
     return () => clearTimeout(timeout)
-  }, [filteredCards])
+  }, [filters])
 
   return (
     <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">
