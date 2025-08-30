@@ -2,21 +2,19 @@ import { Siren } from 'lucide-react'
 import { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
-import { useNavigate, useParams } from 'react-router'
+import { useLoaderData, useNavigate } from 'react-router'
 import { CardsTable } from '@/components/CardsTable.tsx'
 import FilterPanel, { type Filters } from '@/components/FiltersPanel'
 import { MissionsTable } from '@/components/MissionsTable.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import { fetchPublicAccount } from '@/lib/fetchAccount.ts'
-import { fetchPublicCollection } from '@/lib/fetchCollection.ts'
 import CardDetail from '@/pages/collection/CardDetail.tsx'
 import MissionDetail from '@/pages/collection/MissionDetail.tsx'
-import type { AccountRow, Card, CollectionRow, Mission } from '@/types'
+import type { Card, Mission } from '@/types'
 
 function Collection() {
-  const params = useParams()
+  const { friendAccount, friendCollection } = useLoaderData()
   const navigate = useNavigate()
   const { t } = useTranslation(['pages/collection'])
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
@@ -36,36 +34,10 @@ function Collection() {
     allTextSearch: false,
   })
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
-  const [friendAccount, setFriendAccount] = useState<AccountRow | null>(null)
-  const [cardCollection, setCardCollection] = useState<CollectionRow[] | null>(null)
   const [filteredCards, setFilteredCards] = useState<Card[] | null>(null)
   const [missions, setMissions] = useState<Mission[] | null>(null)
 
-  useEffect(() => {
-    const friendId = params.friendId
-    if (friendId && cardCollection === null) {
-      console.log('fetching collection by friend id', friendId)
-      fetchPublicAccount(friendId)
-        .then((account) => {
-          console.log('friend account', account)
-          setFriendAccount(account)
-        })
-        .catch(console.error)
-
-      fetchPublicCollection(friendId)
-        .then((cards) => {
-          if (cards.length === 0) {
-            console.log('not a public collection, going back to normal mode.')
-            navigate('/collection')
-            return
-          }
-          setCardCollection(cards)
-        })
-        .catch(console.error)
-    } else if (!friendId && cardCollection === null) {
-      setCardCollection(ownedCards)
-    }
-  }, [params])
+  const cardCollection = friendCollection ?? ownedCards
 
   useEffect(() => {
     setResetScrollTrigger(true)
@@ -94,11 +66,11 @@ function Collection() {
           deckBuildingMode: true,
           allTextSearch: true,
         }}
-        batchUpdate={Boolean(!params.friendId)}
+        batchUpdate={Boolean(friendAccount)}
         share
       >
         <div>
-          {params.friendId && (
+          {friendAccount && (
             <Alert className="mb-4 border-1 border-neutral-700 shadow-none">
               <Siren className="h-4 w-4" />
               <AlertTitle>{t('publicCollectionTitle', { username: friendAccount?.username })}</AlertTitle>

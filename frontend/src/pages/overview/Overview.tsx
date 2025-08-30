@@ -1,6 +1,7 @@
 import { Heart, Siren } from 'lucide-react'
 import { use, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import Footer from '@/components/Footer.tsx'
 import DeckbuildingFilter from '@/components/filters/DeckbuildingFilter'
 import ExpansionsFilter from '@/components/filters/ExpansionsFilter.tsx'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
@@ -158,6 +159,7 @@ function Overview() {
           </Alert>
         </div>
       )}
+      <Footer />
     </main>
   )
 }

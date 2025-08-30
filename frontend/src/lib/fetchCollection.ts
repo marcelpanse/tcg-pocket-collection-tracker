@@ -9,6 +9,7 @@ const PAGE_SIZE = 500
 async function fetchCollection(table: string, key: string, value: string): Promise<CollectionRow[]> {
   const { count, error } = await supabase.from(table).select('*', { count: 'exact', head: true }).eq(key, value)
   if (error) {
+    console.log(error)
     throw new Error('Error fetching collection')
   }
   if (!count) {

@@ -1,19 +1,18 @@
 import loadable from '@loadable/component'
 import { useEffect, useMemo, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
-import { Route, Routes, useLocation } from 'react-router'
+import { createHashRouter, Outlet, RouterProvider, useLocation } from 'react-router'
 import DonationPopup from '@/components/DonationPopup.tsx'
 import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { authSSO, supabase } from '@/lib/Auth.ts'
-import { fetchAccount } from '@/lib/fetchAccount.ts'
+import { fetchAccount, fetchPublicAccount } from '@/lib/fetchAccount.ts'
 import type { AccountRow, CollectionRow, CollectionRowUpdate } from '@/types'
-import Footer from './components/Footer.tsx'
 import { Header } from './components/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { CollectionContext } from './lib/context/CollectionContext.ts'
 import { type User, UserContext } from './lib/context/UserContext.ts'
-import { fetchOwnCollection, updateCollectionCache } from './lib/fetchCollection.ts'
+import { fetchOwnCollection, fetchPublicCollection, updateCollectionCache } from './lib/fetchCollection.ts'
 
 // Lazy import for chunking
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
@@ -23,10 +22,17 @@ const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const TradeWith = loadable(() => import('./pages/trade/TradeWith.tsx'))
 const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
 
+function Analytics() {
+  const location = useLocation()
+  useEffect(() => {
+    // @ts-expect-error
+    window.umami?.track((props) => ({ ...props, url: location.pathname }))
+  }, [location])
+  return null
+}
+
 function App() {
   const { toast } = useToast()
-  const location = useLocation()
-  const isOverviewPage = location.pathname === '/'
 
   const [user, setUser] = useState<User | null>(null)
   const [account, setAccount] = useState<AccountRow | null>(null)
@@ -86,11 +92,6 @@ function App() {
   }, [])
 
   useEffect(() => {
-    // @ts-expect-error
-    window.umami?.track((props) => ({ ...props, url: location.pathname }))
-  }, [location])
-
-  useEffect(() => {
     if (user) {
       // check if query params sso & sig are set
       const params = new URLSearchParams(window.location.search)
@@ -148,23 +149,46 @@ function App() {
     [ownedCards, selectedCardId, selectedMissionCardOptions],
   )
 
+  type collectionLoaderParams = { params: { friendId?: string } }
+  async function collectionLoader({ params }: collectionLoaderParams) {
+    const friendId = params.friendId
+    if (!friendId) {
+      return {}
+    }
+
+    const account = fetchPublicAccount(friendId)
+    const collection = fetchPublicCollection(friendId)
+    return { friendAccount: await account, friendCollection: await collection }
+  }
+
+  const router = createHashRouter([
+    {
+      element: (
+        <>
+          <Analytics />
+          <Header />
+          <Outlet />
+          <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
+        </>
+      ),
+      children: [
+        { path: '/', element: <Overview /> },
+        { path: '/collection/:friendId?/trade?', element: <Collection />, loader: collectionLoader },
+        { path: '/decks', element: <Decks /> },
+        { path: '/trade', element: <Trade /> },
+        { path: '/trade/:friendId', element: <TradeWith /> },
+      ],
+    },
+  ])
+
   return (
     <UserContext.Provider value={userContextValue}>
       <CollectionContext.Provider value={collectionContextValue}>
         <ErrorBoundary fallback={<div className="m-4">A new version was deployed, please refresh the page to see the latest changes.</div>}>
           <Toaster />
-          <Header />
-          <Routes>
-            <Route path="/" element={<Overview />} />
-            <Route path="/collection/:friendId?/trade?" element={<Collection />} />
-            <Route path="/decks" element={<Decks />} />
-            <Route path="/trade" element={<Trade />} />
-            <Route path="/trade/:friendId" element={<TradeWith />} />
-          </Routes>
-          <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
+          <RouterProvider router={router} />
           <InstallPrompt />
           <DonationPopup />
-          {isOverviewPage && <Footer />}
         </ErrorBoundary>
       </CollectionContext.Provider>
     </UserContext.Provider>
