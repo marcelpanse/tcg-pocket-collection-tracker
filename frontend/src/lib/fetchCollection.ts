@@ -19,7 +19,7 @@ async function fetchCollection(table: string, key: string, value: string): Promi
 }
 
 export async function fetchPublicCollection(friendId: string) {
-  return await fetchCollection('public_cards', 'friendId', friendId)
+  return await fetchCollection('public_cards', 'friend_id', friendId)
 }
 
 export async function fetchOwnCollection(email: string, collectionLastUpdated: Date): Promise<CollectionRow[]> {

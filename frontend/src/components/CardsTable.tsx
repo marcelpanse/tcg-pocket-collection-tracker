@@ -23,18 +23,18 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
   const { t } = useTranslation(['common/sets', 'pages/collection'])
   const [scrollContainerHeight, setScrollContainerHeight] = useState('auto')
 
-  useLayoutEffect(() => {
-    const updateScrollContainerHeight = () => {
-      if (scrollRef.current) {
-        const headerHeight = (document.querySelector('#header') as HTMLElement | null)?.offsetHeight || 0
-        const filterbarHeight = (document.querySelector('#filterbar') as HTMLElement | null)?.offsetHeight || 0
-        const isMobileDevice = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
-        const offset = isMobileDevice ? 0 : extraOffset
-        const maxHeight = window.innerHeight - headerHeight - filterbarHeight - offset
-        setScrollContainerHeight(`${maxHeight}px`)
-      }
+  const updateScrollContainerHeight = () => {
+    if (scrollRef.current) {
+      const headerHeight = (document.querySelector('#header') as HTMLElement | null)?.offsetHeight || 0
+      const filterbarHeight = (document.querySelector('#filterbar') as HTMLElement | null)?.offsetHeight || 0
+      const isMobileDevice = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
+      const offset = isMobileDevice ? 0 : extraOffset
+      const maxHeight = window.innerHeight - headerHeight - filterbarHeight - offset
+      setScrollContainerHeight(`${maxHeight}px`)
     }
+  }
 
+  useLayoutEffect(() => {
     updateScrollContainerHeight()
     window.addEventListener('resize', updateScrollContainerHeight)
 
@@ -48,6 +48,8 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
       scrollRef.current.scrollTop = 0
     }
   }, [resetScrollTrigger])
+
+  useEffect(() => updateScrollContainerHeight)
 
   const columns = useMemo(() => {
     return [
