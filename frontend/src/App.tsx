@@ -7,13 +7,13 @@ import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { authSSO, supabase } from '@/lib/Auth.ts'
 import { fetchAccount } from '@/lib/fetchAccount.ts'
+import { friendCollectionLoader } from '@/lib/friendCollectionLoader.ts'
 import type { AccountRow, CollectionRow, CollectionRowUpdate } from '@/types'
 import { Header } from './components/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { CollectionContext } from './lib/context/CollectionContext.ts'
 import { type User, UserContext } from './lib/context/UserContext.ts'
 import { fetchOwnCollection, updateCollectionCache } from './lib/fetchCollection.ts'
-import { friendCollectionLoader } from './lib/friendCollectionLoader.ts'
 
 // Lazy import for chunking
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
