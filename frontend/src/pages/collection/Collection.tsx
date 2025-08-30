@@ -1,5 +1,5 @@
 import { Siren } from 'lucide-react'
-import { useContext, useEffect, useMemo, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
 import { useNavigate, useParams } from 'react-router'
@@ -37,13 +37,13 @@ function Collection() {
   })
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
   const [friendAccount, setFriendAccount] = useState<AccountRow | null>(null)
-  const [friendCards, setFriendCards] = useState<CollectionRow[] | null>(null)
+  const [cardCollection, setCardCollection] = useState<CollectionRow[] | null>(null)
   const [filteredCards, setFilteredCards] = useState<Card[] | null>(null)
   const [missions, setMissions] = useState<Mission[] | null>(null)
 
   useEffect(() => {
     const friendId = params.friendId
-    if (friendId && !friendCards) {
+    if (friendId && cardCollection === null) {
       console.log('fetching collection by friend id', friendId)
       fetchPublicAccount(friendId)
         .then((account) => {
@@ -57,35 +57,19 @@ function Collection() {
           if (cards.length === 0) {
             console.log('not a public collection, going back to normal mode.')
             navigate('/collection')
+            return
           }
-          setFriendCards(cards)
+          setCardCollection(cards)
         })
         .catch(console.error)
-    } else if (!friendId && friendCards) {
-      // NOTE: because the card table is hard to refresh, we have to reload the page. This is a bit of a hack, but it works. If you figure  a better way, please let me know.
-      window.location.reload()
+    } else if (!friendId && cardCollection === null) {
+      setCardCollection(ownedCards)
     }
   }, [params])
 
   useEffect(() => {
-    return () => {
-      setFriendCards(null)
-    }
-  }, [])
-
-  const cardCollection = useMemo(() => {
-    // if friendId is in the url, return friendCards, otherwise return ownedCards. FriendCards can be null if they are still loading.
-    if (params.friendId) {
-      return friendCards
-    }
-    return ownedCards || []
-  }, [ownedCards, friendCards])
-
-  useEffect(() => {
     setResetScrollTrigger(true)
-
     const timeout = setTimeout(() => setResetScrollTrigger(false), 100)
-
     return () => clearTimeout(timeout)
   }, [filteredCards])
 
@@ -110,11 +94,11 @@ function Collection() {
           deckBuildingMode: true,
           allTextSearch: true,
         }}
-        batchUpdate={Boolean(!friendCards)}
+        batchUpdate={Boolean(!params.friendId)}
         share
       >
         <div>
-          {friendCards && (
+          {params.friendId && (
             <Alert className="mb-4 border-1 border-neutral-700 shadow-none">
               <Siren className="h-4 w-4" />
               <AlertTitle>{t('publicCollectionTitle', { username: friendAccount?.username })}</AlertTitle>
