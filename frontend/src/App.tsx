@@ -12,7 +12,7 @@ import { Header } from './components/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { CollectionContext } from './lib/context/CollectionContext.ts'
 import { type User, UserContext } from './lib/context/UserContext.ts'
-import { fetchOwnCollection, fetchPublicCollection, updateCollectionCache } from './lib/fetchCollection.ts'
+import { fetchOwnCollection, fetchPublicCollection, getCollectionFromCache, updateCollectionCache } from './lib/fetchCollection.ts'
 
 // Lazy import for chunking
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
@@ -46,10 +46,11 @@ function App() {
     if (!user || !user.user.email) {
       throw new Error('User not logged in')
     }
+    const email = user.user.email
 
     const now = new Date()
     const nowString = now.toISOString()
-    const rows: CollectionRow[] = rowsToUpdate.map((row) => ({ ...row, email: user.user.email as string, updated_at: nowString }))
+    const rows: CollectionRow[] = rowsToUpdate.map((row) => ({ ...row, email, updated_at: nowString }))
 
     const { error: error1, data } = await supabase
       .from('accounts')
@@ -65,19 +66,21 @@ function App() {
       throw new Error(`Error bulk updating collection: ${error2.message}`)
     }
 
-    setOwnedCards((old) => {
-      const previouslyOwned = old.map((row) => {
-        const updated = rowsToUpdate.find((r) => r.card_id === row.card_id)
-        if (updated === undefined) {
-          return row
-        } else {
-          return { ...row, ...updated }
-        }
-      })
-      const newlyAdded = rows.filter((row) => old.find((r) => r.card_id === row.card_id) === undefined)
-      return previouslyOwned.concat(newlyAdded)
+    // we can't trust ownedCards to already be updated, so we'll have to get the latest from cache.
+    const latestFromCache = getCollectionFromCache(email) || ownedCards
+    const updatedCards = latestFromCache.map((row) => {
+      const updated = rowsToUpdate.find((r) => r.card_id === row.card_id)
+      if (updated === undefined) {
+        return row
+      } else {
+        return { ...row, ...updated }
+      }
     })
-    updateCollectionCache(ownedCards, user.user.email, now)
+    const newlyAdded = rows.filter((row) => latestFromCache.find((r) => r.card_id === row.card_id) === undefined)
+    updatedCards.concat(newlyAdded)
+    setOwnedCards(updatedCards)
+
+    updateCollectionCache(updatedCards, email, now)
     setAccount(data as AccountRow)
   }
 

@@ -78,7 +78,7 @@ export function updateCollectionCache(collection: CollectionRow[], email: string
 /**
  * Get collection data from localStorage
  */
-function getCollectionFromCache(email: string): CollectionRow[] | null {
+export function getCollectionFromCache(email: string): CollectionRow[] | null {
   try {
     const cachedData = localStorage.getItem(`${COLLECTION_CACHE_KEY}_${email}`)
     if (cachedData) {
