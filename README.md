@@ -1,6 +1,6 @@
 # TCG Pocket Collection Tracker
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-30-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-31-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 TCG Pocket Collection Tracker is an application designed to help users efficiently track their Pokémon Pocket game cards, identify optimal card packs to open, manage trades, and engage with both friends and the community at large. Our application is completely free, open-source, and prioritizes user privacy by not selling data, tracking analytics or using advertisements.
@@ -90,6 +90,7 @@ We encourage contributors to incrementally improve the project by making small c
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/velinakennedy"><img src="https://avatars.githubusercontent.com/u/153860469?v=4?s=100" width="100px;" alt="velinakennedy"/><br /><sub><b>velinakennedy</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=velinakennedy" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gregormaclaine"><img src="https://avatars.githubusercontent.com/u/45013509?v=4?s=100" width="100px;" alt="Gregor Maclaine"/><br /><sub><b>Gregor Maclaine</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=gregormaclaine" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/gregormaclaine"><img src="https://avatars.githubusercontent.com/u/18427765?v=4?s=100" width="100px;" alt="MarkoOleksiyenko"/><br /><sub><b>MarkoOleksiyenko</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=MarkoOleksiyenko" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
