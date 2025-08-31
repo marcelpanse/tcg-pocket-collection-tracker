@@ -77,7 +77,7 @@ function App() {
       }
     })
     const newlyAdded = rows.filter((row) => latestFromCache.find((r) => r.card_id === row.card_id) === undefined)
-    updatedCards.concat(newlyAdded)
+    updatedCards.push(...newlyAdded)
     setOwnedCards(updatedCards)
 
     updateCollectionCache(updatedCards, email, now)
