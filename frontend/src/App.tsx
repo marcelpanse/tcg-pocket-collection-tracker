@@ -51,17 +51,6 @@ function App() {
     const nowString = now.toISOString()
     const rows: CollectionRow[] = rowsToUpdate.map((row) => ({ ...row, email: user.user.email as string, updated_at: nowString }))
 
-    const ownedCardsCopy = [...ownedCards]
-    for (const row of rows) {
-      const i = ownedCardsCopy.findIndex((r) => r.card_id === row.card_id)
-      if (i < 0) {
-        ownedCardsCopy.push(row)
-      } else {
-        ownedCardsCopy[i].amount_owned = row.amount_owned
-        ownedCardsCopy[i].updated_at = nowString
-      }
-    }
-
     const { error: error1, data } = await supabase
       .from('accounts')
       .upsert({ ...account, collection_last_updated: now })
@@ -76,9 +65,20 @@ function App() {
       throw new Error(`Error bulk updating collection: ${error2.message}`)
     }
 
-    updateCollectionCache(ownedCardsCopy, user.user.email, now)
+    setOwnedCards((old) => {
+      const previouslyOwned = old.map((row) => {
+        const updated = rowsToUpdate.find((r) => r.card_id === row.card_id)
+        if (updated === undefined) {
+          return row
+        } else {
+          return { ...row, ...updated }
+        }
+      })
+      const newlyAdded = rows.filter((row) => old.find((r) => r.card_id === row.card_id) === undefined)
+      return previouslyOwned.concat(newlyAdded)
+    })
+    updateCollectionCache(ownedCards, user.user.email, now)
     setAccount(data as AccountRow)
-    setOwnedCards([...ownedCardsCopy])
   }
 
   useEffect(() => {

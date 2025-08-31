@@ -30,7 +30,6 @@ export async function fetchOwnCollection(email: string, collectionLastUpdated: D
 
   const cacheLastUpdatedRaw = localStorage.getItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
   const cacheLastUpdated = cacheLastUpdatedRaw && new Date(cacheLastUpdatedRaw)
-  console.log(collectionLastUpdated, cacheLastUpdated)
 
   if (cacheLastUpdated && !Number.isNaN(cacheLastUpdated.getTime()) && cacheLastUpdated >= collectionLastUpdated) {
     const cachedCollection = getCollectionFromCache(email)
