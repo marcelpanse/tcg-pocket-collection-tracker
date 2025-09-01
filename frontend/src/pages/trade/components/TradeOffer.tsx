@@ -21,10 +21,10 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
 
   function card(c: Card | null) {
     if (!c) {
-      return <span className="w-1/2 text-center">–</span>
+      return '—'
     }
     return (
-      <span className="flex w-1/2">
+      <span className="flex">
         <span className="min-w-10">{c.rarity} </span>
         <span className="min-w-14 me-4">{c.card_id} </span>
         <span>{getCardNameByLang(c, i18n.language)}</span>
@@ -56,23 +56,27 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
     }
   }
 
+  if (!yourCard && !friendCard) {
+    return (
+      <div className="flex rounded-lg border-1 border-neutral-700 border-solid p-2 w-full items-center justify-around text-center h-[206px] sm:h-[138px]">
+        <h4 className="text-lg font-medium">{t('selectCardsToTrade')}</h4>
+      </div>
+    )
+  }
+
   return (
-    <div className="rounded-lg border-1 border-neutral-700 border-solid p-2 text-center">
-      <div className="flex justify-between mx-2 mb-2">
-        <h4 className="text-lg font-medium">{t('youGive')}</h4>
-        <h4 className="text-lg font-medium">{t('youReceive')}</h4>
+    <div className="bg-neutral-900 rounded-lg border-1 border-neutral-700 border-solid p-2">
+      <div className="flex flex-col sm:flex-row gap-4 p-4">
+        <div className="w-full sm:w-1/2">
+          <h4 className="text-lg font-medium">{t('youGive')}</h4>
+          {card(yourCard)}
+        </div>
+        <div className="w-full sm:w-1/2">
+          <h4 className="text-lg font-medium">{t('youReceive')}</h4>
+          {card(friendCard)}
+        </div>
       </div>
-      <div className="flex justify-between rounded bg-zinc-800 px-1 mt-2">
-        {yourCard || friendCard ? (
-          <>
-            {card(yourCard)}
-            {card(friendCard)}
-          </>
-        ) : (
-          <span className="w-full text-center">{t('selectCardsToTrade')}</span>
-        )}
-      </div>
-      <Button className="text-center mt-4" type="button" variant="outline" onClick={submit} disabled={!enabled}>
+      <Button className="block w-full sm:w-1/2 mx-auto text-center" type="button" variant="outline" onClick={submit} disabled={!enabled}>
         {t('offerTrades')}
       </Button>
     </div>

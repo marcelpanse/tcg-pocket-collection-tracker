@@ -61,7 +61,7 @@ function TradePartner({ friendId, initialTrades }: TradePartnerProps) {
         <p>
           <span className="text-sm">{t('tradingWith')}</span>
           <span className="text-xl font-medium"> {friendAccount?.username || 'loading'} </span>
-          <span className="text-xs">({friendId})</span>
+          <span className="block sm:inline text-xs">({friendId})</span>
         </p>
         <span className="flex gap-4">
           <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">

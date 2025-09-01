@@ -21,7 +21,11 @@ export const CardList: FC<Props> = ({ cards, ownedCards, selected, setSelected }
       }
     }
     return (
-      <li key={card.card_id} className={`flex rounded px-2 ${selected?.card_id === card.card_id && 'bg-green-900'} hover:bg-gray-500`} onClick={onClick}>
+      <li
+        key={card.card_id}
+        className={`flex rounded px-2 cursor-pointer ${selected?.card_id === card.card_id && 'bg-green-900'} hover:bg-neutral-600`}
+        onClick={onClick}
+      >
         <span className="min-w-14 me-4">{card.card_id} </span>
         <span>{getCardNameByLang(card, i18n.language)}</span>
         <span title="Amount you own" className="text-gray-400 ml-auto">
