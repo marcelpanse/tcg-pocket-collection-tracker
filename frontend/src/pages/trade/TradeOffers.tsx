@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
+import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { Switch } from '@/components/ui/switch'
 import { supabase } from '@/lib/Auth.ts'
 import { UserContext } from '@/lib/context/UserContext'
@@ -61,7 +62,9 @@ function TradePartner({ friendId, initialTrades }: TradePartnerProps) {
         <p>
           <span className="text-sm">{t('tradingWith')}</span>
           <span className="text-xl font-medium"> {friendAccount?.username || 'loading'} </span>
-          <span className="text-xs">({friendId})</span>
+          <span className="text-xs">
+            (<FriendIdDisplay friendId={friendId} showCopyButton={false} />)
+          </span>
         </p>
         <span className="flex gap-4">
           <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">
