@@ -13,7 +13,7 @@ import { Header } from './components/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { CollectionContext } from './lib/context/CollectionContext.ts'
 import { type User, UserContext } from './lib/context/UserContext.ts'
-import { fetchOwnCollection, updateCollectionCache } from './lib/fetchCollection.ts'
+import { fetchOwnCollection, getCollectionFromCache, updateCollectionCache } from './lib/fetchCollection.ts'
 
 // Lazy import for chunking
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
@@ -48,21 +48,11 @@ function App() {
     if (!user || !user.user.email) {
       throw new Error('App.tsx:updateCards: User not logged in')
     }
+    const email = user.user.email
 
     const now = new Date()
     const nowString = now.toISOString()
-    const rows: CollectionRow[] = rowsToUpdate.map((row) => ({ ...row, email: user.user.email as string, updated_at: nowString }))
-
-    const ownedCardsCopy = [...ownedCards]
-    for (const row of rows) {
-      const i = ownedCardsCopy.findIndex((r) => r.card_id === row.card_id)
-      if (i < 0) {
-        ownedCardsCopy.push(row)
-      } else {
-        ownedCardsCopy[i].amount_owned = row.amount_owned
-        ownedCardsCopy[i].updated_at = nowString
-      }
-    }
+    const rows: CollectionRow[] = rowsToUpdate.map((row) => ({ ...row, email, updated_at: nowString }))
 
     const { error: error1, data } = await supabase
       .from('accounts')
@@ -78,9 +68,22 @@ function App() {
       throw new Error(`App.tsx:updateCards: Error bulk updating collection: ${error2.message}`)
     }
 
-    updateCollectionCache(ownedCardsCopy, user.user.email, now)
+    // we can't trust ownedCards to already be updated, so we'll have to get the latest from cache.
+    const latestFromCache = getCollectionFromCache(email) || ownedCards
+    const updatedCards = latestFromCache.map((row) => {
+      const updated = rowsToUpdate.find((r) => r.card_id === row.card_id)
+      if (updated === undefined) {
+        return row
+      } else {
+        return { ...row, ...updated }
+      }
+    })
+    const newlyAdded = rows.filter((row) => latestFromCache.find((r) => r.card_id === row.card_id) === undefined)
+    updatedCards.push(...newlyAdded)
+    setOwnedCards(updatedCards)
+
+    updateCollectionCache(updatedCards, email, now)
     setAccount(data as AccountRow)
-    setOwnedCards([...ownedCardsCopy])
   }
 
   useEffect(() => {
@@ -151,6 +154,8 @@ function App() {
     [ownedCards, selectedCardId, selectedMissionCardOptions],
   )
 
+  const errorDiv = <div className="m-4">A new version was deployed, please refresh the page to see the latest changes.</div>
+
   const router = createHashRouter([
     {
       element: (
@@ -161,6 +166,7 @@ function App() {
           <EditProfile account={account} setAccount={setAccount} isProfileDialogOpen={isProfileDialogOpen} setIsProfileDialogOpen={setIsProfileDialogOpen} />
         </>
       ),
+      errorElement: errorDiv,
       children: [
         { path: '/', element: <Overview /> },
         { path: '/collection/:friendId?', element: <Collection />, loader: friendCollectionLoader },
@@ -175,7 +181,7 @@ function App() {
   return (
     <UserContext.Provider value={userContextValue}>
       <CollectionContext.Provider value={collectionContextValue}>
-        <ErrorBoundary fallback={<div className="m-4">A new version was deployed, please refresh the page to see the latest changes.</div>}>
+        <ErrorBoundary fallback={errorDiv}>
           <Toaster />
           <RouterProvider router={router} />
           <InstallPrompt />

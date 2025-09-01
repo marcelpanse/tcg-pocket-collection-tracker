@@ -36,20 +36,13 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
 
   useLayoutEffect(() => {
     updateScrollContainerHeight()
-    window.addEventListener('resize', updateScrollContainerHeight)
-
-    return () => {
-      window.removeEventListener('resize', updateScrollContainerHeight)
-    }
-  }, [])
+  }, [width, extraOffset])
 
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = 0
     }
   }, [resetScrollTrigger])
-
-  useEffect(() => updateScrollContainerHeight)
 
   const columns = useMemo(() => {
     return [
@@ -81,12 +74,13 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
   })
 
   const groupedRows = useMemo(() => table.getGroupedRowModel().rows, [table.getGroupedRowModel().rows])
-
-  const aspectRatio = 1.71
+  const aspectRatio = 1.4
+  // height of the card name + action buttons
+  const descriptionOffset = width <= 780 ? 40 : 20
   const extraPadding = 8
   const trueWidth = Math.min(width, 900) - extraPadding
   const cardsPerRow = Math.max(Math.min(Math.floor(trueWidth / 170), 5), 3)
-  const cardHeight = (aspectRatio * trueWidth) / cardsPerRow - 10
+  const cardHeight = Math.round(aspectRatio * (trueWidth / cardsPerRow)) + descriptionOffset
   const basis = {
     3: 'basis-1/3',
     4: 'basis-1/4',
