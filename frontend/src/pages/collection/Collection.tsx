@@ -93,7 +93,7 @@ function Collection() {
             resetScrollTrigger={resetScrollTrigger}
             showStats={!filters.deckbuildingMode}
             extraOffset={24}
-            editable={!filters.deckbuildingMode && !Boolean(friendAccount)}
+            editable={!filters.deckbuildingMode && !friendAccount}
           />
         )}
       </div>
