@@ -147,10 +147,10 @@ const TradeWith: FC = () => {
   return (
     <div className="kap-4 justify-center max-w-2xl m-auto">
       <h1 className="mb-4">
-        <span className="text-2xl font-likht">{t('tradingWith')}</span>
-        <span className="text-4xl font-bold"> {friendAccount.username} </span>
-        <span className="text-md">
-          (<FriendIdDisplay friendId={friendAccount.friend_id} />)
+        <span className="text-2xl font-light">{t('tradingWith')}</span>
+        <span className="text-2xl font-bold"> {friendAccount.username} </span>
+        <span className="text-sm">
+          <FriendIdDisplay friendId={friendAccount.friend_id} />
         </span>
       </h1>
       <div className="flex gap-4 mb-2 mt-4 justify-between">
