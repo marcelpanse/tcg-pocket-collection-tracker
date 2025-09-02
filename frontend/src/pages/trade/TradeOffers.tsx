@@ -13,16 +13,16 @@ function groupTrades(arr: TradeRow[], id: string) {
   return Object.groupBy(arr, (row) => {
     if (row.offering_friend_id === id) {
       return row.receiving_friend_id
-    }
-    if (row.receiving_friend_id === id) {
+    } else if (row.receiving_friend_id === id) {
       return row.offering_friend_id
+    } else {
+      console.log('Fetched row does not match user friend_id', row)
+      return 'undefined'
     }
-    return 'undefined'
   })
 }
 
 interface TradePartnerProps {
-  account: AccountRow
   friendId: string
   initialTrades: TradeRow[]
 }
@@ -43,9 +43,8 @@ function TradePartner({ friendId, initialTrades }: TradePartnerProps) {
       .eq('id', id)
     if (error) {
       console.log('Error updating trades: ', error)
-      return
+      throw new Error('TradeOffers.tsx:update: Error updating trade')
     }
-    console.log('successfully updated trade')
     setTrades((arr) => arr.map((r) => (r.id === id ? { ...r, updated_at: now, ...fields } : r)))
   }
 
@@ -59,9 +58,8 @@ function TradePartner({ friendId, initialTrades }: TradePartnerProps) {
     <div className="w-full">
       <div className="flex justify-between items-center mb-2 mx-1">
         <p>
-          <span className="text-sm">{t('tradingWith')}</span>
-          <span className="text-xl font-medium"> {friendAccount?.username || 'loading'} </span>
-          <span className="block sm:inline text-xs">({friendId})</span>
+          <span className="text-md">{t('tradingWith')}</span>
+          <span className="text-md font-bold"> {friendAccount?.username || 'loading'} </span>
         </p>
         <span className="flex gap-4">
           <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">
@@ -109,10 +107,15 @@ function TradeOffers() {
   }
 
   const friends = groupTrades(trades, account.friend_id)
+  const friendsLastActivity = Object.fromEntries(
+    Object.entries(friends).map(([key, value]) => [key, Math.max(...(value as TradeRow[]).map((row) => new Date(row.updated_at).getTime()))]),
+  )
+  const friendIds = Object.keys(friends).toSorted((a, b) => friendsLastActivity[b] - friendsLastActivity[a])
+
   return (
-    <div className="flex flex-col items-center mx-auto gap-12 sm:px-4">
-      {Object.keys(friends).map((friend_id) => (
-        <TradePartner key={friend_id} friendId={friend_id} initialTrades={friends[friend_id] as TradeRow[]} account={account} />
+    <div className="flex flex-col items-center mx-auto gap-12 sm:px-4 mb-12">
+      {friendIds.map((friend_id) => (
+        <TradePartner key={friend_id} friendId={friend_id} initialTrades={friends[friend_id] as TradeRow[]} />
       ))}
     </div>
   )

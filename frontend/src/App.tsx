@@ -1,18 +1,19 @@
 import loadable from '@loadable/component'
 import { useEffect, useMemo, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
-import { createHashRouter, Outlet, RouterProvider, useLocation } from 'react-router'
+import { createHashRouter, Navigate, Outlet, RouterProvider, useLocation } from 'react-router'
 import DonationPopup from '@/components/DonationPopup.tsx'
 import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { authSSO, supabase } from '@/lib/Auth.ts'
-import { fetchAccount, fetchPublicAccount } from '@/lib/fetchAccount.ts'
+import { fetchAccount } from '@/lib/fetchAccount.ts'
+import { friendCollectionLoader } from '@/lib/friendCollectionLoader.ts'
 import type { AccountRow, CollectionRow, CollectionRowUpdate } from '@/types'
 import { Header } from './components/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { CollectionContext } from './lib/context/CollectionContext.ts'
 import { type User, UserContext } from './lib/context/UserContext.ts'
-import { fetchOwnCollection, fetchPublicCollection, getCollectionFromCache, updateCollectionCache } from './lib/fetchCollection.ts'
+import { fetchOwnCollection, getCollectionFromCache, updateCollectionCache } from './lib/fetchCollection.ts'
 
 // Lazy import for chunking
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
@@ -21,6 +22,7 @@ const Decks = loadable(() => import('./pages/decks/Decks.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const TradeWith = loadable(() => import('./pages/trade/TradeWith.tsx'))
 const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
+const CardDetail = loadable(() => import('./pages/collection/CardDetail.tsx'))
 
 function Analytics() {
   const location = useLocation()
@@ -44,7 +46,7 @@ function App() {
 
   const updateCards = async (rowsToUpdate: CollectionRowUpdate[]) => {
     if (!user || !user.user.email) {
-      throw new Error('User not logged in')
+      throw new Error('App.tsx:updateCards: User not logged in')
     }
     const email = user.user.email
 
@@ -58,12 +60,12 @@ function App() {
       .select()
       .single()
     if (error1) {
-      throw new Error(`Error modyfing account: ${error1.message}`)
+      throw new Error(`App.tsx:updateCards: Error modyfing account: ${error1.message}`)
     }
     const { error: error2 } = await supabase.from('collection').upsert(rows)
     if (error2) {
       setAccount(data as AccountRow)
-      throw new Error(`Error bulk updating collection: ${error2.message}`)
+      throw new Error(`App.tsx:updateCards: Error bulk updating collection: ${error2.message}`)
     }
 
     // we can't trust ownedCards to already be updated, so we'll have to get the latest from cache.
@@ -152,18 +154,6 @@ function App() {
     [ownedCards, selectedCardId, selectedMissionCardOptions],
   )
 
-  type collectionLoaderParams = { params: { friendId?: string } }
-  async function collectionLoader({ params }: collectionLoaderParams) {
-    const friendId = params.friendId
-    if (!friendId) {
-      return {}
-    }
-
-    const account = fetchPublicAccount(friendId)
-    const collection = fetchPublicCollection(friendId)
-    return { friendAccount: await account, friendCollection: await collection }
-  }
-
   const errorDiv = <div className="m-4">A new version was deployed, please refresh the page to see the latest changes.</div>
 
   const router = createHashRouter([
@@ -179,10 +169,11 @@ function App() {
       errorElement: errorDiv,
       children: [
         { path: '/', element: <Overview /> },
-        { path: '/collection/:friendId?/trade?', element: <Collection />, loader: collectionLoader },
+        { path: '/collection/:friendId?', element: <Collection />, loader: friendCollectionLoader },
         { path: '/decks', element: <Decks /> },
         { path: '/trade', element: <Trade /> },
-        { path: '/trade/:friendId', element: <TradeWith /> },
+        { path: '/trade/:friendId', element: <TradeWith />, loader: friendCollectionLoader },
+        { path: '/collection/:friendId/trade', element: <Navigate to="/trade/:friendId" replace /> }, // support old trading path
       ],
     },
   ])
@@ -195,6 +186,7 @@ function App() {
           <RouterProvider router={router} />
           <InstallPrompt />
           <DonationPopup />
+          {selectedCardId && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}
         </ErrorBoundary>
       </CollectionContext.Provider>
     </UserContext.Provider>

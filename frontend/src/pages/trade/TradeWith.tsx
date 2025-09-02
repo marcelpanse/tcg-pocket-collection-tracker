@@ -1,17 +1,17 @@
 import { CircleHelp } from 'lucide-react'
-import { type FC, useContext, useEffect, useMemo, useState } from 'react'
+import { useContext, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useParams } from 'react-router'
+import { useLoaderData } from 'react-router'
 import { Tooltip } from 'react-tooltip'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
+import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { expansions, getCardById } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
-import { fetchPublicAccount } from '@/lib/fetchAccount'
-import { fetchPublicCollection } from '@/lib/fetchCollection'
+import type { FriendCollectionLoaderReturn } from '@/lib/friendCollectionLoader.ts'
 import { CardList } from '@/pages/trade/components/CardList.tsx'
 import { TradeOffer } from '@/pages/trade/components/TradeOffer.tsx'
-import type { AccountRow, Card, CollectionRow, Rarity } from '@/types'
+import type { Card, Rarity } from '@/types'
 
 const rarityOrder: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆']
 
@@ -19,29 +19,18 @@ interface TradeCard extends Card {
   amount_owned: number
 }
 
-const TradeWith: FC = () => {
+function TradeWith() {
   const { t } = useTranslation('trade-matches')
 
-  const { friendId } = useParams()
+  const { friendAccount, friendCollection: friendCards } = useLoaderData() as FriendCollectionLoaderReturn
 
   const { account } = useContext(UserContext)
   const { ownedCards } = useContext(CollectionContext)
-  const [friendAccount, setFriendAccount] = useState<AccountRow | null>(null)
-  const [friendCards, setFriendCards] = useState<CollectionRow[] | null>(null)
 
   const [userCardsMaxFilter, setUserCardsMaxFilter] = useState<number>((account?.max_number_of_cards_wanted || 1) - 1)
   const [friendCardsMinFilter, setFriendCardsMinFilter] = useState<number>((account?.min_number_of_cards_to_keep || 1) + 1)
   const [yourCard, setYourCard] = useState<Card | null>(null)
   const [friendCard, setFriendCard] = useState<Card | null>(null)
-
-  useEffect(() => {
-    if (!friendAccount && friendId) {
-      fetchPublicAccount(friendId).then(setFriendAccount)
-    }
-    if (friendId && !friendCards) {
-      fetchPublicCollection(friendId).then(setFriendCards)
-    }
-  })
 
   const tradeableExpansions = useMemo(() => expansions.filter((e) => e.tradeable).map((e) => e.id), [])
 
@@ -126,10 +115,6 @@ const TradeWith: FC = () => {
     return rarityOrder.some((rarity) => friendExtraCards && friendExtraCards[rarity].length > 0 && userExtraCards && userExtraCards[rarity].length > 0)
   }, [friendExtraCards, userExtraCards])
 
-  if (!friendId) {
-    return 'Wrong friend id'
-  }
-
   if (!account || !friendAccount || friendExtraCards === null || userExtraCards === null) {
     return null
   }
@@ -146,9 +131,11 @@ const TradeWith: FC = () => {
   return (
     <div className="kap-4 justify-center max-w-2xl m-auto px-2">
       <h1 className="mb-4">
-        <span className="text-2xl font-likht">{t('tradingWith')}</span>
-        <span className="text-4xl font-bold"> {friendAccount.username} </span>
-        <span className="block sm:inline text-md">({friendAccount.friend_id})</span>
+        <span className="text-2xl font-light">{t('tradingWith')}</span>
+        <span className="text-2xl font-bold"> {friendAccount.username} </span>
+        <span className="block sm:inline text-sm">
+          <FriendIdDisplay friendId={friendAccount.friend_id} />
+        </span>
       </h1>
 
       <TradeOffer
