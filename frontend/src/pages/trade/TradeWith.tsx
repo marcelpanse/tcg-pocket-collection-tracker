@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { useLoaderData } from 'react-router'
 import { Tooltip } from 'react-tooltip'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
+import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { expansions, getCardById } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { UserContext } from '@/lib/context/UserContext'
@@ -130,10 +131,10 @@ function TradeWith() {
   return (
     <div className="kap-4 justify-center max-w-2xl m-auto">
       <h1 className="mb-4">
-        <span className="text-2xl font-likht">{t('tradingWith')}</span>
-        <span className="text-4xl font-bold"> {friendAccount.username} </span>
-        <span>
-          <span className="text-md">({friendAccount.friend_id})</span>
+        <span className="text-2xl font-light">{t('tradingWith')}</span>
+        <span className="text-2xl font-bold"> {friendAccount.username} </span>
+        <span className="text-sm">
+          <FriendIdDisplay friendId={friendAccount.friend_id} />
         </span>
       </h1>
       <div className="flex gap-4 mb-2 mt-4 justify-between">
