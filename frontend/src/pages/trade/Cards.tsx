@@ -6,7 +6,7 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { toast } from '@/hooks/use-toast.ts'
-import { allCards, expansions, tradeableRaritiesDictionary } from '@/lib/CardsDB.ts'
+import { allCards, expansions } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext.ts'
 import { UserContext } from '@/lib/context/UserContext'
 import { NoCardsNeeded } from '@/pages/trade/components/NoCardsNeeded.tsx'
@@ -38,11 +38,10 @@ function Cards() {
     () =>
       allCards
         .filter((c) => (tradableRarities as readonly string[]).includes(c.rarity) && tradeableExpansions.includes(c.expansion))
-        .filter(
-          (ac) =>
-            ownedCards.findIndex((oc) => oc.card_id === ac.card_id) === -1 ||
-            ownedCards[ownedCards.findIndex((oc) => oc.card_id === ac.card_id)].amount_owned <= lookingForMaxCards,
-        ),
+        .filter((ac) => {
+          const idx = ownedCards.findIndex((oc) => oc.card_id === ac.card_id)
+          return idx === -1 || ownedCards[idx].amount_owned <= lookingForMaxCards
+        }),
     [ownedCards, lookingForMaxCards],
   )
   const lookingForCardsFiltered = useMemo(() => {
@@ -53,12 +52,12 @@ function Cards() {
   const forTradeCards = useMemo(() => {
     const myCards = ownedCards.filter((c) => c.amount_owned >= forTradeMinCards)
     return allCards
+      .filter((c) => (tradableRarities as readonly string[]).includes(c.rarity) && tradeableExpansions.includes(c.expansion))
       .filter((ac) => myCards.findIndex((oc) => oc.card_id === ac.card_id) > -1)
       .map((ac) => ({
         ...ac,
         amount_owned: myCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned,
       }))
-      .filter((c) => tradeableRaritiesDictionary[c.rarity] !== null && tradeableExpansions.includes(c.expansion))
   }, [ownedCards, forTradeMinCards])
 
   const forTradeCardsFiltered = useMemo(() => {
