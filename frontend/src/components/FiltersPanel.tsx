@@ -270,7 +270,9 @@ const FilterPanel: FC<Props> = ({
       <div className="gap-2 flex-row gap-y-1 px-4 flex">
         {visibleFilters?.search && <SearchInput className="w-full sm:w-32" setSearchValue={setSearchValue} />}
         {visibleFilters?.owned && <OwnedFilter ownedFilter={filters.owned} setOwnedFilter={setOwned} />}
-        {visibleFilters?.rarity && <RarityFilter rarityFilter={filters.rarity} setRarityFilter={setRarity} collapse />}
+        {visibleFilters?.rarity && (
+          <RarityFilter rarityFilter={filters.rarity} setRarityFilter={setRarity} deckbuildingMode={filters.deckbuildingMode} collapse />
+        )}
 
         {filtersDialog && (
           <Dialog>
@@ -286,7 +288,7 @@ const FilterPanel: FC<Props> = ({
                 {filtersDialog.allTextSearch && <AllTextSearchFilter allTextSearch={filters.allTextSearch} setAllTextSearch={setAllTextSearch} />}
                 {filtersDialog.expansions && <ExpansionsFilter value={filters.expansion} onChange={onExpansionChange} />}
                 {filtersDialog.pack && <PackFilter className="w-full" value={filters.pack} onChange={setPack} expansion={filters.expansion} />}
-                {filtersDialog.rarity && <RarityFilter rarityFilter={filters.rarity} setRarityFilter={setRarity} />}
+                {filtersDialog.rarity && <RarityFilter rarityFilter={filters.rarity} setRarityFilter={setRarity} deckbuildingMode={filters.deckbuildingMode} />}
                 {filtersDialog.cardType && <CardTypeFilter cardTypeFilter={filters.cardType} setCardTypeFilter={setCardType} />}
                 {filtersDialog.owned && <OwnedFilter className="w-full" ownedFilter={filters.owned} setOwnedFilter={setOwned} />}
                 {filtersDialog.sortBy && <SortByRecent sortBy={filters.sortBy} setSortBy={setSortBy} />}
