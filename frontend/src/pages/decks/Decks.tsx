@@ -18,11 +18,11 @@ const rankInfo: Record<string, { title: string; tooltip: string }> = {
     tooltip:
       'The best decks are in the S tier, which are decks that have amazing consistency on top of being easy to build and function with minimal difficulty.',
   },
-  A: {
+  'A+': {
     title: 'Advanced Tier',
     tooltip: 'A+ Tier Decks are some of the most powerful metagame options. These can function at the highest level, but face competition against S tiers.',
   },
-  'A+': {
+  A: {
     title: 'Basic Tier',
     tooltip: 'A Tier Decks are also powerful, and can also function at a high level, but may not be as easy to pilot as the S Tiers.',
   },

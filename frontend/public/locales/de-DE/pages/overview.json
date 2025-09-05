@@ -1,0 +1,21 @@
+{
+  "stats": {
+    "title": "Danke dass du Teil unserer Community bist!",
+    "description": "Aktuell haben {{usersCount}} Nutzer insgesamt {{collectionCount}} Karten gesammelt!"
+  },
+  "dontHaveCards": {
+    "title": "Du hast noch keine Karten in deiner Sammlung!",
+    "description": "Geh zu der Übersichtsseite und füge Karten zu deiner Sammlung hinzu."
+  },
+  "usersOurCommunity": {
+    "youAre": "Unglaublich, dass du Teil der",
+    "join": "Tritt der",
+    "text": "Nutzer unserer Community! 🎉"
+  },
+  "all": "alle Erweiterungen",
+  "youHave": "Insgesamt",
+  "uniqueCards": "Einzigartige Karten",
+  "numberOfCopies-single": "mit mindestens einer Kopie",
+  "numberOfCopies-plural": "mit mindestens {{numberFilter}} Kopien",
+  "cardsTotal": "Karten"
+}

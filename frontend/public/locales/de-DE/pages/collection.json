@@ -1,0 +1,19 @@
+{
+  "publicCollectionTitle": "Du siehst die aktuelle Sammlung von \"{{username}}\".",
+  "publicCollectionDescription": "Du siehst aktuell eine öffentliche Sammlung. Klicke auf einen der Navigationspunkte, um zu deiner eigenen Sammlung zurückzukehren.",
+  "showPossibleTrades": "Mögliche Tauschobjekte anzeigen",
+  "missionDetail": {
+    "eligibleCards-singular": "Liste der berechtigten Karten: {{options}} option",
+    "eligibleCards-plural": "Liste der berechtigten Karten: {{options}} optionen",
+    "chanceFrom": "Wahrscheinlichkeit aus {{pack}}: {{chance}}%"
+  },
+  "filters": {
+    "allFilters": "Alle Filter",
+    "filtersCount": "Filters ({{count}})",
+    "clear": "Zurücksetzen",
+    "share": "Teilen"
+  },
+  "stats": {
+    "summary": "{{selected}} ausgewählt, {{uniquesOwned}} einzigartige im Besitz, {{totalOwned}} Gesamt"
+  }
+}

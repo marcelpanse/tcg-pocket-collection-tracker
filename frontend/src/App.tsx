@@ -1,7 +1,7 @@
 import loadable from '@loadable/component'
 import { useEffect, useMemo, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
-import { createHashRouter, Navigate, Outlet, RouterProvider, useLocation } from 'react-router'
+import { createHashRouter, Navigate, Outlet, RouterProvider, useLocation, useParams } from 'react-router'
 import DonationPopup from '@/components/DonationPopup.tsx'
 import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
@@ -23,6 +23,11 @@ const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const TradeWith = loadable(() => import('./pages/trade/TradeWith.tsx'))
 const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
 const CardDetail = loadable(() => import('./pages/collection/CardDetail.tsx'))
+
+const TradeWithRedirect = () => {
+  const { friendId } = useParams()
+  return <Navigate to={`/trade/${friendId}`} replace />
+}
 
 function Analytics() {
   const location = useLocation()
@@ -173,7 +178,7 @@ function App() {
         { path: '/decks', element: <Decks /> },
         { path: '/trade', element: <Trade /> },
         { path: '/trade/:friendId', element: <TradeWith />, loader: friendCollectionLoader },
-        { path: '/collection/:friendId/trade', element: <Navigate to="/trade/:friendId" replace /> }, // support old trading path
+        { path: '/collection/:friendId/trade', element: <TradeWithRedirect /> }, // support old trading path
       ],
     },
   ])

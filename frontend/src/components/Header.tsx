@@ -35,6 +35,7 @@ export function Header() {
   const changeLanguage = (lng: string) => i18n.changeLanguage(lng)
 
   const languages = [
+    { code: 'de-DE', name: 'Deutsch' },
     { code: 'en-US', name: 'English' },
     { code: 'es-ES', name: 'Español' },
     { code: 'fr-FR', name: 'Français' },

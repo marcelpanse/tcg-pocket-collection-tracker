@@ -17,6 +17,7 @@ export const Login = () => {
 
   const [emailInput, setEmailInput] = useState('')
   const [emailSubmitted, setEmailSubmitted] = useState(false)
+  const [emailSubmitting, setEmailSubmitting] = useState(false)
 
   const otpEntered = async (otp: string) => {
     try {
@@ -48,10 +49,12 @@ export const Login = () => {
       return
     }
 
+    setEmailSubmitting(true)
     const { error } = await supabase.auth.signInWithOtp({ email: emailInput })
     if (error) {
       console.log('supa OTP error', error)
       toast({ title: t('otpSendError'), variant: 'destructive' })
+      setEmailSubmitting(false)
     } else {
       setEmailSubmitted(true)
     }
@@ -86,6 +89,7 @@ export const Login = () => {
 
       <div className="flex justify-center gap-2 pt-4 align-center">
         <Input
+          disabled={emailSubmitting}
           type="email"
           placeholder={t('email')}
           onChange={(e) => setEmailInput(e.target.value)}
@@ -96,7 +100,9 @@ export const Login = () => {
           }}
         />
 
-        <Button onClick={submitEmail}>{t('button')}</Button>
+        <Button onClick={submitEmail} disabled={emailSubmitting}>
+          {t('button')}
+        </Button>
       </div>
 
       <p className="mt-3 text-sm text-white/25">{t('onlyEmail')}</p>

@@ -1,0 +1,38 @@
+{
+  "text": {
+    "chanceToPull": "Wahrscheinlichkeit zum erhalten: {{percent}}%",
+    "hp": "KP",
+    "cardType": "Kartentyp",
+    "evolutionType": "Evolutionstyp",
+    "ex": "EX",
+    "baby": "Baby",
+    "craftingCost": "Herstellungskosten",
+    "artist": "Künstler",
+    "setDetails": "Set Details",
+    "expansion": "Erweiterung",
+    "pack": "Pack",
+    "weakness": "Schwäche",
+    "retreat": "Rückzug",
+    "ability": "Fähigkeit",
+    "abilityEffect": "Fähigkeitseffekt",
+    "details": "Details",
+    "updated": "Aktualisiert",
+    "alternateVersions": "Alternative Versionen"
+  },
+  "cardType": {
+    "pokémon": "Pokémon",
+    "trainer": "Trainer"
+  },
+  "evolutionType": {
+    "basic": "Basis",
+    "stage1": "Stufe 1",
+    "stage2": "Stufe 2",
+    "item": "Item",
+    "tool": "Ausrüstung",
+    "supporter": "Unterstützer"
+  },
+  "ex": {
+    "yes": "Ja",
+    "no": "Nein"
+  }
+}
