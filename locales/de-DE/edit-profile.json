@@ -1,0 +1,22 @@
+{
+  "editProfile": "Profil bearbeiten",
+  "updateProfile": {
+    "title": "Aktualisiere dein Profil",
+    "description": "Stelle sicher dass deine Informationen mit denen in der Pokémon Pocket App übereinstimmen. Wir nutzen diese Informationen um deine Sammlung und Tauschseite zu generieren."
+  },
+  "email": "Email",
+  "registeredEmail": "Deine registrierte Email",
+  "username": "Benutzername",
+  "usernameDescription": "Verwende am besten deinen In-Game-Namen",
+  "friendID": "Freundescode",
+  "friendIDDescription": "Verwende deinen Freundescode (Ohne Anführungszeichen)",
+  "isPublicDescription": "Du kannst deine Kartensammlung öffentlich machen.",
+  "isPublicButton": "Sammlung teilen",
+  "isPublicTradeButton": "Tauschseite öffnen",
+  "isPublicToggle": "Öffentlich",
+  "save": "Speichern",
+  "usernameTooShort": "Benutzername muss mindestens 2 Zeichen lang sein",
+  "friendIdInvalid": "Der Freundescodes ist ungültig, dieser besteht aus 16 Zeichen",
+  "accountSaved": "Konto gespeichert.",
+  "accountSavingError": "Fehler beim speichern."
+}

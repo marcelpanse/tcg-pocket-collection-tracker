@@ -1,0 +1,23 @@
+{
+  "title": "Import",
+  "description": "ACHTUNG! Deine Sammlung wird mit den Werten aus der importierten CSV-Datei ÜBERSCHRIEBEN. Führe diesen Vorgang NUR durch, wenn deine Tabelle die genauen Zählwerte enthält, die du in deiner Sammlung haben möchtest.",
+  "fileWasAborted": "Datei wurde abgebrochen",
+  "errorWithFile": "Fehler mit Datei:",
+  "errorProcessingExcel": "Fehler beim Verarbeiten der Excel:",
+  "dragNDrop": "Klicke hier, um das Auswahlfenster zu öffnen, oder ziehe eine Datei hierher.",
+  "loading": "Excel Datei wird geladen",
+  "dataUpdated": "Datei aktualisiert:",
+  "expansionName": "Name der Erweiterung",
+  "id": "ID",
+  "cardName": "Kartenname",
+  "statusCount": "Status (Count)",
+  "added": "Hinzugefügt ({{count}})",
+  "updated": "Aktualisiert ({{count}})",
+  "removed": "Entfernt",
+  "unknown": "Unbekannt",
+  "noDataUpdated": "Keine Daten aktualisiert.",
+  "loggedOut": {
+    "title": "Logge dich ein um deine Karten zu importieren",
+    "description": "Du musst eingeloggt sein, um Karten zu deiner Sammlung hinzuzufügen."
+  }
+}

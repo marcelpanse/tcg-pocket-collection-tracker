@@ -1,0 +1,14 @@
+{
+  "invalidCode": "Ungültiger Code",
+  "validEmail": "Bitte gebe eine gültige E-Mail-Adresse ein",
+  "fill6Digit": "Bitte gebe hier den 6-stelligen Code ein, den wir dir per E-Mail geschickt haben.",
+  "fillEmail": "Gib deine E-Mail-Adresse ein, um einen Anmeldecode zu erhalten. Falls du noch kein Konto hast, wird automatisch eines für dich erstellt.",
+  "button": "Weiter",
+  "emailRequired": "Email ist erforderlich",
+  "emailInvalid": "Email muss gültig sein",
+  "emailTooLong": "Email darf nicht mehr als 255 Zeichen lang sein",
+  "otpVerifyError": "Es gab einen Fehler bei der Überprüfung deines Codes. Bitte versuche es erneut.",
+  "otpSendError": "Es gab einen Fehler beim Senden des Codes an deine E-Mail. Bitte versuche es erneut.",
+  "onlyEmail": "Wir nutzen nur deine E-Mail-Adresse, um dir den Anmeldecode zu senden. Wir speichern keine weiteren Informationen.",
+  "email": "Email"
+}

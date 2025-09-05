@@ -1,0 +1,28 @@
+{
+  "publicTradePage": "Öffentliche Tauschseite:",
+  "friendID": "Freundescode:",
+  "lookingForCards": "Suche:",
+  "forTradeCards": "Tausche:",
+  "copiedInClipboard": "Zu tauschende Karten wurden in die Zwischenablage kopiert!",
+  "copyToClipboard": "In die Zwischenablage kopieren",
+  "lookingFor": "Suche nach",
+  "forTrade": "Zum tauschen",
+  "enableTradingPage": "Aktiviere Tauschseite",
+  "openTradingPage": "Öffne Tauschseite",
+  "notLoggedIn": {
+    "title": "Logge dich ein, um deine tauschbaren Karten zu sehen",
+    "description": "Durch die Registrierung kannst du deine Sammlung verfolgen, mit anderen Nutzern tauschen und auf exklusive Funktionen zugreifen."
+  },
+  "noTradeableCards": {
+    "title": "Du besitzt aktuell keine tauschbaren Karten!",
+    "description": "Geh zu den Übersichtsseiten und füge Karten zu deiner Sammlung hinzu, um zu sehen, was du tauschen kannst."
+  },
+  "noCardsNeeded": {
+    "title": "Du besitzt alle tauschbaren Karten!",
+    "description": "Stelle sicher, dass du hierher zurückkommst, wenn neue Seltenheiten und Erweiterungen zum Tauschen verfügbar sind."
+  },
+  "goTrackYourCards": {
+    "title": "Verfolge deine Karten",
+    "description": "Indem du deine Karten verfolgst, kannst du sehen, welche Karten du noch bekommen musst und welche Karten du mit Freunden tauschen kannst."
+  }
+}
