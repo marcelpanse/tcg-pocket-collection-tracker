@@ -1,11 +1,11 @@
 {
-  "notAffiliated": "This project is not affiliated with Nintendo, The Pokémon Company, Creatures Inc., or DeNA Co., Ltd.\nAll card assets and trademarks are © their respective owners.",
-  "licenseDisclaimer": "See full License & Disclaimer",
+  "notAffiliated": "Dieses Projekt steht in keiner Verbindung zu Nintendo, The Pokémon Company, Creatures Inc., oder DeNA Co., Ltd.\nAlle Grafiken und und Warenzeichen sind Eigentum der entsprechenden Urheber.",
+  "licenseDisclaimer": "Vollständige Erklärung lesen",
   "modal": {
-    "title": "License & Legal Disclaimer",
-    "licenseSummary": "{{projectName}} is an open source project licensed under the GNU General Public License v3.0. You may use, modify, and distribute this software under its terms. For more details, visit our <repo>GitHub repository</repo>.",
-    "disclaimerTitle": "Disclaimer:",
-    "disclaimerText": "This is a fan-made application and is not affiliated with, endorsed by, or sponsored by Nintendo Co., Ltd., The Pokémon Company, Creatures Inc. or DeNA Co., Ltd.\nAll Pokémon-related names, card assets, images, and trademarks are the intellectual property of their respective owners.",
-    "copyright": "All original code and content in this project is © 2025 {{projectName}}."
+    "title": "Lizenz und rechtlicher Haftungsausschluss",
+    "licenseSummary": "{{projectName}} ist ein Open Source Projekt unter der GNU General Public License v3.0. Die Software darf gemäß ihren Bedingungen verwendet, verändert und vertrieben werden. Besuche unsere <repo>GitHub Repo</repo> für weitere Informationen.",
+    "disclaimerTitle": "Haftungsausschluss:",
+    "disclaimerText": "Dies ist ein Fan-Projekt welches in keiner Verbindung zu Nintendo Co., Ltd., The Pokémon Company, Creatures Inc. oder DeNA Co., Ltd. steht.\nAlle Pokemon bezogenen Namen, Grafiken und Warenzeichen sind geistiges Eigentum der entsprechenden Urheber.\nDieses Projekt wird ohne jegliche Garantie bereitgestellt. Der Autor übernimmt keine Verantwortung für Schäden, die durch die Nutzung dieser Software entstehen könnten.",
+    "copyright": "Originalcode und Inhalt © 2025 {{projectName}}."
   }
 }
