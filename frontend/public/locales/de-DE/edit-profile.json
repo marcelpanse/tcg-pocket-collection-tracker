@@ -1,0 +1,22 @@
+{
+  "editProfile": "Edit profile",
+  "updateProfile": {
+    "title": "Update your profile",
+    "description": "Make sure to update your profile with the actual values from your Pokémon Pocket app. We'll use this information to set up trades and your public collection page."
+  },
+  "email": "Email",
+  "registeredEmail": "Your registered email.",
+  "username": "Username",
+  "usernameDescription": "Match your Pokémon Pocket display name here.",
+  "friendID": "Friend ID",
+  "friendIDDescription": "Match your Pokémon Pocket friend ID here (without dashes)",
+  "isPublicDescription": "If you want to share your collection or trading page, you can do so here.",
+  "isPublicButton": "Share collection",
+  "isPublicTradeButton": "Open trading page",
+  "isPublicToggle": "Is public",
+  "save": "Save",
+  "usernameTooShort": "Username must be at least 2 characters.",
+  "friendIdInvalid": "Friend ID is not valid, it must be 16 digits without dashes.",
+  "accountSaved": "Account saved.",
+  "accountSavingError": "Error saving your account."
+}
