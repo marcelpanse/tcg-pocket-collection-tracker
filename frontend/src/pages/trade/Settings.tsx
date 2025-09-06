@@ -1,6 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { CircleHelp } from 'lucide-react'
-import { useContext } from 'react'
 import { type Resolver, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
@@ -11,13 +10,15 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel } fr
 import { Input } from '@/components/ui/input.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
 import { toast } from '@/hooks/use-toast.ts'
-import { supabase } from '@/lib/Auth'
-import { UserContext } from '@/lib/context/UserContext'
-import type { AccountRow } from '@/types'
+import { supabase } from '@/lib/supabase'
+import { useAccount } from '@/services/account/useAccount.ts'
+import { useUser } from '@/services/auth/useAuth.ts'
 
 function TradeSettings() {
   const { t } = useTranslation('trade-matches')
-  const { user, account, setAccount } = useContext(UserContext)
+
+  const { data: user } = useUser()
+  const { data: account } = useAccount()
 
   const formSchema = z.object({
     is_active_trading: z.boolean(),
@@ -37,6 +38,7 @@ function TradeSettings() {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
+      // TODO: MOVE TO QUERY SERVICE
       const updatedAccount = await supabase
         .from('accounts')
         .upsert({
@@ -53,7 +55,6 @@ function TradeSettings() {
         console.error('Could not save account', account)
         throw new Error('Could not save account')
       }
-      setAccount(updatedAccount.data as AccountRow)
 
       toast({ title: t('accountSaved'), variant: 'default' })
     } catch (e) {

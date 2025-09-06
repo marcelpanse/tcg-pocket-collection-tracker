@@ -1,13 +1,13 @@
 import i18n from 'i18next'
 import { CircleHelp, Trophy } from 'lucide-react'
-import { use, useMemo } from 'react'
+import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import FancyCard from '@/components/FancyCard.tsx'
+import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
 import { getCardById, pullRateForSpecificMission } from '@/lib/CardsDB.ts'
-import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
 import { getCardNameByLang } from '@/lib/utils.ts'
+import { useCollection, useSelectedCard, useSelectedMissionCardOptions } from '@/services/collection/useCollection'
 import type { Mission as MissionType } from '@/types'
 
 interface Props {
@@ -25,7 +25,9 @@ export function Mission({ mission }: Props) {
   const { width } = useWindowDimensions()
   const { t } = useTranslation('common/packs')
 
-  const { ownedCards, setSelectedCardId, setSelectedMissionCardOptions } = use(CollectionContext)
+  const { data: ownedCards = [] } = useCollection()
+  const { setSelectedCardId } = useSelectedCard()
+  const { setSelectedMissionCardOptions } = useSelectedMissionCardOptions()
 
   let cardsPerRow = 5
   let cardHeight = Math.min(width, 890) / 5 + 120

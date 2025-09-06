@@ -2,7 +2,7 @@ import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
-import { supabase } from '@/lib/Auth.ts'
+import { supabase } from '@/lib/supabase'
 import { getCardNameByLang } from '@/lib/utils'
 import type { Card, TradeRow } from '@/types'
 

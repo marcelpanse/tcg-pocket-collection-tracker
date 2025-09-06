@@ -1,10 +1,11 @@
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast.ts'
-import { CollectionContext } from '@/lib/context/CollectionContext'
-import { UserContext } from '@/lib/context/UserContext'
 import { TradeListRow } from '@/pages/trade/components/TradeListRow.tsx'
+import { useAccount } from '@/services/account/useAccount'
+import { useUser } from '@/services/auth/useAuth'
+import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import type { CollectionRowUpdate, TradeRow, TradeStatus } from '@/types'
 
 interface Props {
@@ -17,12 +18,14 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
   const { t } = useTranslation('trade-matches')
   const { toast } = useToast()
 
+  const { data: user } = useUser()
+  const { data: account } = useAccount()
+  const { data: ownedCards = [] } = useCollection()
+  const updateCardsMutation = useUpdateCards()
+
   function interesting(row: TradeRow) {
     return (row.offering_friend_id === account?.friend_id && !row.offerer_ended) || (row.receiving_friend_id === account?.friend_id && !row.receiver_ended)
   }
-
-  const { ownedCards, updateCards } = useContext(CollectionContext)
-  const { account, user } = useContext(UserContext)
   const trades = viewHistory ? allTrades.filter((x) => !interesting(x)) : allTrades.filter(interesting)
   const [selectedTradeId, setSelectedTradeId] = useState<number | undefined>(undefined)
 
@@ -39,11 +42,17 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
       return
     }
 
-    if (row.offering_friend_id === account.friend_id) {
-      await updateCards([getAndIncrement(row.offer_card_id, -1), getAndIncrement(row.receiver_card_id, 1)])
+    if (!user?.user.email) {
+      return
+    }
+
+    if (row.offering_friend_id === account?.friend_id) {
+      const updates = [getAndIncrement(row.offer_card_id, -1), getAndIncrement(row.receiver_card_id, 1)]
+      updateCardsMutation.mutate({ email: user.user.email, updates })
       toast({ title: t('collectionUpdated'), variant: 'default' })
-    } else if (row.receiving_friend_id === account.friend_id) {
-      await updateCards([getAndIncrement(row.offer_card_id, 1), getAndIncrement(row.receiver_card_id, -1)])
+    } else if (row.receiving_friend_id === account?.friend_id) {
+      const updates = [getAndIncrement(row.offer_card_id, 1), getAndIncrement(row.receiver_card_id, -1)]
+      updateCardsMutation.mutate({ email: user.user.email, updates })
       toast({ title: t('collectionUpdated'), variant: 'default' })
     } else {
       console.log(row, "can't match friend id")

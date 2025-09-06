@@ -1,12 +1,12 @@
 import i18n from 'i18next'
-import { use, useState } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Card as CardComponent } from '@/components/Card'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { getCardById, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
-import { CollectionContext } from '@/lib/context/CollectionContext'
 import { getCardNameByLang } from '@/lib/utils'
+import { useCollection } from '@/services/collection/useCollection'
 import type { Card, CollectionRow } from '@/types'
 
 interface CardDetailProps {
@@ -19,7 +19,9 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
   const [cardId, setCardId] = useState(initialCardId)
   const card: Card = getCardById(cardId) || ({} as Card)
   const expansion = getExpansionById(card.expansion)
-  const { ownedCards } = use(CollectionContext)
+
+  const { data: ownedCards = [] } = useCollection()
+
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
 
   if (!card) {

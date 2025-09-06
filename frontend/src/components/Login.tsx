@@ -1,15 +1,15 @@
-import { use, useState } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { z } from 'zod'
 import { Button } from '@/components/ui/button.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
-import { supabase } from '@/lib/Auth.ts'
-import { UserContext } from '@/lib/context/UserContext.ts'
+import { supabase } from '@/lib/supabase'
+import { useLoginDialog } from '@/services/auth/useAuth'
 import { Input } from './ui/input.tsx'
 import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from './ui/input-otp.tsx'
 
 export const Login = () => {
-  const { setIsLoginDialogOpen } = use(UserContext)
+  const { setIsLoginDialogOpen } = useLoginDialog()
   const { toast } = useToast()
   const { t } = useTranslation('login')
 
