@@ -235,6 +235,8 @@ export const getExpansionById = (expansion: string): Expansion | undefined => {
   return expansionsDict.get(expansion)
 }
 
+export const tradeableExpansions = expansions.filter((e) => e.tradeable).map((e) => e.id)
+
 export const tradeableRaritiesDictionary: Record<Rarity, number | null> = {
   '◊': 0,
   '◊◊': 0,
