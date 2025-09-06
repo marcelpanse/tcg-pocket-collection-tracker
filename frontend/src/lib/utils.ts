@@ -1,9 +1,10 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import type { Card } from '@/types'
+import type { Card, CollectionRow } from '@/types'
 import pokemonTranslations from '../../assets/pokemon_translations.json'
 import toolTranslations from '../../assets/tools_translations.json'
 import trainerTranslations from '../../assets/trainers_translations.json'
+import { allCards } from './CardsDB'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -50,4 +51,13 @@ export function getCardNameByLang(card: Card, lang: string): string {
   }
 
   return card.name
+}
+
+export function getExtraCards(cards: CollectionRow[], amount_wanted: number): string[] {
+  return cards.filter((c) => c.amount_owned > amount_wanted).map((c) => c.card_id)
+}
+
+export function getNeededCards(cards: CollectionRow[], amount_wanted: number): string[] {
+  const notNeeded = new Set(cards.filter((c) => c.amount_owned >= amount_wanted).map((c) => c.card_id))
+  return allCards.map((c) => c.card_id).filter((card_id) => !notNeeded.has(card_id))
 }
