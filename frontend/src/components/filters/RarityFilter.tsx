@@ -52,7 +52,7 @@ const rarityJSX: Record<Rarity, JSX.Element | null> = {
     </ToggleGroupItem>
   ),
   'Crown Rare': (
-    <ToggleGroupItem key="Crown Rare" value="Crown Rare" aria-label="♛" className="px-1">
+    <ToggleGroupItem key="Crown" value="Crown Rare" aria-label="♛" className="px-1">
       👑
     </ToggleGroupItem>
   ),
