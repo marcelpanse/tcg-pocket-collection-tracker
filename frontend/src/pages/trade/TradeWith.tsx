@@ -53,13 +53,8 @@ function TradeWith() {
     )
   }
 
-  const userExtraCards = getExtraCards(ownedCards, friendCardsMinFilter - 1)
-  const userNeededCards = getNeededCards(ownedCards, userCardsMaxFilter + 1)
-  const friendExtraCards = getExtraCards(friendCards, friendAccount.min_number_of_cards_to_keep)
-  const friendNeededCards = getNeededCards(friendCards, friendAccount.max_number_of_cards_wanted)
-
-  const userTrades = getTradeCards(userExtraCards, friendNeededCards)
-  const friendTrades = getTradeCards(friendExtraCards, userNeededCards)
+  const userTrades = getTradeCards(getExtraCards(ownedCards, friendCardsMinFilter - 1), getNeededCards(friendCards, friendAccount.max_number_of_cards_wanted))
+  const friendTrades = getTradeCards(getExtraCards(friendCards, friendAccount.min_number_of_cards_to_keep), getNeededCards(ownedCards, userCardsMaxFilter + 1))
 
   const hasPossibleTrades = tradableRarities.some((r) => (userTrades[r] ?? []).length > 0 && (friendTrades[r] ?? []).length > 0)
 
