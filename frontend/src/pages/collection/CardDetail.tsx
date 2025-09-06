@@ -7,7 +7,6 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sh
 import { getCardById, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
 import { CollectionContext } from '@/lib/context/CollectionContext'
 import { getCardNameByLang } from '@/lib/utils'
-import type { Card, CollectionRow } from '@/types'
 
 interface CardDetailProps {
   cardId: string
@@ -16,20 +15,29 @@ interface CardDetailProps {
 
 function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps>) {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
+
+  const { ownedCardsMap } = use(CollectionContext)
+
   const [cardId, setCardId] = useState(initialCardId)
-  const card: Card = getCardById(cardId) || ({} as Card)
-  const expansion = getExpansionById(card.expansion)
-  const { ownedCards } = use(CollectionContext)
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
 
+  const card = getCardById(cardId)
   if (!card) {
+    console.log(`Unrecognized card_id: ${cardId}`)
     return null
   }
 
-  // if we draw from 'everypack' we need to take one of the packs to calculated based on
-  const packName = card.pack === 'everypack' ? expansion?.packs[0].name : card.pack
+  const expansion = getExpansionById(card.expansion)
+  if (!expansion) {
+    console.log(`Unrecognized expansion: ${card.expansion}`)
+    return null
+  }
 
-  const row = ownedCards.find((oc: CollectionRow) => oc.card_id === cardId)
+  // if we draw from 'everypack' we need to take one of the packs to base calculations on
+  const packName = card.pack === 'everypack' ? expansion.packs[0].name : card.pack
+
+  const row = ownedCardsMap.get(cardId)
+  const totalAmount = card.alternate_versions.reduce((acc, c) => acc + (ownedCardsMap.get(c.card_id)?.amount_owned ?? 0), 0)
 
   const formatTimestamp = (timestamp: string) => {
     return new Intl.DateTimeFormat(undefined, {
@@ -81,6 +89,9 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
           <div className="p-4 w-full">
             <div className="mb-8">
               <h2 className="text-xl font-semibold">{t('text.alternateVersions')}</h2>
+              <p className="text-lg">
+                {t('text.totalAmount')}: {totalAmount}
+              </p>
               {card.alternate_versions?.map((x) => (
                 <p key={x.card_id} onClick={() => setCardId(x.card_id)} className="cursor-pointer">
                   {x.card_id === cardId ? '✓' : '→'} {x.version}
@@ -88,7 +99,7 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
               ))}
             </div>
 
-            {expansion && packName && (
+            {packName && (
               <p className="text-lg mb-1">
                 <strong>{t('text.chanceToPull', { ns: 'pages/card-detail', percent: pullRateForSpecificCard(expansion, packName, card).toFixed(2) })}</strong>
               </p>

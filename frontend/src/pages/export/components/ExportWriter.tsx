@@ -10,7 +10,7 @@ import type { ImportExportRow } from '@/types'
 
 export const ExportWriter = () => {
   const { t } = useTranslation('pages/export')
-  const { ownedCards } = use(CollectionContext)
+  const { ownedCardsMap } = use(CollectionContext)
 
   const createFile = () => {
     const json: ImportExportRow[] = allCards
@@ -19,7 +19,7 @@ export const ExportWriter = () => {
         return {
           Id: ac.card_id,
           CardName: getCardNameByLang(ac, i18n.language),
-          NumberOwned: ownedCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned ?? 0,
+          NumberOwned: ownedCardsMap.get(ac.card_id)?.amount_owned ?? 0,
           Expansion: ac.expansion,
           Pack: ac.pack,
           Rarity: ac.rarity,

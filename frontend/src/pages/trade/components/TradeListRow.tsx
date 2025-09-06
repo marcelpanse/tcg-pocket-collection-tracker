@@ -16,7 +16,7 @@ interface Props {
 export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTradeId }) => {
   const { t, i18n } = useTranslation('trade-matches')
   const { account } = useContext(UserContext)
-  const { ownedCards } = useContext(CollectionContext)
+  const { ownedCardsMap } = useContext(CollectionContext)
 
   if (!account) {
     return null
@@ -35,7 +35,7 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
         <span className="mr-2 sm:min-w-10">{card.rarity} </span>
         <span className="mr-2 sm:min-w-14 me-4">{card.card_id} </span>
         <span>{getCardNameByLang(card, i18n.language)}</span>
-        <span className="text-neutral-400 ml-auto">×{ownedCards.find((c) => c.card_id === card.card_id)?.amount_owned || 0}</span>
+        <span className="text-neutral-400 ml-auto">×{ownedCardsMap.get(card.card_id)?.amount_owned ?? 0}</span>
       </span>
     )
   }
