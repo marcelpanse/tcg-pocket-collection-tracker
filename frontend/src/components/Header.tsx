@@ -1,6 +1,6 @@
 import loadable from '@loadable/component'
 import { Globe, LogOut, UserRoundPen } from 'lucide-react'
-import { use, useState } from 'react'
+import { useState } from 'react'
 import GitHubButton from 'react-github-btn'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router'
@@ -18,15 +18,19 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu.tsx'
-import { logout } from '@/lib/Auth.ts'
-import { UserContext } from '@/lib/context/UserContext.ts'
 import Export from '@/pages/export/Export'
 import Import from '@/pages/import/Import'
+import { useProfileDialog } from '@/services/account/useAccount'
+import { useLoginDialog, useLogout, useUser } from '@/services/auth/useAuth'
+import { Badge } from './ui/badge'
 
 const PokemonCardDetector = loadable(() => import('@/components/PokemonCardDetectorComponent.tsx'))
 
 export function Header() {
-  const { user, setUser, isLoginDialogOpen, setIsLoginDialogOpen, setIsProfileDialogOpen } = use(UserContext)
+  const { data: user } = useUser()
+  const logoutMutation = useLogout()
+  const { isLoginDialogOpen, setIsLoginDialogOpen } = useLoginDialog()
+  const { setIsProfileDialogOpen } = useProfileDialog()
   const location = useLocation()
   const [isImportDialogOpen, setIsImportDialogOpen] = useState<boolean>(false)
   const [isExportDialogOpen, setIsExportDialogOpen] = useState<boolean>(false)
@@ -50,7 +54,7 @@ export function Header() {
       <header id="header" className="flex max-w-7xl mx-auto min-h-fit h-14 md:h-20 shrink-0 flex-wrap items-center px-4 md:px-6">
         <HamburgerMenu />
         <Link to="/" className="flex items-center gap-2">
-          <img src="\pokemon-icon128.png" alt="Logo" className="h-5" />
+          <img src="/pokemon-icon128.png" alt="Logo" className="h-5" />
           <div className="shrink font-bold pr-4 hidden lg:block">TCG Pocket Collection Tracker</div>
         </Link>
         <NavigationMenu className="max-w-full justify-start">
@@ -79,7 +83,12 @@ export function Header() {
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/trade">
-                <Button variant="ghost">{t('trade')}</Button>
+                <Button variant="ghost">
+                  {t('trade')}
+                  <Badge className="h-5 min-w-5 rounded-full font-mono tabular-nums -mt-2 hidden justify-center" variant="destructive">
+                    1
+                  </Badge>
+                </Button>
               </Link>
             </NavigationMenuLink>
             <PokemonCardDetector />
@@ -134,12 +143,7 @@ export function Header() {
 
                   <DropdownMenuGroup>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem
-                      onClick={async () => {
-                        await logout()
-                        setUser(null)
-                      }}
-                    >
+                    <DropdownMenuItem onClick={() => logoutMutation.mutate()}>
                       {t('logOut')}
                       <LogOut />
                     </DropdownMenuItem>

@@ -1,10 +1,10 @@
-import { type FC, useContext } from 'react'
+import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import { getCardById } from '@/lib/CardsDB.ts'
-import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import { UserContext } from '@/lib/context/UserContext.ts'
 import { getCardNameByLang } from '@/lib/utils'
+import { useAccount } from '@/services/account/useAccount'
+import { useCollection } from '@/services/collection/useCollection'
 import type { TradeRow } from '@/types'
 
 interface Props {
@@ -15,8 +15,9 @@ interface Props {
 
 export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTradeId }) => {
   const { t, i18n } = useTranslation('trade-matches')
-  const { account } = useContext(UserContext)
-  const { ownedCards } = useContext(CollectionContext)
+
+  const { data: account } = useAccount()
+  const { data: ownedCards = [] } = useCollection()
 
   if (!account) {
     return null

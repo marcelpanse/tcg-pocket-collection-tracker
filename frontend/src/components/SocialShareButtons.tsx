@@ -1,4 +1,3 @@
-import { useContext } from 'react'
 import {
   BlueskyIcon,
   BlueskyShareButton,
@@ -23,11 +22,11 @@ import {
 } from 'react-share'
 import { Button } from '@/components/ui/button.tsx'
 import { toast } from '@/hooks/use-toast'
-import { UserContext } from '@/lib/context/UserContext.ts'
 import { cn } from '@/lib/utils'
+import { useAccount } from '@/services/account/useAccount'
 
 export const SocialShareButtons = ({ className }: { className?: string }) => {
-  const { account } = useContext(UserContext)
+  const { data: account } = useAccount()
   const collectionShareUrl = `https://tcgpocketcollectiontracker.com/#/collection/${account?.friend_id}`
   const tradeShareUrl = `https://tcgpocketcollectiontracker.com/#/trade/${account?.friend_id}`
   const title = 'My Pokemon Pocket collection'

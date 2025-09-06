@@ -1,12 +1,11 @@
-import { use } from 'react'
 import { useTranslation } from 'react-i18next'
 import { TitleCard } from '@/components/ui/title-card'
-import { UserContext } from '@/lib/context/UserContext'
+import { useUser } from '@/services/auth/useAuth'
 import { ImportReader } from './components/ImportReader'
 
 function Import() {
   const { t } = useTranslation('pages/import')
-  const { user } = use(UserContext)
+  const { data: user } = useUser()
 
   if (!user) {
     return <TitleCard title={t('loggedOut.title')} paragraph={t('loggedOut.description')} className="bg-gray-400" />

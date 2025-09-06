@@ -1,16 +1,15 @@
 import i18n from 'i18next'
-import { use } from 'react'
 import { useTranslation } from 'react-i18next'
 import XLSX from 'xlsx'
 import { Button } from '@/components/ui/button.tsx'
 import { allCards } from '@/lib/CardsDB'
-import { CollectionContext } from '@/lib/context/CollectionContext'
 import { getCardNameByLang } from '@/lib/utils'
+import { useCollection } from '@/services/collection/useCollection'
 import type { ImportExportRow } from '@/types'
 
 export const ExportWriter = () => {
   const { t } = useTranslation('pages/export')
-  const { ownedCards } = use(CollectionContext)
+  const { data: ownedCards = [] } = useCollection()
 
   const createFile = () => {
     const json: ImportExportRow[] = allCards

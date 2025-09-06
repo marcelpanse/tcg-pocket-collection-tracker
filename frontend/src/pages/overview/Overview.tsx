@@ -1,5 +1,5 @@
 import { Heart, Siren } from 'lucide-react'
-import { use, useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Footer from '@/components/Footer.tsx'
 import DeckbuildingFilter from '@/components/filters/DeckbuildingFilter'
@@ -11,8 +11,8 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTitle } from '@/components/ui/alert.tsx'
 import * as CardsDB from '@/lib/CardsDB.ts'
 import { expansions } from '@/lib/CardsDB.ts'
-import { CollectionContext } from '@/lib/context/CollectionContext'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
+import { useCollection } from '@/services/collection/useCollection'
 import type { Rarity } from '@/types'
 import { BlogOverview } from './components/BlogOverview'
 import { ExpansionOverview } from './components/ExpansionOverview'
@@ -24,7 +24,8 @@ interface Pack {
 }
 
 function Overview() {
-  const { ownedCards } = use(CollectionContext)
+  const { data: ownedCards = [] } = useCollection()
+
   const { t } = useTranslation('pages/overview')
 
   const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
@@ -72,7 +73,7 @@ function Overview() {
         .filter((p) => p.name !== 'everypack')
         .map((pack) => ({
           packName: pack.name,
-          percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter, deckbuildingMode }),
+          percentage: CardsDB.pullRate({ ownedCards: ownedCards, expansion, pack, rarityFilter, numberFilter, deckbuildingMode }),
           fill: pack.color,
         }))
       const highestProbabilityPackCandidate = pullRates.sort((a, b) => b.percentage - a.percentage)[0]
@@ -82,7 +83,7 @@ function Overview() {
     }
 
     setHighestProbabilityPack(newHighestProbabilityPack)
-  }, [ownedCards, rarityFilter, numberFilter, deckbuildingMode])
+  }, [ownedCardsCount, rarityFilter, numberFilter, deckbuildingMode]) //use the memo-ed ownedCardsCount instead of ownedCards to avoid re-rendering when ownedCards changes
 
   return (
     <main className="fade-in-up">
@@ -106,8 +107,12 @@ function Overview() {
           <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-lg border-1 border-neutral-700 bg-neutral-800 border-solid p-3 sm:p-6 md:p-8 mb-4 md:mb-0">
             <h2 className="font-bold mb-4 text-center text-base sm:text-lg md:text-3xl">{t('uniqueCards')}</h2>
             <RadialChart
-              value={totalUniqueCards === 0 ? 0 : CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode }) / totalUniqueCards}
-              label={`${CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode })}`}
+              value={
+                totalUniqueCards === 0
+                  ? 0
+                  : CardsDB.getNrOfCardsOwned({ ownedCards: ownedCards, rarityFilter, numberFilter, deckbuildingMode }) / totalUniqueCards
+              }
+              label={`${CardsDB.getNrOfCardsOwned({ ownedCards: ownedCards, rarityFilter, numberFilter, deckbuildingMode })}`}
               sublabel={`/ ${totalUniqueCards}`}
               color="#92C5FD"
               strokeWidth={24}

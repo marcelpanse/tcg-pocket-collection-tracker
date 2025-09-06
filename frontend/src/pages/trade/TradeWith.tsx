@@ -1,16 +1,15 @@
 import { CircleHelp } from 'lucide-react'
-import { useContext, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useLoaderData } from 'react-router'
+import { useParams } from 'react-router'
 import { Tooltip } from 'react-tooltip'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { expansions, getCardById } from '@/lib/CardsDB.ts'
-import { CollectionContext } from '@/lib/context/CollectionContext'
-import { UserContext } from '@/lib/context/UserContext'
-import type { FriendCollectionLoaderReturn } from '@/lib/friendCollectionLoader.ts'
 import { CardList } from '@/pages/trade/components/CardList.tsx'
 import { TradeOffer } from '@/pages/trade/components/TradeOffer.tsx'
+import { useAccount, usePublicAccount } from '@/services/account/useAccount'
+import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
 import type { Card, Rarity } from '@/types'
 
 const rarityOrder: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆']
@@ -21,11 +20,13 @@ interface TradeCard extends Card {
 
 function TradeWith() {
   const { t } = useTranslation('trade-matches')
+  const { friendId } = useParams()
 
-  const { friendAccount, friendCollection: friendCards } = useLoaderData() as FriendCollectionLoaderReturn
+  const { data: friendAccount } = usePublicAccount(friendId)
+  const { data: friendCards } = usePublicCollection(friendId)
 
-  const { account } = useContext(UserContext)
-  const { ownedCards } = useContext(CollectionContext)
+  const { data: account } = useAccount()
+  const { data: ownedCards = [] } = useCollection()
 
   const [userCardsMaxFilter, setUserCardsMaxFilter] = useState<number>((account?.max_number_of_cards_wanted || 1) - 1)
   const [friendCardsMinFilter, setFriendCardsMinFilter] = useState<number>((account?.min_number_of_cards_to_keep || 1) + 1)
@@ -69,7 +70,7 @@ function TradeWith() {
     }
 
     return result
-  }, [ownedCards, friendCards, userCardsMaxFilter, friendCardsMinFilter])
+  }, [ownedCards, friendCards, userCardsMaxFilter, friendAccount?.min_number_of_cards_to_keep, tradeableExpansions])
 
   const userExtraCards = useMemo(() => {
     if (!friendCards) {
@@ -108,7 +109,7 @@ function TradeWith() {
     }
 
     return result
-  }, [ownedCards, friendCards, userCardsMaxFilter, friendCardsMinFilter])
+  }, [ownedCards, friendCards, friendCardsMinFilter, friendAccount?.max_number_of_cards_wanted, tradeableExpansions])
 
   // Check if there are any possible trades across all rarities
   const hasPossibleTrades = useMemo(() => {

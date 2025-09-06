@@ -1,12 +1,12 @@
 import i18n from 'i18next'
-import { use, useMemo } from 'react'
+import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
 import { BarChartComponent } from '@/components/BarChart.tsx'
 import * as CardsDB from '@/lib/CardsDB.ts'
-import { CollectionContext } from '@/lib/context/CollectionContext'
 import { CompleteProgress } from '@/pages/overview/components/CompleteProgress.tsx'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
+import { useCollection } from '@/services/collection/useCollection'
 import type { Expansion, Rarity } from '@/types'
 import { Carousel } from './Carousel'
 
@@ -17,7 +17,8 @@ interface ExpansionOverviewProps {
   deckbuildingMode: boolean
 }
 export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckbuildingMode }: ExpansionOverviewProps) {
-  const { ownedCards } = use(CollectionContext)
+  const { data: ownedCards = [] } = useCollection()
+
   const { t } = useTranslation(['expansion-overview', 'common/sets', 'common/packs'])
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })

@@ -1,18 +1,18 @@
 import i18n from 'i18next'
 import type { ChangeEvent, FC } from 'react'
-import { use, useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogOverlay, DialogTitle } from '@/components/ui/dialog'
 import { allCards } from '@/lib/CardsDB'
-import { CollectionContext } from '@/lib/context/CollectionContext'
-import { UserContext } from '@/lib/context/UserContext'
 import { getCardNameByLang } from '@/lib/utils'
-import { CardHashStorageService } from '@/services/CardHashStorageService'
-import { ImageSimilarityService } from '@/services/ImageHashingService'
-import PokemonCardDetectorService, { type DetectionResult } from '@/services/PokemonCardDetectionServices'
+import { useUser } from '@/services/auth/useAuth.ts'
+import { useCollection, useUpdateCards } from '@/services/collection/useCollection.ts'
+import { CardHashStorageService } from '@/services/scanner/CardHashStorageService'
+import { ImageSimilarityService } from '@/services/scanner/ImageHashingService'
+import PokemonCardDetectorService, { type DetectionResult } from '@/services/scanner/PokemonCardDetectionServices'
 import type { Card, CollectionRowUpdate } from '@/types'
 
 interface PokemonCardDetectorProps {
@@ -50,8 +50,10 @@ enum State {
 
 const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
   const { t } = useTranslation('scan')
-  const { ownedCards, updateCards } = use(CollectionContext)
-  const { user } = use(UserContext)
+
+  const { data: user } = useUser()
+  const { data: ownedCards = [] } = useCollection()
+  const updateCardsMutation = useUpdateCards()
 
   const fileInputRef = useRef<HTMLInputElement>(null)
 
@@ -346,7 +348,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
       cardArray.push({ card_id, amount_owned: (ownedCard?.amount_owned ?? 0) + increment })
     }
 
-    updateCards(cardArray)
+    updateCardsMutation.mutate({ email: user.user.email, updates: cardArray })
 
     return cardIds.length * amount
   }

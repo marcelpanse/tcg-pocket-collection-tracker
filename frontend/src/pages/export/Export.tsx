@@ -1,12 +1,11 @@
-import { use } from 'react'
 import { useTranslation } from 'react-i18next'
 import { TitleCard } from '@/components/ui/title-card'
-import { UserContext } from '@/lib/context/UserContext'
+import { useUser } from '@/services/auth/useAuth'
 import { ExportWriter } from './components/ExportWriter'
 
 function Export() {
   const { t } = useTranslation('pages/export')
-  const { user } = use(UserContext)
+  const { data: user } = useUser()
 
   if (!user) {
     return <TitleCard title={t('loggedOut.title')} paragraph={t('loggedOut.description')} className="bg-gray-400" />
