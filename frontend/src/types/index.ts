@@ -1,11 +1,13 @@
 const expansionIds = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'P-A'] as const
 export type ExpansionId = (typeof expansionIds)[number]
 
-const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', '✵', '✵✵', 'Crown Rare', 'P', ''] as const
+export const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', '✵', '✵✵', 'Crown Rare', 'P', ''] as const
+export const tradableRarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆'] as const
 
 export const cardTypes = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'dragon', 'colorless', 'trainer', ''] as const
 
 export type Rarity = (typeof rarities)[number]
+export type TradableRarity = (typeof tradableRarities)[number]
 export type CardType = (typeof cardTypes)[number]
 
 export interface AccountRow {
