@@ -36,8 +36,12 @@ function TradeWith() {
   const [yourCard, setYourCard] = useState<Card | null>(null)
   const [friendCard, setFriendCard] = useState<Card | null>(null)
 
-  if (!account || !friendAccount) {
+  if (!account) {
     return null
+  }
+
+  if (!friendAccount) {
+    return <p className="text-xl text-center py-8">{t('notFound')}</p>
   }
 
   if (!friendAccount.is_active_trading) {
