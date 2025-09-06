@@ -50,7 +50,7 @@ enum State {
 
 const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
   const { t } = useTranslation('scan')
-  const { ownedCards, updateCards } = use(CollectionContext)
+  const { ownedCardsMap, updateCards } = use(CollectionContext)
   const { user } = use(UserContext)
 
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -342,8 +342,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
     const cardArray: CollectionRowUpdate[] = []
 
     for (const [card_id, increment] of counts) {
-      const ownedCard = ownedCards.find((row) => row.card_id === card_id)
-      cardArray.push({ card_id, amount_owned: (ownedCard?.amount_owned ?? 0) + increment })
+      cardArray.push({ card_id, amount_owned: (ownedCardsMap.get(card_id)?.amount_owned ?? 0) + increment })
     }
 
     updateCards(cardArray)

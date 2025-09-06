@@ -49,6 +49,8 @@ function App() {
   const [selectedCardId, setSelectedCardId] = useState('')
   const [selectedMissionCardOptions, setSelectedMissionCardOptions] = useState<string[]>([])
 
+  const ownedCardsMap = useMemo(() => new Map(ownedCards.map((c) => [c.card_id, c])), [ownedCards])
+
   const updateCards = async (rowsToUpdate: CollectionRowUpdate[]) => {
     if (!user || !user.user.email) {
       throw new Error('App.tsx:updateCards: User not logged in')
@@ -150,13 +152,14 @@ function App() {
   const collectionContextValue = useMemo(
     () => ({
       ownedCards,
+      ownedCardsMap,
       updateCards,
       selectedCardId,
       setSelectedCardId,
       selectedMissionCardOptions,
       setSelectedMissionCardOptions,
     }),
-    [ownedCards, selectedCardId, selectedMissionCardOptions],
+    [ownedCards, ownedCardsMap, selectedCardId, selectedMissionCardOptions],
   )
 
   const errorDiv = <div className="m-4">A new version was deployed, please refresh the page to see the latest changes.</div>

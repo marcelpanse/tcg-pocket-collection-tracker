@@ -21,7 +21,7 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
     return (row.offering_friend_id === account?.friend_id && !row.offerer_ended) || (row.receiving_friend_id === account?.friend_id && !row.receiver_ended)
   }
 
-  const { ownedCards, updateCards } = useContext(CollectionContext)
+  const { ownedCardsMap, updateCards } = useContext(CollectionContext)
   const { account, user } = useContext(UserContext)
   const trades = viewHistory ? allTrades.filter((x) => !interesting(x)) : allTrades.filter(interesting)
   const [selectedTradeId, setSelectedTradeId] = useState<number | undefined>(undefined)
@@ -31,7 +31,7 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
   }
 
   const getAndIncrement = (card_id: string, increment: number): CollectionRowUpdate => {
-    return { card_id, amount_owned: (ownedCards.find((r) => r.card_id === card_id)?.amount_owned ?? 0) + increment }
+    return { card_id, amount_owned: (ownedCardsMap.get(card_id)?.amount_owned ?? 0) + increment }
   }
 
   const increment = async (row: TradeRow) => {

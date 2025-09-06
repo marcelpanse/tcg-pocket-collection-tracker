@@ -7,7 +7,7 @@ import type { CollectionRowUpdate, ImportExportRow } from '@/types'
 
 export const ImportReader = () => {
   const { t } = useTranslation('pages/import')
-  const { ownedCards, updateCards } = use(CollectionContext)
+  const { ownedCardsMap, updateCards } = use(CollectionContext)
 
   const [processedData, setProcessedData] = useState<(ImportExportRow & { added?: boolean; updated?: boolean; removed?: boolean })[] | null>(null)
   const [numberProcessed, setNumberProcessed] = useState<number>(0)
@@ -23,7 +23,7 @@ export const ImportReader = () => {
       console.log('Row', r)
       const newAmount = Math.max(0, Number(r.NumberOwned))
       const cardId = r.Id
-      const ownedCard = ownedCards.find((row) => row.card_id === r.Id)
+      const ownedCard = ownedCardsMap.get(r.Id)
       console.log('Owned Card', ownedCard)
 
       cardArray.push({ card_id: cardId, amount_owned: newAmount })
