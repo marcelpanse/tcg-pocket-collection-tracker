@@ -7,7 +7,6 @@ import DonationPopup from '@/components/DonationPopup.tsx'
 import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useAuthSSO, useUser } from '@/services/auth/useAuth'
-import { useSelectedCard } from '@/services/collection/useCollection'
 import { Header } from './components/Header.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { DialogContext } from './context/DialogContext.ts'
@@ -39,9 +38,9 @@ function App() {
   const { toast } = useToast()
   const { data: user } = useUser()
   const authSSOQuery = useAuthSSO()
-  const { selectedCardId, setSelectedCardId } = useSelectedCard()
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false)
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false)
+  const [selectedCardId, setSelectedCardId] = useState('')
 
   // Check for SSO parameters
   useEffect(() => {
@@ -87,8 +86,10 @@ function App() {
       setIsLoginDialogOpen,
       isProfileDialogOpen,
       setIsProfileDialogOpen,
+      selectedCardId,
+      setSelectedCardId,
     }),
-    [isLoginDialogOpen, isProfileDialogOpen],
+    [isLoginDialogOpen, isProfileDialogOpen, selectedCardId],
   )
 
   return (

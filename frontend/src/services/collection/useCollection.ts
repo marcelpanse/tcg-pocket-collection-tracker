@@ -1,5 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { useCallback, useState } from 'react'
+import { useContext } from 'react'
+import { DialogContext } from '@/context/DialogContext.ts'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { useUser } from '@/services/auth/useAuth.ts'
 import { fetchCollection, fetchPublicCollection, updateCards } from '@/services/collection/collectionService.ts'
@@ -47,36 +48,10 @@ export function useUpdateCards() {
   })
 }
 
-//TODO: this is probably wrong
-// UI state hooks to replace the selected card/mission state from CollectionContext
 export function useSelectedCard() {
-  const [selectedCardId, setSelectedCardId] = useState('')
-  const selectCard = useCallback((cardId: string) => {
-    setSelectedCardId(cardId)
-  }, [])
-  const clearSelectedCard = useCallback(() => {
-    setSelectedCardId('')
-  }, [])
-  return {
-    selectedCardId,
-    setSelectedCardId,
-    selectCard,
-    clearSelectedCard,
+  const context = useContext(DialogContext)
+  if (!context) {
+    throw new Error('useLoginDialog must be used within a ProfileDialogProvider')
   }
-}
-
-export function useSelectedMissionCardOptions() {
-  const [options, setOptions] = useState<string[]>([])
-  const selectMissionCardOptions = useCallback((cardOptions: string[]) => {
-    setOptions(cardOptions)
-  }, [])
-  const clearMissionCardOptions = useCallback(() => {
-    setOptions([])
-  }, [])
-  return {
-    selectedMissionCardOptions: options,
-    setSelectedMissionCardOptions: setOptions,
-    selectMissionCardOptions,
-    clearMissionCardOptions,
-  }
+  return context
 }

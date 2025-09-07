@@ -5,6 +5,8 @@ export interface IDialogContext {
   setIsProfileDialogOpen: (isOpen: boolean) => void
   isLoginDialogOpen: boolean
   setIsLoginDialogOpen: (isOpen: boolean) => void
+  selectedCardId: string
+  setSelectedCardId: (id: string) => void
 }
 
 export const DialogContext = createContext<IDialogContext>({
@@ -12,4 +14,6 @@ export const DialogContext = createContext<IDialogContext>({
   setIsProfileDialogOpen: () => {},
   isLoginDialogOpen: false,
   setIsLoginDialogOpen: () => {},
+  selectedCardId: '',
+  setSelectedCardId: () => {},
 })

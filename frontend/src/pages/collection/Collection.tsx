@@ -10,7 +10,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import MissionDetail from '@/pages/collection/MissionDetail.tsx'
 import { usePublicAccount } from '@/services/account/useAccount.ts'
-import { useCollection, usePublicCollection, useSelectedMissionCardOptions } from '@/services/collection/useCollection'
+import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
 import type { Card, Mission } from '@/types'
 
 function Collection() {
@@ -24,7 +24,8 @@ function Collection() {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
   const { data: ownedCards = [] } = useCollection()
-  const { selectedMissionCardOptions: queryMissionOptions, setSelectedMissionCardOptions: querySetMissionOptions } = useSelectedMissionCardOptions()
+  const [selectedMissionCardOptions, setSelectedMissionCardOptions] = useState<string[]>([])
+
   const [filters, setFilters] = useState<Filters>({
     search: '',
     expansion: 'all',
@@ -102,12 +103,16 @@ function Collection() {
           />
         )}
       </div>
-      <div>{missions && <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} />}</div>
+      <div>
+        {missions && (
+          <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} setSelectedMissionCardOptions={setSelectedMissionCardOptions} />
+        )}
+      </div>
       {missions && (
         <MissionDetail
-          missionCardOptions={queryMissionOptions}
+          missionCardOptions={selectedMissionCardOptions}
           onClose={() => {
-            querySetMissionOptions([])
+            setSelectedMissionCardOptions([])
           }}
         />
       )}
