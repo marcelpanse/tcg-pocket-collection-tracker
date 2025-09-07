@@ -63,3 +63,28 @@ export const updateAccount = async (account: AccountRow) => {
 
   return data as AccountRow
 }
+
+export const updateAccountTradingFields = async ({
+  email,
+  username,
+  is_active_trading,
+  min_number_of_cards_to_keep,
+  max_number_of_cards_wanted,
+}: {
+  email: string
+  username: string
+  is_active_trading: boolean
+  min_number_of_cards_to_keep: number
+  max_number_of_cards_wanted: number
+}) => {
+  const { data, error } = await supabase
+    .from('accounts')
+    .upsert({ email, username, is_active_trading, min_number_of_cards_to_keep, max_number_of_cards_wanted })
+    .select()
+    .single()
+  if (error) {
+    throw new Error(`Error updating account: ${error.message}`)
+  }
+
+  return data as AccountRow
+}

@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
 import { useUser } from '@/services/auth/useAuth.ts'
 import type { AccountRow } from '@/types'
-import { fetchAccount, fetchPublicAccount, updateAccount } from './accountService'
+import { fetchAccount, fetchPublicAccount, updateAccount, updateAccountTradingFields } from './accountService'
 
 export function useAccount() {
   const { data: user } = useUser()
@@ -29,6 +29,44 @@ export function useUpdateAccount() {
 
   return useMutation({
     mutationFn: (account: AccountRow) => updateAccount(account),
+    onSuccess: (updatedAccount) => {
+      queryClient.setQueryData(['account', updatedAccount.email], updatedAccount)
+    },
+  })
+}
+
+export function useUpdateAccountTradingFields() {
+  const queryClient = useQueryClient()
+  const { data: user } = useUser()
+  const email = user?.user.email
+
+  return useMutation({
+    mutationFn: ({
+      username,
+      is_active_trading,
+      min_number_of_cards_to_keep,
+      max_number_of_cards_wanted,
+    }: {
+      username: string
+      is_active_trading: boolean
+      min_number_of_cards_to_keep: number
+      max_number_of_cards_wanted: number
+    }) => {
+      if (!email) {
+        throw new Error('Email is required to update account')
+      }
+      if (!username) {
+        throw new Error('Username is required to update account')
+      }
+
+      return updateAccountTradingFields({
+        email,
+        username,
+        is_active_trading,
+        min_number_of_cards_to_keep,
+        max_number_of_cards_wanted,
+      })
+    },
     onSuccess: (updatedAccount) => {
       queryClient.setQueryData(['account', updatedAccount.email], updatedAccount)
     },
