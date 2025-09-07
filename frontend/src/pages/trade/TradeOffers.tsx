@@ -1,42 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { Switch } from '@/components/ui/switch'
-import { supabase } from '@/lib/supabase'
 import { useAccount, usePublicAccount } from '@/services/account/useAccount'
 import { useUser } from '@/services/auth/useAuth'
+import { useTrades, useUpdateTrade } from '@/services/trade/useTrade.ts'
 import type { TradeRow } from '@/types'
 import TradeList from './TradeList'
-
-interface TradePartnerProps {
-  friendId: string
-  initialTrades: TradeRow[]
-}
 
 function TradeOffers() {
   const { t } = useTranslation('trade-matches')
 
   const { data: account } = useAccount()
-  const [trades, setTrades] = useState<TradeRow[] | null>(null)
+  const { data: trades } = useTrades()
 
-  useEffect(() => {
-    if (account && trades === null) {
-      console.log('Refrehing trades')
-      supabase
-        .from('trades')
-        .select()
-        .then(({ data, error }) => {
-          if (error) {
-            console.log('Error fetching trades: ', error)
-          } else {
-            setTrades(data)
-          }
-        })
-    }
-  })
-
-  if (trades === null || !account) {
+  if (!trades || !account) {
     return null
   }
 
@@ -53,33 +32,29 @@ function TradeOffers() {
   return (
     <div className="flex flex-col items-center mx-auto gap-12 sm:px-4 mb-12">
       {friendIds.map((friend_id) => (
-        <TradePartner key={friend_id} friendId={friend_id} initialTrades={friends[friend_id] as TradeRow[]} />
+        <TradePartner key={friend_id} friendId={friend_id} />
       ))}
     </div>
   )
 }
 
-function TradePartner({ friendId, initialTrades }: TradePartnerProps) {
+interface TradePartnerProps {
+  friendId: string
+}
+
+function TradePartner({ friendId }: TradePartnerProps) {
+  const navigate = useNavigate()
   const { t } = useTranslation('trade-matches')
 
   const { data: user } = useUser()
+  const { data: trades } = useTrades()
   const { data: friendAccount } = usePublicAccount(user?.user.email)
+  const updateTradeMutation = useUpdateTrade()
 
-  const navigate = useNavigate()
-  const [trades, setTrades] = useState<TradeRow[]>(initialTrades)
   const [viewHistory, setViewHistory] = useState<boolean>(false)
 
-  async function update(id: number, fields: Partial<TradeRow>) {
-    const now = new Date()
-    const { error } = await supabase
-      .from('trades')
-      .update({ updated_at: now, ...fields })
-      .eq('id', id)
-    if (error) {
-      console.log('Error updating trades: ', error)
-      throw new Error('TradeOffers.tsx:update: Error updating trade')
-    }
-    setTrades((arr) => arr.map((r) => (r.id === id ? { ...r, updated_at: now, ...fields } : r)))
+  async function update(id: number, trade: Partial<TradeRow>) {
+    updateTradeMutation.mutate({ id, trade })
   }
 
   return (
@@ -99,7 +74,7 @@ function TradePartner({ friendId, initialTrades }: TradePartnerProps) {
           </Button>
         </span>
       </div>
-      {friendAccount !== null && <TradeList trades={trades} update={update} viewHistory={viewHistory} />}
+      {friendAccount !== null && trades && <TradeList trades={trades} update={update} viewHistory={viewHistory} />}
     </div>
   )
 }

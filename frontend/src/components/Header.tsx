@@ -24,7 +24,7 @@ import { useProfileDialog } from '@/services/account/useAccount'
 import { useLoginDialog, useLogout, useUser } from '@/services/auth/useAuth'
 import { Badge } from './ui/badge'
 
-const PokemonCardDetector = loadable(() => import('@/components/PokemonCardDetectorComponent.tsx'))
+const CardDetectorComponent = loadable(() => import('@/components/CardDetectorComponent.tsx'))
 
 export function Header() {
   const { data: user } = useUser()
@@ -91,7 +91,7 @@ export function Header() {
                 </Button>
               </Link>
             </NavigationMenuLink>
-            <PokemonCardDetector />
+            <CardDetectorComponent />
             <NavigationMenuLink asChild className="hidden md:block">
               <Link to="https://blog.tcgpocketcollectiontracker.com" className="hidden md:block">
                 <Button variant="ghost">{t('blog')}</Button>

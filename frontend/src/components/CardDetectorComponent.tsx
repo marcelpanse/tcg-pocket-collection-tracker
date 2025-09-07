@@ -8,14 +8,14 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogOverlay, DialogTitle } from '@/components/ui/dialog'
 import { allCards } from '@/lib/CardsDB'
 import { getCardNameByLang } from '@/lib/utils'
-import { useUser } from '@/services/auth/useAuth.ts'
-import { useCollection, useUpdateCards } from '@/services/collection/useCollection.ts'
-import { CardHashService } from '@/services/scanner/CardHashService.ts'
-import { ImageSimilarityService } from '@/services/scanner/ImageHashingService'
-import PokemonCardDetectorService, { type DetectionResult } from '@/services/scanner/PokemonCardDetectionServices'
+import { useUser } from '@/services/auth/useAuth'
+import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
+import CardDetectorService, { type DetectionResult } from '@/services/scanner/CardDetectionService'
+import { CardHashService } from '@/services/scanner/CardHashService'
+import { ImageHashService } from '@/services/scanner/ImageHashService'
 import type { Card, CollectionRowUpdate } from '@/types'
 
-interface PokemonCardDetectorProps {
+interface CardDetectorProps {
   onDetectionComplete?: (results: DetectionResult[]) => void
   modelPath?: string
 }
@@ -48,7 +48,7 @@ enum State {
   Confirmation = 6,
 }
 
-const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
+const PokemonCardDetector: FC<CardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
   const { t } = useTranslation('scan')
 
   const { data: user } = useUser()
@@ -70,7 +70,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
   const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
   const [incrementedCards, setIncrementedCards] = useState<number>(0)
 
-  const detectorService = PokemonCardDetectorService.getInstance()
+  const detectorService = CardDetectorService.getInstance()
 
   useEffect(() => {
     if (state === State.Closed + 1) {
@@ -117,7 +117,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
     })
   }
 
-  const hashingService = ImageSimilarityService.getInstance()
+  const hashingService = ImageHashService.getInstance()
   const hashStorageService = CardHashService.getInstance()
   const uniqueCards = useMemo(() => {
     return allCards.reduce((acc, card) => {
@@ -191,7 +191,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
     }
     const image = new Image()
     const imageUrl = URL.createObjectURL(file)
-    const hashingService = ImageSimilarityService.getInstance()
+    const hashingService = ImageHashService.getInstance()
 
     return new Promise<ExtractedCard[]>((resolve) => {
       image.onload = async () => {
