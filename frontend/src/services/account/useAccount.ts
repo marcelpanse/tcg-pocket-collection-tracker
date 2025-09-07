@@ -11,7 +11,7 @@ export function useAccount() {
 
   return useQuery({
     queryKey: ['account', email],
-    queryFn: () => accountService.fetchAccount(email || ''),
+    queryFn: () => accountService.fetchAccount(email as string),
     enabled: !!email,
   })
 }
@@ -19,7 +19,7 @@ export function useAccount() {
 export function usePublicAccount(friendId: string | undefined) {
   return useQuery({
     queryKey: ['account', friendId],
-    queryFn: () => accountService.fetchPublicAccount(friendId || ''),
+    queryFn: () => accountService.fetchPublicAccount(friendId as string),
     enabled: !!friendId,
   })
 }

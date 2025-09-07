@@ -73,7 +73,7 @@ function Overview() {
         .filter((p) => p.name !== 'everypack')
         .map((pack) => ({
           packName: pack.name,
-          percentage: CardsDB.pullRate({ ownedCards: ownedCards, expansion, pack, rarityFilter, numberFilter, deckbuildingMode }),
+          percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter, deckbuildingMode }),
           fill: pack.color,
         }))
       const highestProbabilityPackCandidate = pullRates.sort((a, b) => b.percentage - a.percentage)[0]
@@ -110,9 +110,9 @@ function Overview() {
               value={
                 totalUniqueCards === 0
                   ? 0
-                  : CardsDB.getNrOfCardsOwned({ ownedCards: ownedCards, rarityFilter, numberFilter, deckbuildingMode }) / totalUniqueCards
+                  : CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode }) / totalUniqueCards
               }
-              label={`${CardsDB.getNrOfCardsOwned({ ownedCards: ownedCards, rarityFilter, numberFilter, deckbuildingMode })}`}
+              label={`${CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode })}`}
               sublabel={`/ ${totalUniqueCards}`}
               color="#92C5FD"
               strokeWidth={24}

@@ -19,7 +19,6 @@ interface CardProps {
 const _inputDebounce: Record<string, number | null> = {}
 
 export function Card({ card, onImageClick, className, editable = true }: CardProps) {
-  // React Query hooks for state management
   const { data: user } = useUser()
   const { setIsLoginDialogOpen } = useLoginDialog()
   const { setSelectedCardId } = useSelectedCard()
