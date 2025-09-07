@@ -107,11 +107,7 @@ function Overview() {
           <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-lg border-1 border-neutral-700 bg-neutral-800 border-solid p-3 sm:p-6 md:p-8 mb-4 md:mb-0">
             <h2 className="font-bold mb-4 text-center text-base sm:text-lg md:text-3xl">{t('uniqueCards')}</h2>
             <RadialChart
-              value={
-                totalUniqueCards === 0
-                  ? 0
-                  : CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode }) / totalUniqueCards
-              }
+              value={totalUniqueCards === 0 ? 0 : CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode }) / totalUniqueCards}
               label={`${CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode })}`}
               sublabel={`/ ${totalUniqueCards}`}
               color="#92C5FD"

@@ -348,7 +348,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
       cardArray.push({ card_id, amount_owned: (ownedCard?.amount_owned ?? 0) + increment })
     }
 
-    updateCardsMutation.mutate({ email: user.user.email, updates: cardArray })
+    updateCardsMutation.mutate({ updates: cardArray })
 
     return cardIds.length * amount
   }

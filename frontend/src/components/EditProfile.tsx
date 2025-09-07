@@ -47,9 +47,8 @@ const EditProfile: FC = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      // Update account using mutation
       await updateAccountMutation.mutateAsync({
-        email: user?.user.email || '',
+        email: user?.user.email as string,
         username: values.username,
         friend_id: values.friend_id,
         is_public: values.is_public,

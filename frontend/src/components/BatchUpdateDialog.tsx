@@ -30,7 +30,6 @@ export function BatchUpdateDialog({ filteredCards }: BatchUpdateDialogProps) {
       throw new Error('BatchUpdateDialog.tsx:onBatchUpdate: User not logged in')
     }
     updateCardsMutation.mutate({
-      email: user.user.email,
       updates: cardIds.map((card_id) => ({ card_id, amount_owned: amount })),
     })
   }

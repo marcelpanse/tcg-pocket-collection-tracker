@@ -42,17 +42,13 @@ function TradeList({ trades: allTrades, update, viewHistory }: Props) {
       return
     }
 
-    if (!user?.user.email) {
-      return
-    }
-
     if (row.offering_friend_id === account?.friend_id) {
       const updates = [getAndIncrement(row.offer_card_id, -1), getAndIncrement(row.receiver_card_id, 1)]
-      updateCardsMutation.mutate({ email: user.user.email, updates })
+      updateCardsMutation.mutate({ updates })
       toast({ title: t('collectionUpdated'), variant: 'default' })
     } else if (row.receiving_friend_id === account?.friend_id) {
       const updates = [getAndIncrement(row.offer_card_id, 1), getAndIncrement(row.receiver_card_id, -1)]
-      updateCardsMutation.mutate({ email: user.user.email, updates })
+      updateCardsMutation.mutate({ updates })
       toast({ title: t('collectionUpdated'), variant: 'default' })
     } else {
       console.log(row, "can't match friend id")

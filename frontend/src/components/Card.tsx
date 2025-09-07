@@ -47,7 +47,6 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
           throw new Error('Card.tsx:updateCardCount: User not logged in')
         }
         updateCardsMutation.mutate({
-          email: user.user.email,
           updates: [{ card_id, amount_owned: newAmount }],
         })
       }, 1000)

@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
 import { useUser } from '@/services/auth/useAuth.ts'
 import type { AccountRow } from '@/types'
-import { accountService } from './accountService'
+import { fetchAccount, fetchPublicAccount, updateAccount } from './accountService'
 
 export function useAccount() {
   const { data: user } = useUser()
@@ -11,7 +11,7 @@ export function useAccount() {
 
   return useQuery({
     queryKey: ['account', email],
-    queryFn: () => accountService.fetchAccount(email as string),
+    queryFn: () => fetchAccount(email as string),
     enabled: !!email,
   })
 }
@@ -19,7 +19,7 @@ export function useAccount() {
 export function usePublicAccount(friendId: string | undefined) {
   return useQuery({
     queryKey: ['account', friendId],
-    queryFn: () => accountService.fetchPublicAccount(friendId as string),
+    queryFn: () => fetchPublicAccount(friendId as string),
     enabled: !!friendId,
   })
 }
@@ -28,7 +28,7 @@ export function useUpdateAccount() {
   const queryClient = useQueryClient()
 
   return useMutation({
-    mutationFn: (account: AccountRow) => accountService.updateAccount(account),
+    mutationFn: (account: AccountRow) => updateAccount(account),
     onSuccess: (updatedAccount) => {
       queryClient.setQueryData(['account', updatedAccount.email], updatedAccount)
     },

@@ -1,107 +1,104 @@
 import { supabase } from '@/lib/supabase'
 import type { AccountRow, CollectionRow, CollectionRowUpdate } from '@/types'
 
-// Cache management constants
 const COLLECTION_CACHE_KEY = 'tcg_collection_cache'
 const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp'
 const PAGE_SIZE = 500
 
-export const collectionService = {
-  fetchCollection: async (email: string, collectionLastUpdated?: Date) => {
-    if (!email) {
-      throw new Error('Email is required to fetch collection')
+export const fetchCollection = async (email: string, collectionLastUpdated?: Date) => {
+  if (!email) {
+    throw new Error('Email is required to fetch collection')
+  }
+
+  // Check if we should use cached data
+  if (collectionLastUpdated) {
+    const cachedCollection = getCollectionFromCache(email)
+    const cacheLastUpdatedRaw = localStorage.getItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
+    const cacheLastUpdated = cacheLastUpdatedRaw && new Date(cacheLastUpdatedRaw)
+
+    if (cacheLastUpdated && !Number.isNaN(cacheLastUpdated.getTime()) && cacheLastUpdated >= collectionLastUpdated && cachedCollection !== null) {
+      console.log('Using cached collection')
+      return cachedCollection
     }
+  }
 
-    // Check if we should use cached data
-    if (collectionLastUpdated) {
-      const cachedCollection = getCollectionFromCache(email)
-      const cacheLastUpdatedRaw = localStorage.getItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
-      const cacheLastUpdated = cacheLastUpdatedRaw && new Date(cacheLastUpdatedRaw)
+  // Fetch from API if cache is invalid or not available
+  const collection = await fetchCollectionFromAPI('collection', 'email', email)
 
-      if (cacheLastUpdated && !Number.isNaN(cacheLastUpdated.getTime()) && cacheLastUpdated >= collectionLastUpdated && cachedCollection !== null) {
-        console.log('Using cached collection')
-        return cachedCollection
-      }
+  // Update cache with new data
+  if (collectionLastUpdated) {
+    updateCollectionCache(collection, email, collectionLastUpdated)
+  }
+
+  return collection
+}
+
+export const fetchPublicCollection = async (friendId: string) => {
+  if (!friendId) {
+    throw new Error('Friend ID is required to fetch public collection')
+  }
+
+  return await fetchCollectionFromAPI('public_cards', 'friend_id', friendId)
+}
+
+export const updateCards = async (email: string, rowsToUpdate: CollectionRowUpdate[]) => {
+  if (!email) {
+    throw new Error('Email is required to update cards')
+  }
+  if (!rowsToUpdate.length) {
+    throw new Error('No card updates provided')
+  }
+
+  const now = new Date()
+  const nowString = now.toISOString()
+  const rows: CollectionRow[] = rowsToUpdate.map((row) => ({ ...row, email, updated_at: nowString }))
+
+  // First fetch the current account data
+  const { data: account, error: accountError } = await supabase.from('accounts').select().eq('email', email).single()
+
+  if (accountError) {
+    throw new Error(`Error fetching account: ${accountError.message}`)
+  }
+
+  // Update account's collection_last_updated timestamp
+  const { error: accountUpdateError, data: updatedAccount } = await supabase
+    .from('accounts')
+    .upsert({ ...account, collection_last_updated: now })
+    .select()
+    .single()
+
+  if (accountUpdateError) {
+    throw new Error(`Error updating account timestamp: ${accountUpdateError.message}`)
+  }
+
+  // Update collection records
+  const { error: collectionError } = await supabase.from('collection').upsert(rows)
+
+  if (collectionError) {
+    throw new Error(`Error bulk updating collection: ${collectionError.message}`)
+  }
+
+  // Update cache with the changes
+  const latestFromCache = getCollectionFromCache(email) || (await fetchCollectionFromAPI('collection', 'email', email))
+
+  const updatedCards = latestFromCache.map((row) => {
+    const updated = rowsToUpdate.find((r) => r.card_id === row.card_id)
+    if (updated === undefined) {
+      return row
+    } else {
+      return { ...row, ...updated }
     }
+  })
 
-    // Fetch from API if cache is invalid or not available
-    const collection = await fetchCollectionFromAPI('collection', 'email', email)
+  const newlyAdded = rows.filter((row) => latestFromCache.find((r) => r.card_id === row.card_id) === undefined)
+  updatedCards.push(...newlyAdded)
 
-    // Update cache with new data
-    if (collectionLastUpdated) {
-      updateCollectionCache(collection, email, collectionLastUpdated)
-    }
+  updateCollectionCache(updatedCards, email, now)
 
-    return collection
-  },
-
-  fetchPublicCollection: async (friendId: string) => {
-    if (!friendId) {
-      throw new Error('Friend ID is required to fetch public collection')
-    }
-
-    return await fetchCollectionFromAPI('public_cards', 'friend_id', friendId)
-  },
-
-  updateCards: async (email: string, rowsToUpdate: CollectionRowUpdate[]) => {
-    if (!email) {
-      throw new Error('Email is required to update cards')
-    }
-    if (!rowsToUpdate.length) {
-      throw new Error('No card updates provided')
-    }
-
-    const now = new Date()
-    const nowString = now.toISOString()
-    const rows: CollectionRow[] = rowsToUpdate.map((row) => ({ ...row, email, updated_at: nowString }))
-
-    // First fetch the current account data
-    const { data: account, error: accountError } = await supabase.from('accounts').select().eq('email', email).single()
-
-    if (accountError) {
-      throw new Error(`Error fetching account: ${accountError.message}`)
-    }
-
-    // Update account's collection_last_updated timestamp
-    const { error: accountUpdateError, data: updatedAccount } = await supabase
-      .from('accounts')
-      .upsert({ ...account, collection_last_updated: now })
-      .select()
-      .single()
-
-    if (accountUpdateError) {
-      throw new Error(`Error updating account timestamp: ${accountUpdateError.message}`)
-    }
-
-    // Update collection records
-    const { error: collectionError } = await supabase.from('collection').upsert(rows)
-
-    if (collectionError) {
-      throw new Error(`Error bulk updating collection: ${collectionError.message}`)
-    }
-
-    // Update cache with the changes
-    const latestFromCache = getCollectionFromCache(email) || (await fetchCollectionFromAPI('collection', 'email', email))
-
-    const updatedCards = latestFromCache.map((row) => {
-      const updated = rowsToUpdate.find((r) => r.card_id === row.card_id)
-      if (updated === undefined) {
-        return row
-      } else {
-        return { ...row, ...updated }
-      }
-    })
-
-    const newlyAdded = rows.filter((row) => latestFromCache.find((r) => r.card_id === row.card_id) === undefined)
-    updatedCards.push(...newlyAdded)
-
-    updateCollectionCache(updatedCards, email, now)
-
-    return {
-      cards: updatedCards,
-      account: updatedAccount as AccountRow,
-    }
-  },
+  return {
+    cards: updatedCards,
+    account: updatedAccount as AccountRow,
+  }
 }
 
 // Helper functions
@@ -137,7 +134,7 @@ async function fetchRange(table: string, key: string, value: string, total: numb
   }
 }
 
-export function getCollectionFromCache(email: string): CollectionRow[] | null {
+function getCollectionFromCache(email: string): CollectionRow[] | null {
   if (typeof localStorage === 'undefined') {
     console.warn('localStorage is not available, cannot retrieve cached collection')
     return null
@@ -165,7 +162,7 @@ export function getCollectionFromCache(email: string): CollectionRow[] | null {
   return null
 }
 
-export function updateCollectionCache(collection: CollectionRow[], email: string, timestamp: Date) {
+function updateCollectionCache(collection: CollectionRow[], email: string, timestamp: Date) {
   if (!email) {
     return
   }
