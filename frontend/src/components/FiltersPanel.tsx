@@ -1,5 +1,5 @@
 import i18n from 'i18next'
-import { type FC, type JSX, useEffect, useMemo, useState } from 'react'
+import { type Dispatch, type FC, type JSX, type SetStateAction, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BatchUpdateDialog } from '@/components/BatchUpdateDialog.tsx'
 import ExpansionsFilter from '@/components/filters/ExpansionsFilter.tsx'
@@ -40,7 +40,7 @@ interface Props {
   cards: CollectionRow[] | null
 
   filters: Filters
-  setFilters: React.Dispatch<React.SetStateAction<Filters>>
+  setFilters: Dispatch<SetStateAction<Filters>>
 
   onFiltersChanged: (cards: Card[] | null) => void
   onChangeToMissions: (missions: Mission[] | null) => void
@@ -85,38 +85,25 @@ const FilterPanel: FC<Props> = ({
   const { t } = useTranslation(['pages/collection'])
   const { setIsProfileDialogOpen } = useProfileDialog()
 
-  const [langState, setLangState] = useState(i18n.language)
-  const setSearchValue = (x: string) => setFilters((f) => ({ ...f, search: x }))
-  const setAllTextSearch = (x: boolean) => setFilters((f) => ({ ...f, allTextSearch: x }))
-  const setExpansion = (x: string) => setFilters((f) => ({ ...f, expansion: x }))
-  const setPack = (x: string) => setFilters((f) => ({ ...f, pack: x }))
-  const setCardType = (x: CardType[]) => setFilters((f) => ({ ...f, cardType: x }))
-  const setRarity = (x: Rarity[]) => setFilters((f) => ({ ...f, rarity: x }))
-  const setOwned = (x: 'all' | 'owned' | 'missing') => setFilters((f) => ({ ...f, owned: x }))
-  const setSortBy = (x: 'default' | 'recent' | 'expansion-newest') => setFilters((f) => ({ ...f, sortBy: x }))
-  const setMinNumber = (x: number) => setFilters((f) => ({ ...f, minNumber: x }))
-  const setMaxNumber = (x: number) => setFilters((f) => ({ ...f, maxNumber: x }))
-  const setDeckbuildingMode = (x: boolean) => setFilters((f) => ({ ...f, deckbuildingMode: x }))
+  const setFilterChange = (filters: Filters) => {
+    const cards = getFilteredCards(filters)
+    onFiltersChanged(cards)
+    setFilters(filters)
+  }
+
+  const setSearchValue = (x: string) => setFilterChange({ ...filters, search: x })
+  const setAllTextSearch = (x: boolean) => setFilterChange({ ...filters, allTextSearch: x })
+  const setPack = (x: string) => setFilterChange({ ...filters, pack: x })
+  const setCardType = (x: CardType[]) => setFilterChange({ ...filters, cardType: x })
+  const setRarity = (x: Rarity[]) => setFilterChange({ ...filters, rarity: x })
+  const setOwned = (x: 'all' | 'owned' | 'missing') => setFilterChange({ ...filters, owned: x })
+  const setSortBy = (x: 'default' | 'recent' | 'expansion-newest') => setFilterChange({ ...filters, sortBy: x })
+  const setMinNumber = (x: number) => setFilterChange({ ...filters, minNumber: x })
+  const setMaxNumber = (x: number) => setFilterChange({ ...filters, maxNumber: x })
+  const setDeckbuildingMode = (x: boolean) => setFilterChange({ ...filters, deckbuildingMode: x })
   const [missions, setMissions] = useState<Mission[] | null>(null)
 
-  const filterRarities = (c: Card) => {
-    if (filters.rarity.length === 0) {
-      return true
-    }
-    return c.rarity !== '' && filters.rarity.includes(c.rarity)
-  }
-
-  const filterCardTypes = (c: Card) => {
-    if (filters.cardType.length === 0) {
-      return true
-    }
-    if (c.card_type.toLowerCase() === 'trainer') {
-      return filters.cardType.includes('trainer')
-    }
-    return c.energy !== '' && filters.cardType.includes(c.energy.toLowerCase() as CardType)
-  }
-
-  const getFilteredCards = useMemo(() => {
+  const getFilteredCards = (filters: Filters) => {
     if (!cards) {
       return null // cards are still loading
     }
@@ -184,8 +171,21 @@ const FilterPanel: FC<Props> = ({
       })
     }
 
-    filteredCards = filteredCards.filter(filterRarities)
-    filteredCards = filteredCards.filter(filterCardTypes)
+    filteredCards = filteredCards.filter((c: Card) => {
+      if (filters.rarity.length === 0) {
+        return true
+      }
+      return c.rarity !== '' && filters.rarity.includes(c.rarity)
+    })
+    filteredCards = filteredCards.filter((c: Card) => {
+      if (filters.cardType.length === 0) {
+        return true
+      }
+      if (c.card_type.toLowerCase() === 'trainer') {
+        return filters.cardType.includes('trainer')
+      }
+      return c.energy !== '' && filters.cardType.includes(c.energy.toLowerCase() as CardType)
+    })
 
     if (filters.search) {
       const threshold = 2 // tweak if needed
@@ -233,28 +233,20 @@ const FilterPanel: FC<Props> = ({
     }
 
     return filteredCards
-  }, [cards, filters, langState])
+  }
+
+  const filteredCards = useMemo(() => getFilteredCards(filters), [filters])
 
   useEffect(() => {
-    onFiltersChanged(getFilteredCards)
-    const handleLanguageChange = (lng: string) => {
-      setLangState(lng)
-    }
-
-    i18n.on('languageChanged', handleLanguageChange)
-
-    return () => {
-      i18n.off('languageChanged', handleLanguageChange)
-    }
-  }, [getFilteredCards])
+    onFiltersChanged(filteredCards)
+  }, [])
 
   useEffect(() => {
     onChangeToMissions(missions)
   }, [missions])
 
   function onExpansionChange(x: string) {
-    setExpansion(x)
-    setPack('all')
+    setFilterChange({ ...filters, expansion: x, pack: 'all' })
   }
 
   return (
@@ -281,7 +273,7 @@ const FilterPanel: FC<Props> = ({
             </DialogTrigger>
             <DialogContent className="border-1 border-neutral-700 shadow-none max-h-[90vh] overflow-y-auto content-start">
               <DialogHeader>
-                <DialogTitle>{t('filters.filtersCount', { count: (getFilteredCards || []).filter((c) => !c.linkedCardID).length })}</DialogTitle>
+                <DialogTitle>{t('filters.filtersCount', { count: (filteredCards || []).filter((c) => !c.linkedCardID).length })}</DialogTitle>
               </DialogHeader>
               <div className="flex flex-col gap-3">
                 {filtersDialog.search && <SearchInput className="w-full" setSearchValue={setSearchValue} />}
@@ -330,7 +322,7 @@ const FilterPanel: FC<Props> = ({
           </Dialog>
         )}
 
-        {batchUpdate && <BatchUpdateDialog filteredCards={getFilteredCards || []} disabled={!getFilteredCards || getFilteredCards.length === 0} />}
+        {batchUpdate && <BatchUpdateDialog filteredCards={filteredCards || []} disabled={!filteredCards || filteredCards.length === 0} />}
 
         {share && (
           <Button variant="outline" onClick={() => setIsProfileDialogOpen(true)}>

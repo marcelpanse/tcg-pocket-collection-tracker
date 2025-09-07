@@ -1,6 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
+import { supabase } from '@/lib/supabase.ts'
 import { authSSO, getCurrentUser, logout } from '@/services/auth/authService.ts'
 import type { User } from '@/types'
 
@@ -33,6 +34,27 @@ export function useAuthSSO() {
       window.location.href = data.redirectUrl
     },
   })
+}
+
+export async function signInWithOtp({ email }: { email: string }) {
+  const { error } = await supabase.auth.signInWithOtp({ email })
+  if (error) {
+    console.log('supabase sign in with OTP error', error)
+    throw new Error('Error sending the OTP')
+  }
+}
+
+export async function verifyOTP({ email, otp }: { email: string; otp: string }) {
+  const { error } = await supabase.auth.verifyOtp({
+    email,
+    token: otp,
+    type: 'email',
+  })
+
+  if (error) {
+    console.log('supabase OTP error', error)
+    throw new Error('Error verifying the OTP')
+  }
 }
 
 export function useLoginDialog() {

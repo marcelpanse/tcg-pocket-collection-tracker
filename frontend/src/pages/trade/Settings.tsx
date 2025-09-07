@@ -17,7 +17,7 @@ function TradeSettings() {
   const { t } = useTranslation('trade-matches')
 
   const { data: account } = useAccount()
-  const updateAccountTradingFields = useUpdateAccountTradingFields()
+  const updateAccountTradingFieldsMutation = useUpdateAccountTradingFields()
 
   const formSchema = z.object({
     is_active_trading: z.boolean(),
@@ -37,7 +37,7 @@ function TradeSettings() {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      updateAccountTradingFields.mutate({
+      updateAccountTradingFieldsMutation.mutate({
         username: account?.username as string,
         is_active_trading: values.is_active_trading,
         min_number_of_cards_to_keep: values.min_number_of_cards_to_keep,
