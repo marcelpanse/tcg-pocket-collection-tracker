@@ -1,15 +1,15 @@
-export class ImageSimilarityService {
-  private static instance: ImageSimilarityService
+export class ImageHashService {
+  private static instance: ImageHashService
   private readonly hashSize: number = 48
   private readonly freqSize: number = 12
 
   private constructor() {}
 
-  public static getInstance(): ImageSimilarityService {
-    if (!ImageSimilarityService.instance) {
-      ImageSimilarityService.instance = new ImageSimilarityService()
+  public static getInstance(): ImageHashService {
+    if (!ImageHashService.instance) {
+      ImageHashService.instance = new ImageHashService()
     }
-    return ImageSimilarityService.instance
+    return ImageHashService.instance
   }
 
   public async calculatePerceptualHash(imageData: string | HTMLImageElement): Promise<ArrayBuffer> {

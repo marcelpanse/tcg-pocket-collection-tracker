@@ -10,7 +10,7 @@ import { allCards } from '@/lib/CardsDB'
 import { getCardNameByLang } from '@/lib/utils'
 import { useUser } from '@/services/auth/useAuth.ts'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection.ts'
-import { CardHashStorageService } from '@/services/scanner/CardHashStorageService'
+import { CardHashService } from '@/services/scanner/CardHashService.ts'
 import { ImageSimilarityService } from '@/services/scanner/ImageHashingService'
 import PokemonCardDetectorService, { type DetectionResult } from '@/services/scanner/PokemonCardDetectionServices'
 import type { Card, CollectionRowUpdate } from '@/types'
@@ -118,7 +118,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
   }
 
   const hashingService = ImageSimilarityService.getInstance()
-  const hashStorageService = CardHashStorageService.getInstance()
+  const hashStorageService = CardHashService.getInstance()
   const uniqueCards = useMemo(() => {
     return allCards.reduce((acc, card) => {
       if (!acc.some((c) => c.card_id === card.card_id)) {
