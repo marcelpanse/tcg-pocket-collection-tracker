@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogOverlay, DialogTitle } from '@/components/ui/dialog'
 import { allCards } from '@/lib/CardsDB'
 import { getCardNameByLang } from '@/lib/utils'
-import { useUser } from '@/services/auth/useAuth'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import CardDetectorService, { type DetectionResult } from '@/services/scanner/CardDetectionService'
 import { CardHashService } from '@/services/scanner/CardHashService'
@@ -51,7 +50,6 @@ enum State {
 const PokemonCardDetector: FC<CardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
   const { t } = useTranslation('scan')
 
-  const { data: user } = useUser()
   const { data: ownedCards = [] } = useCollection()
   const updateCardsMutation = useUpdateCards()
 
@@ -330,12 +328,6 @@ const PokemonCardDetector: FC<CardDetectorProps> = ({ onDetectionComplete, model
   const selectedCount = extractedCards.filter((card) => card.selected).length
 
   const incrementCards = async (cardIds: string[]) => {
-    if (!user || !user.user.email) {
-      setState(State.Error)
-      setError('User not logged in')
-      return 0
-    }
-
     const counts = new Map()
     for (const cardId of cardIds) {
       counts.set(cardId, (counts.get(cardId) || 0) + amount)

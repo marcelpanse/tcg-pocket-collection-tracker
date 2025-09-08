@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { cn, getCardNameByLang } from '@/lib/utils'
-import { useLoginDialog, useUser } from '@/services/auth/useAuth'
+import { useLoginDialog } from '@/services/auth/useAuth'
 import { useSelectedCard, useUpdateCards } from '@/services/collection/useCollection'
 import type { Card as CardType } from '@/types'
 
@@ -19,7 +19,6 @@ interface CardProps {
 const _inputDebounce: Record<string, number | null> = {}
 
 export function Card({ card, onImageClick, className, editable = true }: CardProps) {
-  const { data: user } = useUser()
   const { setIsLoginDialogOpen } = useLoginDialog()
   const { setSelectedCardId } = useSelectedCard()
   const updateCardsMutation = useUpdateCards()
@@ -32,9 +31,6 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
 
   const updateCardCount = useCallback(
     async (newAmountIn: number) => {
-      if (!user?.user.email) {
-        throw new Error('Card.tsx:updateCardCount: User not logged in')
-      }
       const card_id = card.card_id
       const newAmount = Math.max(0, newAmountIn)
       setAmountOwned(newAmount)
@@ -43,32 +39,21 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
         window.clearTimeout(_inputDebounce[card_id])
       }
       _inputDebounce[card_id] = window.setTimeout(async () => {
-        if (!user || !user.user.email) {
-          throw new Error('Card.tsx:updateCardCount: User not logged in')
-        }
         updateCardsMutation.mutate({
           updates: [{ card_id, amount_owned: newAmount }],
         })
       }, 1000)
     },
-    [user, amountOwned, updateCardsMutation, card.card_id],
+    [amountOwned, updateCardsMutation, card.card_id],
   )
 
   const addCard = useCallback(async () => {
-    if (!user) {
-      setIsLoginDialogOpen(true)
-      return
-    }
     await updateCardCount(amountOwned + 1)
-  }, [user, updateCardCount, setIsLoginDialogOpen])
+  }, [updateCardCount, setIsLoginDialogOpen])
 
   const removeCard = useCallback(async () => {
-    if (!user) {
-      setIsLoginDialogOpen(true)
-      return
-    }
     await updateCardCount(amountOwned - 1)
-  }, [user, updateCardCount, setIsLoginDialogOpen])
+  }, [updateCardCount, setIsLoginDialogOpen])
 
   const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)
