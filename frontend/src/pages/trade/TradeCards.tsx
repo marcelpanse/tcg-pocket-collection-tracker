@@ -17,7 +17,7 @@ import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 
 const tradeableExpansions = expansions.filter((e) => e.tradeable).map((e) => e.id)
 
-function Cards() {
+function TradeCards() {
   const { t } = useTranslation('pages/trade')
 
   const { data: user } = useUser()
@@ -160,4 +160,4 @@ function Cards() {
   )
 }
 
-export default Cards
+export default TradeCards

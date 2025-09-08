@@ -20,6 +20,7 @@ export function useLogout() {
     mutationFn: logout,
     onSuccess: async () => {
       queryClient.setQueryData(['user'], null)
+      await queryClient.invalidateQueries({ queryKey: ['user'] })
       await queryClient.invalidateQueries({ queryKey: ['account'] })
       await queryClient.invalidateQueries({ queryKey: ['collection'] })
       await queryClient.invalidateQueries({ queryKey: ['trade'] })
@@ -36,24 +37,36 @@ export function useAuthSSO() {
   })
 }
 
+export function useVerifyOTP() {
+  const queryClient = useQueryClient()
+
+  return useMutation({
+    mutationFn: async ({ email, otp }: { email: string; otp: string }) => {
+      const { error } = await supabase.auth.verifyOtp({
+        email,
+        token: otp,
+        type: 'email',
+      })
+
+      if (error) {
+        console.log('supabase OTP error', error)
+        throw new Error('Error verifying the OTP')
+      }
+    },
+    onSuccess: async () => {
+      await queryClient.invalidateQueries({ queryKey: ['user'] })
+      await queryClient.invalidateQueries({ queryKey: ['account'] })
+      await queryClient.invalidateQueries({ queryKey: ['collection'] })
+      await queryClient.invalidateQueries({ queryKey: ['trade'] })
+    },
+  })
+}
+
 export async function signInWithOtp({ email }: { email: string }) {
   const { error } = await supabase.auth.signInWithOtp({ email })
   if (error) {
     console.log('supabase sign in with OTP error', error)
     throw new Error('Error sending the OTP')
-  }
-}
-
-export async function verifyOTP({ email, otp }: { email: string; otp: string }) {
-  const { error } = await supabase.auth.verifyOtp({
-    email,
-    token: otp,
-    type: 'email',
-  })
-
-  if (error) {
-    console.log('supabase OTP error', error)
-    throw new Error('Error verifying the OTP')
   }
 }
 

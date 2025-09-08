@@ -1,16 +1,17 @@
-import { useState } from 'react'
+import { type FC, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { z } from 'zod'
 import { Button } from '@/components/ui/button.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
-import { signInWithOtp, useLoginDialog, verifyOTP } from '@/services/auth/useAuth'
+import { signInWithOtp, useLoginDialog, useVerifyOTP } from '@/services/auth/useAuth'
 import { Input } from './ui/input.tsx'
 import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from './ui/input-otp.tsx'
 
-export const Login = () => {
+export const Login: FC = () => {
   const { setIsLoginDialogOpen } = useLoginDialog()
   const { toast } = useToast()
   const { t } = useTranslation('login')
+  const verifyOtpMutation = useVerifyOTP()
 
   const EmailSchema = z.email(t('emailInvalid')).nonempty(t('emailRequired')).max(255, t('emailTooLong'))
 
@@ -20,9 +21,10 @@ export const Login = () => {
 
   const otpEntered = async (otp: string) => {
     try {
-      await verifyOTP({ email: emailInput, otp })
+      verifyOtpMutation.mutate({ email: emailInput, otp })
       setIsLoginDialogOpen(false)
-    } catch {
+    } catch (e) {
+      console.error('error verifying otp', e)
       toast({ title: t('otpVerifyError'), variant: 'destructive' })
     }
   }

@@ -235,7 +235,7 @@ const FilterPanel: FC<Props> = ({
     return filteredCards
   }
 
-  const filteredCards = useMemo(() => getFilteredCards(filters), [filters])
+  const filteredCards = useMemo(() => getFilteredCards(filters), [filters, cards])
 
   useEffect(() => {
     onFiltersChanged(filteredCards)

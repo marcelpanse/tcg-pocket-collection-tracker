@@ -4,32 +4,31 @@ import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast.ts'
 import { TradeListRow } from '@/pages/trade/components/TradeListRow.tsx'
 import { useAccount } from '@/services/account/useAccount'
-import { useUser } from '@/services/auth/useAuth'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import type { CollectionRowUpdate, TradeRow, TradeStatus } from '@/types'
 
 interface Props {
+  friendId: string
   trades: TradeRow[]
   update: (id: number, fields: Partial<TradeRow>) => Promise<void>
   viewHistory: boolean
 }
 
-function TradeList({ trades: allTrades, update, viewHistory }: Props) {
+function TradeList({ friendId, trades: allTrades, update, viewHistory }: Props) {
   const { t } = useTranslation('trade-matches')
   const { toast } = useToast()
 
-  const { data: user } = useUser()
   const { data: account } = useAccount()
   const { data: ownedCards = [] } = useCollection()
   const updateCardsMutation = useUpdateCards()
 
   function interesting(row: TradeRow) {
-    return (row.offering_friend_id === account?.friend_id && !row.offerer_ended) || (row.receiving_friend_id === account?.friend_id && !row.receiver_ended)
+    return (row.offering_friend_id === friendId && !row.offerer_ended) || (row.receiving_friend_id === friendId && !row.receiver_ended)
   }
   const trades = viewHistory ? allTrades.filter((x) => !interesting(x)) : allTrades.filter(interesting)
   const [selectedTradeId, setSelectedTradeId] = useState<number | undefined>(undefined)
 
-  if (!account || !user) {
+  if (!account) {
     return null
   }
 

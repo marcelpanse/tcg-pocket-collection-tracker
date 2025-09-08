@@ -1,13 +1,8 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router'
-import { Button } from '@/components/ui/button'
-import { Switch } from '@/components/ui/switch'
-import { useAccount, usePublicAccount } from '@/services/account/useAccount'
-import { useUser } from '@/services/auth/useAuth'
-import { useTrades, useUpdateTrade } from '@/services/trade/useTrade.ts'
+import TradePartner from '@/pages/trade/components/TradePartner.tsx'
+import { useAccount } from '@/services/account/useAccount'
+import { useTrades } from '@/services/trade/useTrade.ts'
 import type { TradeRow } from '@/types'
-import TradeList from './TradeList'
 
 function TradeOffers() {
   const { t } = useTranslation('trade-matches')
@@ -34,47 +29,6 @@ function TradeOffers() {
       {friendIds.map((friend_id) => (
         <TradePartner key={friend_id} friendId={friend_id} />
       ))}
-    </div>
-  )
-}
-
-interface TradePartnerProps {
-  friendId: string
-}
-
-function TradePartner({ friendId }: TradePartnerProps) {
-  const navigate = useNavigate()
-  const { t } = useTranslation('trade-matches')
-
-  const { data: user } = useUser()
-  const { data: trades } = useTrades()
-  const { data: friendAccount } = usePublicAccount(user?.user.email)
-  const updateTradeMutation = useUpdateTrade()
-
-  const [viewHistory, setViewHistory] = useState<boolean>(false)
-
-  async function update(id: number, trade: Partial<TradeRow>) {
-    updateTradeMutation.mutate({ id, trade })
-  }
-
-  return (
-    <div className="w-full">
-      <div className="flex justify-between items-center mb-2 mx-1">
-        <p>
-          <span className="text-md">{t('tradingWith')}</span>
-          <span className="text-md font-bold"> {friendAccount?.username || 'loading'} </span>
-        </p>
-        <span className="flex gap-4">
-          <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">
-            {t('viewHistory')}
-            <Switch id={`history-${friendId}`} className="ml-2 my-auto" checked={viewHistory} onCheckedChange={setViewHistory} />
-          </label>
-          <Button className="my-auto" onClick={() => navigate(`/trade/${friendId}`)}>
-            {t('openTradeWith')}
-          </Button>
-        </span>
-      </div>
-      {friendAccount !== null && trades && <TradeList trades={trades} update={update} viewHistory={viewHistory} />}
     </div>
   )
 }
