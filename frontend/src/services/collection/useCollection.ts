@@ -14,7 +14,7 @@ export function useCollection() {
 
   return useQuery({
     queryKey: ['collection', email],
-    queryFn: () => fetchCollection(email || '', collectionLastUpdated),
+    queryFn: () => fetchCollection(email as string, collectionLastUpdated),
     enabled: Boolean(email && account),
   })
 }
