@@ -5,7 +5,7 @@ import type { TradeRow } from '@/types'
 export function useTrades() {
   return useQuery({
     queryKey: ['trade'],
-    queryFn: () => fetchTrades(),
+    queryFn: fetchTrades,
   })
 }
 
