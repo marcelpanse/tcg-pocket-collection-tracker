@@ -22,7 +22,7 @@ export function useCollection() {
 export function usePublicCollection(friendId: string | undefined) {
   return useQuery({
     queryKey: ['collection', friendId],
-    queryFn: () => fetchPublicCollection(friendId || ''),
+    queryFn: () => fetchPublicCollection(friendId as string),
     enabled: !!friendId,
   })
 }
