@@ -45,7 +45,7 @@ function TradeList({ friendId, trades: allTrades, update, viewHistory }: Props) 
       const updates = [getAndIncrement(row.offer_card_id, -1), getAndIncrement(row.receiver_card_id, 1)]
       updateCardsMutation.mutate({ updates })
       toast({ title: t('collectionUpdated'), variant: 'default' })
-    } else if (row.receiving_friend_id === account?.friend_id) {
+    } else if (row.receiving_friend_id === account.friend_id) {
       const updates = [getAndIncrement(row.offer_card_id, 1), getAndIncrement(row.receiver_card_id, -1)]
       updateCardsMutation.mutate({ updates })
       toast({ title: t('collectionUpdated'), variant: 'default' })
