@@ -43,7 +43,13 @@ function TradePartner({ friendId }: TradePartnerProps) {
           </Button>
         </span>
       </div>
-      {friendAccount !== null && trades && <TradeList friendId={friendId} trades={trades} update={update} viewHistory={viewHistory} />}
+      {friendAccount !== null && trades && (
+        <TradeList
+          trades={trades.filter((t) => t.offering_friend_id === friendId || t.receiving_friend_id === friendId)}
+          update={update}
+          viewHistory={viewHistory}
+        />
+      )}
     </div>
   )
 }

@@ -41,7 +41,7 @@ export const getPublicAccount = async (friendId: string) => {
     throw new Error('Error fetching account')
   }
 
-  console.log('fetched account', data)
+  console.log('fetched public account', data)
 
   if (data.length > 0) {
     return data[0] as AccountRow

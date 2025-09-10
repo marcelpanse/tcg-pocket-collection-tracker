@@ -11,7 +11,7 @@ export const getTrades = async () => {
 
   console.log('fetched trades', data)
 
-  return data
+  return data as TradeRow[]
 }
 
 export const insertTrade = async (trade: TradeRow) => {

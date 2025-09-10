@@ -8,13 +8,12 @@ import { useCollection, useUpdateCards } from '@/services/collection/useCollecti
 import type { CollectionRowUpdate, TradeRow, TradeStatus } from '@/types'
 
 interface Props {
-  friendId: string
   trades: TradeRow[]
   update: (id: number, fields: Partial<TradeRow>) => Promise<void>
   viewHistory: boolean
 }
 
-function TradeList({ friendId, trades: allTrades, update, viewHistory }: Props) {
+function TradeList({ trades, update, viewHistory }: Props) {
   const { t } = useTranslation('trade-matches')
   const { toast } = useToast()
 
@@ -23,9 +22,9 @@ function TradeList({ friendId, trades: allTrades, update, viewHistory }: Props) 
   const updateCardsMutation = useUpdateCards()
 
   function interesting(row: TradeRow) {
-    return (row.offering_friend_id === friendId && !row.offerer_ended) || (row.receiving_friend_id === friendId && !row.receiver_ended)
+    return (row.offering_friend_id === account?.friend_id && !row.offerer_ended) || (row.receiving_friend_id === account?.friend_id && !row.receiver_ended)
   }
-  const trades = viewHistory ? allTrades.filter((x) => !interesting(x)) : allTrades.filter(interesting)
+  const filteredTrades = viewHistory ? trades.filter((x) => !interesting(x)) : trades.filter(interesting)
   const [selectedTradeId, setSelectedTradeId] = useState<number | undefined>(undefined)
 
   if (!account) {
@@ -132,9 +131,9 @@ function TradeList({ friendId, trades: allTrades, update, viewHistory }: Props) 
     }
   }
 
-  const selectedTrade = trades.find((r) => r.id === selectedTradeId)
+  const selectedTrade = filteredTrades.find((r) => r.id === selectedTradeId)
 
-  if (trades.length === 0) {
+  if (filteredTrades.length === 0) {
     return <div className="rounded-lg border-1 border-neutral-700 border-solid p-2 text-center">{t('noActiveTrades')}</div>
   }
 
@@ -146,7 +145,7 @@ function TradeList({ friendId, trades: allTrades, update, viewHistory }: Props) 
         <h4 className="text-lg font-medium w-1/2 pl-1">{t('youReceive')}</h4>
       </div>
       <ul>
-        {trades
+        {filteredTrades
           .toSorted((a, b) => (a.created_at > b.created_at ? -1 : 1))
           .map((x) => (
             <TradeListRow key={x.id} row={x} selectedTradeId={selectedTradeId} setSelectedTradeId={setSelectedTradeId} />
