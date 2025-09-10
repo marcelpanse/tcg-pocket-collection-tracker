@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { useUser } from '@/services/auth/useAuth.ts'
-import { fetchCollection, fetchPublicCollection, updateCards } from '@/services/collection/collectionService.ts'
+import { getCollection, getPublicCollection, updateCards } from '@/services/collection/collectionService.ts'
 import type { CollectionRowUpdate } from '@/types'
 
 export function useCollection() {
@@ -14,7 +14,7 @@ export function useCollection() {
 
   return useQuery({
     queryKey: ['collection', email],
-    queryFn: () => fetchCollection(email as string, collectionLastUpdated),
+    queryFn: () => getCollection(email as string, collectionLastUpdated),
     enabled: Boolean(email && account),
     staleTime: 10, //set a short stale time here because we handle the cache internally already (in case someone is using two devices at the same time)
   })
@@ -23,7 +23,7 @@ export function useCollection() {
 export function usePublicCollection(friendId: string | undefined) {
   return useQuery({
     queryKey: ['collection', friendId],
-    queryFn: () => fetchPublicCollection(friendId as string),
+    queryFn: () => getPublicCollection(friendId as string),
     enabled: !!friendId,
   })
 }

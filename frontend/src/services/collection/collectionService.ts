@@ -5,7 +5,7 @@ const COLLECTION_CACHE_KEY = 'tcg_collection_cache'
 const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp'
 const PAGE_SIZE = 500
 
-export const fetchCollection = async (email: string, collectionLastUpdated?: Date) => {
+export const getCollection = async (email: string, collectionLastUpdated?: Date) => {
   if (!email) {
     throw new Error('Email is required to fetch collection')
   }
@@ -33,7 +33,7 @@ export const fetchCollection = async (email: string, collectionLastUpdated?: Dat
   return collection
 }
 
-export const fetchPublicCollection = async (friendId: string) => {
+export const getPublicCollection = async (friendId: string) => {
   if (!friendId) {
     throw new Error('Friend ID is required to fetch public collection')
   }

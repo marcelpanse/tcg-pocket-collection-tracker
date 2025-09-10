@@ -85,22 +85,28 @@ const FilterPanel: FC<Props> = ({
   const { t } = useTranslation(['pages/collection'])
   const { setIsProfileDialogOpen } = useProfileDialog()
 
-  const setFilterChange = (filters: Filters) => {
-    const cards = getFilteredCards(filters)
-    onFiltersChanged(cards)
-    setFilters(filters)
+  const setFilterChange = (filters: Partial<Filters>) => {
+    setFilters((prevFilters) => {
+      const newFilters = { ...prevFilters, ...filters }
+      const cards = getFilteredCards(newFilters)
+      onFiltersChanged(cards)
+      return newFilters
+    })
   }
 
-  const setSearchValue = (x: string) => setFilterChange({ ...filters, search: x })
-  const setAllTextSearch = (x: boolean) => setFilterChange({ ...filters, allTextSearch: x })
-  const setPack = (x: string) => setFilterChange({ ...filters, pack: x })
-  const setCardType = (x: CardType[]) => setFilterChange({ ...filters, cardType: x })
-  const setRarity = (x: Rarity[]) => setFilterChange({ ...filters, rarity: x })
-  const setOwned = (x: 'all' | 'owned' | 'missing') => setFilterChange({ ...filters, owned: x })
-  const setSortBy = (x: 'default' | 'recent' | 'expansion-newest') => setFilterChange({ ...filters, sortBy: x })
-  const setMinNumber = (x: number) => setFilterChange({ ...filters, minNumber: x })
-  const setMaxNumber = (x: number) => setFilterChange({ ...filters, maxNumber: x })
-  const setDeckbuildingMode = (x: boolean) => setFilterChange({ ...filters, deckbuildingMode: x })
+  const setSearchValue = (x: string) => setFilterChange({ search: x })
+  const setAllTextSearch = (x: boolean) => setFilterChange({ allTextSearch: x })
+  const setPack = (x: string) => setFilterChange({ pack: x })
+  const setCardType = (x: CardType[]) => setFilterChange({ cardType: x })
+  const setRarity = (x: Rarity[]) => {
+    console.log('new rarity', x, filters)
+    setFilterChange({ rarity: x })
+  }
+  const setOwned = (x: 'all' | 'owned' | 'missing') => setFilterChange({ owned: x })
+  const setSortBy = (x: 'default' | 'recent' | 'expansion-newest') => setFilterChange({ sortBy: x })
+  const setMinNumber = (x: number) => setFilterChange({ minNumber: x })
+  const setMaxNumber = (x: number) => setFilterChange({ maxNumber: x })
+  const setDeckbuildingMode = (x: boolean) => setFilterChange({ deckbuildingMode: x })
   const [missions, setMissions] = useState<Mission[] | null>(null)
 
   const getFilteredCards = (filters: Filters) => {
@@ -246,7 +252,7 @@ const FilterPanel: FC<Props> = ({
   }, [missions])
 
   function onExpansionChange(x: string) {
-    setFilterChange({ ...filters, expansion: x, pack: 'all' })
+    setFilterChange({ expansion: x, pack: 'all' })
   }
 
   return (
@@ -299,8 +305,8 @@ const FilterPanel: FC<Props> = ({
                 <Button
                   variant="outline"
                   className="!text-red-700"
-                  onClick={() =>
-                    setFilters({
+                  onClick={() => {
+                    const filters: Filters = {
                       search: '',
                       expansion: 'all',
                       pack: 'all',
@@ -312,8 +318,11 @@ const FilterPanel: FC<Props> = ({
                       maxNumber: 100,
                       deckbuildingMode: false,
                       allTextSearch: false,
-                    })
-                  }
+                    }
+                    const cards = getFilteredCards(filters)
+                    onFiltersChanged(cards)
+                    setFilters(filters)
+                  }}
                 >
                   {t('filters.clear')}
                 </Button>

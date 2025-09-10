@@ -1,11 +1,11 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { fetchTrades, insertTrade, updateTrade } from '@/services/trade/tradeService.ts'
+import { getTrades, insertTrade, updateTrade } from '@/services/trade/tradeService.ts'
 import type { TradeRow } from '@/types'
 
 export function useTrades() {
   return useQuery({
     queryKey: ['trade'],
-    queryFn: fetchTrades,
+    queryFn: getTrades,
   })
 }
 

@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
 import { useUser } from '@/services/auth/useAuth.ts'
 import type { AccountRow } from '@/types'
-import { fetchAccount, fetchPublicAccount, updateAccount, updateAccountTradingFields } from './accountService'
+import { getAccount, getPublicAccount, updateAccount, updateAccountTradingFields } from './accountService'
 
 export function useAccount() {
   const { data: user } = useUser()
@@ -11,7 +11,7 @@ export function useAccount() {
 
   return useQuery({
     queryKey: ['account', email],
-    queryFn: () => fetchAccount(email as string),
+    queryFn: () => getAccount(email as string),
     enabled: !!email,
   })
 }
@@ -19,7 +19,7 @@ export function useAccount() {
 export function usePublicAccount(friendId: string | undefined) {
   return useQuery({
     queryKey: ['account', friendId],
-    queryFn: () => fetchPublicAccount(friendId as string),
+    queryFn: () => getPublicAccount(friendId as string),
     enabled: !!friendId,
   })
 }

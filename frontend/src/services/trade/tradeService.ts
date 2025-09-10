@@ -1,7 +1,7 @@
 import { supabase } from '@/lib/supabase.ts'
 import type { TradeRow } from '@/types'
 
-export const fetchTrades = async () => {
+export const getTrades = async () => {
   const { data, error } = await supabase.from('trades').select()
 
   if (error) {

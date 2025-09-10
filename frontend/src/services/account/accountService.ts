@@ -1,7 +1,7 @@
 import { supabase } from '@/lib/supabase'
 import type { AccountRow } from '@/types'
 
-export const fetchAccount = async (email: string) => {
+export const getAccount = async (email: string) => {
   if (!email) {
     throw new Error('Email is required to fetch account')
   }
@@ -29,7 +29,7 @@ export const fetchAccount = async (email: string) => {
   } as AccountRow & { email: string }
 }
 
-export const fetchPublicAccount = async (friendId: string) => {
+export const getPublicAccount = async (friendId: string) => {
   if (!friendId) {
     throw new Error('Friend ID is required to fetch public account')
   }
