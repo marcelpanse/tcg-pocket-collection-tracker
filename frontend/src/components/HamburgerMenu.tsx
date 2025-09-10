@@ -3,11 +3,13 @@ import type * as React from 'react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
+import { Badge } from '@/components/ui/badge.tsx'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 import { useProfileDialog } from '@/services/account/useAccount'
 import { useLoginDialog, useLogout, useUser } from '@/services/auth/useAuth'
+import { useActionableTradeCount } from '@/services/trade/useTrade.ts'
 
 type MenuItem = {
   title: string
@@ -30,6 +32,7 @@ export default function HamburgerMenu() {
   const { setIsLoginDialogOpen } = useLoginDialog()
   const { data: user } = useUser()
   const logoutMutation = useLogout()
+  const { data: actionableTradeCount = 0 } = useActionableTradeCount()
 
   const [open, setOpen] = useState(false)
 
@@ -44,7 +47,7 @@ export default function HamburgerMenu() {
       <SheetContent side="left" className="flex flex-col w-[240px] sm:w-[300px]">
         <nav className="flex flex-col space-y-4 grow-1">
           {menuItems.map((item) => (
-            <MenuItemComponent key={item.title} item={item} setOpen={setOpen} />
+            <MenuItemComponent key={item.title} item={item} setOpen={setOpen} actionableTradeCount={actionableTradeCount} />
           ))}
         </nav>
 
@@ -86,7 +89,11 @@ export default function HamburgerMenu() {
   )
 }
 
-const MenuItemComponent: React.FC<{ item: MenuItem; setOpen: (open: boolean) => void }> = ({ item, setOpen }) => {
+const MenuItemComponent: React.FC<{ actionableTradeCount: number; item: MenuItem; setOpen: (open: boolean) => void }> = ({
+  actionableTradeCount,
+  item,
+  setOpen,
+}) => {
   const { t } = useTranslation('hamburger-menu')
 
   return (
@@ -97,7 +104,17 @@ const MenuItemComponent: React.FC<{ item: MenuItem; setOpen: (open: boolean) => 
         setOpen(false)
       }}
     >
-      {t(item.title)}
+      <div className="flex items-center gap-2">
+        {t(item.title)}
+        {item.title === 'trade' && actionableTradeCount && (
+          <Badge
+            className={`h-5 min-w-5 rounded-full font-mono tabular-nums -mt-2 ${actionableTradeCount ? 'flex' : 'hidden'} justify-center`}
+            variant="destructive"
+          >
+            {actionableTradeCount}
+          </Badge>
+        )}
+      </div>
     </Link>
   )
 }

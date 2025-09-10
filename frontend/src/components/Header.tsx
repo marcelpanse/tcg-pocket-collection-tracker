@@ -22,20 +22,25 @@ import Export from '@/pages/export/Export'
 import Import from '@/pages/import/Import'
 import { useProfileDialog } from '@/services/account/useAccount'
 import { useLoginDialog, useLogout, useUser } from '@/services/auth/useAuth'
+import { useActionableTradeCount } from '@/services/trade/useTrade.ts'
 import { Badge } from './ui/badge'
 
 const CardDetectorComponent = loadable(() => import('@/components/CardDetectorComponent.tsx'))
 
 export function Header() {
+  const location = useLocation()
+  const { t, i18n } = useTranslation('header')
   const { data: user } = useUser()
+  const { data: actionableTradeCount } = useActionableTradeCount()
   const logoutMutation = useLogout()
+
   const { isLoginDialogOpen, setIsLoginDialogOpen } = useLoginDialog()
   const { setIsProfileDialogOpen } = useProfileDialog()
-  const location = useLocation()
+
   const [isImportDialogOpen, setIsImportDialogOpen] = useState<boolean>(false)
   const [isExportDialogOpen, setIsExportDialogOpen] = useState<boolean>(false)
   const [isAboutUsDialogOpen, setIsAboutUsDialogOpen] = useState<boolean>(false)
-  const { t, i18n } = useTranslation('header')
+
   const changeLanguage = (lng: string) => i18n.changeLanguage(lng)
 
   const languages = [
@@ -81,12 +86,15 @@ export function Header() {
                 <Button variant="ghost">{t('Decks')}</Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild className="hidden sm:block">
+            <NavigationMenuLink asChild className={`${actionableTradeCount ? 'block' : 'hidden'} sm:block`}>
               <Link to="/trade">
                 <Button variant="ghost">
                   {t('trade')}
-                  <Badge className="h-5 min-w-5 rounded-full font-mono tabular-nums -mt-2 hidden justify-center" variant="destructive">
-                    1
+                  <Badge
+                    className={`h-5 min-w-5 rounded-full font-mono tabular-nums -mt-2 ${actionableTradeCount ? 'flex' : 'hidden'} justify-center`}
+                    variant="destructive"
+                  >
+                    {actionableTradeCount}
                   </Badge>
                 </Button>
               </Link>
