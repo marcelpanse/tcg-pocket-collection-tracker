@@ -328,7 +328,7 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName, deckbuild
   }
 
   if (deckbuildingMode) {
-    filteredCards = filteredCards.filter((c) => c.fullart === 'No')
+    filteredCards = filteredCards.filter((c) => !c.fullart)
   }
 
   return filteredCards.length

@@ -4,8 +4,6 @@
     "hp": "HP",
     "cardType": "Card Type",
     "evolutionType": "Evolution Type",
-    "ex": "EX",
-    "baby": "Baby",
     "craftingCost": "Crafting Cost",
     "artist": "Artist",
     "setDetails": "Set Details",
@@ -30,9 +28,5 @@
     "item": "Item",
     "tool": "Tool",
     "supporter": "Supporter"
-  },
-  "ex": {
-    "yes": "Yes",
-    "no": "No"
   }
 }

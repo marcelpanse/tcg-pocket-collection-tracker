@@ -202,11 +202,8 @@ const FilterPanel: FC<Props> = ({
 
         let filterAllText = false
         if (filters.allTextSearch) {
-          const cardAbilityName = card.ability.name?.toLowerCase()
-          const cardAbilityEffect = card.ability.effect?.toLowerCase()
-
           filterAllText =
-            (cardAbilityName && cardAbilityName !== 'no ability' && (cardAbilityName.includes(query) || cardAbilityEffect.includes(query))) ||
+            (card.ability && (card.ability.name.toLowerCase().includes(query) || card.ability.effect.toLowerCase().includes(query))) ||
             card.attacks.some(
               (attack) =>
                 attack.name?.toLowerCase().includes(query) || (attack.effect?.toLowerCase() !== 'no effect' && attack.effect?.toLowerCase()?.includes(query)),

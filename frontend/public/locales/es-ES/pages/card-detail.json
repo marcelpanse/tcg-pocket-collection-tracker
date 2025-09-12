@@ -3,7 +3,6 @@
     "hp": "PS",
     "cardType": "Tipo de carta",
     "evolutionType": "Tipo de evolución",
-    "ex": "EX",
     "craftingCost": "Puntos abresobres",
     "artist": "Artista",
     "setDetails": "Detalles de la expansión",
@@ -27,9 +26,5 @@
     "item": "Objeto",
     "tool": "Herramienta Pokémon",
     "supporter": "Partidario"
-  },
-  "ex": {
-    "yes": "Sí",
-    "no": "No"
   }
 }
