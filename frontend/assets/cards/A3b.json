@@ -15,22 +15,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-1",
-        "version": "Eevee Grove #1",
         "rarity": "◊◊"
       }
     ],
@@ -53,27 +48,21 @@
         "effect": "This attack does 20 more damage for each [G] Energy attached to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-2",
-        "version": "Eevee Grove #2",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-70",
-        "version": "Eevee Grove #70",
         "rarity": "☆"
       }
     ],
@@ -96,22 +85,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-3",
-        "version": "Eevee Grove #3",
         "rarity": "◊"
       }
     ],
@@ -134,22 +118,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-4",
-        "version": "Eevee Grove #4",
         "rarity": "◊"
       }
     ],
@@ -172,22 +151,17 @@
         "effect": "Your opponent reveals a random card from their hand and shuffles it into their deck."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-5",
-        "version": "Eevee Grove #5",
         "rarity": "◊◊"
       }
     ],
@@ -210,22 +184,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-6",
-        "version": "Eevee Grove #6",
         "rarity": "◊"
       }
     ],
@@ -248,22 +217,17 @@
         "effect": "If 1 of your Pokémon used Sweets Relay during your last turn, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-7",
-        "version": "Eevee Grove #7",
         "rarity": "◊◊"
       }
     ],
@@ -286,32 +250,25 @@
         "effect": "Take a [R] Energy from your Energy Zone and attach it to 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-8",
-        "version": "Eevee Grove #8",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-71",
-        "version": "Eevee Grove #71",
         "rarity": "☆"
       },
       {
         "card_id": "A4-213",
-        "version": "Wisdom of Sea and Sky #213",
         "rarity": "☆"
       }
     ],
@@ -341,25 +298,22 @@
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-9",
-        "version": "Eevee Grove #9",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-79",
-        "version": "Eevee Grove #79",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-87",
-        "version": "Eevee Grove #87",
         "rarity": "☆☆"
       }
     ],
@@ -382,22 +336,17 @@
         "effect": "Discard a [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-10",
-        "version": "Eevee Grove #10",
         "rarity": "◊"
       }
     ],
@@ -420,22 +369,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-11",
-        "version": "Eevee Grove #11",
         "rarity": "◊"
       }
     ],
@@ -458,22 +402,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-12",
-        "version": "Eevee Grove #12",
         "rarity": "◊"
       }
     ],
@@ -496,22 +435,17 @@
         "effect": "Flip 2 coins. This attack does 100 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-13",
-        "version": "Eevee Grove #13",
         "rarity": "◊◊"
       }
     ],
@@ -534,22 +468,17 @@
         "effect": "Discard a [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-14",
-        "version": "Eevee Grove #14",
         "rarity": "◊"
       }
     ],
@@ -572,22 +501,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "0",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-15",
-        "version": "Eevee Grove #15",
         "rarity": "◊◊"
       }
     ],
@@ -610,27 +534,21 @@
         "effect": "Flip a coin until you get tails. For each heads, discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-16",
-        "version": "Eevee Grove #16",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-72",
-        "version": "Eevee Grove #72",
         "rarity": "☆"
       }
     ],
@@ -653,27 +571,21 @@
         "effect": "This attack does 50 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-17",
-        "version": "Eevee Grove #17",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-73",
-        "version": "Eevee Grove #73",
         "rarity": "☆"
       }
     ],
@@ -696,27 +608,21 @@
         "effect": "If 1 of your Pokémon used Sweets Relay during your last turn, this attack does 20 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-18",
-        "version": "Eevee Grove #18",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-85",
-        "version": "Promo-A #85",
         "rarity": ""
       }
     ],
@@ -739,22 +645,17 @@
         "effect": "If 1 of your Pokémon used Sweets Relay during your last turn, this attack does 20 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-19",
-        "version": "Eevee Grove #19",
         "rarity": "◊"
       }
     ],
@@ -777,22 +678,17 @@
         "effect": "Flip 2 coins. This attack does 80 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-20",
-        "version": "Eevee Grove #20",
         "rarity": "◊◊"
       }
     ],
@@ -815,22 +711,17 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-21",
-        "version": "Eevee Grove #21",
         "rarity": "◊"
       }
     ],
@@ -853,22 +744,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-22",
-        "version": "Eevee Grove #22",
         "rarity": "◊"
       }
     ],
@@ -891,22 +777,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-23",
-        "version": "Eevee Grove #23",
         "rarity": "◊"
       }
     ],
@@ -935,32 +816,25 @@
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-24",
-        "version": "Eevee Grove #24",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-80",
-        "version": "Eevee Grove #80",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-88",
-        "version": "Eevee Grove #88",
         "rarity": "☆☆"
       }
     ],
@@ -983,37 +857,29 @@
         "effect": "If this Pokémon evolved during this turn, this attack does 20 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-25",
-        "version": "Eevee Grove #25",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-74",
-        "version": "Eevee Grove #74",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-86",
-        "version": "Promo-A #86",
         "rarity": ""
       },
       {
         "card_id": "A4-219",
-        "version": "Wisdom of Sea and Sky #219",
         "rarity": "☆"
       }
     ],
@@ -1036,22 +902,17 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-26",
-        "version": "Eevee Grove #26",
         "rarity": "◊"
       }
     ],
@@ -1074,22 +935,17 @@
         "effect": "Discard all Energy attached to this Pokémon. Your opponent's Active Pokémon is now Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "0",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-27",
-        "version": "Eevee Grove #27",
         "rarity": "◊◊"
       }
     ],
@@ -1112,27 +968,21 @@
         "effect": "This attack does 20 damage for each Energy attached to all of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-28",
-        "version": "Eevee Grove #28",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-75",
-        "version": "Eevee Grove #75",
         "rarity": "☆"
       }
     ],
@@ -1155,22 +1005,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-29",
-        "version": "Eevee Grove #29",
         "rarity": "◊"
       }
     ],
@@ -1193,22 +1038,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-30",
-        "version": "Eevee Grove #30",
         "rarity": "◊◊"
       }
     ],
@@ -1231,22 +1071,17 @@
         "effect": "If 1 of your Pokémon used Sweets Relay during your last turn, this attack does 20 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-31",
-        "version": "Eevee Grove #31",
         "rarity": "◊"
       }
     ],
@@ -1269,22 +1104,17 @@
         "effect": "If 1 of your Pokémon used Sweets Relay during your last turn, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-32",
-        "version": "Eevee Grove #32",
         "rarity": "◊◊"
       }
     ],
@@ -1307,27 +1137,21 @@
         "effect": "This attack does 30 more damage for each Evolution Pokémon on your Bench."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-33",
-        "version": "Eevee Grove #33",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-76",
-        "version": "Eevee Grove #76",
         "rarity": "☆"
       }
     ],
@@ -1357,25 +1181,22 @@
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-34",
-        "version": "Eevee Grove #34",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-81",
-        "version": "Eevee Grove #81",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-89",
-        "version": "Eevee Grove #89",
         "rarity": "☆☆"
       }
     ],
@@ -1398,22 +1219,17 @@
         "effect": "Flip a coin. If heads, choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-35",
-        "version": "Eevee Grove #35",
         "rarity": "◊◊"
       }
     ],
@@ -1436,22 +1252,17 @@
         "effect": "If 1 of your Pokémon used Sweets Relay during your last turn, this attack does 20 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-36",
-        "version": "Eevee Grove #36",
         "rarity": "◊"
       }
     ],
@@ -1474,27 +1285,21 @@
         "effect": "This attack does 40 damage for each time your Pokémon used Sweets Relay during this game."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-37",
-        "version": "Eevee Grove #37",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-87",
-        "version": "Promo-A #87",
         "rarity": ""
       }
     ],
@@ -1517,22 +1322,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-38",
-        "version": "Eevee Grove #38",
         "rarity": "◊"
       }
     ],
@@ -1555,22 +1355,17 @@
         "effect": "This attack also does 10 damage to each of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-39",
-        "version": "Eevee Grove #39",
         "rarity": "◊◊"
       }
     ],
@@ -1593,22 +1388,17 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-40",
-        "version": "Eevee Grove #40",
         "rarity": "◊"
       }
     ],
@@ -1631,22 +1421,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-41",
-        "version": "Eevee Grove #41",
         "rarity": "◊◊"
       }
     ],
@@ -1669,22 +1454,17 @@
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-42",
-        "version": "Eevee Grove #42",
         "rarity": "◊"
       }
     ],
@@ -1707,27 +1487,21 @@
         "effect": "If the Defending Pokémon is a Basic Pokémon, it can't attack during your opponent's next turn."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-43",
-        "version": "Eevee Grove #43",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-77",
-        "version": "Eevee Grove #77",
         "rarity": "☆"
       }
     ],
@@ -1750,22 +1524,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-44",
-        "version": "Eevee Grove #44",
         "rarity": "◊"
       }
     ],
@@ -1788,22 +1557,17 @@
         "effect": "Discard all Pokémon Tools from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-45",
-        "version": "Eevee Grove #45",
         "rarity": "◊"
       }
     ],
@@ -1826,22 +1590,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-46",
-        "version": "Eevee Grove #46",
         "rarity": "◊◊"
       }
     ],
@@ -1864,22 +1623,17 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-47",
-        "version": "Eevee Grove #47",
         "rarity": "◊"
       }
     ],
@@ -1902,27 +1656,21 @@
         "effect": "During your opponent's next turn, if this Pokémon is damaged by an attack, do 30 damage to the Attacking Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-48",
-        "version": "Eevee Grove #48",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-90",
-        "version": "Promo-A #90",
         "rarity": ""
       }
     ],
@@ -1945,22 +1693,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-49",
-        "version": "Eevee Grove #49",
         "rarity": "◊"
       }
     ],
@@ -1983,22 +1726,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "4",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-50",
-        "version": "Eevee Grove #50",
         "rarity": "◊◊"
       }
     ],
@@ -2021,22 +1759,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-51",
-        "version": "Eevee Grove #51",
         "rarity": "◊"
       }
     ],
@@ -2059,22 +1792,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-52",
-        "version": "Eevee Grove #52",
         "rarity": "◊"
       }
     ],
@@ -2097,32 +1825,25 @@
         "effect": "During your next turn, this Pokémon can't attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-53",
-        "version": "Eevee Grove #53",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-82",
-        "version": "Eevee Grove #82",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-90",
-        "version": "Eevee Grove #90",
         "rarity": "☆☆"
       }
     ],
@@ -2145,22 +1866,17 @@
         "effect": "Flip a coin. If tails, this attack does nothing. If heads, your opponent's Active Pokémon is now Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-54",
-        "version": "Eevee Grove #54",
         "rarity": "◊◊"
       }
     ],
@@ -2183,27 +1899,21 @@
         "effect": "Draw a card."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-55",
-        "version": "Eevee Grove #55",
         "rarity": "◊"
       },
       {
         "card_id": "A3b-78",
-        "version": "Eevee Grove #78",
         "rarity": "☆"
       }
     ],
@@ -2233,25 +1943,22 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-56",
-        "version": "Eevee Grove #56",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-83",
-        "version": "Eevee Grove #83",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-92",
-        "version": "Eevee Grove #92",
         "rarity": "☆☆☆"
       }
     ],
@@ -2281,25 +1988,22 @@
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-57",
-        "version": "Eevee Grove #57",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-84",
-        "version": "Eevee Grove #84",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-91",
-        "version": "Eevee Grove #91",
         "rarity": "☆☆"
       }
     ],
@@ -2322,22 +2026,17 @@
         "effect": "Flip 2 coins. This attack does 20 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-58",
-        "version": "Eevee Grove #58",
         "rarity": "◊"
       }
     ],
@@ -2367,15 +2066,14 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-59",
-        "version": "Eevee Grove #59",
         "rarity": "◊◊"
       }
     ],
@@ -2398,22 +2096,17 @@
         "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-60",
-        "version": "Eevee Grove #60",
         "rarity": "◊"
       }
     ],
@@ -2436,22 +2129,17 @@
         "effect": "This attack does 20 damage for each of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-61",
-        "version": "Eevee Grove #61",
         "rarity": "◊"
       }
     ],
@@ -2474,22 +2162,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-62",
-        "version": "Eevee Grove #62",
         "rarity": "◊"
       }
     ],
@@ -2512,22 +2195,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-63",
-        "version": "Eevee Grove #63",
         "rarity": "◊◊"
       }
     ],
@@ -2550,22 +2228,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-64",
-        "version": "Eevee Grove #64",
         "rarity": "◊"
       }
     ],
@@ -2588,27 +2261,21 @@
         "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-65",
-        "version": "Eevee Grove #65",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-91",
-        "version": "Promo-A #91",
         "rarity": ""
       }
     ],
@@ -2624,24 +2291,25 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Choose 1:① During this turn, attacks used by your Pokémon that evolve from Eevee do +10 damage to your opponent's Active Pokémon.② Heal 20 damage from each of your Pokémon that evolves from Eevee.\n\n            \n                    \n    \n            Illustrated by \n            \n                AYUMI ODASHIMA",
+    "ability": {
+      "name": "",
+      "effect": "Choose 1:① During this turn, attacks used by your Pokémon that evolve from Eevee do +10 damage to your opponent's Active Pokémon.② Heal 20 damage from each of your Pokémon that evolves from Eevee.\n\n            \n                    \n    \n            Illustrated by \n            \n                AYUMI ODASHIMA"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-66",
-        "version": "Eevee Grove #66",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3b-107",
-        "version": "Eevee Grove #107",
         "rarity": "♛"
       }
     ],
@@ -2657,19 +2325,21 @@
     "card_type": "trainer",
     "evolution_type": "tool",
     "attacks": [],
-    "ability": "At the end of your turn, if the Pokémon this card is attached to is in the Active Spot, heal 10 damage from that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Studio Bora Inc.",
+    "ability": {
+      "name": "",
+      "effect": "At the end of your turn, if the Pokémon this card is attached to is in the Active Spot, heal 10 damage from that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Studio Bora Inc."
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-67",
-        "version": "Eevee Grove #67",
         "rarity": "◊◊"
       }
     ],
@@ -2685,24 +2355,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Decidueye ex, Incineroar ex, or Primarina ex do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Decidueye ex, Incineroar ex, or Primarina ex do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-68",
-        "version": "Eevee Grove #68",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3b-85",
-        "version": "Eevee Grove #85",
         "rarity": "☆☆"
       }
     ],
@@ -2718,24 +2389,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Look at a random Supporter card that's not Penny from your opponent's deck and shuffle it back into their deck. Use the effect of that card as the effect of this card.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya",
+    "ability": {
+      "name": "",
+      "effect": "Look at a random Supporter card that's not Penny from your opponent's deck and shuffle it back into their deck. Use the effect of that card as the effect of this card.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-69",
-        "version": "Eevee Grove #69",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3b-86",
-        "version": "Eevee Grove #86",
         "rarity": "☆☆"
       }
     ],
@@ -2758,27 +2430,21 @@
         "effect": "This attack does 20 more damage for each [G] Energy attached to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-2",
-        "version": "Eevee Grove #2",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-70",
-        "version": "Eevee Grove #70",
         "rarity": "☆"
       }
     ],
@@ -2801,32 +2467,25 @@
         "effect": "Take a [R] Energy from your Energy Zone and attach it to 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-8",
-        "version": "Eevee Grove #8",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-71",
-        "version": "Eevee Grove #71",
         "rarity": "☆"
       },
       {
         "card_id": "A4-213",
-        "version": "Wisdom of Sea and Sky #213",
         "rarity": "☆"
       }
     ],
@@ -2849,27 +2508,21 @@
         "effect": "Flip a coin until you get tails. For each heads, discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-16",
-        "version": "Eevee Grove #16",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-72",
-        "version": "Eevee Grove #72",
         "rarity": "☆"
       }
     ],
@@ -2892,27 +2545,21 @@
         "effect": "This attack does 50 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-17",
-        "version": "Eevee Grove #17",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-73",
-        "version": "Eevee Grove #73",
         "rarity": "☆"
       }
     ],
@@ -2935,37 +2582,29 @@
         "effect": "If this Pokémon evolved during this turn, this attack does 20 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-25",
-        "version": "Eevee Grove #25",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-74",
-        "version": "Eevee Grove #74",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-86",
-        "version": "Promo-A #86",
         "rarity": ""
       },
       {
         "card_id": "A4-219",
-        "version": "Wisdom of Sea and Sky #219",
         "rarity": "☆"
       }
     ],
@@ -2988,27 +2627,21 @@
         "effect": "This attack does 20 damage for each Energy attached to all of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-28",
-        "version": "Eevee Grove #28",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-75",
-        "version": "Eevee Grove #75",
         "rarity": "☆"
       }
     ],
@@ -3031,27 +2664,21 @@
         "effect": "This attack does 30 more damage for each Evolution Pokémon on your Bench."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-33",
-        "version": "Eevee Grove #33",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-76",
-        "version": "Eevee Grove #76",
         "rarity": "☆"
       }
     ],
@@ -3074,27 +2701,21 @@
         "effect": "If the Defending Pokémon is a Basic Pokémon, it can't attack during your opponent's next turn."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-43",
-        "version": "Eevee Grove #43",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-77",
-        "version": "Eevee Grove #77",
         "rarity": "☆"
       }
     ],
@@ -3117,27 +2738,21 @@
         "effect": "Draw a card."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-55",
-        "version": "Eevee Grove #55",
         "rarity": "◊"
       },
       {
         "card_id": "A3b-78",
-        "version": "Eevee Grove #78",
         "rarity": "☆"
       }
     ],
@@ -3167,25 +2782,22 @@
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-9",
-        "version": "Eevee Grove #9",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-79",
-        "version": "Eevee Grove #79",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-87",
-        "version": "Eevee Grove #87",
         "rarity": "☆☆"
       }
     ],
@@ -3214,32 +2826,25 @@
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-24",
-        "version": "Eevee Grove #24",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-80",
-        "version": "Eevee Grove #80",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-88",
-        "version": "Eevee Grove #88",
         "rarity": "☆☆"
       }
     ],
@@ -3269,25 +2874,22 @@
     "weakness": "metal",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-34",
-        "version": "Eevee Grove #34",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-81",
-        "version": "Eevee Grove #81",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-89",
-        "version": "Eevee Grove #89",
         "rarity": "☆☆"
       }
     ],
@@ -3310,32 +2912,25 @@
         "effect": "During your next turn, this Pokémon can't attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-53",
-        "version": "Eevee Grove #53",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-82",
-        "version": "Eevee Grove #82",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-90",
-        "version": "Eevee Grove #90",
         "rarity": "☆☆"
       }
     ],
@@ -3365,25 +2960,22 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-56",
-        "version": "Eevee Grove #56",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-83",
-        "version": "Eevee Grove #83",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-92",
-        "version": "Eevee Grove #92",
         "rarity": "☆☆☆"
       }
     ],
@@ -3413,25 +3005,22 @@
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-57",
-        "version": "Eevee Grove #57",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-84",
-        "version": "Eevee Grove #84",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-91",
-        "version": "Eevee Grove #91",
         "rarity": "☆☆"
       }
     ],
@@ -3447,24 +3036,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Decidueye ex, Incineroar ex, or Primarina ex do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Decidueye ex, Incineroar ex, or Primarina ex do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-68",
-        "version": "Eevee Grove #68",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3b-85",
-        "version": "Eevee Grove #85",
         "rarity": "☆☆"
       }
     ],
@@ -3480,24 +3070,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Look at a random Supporter card that's not Penny from your opponent's deck and shuffle it back into their deck. Use the effect of that card as the effect of this card.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya",
+    "ability": {
+      "name": "",
+      "effect": "Look at a random Supporter card that's not Penny from your opponent's deck and shuffle it back into their deck. Use the effect of that card as the effect of this card.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-69",
-        "version": "Eevee Grove #69",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3b-86",
-        "version": "Eevee Grove #86",
         "rarity": "☆☆"
       }
     ],
@@ -3527,25 +3118,22 @@
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-9",
-        "version": "Eevee Grove #9",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-79",
-        "version": "Eevee Grove #79",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-87",
-        "version": "Eevee Grove #87",
         "rarity": "☆☆"
       }
     ],
@@ -3574,32 +3162,25 @@
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-24",
-        "version": "Eevee Grove #24",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-80",
-        "version": "Eevee Grove #80",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-88",
-        "version": "Eevee Grove #88",
         "rarity": "☆☆"
       }
     ],
@@ -3629,25 +3210,22 @@
     "weakness": "metal",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-34",
-        "version": "Eevee Grove #34",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-81",
-        "version": "Eevee Grove #81",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-89",
-        "version": "Eevee Grove #89",
         "rarity": "☆☆"
       }
     ],
@@ -3670,32 +3248,25 @@
         "effect": "During your next turn, this Pokémon can't attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-53",
-        "version": "Eevee Grove #53",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-82",
-        "version": "Eevee Grove #82",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-90",
-        "version": "Eevee Grove #90",
         "rarity": "☆☆"
       }
     ],
@@ -3725,25 +3296,22 @@
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-57",
-        "version": "Eevee Grove #57",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-84",
-        "version": "Eevee Grove #84",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-91",
-        "version": "Eevee Grove #91",
         "rarity": "☆☆"
       }
     ],
@@ -3773,25 +3341,22 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-56",
-        "version": "Eevee Grove #56",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3b-83",
-        "version": "Eevee Grove #83",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-92",
-        "version": "Eevee Grove #92",
         "rarity": "☆☆☆"
       }
     ],
@@ -3814,27 +3379,21 @@
         "effect": "Flip a coin until you get tails. This attack does 40 more damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2b-4",
-        "version": "Shining Revelry #4",
         "rarity": "◊"
       },
       {
         "card_id": "A3b-93",
-        "version": "Eevee Grove #93",
         "rarity": "☆"
       }
     ],
@@ -3857,32 +3416,25 @@
         "effect": "If this Pokémon has at least 3 extra [W] Energy attached, this attack does 70 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-79",
-        "version": "Genetic Apex #79",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-234",
-        "version": "Genetic Apex #234",
         "rarity": "☆"
       },
       {
         "card_id": "A3b-94",
-        "version": "Eevee Grove #94",
         "rarity": "☆"
       }
     ],
@@ -3905,27 +3457,21 @@
         "effect": "This Pokémon also does 10 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-54",
-        "version": "Space-Time Smackdown #54",
         "rarity": "◊"
       },
       {
         "card_id": "A3b-95",
-        "version": "Eevee Grove #95",
         "rarity": "☆"
       }
     ],
@@ -3948,27 +3494,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-55",
-        "version": "Space-Time Smackdown #55",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3b-96",
-        "version": "Eevee Grove #96",
         "rarity": "☆"
       }
     ],
@@ -3991,27 +3531,21 @@
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-68",
-        "version": "Space-Time Smackdown #68",
         "rarity": "◊"
       },
       {
         "card_id": "A3b-97",
-        "version": "Eevee Grove #97",
         "rarity": "☆"
       }
     ],
@@ -4034,27 +3568,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-69",
-        "version": "Space-Time Smackdown #69",
         "rarity": "◊"
       },
       {
         "card_id": "A3b-98",
-        "version": "Eevee Grove #98",
         "rarity": "☆"
       }
     ],
@@ -4084,15 +3612,14 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-99",
-        "version": "Eevee Grove #99",
         "rarity": "☆"
       }
     ],
@@ -4115,27 +3642,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-164",
-        "version": "Genetic Apex #164",
         "rarity": "◊"
       },
       {
         "card_id": "A3b-100",
-        "version": "Eevee Grove #100",
         "rarity": "☆"
       }
     ],
@@ -4158,27 +3679,21 @@
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-165",
-        "version": "Genetic Apex #165",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3b-101",
-        "version": "Eevee Grove #101",
         "rarity": "☆"
       }
     ],
@@ -4201,32 +3716,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-198",
-        "version": "Genetic Apex #198",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-62",
-        "version": "Promo-A #62",
         "rarity": ""
       },
       {
         "card_id": "A3b-102",
-        "version": "Eevee Grove #102",
         "rarity": "☆"
       }
     ],
@@ -4255,42 +3763,33 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-47",
-        "version": "Genetic Apex #47",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-255",
-        "version": "Genetic Apex #255",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-274",
-        "version": "Genetic Apex #274",
         "rarity": "☆☆"
       },
       {
         "card_id": "P-A-25",
-        "version": "Promo-A #25",
         "rarity": ""
       },
       {
         "card_id": "A3b-103",
-        "version": "Eevee Grove #103",
         "rarity": "☆☆"
       }
     ],
@@ -4319,37 +3818,29 @@
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-84",
-        "version": "Genetic Apex #84",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-258",
-        "version": "Genetic Apex #258",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-275",
-        "version": "Genetic Apex #275",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-104",
-        "version": "Eevee Grove #104",
         "rarity": "☆☆"
       }
     ],
@@ -4378,37 +3869,29 @@
         "effect": "Flip 4 coins. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-104",
-        "version": "Genetic Apex #104",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-260",
-        "version": "Genetic Apex #260",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-276",
-        "version": "Genetic Apex #276",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-105",
-        "version": "Eevee Grove #105",
         "rarity": "☆☆"
       }
     ],
@@ -4431,37 +3914,29 @@
         "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-95",
-        "version": "Space-Time Smackdown #95",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A2-185",
-        "version": "Space-Time Smackdown #185",
         "rarity": "☆☆"
       },
       {
         "card_id": "A2-200",
-        "version": "Space-Time Smackdown #200",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-106",
-        "version": "Eevee Grove #106",
         "rarity": "☆☆"
       }
     ],
@@ -4477,24 +3952,25 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Choose 1:① During this turn, attacks used by your Pokémon that evolve from Eevee do +10 damage to your opponent's Active Pokémon.② Heal 20 damage from each of your Pokémon that evolves from Eevee.\n\n            \n                    \n    \n            Illustrated by \n            \n                AYUMI ODASHIMA",
+    "ability": {
+      "name": "",
+      "effect": "Choose 1:① During this turn, attacks used by your Pokémon that evolve from Eevee do +10 damage to your opponent's Active Pokémon.② Heal 20 damage from each of your Pokémon that evolves from Eevee.\n\n            \n                    \n    \n            Illustrated by \n            \n                AYUMI ODASHIMA"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "Crown Rare",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-66",
-        "version": "Eevee Grove #66",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3b-107",
-        "version": "Eevee Grove #107",
         "rarity": "♛"
       }
     ],

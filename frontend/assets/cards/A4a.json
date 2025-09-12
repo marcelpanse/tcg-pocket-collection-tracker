@@ -15,22 +15,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-1",
-        "version": "Secluded Springs #1",
         "rarity": "◊"
       }
     ],
@@ -53,22 +48,17 @@
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-2",
-        "version": "Secluded Springs #2",
         "rarity": "◊◊"
       }
     ],
@@ -91,32 +81,25 @@
         "effect": "You may switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-3",
-        "version": "Secluded Springs #3",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-78",
-        "version": "Secluded Springs #78",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-86",
-        "version": "Secluded Springs #86",
         "rarity": "☆☆"
       }
     ],
@@ -139,22 +122,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-4",
-        "version": "Secluded Springs #4",
         "rarity": "◊"
       }
     ],
@@ -177,22 +155,17 @@
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-5",
-        "version": "Secluded Springs #5",
         "rarity": "◊◊"
       }
     ],
@@ -215,22 +188,17 @@
         "effect": "If your opponent's Active Pokémon is an evolved Pokémon, devolve it by putting the highest Stage Evolution card on it into your opponent's hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-6",
-        "version": "Secluded Springs #6",
         "rarity": "◊◊◊"
       }
     ],
@@ -253,22 +221,17 @@
         "effect": "Discard the top card of your opponent's deck."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-7",
-        "version": "Secluded Springs #7",
         "rarity": "◊"
       }
     ],
@@ -291,22 +254,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-8",
-        "version": "Secluded Springs #8",
         "rarity": "◊"
       }
     ],
@@ -329,22 +287,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-9",
-        "version": "Secluded Springs #9",
         "rarity": "◊◊"
       }
     ],
@@ -374,25 +327,22 @@
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-10",
-        "version": "Secluded Springs #10",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-79",
-        "version": "Secluded Springs #79",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-87",
-        "version": "Secluded Springs #87",
         "rarity": "☆☆"
       }
     ],
@@ -415,22 +365,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-11",
-        "version": "Secluded Springs #11",
         "rarity": "◊"
       }
     ],
@@ -453,22 +398,17 @@
         "effect": "Your opponent's Active Pokémon is now Burned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-12",
-        "version": "Secluded Springs #12",
         "rarity": "◊◊"
       }
     ],
@@ -491,22 +431,17 @@
         "effect": "Put 1 random Poliwag from your deck onto your Bench."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-13",
-        "version": "Secluded Springs #13",
         "rarity": "◊"
       }
     ],
@@ -529,22 +464,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-14",
-        "version": "Secluded Springs #14",
         "rarity": "◊◊"
       }
     ],
@@ -567,22 +497,17 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-15",
-        "version": "Secluded Springs #15",
         "rarity": "◊"
       }
     ],
@@ -605,22 +530,17 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Poisoned and Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-16",
-        "version": "Secluded Springs #16",
         "rarity": "◊◊"
       }
     ],
@@ -643,22 +563,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-17",
-        "version": "Secluded Springs #17",
         "rarity": "◊"
       }
     ],
@@ -681,22 +596,17 @@
         "effect": "Discard up to 2 Pokémon Tool cards from your hand. This attack does 50 damage for each card you discarded in this way."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-18",
-        "version": "Secluded Springs #18",
         "rarity": "◊◊"
       }
     ],
@@ -719,22 +629,17 @@
         "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-19",
-        "version": "Secluded Springs #19",
         "rarity": "◊"
       }
     ],
@@ -764,25 +669,22 @@
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-20",
-        "version": "Secluded Springs #20",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-80",
-        "version": "Secluded Springs #80",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-90",
-        "version": "Secluded Springs #90",
         "rarity": "☆☆☆"
       }
     ],
@@ -805,22 +707,17 @@
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-21",
-        "version": "Secluded Springs #21",
         "rarity": "◊"
       }
     ],
@@ -850,25 +747,22 @@
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-22",
-        "version": "Secluded Springs #22",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A4a-72",
-        "version": "Secluded Springs #72",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-104",
-        "version": "Promo-A #104",
         "rarity": ""
       }
     ],
@@ -891,27 +785,21 @@
         "effect": "Take a [W] Energy from your Energy Zone and attach it to 1 of your Benched Basic Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "0",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": true,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-23",
-        "version": "Secluded Springs #23",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A4a-105",
-        "version": "Secluded Springs #105",
         "rarity": "♛"
       }
     ],
@@ -934,22 +822,17 @@
         "effect": "This attack does 40 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-24",
-        "version": "Secluded Springs #24",
         "rarity": "◊"
       }
     ],
@@ -979,25 +862,22 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-25",
-        "version": "Secluded Springs #25",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-81",
-        "version": "Secluded Springs #81",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-88",
-        "version": "Secluded Springs #88",
         "rarity": "☆☆"
       }
     ],
@@ -1020,22 +900,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "0",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-26",
-        "version": "Secluded Springs #26",
         "rarity": "◊"
       }
     ],
@@ -1058,22 +933,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-27",
-        "version": "Secluded Springs #27",
         "rarity": "◊"
       }
     ],
@@ -1096,22 +966,17 @@
         "effect": "This Pokémon also does 20 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-28",
-        "version": "Secluded Springs #28",
         "rarity": "◊◊"
       }
     ],
@@ -1134,27 +999,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-29",
-        "version": "Secluded Springs #29",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-73",
-        "version": "Secluded Springs #73",
         "rarity": "☆"
       }
     ],
@@ -1177,27 +1036,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-30",
-        "version": "Secluded Springs #30",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-74",
-        "version": "Secluded Springs #74",
         "rarity": "☆"
       }
     ],
@@ -1220,22 +1073,17 @@
         "effect": "If this Pokémon has damage on it, this attack can be used for 1 [L] Energy."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-31",
-        "version": "Secluded Springs #31",
         "rarity": "◊◊◊"
       }
     ],
@@ -1265,15 +1113,14 @@
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-32",
-        "version": "Secluded Springs #32",
         "rarity": "◊"
       }
     ],
@@ -1296,22 +1143,17 @@
         "effect": "At the end of your opponent's next turn, do 90 damage to the Defending Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-33",
-        "version": "Secluded Springs #33",
         "rarity": "◊◊"
       }
     ],
@@ -1334,22 +1176,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-34",
-        "version": "Secluded Springs #34",
         "rarity": "◊"
       }
     ],
@@ -1379,15 +1216,14 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-35",
-        "version": "Secluded Springs #35",
         "rarity": "◊◊◊"
       }
     ],
@@ -1410,27 +1246,21 @@
         "effect": "If Latios is on your Bench, this attack does 20 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-36",
-        "version": "Secluded Springs #36",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-101",
-        "version": "Promo-A #101",
         "rarity": ""
       }
     ],
@@ -1460,20 +1290,18 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-37",
-        "version": "Secluded Springs #37",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A4a-75",
-        "version": "Secluded Springs #75",
         "rarity": "☆"
       }
     ],
@@ -1496,22 +1324,17 @@
         "effect": "Heal 10 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-38",
-        "version": "Secluded Springs #38",
         "rarity": "◊"
       }
     ],
@@ -1534,22 +1357,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-39",
-        "version": "Secluded Springs #39",
         "rarity": "◊◊"
       }
     ],
@@ -1572,22 +1390,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-40",
-        "version": "Secluded Springs #40",
         "rarity": "◊"
       }
     ],
@@ -1610,22 +1423,17 @@
         "effect": "Discard the top card of your deck. If that card is a [F] Pokémon, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-41",
-        "version": "Secluded Springs #41",
         "rarity": "◊◊"
       }
     ],
@@ -1648,32 +1456,25 @@
         "effect": "If this Pokémon has any [W] Energy attached, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-42",
-        "version": "Secluded Springs #42",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-82",
-        "version": "Secluded Springs #82",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-89",
-        "version": "Secluded Springs #89",
         "rarity": "☆☆"
       }
     ],
@@ -1696,32 +1497,25 @@
         "effect": "This attack does damage to your opponent's Active Pokémon equal to the damage this Pokémon has on it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-43",
-        "version": "Secluded Springs #43",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-76",
-        "version": "Secluded Springs #76",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-108",
-        "version": "Promo-A #108",
         "rarity": ""
       }
     ],
@@ -1751,15 +1545,14 @@
     "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-44",
-        "version": "Secluded Springs #44",
         "rarity": "◊◊"
       }
     ],
@@ -1782,22 +1575,17 @@
         "effect": "This Pokémon also does 10 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-45",
-        "version": "Secluded Springs #45",
         "rarity": "◊"
       }
     ],
@@ -1820,22 +1608,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-46",
-        "version": "Secluded Springs #46",
         "rarity": "◊"
       }
     ],
@@ -1858,22 +1641,17 @@
         "effect": "Flip a coin. If heads, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-47",
-        "version": "Secluded Springs #47",
         "rarity": "◊◊"
       }
     ],
@@ -1896,22 +1674,17 @@
         "effect": "If your opponent's Active Pokémon is Zangoose, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-48",
-        "version": "Secluded Springs #48",
         "rarity": "◊"
       }
     ],
@@ -1934,27 +1707,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-49",
-        "version": "Secluded Springs #49",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-105",
-        "version": "Promo-A #105",
         "rarity": ""
       }
     ],
@@ -1984,20 +1751,18 @@
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-50",
-        "version": "Secluded Springs #50",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-106",
-        "version": "Promo-A #106",
         "rarity": ""
       }
     ],
@@ -2020,22 +1785,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-51",
-        "version": "Secluded Springs #51",
         "rarity": "◊"
       }
     ],
@@ -2058,22 +1818,17 @@
         "effect": "This attack does 20 damage to each of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-52",
-        "version": "Secluded Springs #52",
         "rarity": "◊◊"
       }
     ],
@@ -2096,22 +1851,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-53",
-        "version": "Secluded Springs #53",
         "rarity": "◊"
       }
     ],
@@ -2134,22 +1884,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-54",
-        "version": "Secluded Springs #54",
         "rarity": "◊"
       }
     ],
@@ -2172,22 +1917,17 @@
         "effect": "If this Pokémon has 2 or more different types of Energy attached, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-55",
-        "version": "Secluded Springs #55",
         "rarity": "◊◊◊"
       }
     ],
@@ -2210,22 +1950,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-56",
-        "version": "Secluded Springs #56",
         "rarity": "◊"
       }
     ],
@@ -2248,22 +1983,17 @@
         "effect": "This attack does 30 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-57",
-        "version": "Secluded Springs #57",
         "rarity": "◊"
       }
     ],
@@ -2286,22 +2016,17 @@
         "effect": "This attack does 60 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-58",
-        "version": "Secluded Springs #58",
         "rarity": "◊◊"
       }
     ],
@@ -2324,22 +2049,17 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "0",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": true,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-59",
-        "version": "Secluded Springs #59",
         "rarity": "◊◊◊"
       }
     ],
@@ -2362,22 +2082,17 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-60",
-        "version": "Secluded Springs #60",
         "rarity": "◊"
       }
     ],
@@ -2400,22 +2115,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-61",
-        "version": "Secluded Springs #61",
         "rarity": "◊◊"
       }
     ],
@@ -2438,27 +2148,21 @@
         "effect": "Until this Pokémon leaves the Active Spot, this Pokémon's Rolling Frenzy attack does +30 damage. This effect stacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-62",
-        "version": "Secluded Springs #62",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-107",
-        "version": "Promo-A #107",
         "rarity": ""
       }
     ],
@@ -2481,27 +2185,21 @@
         "effect": "Heal 50 damage from 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "0",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": true,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-63",
-        "version": "Secluded Springs #63",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A4a-77",
-        "version": "Secluded Springs #77",
         "rarity": "☆"
       }
     ],
@@ -2524,22 +2222,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-64",
-        "version": "Secluded Springs #64",
         "rarity": "◊"
       }
     ],
@@ -2569,15 +2262,14 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-65",
-        "version": "Secluded Springs #65",
         "rarity": "◊◊"
       }
     ],
@@ -2600,22 +2292,17 @@
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-66",
-        "version": "Secluded Springs #66",
         "rarity": "◊"
       }
     ],
@@ -2631,19 +2318,21 @@
     "card_type": "trainer",
     "evolution_type": "tool",
     "attacks": [],
-    "ability": "The Retreat Cost of the [W] Pokémon this card is attached to is 1 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "The Retreat Cost of the [W] Pokémon this card is attached to is 1 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-67",
-        "version": "Secluded Springs #67",
         "rarity": "◊◊"
       }
     ],
@@ -2659,19 +2348,21 @@
     "card_type": "trainer",
     "evolution_type": "tool",
     "attacks": [],
-    "ability": "The Pokémon this card is attached to can use any attack from its previous Evolutions. (You still need the necessary Energy to use each attack.)\n\n            \n                    \n    \n            Illustrated by \n            \n                Studio Bora Inc.",
+    "ability": {
+      "name": "",
+      "effect": "The Pokémon this card is attached to can use any attack from its previous Evolutions. (You still need the necessary Energy to use each attack.)\n\n            \n                    \n    \n            Illustrated by \n            \n                Studio Bora Inc."
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-68",
-        "version": "Secluded Springs #68",
         "rarity": "◊◊"
       }
     ],
@@ -2687,24 +2378,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal 60 damage from 1 of your Miltank, and it recovers from being Asleep, Paralyzed, and Confused.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "Heal 60 damage from 1 of your Miltank, and it recovers from being Asleep, Paralyzed, and Confused.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-69",
-        "version": "Secluded Springs #69",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4a-83",
-        "version": "Secluded Springs #83",
         "rarity": "☆☆"
       }
     ],
@@ -2720,24 +2412,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Look at the top 4 cards of your deck. Put all Pokémon Tool cards you find there into your hand. Shuffle the other cards back into your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
+    "ability": {
+      "name": "",
+      "effect": "Look at the top 4 cards of your deck. Put all Pokémon Tool cards you find there into your hand. Shuffle the other cards back into your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-70",
-        "version": "Secluded Springs #70",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4a-84",
-        "version": "Secluded Springs #84",
         "rarity": "☆☆"
       }
     ],
@@ -2753,24 +2446,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "For each of your [P] Pokémon in play, look at that many cards from the top of your opponent's deck and put them back in any order.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro",
+    "ability": {
+      "name": "",
+      "effect": "For each of your [P] Pokémon in play, look at that many cards from the top of your opponent's deck and put them back in any order.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-71",
-        "version": "Secluded Springs #71",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4a-85",
-        "version": "Secluded Springs #85",
         "rarity": "☆☆"
       }
     ],
@@ -2800,25 +2494,22 @@
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-22",
-        "version": "Secluded Springs #22",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A4a-72",
-        "version": "Secluded Springs #72",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-104",
-        "version": "Promo-A #104",
         "rarity": ""
       }
     ],
@@ -2841,27 +2532,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-29",
-        "version": "Secluded Springs #29",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-73",
-        "version": "Secluded Springs #73",
         "rarity": "☆"
       }
     ],
@@ -2884,27 +2569,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-30",
-        "version": "Secluded Springs #30",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-74",
-        "version": "Secluded Springs #74",
         "rarity": "☆"
       }
     ],
@@ -2934,20 +2613,18 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-37",
-        "version": "Secluded Springs #37",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A4a-75",
-        "version": "Secluded Springs #75",
         "rarity": "☆"
       }
     ],
@@ -2970,32 +2647,25 @@
         "effect": "This attack does damage to your opponent's Active Pokémon equal to the damage this Pokémon has on it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-43",
-        "version": "Secluded Springs #43",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-76",
-        "version": "Secluded Springs #76",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-108",
-        "version": "Promo-A #108",
         "rarity": ""
       }
     ],
@@ -3018,27 +2688,21 @@
         "effect": "Heal 50 damage from 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "0",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": true,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-63",
-        "version": "Secluded Springs #63",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A4a-77",
-        "version": "Secluded Springs #77",
         "rarity": "☆"
       }
     ],
@@ -3061,32 +2725,25 @@
         "effect": "You may switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-3",
-        "version": "Secluded Springs #3",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-78",
-        "version": "Secluded Springs #78",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-86",
-        "version": "Secluded Springs #86",
         "rarity": "☆☆"
       }
     ],
@@ -3116,25 +2773,22 @@
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-10",
-        "version": "Secluded Springs #10",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-79",
-        "version": "Secluded Springs #79",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-87",
-        "version": "Secluded Springs #87",
         "rarity": "☆☆"
       }
     ],
@@ -3164,25 +2818,22 @@
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-20",
-        "version": "Secluded Springs #20",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-80",
-        "version": "Secluded Springs #80",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-90",
-        "version": "Secluded Springs #90",
         "rarity": "☆☆☆"
       }
     ],
@@ -3212,25 +2863,22 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-25",
-        "version": "Secluded Springs #25",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-81",
-        "version": "Secluded Springs #81",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-88",
-        "version": "Secluded Springs #88",
         "rarity": "☆☆"
       }
     ],
@@ -3253,32 +2901,25 @@
         "effect": "If this Pokémon has any [W] Energy attached, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-42",
-        "version": "Secluded Springs #42",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-82",
-        "version": "Secluded Springs #82",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-89",
-        "version": "Secluded Springs #89",
         "rarity": "☆☆"
       }
     ],
@@ -3294,24 +2935,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal 60 damage from 1 of your Miltank, and it recovers from being Asleep, Paralyzed, and Confused.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "Heal 60 damage from 1 of your Miltank, and it recovers from being Asleep, Paralyzed, and Confused.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-69",
-        "version": "Secluded Springs #69",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4a-83",
-        "version": "Secluded Springs #83",
         "rarity": "☆☆"
       }
     ],
@@ -3327,24 +2969,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Look at the top 4 cards of your deck. Put all Pokémon Tool cards you find there into your hand. Shuffle the other cards back into your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
+    "ability": {
+      "name": "",
+      "effect": "Look at the top 4 cards of your deck. Put all Pokémon Tool cards you find there into your hand. Shuffle the other cards back into your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-70",
-        "version": "Secluded Springs #70",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4a-84",
-        "version": "Secluded Springs #84",
         "rarity": "☆☆"
       }
     ],
@@ -3360,24 +3003,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "For each of your [P] Pokémon in play, look at that many cards from the top of your opponent's deck and put them back in any order.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro",
+    "ability": {
+      "name": "",
+      "effect": "For each of your [P] Pokémon in play, look at that many cards from the top of your opponent's deck and put them back in any order.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-71",
-        "version": "Secluded Springs #71",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4a-85",
-        "version": "Secluded Springs #85",
         "rarity": "☆☆"
       }
     ],
@@ -3400,32 +3044,25 @@
         "effect": "You may switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-3",
-        "version": "Secluded Springs #3",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-78",
-        "version": "Secluded Springs #78",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-86",
-        "version": "Secluded Springs #86",
         "rarity": "☆☆"
       }
     ],
@@ -3455,25 +3092,22 @@
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-10",
-        "version": "Secluded Springs #10",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-79",
-        "version": "Secluded Springs #79",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-87",
-        "version": "Secluded Springs #87",
         "rarity": "☆☆"
       }
     ],
@@ -3503,25 +3137,22 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-25",
-        "version": "Secluded Springs #25",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-81",
-        "version": "Secluded Springs #81",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-88",
-        "version": "Secluded Springs #88",
         "rarity": "☆☆"
       }
     ],
@@ -3544,32 +3175,25 @@
         "effect": "If this Pokémon has any [W] Energy attached, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-42",
-        "version": "Secluded Springs #42",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-82",
-        "version": "Secluded Springs #82",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-89",
-        "version": "Secluded Springs #89",
         "rarity": "☆☆"
       }
     ],
@@ -3599,25 +3223,22 @@
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-20",
-        "version": "Secluded Springs #20",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A4a-80",
-        "version": "Secluded Springs #80",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-90",
-        "version": "Secluded Springs #90",
         "rarity": "☆☆☆"
       }
     ],
@@ -3640,32 +3261,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-27",
-        "version": "Space-Time Smackdown #27",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-40",
-        "version": "Promo-A #40",
         "rarity": ""
       },
       {
         "card_id": "A4a-91",
-        "version": "Secluded Springs #91",
         "rarity": "☆"
       }
     ],
@@ -3688,27 +3302,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-28",
-        "version": "Space-Time Smackdown #28",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4a-92",
-        "version": "Secluded Springs #92",
         "rarity": "☆"
       }
     ],
@@ -3731,27 +3339,21 @@
         "effect": "Your opponent can't use any Supporter cards from their hand during their next turn."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-57",
-        "version": "Genetic Apex #57",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-93",
-        "version": "Secluded Springs #93",
         "rarity": "☆"
       }
     ],
@@ -3774,27 +3376,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-58",
-        "version": "Genetic Apex #58",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4a-94",
-        "version": "Secluded Springs #94",
         "rarity": "☆"
       }
     ],
@@ -3817,27 +3413,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-68",
-        "version": "Genetic Apex #68",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-95",
-        "version": "Secluded Springs #95",
         "rarity": "☆"
       }
     ],
@@ -3860,27 +3450,21 @@
         "effect": "Flip 2 coins. If both of them are heads, this attack does 80 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-69",
-        "version": "Genetic Apex #69",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4a-96",
-        "version": "Secluded Springs #96",
         "rarity": "☆"
       }
     ],
@@ -3910,25 +3494,22 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3-54",
-        "version": "Celestial Guardians #54",
         "rarity": "◊"
       },
       {
         "card_id": "A3-163",
-        "version": "Celestial Guardians #163",
         "rarity": "☆"
       },
       {
         "card_id": "A4a-97",
-        "version": "Secluded Springs #97",
         "rarity": "☆"
       }
     ],
@@ -3951,32 +3532,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2a-45",
-        "version": "Triumphant Light #45",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-46",
-        "version": "Promo-A #46",
         "rarity": ""
       },
       {
         "card_id": "A4a-98",
-        "version": "Secluded Springs #98",
         "rarity": "☆"
       }
     ],
@@ -3999,27 +3573,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2a-46",
-        "version": "Triumphant Light #46",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-99",
-        "version": "Secluded Springs #99",
         "rarity": "☆"
       }
     ],
@@ -4042,27 +3610,21 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2b-47",
-        "version": "Shining Revelry #47",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-100",
-        "version": "Secluded Springs #100",
         "rarity": "☆"
       }
     ],
@@ -4085,37 +3647,29 @@
         "effect": "Discard all [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "0",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-29",
-        "version": "Space-Time Smackdown #29",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A2-181",
-        "version": "Space-Time Smackdown #181",
         "rarity": "☆☆"
       },
       {
         "card_id": "A2-197",
-        "version": "Space-Time Smackdown #197",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-101",
-        "version": "Secluded Springs #101",
         "rarity": "☆☆"
       }
     ],
@@ -4144,42 +3698,33 @@
         "effect": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1a-32",
-        "version": "Mythical Island #32",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-77",
-        "version": "Mythical Island #77",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-83",
-        "version": "Mythical Island #83",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-86",
-        "version": "Mythical Island #86",
         "rarity": "♛"
       },
       {
         "card_id": "A4a-102",
-        "version": "Secluded Springs #102",
         "rarity": "☆☆"
       }
     ],
@@ -4208,37 +3753,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2a-47",
-        "version": "Triumphant Light #47",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A2a-84",
-        "version": "Triumphant Light #84",
         "rarity": "☆☆"
       },
       {
         "card_id": "A2a-93",
-        "version": "Triumphant Light #93",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-103",
-        "version": "Secluded Springs #103",
         "rarity": "☆☆"
       }
     ],
@@ -4261,37 +3798,29 @@
         "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2b-48",
-        "version": "Shining Revelry #48",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A2b-85",
-        "version": "Shining Revelry #85",
         "rarity": "☆☆"
       },
       {
         "card_id": "A2b-93",
-        "version": "Shining Revelry #93",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4a-104",
-        "version": "Secluded Springs #104",
         "rarity": "☆☆"
       }
     ],
@@ -4314,27 +3843,21 @@
         "effect": "Take a [W] Energy from your Energy Zone and attach it to 1 of your Benched Basic Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "0",
     "rarity": "Crown Rare",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": true,
     "set_details": "secludedsprings(a4a)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-23",
-        "version": "Secluded Springs #23",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A4a-105",
-        "version": "Secluded Springs #105",
         "rarity": "♛"
       }
     ],
