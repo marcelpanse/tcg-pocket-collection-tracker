@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Card as CardComponent } from '@/components/Card'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import { Radio, RadioIndicator, RadioItem } from '@/components/ui/radio'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { getCardById, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
 import { getCardNameByLang } from '@/lib/utils'
@@ -87,19 +88,16 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
           <div className="p-4 w-full">
             <div className="mb-3">
               <h2 className="text-xl font-semibold">{t('text.alternateVersions')}</h2>
-              {card.alternate_versions?.map((x) => (
-                <label key={x.card_id} className="block">
-                  <input
-                    className="mr-2"
-                    type="radio"
-                    name="alternative"
-                    value={x.card_id}
-                    checked={x.card_id === cardId}
-                    onChange={(e) => setCardId(e.target.value)}
-                  />
-                  {x.rarity} {x.card_id}
-                </label>
-              ))}
+              <Radio value={cardId} onValueChange={setCardId}>
+                {card.alternate_versions?.map((x) => (
+                  <label key={x.card_id} className="flex items-center cursor-pointer" htmlFor={`radio-${x.card_id}`}>
+                    <RadioItem id={`radio-${x.card_id}`} value={x.card_id}>
+                      <RadioIndicator />
+                    </RadioItem>
+                    {x.rarity} {x.card_id}
+                  </label>
+                ))}
+              </Radio>
             </div>
 
             <p className="text-lg mt-1">
