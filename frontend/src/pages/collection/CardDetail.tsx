@@ -96,7 +96,7 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
           </Dialog>
 
           <div className="p-4 w-full">
-            <div className="mb-3 ">
+            <div className="mb-3">
               <h2 className="text-xl font-semibold">{t('text.alternateVersions')}</h2>
               <Radio className="w-fit" value={cardId} onValueChange={setCardId}>
                 {alternatives.map((x) => (
