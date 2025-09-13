@@ -1,25 +1,31 @@
 import { Siren } from 'lucide-react'
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
-import { useLoaderData, useNavigate } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
 import { CardsTable } from '@/components/CardsTable.tsx'
 import FilterPanel, { type Filters } from '@/components/FiltersPanel'
 import { MissionsTable } from '@/components/MissionsTable.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button.tsx'
-import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import type { FriendCollectionLoaderReturn } from '@/lib/friendCollectionLoader'
 import MissionDetail from '@/pages/collection/MissionDetail.tsx'
+import { usePublicAccount } from '@/services/account/useAccount.ts'
+import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
 import type { Card, Mission } from '@/types'
 
 function Collection() {
-  const { friendAccount, friendCollection } = useLoaderData() as Partial<FriendCollectionLoaderReturn>
   const navigate = useNavigate()
+  const { friendId } = useParams()
+
+  const { data: friendAccount } = usePublicAccount(friendId)
+  const { data: friendCards } = usePublicCollection(friendId)
+
   const { t } = useTranslation(['pages/collection'])
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
-  const { ownedCards, selectedMissionCardOptions, setSelectedMissionCardOptions } = useContext(CollectionContext)
+  const { data: ownedCards = [] } = useCollection()
+  const [selectedMissionCardOptions, setSelectedMissionCardOptions] = useState<string[]>([])
+
   const [filters, setFilters] = useState<Filters>({
     search: '',
     expansion: 'all',
@@ -37,7 +43,7 @@ function Collection() {
   const [filteredCards, setFilteredCards] = useState<Card[] | null>(null)
   const [missions, setMissions] = useState<Mission[] | null>(null)
 
-  const cardCollection = friendCollection ?? ownedCards
+  const cardCollection = friendCards ?? ownedCards
 
   useEffect(() => {
     setResetScrollTrigger(true)
@@ -97,8 +103,19 @@ function Collection() {
           />
         )}
       </div>
-      <div>{missions && <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} />}</div>
-      {missions && <MissionDetail missionCardOptions={selectedMissionCardOptions} onClose={() => setSelectedMissionCardOptions([])} />}
+      <div>
+        {missions && (
+          <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} setSelectedMissionCardOptions={setSelectedMissionCardOptions} />
+        )}
+      </div>
+      {missions && (
+        <MissionDetail
+          missionCardOptions={selectedMissionCardOptions}
+          onClose={() => {
+            setSelectedMissionCardOptions([])
+          }}
+        />
+      )}
     </div>
   )
 }

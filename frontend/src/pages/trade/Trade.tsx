@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import Cards from './Cards'
-import TradeSettings from './Settings'
+import TradeCards from './TradeCards.tsx'
 import TradeOffers from './TradeOffers'
+import TradeSettings from './TradeSettings.tsx'
 
 function Trade() {
   const { t } = useTranslation('trade-matches')
@@ -20,7 +20,7 @@ function Trade() {
         </TabsTrigger>
       </TabsList>
       <TabsContent value="cards">
-        <Cards />
+        <TradeCards />
       </TabsContent>
       <TabsContent value="offers">
         <TradeOffers />

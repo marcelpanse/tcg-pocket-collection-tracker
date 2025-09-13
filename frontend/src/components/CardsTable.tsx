@@ -3,7 +3,7 @@ import { useVirtualizer } from '@tanstack/react-virtual'
 import i18n from 'i18next'
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
+import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
 import type { Card as CardType } from '@/types'
 import { Card } from './Card.tsx'
 

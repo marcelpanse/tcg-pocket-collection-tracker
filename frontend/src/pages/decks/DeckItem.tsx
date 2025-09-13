@@ -1,10 +1,10 @@
 import i18n from 'i18next'
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import FancyCard from '@/components/FancyCard'
 import { RankBadge } from '@/components/ui/rank-badge'
 import { getCardById } from '@/lib/CardsDB'
-import { CollectionContext } from '@/lib/context/CollectionContext'
 import { getCardNameByLang } from '@/lib/utils'
+import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
 import type { Card } from '@/types'
 
 export interface IDeck {
@@ -19,7 +19,8 @@ export interface IDeck {
 }
 
 export const DeckItem = ({ deck }: { deck: IDeck }) => {
-  const { ownedCards, setSelectedCardId } = useContext(CollectionContext)
+  const { data: ownedCards = [] } = useCollection()
+  const { setSelectedCardId } = useSelectedCard()
   const [isOpen, setIsOpen] = useState(false)
 
   const missingCards: Card[] = deck.cards

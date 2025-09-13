@@ -1,17 +1,16 @@
 import { CircleHelp } from 'lucide-react'
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useLoaderData } from 'react-router'
+import { useParams } from 'react-router'
 import { Tooltip } from 'react-tooltip'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { getCardById, tradeableExpansions } from '@/lib/CardsDB.ts'
-import { CollectionContext } from '@/lib/context/CollectionContext'
-import { UserContext } from '@/lib/context/UserContext'
-import type { FriendCollectionLoaderReturn } from '@/lib/friendCollectionLoader.ts'
 import { getExtraCards, getNeededCards } from '@/lib/utils'
 import { CardList } from '@/pages/trade/components/CardList.tsx'
 import { TradeOffer } from '@/pages/trade/components/TradeOffer.tsx'
+import { useAccount, usePublicAccount } from '@/services/account/useAccount'
+import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
 import { type Card, type Rarity, type TradableRarity, tradableRarities } from '@/types'
 
 function getTradeCards(extraCards: string[], neededCards: string[]) {
@@ -25,11 +24,13 @@ function getTradeCards(extraCards: string[], neededCards: string[]) {
 
 function TradeWith() {
   const { t } = useTranslation('trade-matches')
+  const { friendId } = useParams()
 
-  const { friendAccount, friendCollection: friendCards } = useLoaderData() as FriendCollectionLoaderReturn
+  const { data: friendAccount } = usePublicAccount(friendId)
+  const { data: friendCards } = usePublicCollection(friendId)
 
-  const { account } = useContext(UserContext)
-  const { ownedCards } = useContext(CollectionContext)
+  const { data: account } = useAccount()
+  const { data: ownedCards = [] } = useCollection()
 
   const [userCardsMaxFilter, setUserCardsMaxFilter] = useState<number>((account?.max_number_of_cards_wanted || 1) - 1)
   const [friendCardsMinFilter, setFriendCardsMinFilter] = useState<number>((account?.min_number_of_cards_to_keep || 1) + 1)
@@ -40,8 +41,12 @@ function TradeWith() {
     return null
   }
 
-  if (!friendAccount) {
+  if (friendAccount === null) {
     return <p className="text-xl text-center py-8">{t('notFound')}</p>
+  }
+
+  if (friendAccount === undefined || friendCards === undefined) {
+    return <p className="text-xl text-center py-8">Loading...</p>
   }
 
   if (!friendAccount.is_active_trading) {

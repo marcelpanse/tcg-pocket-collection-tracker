@@ -1,21 +1,20 @@
 import i18n from 'i18next'
 import type { ChangeEvent, FC } from 'react'
-import { use, useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogOverlay, DialogTitle } from '@/components/ui/dialog'
 import { allCards } from '@/lib/CardsDB'
-import { CollectionContext } from '@/lib/context/CollectionContext'
-import { UserContext } from '@/lib/context/UserContext'
 import { getCardNameByLang } from '@/lib/utils'
-import { CardHashStorageService } from '@/services/CardHashStorageService'
-import { ImageSimilarityService } from '@/services/ImageHashingService'
-import PokemonCardDetectorService, { type DetectionResult } from '@/services/PokemonCardDetectionServices'
+import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
+import CardDetectorService, { type DetectionResult } from '@/services/scanner/CardDetectionService'
+import { CardHashService } from '@/services/scanner/CardHashService'
+import { ImageHashService } from '@/services/scanner/ImageHashService'
 import type { Card, CollectionRowUpdate } from '@/types'
 
-interface PokemonCardDetectorProps {
+interface CardDetectorProps {
   onDetectionComplete?: (results: DetectionResult[]) => void
   modelPath?: string
 }
@@ -48,10 +47,11 @@ enum State {
   Confirmation = 6,
 }
 
-const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
+const PokemonCardDetector: FC<CardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
   const { t } = useTranslation('scan')
-  const { ownedCards, updateCards } = use(CollectionContext)
-  const { user } = use(UserContext)
+
+  const { data: ownedCards = [] } = useCollection()
+  const updateCardsMutation = useUpdateCards()
 
   const fileInputRef = useRef<HTMLInputElement>(null)
 
@@ -68,7 +68,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
   const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
   const [incrementedCards, setIncrementedCards] = useState<number>(0)
 
-  const detectorService = PokemonCardDetectorService.getInstance()
+  const detectorService = CardDetectorService.getInstance()
 
   useEffect(() => {
     if (state === State.Closed + 1) {
@@ -115,8 +115,8 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
     })
   }
 
-  const hashingService = ImageSimilarityService.getInstance()
-  const hashStorageService = CardHashStorageService.getInstance()
+  const hashingService = ImageHashService.getInstance()
+  const hashStorageService = CardHashService.getInstance()
   const uniqueCards = useMemo(() => {
     return allCards.reduce((acc, card) => {
       if (!acc.some((c) => c.card_id === card.card_id)) {
@@ -189,7 +189,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
     }
     const image = new Image()
     const imageUrl = URL.createObjectURL(file)
-    const hashingService = ImageSimilarityService.getInstance()
+    const hashingService = ImageHashService.getInstance()
 
     return new Promise<ExtractedCard[]>((resolve) => {
       image.onload = async () => {
@@ -328,12 +328,6 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
   const selectedCount = extractedCards.filter((card) => card.selected).length
 
   const incrementCards = async (cardIds: string[]) => {
-    if (!user || !user.user.email) {
-      setState(State.Error)
-      setError('User not logged in')
-      return 0
-    }
-
     const counts = new Map()
     for (const cardId of cardIds) {
       counts.set(cardId, (counts.get(cardId) || 0) + amount)
@@ -346,7 +340,7 @@ const PokemonCardDetector: FC<PokemonCardDetectorProps> = ({ onDetectionComplete
       cardArray.push({ card_id, amount_owned: (ownedCard?.amount_owned ?? 0) + increment })
     }
 
-    updateCards(cardArray)
+    updateCardsMutation.mutate({ updates: cardArray })
 
     return cardIds.length * amount
   }

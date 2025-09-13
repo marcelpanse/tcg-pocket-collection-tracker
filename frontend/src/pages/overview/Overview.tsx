@@ -1,5 +1,5 @@
 import { Heart, Siren } from 'lucide-react'
-import { use, useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Footer from '@/components/Footer.tsx'
 import DeckbuildingFilter from '@/components/filters/DeckbuildingFilter'
@@ -11,8 +11,8 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTitle } from '@/components/ui/alert.tsx'
 import * as CardsDB from '@/lib/CardsDB.ts'
 import { expansions } from '@/lib/CardsDB.ts'
-import { CollectionContext } from '@/lib/context/CollectionContext'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
+import { useCollection } from '@/services/collection/useCollection'
 import type { Rarity } from '@/types'
 import { BlogOverview } from './components/BlogOverview'
 import { ExpansionOverview } from './components/ExpansionOverview'
@@ -24,7 +24,8 @@ interface Pack {
 }
 
 function Overview() {
-  const { ownedCards } = use(CollectionContext)
+  const { data: ownedCards = [] } = useCollection()
+
   const { t } = useTranslation('pages/overview')
 
   const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
@@ -82,7 +83,7 @@ function Overview() {
     }
 
     setHighestProbabilityPack(newHighestProbabilityPack)
-  }, [ownedCards, rarityFilter, numberFilter, deckbuildingMode])
+  }, [ownedCardsCount, rarityFilter, numberFilter, deckbuildingMode]) //use the memo-ed ownedCardsCount instead of ownedCards to avoid re-rendering when ownedCards changes
 
   return (
     <main className="fade-in-up">
