@@ -1,7 +1,5 @@
 {
-  "cancel": "Annuler",
   "clickToSelect": "Cliquez pour sélectionner",
-  "close": "Fermer",
   "description": "Vous pouvez téléverser plusieurs images à la fois. Le système scannera chaque image à la recherche de cartes Pokémon et affichera les résultats. Vous pouvez vérifier les correspondances, sélectionner ou désélectionner les cartes détectées, et choisir de combien incrémenter la quantité pour les cartes sélectionnées.",
   "deselectAll": "Tout désélectionner",
   "enterAmount": "Saisir la quantité",
@@ -10,7 +8,6 @@
   "loading": "Téléchargement et initialisation du modèle de scan, veuillez patienter... ({{initProgress}}%)",
   "otherPotentialMatch": "Autres correspondances potentielles :",
   "percentMatch": "concordance de {{match}}%",
-  "scan": "Scanneur",
   "selectAll": "Tout sélectionner",
   "selectImages": "Sélectionner des images",
   "selected": "Sélectionné",
