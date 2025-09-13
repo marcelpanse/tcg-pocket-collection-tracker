@@ -2,9 +2,9 @@ import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
-import { getCardNameByLang } from '@/lib/utils'
 import { useInsertTrade } from '@/services/trade/useTrade.ts'
 import type { Card, TradeRow } from '@/types'
+import { CardLine } from './CardLine'
 
 interface Props {
   yourId: string
@@ -15,24 +15,18 @@ interface Props {
   setFriendCard: (card: Card | null) => void
 }
 
+function card(c: Card | null) {
+  if (!c) {
+    return '—'
+  }
+  return <CardLine card_id={c.card_id} details={false} />
+}
+
 export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, setYourCard, setFriendCard }) => {
-  const { t, i18n } = useTranslation('trade-matches')
+  const { t } = useTranslation('trade-matches')
   const { toast } = useToast()
 
   const insertTradeMutation = useInsertTrade()
-
-  function card(c: Card | null) {
-    if (!c) {
-      return '—'
-    }
-    return (
-      <span className="flex">
-        <span className="min-w-10">{c.rarity} </span>
-        <span className="min-w-14 me-4">{c.card_id} </span>
-        <span>{getCardNameByLang(c, i18n.language)}</span>
-      </span>
-    )
-  }
 
   const enabled = yourCard && friendCard && yourCard.rarity === friendCard.rarity
 

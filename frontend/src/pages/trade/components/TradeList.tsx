@@ -138,13 +138,13 @@ function TradeList({ trades, update, viewHistory }: Props) {
   }
 
   return (
-    <div className="rounded-lg border-1 border-neutral-700 border-solid p-2">
-      <div className="flex gap-4 px-1">
+    <div className="rounded-lg border-1 border-neutral-700 border-solid p-1 sm:p-2">
+      <div className="hidden sm:flex px-1">
         <div className="w-9" />
-        <h4 className="text-lg font-medium w-1/2 pl-1">{t('youGive')}</h4>
-        <h4 className="text-lg font-medium w-1/2 pl-1">{t('youReceive')}</h4>
+        <h4 className="text-lg font-medium w-1/2 ml-8">{t('youGive')}</h4>
+        <h4 className="text-lg font-medium w-1/2 ml-8">{t('youReceive')}</h4>
       </div>
-      <ul>
+      <ul className="flex flex-col gap-2 sm:gap-0">
         {filteredTrades
           .toSorted((a, b) => (a.created_at > b.created_at ? -1 : 1))
           .map((x) => (
