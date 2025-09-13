@@ -15,37 +15,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-1",
-        "version": "Genetic Apex #1",
         "rarity": "◊"
       },
       {
         "card_id": "A1-227",
-        "version": "Genetic Apex #227",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-23",
-        "version": "Promo-A #23",
         "rarity": ""
       },
       {
         "card_id": "A3-210",
-        "version": "Celestial Guardians #210",
         "rarity": "☆"
       }
     ],
@@ -68,27 +60,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-2",
-        "version": "Genetic Apex #2",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3-211",
-        "version": "Celestial Guardians #211",
         "rarity": "☆"
       }
     ],
@@ -111,32 +97,25 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-3",
-        "version": "Genetic Apex #3",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-18",
-        "version": "Promo-A #18",
         "rarity": ""
       },
       {
         "card_id": "A3-212",
-        "version": "Celestial Guardians #212",
         "rarity": "☆"
       }
     ],
@@ -165,32 +144,25 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-4",
-        "version": "Genetic Apex #4",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-251",
-        "version": "Genetic Apex #251",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-230",
-        "version": "Celestial Guardians #230",
         "rarity": "☆☆"
       }
     ],
@@ -213,22 +185,17 @@
         "effect": "Put 1 random [G] Pokémon from your deck into your hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-5",
-        "version": "Genetic Apex #5",
         "rarity": "◊"
       }
     ],
@@ -251,22 +218,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-6",
-        "version": "Genetic Apex #6",
         "rarity": "◊"
       }
     ],
@@ -296,20 +258,18 @@
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-7",
-        "version": "Genetic Apex #7",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-13",
-        "version": "Promo-A #13",
         "rarity": ""
       }
     ],
@@ -332,22 +292,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-8",
-        "version": "Genetic Apex #8",
         "rarity": "◊"
       }
     ],
@@ -370,22 +325,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-9",
-        "version": "Genetic Apex #9",
         "rarity": "◊"
       }
     ],
@@ -408,22 +358,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-10",
-        "version": "Genetic Apex #10",
         "rarity": "◊◊◊"
       }
     ],
@@ -446,22 +391,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-11",
-        "version": "Genetic Apex #11",
         "rarity": "◊"
       }
     ],
@@ -484,27 +424,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-12",
-        "version": "Genetic Apex #12",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-228",
-        "version": "Genetic Apex #228",
         "rarity": "☆"
       }
     ],
@@ -527,22 +461,17 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-13",
-        "version": "Genetic Apex #13",
         "rarity": "◊◊◊"
       }
     ],
@@ -565,22 +494,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-14",
-        "version": "Genetic Apex #14",
         "rarity": "◊"
       }
     ],
@@ -603,22 +527,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-15",
-        "version": "Genetic Apex #15",
         "rarity": "◊◊"
       }
     ],
@@ -641,22 +560,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-16",
-        "version": "Genetic Apex #16",
         "rarity": "◊"
       }
     ],
@@ -679,22 +593,17 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-17",
-        "version": "Genetic Apex #17",
         "rarity": "◊◊"
       }
     ],
@@ -717,22 +626,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-18",
-        "version": "Genetic Apex #18",
         "rarity": "◊"
       }
     ],
@@ -755,22 +659,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-19",
-        "version": "Genetic Apex #19",
         "rarity": "◊◊"
       }
     ],
@@ -800,15 +699,14 @@
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-20",
-        "version": "Genetic Apex #20",
         "rarity": "◊◊◊"
       }
     ],
@@ -831,22 +729,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-21",
-        "version": "Genetic Apex #21",
         "rarity": "◊"
       }
     ],
@@ -869,22 +762,17 @@
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-22",
-        "version": "Genetic Apex #22",
         "rarity": "◊◊◊"
       }
     ],
@@ -907,32 +795,25 @@
         "effect": "Flip a coin. If heads, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-23",
-        "version": "Genetic Apex #23",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-252",
-        "version": "Genetic Apex #252",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-231",
-        "version": "Celestial Guardians #231",
         "rarity": "☆☆"
       }
     ],
@@ -955,22 +836,17 @@
         "effect": "Heal 10 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-24",
-        "version": "Genetic Apex #24",
         "rarity": "◊"
       }
     ],
@@ -993,22 +869,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-25",
-        "version": "Genetic Apex #25",
         "rarity": "◊"
       }
     ],
@@ -1031,27 +902,21 @@
         "effect": "Flip 2 coins. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-26",
-        "version": "Genetic Apex #26",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-229",
-        "version": "Genetic Apex #229",
         "rarity": "☆"
       }
     ],
@@ -1074,22 +939,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-27",
-        "version": "Genetic Apex #27",
         "rarity": "◊"
       }
     ],
@@ -1112,22 +972,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-28",
-        "version": "Genetic Apex #28",
         "rarity": "◊◊"
       }
     ],
@@ -1150,22 +1005,17 @@
         "effect": "Heal 10 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-29",
-        "version": "Genetic Apex #29",
         "rarity": "◊"
       }
     ],
@@ -1188,22 +1038,17 @@
         "effect": "Take a [G] Energy from your Energy Zone and attach it to 1 of your Benched [G] Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-30",
-        "version": "Genetic Apex #30",
         "rarity": "◊◊"
       }
     ],
@@ -1226,22 +1071,17 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-31",
-        "version": "Genetic Apex #31",
         "rarity": "◊"
       }
     ],
@@ -1264,22 +1104,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-32",
-        "version": "Genetic Apex #32",
         "rarity": "◊"
       }
     ],
@@ -1302,32 +1137,25 @@
         "effect": "Discard a [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-33",
-        "version": "Genetic Apex #33",
         "rarity": "◊"
       },
       {
         "card_id": "A1-230",
-        "version": "Genetic Apex #230",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-32",
-        "version": "Promo-A #32",
         "rarity": ""
       }
     ],
@@ -1350,22 +1178,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-34",
-        "version": "Genetic Apex #34",
         "rarity": "◊◊"
       }
     ],
@@ -1388,22 +1211,17 @@
         "effect": "Discard 2 [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-35",
-        "version": "Genetic Apex #35",
         "rarity": "◊◊◊"
       }
     ],
@@ -1432,37 +1250,29 @@
         "effect": "Discard 2 [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-36",
-        "version": "Genetic Apex #36",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-253",
-        "version": "Genetic Apex #253",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-280",
-        "version": "Genetic Apex #280",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-284",
-        "version": "Genetic Apex #284",
         "rarity": "♛"
       }
     ],
@@ -1485,22 +1295,17 @@
         "effect": "Flip a coin. If heads, the Defending Pokémon can't attack during your opponent's next turn."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-37",
-        "version": "Genetic Apex #37",
         "rarity": "◊"
       }
     ],
@@ -1523,22 +1328,17 @@
         "effect": "Discard a [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-38",
-        "version": "Genetic Apex #38",
         "rarity": "◊◊"
       }
     ],
@@ -1561,27 +1361,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-39",
-        "version": "Genetic Apex #39",
         "rarity": "◊"
       },
       {
         "card_id": "A3a-89",
-        "version": "Extradimensional Crisis #89",
         "rarity": "☆"
       }
     ],
@@ -1604,27 +1398,21 @@
         "effect": "This Pokémon also does 20 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-40",
-        "version": "Genetic Apex #40",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3a-90",
-        "version": "Extradimensional Crisis #90",
         "rarity": "☆"
       }
     ],
@@ -1647,32 +1435,25 @@
         "effect": "This Pokémon also does 20 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-41",
-        "version": "Genetic Apex #41",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-254",
-        "version": "Genetic Apex #254",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3a-100",
-        "version": "Extradimensional Crisis #100",
         "rarity": "☆☆"
       }
     ],
@@ -1695,22 +1476,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-42",
-        "version": "Genetic Apex #42",
         "rarity": "◊"
       }
     ],
@@ -1733,27 +1509,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-43",
-        "version": "Genetic Apex #43",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-231",
-        "version": "Genetic Apex #231",
         "rarity": "☆"
       }
     ],
@@ -1776,22 +1546,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-44",
-        "version": "Genetic Apex #44",
         "rarity": "◊"
       }
     ],
@@ -1814,22 +1579,17 @@
         "effect": "Discard 1 [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-45",
-        "version": "Genetic Apex #45",
         "rarity": "◊◊◊"
       }
     ],
@@ -1852,22 +1612,17 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-46",
-        "version": "Genetic Apex #46",
         "rarity": "◊◊◊"
       }
     ],
@@ -1896,42 +1651,33 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-47",
-        "version": "Genetic Apex #47",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-255",
-        "version": "Genetic Apex #255",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-274",
-        "version": "Genetic Apex #274",
         "rarity": "☆☆"
       },
       {
         "card_id": "P-A-25",
-        "version": "Promo-A #25",
         "rarity": ""
       },
       {
         "card_id": "A3b-103",
-        "version": "Eevee Grove #103",
         "rarity": "☆☆"
       }
     ],
@@ -1954,22 +1700,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-48",
-        "version": "Genetic Apex #48",
         "rarity": "◊"
       }
     ],
@@ -1992,22 +1733,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-49",
-        "version": "Genetic Apex #49",
         "rarity": "◊"
       }
     ],
@@ -2030,22 +1766,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-50",
-        "version": "Genetic Apex #50",
         "rarity": "◊"
       }
     ],
@@ -2068,22 +1799,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-51",
-        "version": "Genetic Apex #51",
         "rarity": "◊"
       }
     ],
@@ -2106,22 +1832,17 @@
         "effect": "Discard a [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-52",
-        "version": "Genetic Apex #52",
         "rarity": "◊◊"
       }
     ],
@@ -2144,37 +1865,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-53",
-        "version": "Genetic Apex #53",
         "rarity": "◊"
       },
       {
         "card_id": "A1-232",
-        "version": "Genetic Apex #232",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-33",
-        "version": "Promo-A #33",
         "rarity": ""
       },
       {
         "card_id": "A3-215",
-        "version": "Celestial Guardians #215",
         "rarity": "☆"
       }
     ],
@@ -2197,27 +1910,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-54",
-        "version": "Genetic Apex #54",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3-216",
-        "version": "Celestial Guardians #216",
         "rarity": "☆"
       }
     ],
@@ -2240,32 +1947,25 @@
         "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-55",
-        "version": "Genetic Apex #55",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-29",
-        "version": "Promo-A #29",
         "rarity": ""
       },
       {
         "card_id": "A3-217",
-        "version": "Celestial Guardians #217",
         "rarity": "☆"
       }
     ],
@@ -2294,32 +1994,25 @@
         "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-56",
-        "version": "Genetic Apex #56",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-256",
-        "version": "Genetic Apex #256",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-232",
-        "version": "Celestial Guardians #232",
         "rarity": "☆☆"
       }
     ],
@@ -2342,27 +2035,21 @@
         "effect": "Your opponent can't use any Supporter cards from their hand during their next turn."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-57",
-        "version": "Genetic Apex #57",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-93",
-        "version": "Secluded Springs #93",
         "rarity": "☆"
       }
     ],
@@ -2385,27 +2072,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-58",
-        "version": "Genetic Apex #58",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4a-94",
-        "version": "Secluded Springs #94",
         "rarity": "☆"
       }
     ],
@@ -2428,22 +2109,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-59",
-        "version": "Genetic Apex #59",
         "rarity": "◊"
       }
     ],
@@ -2466,22 +2142,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-60",
-        "version": "Genetic Apex #60",
         "rarity": "◊◊"
       }
     ],
@@ -2511,15 +2182,14 @@
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-61",
-        "version": "Genetic Apex #61",
         "rarity": "◊◊◊"
       }
     ],
@@ -2542,22 +2212,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-62",
-        "version": "Genetic Apex #62",
         "rarity": "◊"
       }
     ],
@@ -2580,22 +2245,17 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-63",
-        "version": "Genetic Apex #63",
         "rarity": "◊◊"
       }
     ],
@@ -2618,22 +2278,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-64",
-        "version": "Genetic Apex #64",
         "rarity": "◊"
       }
     ],
@@ -2656,22 +2311,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-65",
-        "version": "Genetic Apex #65",
         "rarity": "◊◊"
       }
     ],
@@ -2694,22 +2344,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-66",
-        "version": "Genetic Apex #66",
         "rarity": "◊"
       }
     ],
@@ -2739,15 +2384,14 @@
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-67",
-        "version": "Genetic Apex #67",
         "rarity": "◊◊"
       }
     ],
@@ -2770,27 +2414,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-68",
-        "version": "Genetic Apex #68",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-95",
-        "version": "Secluded Springs #95",
         "rarity": "☆"
       }
     ],
@@ -2813,27 +2451,21 @@
         "effect": "Flip 2 coins. If both of them are heads, this attack does 80 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-69",
-        "version": "Genetic Apex #69",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4a-96",
-        "version": "Secluded Springs #96",
         "rarity": "☆"
       }
     ],
@@ -2856,22 +2488,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-70",
-        "version": "Genetic Apex #70",
         "rarity": "◊"
       }
     ],
@@ -2894,22 +2521,17 @@
         "effect": "This attack does 50 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-71",
-        "version": "Genetic Apex #71",
         "rarity": "◊◊"
       }
     ],
@@ -2932,22 +2554,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-72",
-        "version": "Genetic Apex #72",
         "rarity": "◊"
       }
     ],
@@ -2970,22 +2587,17 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-73",
-        "version": "Genetic Apex #73",
         "rarity": "◊"
       }
     ],
@@ -3008,27 +2620,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-74",
-        "version": "Genetic Apex #74",
         "rarity": "◊"
       },
       {
         "card_id": "A3-218",
-        "version": "Celestial Guardians #218",
         "rarity": "☆"
       }
     ],
@@ -3051,27 +2657,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "0",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-75",
-        "version": "Genetic Apex #75",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3-219",
-        "version": "Celestial Guardians #219",
         "rarity": "☆"
       }
     ],
@@ -3094,32 +2694,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "0",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-76",
-        "version": "Genetic Apex #76",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-257",
-        "version": "Genetic Apex #257",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-233",
-        "version": "Celestial Guardians #233",
         "rarity": "☆☆"
       }
     ],
@@ -3142,22 +2735,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-77",
-        "version": "Genetic Apex #77",
         "rarity": "◊"
       }
     ],
@@ -3180,27 +2768,21 @@
         "effect": "Discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "4",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-78",
-        "version": "Genetic Apex #78",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-233",
-        "version": "Genetic Apex #233",
         "rarity": "☆"
       }
     ],
@@ -3223,32 +2805,25 @@
         "effect": "If this Pokémon has at least 3 extra [W] Energy attached, this attack does 70 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-79",
-        "version": "Genetic Apex #79",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-234",
-        "version": "Genetic Apex #234",
         "rarity": "☆"
       },
       {
         "card_id": "A3b-94",
-        "version": "Eevee Grove #94",
         "rarity": "☆"
       }
     ],
@@ -3271,27 +2846,21 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-80",
-        "version": "Genetic Apex #80",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A4-216",
-        "version": "Wisdom of Sea and Sky #216",
         "rarity": "☆"
       }
     ],
@@ -3314,22 +2883,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-81",
-        "version": "Genetic Apex #81",
         "rarity": "◊◊"
       }
     ],
@@ -3352,22 +2916,17 @@
         "effect": "During your opponent's next turn, the Defending Pokémon can't attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-82",
-        "version": "Genetic Apex #82",
         "rarity": "◊◊◊"
       }
     ],
@@ -3390,22 +2949,17 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-83",
-        "version": "Genetic Apex #83",
         "rarity": "◊◊◊"
       }
     ],
@@ -3434,37 +2988,29 @@
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-84",
-        "version": "Genetic Apex #84",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-258",
-        "version": "Genetic Apex #258",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-275",
-        "version": "Genetic Apex #275",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-104",
-        "version": "Eevee Grove #104",
         "rarity": "☆☆"
       }
     ],
@@ -3487,22 +3033,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-85",
-        "version": "Genetic Apex #85",
         "rarity": "◊"
       }
     ],
@@ -3525,22 +3066,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-86",
-        "version": "Genetic Apex #86",
         "rarity": "◊◊"
       }
     ],
@@ -3563,32 +3099,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-87",
-        "version": "Genetic Apex #87",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-61",
-        "version": "Promo-A #61",
         "rarity": ""
       },
       {
         "card_id": "A3a-91",
-        "version": "Extradimensional Crisis #91",
         "rarity": "☆"
       }
     ],
@@ -3611,27 +3140,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-88",
-        "version": "Genetic Apex #88",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3a-92",
-        "version": "Extradimensional Crisis #92",
         "rarity": "☆"
       }
     ],
@@ -3661,25 +3184,22 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-89",
-        "version": "Genetic Apex #89",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-19",
-        "version": "Promo-A #19",
         "rarity": ""
       },
       {
         "card_id": "A3a-93",
-        "version": "Extradimensional Crisis #93",
         "rarity": "☆"
       }
     ],
@@ -3702,22 +3222,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-90",
-        "version": "Genetic Apex #90",
         "rarity": "◊"
       }
     ],
@@ -3740,22 +3255,17 @@
         "effect": "If your opponent's Active Pokémon has damage on it, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-91",
-        "version": "Genetic Apex #91",
         "rarity": "◊◊"
       }
     ],
@@ -3778,22 +3288,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-92",
-        "version": "Genetic Apex #92",
         "rarity": "◊"
       }
     ],
@@ -3816,22 +3321,17 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-93",
-        "version": "Genetic Apex #93",
         "rarity": "◊◊"
       }
     ],
@@ -3854,37 +3354,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-94",
-        "version": "Genetic Apex #94",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-9",
-        "version": "Promo-A #9",
         "rarity": ""
       },
       {
         "card_id": "P-A-15",
-        "version": "Promo-A #15",
         "rarity": ""
       },
       {
         "card_id": "P-A-26",
-        "version": "Promo-A #26",
         "rarity": ""
       }
     ],
@@ -3907,22 +3399,17 @@
         "effect": "Discard all Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-95",
-        "version": "Genetic Apex #95",
         "rarity": "◊◊◊"
       }
     ],
@@ -3945,37 +3432,29 @@
         "effect": "This attack does 30 damage for each of your Benched [L] Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-96",
-        "version": "Genetic Apex #96",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-259",
-        "version": "Genetic Apex #259",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-281",
-        "version": "Genetic Apex #281",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-285",
-        "version": "Genetic Apex #285",
         "rarity": "♛"
       }
     ],
@@ -3998,32 +3477,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-97",
-        "version": "Genetic Apex #97",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-24",
-        "version": "Promo-A #24",
         "rarity": ""
       },
       {
         "card_id": "A4-217",
-        "version": "Wisdom of Sea and Sky #217",
         "rarity": "☆"
       }
     ],
@@ -4053,20 +3525,18 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-98",
-        "version": "Genetic Apex #98",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A4-218",
-        "version": "Wisdom of Sea and Sky #218",
         "rarity": "☆"
       }
     ],
@@ -4089,22 +3559,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-99",
-        "version": "Genetic Apex #99",
         "rarity": "◊"
       }
     ],
@@ -4127,27 +3592,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "0",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-100",
-        "version": "Genetic Apex #100",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-235",
-        "version": "Genetic Apex #235",
         "rarity": "☆"
       }
     ],
@@ -4170,22 +3629,17 @@
         "effect": "Flip a coin. If heads, this attack does 40 more damage. If tails, this Pokémon also does 20 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-101",
-        "version": "Genetic Apex #101",
         "rarity": "◊"
       }
     ],
@@ -4208,22 +3662,17 @@
         "effect": "Flip 4 coins. This attack does 40 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-102",
-        "version": "Genetic Apex #102",
         "rarity": "◊◊◊"
       }
     ],
@@ -4246,22 +3695,17 @@
         "effect": "This attack also does 30 damage to 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-103",
-        "version": "Genetic Apex #103",
         "rarity": "◊◊◊"
       }
     ],
@@ -4290,37 +3734,29 @@
         "effect": "Flip 4 coins. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-104",
-        "version": "Genetic Apex #104",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-260",
-        "version": "Genetic Apex #260",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-276",
-        "version": "Genetic Apex #276",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-105",
-        "version": "Eevee Grove #105",
         "rarity": "☆☆"
       }
     ],
@@ -4343,22 +3779,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-105",
-        "version": "Genetic Apex #105",
         "rarity": "◊"
       }
     ],
@@ -4381,22 +3812,17 @@
         "effect": "This attack does 30 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-106",
-        "version": "Genetic Apex #106",
         "rarity": "◊◊"
       }
     ],
@@ -4419,22 +3845,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-107",
-        "version": "Genetic Apex #107",
         "rarity": "◊"
       }
     ],
@@ -4457,22 +3878,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-108",
-        "version": "Genetic Apex #108",
         "rarity": "◊◊"
       }
     ],
@@ -4495,22 +3911,17 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-109",
-        "version": "Genetic Apex #109",
         "rarity": "◊◊◊"
       }
     ],
@@ -4533,22 +3944,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-110",
-        "version": "Genetic Apex #110",
         "rarity": "◊"
       }
     ],
@@ -4571,22 +3977,17 @@
         "effect": "Flip a coin. If heads, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-111",
-        "version": "Genetic Apex #111",
         "rarity": "◊"
       }
     ],
@@ -4609,22 +4010,17 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-112",
-        "version": "Genetic Apex #112",
         "rarity": "◊◊"
       }
     ],
@@ -4647,27 +4043,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-113",
-        "version": "Genetic Apex #113",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-16",
-        "version": "Promo-A #16",
         "rarity": ""
       }
     ],
@@ -4690,22 +4080,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-114",
-        "version": "Genetic Apex #114",
         "rarity": "◊◊"
       }
     ],
@@ -4728,22 +4113,17 @@
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-115",
-        "version": "Genetic Apex #115",
         "rarity": "◊"
       }
     ],
@@ -4766,22 +4146,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-116",
-        "version": "Genetic Apex #116",
         "rarity": "◊◊"
       }
     ],
@@ -4804,27 +4179,21 @@
         "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-117",
-        "version": "Genetic Apex #117",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-236",
-        "version": "Genetic Apex #236",
         "rarity": "☆"
       }
     ],
@@ -4847,27 +4216,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-118",
-        "version": "Genetic Apex #118",
         "rarity": "◊"
       },
       {
         "card_id": "A1-237",
-        "version": "Genetic Apex #237",
         "rarity": "☆"
       }
     ],
@@ -4890,22 +4253,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-119",
-        "version": "Genetic Apex #119",
         "rarity": "◊◊"
       }
     ],
@@ -4928,22 +4286,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-120",
-        "version": "Genetic Apex #120",
         "rarity": "◊"
       }
     ],
@@ -4966,27 +4319,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-121",
-        "version": "Genetic Apex #121",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3-221",
-        "version": "Celestial Guardians #221",
         "rarity": "☆"
       }
     ],
@@ -5009,27 +4356,21 @@
         "effect": "Your opponent can't use any Supporter cards from their hand during their next turn."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-122",
-        "version": "Genetic Apex #122",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3-222",
-        "version": "Celestial Guardians #222",
         "rarity": "☆"
       }
     ],
@@ -5059,30 +4400,26 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-123",
-        "version": "Genetic Apex #123",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-261",
-        "version": "Genetic Apex #261",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-277",
-        "version": "Genetic Apex #277",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-234",
-        "version": "Celestial Guardians #234",
         "rarity": "☆☆"
       }
     ],
@@ -5105,22 +4442,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-124",
-        "version": "Genetic Apex #124",
         "rarity": "◊"
       }
     ],
@@ -5150,15 +4482,14 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-125",
-        "version": "Genetic Apex #125",
         "rarity": "◊◊◊"
       }
     ],
@@ -5181,22 +4512,17 @@
         "effect": "During your opponent's next turn, this Pokémon takes -20 damage from attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-126",
-        "version": "Genetic Apex #126",
         "rarity": "◊◊"
       }
     ],
@@ -5219,27 +4545,21 @@
         "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-127",
-        "version": "Genetic Apex #127",
         "rarity": "◊"
       },
       {
         "card_id": "A3a-94",
-        "version": "Extradimensional Crisis #94",
         "rarity": "☆"
       }
     ],
@@ -5262,27 +4582,21 @@
         "effect": "Discard 2 [P] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-128",
-        "version": "Genetic Apex #128",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-10",
-        "version": "Promo-A #10",
         "rarity": ""
       }
     ],
@@ -5311,42 +4625,33 @@
         "effect": "Discard 2 [P] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-129",
-        "version": "Genetic Apex #129",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-262",
-        "version": "Genetic Apex #262",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-282",
-        "version": "Genetic Apex #282",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-286",
-        "version": "Genetic Apex #286",
         "rarity": "♛"
       },
       {
         "card_id": "P-A-50",
-        "version": "Promo-A #50",
         "rarity": ""
       }
     ],
@@ -5369,22 +4674,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-130",
-        "version": "Genetic Apex #130",
         "rarity": "◊"
       }
     ],
@@ -5407,22 +4707,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-131",
-        "version": "Genetic Apex #131",
         "rarity": "◊◊"
       }
     ],
@@ -5452,15 +4747,14 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-132",
-        "version": "Genetic Apex #132",
         "rarity": "◊◊◊"
       }
     ],
@@ -5483,22 +4777,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-133",
-        "version": "Genetic Apex #133",
         "rarity": "◊"
       }
     ],
@@ -5521,22 +4810,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-134",
-        "version": "Genetic Apex #134",
         "rarity": "◊"
       }
     ],
@@ -5559,22 +4843,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "3",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-135",
-        "version": "Genetic Apex #135",
         "rarity": "◊"
       }
     ],
@@ -5597,22 +4876,17 @@
         "effect": "Flip 2 coins. This attack does 100 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "4",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-136",
-        "version": "Genetic Apex #136",
         "rarity": "◊◊"
       }
     ],
@@ -5635,22 +4909,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-137",
-        "version": "Genetic Apex #137",
         "rarity": "◊"
       }
     ],
@@ -5673,22 +4942,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-138",
-        "version": "Genetic Apex #138",
         "rarity": "◊◊"
       }
     ],
@@ -5711,27 +4975,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-139",
-        "version": "Genetic Apex #139",
         "rarity": "◊"
       },
       {
         "card_id": "A1-238",
-        "version": "Genetic Apex #238",
         "rarity": "☆"
       }
     ],
@@ -5754,22 +5012,17 @@
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-140",
-        "version": "Genetic Apex #140",
         "rarity": "◊◊"
       }
     ],
@@ -5792,22 +5045,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-141",
-        "version": "Genetic Apex #141",
         "rarity": "◊"
       }
     ],
@@ -5830,27 +5078,21 @@
         "effect": "If this Pokémon has damage on it, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-142",
-        "version": "Genetic Apex #142",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4-222",
-        "version": "Wisdom of Sea and Sky #222",
         "rarity": "☆"
       }
     ],
@@ -5873,27 +5115,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-143",
-        "version": "Genetic Apex #143",
         "rarity": "◊"
       },
       {
         "card_id": "A3-223",
-        "version": "Celestial Guardians #223",
         "rarity": "☆"
       }
     ],
@@ -5916,27 +5152,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-144",
-        "version": "Genetic Apex #144",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3-224",
-        "version": "Celestial Guardians #224",
         "rarity": "☆"
       }
     ],
@@ -5959,22 +5189,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-145",
-        "version": "Genetic Apex #145",
         "rarity": "◊◊◊"
       }
     ],
@@ -5997,37 +5222,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-146",
-        "version": "Genetic Apex #146",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-263",
-        "version": "Genetic Apex #263",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-278",
-        "version": "Genetic Apex #278",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-235",
-        "version": "Celestial Guardians #235",
         "rarity": "☆☆"
       }
     ],
@@ -6050,22 +5267,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-147",
-        "version": "Genetic Apex #147",
         "rarity": "◊"
       }
     ],
@@ -6088,22 +5300,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-148",
-        "version": "Genetic Apex #148",
         "rarity": "◊◊"
       }
     ],
@@ -6126,22 +5333,17 @@
         "effect": "This Pokémon also does 50 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-149",
-        "version": "Genetic Apex #149",
         "rarity": "◊◊◊"
       }
     ],
@@ -6164,27 +5366,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-150",
-        "version": "Genetic Apex #150",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-21",
-        "version": "Promo-A #21",
         "rarity": ""
       }
     ],
@@ -6207,32 +5403,25 @@
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do -20 damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-151",
-        "version": "Genetic Apex #151",
         "rarity": "◊"
       },
       {
         "card_id": "A1-239",
-        "version": "Genetic Apex #239",
         "rarity": "☆"
       },
       {
         "card_id": "A3-226",
-        "version": "Celestial Guardians #226",
         "rarity": "☆"
       }
     ],
@@ -6255,27 +5444,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-152",
-        "version": "Genetic Apex #152",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3-227",
-        "version": "Celestial Guardians #227",
         "rarity": "☆"
       }
     ],
@@ -6298,32 +5481,25 @@
         "effect": "Flip 2 coins. This attack does 80 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-153",
-        "version": "Genetic Apex #153",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-264",
-        "version": "Genetic Apex #264",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-236",
-        "version": "Celestial Guardians #236",
         "rarity": "☆☆"
       }
     ],
@@ -6346,22 +5522,17 @@
         "effect": "This attack does 30 damage to 1 of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-154",
-        "version": "Genetic Apex #154",
         "rarity": "◊"
       }
     ],
@@ -6384,22 +5555,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-155",
-        "version": "Genetic Apex #155",
         "rarity": "◊"
       }
     ],
@@ -6422,22 +5588,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-156",
-        "version": "Genetic Apex #156",
         "rarity": "◊"
       }
     ],
@@ -6460,22 +5621,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-157",
-        "version": "Genetic Apex #157",
         "rarity": "◊◊"
       }
     ],
@@ -6498,22 +5654,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-158",
-        "version": "Genetic Apex #158",
         "rarity": "◊◊"
       }
     ],
@@ -6536,22 +5687,17 @@
         "effect": "Heal from this Pokémon the same amount of damage you did to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-159",
-        "version": "Genetic Apex #159",
         "rarity": "◊◊◊"
       }
     ],
@@ -6574,22 +5720,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-160",
-        "version": "Genetic Apex #160",
         "rarity": "◊"
       }
     ],
@@ -6612,22 +5753,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-161",
-        "version": "Genetic Apex #161",
         "rarity": "◊◊"
       }
     ],
@@ -6650,22 +5786,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-162",
-        "version": "Genetic Apex #162",
         "rarity": "◊"
       }
     ],
@@ -6688,22 +5819,17 @@
         "effect": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-163",
-        "version": "Genetic Apex #163",
         "rarity": "◊◊"
       }
     ],
@@ -6726,27 +5852,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-164",
-        "version": "Genetic Apex #164",
         "rarity": "◊"
       },
       {
         "card_id": "A3b-100",
-        "version": "Eevee Grove #100",
         "rarity": "☆"
       }
     ],
@@ -6769,27 +5889,21 @@
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-165",
-        "version": "Genetic Apex #165",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3b-101",
-        "version": "Eevee Grove #101",
         "rarity": "☆"
       }
     ],
@@ -6812,27 +5926,21 @@
         "effect": "Put 1 random Nidoran♂ from your deck onto your Bench."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-166",
-        "version": "Genetic Apex #166",
         "rarity": "◊"
       },
       {
         "card_id": "A4-223",
-        "version": "Wisdom of Sea and Sky #223",
         "rarity": "☆"
       }
     ],
@@ -6855,27 +5963,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-167",
-        "version": "Genetic Apex #167",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4-224",
-        "version": "Wisdom of Sea and Sky #224",
         "rarity": "☆"
       }
     ],
@@ -6898,32 +6000,25 @@
         "effect": "This attack does 50 more damage for each of your Benched Nidoking."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-168",
-        "version": "Genetic Apex #168",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-240",
-        "version": "Genetic Apex #240",
         "rarity": "☆"
       },
       {
         "card_id": "A4-225",
-        "version": "Wisdom of Sea and Sky #225",
         "rarity": "☆"
       }
     ],
@@ -6946,27 +6041,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-169",
-        "version": "Genetic Apex #169",
         "rarity": "◊"
       },
       {
         "card_id": "A4-226",
-        "version": "Wisdom of Sea and Sky #226",
         "rarity": "☆"
       }
     ],
@@ -6989,27 +6078,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-170",
-        "version": "Genetic Apex #170",
         "rarity": "◊◊"
       },
       {
         "card_id": "A4-227",
-        "version": "Wisdom of Sea and Sky #227",
         "rarity": "☆"
       }
     ],
@@ -7032,32 +6115,25 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-171",
-        "version": "Genetic Apex #171",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-241",
-        "version": "Genetic Apex #241",
         "rarity": "☆"
       },
       {
         "card_id": "A4-228",
-        "version": "Wisdom of Sea and Sky #228",
         "rarity": "☆"
       }
     ],
@@ -7080,22 +6156,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-172",
-        "version": "Genetic Apex #172",
         "rarity": "◊"
       }
     ],
@@ -7118,27 +6189,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-173",
-        "version": "Genetic Apex #173",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-242",
-        "version": "Genetic Apex #242",
         "rarity": "☆"
       }
     ],
@@ -7161,22 +6226,17 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-174",
-        "version": "Genetic Apex #174",
         "rarity": "◊"
       }
     ],
@@ -7199,22 +6259,17 @@
         "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-175",
-        "version": "Genetic Apex #175",
         "rarity": "◊◊◊"
       }
     ],
@@ -7237,22 +6292,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-176",
-        "version": "Genetic Apex #176",
         "rarity": "◊"
       }
     ],
@@ -7282,20 +6332,18 @@
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-177",
-        "version": "Genetic Apex #177",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-243",
-        "version": "Genetic Apex #243",
         "rarity": "☆"
       }
     ],
@@ -7318,22 +6366,17 @@
         "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-178",
-        "version": "Genetic Apex #178",
         "rarity": "◊"
       }
     ],
@@ -7356,22 +6399,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-179",
-        "version": "Genetic Apex #179",
         "rarity": "◊"
       }
     ],
@@ -7394,22 +6432,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-180",
-        "version": "Genetic Apex #180",
         "rarity": "◊◊"
       }
     ],
@@ -7432,22 +6465,17 @@
         "effect": "Take 1 [M] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-181",
-        "version": "Genetic Apex #181",
         "rarity": "◊"
       }
     ],
@@ -7477,15 +6505,14 @@
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-182",
-        "version": "Genetic Apex #182",
         "rarity": "◊◊◊"
       }
     ],
@@ -7508,22 +6535,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-183",
-        "version": "Genetic Apex #183",
         "rarity": "◊"
       }
     ],
@@ -7546,22 +6568,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-184",
-        "version": "Genetic Apex #184",
         "rarity": "◊◊"
       }
     ],
@@ -7584,27 +6601,21 @@
         "effect": "1 of your opponent's Pokémon is chosen at random 4 times. For each time a Pokémon was chosen, do 50 damage to it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-185",
-        "version": "Genetic Apex #185",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-244",
-        "version": "Genetic Apex #244",
         "rarity": "☆"
       }
     ],
@@ -7627,27 +6638,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-186",
-        "version": "Genetic Apex #186",
         "rarity": "◊"
       },
       {
         "card_id": "A3a-95",
-        "version": "Extradimensional Crisis #95",
         "rarity": "☆"
       }
     ],
@@ -7670,27 +6675,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-187",
-        "version": "Genetic Apex #187",
         "rarity": "◊"
       },
       {
         "card_id": "A3a-96",
-        "version": "Extradimensional Crisis #96",
         "rarity": "☆"
       }
     ],
@@ -7720,25 +6719,22 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-188",
-        "version": "Genetic Apex #188",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-245",
-        "version": "Genetic Apex #245",
         "rarity": "☆"
       },
       {
         "card_id": "A3a-97",
-        "version": "Extradimensional Crisis #97",
         "rarity": "☆"
       }
     ],
@@ -7761,22 +6757,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-189",
-        "version": "Genetic Apex #189",
         "rarity": "◊"
       }
     ],
@@ -7799,22 +6790,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-190",
-        "version": "Genetic Apex #190",
         "rarity": "◊"
       }
     ],
@@ -7837,22 +6823,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-191",
-        "version": "Genetic Apex #191",
         "rarity": "◊"
       }
     ],
@@ -7875,22 +6856,17 @@
         "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-192",
-        "version": "Genetic Apex #192",
         "rarity": "◊"
       }
     ],
@@ -7913,22 +6889,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-193",
-        "version": "Genetic Apex #193",
         "rarity": "◊"
       }
     ],
@@ -7951,22 +6922,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-194",
-        "version": "Genetic Apex #194",
         "rarity": "◊"
       }
     ],
@@ -7989,37 +6955,29 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-195",
-        "version": "Genetic Apex #195",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-265",
-        "version": "Genetic Apex #265",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-279",
-        "version": "Genetic Apex #279",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-237",
-        "version": "Celestial Guardians #237",
         "rarity": "☆☆"
       }
     ],
@@ -8042,32 +7000,25 @@
         "effect": "Draw 1 card."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-196",
-        "version": "Genetic Apex #196",
         "rarity": "◊"
       },
       {
         "card_id": "A1-246",
-        "version": "Genetic Apex #246",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-12",
-        "version": "Promo-A #12",
         "rarity": ""
       }
     ],
@@ -8090,22 +7041,17 @@
         "effect": "Flip a coin. If heads, discard a random card from your opponent's hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-197",
-        "version": "Genetic Apex #197",
         "rarity": "◊◊"
       }
     ],
@@ -8128,32 +7074,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-198",
-        "version": "Genetic Apex #198",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-62",
-        "version": "Promo-A #62",
         "rarity": ""
       },
       {
         "card_id": "A3b-102",
-        "version": "Eevee Grove #102",
         "rarity": "☆"
       }
     ],
@@ -8176,22 +7115,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-199",
-        "version": "Genetic Apex #199",
         "rarity": "◊"
       }
     ],
@@ -8214,22 +7148,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "0",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-200",
-        "version": "Genetic Apex #200",
         "rarity": "◊◊"
       }
     ],
@@ -8252,22 +7181,17 @@
         "effect": "Flip a coin until you get tails. This attack does 60 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-201",
-        "version": "Genetic Apex #201",
         "rarity": "◊◊"
       }
     ],
@@ -8290,27 +7214,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-202",
-        "version": "Genetic Apex #202",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-11",
-        "version": "Promo-A #11",
         "rarity": ""
       }
     ],
@@ -8333,22 +7251,17 @@
         "effect": "Flip 2 coins. This attack does 30 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-203",
-        "version": "Genetic Apex #203",
         "rarity": "◊◊◊"
       }
     ],
@@ -8371,22 +7284,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-204",
-        "version": "Genetic Apex #204",
         "rarity": "◊◊"
       }
     ],
@@ -8409,27 +7317,21 @@
         "effect": "Choose 1 of your opponent's Pokémon's attacks and use it as this attack. If this Pokémon doesn't have the necessary Energy to use that attack, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-205",
-        "version": "Genetic Apex #205",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-247",
-        "version": "Genetic Apex #247",
         "rarity": "☆"
       }
     ],
@@ -8452,42 +7354,33 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-206",
-        "version": "Genetic Apex #206",
         "rarity": "◊"
       },
       {
         "card_id": "A1-207",
-        "version": "Genetic Apex #207",
         "rarity": "◊"
       },
       {
         "card_id": "A1-208",
-        "version": "Genetic Apex #208",
         "rarity": "◊"
       },
       {
         "card_id": "A1-248",
-        "version": "Genetic Apex #248",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-92",
-        "version": "Promo-A #92",
         "rarity": ""
       }
     ],
@@ -8510,42 +7403,33 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-206",
-        "version": "Genetic Apex #206",
         "rarity": "◊"
       },
       {
         "card_id": "A1-207",
-        "version": "Genetic Apex #207",
         "rarity": "◊"
       },
       {
         "card_id": "A1-208",
-        "version": "Genetic Apex #208",
         "rarity": "◊"
       },
       {
         "card_id": "A1-248",
-        "version": "Genetic Apex #248",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-92",
-        "version": "Promo-A #92",
         "rarity": ""
       }
     ],
@@ -8568,42 +7452,33 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-206",
-        "version": "Genetic Apex #206",
         "rarity": "◊"
       },
       {
         "card_id": "A1-207",
-        "version": "Genetic Apex #207",
         "rarity": "◊"
       },
       {
         "card_id": "A1-208",
-        "version": "Genetic Apex #208",
         "rarity": "◊"
       },
       {
         "card_id": "A1-248",
-        "version": "Genetic Apex #248",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-92",
-        "version": "Promo-A #92",
         "rarity": ""
       }
     ],
@@ -8633,20 +7508,18 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-209",
-        "version": "Genetic Apex #209",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-249",
-        "version": "Genetic Apex #249",
         "rarity": "☆"
       }
     ],
@@ -8669,27 +7542,21 @@
         "effect": "Flip a coin. If heads, your opponent shuffles their Active Pokémon back into their deck."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-210",
-        "version": "Genetic Apex #210",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3a-98",
-        "version": "Extradimensional Crisis #98",
         "rarity": "☆"
       }
     ],
@@ -8712,27 +7579,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-211",
-        "version": "Genetic Apex #211",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-250",
-        "version": "Genetic Apex #250",
         "rarity": "☆"
       }
     ],
@@ -8755,22 +7616,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-212",
-        "version": "Genetic Apex #212",
         "rarity": "◊"
       }
     ],
@@ -8793,27 +7649,21 @@
         "effect": "This attack does 30 damage for each of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-213",
-        "version": "Genetic Apex #213",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-31",
-        "version": "Promo-A #31",
         "rarity": ""
       }
     ],
@@ -8836,22 +7686,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-214",
-        "version": "Genetic Apex #214",
         "rarity": "◊"
       }
     ],
@@ -8874,22 +7719,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-215",
-        "version": "Genetic Apex #215",
         "rarity": "◊"
       }
     ],
@@ -8905,19 +7745,21 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-216",
-        "version": "Genetic Apex #216",
         "rarity": "◊"
       }
     ],
@@ -8933,19 +7775,21 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-217",
-        "version": "Genetic Apex #217",
         "rarity": "◊"
       }
     ],
@@ -8961,24 +7805,25 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-218",
-        "version": "Genetic Apex #218",
         "rarity": "◊"
       },
       {
         "card_id": "A1a-63",
-        "version": "Mythical Island #63",
         "rarity": "◊"
       }
     ],
@@ -8994,24 +7839,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal 50 damage from 1 of your [G] Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                kirisAki",
+    "ability": {
+      "name": "",
+      "effect": "Heal 50 damage from 1 of your [G] Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                kirisAki"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-219",
-        "version": "Genetic Apex #219",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-266",
-        "version": "Genetic Apex #266",
         "rarity": "☆☆"
       }
     ],
@@ -9027,24 +7873,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Choose 1 of your [W] Pokémon, and flip a coin until you get tails. For each heads, take a [W] Energy from your Energy Zone and attach it to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Sanosuke Sakuma",
+    "ability": {
+      "name": "",
+      "effect": "Choose 1 of your [W] Pokémon, and flip a coin until you get tails. For each heads, take a [W] Energy from your Energy Zone and attach it to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Sanosuke Sakuma"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-220",
-        "version": "Genetic Apex #220",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-267",
-        "version": "Genetic Apex #267",
         "rarity": "☆☆"
       }
     ],
@@ -9060,24 +7907,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Ninetales, Rapidash, or Magmar do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Ninetales, Rapidash, or Magmar do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-221",
-        "version": "Genetic Apex #221",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-268",
-        "version": "Genetic Apex #268",
         "rarity": "☆☆"
       }
     ],
@@ -9093,24 +7941,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Put your Muk or Weezing in the Active Spot into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Souichirou Gunjima",
+    "ability": {
+      "name": "",
+      "effect": "Put your Muk or Weezing in the Active Spot into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Souichirou Gunjima"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-222",
-        "version": "Genetic Apex #222",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-269",
-        "version": "Genetic Apex #269",
         "rarity": "☆☆"
       }
     ],
@@ -9126,24 +7975,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Pokémon do +10 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Pokémon do +10 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-223",
-        "version": "Genetic Apex #223",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-270",
-        "version": "Genetic Apex #270",
         "rarity": "☆☆"
       }
     ],
@@ -9159,24 +8009,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Take a [F] Energy from your Energy Zone and attach it to Golem or Onix.\n\n            \n                    \n    \n            Illustrated by \n            \n                Taira Akitsu",
+    "ability": {
+      "name": "",
+      "effect": "Take a [F] Energy from your Energy Zone and attach it to Golem or Onix.\n\n            \n                    \n    \n            Illustrated by \n            \n                Taira Akitsu"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-224",
-        "version": "Genetic Apex #224",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-271",
-        "version": "Genetic Apex #271",
         "rarity": "☆☆"
       }
     ],
@@ -9192,24 +8043,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-225",
-        "version": "Genetic Apex #225",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-272",
-        "version": "Genetic Apex #272",
         "rarity": "☆☆"
       }
     ],
@@ -9225,24 +8077,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Move all [L] Energy from your Benched Pokémon to your Raichu, Electrode, or Electabuzz in the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                nagimiso",
+    "ability": {
+      "name": "",
+      "effect": "Move all [L] Energy from your Benched Pokémon to your Raichu, Electrode, or Electabuzz in the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                nagimiso"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-226",
-        "version": "Genetic Apex #226",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-273",
-        "version": "Genetic Apex #273",
         "rarity": "☆☆"
       }
     ],
@@ -9265,37 +8118,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-1",
-        "version": "Genetic Apex #1",
         "rarity": "◊"
       },
       {
         "card_id": "A1-227",
-        "version": "Genetic Apex #227",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-23",
-        "version": "Promo-A #23",
         "rarity": ""
       },
       {
         "card_id": "A3-210",
-        "version": "Celestial Guardians #210",
         "rarity": "☆"
       }
     ],
@@ -9318,27 +8163,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-12",
-        "version": "Genetic Apex #12",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-228",
-        "version": "Genetic Apex #228",
         "rarity": "☆"
       }
     ],
@@ -9361,27 +8200,21 @@
         "effect": "Flip 2 coins. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-26",
-        "version": "Genetic Apex #26",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-229",
-        "version": "Genetic Apex #229",
         "rarity": "☆"
       }
     ],
@@ -9404,32 +8237,25 @@
         "effect": "Discard a [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-33",
-        "version": "Genetic Apex #33",
         "rarity": "◊"
       },
       {
         "card_id": "A1-230",
-        "version": "Genetic Apex #230",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-32",
-        "version": "Promo-A #32",
         "rarity": ""
       }
     ],
@@ -9452,27 +8278,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-43",
-        "version": "Genetic Apex #43",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-231",
-        "version": "Genetic Apex #231",
         "rarity": "☆"
       }
     ],
@@ -9495,37 +8315,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-53",
-        "version": "Genetic Apex #53",
         "rarity": "◊"
       },
       {
         "card_id": "A1-232",
-        "version": "Genetic Apex #232",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-33",
-        "version": "Promo-A #33",
         "rarity": ""
       },
       {
         "card_id": "A3-215",
-        "version": "Celestial Guardians #215",
         "rarity": "☆"
       }
     ],
@@ -9548,27 +8360,21 @@
         "effect": "Discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "4",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-78",
-        "version": "Genetic Apex #78",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-233",
-        "version": "Genetic Apex #233",
         "rarity": "☆"
       }
     ],
@@ -9591,32 +8397,25 @@
         "effect": "If this Pokémon has at least 3 extra [W] Energy attached, this attack does 70 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-79",
-        "version": "Genetic Apex #79",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-234",
-        "version": "Genetic Apex #234",
         "rarity": "☆"
       },
       {
         "card_id": "A3b-94",
-        "version": "Eevee Grove #94",
         "rarity": "☆"
       }
     ],
@@ -9639,27 +8438,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "0",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-100",
-        "version": "Genetic Apex #100",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-235",
-        "version": "Genetic Apex #235",
         "rarity": "☆"
       }
     ],
@@ -9682,27 +8475,21 @@
         "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-117",
-        "version": "Genetic Apex #117",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-236",
-        "version": "Genetic Apex #236",
         "rarity": "☆"
       }
     ],
@@ -9725,27 +8512,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-118",
-        "version": "Genetic Apex #118",
         "rarity": "◊"
       },
       {
         "card_id": "A1-237",
-        "version": "Genetic Apex #237",
         "rarity": "☆"
       }
     ],
@@ -9768,27 +8549,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-139",
-        "version": "Genetic Apex #139",
         "rarity": "◊"
       },
       {
         "card_id": "A1-238",
-        "version": "Genetic Apex #238",
         "rarity": "☆"
       }
     ],
@@ -9811,32 +8586,25 @@
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do -20 damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-151",
-        "version": "Genetic Apex #151",
         "rarity": "◊"
       },
       {
         "card_id": "A1-239",
-        "version": "Genetic Apex #239",
         "rarity": "☆"
       },
       {
         "card_id": "A3-226",
-        "version": "Celestial Guardians #226",
         "rarity": "☆"
       }
     ],
@@ -9859,32 +8627,25 @@
         "effect": "This attack does 50 more damage for each of your Benched Nidoking."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-168",
-        "version": "Genetic Apex #168",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-240",
-        "version": "Genetic Apex #240",
         "rarity": "☆"
       },
       {
         "card_id": "A4-225",
-        "version": "Wisdom of Sea and Sky #225",
         "rarity": "☆"
       }
     ],
@@ -9907,32 +8668,25 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-171",
-        "version": "Genetic Apex #171",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-241",
-        "version": "Genetic Apex #241",
         "rarity": "☆"
       },
       {
         "card_id": "A4-228",
-        "version": "Wisdom of Sea and Sky #228",
         "rarity": "☆"
       }
     ],
@@ -9955,27 +8709,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-173",
-        "version": "Genetic Apex #173",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-242",
-        "version": "Genetic Apex #242",
         "rarity": "☆"
       }
     ],
@@ -10005,20 +8753,18 @@
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-177",
-        "version": "Genetic Apex #177",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-243",
-        "version": "Genetic Apex #243",
         "rarity": "☆"
       }
     ],
@@ -10041,27 +8787,21 @@
         "effect": "1 of your opponent's Pokémon is chosen at random 4 times. For each time a Pokémon was chosen, do 50 damage to it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-185",
-        "version": "Genetic Apex #185",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-244",
-        "version": "Genetic Apex #244",
         "rarity": "☆"
       }
     ],
@@ -10091,25 +8831,22 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-188",
-        "version": "Genetic Apex #188",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-245",
-        "version": "Genetic Apex #245",
         "rarity": "☆"
       },
       {
         "card_id": "A3a-97",
-        "version": "Extradimensional Crisis #97",
         "rarity": "☆"
       }
     ],
@@ -10132,32 +8869,25 @@
         "effect": "Draw 1 card."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-196",
-        "version": "Genetic Apex #196",
         "rarity": "◊"
       },
       {
         "card_id": "A1-246",
-        "version": "Genetic Apex #246",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-12",
-        "version": "Promo-A #12",
         "rarity": ""
       }
     ],
@@ -10180,27 +8910,21 @@
         "effect": "Choose 1 of your opponent's Pokémon's attacks and use it as this attack. If this Pokémon doesn't have the necessary Energy to use that attack, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-205",
-        "version": "Genetic Apex #205",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-247",
-        "version": "Genetic Apex #247",
         "rarity": "☆"
       }
     ],
@@ -10223,42 +8947,33 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-206",
-        "version": "Genetic Apex #206",
         "rarity": "◊"
       },
       {
         "card_id": "A1-207",
-        "version": "Genetic Apex #207",
         "rarity": "◊"
       },
       {
         "card_id": "A1-208",
-        "version": "Genetic Apex #208",
         "rarity": "◊"
       },
       {
         "card_id": "A1-248",
-        "version": "Genetic Apex #248",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-92",
-        "version": "Promo-A #92",
         "rarity": ""
       }
     ],
@@ -10288,20 +9003,18 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-209",
-        "version": "Genetic Apex #209",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-249",
-        "version": "Genetic Apex #249",
         "rarity": "☆"
       }
     ],
@@ -10324,27 +9037,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-211",
-        "version": "Genetic Apex #211",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1-250",
-        "version": "Genetic Apex #250",
         "rarity": "☆"
       }
     ],
@@ -10373,32 +9080,25 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-4",
-        "version": "Genetic Apex #4",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-251",
-        "version": "Genetic Apex #251",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-230",
-        "version": "Celestial Guardians #230",
         "rarity": "☆☆"
       }
     ],
@@ -10421,32 +9121,25 @@
         "effect": "Flip a coin. If heads, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-23",
-        "version": "Genetic Apex #23",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-252",
-        "version": "Genetic Apex #252",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-231",
-        "version": "Celestial Guardians #231",
         "rarity": "☆☆"
       }
     ],
@@ -10475,37 +9168,29 @@
         "effect": "Discard 2 [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-36",
-        "version": "Genetic Apex #36",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-253",
-        "version": "Genetic Apex #253",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-280",
-        "version": "Genetic Apex #280",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-284",
-        "version": "Genetic Apex #284",
         "rarity": "♛"
       }
     ],
@@ -10528,32 +9213,25 @@
         "effect": "This Pokémon also does 20 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-41",
-        "version": "Genetic Apex #41",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-254",
-        "version": "Genetic Apex #254",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3a-100",
-        "version": "Extradimensional Crisis #100",
         "rarity": "☆☆"
       }
     ],
@@ -10582,42 +9260,33 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-47",
-        "version": "Genetic Apex #47",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-255",
-        "version": "Genetic Apex #255",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-274",
-        "version": "Genetic Apex #274",
         "rarity": "☆☆"
       },
       {
         "card_id": "P-A-25",
-        "version": "Promo-A #25",
         "rarity": ""
       },
       {
         "card_id": "A3b-103",
-        "version": "Eevee Grove #103",
         "rarity": "☆☆"
       }
     ],
@@ -10646,32 +9315,25 @@
         "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-56",
-        "version": "Genetic Apex #56",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-256",
-        "version": "Genetic Apex #256",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-232",
-        "version": "Celestial Guardians #232",
         "rarity": "☆☆"
       }
     ],
@@ -10694,32 +9356,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "0",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-76",
-        "version": "Genetic Apex #76",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-257",
-        "version": "Genetic Apex #257",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-233",
-        "version": "Celestial Guardians #233",
         "rarity": "☆☆"
       }
     ],
@@ -10748,37 +9403,29 @@
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-84",
-        "version": "Genetic Apex #84",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-258",
-        "version": "Genetic Apex #258",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-275",
-        "version": "Genetic Apex #275",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-104",
-        "version": "Eevee Grove #104",
         "rarity": "☆☆"
       }
     ],
@@ -10801,37 +9448,29 @@
         "effect": "This attack does 30 damage for each of your Benched [L] Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-96",
-        "version": "Genetic Apex #96",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-259",
-        "version": "Genetic Apex #259",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-281",
-        "version": "Genetic Apex #281",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-285",
-        "version": "Genetic Apex #285",
         "rarity": "♛"
       }
     ],
@@ -10860,37 +9499,29 @@
         "effect": "Flip 4 coins. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-104",
-        "version": "Genetic Apex #104",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-260",
-        "version": "Genetic Apex #260",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-276",
-        "version": "Genetic Apex #276",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-105",
-        "version": "Eevee Grove #105",
         "rarity": "☆☆"
       }
     ],
@@ -10920,30 +9551,26 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-123",
-        "version": "Genetic Apex #123",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-261",
-        "version": "Genetic Apex #261",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-277",
-        "version": "Genetic Apex #277",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-234",
-        "version": "Celestial Guardians #234",
         "rarity": "☆☆"
       }
     ],
@@ -10972,42 +9599,33 @@
         "effect": "Discard 2 [P] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-129",
-        "version": "Genetic Apex #129",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-262",
-        "version": "Genetic Apex #262",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-282",
-        "version": "Genetic Apex #282",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-286",
-        "version": "Genetic Apex #286",
         "rarity": "♛"
       },
       {
         "card_id": "P-A-50",
-        "version": "Promo-A #50",
         "rarity": ""
       }
     ],
@@ -11030,37 +9648,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-146",
-        "version": "Genetic Apex #146",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-263",
-        "version": "Genetic Apex #263",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-278",
-        "version": "Genetic Apex #278",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-235",
-        "version": "Celestial Guardians #235",
         "rarity": "☆☆"
       }
     ],
@@ -11083,32 +9693,25 @@
         "effect": "Flip 2 coins. This attack does 80 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-153",
-        "version": "Genetic Apex #153",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-264",
-        "version": "Genetic Apex #264",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-236",
-        "version": "Celestial Guardians #236",
         "rarity": "☆☆"
       }
     ],
@@ -11131,37 +9734,29 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-195",
-        "version": "Genetic Apex #195",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-265",
-        "version": "Genetic Apex #265",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-279",
-        "version": "Genetic Apex #279",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-237",
-        "version": "Celestial Guardians #237",
         "rarity": "☆☆"
       }
     ],
@@ -11177,24 +9772,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal 50 damage from 1 of your [G] Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki",
+    "ability": {
+      "name": "",
+      "effect": "Heal 50 damage from 1 of your [G] Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-219",
-        "version": "Genetic Apex #219",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-266",
-        "version": "Genetic Apex #266",
         "rarity": "☆☆"
       }
     ],
@@ -11210,24 +9806,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Choose 1 of your [W] Pokémon, and flip a coin until you get tails. For each heads, take a [W] Energy from your Energy Zone and attach it to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Sanosuke Sakuma",
+    "ability": {
+      "name": "",
+      "effect": "Choose 1 of your [W] Pokémon, and flip a coin until you get tails. For each heads, take a [W] Energy from your Energy Zone and attach it to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Sanosuke Sakuma"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-220",
-        "version": "Genetic Apex #220",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-267",
-        "version": "Genetic Apex #267",
         "rarity": "☆☆"
       }
     ],
@@ -11243,24 +9840,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Ninetales, Rapidash, or Magmar do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Ninetales, Rapidash, or Magmar do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-221",
-        "version": "Genetic Apex #221",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-268",
-        "version": "Genetic Apex #268",
         "rarity": "☆☆"
       }
     ],
@@ -11276,24 +9874,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Put your Muk or Weezing in the Active Spot into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Souichirou Gunjima",
+    "ability": {
+      "name": "",
+      "effect": "Put your Muk or Weezing in the Active Spot into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Souichirou Gunjima"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-222",
-        "version": "Genetic Apex #222",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-269",
-        "version": "Genetic Apex #269",
         "rarity": "☆☆"
       }
     ],
@@ -11309,24 +9908,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Pokémon do +10 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Pokémon do +10 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-223",
-        "version": "Genetic Apex #223",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-270",
-        "version": "Genetic Apex #270",
         "rarity": "☆☆"
       }
     ],
@@ -11342,24 +9942,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Take a [F] Energy from your Energy Zone and attach it to Golem or Onix.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse",
+    "ability": {
+      "name": "",
+      "effect": "Take a [F] Energy from your Energy Zone and attach it to Golem or Onix.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-224",
-        "version": "Genetic Apex #224",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-271",
-        "version": "Genetic Apex #271",
         "rarity": "☆☆"
       }
     ],
@@ -11375,24 +9976,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA",
+    "ability": {
+      "name": "",
+      "effect": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-225",
-        "version": "Genetic Apex #225",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-272",
-        "version": "Genetic Apex #272",
         "rarity": "☆☆"
       }
     ],
@@ -11408,24 +10010,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Move all [L] Energy from your Benched Pokémon to your Raichu, Electrode, or Electabuzz in the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                nagimiso",
+    "ability": {
+      "name": "",
+      "effect": "Move all [L] Energy from your Benched Pokémon to your Raichu, Electrode, or Electabuzz in the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                nagimiso"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-226",
-        "version": "Genetic Apex #226",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1-273",
-        "version": "Genetic Apex #273",
         "rarity": "☆☆"
       }
     ],
@@ -11454,42 +10057,33 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-47",
-        "version": "Genetic Apex #47",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-255",
-        "version": "Genetic Apex #255",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-274",
-        "version": "Genetic Apex #274",
         "rarity": "☆☆"
       },
       {
         "card_id": "P-A-25",
-        "version": "Promo-A #25",
         "rarity": ""
       },
       {
         "card_id": "A3b-103",
-        "version": "Eevee Grove #103",
         "rarity": "☆☆"
       }
     ],
@@ -11518,37 +10112,29 @@
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-84",
-        "version": "Genetic Apex #84",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-258",
-        "version": "Genetic Apex #258",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-275",
-        "version": "Genetic Apex #275",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-104",
-        "version": "Eevee Grove #104",
         "rarity": "☆☆"
       }
     ],
@@ -11577,37 +10163,29 @@
         "effect": "Flip 4 coins. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-104",
-        "version": "Genetic Apex #104",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-260",
-        "version": "Genetic Apex #260",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-276",
-        "version": "Genetic Apex #276",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3b-105",
-        "version": "Eevee Grove #105",
         "rarity": "☆☆"
       }
     ],
@@ -11637,30 +10215,26 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-123",
-        "version": "Genetic Apex #123",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-261",
-        "version": "Genetic Apex #261",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-277",
-        "version": "Genetic Apex #277",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-234",
-        "version": "Celestial Guardians #234",
         "rarity": "☆☆"
       }
     ],
@@ -11683,37 +10257,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-146",
-        "version": "Genetic Apex #146",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-263",
-        "version": "Genetic Apex #263",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-278",
-        "version": "Genetic Apex #278",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-235",
-        "version": "Celestial Guardians #235",
         "rarity": "☆☆"
       }
     ],
@@ -11736,37 +10302,29 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-195",
-        "version": "Genetic Apex #195",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-265",
-        "version": "Genetic Apex #265",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-279",
-        "version": "Genetic Apex #279",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3-237",
-        "version": "Celestial Guardians #237",
         "rarity": "☆☆"
       }
     ],
@@ -11795,37 +10353,29 @@
         "effect": "Discard 2 [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
     "alternate_versions": [
       {
         "card_id": "A1-36",
-        "version": "Genetic Apex #36",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-253",
-        "version": "Genetic Apex #253",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-280",
-        "version": "Genetic Apex #280",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-284",
-        "version": "Genetic Apex #284",
         "rarity": "♛"
       }
     ],
@@ -11848,37 +10398,29 @@
         "effect": "This attack does 30 damage for each of your Benched [L] Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
     "alternate_versions": [
       {
         "card_id": "A1-96",
-        "version": "Genetic Apex #96",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-259",
-        "version": "Genetic Apex #259",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-281",
-        "version": "Genetic Apex #281",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-285",
-        "version": "Genetic Apex #285",
         "rarity": "♛"
       }
     ],
@@ -11907,42 +10449,33 @@
         "effect": "Discard 2 [P] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
     "alternate_versions": [
       {
         "card_id": "A1-129",
-        "version": "Genetic Apex #129",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-262",
-        "version": "Genetic Apex #262",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-282",
-        "version": "Genetic Apex #282",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-286",
-        "version": "Genetic Apex #286",
         "rarity": "♛"
       },
       {
         "card_id": "P-A-50",
-        "version": "Promo-A #50",
         "rarity": ""
       }
     ],
@@ -11965,27 +10498,21 @@
         "effect": "Your opponent reveals their hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-283",
-        "version": "Genetic Apex #283",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1a-31",
-        "version": "Mythical Island #31",
         "rarity": "◊◊◊"
       }
     ],
@@ -12014,37 +10541,29 @@
         "effect": "Discard 2 [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "Crown Rare",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-36",
-        "version": "Genetic Apex #36",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-253",
-        "version": "Genetic Apex #253",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-280",
-        "version": "Genetic Apex #280",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-284",
-        "version": "Genetic Apex #284",
         "rarity": "♛"
       }
     ],
@@ -12067,37 +10586,29 @@
         "effect": "This attack does 30 damage for each of your Benched [L] Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "Crown Rare",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-96",
-        "version": "Genetic Apex #96",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-259",
-        "version": "Genetic Apex #259",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-281",
-        "version": "Genetic Apex #281",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-285",
-        "version": "Genetic Apex #285",
         "rarity": "♛"
       }
     ],
@@ -12126,42 +10637,33 @@
         "effect": "Discard 2 [P] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "Crown Rare",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-129",
-        "version": "Genetic Apex #129",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-262",
-        "version": "Genetic Apex #262",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-282",
-        "version": "Genetic Apex #282",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-286",
-        "version": "Genetic Apex #286",
         "rarity": "♛"
       },
       {
         "card_id": "P-A-50",
-        "version": "Promo-A #50",
         "rarity": ""
       }
     ],

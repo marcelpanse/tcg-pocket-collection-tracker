@@ -1,21 +1,25 @@
 import { CircleHelp } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router'
 import { Tooltip } from 'react-tooltip'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
-import { expansions, getCardById } from '@/lib/CardsDB.ts'
+import { getCardById, tradeableExpansions } from '@/lib/CardsDB.ts'
+import { getExtraCards, getNeededCards } from '@/lib/utils'
 import { CardList } from '@/pages/trade/components/CardList.tsx'
 import { TradeOffer } from '@/pages/trade/components/TradeOffer.tsx'
 import { useAccount, usePublicAccount } from '@/services/account/useAccount'
 import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
-import type { Card, Rarity } from '@/types'
+import { type Card, type Rarity, type TradableRarity, tradableRarities } from '@/types'
 
-const rarityOrder: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆']
-
-interface TradeCard extends Card {
-  amount_owned: number
+function getTradeCards(extraCards: string[], neededCards: string[]) {
+  const neededCardsSet = new Set(neededCards)
+  const common = extraCards
+    .filter((card_id) => neededCardsSet.has(card_id))
+    .map((card_id) => getCardById(card_id) as Card)
+    .filter((card) => (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion))
+  return Object.groupBy(common, (card) => card.rarity as TradableRarity)
 }
 
 function TradeWith() {
@@ -33,91 +37,16 @@ function TradeWith() {
   const [yourCard, setYourCard] = useState<Card | null>(null)
   const [friendCard, setFriendCard] = useState<Card | null>(null)
 
-  const tradeableExpansions = useMemo(() => expansions.filter((e) => e.tradeable).map((e) => e.id), [])
-
-  const friendExtraCards = useMemo(() => {
-    if (!friendCards) {
-      return null
-    }
-    const result: Record<Rarity, TradeCard[]> = {
-      '◊': [],
-      '◊◊': [],
-      '◊◊◊': [],
-      '◊◊◊◊': [],
-      '☆': [],
-      '☆☆': [],
-      '☆☆☆': [],
-      '✵': [],
-      '✵✵': [],
-      'Crown Rare': [],
-      P: [],
-      '': [],
-    }
-
-    const friendExtraCards = friendCards.filter((card) => card.amount_owned > (friendAccount?.min_number_of_cards_to_keep || 1))
-    const userCardIds = new Set(ownedCards.filter((card) => card.amount_owned > userCardsMaxFilter).map((card) => card.card_id))
-    const cardsUserNeeds = friendExtraCards.filter((card) => !userCardIds.has(card.card_id))
-
-    // Get full card info and group by rarity
-    for (const card of cardsUserNeeds) {
-      const fullCard = getCardById(card.card_id)
-      if (fullCard && rarityOrder.includes(fullCard.rarity) && tradeableExpansions.includes(fullCard.expansion)) {
-        result[fullCard.rarity].push({
-          ...fullCard,
-          amount_owned: card.amount_owned,
-        })
-      }
-    }
-
-    return result
-  }, [ownedCards, friendCards, userCardsMaxFilter, friendAccount?.min_number_of_cards_to_keep, tradeableExpansions])
-
-  const userExtraCards = useMemo(() => {
-    if (!friendCards) {
-      return null
-    }
-    const result: Record<Rarity, TradeCard[]> = {
-      '◊': [],
-      '◊◊': [],
-      '◊◊◊': [],
-      '◊◊◊◊': [],
-      '☆': [],
-      '☆☆': [],
-      '☆☆☆': [],
-      '✵': [],
-      '✵✵': [],
-      'Crown Rare': [],
-      P: [],
-      '': [],
-    }
-
-    const userExtraCards = ownedCards.filter((card) => card.amount_owned >= friendCardsMinFilter)
-    const friendCardIds = new Set(
-      friendCards.filter((card) => card.amount_owned >= (friendAccount?.max_number_of_cards_wanted || 1)).map((card) => card.card_id),
-    )
-    const cardsFriendNeeds = userExtraCards.filter((card) => !friendCardIds.has(card.card_id))
-
-    // Get full card info and group by rarity
-    for (const card of cardsFriendNeeds) {
-      const fullCard = getCardById(card.card_id)
-      if (fullCard && rarityOrder.includes(fullCard.rarity) && tradeableExpansions.includes(fullCard.expansion)) {
-        result[fullCard.rarity].push({
-          ...fullCard,
-          amount_owned: card.amount_owned,
-        })
-      }
-    }
-
-    return result
-  }, [ownedCards, friendCards, friendCardsMinFilter, friendAccount?.max_number_of_cards_wanted, tradeableExpansions])
-
-  // Check if there are any possible trades across all rarities
-  const hasPossibleTrades = useMemo(() => {
-    return rarityOrder.some((rarity) => friendExtraCards && friendExtraCards[rarity].length > 0 && userExtraCards && userExtraCards[rarity].length > 0)
-  }, [friendExtraCards, userExtraCards])
-
-  if (!account || !friendAccount || friendExtraCards === null || userExtraCards === null) {
+  if (!account) {
     return null
+  }
+
+  if (friendAccount === null) {
+    return <p className="text-xl text-center py-8">{t('notFound')}</p>
+  }
+
+  if (friendAccount === undefined || friendCards === undefined) {
+    return <p className="text-xl text-center py-8">Loading...</p>
   }
 
   if (!friendAccount.is_active_trading) {
@@ -128,6 +57,11 @@ function TradeWith() {
       </div>
     )
   }
+
+  const userTrades = getTradeCards(getExtraCards(ownedCards, friendCardsMinFilter - 1), getNeededCards(friendCards, friendAccount.max_number_of_cards_wanted))
+  const friendTrades = getTradeCards(getExtraCards(friendCards, friendAccount.min_number_of_cards_to_keep), getNeededCards(ownedCards, userCardsMaxFilter + 1))
+
+  const hasPossibleTrades = tradableRarities.some((r) => (userTrades[r] ?? []).length > 0 && (friendTrades[r] ?? []).length > 0)
 
   return (
     <div className="kap-4 justify-center max-w-2xl m-auto px-2">
@@ -180,20 +114,20 @@ function TradeWith() {
         </div>
       )}
 
-      {rarityOrder.map(
+      {tradableRarities.map(
         (rarity) =>
-          friendExtraCards[rarity].length > 0 &&
-          userExtraCards[rarity].length > 0 && (
+          friendTrades[rarity] &&
+          userTrades[rarity] && (
             <div key={rarity} className="mb-4">
               <h3 className="text-xl font-semibold mb-1 text-center">[ {rarity} ]</h3>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                 <div className="w-full sm:w-1/2">
                   <h4 className="text-md font-medium mb-1 ml-2">{t('youHave')}</h4>
-                  <CardList cards={userExtraCards[rarity]} selected={yourCard} setSelected={setYourCard} />
+                  <CardList cards={userTrades[rarity]} selected={yourCard} setSelected={setYourCard} />
                 </div>
                 <div className="w-full sm:w-1/2">
                   <h4 className="text-md font-medium mb-1 ml-2">{t('friendHas')}</h4>
-                  <CardList cards={friendExtraCards[rarity]} selected={friendCard} setSelected={setFriendCard} />
+                  <CardList cards={friendTrades[rarity]} selected={friendCard} setSelected={setFriendCard} />
                 </div>
               </div>
             </div>

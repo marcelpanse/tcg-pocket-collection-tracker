@@ -62,7 +62,7 @@ export interface Expansion {
   cards: Card[]
   packs: Pack[]
   missions?: Mission[]
-  tradeable?: boolean
+  tradeable: boolean
   promo?: boolean
   containsShinies?: boolean
   containsBabies?: boolean
@@ -89,21 +89,20 @@ export interface Card {
     damage: string
     effect: string
   }[]
-  ability: {
+  ability?: {
     name: string
     effect: string
   }
   weakness: string
   retreat: string
   rarity: Rarity
-  fullart: string
-  ex: string
+  fullart: boolean
+  ex: boolean
   baby: boolean
   set_details: string
   pack: string
   alternate_versions: {
     card_id: string
-    version: string
     rarity: Rarity
   }[]
   artist: string

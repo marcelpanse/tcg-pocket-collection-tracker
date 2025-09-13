@@ -4,8 +4,6 @@
     "hp": "KP",
     "cardType": "Kartentyp",
     "evolutionType": "Evolutionstyp",
-    "ex": "EX",
-    "baby": "Baby",
     "craftingCost": "Herstellungskosten",
     "artist": "Künstler",
     "setDetails": "Set Details",
@@ -30,9 +28,5 @@
     "item": "Item",
     "tool": "Ausrüstung",
     "supporter": "Unterstützer"
-  },
-  "ex": {
-    "yes": "Ja",
-    "no": "Nein"
   }
 }

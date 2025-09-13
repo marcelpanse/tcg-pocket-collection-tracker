@@ -15,27 +15,21 @@
         "effect": "Take a [G] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-1",
-        "version": "Mythical Island #1",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-60",
-        "version": "Promo-A #60",
         "rarity": ""
       }
     ],
@@ -58,32 +52,25 @@
         "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-2",
-        "version": "Mythical Island #2",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1a-69",
-        "version": "Mythical Island #69",
         "rarity": "☆"
       },
       {
         "card_id": "A3-214",
-        "version": "Celestial Guardians #214",
         "rarity": "☆"
       }
     ],
@@ -106,37 +93,29 @@
         "effect": "Flip a coin for each Energy attached to this Pokémon. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-3",
-        "version": "Mythical Island #3",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-75",
-        "version": "Mythical Island #75",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-85",
-        "version": "Mythical Island #85",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A3a-99",
-        "version": "Extradimensional Crisis #99",
         "rarity": "☆☆"
       }
     ],
@@ -159,22 +138,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-4",
-        "version": "Mythical Island #4",
         "rarity": "◊"
       }
     ],
@@ -197,22 +171,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-5",
-        "version": "Mythical Island #5",
         "rarity": "◊◊"
       }
     ],
@@ -242,20 +211,18 @@
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-6",
-        "version": "Mythical Island #6",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1a-70",
-        "version": "Mythical Island #70",
         "rarity": "☆"
       }
     ],
@@ -278,22 +245,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-7",
-        "version": "Mythical Island #7",
         "rarity": "◊"
       }
     ],
@@ -316,22 +278,17 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-8",
-        "version": "Mythical Island #8",
         "rarity": "◊◊"
       }
     ],
@@ -354,22 +311,17 @@
         "effect": "If this Pokémon has at least 3 extra [G] Energy attached, this attack does 70 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-9",
-        "version": "Mythical Island #9",
         "rarity": "◊◊"
       }
     ],
@@ -392,22 +344,17 @@
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-10",
-        "version": "Mythical Island #10",
         "rarity": "◊"
       }
     ],
@@ -430,22 +377,17 @@
         "effect": "Flip a coin. If heads, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-11",
-        "version": "Mythical Island #11",
         "rarity": "◊◊"
       }
     ],
@@ -468,22 +410,17 @@
         "effect": "Discard 2 [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-12",
-        "version": "Mythical Island #12",
         "rarity": "◊◊"
       }
     ],
@@ -506,22 +443,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-13",
-        "version": "Mythical Island #13",
         "rarity": "◊"
       }
     ],
@@ -544,27 +476,21 @@
         "effect": "Discard 2 [R] Energy from this Pokémon. This attack does 80 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-14",
-        "version": "Mythical Island #14",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-28",
-        "version": "Promo-A #28",
         "rarity": ""
       }
     ],
@@ -587,27 +513,21 @@
         "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-15",
-        "version": "Mythical Island #15",
         "rarity": "◊"
       },
       {
         "card_id": "A1a-71",
-        "version": "Mythical Island #71",
         "rarity": "☆"
       }
     ],
@@ -630,22 +550,17 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-16",
-        "version": "Mythical Island #16",
         "rarity": "◊"
       }
     ],
@@ -668,27 +583,21 @@
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-17",
-        "version": "Mythical Island #17",
         "rarity": "◊"
       },
       {
         "card_id": "A4-214",
-        "version": "Wisdom of Sea and Sky #214",
         "rarity": "☆"
       }
     ],
@@ -711,32 +620,25 @@
         "effect": "Discard a random Energy from among the Energy attached to all Pokémon (both yours and your opponent's)."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-18",
-        "version": "Mythical Island #18",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-76",
-        "version": "Mythical Island #76",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4-234",
-        "version": "Wisdom of Sea and Sky #234",
         "rarity": "☆☆"
       }
     ],
@@ -766,20 +668,18 @@
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-19",
-        "version": "Mythical Island #19",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1a-72",
-        "version": "Mythical Island #72",
         "rarity": "☆"
       }
     ],
@@ -802,22 +702,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-20",
-        "version": "Mythical Island #20",
         "rarity": "◊"
       }
     ],
@@ -840,22 +735,17 @@
         "effect": "This attack does 50 damage to 1 of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "0",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-21",
-        "version": "Mythical Island #21",
         "rarity": "◊◊"
       }
     ],
@@ -878,22 +768,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-22",
-        "version": "Mythical Island #22",
         "rarity": "◊"
       }
     ],
@@ -916,22 +801,17 @@
         "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-23",
-        "version": "Mythical Island #23",
         "rarity": "◊◊"
       }
     ],
@@ -954,22 +834,17 @@
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-24",
-        "version": "Mythical Island #24",
         "rarity": "◊"
       }
     ],
@@ -992,22 +867,17 @@
         "effect": "This attack does 10 damage for each of your Benched [L] Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-25",
-        "version": "Mythical Island #25",
         "rarity": "◊"
       }
     ],
@@ -1030,22 +900,17 @@
         "effect": "This attack also does 20 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-26",
-        "version": "Mythical Island #26",
         "rarity": "◊◊◊"
       }
     ],
@@ -1068,22 +933,17 @@
         "effect": "This attack does 40 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-27",
-        "version": "Mythical Island #27",
         "rarity": "◊◊"
       }
     ],
@@ -1106,22 +966,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-28",
-        "version": "Mythical Island #28",
         "rarity": "◊"
       }
     ],
@@ -1144,22 +999,17 @@
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-29",
-        "version": "Mythical Island #29",
         "rarity": "◊◊"
       }
     ],
@@ -1182,27 +1032,21 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-30",
-        "version": "Mythical Island #30",
         "rarity": "◊"
       },
       {
         "card_id": "A1a-73",
-        "version": "Mythical Island #73",
         "rarity": "☆"
       }
     ],
@@ -1225,27 +1069,21 @@
         "effect": "Your opponent reveals their hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1-283",
-        "version": "Genetic Apex #283",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1a-31",
-        "version": "Mythical Island #31",
         "rarity": "◊◊◊"
       }
     ],
@@ -1274,42 +1112,33 @@
         "effect": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-32",
-        "version": "Mythical Island #32",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-77",
-        "version": "Mythical Island #77",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-83",
-        "version": "Mythical Island #83",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-86",
-        "version": "Mythical Island #86",
         "rarity": "♛"
       },
       {
         "card_id": "A4a-102",
-        "version": "Secluded Springs #102",
         "rarity": "☆☆"
       }
     ],
@@ -1332,22 +1161,17 @@
         "effect": "Draw a card."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-33",
-        "version": "Mythical Island #33",
         "rarity": "◊◊"
       }
     ],
@@ -1370,22 +1194,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-34",
-        "version": "Mythical Island #34",
         "rarity": "◊"
       }
     ],
@@ -1408,22 +1227,17 @@
         "effect": "This attack does 20 more damage for each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-35",
-        "version": "Mythical Island #35",
         "rarity": "◊◊"
       }
     ],
@@ -1446,22 +1260,17 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-36",
-        "version": "Mythical Island #36",
         "rarity": "◊"
       }
     ],
@@ -1484,22 +1293,17 @@
         "effect": "Heal 10 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-37",
-        "version": "Mythical Island #37",
         "rarity": "◊"
       }
     ],
@@ -1522,22 +1326,17 @@
         "effect": "Heal 20 damage from each of your Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-38",
-        "version": "Mythical Island #38",
         "rarity": "◊◊"
       }
     ],
@@ -1560,22 +1359,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-39",
-        "version": "Mythical Island #39",
         "rarity": "◊"
       }
     ],
@@ -1598,22 +1392,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-40",
-        "version": "Mythical Island #40",
         "rarity": "◊"
       }
     ],
@@ -1636,27 +1425,21 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-41",
-        "version": "Mythical Island #41",
         "rarity": "◊"
       },
       {
         "card_id": "A4-221",
-        "version": "Wisdom of Sea and Sky #221",
         "rarity": "☆"
       }
     ],
@@ -1679,22 +1462,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-42",
-        "version": "Mythical Island #42",
         "rarity": "◊"
       }
     ],
@@ -1717,22 +1495,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-43",
-        "version": "Mythical Island #43",
         "rarity": "◊"
       }
     ],
@@ -1755,22 +1528,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-44",
-        "version": "Mythical Island #44",
         "rarity": "◊◊"
       }
     ],
@@ -1793,22 +1561,17 @@
         "effect": "During your opponent's next turn, this Pokémon takes −30 damage from attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-45",
-        "version": "Mythical Island #45",
         "rarity": "◊◊◊"
       }
     ],
@@ -1838,30 +1601,26 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-46",
-        "version": "Mythical Island #46",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-78",
-        "version": "Mythical Island #78",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-84",
-        "version": "Mythical Island #84",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3a-101",
-        "version": "Extradimensional Crisis #101",
         "rarity": "☆☆"
       }
     ],
@@ -1884,27 +1643,21 @@
         "effect": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-47",
-        "version": "Mythical Island #47",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1a-74",
-        "version": "Mythical Island #74",
         "rarity": "☆"
       }
     ],
@@ -1927,22 +1680,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-48",
-        "version": "Mythical Island #48",
         "rarity": "◊◊"
       }
     ],
@@ -1965,22 +1713,17 @@
         "effect": "Put 1 random Koffing from your deck onto your Bench."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-49",
-        "version": "Mythical Island #49",
         "rarity": "◊"
       }
     ],
@@ -2003,22 +1746,17 @@
         "effect": "During your opponent's next turn, if the Defending Pokémon tries to use an attack, your opponent flips a coin. If tails, that attack doesn't happen."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-50",
-        "version": "Mythical Island #50",
         "rarity": "◊◊"
       }
     ],
@@ -2041,22 +1779,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-51",
-        "version": "Mythical Island #51",
         "rarity": "◊"
       }
     ],
@@ -2079,22 +1812,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-52",
-        "version": "Mythical Island #52",
         "rarity": "◊"
       }
     ],
@@ -2117,22 +1845,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-53",
-        "version": "Mythical Island #53",
         "rarity": "◊"
       }
     ],
@@ -2155,22 +1878,17 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-54",
-        "version": "Mythical Island #54",
         "rarity": "◊"
       }
     ],
@@ -2193,22 +1911,17 @@
         "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-55",
-        "version": "Mythical Island #55",
         "rarity": "◊◊"
       }
     ],
@@ -2238,15 +1951,14 @@
     "weakness": "none",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-56",
-        "version": "Mythical Island #56",
         "rarity": "◊◊"
       }
     ],
@@ -2269,22 +1981,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-57",
-        "version": "Mythical Island #57",
         "rarity": "◊"
       }
     ],
@@ -2307,22 +2014,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-58",
-        "version": "Mythical Island #58",
         "rarity": "◊"
       }
     ],
@@ -2345,32 +2047,25 @@
         "effect": "This attack does 20 more damage for each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-59",
-        "version": "Mythical Island #59",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-79",
-        "version": "Mythical Island #79",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3a-102",
-        "version": "Extradimensional Crisis #102",
         "rarity": "☆☆"
       }
     ],
@@ -2393,22 +2088,17 @@
         "effect": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 80  more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-60",
-        "version": "Mythical Island #60",
         "rarity": "◊◊◊"
       }
     ],
@@ -2431,22 +2121,17 @@
         "effect": "Flip a coin until you get tails. This attack does 20 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-61",
-        "version": "Mythical Island #61",
         "rarity": "◊"
       }
     ],
@@ -2469,22 +2154,17 @@
         "effect": "Shuffle your hand into your deck. Draw a card for each card in your opponent's hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-62",
-        "version": "Mythical Island #62",
         "rarity": "◊"
       }
     ],
@@ -2501,24 +2181,25 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1-218",
-        "version": "Genetic Apex #218",
         "rarity": "◊"
       },
       {
         "card_id": "A1a-63",
-        "version": "Mythical Island #63",
         "rarity": "◊"
       }
     ],
@@ -2534,19 +2215,21 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Put a Basic Pokémon from your opponent's discard pile onto their Bench.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "Put a Basic Pokémon from your opponent's discard pile onto their Bench.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-64",
-        "version": "Mythical Island #64",
         "rarity": "◊◊"
       }
     ],
@@ -2562,19 +2245,21 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Look at the top card of your deck. If that card is a [P] Pokémon, put it into your hand. If it is not a [P] Pokémon, put it on the bottom of your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                AYUMI ODASHIMA",
+    "ability": {
+      "name": "",
+      "effect": "Look at the top card of your deck. If that card is a [P] Pokémon, put it into your hand. If it is not a [P] Pokémon, put it on the bottom of your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                AYUMI ODASHIMA"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-65",
-        "version": "Mythical Island #65",
         "rarity": "◊◊"
       }
     ],
@@ -2590,24 +2275,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Put your Mew ex in the Active Spot into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "Put your Mew ex in the Active Spot into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-66",
-        "version": "Mythical Island #66",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1a-80",
-        "version": "Mythical Island #80",
         "rarity": "☆☆"
       }
     ],
@@ -2623,24 +2309,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During your opponent's next turn, all of your Pokémon take −10 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse",
+    "ability": {
+      "name": "",
+      "effect": "During your opponent's next turn, all of your Pokémon take −10 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-67",
-        "version": "Mythical Island #67",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1a-81",
-        "version": "Mythical Island #81",
         "rarity": "☆☆"
       }
     ],
@@ -2656,24 +2343,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, the Retreat Cost of your Active Pokémon is 2 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                En Morikura",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, the Retreat Cost of your Active Pokémon is 2 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                En Morikura"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-68",
-        "version": "Mythical Island #68",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1a-82",
-        "version": "Mythical Island #82",
         "rarity": "☆☆"
       }
     ],
@@ -2696,32 +2384,25 @@
         "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-2",
-        "version": "Mythical Island #2",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1a-69",
-        "version": "Mythical Island #69",
         "rarity": "☆"
       },
       {
         "card_id": "A3-214",
-        "version": "Celestial Guardians #214",
         "rarity": "☆"
       }
     ],
@@ -2751,20 +2432,18 @@
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-6",
-        "version": "Mythical Island #6",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1a-70",
-        "version": "Mythical Island #70",
         "rarity": "☆"
       }
     ],
@@ -2787,27 +2466,21 @@
         "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-15",
-        "version": "Mythical Island #15",
         "rarity": "◊"
       },
       {
         "card_id": "A1a-71",
-        "version": "Mythical Island #71",
         "rarity": "☆"
       }
     ],
@@ -2837,20 +2510,18 @@
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-19",
-        "version": "Mythical Island #19",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1a-72",
-        "version": "Mythical Island #72",
         "rarity": "☆"
       }
     ],
@@ -2873,27 +2544,21 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-30",
-        "version": "Mythical Island #30",
         "rarity": "◊"
       },
       {
         "card_id": "A1a-73",
-        "version": "Mythical Island #73",
         "rarity": "☆"
       }
     ],
@@ -2916,27 +2581,21 @@
         "effect": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-47",
-        "version": "Mythical Island #47",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A1a-74",
-        "version": "Mythical Island #74",
         "rarity": "☆"
       }
     ],
@@ -2959,37 +2618,29 @@
         "effect": "Flip a coin for each Energy attached to this Pokémon. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-3",
-        "version": "Mythical Island #3",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-75",
-        "version": "Mythical Island #75",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-85",
-        "version": "Mythical Island #85",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A3a-99",
-        "version": "Extradimensional Crisis #99",
         "rarity": "☆☆"
       }
     ],
@@ -3012,32 +2663,25 @@
         "effect": "Discard a random Energy from among the Energy attached to all Pokémon (both yours and your opponent's)."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-18",
-        "version": "Mythical Island #18",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-76",
-        "version": "Mythical Island #76",
         "rarity": "☆☆"
       },
       {
         "card_id": "A4-234",
-        "version": "Wisdom of Sea and Sky #234",
         "rarity": "☆☆"
       }
     ],
@@ -3066,42 +2710,33 @@
         "effect": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-32",
-        "version": "Mythical Island #32",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-77",
-        "version": "Mythical Island #77",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-83",
-        "version": "Mythical Island #83",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-86",
-        "version": "Mythical Island #86",
         "rarity": "♛"
       },
       {
         "card_id": "A4a-102",
-        "version": "Secluded Springs #102",
         "rarity": "☆☆"
       }
     ],
@@ -3131,30 +2766,26 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-46",
-        "version": "Mythical Island #46",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-78",
-        "version": "Mythical Island #78",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-84",
-        "version": "Mythical Island #84",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3a-101",
-        "version": "Extradimensional Crisis #101",
         "rarity": "☆☆"
       }
     ],
@@ -3177,32 +2808,25 @@
         "effect": "This attack does 20 more damage for each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-59",
-        "version": "Mythical Island #59",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-79",
-        "version": "Mythical Island #79",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3a-102",
-        "version": "Extradimensional Crisis #102",
         "rarity": "☆☆"
       }
     ],
@@ -3218,24 +2842,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Put your Mew ex in the Active Spot into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "Put your Mew ex in the Active Spot into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-66",
-        "version": "Mythical Island #66",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1a-80",
-        "version": "Mythical Island #80",
         "rarity": "☆☆"
       }
     ],
@@ -3251,24 +2876,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During your opponent's next turn, all of your Pokémon take −10 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse",
+    "ability": {
+      "name": "",
+      "effect": "During your opponent's next turn, all of your Pokémon take −10 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-67",
-        "version": "Mythical Island #67",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1a-81",
-        "version": "Mythical Island #81",
         "rarity": "☆☆"
       }
     ],
@@ -3284,24 +2910,25 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, the Retreat Cost of your Active Pokémon is 2 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                En Morikura",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, the Retreat Cost of your Active Pokémon is 2 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                En Morikura"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-68",
-        "version": "Mythical Island #68",
         "rarity": "◊◊"
       },
       {
         "card_id": "A1a-82",
-        "version": "Mythical Island #82",
         "rarity": "☆☆"
       }
     ],
@@ -3330,42 +2957,33 @@
         "effect": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-32",
-        "version": "Mythical Island #32",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-77",
-        "version": "Mythical Island #77",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-83",
-        "version": "Mythical Island #83",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-86",
-        "version": "Mythical Island #86",
         "rarity": "♛"
       },
       {
         "card_id": "A4a-102",
-        "version": "Secluded Springs #102",
         "rarity": "☆☆"
       }
     ],
@@ -3395,30 +3013,26 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-46",
-        "version": "Mythical Island #46",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-78",
-        "version": "Mythical Island #78",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-84",
-        "version": "Mythical Island #84",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3a-101",
-        "version": "Extradimensional Crisis #101",
         "rarity": "☆☆"
       }
     ],
@@ -3441,37 +3055,29 @@
         "effect": "Flip a coin for each Energy attached to this Pokémon. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-3",
-        "version": "Mythical Island #3",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-75",
-        "version": "Mythical Island #75",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-85",
-        "version": "Mythical Island #85",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A3a-99",
-        "version": "Extradimensional Crisis #99",
         "rarity": "☆☆"
       }
     ],
@@ -3500,42 +3106,33 @@
         "effect": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "Crown Rare",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "mythicalisland(a1a)",
     "pack": "mewpack",
     "alternate_versions": [
       {
         "card_id": "A1a-32",
-        "version": "Mythical Island #32",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1a-77",
-        "version": "Mythical Island #77",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-83",
-        "version": "Mythical Island #83",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1a-86",
-        "version": "Mythical Island #86",
         "rarity": "♛"
       },
       {
         "card_id": "A4a-102",
-        "version": "Secluded Springs #102",
         "rarity": "☆☆"
       }
     ],

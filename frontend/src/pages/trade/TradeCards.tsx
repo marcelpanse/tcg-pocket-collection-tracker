@@ -6,7 +6,8 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { toast } from '@/hooks/use-toast.ts'
-import { allCards, expansions } from '@/lib/CardsDB.ts'
+import { getCardById } from '@/lib/CardsDB.ts'
+import { getExtraCards, getNeededCards } from '@/lib/utils'
 import { NoCardsNeeded } from '@/pages/trade/components/NoCardsNeeded.tsx'
 import { NoTradeableCards } from '@/pages/trade/components/NoTradeableCards.tsx'
 import { useAccount } from '@/services/account/useAccount.ts'
@@ -14,8 +15,6 @@ import { useUser } from '@/services/auth/useAuth.ts'
 import { useCollection } from '@/services/collection/useCollection.ts'
 import { type Card, type Rarity, tradableRarities } from '@/types'
 import { UserNotLoggedIn } from './components/UserNotLoggedIn'
-
-const tradeableExpansions = expansions.filter((e) => e.tradeable).map((e) => e.id)
 
 function TradeCards() {
   const { t } = useTranslation('pages/trade')
@@ -36,42 +35,23 @@ function TradeCards() {
     return c.rarity !== '' && rarityFilter.includes(c.rarity)
   }
 
-  // LOOKING FOR CARDS
-  const lookingForCards = useMemo(
-    () =>
-      allCards
-        .filter((c) => (tradableRarities as readonly string[]).includes(c.rarity) && tradeableExpansions.includes(c.expansion))
-        .filter((ac) => {
-          const idx = ownedCards.findIndex((oc) => oc.card_id === ac.card_id)
-          return idx === -1 || ownedCards[idx].amount_owned <= lookingForMaxCards
-        }),
-    [ownedCards, lookingForMaxCards],
-  )
-  const lookingForCardsFiltered = useMemo(() => {
-    return lookingForCards.filter(filterRarities)
-  }, [lookingForCards, rarityFilter])
+  const populateCards = (card_id: string) => {
+    const card = getCardById(card_id) as Card
+    const amount_owned = ownedCards.find((c) => c.card_id === card_id)?.amount_owned ?? 0
+    return { ...card, amount_owned }
+  }
 
-  // FOR TRADE CARDS
-  const forTradeCards = useMemo(() => {
-    const myCards = ownedCards.filter((c) => c.amount_owned >= forTradeMinCards)
-    return allCards
-      .filter((c) => (tradableRarities as readonly string[]).includes(c.rarity) && tradeableExpansions.includes(c.expansion))
-      .filter((ac) => myCards.findIndex((oc) => oc.card_id === ac.card_id) > -1)
-      .map((ac) => ({
-        ...ac,
-        amount_owned: myCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned,
-      }))
-  }, [ownedCards, forTradeMinCards])
+  const lookingForCards = useMemo(() => getNeededCards(ownedCards, lookingForMaxCards + 1).map(populateCards), [ownedCards, lookingForMaxCards])
+  const lookingForCardsFiltered = useMemo(() => lookingForCards.filter(filterRarities), [lookingForCards, rarityFilter])
 
-  const forTradeCardsFiltered = useMemo(() => {
-    return forTradeCards.filter(filterRarities)
-  }, [forTradeCards, rarityFilter])
+  const forTradeCards = useMemo(() => getExtraCards(ownedCards, forTradeMinCards - 1).map(populateCards), [ownedCards, forTradeMinCards])
+  const forTradeCardsFiltered = useMemo(() => forTradeCards.filter(filterRarities), [forTradeCards, rarityFilter])
 
   const getCardValues = () => {
     let cardValues = ''
 
     if (account?.is_public) {
-      cardValues += `${t('publicTradePage')} https://tcgpocketcollectiontracker.com/#/collection/${account?.friend_id}/trade\n`
+      cardValues += `${t('publicTradePage')} https://tcgpocketcollectiontracker.com/#/trade/${account?.friend_id}\n`
     }
     if (account?.username) {
       cardValues += `${t('friendID')} ${account.friend_id} (${account.username})\n\n`
@@ -145,14 +125,10 @@ function TradeCards() {
         </div>
         <div className="mx-auto max-w-[900px] mt-6">
           <TabsContent value="looking_for">
-            {lookingForCards && lookingForCards.length > 0 ? (
-              <CardsTable cards={lookingForCardsFiltered} extraOffset={105} editable={false} />
-            ) : (
-              <NoCardsNeeded />
-            )}
+            {lookingForCards ? <CardsTable cards={lookingForCardsFiltered} extraOffset={105} editable={false} /> : <NoCardsNeeded />}
           </TabsContent>
           <TabsContent value="for_trade">
-            {forTradeCards && forTradeCards.length > 0 ? <CardsTable cards={forTradeCardsFiltered} extraOffset={105} editable={false} /> : <NoTradeableCards />}
+            {forTradeCards ? <CardsTable cards={forTradeCardsFiltered} extraOffset={105} editable={false} /> : <NoTradeableCards />}
           </TabsContent>
         </div>
       </Tabs>

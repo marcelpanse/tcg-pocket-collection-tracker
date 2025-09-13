@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Card as CardComponent } from '@/components/Card'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import { Radio, RadioIndicator, RadioItem } from '@/components/ui/radio'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { getCardById, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
 import { getCardNameByLang } from '@/lib/utils'
@@ -85,75 +86,72 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
           </Dialog>
 
           <div className="p-4 w-full">
-            <div className="mb-8">
+            <div className="mb-3">
               <h2 className="text-xl font-semibold">{t('text.alternateVersions')}</h2>
-              {card.alternate_versions?.map((x) => (
-                <p key={x.card_id} onClick={() => setCardId(x.card_id)} className="cursor-pointer">
-                  {x.card_id === cardId ? '✓' : '→'} {x.version}
-                </p>
-              ))}
+              <Radio value={cardId} onValueChange={setCardId}>
+                {card.alternate_versions?.map((x) => (
+                  <label key={x.card_id} className="flex items-center cursor-pointer" htmlFor={`radio-${x.card_id}`}>
+                    <RadioItem id={`radio-${x.card_id}`} value={x.card_id}>
+                      <RadioIndicator />
+                    </RadioItem>
+                    {x.rarity} {x.card_id}
+                  </label>
+                ))}
+              </Radio>
             </div>
 
+            <p className="text-lg mt-1">
+              <strong>{t('text.expansion')}:</strong> {card.expansion}
+            </p>
+            <p className="text-lg">
+              <strong>{t('text.pack')}:</strong> {t(`${card.pack}`, { ns: 'common/packs' })}
+            </p>
+
+            <p className="mt-1">
+              <strong>Energy:</strong> {card.energy}
+            </p>
+            <p>
+              <strong>{t('text.weakness')}:</strong> {t(`${card.weakness}`, { ns: 'common/types' }) || 'N/A'}
+            </p>
+            <p>
+              <strong>{t('text.hp')}:</strong> {card.hp}
+            </p>
+            <p>
+              <strong>{t('text.retreat')}:</strong> {card.retreat || 'N/A'}
+            </p>
+
+            <p className="mt-1">
+              <strong>{t('text.ability')}:</strong> {card.ability?.name ?? <i>None</i>}
+            </p>
+            {card.ability && (
+              <p>
+                <strong>{t('text.abilityEffect')}:</strong> {card.ability.effect}
+              </p>
+            )}
+
+            <p className="mt-1">
+              <strong>{t('text.cardType')}:</strong> {t(`cardType.${card.card_type}`)}
+            </p>
+            <p>
+              <strong>{t('text.evolutionType')}:</strong> {t(`evolutionType.${card.evolution_type}`)}
+            </p>
+
             {expansion && packName && (
-              <p className="text-lg mb-1">
+              <p className="mt-1">
                 <strong>{t('text.chanceToPull', { ns: 'pages/card-detail', percent: pullRateForSpecificCard(expansion, packName, card).toFixed(2) })}</strong>
               </p>
             )}
-            <p className="text-lg mb-1">
-              <strong>{t('text.expansion')}:</strong> {card.expansion}
-            </p>
-            <p className="text-lg mb-1">
-              <strong>{t('text.pack')}:</strong> {t(`${card.pack}`, { ns: 'common/packs' })}
-            </p>
-            <p className="text-lg mb-1">
-              <strong>Energy:</strong> {card.energy}
-            </p>
-            <p className="text-lg mb-1">
-              <strong>{t('text.hp')}:</strong> {card.hp}
-            </p>
-            <p className="text-lg mb-1">
-              <strong>{t('text.cardType')}:</strong> {t(`cardType.${card.card_type}`)}
-            </p>
-            <p className="text-lg mb-1">
-              <strong>{t('text.evolutionType')}:</strong> {t(`evolutionType.${card.evolution_type}`)}
-            </p>
-            <p className="text-lg mb-1">
-              <strong>{t('text.ex')}:</strong> {t(`ex.${card.ex}`)}
-            </p>
-            <p className="text-lg mb-1">
-              <strong>{t('text.baby')}:</strong> {t(`ex.${card.baby ? 'yes' : 'no'}`)}
-            </p>
-            <p className="text-lg mb-1">
+            <p>
               <strong>{t('text.craftingCost')}:</strong> {card.crafting_cost}
             </p>
-            <p className="text-lg mb-1">
+
+            <p className="mt-1">
               <strong>{t('text.artist')}:</strong> {card.artist}
             </p>
-            <p className="text-lg mb-1">
-              <strong>{t('text.setDetails')}:</strong> {t(card.set_details, { ns: 'common/sets' })}
+
+            <p className="mt-4 text-neutral-400 text-sm">
+              <strong className="font-semibold">{t('text.updated')}:</strong> {row?.updated_at ? formatTimestamp(row.updated_at) : 'N/A'}
             </p>
-
-            <div className="mt-4">
-              <h2 className="text-xl font-semibold">{t('text.details')}</h2>
-              <p>
-                <strong>{t('text.weakness')}:</strong> {t(`${card.weakness}`, { ns: 'common/types' }) || 'N/A'}
-              </p>
-              <p>
-                <strong>{t('text.retreat')}:</strong> {card.retreat || 'N/A'}
-              </p>
-              <p>
-                <strong>{t('text.ability')}:</strong> {card.ability?.name || 'No ability'}
-              </p>
-              <p>
-                <strong>{t('text.abilityEffect')}:</strong> {card.ability?.effect || 'N/A'}
-              </p>
-            </div>
-
-            <div className="mt-4">
-              <p className="text-neutral-400 text-sm">
-                <strong className="font-semibold">{t('text.updated')}:</strong> {row?.updated_at ? formatTimestamp(row.updated_at) : 'N/A'}
-              </p>
-            </div>
           </div>
         </div>
       </SheetContent>

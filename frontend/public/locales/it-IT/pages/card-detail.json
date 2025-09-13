@@ -3,7 +3,6 @@
     "hp": "PS",
     "cardType": "Tipo di carta",
     "evolutionType": "Tipo di evoluzione",
-    "ex": "EX",
     "craftingCost": "Costo punti busta",
     "artist": "Artista",
     "setDetails": "Dettagli espansione",
@@ -26,9 +25,5 @@
     "item": "Strumento",
     "tool": "Oggetto Pokémon",
     "supporter": "Aiuto"
-  },
-  "ex": {
-    "yes": "Sì",
-    "no": "No"
   }
 }
