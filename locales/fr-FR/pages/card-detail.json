@@ -4,7 +4,6 @@
     "hp": "PV",
     "cardType": "Type de carte",
     "evolutionType": "Type d'évolution",
-    "ex": "EX",
     "craftingCost": "Coût de fabrication",
     "artist": "Illustrateur",
     "setDetails": "Détails de l'extension",
@@ -15,7 +14,6 @@
     "ability": "Talent",
     "abilityEffect": "Effet du talent",
     "details": "Détails",
-    "baby": "Bébé",
     "updated": "Actualisé",
     "alternateVersions": "Versions alternatives"
   },
@@ -30,9 +28,5 @@
     "item": "Objet",
     "tool": "Outil",
     "supporter": "Supporter"
-  },
-  "ex": {
-    "yes": "Oui",
-    "no": "Non"
   }
 }
