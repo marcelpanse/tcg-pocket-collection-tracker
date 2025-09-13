@@ -189,11 +189,11 @@ function TradeWith() {
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                 <div className="w-full sm:w-1/2">
                   <h4 className="text-md font-medium mb-1 ml-2">{t('youHave')}</h4>
-                  <CardList cards={userExtraCards[rarity]} ownedCards={ownedCards} selected={yourCard} setSelected={setYourCard} />
+                  <CardList cards={userExtraCards[rarity]} selected={yourCard} setSelected={setYourCard} />
                 </div>
                 <div className="w-full sm:w-1/2">
                   <h4 className="text-md font-medium mb-1 ml-2">{t('friendHas')}</h4>
-                  <CardList cards={friendExtraCards[rarity]} ownedCards={ownedCards} selected={friendCard} setSelected={setFriendCard} />
+                  <CardList cards={friendExtraCards[rarity]} selected={friendCard} setSelected={setFriendCard} />
                 </div>
               </div>
             </div>
