@@ -1,5 +1,5 @@
 import i18n from 'i18next'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Card as CardComponent } from '@/components/Card'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
@@ -18,21 +18,31 @@ interface CardDetailProps {
 function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps>) {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
   const [cardId, setCardId] = useState(initialCardId)
-  const card: Card = getCardById(cardId) || ({} as Card)
-  const expansion = getExpansionById(card.expansion)
 
   const { data: ownedCards = [] } = useCollection()
 
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
 
+  const card: Card = useMemo(() => getCardById(cardId) || ({} as Card), [cardId])
+  const row = useMemo(() => ownedCards.find((oc: CollectionRow) => oc.card_id === cardId), [cardId])
+  const alternatives = useMemo(
+    () => card.alternate_versions.map((card) => ({ ...card, amount_owned: ownedCards.find((c) => c.card_id === card.card_id)?.amount_owned ?? 0 })),
+    [card],
+  )
+  const expansion = useMemo(() => getExpansionById(card.expansion), [card])
+
   if (!card) {
+    console.log(`Unrecognized card_id: ${cardId}`)
     return null
   }
 
-  // if we draw from 'everypack' we need to take one of the packs to calculated based on
-  const packName = card.pack === 'everypack' ? expansion?.packs[0].name : card.pack
+  if (!expansion) {
+    console.log(`Unrecognized expansion: ${card.expansion}`)
+    return null
+  }
 
-  const row = ownedCards.find((oc: CollectionRow) => oc.card_id === cardId)
+  // if we draw from 'everypack' we need to take one of the packs to base calculations on
+  const packName = card.pack === 'everypack' ? expansion?.packs[0].name : card.pack
 
   const formatTimestamp = (timestamp: string) => {
     return new Intl.DateTimeFormat(undefined, {
@@ -86,17 +96,24 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
           </Dialog>
 
           <div className="p-4 w-full">
-            <div className="mb-3">
+            <div className="mb-3 ">
               <h2 className="text-xl font-semibold">{t('text.alternateVersions')}</h2>
-              <Radio value={cardId} onValueChange={setCardId}>
-                {card.alternate_versions?.map((x) => (
+              <Radio className="w-fit" value={cardId} onValueChange={setCardId}>
+                {alternatives.map((x) => (
                   <label key={x.card_id} className="flex items-center cursor-pointer" htmlFor={`radio-${x.card_id}`}>
                     <RadioItem id={`radio-${x.card_id}`} value={x.card_id}>
                       <RadioIndicator />
                     </RadioItem>
-                    {x.rarity} {x.card_id}
+                    <span className="mr-4">
+                      {x.rarity} {x.card_id}
+                    </span>
+                    <span className="text-neutral-400 ml-auto">×{x.amount_owned}</span>
                   </label>
                 ))}
+                <p className="flex items-baseline mt-1">
+                  <span className="mr-4">{t('text.totalAmount')}:</span>
+                  <span className="text-neutral-400 ml-auto">×{alternatives.reduce((acc, c) => acc + c.amount_owned, 0)}</span>
+                </p>
               </Radio>
             </div>
 
