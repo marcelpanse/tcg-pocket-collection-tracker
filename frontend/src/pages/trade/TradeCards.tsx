@@ -28,12 +28,7 @@ function TradeCards() {
   const [forTradeMinCards, setForTradeMinCards] = useState<number>((account?.min_number_of_cards_to_keep ?? 1) + 1)
   const [currentTab, setCurrentTab] = useState('looking_for')
 
-  const filterRarities = (c: Card) => {
-    if (rarityFilter.length === 0) {
-      return true
-    }
-    return c.rarity !== '' && rarityFilter.includes(c.rarity)
-  }
+  const filterRarities = (c: Card) => (rarityFilter.length === 0 ? (tradableRarities as readonly Rarity[]) : rarityFilter).includes(c.rarity)
 
   const populateCards = (card_id: string) => {
     const card = getCardById(card_id) as Card
