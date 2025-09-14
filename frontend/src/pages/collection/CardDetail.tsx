@@ -61,7 +61,7 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
         }
       }}
     >
-      <SheetContent className="transition-all duration-300 ease-in-out border-slate-600 overflow-y-auto">
+      <SheetContent className="transition-all duration-300 ease-in-out border-slate-600 overflow-y-auto w-full md:w-[725px]">
         <SheetHeader>
           <SheetTitle>
             {getCardNameByLang(card, i18n.language)} {card.rarity}
@@ -115,57 +115,58 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
               </Radio>
             </div>
 
-            <p className="text-lg mt-1">
-              <strong>{t('text.expansion')}:</strong> {card.expansion}
+            <p className="mt-8 flex">
+              <strong className="block min-w-[175px]">{t('text.expansion')}</strong> {card.expansion}
             </p>
-            <p className="text-lg">
-              <strong>{t('text.pack')}:</strong> {t(`${card.pack}`, { ns: 'common/packs' })}
-            </p>
-
-            <p className="mt-1">
-              <strong>Energy:</strong> {card.energy}
-            </p>
-            <p>
-              <strong>{t('text.weakness')}:</strong> {t(`${card.weakness}`, { ns: 'common/types' }) || 'N/A'}
-            </p>
-            <p>
-              <strong>{t('text.hp')}:</strong> {card.hp}
-            </p>
-            <p>
-              <strong>{t('text.retreat')}:</strong> {card.retreat || 'N/A'}
+            <p className="mt-1 flex">
+              <strong className="block min-w-[175px]">{t('text.pack')}</strong> {t(`${card.pack}`, { ns: 'common/packs' })}
             </p>
 
-            <p className="mt-1">
-              <strong>{t('text.ability')}:</strong> {card.ability?.name ?? <i>None</i>}
+            <p className="mt-1 flex">
+              <strong className="block min-w-[175px]">Energy</strong> {card.energy}
+            </p>
+            <p className="mt-1 flex">
+              <strong className="block min-w-[175px]">{t('text.weakness')}</strong> {t(`${card.weakness}`, { ns: 'common/types' }) || 'N/A'}
+            </p>
+            <p className="mt-1 flex">
+              <strong className="block min-w-[175px]">{t('text.hp')}</strong> {card.hp}
+            </p>
+            <p className="mt-1 flex">
+              <strong className="block min-w-[175px]">{t('text.retreat')}</strong> {card.retreat || 'N/A'}
+            </p>
+
+            <p className="mt-1 flex">
+              <strong className="block min-w-[175px]">{t('text.ability')}</strong> {card.ability?.name ?? <i>None</i>}
             </p>
             {card.ability && (
-              <p>
-                <strong>{t('text.abilityEffect')}:</strong> {card.ability.effect}
+              <p className="mt-1 flex">
+                <strong className="block min-w-[175px]">{t('text.abilityEffect')}</strong> {card.ability.effect}
               </p>
             )}
 
-            <p className="mt-1">
-              <strong>{t('text.cardType')}:</strong> {t(`cardType.${card.card_type}`)}
+            <p className="mt-1 flex">
+              <strong className="block min-w-[175px]">{t('text.cardType')}</strong> {t(`cardType.${card.card_type}`)}
             </p>
-            <p>
-              <strong>{t('text.evolutionType')}:</strong> {t(`evolutionType.${card.evolution_type}`)}
+            <p className="mt-1 flex">
+              <strong className="block min-w-[175px]">{t('text.evolutionType')}</strong> {t(`evolutionType.${card.evolution_type}`)}
             </p>
 
             {expansion && packName && (
-              <p className="mt-1">
-                <strong>{t('text.chanceToPull', { ns: 'pages/card-detail', percent: pullRateForSpecificCard(expansion, packName, card).toFixed(2) })}</strong>
+              <p className="mt-1 flex">
+                <strong className="block min-w-[175px]">{t('text.chanceToPull', { ns: 'pages/card-detail' })}</strong>
+                {pullRateForSpecificCard(expansion, packName, card).toFixed(2)}%
               </p>
             )}
-            <p>
-              <strong>{t('text.craftingCost')}:</strong> {card.crafting_cost}
+            <p className="mt-1 flex">
+              <strong className="block min-w-[175px]">{t('text.craftingCost')}</strong> {card.crafting_cost}
             </p>
 
-            <p className="mt-1">
-              <strong>{t('text.artist')}:</strong> {card.artist}
+            <p className="mt-1 flex">
+              <strong className="block min-w-[175px]">{t('text.artist')}</strong> {card.artist}
             </p>
 
-            <p className="mt-4 text-neutral-400 text-sm">
-              <strong className="font-semibold">{t('text.updated')}:</strong> {row?.updated_at ? formatTimestamp(row.updated_at) : 'N/A'}
+            <p className="mt-4 text-neutral-400 text-sm flex">
+              <strong className="font-semibold">{t('text.updated')}</strong> {row?.updated_at ? formatTimestamp(row.updated_at) : 'N/A'}
             </p>
           </div>
         </div>
