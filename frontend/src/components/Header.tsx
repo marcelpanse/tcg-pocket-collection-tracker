@@ -104,8 +104,8 @@ export function Header() {
                 </Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild className="hidden lg:block">
-              <Link to="/scan" className="hidden md:block">
+            <NavigationMenuLink asChild className={`${actionableTradeCount ? 'hidden sm:block' : ''}`}>
+              <Link to="/scan">
                 <Button className="px-2 sm:px-4" variant="ghost">
                   {t('scan')}
                 </Button>
