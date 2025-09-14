@@ -418,7 +418,7 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
   }
 
   return (
-    <div className="flex flex-col mx-auto max-w-[900px] p-4 mt-4 mb-10 rounded-3xl border border-neutral-500">
+    <div className="flex flex-col mx-auto max-w-[900px] p-4 mt-4 mb-10 rounded-lg border-1 border-neutral-700 border-solid">
       {error && (
         <Alert variant="destructive">
           <AlertTitle>An error occured!</AlertTitle>
@@ -436,9 +436,9 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
       )}
 
       {isInitialized && state === State.UploadImages && (
-        <button
-          type="button"
-          className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900/10"
+        // biome-ignore lint/a11y/noStaticElementInteractions: cant be a button because it contains another button
+        <div
+          className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-md cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900/10"
           onClick={() => fileInputRef.current?.click()}
         >
           <AlertDescription>
@@ -448,7 +448,7 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
           <Button variant="outline" className="mt-2">
             {t('selectImages')}
           </Button>
-        </button>
+        </div>
       )}
 
       {state === State.UploadingImages && (
