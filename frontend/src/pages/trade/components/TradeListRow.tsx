@@ -1,11 +1,9 @@
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
-import { getCardById } from '@/lib/CardsDB.ts'
-import { getCardNameByLang } from '@/lib/utils'
 import { useAccount } from '@/services/account/useAccount'
-import { useCollection } from '@/services/collection/useCollection'
 import type { TradeRow } from '@/types'
+import { CardLine } from './CardLine'
 
 interface Props {
   row: TradeRow
@@ -14,10 +12,9 @@ interface Props {
 }
 
 export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTradeId }) => {
-  const { t, i18n } = useTranslation('trade-matches')
+  const { t } = useTranslation('trade-matches')
 
   const { data: account } = useAccount()
-  const { data: ownedCards = [] } = useCollection()
 
   if (!account) {
     return null
@@ -25,21 +22,6 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
 
   const yourCard = row.offering_friend_id === account.friend_id ? row.offer_card_id : row.receiver_card_id
   const friendCard = row.offering_friend_id === account.friend_id ? row.receiver_card_id : row.offer_card_id
-
-  function card(card_id: string) {
-    const card = getCardById(card_id)
-    if (!card) {
-      return <span className="w-1/2 text-center">?</span>
-    }
-    return (
-      <span className="flex rounded px-1 w-1/2 bg-zinc-800">
-        <span className="mr-2 sm:min-w-10">{card.rarity} </span>
-        <span className="mr-2 sm:min-w-14 me-4">{card.card_id} </span>
-        <span>{getCardNameByLang(card, i18n.language)}</span>
-        <span className="text-neutral-400 ml-auto">×{ownedCards.find((c) => c.card_id === card.card_id)?.amount_owned || 0}</span>
-      </span>
-    )
-  }
 
   function onClick(row: TradeRow) {
     if (selectedTradeId === row.id) {
@@ -57,27 +39,29 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
       finished: { icon: '✓', color: 'bg-indigo-600' },
     }
     return (
-      <>
+      <div className="flex items-center">
         <Tooltip id={`tooltip-${row.id}`} />
         <span
-          className={`rounded-full text-center w-9 min-w-6 ${style[row.status].color}`}
+          className={`rounded-full text-center w-7 md:w-9 ${style[row.status].color}`}
           data-tooltip-id={`tooltip-${row.id}`}
           data-tooltip-content={t(`status.${row.status}`)}
         >
           {style[row.status].icon}
         </span>
-      </>
+      </div>
     )
   }
 
   return (
     <li
-      className={`flex cursor-pointer justify-between rounded gap-1 sm:gap-4 sm:px-1 py-1 my-1 ${selectedTradeId === row.id && 'bg-green-900'} hover:bg-neutral-500`}
+      className={`flex cursor-pointer rounded gap-1 md:gap-4 p-1 ${selectedTradeId === row.id && 'bg-green-900'} hover:bg-neutral-500`}
       onClick={() => onClick(row)}
     >
       {status(row)}
-      {card(yourCard)}
-      {card(friendCard)}
+      <div className="flex flex-col sm:flex-row w-full justify-between gap-1 md:gap-4">
+        <CardLine className="sm:w-1/2" card_id={yourCard} increment={-1} />
+        <CardLine className="sm:w-1/2" card_id={friendCard} increment={1} />
+      </div>
     </li>
   )
 }
