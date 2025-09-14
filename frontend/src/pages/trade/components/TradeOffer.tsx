@@ -1,10 +1,10 @@
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
+import { CardLine } from '@/components/CardLine'
 import { Button } from '@/components/ui/button.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useInsertTrade } from '@/services/trade/useTrade.ts'
 import type { Card, TradeRow } from '@/types'
-import { CardLine } from './CardLine'
 
 interface Props {
   yourId: string

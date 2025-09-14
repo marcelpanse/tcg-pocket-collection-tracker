@@ -1,6 +1,6 @@
 import type { Dispatch, FC, SetStateAction } from 'react'
+import { CardLine } from '@/components/CardLine'
 import type { Card } from '@/types'
-import { CardLine } from './CardLine'
 
 interface Props {
   cards: Card[]

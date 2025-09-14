@@ -1,9 +1,9 @@
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
+import { CardLine } from '@/components/CardLine'
 import { useAccount } from '@/services/account/useAccount'
 import type { TradeRow } from '@/types'
-import { CardLine } from './CardLine'
 
 interface Props {
   row: TradeRow
