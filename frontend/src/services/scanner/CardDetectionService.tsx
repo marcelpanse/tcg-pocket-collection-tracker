@@ -12,19 +12,19 @@ export interface DetectionResult {
   detections: BoundingBox[]
 }
 
-class PokemonCardDetectorService {
-  private static instance: PokemonCardDetectorService
+class CardDetectorService {
+  private static instance: CardDetectorService
   private model: tf.GraphModel | null = null
   private modelLoading: Promise<void> | null = null
   private numClass = 1
 
   private constructor() {}
 
-  public static getInstance(): PokemonCardDetectorService {
-    if (!PokemonCardDetectorService.instance) {
-      PokemonCardDetectorService.instance = new PokemonCardDetectorService()
+  public static getInstance(): CardDetectorService {
+    if (!CardDetectorService.instance) {
+      CardDetectorService.instance = new CardDetectorService()
     }
-    return PokemonCardDetectorService.instance
+    return CardDetectorService.instance
   }
 
   public async loadModel(modelPath = '/model/model.json'): Promise<void> {
@@ -243,4 +243,4 @@ class PokemonCardDetectorService {
   }
 }
 
-export default PokemonCardDetectorService
+export default CardDetectorService

@@ -1,11 +1,11 @@
 import i18n from 'i18next'
 import { MinusIcon, PlusIcon } from 'lucide-react'
-import { use, useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
-import { CollectionContext } from '@/lib/context/CollectionContext.ts'
-import { UserContext } from '@/lib/context/UserContext.ts'
 import { cn, getCardNameByLang } from '@/lib/utils'
+import { useLoginDialog } from '@/services/auth/useAuth'
+import { useSelectedCard, useUpdateCards } from '@/services/collection/useCollection'
 import type { Card as CardType } from '@/types'
 
 interface CardProps {
@@ -19,8 +19,9 @@ interface CardProps {
 const _inputDebounce: Record<string, number | null> = {}
 
 export function Card({ card, onImageClick, className, editable = true }: CardProps) {
-  const { user, setIsLoginDialogOpen } = use(UserContext)
-  const { setSelectedCardId, updateCards } = use(CollectionContext)
+  const { setIsLoginDialogOpen } = useLoginDialog()
+  const { setSelectedCardId } = useSelectedCard()
+  const updateCardsMutation = useUpdateCards()
   const [amountOwned, setAmountOwned] = useState(card.amount_owned || 0)
   const [inputValue, setInputValue] = useState(0)
 
@@ -30,9 +31,6 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
 
   const updateCardCount = useCallback(
     async (newAmountIn: number) => {
-      if (!user?.user.email) {
-        throw new Error('Card.tsx:updateCardCount: User not logged in')
-      }
       const card_id = card.card_id
       const newAmount = Math.max(0, newAmountIn)
       setAmountOwned(newAmount)
@@ -41,30 +39,21 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
         window.clearTimeout(_inputDebounce[card_id])
       }
       _inputDebounce[card_id] = window.setTimeout(async () => {
-        if (!user || !user.user.email) {
-          throw new Error('Card.tsx:updateCardCount: User not logged in')
-        }
-        await updateCards([{ card_id, amount_owned: newAmount }])
+        updateCardsMutation.mutate({
+          updates: [{ card_id, amount_owned: newAmount }],
+        })
       }, 1000)
     },
-    [user, amountOwned],
+    [amountOwned, updateCardsMutation, card.card_id],
   )
 
   const addCard = useCallback(async () => {
-    if (!user) {
-      setIsLoginDialogOpen(true)
-      return
-    }
     await updateCardCount(amountOwned + 1)
-  }, [updateCardCount])
+  }, [updateCardCount, setIsLoginDialogOpen])
 
   const removeCard = useCallback(async () => {
-    if (!user) {
-      setIsLoginDialogOpen(true)
-      return
-    }
     await updateCardCount(amountOwned - 1)
-  }, [updateCardCount])
+  }, [updateCardCount, setIsLoginDialogOpen])
 
   const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)

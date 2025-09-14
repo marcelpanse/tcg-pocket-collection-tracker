@@ -1,4 +1,5 @@
 {
+  "notFound": "Account not found",
   "settingsTitle": "Trade settings",
   "openSettings": "Open trade settings",
   "openTradeWith": "View matches",
@@ -47,5 +48,6 @@
   "viewHistory": "View history",
   "tabCards": "Cards",
   "tabOffers": "Offers",
-  "tabSettings": "Settings"
+  "tabSettings": "Settings",
+  "noAccount": "First set up your account using 'Edit profile' in the top right corner."
 }

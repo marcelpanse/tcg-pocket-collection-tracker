@@ -1,19 +1,19 @@
-import { use, useState } from 'react'
+import { type FC, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { z } from 'zod'
 import { Button } from '@/components/ui/button.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
-import { supabase } from '@/lib/Auth.ts'
-import { UserContext } from '@/lib/context/UserContext.ts'
+import { signInWithOtp, useLoginDialog, useVerifyOTP } from '@/services/auth/useAuth'
 import { Input } from './ui/input.tsx'
 import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from './ui/input-otp.tsx'
 
-export const Login = () => {
-  const { setIsLoginDialogOpen } = use(UserContext)
+export const Login: FC = () => {
+  const { setIsLoginDialogOpen } = useLoginDialog()
   const { toast } = useToast()
   const { t } = useTranslation('login')
+  const verifyOtpMutation = useVerifyOTP()
 
-  const EmailSchema = z.string().nonempty(t('emailRequired')).email(t('emailInvalid')).max(255, t('emailTooLong'))
+  const EmailSchema = z.email(t('emailInvalid')).nonempty(t('emailRequired')).max(255, t('emailTooLong'))
 
   const [emailInput, setEmailInput] = useState('')
   const [emailSubmitted, setEmailSubmitted] = useState(false)
@@ -21,24 +21,11 @@ export const Login = () => {
 
   const otpEntered = async (otp: string) => {
     try {
-      const {
-        data: { session },
-        error,
-      } = await supabase.auth.verifyOtp({
-        email: emailInput,
-        token: otp,
-        type: 'email',
-      })
-
-      if (error) {
-        console.log('supa OTP error', error)
-        toast({ title: t('otpVerifyError'), variant: 'destructive' })
-      } else {
-        console.log('supa session', session)
-        setIsLoginDialogOpen(false)
-      }
-    } catch {
-      toast({ title: t('invalidCode'), variant: 'destructive' })
+      verifyOtpMutation.mutate({ email: emailInput, otp })
+      setIsLoginDialogOpen(false)
+    } catch (e) {
+      console.error('error verifying otp', e)
+      toast({ title: t('otpVerifyError'), variant: 'destructive' })
     }
   }
 
@@ -50,13 +37,13 @@ export const Login = () => {
     }
 
     setEmailSubmitting(true)
-    const { error } = await supabase.auth.signInWithOtp({ email: emailInput })
-    if (error) {
-      console.log('supa OTP error', error)
+
+    try {
+      await signInWithOtp({ email: emailInput })
+      setEmailSubmitted(true)
+    } catch {
       toast({ title: t('otpSendError'), variant: 'destructive' })
       setEmailSubmitting(false)
-    } else {
-      setEmailSubmitted(true)
     }
   }
 

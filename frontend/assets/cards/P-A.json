@@ -8,19 +8,21 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Heal 20 damage from 1 of your Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics",
+    "ability": {
+      "name": "",
+      "effect": "Heal 20 damage from 1 of your Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-1",
-        "version": "Promo-A #1",
         "rarity": ""
       }
     ],
@@ -36,19 +38,21 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "During this turn, the Retreat Cost of your Active Pokémon is 1 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, the Retreat Cost of your Active Pokémon is 1 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-2",
-        "version": "Promo-A #2",
         "rarity": ""
       }
     ],
@@ -64,19 +68,21 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Your opponent reveals their hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "Your opponent reveals their hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-3",
-        "version": "Promo-A #3",
         "rarity": ""
       }
     ],
@@ -92,24 +98,25 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Look at the top 3 cards of your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda",
+    "ability": {
+      "name": "",
+      "effect": "Look at the top 3 cards of your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-4",
-        "version": "Promo-A #4",
         "rarity": ""
       },
       {
         "card_id": "P-A-8",
-        "version": "Promo-A #8",
         "rarity": ""
       }
     ],
@@ -125,24 +132,25 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Put 1 random Basic Pokemon from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda",
+    "ability": {
+      "name": "",
+      "effect": "Put 1 random Basic Pokemon from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-5",
-        "version": "Promo-A #5",
         "rarity": ""
       },
       {
         "card_id": "A2b-111",
-        "version": "Shining Revelry #111",
         "rarity": "♛"
       }
     ],
@@ -158,19 +166,21 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Your opponent shuffles their hand into their deck and draws 3 cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics",
+    "ability": {
+      "name": "",
+      "effect": "Your opponent shuffles their hand into their deck and draws 3 cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-6",
-        "version": "Promo-A #6",
         "rarity": ""
       }
     ],
@@ -186,19 +196,21 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Draw 2 cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                Naoki Saito",
+    "ability": {
+      "name": "",
+      "effect": "Draw 2 cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                Naoki Saito"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-7",
-        "version": "Promo-A #7",
         "rarity": ""
       }
     ],
@@ -214,24 +226,25 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Look at the top 3 cards of your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "Look at the top 3 cards of your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-4",
-        "version": "Promo-A #4",
         "rarity": ""
       },
       {
         "card_id": "P-A-8",
-        "version": "Promo-A #8",
         "rarity": ""
       }
     ],
@@ -254,37 +267,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-94",
-        "version": "Genetic Apex #94",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-9",
-        "version": "Promo-A #9",
         "rarity": ""
       },
       {
         "card_id": "P-A-15",
-        "version": "Promo-A #15",
         "rarity": ""
       },
       {
         "card_id": "P-A-26",
-        "version": "Promo-A #26",
         "rarity": ""
       }
     ],
@@ -307,27 +312,21 @@
         "effect": "Discard 2 [P] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-128",
-        "version": "Genetic Apex #128",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-10",
-        "version": "Promo-A #10",
         "rarity": ""
       }
     ],
@@ -350,27 +349,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-202",
-        "version": "Genetic Apex #202",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-11",
-        "version": "Promo-A #11",
         "rarity": ""
       }
     ],
@@ -393,32 +386,25 @@
         "effect": "Draw 1 card."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-196",
-        "version": "Genetic Apex #196",
         "rarity": "◊"
       },
       {
         "card_id": "A1-246",
-        "version": "Genetic Apex #246",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-12",
-        "version": "Promo-A #12",
         "rarity": ""
       }
     ],
@@ -448,20 +434,18 @@
     "weakness": "fire",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-7",
-        "version": "Genetic Apex #7",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-13",
-        "version": "Promo-A #13",
         "rarity": ""
       }
     ],
@@ -484,22 +468,17 @@
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-14",
-        "version": "Promo-A #14",
         "rarity": ""
       }
     ],
@@ -522,37 +501,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-94",
-        "version": "Genetic Apex #94",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-9",
-        "version": "Promo-A #9",
         "rarity": ""
       },
       {
         "card_id": "P-A-15",
-        "version": "Promo-A #15",
         "rarity": ""
       },
       {
         "card_id": "P-A-26",
-        "version": "Promo-A #26",
         "rarity": ""
       }
     ],
@@ -575,27 +546,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-113",
-        "version": "Genetic Apex #113",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-16",
-        "version": "Promo-A #16",
         "rarity": ""
       }
     ],
@@ -618,22 +583,17 @@
         "effect": "This Pokémon also does 10 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-17",
-        "version": "Promo-A #17",
         "rarity": ""
       }
     ],
@@ -656,32 +616,25 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-3",
-        "version": "Genetic Apex #3",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-18",
-        "version": "Promo-A #18",
         "rarity": ""
       },
       {
         "card_id": "A3-212",
-        "version": "Celestial Guardians #212",
         "rarity": "☆"
       }
     ],
@@ -711,25 +664,22 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-89",
-        "version": "Genetic Apex #89",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-19",
-        "version": "Promo-A #19",
         "rarity": ""
       },
       {
         "card_id": "A3a-93",
-        "version": "Extradimensional Crisis #93",
         "rarity": "☆"
       }
     ],
@@ -752,22 +702,17 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-20",
-        "version": "Promo-A #20",
         "rarity": ""
       }
     ],
@@ -790,27 +735,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "4",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-150",
-        "version": "Genetic Apex #150",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-21",
-        "version": "Promo-A #21",
         "rarity": ""
       }
     ],
@@ -833,22 +772,17 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-22",
-        "version": "Promo-A #22",
         "rarity": ""
       }
     ],
@@ -871,37 +805,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-1",
-        "version": "Genetic Apex #1",
         "rarity": "◊"
       },
       {
         "card_id": "A1-227",
-        "version": "Genetic Apex #227",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-23",
-        "version": "Promo-A #23",
         "rarity": ""
       },
       {
         "card_id": "A3-210",
-        "version": "Celestial Guardians #210",
         "rarity": "☆"
       }
     ],
@@ -924,32 +850,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-97",
-        "version": "Genetic Apex #97",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-24",
-        "version": "Promo-A #24",
         "rarity": ""
       },
       {
         "card_id": "A4-217",
-        "version": "Wisdom of Sea and Sky #217",
         "rarity": "☆"
       }
     ],
@@ -978,42 +897,33 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-47",
-        "version": "Genetic Apex #47",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-255",
-        "version": "Genetic Apex #255",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-274",
-        "version": "Genetic Apex #274",
         "rarity": "☆☆"
       },
       {
         "card_id": "P-A-25",
-        "version": "Promo-A #25",
         "rarity": ""
       },
       {
         "card_id": "A3b-103",
-        "version": "Eevee Grove #103",
         "rarity": "☆☆"
       }
     ],
@@ -1036,37 +946,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-94",
-        "version": "Genetic Apex #94",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-9",
-        "version": "Promo-A #9",
         "rarity": ""
       },
       {
         "card_id": "P-A-15",
-        "version": "Promo-A #15",
         "rarity": ""
       },
       {
         "card_id": "P-A-26",
-        "version": "Promo-A #26",
         "rarity": ""
       }
     ],
@@ -1089,22 +991,17 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-27",
-        "version": "Promo-A #27",
         "rarity": ""
       }
     ],
@@ -1127,27 +1024,21 @@
         "effect": "Discard 2 [R] Energy from this Pokémon. This attack does 80 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1a-14",
-        "version": "Mythical Island #14",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-28",
-        "version": "Promo-A #28",
         "rarity": ""
       }
     ],
@@ -1170,32 +1061,25 @@
         "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-55",
-        "version": "Genetic Apex #55",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-29",
-        "version": "Promo-A #29",
         "rarity": ""
       },
       {
         "card_id": "A3-217",
-        "version": "Celestial Guardians #217",
         "rarity": "☆"
       }
     ],
@@ -1218,22 +1102,17 @@
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do −20 damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-30",
-        "version": "Promo-A #30",
         "rarity": ""
       }
     ],
@@ -1256,27 +1135,21 @@
         "effect": "This attack does 30 damage for each of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-213",
-        "version": "Genetic Apex #213",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-31",
-        "version": "Promo-A #31",
         "rarity": ""
       }
     ],
@@ -1299,32 +1172,25 @@
         "effect": "Discard a [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-33",
-        "version": "Genetic Apex #33",
         "rarity": "◊"
       },
       {
         "card_id": "A1-230",
-        "version": "Genetic Apex #230",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-32",
-        "version": "Promo-A #32",
         "rarity": ""
       }
     ],
@@ -1347,37 +1213,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-53",
-        "version": "Genetic Apex #53",
         "rarity": "◊"
       },
       {
         "card_id": "A1-232",
-        "version": "Genetic Apex #232",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-33",
-        "version": "Promo-A #33",
         "rarity": ""
       },
       {
         "card_id": "A3-215",
-        "version": "Celestial Guardians #215",
         "rarity": "☆"
       }
     ],
@@ -1400,27 +1258,21 @@
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-35",
-        "version": "Space-Time Smackdown #35",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-34",
-        "version": "Promo-A #34",
         "rarity": ""
       }
     ],
@@ -1443,27 +1295,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-10",
-        "version": "Space-Time Smackdown #10",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-35",
-        "version": "Promo-A #35",
         "rarity": ""
       }
     ],
@@ -1486,27 +1332,21 @@
         "effect": "If this Pokémon has at least 2 extra [L] Energy attached, this attack does 80 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-57",
-        "version": "Space-Time Smackdown #57",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-36",
-        "version": "Promo-A #36",
         "rarity": ""
       }
     ],
@@ -1536,15 +1376,14 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-37",
-        "version": "Promo-A #37",
         "rarity": ""
       }
     ],
@@ -1567,22 +1406,17 @@
         "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-38",
-        "version": "Promo-A #38",
         "rarity": ""
       }
     ],
@@ -1605,27 +1439,21 @@
         "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-111",
-        "version": "Space-Time Smackdown #111",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-39",
-        "version": "Promo-A #39",
         "rarity": ""
       }
     ],
@@ -1648,32 +1476,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-27",
-        "version": "Space-Time Smackdown #27",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-40",
-        "version": "Promo-A #40",
         "rarity": ""
       },
       {
         "card_id": "A4a-91",
-        "version": "Secluded Springs #91",
         "rarity": "☆"
       }
     ],
@@ -1696,27 +1517,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-63",
-        "version": "Space-Time Smackdown #63",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-41",
-        "version": "Promo-A #41",
         "rarity": ""
       }
     ],
@@ -1746,30 +1561,26 @@
     "weakness": "grass",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-110",
-        "version": "Space-Time Smackdown #110",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A2-187",
-        "version": "Space-Time Smackdown #187",
         "rarity": "☆☆"
       },
       {
         "card_id": "A2-202",
-        "version": "Space-Time Smackdown #202",
         "rarity": "☆☆"
       },
       {
         "card_id": "P-A-42",
-        "version": "Promo-A #42",
         "rarity": ""
       }
     ],
@@ -1792,27 +1603,21 @@
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2a-8",
-        "version": "Triumphant Light #8",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-43",
-        "version": "Promo-A #43",
         "rarity": ""
       }
     ],
@@ -1842,20 +1647,18 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2a-26",
-        "version": "Triumphant Light #26",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-44",
-        "version": "Promo-A #44",
         "rarity": ""
       }
     ],
@@ -1878,22 +1681,17 @@
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage done to this Pokémon by attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-45",
-        "version": "Promo-A #45",
         "rarity": ""
       }
     ],
@@ -1916,32 +1714,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2a-45",
-        "version": "Triumphant Light #45",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-46",
-        "version": "Promo-A #46",
         "rarity": ""
       },
       {
         "card_id": "A4a-98",
-        "version": "Secluded Springs #98",
         "rarity": "☆"
       }
     ],
@@ -1971,15 +1762,14 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-47",
-        "version": "Promo-A #47",
         "rarity": ""
       }
     ],
@@ -2002,32 +1792,25 @@
         "effect": "Choose 2 of your Benched Pokémon. For each of those Pokémon, take a [W] Energy from your Energy Zone and attach it to that Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2-50",
-        "version": "Space-Time Smackdown #50",
         "rarity": "◊◊"
       },
       {
         "card_id": "A2-162",
-        "version": "Space-Time Smackdown #162",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-48",
-        "version": "Promo-A #48",
         "rarity": ""
       }
     ],
@@ -2050,27 +1833,21 @@
         "effect": "This Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2a-63",
-        "version": "Triumphant Light #63",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-49",
-        "version": "Promo-A #49",
         "rarity": ""
       }
     ],
@@ -2099,42 +1876,33 @@
         "effect": "Discard 2 [P] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-129",
-        "version": "Genetic Apex #129",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A1-262",
-        "version": "Genetic Apex #262",
         "rarity": "☆☆"
       },
       {
         "card_id": "A1-282",
-        "version": "Genetic Apex #282",
         "rarity": "☆☆☆"
       },
       {
         "card_id": "A1-286",
-        "version": "Genetic Apex #286",
         "rarity": "♛"
       },
       {
         "card_id": "P-A-50",
-        "version": "Promo-A #50",
         "rarity": ""
       }
     ],
@@ -2157,27 +1925,21 @@
         "effect": "During your next turn, this Pokémon's Overacceleration attack does +20 damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2b-68",
-        "version": "Shining Revelry #68",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-51",
-        "version": "Promo-A #51",
         "rarity": ""
       }
     ],
@@ -2200,27 +1962,21 @@
         "effect": "Put 1 random [G] Pokémon from your deck into your hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2b-5",
-        "version": "Shining Revelry #5",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-52",
-        "version": "Promo-A #52",
         "rarity": ""
       }
     ],
@@ -2243,22 +1999,17 @@
         "effect": "If your opponent's Active Pokémon has damage on it, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-53",
-        "version": "Promo-A #53",
         "rarity": ""
       }
     ],
@@ -2288,20 +2039,18 @@
     "weakness": "fighting",
     "retreat": "0",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2b-28",
-        "version": "Shining Revelry #28",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-54",
-        "version": "Promo-A #54",
         "rarity": ""
       }
     ],
@@ -2324,32 +2073,25 @@
         "effect": "If this Pokémon has at least 2 extra [F] Energy attached, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2b-39",
-        "version": "Shining Revelry #39",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-55",
-        "version": "Promo-A #55",
         "rarity": ""
       },
       {
         "card_id": "A3-225",
-        "version": "Celestial Guardians #225",
         "rarity": "☆"
       }
     ],
@@ -2372,22 +2114,17 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-56",
-        "version": "Promo-A #56",
         "rarity": ""
       }
     ],
@@ -2410,27 +2147,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2b-64",
-        "version": "Shining Revelry #64",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-57",
-        "version": "Promo-A #57",
         "rarity": ""
       }
     ],
@@ -2453,32 +2184,25 @@
         "effect": "Take a [L] Energy from your Energy Zone and attach it to 1 of your Benched [L] Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2b-25",
-        "version": "Shining Revelry #25",
         "rarity": "◊◊"
       },
       {
         "card_id": "A2b-103",
-        "version": "Shining Revelry #103",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-58",
-        "version": "Promo-A #58",
         "rarity": ""
       }
     ],
@@ -2501,32 +2225,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A2b-42",
-        "version": "Shining Revelry #42",
         "rarity": "◊"
       },
       {
         "card_id": "A2b-104",
-        "version": "Shining Revelry #104",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-59",
-        "version": "Promo-A #59",
         "rarity": ""
       }
     ],
@@ -2549,27 +2266,21 @@
         "effect": "Take a [G] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1a-1",
-        "version": "Mythical Island #1",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-60",
-        "version": "Promo-A #60",
         "rarity": ""
       }
     ],
@@ -2592,32 +2303,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-87",
-        "version": "Genetic Apex #87",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-61",
-        "version": "Promo-A #61",
         "rarity": ""
       },
       {
         "card_id": "A3a-91",
-        "version": "Extradimensional Crisis #91",
         "rarity": "☆"
       }
     ],
@@ -2640,32 +2344,25 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-198",
-        "version": "Genetic Apex #198",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-62",
-        "version": "Promo-A #62",
         "rarity": ""
       },
       {
         "card_id": "A3b-102",
-        "version": "Eevee Grove #102",
         "rarity": "☆"
       }
     ],
@@ -2688,22 +2385,17 @@
         "effect": "Flip a coin until you get tails. This attack does 30 more damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-63",
-        "version": "Promo-A #63",
         "rarity": ""
       }
     ],
@@ -2726,27 +2418,21 @@
         "effect": "1 of your opponent's Pokémon is chosen at random 4 times. For each time a Pokémon was chosen, do 40 damage to it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-64",
-        "version": "Promo-A #64",
         "rarity": ""
       },
       {
         "card_id": "P-A-65",
-        "version": "Promo-A #65",
         "rarity": ""
       }
     ],
@@ -2769,27 +2455,21 @@
         "effect": "1 of your opponent's Pokémon is chosen at random 4 times. For each time a Pokémon was chosen, do 40 damage to it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-64",
-        "version": "Promo-A #64",
         "rarity": ""
       },
       {
         "card_id": "P-A-65",
-        "version": "Promo-A #65",
         "rarity": ""
       }
     ],
@@ -2812,27 +2492,21 @@
         "effect": "This attack also does 20 damage to 1 of your Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3-83",
-        "version": "Celestial Guardians #83",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-66",
-        "version": "Promo-A #66",
         "rarity": ""
       }
     ],
@@ -2855,32 +2529,25 @@
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3-85",
-        "version": "Celestial Guardians #85",
         "rarity": "◊"
       },
       {
         "card_id": "A3-171",
-        "version": "Celestial Guardians #171",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-67",
-        "version": "Promo-A #67",
         "rarity": ""
       }
     ],
@@ -2903,27 +2570,21 @@
         "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3-100",
-        "version": "Celestial Guardians #100",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-68",
-        "version": "Promo-A #68",
         "rarity": ""
       }
     ],
@@ -2946,32 +2607,25 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "4",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3-2",
-        "version": "Celestial Guardians #2",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3-156",
-        "version": "Celestial Guardians #156",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-69",
-        "version": "Promo-A #69",
         "rarity": ""
       }
     ],
@@ -2994,27 +2648,21 @@
         "effect": "This attack also does 20 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3-41",
-        "version": "Celestial Guardians #41",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-70",
-        "version": "Promo-A #70",
         "rarity": ""
       }
     ],
@@ -3037,27 +2685,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3-97",
-        "version": "Celestial Guardians #97",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-71",
-        "version": "Promo-A #71",
         "rarity": ""
       }
     ],
@@ -3080,22 +2722,17 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-72",
-        "version": "Promo-A #72",
         "rarity": ""
       }
     ],
@@ -3118,22 +2755,17 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Burned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-73",
-        "version": "Promo-A #73",
         "rarity": ""
       }
     ],
@@ -3163,20 +2795,18 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3a-21",
-        "version": "Extradimensional Crisis #21",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-74",
-        "version": "Promo-A #74",
         "rarity": ""
       }
     ],
@@ -3199,27 +2829,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3a-8",
-        "version": "Extradimensional Crisis #8",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-75",
-        "version": "Promo-A #75",
         "rarity": ""
       }
     ],
@@ -3242,32 +2866,25 @@
         "effect": "This Pokémon also does 70 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3a-9",
-        "version": "Extradimensional Crisis #9",
         "rarity": "◊◊"
       },
       {
         "card_id": "A3a-72",
-        "version": "Extradimensional Crisis #72",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-76",
-        "version": "Promo-A #76",
         "rarity": ""
       }
     ],
@@ -3290,27 +2907,21 @@
         "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3a-20",
-        "version": "Extradimensional Crisis #20",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-77",
-        "version": "Promo-A #77",
         "rarity": ""
       }
     ],
@@ -3333,22 +2944,17 @@
         "effect": "This Pokémon also does 30 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-78",
-        "version": "Promo-A #78",
         "rarity": "◊◊◊"
       }
     ],
@@ -3371,22 +2977,17 @@
         "effect": "Discard a [M] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-79",
-        "version": "Promo-A #79",
         "rarity": "◊◊◊"
       }
     ],
@@ -3409,27 +3010,21 @@
         "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3a-53",
-        "version": "Extradimensional Crisis #53",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-80",
-        "version": "Promo-A #80",
         "rarity": ""
       }
     ],
@@ -3458,22 +3053,17 @@
         "effect": "Discard the top 5 cards of each player's deck."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-81",
-        "version": "Promo-A #81",
         "rarity": "◊◊◊◊"
       }
     ],
@@ -3496,27 +3086,21 @@
         "effect": "Flip 2 coins. This attack does 20 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3a-44",
-        "version": "Extradimensional Crisis #44",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-82",
-        "version": "Promo-A #82",
         "rarity": ""
       }
     ],
@@ -3539,27 +3123,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3a-57",
-        "version": "Extradimensional Crisis #57",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-83",
-        "version": "Promo-A #83",
         "rarity": ""
       }
     ],
@@ -3588,37 +3166,29 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3a-19",
-        "version": "Extradimensional Crisis #19",
         "rarity": "◊◊◊◊"
       },
       {
         "card_id": "A3a-77",
-        "version": "Extradimensional Crisis #77",
         "rarity": "☆☆"
       },
       {
         "card_id": "A3a-84",
-        "version": "Extradimensional Crisis #84",
         "rarity": "☆☆"
       },
       {
         "card_id": "P-A-84",
-        "version": "Promo-A #84",
         "rarity": ""
       }
     ],
@@ -3641,27 +3211,21 @@
         "effect": "If 1 of your Pokémon used Sweets Relay during your last turn, this attack does 20 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-18",
-        "version": "Eevee Grove #18",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-85",
-        "version": "Promo-A #85",
         "rarity": ""
       }
     ],
@@ -3684,37 +3248,29 @@
         "effect": "If this Pokémon evolved during this turn, this attack does 20 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-25",
-        "version": "Eevee Grove #25",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A3b-74",
-        "version": "Eevee Grove #74",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-86",
-        "version": "Promo-A #86",
         "rarity": ""
       },
       {
         "card_id": "A4-219",
-        "version": "Wisdom of Sea and Sky #219",
         "rarity": "☆"
       }
     ],
@@ -3737,27 +3293,21 @@
         "effect": "This attack does 40 damage for each time your Pokémon used Sweets Relay during this game."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-37",
-        "version": "Eevee Grove #37",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-87",
-        "version": "Promo-A #87",
         "rarity": ""
       }
     ],
@@ -3780,22 +3330,17 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-88",
-        "version": "Promo-A #88",
         "rarity": ""
       }
     ],
@@ -3818,22 +3363,17 @@
         "effect": "Heal 10 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-89",
-        "version": "Promo-A #89",
         "rarity": ""
       }
     ],
@@ -3856,27 +3396,21 @@
         "effect": "During your opponent's next turn, if this Pokémon is damaged by an attack, do 30 damage to the Attacking Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-48",
-        "version": "Eevee Grove #48",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-90",
-        "version": "Promo-A #90",
         "rarity": ""
       }
     ],
@@ -3899,27 +3433,21 @@
         "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A3b-65",
-        "version": "Eevee Grove #65",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-91",
-        "version": "Promo-A #91",
         "rarity": ""
       }
     ],
@@ -3942,42 +3470,33 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A1-206",
-        "version": "Genetic Apex #206",
         "rarity": "◊"
       },
       {
         "card_id": "A1-207",
-        "version": "Genetic Apex #207",
         "rarity": "◊"
       },
       {
         "card_id": "A1-208",
-        "version": "Genetic Apex #208",
         "rarity": "◊"
       },
       {
         "card_id": "A1-248",
-        "version": "Genetic Apex #248",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-92",
-        "version": "Promo-A #92",
         "rarity": ""
       }
     ],
@@ -4000,27 +3519,21 @@
         "effect": "Put a random Pokémon from your deck into your hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "0",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": true,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4-77",
-        "version": "Wisdom of Sea and Sky #77",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-93",
-        "version": "Promo-A #93",
         "rarity": ""
       }
     ],
@@ -4043,22 +3556,17 @@
         "effect": "This attack does 10 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-94",
-        "version": "Promo-A #94",
         "rarity": ""
       }
     ],
@@ -4081,22 +3589,17 @@
         "effect": "Flip a coin. If heads, switch in 1 of your opponent's Benched Pokémon to the Active Spot."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-95",
-        "version": "Promo-A #95",
         "rarity": ""
       }
     ],
@@ -4119,27 +3622,21 @@
         "effect": "Discard a random card from your opponent's hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4-118",
-        "version": "Wisdom of Sea and Sky #118",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-96",
-        "version": "Promo-A #96",
         "rarity": ""
       }
     ],
@@ -4162,27 +3659,21 @@
         "effect": "If your opponent's Active Pokémon is an Evolution Pokémon, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4-133",
-        "version": "Wisdom of Sea and Sky #133",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-97",
-        "version": "Promo-A #97",
         "rarity": ""
       }
     ],
@@ -4205,22 +3696,17 @@
         "effect": "Flip a coin. If heads, heal 60 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-98",
-        "version": "Promo-A #98",
         "rarity": ""
       }
     ],
@@ -4243,27 +3729,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4-49",
-        "version": "Wisdom of Sea and Sky #49",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-99",
-        "version": "Promo-A #99",
         "rarity": ""
       }
     ],
@@ -4286,27 +3766,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "0",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4-116",
-        "version": "Wisdom of Sea and Sky #116",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-100",
-        "version": "Promo-A #100",
         "rarity": ""
       }
     ],
@@ -4329,27 +3803,21 @@
         "effect": "If Latios is on your Bench, this attack does 20 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-36",
-        "version": "Secluded Springs #36",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-101",
-        "version": "Promo-A #101",
         "rarity": ""
       }
     ],
@@ -4372,22 +3840,17 @@
         "effect": "Flip 2 coins. This attack does 40 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-102",
-        "version": "Promo-A #102",
         "rarity": ""
       }
     ],
@@ -4410,22 +3873,17 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "P-A-103",
-        "version": "Promo-A #103",
         "rarity": ""
       }
     ],
@@ -4455,25 +3913,22 @@
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-22",
-        "version": "Secluded Springs #22",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "A4a-72",
-        "version": "Secluded Springs #72",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-104",
-        "version": "Promo-A #104",
         "rarity": ""
       }
     ],
@@ -4496,27 +3951,21 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-49",
-        "version": "Secluded Springs #49",
         "rarity": "◊"
       },
       {
         "card_id": "P-A-105",
-        "version": "Promo-A #105",
         "rarity": ""
       }
     ],
@@ -4546,20 +3995,18 @@
     "weakness": "grass",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-50",
-        "version": "Secluded Springs #50",
         "rarity": "◊◊◊"
       },
       {
         "card_id": "P-A-106",
-        "version": "Promo-A #106",
         "rarity": ""
       }
     ],
@@ -4582,27 +4029,21 @@
         "effect": "Until this Pokémon leaves the Active Spot, this Pokémon's Rolling Frenzy attack does +30 damage. This effect stacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-62",
-        "version": "Secluded Springs #62",
         "rarity": "◊◊"
       },
       {
         "card_id": "P-A-107",
-        "version": "Promo-A #107",
         "rarity": ""
       }
     ],
@@ -4625,32 +4066,25 @@
         "effect": "This attack does damage to your opponent's Active Pokémon equal to the damage this Pokémon has on it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "P",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
       {
         "card_id": "A4a-43",
-        "version": "Secluded Springs #43",
         "rarity": "◊"
       },
       {
         "card_id": "A4a-76",
-        "version": "Secluded Springs #76",
         "rarity": "☆"
       },
       {
         "card_id": "P-A-108",
-        "version": "Promo-A #108",
         "rarity": ""
       }
     ],

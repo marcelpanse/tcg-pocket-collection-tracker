@@ -1,16 +1,16 @@
-export class CardHashStorageService {
-  private static instance: CardHashStorageService
+export class CardHashService {
+  private static instance: CardHashService
   private db: IDBDatabase | null = null
   private readonly DB_NAME = 'PokemonCardHashes'
   private readonly STORE_NAME = 'cardHashes2'
 
   private constructor() {}
 
-  public static getInstance(): CardHashStorageService {
-    if (!CardHashStorageService.instance) {
-      CardHashStorageService.instance = new CardHashStorageService()
+  public static getInstance(): CardHashService {
+    if (!CardHashService.instance) {
+      CardHashService.instance = new CardHashService()
     }
-    return CardHashStorageService.instance
+    return CardHashService.instance
   }
 
   public async initDB(): Promise<void> {

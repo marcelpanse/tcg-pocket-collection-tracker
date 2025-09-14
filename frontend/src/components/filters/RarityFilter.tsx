@@ -7,57 +7,57 @@ import { rarities as allRarities, type Rarity } from '@/types'
 
 const rarityJSX: Record<Rarity, JSX.Element | null> = {
   '◊': (
-    <ToggleGroupItem value="◊" aria-label="◊" className="text-gray-400 hover:text-gray-500 px-1">
+    <ToggleGroupItem key="◊" value="◊" aria-label="◊" className="text-gray-400 hover:text-gray-500 px-1">
       ♢
     </ToggleGroupItem>
   ),
   '◊◊': (
-    <ToggleGroupItem value="◊◊" aria-label="◊◊" className="text-gray-400 hover:text-gray-500 px-1">
+    <ToggleGroupItem key="◊◊" value="◊◊" aria-label="◊◊" className="text-gray-400 hover:text-gray-500 px-1">
       ♢♢
     </ToggleGroupItem>
   ),
   '◊◊◊': (
-    <ToggleGroupItem value="◊◊◊" aria-label="◊◊◊" className="text-gray-400 hover:text-gray-500 px-1">
+    <ToggleGroupItem key="◊◊◊" value="◊◊◊" aria-label="◊◊◊" className="text-gray-400 hover:text-gray-500 px-1">
       ♢♢♢
     </ToggleGroupItem>
   ),
   '◊◊◊◊': (
-    <ToggleGroupItem value="◊◊◊◊" aria-label="◊◊◊◊" className="text-gray-400 hover:text-gray-500 px-1">
+    <ToggleGroupItem key="◊◊◊◊" value="◊◊◊◊" aria-label="◊◊◊◊" className="text-gray-400 hover:text-gray-500 px-1">
       ♢♢♢♢
     </ToggleGroupItem>
   ),
   '☆': (
-    <ToggleGroupItem value="☆" aria-label="☆" className="text-yellow-500 hover:text-yellow-600 .dark:data-[state=on]:text-yellow-500 px-1">
+    <ToggleGroupItem key="☆" value="☆" aria-label="☆" className="text-yellow-500 hover:text-yellow-600 .dark:data-[state=on]:text-yellow-500 px-1">
       ☆
     </ToggleGroupItem>
   ),
   '☆☆': (
-    <ToggleGroupItem value="☆☆" aria-label="☆☆" className="text-yellow-500 hover:text-yellow-600 data-[state=on]:text-yellow-500 px-1">
+    <ToggleGroupItem key="☆☆" value="☆☆" aria-label="☆☆" className="text-yellow-500 hover:text-yellow-600 data-[state=on]:text-yellow-500 px-1">
       ☆☆
     </ToggleGroupItem>
   ),
   '☆☆☆': (
-    <ToggleGroupItem value="☆☆☆" aria-label="☆☆☆" className="text-yellow-500 hover:text-yellow-600 data-[state=on]:text-yellow-500 px-1">
+    <ToggleGroupItem key="☆☆☆" value="☆☆☆" aria-label="☆☆☆" className="text-yellow-500 hover:text-yellow-600 data-[state=on]:text-yellow-500 px-1">
       ☆☆☆
     </ToggleGroupItem>
   ),
   '✵': (
-    <ToggleGroupItem value="✵" aria-label="✵" className="text-pink-300 hover:text-pink-500 .dark:data-[state=on]:text-pink-400 px-1">
+    <ToggleGroupItem key="✵" value="✵" aria-label="✵" className="text-pink-300 hover:text-pink-500 .dark:data-[state=on]:text-pink-400 px-1">
       ✵
     </ToggleGroupItem>
   ),
   '✵✵': (
-    <ToggleGroupItem value="✵✵" aria-label="✵✵" className="text-pink-300 hover:text-pink-500 data-[state=on]:text-pink-400 px-1">
+    <ToggleGroupItem key="✵✵" value="✵✵" aria-label="✵✵" className="text-pink-300 hover:text-pink-500 data-[state=on]:text-pink-400 px-1">
       ✵✵
     </ToggleGroupItem>
   ),
   'Crown Rare': (
-    <ToggleGroupItem value="Crown Rare" aria-label="♛" className="px-1">
+    <ToggleGroupItem key="Crown" value="Crown Rare" aria-label="♛" className="px-1">
       👑
     </ToggleGroupItem>
   ),
   P: (
-    <ToggleGroupItem value="P" aria-label="P" className="px-1">
+    <ToggleGroupItem key="P" value="P" aria-label="P" className="px-1">
       P
     </ToggleGroupItem>
   ),

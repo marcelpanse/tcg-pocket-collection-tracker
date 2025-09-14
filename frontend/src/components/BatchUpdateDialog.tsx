@@ -1,12 +1,12 @@
 import { MinusIcon, PlusIcon } from 'lucide-react'
-import { use, useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CardMiniature } from '@/components/CardMiniature'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import ScrollArea from '@/components/ui/scroll-area'
-import { CollectionContext } from '@/lib/context/CollectionContext'
+import { useUpdateCards } from '@/services/collection/useCollection.ts'
 import type { Card } from '@/types'
 
 interface BatchUpdateDialogProps {
@@ -16,15 +16,17 @@ interface BatchUpdateDialogProps {
 
 export function BatchUpdateDialog({ filteredCards }: BatchUpdateDialogProps) {
   const { t } = useTranslation('bulk-update')
-  const { updateCards } = use(CollectionContext)
   const [isOpen, setIsOpen] = useState(false)
   const [amount, setAmount] = useState(0)
   const [selectedCards, setSelectedCards] = useState<Record<string, boolean>>({})
   const [isProcessing, setIsProcessing] = useState(false)
   const [changesMade, setChangesMade] = useState(false)
+  const updateCardsMutation = useUpdateCards()
 
   const onBatchUpdate = async (cardIds: string[], amount: number) => {
-    await updateCards(cardIds.map((card_id) => ({ card_id, amount_owned: amount })))
+    updateCardsMutation.mutate({
+      updates: cardIds.map((card_id) => ({ card_id, amount_owned: amount })),
+    })
   }
 
   const isBatchUpdateDisabled = filteredCards.length === 0

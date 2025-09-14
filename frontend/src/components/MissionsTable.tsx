@@ -1,13 +1,14 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { type FC, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import type { Mission as MissionType } from '@/types'
 import { Mission } from './Mission.tsx'
 
 interface Props {
   missions: MissionType[]
   resetScrollTrigger?: boolean
+  setSelectedMissionCardOptions: (options: string[]) => void
 }
 
-export function MissionsTable({ missions, resetScrollTrigger }: Props) {
+export const MissionsTable: FC<Props> = ({ missions, resetScrollTrigger, setSelectedMissionCardOptions }) => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [scrollContainerHeight, setScrollContainerHeight] = useState('auto')
 
@@ -43,7 +44,7 @@ export function MissionsTable({ missions, resetScrollTrigger }: Props) {
       style={{ scrollbarWidth: 'none', height: scrollContainerHeight }}
     >
       {missions.map((mission) => (
-        <Mission key={mission.name} mission={mission} />
+        <Mission key={mission.name} mission={mission} setSelectedMissionCardOptions={setSelectedMissionCardOptions} />
       ))}
     </div>
   )

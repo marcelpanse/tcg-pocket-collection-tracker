@@ -212,9 +212,9 @@ async function extractCardInfo($, cardUrl) {
   const raritySection = $('table.card-prints-versions tr.current')
   cardInfo.rarity = cardUrl.toString().includes('P-A') ? 'P' : raritySection.find('td:last-child').text().trim() || 'P'
 
-  cardInfo.fullart = fullArtRarities.includes(cardInfo.rarity) ? 'Yes' : 'No'
+  cardInfo.fullart = fullArtRarities.includes(cardInfo.rarity)
 
-  cardInfo.ex = cardInfo.name.includes('ex') && !nonExCardsWithEx.includes(cardInfo.name) ? 'yes' : 'no'
+  cardInfo.ex = cardInfo.name.includes('ex') && !nonExCardsWithEx.includes(cardInfo.name)
 
   // Check if card is a baby pokemon (Not currently specified exactly on Limitless TCG page)
   cardInfo.baby = cardInfo.weakness === 'none' && cardInfo.hp === '30' && cardInfo.energy !== 'Dragon'
@@ -231,7 +231,6 @@ async function extractCardInfo($, cardUrl) {
     if (versionName) {
       cardInfo.alternate_versions.push({
         card_id: alternate_card_id ? urlToCardId(alternate_card_id) : cardInfo.card_id,
-        version: versionName,
         rarity: rarityText === 'Crown Rare' ? '♛' : rarityText,
       })
     }
@@ -257,13 +256,19 @@ async function getCardDetails(cardUrl) {
 function extractAbility($) {
   const cardType = $('p.card-text-type').text().trim()
   if (cardType.startsWith('Trainer')) {
-    // For Trainer cards, handle the effect for Trainer cards explicitly
+    // handle the effect for Trainer cards explicitly
     const abilitySection = $('div.card-text-section')
     if (abilitySection.length) {
       const nextSection = abilitySection.next('div.card-text-section')
-      return nextSection.length ? nextSection.text().trim() : 'No effect'
+      if (!nextSection) {
+        return undefined
+      }
+      return {
+        name: '',
+        effect: nextSection.text().trim(),
+      }
     }
-    return 'No effect'
+    return undefined
   } else {
     // For other cards, extract ability name and effect
     const abilitySection = $('div.card-text-ability')
@@ -274,12 +279,20 @@ function extractAbility($) {
       // Remove text within square brackets, similar to Python's re.sub(r'\[.*?\]', '')
       abilityEffect = abilityEffect.replace(/\[.*?]/g, '').trim()
 
+      if (Boolean(abilityName) !== Boolean(abilityEffect)) {
+        throw new Error('Ability name and effect presence missmatch')
+      }
+
+      if (!abilityName) {
+        return undefined
+      }
+
       return {
         name: abilityName || 'No ability',
         effect: abilityEffect || 'No effect',
       }
     }
-    return { name: 'No ability', effect: 'N/A' }
+    return undefined
   }
 }
 

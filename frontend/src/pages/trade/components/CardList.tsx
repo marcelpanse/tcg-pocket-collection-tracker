@@ -1,17 +1,14 @@
 import type { Dispatch, FC, SetStateAction } from 'react'
-import { useTranslation } from 'react-i18next'
-import { getCardNameByLang } from '@/lib/utils'
-import type { Card, CollectionRow } from '@/types'
+import type { Card } from '@/types'
+import { CardLine } from './CardLine'
 
 interface Props {
   cards: Card[]
-  ownedCards: CollectionRow[]
   selected: Card | null
   setSelected: Dispatch<SetStateAction<Card | null>>
 }
 
-export const CardList: FC<Props> = ({ cards, ownedCards, selected, setSelected }) => {
-  const { i18n } = useTranslation()
+export const CardList: FC<Props> = ({ cards, selected, setSelected }) => {
   function item(card: Card) {
     function onClick() {
       if (selected?.card_id === card.card_id) {
@@ -21,16 +18,8 @@ export const CardList: FC<Props> = ({ cards, ownedCards, selected, setSelected }
       }
     }
     return (
-      <li
-        key={card.card_id}
-        className={`flex rounded px-2 cursor-pointer ${selected?.card_id === card.card_id && 'bg-green-900'} hover:bg-neutral-600`}
-        onClick={onClick}
-      >
-        <span className="min-w-14 me-4">{card.card_id} </span>
-        <span>{getCardNameByLang(card, i18n.language)}</span>
-        <span title="Amount you own" className="text-gray-400 ml-auto">
-          <span style={{ userSelect: 'none' }}>×{ownedCards.find((c) => c.card_id === card.card_id)?.amount_owned || 0}</span>
-        </span>
+      <li key={card.card_id} className="rounded cursor-pointer" onClick={onClick}>
+        <CardLine className={`w-full ${selected?.card_id === card.card_id && 'bg-green-900'} hover:bg-neutral-600`} card_id={card.card_id} rarity={false} />
       </li>
     )
   }
