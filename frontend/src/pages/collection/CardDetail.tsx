@@ -2,6 +2,7 @@ import i18n from 'i18next'
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Card as CardComponent } from '@/components/Card'
+import { CardLine } from '@/components/CardLine'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Radio, RadioIndicator, RadioItem } from '@/components/ui/radio'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
@@ -104,15 +105,12 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
                     <RadioItem id={`radio-${x.card_id}`} value={x.card_id}>
                       <RadioIndicator />
                     </RadioItem>
-                    <span className="mr-4">
-                      {x.rarity} {x.card_id}
-                    </span>
-                    <span className="text-neutral-400 ml-auto">×{x.amount_owned}</span>
+                    <CardLine className="bg-transparent" card_id={x.card_id} name={false} details={false} />
                   </label>
                 ))}
                 <p className="flex items-baseline mt-1">
                   <span className="mr-4">{t('text.totalAmount')}:</span>
-                  <span className="text-neutral-400 ml-auto">×{alternatives.reduce((acc, c) => acc + c.amount_owned, 0)}</span>
+                  <span className="text-neutral-400 ml-auto mr-2">×{alternatives.reduce((acc, c) => acc + c.amount_owned, 0)}</span>
                 </p>
               </Radio>
             </div>

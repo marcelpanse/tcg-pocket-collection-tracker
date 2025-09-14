@@ -11,10 +11,11 @@ interface Props {
 
   // What to show
   rarity?: boolean
+  name?: boolean
   details?: boolean
 }
 
-export const CardLine: FC<Props> = ({ card_id, className, increment, rarity = true, details = true }) => {
+export const CardLine: FC<Props> = ({ card_id, className, increment, rarity = true, name = true, details = true }) => {
   const { i18n } = useTranslation('trade-matches')
 
   const { data: ownedCards = [] } = useCollection()
@@ -31,7 +32,7 @@ export const CardLine: FC<Props> = ({ card_id, className, increment, rarity = tr
     <span className={cn('flex rounded pl-1 bg-zinc-800', className)}>
       {rarity && <span className="mr-2 sm:min-w-10">{card.rarity} </span>}
       <span className="mr-2 sm:min-w-14 me-4">{card.card_id} </span>
-      <span className="mr-1">{getCardNameByLang(card, i18n.language)}</span>
+      {name && <span className="mr-1">{getCardNameByLang(card, i18n.language)}</span>}
       <span className="text-neutral-400 ml-auto mr-2">
         ×{ownedAmount}
         {increment && (
