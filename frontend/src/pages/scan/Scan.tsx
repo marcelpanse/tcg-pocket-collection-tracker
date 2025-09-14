@@ -60,7 +60,7 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
 
   const [isLoadingModel, setIsLoadingModel] = useState<boolean>(false)
   const [isGeneratingHashes, setIsGeneratingHashes] = useState<boolean>(false)
-  const isInitialized = !isLoadingModel && !isGeneratingHashes
+  const isInitialized = useMemo(() => !isLoadingModel && !isGeneratingHashes, [isLoadingModel, isGeneratingHashes])
 
   const [initProgress, setInitProgress] = useState(0)
   const [amount, setAmount] = useState(1)
@@ -68,7 +68,7 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
   const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
   const [incrementedCards, setIncrementedCards] = useState<number>(0)
 
-  const detectorService = CardDetectorService.getInstance()
+  const detectorService = useMemo(() => CardDetectorService.getInstance(), [])
 
   useEffect(() => {
     initializeModel().catch(console.error)
@@ -326,7 +326,7 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
     setExtractedCards((prev) => prev.map((card) => ({ ...card, selected: false })))
   }
 
-  const selectedCount = extractedCards.filter((card) => card.selected).length
+  const selectedCount = useMemo(() => extractedCards.filter((card) => card.selected).length, [extractedCards])
 
   const incrementCards = async (cardIds: string[]) => {
     const counts = new Map()
@@ -370,7 +370,7 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
     setState(State.ProcessUpdates + 1)
   }
 
-  const renderPotentialMatches = async (card: ExtractedCard, index: number) => {
+  const renderPotentialMatches = (card: ExtractedCard, index: number) => {
     return (
       <button
         type="button"
@@ -418,7 +418,7 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
   }
 
   return (
-    <div className="flex flex-col mx-auto max-w-[900px] px-4 mt-4 mb-10">
+    <div className="flex flex-col mx-auto max-w-[900px] p-4 mt-4 mb-10 rounded-3xl border border-neutral-500">
       {error && (
         <Alert variant="destructive">
           <AlertTitle>An error occured!</AlertTitle>
