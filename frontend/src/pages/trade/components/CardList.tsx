@@ -19,7 +19,7 @@ export const CardList: FC<Props> = ({ cards, selected, setSelected }) => {
     }
     return (
       <li key={card.card_id} className="rounded cursor-pointer" onClick={onClick}>
-        <CardLine className={`w-full ${selected?.card_id === card.card_id && 'bg-green-900'} hover:bg-neutral-600`} card_id={card.card_id} rarity={false} />
+        <CardLine className={`w-full ${selected?.card_id === card.card_id && 'bg-green-900'} hover:bg-neutral-600`} card_id={card.card_id} rarity="hidden" />
       </li>
     )
   }

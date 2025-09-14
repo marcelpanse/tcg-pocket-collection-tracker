@@ -19,7 +19,7 @@ function card(c: Card | null) {
   if (!c) {
     return '—'
   }
-  return <CardLine card_id={c.card_id} details={false} />
+  return <CardLine card_id={c.card_id} details="hidden" />
 }
 
 export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, setYourCard, setFriendCard }) => {

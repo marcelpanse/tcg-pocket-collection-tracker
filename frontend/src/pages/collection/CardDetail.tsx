@@ -105,7 +105,7 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
                     <RadioItem id={`radio-${x.card_id}`} value={x.card_id}>
                       <RadioIndicator />
                     </RadioItem>
-                    <CardLine className="bg-transparent" card_id={x.card_id} name={false} details={false} />
+                    <CardLine className="w-auto bg-transparent" card_id={x.card_id} rarity="w-14" name="hidden" details="hidden" amount="pl-4" />
                   </label>
                 ))}
                 <p className="flex items-baseline mt-1">
