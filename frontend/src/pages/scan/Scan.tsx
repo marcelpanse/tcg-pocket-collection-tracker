@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next'
 import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogOverlay, DialogTitle } from '@/components/ui/dialog'
 import { allCards } from '@/lib/CardsDB'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
@@ -39,15 +38,16 @@ interface ExtractedCard {
 
 enum State {
   Error = 0,
-  Closed = 1,
-  UploadImages = 2,
-  UploadingImages = 3,
-  ShowMatches = 4,
-  ProcessUpdates = 5,
-  Confirmation = 6,
+  UploadImages = 1,
+  UploadingImages = 2,
+  ShowMatches = 3,
+  ProcessUpdates = 4,
+  Confirmation = 5,
 }
 
-const PokemonCardDetector: FC<CardDetectorProps> = ({ onDetectionComplete, modelPath = '/model/model.json' }) => {
+const modelPath = '/model/model.json'
+
+const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
   const { t } = useTranslation('scan')
 
   const { data: ownedCards = [] } = useCollection()
@@ -55,12 +55,12 @@ const PokemonCardDetector: FC<CardDetectorProps> = ({ onDetectionComplete, model
 
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  const [state, setState] = useState<State>(State.Closed)
+  const [state, setState] = useState<State>(State.UploadImages)
   const [error, setError] = useState<string>('')
 
   const [isLoadingModel, setIsLoadingModel] = useState<boolean>(false)
   const [isGeneratingHashes, setIsGeneratingHashes] = useState<boolean>(false)
-  const isInitialized = !isLoadingModel && !isGeneratingHashes
+  const isInitialized = useMemo(() => !isLoadingModel && !isGeneratingHashes, [isLoadingModel, isGeneratingHashes])
 
   const [initProgress, setInitProgress] = useState(0)
   const [amount, setAmount] = useState(1)
@@ -68,20 +68,21 @@ const PokemonCardDetector: FC<CardDetectorProps> = ({ onDetectionComplete, model
   const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
   const [incrementedCards, setIncrementedCards] = useState<number>(0)
 
-  const detectorService = CardDetectorService.getInstance()
+  const detectorService = useMemo(() => CardDetectorService.getInstance(), [])
 
   useEffect(() => {
-    if (state === State.Closed + 1) {
+    initializeModel().catch(console.error)
+    generateAndStoreHashes().catch(console.error)
+  }, [])
+
+  useEffect(() => {
+    if (state === State.UploadImages) {
       if (extractedCards.length > 0) {
         setExtractedCards([])
         setAmount(1)
       }
     }
-    if (state !== State.Closed) {
-      initializeModel().catch(console.error)
-      generateAndStoreHashes().catch(console.error)
-    }
-  }, [modelPath, state])
+  }, [state])
 
   const initializeModel = async () => {
     try {
@@ -325,7 +326,7 @@ const PokemonCardDetector: FC<CardDetectorProps> = ({ onDetectionComplete, model
     setExtractedCards((prev) => prev.map((card) => ({ ...card, selected: false })))
   }
 
-  const selectedCount = extractedCards.filter((card) => card.selected).length
+  const selectedCount = useMemo(() => extractedCards.filter((card) => card.selected).length, [extractedCards])
 
   const incrementCards = async (cardIds: string[]) => {
     const counts = new Map()
@@ -369,7 +370,7 @@ const PokemonCardDetector: FC<CardDetectorProps> = ({ onDetectionComplete, model
     setState(State.ProcessUpdates + 1)
   }
 
-  const renderPotentialMatches = async (card: ExtractedCard, index: number) => {
+  const renderPotentialMatches = (card: ExtractedCard, index: number) => {
     return (
       <button
         type="button"
@@ -417,132 +418,101 @@ const PokemonCardDetector: FC<CardDetectorProps> = ({ onDetectionComplete, model
   }
 
   return (
-    <div className="pokemon-card-detector flex justify-end">
-      <Button onClick={() => setState(State.Closed + 1)} variant="ghost">
-        {t('scan')}
-      </Button>
+    <div className="flex flex-col mx-auto max-w-[900px] p-4 mt-4 mb-10 rounded-lg border-1 border-neutral-700 border-solid">
+      {error && (
+        <Alert variant="destructive">
+          <AlertTitle>An error occured!</AlertTitle>
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      )}
 
-      <Dialog
-        open={state !== State.Closed}
-        onOpenChange={(open) => {
-          if (!open) {
-            setState(State.Closed)
-          }
-        }}
-      >
-        <DialogOverlay className="DialogOverlay">
-          <DialogContent className="DialogContent max-w-4xl">
-            <DialogHeader>
-              <DialogTitle>{t('title')}</DialogTitle>
-            </DialogHeader>
+      {!isInitialized && state !== State.UploadingImages && (
+        <Alert variant="default">
+          <AlertDescription className="flex items-center space-x-2">
+            <Spinner />
+            <p>{t('loading', { initProgress: (initProgress * 100).toFixed(0) })}</p>
+          </AlertDescription>
+        </Alert>
+      )}
 
-            {error && (
-              <Alert variant="destructive">
-                <AlertTitle>An error occured!</AlertTitle>
-                <AlertDescription>{error}</AlertDescription>
-              </Alert>
-            )}
+      {isInitialized && state === State.UploadImages && (
+        // biome-ignore lint/a11y/noStaticElementInteractions: cant be a button because it contains another button
+        <div
+          className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-md cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900/10"
+          onClick={() => fileInputRef.current?.click()}
+        >
+          <AlertDescription>
+            <p className="mb-4 text-center">{t('description')}</p>
+          </AlertDescription>
+          <input type="file" ref={fileInputRef} onChange={handleImageUpload} accept="image/*" multiple className="w-full hidden" />
+          <Button variant="outline" className="mt-2">
+            {t('selectImages')}
+          </Button>
+        </div>
+      )}
 
-            {!isInitialized && state !== State.UploadingImages && (
-              <Alert variant="default">
-                <AlertDescription className="flex items-center space-x-2">
-                  <Spinner />
-                  <p>{t('loading', { initProgress: (initProgress * 100).toFixed(0) })}</p>
-                </AlertDescription>
-              </Alert>
-            )}
+      {state === State.UploadingImages && (
+        <Alert variant="default">
+          <AlertDescription className="flex items-center space-x-2">
+            <Spinner />
+            <p>{t('processing')}</p>
+          </AlertDescription>
+        </Alert>
+      )}
 
-            {isInitialized && state === State.UploadImages && (
-              <button
-                type="button"
-                className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900/10"
-                onClick={() => fileInputRef.current?.click()}
-              >
-                <AlertDescription>
-                  <p className="mb-4 text-center">{t('description')}</p>
-                </AlertDescription>
-                <input type="file" ref={fileInputRef} onChange={handleImageUpload} accept="image/*" multiple className="w-full hidden" />
-                <Button variant="outline" className="mt-2">
-                  {t('selectImages')}
-                </Button>
-              </button>
-            )}
+      {state === State.ShowMatches && (
+        <>
+          <div className="flex gap-2 justify-between my-4 flex-wrap">
+            <Button variant="outline" onClick={handleDeselectAll}>
+              {t('deselectAll')}
+            </Button>
+            <Button variant="outline" onClick={handleSelectAll}>
+              {t('selectAll')}
+            </Button>
+          </div>
 
-            {state === State.UploadingImages && (
-              <Alert variant="default">
-                <AlertDescription className="flex items-center space-x-2">
-                  <Spinner />
-                  <p>{t('loading', { initProgress })}</p>
-                </AlertDescription>
-              </Alert>
-            )}
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">{extractedCards.map((card, index) => renderPotentialMatches(card, index))}</div>
 
-            {state === State.ShowMatches && (
-              <div>
-                <div className="flex gap-2 justify-between my-4 flex-wrap">
-                  <Button variant="outline" onClick={handleDeselectAll} className="hidden sm:block">
-                    {t('deselectAll')}
-                  </Button>
-                  <Button variant="outline" onClick={handleSelectAll} className="hidden sm:block">
-                    {t('selectAll')}
-                  </Button>
-                </div>
+          <div className="flex flex-col items-center text-center mt-4">
+            <div className="flex gap-4">
+              <label className="flex items-center space-x-2 cursor-pointer">
+                <input type="radio" name="incrementType" value="increment" checked={amount === 1} onChange={() => setAmount(1)} />
+                <span>{t('increment')}</span>
+              </label>
+              <label className="flex items-center space-x-2 cursor-pointer">
+                <input type="radio" name="incrementType" value="decrement" checked={amount === -1} onChange={() => setAmount(-1)} />
+                <span>{t('decrement')}</span>
+              </label>
+            </div>
+          </div>
+          <Button className="mx-auto mt-2 min-w-60" onClick={handleConfirm} disabled={selectedCount === 0} variant="default">
+            {t('updateSelectedCards')}
+          </Button>
+          <Button className="mx-auto mt-2 min-w-60 border" onClick={() => setState(State.UploadImages)} variant="ghost">
+            {t('scanMore')}
+          </Button>
+        </>
+      )}
 
-                <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-                  {extractedCards.map((card, index) => renderPotentialMatches(card, index))}
-                </div>
+      {state === State.ProcessUpdates && (
+        <Alert variant="default">
+          <AlertDescription className="flex items-center space-x-2">
+            <Spinner />
+            <p>{t('processing')}</p>
+          </AlertDescription>
+        </Alert>
+      )}
 
-                <div className="flex flex-col items-center text-center">
-                  <div className="flex gap-4">
-                    <label className="flex items-center space-x-2 cursor-pointer">
-                      <input type="radio" name="incrementType" value="increment" checked={amount === 1} onChange={() => setAmount(1)} />
-                      <span>{t('increment')}</span>
-                    </label>
-                    <label className="flex items-center space-x-2 cursor-pointer">
-                      <input type="radio" name="incrementType" value="decrement" checked={amount === -1} onChange={() => setAmount(-1)} />
-                      <span>{t('decrement')}</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {state === State.ProcessUpdates && (
-              <Alert variant="default">
-                <AlertDescription className="flex items-center space-x-2">
-                  <Spinner />
-                  <p>{t('processing')}</p>
-                </AlertDescription>
-              </Alert>
-            )}
-
-            {state === State.Confirmation && <p>{t('success', { n: incrementedCards })}</p>}
-
-            <DialogFooter className="gap-y-4">
-              <Button
-                variant="outline"
-                onClick={() => {
-                  setState(State.Closed)
-                }}
-              >
-                {state === State.ShowMatches ? t('cancel') : t('close')}
-              </Button>
-              {state === State.ShowMatches && (
-                <Button onClick={handleConfirm} disabled={selectedCount === 0} variant="default">
-                  {t('updateSelectedCards')}
-                </Button>
-              )}
-              {state === State.Confirmation && (
-                <Button onClick={() => setState(State.Closed + 1)} variant="default">
-                  {t('scanMore')}
-                </Button>
-              )}
-            </DialogFooter>
-          </DialogContent>
-        </DialogOverlay>
-      </Dialog>
+      {state === State.Confirmation && (
+        <>
+          <p className="text-xl text-center mb-8">{t('success', { n: incrementedCards })}</p>
+          <Button onClick={() => setState(State.UploadImages)} variant="default">
+            {t('scanMore')}
+          </Button>
+        </>
+      )}
     </div>
   )
 }
 
-export default PokemonCardDetector
+export default Scan

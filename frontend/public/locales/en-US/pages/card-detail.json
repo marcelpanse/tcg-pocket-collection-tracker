@@ -1,6 +1,6 @@
 {
   "text": {
-    "chanceToPull": "Chance to pull: {{percent}}%",
+    "chanceToPull": "Chance to pull",
     "hp": "HP",
     "cardType": "Card Type",
     "evolutionType": "Evolution Type",
@@ -15,7 +15,8 @@
     "abilityEffect": "Ability Effect",
     "details": "Details",
     "updated": "Updated",
-    "alternateVersions": "Alternate versions"
+    "alternateVersions": "Alternate versions",
+    "totalAmount": "Total amount"
   },
   "cardType": {
     "pokémon": "Pokémon",

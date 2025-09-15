@@ -1,16 +1,15 @@
 import i18n from 'i18next'
-import { type CSSProperties, type Dispatch, type SetStateAction, useCallback, useRef, useState } from 'react'
+import { type CSSProperties, useCallback, useRef, useState } from 'react'
 import { getCardNameByLang } from '@/lib/utils'
 import type { Card } from '@/types'
 
 interface FancyCardProps {
   card: Card
   selected: boolean
-  setIsSelected?: Dispatch<SetStateAction<boolean>>
   size?: 'default' | 'small'
 }
 
-function FancyCard({ selected, setIsSelected, card, size = 'default' }: Readonly<FancyCardProps>) {
+function FancyCard({ selected, card, size = 'default' }: Readonly<FancyCardProps>) {
   const cardRef = useRef<HTMLImageElement>(null)
   const [throttledPos, setThrottledPos] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
@@ -48,7 +47,7 @@ function FancyCard({ selected, setIsSelected, card, size = 'default' }: Readonly
   const rotateY = isHovering ? clamp(centeredX / 4, -10, 10) : 0
   const rotateX = isHovering ? clamp(-centeredY / 4, -10, 10) : 0
 
-  const cardTestStyle: CSSProperties = {
+  const cardStyle: CSSProperties = {
     transform: `perspective(1000px)
                    rotateY(${rotateY}deg)
                    rotateX(${rotateX}deg)
@@ -76,21 +75,28 @@ function FancyCard({ selected, setIsSelected, card, size = 'default' }: Readonly
       }}
     >
       {baseName && (
-        <img
-          draggable={false}
-          loading="lazy"
-          onMouseDown={() => setIsSelected?.(!selected)}
-          ref={cardRef}
-          className="card-test"
-          style={cardTestStyle}
-          src={imagePath}
-          alt={getCardNameByLang(card, i18n.language)}
+        // biome-ignore lint/a11y/noStaticElementInteractions: interative for hover animation
+        <div
+          style={{
+            width: size === 'small' ? '80px' : '100%',
+            height: size === 'small' ? '112px' : 'auto',
+          }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          onError={(e) => {
-            ;(e.target as HTMLImageElement).src = card.image // Default card image to English if localized image is missing
-          }}
-        />
+        >
+          <img
+            draggable={false}
+            loading="lazy"
+            ref={cardRef}
+            className="card-test"
+            style={cardStyle}
+            src={imagePath}
+            alt={getCardNameByLang(card, i18n.language)}
+            onError={(e) => {
+              ;(e.target as HTMLImageElement).src = card.image
+            }}
+          />
+        </div>
       )}
     </div>
   )

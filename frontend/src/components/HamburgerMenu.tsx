@@ -21,12 +21,13 @@ const menuItems: MenuItem[] = [
   { title: 'collection', href: '/collection' },
   { title: 'decks', href: '/decks' },
   { title: 'trade', href: '/trade' },
+  { title: 'scan', href: '/scan' },
   { title: 'blog', href: 'https://blog.tcgpocketcollectiontracker.com' },
   { title: 'community', href: 'https://community.tcgpocketcollectiontracker.com' },
 ]
 
 export default function HamburgerMenu() {
-  const { t } = useTranslation('hamburger-menu')
+  const { t } = useTranslation('header')
 
   const { setIsProfileDialogOpen } = useProfileDialog()
   const { setIsLoginDialogOpen } = useLoginDialog()
@@ -94,7 +95,7 @@ const MenuItemComponent: React.FC<{ actionableTradeCount: number; item: MenuItem
   item,
   setOpen,
 }) => {
-  const { t } = useTranslation('hamburger-menu')
+  const { t } = useTranslation('header')
 
   return (
     <Link

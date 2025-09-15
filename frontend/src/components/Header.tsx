@@ -1,4 +1,3 @@
-import loadable from '@loadable/component'
 import { Globe, LogOut, UserRoundPen } from 'lucide-react'
 import { useState } from 'react'
 import GitHubButton from 'react-github-btn'
@@ -24,8 +23,6 @@ import { useProfileDialog } from '@/services/account/useAccount'
 import { useLoginDialog, useLogout, useUser } from '@/services/auth/useAuth'
 import { useActionableTradeCount } from '@/services/trade/useTrade.ts'
 import { Badge } from './ui/badge'
-
-const CardDetectorComponent = loadable(() => import('@/components/CardDetectorComponent.tsx'))
 
 export function Header() {
   const location = useLocation()
@@ -107,7 +104,13 @@ export function Header() {
                 </Button>
               </Link>
             </NavigationMenuLink>
-            <CardDetectorComponent />
+            <NavigationMenuLink asChild className={`${actionableTradeCount ? 'hidden sm:block' : ''}`}>
+              <Link to="/scan">
+                <Button className="px-2 sm:px-4" variant="ghost">
+                  {t('scan')}
+                </Button>
+              </Link>
+            </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden lg:block">
               <Link to="https://blog.tcgpocketcollectiontracker.com" className="hidden md:block">
                 <Button className="px-2 sm:px-4" variant="ghost">

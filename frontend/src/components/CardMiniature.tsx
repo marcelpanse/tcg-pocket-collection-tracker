@@ -18,12 +18,13 @@ export function CardMiniature({ card, onSelect, selected }: CardMiniatureProps) 
 
   return (
     <div className="flex flex-col items-center">
-      <FancyCard
-        card={card}
-        selected={selected} // Pass the selected prop
-        setIsSelected={handleClick} // Pass the click handler
-        size="small"
-      />
+      <button type="button" onClick={handleClick}>
+        <FancyCard
+          card={card}
+          selected={selected} // Pass the selected prop
+          size="small"
+        />
+      </button>
       <p className="text-xs text-center mt-1">{getCardNameByLang(card, i18n.language)}</p>
     </div>
   )
