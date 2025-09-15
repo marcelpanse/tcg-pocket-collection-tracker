@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.3",
-    "lefthook": "^1.12.4"
+    "lefthook": "^1.13.0"
   },
   "type": "module",
   "packageManager": "pnpm@10.15.0",
