@@ -1,5 +1,4 @@
 import { Siren } from 'lucide-react'
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useParams } from 'react-router'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
@@ -7,7 +6,6 @@ import { Button } from '@/components/ui/button'
 import { usePublicAccount } from '@/services/account/useAccount.ts'
 import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
 import CollectionCards from './CollectionCards'
-import { Missions } from './Missions'
 
 function Collection() {
   const { t } = useTranslation(['pages/collection'])
@@ -19,8 +17,6 @@ function Collection() {
   const { data: friendCards } = usePublicCollection(friendId)
 
   const { data: ownedCards } = useCollection()
-
-  const [missions, setMissions] = useState(false)
 
   if (friendId) {
     if (friendAccount === null) {
@@ -56,11 +52,7 @@ function Collection() {
 
   return (
     <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">
-      {missions ? (
-        <Missions onSwitchToCards={() => setMissions(false)} />
-      ) : (
-        <CollectionCards cards={ownedCards} isPublic={false} extraOffset={20} onSwitchToMissions={() => setMissions(true)} />
-      )}
+      <CollectionCards cards={ownedCards} isPublic={false} extraOffset={20} />
     </div>
   )
 }

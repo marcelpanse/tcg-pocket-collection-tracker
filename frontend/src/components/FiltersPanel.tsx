@@ -1,6 +1,7 @@
 import i18n from 'i18next'
-import { type Dispatch, type FC, type JSX, type SetStateAction, useEffect, useMemo } from 'react'
+import { type Dispatch, type FC, type SetStateAction, useEffect, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router'
 import { BatchUpdateDialog } from '@/components/BatchUpdateDialog.tsx'
 import ExpansionsFilter from '@/components/filters/ExpansionsFilter.tsx'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
@@ -12,7 +13,7 @@ import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
 import { allCards, basicRarities, expansions } from '@/lib/CardsDB.ts'
 import { levenshtein } from '@/lib/levenshtein'
-import { cn, getCardNameByLang } from '@/lib/utils'
+import { getCardNameByLang } from '@/lib/utils'
 import { useProfileDialog } from '@/services/account/useAccount'
 import type { Card, CardType, CollectionRow, Rarity } from '@/types'
 import AllTextSearchFilter from './filters/AllTextSearchFilter'
@@ -35,9 +36,6 @@ export interface Filters {
 }
 
 interface Props {
-  children?: JSX.Element
-  className?: string
-
   cards: CollectionRow[] | null
 
   filters: Filters
@@ -68,21 +66,12 @@ interface Props {
 
   batchUpdate?: boolean
   share?: boolean
+  missionsButton?: boolean
 }
 
-const FilterPanel: FC<Props> = ({
-  children,
-  cards,
-  filters,
-  setFilters,
-  onFiltersChanged,
-  visibleFilters,
-  filtersDialog,
-  batchUpdate,
-  share,
-  className,
-}: Props) => {
+const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, visibleFilters, filtersDialog, batchUpdate, share, missionsButton }: Props) => {
   const { t } = useTranslation(['pages/collection'])
+  const navigate = useNavigate()
   const { setIsProfileDialogOpen } = useProfileDialog()
 
   const setFilterChange = (filters: Partial<Filters>) => {
@@ -234,9 +223,7 @@ const FilterPanel: FC<Props> = ({
   }
 
   return (
-    <div id="filterbar" className={cn('flex flex-col gap-x-2 flex-wrap', className)}>
-      {children}
-
+    <div id="filterbar" className="flex flex-col gap-x-2 flex-wrap">
       {visibleFilters?.expansions && (
         <div className="flex gap-x-2 px-4 mb-2">
           <ExpansionsFilter value={filters.expansion} onChange={onExpansionChange} />
@@ -304,6 +291,11 @@ const FilterPanel: FC<Props> = ({
                 >
                   {t('filters.clear')}
                 </Button>
+                {missionsButton && (
+                  <Button className="mt-2" variant="outline" onClick={() => navigate('/collection/missions')}>
+                    Go to missions
+                  </Button>
+                )}
               </div>
             </DialogContent>
           </Dialog>

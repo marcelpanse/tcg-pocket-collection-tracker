@@ -2,17 +2,15 @@ import { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { CardsTable } from '@/components/CardsTable.tsx'
 import FilterPanel, { type Filters } from '@/components/FiltersPanel'
-import { Button } from '@/components/ui/button'
 import type { Card, CollectionRow } from '@/types'
 
 interface Props {
   cards: CollectionRow[]
   isPublic: boolean
   extraOffset: number
-  onSwitchToMissions?: () => void
 }
 
-export default function CollectionCards({ cards, isPublic, extraOffset, onSwitchToMissions }: Props) {
+export default function CollectionCards({ cards, isPublic, extraOffset }: Props) {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' }) // tailwind "md"
 
   const [filteredCards, setFilteredCards] = useState<Card[] | null>(null)
@@ -41,7 +39,6 @@ export default function CollectionCards({ cards, isPublic, extraOffset, onSwitch
   return (
     <>
       <FilterPanel
-        className="relative h-20 sm:h-fit"
         cards={cards}
         filters={filters}
         setFilters={setFilters}
@@ -60,14 +57,9 @@ export default function CollectionCards({ cards, isPublic, extraOffset, onSwitch
           allTextSearch: true,
         }}
         batchUpdate={!isPublic}
+        missionsButton={!isPublic}
         share
-      >
-        {onSwitchToMissions && (
-          <Button className="border absolute right-4 top-11 sm:top-0 cursor-pointer px-3" variant="ghost" onClick={onSwitchToMissions}>
-            Go to missions
-          </Button>
-        )}
-      </FilterPanel>
+      />
       {filteredCards && (
         <CardsTable
           cards={filteredCards}
