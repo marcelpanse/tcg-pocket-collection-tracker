@@ -293,7 +293,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
                 </Button>
                 {missionsButton && (
                   <Button className="mt-2" variant="outline" onClick={() => navigate('/collection/missions')}>
-                    Go to missions
+                    {t('goToMissions')}
                   </Button>
                 )}
               </div>

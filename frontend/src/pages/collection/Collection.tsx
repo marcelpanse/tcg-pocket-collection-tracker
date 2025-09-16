@@ -8,7 +8,7 @@ import { useCollection, usePublicCollection } from '@/services/collection/useCol
 import CollectionCards from './CollectionCards'
 
 function Collection() {
-  const { t } = useTranslation(['pages/collection'])
+  const { t } = useTranslation(['pages/collection', 'common'])
 
   const { friendId } = useParams()
   const navigate = useNavigate()
@@ -20,11 +20,11 @@ function Collection() {
 
   if (friendId) {
     if (friendAccount === null) {
-      return <p className="text-xl text-center py-8">Account not found</p>
+      return <p className="text-xl text-center py-8">{t('common:noAccount')}</p>
     } else if (friendCards === null) {
       return <p className="text-xl text-center py-8">Not a public account</p>
     } else if (friendCards === undefined || friendAccount === undefined) {
-      return <p className="text-xl text-center py-8">Loading...</p>
+      return <p className="text-xl text-center py-8">{t('common:loading')}...</p>
     }
 
     return (
@@ -47,7 +47,7 @@ function Collection() {
   }
 
   if (ownedCards === undefined) {
-    return <p className="text-xl text-center py-8">Loading...</p>
+    return <p className="text-xl text-center py-8">{t('common:loading')}...</p>
   }
 
   return (

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
 import ExpansionsFilter from '@/components/filters/ExpansionsFilter'
 import OwnedFilter from '@/components/filters/OwnedFilter'
@@ -9,6 +10,7 @@ import type { Mission } from '@/types'
 import MissionDetail from './MissionDetail'
 
 export default function Missions() {
+  const { t } = useTranslation(['pages/collection'])
   const navigate = useNavigate()
 
   const [expansion, setExpansion] = useState<string>('A1')
@@ -36,7 +38,7 @@ export default function Missions() {
         <ExpansionsFilter value={expansion} onChange={setExpansion} allowAll={false} />
         <OwnedFilter ownedFilter={ownedFilter} setOwnedFilter={setOwnedFilter} />
         <Button className="ml-auto cursor-pointer" variant="outline" onClick={() => navigate('/collection')}>
-          Go to collection
+          {t('goToCollection')}
         </Button>
       </div>
       {missions && <MissionsTable missions={missions} resetScrollTrigger={resetScrollTrigger} setSelectedMissionCardOptions={setSelectedMissionCardOptions} />}
