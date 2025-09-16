@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabase.ts'
-import type { TradeRow } from '@/types'
+import type { TradePartners, TradeRow } from '@/types'
 
 export const getTrades = async () => {
   const { data, error } = await supabase.from('trades').select()
@@ -38,4 +38,16 @@ export const updateTrade = async (id: number, trade: Partial<TradeRow>) => {
   }
 
   return data as TradeRow
+}
+
+export const getTradingPartners = async (email: string, maxNumberOfCardsWanted: number) => {
+  const { data, error } = await supabase.functions.invoke('get-trading-partners', { method: 'POST', body: { email, maxNumberOfCardsWanted } })
+  if (error) {
+    console.log('supa error', error)
+    throw new Error('Error fetching trade partners')
+  }
+
+  console.log('fetched trade partners', data)
+
+  return data as TradePartners[]
 }

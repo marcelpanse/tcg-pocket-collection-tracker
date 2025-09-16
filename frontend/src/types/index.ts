@@ -56,6 +56,11 @@ export interface TradeRow {
   status: TradeStatus
 }
 
+export interface TradePartners {
+  friend_id: string
+  matched_cards_amount: number
+}
+
 export interface Expansion {
   name: string
   id: ExpansionId

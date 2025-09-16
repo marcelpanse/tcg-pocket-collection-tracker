@@ -1,18 +1,35 @@
 import 'jsr:@supabase/functions-js/edge-runtime.d.ts'
 import * as postgres from 'https://deno.land/x/postgres@v0.17.0/mod.ts'
 
-// Get the connection string from the environment variable "SUPABASE_DB_URL"
 const databaseUrl = Deno.env.get('SUPABASE_DB_URL') || ''
-// Create a database pool with three connections that are lazily established
-const pool = new postgres.Pool(databaseUrl, 3, true)
+const pool = new postgres.Pool(databaseUrl, 10, true)
 
-Deno.serve(async (_req) => {
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST',
+  'Access-Control-Expose-Headers': 'Content-Length, X-JSON',
+  'Access-Control-Allow-Headers': 'apikey,X-Client-Info, Content-Type, Authorization, Accept, Accept-Language, X-Authorization',
+}
+
+Deno.serve(async (req) => {
+  if (req.method === 'OPTIONS') {
+    return new Response('ok', {
+      headers: corsHeaders,
+    })
+  }
+
+  const connection = await pool.connect()
   try {
-    const connection = await pool.connect()
+    const { email, maxNumberOfCardsWanted } = await req.json()
 
-    // const { name } = await req.json()
+    if (!email || !maxNumberOfCardsWanted) {
+      return new Response('Missing email or maxNumberOfCardsWanted', { status: 400 })
+    }
 
-    const tradingPartners = await connection.queryObject<{ count: number }>(`
+    console.log('fetching trading partners')
+
+    const tradingPartners = await connection.queryObject(
+      `
 SELECT
   a.friend_id, count(c.card_id) matched_cards_amount
 FROM
@@ -29,16 +46,30 @@ WHERE
     FROM
       collection c
     WHERE
-      c.email = 'marcel.panse@gmail.com'
-      AND c.amount_owned < 10
+      c.email = $1
+      AND c.amount_owned < $2
   )
 GROUP BY
   a.friend_id
 ORDER BY
   matched_cards_amount DESC;
-`)
+`,
+      [email, maxNumberOfCardsWanted],
+    )
 
-    return new Response(JSON.stringify(tradingPartners), { headers: { 'Content-Type': 'application/json' } })
+    const serializedRows = tradingPartners.rows.map((row) => ({
+      ...row,
+      matched_cards_amount: Number(row.matched_cards_amount),
+    }))
+
+    console.log('returning', serializedRows)
+
+    return new Response(JSON.stringify(serializedRows), {
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders,
+      },
+    })
   } catch (err) {
     console.error('An error occurred:', err)
     return new Response('An internal server error occurred', { status: 500 })
@@ -47,15 +78,3 @@ ORDER BY
     connection.release()
   }
 })
-
-/* To invoke locally:
-
-  1. Run `supabase start` (see: https://supabase.com/docs/reference/cli/supabase-start)
-  2. Make an HTTP request:
-
-  curl -i --location --request POST 'http://127.0.0.1:54321/functions/v1/get-trading-partners' \
-    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0' \
-    --header 'Content-Type: application/json' \
-    --data '{"name":"Functions"}'
-
-*/
