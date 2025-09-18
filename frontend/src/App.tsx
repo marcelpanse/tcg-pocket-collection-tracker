@@ -14,6 +14,7 @@ import { DialogContext } from './context/DialogContext.ts'
 // Lazy import for chunking
 const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
 const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
+const Missions = loadable(() => import('./pages/collection/Missions.tsx'))
 const Decks = loadable(() => import('./pages/decks/Decks.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const Scan = loadable(() => import('./pages/scan/Scan.tsx'))
@@ -72,6 +73,7 @@ function App() {
       errorElement: errorDiv,
       children: [
         { path: '/', element: <Overview /> },
+        { path: '/collection/missions', element: <Missions /> },
         { path: '/collection/:friendId?', element: <Collection /> },
         { path: '/collection/:friendId/trade', element: <TradeWithRedirect /> }, // support old trading path
         { path: '/decks', element: <Decks /> },

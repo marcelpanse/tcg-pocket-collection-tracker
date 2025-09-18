@@ -23,7 +23,7 @@ function getTradeCards(extraCards: string[], neededCards: string[]) {
 }
 
 function TradeWith() {
-  const { t } = useTranslation('trade-matches')
+  const { t } = useTranslation(['trade-matches', 'common'])
   const { friendId } = useParams()
 
   const { data: friendAccount } = usePublicAccount(friendId)
@@ -46,7 +46,7 @@ function TradeWith() {
   }
 
   if (friendAccount === undefined || friendCards === undefined) {
-    return <p className="text-xl text-center py-8">Loading...</p>
+    return <p className="text-xl text-center py-8">{t('common:loading')}...</p>
   }
 
   if (!friendAccount.is_active_trading) {

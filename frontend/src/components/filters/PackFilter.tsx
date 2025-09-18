@@ -14,7 +14,6 @@ const PackFilter: FC<Props> = ({ value, onChange, expansion, className }) => {
   const { t } = useTranslation('common/packs')
 
   let packsToShow = getExpansionById(expansion)?.packs
-  const showMissions = !(packsToShow === undefined || expansion === 'P-A')
   if (packsToShow === undefined || packsToShow.length <= 1) {
     packsToShow = []
   }
@@ -34,7 +33,6 @@ const PackFilter: FC<Props> = ({ value, onChange, expansion, className }) => {
               {t(pack.name)}
             </TabsTrigger>
           ))}
-        {showMissions && <TabsTrigger value="missions">{t('missions')}</TabsTrigger>}
       </TabsList>
     </Tabs>
   )
