@@ -11,12 +11,13 @@
     "dev": "pnpm --filter frontend run dev",
     "build": "pnpm --filter frontend run build",
     "scraper": "node scripts/scraper.js && node scripts/download-packs.js && node scripts/scrape-missions.js && node scripts/deck-scraper-game8.js",
-    "hashes": "node scripts/gen-hashes.js",
+    "hashes": "tsx scripts/gen-hashes.js",
     "sync-locales": "node scripts/sync-locales.js"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.4",
-    "lefthook": "^1.13.0"
+    "lefthook": "^1.13.0",
+    "tsx": "^4.20.5"
   },
   "type": "module",
   "packageManager": "pnpm@10.15.0",
