@@ -25,4 +25,4 @@ jobs:
       - name: Verify hashes
         run: |
           pnpm install
-          pnpm run hashes --verify
+          pnpm exec ts-node scripts/gen-hashes.ts --verify
