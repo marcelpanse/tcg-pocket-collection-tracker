@@ -107,7 +107,7 @@ const MenuItemComponent: React.FC<{ actionableTradeCount: number; item: MenuItem
     >
       <div className="flex items-center gap-2">
         {t(item.title)}
-        {item.title === 'trade' && actionableTradeCount && (
+        {item.title === 'trade' && actionableTradeCount > 0 && (
           <Badge
             className={`h-5 min-w-5 rounded-full font-mono tabular-nums -mt-2 ${actionableTradeCount ? 'flex' : 'hidden'} justify-center`}
             variant="destructive"

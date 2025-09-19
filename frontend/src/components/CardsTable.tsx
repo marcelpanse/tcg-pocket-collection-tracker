@@ -27,9 +27,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
     if (scrollRef.current) {
       const headerHeight = (document.querySelector('#header') as HTMLElement | null)?.offsetHeight || 0
       const filterbarHeight = (document.querySelector('#filterbar') as HTMLElement | null)?.offsetHeight || 0
-      const isMobileDevice = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
-      const offset = isMobileDevice ? 0 : extraOffset
-      const maxHeight = window.innerHeight - headerHeight - filterbarHeight - offset
+      const maxHeight = window.innerHeight - headerHeight - filterbarHeight - extraOffset
       setScrollContainerHeight(`${maxHeight}px`)
     }
   }

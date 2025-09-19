@@ -67,7 +67,7 @@ function FancyCard({ selected, card, size = 'default' }: Readonly<FancyCardProps
       style={{
         flex: '1 0 20%',
         perspective: '1000px',
-        transformStyle: typeof navigator !== 'undefined' && navigator.userAgent.toLowerCase().includes('firefox') ? 'flat' : 'preserve-3d', // Transform override to fix firefox issue
+        transformStyle: navigator?.userAgent.toLowerCase().includes('firefox') ? 'flat' : 'preserve-3d', // Transform override to fix firefox issue
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

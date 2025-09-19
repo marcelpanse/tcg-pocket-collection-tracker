@@ -20,13 +20,13 @@ export const getAccount = async (email: string) => {
     return data[0] as AccountRow
   }
 
-  // Default values if no account exists
-  return {
+  // no account exists yet, create one
+  return await updateAccount({
     email,
     username: '',
     min_number_of_cards_to_keep: 1,
     max_number_of_cards_wanted: 1,
-  } as AccountRow & { email: string }
+  } as AccountRow)
 }
 
 export const getPublicAccount = async (friendId: string) => {

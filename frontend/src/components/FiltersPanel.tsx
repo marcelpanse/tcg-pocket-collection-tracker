@@ -1,6 +1,7 @@
 import i18n from 'i18next'
-import { type Dispatch, type FC, type JSX, type SetStateAction, useEffect, useMemo, useState } from 'react'
+import { type Dispatch, type FC, type SetStateAction, useEffect, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router'
 import { BatchUpdateDialog } from '@/components/BatchUpdateDialog.tsx'
 import ExpansionsFilter from '@/components/filters/ExpansionsFilter.tsx'
 import NumberFilter from '@/components/filters/NumberFilter.tsx'
@@ -10,11 +11,11 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
-import { allCards, basicRarities, expansions, expansionsDict } from '@/lib/CardsDB.ts'
+import { allCards, basicRarities, expansions } from '@/lib/CardsDB.ts'
 import { levenshtein } from '@/lib/levenshtein'
 import { getCardNameByLang } from '@/lib/utils'
 import { useProfileDialog } from '@/services/account/useAccount'
-import type { Card, CardType, CollectionRow, Mission, Rarity } from '@/types'
+import type { Card, CardType, CollectionRow, Rarity } from '@/types'
 import AllTextSearchFilter from './filters/AllTextSearchFilter'
 import CardTypeFilter from './filters/CardTypeFilter'
 import DeckbuildingFilter from './filters/DeckbuildingFilter'
@@ -35,15 +36,12 @@ export interface Filters {
 }
 
 interface Props {
-  children?: JSX.Element
-
   cards: CollectionRow[] | null
 
   filters: Filters
   setFilters: Dispatch<SetStateAction<Filters>>
 
   onFiltersChanged: (cards: Card[] | null) => void
-  onChangeToMissions: (missions: Mission[] | null) => void
 
   visibleFilters?: {
     expansions?: boolean
@@ -68,21 +66,12 @@ interface Props {
 
   batchUpdate?: boolean
   share?: boolean
+  missionsButton?: boolean
 }
 
-const FilterPanel: FC<Props> = ({
-  children,
-  cards,
-  filters,
-  setFilters,
-  onFiltersChanged,
-  onChangeToMissions,
-  visibleFilters,
-  filtersDialog,
-  batchUpdate,
-  share,
-}: Props) => {
+const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, visibleFilters, filtersDialog, batchUpdate, share, missionsButton }: Props) => {
   const { t } = useTranslation(['pages/collection'])
+  const navigate = useNavigate()
   const { setIsProfileDialogOpen } = useProfileDialog()
 
   const setFilterChange = (filters: Partial<Filters>) => {
@@ -107,7 +96,6 @@ const FilterPanel: FC<Props> = ({
   const setMinNumber = (x: number) => setFilterChange({ minNumber: x })
   const setMaxNumber = (x: number) => setFilterChange({ maxNumber: x })
   const setDeckbuildingMode = (x: boolean) => setFilterChange({ deckbuildingMode: x })
-  const [missions, setMissions] = useState<Mission[] | null>(null)
 
   const getFilteredCards = (filters: Filters) => {
     if (!cards) {
@@ -123,22 +111,8 @@ const FilterPanel: FC<Props> = ({
     if (filters.expansion !== 'all') {
       filteredCards = filteredCards.filter((card) => card.expansion === filters.expansion)
     }
-    if (filters.pack === 'missions') {
-      filteredCards = []
-      let missions = expansionsDict.get(filters.expansion)?.missions || null
-      if (missions) {
-        if (filters.owned === 'owned') {
-          missions = missions.filter((mission) => mission.completed)
-        } else if (filters.owned === 'missing') {
-          missions = missions.filter((mission) => !mission.completed)
-        }
-      }
-      setMissions(missions)
-    } else {
-      setMissions(null)
-      if (filters.pack !== 'all') {
-        filteredCards = filteredCards.filter((card) => card.pack === filters.pack || card.pack === 'everypack')
-      }
+    if (filters.pack !== 'all') {
+      filteredCards = filteredCards.filter((card) => card.pack === filters.pack || card.pack === 'everypack')
     }
     if (filters.owned !== 'all') {
       if (filters.owned === 'owned') {
@@ -244,22 +218,16 @@ const FilterPanel: FC<Props> = ({
     onFiltersChanged(filteredCards)
   }, [])
 
-  useEffect(() => {
-    onChangeToMissions(missions)
-  }, [missions])
-
   function onExpansionChange(x: string) {
     setFilterChange({ expansion: x, pack: 'all' })
   }
 
   return (
     <div id="filterbar" className="flex flex-col gap-x-2 flex-wrap">
-      {children}
-
       {visibleFilters?.expansions && (
         <div className="flex gap-x-2 px-4 mb-2">
           <ExpansionsFilter value={filters.expansion} onChange={onExpansionChange} />
-          <PackFilter className="w-[440px]" value={filters.pack} onChange={setPack} expansion={filters.expansion} />
+          <PackFilter className="w-84" value={filters.pack} onChange={setPack} expansion={filters.expansion} />
         </div>
       )}
       <div className="gap-2 flex-row gap-y-1 px-4 flex">
@@ -323,6 +291,11 @@ const FilterPanel: FC<Props> = ({
                 >
                   {t('filters.clear')}
                 </Button>
+                {missionsButton && (
+                  <Button className="mt-2" variant="outline" onClick={() => navigate('/collection/missions')}>
+                    {t('goToMissions')}
+                  </Button>
+                )}
               </div>
             </DialogContent>
           </Dialog>
