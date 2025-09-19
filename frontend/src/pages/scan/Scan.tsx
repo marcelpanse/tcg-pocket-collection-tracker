@@ -1,38 +1,26 @@
 import i18n from 'i18next'
-import type { ChangeEvent, FC } from 'react'
+import type { ChangeEvent, Dispatch, SetStateAction } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { allCards } from '@/lib/CardsDB'
+import { calculatePerceptualHash, calculateSimilarity, imageToBuffers } from '@/lib/hash'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import CardDetectorService, { type DetectionResult } from '@/services/scanner/CardDetectionService'
-import { CardHashService } from '@/services/scanner/CardHashService'
-import { ImageHashService } from '@/services/scanner/ImageHashService'
 import type { Card, CollectionRowUpdate } from '@/types'
-
-interface CardDetectorProps {
-  onDetectionComplete?: (results: DetectionResult[]) => void
-  modelPath?: string
-}
 
 interface ExtractedCard {
   imageUrl: string
   confidence: number
   hash?: ArrayBuffer
-  matchedCard?: {
-    id: string
-    similarity: number
-    imageUrl?: string
-  }
-  resolvedImageUrl?: string
-  topMatches?: Array<{
-    id: string
+  matchedCard: {
     similarity: number
     card: Card
-  }>
+  }
+  resolvedImageUrl?: string
   selected?: boolean
 }
 
@@ -45,9 +33,11 @@ enum State {
   Confirmation = 5,
 }
 
+type Hashes = Record<string, ArrayBuffer>
+
 const modelPath = '/model/model.json'
 
-const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
+const Scan = () => {
   const { t } = useTranslation('scan')
 
   const { data: ownedCards = [] } = useCollection()
@@ -59,10 +49,10 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
   const [error, setError] = useState<string>('')
 
   const [isLoadingModel, setIsLoadingModel] = useState<boolean>(false)
-  const [isGeneratingHashes, setIsGeneratingHashes] = useState<boolean>(false)
-  const isInitialized = useMemo(() => !isLoadingModel && !isGeneratingHashes, [isLoadingModel, isGeneratingHashes])
+  const [hashes, setHashes] = useState<Hashes>()
+  const [fallbackHashes, setFallbackHashes] = useState<Hashes>()
+  const isInitialized = useMemo(() => !isLoadingModel && !!hashes && !!fallbackHashes, [isLoadingModel, hashes, fallbackHashes])
 
-  const [initProgress, setInitProgress] = useState(0)
   const [amount, setAmount] = useState(1)
 
   const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
@@ -71,8 +61,44 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
   const detectorService = useMemo(() => CardDetectorService.getInstance(), [])
 
   useEffect(() => {
+    const fetchHashes = async (lang: string, set: Dispatch<SetStateAction<Hashes | undefined>>) => {
+      try {
+        const res = await fetch(`/hashes/${lang}/hashes.json`)
+        if (!res.ok) {
+          setState(State.Error)
+          setError(`Could not fetch hashes: ${res.status}: ${res.statusText}`)
+          return
+        }
+        const json = await res.json()
+        // @ts-expect-error: Brand new api https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/fromBase64
+        const decoded = Object.fromEntries(Object.entries(json).map(([k, v]) => [k, Uint8Array.fromBase64(v).buffer]))
+        set(decoded)
+      } catch (err) {
+        console.error(`Failed getting hashes for '${lang}': ${err}`)
+        if (lang === 'en-US') {
+          setState(State.Error)
+          setError(`Error getting card hashes: ${err}`)
+        }
+      }
+    }
+
+    const callback = (lang: string) => {
+      if (lang === 'en-US') {
+        setHashes({})
+      } else {
+        fetchHashes(lang, setHashes)
+      }
+    }
+
+    fetchHashes('en-US', setFallbackHashes)
+    callback(i18n.language)
+
+    i18n.on('languageChanged', callback)
+    return () => i18n.off('languageChanged', callback)
+  }, [i18n])
+
+  useEffect(() => {
     initializeModel().catch(console.error)
-    generateAndStoreHashes().catch(console.error)
   }, [])
 
   useEffect(() => {
@@ -116,89 +142,21 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
     })
   }
 
-  const hashingService = ImageHashService.getInstance()
-  const hashStorageService = CardHashService.getInstance()
-  const uniqueCards = useMemo(() => {
-    return allCards.reduce((acc, card) => {
-      if (!acc.some((c) => c.card_id === card.card_id)) {
-        acc.push(card)
-      }
-      return acc
-    }, [] as Card[])
-  }, [allCards])
-
-  const generateAndStoreHashes = async () => {
-    try {
-      setIsGeneratingHashes(true)
-      await hashStorageService.initDB()
-      const storedHashCount = await hashStorageService.getHashCount()
-
-      if (storedHashCount !== uniqueCards.length) {
-        console.log('Checking and generating missing card hashes...')
-
-        const batchSize = 80
-        const totalCards = uniqueCards.length
-        const allHashes = []
-        const existingHashes = await hashStorageService.getAllHashes()
-
-        for (let i = 0; i < totalCards; i += batchSize) {
-          const batch = uniqueCards.slice(i, i + batchSize)
-
-          // Process one batch
-          const batchPromises = batch.map(async (card) => {
-            try {
-              // Check if hash already exists for this card
-              const existingHash = existingHashes.find((h) => h.id === card.card_id)
-              if (existingHash) {
-                return existingHash
-              }
-
-              const resolvedImagePath = await getRightPathOfImage(card.image)
-              const hash = await hashingService.calculatePerceptualHash(resolvedImagePath)
-              return { id: card.card_id, hash }
-            } catch (error) {
-              setState(State.Error)
-              setError(`Error generating hash for card ${card.card_id}: ${error}`)
-              return null
-            }
-          })
-
-          const batchResults = await Promise.all(batchPromises)
-          const validResults = batchResults.filter((hash): hash is { id: string; hash: ArrayBuffer } => hash !== null)
-          allHashes.push(...validResults)
-
-          setInitProgress(Math.min(i + batchSize, totalCards) / totalCards)
-        }
-
-        await hashStorageService.storeHashes(allHashes)
-        console.log('All missing hashes generated and stored')
-      } else {
-        console.log('Using stored hashes from IndexDB')
-      }
-    } catch (error) {
-      setState(State.Error)
-      setError(`Error in hash generation/storage:, ${error}`)
-    } finally {
-      setIsGeneratingHashes(false)
-    }
-  }
-
   // Extract card images function
   const extractCardImages = async (file: File, detections: DetectionResult) => {
     if (!file.type.startsWith('image/')) {
       throw new Error('PokemonCardDetectorComponent.tsx:extractCardImages: Invalid file type')
     }
+    if (!hashes || !fallbackHashes) {
+      throw new Error('Cant extract card images: hashes not loaded yet')
+    }
     const image = new Image()
     const imageUrl = URL.createObjectURL(file)
-    const hashingService = ImageHashService.getInstance()
 
     return new Promise<ExtractedCard[]>((resolve) => {
       image.onload = async () => {
         const canvas = document.createElement('canvas')
         const ctx = canvas.getContext('2d')
-
-        // Get all stored hashes for comparison
-        const storedHashes = await hashStorageService.getAllHashes()
 
         const extractedCards = await Promise.all(
           detections.detections
@@ -216,26 +174,23 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
               ctx?.drawImage(image, x1, y1, width, height, 0, 0, width, height)
 
               const cardImageUrl = canvas.toDataURL('image/png')
-              const hash = await hashingService.calculatePerceptualHash(cardImageUrl)
+              const buffers = await imageToBuffers(cardImageUrl)
+              const hash = calculatePerceptualHash(buffers)
 
               // Calculate similarityes for all cards and sort them
-              const matches = storedHashes
-                .map((storedHash) => {
-                  const similarity = hashingService.calculateSimilarity(hash, storedHash.hash)
-                  const matchedCard = uniqueCards.find((card) => card.card_id === storedHash.id)
-                  return {
-                    id: storedHash.id,
-                    similarity,
-                    card: matchedCard as Card,
+              const matches = allCards
+                .map((c) => {
+                  const c_hash = hashes[c.card_id] ?? fallbackHashes[c.card_id]
+                  if (!c_hash) {
+                    console.warn(`Couldn't find hash for card ${c.card_id}`)
+                    return { card: c, similarity: 0 }
                   }
+                  return { card: c, similarity: calculateSimilarity(hash, c_hash) }
                 })
                 .sort((a, b) => b.similarity - a.similarity)
 
-              // Get top 5 matches
-              const topMatches = matches.slice(0, 5)
-
               // Best match is the first one
-              const bestMatch = topMatches[0]
+              const bestMatch = matches[0]
 
               const resolvedImageUrl = bestMatch ? await getRightPathOfImage(bestMatch.card.image) : undefined
 
@@ -243,15 +198,8 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
                 imageUrl: cardImageUrl,
                 confidence: detection.confidence,
                 hash,
-                matchedCard: bestMatch
-                  ? {
-                      id: bestMatch.id,
-                      similarity: bestMatch.similarity,
-                      imageUrl: bestMatch.card.image,
-                    }
-                  : undefined,
+                matchedCard: bestMatch,
                 resolvedImageUrl,
-                topMatches,
                 selected: true, // Default to selected
               }
             }),
@@ -300,9 +248,6 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
       setExtractedCards(allExtractedCards)
       console.log(allExtractedCards)
 
-      if (onDetectionComplete) {
-        onDetectionComplete(detectionResults)
-      }
       setState(State.UploadingImages + 1)
     } catch (error) {
       setState(State.Error)
@@ -355,7 +300,7 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
 
     setState(State.ProcessUpdates)
 
-    const cardIds = extractedCards.filter((card) => card.selected && card.matchedCard).map((card) => card.matchedCard?.id)
+    const cardIds = extractedCards.filter((card) => card.selected && card.matchedCard).map((card) => card.matchedCard.card.card_id)
 
     if (cardIds.length > 0) {
       try {
@@ -390,26 +335,18 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
             </div>
 
             {/* Best match card */}
-            {card.matchedCard && (
-              <div className="w-1/2 relative">
-                <img src={card.resolvedImageUrl} alt="Best match" className="w-full h-auto object-contain" />
-                <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
-                  {t('percentMatch', { match: (card.matchedCard.similarity * 100).toFixed(0) })}
-                </div>
+            <div className="w-1/2 relative">
+              <img src={card.resolvedImageUrl} alt="Best match" className="w-full h-auto object-contain" />
+              <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
+                {t('percentMatch', { match: (card.matchedCard.similarity * 100).toFixed(0) })}
               </div>
-            )}
+            </div>
           </div>
 
           {/* Potential matches thumbnails */}
           <div className="flex justify-between items-center mb-2 w-full">
             <span className="text-sm font-medium">
-              {card.selected ? t('selected') : t('clickToSelect')}{' '}
-              {card.matchedCard &&
-                card.topMatches &&
-                card.topMatches
-                  .filter((match) => match.id === card.matchedCard?.id)
-                  .map((match) => getCardNameByLang(match.card, i18n.language))
-                  .join(' ')}
+              {card.selected ? t('selected') : t('clickToSelect')} {getCardNameByLang(card.matchedCard.card, i18n.language)}
             </span>
           </div>
         </div>
@@ -430,7 +367,7 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
         <Alert variant="default">
           <AlertDescription className="flex items-center space-x-2">
             <Spinner />
-            <p>{t('loading', { initProgress: (initProgress * 100).toFixed(0) })}</p>
+            <p>{t('loading', { initProgress: 50 })}</p>
           </AlertDescription>
         </Alert>
       )}

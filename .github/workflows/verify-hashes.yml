@@ -1,0 +1,28 @@
+name: Verify scanner hashes
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'frontend/public/images/**'
+      - 'frontend/public/hashes/**'
+      - 'frontend/assets/cards/**'
+  pull_request:
+    paths:
+      - 'frontend/public/images/**'
+      - 'frontend/public/hashes/**'
+      - 'frontend/assets/cards/**'
+jobs:
+  verify-hashes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+
+      - name: Verify hashes
+        run: |
+          pnpm install
+          pnpm run hashes --verify
