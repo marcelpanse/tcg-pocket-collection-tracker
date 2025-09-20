@@ -64,7 +64,7 @@ function TradeWith() {
   const hasPossibleTrades = tradableRarities.some((r) => (userTrades[r] ?? []).length > 0 && (friendTrades[r] ?? []).length > 0)
 
   return (
-    <div className="kap-4 justify-center max-w-2xl m-auto px-2">
+    <div className="kap-4 justify-center w-full m-auto px-2">
       <h1 className="mb-4">
         <span className="text-2xl font-light">{t('tradingWith')}</span>
         <span className="text-2xl font-bold"> {friendAccount.username} </span>

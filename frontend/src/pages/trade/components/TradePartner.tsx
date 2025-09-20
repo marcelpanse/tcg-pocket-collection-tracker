@@ -1,3 +1,4 @@
+import { ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
@@ -38,8 +39,9 @@ function TradePartner({ friendId }: TradePartnerProps) {
             {t('viewHistory')}
             <Switch id={`history-${friendId}`} className="ml-2 my-auto" checked={viewHistory} onCheckedChange={setViewHistory} />
           </label>
-          <Button className="my-auto" onClick={() => navigate(`/trade/${friendId}`)}>
+          <Button variant="outline" className="my-auto" onClick={() => navigate(`/trade/${friendId}`)}>
             {t('openTradeWith')}
+            <ChevronRight />
           </Button>
         </span>
       </div>

@@ -58,6 +58,7 @@ export interface TradeRow {
 
 export interface TradePartners {
   friend_id: string
+  username: string
   matched_cards_amount: number
 }
 

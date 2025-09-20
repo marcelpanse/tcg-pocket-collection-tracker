@@ -18,7 +18,6 @@ const Missions = loadable(() => import('./pages/collection/Missions.tsx'))
 const Decks = loadable(() => import('./pages/decks/Decks.tsx'))
 const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
 const Scan = loadable(() => import('./pages/scan/Scan.tsx'))
-const TradeWith = loadable(() => import('./pages/trade/TradeWith.tsx'))
 const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
 const CardDetail = loadable(() => import('./pages/collection/CardDetail.tsx'))
 
@@ -78,8 +77,7 @@ function App() {
         { path: '/collection/:friendId/trade', element: <TradeWithRedirect /> }, // support old trading path
         { path: '/decks', element: <Decks /> },
         { path: '/scan', element: <Scan /> },
-        { path: '/trade', element: <Trade /> },
-        { path: '/trade/:friendId', element: <TradeWith /> },
+        { path: '/trade*', element: <Trade /> },
       ],
     },
   ])

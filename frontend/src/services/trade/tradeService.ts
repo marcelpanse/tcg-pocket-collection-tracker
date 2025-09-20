@@ -2,7 +2,7 @@ import { supabase } from '@/lib/supabase.ts'
 import type { TradePartners, TradeRow } from '@/types'
 
 export const getTrades = async () => {
-  const { data, error } = await supabase.from('trades').select()
+  const { data, error } = await supabase.from('trades').select().limit(20).order('updated_at', { ascending: false })
 
   if (error) {
     console.log('supa error', error)
