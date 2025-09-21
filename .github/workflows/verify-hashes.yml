@@ -7,11 +7,15 @@ on:
       - 'frontend/public/images/**'
       - 'frontend/public/hashes/**'
       - 'frontend/assets/cards/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
   pull_request:
     paths:
       - 'frontend/public/images/**'
       - 'frontend/public/hashes/**'
       - 'frontend/assets/cards/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
 jobs:
   verify-hashes:
     runs-on: ubuntu-latest
