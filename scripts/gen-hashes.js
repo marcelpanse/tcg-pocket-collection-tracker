@@ -4,6 +4,9 @@ import { parseArgs } from 'node:util'
 import sharp from 'sharp'
 import { calculatePerceptualHash, hashSize } from '../frontend/src/lib/hash.ts'
 
+console.log(`Using sharp ${sharp.versions.sharp}`)
+console.log(`Using libvips ${sharp.versions.vips}`)
+
 const imagesDir = 'frontend/public/images'
 const targetDir = 'frontend/public/hashes'
 const cardsDir = 'frontend/assets/cards'
