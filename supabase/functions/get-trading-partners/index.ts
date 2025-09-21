@@ -20,9 +20,9 @@ Deno.serve(async (req) => {
 
   const connection = await pool.connect()
   try {
-    const { email, maxNumberOfCardsWanted } = await req.json()
+    const { email, maxNumberOfCardsWanted, minNumberOfCardsToKeep } = await req.json()
 
-    if (!email || !maxNumberOfCardsWanted) {
+    if (!email || !maxNumberOfCardsWanted || !minNumberOfCardsToKeep) {
       return new Response('Missing email or maxNumberOfCardsWanted', { status: 400 })
     }
 
@@ -30,60 +30,70 @@ Deno.serve(async (req) => {
 
     const tradingPartners = await connection.queryObject(
       `
-WITH recent_accounts AS (
-    SELECT email
-    FROM accounts
-    WHERE is_active_trading = TRUE AND is_public = TRUE
-    ORDER BY collection_last_updated
-    LIMIT 100
-),
-   wanted_cards AS (
-       -- Cards YOU are missing
-       SELECT c.card_id
-       FROM cards c
-       WHERE NOT EXISTS (
-           SELECT 1
-           FROM collection c2
-           WHERE c2.card_id = c.card_id
-             AND c2.email = $1            -- your email
-             AND c2.amount_owned >= $2    -- your threshold
-       )
-   ),
-   partner_wanted_cards AS (
-       -- Cards THEY are missing
-       SELECT c.card_id, a.email
-       FROM accounts a
-                JOIN cards c ON TRUE
-       WHERE NOT EXISTS (
-           SELECT 1
-           FROM collection c2
-           WHERE c2.card_id = c.card_id
-             AND c2.email = a.email
-             AND c2.amount_owned >= a.min_number_of_cards_to_keep
-       )
-   )
-SELECT
-    a.friend_id,
-    a.username,
-    COUNT(DISTINCT CASE WHEN wc.card_id IS NOT NULL THEN c.card_id END) AS matched_cards_amount
-FROM accounts a
-         JOIN recent_accounts ra
-              ON a.email = ra.email
-         JOIN collection c
-              ON a.email = c.email
-         LEFT JOIN wanted_cards wc
-                   ON c.card_id = wc.card_id
-                       AND c.amount_owned > a.min_number_of_cards_to_keep
-         LEFT JOIN partner_wanted_cards pwc
-                   ON pwc.card_id = c.card_id
-                       AND pwc.email = $1   -- your account, to see if they want what you own
-WHERE a.email != $1
-GROUP BY a.friend_id, a.username
-HAVING COUNT(DISTINCT CASE WHEN wc.card_id IS NOT NULL THEN c.card_id END) > 0
-   AND COUNT(DISTINCT CASE WHEN pwc.card_id IS NOT NULL THEN c.card_id END) > 0
-ORDER BY matched_cards_amount DESC;
+          WITH recent_accounts AS (
+              SELECT email, min_number_of_cards_to_keep, max_number_of_cards_wanted
+              FROM accounts
+              WHERE is_active_trading = TRUE
+                AND is_public = TRUE
+              ORDER BY collection_last_updated DESC, email
+              LIMIT 50
+          ),
+               your_wanted AS (
+                   SELECT c.card_id
+                   FROM cards c
+                            LEFT JOIN collection c2
+                                      ON c.card_id = c2.card_id AND c2.email = $1
+                   WHERE COALESCE(c2.amount_owned, 0) < $2
+               ),
+               you_have AS (
+                   SELECT c.card_id
+                   FROM collection c
+                   WHERE c.email = $1
+                     AND c.amount_owned > $3
+               ),
+               partner_wanted AS (
+                   SELECT a.email, c.card_id
+                   FROM recent_accounts a
+                            CROSS JOIN cards c
+                            LEFT JOIN collection c2
+                                      ON c.card_id = c2.card_id AND c2.email = a.email
+                   WHERE COALESCE(c2.amount_owned, 0) < a.max_number_of_cards_wanted
+               ),
+               partner_has AS (
+                   SELECT c.email, c.card_id
+                   FROM collection c
+                            JOIN recent_accounts ra ON ra.email = c.email
+                            JOIN accounts a ON a.email = c.email
+                   WHERE c.amount_owned > a.min_number_of_cards_to_keep
+               ),
+               matches AS (
+                   -- What you can get from them
+                   SELECT ph.email AS partner_email, COUNT(DISTINCT ph.card_id) AS they_can_give
+                   FROM partner_has ph
+                            JOIN your_wanted yw ON ph.card_id = yw.card_id
+                   GROUP BY ph.email
+               ),
+               reverse_matches AS (
+                   -- What they can get from you
+                   SELECT pw.email AS partner_email, COUNT(DISTINCT pw.card_id) AS you_can_give
+                   FROM partner_wanted pw
+                            JOIN you_have yh ON pw.card_id = yh.card_id
+                   GROUP BY pw.email
+               )
+          SELECT
+              a.friend_id,
+              a.username,
+              LEAST(COALESCE(m.they_can_give,0), COALESCE(rm.you_can_give,0)) AS matched_cards_amount
+          FROM accounts a
+                   JOIN recent_accounts ra ON ra.email = a.email
+                   LEFT JOIN matches m ON m.partner_email = a.email
+                   LEFT JOIN reverse_matches rm ON rm.partner_email = a.email
+          WHERE a.email != $1
+            AND COALESCE(m.they_can_give,0) > 0
+            AND COALESCE(rm.you_can_give,0) > 0
+          ORDER BY matched_cards_amount DESC;
 `,
-      [email, maxNumberOfCardsWanted],
+      [email, maxNumberOfCardsWanted, minNumberOfCardsToKeep],
     )
 
     const serializedRows = tradingPartners.rows.map((row) => ({

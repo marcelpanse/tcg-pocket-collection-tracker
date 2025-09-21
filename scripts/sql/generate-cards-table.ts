@@ -2,6 +2,9 @@
  * This script extracts cards from the CardsDB and generates SQL statements to insert them into Postgres.
  * This is just a helper function to get the cards into the postgres db cards table. This table is currently
  * only used for the trading matching algorithm.
+ *
+ * Because this is a TS file you need to run this with `bun run scripts/sql/generate-cards-table.ts`
+ * Install bun with `npm install -g bun` if you don't have it already.
  */
 
 import fs from 'node:fs'
@@ -29,7 +32,7 @@ INSERT INTO cards (card_id, rarity) VALUES
 
   // Generate values for bulk insert
   const values = cards
-    .filter((card) => (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion))
+    .filter((card) => !card.linkedCardID && (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion))
     .map((card) => {
       // Escape single quotes in strings
       const cardId = card.card_id.replace(/'/g, "''")
