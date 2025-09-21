@@ -57,7 +57,10 @@ export function calculatePerceptualHash(colorPixels: PixelData): ArrayBuffer {
     }
     avg /= dct.length - 1
     for (let i = 1; i < dct.length; i++, j++) {
-      if (dct[i] > avg) {
+      if (Math.abs(dct[i] - avg) < 1e-6) {
+        console.warn('Numerical instability in hash calculation detected')
+      }
+      if (dct[i] > avg + 1e-15) {
         arr[Math.floor(j / 32)] |= 1 << (j % 32)
       }
     }

@@ -6,6 +6,7 @@ import { calculatePerceptualHash, hashSize } from '../frontend/src/lib/hash.ts'
 
 console.log(`Using sharp ${sharp.versions.sharp}`)
 console.log(`Using libvips ${sharp.versions.vips}`)
+console.log(`Using libwebp ${sharp.versions.webp}`)
 
 const imagesDir = 'frontend/public/images'
 const targetDir = 'frontend/public/hashes'
