@@ -70,8 +70,7 @@ async function generateHash(card_id, locale) {
 
   const colorPixels = await loadImage(imgPath)
   const hash = calculatePerceptualHash(colorPixels)
-  const encoded = Buffer.from(new Uint8Array(hash)).toString('base64')
-  return encoded
+  return Buffer.from(new Uint8Array(hash)).toString('base64')
 }
 
 const hashes = Object.fromEntries(
@@ -87,14 +86,33 @@ const hashes = Object.fromEntries(
   ),
 )
 
+function similarityRatio(str1, str2) {
+  if (str1.length !== str2.length) {
+    throw new Error('Strings must be same length')
+  }
+
+  let matches = 0
+  for (let i = 0; i < str1.length; i++) {
+    if (str1[i] === str2[i]) {
+      matches++
+    }
+  }
+  return matches / str1.length
+}
+
 const handleCard = async (card_id, locale) => {
   const hash = await generateHash(card_id, locale)
   if (values.verify) {
+    // check equality first to avoid unnecessary calculations
     if (hashes[locale][card_id] !== hash) {
-      console.log(`Incorrect hash for ${card_id} for locale ${locale}:`)
-      console.log(`Stored:    ${hashes[locale][card_id]}`)
-      console.log(`Calcuated: ${hash}`)
-      ret |= 1
+      // if not fully equal, check similarity
+      const similarity = similarityRatio(hashes[locale][card_id], hash)
+      if (similarity <= 0.97) {
+        console.log(`Incorrect hash for ${card_id} for locale ${locale}:`)
+        console.log(`Stored:    ${hashes[locale][card_id]}`)
+        console.log(`Calculated: ${hash}`)
+        ret |= 1
+      }
     }
   } else {
     hashes[locale][card_id] = hash
