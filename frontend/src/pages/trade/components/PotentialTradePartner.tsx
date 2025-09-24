@@ -18,7 +18,7 @@ function PotentialTradePartner({ partner }: PotentialTradePartnerProps) {
         <p>{partner.username}</p>
         <span className="flex gap-4">
           <Button variant="outline" className="my-auto" onClick={() => navigate(`/trade/${partner.friend_id}`)}>
-            {t('viewTradePartner', { matched_cards_amount: partner.matched_cards_amount })}
+            {t('viewTradePartner')}
             <ChevronRight />
           </Button>
         </span>
