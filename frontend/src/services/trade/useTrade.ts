@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useAccount } from '@/services/account/useAccount.ts'
-import { getTrades, insertTrade, updateTrade } from '@/services/trade/tradeService.ts'
+import { getTrades, getTradingPartners, insertTrade, updateTrade } from '@/services/trade/tradeService.ts'
 import type { TradeRow } from '@/types'
 
 export function useTrades() {
@@ -9,6 +9,18 @@ export function useTrades() {
     queryFn: getTrades,
   })
 }
+
+export function useTradingPartners() {
+  const { data: account } = useAccount()
+
+  return useQuery({
+    queryKey: ['trading-partners'],
+    queryFn: () => getTradingPartners(account?.email as string, account?.max_number_of_cards_wanted as number, account?.min_number_of_cards_to_keep as number),
+    enabled: !!account,
+  })
+}
+
+// MUTATIONS
 
 export function useInsertTrade() {
   const queryClient = useQueryClient()

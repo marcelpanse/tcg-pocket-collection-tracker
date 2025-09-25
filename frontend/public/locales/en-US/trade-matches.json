@@ -3,8 +3,10 @@
   "settingsTitle": "Trade settings",
   "openSettings": "Open trade settings",
   "openTradeWith": "View matches",
+  "viewTradePartner": "View matches",
   "tradingWith": "Trading with",
   "noTradeOffers": "No trades yet, head to the community to find someone to trade with!",
+  "noTradePartners": "We couldn't find anyone for you to trade with.",
   "offerTrades": "Offer trade",
   "friendHas": "Cards you need (and friend has)",
   "youHave": "Cards your friend needs (and you have)",
@@ -48,6 +50,7 @@
   "viewHistory": "View history",
   "tabCards": "Cards",
   "tabOffers": "Offers",
+  "tabMatches": "Matches",
   "tabSettings": "Settings",
   "noAccount": "First set up your account using 'Edit profile' in the top right corner."
 }

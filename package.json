@@ -16,11 +16,11 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.4",
-    "lefthook": "^1.13.0",
+    "lefthook": "^1.13.4",
     "tsx": "^4.20.5"
   },
   "type": "module",
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@10.17.1",
   "engines": {
     "node": ">=20"
   },

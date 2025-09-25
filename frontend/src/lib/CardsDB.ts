@@ -237,21 +237,6 @@ export const getExpansionById = (expansion: string): Expansion | undefined => {
 
 export const tradeableExpansions = expansions.filter((e) => e.tradeable).map((e) => e.id)
 
-export const tradeableRaritiesDictionary: Record<Rarity, number | null> = {
-  '◊': 0,
-  '◊◊': 0,
-  '◊◊◊': 1200,
-  '◊◊◊◊': 5000,
-  '☆': 4000,
-  '☆☆': null,
-  '☆☆☆': null,
-  '✵': null,
-  '✵✵': null,
-  'Crown Rare': null,
-  P: null,
-  '': null,
-}
-
 export const basicRarities: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊']
 
 type CardWithAmount = Card & { amount_owned: number }

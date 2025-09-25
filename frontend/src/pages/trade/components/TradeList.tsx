@@ -5,15 +5,15 @@ import { useToast } from '@/hooks/use-toast.ts'
 import { TradeListRow } from '@/pages/trade/components/TradeListRow.tsx'
 import { useAccount } from '@/services/account/useAccount'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
+import { useUpdateTrade } from '@/services/trade/useTrade.ts'
 import type { CollectionRowUpdate, TradeRow, TradeStatus } from '@/types'
 
 interface Props {
   trades: TradeRow[]
-  update: (id: number, fields: Partial<TradeRow>) => Promise<void>
   viewHistory: boolean
 }
 
-function TradeList({ trades, update, viewHistory }: Props) {
+function TradeList({ trades, viewHistory }: Props) {
   const { t } = useTranslation('trade-matches')
   const { toast } = useToast()
 
@@ -26,6 +26,7 @@ function TradeList({ trades, update, viewHistory }: Props) {
   }
   const filteredTrades = viewHistory ? trades.filter((x) => !interesting(x)) : trades.filter(interesting)
   const [selectedTradeId, setSelectedTradeId] = useState<number | undefined>(undefined)
+  const updateTradeMutation = useUpdateTrade()
 
   if (!account) {
     return null
@@ -55,19 +56,24 @@ function TradeList({ trades, update, viewHistory }: Props) {
 
   const actions = (row: TradeRow) => {
     const updateStatus = async (status: TradeStatus) => {
-      await update(row.id, { status: status })
+      updateTradeMutation.mutate({ id: row.id, trade: { status: status } })
       setSelectedTradeId(row.id)
+      // @ts-expect-error runtime script on window object
+      window.umami.track(`Updated trade: ${status}`)
     }
 
     const end = async () => {
-      const obj =
+      const trade =
         row.offering_friend_id === account.friend_id ? { offerer_ended: true } : row.receiving_friend_id === account.friend_id ? { receiver_ended: true } : null
-      if (obj === null) {
+      if (trade === null) {
         console.log(row, " doesn't match your friend_id")
         return
       }
-      await update(row.id, obj)
+      updateTradeMutation.mutate({ id: row.id, trade })
+
       setSelectedTradeId(undefined)
+      // @ts-expect-error runtime script on window object
+      window.umami.track('Updated trade: ended')
     }
 
     const i_ended = (row.offering_friend_id === account.friend_id && row.offerer_ended) || (row.receiving_friend_id === account.friend_id && row.receiver_ended)

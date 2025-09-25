@@ -1,3 +1,4 @@
+import { ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
@@ -5,8 +6,7 @@ import { Button } from '@/components/ui/button.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
 import TradeList from '@/pages/trade/components/TradeList.tsx'
 import { usePublicAccount } from '@/services/account/useAccount.ts'
-import { useTrades, useUpdateTrade } from '@/services/trade/useTrade.ts'
-import type { TradeRow } from '@/types'
+import { useTrades } from '@/services/trade/useTrade.ts'
 
 interface TradePartnerProps {
   friendId: string
@@ -18,13 +18,8 @@ function TradePartner({ friendId }: TradePartnerProps) {
 
   const { data: trades } = useTrades()
   const { data: friendAccount } = usePublicAccount(friendId)
-  const updateTradeMutation = useUpdateTrade()
 
   const [viewHistory, setViewHistory] = useState<boolean>(false)
-
-  async function update(id: number, trade: Partial<TradeRow>) {
-    updateTradeMutation.mutate({ id, trade })
-  }
 
   return (
     <div className="w-full">
@@ -38,17 +33,14 @@ function TradePartner({ friendId }: TradePartnerProps) {
             {t('viewHistory')}
             <Switch id={`history-${friendId}`} className="ml-2 my-auto" checked={viewHistory} onCheckedChange={setViewHistory} />
           </label>
-          <Button className="my-auto" onClick={() => navigate(`/trade/${friendId}`)}>
+          <Button variant="outline" className="my-auto" onClick={() => navigate(`/trade/${friendId}`)}>
             {t('openTradeWith')}
+            <ChevronRight />
           </Button>
         </span>
       </div>
       {friendAccount !== null && trades && (
-        <TradeList
-          trades={trades.filter((t) => t.offering_friend_id === friendId || t.receiving_friend_id === friendId)}
-          update={update}
-          viewHistory={viewHistory}
-        />
+        <TradeList trades={trades.filter((t) => t.offering_friend_id === friendId || t.receiving_friend_id === friendId)} viewHistory={viewHistory} />
       )}
     </div>
   )

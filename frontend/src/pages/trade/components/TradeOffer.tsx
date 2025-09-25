@@ -51,6 +51,8 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
     setYourCard(null)
     setFriendCard(null)
     toast({ title: t('tradeOffered'), variant: 'default' })
+    // @ts-expect-error runtime script on window object
+    window.umami.track('Offer trade')
   }
 
   if (!yourCard && !friendCard) {

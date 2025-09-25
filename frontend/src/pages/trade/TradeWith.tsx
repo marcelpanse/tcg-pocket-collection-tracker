@@ -1,9 +1,6 @@
-import { CircleHelp } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router'
-import { Tooltip } from 'react-tooltip'
-import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { getCardById, tradeableExpansions } from '@/lib/CardsDB.ts'
 import { getExtraCards, getNeededCards } from '@/lib/utils'
@@ -32,8 +29,6 @@ function TradeWith() {
   const { data: account } = useAccount()
   const { data: ownedCards = [] } = useCollection()
 
-  const [userCardsMaxFilter, setUserCardsMaxFilter] = useState<number>((account?.max_number_of_cards_wanted || 1) - 1)
-  const [friendCardsMinFilter, setFriendCardsMinFilter] = useState<number>((account?.min_number_of_cards_to_keep || 1) + 1)
   const [yourCard, setYourCard] = useState<Card | null>(null)
   const [friendCard, setFriendCard] = useState<Card | null>(null)
 
@@ -58,13 +53,19 @@ function TradeWith() {
     )
   }
 
-  const userTrades = getTradeCards(getExtraCards(ownedCards, friendCardsMinFilter - 1), getNeededCards(friendCards, friendAccount.max_number_of_cards_wanted))
-  const friendTrades = getTradeCards(getExtraCards(friendCards, friendAccount.min_number_of_cards_to_keep), getNeededCards(ownedCards, userCardsMaxFilter + 1))
+  const userTrades = getTradeCards(
+    getExtraCards(ownedCards, account?.min_number_of_cards_to_keep),
+    getNeededCards(friendCards, friendAccount.max_number_of_cards_wanted),
+  )
+  const friendTrades = getTradeCards(
+    getExtraCards(friendCards, friendAccount.min_number_of_cards_to_keep),
+    getNeededCards(ownedCards, account?.max_number_of_cards_wanted),
+  )
 
   const hasPossibleTrades = tradableRarities.some((r) => (userTrades[r] ?? []).length > 0 && (friendTrades[r] ?? []).length > 0)
 
   return (
-    <div className="kap-4 justify-center max-w-2xl m-auto px-2">
+    <div className="kap-4 justify-center w-full m-auto px-2">
       <h1 className="mb-4">
         <span className="text-2xl font-light">{t('tradingWith')}</span>
         <span className="text-2xl font-bold"> {friendAccount.username} </span>
@@ -82,31 +83,6 @@ function TradeWith() {
         setFriendCard={setFriendCard}
       />
 
-      <div className="flex flex-col sm:flex-row sm:justify-between gap-2 mb-2 mt-2">
-        <div className="flex items-center gap-2">
-          <Tooltip id="maxFilter" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
-          <NumberFilter
-            className="w-full sm:w-[260px]"
-            numberFilter={friendCardsMinFilter}
-            setNumberFilter={setFriendCardsMinFilter}
-            options={[2, 3, 4, 5]}
-            labelKey="minNum"
-          />
-          <CircleHelp className="h-4 w-4 mx-1" data-tooltip-id="maxFilter" data-tooltip-content={t('maxFilterTooltip')} />
-        </div>
-        <div className="flex sm:flex-row-reverse items-center gap-2">
-          <Tooltip id="minFilter" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
-          <NumberFilter
-            className="w-full sm:w-[260px]"
-            numberFilter={userCardsMaxFilter}
-            setNumberFilter={setUserCardsMaxFilter}
-            options={[0, 1, 2, 3, 4, 5]}
-            labelKey="maxNum"
-          />
-          <CircleHelp className="h-4 w-4 mx-1" data-tooltip-id="minFilter" data-tooltip-content={t('minFilterTooltip')} />
-        </div>
-      </div>
-
       {!hasPossibleTrades && (
         <div className="text-center py-8">
           <p className="text-xl ">{t('noPossibleTrades')}</p>
@@ -114,25 +90,27 @@ function TradeWith() {
         </div>
       )}
 
-      {tradableRarities.map(
-        (rarity) =>
-          friendTrades[rarity] &&
-          userTrades[rarity] && (
-            <div key={rarity} className="mb-4">
-              <h3 className="text-xl font-semibold mb-1 text-center">[ {rarity} ]</h3>
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                <div className="w-full sm:w-1/2">
-                  <h4 className="text-md font-medium mb-1 ml-2">{t('youHave')}</h4>
-                  <CardList cards={userTrades[rarity]} selected={yourCard} setSelected={setYourCard} />
-                </div>
-                <div className="w-full sm:w-1/2">
-                  <h4 className="text-md font-medium mb-1 ml-2">{t('friendHas')}</h4>
-                  <CardList cards={friendTrades[rarity]} selected={friendCard} setSelected={setFriendCard} />
+      <div className="mt-8">
+        {tradableRarities.map(
+          (rarity) =>
+            friendTrades[rarity] &&
+            userTrades[rarity] && (
+              <div key={rarity} className="mb-4">
+                <h3 className="text-xl font-semibold mb-2 text-center">[ {rarity} ]</h3>
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                  <div className="w-full sm:w-1/2">
+                    <h4 className="text-md font-medium mb-1 ml-2">{t('youHave')}</h4>
+                    <CardList cards={userTrades[rarity]} selected={yourCard} setSelected={setYourCard} />
+                  </div>
+                  <div className="w-full sm:w-1/2">
+                    <h4 className="text-md font-medium mb-1 ml-2">{t('friendHas')}</h4>
+                    <CardList cards={friendTrades[rarity]} selected={friendCard} setSelected={setFriendCard} />
+                  </div>
                 </div>
               </div>
-            </div>
-          ),
-      )}
+            ),
+        )}
+      </div>
     </div>
   )
 }
