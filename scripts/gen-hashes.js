@@ -104,7 +104,7 @@ const handleCard = async (card_id, locale) => {
   const hash = await generateHash(card_id, locale)
   if (values.verify) {
     // check equality first to avoid unnecessary calculations
-    if (hashes[locale][card_id] !== hash) {
+    if (hashes[locale][card_id] && hash && hashes[locale][card_id] !== hash) {
       // if not fully equal, check similarity
       const similarity = similarityRatio(hashes[locale][card_id], hash)
       if (similarity <= 0.97) {
