@@ -101,7 +101,7 @@ function App() {
         <RouterProvider router={router} />
         <InstallPrompt />
         <DonationPopup />
-        {selectedCardId && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}
+        <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />
         {/* Add React Query DevTools (only in development) */}
         {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
       </ErrorBoundary>
