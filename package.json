@@ -11,14 +11,16 @@
     "dev": "pnpm --filter frontend run dev",
     "build": "pnpm --filter frontend run build",
     "scraper": "node scripts/scraper.js && node scripts/download-packs.js && node scripts/scrape-missions.js && node scripts/deck-scraper-game8.js",
+    "hashes": "tsx scripts/generate-scan-hashes.ts",
     "sync-locales": "node scripts/sync-locales.js"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.4",
-    "lefthook": "^1.13.4"
+    "lefthook": "^1.13.4",
+    "tsx": "^4.20.5"
   },
   "type": "module",
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@10.17.1",
   "engines": {
     "node": ">=20"
   },
@@ -36,6 +38,7 @@
     "cheerio": "^1.1.2",
     "fs-extra": "^11.3.2",
     "glob": "^11.0.3",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "sharp": "0.34.3"
   }
 }
