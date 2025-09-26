@@ -107,7 +107,7 @@ const handleCard = async (card_id, locale) => {
     const stored_hash = stored_string && decode(stored_string)
     if (!checkSimilar(hash, stored_hash)) {
       console.log(`Incorrect hash for ${card_id} for locale ${locale}:`)
-      console.log(`Stored:     ${hashes[locale][card_id]}`)
+      console.log(`Stored:     ${stored_string}`)
       console.log(`Calculated: ${Buffer.from(new Uint8Array(hash)).toString('base64')}`)
       ret |= 1
     }

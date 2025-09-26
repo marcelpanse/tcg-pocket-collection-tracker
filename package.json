@@ -11,7 +11,7 @@
     "dev": "pnpm --filter frontend run dev",
     "build": "pnpm --filter frontend run build",
     "scraper": "node scripts/scraper.js && node scripts/download-packs.js && node scripts/scrape-missions.js && node scripts/deck-scraper-game8.js",
-    "hashes": "tsx scripts/gen-hashes.js",
+    "hashes": "tsx scripts/generate-scan-hashes.ts",
     "sync-locales": "node scripts/sync-locales.js"
   },
   "devDependencies": {
