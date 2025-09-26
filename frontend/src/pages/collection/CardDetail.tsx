@@ -104,20 +104,22 @@ function CardDetail() {
           <div className="p-4 w-full">
             <div className="mb-3">
               <h2 className="text-xl font-semibold">{t('text.alternateVersions')}</h2>
-              <Radio className="w-fit" value={cardId} onValueChange={setCardId}>
-                {alternatives?.map((x) => (
-                  <label key={x.card_id} className="flex items-center cursor-pointer" htmlFor={`radio-${x.card_id}`}>
-                    <RadioItem id={`radio-${x.card_id}`} value={x.card_id}>
-                      <RadioIndicator />
-                    </RadioItem>
-                    <CardLine className="w-auto bg-transparent" card_id={x.card_id} rarity="w-14" name="hidden" details="hidden" amount="pl-4" />
-                  </label>
-                ))}
-                <p className="flex items-baseline mt-1">
-                  <span className="mr-4">{t('text.totalAmount')}:</span>
-                  <span className="text-neutral-400 ml-auto mr-2">×{alternatives?.reduce((acc, c) => acc + c.amount_owned, 0)}</span>
-                </p>
-              </Radio>
+              {alternatives && (
+                <Radio className="w-fit" value={cardId} onValueChange={setCardId}>
+                  {alternatives.map((x) => (
+                    <label key={x.card_id} className="flex items-center cursor-pointer" htmlFor={`radio-${x.card_id}`}>
+                      <RadioItem id={`radio-${x.card_id}`} value={x.card_id}>
+                        <RadioIndicator />
+                      </RadioItem>
+                      <CardLine className="w-auto bg-transparent" card_id={x.card_id} rarity="w-14" name="hidden" details="hidden" amount="pl-4" />
+                    </label>
+                  ))}
+                  <p className="flex items-baseline mt-1">
+                    <span className="mr-4">{t('text.totalAmount')}:</span>
+                    <span className="text-neutral-400 ml-auto mr-2">×{alternatives?.reduce((acc, c) => acc + c.amount_owned, 0)}</span>
+                  </p>
+                </Radio>
+              )}
             </div>
 
             <p className="mt-8 flex">
