@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { parseArgs } from 'node:util'
 import sharp from 'sharp'
-import { calculatePerceptualHash, hashSize } from '../frontend/src/lib/hash.ts'
+import { calculatePerceptualHash, calculateSimilarity, hashSize } from '../frontend/src/lib/hash.ts'
 
 console.log(`Using sharp ${sharp.versions.sharp}`)
 console.log(`Using libvips ${sharp.versions.vips}`)
@@ -69,8 +69,7 @@ async function generateHash(card_id, locale) {
   }
 
   const colorPixels = await loadImage(imgPath)
-  const hash = calculatePerceptualHash(colorPixels)
-  return Buffer.from(new Uint8Array(hash)).toString('base64')
+  return calculatePerceptualHash(colorPixels)
 }
 
 const hashes = Object.fromEntries(
@@ -86,36 +85,34 @@ const hashes = Object.fromEntries(
   ),
 )
 
-function similarityRatio(str1, str2) {
-  if (str1.length !== str2.length) {
-    throw new Error('Strings must be same length')
+function checkSimilar(hash1, hash2) {
+  if (hash1 === undefined && hash2 === undefined) {
+    return true
+  } else if (hash1 === undefined || hash2 === undefined) {
+    return false
+  } else {
+    return calculateSimilarity(hash1, hash2) > 0.99
   }
+}
 
-  let matches = 0
-  for (let i = 0; i < str1.length; i++) {
-    if (str1[i] === str2[i]) {
-      matches++
-    }
-  }
-  return matches / str1.length
+function decode(hash) {
+  const buf = Buffer.from(hash, 'base64')
+  return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength)
 }
 
 const handleCard = async (card_id, locale) => {
   const hash = await generateHash(card_id, locale)
   if (values.verify) {
-    // check equality first to avoid unnecessary calculations
-    if (hashes[locale][card_id] && hash && hashes[locale][card_id] !== hash) {
-      // if not fully equal, check similarity
-      const similarity = similarityRatio(hashes[locale][card_id], hash)
-      if (similarity <= 0.97) {
-        console.log(`Incorrect hash for ${card_id} for locale ${locale}:`)
-        console.log(`Stored:    ${hashes[locale][card_id]}`)
-        console.log(`Calculated: ${hash}`)
-        ret |= 1
-      }
+    const stored_string = hashes[locale][card_id]
+    const stored_hash = stored_string && decode(stored_string)
+    if (!checkSimilar(hash, stored_hash)) {
+      console.log(`Incorrect hash for ${card_id} for locale ${locale}:`)
+      console.log(`Stored:     ${hashes[locale][card_id]}`)
+      console.log(`Calculated: ${Buffer.from(new Uint8Array(hash)).toString('base64')}`)
+      ret |= 1
     }
   } else {
-    hashes[locale][card_id] = hash
+    hashes[locale][card_id] = Buffer.from(new Uint8Array(hash)).toString('base64')
   }
 }
 

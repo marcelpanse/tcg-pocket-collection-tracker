@@ -79,6 +79,9 @@ export function calculateSimilarity(hash1: ArrayBuffer, hash2: ArrayBuffer): num
   let distance = 0
   const arr1 = new Uint32Array(hash1)
   const arr2 = new Uint32Array(hash2)
+  if (arr1.length !== arr2.length) {
+    console.warn('hash.ts:calculateSimilarity: Buffer length mismatch')
+  }
   const len = Math.min(arr1.length, arr2.length)
 
   for (let i = 0; i < len; i++) {
