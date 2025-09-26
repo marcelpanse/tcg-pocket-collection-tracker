@@ -41,7 +41,7 @@ function App() {
   const authSSOQuery = useAuthSSO()
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false)
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false)
-  const [selectedCardId, setSelectedCardId] = useState('')
+  const [selectedCardId, setSelectedCardId] = useState<string | undefined>(undefined)
 
   // Check for SSO parameters
   useEffect(() => {
@@ -101,7 +101,7 @@ function App() {
         <RouterProvider router={router} />
         <InstallPrompt />
         <DonationPopup />
-        {selectedCardId && <CardDetail cardId={selectedCardId} onClose={() => setSelectedCardId('')} />}
+        <CardDetail />
         {/* Add React Query DevTools (only in development) */}
         {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
       </ErrorBoundary>
