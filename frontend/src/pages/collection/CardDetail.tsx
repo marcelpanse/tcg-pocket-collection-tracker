@@ -1,5 +1,5 @@
 import i18n from 'i18next'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Card as CardComponent } from '@/components/Card'
 import { CardLine } from '@/components/CardLine'
@@ -11,17 +11,13 @@ import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
 import type { CollectionRow } from '@/types'
 
-interface CardDetailProps {
-  cardId: string
-  onClose: () => void // Function to close the sidebar
-}
-
-function CardDetail({ onClose }: Readonly<CardDetailProps>) {
+function CardDetail() {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
   const { selectedCardId: cardId, setSelectedCardId: setCardId } = useSelectedCard()
 
   const { data: ownedCards = [] } = useCollection()
 
+  const [isOpen, setIsOpen] = useState(false)
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
 
   const card = useMemo(() => (cardId === undefined ? undefined : getCardById(cardId)), [cardId])
@@ -31,6 +27,12 @@ function CardDetail({ onClose }: Readonly<CardDetailProps>) {
     [card, ownedCards],
   )
   const expansion = useMemo(() => (card === undefined ? undefined : getExpansionById(card?.expansion)), [card])
+
+  useEffect(() => {
+    if (cardId) {
+      setIsOpen(true)
+    }
+  }, [cardId])
 
   if (cardId && !card) {
     console.log(`Unrecognized card_id: ${cardId}`)
@@ -54,10 +56,11 @@ function CardDetail({ onClose }: Readonly<CardDetailProps>) {
 
   return (
     <Sheet
-      open={Boolean(card)}
+      open={Boolean(cardId) && isOpen}
       onOpenChange={(open) => {
         if (!open) {
-          onClose()
+          setIsOpen(open)
+          setTimeout(() => setCardId(undefined), 300) // keep content when sliding out
         }
       }}
     >
