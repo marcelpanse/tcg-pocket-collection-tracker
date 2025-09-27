@@ -508,7 +508,9 @@ const Scan: FC<CardDetectorProps> = ({ onDetectionComplete }) => {
           <p className="text-xl text-center mb-4">{t('success', { n: incrementedCards.reduce((acc, x) => acc + x.increment, 0) })}</p>
           <ul className="flex flex-col gap-2 mb-8">
             {incrementedCards.map((x) => (
-              <CardLine key={x.card_id} card_id={x.card_id} amount_owned={x.previous_amount} increment={x.increment} />
+              <li key={x.card_id}>
+                <CardLine card_id={x.card_id} amount_owned={x.previous_amount} increment={x.increment} />
+              </li>
             ))}
           </ul>
           <Button onClick={() => setState(State.UploadImages)} variant="default">
