@@ -2,7 +2,7 @@ import type { Session } from '@supabase/supabase-js'
 
 export type User = Session
 
-const expansionIds = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'P-A'] as const
+export const expansionIds = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'P-A'] as const
 export type ExpansionId = (typeof expansionIds)[number]
 
 export const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', '✵', '✵✵', 'Crown Rare', 'P', ''] as const
