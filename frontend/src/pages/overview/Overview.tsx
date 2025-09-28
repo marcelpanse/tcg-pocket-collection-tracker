@@ -28,7 +28,7 @@ type ExpansionOption = (typeof expansionOptions)[number]
 function Overview() {
   const { data: ownedCards = [] } = useCollection()
 
-  const { t } = useTranslation(['pages/overview', 'number-filter', 'common/sets'])
+  const { t } = useTranslation(['pages/overview', 'filters', 'common/sets'])
 
   const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
   const [collectionCount, setCollectionCount] = useState('')
@@ -106,7 +106,7 @@ function Overview() {
         <div className="mb-8 flex items-center gap-2 flex-wrap">
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} deckbuildingMode={deckbuildingMode} />
           <DropdownFilter
-            label={t('numberCards', { ns: 'number-filter' })}
+            label={t('f-number.numberCards', { ns: 'filters' })}
             options={[1, 2, 3, 4, 5] as const}
             value={numberFilter}
             onChange={setNumberFilter}

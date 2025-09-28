@@ -17,7 +17,7 @@ import { type Card, type Rarity, tradableRarities } from '@/types'
 import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 
 function TradeCards() {
-  const { t } = useTranslation(['pages/trade', 'number-filter'])
+  const { t } = useTranslation(['pages/trade', 'filters'])
 
   const { data: user } = useUser()
   const { data: account } = useAccount()
@@ -109,7 +109,7 @@ function TradeCards() {
           <div className="sm:mt-1 flex flex-row flex-wrap align-center gap-x-4 gap-y-1">
             {currentTab === 'looking_for' && (
               <DropdownFilter
-                label={t('maxNum', { ns: 'number-filter' })}
+                label={t('f-number.maxNum', { ns: 'filters' })}
                 options={[1, 2, 3, 4, 5] as const}
                 value={lookingForMaxCards}
                 onChange={setLookingForMaxCards}
@@ -117,7 +117,7 @@ function TradeCards() {
             )}
             {currentTab === 'for_trade' && (
               <DropdownFilter
-                label={t('minNum', { ns: 'number-filter' })}
+                label={t('f-number.minNum', { ns: 'filters' })}
                 options={[2, 3, 4, 5] as const}
                 value={forTradeMinCards}
                 onChange={setForTradeMinCards}

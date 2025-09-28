@@ -75,7 +75,7 @@ interface Props {
 }
 
 const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, visibleFilters, filtersDialog, batchUpdate, share, missionsButton }: Props) => {
-  const { t } = useTranslation(['pages/collection', 'common/sets', 'filters', 'sort-by', 'number-filter', 'rarity-filter'])
+  const { t } = useTranslation(['pages/collection', 'common/sets', 'filters'])
   const navigate = useNavigate()
   const { setIsProfileDialogOpen } = useProfileDialog()
 
@@ -263,7 +263,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="outline">
-                {t('filters', { ns: 'rarity-filter' })} ({filters.rarity.length})
+                {t('rarity', { ns: 'filters' })} ({filters.rarity.length})
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-28">
@@ -337,25 +337,25 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
                 {filtersDialog.sortBy && (
                   <DropdownFilter
                     className="bg-neutral-900"
-                    label={t('sortBy', { ns: 'sort-by' })}
+                    label={t('f-sortBy.sortBy', { ns: 'filters' })}
                     options={sortByOptions}
                     value={filters.sortBy}
                     onChange={(x) => setFilterChange({ sortBy: x })}
-                    show={(x) => t(x, { ns: 'sort-by' })}
+                    show={(x) => t(`f-sortBy.${x}`, { ns: 'filters' })}
                   />
                 )}
                 {filtersDialog.amount && (
                   <>
                     <DropdownFilter
                       className="bg-neutral-900"
-                      label={t('minNum', { ns: 'number-filter' })}
+                      label={t('f-number.minNum', { ns: 'filters' })}
                       options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
                       value={filters.minNumber}
                       onChange={(x) => setFilterChange({ minNumber: x })}
                     />
                     <DropdownFilter
                       className="bg-neutral-900"
-                      label={t('maxNum', { ns: 'number-filter' })}
+                      label={t('f-number.maxNum', { ns: 'filters' })}
                       options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
                       value={filters.maxNumber}
                       onChange={(x) => setFilterChange({ maxNumber: x })}
