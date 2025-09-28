@@ -196,17 +196,17 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
     for (const card of filteredCards) {
       if (!card.linkedCardID) {
         if (filters.deckbuildingMode) {
-          card.amount_owned = card.alternate_versions.reduce((acc, c) => acc + (amounts.get(c.card_id) || 0), 0)
+          card.amount_owned = card.alternate_versions.reduce((acc, c) => acc + (amounts.get(c) ?? 0), 0)
         } else {
-          card.amount_owned = amounts.get(card.card_id) || 0
+          card.amount_owned = amounts.get(card.card_id) ?? 0
         }
       } else {
         card.amount_owned = 0
       }
     }
-    filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) >= filters.minNumber)
+    filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) >= filters.minNumber)
     if (filters.maxNumber !== 100) {
-      filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) <= filters.maxNumber)
+      filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) <= filters.maxNumber)
     }
 
     return filteredCards

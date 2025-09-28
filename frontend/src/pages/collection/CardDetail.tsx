@@ -27,7 +27,7 @@ function CardDetail({ cardId: initialCardId, onClose }: Readonly<CardDetailProps
   const card: Card = useMemo(() => getCardById(cardId) || ({} as Card), [cardId])
   const row = useMemo(() => ownedCards.find((oc: CollectionRow) => oc.card_id === cardId), [cardId])
   const alternatives = useMemo(
-    () => card.alternate_versions.map((card) => ({ ...card, amount_owned: ownedCards.find((c) => c.card_id === card.card_id)?.amount_owned ?? 0 })),
+    () => card.alternate_versions.map((card_id) => ({ card_id, amount_owned: ownedCards.find((c) => c.card_id === card_id)?.amount_owned ?? 0 })),
     [card, ownedCards],
   )
   const expansion = useMemo(() => getExpansionById(card.expansion), [card])

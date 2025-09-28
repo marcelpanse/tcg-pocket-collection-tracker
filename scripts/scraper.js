@@ -226,13 +226,9 @@ async function extractCardInfo($, cardUrl) {
   cardInfo.alternate_versions = []
   $('table.card-prints-versions tr').each((_i, version) => {
     const versionName = $(version).find('a').text().trim().replace(/\s+/g, ' ')
-    const rarityText = $(version).find('td:last-child').text().trim()
     const alternate_card_id = $(version).find('a').attr('href')
     if (versionName) {
-      cardInfo.alternate_versions.push({
-        card_id: alternate_card_id ? urlToCardId(alternate_card_id) : cardInfo.card_id,
-        rarity: rarityText === 'Crown Rare' ? '♛' : rarityText,
-      })
+      cardInfo.alternate_versions.push(alternate_card_id ? urlToCardId(alternate_card_id) : cardInfo.card_id)
     }
   })
 

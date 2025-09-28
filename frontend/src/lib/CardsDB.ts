@@ -69,7 +69,7 @@ const update = (cards: Card[], expansionName: ExpansionId) => {
 }
 
 const equivalent = (firstCard: Card, secondCard: Card) => {
-  return firstCard.alternate_versions.some((x) => x.card_id === secondCard.card_id)
+  return firstCard.alternate_versions.includes(secondCard.card_id)
 }
 
 export const a1Cards: Card[] = update(A1 as unknown as Card[], 'A1')
@@ -261,7 +261,7 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
   if (deckbuildingMode) {
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
-        const amount_owned = ac.alternate_versions.reduce((acc, rc) => acc + (amounts.get(rc.card_id) || 0), 0)
+        const amount_owned = ac.alternate_versions.reduce((acc, rc) => acc + (amounts.get(rc) || 0), 0)
         return { ...ac, amount_owned }
       })
       .filter((c) => basicRarities.includes(c.rarity))

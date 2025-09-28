@@ -107,10 +107,7 @@ export interface Card {
   baby: boolean
   set_details: string
   pack: string
-  alternate_versions: {
-    card_id: string
-    rarity: Rarity
-  }[]
+  alternate_versions: string[]
   artist: string
   probability: {
     '1-3 card': string | null | undefined
