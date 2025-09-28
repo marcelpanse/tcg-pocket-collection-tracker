@@ -1,0 +1,19 @@
+{
+  "rarity": "Seltenheit",
+  "f-owned": {
+    "all": "Alle",
+    "missing": "Fehlend",
+    "owned": "Im Besitz"
+  },
+  "f-sortBy": {
+    "sortBy": "Sortiere nach",
+    "default": "Kartennummer",
+    "recent": "Zuletzt hinzugefügt",
+    "expansion-newest": "Neueste Erweiterung"
+  },
+  "f-number": {
+    "numberCards": "Anzahl der gesuchten Karten",
+    "maxNum": "Maximale Anzahl der Karten",
+    "minNum": "Minimale Anzahl der Karten"
+  }
+}
