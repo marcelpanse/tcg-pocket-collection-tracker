@@ -17,7 +17,7 @@ import AllTextSearchFilter from './filters/AllTextSearchFilter'
 import DeckbuildingFilter from './filters/DeckbuildingFilter'
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 
-const ownedOptions = ['all', 'owned', 'missing'] as const
+const ownedOptions = ['all', 'missing', 'owned'] as const
 const expansionOptions = ['all', ...expansionIds] as const
 const sortByOptions = ['default', 'recent', 'expansion-newest'] as const
 const cardTypeOptions = [...cardTypes.filter((x) => x !== '')] as const
@@ -75,7 +75,7 @@ interface Props {
 }
 
 const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, visibleFilters, filtersDialog, batchUpdate, share, missionsButton }: Props) => {
-  const { t } = useTranslation(['pages/collection', 'common/sets', 'filters'])
+  const { t } = useTranslation(['pages/collection', 'common/sets', 'common/packs', 'filters'])
   const navigate = useNavigate()
   const { setIsProfileDialogOpen } = useProfileDialog()
 
