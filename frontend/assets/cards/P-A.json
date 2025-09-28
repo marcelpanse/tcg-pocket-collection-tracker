@@ -20,12 +20,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-1",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-1"],
     "artist": "5ban Graphics",
     "crafting_cost": "Unknown"
   },
@@ -50,12 +45,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-2",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-2"],
     "artist": "Toyste Beach",
     "crafting_cost": "Unknown"
   },
@@ -80,12 +70,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-3",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-3"],
     "artist": "Toyste Beach",
     "crafting_cost": "Unknown"
   },
@@ -110,16 +95,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-4",
-        "rarity": ""
-      },
-      {
-        "card_id": "P-A-8",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-4", "P-A-8"],
     "artist": "Ryo Ueda",
     "crafting_cost": "Unknown"
   },
@@ -144,16 +120,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-5",
-        "rarity": ""
-      },
-      {
-        "card_id": "A2b-111",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["P-A-5", "A2b-111"],
     "artist": "Ryo Ueda",
     "crafting_cost": "Unknown"
   },
@@ -178,12 +145,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-6",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-6"],
     "artist": "5ban Graphics",
     "crafting_cost": "Unknown"
   },
@@ -208,12 +170,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-7",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-7"],
     "artist": "Naoki Saito",
     "crafting_cost": "Unknown"
   },
@@ -238,16 +195,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-4",
-        "rarity": ""
-      },
-      {
-        "card_id": "P-A-8",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-4", "P-A-8"],
     "artist": "Yuu Nishida",
     "crafting_cost": "Unknown"
   },
@@ -275,24 +223,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-94",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-9",
-        "rarity": ""
-      },
-      {
-        "card_id": "P-A-15",
-        "rarity": ""
-      },
-      {
-        "card_id": "P-A-26",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26"],
     "artist": "Atsushi Furusawa",
     "crafting_cost": "Unknown"
   },
@@ -320,16 +251,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-128",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-10",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-128", "P-A-10"],
     "artist": "Krgc",
     "crafting_cost": "Unknown"
   },
@@ -357,16 +279,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-202",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-11",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-202", "P-A-11"],
     "artist": "sowsow",
     "crafting_cost": "Unknown"
   },
@@ -394,20 +307,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-196",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A1-246",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-12",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-196", "A1-246", "P-A-12"],
     "artist": "Shigenori Negishi",
     "crafting_cost": "Unknown"
   },
@@ -439,16 +339,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-7",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-13",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-7", "P-A-13"],
     "artist": "miki kudo",
     "crafting_cost": "Unknown"
   },
@@ -476,12 +367,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-14",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-14"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -509,24 +395,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-94",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-9",
-        "rarity": ""
-      },
-      {
-        "card_id": "P-A-15",
-        "rarity": ""
-      },
-      {
-        "card_id": "P-A-26",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26"],
     "artist": "Kouki Saitou",
     "crafting_cost": "Unknown"
   },
@@ -554,16 +423,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-113",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-16",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-113", "P-A-16"],
     "artist": "Shibuzoh.",
     "crafting_cost": "Unknown"
   },
@@ -591,12 +451,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-17",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-17"],
     "artist": "Souichirou Gunjima",
     "crafting_cost": "Unknown"
   },
@@ -624,20 +479,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-3",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-18",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3-212",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-3", "P-A-18", "A3-212"],
     "artist": "Kuroimori",
     "crafting_cost": "Unknown"
   },
@@ -669,20 +511,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-89",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-19",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3a-93",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-89", "P-A-19", "A3a-93"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": "Unknown"
   },
@@ -710,12 +539,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-20",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-20"],
     "artist": "Mékayu",
     "crafting_cost": "Unknown"
   },
@@ -743,16 +567,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-150",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-21",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-150", "P-A-21"],
     "artist": "Tomokazu Komiya",
     "crafting_cost": "Unknown"
   },
@@ -780,12 +595,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-22",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-22"],
     "artist": "Kurata So",
     "crafting_cost": "Unknown"
   },
@@ -813,24 +623,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-1",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A1-227",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-23",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3-210",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-1", "A1-227", "P-A-23", "A3-210"],
     "artist": "Kouki Saitou",
     "crafting_cost": "Unknown"
   },
@@ -858,20 +651,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-97",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-24",
-        "rarity": ""
-      },
-      {
-        "card_id": "A4-217",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-97", "P-A-24", "A4-217"],
     "artist": "Miki Tanaka",
     "crafting_cost": "Unknown"
   },
@@ -905,28 +685,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-47",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A1-255",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A1-274",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "P-A-25",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3b-103",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": "Unknown"
   },
@@ -954,24 +713,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-94",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-9",
-        "rarity": ""
-      },
-      {
-        "card_id": "P-A-15",
-        "rarity": ""
-      },
-      {
-        "card_id": "P-A-26",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26"],
     "artist": "Kouki Saitou",
     "crafting_cost": "Unknown"
   },
@@ -999,12 +741,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-27",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-27"],
     "artist": "Yoriyuki Ikegami",
     "crafting_cost": "Unknown"
   },
@@ -1032,16 +769,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1a-14",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-28",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1a-14", "P-A-28"],
     "artist": "Shin Nagasawa",
     "crafting_cost": "Unknown"
   },
@@ -1069,20 +797,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-55",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-29",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3-217",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-55", "P-A-29", "A3-217"],
     "artist": "danciao",
     "crafting_cost": "Unknown"
   },
@@ -1110,12 +825,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-30",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-30"],
     "artist": "En Morikura",
     "crafting_cost": "Unknown"
   },
@@ -1143,16 +853,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-213",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-31",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-213", "P-A-31"],
     "artist": "MAHOU",
     "crafting_cost": "Unknown"
   },
@@ -1180,20 +881,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-33",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A1-230",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-32",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-33", "A1-230", "P-A-32"],
     "artist": "Naoyo Kimura",
     "crafting_cost": "Unknown"
   },
@@ -1221,24 +909,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-53",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A1-232",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-33",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3-215",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-53", "A1-232", "P-A-33", "A3-215"],
     "artist": "Kanako Eo",
     "crafting_cost": "Unknown"
   },
@@ -1266,16 +937,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-35",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-34",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-35", "P-A-34"],
     "artist": "Kariya",
     "crafting_cost": "Unknown"
   },
@@ -1303,16 +965,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-10",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-35",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-10", "P-A-35"],
     "artist": "Atsuko Nishida",
     "crafting_cost": "Unknown"
   },
@@ -1340,16 +993,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-57",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-36",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-57", "P-A-36"],
     "artist": "Sumiyoshi Kizuki",
     "crafting_cost": "Unknown"
   },
@@ -1381,12 +1025,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-37",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-37"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": "Unknown"
   },
@@ -1414,12 +1053,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-38",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-38"],
     "artist": "Miki Tanaka",
     "crafting_cost": "Unknown"
   },
@@ -1447,16 +1081,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-111",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-39",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-111", "P-A-39"],
     "artist": "Anesaki Dynamic",
     "crafting_cost": "Unknown"
   },
@@ -1484,20 +1109,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-27",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-40",
-        "rarity": ""
-      },
-      {
-        "card_id": "A4a-91",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-27", "P-A-40", "A4a-91"],
     "artist": "sui",
     "crafting_cost": "Unknown"
   },
@@ -1525,16 +1137,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-63",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-41",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-63", "P-A-41"],
     "artist": "Naoyo Kimura",
     "crafting_cost": "Unknown"
   },
@@ -1566,24 +1169,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-110",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-187",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-202",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "P-A-42",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": "Unknown"
   },
@@ -1611,16 +1197,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-8",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-43",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2a-8", "P-A-43"],
     "artist": "MAHOU",
     "crafting_cost": "Unknown"
   },
@@ -1652,16 +1229,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-26",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-44",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2a-26", "P-A-44"],
     "artist": "Kazumasa Yasukuni",
     "crafting_cost": "Unknown"
   },
@@ -1689,12 +1257,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-45",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-45"],
     "artist": "Tomokazu Komiya",
     "crafting_cost": "Unknown"
   },
@@ -1722,20 +1285,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-45",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-46",
-        "rarity": ""
-      },
-      {
-        "card_id": "A4a-98",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-45", "P-A-46", "A4a-98"],
     "artist": "Uninori",
     "crafting_cost": "Unknown"
   },
@@ -1767,12 +1317,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-47",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-47"],
     "artist": "Hasuno",
     "crafting_cost": "Unknown"
   },
@@ -1800,20 +1345,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-50",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-162",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-48",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-50", "A2-162", "P-A-48"],
     "artist": "sui",
     "crafting_cost": "Unknown"
   },
@@ -1841,16 +1373,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-63",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-49",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2a-63", "P-A-49"],
     "artist": "okayamatakatoshi",
     "crafting_cost": "Unknown"
   },
@@ -1884,28 +1407,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-129",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A1-262",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A1-282",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A1-286",
-        "rarity": "♛"
-      },
-      {
-        "card_id": "P-A-50",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": "Unknown"
   },
@@ -1933,16 +1435,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-68",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-51",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-68", "P-A-51"],
     "artist": "Shigenori Negishi",
     "crafting_cost": "Unknown"
   },
@@ -1970,16 +1463,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-5",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-52",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-5", "P-A-52"],
     "artist": "MINAMINAMI Take",
     "crafting_cost": "Unknown"
   },
@@ -2007,12 +1491,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-53",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-53"],
     "artist": "Shin Nagasawa",
     "crafting_cost": "Unknown"
   },
@@ -2044,16 +1523,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-28",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-54",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-28", "P-A-54"],
     "artist": "REND",
     "crafting_cost": "Unknown"
   },
@@ -2081,20 +1551,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-39",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-55",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3-225",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-39", "P-A-55", "A3-225"],
     "artist": "Masakazu Fukuda",
     "crafting_cost": "Unknown"
   },
@@ -2122,12 +1579,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-56",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-56"],
     "artist": "Krgc",
     "crafting_cost": "Unknown"
   },
@@ -2155,16 +1607,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-64",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-57",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-64", "P-A-57"],
     "artist": "Kouki Saitou",
     "crafting_cost": "Unknown"
   },
@@ -2192,20 +1635,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-25",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-103",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-58",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-25", "A2b-103", "P-A-58"],
     "artist": "OOYAMA",
     "crafting_cost": "Unknown"
   },
@@ -2233,20 +1663,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-42",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-104",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-59",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-42", "A2b-104", "P-A-59"],
     "artist": "Akira Komayama",
     "crafting_cost": "Unknown"
   },
@@ -2274,16 +1691,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1a-1",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-60",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1a-1", "P-A-60"],
     "artist": "0313",
     "crafting_cost": "Unknown"
   },
@@ -2311,20 +1719,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-87",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-61",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3a-91",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-87", "P-A-61", "A3a-91"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": "Unknown"
   },
@@ -2352,20 +1747,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-198",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-62",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3b-102",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-198", "P-A-62", "A3b-102"],
     "artist": "Eri Yamaki",
     "crafting_cost": "Unknown"
   },
@@ -2393,12 +1775,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-63",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-63"],
     "artist": "Yoshinobu Saito",
     "crafting_cost": "Unknown"
   },
@@ -2426,16 +1803,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-64",
-        "rarity": ""
-      },
-      {
-        "card_id": "P-A-65",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-64", "P-A-65"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -2463,16 +1831,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-64",
-        "rarity": ""
-      },
-      {
-        "card_id": "P-A-65",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-64", "P-A-65"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -2500,16 +1859,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-83",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-66",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-83", "P-A-66"],
     "artist": "Amelicart",
     "crafting_cost": "Unknown"
   },
@@ -2537,20 +1887,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-85",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-171",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-67",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-85", "A3-171", "P-A-67"],
     "artist": "Mizue",
     "crafting_cost": "Unknown"
   },
@@ -2578,16 +1915,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-100",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-68",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-100", "P-A-68"],
     "artist": "Ryuta Fuse",
     "crafting_cost": "Unknown"
   },
@@ -2615,20 +1943,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-2",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-156",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-69",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-2", "A3-156", "P-A-69"],
     "artist": "Satoshi Shirai",
     "crafting_cost": "Unknown"
   },
@@ -2656,16 +1971,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-41",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-70",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-41", "P-A-70"],
     "artist": "tono",
     "crafting_cost": "Unknown"
   },
@@ -2693,16 +1999,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-97",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-71",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-97", "P-A-71"],
     "artist": "Miki Tanaka",
     "crafting_cost": "Unknown"
   },
@@ -2730,12 +2027,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-72",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-72"],
     "artist": "Naoki Saito",
     "crafting_cost": "Unknown"
   },
@@ -2763,12 +2055,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-73",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-73"],
     "artist": "Sekio",
     "crafting_cost": "Unknown"
   },
@@ -2800,16 +2087,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3a-21",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-74",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3a-21", "P-A-74"],
     "artist": "GIDORA",
     "crafting_cost": "Unknown"
   },
@@ -2837,16 +2115,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3a-8",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-75",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3a-8", "P-A-75"],
     "artist": "Hasuno",
     "crafting_cost": "Unknown"
   },
@@ -2874,20 +2143,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3a-9",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3a-72",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-76",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3a-9", "A3a-72", "P-A-76"],
     "artist": "Hasuno",
     "crafting_cost": "Unknown"
   },
@@ -2915,16 +2171,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3a-20",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-77",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3a-20", "P-A-77"],
     "artist": "Shin Nagasawa",
     "crafting_cost": "Unknown"
   },
@@ -2952,12 +2199,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-78",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["P-A-78"],
     "artist": "nagimiso",
     "crafting_cost": "Unknown"
   },
@@ -2985,12 +2227,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-79",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["P-A-79"],
     "artist": "nagimiso",
     "crafting_cost": "Unknown"
   },
@@ -3018,16 +2255,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3a-53",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-80",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3a-53", "P-A-80"],
     "artist": "Shin Nagasawa",
     "crafting_cost": "Unknown"
   },
@@ -3061,12 +2289,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-81",
-        "rarity": "◊◊◊◊"
-      }
-    ],
+    "alternate_versions": ["P-A-81"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": "Unknown"
   },
@@ -3094,16 +2317,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3a-44",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-82",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3a-44", "P-A-82"],
     "artist": "Megumi Mizutani",
     "crafting_cost": "Unknown"
   },
@@ -3131,16 +2345,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3a-57",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-83",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3a-57", "P-A-83"],
     "artist": "Kanako Eo",
     "crafting_cost": "Unknown"
   },
@@ -3174,24 +2379,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3a-19",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3a-77",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3a-84",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "P-A-84",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3a-19", "A3a-77", "A3a-84", "P-A-84"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": "Unknown"
   },
@@ -3219,16 +2407,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3b-18",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-85",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3b-18", "P-A-85"],
     "artist": "OOYAMA",
     "crafting_cost": "Unknown"
   },
@@ -3256,24 +2435,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3b-25",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3b-74",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-86",
-        "rarity": ""
-      },
-      {
-        "card_id": "A4-219",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3b-25", "A3b-74", "P-A-86", "A4-219"],
     "artist": "Mizue",
     "crafting_cost": "Unknown"
   },
@@ -3301,16 +2463,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3b-37",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-87",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3b-37", "P-A-87"],
     "artist": "Tika Matsuno",
     "crafting_cost": "Unknown"
   },
@@ -3338,12 +2491,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-88",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-88"],
     "artist": "Shinya Komatsu",
     "crafting_cost": "Unknown"
   },
@@ -3371,12 +2519,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-89",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-89"],
     "artist": "MAHOU",
     "crafting_cost": "Unknown"
   },
@@ -3404,16 +2547,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3b-48",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-90",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3b-48", "P-A-90"],
     "artist": "sowsow",
     "crafting_cost": "Unknown"
   },
@@ -3441,16 +2575,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3b-65",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-91",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3b-65", "P-A-91"],
     "artist": "HYOGONOSUKE",
     "crafting_cost": "Unknown"
   },
@@ -3478,28 +2603,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-206",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A1-207",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A1-208",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A1-248",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-92",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A1-206", "A1-207", "A1-208", "A1-248", "P-A-92"],
     "artist": "nisimono",
     "crafting_cost": "Unknown"
   },
@@ -3527,16 +2631,7 @@
     "baby": true,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A4-77",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-93",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A4-77", "P-A-93"],
     "artist": "Tika Matsuno",
     "crafting_cost": "Unknown"
   },
@@ -3564,12 +2659,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-94",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-94"],
     "artist": "Taira Akitsu",
     "crafting_cost": "Unknown"
   },
@@ -3597,12 +2687,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-95",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-95"],
     "artist": "Aya Kusube",
     "crafting_cost": "Unknown"
   },
@@ -3630,16 +2715,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A4-118",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-96",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A4-118", "P-A-96"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": "Unknown"
   },
@@ -3667,16 +2743,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A4-133",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-97",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A4-133", "P-A-97"],
     "artist": "Kouki Saitou",
     "crafting_cost": "Unknown"
   },
@@ -3704,12 +2771,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-98",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-98"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -3737,16 +2799,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A4-49",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-99",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A4-49", "P-A-99"],
     "artist": "Shibuzoh.",
     "crafting_cost": "Unknown"
   },
@@ -3774,16 +2827,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A4-116",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-100",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A4-116", "P-A-100"],
     "artist": "Satoshi Shirai",
     "crafting_cost": "Unknown"
   },
@@ -3811,16 +2855,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A4a-36",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-101",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A4a-36", "P-A-101"],
     "artist": "Yuu Nishida",
     "crafting_cost": "Unknown"
   },
@@ -3848,12 +2883,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-102",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-102"],
     "artist": "sowsow",
     "crafting_cost": "Unknown"
   },
@@ -3881,12 +2911,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-103",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["P-A-103"],
     "artist": "MAHOU",
     "crafting_cost": "Unknown"
   },
@@ -3918,20 +2943,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A4a-22",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A4a-72",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-104",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A4a-22", "A4a-72", "P-A-104"],
     "artist": "Hajime Kusajima",
     "crafting_cost": "Unknown"
   },
@@ -3959,16 +2971,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A4a-49",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-105",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A4a-49", "P-A-105"],
     "artist": "Naoyo Kimura",
     "crafting_cost": "Unknown"
   },
@@ -4000,16 +3003,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A4a-50",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-106",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A4a-50", "P-A-106"],
     "artist": "matazo",
     "crafting_cost": "Unknown"
   },
@@ -4037,16 +3031,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A4a-62",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-107",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A4a-62", "P-A-107"],
     "artist": "Kanako Eo",
     "crafting_cost": "Unknown"
   },
@@ -4074,20 +3059,7 @@
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A4a-43",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A4a-76",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-108",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A4a-43", "A4a-76", "P-A-108"],
     "artist": "Asako Ito",
     "crafting_cost": "Unknown"
   }
