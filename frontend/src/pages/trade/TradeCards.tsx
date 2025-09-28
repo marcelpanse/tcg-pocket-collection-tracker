@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CardsTable } from '@/components/CardsTable'
-import NumberFilter from '@/components/filters/NumberFilter.tsx'
-import RarityFilter from '@/components/filters/RarityFilter.tsx'
+import { DropdownFilter, ToggleFilter } from '@/components/Filters'
 import { Button } from '@/components/ui/button.tsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { formatRarity } from '@/components/utils'
 import { toast } from '@/hooks/use-toast.ts'
 import { getCardById } from '@/lib/CardsDB.ts'
 import { getExtraCards, getNeededCards } from '@/lib/utils'
@@ -17,7 +17,7 @@ import { type Card, type Rarity, tradableRarities } from '@/types'
 import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 
 function TradeCards() {
-  const { t } = useTranslation('pages/trade')
+  const { t } = useTranslation(['pages/trade', 'filters'])
 
   const { data: user } = useUser()
   const { data: account } = useAccount()
@@ -105,13 +105,23 @@ function TradeCards() {
             <TabsTrigger value="looking_for">{t('lookingFor')}</TabsTrigger>
             <TabsTrigger value="for_trade">{t('forTrade')}</TabsTrigger>
           </TabsList>
-          <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} rarities={tradableRarities} />
+          <ToggleFilter options={tradableRarities} value={rarityFilter} onChange={setRarityFilter} show={formatRarity} asChild />
           <div className="sm:mt-1 flex flex-row flex-wrap align-center gap-x-4 gap-y-1">
             {currentTab === 'looking_for' && (
-              <NumberFilter numberFilter={lookingForMaxCards} setNumberFilter={setLookingForMaxCards} options={[0, 1, 2, 3, 4, 5]} labelKey="maxNum" />
+              <DropdownFilter
+                label={t('f-number.maxNum', { ns: 'filters' })}
+                options={[1, 2, 3, 4, 5] as const}
+                value={lookingForMaxCards}
+                onChange={setLookingForMaxCards}
+              />
             )}
             {currentTab === 'for_trade' && (
-              <NumberFilter numberFilter={forTradeMinCards} setNumberFilter={setForTradeMinCards} options={[2, 3, 4, 5]} labelKey="minNum" />
+              <DropdownFilter
+                label={t('f-number.minNum', { ns: 'filters' })}
+                options={[2, 3, 4, 5] as const}
+                value={forTradeMinCards}
+                onChange={setForTradeMinCards}
+              />
             )}
             <Button variant="outline" onClick={copyToClipboard}>
               Copy to clipboard

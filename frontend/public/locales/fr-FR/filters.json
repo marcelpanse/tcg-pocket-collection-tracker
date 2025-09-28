@@ -1,0 +1,19 @@
+{
+  "rarity": "Rareté",
+  "f-owned": {
+    "all": "Tout",
+    "missing": "Manquant",
+    "owned": "Obtenu"
+  },
+  "f-sortBy": {
+    "sortBy": "Trier par",
+    "default": "ID de carte",
+    "recent": "Mise à jour récemment",
+    "expansion-newest": "Plus récent en premier"
+  },
+  "f-number": {
+    "numberCards": "Nombre d'exemplaire voulu",
+    "maxNum": "Nombre maximum de cartes",
+    "minNum": "Nombre minimum de cartes"
+  }
+}
