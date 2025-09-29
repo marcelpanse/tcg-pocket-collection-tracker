@@ -37,6 +37,20 @@ type Hashes = Record<string, ArrayBuffer>
 
 const modelPath = '/model/model.json'
 
+function decode(base64: string): ArrayBuffer {
+  try {
+    // @ts-expect-error: Brand new api https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/fromBase64
+    return Uint8Array.fromBase64(base64).buffer
+  } catch {
+    const binary = atob(base64)
+    const bytes = new Uint8Array(binary.length)
+    for (let i = 0; i < binary.length; i++) {
+      bytes[i] = binary.charCodeAt(i)
+    }
+    return bytes.buffer
+  }
+}
+
 const Scan = () => {
   const { t } = useTranslation('scan')
 
@@ -70,8 +84,7 @@ const Scan = () => {
           return
         }
         const json = await res.json()
-        // @ts-expect-error: Brand new api https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/fromBase64
-        const decoded = Object.fromEntries(Object.entries(json).map(([k, v]) => [k, Uint8Array.fromBase64(v).buffer]))
+        const decoded = Object.fromEntries(Object.entries(json).map(([k, v]) => [k, decode(v as string)]))
         set(decoded)
       } catch (err) {
         console.error(`Failed getting hashes for '${lang}': ${err}`)
