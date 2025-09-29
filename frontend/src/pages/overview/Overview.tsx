@@ -1,19 +1,18 @@
 import { Heart, Siren } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { DropdownFilter } from '@/components/Filters'
 import Footer from '@/components/Footer.tsx'
 import DeckbuildingFilter from '@/components/filters/DeckbuildingFilter'
-import ExpansionsFilter from '@/components/filters/ExpansionsFilter.tsx'
-import NumberFilter from '@/components/filters/NumberFilter.tsx'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import { RadialChart } from '@/components/RadialChart'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTitle } from '@/components/ui/alert.tsx'
 import * as CardsDB from '@/lib/CardsDB.ts'
-import { expansions } from '@/lib/CardsDB.ts'
+import { getExpansionById } from '@/lib/CardsDB.ts'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import { useCollection } from '@/services/collection/useCollection'
-import type { Rarity } from '@/types'
+import { expansionIds, type Rarity } from '@/types'
 import { BlogOverview } from './components/BlogOverview'
 import { ExpansionOverview } from './components/ExpansionOverview'
 
@@ -23,15 +22,18 @@ interface Pack {
   fill: string
 }
 
+const expansionOptions = ['all', ...expansionIds] as const
+type ExpansionOption = (typeof expansionOptions)[number]
+
 function Overview() {
   const { data: ownedCards = [] } = useCollection()
 
-  const { t } = useTranslation('pages/overview')
+  const { t } = useTranslation(['pages/overview', 'filters', 'common/sets'])
 
   const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
   const [collectionCount, setCollectionCount] = useState('')
   const [usersCount, setUsersCount] = useState('')
-  const [expansionFilter, setExpansionFilter] = useState<string>(expansions[expansions.length - 2].id)
+  const [expansionFilter, setExpansionFilter] = useState<ExpansionOption>(expansionOptions[expansionOptions.length - 2])
 
   const ownedCardsCount = useMemo(() => ownedCards.reduce((total, card) => total + card.amount_owned, 0), [ownedCards])
 
@@ -85,6 +87,11 @@ function Overview() {
     setHighestProbabilityPack(newHighestProbabilityPack)
   }, [ownedCardsCount, rarityFilter, numberFilter, deckbuildingMode]) //use the memo-ed ownedCardsCount instead of ownedCards to avoid re-rendering when ownedCards changes
 
+  const getLocalizedExpansion = (id: ExpansionOption) => {
+    const expansion_name = id === 'all' ? 'all' : (getExpansionById(id)?.name ?? 'unknown')
+    return t(expansion_name, { ns: 'common/sets' })
+  }
+
   return (
     <main className="fade-in-up">
       <article className="mx-auto max-w-7xl px-8">
@@ -98,7 +105,12 @@ function Overview() {
 
         <div className="mb-8 flex items-center gap-2 flex-wrap">
           <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} deckbuildingMode={deckbuildingMode} />
-          <NumberFilter numberFilter={numberFilter} setNumberFilter={setNumberFilter} options={[1, 2, 3, 4, 5]} />
+          <DropdownFilter
+            label={t('f-number.numberCards', { ns: 'filters' })}
+            options={[1, 2, 3, 4, 5] as const}
+            value={numberFilter}
+            onChange={setNumberFilter}
+          />
           <div className="grow" />
           <DeckbuildingFilter deckbuildingMode={deckbuildingMode} setDeckbuildingMode={setDeckbuildingMode} />
         </div>
@@ -134,7 +146,13 @@ function Overview() {
       <BlogOverview />
 
       <article className="flex mx-auto max-w-7xl px-8 pt-10 -mb-4">
-        <ExpansionsFilter value={expansionFilter} onChange={setExpansionFilter} />
+        <DropdownFilter
+          label={t('expansion', { ns: 'common/sets' })}
+          options={expansionOptions}
+          value={expansionFilter}
+          onChange={setExpansionFilter}
+          show={getLocalizedExpansion}
+        />
       </article>
 
       <article className="mx-auto max-w-7xl sm:p-6 p-0 pt-6 grid grid-cols-8 gap-6">

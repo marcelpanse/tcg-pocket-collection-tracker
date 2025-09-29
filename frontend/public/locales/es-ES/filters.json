@@ -1,0 +1,18 @@
+{
+  "rarity": "Rareza",
+  "f-owned": {
+    "all": "Todas",
+    "missing": "Por conseguir",
+    "owned": "Obtenidas"
+  },
+  "f-sortBy": {
+    "sortBy": "Ordenar Por",
+    "default": "ID de tarjeta",
+    "recent": "Última actualización"
+  },
+  "f-number": {
+    "numberCards": "Número de cartas deseadas",
+    "maxNum": "Número máximo de cartas",
+    "minNum": "Número mínimo de cartas"
+  }
+}

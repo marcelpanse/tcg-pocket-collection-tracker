@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { CardLine } from '@/components/CardLine'
 import { Button } from '@/components/ui/button.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
+import { umami } from '@/lib/utils.ts'
 import { useInsertTrade } from '@/services/trade/useTrade.ts'
 import type { Card, TradeRow } from '@/types'
 
@@ -51,8 +52,7 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
     setYourCard(null)
     setFriendCard(null)
     toast({ title: t('tradeOffered'), variant: 'default' })
-    // @ts-expect-error runtime script on window object
-    window.umami.track('Offer trade')
+    umami('Offer trade')
   }
 
   if (!yourCard && !friendCard) {

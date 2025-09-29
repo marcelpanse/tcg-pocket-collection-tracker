@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast.ts'
+import { umami } from '@/lib/utils.ts'
 import { TradeListRow } from '@/pages/trade/components/TradeListRow.tsx'
 import { useAccount } from '@/services/account/useAccount'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
@@ -58,8 +59,7 @@ function TradeList({ trades, viewHistory }: Props) {
     const updateStatus = async (status: TradeStatus) => {
       updateTradeMutation.mutate({ id: row.id, trade: { status: status } })
       setSelectedTradeId(row.id)
-      // @ts-expect-error runtime script on window object
-      window.umami.track(`Updated trade: ${status}`)
+      umami(`Updated trade: ${status}`)
     }
 
     const end = async () => {
@@ -72,8 +72,7 @@ function TradeList({ trades, viewHistory }: Props) {
       updateTradeMutation.mutate({ id: row.id, trade })
 
       setSelectedTradeId(undefined)
-      // @ts-expect-error runtime script on window object
-      window.umami.track('Updated trade: ended')
+      umami('Updated trade: ended')
     }
 
     const i_ended = (row.offering_friend_id === account.friend_id && row.offerer_ended) || (row.receiving_friend_id === account.friend_id && row.receiver_ended)

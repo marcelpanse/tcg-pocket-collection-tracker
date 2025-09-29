@@ -61,3 +61,8 @@ export function getNeededCards(cards: CollectionRow[], amount_wanted: number): s
   const notNeeded = new Set(cards.filter((c) => c.amount_owned >= amount_wanted).map((c) => c.card_id))
   return allCards.map((c) => c.card_id).filter((card_id) => !notNeeded.has(card_id))
 }
+
+export function umami(event: string) {
+  // @ts-expect-error runtime script on window object
+  window.umami.track(event)
+}
