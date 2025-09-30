@@ -6,7 +6,7 @@ import { CardLine } from '@/components/CardLine'
 import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
-import { allCards } from '@/lib/CardsDB'
+import { allCards, expansions } from '@/lib/CardsDB'
 import { calculatePerceptualHash, calculateSimilarity, imageToBuffers } from '@/lib/hash'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
@@ -59,7 +59,7 @@ function decode(base64: string): ArrayBuffer {
 }
 
 const Scan = () => {
-  const { t } = useTranslation('scan')
+  const { t } = useTranslation(['scan', 'common/sets'])
 
   const { data: ownedCards = [] } = useCollection()
   const updateCardsMutation = useUpdateCards()
@@ -75,6 +75,10 @@ const Scan = () => {
   const isInitialized = useMemo(() => !isLoadingModel && !!hashes && !!fallbackHashes, [isLoadingModel, hashes, fallbackHashes])
 
   const [amount, setAmount] = useState(1)
+  const [selectedExpansionId, setSelectedExpansionId] = useState<string>(() => {
+    const nonPromoExpansions = expansions.filter((exp) => !exp.promo)
+    return nonPromoExpansions[nonPromoExpansions.length - 1]?.id || 'A1'
+  })
 
   const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
   const [incrementedCards, setIncrementedCards] = useState<IncrementedCard[]>([])
@@ -163,7 +167,7 @@ const Scan = () => {
   }
 
   // Extract card images function
-  const extractCardImages = async (file: File, detections: DetectionResult) => {
+  const extractCardImages = async (file: File, detections: DetectionResult, expansionId: string) => {
     if (!file.type.startsWith('image/')) {
       throw new Error('PokemonCardDetectorComponent.tsx:extractCardImages: Invalid file type')
     }
@@ -197,8 +201,9 @@ const Scan = () => {
               const buffers = await imageToBuffers(cardImageUrl)
               const hash = calculatePerceptualHash(buffers)
 
-              // Calculate similarityes for all cards and sort them
+              // Calculate similarityes for all cards from the selected expansion and sort them
               const matches = allCards
+                .filter((c) => c.expansion === expansionId)
                 .map((c) => {
                   const c_hash = hashes[c.card_id] ?? fallbackHashes[c.card_id]
                   if (!c_hash) {
@@ -262,7 +267,7 @@ const Scan = () => {
       // Extract card images
       const allExtractedCards: ExtractedCard[] = []
       for (let i = 0; i < imageFiles.length; i++) {
-        const extractedFromImage = await extractCardImages(imageFiles[i], detectionResults[i])
+        const extractedFromImage = await extractCardImages(imageFiles[i], detectionResults[i], selectedExpansionId)
         allExtractedCards.push(...extractedFromImage)
       }
       setExtractedCards(allExtractedCards)
@@ -359,7 +364,7 @@ const Scan = () => {
           {/* Potential matches thumbnails */}
           <div className="flex justify-between items-center mb-2 w-full">
             <span className="text-sm font-medium">
-              {card.selected ? t('selected') : t('clickToSelect')} {getCardNameByLang(card.matchedCard.card, i18n.language)}
+              {card.selected ? t('selected') : t('clickToSelect')} {getCardNameByLang(card.matchedCard.card, i18n.language)} ({card.matchedCard.card.card_id})
             </span>
           </div>
         </div>
@@ -386,16 +391,29 @@ const Scan = () => {
       )}
 
       {isInitialized && state === State.UploadImages && (
-        // biome-ignore lint/a11y/noStaticElementInteractions: cant be a button because it contains another button
-        <div
-          className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-md cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900/10"
-          onClick={() => fileInputRef.current?.click()}
-        >
+        <div className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-md hover:bg-gray-50 dark:hover:bg-gray-900/10">
           <AlertDescription>
-            <p className="mb-4 text-center">{t('description')}</p>
+            <p className="text-neutral-400 mb-4 text-center">{t('description')}</p>
           </AlertDescription>
+          <label className="flex items-baseline justify-between gap-5 px-3 py-1 my-auto text-neutral-400">
+            <span className="text-sm">Which pack did you open?</span>
+            <select
+              value={selectedExpansionId}
+              onChange={(e) => setSelectedExpansionId(e.target.value)}
+              className="text-white min-h-[27px] text-sm cursor-pointer"
+            >
+              {expansions
+                .filter((exp) => !exp.promo)
+                .reverse()
+                .map((exp) => (
+                  <option key={exp.id} value={exp.id}>
+                    {t(exp.name, { ns: 'common/sets' })} ({exp.id})
+                  </option>
+                ))}
+            </select>
+          </label>
           <input type="file" ref={fileInputRef} onChange={handleImageUpload} accept="image/*" multiple className="w-full hidden" />
-          <Button variant="outline" className="mt-2">
+          <Button variant="outline" className="mt-2" onClick={() => fileInputRef.current?.click()}>
             {t('selectImages')}
           </Button>
         </div>
