@@ -233,7 +233,14 @@ export const expansions: Expansion[] = [
     missions: a4bMissions,
     tradeable: false,
     containsShinies: true,
-    containsBabies: true,
+    containsBabies: false,
+    packStructure: {
+      cardsPerPack: 4,
+      guaranteedRarity: {
+        position: 4,
+        rarity: '◊◊◊◊',
+      },
+    },
   },
   {
     name: 'promo-a',
@@ -436,6 +443,105 @@ const probabilityPerRarityBaby: Record<Rarity, number> = {
   '': 0,
 }
 
+// 4-card deluxe pack probabilities
+// Position 1: Always ◊
+const probabilityPerRarityDeluxe1: Record<Rarity, number> = {
+  '◊': 100,
+  '◊◊': 0,
+  '◊◊◊': 0,
+  '◊◊◊◊': 0,
+  '☆': 0,
+  '☆☆': 0,
+  '☆☆☆': 0,
+  '✵': 0,
+  '✵✵': 0,
+  'Crown Rare': 0,
+  P: 0,
+  '': 0,
+}
+
+// Position 2: ◊ or ◊◊
+const probabilityPerRarityDeluxe2: Record<Rarity, number> = {
+  '◊': 17.73,
+  '◊◊': 82.27,
+  '◊◊◊': 0,
+  '◊◊◊◊': 0,
+  '☆': 0,
+  '☆☆': 0,
+  '☆☆☆': 0,
+  '✵': 0,
+  '✵✵': 0,
+  'Crown Rare': 0,
+  P: 0,
+  '': 0,
+}
+
+// Position 3: Anything EXCEPT ◊◊◊◊
+const probabilityPerRarityDeluxe3: Record<Rarity, number> = {
+  '◊': 23.021,
+  '◊◊': 17.985,
+  '◊◊◊': 40.659,
+  '◊◊◊◊': 0,
+  '☆': 12.858,
+  '☆☆': 2.5,
+  '☆☆☆': 1.111,
+  '✵': 0,
+  '✵✵': 1.667,
+  'Crown Rare': 0.198,
+  P: 0,
+  '': 0,
+}
+
+// Position 4: Always ◊◊◊◊
+const probabilityPerRarityDeluxe4: Record<Rarity, number> = {
+  '◊': 0,
+  '◊◊': 0,
+  '◊◊◊': 0,
+  '◊◊◊◊': 100, // GUARANTEED
+  '☆': 0,
+  '☆☆': 0,
+  '☆☆☆': 0,
+  '✵': 0,
+  '✵✵': 0,
+  'Crown Rare': 0,
+  P: 0,
+  '': 0,
+}
+
+const getPositionProbability = (expansion: Expansion, position: number): Record<Rarity, number> => {
+  const packStructure = expansion.packStructure
+
+  // 4-card deluxe pack
+  if (packStructure?.cardsPerPack === 4) {
+    if (position === 1) {
+      return probabilityPerRarityDeluxe1
+    }
+    if (position === 2) {
+      return probabilityPerRarityDeluxe2
+    }
+    if (position === 3) {
+      return probabilityPerRarityDeluxe3
+    }
+    if (position === 4) {
+      return probabilityPerRarityDeluxe4
+    }
+  }
+
+  // 5-card standard pack (existing logic)
+  if (position <= 3) {
+    return probabilityPerRarity1_3
+  }
+  if (position === 4) {
+    return expansion.containsShinies ? probabilityPerRarity4Shiny : probabilityPerRarity4
+  }
+  if (position === 5) {
+    return expansion.containsShinies ? probabilityPerRarity5Shiny : probabilityPerRarity5
+  }
+
+  // Fallback (should never reach here)
+  return probabilityPerRarity1_3
+}
+
 interface PullRateProps {
   ownedCards: CollectionRow[]
   expansion: Expansion
@@ -523,9 +629,8 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
   const cardsInRarePack = cardsInPack.filter((c) => abilityByRarityToBeInRarePack[c.rarity] === 1)
   const missingCardsFromPack = missingCards.filter((c) => cardsInPack.some((card) => c.card_id === card.card_id))
 
-  let totalProbability1_3 = 0
-  let totalProbability4 = 0
-  let totalProbability5 = 0
+  const cardsPerPack = expansion.packStructure?.cardsPerPack || 5
+  const totalProbabilityPerPosition = Array(cardsPerPack).fill(0)
   let rareProbability1_5 = 0
   let babyProbability = 0
   for (const card of missingCardsFromPack) {
@@ -548,14 +653,12 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
       }
     }
 
-    let chanceToGetThisCard1_3 = 0
-    let chanceToGetThisCard4 = 0
-    let chanceToGetThisCard5 = 0
+    const chanceToGetThisCardPerPosition = Array(cardsPerPack).fill(0)
     let chanceToGetThisCardRare1_5 = 0
     let chanceToGetThisCardBaby = 0
 
     for (const rarity of rarityList) {
-      if (card.baby && rarity !== 'Crown Rare') {
+      if (card.baby && rarity !== 'Crown Rare' && expansion.containsBabies) {
         // if the card is a baby (but not Crown Rare), we only consider 6-card packs
         const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && c.baby).length
 
@@ -564,40 +667,46 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
         // Crown Rare babies and non-baby cards use normal probability distributions
         const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && (rarity === 'Crown Rare' || !c.baby)).length
 
-        // the chance to get this card is the probability of getting this card in the pack divided by the number of cards of this rarity
-        chanceToGetThisCard1_3 += probabilityPerRarity1_3[rarity] / 100 / nrOfcardsOfThisRarity
-        if (expansion.containsShinies) {
-          chanceToGetThisCard4 += probabilityPerRarity4Shiny[rarity] / 100 / nrOfcardsOfThisRarity
-          chanceToGetThisCard5 += probabilityPerRarity5Shiny[rarity] / 100 / nrOfcardsOfThisRarity
-        } else {
-          chanceToGetThisCard4 += probabilityPerRarity4[rarity] / 100 / nrOfcardsOfThisRarity
-          chanceToGetThisCard5 += probabilityPerRarity5[rarity] / 100 / nrOfcardsOfThisRarity
+        // Calculate probability for each position
+        for (let position = 1; position <= cardsPerPack; position++) {
+          const positionProbability = getPositionProbability(expansion, position)
+          chanceToGetThisCardPerPosition[position - 1] += positionProbability[rarity] / 100 / nrOfcardsOfThisRarity
         }
-        chanceToGetThisCardRare1_5 += abilityByRarityToBeInRarePack[rarity] / cardsInRarePack.length
+
+        // Rare pack probability (only for 5-card packs)
+        if (cardsPerPack === 5) {
+          chanceToGetThisCardRare1_5 += abilityByRarityToBeInRarePack[rarity] / cardsInRarePack.length
+        }
       }
     }
 
     // add up the chances to get this card
-    totalProbability1_3 += chanceToGetThisCard1_3
-    totalProbability4 += chanceToGetThisCard4
-    totalProbability5 += chanceToGetThisCard5
+    for (let i = 0; i < cardsPerPack; i++) {
+      totalProbabilityPerPosition[i] += chanceToGetThisCardPerPosition[i]
+    }
     rareProbability1_5 += chanceToGetThisCardRare1_5
     babyProbability += chanceToGetThisCardBaby
   }
 
+  // Calculate chance across all positions
+  const chanceToGetInStandardPack = totalProbabilityPerPosition.reduce((acc, posProb) => acc * (1 - posProb), 1)
+
+  // 4-card packs: no special packs (rare/baby)
+  if (cardsPerPack === 4) {
+    return 1 - chanceToGetInStandardPack
+  }
+
+  // 5-card packs: existing logic with rare/baby packs
   let chanceToGetNewCard = 0
   let chanceToGetNewCardInRarePack = 0
   let changeToGetNewCardIn6CardPack = 0
 
-  // take the total probabilities per card draw (for the 1-3 you need to cube the probability) and multiply
-  const chanceToGetInStandard5Cards = 1 - (1 - totalProbability1_3) ** 3 * (1 - totalProbability4) * (1 - totalProbability5)
-
   if (expansion.containsBabies) {
-    chanceToGetNewCard = 0.9162 * chanceToGetInStandard5Cards
+    chanceToGetNewCard = 0.9162 * (1 - chanceToGetInStandardPack)
     chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - rareProbability1_5) ** 5)
-    changeToGetNewCardIn6CardPack = 0.0833 * (1 - (1 - chanceToGetInStandard5Cards) * (1 - babyProbability))
+    changeToGetNewCardIn6CardPack = 0.0833 * (1 - chanceToGetInStandardPack * (1 - babyProbability))
   } else {
-    chanceToGetNewCard = 0.9995 * chanceToGetInStandard5Cards
+    chanceToGetNewCard = 0.9995 * (1 - chanceToGetInStandardPack)
     chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - rareProbability1_5) ** 5)
   }
 

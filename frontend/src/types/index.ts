@@ -62,6 +62,14 @@ export interface TradePartners {
   matched_cards_amount: number
 }
 
+export interface PackStructure {
+  cardsPerPack: 4 | 5
+  guaranteedRarity?: {
+    position: number
+    rarity: Rarity
+  }
+}
+
 export interface Expansion {
   name: string
   id: ExpansionId
@@ -72,6 +80,7 @@ export interface Expansion {
   promo?: boolean
   containsShinies?: boolean
   containsBabies?: boolean
+  packStructure?: PackStructure
 }
 
 export interface Pack {
