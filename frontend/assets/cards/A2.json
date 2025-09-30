@@ -163,7 +163,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-6"],
+    "alternate_versions": ["A2-6", "A4b-20", "A4b-21"],
     "artist": "Eri Yamaki",
     "crafting_cost": 35
   },
@@ -191,7 +191,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-7", "A2-180", "A2-196", "A4-232"],
+    "alternate_versions": ["A2-7", "A2-180", "A2-196", "A4-232", "A4b-22"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 500
   },
@@ -615,7 +615,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-22", "A2-159"],
+    "alternate_versions": ["A2-22", "A2-159", "A4b-30", "A4b-31", "P-A-116"],
     "artist": "Narumi Sato",
     "crafting_cost": 150
   },
@@ -755,7 +755,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-27", "P-A-40", "A4a-91"],
+    "alternate_versions": ["A2-27", "P-A-40", "A4a-91", "A4b-71", "A4b-72"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": 35
   },
@@ -783,7 +783,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-28", "A4a-92"],
+    "alternate_versions": ["A2-28", "A4a-92", "A4b-73", "A4b-74"],
     "artist": "Masakazu Fukuda",
     "crafting_cost": 70
   },
@@ -811,7 +811,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-29", "A2-181", "A2-197", "A4a-101"],
+    "alternate_versions": ["A2-29", "A2-181", "A2-197", "A4a-101", "A4b-75"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -1389,7 +1389,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206"],
+    "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206", "A4b-107", "A4b-363"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -1417,7 +1417,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-50", "A2-162", "P-A-48"],
+    "alternate_versions": ["A2-50", "A2-162", "P-A-48", "A4b-108", "A4b-109"],
     "artist": "MINAMINAMI Take",
     "crafting_cost": 70
   },
@@ -1501,7 +1501,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": ["A2-53"],
+    "alternate_versions": ["A2-53", "A4b-137", "A4b-138"],
     "artist": "Yoshinobu Saito",
     "crafting_cost": 150
   },
@@ -1725,7 +1725,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-61", "A2-183", "A2-198", "A4-236"],
+    "alternate_versions": ["A2-61", "A2-183", "A2-198", "A4-236", "A4b-145"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 500
   },
@@ -1865,7 +1865,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-66", "A4-220"],
+    "alternate_versions": ["A2-66", "A4-220", "A4b-161", "A4b-162"],
     "artist": "Sumiyoshi Kizuki",
     "crafting_cost": 35
   },
@@ -1893,7 +1893,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-67", "A2-184", "A2-199", "A4-237"],
+    "alternate_versions": ["A2-67", "A2-184", "A2-199", "A4-237", "A4b-163"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 500
   },
@@ -1921,7 +1921,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-68", "A3b-97"],
+    "alternate_versions": ["A2-68", "A3b-97", "A4b-164", "A4b-165"],
     "artist": "Miki Tanaka",
     "crafting_cost": 35
   },
@@ -1949,7 +1949,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-69", "A3b-98"],
+    "alternate_versions": ["A2-69", "A3b-98", "A4b-166", "A4b-167"],
     "artist": "Yukiko Baba",
     "crafting_cost": 35
   },
@@ -2209,7 +2209,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-78", "A2-167"],
+    "alternate_versions": ["A2-78", "A2-167", "A4b-170", "A4b-171"],
     "artist": "AKIRA EGAWA",
     "crafting_cost": 150
   },
@@ -2609,7 +2609,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-92", "A2-170"],
+    "alternate_versions": ["A2-92", "A2-170", "A4b-212", "A4b-213"],
     "artist": "nagimiso",
     "crafting_cost": 150
   },
@@ -2693,7 +2693,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-95", "A2-185", "A2-200", "A3b-106"],
+    "alternate_versions": ["A2-95", "A2-185", "A2-200", "A3b-106", "A4b-215"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -2777,7 +2777,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-98"],
+    "alternate_versions": ["A2-98", "A4b-242", "A4b-243"],
     "artist": "Hasuno",
     "crafting_cost": 35
   },
@@ -2805,7 +2805,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-99", "A2-186", "A2-201", "A4-238"],
+    "alternate_versions": ["A2-99", "A2-186", "A2-201", "A4-238", "A4b-244"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -3117,7 +3117,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42"],
+    "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42", "A4b-245", "A4b-378"],
     "artist": "PLANETA Yamashita",
     "crafting_cost": 500
   },
@@ -3379,7 +3379,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207"],
+    "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207", "A4b-254", "A4b-368"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -3523,7 +3523,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-124", "A4-230"],
+    "alternate_versions": ["A2-124", "A4-230", "A4b-282", "A4b-283"],
     "artist": "Yukiko Baba",
     "crafting_cost": 35
   },
@@ -3551,7 +3551,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-125", "A2-189", "A2-203", "A4-239"],
+    "alternate_versions": ["A2-125", "A2-189", "A2-203", "A4-239", "A4b-284"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 500
   },
@@ -4055,7 +4055,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": ["A2-143", "A2-179"],
+    "alternate_versions": ["A2-143", "A2-179", "P-A-115"],
     "artist": "Tomokazu Komiya",
     "crafting_cost": 150
   },
@@ -4130,7 +4130,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-146"],
+    "alternate_versions": ["A2-146", "A4b-316", "A4b-317"],
     "artist": "Ayaka Yoshida",
     "crafting_cost": 70
   },
@@ -4155,7 +4155,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-147"],
+    "alternate_versions": ["A2-147", "A4b-320", "A4b-321"],
     "artist": "Ryo Ueda",
     "crafting_cost": 70
   },
@@ -4180,7 +4180,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-148"],
+    "alternate_versions": ["A2-148", "A4b-322", "A4b-323"],
     "artist": "Ayaka Yoshida",
     "crafting_cost": 70
   },
@@ -4230,7 +4230,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-150", "A2-190"],
+    "alternate_versions": ["A2-150", "A2-190", "A4b-326", "A4b-327"],
     "artist": "akagi",
     "crafting_cost": 70
   },
@@ -4330,7 +4330,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-154", "A2-194"],
+    "alternate_versions": ["A2-154", "A2-194", "A4b-342", "A4b-343"],
     "artist": "saino misaki",
     "crafting_cost": 70
   },
@@ -4355,7 +4355,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-155", "A2-195"],
+    "alternate_versions": ["A2-155", "A2-195", "A4b-344", "A4b-345"],
     "artist": "Yuu Nishida",
     "crafting_cost": 70
   },
@@ -4471,7 +4471,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-22", "A2-159"],
+    "alternate_versions": ["A2-22", "A2-159", "A4b-30", "A4b-31", "P-A-116"],
     "artist": "REND",
     "crafting_cost": 400
   },
@@ -4559,7 +4559,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-50", "A2-162", "P-A-48"],
+    "alternate_versions": ["A2-50", "A2-162", "P-A-48", "A4b-108", "A4b-109"],
     "artist": "miki kudo",
     "crafting_cost": 400
   },
@@ -4703,7 +4703,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-78", "A2-167"],
+    "alternate_versions": ["A2-78", "A2-167", "A4b-170", "A4b-171"],
     "artist": "Rond",
     "crafting_cost": 400
   },
@@ -4791,7 +4791,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-92", "A2-170"],
+    "alternate_versions": ["A2-92", "A2-170", "A4b-212", "A4b-213"],
     "artist": "Akira Komayama",
     "crafting_cost": 400
   },
@@ -5047,7 +5047,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-143", "A2-179"],
+    "alternate_versions": ["A2-143", "A2-179", "P-A-115"],
     "artist": "Tetsu Kayama",
     "crafting_cost": 400
   },
@@ -5075,7 +5075,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-7", "A2-180", "A2-196", "A4-232"],
+    "alternate_versions": ["A2-7", "A2-180", "A2-196", "A4-232", "A4b-22"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -5103,7 +5103,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-29", "A2-181", "A2-197", "A4a-101"],
+    "alternate_versions": ["A2-29", "A2-181", "A2-197", "A4a-101", "A4b-75"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -5137,7 +5137,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206"],
+    "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206", "A4b-107", "A4b-363"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -5165,7 +5165,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-61", "A2-183", "A2-198", "A4-236"],
+    "alternate_versions": ["A2-61", "A2-183", "A2-198", "A4-236", "A4b-145"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -5193,7 +5193,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-67", "A2-184", "A2-199", "A4-237"],
+    "alternate_versions": ["A2-67", "A2-184", "A2-199", "A4-237", "A4b-163"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -5221,7 +5221,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-95", "A2-185", "A2-200", "A3b-106"],
+    "alternate_versions": ["A2-95", "A2-185", "A2-200", "A3b-106", "A4b-215"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -5249,7 +5249,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-99", "A2-186", "A2-201", "A4-238"],
+    "alternate_versions": ["A2-99", "A2-186", "A2-201", "A4-238", "A4b-244"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -5281,7 +5281,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42"],
+    "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42", "A4b-245", "A4b-378"],
     "artist": "PLANETA Yamashita",
     "crafting_cost": 1250
   },
@@ -5315,7 +5315,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207"],
+    "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207", "A4b-254", "A4b-368"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -5343,7 +5343,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-125", "A2-189", "A2-203", "A4-239"],
+    "alternate_versions": ["A2-125", "A2-189", "A2-203", "A4-239", "A4b-284"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -5368,7 +5368,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-150", "A2-190"],
+    "alternate_versions": ["A2-150", "A2-190", "A4b-326", "A4b-327"],
     "artist": "akagi",
     "crafting_cost": 1250
   },
@@ -5468,7 +5468,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-154", "A2-194"],
+    "alternate_versions": ["A2-154", "A2-194", "A4b-342", "A4b-343"],
     "artist": "saino misaki",
     "crafting_cost": 1250
   },
@@ -5493,7 +5493,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-155", "A2-195"],
+    "alternate_versions": ["A2-155", "A2-195", "A4b-344", "A4b-345"],
     "artist": "Yuu Nishida",
     "crafting_cost": 1250
   },
@@ -5521,7 +5521,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-7", "A2-180", "A2-196", "A4-232"],
+    "alternate_versions": ["A2-7", "A2-180", "A2-196", "A4-232", "A4b-22"],
     "artist": "Mina Nakai",
     "crafting_cost": 1250
   },
@@ -5549,7 +5549,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-29", "A2-181", "A2-197", "A4a-101"],
+    "alternate_versions": ["A2-29", "A2-181", "A2-197", "A4a-101", "A4b-75"],
     "artist": "nagimiso",
     "crafting_cost": 1250
   },
@@ -5577,7 +5577,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-61", "A2-183", "A2-198", "A4-236"],
+    "alternate_versions": ["A2-61", "A2-183", "A2-198", "A4-236", "A4b-145"],
     "artist": "Nurikabe",
     "crafting_cost": 1250
   },
@@ -5605,7 +5605,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-67", "A2-184", "A2-199", "A4-237"],
+    "alternate_versions": ["A2-67", "A2-184", "A2-199", "A4-237", "A4b-163"],
     "artist": "Kuroimori",
     "crafting_cost": 1250
   },
@@ -5633,7 +5633,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-95", "A2-185", "A2-200", "A3b-106"],
+    "alternate_versions": ["A2-95", "A2-185", "A2-200", "A3b-106", "A4b-215"],
     "artist": "Takumi Wada",
     "crafting_cost": 1250
   },
@@ -5661,7 +5661,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-99", "A2-186", "A2-201", "A4-238"],
+    "alternate_versions": ["A2-99", "A2-186", "A2-201", "A4-238", "A4b-244"],
     "artist": "hncl",
     "crafting_cost": 1250
   },
@@ -5693,7 +5693,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42"],
+    "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42", "A4b-245", "A4b-378"],
     "artist": "Oswaldo KATO",
     "crafting_cost": 1250
   },
@@ -5721,7 +5721,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-125", "A2-189", "A2-203", "A4-239"],
+    "alternate_versions": ["A2-125", "A2-189", "A2-203", "A4-239", "A4b-284"],
     "artist": "Jerky",
     "crafting_cost": 1250
   },
@@ -5755,7 +5755,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206"],
+    "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206", "A4b-107", "A4b-363"],
     "artist": "N-DESIGN Inc.",
     "crafting_cost": 1500
   },
@@ -5789,7 +5789,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207"],
+    "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207", "A4b-254", "A4b-368"],
     "artist": "N-DESIGN Inc.",
     "crafting_cost": 1500
   },
@@ -5823,7 +5823,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206"],
+    "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206", "A4b-107", "A4b-363"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -5857,7 +5857,7 @@
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207"],
+    "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207", "A4b-254", "A4b-368"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   }

@@ -219,7 +219,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-8", "A3b-71", "A4-213"],
+    "alternate_versions": ["A3b-8", "A3b-71", "A4-213", "A4b-64", "A4b-65"],
     "artist": "Eri Yamaki",
     "crafting_cost": 150
   },
@@ -240,7 +240,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Combust",
+      "name": "Combust",
       "effect": "Once during your turn, you may attach a  Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
     },
     "weakness": "water",
@@ -251,7 +251,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-9", "A3b-79", "A3b-87"],
+    "alternate_versions": ["A3b-9", "A3b-79", "A3b-87", "A4b-66"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -279,7 +279,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-10"],
+    "alternate_versions": ["A3b-10", "A4b-69", "A4b-70"],
     "artist": "sui",
     "crafting_cost": 35
   },
@@ -615,7 +615,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-22"],
+    "alternate_versions": ["A3b-22", "A4b-116", "A4b-117"],
     "artist": "match",
     "crafting_cost": 35
   },
@@ -643,7 +643,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-23"],
+    "alternate_versions": ["A3b-23", "A4b-118", "A4b-119"],
     "artist": "Atsuko Nishida",
     "crafting_cost": 35
   },
@@ -677,7 +677,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-24", "A3b-80", "A3b-88"],
+    "alternate_versions": ["A3b-24", "A3b-80", "A3b-88", "A4b-120"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -873,7 +873,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-31"],
+    "alternate_versions": ["A3b-31", "A4b-173", "A4b-174"],
     "artist": "MAHOU",
     "crafting_cost": 35
   },
@@ -901,7 +901,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-32"],
+    "alternate_versions": ["A3b-32", "A4b-175", "A4b-176", "A4b-358"],
     "artist": "Kyoko Umemoto",
     "crafting_cost": 70
   },
@@ -950,7 +950,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Happy Ribbon",
+      "name": "Happy Ribbon",
       "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may draw 2 cards."
     },
     "weakness": "metal",
@@ -961,7 +961,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-34", "A3b-81", "A3b-89"],
+    "alternate_versions": ["A3b-34", "A3b-81", "A3b-89", "A4b-177"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -989,7 +989,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-35"],
+    "alternate_versions": ["A3b-35", "P-A-113"],
     "artist": "Eri Yamaki",
     "crafting_cost": 70
   },
@@ -1017,7 +1017,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-36"],
+    "alternate_versions": ["A3b-36", "A4b-185", "A4b-186"],
     "artist": "Mina Nakai",
     "crafting_cost": 35
   },
@@ -1045,7 +1045,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-37", "P-A-87"],
+    "alternate_versions": ["A3b-37", "P-A-87", "A4b-187", "A4b-188"],
     "artist": "Mizue",
     "crafting_cost": 70
   },
@@ -1213,7 +1213,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-43", "A3b-77"],
+    "alternate_versions": ["A3b-43", "A3b-77", "A4b-239", "A4b-240"],
     "artist": "Ryota Murayama",
     "crafting_cost": 150
   },
@@ -1437,7 +1437,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-51"],
+    "alternate_versions": ["A3b-51", "A4b-267", "A4b-268"],
     "artist": "Naoyo Kimura",
     "crafting_cost": 35
   },
@@ -1465,7 +1465,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-52"],
+    "alternate_versions": ["A3b-52", "A4b-269", "A4b-270"],
     "artist": "sui",
     "crafting_cost": 35
   },
@@ -1493,7 +1493,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-53", "A3b-82", "A3b-90"],
+    "alternate_versions": ["A3b-53", "A3b-82", "A3b-90", "A4b-271"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 500
   },
@@ -1549,7 +1549,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-55", "A3b-78"],
+    "alternate_versions": ["A3b-55", "A3b-78", "A4b-285", "A4b-286"],
     "artist": "Naoki Saito",
     "crafting_cost": 35
   },
@@ -1570,7 +1570,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Veevee ’volve",
+      "name": "Veevee ’volve",
       "effect": "This Pokémon can evolve into any Pokémon that evolves from Eevee if you play it from your hand onto this Pokémon. (This Pokémon can't evolve during your first turn or the turn you play it.)"
     },
     "weakness": "fighting",
@@ -1581,7 +1581,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-56", "A3b-83", "A3b-92"],
+    "alternate_versions": ["A3b-56", "A3b-83", "A3b-92", "A4b-287", "A4b-370", "P-A-109"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -1602,7 +1602,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Full-Mouth Manner",
+      "name": "Full-Mouth Manner",
       "effect": "At the end of your turn, if this Pokémon is in the Active Spot, heal 20 damage from it."
     },
     "weakness": "fighting",
@@ -1613,7 +1613,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-57", "A3b-84", "A3b-91"],
+    "alternate_versions": ["A3b-57", "A3b-84", "A3b-91", "A4b-288"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 500
   },
@@ -1662,7 +1662,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Catching Tail",
+      "name": "Catching Tail",
       "effect": "Once during your turn, you may put a random Pokémon Tool card from your deck into your hand."
     },
     "weakness": "fighting",
@@ -1866,7 +1866,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-66", "A3b-107"],
+    "alternate_versions": ["A3b-66", "A3b-107", "A4b-308", "A4b-309"],
     "artist": "AYUMI ODASHIMA",
     "crafting_cost": 70
   },
@@ -1997,7 +1997,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-8", "A3b-71", "A4-213"],
+    "alternate_versions": ["A3b-8", "A3b-71", "A4-213", "A4b-64", "A4b-65"],
     "artist": "Teeziro",
     "crafting_cost": 400
   },
@@ -2165,7 +2165,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-43", "A3b-77"],
+    "alternate_versions": ["A3b-43", "A3b-77", "A4b-239", "A4b-240"],
     "artist": "kawayoo",
     "crafting_cost": 400
   },
@@ -2193,7 +2193,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-55", "A3b-78"],
+    "alternate_versions": ["A3b-55", "A3b-78", "A4b-285", "A4b-286"],
     "artist": "Narumi Sato",
     "crafting_cost": 400
   },
@@ -2214,7 +2214,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Combust",
+      "name": "Combust",
       "effect": "Once during your turn, you may attach a  Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
     },
     "weakness": "water",
@@ -2225,7 +2225,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-9", "A3b-79", "A3b-87"],
+    "alternate_versions": ["A3b-9", "A3b-79", "A3b-87", "A4b-66"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -2259,7 +2259,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-24", "A3b-80", "A3b-88"],
+    "alternate_versions": ["A3b-24", "A3b-80", "A3b-88", "A4b-120"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -2280,7 +2280,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Happy Ribbon",
+      "name": "Happy Ribbon",
       "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may draw 2 cards."
     },
     "weakness": "metal",
@@ -2291,7 +2291,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-34", "A3b-81", "A3b-89"],
+    "alternate_versions": ["A3b-34", "A3b-81", "A3b-89", "A4b-177"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -2319,7 +2319,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-53", "A3b-82", "A3b-90"],
+    "alternate_versions": ["A3b-53", "A3b-82", "A3b-90", "A4b-271"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": 1250
   },
@@ -2340,7 +2340,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Veevee ’volve",
+      "name": "Veevee ’volve",
       "effect": "This Pokémon can evolve into any Pokémon that evolves from Eevee if you play it from your hand onto this Pokémon. (This Pokémon can't evolve during your first turn or the turn you play it.)"
     },
     "weakness": "fighting",
@@ -2351,7 +2351,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-56", "A3b-83", "A3b-92"],
+    "alternate_versions": ["A3b-56", "A3b-83", "A3b-92", "A4b-287", "A4b-370", "P-A-109"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -2372,7 +2372,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Full-Mouth Manner",
+      "name": "Full-Mouth Manner",
       "effect": "At the end of your turn, if this Pokémon is in the Active Spot, heal 20 damage from it."
     },
     "weakness": "fighting",
@@ -2383,7 +2383,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-57", "A3b-84", "A3b-91"],
+    "alternate_versions": ["A3b-57", "A3b-84", "A3b-91", "A4b-288"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -2454,7 +2454,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Combust",
+      "name": "Combust",
       "effect": "Once during your turn, you may attach a  Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
     },
     "weakness": "water",
@@ -2465,7 +2465,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-9", "A3b-79", "A3b-87"],
+    "alternate_versions": ["A3b-9", "A3b-79", "A3b-87", "A4b-66"],
     "artist": "Kuroimori",
     "crafting_cost": 1250
   },
@@ -2499,7 +2499,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-24", "A3b-80", "A3b-88"],
+    "alternate_versions": ["A3b-24", "A3b-80", "A3b-88", "A4b-120"],
     "artist": "DOM",
     "crafting_cost": 1250
   },
@@ -2520,7 +2520,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Happy Ribbon",
+      "name": "Happy Ribbon",
       "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may draw 2 cards."
     },
     "weakness": "metal",
@@ -2531,7 +2531,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-34", "A3b-81", "A3b-89"],
+    "alternate_versions": ["A3b-34", "A3b-81", "A3b-89", "A4b-177"],
     "artist": "Yuu Nishida",
     "crafting_cost": 1250
   },
@@ -2559,7 +2559,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-53", "A3b-82", "A3b-90"],
+    "alternate_versions": ["A3b-53", "A3b-82", "A3b-90", "A4b-271"],
     "artist": "Mori Yuu",
     "crafting_cost": 1250
   },
@@ -2580,7 +2580,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Full-Mouth Manner",
+      "name": "Full-Mouth Manner",
       "effect": "At the end of your turn, if this Pokémon is in the Active Spot, heal 20 damage from it."
     },
     "weakness": "fighting",
@@ -2591,7 +2591,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-57", "A3b-84", "A3b-91"],
+    "alternate_versions": ["A3b-57", "A3b-84", "A3b-91", "A4b-288"],
     "artist": "Mékayu",
     "crafting_cost": 1250
   },
@@ -2612,7 +2612,7 @@
       }
     ],
     "ability": {
-      "name": "Ability Veevee ’volve",
+      "name": "Veevee ’volve",
       "effect": "This Pokémon can evolve into any Pokémon that evolves from Eevee if you play it from your hand onto this Pokémon. (This Pokémon can't evolve during your first turn or the turn you play it.)"
     },
     "weakness": "fighting",
@@ -2623,7 +2623,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-56", "A3b-83", "A3b-92"],
+    "alternate_versions": ["A3b-56", "A3b-83", "A3b-92", "A4b-287", "A4b-370", "P-A-109"],
     "artist": "kurumitsu",
     "crafting_cost": 1500
   },
@@ -2763,7 +2763,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A2-68", "A3b-97"],
+    "alternate_versions": ["A2-68", "A3b-97", "A4b-164", "A4b-165"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": 400
   },
@@ -2791,7 +2791,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A2-69", "A3b-98"],
+    "alternate_versions": ["A2-69", "A3b-98", "A4b-166", "A4b-167"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": 400
   },
@@ -2812,8 +2812,8 @@
       }
     ],
     "ability": {
-      "name": "Ability Psy Shadow",
-      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
+      "name": "Psy Shadow",
+      "effect": "Once during your turn, you may take 1  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
     },
     "weakness": "darkness",
     "retreat": "2",
@@ -2823,7 +2823,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-99"],
+    "alternate_versions": ["A1-132", "A3b-99", "A4b-168", "A4b-169", "A4b-357"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": 400
   },
@@ -2907,7 +2907,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A1-198", "P-A-62", "A3b-102"],
+    "alternate_versions": ["A1-198", "P-A-62", "A3b-102", "A4b-280", "A4b-281", "A4b-359"],
     "artist": "MAHOU",
     "crafting_cost": 400
   },
@@ -2941,7 +2941,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103"],
+    "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103", "A4b-67"],
     "artist": "PLANETA Saito",
     "crafting_cost": 1250
   },
@@ -2975,7 +2975,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A1-84", "A1-258", "A1-275", "A3b-104"],
+    "alternate_versions": ["A1-84", "A1-258", "A1-275", "A3b-104", "A4b-101"],
     "artist": "PLANETA Saito",
     "crafting_cost": 1250
   },
@@ -3009,7 +3009,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A1-104", "A1-260", "A1-276", "A3b-105"],
+    "alternate_versions": ["A1-104", "A1-260", "A1-276", "A3b-105", "A4b-139"],
     "artist": "PLANETA Saito",
     "crafting_cost": 1250
   },
@@ -3037,7 +3037,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A2-95", "A2-185", "A2-200", "A3b-106"],
+    "alternate_versions": ["A2-95", "A2-185", "A2-200", "A3b-106", "A4b-215"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -3062,7 +3062,7 @@
     "baby": false,
     "set_details": "eeveegrove(a3b)",
     "pack": "everypack",
-    "alternate_versions": ["A3b-66", "A3b-107"],
+    "alternate_versions": ["A3b-66", "A3b-107", "A4b-308", "A4b-309"],
     "artist": "AYUMI ODASHIMA",
     "crafting_cost": "Unknown"
   }

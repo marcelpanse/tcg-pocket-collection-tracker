@@ -23,7 +23,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-1", "A1-227", "P-A-23", "A3-210"],
+    "alternate_versions": ["A1-1", "A1-227", "P-A-23", "A3-210", "A4b-1", "A4b-2"],
     "artist": "Narumi Sato",
     "crafting_cost": 35
   },
@@ -51,7 +51,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-2", "A3-211"],
+    "alternate_versions": ["A1-2", "A3-211", "A4b-3", "A4b-4"],
     "artist": "Kurata So",
     "crafting_cost": 70
   },
@@ -113,7 +113,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-4", "A1-251", "A3-230"],
+    "alternate_versions": ["A1-4", "A1-251", "A3-230", "A4b-5"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -597,7 +597,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-21"],
+    "alternate_versions": ["A1-21", "A4b-11", "A4b-12"],
     "artist": "kawayoo",
     "crafting_cost": 35
   },
@@ -653,7 +653,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-23", "A1-252", "A3-231"],
+    "alternate_versions": ["A1-23", "A1-252", "A3-231", "A4b-13"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -933,7 +933,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-33", "A1-230", "P-A-32"],
+    "alternate_versions": ["A1-33", "A1-230", "P-A-32", "A4b-55", "A4b-56"],
     "artist": "Teeziro",
     "crafting_cost": 35
   },
@@ -961,7 +961,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-34"],
+    "alternate_versions": ["A1-34", "A4b-57", "A4b-58"],
     "artist": "kantaro",
     "crafting_cost": 70
   },
@@ -1023,7 +1023,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284"],
+    "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284", "A4b-59", "A4b-361"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": 500
   },
@@ -1107,7 +1107,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-39", "A3a-89"],
+    "alternate_versions": ["A1-39", "A3a-89", "A4b-61", "A4b-62"],
     "artist": "Mizue",
     "crafting_cost": 35
   },
@@ -1163,7 +1163,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-41", "A1-254", "A3a-100"],
+    "alternate_versions": ["A1-41", "A1-254", "A3a-100", "A4b-63"],
     "artist": "PLANETA Saito",
     "crafting_cost": 500
   },
@@ -1337,7 +1337,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103"],
+    "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103", "A4b-67"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 500
   },
@@ -1505,7 +1505,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-53", "A1-232", "P-A-33", "A3-215"],
+    "alternate_versions": ["A1-53", "A1-232", "P-A-33", "A3-215", "A4b-83", "A4b-84"],
     "artist": "Mizue",
     "crafting_cost": 35
   },
@@ -1533,7 +1533,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-54", "A3-216"],
+    "alternate_versions": ["A1-54", "A3-216", "A4b-85", "A4b-86"],
     "artist": "Nelnal",
     "crafting_cost": 70
   },
@@ -1595,7 +1595,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-56", "A1-256", "A3-232"],
+    "alternate_versions": ["A1-56", "A1-256", "A3-232", "A4b-87"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 500
   },
@@ -2107,7 +2107,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-74", "A3-218"],
+    "alternate_versions": ["A1-74", "A3-218", "A4b-93", "A4b-94"],
     "artist": "Hiroki Asanuma",
     "crafting_cost": 35
   },
@@ -2163,7 +2163,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-76", "A1-257", "A3-233"],
+    "alternate_versions": ["A1-76", "A1-257", "A3-233", "A4b-95"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 500
   },
@@ -2393,7 +2393,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-84", "A1-258", "A1-275", "A3b-104"],
+    "alternate_versions": ["A1-84", "A1-258", "A1-275", "A3b-104", "A4b-101"],
     "artist": "PLANETA Saito",
     "crafting_cost": 500
   },
@@ -2477,7 +2477,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-87", "P-A-61", "A3a-91"],
+    "alternate_versions": ["A1-87", "P-A-61", "A3a-91", "A4b-110", "A4b-111"],
     "artist": "Aya Kusube",
     "crafting_cost": 35
   },
@@ -2505,7 +2505,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-88", "A3a-92"],
+    "alternate_versions": ["A1-88", "A3a-92", "A4b-112", "A4b-113"],
     "artist": "Akira Komayama",
     "crafting_cost": 70
   },
@@ -2537,7 +2537,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-89", "P-A-19", "A3a-93"],
+    "alternate_versions": ["A1-89", "P-A-19", "A3a-93", "A4b-114", "A4b-115", "A4b-356"],
     "artist": "5ban Graphics",
     "crafting_cost": 150
   },
@@ -2677,7 +2677,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26"],
+    "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26", "A4b-128", "A4b-129"],
     "artist": "Mitsuhiro Arita",
     "crafting_cost": 35
   },
@@ -2733,7 +2733,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285"],
+    "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285", "A4b-131", "A4b-364", "A4b-376"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -2761,7 +2761,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-97", "P-A-24", "A4-217"],
+    "alternate_versions": ["A1-97", "P-A-24", "A4-217", "A4b-133", "A4b-134"],
     "artist": "sowsow",
     "crafting_cost": 35
   },
@@ -2793,7 +2793,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-98", "A4-218"],
+    "alternate_versions": ["A1-98", "A4-218", "A4b-135", "A4b-136"],
     "artist": "kirisAki",
     "crafting_cost": 150
   },
@@ -2967,7 +2967,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-104", "A1-260", "A1-276", "A3b-105"],
+    "alternate_versions": ["A1-104", "A1-260", "A1-276", "A3b-105", "A4b-139"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -3415,7 +3415,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-120"],
+    "alternate_versions": ["A1-120", "A4b-151", "A4b-152"],
     "artist": "Masako Yamashita",
     "crafting_cost": 35
   },
@@ -3443,7 +3443,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-121", "A3-221"],
+    "alternate_versions": ["A1-121", "A3-221", "A4b-153", "A4b-154"],
     "artist": "Nisata Niso",
     "crafting_cost": 70
   },
@@ -3503,7 +3503,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-123", "A1-261", "A1-277", "A3-234"],
+    "alternate_versions": ["A1-123", "A1-261", "A1-277", "A3-234", "A4b-155"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -3619,7 +3619,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-127", "A3a-94"],
+    "alternate_versions": ["A1-127", "A3a-94", "A4b-156", "A4b-157"],
     "artist": "Oswaldo KATO",
     "crafting_cost": 35
   },
@@ -3681,7 +3681,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50"],
+    "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50", "A4b-158", "A4b-365"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": 500
   },
@@ -3769,7 +3769,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-132"],
+    "alternate_versions": ["A1-132", "A3b-99", "A4b-168", "A4b-169", "A4b-357"],
     "artist": "Yuu Nishida",
     "crafting_cost": 150
   },
@@ -4077,7 +4077,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-143", "A3-223"],
+    "alternate_versions": ["A1-143", "A3-223", "A4b-189", "A4b-190"],
     "artist": "Kyoko Umemoto",
     "crafting_cost": 35
   },
@@ -4105,7 +4105,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-144", "A3-224"],
+    "alternate_versions": ["A1-144", "A3-224", "A4b-191", "A4b-192"],
     "artist": "match",
     "crafting_cost": 70
   },
@@ -4161,7 +4161,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-146", "A1-263", "A1-278", "A3-235"],
+    "alternate_versions": ["A1-146", "A1-263", "A1-278", "A3-235", "A4b-193"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -4301,7 +4301,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-151", "A1-239", "A3-226"],
+    "alternate_versions": ["A1-151", "A1-239", "A3-226", "A4b-194", "A4b-195"],
     "artist": "sowsow",
     "crafting_cost": 35
   },
@@ -4357,7 +4357,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-153", "A1-264", "A3-236"],
+    "alternate_versions": ["A1-153", "A1-264", "A3-236", "A4b-196"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": 500
   },
@@ -5489,7 +5489,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-193"],
+    "alternate_versions": ["A1-193", "A4b-277", "A4b-278"],
     "artist": "Mizue",
     "crafting_cost": 35
   },
@@ -5545,7 +5545,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-195", "A1-265", "A1-279", "A3-237"],
+    "alternate_versions": ["A1-195", "A1-265", "A1-279", "A3-237", "A4b-279"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 500
   },
@@ -5629,7 +5629,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
-    "alternate_versions": ["A1-198", "P-A-62", "A3b-102"],
+    "alternate_versions": ["A1-198", "P-A-62", "A3b-102", "A4b-280", "A4b-281", "A4b-359"],
     "artist": "Miki Tanaka",
     "crafting_cost": 35
   },
@@ -6184,7 +6184,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-218", "A1a-63"],
+    "alternate_versions": ["A1-218", "A1a-63", "A4b-312", "A4b-313"],
     "artist": "Toyste Beach",
     "crafting_cost": 35
   },
@@ -6209,7 +6209,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-219", "A1-266"],
+    "alternate_versions": ["A1-219", "A1-266", "A4b-328", "A4b-329"],
     "artist": "kirisAki",
     "crafting_cost": 70
   },
@@ -6309,7 +6309,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-223", "A1-270"],
+    "alternate_versions": ["A1-223", "A1-270", "A4b-334", "A4b-335"],
     "artist": "Hideki Ishikawa",
     "crafting_cost": 70
   },
@@ -6359,7 +6359,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-225", "A1-272"],
+    "alternate_versions": ["A1-225", "A1-272", "A4b-338", "A4b-339"],
     "artist": "Yuu Nishida",
     "crafting_cost": 70
   },
@@ -6412,7 +6412,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-1", "A1-227", "P-A-23", "A3-210"],
+    "alternate_versions": ["A1-1", "A1-227", "P-A-23", "A3-210", "A4b-1", "A4b-2"],
     "artist": "Ryota Murayama",
     "crafting_cost": 400
   },
@@ -6496,7 +6496,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-33", "A1-230", "P-A-32"],
+    "alternate_versions": ["A1-33", "A1-230", "P-A-32", "A4b-55", "A4b-56"],
     "artist": "GIDORA",
     "crafting_cost": 400
   },
@@ -6552,7 +6552,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-53", "A1-232", "P-A-33", "A3-215"],
+    "alternate_versions": ["A1-53", "A1-232", "P-A-33", "A3-215", "A4b-83", "A4b-84"],
     "artist": "Taira Akitsu",
     "crafting_cost": 400
   },
@@ -6748,7 +6748,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-151", "A1-239", "A3-226"],
+    "alternate_versions": ["A1-151", "A1-239", "A3-226", "A4b-194", "A4b-195"],
     "artist": "Teeziro",
     "crafting_cost": 400
   },
@@ -7102,7 +7102,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-4", "A1-251", "A3-230"],
+    "alternate_versions": ["A1-4", "A1-251", "A3-230", "A4b-5"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7130,7 +7130,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-23", "A1-252", "A3-231"],
+    "alternate_versions": ["A1-23", "A1-252", "A3-231", "A4b-13"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7164,7 +7164,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284"],
+    "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284", "A4b-59", "A4b-361"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7192,7 +7192,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-41", "A1-254", "A3a-100"],
+    "alternate_versions": ["A1-41", "A1-254", "A3a-100", "A4b-63"],
     "artist": "PLANETA Saito",
     "crafting_cost": 1250
   },
@@ -7226,7 +7226,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103"],
+    "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103", "A4b-67"],
     "artist": "PLANETA Saito",
     "crafting_cost": 1250
   },
@@ -7260,7 +7260,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-56", "A1-256", "A3-232"],
+    "alternate_versions": ["A1-56", "A1-256", "A3-232", "A4b-87"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7288,7 +7288,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-76", "A1-257", "A3-233"],
+    "alternate_versions": ["A1-76", "A1-257", "A3-233", "A4b-95"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -7322,7 +7322,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-84", "A1-258", "A1-275", "A3b-104"],
+    "alternate_versions": ["A1-84", "A1-258", "A1-275", "A3b-104", "A4b-101"],
     "artist": "PLANETA Saito",
     "crafting_cost": 1250
   },
@@ -7350,7 +7350,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285"],
+    "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285", "A4b-131", "A4b-364", "A4b-376"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7384,7 +7384,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-104", "A1-260", "A1-276", "A3b-105"],
+    "alternate_versions": ["A1-104", "A1-260", "A1-276", "A3b-105", "A4b-139"],
     "artist": "PLANETA Saito",
     "crafting_cost": 1250
   },
@@ -7416,7 +7416,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-123", "A1-261", "A1-277", "A3-234"],
+    "alternate_versions": ["A1-123", "A1-261", "A1-277", "A3-234", "A4b-155"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7450,7 +7450,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50"],
+    "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50", "A4b-158", "A4b-365"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": 1250
   },
@@ -7478,7 +7478,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-146", "A1-263", "A1-278", "A3-235"],
+    "alternate_versions": ["A1-146", "A1-263", "A1-278", "A3-235", "A4b-193"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -7506,7 +7506,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-153", "A1-264", "A3-236"],
+    "alternate_versions": ["A1-153", "A1-264", "A3-236", "A4b-196"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": 1250
   },
@@ -7534,7 +7534,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-195", "A1-265", "A1-279", "A3-237"],
+    "alternate_versions": ["A1-195", "A1-265", "A1-279", "A3-237", "A4b-279"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -7559,7 +7559,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-219", "A1-266"],
+    "alternate_versions": ["A1-219", "A1-266", "A4b-328", "A4b-329"],
     "artist": "saino misaki",
     "crafting_cost": 1250
   },
@@ -7659,7 +7659,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-223", "A1-270"],
+    "alternate_versions": ["A1-223", "A1-270", "A4b-334", "A4b-335"],
     "artist": "Hideki Ishikawa",
     "crafting_cost": 1250
   },
@@ -7709,7 +7709,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-225", "A1-272"],
+    "alternate_versions": ["A1-225", "A1-272", "A4b-338", "A4b-339"],
     "artist": "GIDORA",
     "crafting_cost": 1250
   },
@@ -7768,7 +7768,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103"],
+    "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103", "A4b-67"],
     "artist": "hncl",
     "crafting_cost": 1250
   },
@@ -7802,7 +7802,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-84", "A1-258", "A1-275", "A3b-104"],
+    "alternate_versions": ["A1-84", "A1-258", "A1-275", "A3b-104", "A4b-101"],
     "artist": "kodama",
     "crafting_cost": 1250
   },
@@ -7836,7 +7836,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-104", "A1-260", "A1-276", "A3b-105"],
+    "alternate_versions": ["A1-104", "A1-260", "A1-276", "A3b-105", "A4b-139"],
     "artist": "GOSSAN",
     "crafting_cost": 1250
   },
@@ -7868,7 +7868,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-123", "A1-261", "A1-277", "A3-234"],
+    "alternate_versions": ["A1-123", "A1-261", "A1-277", "A3-234", "A4b-155"],
     "artist": "NC Empire",
     "crafting_cost": 1250
   },
@@ -7896,7 +7896,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-146", "A1-263", "A1-278", "A3-235"],
+    "alternate_versions": ["A1-146", "A1-263", "A1-278", "A3-235", "A4b-193"],
     "artist": "AKIRA EGAWA",
     "crafting_cost": 1250
   },
@@ -7924,7 +7924,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-195", "A1-265", "A1-279", "A3-237"],
+    "alternate_versions": ["A1-195", "A1-265", "A1-279", "A3-237", "A4b-279"],
     "artist": "Shibuzoh.",
     "crafting_cost": 1250
   },
@@ -7958,7 +7958,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "charizardpack",
-    "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284"],
+    "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284", "A4b-59", "A4b-361"],
     "artist": "kantaro",
     "crafting_cost": 1500
   },
@@ -7986,7 +7986,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "pikachupack",
-    "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285"],
+    "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285", "A4b-131", "A4b-364", "A4b-376"],
     "artist": "Ryota Murayama",
     "crafting_cost": 1500
   },
@@ -8020,7 +8020,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "mewtwopack",
-    "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50"],
+    "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50", "A4b-158", "A4b-365"],
     "artist": "Nurikabe",
     "crafting_cost": 1500
   },
@@ -8082,7 +8082,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
-    "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284"],
+    "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284", "A4b-59", "A4b-361"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -8110,7 +8110,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
-    "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285"],
+    "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285", "A4b-131", "A4b-364", "A4b-376"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -8144,7 +8144,7 @@
     "baby": false,
     "set_details": "geneticapex(a1)",
     "pack": "everypack",
-    "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50"],
+    "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50", "A4b-158", "A4b-365"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": "Unknown"
   }

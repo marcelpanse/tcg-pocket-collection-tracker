@@ -1,0 +1,624 @@
+[
+  {
+    "expansionId": "A4b",
+    "name": "ex Collection",
+    "requiredCards": [],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×16"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Collect Parallel Foil Card Pokémon",
+    "requiredCards": [],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Deluxe Pack ex) ×16"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Pokémon with Impressive Shells",
+    "requiredCards": [
+      {
+        "options": ["A4b-23"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-69", "A4b-70"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-83", "A4b-84"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-85", "A4b-86"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-87"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-102", "A4b-103"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-104", "A4b-105", "A4b-355"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-121"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-218", "A4b-219"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Pokémon That Hold Things",
+    "requiredCards": [
+      {
+        "options": ["A4b-194", "A4b-195"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-196"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-223"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-262", "A4b-263"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-264", "A4b-265"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-266"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-280", "A4b-281", "A4b-359"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Pokémon with Cute Tongues",
+    "requiredCards": [
+      {
+        "options": ["A4b-153", "A4b-154"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-155"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-173", "A4b-174"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-175", "A4b-176", "A4b-358"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-282", "A4b-283"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-284"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Pokémon That Hide Their True Faces",
+    "requiredCards": [
+      {
+        "options": ["A4b-194", "A4b-195"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-300", "A4b-301"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Deluxe Pack ex) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Very Very Light Pokémon",
+    "requiredCards": [
+      {
+        "options": ["A4b-47", "A4b-48"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-151", "A4b-152"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-153", "A4b-154"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-180", "A4b-181"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Deluxe Pack ex) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "A Kitty Get-Together",
+    "requiredCards": [
+      {
+        "options": ["A4b-49", "A4b-50"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-78", "A4b-79"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-290", "A4b-291"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Deluxe Pack ex) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Slithering About",
+    "requiredCards": [
+      {
+        "options": ["A4b-36", "A4b-37"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-125", "A4b-126"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-267", "A4b-268"],
+        "amount": 1
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Fish Pokémon with 30 HP",
+    "requiredCards": [
+      {
+        "options": ["A4b-96", "A4b-97"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-122", "A4b-123"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Deluxe Pack ex) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Late Bloomers",
+    "requiredCards": [
+      {
+        "options": ["A4b-205", "A4b-206"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-267", "A4b-268"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Deluxe Pack ex) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "The Main Characters of the Kanto Region",
+    "requiredCards": [
+      {
+        "options": ["A4b-346", "A4b-347"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-352", "A4b-353"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Deluxe Pack ex) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Father and Child",
+    "requiredCards": [
+      {
+        "options": ["A4b-334", "A4b-335"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-336", "A4b-337"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Deluxe Pack ex) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Mother and Child",
+    "requiredCards": [
+      {
+        "options": ["A4b-348", "A4b-349", "A4b-374"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-350", "A4b-351", "A4b-375"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Deluxe Pack ex) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Item Mania",
+    "requiredCards": [
+      {
+        "options": ["A4b-308", "A4b-309"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-310", "A4b-311"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-312", "A4b-313"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-314", "A4b-315", "A4b-379"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-316", "A4b-317"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Deluxe Pack ex) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Pokémon Tool Mania",
+    "requiredCards": [
+      {
+        "options": ["A4b-318", "A4b-319"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-320", "A4b-321"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-322", "A4b-323"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-324", "A4b-325"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Deluxe Pack ex) ×2<br />Shop Ticket ×2"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "ex Collection • Grass",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": ["A4b-5", "A4b-10", "A4b-13", "A4b-22", "A4b-23", "A4b-24", "A4b-29", "A4b-42", "A4b-43", "A4b-44", "A4b-360"]
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×6"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "ex Collection • Fire",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": ["A4b-59", "A4b-361", "A4b-60", "A4b-63", "A4b-66", "A4b-67", "A4b-68", "A4b-36", "A4b-75", "A4b-82"]
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×6"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "ex Collection • Water",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": ["A4b-87", "A4b-92", "A4b-95", "A4b-98", "A4b-101", "A4b-106", "A4b-107", "A4b-363", "A4b-120", "A4b-121", "A4b-124", "A4b-127"]
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×6"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "ex Collection • Lightning",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": ["A4b-130", "A4b-131", "A4b-364", "A4b-376", "A4b-132", "A4b-139", "A4b-142", "A4b-145", "A4b-148"]
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×6"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "ex Collection • Psychic",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": ["A4b-155", "A4b-158", "A4b-365", "A4b-159", "A4b-366", "A4b-160", "A4b-163", "A4b-172", "A4b-377", "A4b-177", "A4b-184", "A4b-367"]
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×6"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "ex Collection • Fighting",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": ["A4b-193", "A4b-196", "A4b-197", "A4b-202", "A4b-209", "A4b-214", "A4b-215", "A4b-222", "A4b-223"]
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×6"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "ex Collection • Darkness",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": ["A4b-232", "A4b-235", "A4b-238", "A4b-241", "A4b-244", "A4b-245", "A4b-378", "A4b-248"]
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×6"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "ex Collection • Metal",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": ["A4b-251", "A4b-252", "A4b-253", "A4b-254", "A4b-368", "A4b-259", "A4b-369", "A4b-266"]
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×6"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "ex Collection • Colorless",
+    "requiredCards": [
+      {
+        "amount": "5",
+        "options": ["A4b-276", "A4b-279", "A4b-284", "A4b-287", "A4b-370", "A4b-288", "A4b-289", "A4b-371", "A4b-296", "A4b-299", "A4b-372"]
+      }
+    ],
+    "reward": "Emblem Ticket (Deluxe Pack ex) ×6"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Collect Special  Cards",
+    "requiredCards": [
+      {
+        "options": ["A4b-360"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-361"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-362"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-363"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-364"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-365"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-366"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-367"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-368"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-369"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-370"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-371"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-372"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "ex Complete!",
+    "requiredCards": [],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Deluxe Pack: ex Museum 1",
+    "requiredCards": [
+      {
+        "options": ["A4b-354"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-355"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-356"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-357"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-358"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-359"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Deluxe Pack: ex Museum 2",
+    "requiredCards": [
+      {
+        "options": ["A4b-360"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-361"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-362"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-363"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-364"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-365"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-366"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-367"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-368"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-369"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-370"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-371"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-372"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Deluxe Pack: ex Museum 3",
+    "requiredCards": [
+      {
+        "options": ["A4b-373"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-374"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-375"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+  },
+  {
+    "expansionId": "A4b",
+    "name": "Pikachu Museum",
+    "requiredCards": [
+      {
+        "options": ["A4b-128", "A4b-129"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-131"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-132"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-364"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-376"],
+        "amount": 1
+      }
+    ],
+    "reward": "Pikachu (emblem)"
+  }
+]

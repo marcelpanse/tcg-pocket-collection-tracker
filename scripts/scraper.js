@@ -10,8 +10,8 @@ const targetDir = 'frontend/assets/cards/'
 const imagesDir = 'frontend/public/images/en-US/'
 const imagesPath = '/images/en-US/'
 
-const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'P-A']
-// const expansions = ['A4a', 'P-A']
+const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'A4b', 'P-A']
+
 const packs = [
   'Pikachu pack',
   'Charizard pack',
@@ -28,6 +28,7 @@ const packs = [
   'Ho-Oh pack',
   'Lugia pack',
   'Suicune pack',
+  'Deluxe pack',
   'All cards',
 ]
 
