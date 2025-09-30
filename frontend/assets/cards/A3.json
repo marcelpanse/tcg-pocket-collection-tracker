@@ -15,30 +15,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-1",
-        "version": "Celestial Guardians #1",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-213",
-        "version": "Celestial Guardians #213",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-1", "A3-213"],
     "artist": "HYOGONOSUKE",
     "crafting_cost": 35
   },
@@ -58,35 +43,15 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "4",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-2",
-        "version": "Celestial Guardians #2",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-156",
-        "version": "Celestial Guardians #156",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-69",
-        "version": "Promo-A #69",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-2", "A3-156", "P-A-69"],
     "artist": "Anesaki Dynamic",
     "crafting_cost": 150
   },
@@ -106,25 +71,15 @@
         "effect": "Flip a coin. If heads, this attack does 20 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-3",
-        "version": "Celestial Guardians #3",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-3"],
     "artist": "Miki Tanaka",
     "crafting_cost": 35
   },
@@ -144,25 +99,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "0",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-4",
-        "version": "Celestial Guardians #4",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-4"],
     "artist": "Kanako Eo",
     "crafting_cost": 70
   },
@@ -182,25 +127,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-5",
-        "version": "Celestial Guardians #5",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-5"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": 35
   },
@@ -220,25 +155,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-6",
-        "version": "Celestial Guardians #6",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-6"],
     "artist": "OOYAMA",
     "crafting_cost": 35
   },
@@ -258,25 +183,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-7",
-        "version": "Celestial Guardians #7",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-7"],
     "artist": "miki kudo",
     "crafting_cost": 35
   },
@@ -296,25 +211,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-8",
-        "version": "Celestial Guardians #8",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-8"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 70
   },
@@ -334,25 +239,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-9",
-        "version": "Celestial Guardians #9",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-9"],
     "artist": "Megumi Mizutani",
     "crafting_cost": 35
   },
@@ -372,25 +267,15 @@
         "effect": "This attack does 10 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-10",
-        "version": "Celestial Guardians #10",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-10"],
     "artist": "Saya Tsuruta",
     "crafting_cost": 35
   },
@@ -410,25 +295,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-11",
-        "version": "Celestial Guardians #11",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-11"],
     "artist": "Mizue",
     "crafting_cost": 70
   },
@@ -454,35 +329,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-12",
-        "version": "Celestial Guardians #12",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-180",
-        "version": "Celestial Guardians #180",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-198",
-        "version": "Celestial Guardians #198",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-12", "A3-180", "A3-198"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -502,25 +357,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-13",
-        "version": "Celestial Guardians #13",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-13"],
     "artist": "Yuka Morii",
     "crafting_cost": 35
   },
@@ -540,25 +385,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-14",
-        "version": "Celestial Guardians #14",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-14"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": 35
   },
@@ -578,25 +413,15 @@
         "effect": "This attack does 20 damage to each of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-15",
-        "version": "Celestial Guardians #15",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-15"],
     "artist": "AKIRA EGAWA",
     "crafting_cost": 70
   },
@@ -616,30 +441,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-16",
-        "version": "Celestial Guardians #16",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-157",
-        "version": "Celestial Guardians #157",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-16", "A3-157"],
     "artist": "You Iribi",
     "crafting_cost": 35
   },
@@ -659,25 +469,15 @@
         "effect": "Flip a coin. If heads, the Defending Pokémon can't attack during your opponent's next turn."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-17",
-        "version": "Celestial Guardians #17",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-17"],
     "artist": "Suwama Chiaki",
     "crafting_cost": 70
   },
@@ -697,25 +497,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-18",
-        "version": "Celestial Guardians #18",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-18"],
     "artist": "Akira Komayama",
     "crafting_cost": 35
   },
@@ -735,25 +525,15 @@
         "effect": "Flip 2 coins. This attack does 30 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-19",
-        "version": "Celestial Guardians #19",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-19"],
     "artist": "Mizue",
     "crafting_cost": 70
   },
@@ -773,30 +553,15 @@
         "effect": "Flip 3 coins. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-20",
-        "version": "Celestial Guardians #20",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-158",
-        "version": "Celestial Guardians #158",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-20", "A3-158"],
     "artist": "Hasuno",
     "crafting_cost": 150
   },
@@ -823,18 +588,12 @@
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-21",
-        "version": "Celestial Guardians #21",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-21"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": 35
   },
@@ -854,25 +613,15 @@
         "effect": "If this Pokémon moved from your Bench to the Active Spot this turn, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-22",
-        "version": "Celestial Guardians #22",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-22"],
     "artist": "Kouki Saitou",
     "crafting_cost": 150
   },
@@ -892,35 +641,15 @@
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-23",
-        "version": "Celestial Guardians #23",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-181",
-        "version": "Celestial Guardians #181",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-199",
-        "version": "Celestial Guardians #199",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-23", "A3-181", "A3-199"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 500
   },
@@ -940,30 +669,15 @@
         "effect": "Flip a coin. If tails, this Pokémon also does 20 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-24",
-        "version": "Celestial Guardians #24",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-159",
-        "version": "Celestial Guardians #159",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-24", "A3-159"],
     "artist": "Satoshi Shirai",
     "crafting_cost": 150
   },
@@ -983,25 +697,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-25",
-        "version": "Celestial Guardians #25",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-25"],
     "artist": "Naoyo Kimura",
     "crafting_cost": 35
   },
@@ -1021,25 +725,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-26",
-        "version": "Celestial Guardians #26",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-26"],
     "artist": "match",
     "crafting_cost": 70
   },
@@ -1059,30 +753,15 @@
         "effect": "Flip 2 coins. This attack does 70 damage for each heads. If at least 1 of them is heads, your opponent's Active Pokémon is now Burned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-27",
-        "version": "Celestial Guardians #27",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-160",
-        "version": "Celestial Guardians #160",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-27", "A3-160"],
     "artist": "miki kudo",
     "crafting_cost": 70
   },
@@ -1102,25 +781,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-28",
-        "version": "Celestial Guardians #28",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-28"],
     "artist": "Mina Nakai",
     "crafting_cost": 35
   },
@@ -1140,25 +809,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-29",
-        "version": "Celestial Guardians #29",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-29"],
     "artist": "Masakazu Fukuda",
     "crafting_cost": 150
   },
@@ -1178,25 +837,15 @@
         "effect": "This Pokémon also does 10 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-30",
-        "version": "Celestial Guardians #30",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-30"],
     "artist": "Akira Komayama",
     "crafting_cost": 35
   },
@@ -1216,25 +865,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-31",
-        "version": "Celestial Guardians #31",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-31"],
     "artist": "sui",
     "crafting_cost": 35
   },
@@ -1254,25 +893,15 @@
         "effect": "This Pokémon also does 10 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-32",
-        "version": "Celestial Guardians #32",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-32"],
     "artist": "tetsuya koizumi",
     "crafting_cost": 70
   },
@@ -1298,35 +927,15 @@
         "effect": "If this Pokémon has damage on it, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-33",
-        "version": "Celestial Guardians #33",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-182",
-        "version": "Celestial Guardians #182",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-200",
-        "version": "Celestial Guardians #200",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-33", "A3-182", "A3-200"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -1346,25 +955,15 @@
         "effect": "Discard a random Energy from both Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-34",
-        "version": "Celestial Guardians #34",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-34"],
     "artist": "Jerky",
     "crafting_cost": 70
   },
@@ -1384,25 +983,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-35",
-        "version": "Celestial Guardians #35",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-35"],
     "artist": "Yukiko Baba",
     "crafting_cost": 35
   },
@@ -1422,25 +1011,15 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned and Burned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-36",
-        "version": "Celestial Guardians #36",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-36"],
     "artist": "Naoki Saito",
     "crafting_cost": 35
   },
@@ -1460,30 +1039,15 @@
         "effect": "Discard a [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "4",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-37",
-        "version": "Celestial Guardians #37",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-161",
-        "version": "Celestial Guardians #161",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-37", "A3-161"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 150
   },
@@ -1503,25 +1067,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-38",
-        "version": "Celestial Guardians #38",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-38"],
     "artist": "ryoma uratsuka",
     "crafting_cost": 35
   },
@@ -1541,25 +1095,15 @@
         "effect": "During your opponent's next turn, if this Pokémon is damaged by an attack, do 40 damage to the Attacking Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-39",
-        "version": "Celestial Guardians #39",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-39"],
     "artist": "Hasuno",
     "crafting_cost": 70
   },
@@ -1579,30 +1123,15 @@
         "effect": "Take a [W] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-40",
-        "version": "Celestial Guardians #40",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-162",
-        "version": "Celestial Guardians #162",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-40", "A3-162"],
     "artist": "You Iribi",
     "crafting_cost": 35
   },
@@ -1622,30 +1151,15 @@
         "effect": "This attack also does 20 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-41",
-        "version": "Celestial Guardians #41",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-70",
-        "version": "Promo-A #70",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-41", "P-A-70"],
     "artist": "Eri Yamaki",
     "crafting_cost": 150
   },
@@ -1665,25 +1179,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-42",
-        "version": "Celestial Guardians #42",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-42"],
     "artist": "Midori Harada",
     "crafting_cost": 35
   },
@@ -1703,25 +1207,15 @@
         "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-43",
-        "version": "Celestial Guardians #43",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-43"],
     "artist": "Masakazu Fukuda",
     "crafting_cost": 70
   },
@@ -1741,25 +1235,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-44",
-        "version": "Celestial Guardians #44",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-44"],
     "artist": "Hitoshi Ariga",
     "crafting_cost": 70
   },
@@ -1779,25 +1263,15 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-45",
-        "version": "Celestial Guardians #45",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-45"],
     "artist": "Kanami Ogata",
     "crafting_cost": 35
   },
@@ -1817,25 +1291,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-46",
-        "version": "Celestial Guardians #46",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-46"],
     "artist": "Kouki Saitou",
     "crafting_cost": 35
   },
@@ -1855,25 +1319,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-47",
-        "version": "Celestial Guardians #47",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-47"],
     "artist": "Saya Tsuruta",
     "crafting_cost": 70
   },
@@ -1900,18 +1354,12 @@
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-48",
-        "version": "Celestial Guardians #48",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-48"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": 150
   },
@@ -1931,35 +1379,15 @@
         "effect": "During your next turn, this Pokémon's Insatiable Striking attack does +40 damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-49",
-        "version": "Celestial Guardians #49",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-183",
-        "version": "Celestial Guardians #183",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-201",
-        "version": "Celestial Guardians #201",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-49", "A3-183", "A3-201"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -1979,25 +1407,15 @@
         "effect": "Put 1 random Wishiwashi or Wishiwashi ex from your deck onto your Bench."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-50",
-        "version": "Celestial Guardians #50",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-50"],
     "artist": "Kouki Saitou",
     "crafting_cost": 35
   },
@@ -2017,35 +1435,15 @@
         "effect": "This attack does 40 more damage for each of your Benched Wishiwashi or Wishiwashi ex."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-51",
-        "version": "Celestial Guardians #51",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-184",
-        "version": "Celestial Guardians #184",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-202",
-        "version": "Celestial Guardians #202",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-51", "A3-184", "A3-202"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -2065,25 +1463,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-52",
-        "version": "Celestial Guardians #52",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-52"],
     "artist": "Atsuko Nishida",
     "crafting_cost": 35
   },
@@ -2103,25 +1491,15 @@
         "effect": "If your opponent's Active Pokémon is a Basic Pokemon, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-53",
-        "version": "Celestial Guardians #53",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-53"],
     "artist": "kodama",
     "crafting_cost": 70
   },
@@ -2148,28 +1526,12 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-54",
-        "version": "Celestial Guardians #54",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-163",
-        "version": "Celestial Guardians #163",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "A4a-97",
-        "version": "Secluded Springs #97",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-54", "A3-163", "A4a-97"],
     "artist": "You Iribi",
     "crafting_cost": 35
   },
@@ -2189,25 +1551,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-55",
-        "version": "Celestial Guardians #55",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-55"],
     "artist": "Masakazu Fukuda",
     "crafting_cost": 35
   },
@@ -2227,30 +1579,15 @@
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-56",
-        "version": "Celestial Guardians #56",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-164",
-        "version": "Celestial Guardians #164",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-56", "A3-164"],
     "artist": "chibi",
     "crafting_cost": 150
   },
@@ -2270,25 +1607,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-57",
-        "version": "Celestial Guardians #57",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-57"],
     "artist": "Naoyo Kimura",
     "crafting_cost": 35
   },
@@ -2308,35 +1635,15 @@
         "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-58",
-        "version": "Celestial Guardians #58",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-185",
-        "version": "Celestial Guardians #185",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-203",
-        "version": "Celestial Guardians #203",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-58", "A3-185", "A3-203"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -2356,25 +1663,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-59",
-        "version": "Celestial Guardians #59",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-59"],
     "artist": "Hitoshi Ariga",
     "crafting_cost": 35
   },
@@ -2394,25 +1691,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-60",
-        "version": "Celestial Guardians #60",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-60"],
     "artist": "match",
     "crafting_cost": 70
   },
@@ -2432,25 +1719,15 @@
         "effect": "Discard 2 [L] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-61",
-        "version": "Celestial Guardians #61",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-61"],
     "artist": "kawayoo",
     "crafting_cost": 150
   },
@@ -2470,25 +1747,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-62",
-        "version": "Celestial Guardians #62",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-62"],
     "artist": "0313",
     "crafting_cost": 35
   },
@@ -2508,25 +1775,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-63",
-        "version": "Celestial Guardians #63",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-63"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": 35
   },
@@ -2546,25 +1803,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-64",
-        "version": "Celestial Guardians #64",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-64"],
     "artist": "Naoki Saito",
     "crafting_cost": 70
   },
@@ -2584,25 +1831,15 @@
         "effect": "During your opponent's next turn, they can't play any Item cards from their hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-65",
-        "version": "Celestial Guardians #65",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-65"],
     "artist": "Hitoshi Ariga",
     "crafting_cost": 150
   },
@@ -2629,23 +1866,12 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-66",
-        "version": "Celestial Guardians #66",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-165",
-        "version": "Celestial Guardians #165",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-66", "A3-165"],
     "artist": "Jerky",
     "crafting_cost": 150
   },
@@ -2665,25 +1891,15 @@
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-67",
-        "version": "Celestial Guardians #67",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-67"],
     "artist": "Misa Tsutsui",
     "crafting_cost": 35
   },
@@ -2703,30 +1919,15 @@
         "effect": "Switch this Pokémon with 1 of your Benched [L] Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-68",
-        "version": "Celestial Guardians #68",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-166",
-        "version": "Celestial Guardians #166",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-68", "A3-166"],
     "artist": "kirisAki",
     "crafting_cost": 150
   },
@@ -2746,25 +1947,15 @@
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-69",
-        "version": "Celestial Guardians #69",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-69"],
     "artist": "Yukihiro Tada",
     "crafting_cost": 70
   },
@@ -2784,25 +1975,15 @@
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-70",
-        "version": "Celestial Guardians #70",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-70"],
     "artist": "Aya Kusube",
     "crafting_cost": 70
   },
@@ -2822,25 +2003,15 @@
         "effect": "Take a [P] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-71",
-        "version": "Celestial Guardians #71",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-71"],
     "artist": "Sekio",
     "crafting_cost": 35
   },
@@ -2860,25 +2031,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-72",
-        "version": "Celestial Guardians #72",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-72"],
     "artist": "Yukiko Baba",
     "crafting_cost": 70
   },
@@ -2898,25 +2059,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-73",
-        "version": "Celestial Guardians #73",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-73"],
     "artist": "Hisao Nakamura",
     "crafting_cost": 35
   },
@@ -2936,25 +2087,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-74",
-        "version": "Celestial Guardians #74",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-74"],
     "artist": "Kyoko Umemoto",
     "crafting_cost": 35
   },
@@ -2974,25 +2115,15 @@
         "effect": "During your opponent's next turn, they can't take any Energy from their Energy Zone to attach to their Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-75",
-        "version": "Celestial Guardians #75",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-75"],
     "artist": "Aya Kusube",
     "crafting_cost": 35
   },
@@ -3012,25 +2143,15 @@
         "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-76",
-        "version": "Celestial Guardians #76",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-76"],
     "artist": "Jerky",
     "crafting_cost": 70
   },
@@ -3050,25 +2171,15 @@
         "effect": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-77",
-        "version": "Celestial Guardians #77",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-77"],
     "artist": "Jerky",
     "crafting_cost": 70
   },
@@ -3088,30 +2199,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "0",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-78",
-        "version": "Celestial Guardians #78",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-167",
-        "version": "Celestial Guardians #167",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-78", "A3-167"],
     "artist": "Hitoshi Ariga",
     "crafting_cost": 35
   },
@@ -3131,25 +2227,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "0",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-79",
-        "version": "Celestial Guardians #79",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-79"],
     "artist": "Megumi Mizutani",
     "crafting_cost": 35
   },
@@ -3176,23 +2262,12 @@
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-80",
-        "version": "Celestial Guardians #80",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-168",
-        "version": "Celestial Guardians #168",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-80", "A3-168"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": 150
   },
@@ -3212,30 +2287,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-81",
-        "version": "Celestial Guardians #81",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-169",
-        "version": "Celestial Guardians #169",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-81", "A3-169"],
     "artist": "Akira Komayama",
     "crafting_cost": 35
   },
@@ -3255,25 +2315,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-82",
-        "version": "Celestial Guardians #82",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-82"],
     "artist": "OOYAMA",
     "crafting_cost": 150
   },
@@ -3293,30 +2343,15 @@
         "effect": "This attack also does 20 damage to 1 of your Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-83",
-        "version": "Celestial Guardians #83",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-66",
-        "version": "Promo-A #66",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-83", "P-A-66"],
     "artist": "HYOGONOSUKE",
     "crafting_cost": 35
   },
@@ -3336,30 +2371,15 @@
         "effect": "This attack does 20 damage to 1 of your opponent's Pokémon for each Energy attached to that Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-84",
-        "version": "Celestial Guardians #84",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-170",
-        "version": "Celestial Guardians #170",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-84", "A3-170"],
     "artist": "Misa Tsutsui",
     "crafting_cost": 150
   },
@@ -3379,35 +2399,15 @@
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-85",
-        "version": "Celestial Guardians #85",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-171",
-        "version": "Celestial Guardians #171",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-67",
-        "version": "Promo-A #67",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-85", "A3-171", "P-A-67"],
     "artist": "sui",
     "crafting_cost": 35
   },
@@ -3427,25 +2427,15 @@
         "effect": "During your opponent's next turn, this Pokémon takes −50 damage from attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-86",
-        "version": "Celestial Guardians #86",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-86"],
     "artist": "Aya Kusube",
     "crafting_cost": 70
   },
@@ -3472,33 +2462,12 @@
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-87",
-        "version": "Celestial Guardians #87",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-186",
-        "version": "Celestial Guardians #186",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-204",
-        "version": "Celestial Guardians #204",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-238",
-        "version": "Celestial Guardians #238",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A3-87", "A3-186", "A3-204", "A3-238"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -3518,25 +2487,15 @@
         "effect": "During your next turn, this Pokémon can't attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-88",
-        "version": "Celestial Guardians #88",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-88"],
     "artist": "Masakazu Fukuda",
     "crafting_cost": 150
   },
@@ -3556,25 +2515,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-89",
-        "version": "Celestial Guardians #89",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-89"],
     "artist": "kawayoo",
     "crafting_cost": 35
   },
@@ -3594,25 +2543,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-90",
-        "version": "Celestial Guardians #90",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-90"],
     "artist": "Mina Nakai",
     "crafting_cost": 35
   },
@@ -3632,25 +2571,15 @@
         "effect": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-91",
-        "version": "Celestial Guardians #91",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-91"],
     "artist": "Miki Tanaka",
     "crafting_cost": 70
   },
@@ -3670,25 +2599,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-92",
-        "version": "Celestial Guardians #92",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-92"],
     "artist": "Kyoko Umemoto",
     "crafting_cost": 35
   },
@@ -3708,25 +2627,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-93",
-        "version": "Celestial Guardians #93",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-93"],
     "artist": "Tomokazu Komiya",
     "crafting_cost": 35
   },
@@ -3746,25 +2655,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-94",
-        "version": "Celestial Guardians #94",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-94"],
     "artist": "Mizue",
     "crafting_cost": 35
   },
@@ -3784,25 +2683,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-95",
-        "version": "Celestial Guardians #95",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-95"],
     "artist": "Naoki Saito",
     "crafting_cost": 70
   },
@@ -3829,18 +2718,12 @@
     "weakness": "psychic",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-96",
-        "version": "Celestial Guardians #96",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-96"],
     "artist": "kawayoo",
     "crafting_cost": 150
   },
@@ -3860,30 +2743,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-97",
-        "version": "Celestial Guardians #97",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-71",
-        "version": "Promo-A #71",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-97", "P-A-71"],
     "artist": "kirisAki",
     "crafting_cost": 35
   },
@@ -3903,30 +2771,15 @@
         "effect": "Put a random card that evolves from Rockruff from your deck into your hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-98",
-        "version": "Celestial Guardians #98",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-172",
-        "version": "Celestial Guardians #172",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-98", "A3-172"],
     "artist": "Oswaldo KATO",
     "crafting_cost": 35
   },
@@ -3946,25 +2799,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-99",
-        "version": "Celestial Guardians #99",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-99"],
     "artist": "Oswaldo KATO",
     "crafting_cost": 35
   },
@@ -3984,30 +2827,15 @@
         "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-100",
-        "version": "Celestial Guardians #100",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-68",
-        "version": "Promo-A #68",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-100", "P-A-68"],
     "artist": "Atsushi Furusawa",
     "crafting_cost": 150
   },
@@ -4027,25 +2855,15 @@
         "effect": "If your opponent's Active Pokémon has more remaining HP than this Pokémon, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-101",
-        "version": "Celestial Guardians #101",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-101"],
     "artist": "5ban Graphics",
     "crafting_cost": 150
   },
@@ -4065,25 +2883,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-102",
-        "version": "Celestial Guardians #102",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-102"],
     "artist": "Saya Tsuruta",
     "crafting_cost": 35
   },
@@ -4103,30 +2911,15 @@
         "effect": "This Pokémon also does 40 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-103",
-        "version": "Celestial Guardians #103",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-173",
-        "version": "Celestial Guardians #173",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-103", "A3-173"],
     "artist": "Takeshi Nakamura",
     "crafting_cost": 70
   },
@@ -4153,28 +2946,12 @@
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-104",
-        "version": "Celestial Guardians #104",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-187",
-        "version": "Celestial Guardians #187",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-205",
-        "version": "Celestial Guardians #205",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-104", "A3-187", "A3-205"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 500
   },
@@ -4194,30 +2971,15 @@
         "effect": "This attack does 40 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-105",
-        "version": "Celestial Guardians #105",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-174",
-        "version": "Celestial Guardians #174",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-105", "A3-174"],
     "artist": "Amelicart",
     "crafting_cost": 70
   },
@@ -4237,25 +2999,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-106",
-        "version": "Celestial Guardians #106",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-106"],
     "artist": "nagimiso",
     "crafting_cost": 35
   },
@@ -4275,25 +3027,15 @@
         "effect": "Discard a random Item card from your opponent's hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-107",
-        "version": "Celestial Guardians #107",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-107"],
     "artist": "nagimiso",
     "crafting_cost": 70
   },
@@ -4313,25 +3055,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-108",
-        "version": "Celestial Guardians #108",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-108"],
     "artist": "sui",
     "crafting_cost": 35
   },
@@ -4358,18 +3090,12 @@
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-109",
-        "version": "Celestial Guardians #109",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-109"],
     "artist": "kirisAki",
     "crafting_cost": 150
   },
@@ -4389,25 +3115,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-110",
-        "version": "Celestial Guardians #110",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-110"],
     "artist": "Akira Komayama",
     "crafting_cost": 35
   },
@@ -4427,35 +3143,15 @@
         "effect": "1 Special Condition from among Asleep, Burned, Confused, Paralyzed, and Poisoned is chosen at random, and your opponent's Active Pokémon is now affected by that Special Condition. Any Special Conditions already affecting that Pokémon will not be chosen."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-111",
-        "version": "Celestial Guardians #111",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-188",
-        "version": "Celestial Guardians #188",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-206",
-        "version": "Celestial Guardians #206",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-111", "A3-188", "A3-206"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -4475,25 +3171,15 @@
         "effect": "If your opponent's Active Pokémon is affected by a Special Condition, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-112",
-        "version": "Celestial Guardians #112",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-112"],
     "artist": "Anesaki Dynamic",
     "crafting_cost": 150
   },
@@ -4513,25 +3199,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-113",
-        "version": "Celestial Guardians #113",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-113"],
     "artist": "Tomokazu Komiya",
     "crafting_cost": 35
   },
@@ -4551,25 +3227,15 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-114",
-        "version": "Celestial Guardians #114",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-114"],
     "artist": "match",
     "crafting_cost": 70
   },
@@ -4589,25 +3255,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-115",
-        "version": "Celestial Guardians #115",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-115"],
     "artist": "Saya Tsuruta",
     "crafting_cost": 35
   },
@@ -4627,25 +3283,15 @@
         "effect": "Flip 4 coins. This attack does 20 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-116",
-        "version": "Celestial Guardians #116",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-116"],
     "artist": "chibi",
     "crafting_cost": 35
   },
@@ -4665,25 +3311,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-117",
-        "version": "Celestial Guardians #117",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-117"],
     "artist": "Naoyo Kimura",
     "crafting_cost": 35
   },
@@ -4703,25 +3339,15 @@
         "effect": "Flip a coin until you get tails. This attack does 70 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-118",
-        "version": "Celestial Guardians #118",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-118"],
     "artist": "Yuka Morii",
     "crafting_cost": 35
   },
@@ -4741,25 +3367,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-119",
-        "version": "Celestial Guardians #119",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-119"],
     "artist": "SATOSHI NAKAI",
     "crafting_cost": 70
   },
@@ -4779,25 +3395,15 @@
         "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-120",
-        "version": "Celestial Guardians #120",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-120"],
     "artist": "Satoshi Shirai",
     "crafting_cost": 70
   },
@@ -4817,25 +3423,15 @@
         "effect": "Draw a card."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-121",
-        "version": "Celestial Guardians #121",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-121"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 150
   },
@@ -4862,33 +3458,12 @@
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-122",
-        "version": "Celestial Guardians #122",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-189",
-        "version": "Celestial Guardians #189",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-207",
-        "version": "Celestial Guardians #207",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-239",
-        "version": "Celestial Guardians #239",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A3-122", "A3-189", "A3-207", "A3-239"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -4908,30 +3483,15 @@
         "effect": "If your opponent's Active Pokémon has an Ability, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-123",
-        "version": "Celestial Guardians #123",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-175",
-        "version": "Celestial Guardians #175",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-123", "A3-175"],
     "artist": "kawayoo",
     "crafting_cost": 150
   },
@@ -4951,30 +3511,15 @@
         "effect": "If any of your Benched Pokémon have damage on them, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-124",
-        "version": "Celestial Guardians #124",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-176",
-        "version": "Celestial Guardians #176",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-124", "A3-176"],
     "artist": "Anesaki Dynamic",
     "crafting_cost": 150
   },
@@ -4994,25 +3539,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-125",
-        "version": "Celestial Guardians #125",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-125"],
     "artist": "Naoki Saito",
     "crafting_cost": 35
   },
@@ -5032,25 +3567,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-126",
-        "version": "Celestial Guardians #126",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-126"],
     "artist": "Ryuta Fuse",
     "crafting_cost": 70
   },
@@ -5070,25 +3595,15 @@
         "effect": "During your opponent's next turn, this Pokémon takes +30 damage from attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-127",
-        "version": "Celestial Guardians #127",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-127"],
     "artist": "hatachu",
     "crafting_cost": 150
   },
@@ -5108,25 +3623,15 @@
         "effect": "Flip a coin. If heads, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-128",
-        "version": "Celestial Guardians #128",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-128"],
     "artist": "Kazumasa Yasukuni",
     "crafting_cost": 70
   },
@@ -5146,25 +3651,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-129",
-        "version": "Celestial Guardians #129",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-129"],
     "artist": "Sumiyoshi Kizuki",
     "crafting_cost": 35
   },
@@ -5184,25 +3679,15 @@
         "effect": "Take a [C] Energy from your Energy Zone and attach it to 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-130",
-        "version": "Celestial Guardians #130",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-130"],
     "artist": "0313",
     "crafting_cost": 70
   },
@@ -5222,25 +3707,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-131",
-        "version": "Celestial Guardians #131",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-131"],
     "artist": "5ban Graphics",
     "crafting_cost": 35
   },
@@ -5260,25 +3735,15 @@
         "effect": "If your opponent's Active Pokémon is a [D] Pokémon, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-132",
-        "version": "Celestial Guardians #132",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-132"],
     "artist": "miki kudo",
     "crafting_cost": 70
   },
@@ -5298,30 +3763,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-133",
-        "version": "Celestial Guardians #133",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-177",
-        "version": "Celestial Guardians #177",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-133", "A3-177"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 35
   },
@@ -5341,25 +3791,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-134",
-        "version": "Celestial Guardians #134",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-134"],
     "artist": "Kouki Saitou",
     "crafting_cost": 35
   },
@@ -5379,25 +3819,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-135",
-        "version": "Celestial Guardians #135",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-135"],
     "artist": "Megumi Mizutani",
     "crafting_cost": 70
   },
@@ -5417,25 +3847,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-136",
-        "version": "Celestial Guardians #136",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-136"],
     "artist": "Shigenori Negishi",
     "crafting_cost": 35
   },
@@ -5455,25 +3875,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-137",
-        "version": "Celestial Guardians #137",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-137"],
     "artist": "Shigenori Negishi",
     "crafting_cost": 35
   },
@@ -5493,25 +3903,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-138",
-        "version": "Celestial Guardians #138",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A3-138"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": 35
   },
@@ -5531,30 +3931,15 @@
         "effect": "This Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-139",
-        "version": "Celestial Guardians #139",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-178",
-        "version": "Celestial Guardians #178",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-139", "A3-178"],
     "artist": "kirisAki",
     "crafting_cost": 150
   },
@@ -5574,25 +3959,15 @@
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon cost 1 [C] more, and its Retreat Cost is 1 [C] more."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-140",
-        "version": "Celestial Guardians #140",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-140"],
     "artist": "Naoki Saito",
     "crafting_cost": 150
   },
@@ -5619,23 +3994,12 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-141",
-        "version": "Celestial Guardians #141",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-179",
-        "version": "Celestial Guardians #179",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-141", "A3-179"],
     "artist": "Kouki Saitou",
     "crafting_cost": 70
   },
@@ -5648,22 +4012,19 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Heal 10 damage and remove a random Special Condition from your Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics",
+    "ability": {
+      "name": "",
+      "effect": "Heal 10 damage and remove a random Special Condition from your Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-142",
-        "version": "Celestial Guardians #142",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-142"],
     "artist": "5ban Graphics",
     "crafting_cost": 70
   },
@@ -5676,22 +4037,19 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Put a random Basic [W] Pokémon from your discard pile into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "Put a random Basic [W] Pokémon from your discard pile into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-143",
-        "version": "Celestial Guardians #143",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-143"],
     "artist": "Toyste Beach",
     "crafting_cost": 70
   },
@@ -5704,22 +4062,19 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-144",
-        "version": "Celestial Guardians #144",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-144"],
     "artist": "Toyste Beach",
     "crafting_cost": 70
   },
@@ -5732,22 +4087,19 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Look at the top card of your deck. Then, you may shuffle your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics",
+    "ability": {
+      "name": "",
+      "effect": "Look at the top card of your deck. Then, you may shuffle your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-145",
-        "version": "Celestial Guardians #145",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-145"],
     "artist": "5ban Graphics",
     "crafting_cost": 70
   },
@@ -5760,22 +4112,19 @@
     "card_type": "trainer",
     "evolution_type": "tool",
     "attacks": [],
-    "ability": "If the Pokémon this card is attached to is your Active Pokémon and is damaged by an attack from your opponent's Pokémon, the Attacking Pokémon is now Poisoned.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "If the Pokémon this card is attached to is your Active Pokémon and is damaged by an attack from your opponent's Pokémon, the Attacking Pokémon is now Poisoned.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-146",
-        "version": "Celestial Guardians #146",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-146"],
     "artist": "Toyste Beach",
     "crafting_cost": 70
   },
@@ -5788,22 +4137,19 @@
     "card_type": "trainer",
     "evolution_type": "tool",
     "attacks": [],
-    "ability": "The [G] Pokémon this card is attached to gets +30 HP.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "The [G] Pokémon this card is attached to gets +30 HP.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-147",
-        "version": "Celestial Guardians #147",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A3-147"],
     "artist": "Toyste Beach",
     "crafting_cost": 70
   },
@@ -5816,27 +4162,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Choose 1 of your Palossand or Mimikyu that has damage on it, and move 40 of its damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya",
+    "ability": {
+      "name": "",
+      "effect": "Choose 1 of your Palossand or Mimikyu that has damage on it, and move 40 of its damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-148",
-        "version": "Celestial Guardians #148",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-190",
-        "version": "Celestial Guardians #190",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-148", "A3-190"],
     "artist": "Susumu Maeya",
     "crafting_cost": 70
   },
@@ -5849,27 +4187,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Put 1 of your [C] Pokémon that has damage on it into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro",
+    "ability": {
+      "name": "",
+      "effect": "Put 1 of your [C] Pokémon that has damage on it into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-149",
-        "version": "Celestial Guardians #149",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-191",
-        "version": "Celestial Guardians #191",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-149", "A3-191"],
     "artist": "Teeziro",
     "crafting_cost": 70
   },
@@ -5882,27 +4212,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Choose 1 of your Alolan Marowak or Turtonator. Take 2 [R] Energy from your Energy Zone and attach it to that Pokémon. Your turn ends.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa",
+    "ability": {
+      "name": "",
+      "effect": "Choose 1 of your Alolan Marowak or Turtonator. Take 2 [R] Energy from your Energy Zone and attach it to that Pokémon. Your turn ends.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-150",
-        "version": "Celestial Guardians #150",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-192",
-        "version": "Celestial Guardians #192",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-150", "A3-192"],
     "artist": "Hideki Ishikawa",
     "crafting_cost": 70
   },
@@ -5915,32 +4237,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Discard all Pokémon Tool cards attached to each of your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
+    "ability": {
+      "name": "",
+      "effect": "Discard all Pokémon Tool cards attached to each of your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-151",
-        "version": "Celestial Guardians #151",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-193",
-        "version": "Celestial Guardians #193",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-208",
-        "version": "Celestial Guardians #208",
-        "rarity": "☆☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-151", "A3-193", "A3-208"],
     "artist": "GOSSAN",
     "crafting_cost": 70
   },
@@ -5953,27 +4262,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "You can use this card only if you have Araquanid in play.Switch in 1 of your opponent's Benched Pokémon to the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "You can use this card only if you have Araquanid in play.Switch in 1 of your opponent's Benched Pokémon to the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-152",
-        "version": "Celestial Guardians #152",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-194",
-        "version": "Celestial Guardians #194",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-152", "A3-194"],
     "artist": "Yuu Nishida",
     "crafting_cost": 70
   },
@@ -5986,27 +4287,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Alolan Golem, Vikavolt, or Togedemaru do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Akira Komayama",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Alolan Golem, Vikavolt, or Togedemaru do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Akira Komayama"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-153",
-        "version": "Celestial Guardians #153",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-195",
-        "version": "Celestial Guardians #195",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-153", "A3-195"],
     "artist": "Akira Komayama",
     "crafting_cost": 70
   },
@@ -6019,27 +4312,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal all damage from 1 of your Shiinotic or Tsareena. If you do, discard all Energy from that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                En Morikura",
+    "ability": {
+      "name": "",
+      "effect": "Heal all damage from 1 of your Shiinotic or Tsareena. If you do, discard all Energy from that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                En Morikura"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-154",
-        "version": "Celestial Guardians #154",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-196",
-        "version": "Celestial Guardians #196",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-154", "A3-196"],
     "artist": "En Morikura",
     "crafting_cost": 70
   },
@@ -6052,32 +4337,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal 60 damage from 1 of your Stage 2 Pokemon.\n\n            \n                    \n    \n            Illustrated by \n            \n                hechima",
+    "ability": {
+      "name": "",
+      "effect": "Heal 60 damage from 1 of your Stage 2 Pokemon.\n\n            \n                    \n    \n            Illustrated by \n            \n                hechima"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-155",
-        "version": "Celestial Guardians #155",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-197",
-        "version": "Celestial Guardians #197",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-209",
-        "version": "Celestial Guardians #209",
-        "rarity": "☆☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-155", "A3-197", "A3-209"],
     "artist": "hechima",
     "crafting_cost": 70
   },
@@ -6097,35 +4369,15 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "4",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-2",
-        "version": "Celestial Guardians #2",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-156",
-        "version": "Celestial Guardians #156",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-69",
-        "version": "Promo-A #69",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-2", "A3-156", "P-A-69"],
     "artist": "Saboteri",
     "crafting_cost": 400
   },
@@ -6145,30 +4397,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-16",
-        "version": "Celestial Guardians #16",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-157",
-        "version": "Celestial Guardians #157",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-16", "A3-157"],
     "artist": "kamonabe",
     "crafting_cost": 400
   },
@@ -6188,30 +4425,15 @@
         "effect": "Flip 3 coins. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-20",
-        "version": "Celestial Guardians #20",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-158",
-        "version": "Celestial Guardians #158",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-20", "A3-158"],
     "artist": "Ligton",
     "crafting_cost": 400
   },
@@ -6231,30 +4453,15 @@
         "effect": "Flip a coin. If tails, this Pokémon also does 20 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-24",
-        "version": "Celestial Guardians #24",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-159",
-        "version": "Celestial Guardians #159",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-24", "A3-159"],
     "artist": "OKACHEKE",
     "crafting_cost": 400
   },
@@ -6274,30 +4481,15 @@
         "effect": "Flip 2 coins. This attack does 70 damage for each heads. If at least 1 of them is heads, your opponent's Active Pokémon is now Burned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-27",
-        "version": "Celestial Guardians #27",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-160",
-        "version": "Celestial Guardians #160",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-27", "A3-160"],
     "artist": "Gemi",
     "crafting_cost": 400
   },
@@ -6317,30 +4509,15 @@
         "effect": "Discard a [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "4",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-37",
-        "version": "Celestial Guardians #37",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-161",
-        "version": "Celestial Guardians #161",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-37", "A3-161"],
     "artist": "akagi",
     "crafting_cost": 400
   },
@@ -6360,30 +4537,15 @@
         "effect": "Take a [W] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-40",
-        "version": "Celestial Guardians #40",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-162",
-        "version": "Celestial Guardians #162",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-40", "A3-162"],
     "artist": "tono",
     "crafting_cost": 400
   },
@@ -6410,28 +4572,12 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-54",
-        "version": "Celestial Guardians #54",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-163",
-        "version": "Celestial Guardians #163",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "A4a-97",
-        "version": "Secluded Springs #97",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-54", "A3-163", "A4a-97"],
     "artist": "Toshinao Aoki",
     "crafting_cost": 400
   },
@@ -6451,30 +4597,15 @@
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-56",
-        "version": "Celestial Guardians #56",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-164",
-        "version": "Celestial Guardians #164",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-56", "A3-164"],
     "artist": "OKACHEKE",
     "crafting_cost": 400
   },
@@ -6501,23 +4632,12 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-66",
-        "version": "Celestial Guardians #66",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-165",
-        "version": "Celestial Guardians #165",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-66", "A3-165"],
     "artist": "USGMEN",
     "crafting_cost": 400
   },
@@ -6537,30 +4657,15 @@
         "effect": "Switch this Pokémon with 1 of your Benched [L] Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-68",
-        "version": "Celestial Guardians #68",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-166",
-        "version": "Celestial Guardians #166",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-68", "A3-166"],
     "artist": "OKACHEKE",
     "crafting_cost": 400
   },
@@ -6580,30 +4685,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "0",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-78",
-        "version": "Celestial Guardians #78",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-167",
-        "version": "Celestial Guardians #167",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-78", "A3-167"],
     "artist": "kamonabe",
     "crafting_cost": 400
   },
@@ -6630,23 +4720,12 @@
     "weakness": "metal",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-80",
-        "version": "Celestial Guardians #80",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-168",
-        "version": "Celestial Guardians #168",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-80", "A3-168"],
     "artist": "mashu",
     "crafting_cost": 400
   },
@@ -6666,30 +4745,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-81",
-        "version": "Celestial Guardians #81",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-169",
-        "version": "Celestial Guardians #169",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-81", "A3-169"],
     "artist": "Yukihiro Tada",
     "crafting_cost": 400
   },
@@ -6709,30 +4773,15 @@
         "effect": "This attack does 20 damage to 1 of your opponent's Pokémon for each Energy attached to that Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-84",
-        "version": "Celestial Guardians #84",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-170",
-        "version": "Celestial Guardians #170",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-84", "A3-170"],
     "artist": "OKACHEKE",
     "crafting_cost": 400
   },
@@ -6752,35 +4801,15 @@
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-85",
-        "version": "Celestial Guardians #85",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-171",
-        "version": "Celestial Guardians #171",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-67",
-        "version": "Promo-A #67",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A3-85", "A3-171", "P-A-67"],
     "artist": "Yoko Hishida",
     "crafting_cost": 400
   },
@@ -6800,30 +4829,15 @@
         "effect": "Put a random card that evolves from Rockruff from your deck into your hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-98",
-        "version": "Celestial Guardians #98",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-172",
-        "version": "Celestial Guardians #172",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-98", "A3-172"],
     "artist": "mele",
     "crafting_cost": 400
   },
@@ -6843,30 +4857,15 @@
         "effect": "This Pokémon also does 40 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "4",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-103",
-        "version": "Celestial Guardians #103",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-173",
-        "version": "Celestial Guardians #173",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-103", "A3-173"],
     "artist": "Teeziro",
     "crafting_cost": 400
   },
@@ -6886,30 +4885,15 @@
         "effect": "This attack does 40 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-105",
-        "version": "Celestial Guardians #105",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-174",
-        "version": "Celestial Guardians #174",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-105", "A3-174"],
     "artist": "imoniii",
     "crafting_cost": 400
   },
@@ -6929,30 +4913,15 @@
         "effect": "If your opponent's Active Pokémon has an Ability, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-123",
-        "version": "Celestial Guardians #123",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-175",
-        "version": "Celestial Guardians #175",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-123", "A3-175"],
     "artist": "Kuroimori",
     "crafting_cost": 400
   },
@@ -6972,30 +4941,15 @@
         "effect": "If any of your Benched Pokémon have damage on them, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-124",
-        "version": "Celestial Guardians #124",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-176",
-        "version": "Celestial Guardians #176",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-124", "A3-176"],
     "artist": "Shinji Kanda",
     "crafting_cost": 400
   },
@@ -7015,30 +4969,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-133",
-        "version": "Celestial Guardians #133",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-177",
-        "version": "Celestial Guardians #177",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-133", "A3-177"],
     "artist": "Narumi Sato",
     "crafting_cost": 400
   },
@@ -7058,30 +4997,15 @@
         "effect": "This Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-139",
-        "version": "Celestial Guardians #139",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-178",
-        "version": "Celestial Guardians #178",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-139", "A3-178"],
     "artist": "Tomowaka",
     "crafting_cost": 400
   },
@@ -7108,23 +5032,12 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-141",
-        "version": "Celestial Guardians #141",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-179",
-        "version": "Celestial Guardians #179",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-141", "A3-179"],
     "artist": "GOTO minori",
     "crafting_cost": 400
   },
@@ -7150,35 +5063,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-12",
-        "version": "Celestial Guardians #12",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-180",
-        "version": "Celestial Guardians #180",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-198",
-        "version": "Celestial Guardians #198",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-12", "A3-180", "A3-198"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7198,35 +5091,15 @@
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-23",
-        "version": "Celestial Guardians #23",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-181",
-        "version": "Celestial Guardians #181",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-199",
-        "version": "Celestial Guardians #199",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-23", "A3-181", "A3-199"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -7252,35 +5125,15 @@
         "effect": "If this Pokémon has damage on it, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-33",
-        "version": "Celestial Guardians #33",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-182",
-        "version": "Celestial Guardians #182",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-200",
-        "version": "Celestial Guardians #200",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-33", "A3-182", "A3-200"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -7300,35 +5153,15 @@
         "effect": "During your next turn, this Pokémon's Insatiable Striking attack does +40 damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-49",
-        "version": "Celestial Guardians #49",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-183",
-        "version": "Celestial Guardians #183",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-201",
-        "version": "Celestial Guardians #201",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-49", "A3-183", "A3-201"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7348,35 +5181,15 @@
         "effect": "This attack does 40 more damage for each of your Benched Wishiwashi or Wishiwashi ex."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-51",
-        "version": "Celestial Guardians #51",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-184",
-        "version": "Celestial Guardians #184",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-202",
-        "version": "Celestial Guardians #202",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-51", "A3-184", "A3-202"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7396,35 +5209,15 @@
         "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-58",
-        "version": "Celestial Guardians #58",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-185",
-        "version": "Celestial Guardians #185",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-203",
-        "version": "Celestial Guardians #203",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-58", "A3-185", "A3-203"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7451,33 +5244,12 @@
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-87",
-        "version": "Celestial Guardians #87",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-186",
-        "version": "Celestial Guardians #186",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-204",
-        "version": "Celestial Guardians #204",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-238",
-        "version": "Celestial Guardians #238",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A3-87", "A3-186", "A3-204", "A3-238"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7504,28 +5276,12 @@
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-104",
-        "version": "Celestial Guardians #104",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-187",
-        "version": "Celestial Guardians #187",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-205",
-        "version": "Celestial Guardians #205",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-104", "A3-187", "A3-205"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -7545,35 +5301,15 @@
         "effect": "1 Special Condition from among Asleep, Burned, Confused, Paralyzed, and Poisoned is chosen at random, and your opponent's Active Pokémon is now affected by that Special Condition. Any Special Conditions already affecting that Pokémon will not be chosen."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-111",
-        "version": "Celestial Guardians #111",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-188",
-        "version": "Celestial Guardians #188",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-206",
-        "version": "Celestial Guardians #206",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-111", "A3-188", "A3-206"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7600,33 +5336,12 @@
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-122",
-        "version": "Celestial Guardians #122",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-189",
-        "version": "Celestial Guardians #189",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-207",
-        "version": "Celestial Guardians #207",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-239",
-        "version": "Celestial Guardians #239",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A3-122", "A3-189", "A3-207", "A3-239"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7639,27 +5354,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Choose 1 of your Palossand or Mimikyu that has damage on it, and move 40 of its damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya",
+    "ability": {
+      "name": "",
+      "effect": "Choose 1 of your Palossand or Mimikyu that has damage on it, and move 40 of its damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-148",
-        "version": "Celestial Guardians #148",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-190",
-        "version": "Celestial Guardians #190",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-148", "A3-190"],
     "artist": "Susumu Maeya",
     "crafting_cost": 1250
   },
@@ -7672,27 +5379,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Put 1 of your [C] Pokémon that has damage on it into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro",
+    "ability": {
+      "name": "",
+      "effect": "Put 1 of your [C] Pokémon that has damage on it into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-149",
-        "version": "Celestial Guardians #149",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-191",
-        "version": "Celestial Guardians #191",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-149", "A3-191"],
     "artist": "Teeziro",
     "crafting_cost": 1250
   },
@@ -7705,27 +5404,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Choose 1 of your Alolan Marowak or Turtonator. Take 2 [R] Energy from your Energy Zone and attach it to that Pokémon. Your turn ends.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa",
+    "ability": {
+      "name": "",
+      "effect": "Choose 1 of your Alolan Marowak or Turtonator. Take 2 [R] Energy from your Energy Zone and attach it to that Pokémon. Your turn ends.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-150",
-        "version": "Celestial Guardians #150",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-192",
-        "version": "Celestial Guardians #192",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-150", "A3-192"],
     "artist": "Hideki Ishikawa",
     "crafting_cost": 1250
   },
@@ -7738,32 +5429,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Discard all Pokémon Tool cards attached to each of your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
+    "ability": {
+      "name": "",
+      "effect": "Discard all Pokémon Tool cards attached to each of your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-151",
-        "version": "Celestial Guardians #151",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-193",
-        "version": "Celestial Guardians #193",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-208",
-        "version": "Celestial Guardians #208",
-        "rarity": "☆☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-151", "A3-193", "A3-208"],
     "artist": "GOSSAN",
     "crafting_cost": 1250
   },
@@ -7776,27 +5454,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "You can use this card only if you have Araquanid in play.Switch in 1 of your opponent's Benched Pokémon to the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "You can use this card only if you have Araquanid in play.Switch in 1 of your opponent's Benched Pokémon to the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-152",
-        "version": "Celestial Guardians #152",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-194",
-        "version": "Celestial Guardians #194",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-152", "A3-194"],
     "artist": "Yuu Nishida",
     "crafting_cost": 1250
   },
@@ -7809,27 +5479,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Alolan Golem, Vikavolt, or Togedemaru do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Akira Komayama",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Alolan Golem, Vikavolt, or Togedemaru do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Akira Komayama"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-153",
-        "version": "Celestial Guardians #153",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-195",
-        "version": "Celestial Guardians #195",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-153", "A3-195"],
     "artist": "Akira Komayama",
     "crafting_cost": 1250
   },
@@ -7842,27 +5504,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal all damage from 1 of your Shiinotic or Tsareena. If you do, discard all Energy from that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                En Morikura",
+    "ability": {
+      "name": "",
+      "effect": "Heal all damage from 1 of your Shiinotic or Tsareena. If you do, discard all Energy from that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                En Morikura"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-154",
-        "version": "Celestial Guardians #154",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-196",
-        "version": "Celestial Guardians #196",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-154", "A3-196"],
     "artist": "En Morikura",
     "crafting_cost": 1250
   },
@@ -7875,32 +5529,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal 60 damage from 1 of your Stage 2 Pokemon.\n\n            \n                    \n    \n            Illustrated by \n            \n                hechima",
+    "ability": {
+      "name": "",
+      "effect": "Heal 60 damage from 1 of your Stage 2 Pokemon.\n\n            \n                    \n    \n            Illustrated by \n            \n                hechima"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-155",
-        "version": "Celestial Guardians #155",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-197",
-        "version": "Celestial Guardians #197",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-209",
-        "version": "Celestial Guardians #209",
-        "rarity": "☆☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-155", "A3-197", "A3-209"],
     "artist": "hechima",
     "crafting_cost": 1250
   },
@@ -7926,35 +5567,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-12",
-        "version": "Celestial Guardians #12",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-180",
-        "version": "Celestial Guardians #180",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-198",
-        "version": "Celestial Guardians #198",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-12", "A3-180", "A3-198"],
     "artist": "Takumi Wada",
     "crafting_cost": 1250
   },
@@ -7974,35 +5595,15 @@
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-23",
-        "version": "Celestial Guardians #23",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-181",
-        "version": "Celestial Guardians #181",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-199",
-        "version": "Celestial Guardians #199",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-23", "A3-181", "A3-199"],
     "artist": "IKEDA Saki",
     "crafting_cost": 1250
   },
@@ -8028,35 +5629,15 @@
         "effect": "If this Pokémon has damage on it, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-33",
-        "version": "Celestial Guardians #33",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-182",
-        "version": "Celestial Guardians #182",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-200",
-        "version": "Celestial Guardians #200",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-33", "A3-182", "A3-200"],
     "artist": "Kazumasa Yasukuni",
     "crafting_cost": 1250
   },
@@ -8076,35 +5657,15 @@
         "effect": "During your next turn, this Pokémon's Insatiable Striking attack does +40 damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-49",
-        "version": "Celestial Guardians #49",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-183",
-        "version": "Celestial Guardians #183",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-201",
-        "version": "Celestial Guardians #201",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-49", "A3-183", "A3-201"],
     "artist": "Miki Tanaka",
     "crafting_cost": 1250
   },
@@ -8124,35 +5685,15 @@
         "effect": "This attack does 40 more damage for each of your Benched Wishiwashi or Wishiwashi ex."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-51",
-        "version": "Celestial Guardians #51",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-184",
-        "version": "Celestial Guardians #184",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-202",
-        "version": "Celestial Guardians #202",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-51", "A3-184", "A3-202"],
     "artist": "Nurikabe",
     "crafting_cost": 1250
   },
@@ -8172,35 +5713,15 @@
         "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-58",
-        "version": "Celestial Guardians #58",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-185",
-        "version": "Celestial Guardians #185",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-203",
-        "version": "Celestial Guardians #203",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-58", "A3-185", "A3-203"],
     "artist": "Yoshimi Miyoshi",
     "crafting_cost": 1250
   },
@@ -8227,33 +5748,12 @@
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-87",
-        "version": "Celestial Guardians #87",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-186",
-        "version": "Celestial Guardians #186",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-204",
-        "version": "Celestial Guardians #204",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-238",
-        "version": "Celestial Guardians #238",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A3-87", "A3-186", "A3-204", "A3-238"],
     "artist": "AKIRA EGAWA",
     "crafting_cost": 1250
   },
@@ -8280,28 +5780,12 @@
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-104",
-        "version": "Celestial Guardians #104",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-187",
-        "version": "Celestial Guardians #187",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-205",
-        "version": "Celestial Guardians #205",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-104", "A3-187", "A3-205"],
     "artist": "Taiga Kayama",
     "crafting_cost": 1250
   },
@@ -8321,35 +5805,15 @@
         "effect": "1 Special Condition from among Asleep, Burned, Confused, Paralyzed, and Poisoned is chosen at random, and your opponent's Active Pokémon is now affected by that Special Condition. Any Special Conditions already affecting that Pokémon will not be chosen."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-111",
-        "version": "Celestial Guardians #111",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-188",
-        "version": "Celestial Guardians #188",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-206",
-        "version": "Celestial Guardians #206",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-111", "A3-188", "A3-206"],
     "artist": "Jerky",
     "crafting_cost": 1250
   },
@@ -8376,33 +5840,12 @@
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-122",
-        "version": "Celestial Guardians #122",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-189",
-        "version": "Celestial Guardians #189",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-207",
-        "version": "Celestial Guardians #207",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-239",
-        "version": "Celestial Guardians #239",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A3-122", "A3-189", "A3-207", "A3-239"],
     "artist": "AKIRA EGAWA",
     "crafting_cost": 1250
   },
@@ -8415,32 +5858,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Discard all Pokémon Tool cards attached to each of your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                danciao",
+    "ability": {
+      "name": "",
+      "effect": "Discard all Pokémon Tool cards attached to each of your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                danciao"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-151",
-        "version": "Celestial Guardians #151",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-193",
-        "version": "Celestial Guardians #193",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-208",
-        "version": "Celestial Guardians #208",
-        "rarity": "☆☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-151", "A3-193", "A3-208"],
     "artist": "danciao",
     "crafting_cost": 1500
   },
@@ -8453,32 +5883,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal 60 damage from 1 of your Stage 2 Pokemon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Atsushi Furusawa",
+    "ability": {
+      "name": "",
+      "effect": "Heal 60 damage from 1 of your Stage 2 Pokemon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Atsushi Furusawa"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-155",
-        "version": "Celestial Guardians #155",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-197",
-        "version": "Celestial Guardians #197",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-209",
-        "version": "Celestial Guardians #209",
-        "rarity": "☆☆☆"
-      }
-    ],
+    "alternate_versions": ["A3-155", "A3-197", "A3-209"],
     "artist": "Atsushi Furusawa",
     "crafting_cost": 1500
   },
@@ -8498,40 +5915,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-1",
-        "version": "Genetic Apex #1",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A1-227",
-        "version": "Genetic Apex #227",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-23",
-        "version": "Promo-A #23",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3-210",
-        "version": "Celestial Guardians #210",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-1", "A1-227", "P-A-23", "A3-210"],
     "artist": "Ryuta Fuse",
     "crafting_cost": 400
   },
@@ -8551,30 +5943,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-2",
-        "version": "Genetic Apex #2",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-211",
-        "version": "Celestial Guardians #211",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-2", "A3-211"],
     "artist": "Ryuta Fuse",
     "crafting_cost": 400
   },
@@ -8594,35 +5971,15 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-3",
-        "version": "Genetic Apex #3",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-18",
-        "version": "Promo-A #18",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3-212",
-        "version": "Celestial Guardians #212",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-3", "P-A-18", "A3-212"],
     "artist": "Ryuta Fuse",
     "crafting_cost": 400
   },
@@ -8642,30 +5999,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-1",
-        "version": "Celestial Guardians #1",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-213",
-        "version": "Celestial Guardians #213",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A3-1", "A3-213"],
     "artist": "Shigenori Negishi",
     "crafting_cost": 400
   },
@@ -8685,35 +6027,15 @@
         "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A1a-2",
-        "version": "Mythical Island #2",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A1a-69",
-        "version": "Mythical Island #69",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "A3-214",
-        "version": "Celestial Guardians #214",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1a-2", "A1a-69", "A3-214"],
     "artist": "Shigenori Negishi",
     "crafting_cost": 400
   },
@@ -8733,40 +6055,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-53",
-        "version": "Genetic Apex #53",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A1-232",
-        "version": "Genetic Apex #232",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-33",
-        "version": "Promo-A #33",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3-215",
-        "version": "Celestial Guardians #215",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-53", "A1-232", "P-A-33", "A3-215"],
     "artist": "Nisota Niso",
     "crafting_cost": 400
   },
@@ -8786,30 +6083,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-54",
-        "version": "Genetic Apex #54",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-216",
-        "version": "Celestial Guardians #216",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-54", "A3-216"],
     "artist": "Nisota Niso",
     "crafting_cost": 400
   },
@@ -8829,35 +6111,15 @@
         "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-55",
-        "version": "Genetic Apex #55",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-29",
-        "version": "Promo-A #29",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3-217",
-        "version": "Celestial Guardians #217",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-55", "P-A-29", "A3-217"],
     "artist": "Nisota Niso",
     "crafting_cost": 400
   },
@@ -8877,30 +6139,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-74",
-        "version": "Genetic Apex #74",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-218",
-        "version": "Celestial Guardians #218",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-74", "A3-218"],
     "artist": "MAHOU",
     "crafting_cost": 400
   },
@@ -8920,30 +6167,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "0",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-75",
-        "version": "Genetic Apex #75",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-219",
-        "version": "Celestial Guardians #219",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-75", "A3-219"],
     "artist": "MAHOU",
     "crafting_cost": 400
   },
@@ -8963,30 +6195,15 @@
         "effect": "Flip a coin. If heads, your opponent reveals a random card from their hand and shuffles it into their deck."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-31",
-        "version": "Triumphant Light #31",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-220",
-        "version": "Celestial Guardians #220",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-31", "A3-220"],
     "artist": "kurumitsu",
     "crafting_cost": 400
   },
@@ -9006,30 +6223,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-121",
-        "version": "Genetic Apex #121",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-221",
-        "version": "Celestial Guardians #221",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-121", "A3-221"],
     "artist": "kurumitsu",
     "crafting_cost": 400
   },
@@ -9049,30 +6251,15 @@
         "effect": "Your opponent can't use any Supporter cards from their hand during their next turn."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-122",
-        "version": "Genetic Apex #122",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A3-222",
-        "version": "Celestial Guardians #222",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-122", "A3-222"],
     "artist": "kurumitsu",
     "crafting_cost": 400
   },
@@ -9092,30 +6279,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-143",
-        "version": "Genetic Apex #143",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-223",
-        "version": "Celestial Guardians #223",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-143", "A3-223"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 400
   },
@@ -9135,30 +6307,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-144",
-        "version": "Genetic Apex #144",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-224",
-        "version": "Celestial Guardians #224",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-144", "A3-224"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 400
   },
@@ -9178,35 +6335,15 @@
         "effect": "If this Pokémon has at least 2 extra [F] Energy attached, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-39",
-        "version": "Shining Revelry #39",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-55",
-        "version": "Promo-A #55",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3-225",
-        "version": "Celestial Guardians #225",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-39", "P-A-55", "A3-225"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 400
   },
@@ -9226,35 +6363,15 @@
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do -20 damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-151",
-        "version": "Genetic Apex #151",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A1-239",
-        "version": "Genetic Apex #239",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "A3-226",
-        "version": "Celestial Guardians #226",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-151", "A1-239", "A3-226"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": 400
   },
@@ -9274,30 +6391,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-152",
-        "version": "Genetic Apex #152",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3-227",
-        "version": "Celestial Guardians #227",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A1-152", "A3-227"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": 400
   },
@@ -9317,30 +6419,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-60",
-        "version": "Shining Revelry #60",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-228",
-        "version": "Celestial Guardians #228",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-60", "A3-228"],
     "artist": "Tomowaka",
     "crafting_cost": 400
   },
@@ -9367,28 +6454,12 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-61",
-        "version": "Shining Revelry #61",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2b-78",
-        "version": "Shining Revelry #78",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "A3-229",
-        "version": "Celestial Guardians #229",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-61", "A2b-78", "A3-229"],
     "artist": "Tomowaka",
     "crafting_cost": 400
   },
@@ -9414,35 +6485,15 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-4",
-        "version": "Genetic Apex #4",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A1-251",
-        "version": "Genetic Apex #251",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-230",
-        "version": "Celestial Guardians #230",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A1-4", "A1-251", "A3-230"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -9462,35 +6513,15 @@
         "effect": "Flip a coin. If heads, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-23",
-        "version": "Genetic Apex #23",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A1-252",
-        "version": "Genetic Apex #252",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-231",
-        "version": "Celestial Guardians #231",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A1-23", "A1-252", "A3-231"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -9516,35 +6547,15 @@
         "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-56",
-        "version": "Genetic Apex #56",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A1-256",
-        "version": "Genetic Apex #256",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-232",
-        "version": "Celestial Guardians #232",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A1-56", "A1-256", "A3-232"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -9564,35 +6575,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "0",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-76",
-        "version": "Genetic Apex #76",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A1-257",
-        "version": "Genetic Apex #257",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-233",
-        "version": "Celestial Guardians #233",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A1-76", "A1-257", "A3-233"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -9619,33 +6610,12 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-123",
-        "version": "Genetic Apex #123",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A1-261",
-        "version": "Genetic Apex #261",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A1-277",
-        "version": "Genetic Apex #277",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-234",
-        "version": "Celestial Guardians #234",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A1-123", "A1-261", "A1-277", "A3-234"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -9665,40 +6635,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-146",
-        "version": "Genetic Apex #146",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A1-263",
-        "version": "Genetic Apex #263",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A1-278",
-        "version": "Genetic Apex #278",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-235",
-        "version": "Celestial Guardians #235",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A1-146", "A1-263", "A1-278", "A3-235"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -9718,35 +6663,15 @@
         "effect": "Flip 2 coins. This attack does 80 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "lunalapack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-153",
-        "version": "Genetic Apex #153",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A1-264",
-        "version": "Genetic Apex #264",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-236",
-        "version": "Celestial Guardians #236",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A1-153", "A1-264", "A3-236"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": 1250
   },
@@ -9766,40 +6691,15 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "solgaleopack",
-    "alternate_versions": [
-      {
-        "card_id": "A1-195",
-        "version": "Genetic Apex #195",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A1-265",
-        "version": "Genetic Apex #265",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A1-279",
-        "version": "Genetic Apex #279",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-237",
-        "version": "Celestial Guardians #237",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A1-195", "A1-265", "A1-279", "A3-237"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -9826,33 +6726,12 @@
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "Crown Rare",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-87",
-        "version": "Celestial Guardians #87",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-186",
-        "version": "Celestial Guardians #186",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-204",
-        "version": "Celestial Guardians #204",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-238",
-        "version": "Celestial Guardians #238",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A3-87", "A3-186", "A3-204", "A3-238"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -9879,33 +6758,12 @@
     "weakness": "fire",
     "retreat": "2",
     "rarity": "Crown Rare",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "celestialguardians(a3)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A3-122",
-        "version": "Celestial Guardians #122",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A3-189",
-        "version": "Celestial Guardians #189",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-207",
-        "version": "Celestial Guardians #207",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3-239",
-        "version": "Celestial Guardians #239",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A3-122", "A3-189", "A3-207", "A3-239"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   }

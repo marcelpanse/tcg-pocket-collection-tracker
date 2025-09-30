@@ -1,4 +1,8 @@
-const expansionIds = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'P-A'] as const
+import type { Session } from '@supabase/supabase-js'
+
+export type User = Session
+
+export const expansionIds = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'P-A'] as const
 export type ExpansionId = (typeof expansionIds)[number]
 
 export const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', '✵', '✵✵', 'Crown Rare', 'P', ''] as const
@@ -12,6 +16,7 @@ export type CardType = (typeof cardTypes)[number]
 
 export interface AccountRow {
   $id: string
+  email: string
   username: string
   friend_id: string
   collection_last_updated: Date
@@ -51,13 +56,19 @@ export interface TradeRow {
   status: TradeStatus
 }
 
+export interface TradePartners {
+  friend_id: string
+  username: string
+  matched_cards_amount: number
+}
+
 export interface Expansion {
   name: string
   id: ExpansionId
   cards: Card[]
   packs: Pack[]
   missions?: Mission[]
-  tradeable?: boolean
+  tradeable: boolean
   promo?: boolean
   containsShinies?: boolean
   containsBabies?: boolean
@@ -84,23 +95,19 @@ export interface Card {
     damage: string
     effect: string
   }[]
-  ability: {
+  ability?: {
     name: string
     effect: string
   }
   weakness: string
   retreat: string
   rarity: Rarity
-  fullart: string
-  ex: string
+  fullart: boolean
+  ex: boolean
   baby: boolean
   set_details: string
   pack: string
-  alternate_versions: {
-    card_id: string
-    version: string
-    rarity: Rarity
-  }[]
+  alternate_versions: string[]
   artist: string
   probability: {
     '1-3 card': string | null | undefined

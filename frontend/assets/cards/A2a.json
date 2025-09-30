@@ -15,25 +15,15 @@
         "effect": "Flip 2 coins. If both of them are heads, this attack does 70 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-1",
-        "version": "Triumphant Light #1",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-1"],
     "artist": "Satoshi Shirai",
     "crafting_cost": 70
   },
@@ -53,25 +43,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-2",
-        "version": "Triumphant Light #2",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-2"],
     "artist": "miki kudo",
     "crafting_cost": 35
   },
@@ -91,25 +71,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "0",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-3",
-        "version": "Triumphant Light #3",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-3"],
     "artist": "MAHOU",
     "crafting_cost": 70
   },
@@ -129,25 +99,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-4",
-        "version": "Triumphant Light #4",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-4"],
     "artist": "Akira Komayama",
     "crafting_cost": 35
   },
@@ -167,25 +127,15 @@
         "effect": "This Pokémon also does 30 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-5",
-        "version": "Triumphant Light #5",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-5"],
     "artist": "kawayoo",
     "crafting_cost": 70
   },
@@ -205,25 +155,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-6",
-        "version": "Triumphant Light #6",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-6"],
     "artist": "Atsuko Nishida",
     "crafting_cost": 35
   },
@@ -243,25 +183,15 @@
         "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-7",
-        "version": "Triumphant Light #7",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-7"],
     "artist": "Midori Harada",
     "crafting_cost": 70
   },
@@ -281,30 +211,15 @@
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-8",
-        "version": "Triumphant Light #8",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-43",
-        "version": "Promo-A #43",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2a-8", "P-A-43"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": 70
   },
@@ -331,18 +246,12 @@
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-9",
-        "version": "Triumphant Light #9",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-9"],
     "artist": "Shiburingaru",
     "crafting_cost": 150
   },
@@ -369,33 +278,12 @@
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-10",
-        "version": "Triumphant Light #10",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-82",
-        "version": "Triumphant Light #82",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-91",
-        "version": "Triumphant Light #91",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-233",
-        "version": "Wisdom of Sea and Sky #233",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-10", "A2a-82", "A2a-91", "A4-233"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -415,25 +303,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-11",
-        "version": "Triumphant Light #11",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-11"],
     "artist": "Kouki Saitou",
     "crafting_cost": 35
   },
@@ -453,30 +331,15 @@
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-12",
-        "version": "Triumphant Light #12",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-76",
-        "version": "Triumphant Light #76",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-12", "A2a-76"],
     "artist": "Hajime Kusajima",
     "crafting_cost": 70
   },
@@ -503,18 +366,12 @@
     "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-13",
-        "version": "Triumphant Light #13",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-13"],
     "artist": "Kazumasa Yasukuni",
     "crafting_cost": 150
   },
@@ -534,30 +391,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-14",
-        "version": "Triumphant Light #14",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2a-77",
-        "version": "Triumphant Light #77",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-14", "A2a-77"],
     "artist": "Tika Matsuno",
     "crafting_cost": 35
   },
@@ -577,25 +419,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-15",
-        "version": "Triumphant Light #15",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-15"],
     "artist": "miki kudo",
     "crafting_cost": 35
   },
@@ -615,25 +447,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-16",
-        "version": "Triumphant Light #16",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-16"],
     "artist": "sui",
     "crafting_cost": 35
   },
@@ -653,25 +475,15 @@
         "effect": "Flip a coin. If heads, this attack does 60 more damage. If tails, this Pokémon also does 20 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-17",
-        "version": "Triumphant Light #17",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-17"],
     "artist": "Shinya Komatsu",
     "crafting_cost": 70
   },
@@ -691,25 +503,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-18",
-        "version": "Triumphant Light #18",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-18"],
     "artist": "sowsow",
     "crafting_cost": 35
   },
@@ -729,25 +531,15 @@
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-19",
-        "version": "Triumphant Light #19",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-19"],
     "artist": "Mizue",
     "crafting_cost": 70
   },
@@ -767,25 +559,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-20",
-        "version": "Triumphant Light #20",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-20"],
     "artist": "otumami",
     "crafting_cost": 35
   },
@@ -812,18 +594,12 @@
     "weakness": "metal",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-21",
-        "version": "Triumphant Light #21",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-21"],
     "artist": "nagimiso",
     "crafting_cost": 150
   },
@@ -850,33 +626,12 @@
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-22",
-        "version": "Triumphant Light #22",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-83",
-        "version": "Triumphant Light #83",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-92",
-        "version": "Triumphant Light #92",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-235",
-        "version": "Wisdom of Sea and Sky #235",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-22", "A2a-83", "A2a-92", "A4-235"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -896,25 +651,15 @@
         "effect": "Flip a coin. If heads, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-23",
-        "version": "Triumphant Light #23",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-23"],
     "artist": "toriyufu",
     "crafting_cost": 150
   },
@@ -934,25 +679,15 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-24",
-        "version": "Triumphant Light #24",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-24"],
     "artist": "AKIRA EGAWA",
     "crafting_cost": 70
   },
@@ -972,25 +707,15 @@
         "effect": "This attack also does 10 damage to 1 of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-25",
-        "version": "Triumphant Light #25",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-25"],
     "artist": "MAHOU",
     "crafting_cost": 35
   },
@@ -1017,23 +742,12 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-26",
-        "version": "Triumphant Light #26",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-44",
-        "version": "Promo-A #44",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2a-26", "P-A-44"],
     "artist": "Nisota Niso",
     "crafting_cost": 150
   },
@@ -1053,25 +767,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-27",
-        "version": "Triumphant Light #27",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-27"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 35
   },
@@ -1091,25 +795,15 @@
         "effect": "During your opponent's next turn, if the Defending Pokémon tries to use an attack, your opponent flips a coin. If tails, that attack doesn't happen."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-28",
-        "version": "Triumphant Light #28",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-28"],
     "artist": "match",
     "crafting_cost": 70
   },
@@ -1129,25 +823,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-29",
-        "version": "Triumphant Light #29",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-29"],
     "artist": "rika",
     "crafting_cost": 35
   },
@@ -1167,25 +851,15 @@
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do −30 damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-30",
-        "version": "Triumphant Light #30",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-30"],
     "artist": "sui",
     "crafting_cost": 70
   },
@@ -1205,30 +879,15 @@
         "effect": "Flip a coin. If heads, your opponent reveals a random card from their hand and shuffles it into their deck."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-31",
-        "version": "Triumphant Light #31",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-220",
-        "version": "Celestial Guardians #220",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-31", "A3-220"],
     "artist": "Yuu Nishida",
     "crafting_cost": 35
   },
@@ -1248,25 +907,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-32",
-        "version": "Triumphant Light #32",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-32"],
     "artist": "Eri Yamaki",
     "crafting_cost": 35
   },
@@ -1286,25 +935,15 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-33",
-        "version": "Triumphant Light #33",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-33"],
     "artist": "Midori Harada",
     "crafting_cost": 70
   },
@@ -1331,23 +970,12 @@
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-34",
-        "version": "Triumphant Light #34",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-78",
-        "version": "Triumphant Light #78",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-34", "A2a-78"],
     "artist": "Tetsu Kayama",
     "crafting_cost": 70
   },
@@ -1374,18 +1002,12 @@
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-35",
-        "version": "Triumphant Light #35",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-35"],
     "artist": "Anesaki Dynamic",
     "crafting_cost": 150
   },
@@ -1405,30 +1027,15 @@
         "effect": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-36",
-        "version": "Triumphant Light #36",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-79",
-        "version": "Triumphant Light #79",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-36", "A2a-79"],
     "artist": "Tomokazu Komiya",
     "crafting_cost": 70
   },
@@ -1448,25 +1055,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-37",
-        "version": "Triumphant Light #37",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-37"],
     "artist": "Asako Ito",
     "crafting_cost": 35
   },
@@ -1486,25 +1083,15 @@
         "effect": "During your next turn, this Pokémon's Rolling Spin attack does +60 damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-38",
-        "version": "Triumphant Light #38",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-38"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 70
   },
@@ -1524,25 +1111,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-39",
-        "version": "Triumphant Light #39",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-39"],
     "artist": "Yukiko Baba",
     "crafting_cost": 35
   },
@@ -1562,25 +1139,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-40",
-        "version": "Triumphant Light #40",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-40"],
     "artist": "match",
     "crafting_cost": 70
   },
@@ -1607,18 +1174,12 @@
     "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-41",
-        "version": "Triumphant Light #41",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-41"],
     "artist": "kawayoo",
     "crafting_cost": 150
   },
@@ -1638,25 +1199,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-42",
-        "version": "Triumphant Light #42",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-42"],
     "artist": "Satoshi Shirai",
     "crafting_cost": 35
   },
@@ -1676,25 +1227,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-43",
-        "version": "Triumphant Light #43",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-43"],
     "artist": "Mina Nakai",
     "crafting_cost": 35
   },
@@ -1714,25 +1255,15 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-44",
-        "version": "Triumphant Light #44",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-44"],
     "artist": "Tetsu Kayama",
     "crafting_cost": 70
   },
@@ -1752,35 +1283,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-45",
-        "version": "Triumphant Light #45",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-46",
-        "version": "Promo-A #46",
-        "rarity": ""
-      },
-      {
-        "card_id": "A4a-98",
-        "version": "Secluded Springs #98",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-45", "P-A-46", "A4a-98"],
     "artist": "Kyoko Umemoto",
     "crafting_cost": 35
   },
@@ -1800,30 +1311,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-46",
-        "version": "Triumphant Light #46",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A4a-99",
-        "version": "Secluded Springs #99",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-46", "A4a-99"],
     "artist": "Sumiyoshi Kizuki",
     "crafting_cost": 35
   },
@@ -1849,40 +1345,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-47",
-        "version": "Triumphant Light #47",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-84",
-        "version": "Triumphant Light #84",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-93",
-        "version": "Triumphant Light #93",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4a-103",
-        "version": "Secluded Springs #103",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-47", "A2a-84", "A2a-93", "A4a-103"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -1902,25 +1373,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-48",
-        "version": "Triumphant Light #48",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-48"],
     "artist": "Sekio",
     "crafting_cost": 35
   },
@@ -1940,25 +1401,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-49",
-        "version": "Triumphant Light #49",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-49"],
     "artist": "Kyoko Umemoto",
     "crafting_cost": 35
   },
@@ -1985,18 +1436,12 @@
     "weakness": "fighting",
     "retreat": "0",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-50",
-        "version": "Triumphant Light #50",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-50"],
     "artist": "AKIRA EGAWA",
     "crafting_cost": 150
   },
@@ -2016,25 +1461,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-51",
-        "version": "Triumphant Light #51",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-51"],
     "artist": "SATOSHI NAKAI",
     "crafting_cost": 35
   },
@@ -2054,25 +1489,15 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned. Do 20 damage to this Pokémon instead of the usual amount for this Special Condition."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-52",
-        "version": "Triumphant Light #52",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-52"],
     "artist": "Souichirou Gunjima",
     "crafting_cost": 70
   },
@@ -2092,30 +1517,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-53",
-        "version": "Triumphant Light #53",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2a-80",
-        "version": "Triumphant Light #80",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-53", "A2a-80"],
     "artist": "OKACHEKE",
     "crafting_cost": 35
   },
@@ -2135,25 +1545,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-54",
-        "version": "Triumphant Light #54",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-54"],
     "artist": "Souichirou Gunjima",
     "crafting_cost": 35
   },
@@ -2180,18 +1580,12 @@
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-55",
-        "version": "Triumphant Light #55",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-55"],
     "artist": "toriyufu",
     "crafting_cost": 150
   },
@@ -2211,25 +1605,15 @@
         "effect": "If your opponent's Active Pokémon is a [M] Pokémon, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-56",
-        "version": "Triumphant Light #56",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-56"],
     "artist": "tetsuya koizumi",
     "crafting_cost": 35
   },
@@ -2249,35 +1633,15 @@
         "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-57",
-        "version": "Triumphant Light #57",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-85",
-        "version": "Triumphant Light #85",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-94",
-        "version": "Triumphant Light #94",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-57", "A2a-85", "A2a-94"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 500
   },
@@ -2297,25 +1661,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-58",
-        "version": "Triumphant Light #58",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-58"],
     "artist": "Akira Komayama",
     "crafting_cost": 35
   },
@@ -2335,25 +1689,15 @@
         "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-59",
-        "version": "Triumphant Light #59",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-59"],
     "artist": "Naoki Saito",
     "crafting_cost": 70
   },
@@ -2373,25 +1717,15 @@
         "effect": "Flip a coin. If tails, during your next turn, this Pokémon can't attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-60",
-        "version": "Triumphant Light #60",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-60"],
     "artist": "akagi",
     "crafting_cost": 150
   },
@@ -2411,25 +1745,15 @@
         "effect": "Discard 2 random Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-61",
-        "version": "Triumphant Light #61",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-61"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 150
   },
@@ -2449,25 +1773,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-62",
-        "version": "Triumphant Light #62",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-62"],
     "artist": "Naoyo Kimura",
     "crafting_cost": 35
   },
@@ -2487,30 +1801,15 @@
         "effect": "This Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-63",
-        "version": "Triumphant Light #63",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-49",
-        "version": "Promo-A #49",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2a-63", "P-A-49"],
     "artist": "burari",
     "crafting_cost": 70
   },
@@ -2530,25 +1829,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-64",
-        "version": "Triumphant Light #64",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-64"],
     "artist": "Sumiyoshi Kizuki",
     "crafting_cost": 35
   },
@@ -2568,25 +1857,15 @@
         "effect": "Your opponent reveals their hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-65",
-        "version": "Triumphant Light #65",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-65"],
     "artist": "DOM",
     "crafting_cost": 70
   },
@@ -2606,25 +1885,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-66",
-        "version": "Triumphant Light #66",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-66"],
     "artist": "Apios",
     "crafting_cost": 35
   },
@@ -2644,25 +1913,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-67",
-        "version": "Triumphant Light #67",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2a-67"],
     "artist": "Masakazu Fukuda",
     "crafting_cost": 35
   },
@@ -2682,25 +1941,15 @@
         "effect": "This Pokémon also does 20 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-68",
-        "version": "Triumphant Light #68",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-68"],
     "artist": "Minahamu",
     "crafting_cost": 70
   },
@@ -2727,23 +1976,12 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-69",
-        "version": "Triumphant Light #69",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2a-81",
-        "version": "Triumphant Light #81",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-69", "A2a-81"],
     "artist": "Mizue",
     "crafting_cost": 150
   },
@@ -2763,25 +2001,15 @@
         "effect": "Discard a random Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-70",
-        "version": "Triumphant Light #70",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2a-70"],
     "artist": "Nurikabe",
     "crafting_cost": 150
   },
@@ -2808,33 +2036,12 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-71",
-        "version": "Triumphant Light #71",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-86",
-        "version": "Triumphant Light #86",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-95",
-        "version": "Triumphant Light #95",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A2a-96",
-        "version": "Triumphant Light #96",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A2a-71", "A2a-86", "A2a-95", "A2a-96"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -2847,27 +2054,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal 40 damage from each of your Pokémon that has any [W] Energy attached.\n\n            \n                    \n    \n            Illustrated by \n            \n                Atsushi Furusawa",
+    "ability": {
+      "name": "",
+      "effect": "Heal 40 damage from each of your Pokémon that has any [W] Energy attached.\n\n            \n                    \n    \n            Illustrated by \n            \n                Atsushi Furusawa"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-72",
-        "version": "Triumphant Light #72",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-87",
-        "version": "Triumphant Light #87",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-72", "A2a-87"],
     "artist": "Atsushi Furusawa",
     "crafting_cost": 70
   },
@@ -2880,27 +2079,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Put 1 random Basic Pokémon from your discard pile into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "Put 1 random Basic Pokémon from your discard pile into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-73",
-        "version": "Triumphant Light #73",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-88",
-        "version": "Triumphant Light #88",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-73", "A2a-88"],
     "artist": "Yuu Nishida",
     "crafting_cost": 70
   },
@@ -2913,27 +2104,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Snorlax, Heracross, and Staraptor cost 2 less [C] Energy.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Snorlax, Heracross, and Staraptor cost 2 less [C] Energy.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-74",
-        "version": "Triumphant Light #74",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-89",
-        "version": "Triumphant Light #89",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-74", "A2a-89"],
     "artist": "Hideki Ishikawa",
     "crafting_cost": 70
   },
@@ -2946,27 +2129,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During your opponent's next turn, all of your [M] Pokémon take −20 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi",
+    "ability": {
+      "name": "",
+      "effect": "During your opponent's next turn, all of your [M] Pokémon take −20 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-75",
-        "version": "Triumphant Light #75",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-90",
-        "version": "Triumphant Light #90",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-75", "A2a-90"],
     "artist": "akagi",
     "crafting_cost": 70
   },
@@ -2986,30 +2161,15 @@
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-12",
-        "version": "Triumphant Light #12",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-76",
-        "version": "Triumphant Light #76",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-12", "A2a-76"],
     "artist": "matazo",
     "crafting_cost": 400
   },
@@ -3029,30 +2189,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-14",
-        "version": "Triumphant Light #14",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2a-77",
-        "version": "Triumphant Light #77",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-14", "A2a-77"],
     "artist": "Taiga Kayama",
     "crafting_cost": 400
   },
@@ -3079,23 +2224,12 @@
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-34",
-        "version": "Triumphant Light #34",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-78",
-        "version": "Triumphant Light #78",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-34", "A2a-78"],
     "artist": "IKEDA Saki",
     "crafting_cost": 400
   },
@@ -3115,30 +2249,15 @@
         "effect": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-36",
-        "version": "Triumphant Light #36",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-79",
-        "version": "Triumphant Light #79",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-36", "A2a-79"],
     "artist": "Yuriko Akase",
     "crafting_cost": 400
   },
@@ -3158,30 +2277,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-53",
-        "version": "Triumphant Light #53",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2a-80",
-        "version": "Triumphant Light #80",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-53", "A2a-80"],
     "artist": "Yukihiro Tada",
     "crafting_cost": 400
   },
@@ -3208,23 +2312,12 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-69",
-        "version": "Triumphant Light #69",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2a-81",
-        "version": "Triumphant Light #81",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2a-69", "A2a-81"],
     "artist": "MINAMINAMI Take",
     "crafting_cost": 400
   },
@@ -3251,33 +2344,12 @@
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-10",
-        "version": "Triumphant Light #10",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-82",
-        "version": "Triumphant Light #82",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-91",
-        "version": "Triumphant Light #91",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-233",
-        "version": "Wisdom of Sea and Sky #233",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-10", "A2a-82", "A2a-91", "A4-233"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -3304,33 +2376,12 @@
     "weakness": "metal",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-22",
-        "version": "Triumphant Light #22",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-83",
-        "version": "Triumphant Light #83",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-92",
-        "version": "Triumphant Light #92",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-235",
-        "version": "Wisdom of Sea and Sky #235",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-22", "A2a-83", "A2a-92", "A4-235"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -3356,40 +2407,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-47",
-        "version": "Triumphant Light #47",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-84",
-        "version": "Triumphant Light #84",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-93",
-        "version": "Triumphant Light #93",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4a-103",
-        "version": "Secluded Springs #103",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-47", "A2a-84", "A2a-93", "A4a-103"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -3409,35 +2435,15 @@
         "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-57",
-        "version": "Triumphant Light #57",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-85",
-        "version": "Triumphant Light #85",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-94",
-        "version": "Triumphant Light #94",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-57", "A2a-85", "A2a-94"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -3464,33 +2470,12 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-71",
-        "version": "Triumphant Light #71",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-86",
-        "version": "Triumphant Light #86",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-95",
-        "version": "Triumphant Light #95",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A2a-96",
-        "version": "Triumphant Light #96",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A2a-71", "A2a-86", "A2a-95", "A2a-96"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -3503,27 +2488,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal 40 damage from each of your Pokémon that has any [W] Energy attached.\n\n            \n                    \n    \n            Illustrated by \n            \n                Atsushi Furusawa",
+    "ability": {
+      "name": "",
+      "effect": "Heal 40 damage from each of your Pokémon that has any [W] Energy attached.\n\n            \n                    \n    \n            Illustrated by \n            \n                Atsushi Furusawa"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-72",
-        "version": "Triumphant Light #72",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-87",
-        "version": "Triumphant Light #87",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-72", "A2a-87"],
     "artist": "Atsushi Furusawa",
     "crafting_cost": 1250
   },
@@ -3536,27 +2513,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Put 1 random Basic Pokémon from your discard pile into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "Put 1 random Basic Pokémon from your discard pile into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-73",
-        "version": "Triumphant Light #73",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-88",
-        "version": "Triumphant Light #88",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-73", "A2a-88"],
     "artist": "Yuu Nishida",
     "crafting_cost": 1250
   },
@@ -3569,27 +2538,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Snorlax, Heracross, and Staraptor cost 2 less [C] Energy.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Snorlax, Heracross, and Staraptor cost 2 less [C] Energy.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-74",
-        "version": "Triumphant Light #74",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-89",
-        "version": "Triumphant Light #89",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-74", "A2a-89"],
     "artist": "Hideki Ishikawa",
     "crafting_cost": 1250
   },
@@ -3602,27 +2563,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During your opponent's next turn, all of your [M] Pokémon take −20 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi",
+    "ability": {
+      "name": "",
+      "effect": "During your opponent's next turn, all of your [M] Pokémon take −20 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-75",
-        "version": "Triumphant Light #75",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2a-90",
-        "version": "Triumphant Light #90",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-75", "A2a-90"],
     "artist": "akagi",
     "crafting_cost": 1250
   },
@@ -3649,33 +2602,12 @@
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-10",
-        "version": "Triumphant Light #10",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-82",
-        "version": "Triumphant Light #82",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-91",
-        "version": "Triumphant Light #91",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-233",
-        "version": "Wisdom of Sea and Sky #233",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-10", "A2a-82", "A2a-91", "A4-233"],
     "artist": "saino misaki",
     "crafting_cost": 1250
   },
@@ -3702,33 +2634,12 @@
     "weakness": "metal",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-22",
-        "version": "Triumphant Light #22",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-83",
-        "version": "Triumphant Light #83",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-92",
-        "version": "Triumphant Light #92",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-235",
-        "version": "Wisdom of Sea and Sky #235",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-22", "A2a-83", "A2a-92", "A4-235"],
     "artist": "rika",
     "crafting_cost": 1250
   },
@@ -3754,40 +2665,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-47",
-        "version": "Triumphant Light #47",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-84",
-        "version": "Triumphant Light #84",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-93",
-        "version": "Triumphant Light #93",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4a-103",
-        "version": "Secluded Springs #103",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-47", "A2a-84", "A2a-93", "A4a-103"],
     "artist": "toriyufu",
     "crafting_cost": 1250
   },
@@ -3807,35 +2693,15 @@
         "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-57",
-        "version": "Triumphant Light #57",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-85",
-        "version": "Triumphant Light #85",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-94",
-        "version": "Triumphant Light #94",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2a-57", "A2a-85", "A2a-94"],
     "artist": "Masa",
     "crafting_cost": 1250
   },
@@ -3862,33 +2728,12 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-71",
-        "version": "Triumphant Light #71",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-86",
-        "version": "Triumphant Light #86",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-95",
-        "version": "Triumphant Light #95",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A2a-96",
-        "version": "Triumphant Light #96",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A2a-71", "A2a-86", "A2a-95", "A2a-96"],
     "artist": "Takumi Wada",
     "crafting_cost": 1500
   },
@@ -3915,33 +2760,12 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "Crown Rare",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "triumphantlight(a2a)",
     "pack": "arceuspack",
-    "alternate_versions": [
-      {
-        "card_id": "A2a-71",
-        "version": "Triumphant Light #71",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2a-86",
-        "version": "Triumphant Light #86",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2a-95",
-        "version": "Triumphant Light #95",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A2a-96",
-        "version": "Triumphant Light #96",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A2a-71", "A2a-86", "A2a-95", "A2a-96"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   }

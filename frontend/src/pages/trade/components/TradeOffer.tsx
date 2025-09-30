@@ -1,9 +1,10 @@
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
+import { CardLine } from '@/components/CardLine'
 import { Button } from '@/components/ui/button.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
-import { supabase } from '@/lib/Auth.ts'
-import { getCardNameByLang } from '@/lib/utils'
+import { umami } from '@/lib/utils.ts'
+import { useInsertTrade } from '@/services/trade/useTrade.ts'
 import type { Card, TradeRow } from '@/types'
 
 interface Props {
@@ -15,22 +16,18 @@ interface Props {
   setFriendCard: (card: Card | null) => void
 }
 
+function card(c: Card | null) {
+  if (!c) {
+    return '—'
+  }
+  return <CardLine card_id={c.card_id} details="hidden" />
+}
+
 export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, setYourCard, setFriendCard }) => {
-  const { t, i18n } = useTranslation('trade-matches')
+  const { t } = useTranslation('trade-matches')
   const { toast } = useToast()
 
-  function card(c: Card | null) {
-    if (!c) {
-      return '—'
-    }
-    return (
-      <span className="flex">
-        <span className="min-w-10">{c.rarity} </span>
-        <span className="min-w-14 me-4">{c.card_id} </span>
-        <span>{getCardNameByLang(c, i18n.language)}</span>
-      </span>
-    )
-  }
+  const insertTradeMutation = useInsertTrade()
 
   const enabled = yourCard && friendCard && yourCard.rarity === friendCard.rarity
 
@@ -45,15 +42,17 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
       receiver_card_id: friendCard.card_id,
       status: 'offered',
     } as TradeRow
-    const { error } = await supabase.from('trades').insert(trade)
-    if (error) {
-      console.log(error)
+    try {
+      insertTradeMutation.mutate(trade)
+    } catch (e) {
+      console.log('TradeOffer: Error inserting trade', e)
       toast({ title: t('tradeFailed'), variant: 'default' })
-    } else {
-      setYourCard(null)
-      setFriendCard(null)
-      toast({ title: t('tradeOffered'), variant: 'default' })
     }
+
+    setYourCard(null)
+    setFriendCard(null)
+    toast({ title: t('tradeOffered'), variant: 'default' })
+    umami('Offer trade')
   }
 
   if (!yourCard && !friendCard) {

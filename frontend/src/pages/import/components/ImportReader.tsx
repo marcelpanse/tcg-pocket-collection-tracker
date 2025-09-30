@@ -1,13 +1,14 @@
-import { use, useCallback, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { useTranslation } from 'react-i18next'
 import XLSX from 'xlsx'
-import { CollectionContext } from '@/lib/context/CollectionContext'
+import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import type { CollectionRowUpdate, ImportExportRow } from '@/types'
 
 export const ImportReader = () => {
   const { t } = useTranslation('pages/import')
-  const { ownedCards, updateCards } = use(CollectionContext)
+  const { data: ownedCards = [] } = useCollection()
+  const updateCardsMutation = useUpdateCards()
 
   const [processedData, setProcessedData] = useState<(ImportExportRow & { added?: boolean; updated?: boolean; removed?: boolean })[] | null>(null)
   const [numberProcessed, setNumberProcessed] = useState<number>(0)
@@ -41,7 +42,7 @@ export const ImportReader = () => {
       setNumberProcessed((n) => n + 1)
     }
 
-    updateCards(cardArray)
+    updateCardsMutation.mutate({ updates: cardArray })
   }
 
   const onDrop = useCallback((acceptedFiles: File[]) => {

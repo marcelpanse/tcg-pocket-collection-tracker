@@ -15,25 +15,15 @@
         "effect": "Heal 10 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-1",
-        "version": "Space-Time Smackdown #1",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-1"],
     "artist": "Asako Ito",
     "crafting_cost": 35
   },
@@ -53,25 +43,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-2",
-        "version": "Space-Time Smackdown #2",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-2"],
     "artist": "Shibuzoh.",
     "crafting_cost": 35
   },
@@ -91,25 +71,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-3",
-        "version": "Space-Time Smackdown #3",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-3"],
     "artist": "Naoyo Kimura",
     "crafting_cost": 70
   },
@@ -129,25 +99,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-4",
-        "version": "Space-Time Smackdown #4",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-4"],
     "artist": "Narumi Sato",
     "crafting_cost": 35
   },
@@ -167,30 +127,15 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-5",
-        "version": "Space-Time Smackdown #5",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-156",
-        "version": "Space-Time Smackdown #156",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-5", "A2-156"],
     "artist": "kodama",
     "crafting_cost": 70
   },
@@ -210,25 +155,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-6",
-        "version": "Space-Time Smackdown #6",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-6"],
     "artist": "Eri Yamaki",
     "crafting_cost": 35
   },
@@ -248,40 +183,15 @@
         "effect": "Discard a random Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-7",
-        "version": "Space-Time Smackdown #7",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-180",
-        "version": "Space-Time Smackdown #180",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-196",
-        "version": "Space-Time Smackdown #196",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-232",
-        "version": "Wisdom of Sea and Sky #232",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-7", "A2-180", "A2-196", "A4-232"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 500
   },
@@ -301,25 +211,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-8",
-        "version": "Space-Time Smackdown #8",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-8"],
     "artist": "kirisAki",
     "crafting_cost": 35
   },
@@ -339,25 +239,15 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-9",
-        "version": "Space-Time Smackdown #9",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-9"],
     "artist": "Masakazu Fukuda",
     "crafting_cost": 70
   },
@@ -377,30 +267,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-10",
-        "version": "Space-Time Smackdown #10",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-35",
-        "version": "Promo-A #35",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-10", "P-A-35"],
     "artist": "OOYAMA",
     "crafting_cost": 35
   },
@@ -420,25 +295,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-11",
-        "version": "Space-Time Smackdown #11",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-11"],
     "artist": "Sumiyoshi Kizuki",
     "crafting_cost": 70
   },
@@ -458,25 +323,15 @@
         "effect": "During your next turn, this Pokémon can't use Frenzy Plant."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "4",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-12",
-        "version": "Space-Time Smackdown #12",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-12"],
     "artist": "kawayoo",
     "crafting_cost": 150
   },
@@ -496,25 +351,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-13",
-        "version": "Space-Time Smackdown #13",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-13"],
     "artist": "Shigenori Negishi",
     "crafting_cost": 35
   },
@@ -534,25 +379,15 @@
         "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-14",
-        "version": "Space-Time Smackdown #14",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-14"],
     "artist": "Naoyo Kimura",
     "crafting_cost": 35
   },
@@ -572,25 +407,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-15",
-        "version": "Space-Time Smackdown #15",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-15"],
     "artist": "Mugi Hamada",
     "crafting_cost": 35
   },
@@ -610,25 +435,15 @@
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-16",
-        "version": "Space-Time Smackdown #16",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-16"],
     "artist": "Kouki Saitou",
     "crafting_cost": 35
   },
@@ -648,30 +463,15 @@
         "effect": "Put 1 random Basic Pokémon from your deck onto your Bench."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-17",
-        "version": "Space-Time Smackdown #17",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-157",
-        "version": "Space-Time Smackdown #157",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-17", "A2-157"],
     "artist": "Yukiko Baba",
     "crafting_cost": 35
   },
@@ -691,25 +491,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-18",
-        "version": "Space-Time Smackdown #18",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-18"],
     "artist": "chibi",
     "crafting_cost": 70
   },
@@ -729,30 +519,15 @@
         "effect": "Flip a coin. If heads, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-19",
-        "version": "Space-Time Smackdown #19",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-158",
-        "version": "Space-Time Smackdown #158",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-19", "A2-158"],
     "artist": "Anesaki Dynamic",
     "crafting_cost": 70
   },
@@ -772,25 +547,15 @@
         "effect": "During your next turn, this Pokémon can't attack."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-20",
-        "version": "Space-Time Smackdown #20",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-20"],
     "artist": "Kouki Saitou",
     "crafting_cost": 150
   },
@@ -810,25 +575,15 @@
         "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-21",
-        "version": "Space-Time Smackdown #21",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-21"],
     "artist": "kawayoo",
     "crafting_cost": 35
   },
@@ -855,23 +610,12 @@
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-22",
-        "version": "Space-Time Smackdown #22",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-159",
-        "version": "Space-Time Smackdown #159",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-22", "A2-159"],
     "artist": "Narumi Sato",
     "crafting_cost": 150
   },
@@ -891,25 +635,15 @@
         "effect": "Take a [R] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-23",
-        "version": "Space-Time Smackdown #23",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-23"],
     "artist": "Hiroki Asanuma",
     "crafting_cost": 35
   },
@@ -929,25 +663,15 @@
         "effect": "Your opponent's Active Pokémon is now Burned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-24",
-        "version": "Space-Time Smackdown #24",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-24"],
     "artist": "KEIICHIRO ITO",
     "crafting_cost": 150
   },
@@ -967,25 +691,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-25",
-        "version": "Space-Time Smackdown #25",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-25"],
     "artist": "Naoyo Kimura",
     "crafting_cost": 35
   },
@@ -1005,25 +719,15 @@
         "effect": "Your opponent's Active Pokémon is now Burned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-26",
-        "version": "Space-Time Smackdown #26",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-26"],
     "artist": "Oswaldo KATO",
     "crafting_cost": 70
   },
@@ -1043,35 +747,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-27",
-        "version": "Space-Time Smackdown #27",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-40",
-        "version": "Promo-A #40",
-        "rarity": ""
-      },
-      {
-        "card_id": "A4a-91",
-        "version": "Secluded Springs #91",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-27", "P-A-40", "A4a-91"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": 35
   },
@@ -1091,30 +775,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-28",
-        "version": "Space-Time Smackdown #28",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A4a-92",
-        "version": "Secluded Springs #92",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-28", "A4a-92"],
     "artist": "Masakazu Fukuda",
     "crafting_cost": 70
   },
@@ -1134,40 +803,15 @@
         "effect": "Discard all [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "0",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-29",
-        "version": "Space-Time Smackdown #29",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-181",
-        "version": "Space-Time Smackdown #181",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-197",
-        "version": "Space-Time Smackdown #197",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4a-101",
-        "version": "Secluded Springs #101",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-29", "A2-181", "A2-197", "A4a-101"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -1187,25 +831,15 @@
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-30",
-        "version": "Space-Time Smackdown #30",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-30"],
     "artist": "Kedamahadaitai Yawarakai",
     "crafting_cost": 35
   },
@@ -1225,25 +859,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-31",
-        "version": "Space-Time Smackdown #31",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-31"],
     "artist": "Eri Yamaki",
     "crafting_cost": 35
   },
@@ -1270,18 +894,12 @@
     "weakness": "metal",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-32",
-        "version": "Space-Time Smackdown #32",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-32"],
     "artist": "Suwama Chiaki",
     "crafting_cost": 70
   },
@@ -1308,23 +926,12 @@
     "weakness": "metal",
     "retreat": "4",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-33",
-        "version": "Space-Time Smackdown #33",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-160",
-        "version": "Space-Time Smackdown #160",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-33", "A2-160"],
     "artist": "match",
     "crafting_cost": 150
   },
@@ -1351,18 +958,12 @@
     "weakness": "metal",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-34",
-        "version": "Space-Time Smackdown #34",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-34"],
     "artist": "Tomokazu Komiya",
     "crafting_cost": 70
   },
@@ -1382,30 +983,15 @@
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-35",
-        "version": "Space-Time Smackdown #35",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-34",
-        "version": "Promo-A #34",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-35", "P-A-34"],
     "artist": "Hajime Kusajima",
     "crafting_cost": 35
   },
@@ -1425,25 +1011,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-36",
-        "version": "Space-Time Smackdown #36",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-36"],
     "artist": "Mizue",
     "crafting_cost": 70
   },
@@ -1463,25 +1039,15 @@
         "effect": "This attack also does 30 damage to 1 of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-37",
-        "version": "Space-Time Smackdown #37",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-37"],
     "artist": "Satoshi Shirai",
     "crafting_cost": 150
   },
@@ -1501,25 +1067,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-38",
-        "version": "Space-Time Smackdown #38",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-38"],
     "artist": "OKUBO",
     "crafting_cost": 35
   },
@@ -1539,25 +1095,15 @@
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-39",
-        "version": "Space-Time Smackdown #39",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-39"],
     "artist": "Kanako Eo",
     "crafting_cost": 70
   },
@@ -1577,25 +1123,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-40",
-        "version": "Space-Time Smackdown #40",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-40"],
     "artist": "Teeziro",
     "crafting_cost": 35
   },
@@ -1615,30 +1151,15 @@
         "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-41",
-        "version": "Space-Time Smackdown #41",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-161",
-        "version": "Space-Time Smackdown #161",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-41", "A2-161"],
     "artist": "Aya Kusube",
     "crafting_cost": 70
   },
@@ -1658,25 +1179,15 @@
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-42",
-        "version": "Space-Time Smackdown #42",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-42"],
     "artist": "Shigenori Negishi",
     "crafting_cost": 35
   },
@@ -1696,25 +1207,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-43",
-        "version": "Space-Time Smackdown #43",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-43"],
     "artist": "rika",
     "crafting_cost": 70
   },
@@ -1734,25 +1235,15 @@
         "effect": "If your opponent's Active Pokémon is a [F] Pokémon, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-44",
-        "version": "Space-Time Smackdown #44",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-44"],
     "artist": "match",
     "crafting_cost": 35
   },
@@ -1772,25 +1263,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "4",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-45",
-        "version": "Space-Time Smackdown #45",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-45"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 70
   },
@@ -1810,25 +1291,15 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-46",
-        "version": "Space-Time Smackdown #46",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-46"],
     "artist": "Naoyo Kimura",
     "crafting_cost": 150
   },
@@ -1848,25 +1319,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-47",
-        "version": "Space-Time Smackdown #47",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-47"],
     "artist": "Saboteri",
     "crafting_cost": 35
   },
@@ -1886,25 +1347,15 @@
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-48",
-        "version": "Space-Time Smackdown #48",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-48"],
     "artist": "MAHOU",
     "crafting_cost": 35
   },
@@ -1930,40 +1381,15 @@
         "effect": "Discard 3 [W] Energy from this Pokémon. This attack also does 20 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-49",
-        "version": "Space-Time Smackdown #49",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-182",
-        "version": "Space-Time Smackdown #182",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-204",
-        "version": "Space-Time Smackdown #204",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A2-206",
-        "version": "Space-Time Smackdown #206",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -1983,35 +1409,15 @@
         "effect": "Choose 2 of your Benched Pokémon. For each of those Pokémon, take a [W] Energy from your Energy Zone and attach it to that Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-50",
-        "version": "Space-Time Smackdown #50",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-162",
-        "version": "Space-Time Smackdown #162",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-48",
-        "version": "Promo-A #48",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-50", "A2-162", "P-A-48"],
     "artist": "MINAMINAMI Take",
     "crafting_cost": 70
   },
@@ -2031,25 +1437,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-51",
-        "version": "Space-Time Smackdown #51",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-51"],
     "artist": "MAHOU",
     "crafting_cost": 35
   },
@@ -2069,25 +1465,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-52",
-        "version": "Space-Time Smackdown #52",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-52"],
     "artist": "Yumi",
     "crafting_cost": 70
   },
@@ -2107,25 +1493,15 @@
         "effect": "Discard a [L] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-53",
-        "version": "Space-Time Smackdown #53",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-53"],
     "artist": "Yoshinobu Saito",
     "crafting_cost": 150
   },
@@ -2145,30 +1521,15 @@
         "effect": "This Pokémon also does 10 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-54",
-        "version": "Space-Time Smackdown #54",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3b-95",
-        "version": "Eevee Grove #95",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-54", "A3b-95"],
     "artist": "Midori Harada",
     "crafting_cost": 35
   },
@@ -2188,30 +1549,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-55",
-        "version": "Space-Time Smackdown #55",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A3b-96",
-        "version": "Eevee Grove #96",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-55", "A3b-96"],
     "artist": "Anesaki Dynamic",
     "crafting_cost": 70
   },
@@ -2231,25 +1577,15 @@
         "effect": "Take a [L] Energy from your Energy Zone and attach it to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-56",
-        "version": "Space-Time Smackdown #56",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-56"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 35
   },
@@ -2269,30 +1605,15 @@
         "effect": "If this Pokémon has at least 2 extra [L] Energy attached, this attack does 80 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-57",
-        "version": "Space-Time Smackdown #57",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-36",
-        "version": "Promo-A #36",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-57", "P-A-36"],
     "artist": "kawayoo",
     "crafting_cost": 150
   },
@@ -2312,30 +1633,15 @@
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-58",
-        "version": "Space-Time Smackdown #58",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-163",
-        "version": "Space-Time Smackdown #163",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-58", "A2-163"],
     "artist": "Shibuzoh.",
     "crafting_cost": 35
   },
@@ -2355,25 +1661,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-59",
-        "version": "Space-Time Smackdown #59",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-59"],
     "artist": "Naoki Saito",
     "crafting_cost": 70
   },
@@ -2393,25 +1689,15 @@
         "effect": "Discard all [L] Energy from this Pokémon. This attack does 120 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "0",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-60",
-        "version": "Space-Time Smackdown #60",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-60"],
     "artist": "Hitoshi Ariga",
     "crafting_cost": 150
   },
@@ -2431,40 +1717,15 @@
         "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-61",
-        "version": "Space-Time Smackdown #61",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-183",
-        "version": "Space-Time Smackdown #183",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-198",
-        "version": "Space-Time Smackdown #198",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-236",
-        "version": "Wisdom of Sea and Sky #236",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-61", "A2-183", "A2-198", "A4-236"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 500
   },
@@ -2484,30 +1745,15 @@
         "effect": "If your opponent's Active Pokémon has a Pokémon Tool attached, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-62",
-        "version": "Space-Time Smackdown #62",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-164",
-        "version": "Space-Time Smackdown #164",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-62", "A2-164"],
     "artist": "Krgc",
     "crafting_cost": 35
   },
@@ -2527,30 +1773,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-63",
-        "version": "Space-Time Smackdown #63",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-41",
-        "version": "Promo-A #41",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-63", "P-A-41"],
     "artist": "Narumi Sato",
     "crafting_cost": 35
   },
@@ -2570,25 +1801,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-64",
-        "version": "Space-Time Smackdown #64",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-64"],
     "artist": "Kanako Eo",
     "crafting_cost": 70
   },
@@ -2608,25 +1829,15 @@
         "effect": "During your next turn, this Pokémon's Overdrive Smash attack does +60 damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "metal",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-65",
-        "version": "Space-Time Smackdown #65",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-65"],
     "artist": "kawayoo",
     "crafting_cost": 150
   },
@@ -2646,30 +1857,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-66",
-        "version": "Space-Time Smackdown #66",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A4-220",
-        "version": "Wisdom of Sea and Sky #220",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-66", "A4-220"],
     "artist": "Sumiyoshi Kizuki",
     "crafting_cost": 35
   },
@@ -2689,40 +1885,15 @@
         "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-67",
-        "version": "Space-Time Smackdown #67",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-184",
-        "version": "Space-Time Smackdown #184",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-199",
-        "version": "Space-Time Smackdown #199",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-237",
-        "version": "Wisdom of Sea and Sky #237",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-67", "A2-184", "A2-199", "A4-237"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 500
   },
@@ -2742,30 +1913,15 @@
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-68",
-        "version": "Space-Time Smackdown #68",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3b-97",
-        "version": "Eevee Grove #97",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-68", "A3b-97"],
     "artist": "Miki Tanaka",
     "crafting_cost": 35
   },
@@ -2785,30 +1941,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-69",
-        "version": "Space-Time Smackdown #69",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3b-98",
-        "version": "Eevee Grove #98",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-69", "A3b-98"],
     "artist": "Yukiko Baba",
     "crafting_cost": 35
   },
@@ -2828,25 +1969,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-70",
-        "version": "Space-Time Smackdown #70",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-70"],
     "artist": "ryoma uratsuka",
     "crafting_cost": 35
   },
@@ -2866,25 +1997,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-71",
-        "version": "Space-Time Smackdown #71",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-71"],
     "artist": "Sumiyoshi Kizuki",
     "crafting_cost": 70
   },
@@ -2911,18 +2032,12 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-72",
-        "version": "Space-Time Smackdown #72",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-72"],
     "artist": "Suwama Chiaki",
     "crafting_cost": 150
   },
@@ -2942,30 +2057,15 @@
         "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-73",
-        "version": "Space-Time Smackdown #73",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-165",
-        "version": "Space-Time Smackdown #165",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-73", "A2-165"],
     "artist": "Atsuko Nishida",
     "crafting_cost": 35
   },
@@ -2985,25 +2085,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-74",
-        "version": "Space-Time Smackdown #74",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-74"],
     "artist": "Miki Tanaka",
     "crafting_cost": 70
   },
@@ -3023,25 +2113,15 @@
         "effect": "Take a [P] Energy from your Energy Zone and attach it to Mesprit or Azelf."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-75",
-        "version": "Space-Time Smackdown #75",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-75"],
     "artist": "AKIRA EGAWA",
     "crafting_cost": 70
   },
@@ -3061,30 +2141,15 @@
         "effect": "You can use this attack only if you have Uxie and Azelf on your Bench. Discard all Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-76",
-        "version": "Space-Time Smackdown #76",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-166",
-        "version": "Space-Time Smackdown #166",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-76", "A2-166"],
     "artist": "AKIRA EGAWA",
     "crafting_cost": 150
   },
@@ -3104,25 +2169,15 @@
         "effect": "This attack does 20 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-77",
-        "version": "Space-Time Smackdown #77",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-77"],
     "artist": "AKIRA EGAWA",
     "crafting_cost": 70
   },
@@ -3149,23 +2204,12 @@
     "weakness": "darkness",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-78",
-        "version": "Space-Time Smackdown #78",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-167",
-        "version": "Space-Time Smackdown #167",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-78", "A2-167"],
     "artist": "AKIRA EGAWA",
     "crafting_cost": 150
   },
@@ -3185,30 +2229,15 @@
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-79",
-        "version": "Space-Time Smackdown #79",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-168",
-        "version": "Space-Time Smackdown #168",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-79", "A2-168"],
     "artist": "Masako Tomii",
     "crafting_cost": 150
   },
@@ -3228,25 +2257,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-80",
-        "version": "Space-Time Smackdown #80",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-80"],
     "artist": "otumami",
     "crafting_cost": 35
   },
@@ -3266,25 +2285,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-81",
-        "version": "Space-Time Smackdown #81",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-81"],
     "artist": "Oswaldo KATO",
     "crafting_cost": 70
   },
@@ -3304,30 +2313,15 @@
         "effect": "Discard the top 3 cards of your deck."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-82",
-        "version": "Space-Time Smackdown #82",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-169",
-        "version": "Space-Time Smackdown #169",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-82", "A2-169"],
     "artist": "Naoki Saito",
     "crafting_cost": 150
   },
@@ -3347,25 +2341,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-83",
-        "version": "Space-Time Smackdown #83",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-83"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": 35
   },
@@ -3385,25 +2369,15 @@
         "effect": "Flip 2 coins. This attack does 20 more damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-84",
-        "version": "Space-Time Smackdown #84",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-84"],
     "artist": "Mizue",
     "crafting_cost": 70
   },
@@ -3423,25 +2397,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-85",
-        "version": "Space-Time Smackdown #85",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-85"],
     "artist": "sowsow",
     "crafting_cost": 35
   },
@@ -3461,25 +2425,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-86",
-        "version": "Space-Time Smackdown #86",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-86"],
     "artist": "Midori Harada",
     "crafting_cost": 35
   },
@@ -3506,18 +2460,12 @@
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-87",
-        "version": "Space-Time Smackdown #87",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-87"],
     "artist": "Tomokazu Komiya",
     "crafting_cost": 70
   },
@@ -3537,25 +2485,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-88",
-        "version": "Space-Time Smackdown #88",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-88"],
     "artist": "Kouki Saitou",
     "crafting_cost": 70
   },
@@ -3575,25 +2513,15 @@
         "effect": "If your opponent's Pokémon is Knocked Out by damage from this attack, this Pokémon also does 50 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-89",
-        "version": "Space-Time Smackdown #89",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-89"],
     "artist": "Yoshinobu Saito",
     "crafting_cost": 150
   },
@@ -3613,25 +2541,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-90",
-        "version": "Space-Time Smackdown #90",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-90"],
     "artist": "Hajime Kusajima",
     "crafting_cost": 35
   },
@@ -3651,25 +2569,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-91",
-        "version": "Space-Time Smackdown #91",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-91"],
     "artist": "AKIRA EGAWA",
     "crafting_cost": 35
   },
@@ -3696,23 +2604,12 @@
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-92",
-        "version": "Space-Time Smackdown #92",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-170",
-        "version": "Space-Time Smackdown #170",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-92", "A2-170"],
     "artist": "nagimiso",
     "crafting_cost": 150
   },
@@ -3732,30 +2629,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-93",
-        "version": "Space-Time Smackdown #93",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-171",
-        "version": "Space-Time Smackdown #171",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-93", "A2-171"],
     "artist": "Akira Komayama",
     "crafting_cost": 35
   },
@@ -3775,25 +2657,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "4",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-94",
-        "version": "Space-Time Smackdown #94",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-94"],
     "artist": "KEIICHIRO ITO",
     "crafting_cost": 70
   },
@@ -3813,40 +2685,15 @@
         "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-95",
-        "version": "Space-Time Smackdown #95",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-185",
-        "version": "Space-Time Smackdown #185",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-200",
-        "version": "Space-Time Smackdown #200",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3b-106",
-        "version": "Eevee Grove #106",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-95", "A2-185", "A2-200", "A3b-106"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -3866,25 +2713,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-96",
-        "version": "Space-Time Smackdown #96",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-96"],
     "artist": "Yukiko Baba",
     "crafting_cost": 35
   },
@@ -3904,25 +2741,15 @@
         "effect": "This attack does 50 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-97",
-        "version": "Space-Time Smackdown #97",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-97"],
     "artist": "Hideki Ishikawa",
     "crafting_cost": 70
   },
@@ -3942,25 +2769,15 @@
         "effect": "Flip 2 coins. This attack does 20 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-98",
-        "version": "Space-Time Smackdown #98",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-98"],
     "artist": "Hasuno",
     "crafting_cost": 35
   },
@@ -3980,40 +2797,15 @@
         "effect": "If your opponent's Active Pokémon has damage on it, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-99",
-        "version": "Space-Time Smackdown #99",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-186",
-        "version": "Space-Time Smackdown #186",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-201",
-        "version": "Space-Time Smackdown #201",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-238",
-        "version": "Wisdom of Sea and Sky #238",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-99", "A2-186", "A2-201", "A4-238"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -4033,25 +2825,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-100",
-        "version": "Space-Time Smackdown #100",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-100"],
     "artist": "Midori Harada",
     "crafting_cost": 35
   },
@@ -4071,25 +2853,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-101",
-        "version": "Space-Time Smackdown #101",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-101"],
     "artist": "Kouki Saitou",
     "crafting_cost": 70
   },
@@ -4109,25 +2881,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-102",
-        "version": "Space-Time Smackdown #102",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-102"],
     "artist": "Kyoko Umemoto",
     "crafting_cost": 35
   },
@@ -4147,25 +2909,15 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-103",
-        "version": "Space-Time Smackdown #103",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-103"],
     "artist": "kirisAki",
     "crafting_cost": 70
   },
@@ -4185,30 +2937,15 @@
         "effect": "This attack does 10 damage to each of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-104",
-        "version": "Space-Time Smackdown #104",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-172",
-        "version": "Space-Time Smackdown #172",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-104", "A2-172"],
     "artist": "HYOGONOSUKE",
     "crafting_cost": 70
   },
@@ -4228,25 +2965,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-105",
-        "version": "Space-Time Smackdown #105",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-105"],
     "artist": "Naoki Saito",
     "crafting_cost": 35
   },
@@ -4266,25 +2993,15 @@
         "effect": "Flip 4 coins. This attack does 40 damage for each heads. If at least 2 of them are heads, your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-106",
-        "version": "Space-Time Smackdown #106",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-106"],
     "artist": "Hitoshi Ariga",
     "crafting_cost": 70
   },
@@ -4304,30 +3021,15 @@
         "effect": "Flip a coin for each Pokémon you have in play. This attack does 20 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-107",
-        "version": "Space-Time Smackdown #107",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-173",
-        "version": "Space-Time Smackdown #173",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-107", "A2-173"],
     "artist": "Masakazu Fukuda",
     "crafting_cost": 35
   },
@@ -4347,25 +3049,15 @@
         "effect": "Flip a coin for each Pokémon you have in play. This attack does 40 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-108",
-        "version": "Space-Time Smackdown #108",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-108"],
     "artist": "Hajime Kusajima",
     "crafting_cost": 70
   },
@@ -4385,25 +3077,15 @@
         "effect": "Your opponent's Active Pokémon is now Asleep."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-109",
-        "version": "Space-Time Smackdown #109",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-109"],
     "artist": "Masako Tomii",
     "crafting_cost": 150
   },
@@ -4430,33 +3112,12 @@
     "weakness": "grass",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-110",
-        "version": "Space-Time Smackdown #110",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-187",
-        "version": "Space-Time Smackdown #187",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-202",
-        "version": "Space-Time Smackdown #202",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "P-A-42",
-        "version": "Promo-A #42",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42"],
     "artist": "PLANETA Yamashita",
     "crafting_cost": 500
   },
@@ -4476,30 +3137,15 @@
         "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-111",
-        "version": "Space-Time Smackdown #111",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-39",
-        "version": "Promo-A #39",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-111", "P-A-39"],
     "artist": "Oswaldo KATO",
     "crafting_cost": 70
   },
@@ -4519,25 +3165,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-112",
-        "version": "Space-Time Smackdown #112",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-112"],
     "artist": "Tomokazu Komiya",
     "crafting_cost": 70
   },
@@ -4557,25 +3193,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-113",
-        "version": "Space-Time Smackdown #113",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-113"],
     "artist": "Kouki Saitou",
     "crafting_cost": 70
   },
@@ -4602,18 +3228,12 @@
     "weakness": "fire",
     "retreat": "4",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-114",
-        "version": "Space-Time Smackdown #114",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-114"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": 150
   },
@@ -4633,25 +3253,15 @@
         "effect": "Flip a coin until you get tails. This attack does 30 more damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-115",
-        "version": "Space-Time Smackdown #115",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-115"],
     "artist": "Kyoko Umemoto",
     "crafting_cost": 35
   },
@@ -4671,25 +3281,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-116",
-        "version": "Space-Time Smackdown #116",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-116"],
     "artist": "Miki Tanaka",
     "crafting_cost": 35
   },
@@ -4709,25 +3309,15 @@
         "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-117",
-        "version": "Space-Time Smackdown #117",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-117"],
     "artist": "Yuka Morii",
     "crafting_cost": 70
   },
@@ -4747,25 +3337,15 @@
         "effect": "Flip 3 coins. This attack does 50 more damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "4",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-118",
-        "version": "Space-Time Smackdown #118",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-118"],
     "artist": "MAHOU",
     "crafting_cost": 70
   },
@@ -4791,40 +3371,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-119",
-        "version": "Space-Time Smackdown #119",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-188",
-        "version": "Space-Time Smackdown #188",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-205",
-        "version": "Space-Time Smackdown #205",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A2-207",
-        "version": "Space-Time Smackdown #207",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -4844,30 +3399,15 @@
         "effect": "This Pokémon also does 20 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-120",
-        "version": "Space-Time Smackdown #120",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-174",
-        "version": "Space-Time Smackdown #174",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-120", "A2-174"],
     "artist": "Oswaldo KATO",
     "crafting_cost": 150
   },
@@ -4887,25 +3427,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-121",
-        "version": "Space-Time Smackdown #121",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-121"],
     "artist": "Naoyo Kimura",
     "crafting_cost": 35
   },
@@ -4925,25 +3455,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "none",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-122",
-        "version": "Space-Time Smackdown #122",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-122"],
     "artist": "Shigenori Negishi",
     "crafting_cost": 70
   },
@@ -4970,23 +3490,12 @@
     "weakness": "none",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-123",
-        "version": "Space-Time Smackdown #123",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-175",
-        "version": "Space-Time Smackdown #175",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-123", "A2-175"],
     "artist": "Atsushi Furusawa",
     "crafting_cost": 150
   },
@@ -5006,30 +3515,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-124",
-        "version": "Space-Time Smackdown #124",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A4-230",
-        "version": "Wisdom of Sea and Sky #230",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-124", "A4-230"],
     "artist": "Yukiko Baba",
     "crafting_cost": 35
   },
@@ -5049,40 +3543,15 @@
         "effect": "Flip a coin until you get tails. This attack does 40 more damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-125",
-        "version": "Space-Time Smackdown #125",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-189",
-        "version": "Space-Time Smackdown #189",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-203",
-        "version": "Space-Time Smackdown #203",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-239",
-        "version": "Wisdom of Sea and Sky #239",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-125", "A2-189", "A2-203", "A4-239"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 500
   },
@@ -5102,25 +3571,15 @@
         "effect": "Flip a coin. If heads, this attack does 20 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-126",
-        "version": "Space-Time Smackdown #126",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-126"],
     "artist": "Shibuzoh.",
     "crafting_cost": 35
   },
@@ -5140,25 +3599,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-127",
-        "version": "Space-Time Smackdown #127",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-127"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 35
   },
@@ -5178,25 +3627,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-128",
-        "version": "Space-Time Smackdown #128",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-128"],
     "artist": "sowsow",
     "crafting_cost": 70
   },
@@ -5216,25 +3655,15 @@
         "effect": "Change the type of the next Energy that will be generated for your opponent to 1 of the following at random: [G],[R],[W],[L],[P],[F],[D], or [M]."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-129",
-        "version": "Space-Time Smackdown #129",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-129"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 150
   },
@@ -5254,25 +3683,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-130",
-        "version": "Space-Time Smackdown #130",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-130"],
     "artist": "Miki Tanaka",
     "crafting_cost": 35
   },
@@ -5292,25 +3711,15 @@
         "effect": "Flip 2 coins. This attack does 40 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-131",
-        "version": "Space-Time Smackdown #131",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-131"],
     "artist": "Naoyo Kimura",
     "crafting_cost": 35
   },
@@ -5330,25 +3739,15 @@
         "effect": "Before doing damage, discard all Pokémon Tools from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-132",
-        "version": "Space-Time Smackdown #132",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-132"],
     "artist": "Atsuko Nishida",
     "crafting_cost": 35
   },
@@ -5368,25 +3767,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-133",
-        "version": "Space-Time Smackdown #133",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-133"],
     "artist": "REND",
     "crafting_cost": 35
   },
@@ -5406,30 +3795,15 @@
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-134",
-        "version": "Space-Time Smackdown #134",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-176",
-        "version": "Space-Time Smackdown #176",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-134", "A2-176"],
     "artist": "Sekio",
     "crafting_cost": 70
   },
@@ -5449,30 +3823,15 @@
         "effect": "Halve your opponent's Active Pokémon's remaining HP, rounded down."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-135",
-        "version": "Space-Time Smackdown #135",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-177",
-        "version": "Space-Time Smackdown #177",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-135", "A2-177"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": 35
   },
@@ -5492,25 +3851,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-136",
-        "version": "Space-Time Smackdown #136",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-136"],
     "artist": "kirisAki",
     "crafting_cost": 35
   },
@@ -5530,25 +3879,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-137",
-        "version": "Space-Time Smackdown #137",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-137"],
     "artist": "Narumi Sato",
     "crafting_cost": 35
   },
@@ -5568,25 +3907,15 @@
         "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-138",
-        "version": "Space-Time Smackdown #138",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-138"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": 35
   },
@@ -5606,30 +3935,15 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-139",
-        "version": "Space-Time Smackdown #139",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-178",
-        "version": "Space-Time Smackdown #178",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-139", "A2-178"],
     "artist": "sowsow",
     "crafting_cost": 35
   },
@@ -5649,25 +3963,15 @@
         "effect": "Your opponent reveals their hand. Choose a card you find there and shuffle it into your opponent's deck."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-140",
-        "version": "Space-Time Smackdown #140",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-140"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": 70
   },
@@ -5687,25 +3991,15 @@
         "effect": "Flip 3 coins. This attack does 20 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-141",
-        "version": "Space-Time Smackdown #141",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-141"],
     "artist": "HYOGONOSUKE",
     "crafting_cost": 35
   },
@@ -5725,25 +4019,15 @@
         "effect": "Flip a coin. If heads, put your opponent's Active Pokémon into their hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-142",
-        "version": "Space-Time Smackdown #142",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-142"],
     "artist": "Masakazu Fukuda",
     "crafting_cost": 35
   },
@@ -5763,30 +4047,15 @@
         "effect": "This attack does more damage equal to the damage this Pokémon has on it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-143",
-        "version": "Space-Time Smackdown #143",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-179",
-        "version": "Space-Time Smackdown #179",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-143", "A2-179"],
     "artist": "Tomokazu Komiya",
     "crafting_cost": 150
   },
@@ -5799,22 +4068,19 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-144",
-        "version": "Space-Time Smackdown #144",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-144"],
     "artist": "Toyste Beach",
     "crafting_cost": 35
   },
@@ -5827,22 +4093,19 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-145",
-        "version": "Space-Time Smackdown #145",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2-145"],
     "artist": "Toyste Beach",
     "crafting_cost": 35
   },
@@ -5855,22 +4118,19 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Choose a Pokémon in your hand and switch it with a random Pokémon in your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ayaka Yoshida",
+    "ability": {
+      "name": "",
+      "effect": "Choose a Pokémon in your hand and switch it with a random Pokémon in your deck.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ayaka Yoshida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-146",
-        "version": "Space-Time Smackdown #146",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-146"],
     "artist": "Ayaka Yoshida",
     "crafting_cost": 70
   },
@@ -5883,22 +4143,19 @@
     "card_type": "trainer",
     "evolution_type": "tool",
     "attacks": [],
-    "ability": "The Pokémon this card is attached to gets +20 HP.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda",
+    "ability": {
+      "name": "",
+      "effect": "The Pokémon this card is attached to gets +20 HP.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-147",
-        "version": "Space-Time Smackdown #147",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-147"],
     "artist": "Ryo Ueda",
     "crafting_cost": 70
   },
@@ -5911,22 +4168,19 @@
     "card_type": "trainer",
     "evolution_type": "tool",
     "attacks": [],
-    "ability": "If the Pokémon this card is attached to is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the Attacking Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ayaka Yoshida",
+    "ability": {
+      "name": "",
+      "effect": "If the Pokémon this card is attached to is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the Attacking Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ayaka Yoshida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-148",
-        "version": "Space-Time Smackdown #148",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-148"],
     "artist": "Ayaka Yoshida",
     "crafting_cost": 70
   },
@@ -5939,22 +4193,19 @@
     "card_type": "trainer",
     "evolution_type": "tool",
     "attacks": [],
-    "ability": "At the end of each turn, if the Pokémon this card is attached to is affected by any Special Conditions, it recovers from all of them, and discard this card.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yoshinobu Saito",
+    "ability": {
+      "name": "",
+      "effect": "At the end of each turn, if the Pokémon this card is attached to is affected by any Special Conditions, it recovers from all of them, and discard this card.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yoshinobu Saito"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-149",
-        "version": "Space-Time Smackdown #149",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2-149"],
     "artist": "Yoshinobu Saito",
     "crafting_cost": 70
   },
@@ -5967,27 +4218,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi",
+    "ability": {
+      "name": "",
+      "effect": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-150",
-        "version": "Space-Time Smackdown #150",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-190",
-        "version": "Space-Time Smackdown #190",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-150", "A2-190"],
     "artist": "akagi",
     "crafting_cost": 70
   },
@@ -6000,27 +4243,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Put 1 random Glameow, Stunky, or Croagunk from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
+    "ability": {
+      "name": "",
+      "effect": "Put 1 random Glameow, Stunky, or Croagunk from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-151",
-        "version": "Space-Time Smackdown #151",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-191",
-        "version": "Space-Time Smackdown #191",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-151", "A2-191"],
     "artist": "GOSSAN",
     "crafting_cost": 70
   },
@@ -6033,27 +4268,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Garchomp or Togekiss do +50 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Garchomp or Togekiss do +50 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-152",
-        "version": "Space-Time Smackdown #152",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-192",
-        "version": "Space-Time Smackdown #192",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-152", "A2-192"],
     "artist": "Ryuta Fuse",
     "crafting_cost": 70
   },
@@ -6066,27 +4293,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Choose 1 of your Electivire or Luxray. Attach 2 [L] Energy from your discard pile to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA",
+    "ability": {
+      "name": "",
+      "effect": "Choose 1 of your Electivire or Luxray. Attach 2 [L] Energy from your discard pile to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-153",
-        "version": "Space-Time Smackdown #153",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-193",
-        "version": "Space-Time Smackdown #193",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-153", "A2-193"],
     "artist": "GIDORA",
     "crafting_cost": 70
   },
@@ -6099,27 +4318,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Move an Energy from 1 of your Benched Pokémon to your Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki",
+    "ability": {
+      "name": "",
+      "effect": "Move an Energy from 1 of your Benched Pokémon to your Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-154",
-        "version": "Space-Time Smackdown #154",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-194",
-        "version": "Space-Time Smackdown #194",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-154", "A2-194"],
     "artist": "saino misaki",
     "crafting_cost": 70
   },
@@ -6132,27 +4343,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Your opponent shuffles their hand into their deck and draws a card for each of their remaining points needed to win.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "Your opponent shuffles their hand into their deck and draws a card for each of their remaining points needed to win.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-155",
-        "version": "Space-Time Smackdown #155",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-195",
-        "version": "Space-Time Smackdown #195",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-155", "A2-195"],
     "artist": "Yuu Nishida",
     "crafting_cost": 70
   },
@@ -6172,30 +4375,15 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-5",
-        "version": "Space-Time Smackdown #5",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-156",
-        "version": "Space-Time Smackdown #156",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-5", "A2-156"],
     "artist": "Saboteri",
     "crafting_cost": 400
   },
@@ -6215,30 +4403,15 @@
         "effect": "Put 1 random Basic Pokémon from your deck onto your Bench."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-17",
-        "version": "Space-Time Smackdown #17",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-157",
-        "version": "Space-Time Smackdown #157",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-17", "A2-157"],
     "artist": "Shibuzoh.",
     "crafting_cost": 400
   },
@@ -6258,30 +4431,15 @@
         "effect": "Flip a coin. If heads, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-19",
-        "version": "Space-Time Smackdown #19",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-158",
-        "version": "Space-Time Smackdown #158",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-19", "A2-158"],
     "artist": "Yoriyuki Ikegami",
     "crafting_cost": 400
   },
@@ -6308,23 +4466,12 @@
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-22",
-        "version": "Space-Time Smackdown #22",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-159",
-        "version": "Space-Time Smackdown #159",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-22", "A2-159"],
     "artist": "REND",
     "crafting_cost": 400
   },
@@ -6351,23 +4498,12 @@
     "weakness": "metal",
     "retreat": "4",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-33",
-        "version": "Space-Time Smackdown #33",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-160",
-        "version": "Space-Time Smackdown #160",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-33", "A2-160"],
     "artist": "OKACHEKE",
     "crafting_cost": 400
   },
@@ -6387,30 +4523,15 @@
         "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-41",
-        "version": "Space-Time Smackdown #41",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-161",
-        "version": "Space-Time Smackdown #161",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-41", "A2-161"],
     "artist": "takashi shiraishi",
     "crafting_cost": 400
   },
@@ -6430,35 +4551,15 @@
         "effect": "Choose 2 of your Benched Pokémon. For each of those Pokémon, take a [W] Energy from your Energy Zone and attach it to that Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-50",
-        "version": "Space-Time Smackdown #50",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-162",
-        "version": "Space-Time Smackdown #162",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-48",
-        "version": "Promo-A #48",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-50", "A2-162", "P-A-48"],
     "artist": "miki kudo",
     "crafting_cost": 400
   },
@@ -6478,30 +4579,15 @@
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-58",
-        "version": "Space-Time Smackdown #58",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-163",
-        "version": "Space-Time Smackdown #163",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-58", "A2-163"],
     "artist": "Yuu Nishida",
     "crafting_cost": 400
   },
@@ -6521,30 +4607,15 @@
         "effect": "If your opponent's Active Pokémon has a Pokémon Tool attached, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-62",
-        "version": "Space-Time Smackdown #62",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-164",
-        "version": "Space-Time Smackdown #164",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-62", "A2-164"],
     "artist": "Shimaris Yukichi",
     "crafting_cost": 400
   },
@@ -6564,30 +4635,15 @@
         "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-73",
-        "version": "Space-Time Smackdown #73",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-165",
-        "version": "Space-Time Smackdown #165",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-73", "A2-165"],
     "artist": "Orca",
     "crafting_cost": 400
   },
@@ -6607,30 +4663,15 @@
         "effect": "You can use this attack only if you have Uxie and Azelf on your Bench. Discard all Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-76",
-        "version": "Space-Time Smackdown #76",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-166",
-        "version": "Space-Time Smackdown #166",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-76", "A2-166"],
     "artist": "Orca",
     "crafting_cost": 400
   },
@@ -6657,23 +4698,12 @@
     "weakness": "darkness",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-78",
-        "version": "Space-Time Smackdown #78",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-167",
-        "version": "Space-Time Smackdown #167",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-78", "A2-167"],
     "artist": "Rond",
     "crafting_cost": 400
   },
@@ -6693,30 +4723,15 @@
         "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-79",
-        "version": "Space-Time Smackdown #79",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-168",
-        "version": "Space-Time Smackdown #168",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-79", "A2-168"],
     "artist": "rika",
     "crafting_cost": 400
   },
@@ -6736,30 +4751,15 @@
         "effect": "Discard the top 3 cards of your deck."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "4",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-82",
-        "version": "Space-Time Smackdown #82",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-169",
-        "version": "Space-Time Smackdown #169",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-82", "A2-169"],
     "artist": "Taiga Kayama",
     "crafting_cost": 400
   },
@@ -6786,23 +4786,12 @@
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-92",
-        "version": "Space-Time Smackdown #92",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-170",
-        "version": "Space-Time Smackdown #170",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-92", "A2-170"],
     "artist": "Akira Komayama",
     "crafting_cost": 400
   },
@@ -6822,30 +4811,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-93",
-        "version": "Space-Time Smackdown #93",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-171",
-        "version": "Space-Time Smackdown #171",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-93", "A2-171"],
     "artist": "Teeziro",
     "crafting_cost": 400
   },
@@ -6865,30 +4839,15 @@
         "effect": "This attack does 10 damage to each of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-104",
-        "version": "Space-Time Smackdown #104",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-172",
-        "version": "Space-Time Smackdown #172",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-104", "A2-172"],
     "artist": "Shinji Kanda",
     "crafting_cost": 400
   },
@@ -6908,30 +4867,15 @@
         "effect": "Flip a coin for each Pokémon you have in play. This attack does 20 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-107",
-        "version": "Space-Time Smackdown #107",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-173",
-        "version": "Space-Time Smackdown #173",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-107", "A2-173"],
     "artist": "GOSSAN",
     "crafting_cost": 400
   },
@@ -6951,30 +4895,15 @@
         "effect": "This Pokémon also does 20 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-120",
-        "version": "Space-Time Smackdown #120",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-174",
-        "version": "Space-Time Smackdown #174",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-120", "A2-174"],
     "artist": "OKUBO",
     "crafting_cost": 400
   },
@@ -7001,23 +4930,12 @@
     "weakness": "none",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-123",
-        "version": "Space-Time Smackdown #123",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-175",
-        "version": "Space-Time Smackdown #175",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-123", "A2-175"],
     "artist": "MINAMINAMI Take",
     "crafting_cost": 400
   },
@@ -7037,30 +4955,15 @@
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-134",
-        "version": "Space-Time Smackdown #134",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-176",
-        "version": "Space-Time Smackdown #176",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-134", "A2-176"],
     "artist": "Ryota Murayama",
     "crafting_cost": 400
   },
@@ -7080,30 +4983,15 @@
         "effect": "Halve your opponent's Active Pokémon's remaining HP, rounded down."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-135",
-        "version": "Space-Time Smackdown #135",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-177",
-        "version": "Space-Time Smackdown #177",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-135", "A2-177"],
     "artist": "Shinya Komatsu",
     "crafting_cost": 400
   },
@@ -7123,30 +5011,15 @@
         "effect": "Flip a coin. If tails, this attack does nothing."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-139",
-        "version": "Space-Time Smackdown #139",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2-178",
-        "version": "Space-Time Smackdown #178",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-139", "A2-178"],
     "artist": "matazo",
     "crafting_cost": 400
   },
@@ -7166,30 +5039,15 @@
         "effect": "This attack does more damage equal to the damage this Pokémon has on it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-143",
-        "version": "Space-Time Smackdown #143",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2-179",
-        "version": "Space-Time Smackdown #179",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2-143", "A2-179"],
     "artist": "Tetsu Kayama",
     "crafting_cost": 400
   },
@@ -7209,40 +5067,15 @@
         "effect": "Discard a random Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-7",
-        "version": "Space-Time Smackdown #7",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-180",
-        "version": "Space-Time Smackdown #180",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-196",
-        "version": "Space-Time Smackdown #196",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-232",
-        "version": "Wisdom of Sea and Sky #232",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-7", "A2-180", "A2-196", "A4-232"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -7262,40 +5095,15 @@
         "effect": "Discard all [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "0",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-29",
-        "version": "Space-Time Smackdown #29",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-181",
-        "version": "Space-Time Smackdown #181",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-197",
-        "version": "Space-Time Smackdown #197",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4a-101",
-        "version": "Secluded Springs #101",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-29", "A2-181", "A2-197", "A4a-101"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7321,40 +5129,15 @@
         "effect": "Discard 3 [W] Energy from this Pokémon. This attack also does 20 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-49",
-        "version": "Space-Time Smackdown #49",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-182",
-        "version": "Space-Time Smackdown #182",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-204",
-        "version": "Space-Time Smackdown #204",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A2-206",
-        "version": "Space-Time Smackdown #206",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7374,40 +5157,15 @@
         "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-61",
-        "version": "Space-Time Smackdown #61",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-183",
-        "version": "Space-Time Smackdown #183",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-198",
-        "version": "Space-Time Smackdown #198",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-236",
-        "version": "Wisdom of Sea and Sky #236",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-61", "A2-183", "A2-198", "A4-236"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -7427,40 +5185,15 @@
         "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-67",
-        "version": "Space-Time Smackdown #67",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-184",
-        "version": "Space-Time Smackdown #184",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-199",
-        "version": "Space-Time Smackdown #199",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-237",
-        "version": "Wisdom of Sea and Sky #237",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-67", "A2-184", "A2-199", "A4-237"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -7480,40 +5213,15 @@
         "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-95",
-        "version": "Space-Time Smackdown #95",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-185",
-        "version": "Space-Time Smackdown #185",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-200",
-        "version": "Space-Time Smackdown #200",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3b-106",
-        "version": "Eevee Grove #106",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-95", "A2-185", "A2-200", "A3b-106"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7533,40 +5241,15 @@
         "effect": "If your opponent's Active Pokémon has damage on it, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-99",
-        "version": "Space-Time Smackdown #99",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-186",
-        "version": "Space-Time Smackdown #186",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-201",
-        "version": "Space-Time Smackdown #201",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-238",
-        "version": "Wisdom of Sea and Sky #238",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-99", "A2-186", "A2-201", "A4-238"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7593,33 +5276,12 @@
     "weakness": "grass",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-110",
-        "version": "Space-Time Smackdown #110",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-187",
-        "version": "Space-Time Smackdown #187",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-202",
-        "version": "Space-Time Smackdown #202",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "P-A-42",
-        "version": "Promo-A #42",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42"],
     "artist": "PLANETA Yamashita",
     "crafting_cost": 1250
   },
@@ -7645,40 +5307,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-119",
-        "version": "Space-Time Smackdown #119",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-188",
-        "version": "Space-Time Smackdown #188",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-205",
-        "version": "Space-Time Smackdown #205",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A2-207",
-        "version": "Space-Time Smackdown #207",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -7698,40 +5335,15 @@
         "effect": "Flip a coin until you get tails. This attack does 40 more damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-125",
-        "version": "Space-Time Smackdown #125",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-189",
-        "version": "Space-Time Smackdown #189",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-203",
-        "version": "Space-Time Smackdown #203",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-239",
-        "version": "Wisdom of Sea and Sky #239",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-125", "A2-189", "A2-203", "A4-239"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -7744,27 +5356,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi",
+    "ability": {
+      "name": "",
+      "effect": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                akagi"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-150",
-        "version": "Space-Time Smackdown #150",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-190",
-        "version": "Space-Time Smackdown #190",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-150", "A2-190"],
     "artist": "akagi",
     "crafting_cost": 1250
   },
@@ -7777,27 +5381,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Put 1 random Glameow, Stunky, or Croagunk from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN",
+    "ability": {
+      "name": "",
+      "effect": "Put 1 random Glameow, Stunky, or Croagunk from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-151",
-        "version": "Space-Time Smackdown #151",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-191",
-        "version": "Space-Time Smackdown #191",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-151", "A2-191"],
     "artist": "GOSSAN",
     "crafting_cost": 1250
   },
@@ -7810,27 +5406,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Garchomp or Togekiss do +50 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Garchomp or Togekiss do +50 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-152",
-        "version": "Space-Time Smackdown #152",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-192",
-        "version": "Space-Time Smackdown #192",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-152", "A2-192"],
     "artist": "Ryuta Fuse",
     "crafting_cost": 1250
   },
@@ -7843,27 +5431,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Choose 1 of your Electivire or Luxray. Attach 2 [L] Energy from your discard pile to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA",
+    "ability": {
+      "name": "",
+      "effect": "Choose 1 of your Electivire or Luxray. Attach 2 [L] Energy from your discard pile to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-153",
-        "version": "Space-Time Smackdown #153",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-193",
-        "version": "Space-Time Smackdown #193",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-153", "A2-193"],
     "artist": "GIDORA",
     "crafting_cost": 1250
   },
@@ -7876,27 +5456,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Move an Energy from 1 of your Benched Pokémon to your Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki",
+    "ability": {
+      "name": "",
+      "effect": "Move an Energy from 1 of your Benched Pokémon to your Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-154",
-        "version": "Space-Time Smackdown #154",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-194",
-        "version": "Space-Time Smackdown #194",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-154", "A2-194"],
     "artist": "saino misaki",
     "crafting_cost": 1250
   },
@@ -7909,27 +5481,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Your opponent shuffles their hand into their deck and draws a card for each of their remaining points needed to win.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida",
+    "ability": {
+      "name": "",
+      "effect": "Your opponent shuffles their hand into their deck and draws a card for each of their remaining points needed to win.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-155",
-        "version": "Space-Time Smackdown #155",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2-195",
-        "version": "Space-Time Smackdown #195",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-155", "A2-195"],
     "artist": "Yuu Nishida",
     "crafting_cost": 1250
   },
@@ -7949,40 +5513,15 @@
         "effect": "Discard a random Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-7",
-        "version": "Space-Time Smackdown #7",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-180",
-        "version": "Space-Time Smackdown #180",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-196",
-        "version": "Space-Time Smackdown #196",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-232",
-        "version": "Wisdom of Sea and Sky #232",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-7", "A2-180", "A2-196", "A4-232"],
     "artist": "Mina Nakai",
     "crafting_cost": 1250
   },
@@ -8002,40 +5541,15 @@
         "effect": "Discard all [R] Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "0",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-29",
-        "version": "Space-Time Smackdown #29",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-181",
-        "version": "Space-Time Smackdown #181",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-197",
-        "version": "Space-Time Smackdown #197",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4a-101",
-        "version": "Secluded Springs #101",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-29", "A2-181", "A2-197", "A4a-101"],
     "artist": "nagimiso",
     "crafting_cost": 1250
   },
@@ -8055,40 +5569,15 @@
         "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-61",
-        "version": "Space-Time Smackdown #61",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-183",
-        "version": "Space-Time Smackdown #183",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-198",
-        "version": "Space-Time Smackdown #198",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-236",
-        "version": "Wisdom of Sea and Sky #236",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-61", "A2-183", "A2-198", "A4-236"],
     "artist": "Nurikabe",
     "crafting_cost": 1250
   },
@@ -8108,40 +5597,15 @@
         "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-67",
-        "version": "Space-Time Smackdown #67",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-184",
-        "version": "Space-Time Smackdown #184",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-199",
-        "version": "Space-Time Smackdown #199",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-237",
-        "version": "Wisdom of Sea and Sky #237",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-67", "A2-184", "A2-199", "A4-237"],
     "artist": "Kuroimori",
     "crafting_cost": 1250
   },
@@ -8161,40 +5625,15 @@
         "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-95",
-        "version": "Space-Time Smackdown #95",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-185",
-        "version": "Space-Time Smackdown #185",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-200",
-        "version": "Space-Time Smackdown #200",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A3b-106",
-        "version": "Eevee Grove #106",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-95", "A2-185", "A2-200", "A3b-106"],
     "artist": "Takumi Wada",
     "crafting_cost": 1250
   },
@@ -8214,40 +5653,15 @@
         "effect": "If your opponent's Active Pokémon has damage on it, this attack does 40 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-99",
-        "version": "Space-Time Smackdown #99",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-186",
-        "version": "Space-Time Smackdown #186",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-201",
-        "version": "Space-Time Smackdown #201",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-238",
-        "version": "Wisdom of Sea and Sky #238",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-99", "A2-186", "A2-201", "A4-238"],
     "artist": "hncl",
     "crafting_cost": 1250
   },
@@ -8274,33 +5688,12 @@
     "weakness": "grass",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-110",
-        "version": "Space-Time Smackdown #110",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-187",
-        "version": "Space-Time Smackdown #187",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-202",
-        "version": "Space-Time Smackdown #202",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "P-A-42",
-        "version": "Promo-A #42",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42"],
     "artist": "Oswaldo KATO",
     "crafting_cost": 1250
   },
@@ -8320,40 +5713,15 @@
         "effect": "Flip a coin until you get tails. This attack does 40 more damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "4",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-125",
-        "version": "Space-Time Smackdown #125",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-189",
-        "version": "Space-Time Smackdown #189",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-203",
-        "version": "Space-Time Smackdown #203",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4-239",
-        "version": "Wisdom of Sea and Sky #239",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2-125", "A2-189", "A2-203", "A4-239"],
     "artist": "Jerky",
     "crafting_cost": 1250
   },
@@ -8379,40 +5747,15 @@
         "effect": "Discard 3 [W] Energy from this Pokémon. This attack also does 20 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "palkiapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-49",
-        "version": "Space-Time Smackdown #49",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-182",
-        "version": "Space-Time Smackdown #182",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-204",
-        "version": "Space-Time Smackdown #204",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A2-206",
-        "version": "Space-Time Smackdown #206",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206"],
     "artist": "N-DESIGN Inc.",
     "crafting_cost": 1500
   },
@@ -8438,40 +5781,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "dialgapack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-119",
-        "version": "Space-Time Smackdown #119",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-188",
-        "version": "Space-Time Smackdown #188",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-205",
-        "version": "Space-Time Smackdown #205",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A2-207",
-        "version": "Space-Time Smackdown #207",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207"],
     "artist": "N-DESIGN Inc.",
     "crafting_cost": 1500
   },
@@ -8497,40 +5815,15 @@
         "effect": "Discard 3 [W] Energy from this Pokémon. This attack also does 20 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "2",
     "rarity": "Crown Rare",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-49",
-        "version": "Space-Time Smackdown #49",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-182",
-        "version": "Space-Time Smackdown #182",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-204",
-        "version": "Space-Time Smackdown #204",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A2-206",
-        "version": "Space-Time Smackdown #206",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -8556,40 +5849,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "Crown Rare",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "space-timesmackdown(a2)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2-119",
-        "version": "Space-Time Smackdown #119",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2-188",
-        "version": "Space-Time Smackdown #188",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2-205",
-        "version": "Space-Time Smackdown #205",
-        "rarity": "☆☆☆"
-      },
-      {
-        "card_id": "A2-207",
-        "version": "Space-Time Smackdown #207",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207"],
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   }

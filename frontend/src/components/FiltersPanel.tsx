@@ -1,33 +1,39 @@
 import i18n from 'i18next'
-import { type FC, type JSX, useContext, useEffect, useMemo, useState } from 'react'
+import { type Dispatch, type FC, type SetStateAction, useEffect, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router'
 import { BatchUpdateDialog } from '@/components/BatchUpdateDialog.tsx'
-import ExpansionsFilter from '@/components/filters/ExpansionsFilter.tsx'
-import NumberFilter from '@/components/filters/NumberFilter.tsx'
-import OwnedFilter from '@/components/filters/OwnedFilter.tsx'
-import PackFilter from '@/components/filters/PackFilter.tsx'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
-import { allCards, basicRarities, expansions, expansionsDict } from '@/lib/CardsDB.ts'
-import { UserContext } from '@/lib/context/UserContext.ts'
+import { allCards, basicRarities, expansions, getExpansionById } from '@/lib/CardsDB.ts'
 import { levenshtein } from '@/lib/levenshtein'
 import { getCardNameByLang } from '@/lib/utils'
-import type { Card, CardType, CollectionRow, Mission, Rarity } from '@/types'
+import { useProfileDialog } from '@/services/account/useAccount'
+import { type Card, type CollectionRow, cardTypes, expansionIds, type Rarity } from '@/types'
+import { DropdownFilter, TabsFilter, ToggleFilter } from './Filters'
 import AllTextSearchFilter from './filters/AllTextSearchFilter'
-import CardTypeFilter from './filters/CardTypeFilter'
 import DeckbuildingFilter from './filters/DeckbuildingFilter'
-import SortByRecent from './filters/SortByRecent'
+import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
+
+const ownedOptions = ['all', 'missing', 'owned'] as const
+const expansionOptions = ['all', ...expansionIds] as const
+const sortByOptions = ['default', 'recent', 'expansion-newest'] as const
+const cardTypeOptions = [...cardTypes.filter((x) => x !== '')] as const
+type OwnedOption = (typeof ownedOptions)[number]
+type ExpansionOption = (typeof expansionOptions)[number]
+type SortByOption = (typeof sortByOptions)[number]
+type CardTypeOption = (typeof cardTypeOptions)[number]
 
 export interface Filters {
   search: string
-  expansion: string
+  expansion: ExpansionOption
   pack: string
-  cardType: CardType[]
+  cardType: CardTypeOption[]
   rarity: Rarity[]
-  owned: 'all' | 'owned' | 'missing'
-  sortBy: 'default' | 'recent' | 'expansion-newest'
+  owned: OwnedOption
+  sortBy: SortByOption
   minNumber: number
   maxNumber: number
   deckbuildingMode: boolean
@@ -35,15 +41,12 @@ export interface Filters {
 }
 
 interface Props {
-  children?: JSX.Element
-
   cards: CollectionRow[] | null
 
   filters: Filters
-  setFilters: React.Dispatch<React.SetStateAction<Filters>>
+  setFilters: Dispatch<SetStateAction<Filters>>
 
   onFiltersChanged: (cards: Card[] | null) => void
-  onChangeToMissions: (missions: Mission[] | null) => void
 
   visibleFilters?: {
     expansions?: boolean
@@ -68,55 +71,30 @@ interface Props {
 
   batchUpdate?: boolean
   share?: boolean
+  missionsButton?: boolean
 }
 
-const FilterPanel: FC<Props> = ({
-  children,
-  cards,
-  filters,
-  setFilters,
-  onFiltersChanged,
-  onChangeToMissions,
-  visibleFilters,
-  filtersDialog,
-  batchUpdate,
-  share,
-}: Props) => {
-  const { t } = useTranslation(['pages/collection'])
-  const { setIsProfileDialogOpen } = useContext(UserContext)
+const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, visibleFilters, filtersDialog, batchUpdate, share, missionsButton }: Props) => {
+  const { t } = useTranslation(['pages/collection', 'common/sets', 'common/packs', 'filters'])
+  const navigate = useNavigate()
+  const { setIsProfileDialogOpen } = useProfileDialog()
 
-  const [langState, setLangState] = useState(i18n.language)
-  const setSearchValue = (x: string) => setFilters((f) => ({ ...f, search: x }))
-  const setAllTextSearch = (x: boolean) => setFilters((f) => ({ ...f, allTextSearch: x }))
-  const setExpansion = (x: string) => setFilters((f) => ({ ...f, expansion: x }))
-  const setPack = (x: string) => setFilters((f) => ({ ...f, pack: x }))
-  const setCardType = (x: CardType[]) => setFilters((f) => ({ ...f, cardType: x }))
-  const setRarity = (x: Rarity[]) => setFilters((f) => ({ ...f, rarity: x }))
-  const setOwned = (x: 'all' | 'owned' | 'missing') => setFilters((f) => ({ ...f, owned: x }))
-  const setSortBy = (x: 'default' | 'recent' | 'expansion-newest') => setFilters((f) => ({ ...f, sortBy: x }))
-  const setMinNumber = (x: number) => setFilters((f) => ({ ...f, minNumber: x }))
-  const setMaxNumber = (x: number) => setFilters((f) => ({ ...f, maxNumber: x }))
-  const setDeckbuildingMode = (x: boolean) => setFilters((f) => ({ ...f, deckbuildingMode: x }))
-  const [missions, setMissions] = useState<Mission[] | null>(null)
-
-  const filterRarities = (c: Card) => {
-    if (filters.rarity.length === 0) {
-      return true
-    }
-    return c.rarity !== '' && filters.rarity.includes(c.rarity)
+  const setFilterChange = (filters: Partial<Filters>) => {
+    setFilters((prevFilters) => {
+      const newFilters = { ...prevFilters, ...filters }
+      const cards = getFilteredCards(newFilters)
+      onFiltersChanged(cards)
+      return newFilters
+    })
   }
 
-  const filterCardTypes = (c: Card) => {
-    if (filters.cardType.length === 0) {
-      return true
-    }
-    if (c.card_type.toLowerCase() === 'trainer') {
-      return filters.cardType.includes('trainer')
-    }
-    return c.energy !== '' && filters.cardType.includes(c.energy.toLowerCase() as CardType)
-  }
+  const setSearchValue = (x: string) => setFilterChange({ search: x })
+  const setAllTextSearch = (x: boolean) => setFilterChange({ allTextSearch: x })
+  const setPack = (x: string) => setFilterChange({ pack: x })
+  const setRarity = (x: Rarity[]) => setFilterChange({ rarity: x })
+  const setOwned = (x: OwnedOption) => setFilterChange({ owned: x })
 
-  const getFilteredCards = useMemo(() => {
+  const getFilteredCards = (filters: Filters) => {
     if (!cards) {
       return null // cards are still loading
     }
@@ -130,22 +108,8 @@ const FilterPanel: FC<Props> = ({
     if (filters.expansion !== 'all') {
       filteredCards = filteredCards.filter((card) => card.expansion === filters.expansion)
     }
-    if (filters.pack === 'missions') {
-      filteredCards = []
-      let missions = expansionsDict.get(filters.expansion)?.missions || null
-      if (missions) {
-        if (filters.owned === 'owned') {
-          missions = missions.filter((mission) => mission.completed)
-        } else if (filters.owned === 'missing') {
-          missions = missions.filter((mission) => !mission.completed)
-        }
-      }
-      setMissions(missions)
-    } else {
-      setMissions(null)
-      if (filters.pack !== 'all') {
-        filteredCards = filteredCards.filter((card) => card.pack === filters.pack || card.pack === 'everypack')
-      }
+    if (filters.pack !== 'all') {
+      filteredCards = filteredCards.filter((card) => card.pack === filters.pack || card.pack === 'everypack')
     }
     if (filters.owned !== 'all') {
       if (filters.owned === 'owned') {
@@ -184,8 +148,21 @@ const FilterPanel: FC<Props> = ({
       })
     }
 
-    filteredCards = filteredCards.filter(filterRarities)
-    filteredCards = filteredCards.filter(filterCardTypes)
+    filteredCards = filteredCards.filter((c: Card) => {
+      if (filters.rarity.length === 0) {
+        return true
+      }
+      return c.rarity !== '' && filters.rarity.includes(c.rarity)
+    })
+    filteredCards = filteredCards.filter((c: Card) => {
+      if (filters.cardType.length === 0) {
+        return true
+      }
+      if (c.card_type.toLowerCase() === 'trainer') {
+        return filters.cardType.includes('trainer')
+      }
+      return c.energy !== '' && filters.cardType.includes(c.energy.toLowerCase() as CardTypeOption)
+    })
 
     if (filters.search) {
       const threshold = 2 // tweak if needed
@@ -196,11 +173,8 @@ const FilterPanel: FC<Props> = ({
 
         let filterAllText = false
         if (filters.allTextSearch) {
-          const cardAbilityName = card.ability.name?.toLowerCase()
-          const cardAbilityEffect = card.ability.effect?.toLowerCase()
-
           filterAllText =
-            (cardAbilityName && cardAbilityName !== 'no ability' && (cardAbilityName.includes(query) || cardAbilityEffect.includes(query))) ||
+            (card.ability && (card.ability.name.toLowerCase().includes(query) || card.ability.effect.toLowerCase().includes(query))) ||
             card.attacks.some(
               (attack) =>
                 attack.name?.toLowerCase().includes(query) || (attack.effect?.toLowerCase() !== 'no effect' && attack.effect?.toLowerCase()?.includes(query)),
@@ -219,59 +193,88 @@ const FilterPanel: FC<Props> = ({
     for (const card of filteredCards) {
       if (!card.linkedCardID) {
         if (filters.deckbuildingMode) {
-          card.amount_owned = card.alternate_versions.reduce((acc, c) => acc + (amounts.get(c.card_id) || 0), 0)
+          card.amount_owned = card.alternate_versions.reduce((acc, c) => acc + (amounts.get(c) ?? 0), 0)
         } else {
-          card.amount_owned = amounts.get(card.card_id) || 0
+          card.amount_owned = amounts.get(card.card_id) ?? 0
         }
       } else {
         card.amount_owned = 0
       }
     }
-    filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) >= filters.minNumber)
+    filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) >= filters.minNumber)
     if (filters.maxNumber !== 100) {
-      filteredCards = filteredCards.filter((f) => (f.amount_owned || 0) <= filters.maxNumber)
+      filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) <= filters.maxNumber)
     }
 
     return filteredCards
-  }, [cards, filters, langState])
+  }
+
+  const filteredCards = useMemo(() => getFilteredCards(filters), [filters, cards])
+
+  const packsToShow = useMemo(() => {
+    const expansion = getExpansionById(filters.expansion)
+    if (!expansion || expansion.packs.length <= 1) {
+      return undefined
+    } else {
+      return ['all', ...expansion.packs.map((pack) => pack.name).filter((pack) => pack !== 'everypack')]
+    }
+  }, [filters.expansion])
 
   useEffect(() => {
-    onFiltersChanged(getFilteredCards)
-    const handleLanguageChange = (lng: string) => {
-      setLangState(lng)
+    onFiltersChanged(filteredCards)
+  }, [])
+
+  function onExpansionChange(x: ExpansionOption) {
+    setFilterChange({ expansion: x, pack: 'all' })
+  }
+  const getLocalizedExpansion = (id: ExpansionOption) => {
+    const expansion_name = id === 'all' ? 'all' : (getExpansionById(id)?.name ?? 'unknown')
+    return t(expansion_name, { ns: 'common/sets' })
+  }
+
+  function showCardType(x: CardTypeOption) {
+    if (x === 'trainer') {
+      return 'T'
+    } else {
+      return <img src={`/images/energy/${x}.webp`} alt={x} className="h-4" />
     }
-
-    i18n.on('languageChanged', handleLanguageChange)
-
-    return () => {
-      i18n.off('languageChanged', handleLanguageChange)
-    }
-  }, [getFilteredCards])
-
-  useEffect(() => {
-    onChangeToMissions(missions)
-  }, [missions])
-
-  function onExpansionChange(x: string) {
-    setExpansion(x)
-    setPack('all')
   }
 
   return (
     <div id="filterbar" className="flex flex-col gap-x-2 flex-wrap">
-      {children}
-
       {visibleFilters?.expansions && (
         <div className="flex gap-x-2 px-4 mb-2">
-          <ExpansionsFilter value={filters.expansion} onChange={onExpansionChange} />
-          <PackFilter className="w-[440px]" value={filters.pack} onChange={setPack} expansion={filters.expansion} />
+          <DropdownFilter
+            label={t('expansion', { ns: 'common/sets' })}
+            options={expansionOptions}
+            value={filters.expansion}
+            onChange={onExpansionChange}
+            show={getLocalizedExpansion}
+          />
+          {packsToShow && <TabsFilter options={packsToShow} value={filters.pack} onChange={setPack} show={(x) => t(x, { ns: 'common/packs' })} />}
         </div>
       )}
       <div className="gap-2 flex-row gap-y-1 px-4 flex">
         {visibleFilters?.search && <SearchInput className="w-full sm:w-32" setSearchValue={setSearchValue} />}
-        {visibleFilters?.owned && <OwnedFilter ownedFilter={filters.owned} setOwnedFilter={setOwned} />}
+        {visibleFilters?.owned && (
+          <TabsFilter options={ownedOptions} value={filters.owned} onChange={setOwned} show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-owned' })} />
+        )}
         {visibleFilters?.rarity && (
-          <RarityFilter rarityFilter={filters.rarity} setRarityFilter={setRarity} deckbuildingMode={filters.deckbuildingMode} collapse />
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button variant="outline">
+                {t('rarity', { ns: 'filters' })} ({filters.rarity.length})
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-28">
+              <RarityFilter
+                className="flex-col bg-transparent"
+                rarityFilter={filters.rarity}
+                setRarityFilter={setRarity}
+                deckbuildingMode={filters.deckbuildingMode}
+              />
+            </PopoverContent>
+          </Popover>
         )}
 
         {filtersDialog && (
@@ -281,34 +284,92 @@ const FilterPanel: FC<Props> = ({
             </DialogTrigger>
             <DialogContent className="border-1 border-neutral-700 shadow-none max-h-[90vh] overflow-y-auto content-start">
               <DialogHeader>
-                <DialogTitle>{t('filters.filtersCount', { count: (getFilteredCards || []).filter((c) => !c.linkedCardID).length })}</DialogTitle>
+                <DialogTitle>{t('filters.filtersCount', { count: (filteredCards || []).filter((c) => !c.linkedCardID).length })}</DialogTitle>
               </DialogHeader>
               <div className="flex flex-col gap-3">
-                {filtersDialog.search && <SearchInput className="w-full" setSearchValue={setSearchValue} />}
+                {filtersDialog.search && <SearchInput className="w-full bg-neutral-900" setSearchValue={setSearchValue} />}
                 {filtersDialog.allTextSearch && <AllTextSearchFilter allTextSearch={filters.allTextSearch} setAllTextSearch={setAllTextSearch} />}
-                {filtersDialog.expansions && <ExpansionsFilter value={filters.expansion} onChange={onExpansionChange} />}
-                {filtersDialog.pack && <PackFilter className="w-full" value={filters.pack} onChange={setPack} expansion={filters.expansion} />}
-                {filtersDialog.rarity && <RarityFilter rarityFilter={filters.rarity} setRarityFilter={setRarity} deckbuildingMode={filters.deckbuildingMode} />}
-                {filtersDialog.cardType && <CardTypeFilter cardTypeFilter={filters.cardType} setCardTypeFilter={setCardType} />}
-                {filtersDialog.owned && <OwnedFilter className="w-full" ownedFilter={filters.owned} setOwnedFilter={setOwned} />}
-                {filtersDialog.sortBy && <SortByRecent sortBy={filters.sortBy} setSortBy={setSortBy} />}
+                {filtersDialog.expansions && (
+                  <DropdownFilter
+                    className="bg-neutral-900"
+                    label={t('expansion', { ns: 'common/sets' })}
+                    options={expansionOptions}
+                    value={filters.expansion}
+                    onChange={onExpansionChange}
+                    show={getLocalizedExpansion}
+                  />
+                )}
+                {filtersDialog.pack && packsToShow && (
+                  <TabsFilter
+                    className="w-full bg-neutral-900"
+                    options={packsToShow}
+                    value={filters.pack}
+                    onChange={setPack}
+                    show={(x) => t(x, { ns: 'common/packs' })}
+                  />
+                )}
+                {filtersDialog.rarity && (
+                  <RarityFilter
+                    className="bg-neutral-900"
+                    rarityFilter={filters.rarity}
+                    setRarityFilter={setRarity}
+                    deckbuildingMode={filters.deckbuildingMode}
+                  />
+                )}
+                {filtersDialog.cardType && (
+                  <ToggleFilter
+                    className="bg-neutral-900"
+                    options={cardTypeOptions}
+                    value={filters.cardType}
+                    onChange={(x) => setFilterChange({ cardType: x })}
+                    show={showCardType}
+                  />
+                )}
+                {filtersDialog.owned && (
+                  <TabsFilter
+                    className="w-full bg-neutral-900"
+                    options={ownedOptions}
+                    value={filters.owned}
+                    onChange={setOwned}
+                    show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-owned' })}
+                  />
+                )}
+                {filtersDialog.sortBy && (
+                  <DropdownFilter
+                    className="bg-neutral-900"
+                    label={t('f-sortBy.sortBy', { ns: 'filters' })}
+                    options={sortByOptions}
+                    value={filters.sortBy}
+                    onChange={(x) => setFilterChange({ sortBy: x })}
+                    show={(x) => t(`f-sortBy.${x}`, { ns: 'filters' })}
+                  />
+                )}
                 {filtersDialog.amount && (
                   <>
-                    <NumberFilter numberFilter={filters.minNumber} setNumberFilter={setMinNumber} options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]} labelKey="minNum" />
-                    <NumberFilter
-                      numberFilter={filters.maxNumber}
-                      setNumberFilter={setMaxNumber}
+                    <DropdownFilter
+                      className="bg-neutral-900"
+                      label={t('f-number.minNum', { ns: 'filters' })}
                       options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
-                      labelKey="maxNum"
+                      value={filters.minNumber}
+                      onChange={(x) => setFilterChange({ minNumber: x })}
+                    />
+                    <DropdownFilter
+                      className="bg-neutral-900"
+                      label={t('f-number.maxNum', { ns: 'filters' })}
+                      options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
+                      value={filters.maxNumber}
+                      onChange={(x) => setFilterChange({ maxNumber: x })}
                     />
                   </>
                 )}
-                {filtersDialog.deckBuildingMode && <DeckbuildingFilter deckbuildingMode={filters.deckbuildingMode} setDeckbuildingMode={setDeckbuildingMode} />}
+                {filtersDialog.deckBuildingMode && (
+                  <DeckbuildingFilter deckbuildingMode={filters.deckbuildingMode} setDeckbuildingMode={(x) => setFilterChange({ deckbuildingMode: x })} />
+                )}
                 <Button
                   variant="outline"
                   className="!text-red-700"
-                  onClick={() =>
-                    setFilters({
+                  onClick={() => {
+                    const filters: Filters = {
                       search: '',
                       expansion: 'all',
                       pack: 'all',
@@ -320,17 +381,25 @@ const FilterPanel: FC<Props> = ({
                       maxNumber: 100,
                       deckbuildingMode: false,
                       allTextSearch: false,
-                    })
-                  }
+                    }
+                    const cards = getFilteredCards(filters)
+                    onFiltersChanged(cards)
+                    setFilters(filters)
+                  }}
                 >
                   {t('filters.clear')}
                 </Button>
+                {missionsButton && (
+                  <Button className="mt-2" variant="outline" onClick={() => navigate('/collection/missions')}>
+                    {t('goToMissions')}
+                  </Button>
+                )}
               </div>
             </DialogContent>
           </Dialog>
         )}
 
-        {batchUpdate && <BatchUpdateDialog filteredCards={getFilteredCards || []} disabled={!getFilteredCards || getFilteredCards.length === 0} />}
+        {batchUpdate && <BatchUpdateDialog filteredCards={filteredCards || []} disabled={!filteredCards || filteredCards.length === 0} />}
 
         {share && (
           <Button variant="outline" onClick={() => setIsProfileDialogOpen(true)}>

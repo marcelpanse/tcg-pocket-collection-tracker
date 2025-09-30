@@ -3,7 +3,7 @@ import { useVirtualizer } from '@tanstack/react-virtual'
 import i18n from 'i18next'
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
+import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
 import type { Card as CardType } from '@/types'
 import { Card } from './Card.tsx'
 
@@ -27,9 +27,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
     if (scrollRef.current) {
       const headerHeight = (document.querySelector('#header') as HTMLElement | null)?.offsetHeight || 0
       const filterbarHeight = (document.querySelector('#filterbar') as HTMLElement | null)?.offsetHeight || 0
-      const isMobileDevice = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
-      const offset = isMobileDevice ? 0 : extraOffset
-      const maxHeight = window.innerHeight - headerHeight - filterbarHeight - offset
+      const maxHeight = window.innerHeight - headerHeight - filterbarHeight - extraOffset
       setScrollContainerHeight(`${maxHeight}px`)
     }
   }

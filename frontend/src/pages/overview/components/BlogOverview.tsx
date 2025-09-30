@@ -2,7 +2,7 @@
 import GhostContentAPI from '@tryghost/content-api'
 import { useEffect, useState } from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card.tsx'
-import useWindowDimensions from '@/lib/hooks/useWindowDimensionsHook.ts'
+import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
 
 interface Post {
   id?: string

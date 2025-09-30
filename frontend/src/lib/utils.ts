@@ -1,9 +1,10 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import type { Card } from '@/types'
+import type { Card, CollectionRow } from '@/types'
 import pokemonTranslations from '../../assets/pokemon_translations.json'
 import toolTranslations from '../../assets/tools_translations.json'
 import trainerTranslations from '../../assets/trainers_translations.json'
+import { allCards } from './CardsDB'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -23,7 +24,7 @@ export function getCardNameByLang(card: Card, lang: string): string {
 
   switch (card.card_type) {
     case 'pokémon': {
-      let cardName = card.ex === 'yes' ? card.name.slice(0, -3) : card.name
+      let cardName = card.ex ? card.name.slice(0, -3) : card.name
       const key = cardName.toLowerCase()
       const cardNameTranslations = pokemonTranslations[key as keyof typeof pokemonTranslations]
 
@@ -31,7 +32,7 @@ export function getCardNameByLang(card: Card, lang: string): string {
         cardName = cardNameTranslations[lang as keyof typeof cardNameTranslations] || cardName
       }
 
-      return card.ex === 'yes' ? `${cardName} ex` : cardName
+      return card.ex ? `${cardName} ex` : cardName
     }
     case 'trainer': {
       if (card.evolution_type === 'item' || card.evolution_type === 'tool') {
@@ -50,4 +51,18 @@ export function getCardNameByLang(card: Card, lang: string): string {
   }
 
   return card.name
+}
+
+export function getExtraCards(cards: CollectionRow[], amount_wanted: number): string[] {
+  return cards.filter((c) => c.amount_owned > amount_wanted).map((c) => c.card_id)
+}
+
+export function getNeededCards(cards: CollectionRow[], amount_wanted: number): string[] {
+  const notNeeded = new Set(cards.filter((c) => c.amount_owned >= amount_wanted).map((c) => c.card_id))
+  return allCards.map((c) => c.card_id).filter((card_id) => !notNeeded.has(card_id))
+}
+
+export function umami(event: string) {
+  // @ts-expect-error runtime script on window object
+  window.umami.track(event)
 }

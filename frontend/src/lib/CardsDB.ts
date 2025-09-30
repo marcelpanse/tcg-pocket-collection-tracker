@@ -69,7 +69,7 @@ const update = (cards: Card[], expansionName: ExpansionId) => {
 }
 
 const equivalent = (firstCard: Card, secondCard: Card) => {
-  return firstCard.alternate_versions.some((x) => x.card_id === secondCard.card_id)
+  return firstCard.alternate_versions.includes(secondCard.card_id)
 }
 
 export const a1Cards: Card[] = update(A1 as unknown as Card[], 'A1')
@@ -235,20 +235,7 @@ export const getExpansionById = (expansion: string): Expansion | undefined => {
   return expansionsDict.get(expansion)
 }
 
-export const tradeableRaritiesDictionary: Record<Rarity, number | null> = {
-  '◊': 0,
-  '◊◊': 0,
-  '◊◊◊': 1200,
-  '◊◊◊◊': 5000,
-  '☆': 4000,
-  '☆☆': null,
-  '☆☆☆': null,
-  '✵': null,
-  '✵✵': null,
-  'Crown Rare': null,
-  P: null,
-  '': null,
-}
+export const tradeableExpansions = expansions.filter((e) => e.tradeable).map((e) => e.id)
 
 export const basicRarities: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊']
 
@@ -274,7 +261,7 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
   if (deckbuildingMode) {
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
-        const amount_owned = ac.alternate_versions.reduce((acc, rc) => acc + (amounts.get(rc.card_id) || 0), 0)
+        const amount_owned = ac.alternate_versions.reduce((acc, rc) => acc + (amounts.get(rc) || 0), 0)
         return { ...ac, amount_owned }
       })
       .filter((c) => basicRarities.includes(c.rarity))
@@ -328,7 +315,7 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName, deckbuild
   }
 
   if (deckbuildingMode) {
-    filteredCards = filteredCards.filter((c) => c.fullart === 'No')
+    filteredCards = filteredCards.filter((c) => !c.fullart)
   }
 
   return filteredCards.length

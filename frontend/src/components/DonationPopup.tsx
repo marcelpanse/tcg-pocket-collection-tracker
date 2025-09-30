@@ -1,6 +1,7 @@
 import { X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { umami } from '@/lib/utils.ts'
 
 const DONATION_STORAGE_KEY = 'donation_popup'
 const EXPIRY_DAYS = 30
@@ -20,14 +21,17 @@ const DonationPopup = () => {
         // If the expiry date has passed, show the popup
         if (now > expireDate) {
           setShowPopup(true)
+          umami('Donation popup')
         }
       } catch (_error) {
         // If there's an error parsing the JSON, reset and show the popup
         setShowPopup(true)
+        umami('Donation popup')
       }
     } else {
       // If no dismissal data exists, show the popup
       setShowPopup(true)
+      umami('Donation popup')
     }
   }, [])
 

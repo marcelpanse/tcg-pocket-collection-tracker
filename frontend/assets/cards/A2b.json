@@ -15,30 +15,15 @@
         "effect": "Put 1 random Weedle from your deck onto your Bench."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-1",
-        "version": "Shining Revelry #1",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-97",
-        "version": "Shining Revelry #97",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-1", "A2b-97"],
     "artist": "Akira Komayama",
     "crafting_cost": 35
   },
@@ -58,30 +43,15 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-2",
-        "version": "Shining Revelry #2",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-98",
-        "version": "Shining Revelry #98",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-2", "A2b-98"],
     "artist": "Yuka Morii",
     "crafting_cost": 70
   },
@@ -101,35 +71,15 @@
         "effect": "Discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-3",
-        "version": "Shining Revelry #3",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-79",
-        "version": "Shining Revelry #79",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-107",
-        "version": "Shining Revelry #107",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-3", "A2b-79", "A2b-107"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 500
   },
@@ -149,30 +99,15 @@
         "effect": "Flip a coin until you get tails. This attack does 40 more damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-4",
-        "version": "Shining Revelry #4",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3b-93",
-        "version": "Eevee Grove #93",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-4", "A3b-93"],
     "artist": "Satoshi Shirai",
     "crafting_cost": 35
   },
@@ -192,30 +127,15 @@
         "effect": "Put 1 random [G] Pokémon from your deck into your hand."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-5",
-        "version": "Shining Revelry #5",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-52",
-        "version": "Promo-A #52",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-5", "P-A-52"],
     "artist": "mashu",
     "crafting_cost": 35
   },
@@ -235,25 +155,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-6",
-        "version": "Shining Revelry #6",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-6"],
     "artist": "mashu",
     "crafting_cost": 70
   },
@@ -273,30 +183,15 @@
         "effect": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 70 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-7",
-        "version": "Shining Revelry #7",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2b-73",
-        "version": "Shining Revelry #73",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-7", "A2b-73"],
     "artist": "mashu",
     "crafting_cost": 150
   },
@@ -316,30 +211,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-8",
-        "version": "Shining Revelry #8",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-99",
-        "version": "Shining Revelry #99",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-8", "A2b-99"],
     "artist": "Megumi Mizutani",
     "crafting_cost": 35
   },
@@ -359,30 +239,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-9",
-        "version": "Shining Revelry #9",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-100",
-        "version": "Shining Revelry #100",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-9", "A2b-100"],
     "artist": "kodama",
     "crafting_cost": 70
   },
@@ -408,35 +273,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-10",
-        "version": "Shining Revelry #10",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-80",
-        "version": "Shining Revelry #80",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-108",
-        "version": "Shining Revelry #108",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-10", "A2b-80", "A2b-108"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 500
   },
@@ -456,25 +301,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-11",
-        "version": "Shining Revelry #11",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-11"],
     "artist": "Miki Tanaka",
     "crafting_cost": 35
   },
@@ -494,25 +329,15 @@
         "effect": "During your opponent's next turn, if the Defending Pokémon tries to use an attack, your opponent flips a coin. If tails, that attack doesn't happen."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-12",
-        "version": "Shining Revelry #12",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-12"],
     "artist": "Miki Tanaka",
     "crafting_cost": 150
   },
@@ -532,25 +357,15 @@
         "effect": "This Pokémon also does 10 damage to itself."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-13",
-        "version": "Shining Revelry #13",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-13"],
     "artist": "Minahamu",
     "crafting_cost": 70
   },
@@ -570,25 +385,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-14",
-        "version": "Shining Revelry #14",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-14"],
     "artist": "Shibuzoh.",
     "crafting_cost": 35
   },
@@ -608,25 +413,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-15",
-        "version": "Shining Revelry #15",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-15"],
     "artist": "match",
     "crafting_cost": 70
   },
@@ -646,30 +441,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-16",
-        "version": "Shining Revelry #16",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-74",
-        "version": "Shining Revelry #74",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-16", "A2b-74"],
     "artist": "sui",
     "crafting_cost": 35
   },
@@ -689,25 +469,15 @@
         "effect": "This attack does 30 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-17",
-        "version": "Shining Revelry #17",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-17"],
     "artist": "Kouki Saitou",
     "crafting_cost": 70
   },
@@ -727,30 +497,15 @@
         "effect": "1 of your opponent's Pokémon is chosen at random. Do 30 damage to it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-18",
-        "version": "Shining Revelry #18",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-101",
-        "version": "Shining Revelry #101",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-18", "A2b-101"],
     "artist": "miki kudo",
     "crafting_cost": 35
   },
@@ -770,35 +525,15 @@
         "effect": "1 of your opponent's Pokémon is chosen at random 3 times. For each time a Pokémon was chosen, do 50 damage to it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-19",
-        "version": "Shining Revelry #19",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-81",
-        "version": "Shining Revelry #81",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-109",
-        "version": "Shining Revelry #109",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-19", "A2b-81", "A2b-109"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 500
   },
@@ -818,30 +553,15 @@
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-20",
-        "version": "Shining Revelry #20",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2b-102",
-        "version": "Shining Revelry #102",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-20", "A2b-102"],
     "artist": "Tomowaka",
     "crafting_cost": 150
   },
@@ -868,23 +588,12 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-21",
-        "version": "Shining Revelry #21",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-75",
-        "version": "Shining Revelry #75",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-21", "A2b-75"],
     "artist": "Tomowaka",
     "crafting_cost": 70
   },
@@ -904,35 +613,15 @@
         "effect": "Discard all Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-22",
-        "version": "Shining Revelry #22",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-82",
-        "version": "Shining Revelry #82",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-92",
-        "version": "Shining Revelry #92",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-22", "A2b-82", "A2b-92"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 500
   },
@@ -952,25 +641,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-23",
-        "version": "Shining Revelry #23",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-23"],
     "artist": "Masakazu Fukuda",
     "crafting_cost": 35
   },
@@ -990,25 +669,15 @@
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-24",
-        "version": "Shining Revelry #24",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-24"],
     "artist": "Shigenori Negishi",
     "crafting_cost": 70
   },
@@ -1028,35 +697,15 @@
         "effect": "Take a [L] Energy from your Energy Zone and attach it to 1 of your Benched [L] Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-25",
-        "version": "Shining Revelry #25",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-103",
-        "version": "Shining Revelry #103",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-58",
-        "version": "Promo-A #58",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-25", "A2b-103", "P-A-58"],
     "artist": "imoniii",
     "crafting_cost": 70
   },
@@ -1076,25 +725,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-26",
-        "version": "Shining Revelry #26",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-26"],
     "artist": "Saboteri",
     "crafting_cost": 35
   },
@@ -1114,25 +753,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-27",
-        "version": "Shining Revelry #27",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-27"],
     "artist": "Saboteri",
     "crafting_cost": 70
   },
@@ -1159,23 +788,12 @@
     "weakness": "fighting",
     "retreat": "0",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-28",
-        "version": "Shining Revelry #28",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-54",
-        "version": "Promo-A #54",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-28", "P-A-54"],
     "artist": "Saboteri",
     "crafting_cost": 150
   },
@@ -1195,25 +813,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-29",
-        "version": "Shining Revelry #29",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-29"],
     "artist": "Mousho",
     "crafting_cost": 35
   },
@@ -1233,25 +841,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-30",
-        "version": "Shining Revelry #30",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-30"],
     "artist": "Mousho",
     "crafting_cost": 70
   },
@@ -1271,25 +869,15 @@
         "effect": "This attack also does 20 damage to each of your opponent's Benched Pokémon that has any Energy attached."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-31",
-        "version": "Shining Revelry #31",
-        "rarity": "◊◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-31"],
     "artist": "Mousho",
     "crafting_cost": 150
   },
@@ -1309,25 +897,15 @@
         "effect": "Flip 4 coins. This attack does 20 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-32",
-        "version": "Shining Revelry #32",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-32"],
     "artist": "Atsuko Nishida",
     "crafting_cost": 35
   },
@@ -1347,25 +925,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-33",
-        "version": "Shining Revelry #33",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-33"],
     "artist": "kodama",
     "crafting_cost": 35
   },
@@ -1385,25 +953,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "0",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-34",
-        "version": "Shining Revelry #34",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-34"],
     "artist": "Hajime Kusajima",
     "crafting_cost": 70
   },
@@ -1430,28 +988,12 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-35",
-        "version": "Shining Revelry #35",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-83",
-        "version": "Shining Revelry #83",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-96",
-        "version": "Shining Revelry #96",
-        "rarity": "☆☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-35", "A2b-83", "A2b-96"],
     "artist": "PLANETA Yamashita",
     "crafting_cost": 500
   },
@@ -1471,25 +1013,15 @@
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "darkness",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-36",
-        "version": "Shining Revelry #36",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-36"],
     "artist": "HYOGONOSUKE",
     "crafting_cost": 35
   },
@@ -1509,25 +1041,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-37",
-        "version": "Shining Revelry #37",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-37"],
     "artist": "Mina Nakai",
     "crafting_cost": 35
   },
@@ -1547,25 +1069,15 @@
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-38",
-        "version": "Shining Revelry #38",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-38"],
     "artist": "Kouki Saitou",
     "crafting_cost": 35
   },
@@ -1585,35 +1097,15 @@
         "effect": "If this Pokémon has at least 2 extra [F] Energy attached, this attack does 50 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-39",
-        "version": "Shining Revelry #39",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "P-A-55",
-        "version": "Promo-A #55",
-        "rarity": ""
-      },
-      {
-        "card_id": "A3-225",
-        "version": "Celestial Guardians #225",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-39", "P-A-55", "A3-225"],
     "artist": "Kouki Saitou",
     "crafting_cost": 150
   },
@@ -1633,25 +1125,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-40",
-        "version": "Shining Revelry #40",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-40"],
     "artist": "Tomokazu Komiya",
     "crafting_cost": 35
   },
@@ -1671,25 +1153,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-41",
-        "version": "Shining Revelry #41",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-41"],
     "artist": "Tomokazu Komiya",
     "crafting_cost": 35
   },
@@ -1709,35 +1181,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-42",
-        "version": "Shining Revelry #42",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-104",
-        "version": "Shining Revelry #104",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-59",
-        "version": "Promo-A #59",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-42", "A2b-104", "P-A-59"],
     "artist": "You Iribi",
     "crafting_cost": 35
   },
@@ -1757,35 +1209,15 @@
         "effect": "This attack also does 30 damage to 1 of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-43",
-        "version": "Shining Revelry #43",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-84",
-        "version": "Shining Revelry #84",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-110",
-        "version": "Shining Revelry #110",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-43", "A2b-84", "A2b-110"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -1805,25 +1237,15 @@
         "effect": "Flip 2 coins. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-44",
-        "version": "Shining Revelry #44",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-44"],
     "artist": "REND",
     "crafting_cost": 70
   },
@@ -1843,25 +1265,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-45",
-        "version": "Shining Revelry #45",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-45"],
     "artist": "Midori Harada",
     "crafting_cost": 35
   },
@@ -1881,25 +1293,15 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-46",
-        "version": "Shining Revelry #46",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-46"],
     "artist": "Midori Harada",
     "crafting_cost": 70
   },
@@ -1919,30 +1321,15 @@
         "effect": "Your opponent's Active Pokémon is now Poisoned."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-47",
-        "version": "Shining Revelry #47",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A4a-100",
-        "version": "Secluded Springs #100",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-47", "A4a-100"],
     "artist": "Mori Yuu",
     "crafting_cost": 35
   },
@@ -1962,40 +1349,15 @@
         "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-48",
-        "version": "Shining Revelry #48",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-85",
-        "version": "Shining Revelry #85",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-93",
-        "version": "Shining Revelry #93",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4a-104",
-        "version": "Secluded Springs #104",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-48", "A2b-85", "A2b-93", "A4a-104"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": 500
   },
@@ -2015,25 +1377,15 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Confused."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "grass",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-49",
-        "version": "Shining Revelry #49",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-49"],
     "artist": "Shin Nagasawa",
     "crafting_cost": 70
   },
@@ -2053,25 +1405,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-50",
-        "version": "Shining Revelry #50",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-50"],
     "artist": "Krgc",
     "crafting_cost": 35
   },
@@ -2098,23 +1440,12 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-51",
-        "version": "Shining Revelry #51",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2b-76",
-        "version": "Shining Revelry #76",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-51", "A2b-76"],
     "artist": "Krgc",
     "crafting_cost": 150
   },
@@ -2134,25 +1465,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-52",
-        "version": "Shining Revelry #52",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-52"],
     "artist": "miki kudo",
     "crafting_cost": 35
   },
@@ -2172,25 +1493,15 @@
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-53",
-        "version": "Shining Revelry #53",
-        "rarity": "◊◊"
-      }
-    ],
+    "alternate_versions": ["A2b-53"],
     "artist": "miki kudo",
     "crafting_cost": 70
   },
@@ -2210,35 +1521,15 @@
         "effect": "Flip a coin. If heads, this attack does 80 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-54",
-        "version": "Shining Revelry #54",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-86",
-        "version": "Shining Revelry #86",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-94",
-        "version": "Shining Revelry #94",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-54", "A2b-86", "A2b-94"],
     "artist": "PLANETA Mochizuki",
     "crafting_cost": 500
   },
@@ -2258,30 +1549,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-55",
-        "version": "Shining Revelry #55",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-105",
-        "version": "Shining Revelry #105",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-55", "A2b-105"],
     "artist": "Souichirou Gunjima",
     "crafting_cost": 35
   },
@@ -2301,30 +1577,15 @@
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-56",
-        "version": "Shining Revelry #56",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-106",
-        "version": "Shining Revelry #106",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-56", "A2b-106"],
     "artist": "Souichirou Gunjima",
     "crafting_cost": 70
   },
@@ -2344,30 +1605,15 @@
         "effect": "Flip a coin for each [M] Energy attached to this Pokémon. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-57",
-        "version": "Shining Revelry #57",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2b-77",
-        "version": "Shining Revelry #77",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-57", "A2b-77"],
     "artist": "HYOGONOSUKE",
     "crafting_cost": 150
   },
@@ -2387,25 +1633,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-58",
-        "version": "Shining Revelry #58",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-58"],
     "artist": "Eri Yamaki",
     "crafting_cost": 35
   },
@@ -2425,25 +1661,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-59",
-        "version": "Shining Revelry #59",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-59"],
     "artist": "Kyoko Umemoto",
     "crafting_cost": 35
   },
@@ -2463,30 +1689,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-60",
-        "version": "Shining Revelry #60",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A3-228",
-        "version": "Celestial Guardians #228",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-60", "A3-228"],
     "artist": "Kanako Eo",
     "crafting_cost": 35
   },
@@ -2513,28 +1724,12 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-61",
-        "version": "Shining Revelry #61",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2b-78",
-        "version": "Shining Revelry #78",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "A3-229",
-        "version": "Celestial Guardians #229",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-61", "A2b-78", "A3-229"],
     "artist": "miki kudo",
     "crafting_cost": 150
   },
@@ -2554,25 +1749,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-62",
-        "version": "Shining Revelry #62",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-62"],
     "artist": "Sumiyoshi Kizuki",
     "crafting_cost": 35
   },
@@ -2592,25 +1777,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-63",
-        "version": "Shining Revelry #63",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-63"],
     "artist": "Suwama Chiaki",
     "crafting_cost": 35
   },
@@ -2630,30 +1805,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-64",
-        "version": "Shining Revelry #64",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "P-A-57",
-        "version": "Promo-A #57",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-64", "P-A-57"],
     "artist": "Sekio",
     "crafting_cost": 35
   },
@@ -2673,35 +1833,15 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "◊◊◊◊",
-    "fullart": "No",
-    "ex": "yes",
+    "fullart": false,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-65",
-        "version": "Shining Revelry #65",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-87",
-        "version": "Shining Revelry #87",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-95",
-        "version": "Shining Revelry #95",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-65", "A2b-87", "A2b-95"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 500
   },
@@ -2721,25 +1861,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-66",
-        "version": "Shining Revelry #66",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-66"],
     "artist": "Kagemaru Himeno",
     "crafting_cost": 35
   },
@@ -2759,25 +1889,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-67",
-        "version": "Shining Revelry #67",
-        "rarity": "◊"
-      }
-    ],
+    "alternate_versions": ["A2b-67"],
     "artist": "Minahamu",
     "crafting_cost": 35
   },
@@ -2797,30 +1917,15 @@
         "effect": "During your next turn, this Pokémon's Overacceleration attack does +20 damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-68",
-        "version": "Shining Revelry #68",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "P-A-51",
-        "version": "Promo-A #51",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-68", "P-A-51"],
     "artist": "HAGIYA Kaoru",
     "crafting_cost": 70
   },
@@ -2833,27 +1938,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Each player shuffles the cards in their hand into their deck, then draws that many cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki",
+    "ability": {
+      "name": "",
+      "effect": "Each player shuffles the cards in their hand into their deck, then draws that many cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-69",
-        "version": "Shining Revelry #69",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-88",
-        "version": "Shining Revelry #88",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-69", "A2b-88"],
     "artist": "saino misaki",
     "crafting_cost": 70
   },
@@ -2866,27 +1963,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal 30 damage from 1 of your Pokémon, and it recovers from all Special Conditions.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya",
+    "ability": {
+      "name": "",
+      "effect": "Heal 30 damage from 1 of your Pokémon, and it recovers from all Special Conditions.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-70",
-        "version": "Shining Revelry #70",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-89",
-        "version": "Shining Revelry #89",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-70", "A2b-89"],
     "artist": "Susumu Maeya",
     "crafting_cost": 70
   },
@@ -2899,27 +1988,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Pokémon do +20 damage to your opponent's Active Pokémon ex.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Pokémon do +20 damage to your opponent's Active Pokémon ex.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-71",
-        "version": "Shining Revelry #71",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-90",
-        "version": "Shining Revelry #90",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-71", "A2b-90"],
     "artist": "Teeziro",
     "crafting_cost": 70
   },
@@ -2932,27 +2013,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Flip a coin until you get tails. For each heads, discard a random Energy from your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                kantaro",
+    "ability": {
+      "name": "",
+      "effect": "Flip a coin until you get tails. For each heads, discard a random Energy from your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                kantaro"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "◊◊",
-    "fullart": "No",
-    "ex": "no",
+    "fullart": false,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-72",
-        "version": "Shining Revelry #72",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-91",
-        "version": "Shining Revelry #91",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-72", "A2b-91"],
     "artist": "kantaro",
     "crafting_cost": 70
   },
@@ -2972,30 +2045,15 @@
         "effect": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 70 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-7",
-        "version": "Shining Revelry #7",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2b-73",
-        "version": "Shining Revelry #73",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-7", "A2b-73"],
     "artist": "danciao",
     "crafting_cost": 400
   },
@@ -3015,30 +2073,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-16",
-        "version": "Shining Revelry #16",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-74",
-        "version": "Shining Revelry #74",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-16", "A2b-74"],
     "artist": "Shimaris Yukichi",
     "crafting_cost": 400
   },
@@ -3065,23 +2108,12 @@
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-21",
-        "version": "Shining Revelry #21",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-75",
-        "version": "Shining Revelry #75",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-21", "A2b-75"],
     "artist": "cochi8i",
     "crafting_cost": 400
   },
@@ -3108,23 +2140,12 @@
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-51",
-        "version": "Shining Revelry #51",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2b-76",
-        "version": "Shining Revelry #76",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-51", "A2b-76"],
     "artist": "Teeziro",
     "crafting_cost": 400
   },
@@ -3144,30 +2165,15 @@
         "effect": "Flip a coin for each [M] Energy attached to this Pokémon. This attack does 50 damage for each heads."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-57",
-        "version": "Shining Revelry #57",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2b-77",
-        "version": "Shining Revelry #77",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-57", "A2b-77"],
     "artist": "Jerky",
     "crafting_cost": 400
   },
@@ -3194,28 +2200,12 @@
     "weakness": "fighting",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-61",
-        "version": "Shining Revelry #61",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2b-78",
-        "version": "Shining Revelry #78",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "A3-229",
-        "version": "Celestial Guardians #229",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-61", "A2b-78", "A3-229"],
     "artist": "5ban Graphics",
     "crafting_cost": 400
   },
@@ -3235,35 +2225,15 @@
         "effect": "Discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-3",
-        "version": "Shining Revelry #3",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-79",
-        "version": "Shining Revelry #79",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-107",
-        "version": "Shining Revelry #107",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-3", "A2b-79", "A2b-107"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -3289,35 +2259,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-10",
-        "version": "Shining Revelry #10",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-80",
-        "version": "Shining Revelry #80",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-108",
-        "version": "Shining Revelry #108",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-10", "A2b-80", "A2b-108"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -3337,35 +2287,15 @@
         "effect": "1 of your opponent's Pokémon is chosen at random 3 times. For each time a Pokémon was chosen, do 50 damage to it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-19",
-        "version": "Shining Revelry #19",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-81",
-        "version": "Shining Revelry #81",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-109",
-        "version": "Shining Revelry #109",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-19", "A2b-81", "A2b-109"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -3385,35 +2315,15 @@
         "effect": "Discard all Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-22",
-        "version": "Shining Revelry #22",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-82",
-        "version": "Shining Revelry #82",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-92",
-        "version": "Shining Revelry #92",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-22", "A2b-82", "A2b-92"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -3440,28 +2350,12 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-35",
-        "version": "Shining Revelry #35",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-83",
-        "version": "Shining Revelry #83",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-96",
-        "version": "Shining Revelry #96",
-        "rarity": "☆☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-35", "A2b-83", "A2b-96"],
     "artist": "PLANETA Yamashita",
     "crafting_cost": 1250
   },
@@ -3481,35 +2375,15 @@
         "effect": "This attack also does 30 damage to 1 of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-43",
-        "version": "Shining Revelry #43",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-84",
-        "version": "Shining Revelry #84",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-110",
-        "version": "Shining Revelry #110",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-43", "A2b-84", "A2b-110"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -3529,40 +2403,15 @@
         "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-48",
-        "version": "Shining Revelry #48",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-85",
-        "version": "Shining Revelry #85",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-93",
-        "version": "Shining Revelry #93",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4a-104",
-        "version": "Secluded Springs #104",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-48", "A2b-85", "A2b-93", "A4a-104"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -3582,35 +2431,15 @@
         "effect": "Flip a coin. If heads, this attack does 80 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-54",
-        "version": "Shining Revelry #54",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-86",
-        "version": "Shining Revelry #86",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-94",
-        "version": "Shining Revelry #94",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-54", "A2b-86", "A2b-94"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -3630,35 +2459,15 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-65",
-        "version": "Shining Revelry #65",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-87",
-        "version": "Shining Revelry #87",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-95",
-        "version": "Shining Revelry #95",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-65", "A2b-87", "A2b-95"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -3671,27 +2480,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Each player shuffles the cards in their hand into their deck, then draws that many cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki",
+    "ability": {
+      "name": "",
+      "effect": "Each player shuffles the cards in their hand into their deck, then draws that many cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-69",
-        "version": "Shining Revelry #69",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-88",
-        "version": "Shining Revelry #88",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-69", "A2b-88"],
     "artist": "saino misaki",
     "crafting_cost": 1250
   },
@@ -3704,27 +2505,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Heal 30 damage from 1 of your Pokémon, and it recovers from all Special Conditions.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya",
+    "ability": {
+      "name": "",
+      "effect": "Heal 30 damage from 1 of your Pokémon, and it recovers from all Special Conditions.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-70",
-        "version": "Shining Revelry #70",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-89",
-        "version": "Shining Revelry #89",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-70", "A2b-89"],
     "artist": "Susumu Maeya",
     "crafting_cost": 1250
   },
@@ -3737,27 +2530,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "During this turn, attacks used by your Pokémon do +20 damage to your opponent's Active Pokémon ex.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro",
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Pokémon do +20 damage to your opponent's Active Pokémon ex.\n\n            \n                    \n    \n            Illustrated by \n            \n                Teeziro"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-71",
-        "version": "Shining Revelry #71",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-90",
-        "version": "Shining Revelry #90",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-71", "A2b-90"],
     "artist": "Teeziro",
     "crafting_cost": 1250
   },
@@ -3770,27 +2555,19 @@
     "card_type": "trainer",
     "evolution_type": "supporter",
     "attacks": [],
-    "ability": "Flip a coin until you get tails. For each heads, discard a random Energy from your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                kantaro",
+    "ability": {
+      "name": "",
+      "effect": "Flip a coin until you get tails. For each heads, discard a random Energy from your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                kantaro"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-72",
-        "version": "Shining Revelry #72",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-91",
-        "version": "Shining Revelry #91",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-72", "A2b-91"],
     "artist": "kantaro",
     "crafting_cost": 1250
   },
@@ -3810,35 +2587,15 @@
         "effect": "Discard all Energy from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-22",
-        "version": "Shining Revelry #22",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-82",
-        "version": "Shining Revelry #82",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-92",
-        "version": "Shining Revelry #92",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-22", "A2b-82", "A2b-92"],
     "artist": "You Iribi",
     "crafting_cost": 1250
   },
@@ -3858,40 +2615,15 @@
         "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 60 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-48",
-        "version": "Shining Revelry #48",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-85",
-        "version": "Shining Revelry #85",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-93",
-        "version": "Shining Revelry #93",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A4a-104",
-        "version": "Secluded Springs #104",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-48", "A2b-85", "A2b-93", "A4a-104"],
     "artist": "REND",
     "crafting_cost": 1250
   },
@@ -3911,35 +2643,15 @@
         "effect": "Flip a coin. If heads, this attack does 80 more damage."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-54",
-        "version": "Shining Revelry #54",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-86",
-        "version": "Shining Revelry #86",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-94",
-        "version": "Shining Revelry #94",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-54", "A2b-86", "A2b-94"],
     "artist": "kurumitsu",
     "crafting_cost": 1250
   },
@@ -3959,35 +2671,15 @@
         "effect": "Heal 30 damage from this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-65",
-        "version": "Shining Revelry #65",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-87",
-        "version": "Shining Revelry #87",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-95",
-        "version": "Shining Revelry #95",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-65", "A2b-87", "A2b-95"],
     "artist": "USGMEN",
     "crafting_cost": 1250
   },
@@ -4014,28 +2706,12 @@
     "weakness": "darkness",
     "retreat": "2",
     "rarity": "☆☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-35",
-        "version": "Shining Revelry #35",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-83",
-        "version": "Shining Revelry #83",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-96",
-        "version": "Shining Revelry #96",
-        "rarity": "☆☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-35", "A2b-83", "A2b-96"],
     "artist": "Shinji Kanda",
     "crafting_cost": 1500
   },
@@ -4055,30 +2731,15 @@
         "effect": "Put 1 random Weedle from your deck onto your Bench."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-1",
-        "version": "Shining Revelry #1",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-97",
-        "version": "Shining Revelry #97",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-1", "A2b-97"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": 400
   },
@@ -4098,30 +2759,15 @@
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-2",
-        "version": "Shining Revelry #2",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-98",
-        "version": "Shining Revelry #98",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-2", "A2b-98"],
     "artist": "Sanosuke Sakuma",
     "crafting_cost": 400
   },
@@ -4141,30 +2787,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-8",
-        "version": "Shining Revelry #8",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-99",
-        "version": "Shining Revelry #99",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-8", "A2b-99"],
     "artist": "Souichirou Gunjima",
     "crafting_cost": 400
   },
@@ -4184,30 +2815,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-9",
-        "version": "Shining Revelry #9",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-100",
-        "version": "Shining Revelry #100",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-9", "A2b-100"],
     "artist": "Souichirou Gunjima",
     "crafting_cost": 400
   },
@@ -4227,30 +2843,15 @@
         "effect": "1 of your opponent's Pokémon is chosen at random. Do 30 damage to it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-18",
-        "version": "Shining Revelry #18",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-101",
-        "version": "Shining Revelry #101",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-18", "A2b-101"],
     "artist": "Souichirou Gunjima",
     "crafting_cost": 400
   },
@@ -4270,30 +2871,15 @@
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "3",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-20",
-        "version": "Shining Revelry #20",
-        "rarity": "◊◊◊"
-      },
-      {
-        "card_id": "A2b-102",
-        "version": "Shining Revelry #102",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-20", "A2b-102"],
     "artist": "GOSSAN",
     "crafting_cost": 400
   },
@@ -4313,35 +2899,15 @@
         "effect": "Take a [L] Energy from your Energy Zone and attach it to 1 of your Benched [L] Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fighting",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-25",
-        "version": "Shining Revelry #25",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-103",
-        "version": "Shining Revelry #103",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-58",
-        "version": "Promo-A #58",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-25", "A2b-103", "P-A-58"],
     "artist": "Tomowaka",
     "crafting_cost": 400
   },
@@ -4361,35 +2927,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-42",
-        "version": "Shining Revelry #42",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-104",
-        "version": "Shining Revelry #104",
-        "rarity": "☆"
-      },
-      {
-        "card_id": "P-A-59",
-        "version": "Promo-A #59",
-        "rarity": ""
-      }
-    ],
+    "alternate_versions": ["A2b-42", "A2b-104", "P-A-59"],
     "artist": "GOSSAN",
     "crafting_cost": 400
   },
@@ -4409,30 +2955,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-55",
-        "version": "Shining Revelry #55",
-        "rarity": "◊"
-      },
-      {
-        "card_id": "A2b-105",
-        "version": "Shining Revelry #105",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-55", "A2b-105"],
     "artist": "nagimiso",
     "crafting_cost": 400
   },
@@ -4452,30 +2983,15 @@
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "2",
     "rarity": "☆",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-56",
-        "version": "Shining Revelry #56",
-        "rarity": "◊◊"
-      },
-      {
-        "card_id": "A2b-106",
-        "version": "Shining Revelry #106",
-        "rarity": "☆"
-      }
-    ],
+    "alternate_versions": ["A2b-56", "A2b-106"],
     "artist": "nagimiso",
     "crafting_cost": 400
   },
@@ -4495,35 +3011,15 @@
         "effect": "Discard a random Energy from your opponent's Active Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "fire",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-3",
-        "version": "Shining Revelry #3",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-79",
-        "version": "Shining Revelry #79",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-107",
-        "version": "Shining Revelry #107",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-3", "A2b-79", "A2b-107"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -4549,35 +3045,15 @@
         "effect": "No effect"
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "water",
     "retreat": "3",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-10",
-        "version": "Shining Revelry #10",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-80",
-        "version": "Shining Revelry #80",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-108",
-        "version": "Shining Revelry #108",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-10", "A2b-80", "A2b-108"],
     "artist": "PLANETA Igarashi",
     "crafting_cost": 1250
   },
@@ -4597,35 +3073,15 @@
         "effect": "1 of your opponent's Pokémon is chosen at random 3 times. For each time a Pokémon was chosen, do 50 damage to it."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "lightning",
     "retreat": "1",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-19",
-        "version": "Shining Revelry #19",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-81",
-        "version": "Shining Revelry #81",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-109",
-        "version": "Shining Revelry #109",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-19", "A2b-81", "A2b-109"],
     "artist": "PLANETA Tsuji",
     "crafting_cost": 1250
   },
@@ -4645,35 +3101,15 @@
         "effect": "This attack also does 30 damage to 1 of your opponent's Benched Pokémon."
       }
     ],
-    "ability": {
-      "name": "No ability",
-      "effect": "N/A"
-    },
     "weakness": "psychic",
     "retreat": "2",
     "rarity": "☆☆",
-    "fullart": "Yes",
-    "ex": "yes",
+    "fullart": true,
+    "ex": true,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "A2b-43",
-        "version": "Shining Revelry #43",
-        "rarity": "◊◊◊◊"
-      },
-      {
-        "card_id": "A2b-84",
-        "version": "Shining Revelry #84",
-        "rarity": "☆☆"
-      },
-      {
-        "card_id": "A2b-110",
-        "version": "Shining Revelry #110",
-        "rarity": "☆☆"
-      }
-    ],
+    "alternate_versions": ["A2b-43", "A2b-84", "A2b-110"],
     "artist": "PLANETA CG Works",
     "crafting_cost": 1250
   },
@@ -4686,27 +3122,19 @@
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
-    "ability": "Put 1 random Basic Pokemon from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach",
+    "ability": {
+      "name": "",
+      "effect": "Put 1 random Basic Pokemon from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
     "weakness": "N/A",
     "retreat": "N/A",
     "rarity": "Crown Rare",
-    "fullart": "Yes",
-    "ex": "no",
+    "fullart": true,
+    "ex": false,
     "baby": false,
     "set_details": "shiningrevelry(a2b)",
     "pack": "everypack",
-    "alternate_versions": [
-      {
-        "card_id": "P-A-5",
-        "version": "Promo-A #5",
-        "rarity": ""
-      },
-      {
-        "card_id": "A2b-111",
-        "version": "Shining Revelry #111",
-        "rarity": "♛"
-      }
-    ],
+    "alternate_versions": ["P-A-5", "A2b-111"],
     "artist": "Toyste Beach",
     "crafting_cost": "Unknown"
   }

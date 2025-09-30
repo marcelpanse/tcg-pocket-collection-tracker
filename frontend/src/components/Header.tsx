@@ -1,6 +1,5 @@
-import loadable from '@loadable/component'
 import { Globe, LogOut, UserRoundPen } from 'lucide-react'
-import { use, useState } from 'react'
+import { useState } from 'react'
 import GitHubButton from 'react-github-btn'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router'
@@ -18,20 +17,27 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu.tsx'
-import { logout } from '@/lib/Auth.ts'
-import { UserContext } from '@/lib/context/UserContext.ts'
 import Export from '@/pages/export/Export'
 import Import from '@/pages/import/Import'
-
-const PokemonCardDetector = loadable(() => import('@/components/PokemonCardDetectorComponent.tsx'))
+import { useProfileDialog } from '@/services/account/useAccount'
+import { useLoginDialog, useLogout, useUser } from '@/services/auth/useAuth'
+import { useActionableTradeCount } from '@/services/trade/useTrade.ts'
+import { Badge } from './ui/badge'
 
 export function Header() {
-  const { user, setUser, isLoginDialogOpen, setIsLoginDialogOpen, setIsProfileDialogOpen } = use(UserContext)
   const location = useLocation()
+  const { t, i18n } = useTranslation('header')
+  const { data: user } = useUser()
+  const { data: actionableTradeCount } = useActionableTradeCount()
+  const logoutMutation = useLogout()
+
+  const { isLoginDialogOpen, setIsLoginDialogOpen } = useLoginDialog()
+  const { setIsProfileDialogOpen } = useProfileDialog()
+
   const [isImportDialogOpen, setIsImportDialogOpen] = useState<boolean>(false)
   const [isExportDialogOpen, setIsExportDialogOpen] = useState<boolean>(false)
   const [isAboutUsDialogOpen, setIsAboutUsDialogOpen] = useState<boolean>(false)
-  const { t, i18n } = useTranslation('header')
+
   const changeLanguage = (lng: string) => i18n.changeLanguage(lng)
 
   const languages = [
@@ -50,47 +56,73 @@ export function Header() {
       <header id="header" className="flex max-w-7xl mx-auto min-h-fit h-14 md:h-20 shrink-0 flex-wrap items-center px-4 md:px-6">
         <HamburgerMenu />
         <Link to="/" className="flex items-center gap-2">
-          <img src="\pokemon-icon128.png" alt="Logo" className="h-5" />
-          <div className="shrink font-bold pr-4 hidden lg:block">TCG Pocket Collection Tracker</div>
+          <img src="/pokemon-icon128.png" alt="Logo" className="h-5 hidden min-[420px]:block" />
+          <div className="shrink font-bold pr-4 hidden xl:block">TCG Pocket Collection Tracker</div>
         </Link>
         <NavigationMenu className="max-w-full justify-start">
           <NavigationMenuList>
             {/* dynamic item for mobile that switches between overview and collection depending on the current page */}
             <NavigationMenuLink asChild className="block sm:hidden">
               <Link to={isOverviewPage ? '/collection' : '/'}>
-                <Button variant="ghost">{isOverviewPage ? t('collection') : t('overview')}</Button>
+                <Button className="px-2 sm:px-4" variant="ghost">
+                  {isOverviewPage ? t('collection') : t('overview')}
+                </Button>
               </Link>
             </NavigationMenuLink>
 
             <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/">
-                <Button variant="ghost">{t('overview')}</Button>
+                <Button className="px-2 sm:px-4" variant="ghost">
+                  {t('overview')}
+                </Button>
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/collection">
-                <Button variant="ghost">{t('collection')}</Button>
+                <Button className="px-2 sm:px-4" variant="ghost">
+                  {t('collection')}
+                </Button>
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden sm:block">
               <Link to="/decks">
-                <Button variant="ghost">{t('Decks')}</Button>
+                <Button className="px-2 sm:px-4" variant="ghost">
+                  {t('Decks')}
+                </Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild className="hidden sm:block">
+            <NavigationMenuLink asChild className={`${actionableTradeCount ? 'block' : 'hidden'} sm:block`}>
               <Link to="/trade">
-                <Button variant="ghost">{t('trade')}</Button>
+                <Button className="px-2 sm:px-4" variant="ghost">
+                  {t('trade')}
+                  <Badge
+                    className={`h-5 min-w-5 rounded-full font-mono tabular-nums -mt-2 ${actionableTradeCount ? 'flex' : 'hidden'} justify-center`}
+                    variant="destructive"
+                  >
+                    {actionableTradeCount}
+                  </Badge>
+                </Button>
               </Link>
             </NavigationMenuLink>
-            <PokemonCardDetector />
-            <NavigationMenuLink asChild className="hidden md:block">
+            <NavigationMenuLink asChild className={`${actionableTradeCount ? 'hidden sm:block' : ''}`}>
+              <Link to="/scan">
+                <Button className="px-2 sm:px-4" variant="ghost">
+                  {t('scan')}
+                </Button>
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild className="hidden lg:block">
               <Link to="https://blog.tcgpocketcollectiontracker.com" className="hidden md:block">
-                <Button variant="ghost">{t('blog')}</Button>
+                <Button className="px-2 sm:px-4" variant="ghost">
+                  {t('blog')}
+                </Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild className="hidden md:block">
+            <NavigationMenuLink asChild className="hidden lg:block">
               <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden md:block">
-                <Button variant="ghost">{t('community')}</Button>
+                <Button className="px-2 sm:px-4" variant="ghost">
+                  {t('community')}
+                </Button>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuList>
@@ -98,7 +130,7 @@ export function Header() {
         <div className="items-center gap-2 flex">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button className="px-2 sm:px-4" variant="ghost" size="icon">
                 <Globe />
               </Button>
             </DropdownMenuTrigger>
@@ -134,12 +166,7 @@ export function Header() {
 
                   <DropdownMenuGroup>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem
-                      onClick={async () => {
-                        await logout()
-                        setUser(null)
-                      }}
-                    >
+                    <DropdownMenuItem onClick={() => logoutMutation.mutate()}>
                       {t('logOut')}
                       <LogOut />
                     </DropdownMenuItem>

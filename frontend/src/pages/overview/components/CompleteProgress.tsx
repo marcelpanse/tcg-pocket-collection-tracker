@@ -1,8 +1,8 @@
-import { use, useMemo } from 'react'
+import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Progress } from '@/components/ui/progress-custom.tsx'
 import { getNrOfCardsOwned, getTotalNrOfCards } from '@/lib/CardsDB.ts'
-import { CollectionContext } from '@/lib/context/CollectionContext'
+import { useCollection } from '@/services/collection/useCollection'
 import type { Expansion, Rarity } from '@/types'
 
 interface CompleteProgressProps {
@@ -16,7 +16,8 @@ interface CompleteProgressProps {
 }
 
 export function CompleteProgress({ title, expansion, packName, rarityFilter = [], numberFilter = 1, deckbuildingMode, barColor }: CompleteProgressProps) {
-  const { ownedCards } = use(CollectionContext)
+  const { data: ownedCards = [] } = useCollection()
+
   const { t } = useTranslation('complete-progress')
 
   const nrOfCardsOwned = useMemo(() => {

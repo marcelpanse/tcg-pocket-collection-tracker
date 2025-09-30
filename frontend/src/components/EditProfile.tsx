@@ -1,6 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Siren } from 'lucide-react'
-import { type FC, use } from 'react'
+import type { FC } from 'react'
 import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
@@ -12,20 +12,17 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from '@/components/ui/input'
 import { Switch } from '@/components/ui/switch.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
-import { supabase } from '@/lib/Auth.ts'
-import { UserContext } from '@/lib/context/UserContext.ts'
+import { useAccount, useProfileDialog, useUpdateAccount } from '@/services/account/useAccount'
+import { useUser } from '@/services/auth/useAuth'
 import type { AccountRow } from '@/types'
 import { SocialShareButtons } from './SocialShareButtons'
 
-interface Props {
-  account: AccountRow | null
-  setAccount: (account: AccountRow | null) => void
-  isProfileDialogOpen: boolean
-  setIsProfileDialogOpen: (isProfileDialogOpen: boolean) => void
-}
-const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setIsProfileDialogOpen }) => {
+const EditProfile: FC = () => {
   const navigate = useNavigate()
-  const { user } = use(UserContext)
+  const { data: user } = useUser()
+  const { data: account } = useAccount()
+  const updateAccountMutation = useUpdateAccount()
+  const { isProfileDialogOpen, setIsProfileDialogOpen } = useProfileDialog()
   const { toast } = useToast()
   const { t } = useTranslation('edit-profile')
 
@@ -50,18 +47,12 @@ const EditProfile: FC<Props> = ({ account, setAccount, isProfileDialogOpen, setI
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const account = await supabase
-        .from('accounts')
-        .upsert({
-          email: user?.user.email,
-          username: values.username,
-          friend_id: values.friend_id,
-          is_public: values.is_public,
-        })
-        .select()
-        .single()
-
-      setAccount(account.data as AccountRow)
+      await updateAccountMutation.mutateAsync({
+        email: user?.user.email as string,
+        username: values.username,
+        friend_id: values.friend_id,
+        is_public: values.is_public,
+      } as AccountRow)
 
       toast({ title: t('accountSaved'), variant: 'default' })
     } catch (e) {
