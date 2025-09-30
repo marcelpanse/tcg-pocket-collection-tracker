@@ -3,8 +3,10 @@
   "collection": "Collection",
   "trade": "Échanges",
   "scan": "Scanneur",
+  "decks": "Decks",
   "selectLanguage": "Sélectionner une langue",
   "community": "Communauté ↗",
+  "blog": "Blog ↗",
   "login": "Se connecter",
   "signUp": "Se connecter / Créer un compte",
   "myAccount": "Mon compte",
@@ -20,8 +22,5 @@
     "title": "À propos de nous",
     "content": "TCG Pocket Tracker est un projet gratuit et open-source qui vise à vous aider à suivre votre collection Pokémon Pocket. Il fournit une interface conviviale pour gérer votre collection. Le projet est open-source et les contributions de la communauté sont appreciées. Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter sur <a href=\"https://community.tcgpocketcollectiontracker.com\" style=\"text-decoration: underline;\">notre forum communautaire</a> ou sur <a href=\"https://github.com/marcelpanse/tcg-pocket-collection-tracker\" style=\"text-decoration: underline;\">GitHub</a>."
   },
-  "support": "Le site est hébergé sur Github Pages et Supabase. Les frais sont couverts par mes soins, car il s'agit d'un projet personnel. Si le projet vous plaît, vous pouvez me soutenir en utilisant le bouton café en bas à droite.",
-  "decks": "Decks",
-  "blog": "Blog ↗",
-  "offers": "Offres"
+  "support": "Le site est hébergé sur Github Pages et Supabase. Les frais sont couverts par mes soins, car il s'agit d'un projet personnel. Si le projet vous plaît, vous pouvez me soutenir en utilisant le bouton café en bas à droite."
 }

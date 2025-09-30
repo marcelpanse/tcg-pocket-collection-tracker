@@ -1,11 +1,11 @@
 {
-  "notAffiliated": "This project is not affiliated with Nintendo, The Pokémon Company, Creatures Inc., or DeNA Co., Ltd.\nAll card assets and trademarks are © their respective owners.",
-  "licenseDisclaimer": "See full License & Disclaimer",
+  "notAffiliated": "Ce projet n’est pas affilié à Nintendo, The Pokémon Company, Creatures Inc. ou DeNA Co., Ltd.\nTous les éléments de cartes et marques déposées sont © de leurs propriétaires respectifs.",
+  "licenseDisclaimer": "Voir la licence complète et l’avis de non-responsabilité",
   "modal": {
-    "title": "License & Legal Disclaimer",
-    "licenseSummary": "{{projectName}} is an open source project licensed under the GNU General Public License v3.0. You may use, modify, and distribute this software under its terms. For more details, visit our <repo>GitHub repository</repo>.",
-    "disclaimerTitle": "Disclaimer:",
-    "disclaimerText": "This is a fan-made application and is not affiliated with, endorsed by, or sponsored by Nintendo Co., Ltd., The Pokémon Company, Creatures Inc. or DeNA Co., Ltd.\nAll Pokémon-related names, card assets, images, and trademarks are the intellectual property of their respective owners.",
-    "copyright": "All original code and content in this project is © 2025 {{projectName}}."
+    "title": "Licence et avis légal",
+    "licenseSummary": "{{projectName}} est un projet open source sous licence GNU General Public License v3.0. Vous pouvez utiliser, modifier et distribuer ce logiciel selon ses conditions. Pour plus de détails, consultez notre <repo>dépôt GitHub</repo>.",
+    "disclaimerTitle": "Avis de non-responsabilité :",
+    "disclaimerText": "Cette application a été créée par des fans et n’est ni affiliée à, ni approuvée par, ni sponsorisée par Nintendo Co., Ltd., The Pokémon Company, Creatures Inc. ou DeNA Co., Ltd.\nTous les noms liés à Pokémon, éléments de cartes, images et marques déposées sont la propriété intellectuelle de leurs propriétaires respectifs.",
+    "copyright": "Tout le code et contenu original de ce projet est © 2025 {{projectName}}."
   }
 }

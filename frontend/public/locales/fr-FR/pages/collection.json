@@ -1,4 +1,6 @@
 {
+  "goToCollection": "Aller à la collection",
+  "goToMissions": "Aller aux missions",
   "publicCollectionTitle": "Vous consultez la collection publique de « {{username}} ».",
   "publicCollectionDescription": "Vous consultez actuellement une collection publique. Cliquez sur n'importe quel élément de navigation pour retourner à votre propre collection.",
   "showPossibleTrades": "Afficher les échanges possibles",
@@ -10,8 +12,8 @@
   "filters": {
     "allFilters": "Tous les filtres",
     "filtersCount": "Filtres ({{count}})",
-    "share": "Partager",
-    "clear": "Réinitialiser les filtres"
+    "clear": "Réinitialiser les filtres",
+    "share": "Partager"
   },
   "stats": {
     "summary": "{{selected}} sélectionnée(s), {{uniquesOwned}} unique(s) possédée(s), {{totalOwned}} total possédée(s)"
