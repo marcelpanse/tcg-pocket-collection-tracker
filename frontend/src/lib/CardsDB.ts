@@ -340,8 +340,9 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName, deckbuild
   return filteredCards.length
 }
 
-const probabilityPerRarity1_3: Record<Rarity, number> = {
-  '◊': 100,
+// Helper to create a full rarity probability record with defaults
+const createRarityProbability = (probabilities: Partial<Record<Rarity, number>>): Record<Rarity, number> => ({
+  '◊': 0,
   '◊◊': 0,
   '◊◊◊': 0,
   '◊◊◊◊': 0,
@@ -353,189 +354,107 @@ const probabilityPerRarity1_3: Record<Rarity, number> = {
   'Crown Rare': 0,
   P: 0,
   '': 0,
+  ...probabilities,
+})
+
+// Standard 5-card pack probabilities
+const standardPackProbabilities = {
+  positions1to3: createRarityProbability({ '◊': 100 }),
+  position4: createRarityProbability({
+    '◊◊': 90,
+    '◊◊◊': 5,
+    '◊◊◊◊': 1.666,
+    '☆': 2.572,
+    '☆☆': 0.5,
+    '☆☆☆': 0.222,
+    'Crown Rare': 0.04,
+  }),
+  position5: createRarityProbability({
+    '◊◊': 60,
+    '◊◊◊': 20,
+    '◊◊◊◊': 6.664,
+    '☆': 10.288,
+    '☆☆': 2,
+    '☆☆☆': 0.888,
+    'Crown Rare': 0.16,
+  }),
+  position4Shiny: createRarityProbability({
+    '◊◊': 89,
+    '◊◊◊': 4.9525,
+    '◊◊◊◊': 1.666,
+    '☆': 2.572,
+    '☆☆': 0.5,
+    '☆☆☆': 0.222,
+    '✵': 0.71425,
+    '✵✵': 0.33325,
+    'Crown Rare': 0.04,
+  }),
+  position5Shiny: createRarityProbability({
+    '◊◊': 56,
+    '◊◊◊': 19.81,
+    '◊◊◊◊': 6.664,
+    '☆': 10.288,
+    '☆☆': 2,
+    '☆☆☆': 0.888,
+    '✵': 2.857,
+    '✵✵': 1.333,
+    'Crown Rare': 0.16,
+  }),
 }
-const probabilityPerRarity4: Record<Rarity, number> = {
-  '◊': 0,
-  '◊◊': 90,
-  '◊◊◊': 5,
-  '◊◊◊◊': 1.666,
-  '☆': 2.572,
-  '☆☆': 0.5,
-  '☆☆☆': 0.222,
-  '✵': 0,
-  '✵✵': 0,
-  'Crown Rare': 0.04,
-  P: 0,
-  '': 0,
+
+// 4-card deluxe pack probabilities
+const deluxePackProbabilities = {
+  position1: createRarityProbability({ '◊': 100 }),
+  position2: createRarityProbability({ '◊': 17.73, '◊◊': 82.27 }),
+  position3: createRarityProbability({
+    '◊': 23.021,
+    '◊◊': 17.985,
+    '◊◊◊': 40.659,
+    '☆': 12.858,
+    '☆☆': 2.5,
+    '☆☆☆': 1.111,
+    '✵✵': 1.667,
+    'Crown Rare': 0.198,
+  }),
+  position4: createRarityProbability({ '◊◊◊◊': 100 }),
 }
-const probabilityPerRarity5: Record<Rarity, number> = {
-  '◊': 0,
-  '◊◊': 60,
-  '◊◊◊': 20,
-  '◊◊◊◊': 6.664,
-  '☆': 10.288,
-  '☆☆': 2,
-  '☆☆☆': 0.888,
-  '✵': 0,
-  '✵✵': 0,
-  'Crown Rare': 0.16,
-  P: 0,
-  '': 0,
-}
-const probabilityPerRarity4Shiny: Record<Rarity, number> = {
-  '◊': 0,
-  '◊◊': 89,
-  '◊◊◊': 4.9525,
-  '◊◊◊◊': 1.666,
-  '☆': 2.572,
-  '☆☆': 0.5,
-  '☆☆☆': 0.222,
-  '✵': 0.71425,
-  '✵✵': 0.33325,
-  'Crown Rare': 0.04,
-  P: 0,
-  '': 0,
-}
-const probabilityPerRarity5Shiny: Record<Rarity, number> = {
-  '◊': 0,
-  '◊◊': 56,
-  '◊◊◊': 19.81,
-  '◊◊◊◊': 6.664,
-  '☆': 10.288,
-  '☆☆': 2,
-  '☆☆☆': 0.888,
-  '✵': 2.857,
-  '✵✵': 1.333,
-  'Crown Rare': 0.16,
-  P: 0,
-  '': 0,
-}
-const abilityByRarityToBeInRarePack: Record<Rarity, number> = {
-  '◊': 0,
-  '◊◊': 0,
-  '◊◊◊': 0,
-  '◊◊◊◊': 0,
+
+const abilityByRarityToBeInRarePack: Record<Rarity, number> = createRarityProbability({
   '☆': 1,
   '☆☆': 1,
   '☆☆☆': 1,
   '✵': 1,
   '✵✵': 1,
   'Crown Rare': 1,
-  P: 0,
-  '': 0,
-}
-const probabilityPerRarityBaby: Record<Rarity, number> = {
-  '◊': 0,
-  '◊◊': 0,
+})
+
+const probabilityPerRarityBaby: Record<Rarity, number> = createRarityProbability({
   '◊◊◊': 87.1,
-  '◊◊◊◊': 0,
   '☆': 12.9,
-  '☆☆': 0,
-  '☆☆☆': 0,
-  '✵': 0,
-  '✵✵': 0,
-  'Crown Rare': 0,
-  P: 0,
-  '': 0,
-}
-
-// 4-card deluxe pack probabilities
-// Position 1: Always ◊
-const probabilityPerRarityDeluxe1: Record<Rarity, number> = {
-  '◊': 100,
-  '◊◊': 0,
-  '◊◊◊': 0,
-  '◊◊◊◊': 0,
-  '☆': 0,
-  '☆☆': 0,
-  '☆☆☆': 0,
-  '✵': 0,
-  '✵✵': 0,
-  'Crown Rare': 0,
-  P: 0,
-  '': 0,
-}
-
-// Position 2: ◊ or ◊◊
-const probabilityPerRarityDeluxe2: Record<Rarity, number> = {
-  '◊': 17.73,
-  '◊◊': 82.27,
-  '◊◊◊': 0,
-  '◊◊◊◊': 0,
-  '☆': 0,
-  '☆☆': 0,
-  '☆☆☆': 0,
-  '✵': 0,
-  '✵✵': 0,
-  'Crown Rare': 0,
-  P: 0,
-  '': 0,
-}
-
-// Position 3: Anything EXCEPT ◊◊◊◊
-const probabilityPerRarityDeluxe3: Record<Rarity, number> = {
-  '◊': 23.021,
-  '◊◊': 17.985,
-  '◊◊◊': 40.659,
-  '◊◊◊◊': 0,
-  '☆': 12.858,
-  '☆☆': 2.5,
-  '☆☆☆': 1.111,
-  '✵': 0,
-  '✵✵': 1.667,
-  'Crown Rare': 0.198,
-  P: 0,
-  '': 0,
-}
-
-// Position 4: Always ◊◊◊◊
-const probabilityPerRarityDeluxe4: Record<Rarity, number> = {
-  '◊': 0,
-  '◊◊': 0,
-  '◊◊◊': 0,
-  '◊◊◊◊': 100, // GUARANTEED
-  '☆': 0,
-  '☆☆': 0,
-  '☆☆☆': 0,
-  '✵': 0,
-  '✵✵': 0,
-  'Crown Rare': 0,
-  P: 0,
-  '': 0,
-}
+})
 
 const getPositionProbability = (expansion: Expansion, position: number): Record<Rarity, number> => {
   const packStructure = expansion.packStructure
 
   // 4-card deluxe pack
   if (packStructure?.cardsPerPack === 4) {
-    if (position === 1) {
-      return probabilityPerRarityDeluxe1
-    }
-    if (position === 2) {
-      return probabilityPerRarityDeluxe2
-    }
-    if (position === 3) {
-      return probabilityPerRarityDeluxe3
-    }
-    if (position === 4) {
-      return probabilityPerRarityDeluxe4
-    }
+    const positionKey = `position${position}` as keyof typeof deluxePackProbabilities
+    return deluxePackProbabilities[positionKey] || standardPackProbabilities.positions1to3
   }
 
-  // 5-card standard pack (existing logic)
+  // 5-card standard pack
   if (position <= 3) {
-    return probabilityPerRarity1_3
+    return standardPackProbabilities.positions1to3
   }
   if (position === 4) {
-    return expansion.containsShinies ? probabilityPerRarity4Shiny : probabilityPerRarity4
+    return expansion.containsShinies ? standardPackProbabilities.position4Shiny : standardPackProbabilities.position4
   }
   if (position === 5) {
-    return expansion.containsShinies ? probabilityPerRarity5Shiny : probabilityPerRarity5
+    return expansion.containsShinies ? standardPackProbabilities.position5Shiny : standardPackProbabilities.position5
   }
 
   // Fallback (should never reach here)
-  return probabilityPerRarity1_3
+  return standardPackProbabilities.positions1to3
 }
 
 interface PullRateProps {
