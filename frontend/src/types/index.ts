@@ -64,10 +64,6 @@ export interface TradePartners {
 
 export interface PackStructure {
   cardsPerPack: 4 | 5
-  guaranteedRarity?: {
-    position: number
-    rarity: Rarity
-  }
 }
 
 export interface Expansion {

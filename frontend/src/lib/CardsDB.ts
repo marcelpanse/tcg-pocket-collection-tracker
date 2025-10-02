@@ -236,10 +236,6 @@ export const expansions: Expansion[] = [
     containsBabies: false,
     packStructure: {
       cardsPerPack: 4,
-      guaranteedRarity: {
-        position: 4,
-        rarity: '◊◊◊◊',
-      },
     },
   },
   {
