@@ -1,8 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { pipeline } from 'node:stream/promises'
+import type { CheerioAPI } from 'cheerio'
 import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
+import type { Card, ExpansionId, Rarity } from '../frontend/src/types/index.ts'
 
 const BASE_URL = 'https://pocket.limitlesstcg.com'
 
@@ -79,7 +81,7 @@ const rarityOverrides = {
 
 /* Helper Functions */
 
-async function downloadImage(imageUrl, dest) {
+async function downloadImage(imageUrl: string, dest: string) {
   const response = await fetch(imageUrl)
 
   if (!response.ok) {
@@ -87,19 +89,23 @@ async function downloadImage(imageUrl, dest) {
   }
 
   const stream = response.body
+  if (!stream) {
+    throw new Error(`Failed to download image: ${imageUrl}`)
+  }
+
   const writer = fs.createWriteStream(dest)
 
   await pipeline(stream, writer)
 }
 
-async function fetchHTML(url) {
+async function fetchHTML(url: string) {
   const response = await fetch(url)
   const text = await response.text()
   return cheerio.load(text)
 }
 
-function mapAttackCost($, costElements) {
-  const costList = []
+function mapAttackCost($: CheerioAPI, costElements) {
+  const costList: string[] = []
 
   costElements.each((_i, element) => {
     const costSymbol = $(element).text().trim()
@@ -107,9 +113,9 @@ function mapAttackCost($, costElements) {
     if (costSymbol.length > 1) {
       // Iterate over each letter in costSymbol
       for (const letter of costSymbol) {
-        const costType = typeMapping[letter] || 'Unknown'
-        if (costType === 'Unknown') {
-          console.warn(`Warning: unrecognized symbol '${letter}'.`)
+        const costType = typeMapping[letter]
+        if (!costType) {
+          throw new Error(`Unrecognized energy symbol: '${letter}'`)
         }
         costList.push(costType)
       }
@@ -125,7 +131,7 @@ function mapAttackCost($, costElements) {
   return costList.length > 0 ? costList : ['No Cost']
 }
 
-function extractSetAndPackInfo($) {
+function extractSetAndPackInfo($: CheerioAPI) {
   const setInfo = $('div.card-prints-current')
 
   if (setInfo.length) {
@@ -141,7 +147,7 @@ function extractSetAndPackInfo($) {
   return { setDetails: 'Unknown', pack: 'Unknown' }
 }
 
-function urlToCardId(url) {
+function urlToCardId(url: string) {
   if (!url) {
     throw new Error('url is false')
   }
@@ -156,14 +162,25 @@ function urlToCardId(url) {
   return `${matches[0][1]}-${matches[0][2]}`
 }
 
-async function extractCardInfo($, cardUrl, expansionId) {
-  const cardInfo = {}
-
+async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string) {
   const inPackId = cardUrl.split('/').pop()
-  cardInfo.card_id = `${expansionId}-${inPackId}`
+  if (!inPackId) {
+    throw new Error(`Faied to parse card id from url: ${cardUrl}`)
+  }
+
+  let card_id = `${expansion}-${inPackId}`
+  let linkedCardID: string | undefined
+  if (card_id === 'A1a-63') {
+    // we set the card_id to the linkedCardID if it exists, so we really treat it as a single card even though it appears in multiple expansions.
+    card_id = 'A1-218'
+    linkedCardID = 'A1-218'
+  }
 
   const imageUrl = $('img.card').attr('src')
-  const imageName = cardInfo.card_id + path.extname(imageUrl)
+  if (!imageUrl) {
+    throw new Error(`Failed to scrap image: ${cardUrl}`)
+  }
+  const imageName = card_id + path.extname(imageUrl)
   const imageDest = path.join(imagesDir, imageName)
   if (!fs.existsSync(imageDest)) {
     console.log(`Downloading: ${imageUrl}`)
@@ -171,31 +188,25 @@ async function extractCardInfo($, cardUrl, expansionId) {
   } else {
     console.log(`Skipping image, already exists: ${imageName}`)
   }
-  cardInfo.image = imagesPath + imageName
+  const image = imagesPath + imageName
 
   const title = $('p.card-text-title').text().trim()
   const titleParts = title.split(' - ')
 
   // Extract the last part for HP and remove non-digit characters
-  cardInfo.hp = titleParts.length > 1 ? titleParts[titleParts.length - 1].replace(/\D/g, '') : 'Unknown'
+  const hp = titleParts.length > 1 ? titleParts[titleParts.length - 1].replace(/\D/g, '') : 'Unknown'
 
   // Assign the energy type from the second part if it exists
-  cardInfo.energy = titleParts.length > 1 ? titleParts[1].trim() : 'N/A'
+  const energy = titleParts.length > 1 ? titleParts[1].trim() : 'N/A'
 
   // Assign the name from the first part
-  cardInfo.name = titleParts[0].trim()
-
-  if (cardInfo.name === 'Old Amber' && cardInfo.card_id === 'A1a-63') {
-    // we set the card_id to the linkedCardID if it exists, so we really treat it as a single card even though it appears in multiple expansions.
-    cardInfo.card_id = 'A1-218'
-    cardInfo.linkedCardID = 'A1-218'
-  }
+  const name = titleParts[0].trim()
 
   const typeAndEvolution = $('p.card-text-type').text().trim().split('-')
-  cardInfo.card_type = typeAndEvolution[0].toLowerCase().trim()
-  cardInfo.evolution_type = typeAndEvolution[1] ? typeAndEvolution[1].toLowerCase().trim().replace(' ', '') : 'basic'
+  const card_type = typeAndEvolution[0].toLowerCase().trim()
+  const evolution_type = typeAndEvolution[1] ? typeAndEvolution[1].toLowerCase().trim().replace(' ', '') : 'basic'
 
-  cardInfo.attacks = []
+  const attacks: Card['attacks'][number][] = []
   $('div.card-text-attack').each((_i, attackElem) => {
     const attackInfoSection = $(attackElem).find('p.card-text-attack-info')
     const attackEffectSection = $(attackElem).find('p.card-text-attack-effect')
@@ -216,7 +227,7 @@ async function extractCardInfo($, cardUrl, expansionId) {
       const attackDamage = (attackParts.length > 1 ? attackParts.slice(-1)[0].trim() : '0') || '0'
       const attackEffect = attackEffectSection.text().trim() || 'No effect'
 
-      cardInfo.attacks.push({
+      attacks.push({
         cost: attackCost,
         name: attackName,
         damage: attackDamage,
@@ -225,50 +236,68 @@ async function extractCardInfo($, cardUrl, expansionId) {
     }
   })
 
-  cardInfo.ability = extractAbility($)
+  const ability = extractAbility($)
   const weaknessAndRetreat = $('p.card-text-wrr').text().trim().split('\n')
-  cardInfo.weakness = weaknessAndRetreat[0]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
-  cardInfo.retreat = weaknessAndRetreat[1]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
-
-  cardInfo.expansion = expansionId
+  const weakness = weaknessAndRetreat[0]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
+  const retreat = weaknessAndRetreat[1]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
 
   const raritySection = $('table.card-prints-versions tr.current')
-  cardInfo.rarity = cardUrl.toString().includes('P-A') ? 'P' : raritySection.find('td:last-child').text().trim() || 'P'
-  if (rarityOverrides[expansionId]) {
-    for (const { rarity, start, end } of rarityOverrides[expansionId]) {
+  let rarity = (cardUrl.toString().includes('P-A') ? 'P' : raritySection.find('td:last-child').text().trim() || 'P') as Rarity
+  if (rarityOverrides[expansion]) {
+    for (const { rarity: rarityOverride, start, end } of rarityOverrides[expansion]) {
       if (start <= inPackId && inPackId <= end) {
-        cardInfo.rarity = rarity
+        rarity = rarityOverride
       }
     }
   }
 
-  cardInfo.fullart = fullArtRarities.includes(cardInfo.rarity)
+  const fullart = fullArtRarities.includes(rarity)
 
-  cardInfo.ex = cardInfo.name.includes('ex') && !nonExCardsWithEx.includes(cardInfo.name)
+  const ex = name.includes('ex') && !nonExCardsWithEx.includes(name)
 
   // Check if card is a baby pokemon (Not currently specified exactly on Limitless TCG page)
-  cardInfo.baby = cardInfo.weakness === 'none' && cardInfo.hp === '30' && cardInfo.energy !== 'Dragon'
+  const baby = weakness === 'none' && hp === '30' && energy !== 'Dragon'
 
-  const { setDetails, pack } = extractSetAndPackInfo($)
-  cardInfo.set_details = setDetails
-  cardInfo.pack = pack
+  const { setDetails: set_details, pack } = extractSetAndPackInfo($)
 
-  cardInfo.alternate_versions = []
+  const alternate_versions: string[] = []
   $('table.card-prints-versions tr').each((_i, version) => {
     const versionName = $(version).find('a').text().trim().replace(/\s+/g, ' ')
     const alternate_card_id = $(version).find('a').attr('href')
     if (versionName) {
-      cardInfo.alternate_versions.push(alternate_card_id ? urlToCardId(alternate_card_id) : cardInfo.card_id)
+      alternate_versions.push(alternate_card_id ? urlToCardId(alternate_card_id) : card_id)
     }
   })
 
-  cardInfo.artist = $('div.card-text-section.card-text-artist a').text().trim() || 'Unknown'
+  const artist = $('div.card-text-section.card-text-artist a').text().trim() || 'Unknown'
 
-  console.log('returning card info', cardInfo.card_id)
-  return cardInfo
+  console.log('returning card info', card_id)
+  return {
+    expansion: expansion as ExpansionId,
+    card_id,
+    image,
+    hp,
+    energy,
+    name,
+    linkedCardID,
+    card_type,
+    evolution_type,
+    attacks,
+    ability,
+    weakness,
+    retreat,
+    rarity,
+    fullart,
+    ex,
+    baby,
+    set_details,
+    pack,
+    alternate_versions,
+    artist,
+  }
 }
 
-async function getCardDetails(cardUrl, expansionId) {
+async function getCardDetails(cardUrl: string, expansionId: string) {
   try {
     console.log(`Fetching details for ${cardUrl}...`)
     const $ = await fetchHTML(cardUrl)
@@ -278,7 +307,7 @@ async function getCardDetails(cardUrl, expansionId) {
     return null // Return null or a default object to continue the process for other cards
   }
 }
-function extractAbility($) {
+function extractAbility($: CheerioAPI) {
   const cardType = $('p.card-text-type').text().trim()
   if (cardType.startsWith('Trainer')) {
     // handle the effect for Trainer cards explicitly
@@ -321,9 +350,9 @@ function extractAbility($) {
   }
 }
 
-async function getCardLinks(mainUrl) {
+async function getCardLinks(mainUrl: string) {
   const $ = await fetchHTML(mainUrl)
-  const links = []
+  const links: string[] = []
 
   $('.card-search-grid a').each((_i, element) => {
     const link = $(element).attr('href')
@@ -343,7 +372,7 @@ async function scrapeCards() {
       console.log(`Found ${cardLinks.length} card links.`)
 
       const concurrencyLimit = 10
-      const cards = []
+      const cards: Card[] = []
       let index = 0 // Track the current index of the cardLinks being processed
 
       fs.mkdirSync(targetDir, { recursive: true })
@@ -351,7 +380,7 @@ async function scrapeCards() {
       // Function to process a batch of tasks with a given concurrency limit
       async function processBatch() {
         // Queue up to `concurrencyLimit` promises at the same time
-        const promises = []
+        const promises: Promise<void>[] = []
         while (index < cardLinks.length && promises.length < concurrencyLimit) {
           const link = cardLinks[index++]
           promises.push(
