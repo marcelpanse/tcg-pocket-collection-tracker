@@ -139,7 +139,7 @@ function TradeList({ trades, viewHistory }: Props) {
   const selectedTrade = filteredTrades.find((r) => r.id === selectedTradeId)
 
   if (filteredTrades.length === 0) {
-    return <div className="rounded-lg border-1 border-neutral-700 border-solid p-2 text-center">{t('noActiveTrades')}</div>
+    return null
   }
 
   return (
