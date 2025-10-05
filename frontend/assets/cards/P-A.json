@@ -21,6 +21,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-1"],
+    "linked": false,
+    "internal_id": "e351f6bad4accc6396652f2e5d39392d",
     "artist": "5ban Graphics",
     "crafting_cost": "Unknown"
   },
@@ -46,6 +48,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-2"],
+    "linked": false,
+    "internal_id": "51b96922b5684ae08722e567e94f45aa",
     "artist": "Toyste Beach",
     "crafting_cost": "Unknown"
   },
@@ -71,6 +75,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-3"],
+    "linked": false,
+    "internal_id": "da7562c143b255677f2178f8747ae810",
     "artist": "Toyste Beach",
     "crafting_cost": "Unknown"
   },
@@ -91,11 +97,13 @@
     "retreat": "N/A",
     "rarity": "P",
     "fullart": true,
-    "ex": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-4", "P-A-8"],
+    "linked": false,
+    "internal_id": "3a9e706368d9a06a2741aa5d7862e114",
     "artist": "Ryo Ueda",
     "crafting_cost": "Unknown"
   },
@@ -121,6 +129,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-5", "A2b-111"],
+    "linked": false,
+    "internal_id": "8af78a84e1102c3fa48415c4480fa0a5",
     "artist": "Ryo Ueda",
     "crafting_cost": "Unknown"
   },
@@ -146,6 +156,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-6"],
+    "linked": false,
+    "internal_id": "ead085dfa9aec46663c80b356537d809",
     "artist": "5ban Graphics",
     "crafting_cost": "Unknown"
   },
@@ -171,6 +183,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-7", "A4b-373"],
+    "linked": false,
+    "internal_id": "ee2e300f6b34d7d4cab6b35bdb353edb",
     "artist": "Naoki Saito",
     "crafting_cost": "Unknown"
   },
@@ -191,11 +205,13 @@
     "retreat": "N/A",
     "rarity": "P",
     "fullart": true,
-    "ex": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-4", "P-A-8"],
+    "linked": false,
+    "internal_id": "14aee370b3f79d1f22e55852202f821c",
     "artist": "Yuu Nishida",
     "crafting_cost": "Unknown"
   },
@@ -224,6 +240,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26", "A4b-128", "A4b-129"],
+    "linked": false,
+    "internal_id": "62454c75872840910ab846b727b702c3",
     "artist": "Atsushi Furusawa",
     "crafting_cost": "Unknown"
   },
@@ -252,6 +270,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-128", "P-A-10"],
+    "linked": false,
+    "internal_id": "009af1772b06da57e1f36aead1ff24c1",
     "artist": "Krgc",
     "crafting_cost": "Unknown"
   },
@@ -280,6 +300,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-202", "P-A-11"],
+    "linked": false,
+    "internal_id": "d41c6d87036c4c4d362c2b2d26965114",
     "artist": "sowsow",
     "crafting_cost": "Unknown"
   },
@@ -308,6 +330,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-196", "A1-246", "P-A-12"],
+    "linked": false,
+    "internal_id": "d87245338957ebeb93f4a56c06148a13",
     "artist": "Shigenori Negishi",
     "crafting_cost": "Unknown"
   },
@@ -340,6 +364,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-7", "P-A-13"],
+    "linked": false,
+    "internal_id": "80f9ecbe1d768668c0f19ece343fedb4",
     "artist": "miki kudo",
     "crafting_cost": "Unknown"
   },
@@ -368,6 +394,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-14"],
+    "linked": false,
+    "internal_id": "dde085eb506aab7b79b8ce19e4d44297",
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -396,6 +424,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26", "A4b-128", "A4b-129"],
+    "linked": false,
+    "internal_id": "90b2df5bacd0362c5f391a9289126ae1",
     "artist": "Kouki Saitou",
     "crafting_cost": "Unknown"
   },
@@ -424,6 +454,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-113", "P-A-16"],
+    "linked": false,
+    "internal_id": "14ece48792a0272ab6b041327205af34",
     "artist": "Shibuzoh.",
     "crafting_cost": "Unknown"
   },
@@ -452,6 +484,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-17"],
+    "linked": false,
+    "internal_id": "1fb8c15c8234df3572b8daf0fb05b96a",
     "artist": "Souichirou Gunjima",
     "crafting_cost": "Unknown"
   },
@@ -480,6 +514,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-3", "P-A-18", "A3-212"],
+    "linked": false,
+    "internal_id": "ca621cd475b2d294dde34c05478023ce",
     "artist": "Kuroimori",
     "crafting_cost": "Unknown"
   },
@@ -512,6 +548,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-89", "P-A-19", "A3a-93", "A4b-114", "A4b-115", "A4b-356"],
+    "linked": false,
+    "internal_id": "c509b6980930a902bfe5dadcb6696f4d",
     "artist": "Sanosuke Sakuma",
     "crafting_cost": "Unknown"
   },
@@ -540,6 +578,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-20"],
+    "linked": false,
+    "internal_id": "e13f851d1db8c529875f3ec52d931e9a",
     "artist": "Mékayu",
     "crafting_cost": "Unknown"
   },
@@ -568,6 +608,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-150", "P-A-21"],
+    "linked": false,
+    "internal_id": "3178803efcf0f1039a8dfcab2ec19132",
     "artist": "Tomokazu Komiya",
     "crafting_cost": "Unknown"
   },
@@ -596,6 +638,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-22"],
+    "linked": false,
+    "internal_id": "f13b75340d9ef3d45015edf41c0c2626",
     "artist": "Kurata So",
     "crafting_cost": "Unknown"
   },
@@ -624,6 +668,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-1", "A1-227", "P-A-23", "A3-210", "A4b-1", "A4b-2"],
+    "linked": false,
+    "internal_id": "f8e52b7380296d634f0446ab512b1ece",
     "artist": "Kouki Saitou",
     "crafting_cost": "Unknown"
   },
@@ -652,6 +698,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-97", "P-A-24", "A4-217", "A4b-133", "A4b-134"],
+    "linked": false,
+    "internal_id": "c84489fbc213a6e85e1a0c23aef58087",
     "artist": "Miki Tanaka",
     "crafting_cost": "Unknown"
   },
@@ -686,6 +734,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103", "A4b-67"],
+    "linked": false,
+    "internal_id": "246e917d58773ea046533e88b469d94f",
     "artist": "PLANETA Igarashi",
     "crafting_cost": "Unknown"
   },
@@ -714,6 +764,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26", "A4b-128", "A4b-129"],
+    "linked": false,
+    "internal_id": "8963e7d8689cb7bf1478cae1705a44de",
     "artist": "Kouki Saitou",
     "crafting_cost": "Unknown"
   },
@@ -742,6 +794,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-27"],
+    "linked": false,
+    "internal_id": "a2b1d81d80577259f05e5c4599cd3d77",
     "artist": "Yoriyuki Ikegami",
     "crafting_cost": "Unknown"
   },
@@ -770,6 +824,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1a-14", "P-A-28"],
+    "linked": false,
+    "internal_id": "eee67a25beb0410359f95cec5a173f35",
     "artist": "Shin Nagasawa",
     "crafting_cost": "Unknown"
   },
@@ -798,6 +854,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-55", "P-A-29", "A3-217"],
+    "linked": false,
+    "internal_id": "d18d1e82de44f8ff8b5477fc393cf5df",
     "artist": "danciao",
     "crafting_cost": "Unknown"
   },
@@ -826,6 +884,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-30"],
+    "linked": false,
+    "internal_id": "a273eecab54ef7cd9f169e3546cb8d4f",
     "artist": "En Morikura",
     "crafting_cost": "Unknown"
   },
@@ -854,6 +914,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-213", "P-A-31"],
+    "linked": false,
+    "internal_id": "689baa8471b89c964fd487613ceb5407",
     "artist": "MAHOU",
     "crafting_cost": "Unknown"
   },
@@ -882,6 +944,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-33", "A1-230", "P-A-32", "A4b-55", "A4b-56"],
+    "linked": false,
+    "internal_id": "6de2461e62f7988221169facf3bb8911",
     "artist": "Naoyo Kimura",
     "crafting_cost": "Unknown"
   },
@@ -910,6 +974,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-53", "A1-232", "P-A-33", "A3-215", "A4b-83", "A4b-84"],
+    "linked": false,
+    "internal_id": "0ac0b751490cfbf8c28f0093da5765a8",
     "artist": "Kanako Eo",
     "crafting_cost": "Unknown"
   },
@@ -938,6 +1004,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-35", "P-A-34"],
+    "linked": false,
+    "internal_id": "5445c9059b4b8ec156a3fcc837c3b9a4",
     "artist": "Kariya",
     "crafting_cost": "Unknown"
   },
@@ -966,6 +1034,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-10", "P-A-35"],
+    "linked": false,
+    "internal_id": "14cd7f4bd5309e7c4deee8172ebf903b",
     "artist": "Atsuko Nishida",
     "crafting_cost": "Unknown"
   },
@@ -994,6 +1064,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-57", "P-A-36"],
+    "linked": false,
+    "internal_id": "3e073e728991a9da5e6361528fa4ef95",
     "artist": "Sumiyoshi Kizuki",
     "crafting_cost": "Unknown"
   },
@@ -1026,6 +1098,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-37"],
+    "linked": false,
+    "internal_id": "dd3ad33dcc51ddade3756d6ed89b650a",
     "artist": "PLANETA Mochizuki",
     "crafting_cost": "Unknown"
   },
@@ -1054,6 +1128,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-38"],
+    "linked": false,
+    "internal_id": "b84f74f7d3d1075283c489382496932b",
     "artist": "Miki Tanaka",
     "crafting_cost": "Unknown"
   },
@@ -1082,6 +1158,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-111", "P-A-39"],
+    "linked": false,
+    "internal_id": "2b6a27665b347c0d8c2fe6137be7408d",
     "artist": "Anesaki Dynamic",
     "crafting_cost": "Unknown"
   },
@@ -1110,6 +1188,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-27", "P-A-40", "A4a-91", "A4b-71", "A4b-72"],
+    "linked": false,
+    "internal_id": "797f9c479e04f6cc6279873080184357",
     "artist": "sui",
     "crafting_cost": "Unknown"
   },
@@ -1138,6 +1218,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-63", "P-A-41"],
+    "linked": false,
+    "internal_id": "eb9f2f7f382c684d0f51b85a4b1e76a0",
     "artist": "Naoyo Kimura",
     "crafting_cost": "Unknown"
   },
@@ -1170,6 +1252,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42", "A4b-245", "A4b-378"],
+    "linked": false,
+    "internal_id": "1a38fffd6c0c04cf62edd1c28c4a45a6",
     "artist": "PLANETA Mochizuki",
     "crafting_cost": "Unknown"
   },
@@ -1198,6 +1282,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2a-8", "P-A-43"],
+    "linked": false,
+    "internal_id": "65600e61b9d35bae3876febd008769ba",
     "artist": "MAHOU",
     "crafting_cost": "Unknown"
   },
@@ -1230,6 +1316,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2a-26", "P-A-44"],
+    "linked": false,
+    "internal_id": "bbf8267f16644fc1ee731839505d839a",
     "artist": "Kazumasa Yasukuni",
     "crafting_cost": "Unknown"
   },
@@ -1258,6 +1346,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-45"],
+    "linked": false,
+    "internal_id": "e119da80181e172a454f6ae0caf8ac8d",
     "artist": "Tomokazu Komiya",
     "crafting_cost": "Unknown"
   },
@@ -1286,6 +1376,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2a-45", "P-A-46", "A4a-98", "A4b-205", "A4b-206"],
+    "linked": false,
+    "internal_id": "974358a749dd153bb739c2be912a78c2",
     "artist": "Uninori",
     "crafting_cost": "Unknown"
   },
@@ -1318,6 +1410,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-47"],
+    "linked": false,
+    "internal_id": "00a30b2865401b07f3253a9e563057b5",
     "artist": "Hasuno",
     "crafting_cost": "Unknown"
   },
@@ -1346,6 +1440,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-50", "A2-162", "P-A-48", "A4b-108", "A4b-109"],
+    "linked": false,
+    "internal_id": "aabf61bb9a13421e5028692a1883eb61",
     "artist": "sui",
     "crafting_cost": "Unknown"
   },
@@ -1374,6 +1470,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2a-63", "P-A-49"],
+    "linked": false,
+    "internal_id": "e647cd210422926117485e2288eeef89",
     "artist": "okayamatakatoshi",
     "crafting_cost": "Unknown"
   },
@@ -1408,6 +1506,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50", "A4b-158", "A4b-365"],
+    "linked": false,
+    "internal_id": "767600125263b6432b10de65f81b7aec",
     "artist": "PLANETA Mochizuki",
     "crafting_cost": "Unknown"
   },
@@ -1436,6 +1536,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-68", "P-A-51", "A4b-306", "A4b-307"],
+    "linked": false,
+    "internal_id": "bc6816e7f04df876fa25a16bed6066c3",
     "artist": "Shigenori Negishi",
     "crafting_cost": "Unknown"
   },
@@ -1464,6 +1566,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-5", "P-A-52", "A4b-49", "A4b-50"],
+    "linked": false,
+    "internal_id": "7dc49049a4345799fc93cc07554fa748",
     "artist": "MINAMINAMI Take",
     "crafting_cost": "Unknown"
   },
@@ -1492,6 +1596,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-53"],
+    "linked": false,
+    "internal_id": "b679601abd5ef0571ecbf90380d1b4c9",
     "artist": "Shin Nagasawa",
     "crafting_cost": "Unknown"
   },
@@ -1524,6 +1630,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-28", "P-A-54"],
+    "linked": false,
+    "internal_id": "116069d372b3f73c5bb6a0913320b4d2",
     "artist": "REND",
     "crafting_cost": "Unknown"
   },
@@ -1552,6 +1660,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-39", "P-A-55", "A3-225"],
+    "linked": false,
+    "internal_id": "34197e8ff4971a0b441a7767ca708687",
     "artist": "Masakazu Fukuda",
     "crafting_cost": "Unknown"
   },
@@ -1580,6 +1690,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-56"],
+    "linked": false,
+    "internal_id": "40b2b3fb1048caf7569d0dd72447ba99",
     "artist": "Krgc",
     "crafting_cost": "Unknown"
   },
@@ -1608,6 +1720,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-64", "P-A-57", "A4b-294", "A4b-295"],
+    "linked": false,
+    "internal_id": "575dfcb3fdcc87815cf24ef26862fb58",
     "artist": "Kouki Saitou",
     "crafting_cost": "Unknown"
   },
@@ -1636,6 +1750,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-25", "A2b-103", "P-A-58", "A4b-143", "A4b-144"],
+    "linked": false,
+    "internal_id": "0132d36d085c26753f57207225556e2e",
     "artist": "OOYAMA",
     "crafting_cost": "Unknown"
   },
@@ -1664,6 +1780,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-42", "A2b-104", "P-A-59", "A4b-210", "A4b-211"],
+    "linked": false,
+    "internal_id": "8569c3175996620b25e76292587c43b2",
     "artist": "Akira Komayama",
     "crafting_cost": "Unknown"
   },
@@ -1692,6 +1810,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1a-1", "P-A-60"],
+    "linked": false,
+    "internal_id": "f3818fcf366c4e89241f22217123e427",
     "artist": "0313",
     "crafting_cost": "Unknown"
   },
@@ -1720,6 +1840,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-87", "P-A-61", "A3a-91", "A4b-110", "A4b-111"],
+    "linked": false,
+    "internal_id": "360e4312dfa41a96b994229940bfd602",
     "artist": "Sanosuke Sakuma",
     "crafting_cost": "Unknown"
   },
@@ -1748,6 +1870,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-198", "P-A-62", "A3b-102", "A4b-280", "A4b-281", "A4b-359"],
+    "linked": false,
+    "internal_id": "0b6d21bcc38eddfcfdb27f27cf6fe721",
     "artist": "Eri Yamaki",
     "crafting_cost": "Unknown"
   },
@@ -1776,6 +1900,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-63"],
+    "linked": false,
+    "internal_id": "3efbf309706507e91cf1d7bb7979f8ed",
     "artist": "Yoshinobu Saito",
     "crafting_cost": "Unknown"
   },
@@ -1804,6 +1930,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-64", "P-A-65"],
+    "linked": false,
+    "internal_id": "8785906d5d820ea84286b90149690025",
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -1832,6 +1960,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-64", "P-A-65"],
+    "linked": false,
+    "internal_id": "08ce75ff74bcc6e6fd185f95e7c220bb",
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -1860,6 +1990,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3-83", "P-A-66"],
+    "linked": false,
+    "internal_id": "027f53c51c7f838605cff2106bcdae45",
     "artist": "Amelicart",
     "crafting_cost": "Unknown"
   },
@@ -1888,6 +2020,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3-85", "A3-171", "P-A-67", "A4b-180", "A4b-181"],
+    "linked": false,
+    "internal_id": "d9e8543cce467d8c18adf0db5bc833cc",
     "artist": "Mizue",
     "crafting_cost": "Unknown"
   },
@@ -1916,6 +2050,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3-100", "P-A-68"],
+    "linked": false,
+    "internal_id": "83b72d076c8cc4c0db436d9ef7039ac7",
     "artist": "Ryuta Fuse",
     "crafting_cost": "Unknown"
   },
@@ -1944,6 +2080,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3-2", "A3-156", "P-A-69"],
+    "linked": false,
+    "internal_id": "1d00d9ede6e12147de246cfd338f5d20",
     "artist": "Satoshi Shirai",
     "crafting_cost": "Unknown"
   },
@@ -1972,6 +2110,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3-41", "P-A-70"],
+    "linked": false,
+    "internal_id": "b6df8fb33ae2fd0bf6ee689869d7cc63",
     "artist": "tono",
     "crafting_cost": "Unknown"
   },
@@ -2000,6 +2140,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3-97", "P-A-71", "A4b-218", "A4b-219"],
+    "linked": false,
+    "internal_id": "c3dc0f114547b72b3a3563f41e66d23f",
     "artist": "Miki Tanaka",
     "crafting_cost": "Unknown"
   },
@@ -2028,6 +2170,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-72"],
+    "linked": false,
+    "internal_id": "6f30c249eea2c13dbd0044510ee58e16",
     "artist": "Naoki Saito",
     "crafting_cost": "Unknown"
   },
@@ -2056,6 +2200,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-73"],
+    "linked": false,
+    "internal_id": "83adf34be8751440064bda544e83eab9",
     "artist": "Sekio",
     "crafting_cost": "Unknown"
   },
@@ -2088,6 +2234,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-21", "P-A-74", "A4b-149", "A4b-150"],
+    "linked": false,
+    "internal_id": "bc7cedbf4aeb6f5f84659b729635bae9",
     "artist": "GIDORA",
     "crafting_cost": "Unknown"
   },
@@ -2116,6 +2264,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-8", "P-A-75", "A4b-47", "A4b-48"],
+    "linked": false,
+    "internal_id": "7c300d9fff8e97e5d3987fe6f15cc4fd",
     "artist": "Hasuno",
     "crafting_cost": "Unknown"
   },
@@ -2144,6 +2294,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-9", "A3a-72", "P-A-76"],
+    "linked": false,
+    "internal_id": "22d594c238009eee4d784b067f0c44a4",
     "artist": "Hasuno",
     "crafting_cost": "Unknown"
   },
@@ -2172,6 +2324,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-20", "P-A-77"],
+    "linked": false,
+    "internal_id": "c2359b47dec87d60df8cde279e07b759",
     "artist": "Shin Nagasawa",
     "crafting_cost": "Unknown"
   },
@@ -2200,6 +2354,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-78"],
+    "linked": false,
+    "internal_id": "e425c211b0e89d910ee5e49e4ff7c63e",
     "artist": "nagimiso",
     "crafting_cost": "Unknown"
   },
@@ -2228,6 +2384,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-79"],
+    "linked": false,
+    "internal_id": "f496bda64fa06e4881d22dd2a0fb2fb1",
     "artist": "nagimiso",
     "crafting_cost": "Unknown"
   },
@@ -2256,6 +2414,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-53", "P-A-80"],
+    "linked": false,
+    "internal_id": "95965298dfdc23e61327ce50b7a70eb3",
     "artist": "Shin Nagasawa",
     "crafting_cost": "Unknown"
   },
@@ -2290,6 +2450,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-81"],
+    "linked": false,
+    "internal_id": "560f80bb098d49f4413e10da15501b35",
     "artist": "PLANETA Tsuji",
     "crafting_cost": "Unknown"
   },
@@ -2318,6 +2480,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-44", "P-A-82"],
+    "linked": false,
+    "internal_id": "3f49520734b8ef873846674ed51723eb",
     "artist": "Megumi Mizutani",
     "crafting_cost": "Unknown"
   },
@@ -2346,6 +2510,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-57", "P-A-83"],
+    "linked": false,
+    "internal_id": "e2fe5e516eb71f21e244c0e69ffc57ac",
     "artist": "Kanako Eo",
     "crafting_cost": "Unknown"
   },
@@ -2380,6 +2546,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-19", "A3a-77", "A3a-84", "P-A-84", "A4b-148"],
+    "linked": false,
+    "internal_id": "06e6a827a4241a775cd6564872cde4b1",
     "artist": "PLANETA Tsuji",
     "crafting_cost": "Unknown"
   },
@@ -2408,6 +2576,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-18", "P-A-85"],
+    "linked": false,
+    "internal_id": "c3fd3fb4ac64474b0f37a72c86ec880e",
     "artist": "OOYAMA",
     "crafting_cost": "Unknown"
   },
@@ -2436,6 +2606,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-25", "A3b-74", "P-A-86", "A4-219"],
+    "linked": false,
+    "internal_id": "20622db01ed4c35b9790e61dcc291d5c",
     "artist": "Mizue",
     "crafting_cost": "Unknown"
   },
@@ -2464,6 +2636,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-37", "P-A-87", "A4b-187", "A4b-188"],
+    "linked": false,
+    "internal_id": "c498695403a37014cc44bafd47c76abe",
     "artist": "Tika Matsuno",
     "crafting_cost": "Unknown"
   },
@@ -2492,6 +2666,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-88"],
+    "linked": false,
+    "internal_id": "d9305b9e06585ac63bb98b7f3bb70154",
     "artist": "Shinya Komatsu",
     "crafting_cost": "Unknown"
   },
@@ -2520,6 +2696,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-89"],
+    "linked": false,
+    "internal_id": "3f2a4b47fbd2f9e4f832e1b4bc8959b1",
     "artist": "MAHOU",
     "crafting_cost": "Unknown"
   },
@@ -2548,6 +2726,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-48", "P-A-90"],
+    "linked": false,
+    "internal_id": "8f9b423c77b3c92fae42d90bfc8c10e5",
     "artist": "sowsow",
     "crafting_cost": "Unknown"
   },
@@ -2576,6 +2756,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-65", "P-A-91"],
+    "linked": false,
+    "internal_id": "bd2a09c2c9fa0cb1812829c195ce34ac",
     "artist": "HYOGONOSUKE",
     "crafting_cost": "Unknown"
   },
@@ -2604,6 +2786,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-206", "A1-207", "A1-208", "A1-248", "P-A-92"],
+    "linked": false,
+    "internal_id": "e90cee6d71b100ff9599153dd8f5a97b",
     "artist": "nisimono",
     "crafting_cost": "Unknown"
   },
@@ -2632,6 +2816,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4-77", "P-A-93"],
+    "linked": false,
+    "internal_id": "cd75009a7152a10313a688efa3ff5164",
     "artist": "Tika Matsuno",
     "crafting_cost": "Unknown"
   },
@@ -2660,6 +2846,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-94"],
+    "linked": false,
+    "internal_id": "3e2ecc1291e6e42eb3589e7000378b1f",
     "artist": "Taira Akitsu",
     "crafting_cost": "Unknown"
   },
@@ -2688,6 +2876,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-95"],
+    "linked": false,
+    "internal_id": "59f2071353672ca890d1bd28b310805e",
     "artist": "Aya Kusube",
     "crafting_cost": "Unknown"
   },
@@ -2716,6 +2906,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4-118", "P-A-96"],
+    "linked": false,
+    "internal_id": "acfc9d7beb7b017a5c548821fa7ac8fe",
     "artist": "Kagemaru Himeno",
     "crafting_cost": "Unknown"
   },
@@ -2744,6 +2936,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4-133", "P-A-97"],
+    "linked": false,
+    "internal_id": "3ba924b5afdd4df41725d5b64cfedc31",
     "artist": "Kouki Saitou",
     "crafting_cost": "Unknown"
   },
@@ -2772,6 +2966,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-98"],
+    "linked": false,
+    "internal_id": "1013e35c02d18e1625ec81a57b251149",
     "artist": "PLANETA CG Works",
     "crafting_cost": "Unknown"
   },
@@ -2800,6 +2996,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4-49", "P-A-99"],
+    "linked": false,
+    "internal_id": "3656d40ea1651a68993209030d9102b5",
     "artist": "Shibuzoh.",
     "crafting_cost": "Unknown"
   },
@@ -2828,6 +3026,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4-116", "P-A-100"],
+    "linked": false,
+    "internal_id": "c00da055e9c95d51563433930ed11a43",
     "artist": "Satoshi Shirai",
     "crafting_cost": "Unknown"
   },
@@ -2856,6 +3056,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-36", "P-A-101"],
+    "linked": false,
+    "internal_id": "cb14bed031802ddcea9f9bcae382b92e",
     "artist": "Yuu Nishida",
     "crafting_cost": "Unknown"
   },
@@ -2884,6 +3086,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-102"],
+    "linked": false,
+    "internal_id": "f48f6f7ecff6dea0c82e6546ab6dd028",
     "artist": "sowsow",
     "crafting_cost": "Unknown"
   },
@@ -2912,6 +3116,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-103"],
+    "linked": false,
+    "internal_id": "2674edef7113fe5ea28447e8c9a8ebc7",
     "artist": "MAHOU",
     "crafting_cost": "Unknown"
   },
@@ -2944,6 +3150,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-22", "A4a-72", "P-A-104"],
+    "linked": false,
+    "internal_id": "ffa75952bae7927a66713600a06d2a4f",
     "artist": "Hajime Kusajima",
     "crafting_cost": "Unknown"
   },
@@ -2972,6 +3180,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-49", "P-A-105"],
+    "linked": false,
+    "internal_id": "24ac9e9df96e8dc1134e3e0603c2ff01",
     "artist": "Naoyo Kimura",
     "crafting_cost": "Unknown"
   },
@@ -3004,6 +3214,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-50", "P-A-106"],
+    "linked": false,
+    "internal_id": "0c119340544b8ba1d68eddd1aeb754ae",
     "artist": "matazo",
     "crafting_cost": "Unknown"
   },
@@ -3032,6 +3244,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-62", "P-A-107"],
+    "linked": false,
+    "internal_id": "0709839ba1fdc694f448b3f5ef18f06f",
     "artist": "Kanako Eo",
     "crafting_cost": "Unknown"
   },
@@ -3060,6 +3274,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-43", "A4a-76", "P-A-108"],
+    "linked": false,
+    "internal_id": "5400e4917972f0b05bb0db7e9427ddc6",
     "artist": "Asako Ito",
     "crafting_cost": "Unknown"
   },
@@ -3092,6 +3308,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-56", "A3b-83", "A3b-92", "A4b-287", "A4b-370", "P-A-109"],
+    "linked": false,
+    "internal_id": "c5a0c9afaf4c5d100e6ec51384d62dd1",
     "artist": "Kanami Ogata",
     "crafting_cost": "Unknown"
   },
@@ -3124,6 +3342,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-10", "A4a-79", "A4a-87", "P-A-110"],
+    "linked": false,
+    "internal_id": "d6d94ed517acbf8915c29f4f474cf489",
     "artist": "PLANETA Tsuji",
     "crafting_cost": "Unknown"
   },
@@ -3152,6 +3372,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-111"],
+    "linked": false,
+    "internal_id": "8527d9e95eb1b3205ccb7d2a8316de97",
     "artist": "sui",
     "crafting_cost": "Unknown"
   },
@@ -3180,6 +3402,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-112"],
+    "linked": false,
+    "internal_id": "0ce2a1fc215dca94958e50fe40899f16",
     "artist": "PLANETA Mochizuki",
     "crafting_cost": "Unknown"
   },
@@ -3208,6 +3432,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-35", "P-A-113"],
+    "linked": false,
+    "internal_id": "4201cc1c1778b0632aceb956260d71b7",
     "artist": "Yuka Morii",
     "crafting_cost": "Unknown"
   },
@@ -3236,6 +3462,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-114"],
+    "linked": false,
+    "internal_id": "68ce86a1faa75bb2e4cc2786c45b4e23",
     "artist": "Naoki Saito",
     "crafting_cost": "Unknown"
   },
@@ -3264,6 +3492,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-143", "A2-179", "P-A-115"],
+    "linked": false,
+    "internal_id": "9811857a649b59443a254ecac4cc2c2f",
     "artist": "Ryuta Fuse",
     "crafting_cost": "Unknown"
   },
@@ -3296,6 +3526,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-22", "A2-159", "A4b-30", "A4b-31", "P-A-116"],
+    "linked": false,
+    "internal_id": "805a66bf4aaa7cdd471bab971a45efc7",
     "artist": "Sekio",
     "crafting_cost": "Unknown"
   },
@@ -3324,6 +3556,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4-120", "P-A-117"],
+    "linked": false,
+    "internal_id": "5eb6196487559ca5ba1577ca7cfb190b",
     "artist": "Eri Yamaki",
     "crafting_cost": "Unknown"
   }

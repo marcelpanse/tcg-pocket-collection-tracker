@@ -3,6 +3,7 @@ import path from 'node:path'
 import { pipeline } from 'node:stream/promises'
 import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
+import { md5 } from './md5.js'
 
 const BASE_URL = 'https://pocket.limitlesstcg.com'
 
@@ -10,6 +11,7 @@ const targetDir = 'frontend/assets/cards/'
 const imagesDir = 'frontend/public/images/en-US/'
 const imagesPath = '/images/en-US/'
 
+// const expansions = ['A4b']
 const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'A4b', 'P-A']
 
 const packs = [
@@ -57,8 +59,6 @@ const craftingCost = {
 }
 
 const fullArtRarities = ['☆', '☆☆', '☆☆☆', 'Crown Rare', 'P']
-
-const nonExCardsWithEx = ['Toxapex', 'Rotom Dex']
 
 /* Helper Functions */
 
@@ -215,7 +215,7 @@ async function extractCardInfo($, cardUrl) {
 
   cardInfo.fullart = fullArtRarities.includes(cardInfo.rarity)
 
-  cardInfo.ex = cardInfo.name.includes('ex') && !nonExCardsWithEx.includes(cardInfo.name)
+  cardInfo.ex = cardInfo.name.includes(' ex')
 
   // Check if card is a baby pokemon (Not currently specified exactly on Limitless TCG page)
   cardInfo.baby = cardInfo.weakness === 'none' && cardInfo.hp === '30' && cardInfo.energy !== 'Dragon'
@@ -225,13 +225,42 @@ async function extractCardInfo($, cardUrl) {
   cardInfo.pack = pack
 
   cardInfo.alternate_versions = []
+  cardInfo.linked = false
+  let internalId = ''
+  let foundMyself = false
   $('table.card-prints-versions tr').each((_i, version) => {
     const versionName = $(version).find('a').text().trim().replace(/\s+/g, ' ')
-    const alternate_card_id = $(version).find('a').attr('href')
     if (versionName) {
+      const alternate_card_id = $(version).find('a').attr('href')
+      if (!alternate_card_id) {
+        foundMyself = true // no link with href means this is the current version we're looking at.
+      }
+      console.log('checking', alternate_card_id, versionName)
+
       cardInfo.alternate_versions.push(alternate_card_id ? urlToCardId(alternate_card_id) : cardInfo.card_id)
+      const alternate_card_rarity = $(version).find('td:last-child').text().trim() || 'P'
+
+      // the alternate cards are only available up to EX card rarity (at least for now). And since limitless doesn't properly set shiny cards, we have to check it like this.
+      if (cardInfo.rarity.includes('◊') && alternate_card_rarity === cardInfo.rarity && !internalId) {
+        internalId = alternate_card_id ? urlToCardId(alternate_card_id) : cardInfo.card_id
+        cardInfo.linked = !!alternate_card_id //just for reference to double-check our db for errors
+      }
+
+      // only check for foil up to our current version, the foil card is always below the similar card in the list.
+      if (alternate_card_id && !foundMyself) {
+        const alternateSetId = urlToCardId(alternate_card_id).split('-')[0]
+        const currentSetId = cardInfo.card_id.split('-')[0]
+        if (alternateSetId === currentSetId && alternate_card_rarity === cardInfo.rarity) {
+          // same set, same rarity, means this one is an alternative art in the same set (can be foil), treat like unique card.
+          internalId = cardInfo.card_id // foils don't have linked cards (at least not yet!)
+          cardInfo.linked = false
+        }
+      }
     }
   })
+
+  cardInfo.internal_id = md5(internalId || cardInfo.card_id)
+  console.log('hash', internalId || cardInfo.card_id, cardInfo.internal_id)
 
   cardInfo.artist = $('div.card-text-section.card-text-artist a').text().trim() || 'Unknown'
   cardInfo.crafting_cost = craftingCost[cardInfo.rarity] || 'Unknown'
