@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router'
 import { DropdownFilter, TabsFilter } from '@/components/Filters'
 import { MissionsTable } from '@/components/MissionsTable'
 import { Button } from '@/components/ui/button'
-import { expansionsDict, getExpansionById } from '@/lib/CardsDB'
+import { getExpansionById } from '@/lib/CardsDB'
 import { type ExpansionId, expansionIds, type Mission } from '@/types'
 import MissionDetail from './MissionDetail'
 
@@ -24,7 +24,7 @@ export default function Missions() {
   const getLocalizedExpansion = (id: ExpansionId) => t(getExpansionById(id)?.name ?? 'unknown', { ns: 'common/sets' })
 
   useEffect(() => {
-    let missions = expansionsDict.get(expansion)?.missions
+    let missions = getExpansionById(expansion)?.missions
     if (!missions) {
       throw new Error(`Unrecognized expansion id: ${expansion}`)
     }

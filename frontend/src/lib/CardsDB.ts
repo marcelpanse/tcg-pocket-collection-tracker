@@ -1,5 +1,5 @@
 import type { MissionDetailProps } from '@/components/Mission.tsx'
-import type { Card, CollectionRow, Expansion, ExpansionId, Mission, Pack, Rarity } from '@/types'
+import type { Card, CollectionRow, Expansion, Mission, Pack, Rarity } from '@/types'
 import A1 from '../../assets/cards/A1.json'
 import A1a from '../../assets/cards/A1a.json'
 import A2 from '../../assets/cards/A2.json'
@@ -24,69 +24,22 @@ import A4Missions from '../../assets/themed-collections/A4-missions.json'
 import A4aMissions from '../../assets/themed-collections/A4a-missions.json'
 import A4bMissions from '../../assets/themed-collections/A4b-missions.json'
 
-const rarityOverrides = {
-  A2b: [
-    { rarity: '✵', start: 97, end: 106 },
-    { rarity: '✵✵', start: 107, end: 110 },
-  ],
-  A3: [
-    { rarity: '✵', start: 210, end: 229 },
-    { rarity: '✵✵', start: 230, end: 237 },
-  ],
-  A3a: [
-    { rarity: '✵', start: 89, end: 98 },
-    { rarity: '✵✵', start: 99, end: 102 },
-  ],
-  A3b: [
-    { rarity: '✵', start: 93, end: 102 },
-    { rarity: '✵✵', start: 103, end: 106 },
-  ],
-  A4: [
-    { rarity: '✵', start: 212, end: 231 },
-    { rarity: '✵✵', start: 232, end: 239 },
-  ],
-  A4a: [
-    { rarity: '✵', start: 91, end: 100 },
-    { rarity: '✵✵', start: 101, end: 104 },
-  ],
-  A4b: [{ rarity: '✵✵', start: 377, end: 378 }],
-} as Record<ExpansionId, { rarity: Rarity; start: number; end: number }[]>
-
-const update = (cards: Card[], expansionName: ExpansionId) => {
-  for (const card of cards) {
-    // we set the card_id to the linkedCardID if it exists, so we really treat it as a single card even though it appears in multiple expansions.
-    if (card.linkedCardID) {
-      card.card_id = card.linkedCardID
-    }
-    card.expansion = expansionName
-    if (rarityOverrides[expansionName]) {
-      const inPackId = Number(card.card_id.split('-').pop())
-      for (const { rarity, start, end } of rarityOverrides[expansionName]) {
-        if (start <= inPackId && inPackId <= end) {
-          card.rarity = rarity
-        }
-      }
-    }
-  }
-  return cards
-}
-
 const equivalent = (firstCard: Card, secondCard: Card) => {
   return firstCard.alternate_versions.includes(secondCard.card_id)
 }
 
-export const a1Cards: Card[] = update(A1 as unknown as Card[], 'A1')
-export const a1aCards: Card[] = update(A1a as unknown as Card[], 'A1a')
-export const a2Cards: Card[] = update(A2 as unknown as Card[], 'A2')
-export const a2aCards: Card[] = update(A2a as unknown as Card[], 'A2a')
-export const a2bCards: Card[] = update(A2b as unknown as Card[], 'A2b')
-export const a3Cards: Card[] = update(A3 as unknown as Card[], 'A3')
-export const a3aCards: Card[] = update(A3a as unknown as Card[], 'A3a')
-export const a3bCards: Card[] = update(A3b as unknown as Card[], 'A3b')
-export const a4Cards: Card[] = update(A4 as unknown as Card[], 'A4')
-export const a4aCards: Card[] = update(A4a as unknown as Card[], 'A4a')
-export const a4bCards: Card[] = update(A4b as unknown as Card[], 'A4b')
-export const paCards: Card[] = update(PA as unknown as Card[], 'P-A')
+export const a1Cards: Card[] = A1 as Card[]
+export const a1aCards: Card[] = A1a as Card[]
+export const a2Cards: Card[] = A2 as Card[]
+export const a2aCards: Card[] = A2a as Card[]
+export const a2bCards: Card[] = A2b as Card[]
+export const a3Cards: Card[] = A3 as Card[]
+export const a3aCards: Card[] = A3a as Card[]
+export const a3bCards: Card[] = A3b as Card[]
+export const a4Cards: Card[] = A4 as Card[]
+export const a4aCards: Card[] = A4a as Card[]
+export const a4bCards: Card[] = A4b as Card[]
+export const paCards: Card[] = PA as Card[]
 export const allCards: Card[] = [
   ...a1Cards,
   ...a1aCards,
@@ -102,23 +55,23 @@ export const allCards: Card[] = [
   ...paCards,
 ]
 
-export const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
+const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
 
 export const getCardById = (cardId: string): Card | undefined => {
   return allCardsDict.get(cardId)
 }
 
-export const a1Missions: Mission[] = A1Missions as unknown as Mission[]
-export const a1aMissions: Mission[] = A1aMissions as unknown as Mission[]
-export const a2Missions: Mission[] = A2Missions as unknown as Mission[]
-export const a2aMissions: Mission[] = A2aMissions as unknown as Mission[]
-export const a2bMissions: Mission[] = A2bMissions as unknown as Mission[]
-export const a3Missions: Mission[] = A3Missions as unknown as Mission[]
-export const a3aMissions: Mission[] = A3aMissions as unknown as Mission[]
-export const a3bMissions: Mission[] = A3bMissions as unknown as Mission[]
-export const a4Missions: Mission[] = A4Missions as unknown as Mission[]
-export const a4aMissions: Mission[] = A4aMissions as unknown as Mission[]
-export const a4bMissions: Mission[] = A4bMissions as unknown as Mission[]
+const a1Missions: Mission[] = A1Missions as unknown as Mission[]
+const a1aMissions: Mission[] = A1aMissions as unknown as Mission[]
+const a2Missions: Mission[] = A2Missions as unknown as Mission[]
+const a2aMissions: Mission[] = A2aMissions as unknown as Mission[]
+const a2bMissions: Mission[] = A2bMissions as unknown as Mission[]
+const a3Missions: Mission[] = A3Missions as unknown as Mission[]
+const a3aMissions: Mission[] = A3aMissions as unknown as Mission[]
+const a3bMissions: Mission[] = A3bMissions as unknown as Mission[]
+const a4Missions: Mission[] = A4Missions as unknown as Mission[]
+const a4aMissions: Mission[] = A4aMissions as unknown as Mission[]
+const a4bMissions: Mission[] = A4bMissions as unknown as Mission[]
 
 export const expansions: Expansion[] = [
   {
@@ -248,7 +201,7 @@ export const expansions: Expansion[] = [
   },
 ]
 
-export const expansionsDict: Map<string, Expansion> = new Map(expansions.map((expansion) => [expansion.id, expansion]))
+const expansionsDict: Map<string, Expansion> = new Map(expansions.map((expansion) => [expansion.id, expansion]))
 
 export const getExpansionById = (expansion: string): Expansion | undefined => {
   return expansionsDict.get(expansion)
@@ -257,6 +210,17 @@ export const getExpansionById = (expansion: string): Expansion | undefined => {
 export const tradeableExpansions = expansions.filter((e) => e.tradeable).map((e) => e.id)
 
 export const basicRarities: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊']
+
+export const craftingCost: Partial<Record<Rarity, number>> = {
+  '◊': 35,
+  '◊◊': 70,
+  '◊◊◊': 150,
+  '◊◊◊◊': 500,
+  '☆': 400,
+  '☆☆': 1250,
+  '☆☆☆': 1500,
+  'Crown Rare': 2500,
+}
 
 type CardWithAmount = Card & { amount_owned: number }
 

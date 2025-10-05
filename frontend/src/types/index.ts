@@ -114,12 +114,6 @@ export interface Card {
   pack: string
   alternate_versions: string[]
   artist: string
-  probability: {
-    '1-3 card': string | null | undefined
-    '4 card': string | null | undefined
-    '5 card': string | null | undefined
-  }
-  crafting_cost: number
 
   amount_owned?: number // calculated from the collection table
 }

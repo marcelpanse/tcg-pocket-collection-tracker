@@ -45,20 +45,37 @@ const typeMapping = {
   C: 'Colorless',
 }
 
-const craftingCost = {
-  '◊': 35,
-  '◊◊': 70,
-  '◊◊◊': 150,
-  '◊◊◊◊': 500,
-  '☆': 400,
-  '☆☆': 1250,
-  '☆☆☆': 1500,
-  '♛': 2500,
-}
-
 const fullArtRarities = ['☆', '☆☆', '☆☆☆', 'Crown Rare', 'P']
 
 const nonExCardsWithEx = ['Toxapex', 'Rotom Dex']
+
+const rarityOverrides = {
+  A2b: [
+    { rarity: '✵', start: 97, end: 106 },
+    { rarity: '✵✵', start: 107, end: 110 },
+  ],
+  A3: [
+    { rarity: '✵', start: 210, end: 229 },
+    { rarity: '✵✵', start: 230, end: 237 },
+  ],
+  A3a: [
+    { rarity: '✵', start: 89, end: 98 },
+    { rarity: '✵✵', start: 99, end: 102 },
+  ],
+  A3b: [
+    { rarity: '✵', start: 93, end: 102 },
+    { rarity: '✵✵', start: 103, end: 106 },
+  ],
+  A4: [
+    { rarity: '✵', start: 212, end: 231 },
+    { rarity: '✵✵', start: 232, end: 239 },
+  ],
+  A4a: [
+    { rarity: '✵', start: 91, end: 100 },
+    { rarity: '✵✵', start: 101, end: 104 },
+  ],
+  A4b: [{ rarity: '✵✵', start: 377, end: 378 }],
+} // as Record<ExpansionId, { rarity: Rarity; start: number; end: number }[]>
 
 /* Helper Functions */
 
@@ -139,10 +156,11 @@ function urlToCardId(url) {
   return `${matches[0][1]}-${matches[0][2]}`
 }
 
-async function extractCardInfo($, cardUrl) {
+async function extractCardInfo($, cardUrl, expansionId) {
   const cardInfo = {}
 
-  cardInfo.card_id = urlToCardId(cardUrl)
+  const inPackId = cardUrl.split('/').pop()
+  cardInfo.card_id = `${expansionId}-${inPackId}`
 
   const imageUrl = $('img.card').attr('src')
   const imageName = cardInfo.card_id + path.extname(imageUrl)
@@ -168,6 +186,8 @@ async function extractCardInfo($, cardUrl) {
   cardInfo.name = titleParts[0].trim()
 
   if (cardInfo.name === 'Old Amber' && cardInfo.card_id === 'A1a-63') {
+    // we set the card_id to the linkedCardID if it exists, so we really treat it as a single card even though it appears in multiple expansions.
+    cardInfo.card_id = 'A1-218'
     cardInfo.linkedCardID = 'A1-218'
   }
 
@@ -210,8 +230,17 @@ async function extractCardInfo($, cardUrl) {
   cardInfo.weakness = weaknessAndRetreat[0]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
   cardInfo.retreat = weaknessAndRetreat[1]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
 
+  cardInfo.expansion = expansionId
+
   const raritySection = $('table.card-prints-versions tr.current')
   cardInfo.rarity = cardUrl.toString().includes('P-A') ? 'P' : raritySection.find('td:last-child').text().trim() || 'P'
+  if (rarityOverrides[expansionId]) {
+    for (const { rarity, start, end } of rarityOverrides[expansionId]) {
+      if (start <= inPackId && inPackId <= end) {
+        cardInfo.rarity = rarity
+      }
+    }
+  }
 
   cardInfo.fullart = fullArtRarities.includes(cardInfo.rarity)
 
@@ -234,17 +263,16 @@ async function extractCardInfo($, cardUrl) {
   })
 
   cardInfo.artist = $('div.card-text-section.card-text-artist a').text().trim() || 'Unknown'
-  cardInfo.crafting_cost = craftingCost[cardInfo.rarity] || 'Unknown'
 
   console.log('returning card info', cardInfo.card_id)
   return cardInfo
 }
 
-async function getCardDetails(cardUrl) {
+async function getCardDetails(cardUrl, expansionId) {
   try {
     console.log(`Fetching details for ${cardUrl}...`)
     const $ = await fetchHTML(cardUrl)
-    return await extractCardInfo($, cardUrl)
+    return await extractCardInfo($, cardUrl, expansionId)
   } catch (error) {
     console.error(`Error fetching details for ${cardUrl}:`, error)
     return null // Return null or a default object to continue the process for other cards
@@ -327,7 +355,7 @@ async function scrapeCards() {
         while (index < cardLinks.length && promises.length < concurrencyLimit) {
           const link = cardLinks[index++]
           promises.push(
-            getCardDetails(link).then((card) => {
+            getCardDetails(link, expansion).then((card) => {
               if (card) {
                 cards.push(card)
               }
