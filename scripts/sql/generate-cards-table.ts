@@ -3,8 +3,7 @@
  * This is just a helper function to get the cards into the postgres db cards table. This table is currently
  * only used for the trading matching algorithm.
  *
- * Because this is a TS file you need to run this with `bun run scripts/sql/generate-cards-table.ts`
- * Install bun with `npm install -g bun` if you don't have it already.
+ * Because this is a TS file you need to run this with `tsx scripts/sql/generate-cards-table.ts`
  */
 
 import fs from 'node:fs'

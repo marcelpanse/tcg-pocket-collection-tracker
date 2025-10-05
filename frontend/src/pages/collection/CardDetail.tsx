@@ -6,7 +6,7 @@ import { CardLine } from '@/components/CardLine'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Radio, RadioIndicator, RadioItem } from '@/components/ui/radio'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
-import { getCardById, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
+import { craftingCost, getCardById, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
 import type { CollectionRow } from '@/types'
@@ -164,9 +164,11 @@ function CardDetail() {
                 {card && pullRateForSpecificCard(expansion, packName, card).toFixed(2)}%
               </p>
             )}
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.craftingCost')}</strong> {card?.crafting_cost}
-            </p>
+            {card && craftingCost[card.rarity] && (
+              <p className="mt-1 flex">
+                <strong className="block min-w-[175px]">{t('text.craftingCost')}</strong> {craftingCost[card.rarity]}
+              </p>
+            )}
 
             <p className="mt-1 flex">
               <strong className="block min-w-[175px]">{t('text.artist')}</strong> {card?.artist}

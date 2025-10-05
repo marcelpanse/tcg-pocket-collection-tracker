@@ -1,39 +1,39 @@
-export function md5(inputString) {
+export function md5(inputString: string) {
   const hc = '0123456789abcdef'
 
-  function rh(n) {
-    let j
+  function rh(n: number) {
+    let j: number
     let s = ''
     for (j = 0; j <= 3; j++) {
       s += hc.charAt((n >> (j * 8 + 4)) & 0x0f) + hc.charAt((n >> (j * 8)) & 0x0f)
     }
     return s
   }
-  function ad(x, y) {
+  function ad(x: number, y: number) {
     var l = (x & 0xffff) + (y & 0xffff)
     var m = (x >> 16) + (y >> 16) + (l >> 16)
     return (m << 16) | (l & 0xffff)
   }
-  function rl(n, c) {
+  function rl(n: number, c: number) {
     return (n << c) | (n >>> (32 - c))
   }
-  function cm(q, a, b, x, s, t) {
+  function cm(q: number, a: number, b: number, x: number, s: number, t: number) {
     return ad(rl(ad(ad(a, q), ad(x, t)), s), b)
   }
-  function ff(a, b, c, d, x, s, t) {
+  function ff(a: number, b: number, c: number, d: number, x: number, s: number, t: number) {
     return cm((b & c) | (~b & d), a, b, x, s, t)
   }
-  function gg(a, b, c, d, x, s, t) {
+  function gg(a: number, b: number, c: number, d: number, x: number, s: number, t: number) {
     return cm((b & d) | (c & ~d), a, b, x, s, t)
   }
-  function hh(a, b, c, d, x, s, t) {
+  function hh(a: number, b: number, c: number, d: number, x: number, s: number, t: number) {
     return cm(b ^ c ^ d, a, b, x, s, t)
   }
-  function ii(a, b, c, d, x, s, t) {
+  function ii(a: number, b: number, c: number, d: number, x: number, s: number, t: number) {
     return cm(c ^ (b | ~d), a, b, x, s, t)
   }
-  function sb(x) {
-    let i
+  function sb(x: string) {
+    let i: number
     const nblk = ((x.length + 8) >> 6) + 1
     const blks = new Array(nblk * 16)
     for (i = 0; i < nblk * 16; i++) {
@@ -46,13 +46,13 @@ export function md5(inputString) {
     blks[nblk * 16 - 2] = x.length * 8
     return blks
   }
-  let i
+  let i: number
   let x = sb(`${inputString}`),
     a = 1732584193,
     b = -271733879,
     c = -1732584194,
     d = 271733878
-  let olda, oldb, oldc, oldd
+  let olda: number, oldb: number, oldc: number, oldd: number
   for (i = 0; i < x.length; i += 16) {
     olda = a
     oldb = b
