@@ -17,6 +17,8 @@ const locales = ['en-US', 'es-ES', 'fr-FR', 'it-IT', 'pt-BR']
 const { values } = parseArgs({
   options: {
     verify: { type: 'boolean' },
+    force: { type: 'boolean' },
+    expansion: { type: 'string', multiple: true },
   },
 })
 
@@ -102,10 +104,10 @@ function decode(hash: string) {
 }
 
 const handleCard = async (card_id: string, locale: string) => {
-  const hash = await generateHash(card_id, locale)
+  const stored_string = hashes[locale][card_id]
+  const stored_hash = stored_string && decode(stored_string)
   if (values.verify) {
-    const stored_string = hashes[locale][card_id]
-    const stored_hash = stored_string && decode(stored_string)
+    const hash = await generateHash(card_id, locale)
     if (!checkSimilar(hash, stored_hash)) {
       console.log(`Incorrect hash for ${card_id} for locale ${locale}:`)
       console.log(`Stored:     ${stored_string}`)
@@ -113,14 +115,20 @@ const handleCard = async (card_id: string, locale: string) => {
       ret |= 1
     }
   } else {
-    if (hash) {
-      hashes[locale][card_id] = Buffer.from(new Uint8Array(hash)).toString('base64')
+    if (!stored_hash || values.force) {
+      const hash = await generateHash(card_id, locale)
+      if (hash) {
+        hashes[locale][card_id] = Buffer.from(new Uint8Array(hash)).toString('base64')
+      }
     }
   }
 }
 
 const expansionFiles = await fs.promises.readdir(cardsDir)
 for (const expansionFile of expansionFiles) {
+  if (values.expansion && !values.expansion.includes(path.basename(expansionFile, '.json'))) {
+    continue
+  }
   const data = await fs.promises.readFile(path.join(cardsDir, expansionFile), 'utf8')
   const cards = JSON.parse(data)
   console.log(expansionFile)

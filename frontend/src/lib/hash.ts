@@ -1,5 +1,5 @@
-export const hashSize = 48
-export const freqSize = 12
+export const hashSize = 96
+export const freqSize = 8
 
 export interface PixelData {
   r: Array<number>
@@ -96,7 +96,7 @@ export function calculateSimilarity(hash1: ArrayBuffer, hash2: ArrayBuffer): num
 }
 
 function computeDCT(pixels: number[]): number[] {
-  const n = hashSize
+  const n = Math.round(Math.sqrt(pixels.length))
   const result = new Array(freqSize * freqSize)
 
   for (let u = 0; u < freqSize; u++) {
