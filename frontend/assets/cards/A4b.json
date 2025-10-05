@@ -25,7 +25,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-1", "A1-227", "P-A-23", "A3-210", "A4b-1", "A4b-2"],
-    "artist": "Narumi Sato"
+    "artist": "Narumi Sato",
+    "internal_id": "c8f403e7c43a6d764f99e4754e512cb0",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -53,7 +55,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-1", "A1-227", "P-A-23", "A3-210", "A4b-1", "A4b-2"],
-    "artist": "Narumi Sato"
+    "artist": "Narumi Sato",
+    "internal_id": "4d7087acf0bdb1a5ee35aa2c30406b28",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -81,7 +85,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-2", "A3-211", "A4b-3", "A4b-4"],
-    "artist": "Kurata So"
+    "artist": "Kurata So",
+    "internal_id": "53141d757b08c831a3cce0a6817cd183",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -109,7 +115,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-2", "A3-211", "A4b-3", "A4b-4"],
-    "artist": "Kurata So"
+    "artist": "Kurata So",
+    "internal_id": "700e476d46c37a207633ed4c839c717f",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -143,7 +151,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-4", "A1-251", "A3-230", "A4b-5"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "ecb1f3cb59c47e514df83e9c1ee08031",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -171,7 +181,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-1", "A2b-97", "A4b-6", "A4b-7"],
-    "artist": "Akira Komayama"
+    "artist": "Akira Komayama",
+    "internal_id": "e4f6fd56187c136f781b60844cd6f778",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -199,7 +211,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-1", "A2b-97", "A4b-6", "A4b-7"],
-    "artist": "Akira Komayama"
+    "artist": "Akira Komayama",
+    "internal_id": "3c4ee1bd02f288493d3bd6f8cdfee586",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -227,7 +241,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-2", "A2b-98", "A4b-8", "A4b-9"],
-    "artist": "Yuka Morii"
+    "artist": "Yuka Morii",
+    "internal_id": "d808b78da1a8d1b692b65c3a6f5edd54",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -255,7 +271,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-2", "A2b-98", "A4b-8", "A4b-9"],
-    "artist": "Yuka Morii"
+    "artist": "Yuka Morii",
+    "internal_id": "1d4fefd5c8f8db1423b47db3a04d09db",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -283,7 +301,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-3", "A2b-79", "A2b-107", "A4b-10"],
-    "artist": "PLANETA Igarashi"
+    "artist": "PLANETA Igarashi",
+    "internal_id": "7c62c8c6d2f6c736fed112a83d46d4c5",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -311,7 +331,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-21", "A4b-11", "A4b-12"],
-    "artist": "kawayoo"
+    "artist": "kawayoo",
+    "internal_id": "e1751dcd688433c4c47a040b8a530214",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -339,7 +361,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-21", "A4b-11", "A4b-12"],
-    "artist": "kawayoo"
+    "artist": "kawayoo",
+    "internal_id": "056958a0c752ef6483bbe0e6f84c6fb8",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -367,7 +391,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-23", "A1-252", "A3-231", "A4b-13"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "450a8032b1cdcabe0f29b1b4274447e3",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -395,7 +421,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-13", "A4b-14", "A4b-15"],
-    "artist": "Mékayu"
+    "artist": "Mékayu",
+    "internal_id": "50ad37eb24c90b1e538167094f6a7788",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -423,7 +451,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-13", "A4b-14", "A4b-15"],
-    "artist": "Mékayu"
+    "artist": "Mékayu",
+    "internal_id": "abda10e802d6d6ee9b064b6e776fdf82",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -451,7 +481,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-14", "A4b-16", "A4b-17"],
-    "artist": "Kyoko Umemoto"
+    "artist": "Kyoko Umemoto",
+    "internal_id": "99bf811b3ed80f8bfd59a05492df968b",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -479,7 +511,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-14", "A4b-16", "A4b-17"],
-    "artist": "Kyoko Umemoto"
+    "artist": "Kyoko Umemoto",
+    "internal_id": "5729eefdae125501a26828afe7b6023f",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -511,7 +545,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-15", "A4b-18", "A4b-19"],
-    "artist": "Kagemaru Himeno"
+    "artist": "Kagemaru Himeno",
+    "internal_id": "86666a557c275a2e9a24605d4605cc1f",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -543,7 +579,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-15", "A4b-18", "A4b-19"],
-    "artist": "Kagemaru Himeno"
+    "artist": "Kagemaru Himeno",
+    "internal_id": "cf7c4b7383588eaaf37855c4f329b03e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -571,7 +609,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-6", "A4b-20", "A4b-21"],
-    "artist": "Eri Yamaki"
+    "artist": "Eri Yamaki",
+    "internal_id": "6278554632b934086030ec0e691cb448",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -599,7 +639,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-6", "A4b-20", "A4b-21"],
-    "artist": "Eri Yamaki"
+    "artist": "Eri Yamaki",
+    "internal_id": "250dcd8e6f17d28a7b29c2f52c9e6fb6",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -627,7 +669,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-7", "A2-180", "A2-196", "A4-232", "A4b-22"],
-    "artist": "PLANETA Tsuji"
+    "artist": "PLANETA Tsuji",
+    "internal_id": "336960b76fb3a8bcb3cb24ca056a2064",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -659,7 +703,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-21", "A4-186", "A4-202", "A4b-23"],
-    "artist": "PLANETA Mochizuki"
+    "artist": "PLANETA Mochizuki",
+    "internal_id": "92b38c8551a9aaed551f5f8286f3589e",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -687,7 +733,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-3", "A1a-75", "A1a-85", "A3a-99", "A4b-24"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "073258702f01b269a2654bb63b3651e4",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -719,7 +767,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-23", "A4b-25", "A4b-26"],
-    "artist": "Saya Tsuruta"
+    "artist": "Saya Tsuruta",
+    "internal_id": "9128a3749e4bc0bbfd58802ea485d08d",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -751,7 +801,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-23", "A4b-25", "A4b-26"],
-    "artist": "Saya Tsuruta"
+    "artist": "Saya Tsuruta",
+    "internal_id": "52e71d4ec956e04d3737c0298f96076c",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -779,7 +831,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-24", "A4b-27", "A4b-28"],
-    "artist": "Atsuko Nishida"
+    "artist": "Atsuko Nishida",
+    "internal_id": "5ad7938974a257ca98eb494cde08068d",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -807,7 +861,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-24", "A4b-27", "A4b-28"],
-    "artist": "Atsuko Nishida"
+    "artist": "Atsuko Nishida",
+    "internal_id": "4be39c1d13214ba5e5cb490724f2c6cd",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -839,7 +895,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-10", "A2a-82", "A2a-91", "A4-233", "A4b-29"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "958fc4bf6b895281549c004ca153696a",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -871,7 +929,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-22", "A2-159", "A4b-30", "A4b-31", "P-A-116"],
-    "artist": "Narumi Sato"
+    "artist": "Narumi Sato",
+    "internal_id": "9d6eced002baa59450d878dbeebad662",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -903,7 +963,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-22", "A2-159", "A4b-30", "A4b-31", "P-A-116"],
-    "artist": "Narumi Sato"
+    "artist": "Narumi Sato",
+    "internal_id": "e219bfb554739c18de351f44d8eab2a6",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -931,7 +993,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-4", "A4b-32", "A4b-33"],
-    "artist": "Kagemaru Himeno"
+    "artist": "Kagemaru Himeno",
+    "internal_id": "2360885ea2abef723e10edbb92170180",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -959,7 +1023,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-4", "A4b-32", "A4b-33"],
-    "artist": "Kagemaru Himeno"
+    "artist": "Kagemaru Himeno",
+    "internal_id": "546c5872146eb4889e11168d3e8995ed",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -987,7 +1053,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-5", "A4b-34", "A4b-35"],
-    "artist": "Shigenori Negishi"
+    "artist": "Shigenori Negishi",
+    "internal_id": "4b1370e4376b45c02959acf69532b56f",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1015,7 +1083,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-5", "A4b-34", "A4b-35"],
-    "artist": "Shigenori Negishi"
+    "artist": "Shigenori Negishi",
+    "internal_id": "49296f079b1cba5b2661536172c5cb72",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1047,7 +1117,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-6", "A1a-70", "A4b-36", "A4b-37"],
-    "artist": "Yoshioka"
+    "artist": "Yoshioka",
+    "internal_id": "d2c9d160a17c8503f4ac76476bda200a",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1079,7 +1151,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-6", "A1a-70", "A4b-36", "A4b-37"],
-    "artist": "Yoshioka"
+    "artist": "Yoshioka",
+    "internal_id": "330c71456735f7e1c3ae1ffef6d6770e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1107,7 +1181,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-10", "A4b-38", "A4b-39"],
-    "artist": "Saya Tsuruta"
+    "artist": "Saya Tsuruta",
+    "internal_id": "86db324ef1e4a060b6e46e32edb9c45a",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1135,7 +1211,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-10", "A4b-38", "A4b-39"],
-    "artist": "Saya Tsuruta"
+    "artist": "Saya Tsuruta",
+    "internal_id": "04c563c1ddadb6ea2d48b10c2d95d6e4",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1163,7 +1241,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-11", "A4b-40", "A4b-41"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": "2e8fa3c6f19b3c52002020e0ae8b13f7",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1191,7 +1271,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-11", "A4b-40", "A4b-41"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": "0644f71e3c604faca06b738192eaf8f5",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1225,7 +1307,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-12", "A3-180", "A3-198", "A4b-42"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "be31b9a064d577b93fbc28331e9587fe",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1253,7 +1337,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-23", "A3-181", "A3-199", "A4b-43"],
-    "artist": "PLANETA Tsuji"
+    "artist": "PLANETA Tsuji",
+    "internal_id": "d8e7e3889fdd164bc5bb941c5e30c48f",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1287,7 +1373,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-6", "A3a-76", "A3a-88", "A4b-44", "A4b-360"],
-    "artist": "PLANETA Mochizuki"
+    "artist": "PLANETA Mochizuki",
+    "internal_id": "0401ee36b6bc2bac95b9b0e01806021c",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1315,7 +1403,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-7", "A3a-71", "A4b-45", "A4b-46"],
-    "artist": "Shin Nagasawa"
+    "artist": "Shin Nagasawa",
+    "internal_id": "d592852eec3f0d8707c0ee5ea404147f",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1343,7 +1433,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-7", "A3a-71", "A4b-45", "A4b-46"],
-    "artist": "Shin Nagasawa"
+    "artist": "Shin Nagasawa",
+    "internal_id": "62bdf37b9e9ae6a20eccdad9f18e6028",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1371,7 +1463,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-8", "P-A-75", "A4b-47", "A4b-48"],
-    "artist": "nagimiso"
+    "artist": "nagimiso",
+    "internal_id": "70804f4a1d819518b2cc372168bbc635",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1399,7 +1493,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-8", "P-A-75", "A4b-47", "A4b-48"],
-    "artist": "nagimiso"
+    "artist": "nagimiso",
+    "internal_id": "a0af636a3b3e3ac5283e5780eaa08aed",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1427,7 +1523,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-5", "P-A-52", "A4b-49", "A4b-50"],
-    "artist": "mashu"
+    "artist": "mashu",
+    "internal_id": "3b91a4e96a480b5fda95cbe09604dad5",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1455,7 +1553,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-5", "P-A-52", "A4b-49", "A4b-50"],
-    "artist": "mashu"
+    "artist": "mashu",
+    "internal_id": "0f27cf98838e31bf16f15b4e0ffd4ad5",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1483,7 +1583,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-6", "A4b-51", "A4b-52", "A4b-354"],
-    "artist": "mashu"
+    "artist": "mashu",
+    "internal_id": "0eac2a3bd4a66ccff670417b019d6050",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1511,7 +1613,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-6", "A4b-51", "A4b-52", "A4b-354"],
-    "artist": "mashu"
+    "artist": "mashu",
+    "internal_id": "8dd75043086c28d53264155b3ebc2bce",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1539,7 +1643,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-7", "A2b-73", "A4b-53", "A4b-54"],
-    "artist": "mashu"
+    "artist": "mashu",
+    "internal_id": "07d1c2803852e70c42c1ed01bba32dfc",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1567,7 +1673,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-7", "A2b-73", "A4b-53", "A4b-54"],
-    "artist": "mashu"
+    "artist": "mashu",
+    "internal_id": "cebdc0bf86275517f7365e42fdbbda64",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1595,7 +1703,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-33", "A1-230", "P-A-32", "A4b-55", "A4b-56"],
-    "artist": "Teeziro"
+    "artist": "Teeziro",
+    "internal_id": "5fb2c17882ef30318d8ca2f2615ab055",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1623,7 +1733,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-33", "A1-230", "P-A-32", "A4b-55", "A4b-56"],
-    "artist": "Teeziro"
+    "artist": "Teeziro",
+    "internal_id": "5b17779a57035874bb9a3374fff8b409",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1651,7 +1763,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-34", "A4b-57", "A4b-58"],
-    "artist": "kantaro"
+    "artist": "kantaro",
+    "internal_id": "8c09ebd246a5d7e360885ceb3d034eeb",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1679,7 +1793,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-34", "A4b-57", "A4b-58"],
-    "artist": "kantaro"
+    "artist": "kantaro",
+    "internal_id": "fa206ccdb1075521a5346aa048c6caf8",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1713,7 +1829,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284", "A4b-59", "A4b-361"],
-    "artist": "PLANETA Mochizuki"
+    "artist": "PLANETA Mochizuki",
+    "internal_id": "8917bd819d07b92acc774a8416bfda31",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1747,7 +1865,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-10", "A2b-80", "A2b-108", "A4b-60"],
-    "artist": "PLANETA Igarashi"
+    "artist": "PLANETA Igarashi",
+    "internal_id": "3c7c1262c652757226a68d274ea1b787",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1775,7 +1895,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-39", "A3a-89", "A4b-61", "A4b-62"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": "649c49179e2a02b426c442b78d1d767e",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1803,7 +1925,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-39", "A3a-89", "A4b-61", "A4b-62"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": "cf3af74cb8ca72dfdaf1058b1260a7fe",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1831,7 +1955,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-41", "A1-254", "A3a-100", "A4b-63"],
-    "artist": "PLANETA Saito"
+    "artist": "PLANETA Saito",
+    "internal_id": "80e0f162178e39f09d66600d9727aa69",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1859,7 +1985,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-8", "A3b-71", "A4-213", "A4b-64", "A4b-65"],
-    "artist": "Eri Yamaki"
+    "artist": "Eri Yamaki",
+    "internal_id": "a7c23914173334b0000b3d9ed06dcd53",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1887,7 +2015,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-8", "A3b-71", "A4-213", "A4b-64", "A4b-65"],
-    "artist": "Eri Yamaki"
+    "artist": "Eri Yamaki",
+    "internal_id": "b7845d57dce3f8cec458ab337fd7974c",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -1919,7 +2049,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-9", "A3b-79", "A3b-87", "A4b-66"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "7be986a2547c37ab4f25ea0a45619e12",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1953,7 +2085,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103", "A4b-67"],
-    "artist": "PLANETA Tsuji"
+    "artist": "PLANETA Tsuji",
+    "internal_id": "1d6d2b9e7905c56ff3d909b95f633543",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -1981,7 +2115,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-34", "A4-187", "A4-210", "A4-240", "A4b-68", "A4b-362"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "8f51e98458ff7260bb9c4973b3ae2c06",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2009,7 +2145,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-10", "A4b-69", "A4b-70"],
-    "artist": "sui"
+    "artist": "sui",
+    "internal_id": "5805ea45e9108c16aef11b90eb33430c",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2037,7 +2175,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-10", "A4b-69", "A4b-70"],
-    "artist": "sui"
+    "artist": "sui",
+    "internal_id": "6375763407c281c5912a72e87a95dc51",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2065,7 +2205,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-27", "P-A-40", "A4a-91", "A4b-71", "A4b-72"],
-    "artist": "Kagemaru Himeno"
+    "artist": "Kagemaru Himeno",
+    "internal_id": "6cdf607245a4b1b451b82a9a2ac20da3",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2093,7 +2235,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-27", "P-A-40", "A4a-91", "A4b-71", "A4b-72"],
-    "artist": "Kagemaru Himeno"
+    "artist": "Kagemaru Himeno",
+    "internal_id": "d9b2ed72a136f557cf171d07c9cf7c6d",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2121,7 +2265,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-28", "A4a-92", "A4b-73", "A4b-74"],
-    "artist": "Masakazu Fukuda"
+    "artist": "Masakazu Fukuda",
+    "internal_id": "338870b5146f9a55439842cb9e6a3a60",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2149,7 +2295,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-28", "A4a-92", "A4b-73", "A4b-74"],
-    "artist": "Masakazu Fukuda"
+    "artist": "Masakazu Fukuda",
+    "internal_id": "efea5feb5a8cdb1739699f16b6712f39",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2177,7 +2325,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-29", "A2-181", "A2-197", "A4a-101", "A4b-75"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "8916ca1940a93bb988cbcd596dfe3465",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2209,7 +2359,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-13", "A4b-76", "A4b-77"],
-    "artist": "Kazumasa Yasukuni"
+    "artist": "Kazumasa Yasukuni",
+    "internal_id": "1362c9ed4e0079b85a56701ca22fc837",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2241,7 +2393,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-13", "A4b-76", "A4b-77"],
-    "artist": "Kazumasa Yasukuni"
+    "artist": "Kazumasa Yasukuni",
+    "internal_id": "0061951bd3d0b1bd7c26c64026f4de50",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2269,7 +2423,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-30", "A4b-78", "A4b-79"],
-    "artist": "Akira Komayama"
+    "artist": "Akira Komayama",
+    "internal_id": "50f54c4964754d4095707de56396639f",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2297,7 +2453,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-30", "A4b-78", "A4b-79"],
-    "artist": "Akira Komayama"
+    "artist": "Akira Komayama",
+    "internal_id": "13154b3bdcde6626f38808dbc86d3931",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2325,7 +2483,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-32", "A4b-80", "A4b-81"],
-    "artist": "tetsuya koizumi"
+    "artist": "tetsuya koizumi",
+    "internal_id": "b33ac961570b3cdfea882a987f021c1d",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2353,7 +2513,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-32", "A4b-80", "A4b-81"],
-    "artist": "tetsuya koizumi"
+    "artist": "tetsuya koizumi",
+    "internal_id": "d59761910e3f81361ba96472e88e94a7",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2387,7 +2549,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-33", "A3-182", "A3-200", "A4b-82"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "dfd2958158b215de33147ef030ac45d7",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2415,7 +2579,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-53", "A1-232", "P-A-33", "A3-215", "A4b-83", "A4b-84"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": "207a92659ad0e6b6baf91bcbfa317e74",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2443,7 +2609,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-53", "A1-232", "P-A-33", "A3-215", "A4b-83", "A4b-84"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": "2fbf75a7ed177921c79f765b422781da",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2471,7 +2639,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-54", "A3-216", "A4b-85", "A4b-86"],
-    "artist": "Nelnal"
+    "artist": "Nelnal",
+    "internal_id": "e69857a744f5b1a889b46135fc11b459",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2499,7 +2669,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-54", "A3-216", "A4b-85", "A4b-86"],
-    "artist": "Nelnal"
+    "artist": "Nelnal",
+    "internal_id": "5875b646a2c27a62b96341c07966dd87",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2533,7 +2705,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-56", "A1-256", "A3-232", "A4b-87"],
-    "artist": "PLANETA Tsuji"
+    "artist": "PLANETA Tsuji",
+    "internal_id": "3c2e62e0aedf62055124143542989d39",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2561,7 +2735,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-41", "A4b-88", "A4b-89"],
-    "artist": "Yukiko Baba"
+    "artist": "Yukiko Baba",
+    "internal_id": "25a6984b3bb4561b6135372eeb5953e6",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2589,7 +2765,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-41", "A4b-88", "A4b-89"],
-    "artist": "Yukiko Baba"
+    "artist": "Yukiko Baba",
+    "internal_id": "0459d359d79366b173d7b8e14b2323c5",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2617,7 +2795,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-42", "A4b-90", "A4b-91"],
-    "artist": "sui"
+    "artist": "sui",
+    "internal_id": "0c1e60b45ebcc9acb14547d6a86af64b",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2645,7 +2825,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-42", "A4b-90", "A4b-91"],
-    "artist": "sui"
+    "artist": "sui",
+    "internal_id": "85cc23adf0a539954c60c201b26c938c",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2673,7 +2855,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-43", "A4-188", "A4-203", "A4b-92"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "09ea9c38f0833ecdf2efb820eb605552",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2701,7 +2885,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-74", "A3-218", "A4b-93", "A4b-94"],
-    "artist": "Hiroki Asanuma"
+    "artist": "Hiroki Asanuma",
+    "internal_id": "1cc103d79f113e2889dba58460d039e0",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2729,7 +2915,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-74", "A3-218", "A4b-93", "A4b-94"],
-    "artist": "Hiroki Asanuma"
+    "artist": "Hiroki Asanuma",
+    "internal_id": "03af0845ce6dc46cba9ec604c7046551",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2757,7 +2945,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-76", "A1-257", "A3-233", "A4b-95"],
-    "artist": "PLANETA Igarashi"
+    "artist": "PLANETA Igarashi",
+    "internal_id": "ec846dc2a8ec4def4f3ddbf06a592105",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2785,7 +2975,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-17", "A4-214", "A4b-96", "A4b-97"],
-    "artist": "Mitsuhiro Arita"
+    "artist": "Mitsuhiro Arita",
+    "internal_id": "829960337bb3331c08278da6b921dad8",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2813,7 +3005,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-17", "A4-214", "A4b-96", "A4b-97"],
-    "artist": "Mitsuhiro Arita"
+    "artist": "Mitsuhiro Arita",
+    "internal_id": "c1b2f70a441ceb19641965f202d44bb0",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2841,7 +3035,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-18", "A1a-76", "A4-234", "A4b-98"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "abe2330dc5fdc21e236ed2e60a44cf7c",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2873,7 +3069,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-19", "A1a-72", "A4b-99", "A4b-100"],
-    "artist": "LINNE"
+    "artist": "LINNE",
+    "internal_id": "52c9918daf8455627b7da32dbd8dfcb4",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2905,7 +3103,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-19", "A1a-72", "A4b-99", "A4b-100"],
-    "artist": "LINNE"
+    "artist": "LINNE",
+    "internal_id": "98136348483345b881b4a2e0dc135c12",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -2939,7 +3139,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-84", "A1-258", "A1-275", "A3b-104", "A4b-101"],
-    "artist": "PLANETA Saito"
+    "artist": "PLANETA Saito",
+    "internal_id": "19618b94d64d1954a40baf422aaadd61",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2967,7 +3169,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-60", "A4b-102", "A4b-103"],
-    "artist": "chibi"
+    "artist": "chibi",
+    "internal_id": "7fd5d1f9e149e24b2b84593834190b84",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -2995,7 +3199,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-60", "A4b-102", "A4b-103"],
-    "artist": "chibi"
+    "artist": "chibi",
+    "internal_id": "606ba5be0279822ff99dd1f383bddc22",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3027,7 +3233,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-61", "A4b-104", "A4b-105", "A4b-355"],
-    "artist": "Hajime Kusajima"
+    "artist": "Hajime Kusajima",
+    "internal_id": "d7cbb4b42e1678c29b85ee2585f7de15",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3059,7 +3267,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-61", "A4b-104", "A4b-105", "A4b-355"],
-    "artist": "Hajime Kusajima"
+    "artist": "Hajime Kusajima",
+    "internal_id": "eac1ce83729a2c53bb519f9a11db27ca",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3091,7 +3301,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-22", "A2a-83", "A2a-92", "A4-235", "A4b-106"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "b0f92d94432d6584095766bd19d2c4b9",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3125,7 +3337,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206", "A4b-107", "A4b-363"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "763a980ca17916738a2de6364ee4b0f7",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3153,7 +3367,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-50", "A2-162", "P-A-48", "A4b-108", "A4b-109"],
-    "artist": "MINAMINAMI Take"
+    "artist": "MINAMINAMI Take",
+    "internal_id": "18b3bae3ab48926d799f20c5119a2b4d",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3181,7 +3397,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-50", "A2-162", "P-A-48", "A4b-108", "A4b-109"],
-    "artist": "MINAMINAMI Take"
+    "artist": "MINAMINAMI Take",
+    "internal_id": "ef55cbaa4f38511b4d97f90fe0da1d51",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3209,7 +3427,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-87", "P-A-61", "A3a-91", "A4b-110", "A4b-111"],
-    "artist": "Aya Kusube"
+    "artist": "Aya Kusube",
+    "internal_id": "4eab20667cdf35872fcdc1d5ecadea67",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3237,7 +3457,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-87", "P-A-61", "A3a-91", "A4b-110", "A4b-111"],
-    "artist": "Aya Kusube"
+    "artist": "Aya Kusube",
+    "internal_id": "5866b3f5207efe42fc3d0216de8deb38",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3265,7 +3487,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-88", "A3a-92", "A4b-112", "A4b-113"],
-    "artist": "Akira Komayama"
+    "artist": "Akira Komayama",
+    "internal_id": "b496fc3f482043553ad7b7b8ce07161e",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3293,7 +3517,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-88", "A3a-92", "A4b-112", "A4b-113"],
-    "artist": "Akira Komayama"
+    "artist": "Akira Komayama",
+    "internal_id": "09824033670bddc8aecf20efb448efea",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3325,7 +3551,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-89", "P-A-19", "A3a-93", "A4b-114", "A4b-115", "A4b-356"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "b5e52d1dd63e587f4d4441852fdbfed5",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3357,7 +3585,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-89", "P-A-19", "A3a-93", "A4b-114", "A4b-115", "A4b-356"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "d5058cac1518accc52ac5f777e7a5e07",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3385,7 +3615,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-22", "A4b-116", "A4b-117"],
-    "artist": "match"
+    "artist": "match",
+    "internal_id": "43c3ce465452389c096ba10a22038650",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3413,7 +3645,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-22", "A4b-116", "A4b-117"],
-    "artist": "match"
+    "artist": "match",
+    "internal_id": "1e78ea8ab95ecb2e2a5fa1204c097317",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3441,7 +3675,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-23", "A4b-118", "A4b-119"],
-    "artist": "Atsuko Nishida"
+    "artist": "Atsuko Nishida",
+    "internal_id": "d283b1369218ebf0461fcc6b3e784cb8",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3469,7 +3705,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-23", "A4b-118", "A4b-119"],
-    "artist": "Atsuko Nishida"
+    "artist": "Atsuko Nishida",
+    "internal_id": "bd6a7e6c2ea8b2f31ed91733f9d30571",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3503,7 +3741,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-24", "A3b-80", "A3b-88", "A4b-120"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "cbdf4651da3dbd9db498c6fc575b6545",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3531,7 +3771,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-49", "A3-183", "A3-201", "A4b-121"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "2b7f8e152b2e152ab9d66736bf30b618",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3559,7 +3801,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-50", "A4b-122", "A4b-123"],
-    "artist": "Kouki Saitou"
+    "artist": "Kouki Saitou",
+    "internal_id": "08e5a01bccacc83712373a6120efc9a9",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3587,7 +3831,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-50", "A4b-122", "A4b-123"],
-    "artist": "Kouki Saitou"
+    "artist": "Kouki Saitou",
+    "internal_id": "89a2ec718eb76ea82d13e67ad724de00",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3615,7 +3861,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-51", "A3-184", "A3-202", "A4b-124"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "a74bd7041aa20863473ca7cbcb45c2eb",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3643,7 +3891,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-18", "A2b-101", "A4b-125", "A4b-126"],
-    "artist": "miki kudo"
+    "artist": "miki kudo",
+    "internal_id": "1ce49adcdb372394ce4c2f00c70071dd",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3671,7 +3921,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-18", "A2b-101", "A4b-125", "A4b-126"],
-    "artist": "miki kudo"
+    "artist": "miki kudo",
+    "internal_id": "12a5d0a7c78c890b669680b0fc9e631e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3699,7 +3951,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-19", "A2b-81", "A2b-109", "A4b-127"],
-    "artist": "PLANETA Tsuji"
+    "artist": "PLANETA Tsuji",
+    "internal_id": "76074abe097e365bad09ec32bef0ab9c",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3727,7 +3981,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26", "A4b-128", "A4b-129"],
-    "artist": "Mitsuhiro Arita"
+    "artist": "Mitsuhiro Arita",
+    "internal_id": "adf8ed24d8aa41367f510a772af22e6c",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3755,7 +4011,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26", "A4b-128", "A4b-129"],
-    "artist": "Mitsuhiro Arita"
+    "artist": "Mitsuhiro Arita",
+    "internal_id": "b0fb6fd854465aecee2d6568a03ace12",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3783,7 +4041,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-58", "A3-185", "A3-203", "A4b-130"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "8a64763cf8b279baf8fffcbf0ee5a9c6",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3811,7 +4071,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285", "A4b-131", "A4b-364", "A4b-376"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "54061e2640a01f1e964c75f9619b237a",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3839,7 +4101,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-22", "A2b-82", "A2b-92", "A4b-132"],
-    "artist": "PLANETA Igarashi"
+    "artist": "PLANETA Igarashi",
+    "internal_id": "60129002aec139c4841a15ef793f5a59",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3867,7 +4131,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-97", "P-A-24", "A4-217", "A4b-133", "A4b-134"],
-    "artist": "sowsow"
+    "artist": "sowsow",
+    "internal_id": "f200be1c83cfb123615d3f3434d885a1",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3895,7 +4161,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-97", "P-A-24", "A4-217", "A4b-133", "A4b-134"],
-    "artist": "sowsow"
+    "artist": "sowsow",
+    "internal_id": "8918bde477252dc203c8b65582f19eaa",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3927,7 +4195,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-98", "A4-218", "A4b-135", "A4b-136"],
-    "artist": "kirisAki"
+    "artist": "kirisAki",
+    "internal_id": "a954379c16a6a82a6811f5ec537e2f5f",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -3959,7 +4229,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-98", "A4-218", "A4b-135", "A4b-136"],
-    "artist": "kirisAki"
+    "artist": "kirisAki",
+    "internal_id": "afe1ac23ee88726a0169a3815cb6b5bd",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -3987,7 +4259,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-53", "A4b-137", "A4b-138"],
-    "artist": "Yoshinobu Saito"
+    "artist": "Yoshinobu Saito",
+    "internal_id": "1a7878cbfaf5e1c513bd5dec51eaf3ff",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4015,7 +4289,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-53", "A4b-137", "A4b-138"],
-    "artist": "Yoshinobu Saito"
+    "artist": "Yoshinobu Saito",
+    "internal_id": "a9c62ce76184ce0a0a69957df7d3959c",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -4049,7 +4325,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-104", "A1-260", "A1-276", "A3b-105", "A4b-139"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "9f8423df3d4a592a95a48f03966a2c86",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4077,7 +4355,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-64", "A4b-140", "A4b-141"],
-    "artist": "Miki Tanaka"
+    "artist": "Miki Tanaka",
+    "internal_id": "2ebf5f07d60a0dc4412e142524f712c2",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4105,7 +4385,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-64", "A4b-140", "A4b-141"],
-    "artist": "Miki Tanaka"
+    "artist": "Miki Tanaka",
+    "internal_id": "54d7d8b998fbe50b75d9cd811d371b06",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -4133,7 +4415,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-65", "A4-189", "A4-204", "A4b-142"],
-    "artist": "PLANETA Igarashi"
+    "artist": "PLANETA Igarashi",
+    "internal_id": "94804e133fcff517a3dbd4177286f7b8",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4161,7 +4445,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-25", "A2b-103", "P-A-58", "A4b-143", "A4b-144"],
-    "artist": "imoniii"
+    "artist": "imoniii",
+    "internal_id": "f207a98d8c1c0782b2b6058ed185b8cc",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4189,7 +4475,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-25", "A2b-103", "P-A-58", "A4b-143", "A4b-144"],
-    "artist": "imoniii"
+    "artist": "imoniii",
+    "internal_id": "9162e273052e395a2e16a6d160147618",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -4217,7 +4505,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-61", "A2-183", "A2-198", "A4-236", "A4b-145"],
-    "artist": "PLANETA Tsuji"
+    "artist": "PLANETA Tsuji",
+    "internal_id": "8d2b4f7829a2900df25a50d8d4851fc3",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4249,7 +4539,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-66", "A3-165", "A4b-146", "A4b-147"],
-    "artist": "Jerky"
+    "artist": "Jerky",
+    "internal_id": "a09a73d648e906fe54b6e667c5cc24b4",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4281,7 +4573,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-66", "A3-165", "A4b-146", "A4b-147"],
-    "artist": "Jerky"
+    "artist": "Jerky",
+    "internal_id": "bff4fdfb821a0af83557f6b58c7c68f8",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -4315,7 +4609,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-19", "A3a-77", "A3a-84", "P-A-84", "A4b-148"],
-    "artist": "PLANETA Igarashi"
+    "artist": "PLANETA Igarashi",
+    "internal_id": "85605df22f69c0d1d5aab4a7e841d872",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4347,7 +4643,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-21", "P-A-74", "A4b-149", "A4b-150"],
-    "artist": "kawayoo"
+    "artist": "kawayoo",
+    "internal_id": "f551bc29472eb731ebc97e85fde35a5d",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4379,7 +4677,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-21", "P-A-74", "A4b-149", "A4b-150"],
-    "artist": "kawayoo"
+    "artist": "kawayoo",
+    "internal_id": "33bfa208aa239936c1d03ebb95ef48f2",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -4407,7 +4707,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-120", "A4b-151", "A4b-152"],
-    "artist": "Masako Yamashita"
+    "artist": "Masako Yamashita",
+    "internal_id": "78bdf6bf508003fc0e61130bc31e6f2b",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4435,7 +4737,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-120", "A4b-151", "A4b-152"],
-    "artist": "Masako Yamashita"
+    "artist": "Masako Yamashita",
+    "internal_id": "40d043dd083a3821e37df0bfc5e240b5",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -4463,7 +4767,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-121", "A3-221", "A4b-153", "A4b-154"],
-    "artist": "Nisota Niso"
+    "artist": "Nisota Niso",
+    "internal_id": "4b0e50c73cff88f7cc7545838286ba6e",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4491,7 +4797,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-121", "A3-221", "A4b-153", "A4b-154"],
-    "artist": "Nisota Niso"
+    "artist": "Nisota Niso",
+    "internal_id": "3406ef65af5fc64d0c414a6f0068a242",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -4523,7 +4831,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-123", "A1-261", "A1-277", "A3-234", "A4b-155"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "e172c0a396ccc8d4daa7cc9c88c287b5",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4551,7 +4861,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-127", "A3a-94", "A4b-156", "A4b-157"],
-    "artist": "Oswaldo KATO"
+    "artist": "Oswaldo KATO",
+    "internal_id": "56f4b3a4d94260be0dbeef36ee43cd65",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4579,7 +4891,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-127", "A3a-94", "A4b-156", "A4b-157"],
-    "artist": "Oswaldo KATO"
+    "artist": "Oswaldo KATO",
+    "internal_id": "2ed07fc2136b3f8a652fc5980fbc3d14",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -4613,7 +4927,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50", "A4b-158", "A4b-365"],
-    "artist": "PLANETA Mochizuki"
+    "artist": "PLANETA Mochizuki",
+    "internal_id": "9ea973b61c68a44dcca205df5b479c23",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4647,7 +4963,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-32", "A1a-77", "A1a-83", "A1a-86", "A4a-102", "A4b-159", "A4b-366"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "56a33369cc440ba784f4e9e99a3ecc57",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4679,7 +4997,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-83", "A4-190", "A4-205", "A4b-160"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "eb9c9e05e995fbba09ebc926f2049d5e",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4707,7 +5027,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-66", "A4-220", "A4b-161", "A4b-162"],
-    "artist": "Sumiyoshi Kizuki"
+    "artist": "Sumiyoshi Kizuki",
+    "internal_id": "7775bb9bf60000b3a9190d5189c3643e",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4735,7 +5057,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-66", "A4-220", "A4b-161", "A4b-162"],
-    "artist": "Sumiyoshi Kizuki"
+    "artist": "Sumiyoshi Kizuki",
+    "internal_id": "a4d17ee5c1ec3a26ac4e22a13317df9e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -4763,7 +5087,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-67", "A2-184", "A2-199", "A4-237", "A4b-163"],
-    "artist": "PLANETA Igarashi"
+    "artist": "PLANETA Igarashi",
+    "internal_id": "c97a3e9528949b7737720e06289df437",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4791,7 +5117,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-68", "A3b-97", "A4b-164", "A4b-165"],
-    "artist": "Miki Tanaka"
+    "artist": "Miki Tanaka",
+    "internal_id": "9f9ce97b5a4afdd30a0d91fc97a8ca8b",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4819,7 +5147,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-68", "A3b-97", "A4b-164", "A4b-165"],
-    "artist": "Miki Tanaka"
+    "artist": "Miki Tanaka",
+    "internal_id": "3d5440558155b3900db35b027cd3a373",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -4847,7 +5177,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-69", "A3b-98", "A4b-166", "A4b-167"],
-    "artist": "Yukiko Baba"
+    "artist": "Yukiko Baba",
+    "internal_id": "6fdb83db2ed6ae158238a91a84855efc",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4875,7 +5207,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-69", "A3b-98", "A4b-166", "A4b-167"],
-    "artist": "Yukiko Baba"
+    "artist": "Yukiko Baba",
+    "internal_id": "4b6023a4e2ce54669c055fc10702bb1e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -4907,7 +5241,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-132", "A3b-99", "A4b-168", "A4b-169", "A4b-357"],
-    "artist": "Yuu Nishida"
+    "artist": "Yuu Nishida",
+    "internal_id": "a61512eb2826a169bdfe0bb7bc013528",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -4939,7 +5275,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-132", "A3b-99", "A4b-168", "A4b-169", "A4b-357"],
-    "artist": "Yuu Nishida"
+    "artist": "Yuu Nishida",
+    "internal_id": "25a12c5a6900e7c140a1f0b88700aaca",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -4971,7 +5309,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-78", "A2-167", "A4b-170", "A4b-171"],
-    "artist": "AKIRA EGAWA"
+    "artist": "AKIRA EGAWA",
+    "internal_id": "18f4ba5df67d4c631d201d49d64bc408",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5003,7 +5343,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-78", "A2-167", "A4b-170", "A4b-171"],
-    "artist": "AKIRA EGAWA"
+    "artist": "AKIRA EGAWA",
+    "internal_id": "37fa0470f6a75e30043f5e98c7a80614",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5035,7 +5377,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-35", "A2b-83", "A2b-96", "A4b-172", "A4b-377"],
-    "artist": "PLANETA Yamashita"
+    "artist": "PLANETA Yamashita",
+    "internal_id": "9a6a1775e3ec60d107ae7627eb8c2fd3",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5063,7 +5407,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-31", "A4b-173", "A4b-174"],
-    "artist": "MAHOU"
+    "artist": "MAHOU",
+    "internal_id": "aef035d03b24c84649f5dbabd6f5df57",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5091,7 +5437,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-31", "A4b-173", "A4b-174"],
-    "artist": "MAHOU"
+    "artist": "MAHOU",
+    "internal_id": "d9a7a70c7d961cdfc8c518ad50cb564c",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5119,7 +5467,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-32", "A4b-175", "A4b-176", "A4b-358"],
-    "artist": "Kyoko Umemoto"
+    "artist": "Kyoko Umemoto",
+    "internal_id": "a5d13e391d3a44b700252b98847f3ab3",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5147,7 +5497,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-32", "A4b-175", "A4b-176", "A4b-358"],
-    "artist": "Kyoko Umemoto"
+    "artist": "Kyoko Umemoto",
+    "internal_id": "8fbb2f184d3eea0d34dc9b6076a90567",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5179,7 +5531,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-34", "A3b-81", "A3b-89", "A4b-177"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "9d016f7ed565503154c26a63acc73462",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5207,7 +5561,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-77", "A4b-178", "A4b-179"],
-    "artist": "Jerky"
+    "artist": "Jerky",
+    "internal_id": "7ffeae08bb5df4239002e4e256e88818",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5235,7 +5591,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-77", "A4b-178", "A4b-179"],
-    "artist": "Jerky"
+    "artist": "Jerky",
+    "internal_id": "1b32b945ed44c78114f35134e3c5212a",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5263,7 +5621,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-85", "A3-171", "P-A-67", "A4b-180", "A4b-181"],
-    "artist": "sui"
+    "artist": "sui",
+    "internal_id": "024b780e0a47ae1a12f7c4a8024d2807",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5291,7 +5651,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-85", "A3-171", "P-A-67", "A4b-180", "A4b-181"],
-    "artist": "sui"
+    "artist": "sui",
+    "internal_id": "84f331ef2ae16d43fa1000fac0919df5",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5319,7 +5681,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-86", "A4b-182", "A4b-183"],
-    "artist": "Aya Kusube"
+    "artist": "Aya Kusube",
+    "internal_id": "6432f64edc86cae2de47f07bed736838",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5347,7 +5711,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-86", "A4b-182", "A4b-183"],
-    "artist": "Aya Kusube"
+    "artist": "Aya Kusube",
+    "internal_id": "261aa4754e0ea9d8174761938d247fb0",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5379,7 +5745,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-87", "A3-186", "A3-204", "A3-238", "A4b-184", "A4b-367"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "b375ad977ab9c148f83b1133e046ca2e",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5407,7 +5775,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-36", "A4b-185", "A4b-186"],
-    "artist": "Mina Nakai"
+    "artist": "Mina Nakai",
+    "internal_id": "b083cce5dfd6a2b7c859fce9ec5ac02f",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5435,7 +5805,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-36", "A4b-185", "A4b-186"],
-    "artist": "Mina Nakai"
+    "artist": "Mina Nakai",
+    "internal_id": "23b14e0e12495dab1abf59588bba1499",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5463,7 +5835,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-37", "P-A-87", "A4b-187", "A4b-188"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": "dfd77998dbb1e87b00cf0256e9a41548",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5491,7 +5865,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-37", "P-A-87", "A4b-187", "A4b-188"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": "c84ab2b1d65f54eed09e22b498e3c717",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5519,7 +5895,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-143", "A3-223", "A4b-189", "A4b-190"],
-    "artist": "Kyoko Umemoto"
+    "artist": "Kyoko Umemoto",
+    "internal_id": "4a8377b1d5b957dc82307a5c08a47cb4",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5547,7 +5925,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-143", "A3-223", "A4b-189", "A4b-190"],
-    "artist": "Kyoko Umemoto"
+    "artist": "Kyoko Umemoto",
+    "internal_id": "cf7e1f7492f5fcd0356ea9667e69b783",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5575,7 +5955,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-144", "A3-224", "A4b-191", "A4b-192"],
-    "artist": "match"
+    "artist": "match",
+    "internal_id": "233d0b1b8c429c2deaa5f25a09f76484",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5603,7 +5985,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-144", "A3-224", "A4b-191", "A4b-192"],
-    "artist": "match"
+    "artist": "match",
+    "internal_id": "a92af177e6927ef63840f10da5438930",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5631,7 +6015,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-146", "A1-263", "A1-278", "A3-235", "A4b-193"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "d781f21e4ae9fa3a89455f06096735cf",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5659,7 +6045,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-151", "A1-239", "A3-226", "A4b-194", "A4b-195"],
-    "artist": "sowsow"
+    "artist": "sowsow",
+    "internal_id": "88aa2d92dd3239e5f44c3ba2fa6715d3",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5687,7 +6075,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-151", "A1-239", "A3-226", "A4b-194", "A4b-195"],
-    "artist": "sowsow"
+    "artist": "sowsow",
+    "internal_id": "650500c9069ff95ec1605cd64910d09f",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5715,7 +6105,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-153", "A1-264", "A3-236", "A4b-196"],
-    "artist": "PLANETA Mochizuki"
+    "artist": "PLANETA Mochizuki",
+    "internal_id": "145c7478bb54e262c0646defdaea86cd",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5747,7 +6139,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-46", "A1a-78", "A1a-84", "A3a-101", "A4b-197"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "4afbdfab1ddc90038202de80314a20e4",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5775,7 +6169,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-36", "A2a-79", "A4b-198", "A4b-199"],
-    "artist": "Tomokazu Komiya"
+    "artist": "Tomokazu Komiya",
+    "internal_id": "5517094911ea301cc4add7a0e2eb71eb",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5803,7 +6199,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-36", "A2a-79", "A4b-198", "A4b-199"],
-    "artist": "Tomokazu Komiya"
+    "artist": "Tomokazu Komiya",
+    "internal_id": "fb35fb8ac47b10c65ebcb5eef4da6af9",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5831,7 +6229,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-99", "A4b-200", "A4b-201"],
-    "artist": "Midori Harada"
+    "artist": "Midori Harada",
+    "internal_id": "f1421a397b52da47c753e23881cc8096",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5859,7 +6259,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-99", "A4b-200", "A4b-201"],
-    "artist": "Midori Harada"
+    "artist": "Midori Harada",
+    "internal_id": "1751723f480628e75451f81f17027e18",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5887,7 +6289,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-100", "A4-191", "A4-206", "A4b-202"],
-    "artist": "PLANETA Yamashita"
+    "artist": "PLANETA Yamashita",
+    "internal_id": "8173ac91a050544b5250ab3b8d512bd1",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5915,7 +6319,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-42", "A4b-203", "A4b-204"],
-    "artist": "Satoshi Shirai"
+    "artist": "Satoshi Shirai",
+    "internal_id": "f8880946013f7c6003a3ca5e5be6f254",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5943,7 +6349,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-42", "A4b-203", "A4b-204"],
-    "artist": "Satoshi Shirai"
+    "artist": "Satoshi Shirai",
+    "internal_id": "8e79956b83817191d14feec2aca9fab0",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -5971,7 +6379,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-45", "P-A-46", "A4a-98", "A4b-205", "A4b-206"],
-    "artist": "Kyoko Umemoto"
+    "artist": "Kyoko Umemoto",
+    "internal_id": "621fd353b5173910860b432cea4c90dc",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -5999,7 +6409,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-45", "P-A-46", "A4a-98", "A4b-205", "A4b-206"],
-    "artist": "Kyoko Umemoto"
+    "artist": "Kyoko Umemoto",
+    "internal_id": "1383dac75e0c8fa72e5a3cf45c3a464e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6027,7 +6439,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-46", "A4a-99", "A4b-207", "A4b-208"],
-    "artist": "Sumiyoshi Kizuki"
+    "artist": "Sumiyoshi Kizuki",
+    "internal_id": "43cf3e0fc69dcb06d2762bcef5b55440",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6055,7 +6469,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-46", "A4a-99", "A4b-207", "A4b-208"],
-    "artist": "Sumiyoshi Kizuki"
+    "artist": "Sumiyoshi Kizuki",
+    "internal_id": "81f76e395cf0de0ff9d29f452a1eae7f",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6089,7 +6505,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-47", "A2a-84", "A2a-93", "A4a-103", "A4b-209"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "220ad8d1fdd1a6b78360dbb969256140",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6117,7 +6535,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-42", "A2b-104", "P-A-59", "A4b-210", "A4b-211"],
-    "artist": "You Iribi"
+    "artist": "You Iribi",
+    "internal_id": "8112c035ff3f5c7380f6e23484cd299e",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6145,7 +6565,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-42", "A2b-104", "P-A-59", "A4b-210", "A4b-211"],
-    "artist": "You Iribi"
+    "artist": "You Iribi",
+    "internal_id": "a1de9c0578f2715fc5bd2dc1ae677fdd",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6177,7 +6599,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-92", "A2-170", "A4b-212", "A4b-213"],
-    "artist": "nagimiso"
+    "artist": "nagimiso",
+    "internal_id": "80c682396b51d19005dcae6d5245c539",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6209,7 +6633,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-92", "A2-170", "A4b-212", "A4b-213"],
-    "artist": "nagimiso"
+    "artist": "nagimiso",
+    "internal_id": "d84115e90f00a8247ad827d5cbfcf724",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6237,7 +6663,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-43", "A2b-84", "A2b-110", "A4b-214"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "71ce3eb576fd0331d7e9ae0ca11aea7f",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6265,7 +6693,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-95", "A2-185", "A2-200", "A3b-106", "A4b-215"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "e84904708a10462a552ef45e75cceec6",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6293,7 +6723,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-93", "A4b-216", "A4b-217"],
-    "artist": "Tomokazu Komiya"
+    "artist": "Tomokazu Komiya",
+    "internal_id": "554dcd5329c4ae0416336c4640d9e790",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6321,7 +6753,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-93", "A4b-216", "A4b-217"],
-    "artist": "Tomokazu Komiya"
+    "artist": "Tomokazu Komiya",
+    "internal_id": "edd9b255af95f1b20dc40c58eb280d4e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6349,7 +6783,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-97", "P-A-71", "A4b-218", "A4b-219"],
-    "artist": "kirisAki"
+    "artist": "kirisAki",
+    "internal_id": "33cd3343dfed6abd9f3113509a86fb77",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6377,7 +6813,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-97", "P-A-71", "A4b-218", "A4b-219"],
-    "artist": "kirisAki"
+    "artist": "kirisAki",
+    "internal_id": "e78d9160aad83788d1f9a4e7f6bc7b2c",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6405,7 +6843,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-32", "A4b-220", "A4b-221"],
-    "artist": "match"
+    "artist": "match",
+    "internal_id": "d6fffc7d96999f1a3dd90a2d465a8ca5",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6433,7 +6873,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-32", "A4b-220", "A4b-221"],
-    "artist": "match"
+    "artist": "match",
+    "internal_id": "72b60b5cf7d9de4d68396e43ad6fcc32",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6461,7 +6903,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-33", "A3a-78", "A3a-85", "A4b-222"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "0abb445034db9fae72c16bb2a191daa5",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6493,7 +6937,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-104", "A3-187", "A3-205", "A4b-223"],
-    "artist": "PLANETA Tsuji"
+    "artist": "PLANETA Tsuji",
+    "internal_id": "6e160bec7be44dd1ad1c3d0d141970e7",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6521,7 +6967,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-47", "A1a-74", "A4b-224", "A4b-225"],
-    "artist": "kantaro"
+    "artist": "kantaro",
+    "internal_id": "0e73efa6117dd3cd85aec1e6cd2e0b1e",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6549,7 +6997,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-47", "A1a-74", "A4b-224", "A4b-225"],
-    "artist": "kantaro"
+    "artist": "kantaro",
+    "internal_id": "2551daa4e066613922e310f9380cf0b8",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6577,7 +7027,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-48", "A4b-226", "A4b-227"],
-    "artist": "Sekio"
+    "artist": "Sekio",
+    "internal_id": "d26a911e9e2f33015d47f6a1b2f6a6f7",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6605,7 +7057,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-48", "A4b-226", "A4b-227"],
-    "artist": "Sekio"
+    "artist": "Sekio",
+    "internal_id": "b3c52f12bc86497e5a19baa23deda203",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6633,7 +7087,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-49", "A4b-228", "A4b-229"],
-    "artist": "Kyoko Umemoto"
+    "artist": "Kyoko Umemoto",
+    "internal_id": "7ef3f71597da0eacd7f0b1a9618e82ad",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6661,7 +7117,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-49", "A4b-228", "A4b-229"],
-    "artist": "Kyoko Umemoto"
+    "artist": "Kyoko Umemoto",
+    "internal_id": "692303af376d53d043cc52b0abfc61dc",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6693,7 +7151,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-50", "A4b-230", "A4b-231"],
-    "artist": "AKIRA EGAWA"
+    "artist": "AKIRA EGAWA",
+    "internal_id": "565fc9775be2ef5f0802626fb1591fa2",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6725,7 +7185,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-50", "A4b-230", "A4b-231"],
-    "artist": "AKIRA EGAWA"
+    "artist": "AKIRA EGAWA",
+    "internal_id": "b192e10ad6c0e09c2f4e87f4865a82db",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6753,7 +7215,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-109", "A4-192", "A4-207", "A4b-232"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "afe8293c9801b436c055142c78cdc73d",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6781,7 +7245,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-110", "A4b-233", "A4b-234"],
-    "artist": "Akira Komayama"
+    "artist": "Akira Komayama",
+    "internal_id": "aed5f41e20ca71dc5f2d416f55c74fd2",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6809,7 +7275,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-110", "A4b-233", "A4b-234"],
-    "artist": "Akira Komayama"
+    "artist": "Akira Komayama",
+    "internal_id": "e7dfbb819fa172bd2230f3b279f1e30c",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6837,7 +7305,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-111", "A3-188", "A3-206", "A4b-235"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "bb8b62712bfe0ec431570aa2e8f8c70b",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6865,7 +7335,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-47", "A4a-100", "A4b-236", "A4b-237"],
-    "artist": "Mori Yuu"
+    "artist": "Mori Yuu",
+    "internal_id": "20c5fa85a2c56b5d1bd3df1d6745731a",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6893,7 +7365,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-47", "A4a-100", "A4b-236", "A4b-237"],
-    "artist": "Mori Yuu"
+    "artist": "Mori Yuu",
+    "internal_id": "793f7119e898f46ba4eb6adeea5c850d",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -6921,7 +7395,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-48", "A2b-85", "A2b-93", "A4a-104", "A4b-238"],
-    "artist": "PLANETA Mochizuki"
+    "artist": "PLANETA Mochizuki",
+    "internal_id": "f8e808bb7aacdef87550ad9e6f2bad0d",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6949,7 +7425,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-43", "A3b-77", "A4b-239", "A4b-240"],
-    "artist": "Ryota Murayama"
+    "artist": "Ryota Murayama",
+    "internal_id": "6b4eebb42e82f9078a56b92195e58a86",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -6977,7 +7455,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-43", "A3b-77", "A4b-239", "A4b-240"],
-    "artist": "Ryota Murayama"
+    "artist": "Ryota Murayama",
+    "internal_id": "831cd234813b06702ddf46dc7183987e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -7009,7 +7489,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-112", "A4-193", "A4-208", "A4b-241"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "061201cf3eab3ba474e1beba050484f2",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7037,7 +7519,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-98", "A4b-242", "A4b-243"],
-    "artist": "Hasuno"
+    "artist": "Hasuno",
+    "internal_id": "b65648fbd16424e6bf8c3fb638603779",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7065,7 +7549,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-98", "A4b-242", "A4b-243"],
-    "artist": "Hasuno"
+    "artist": "Hasuno",
+    "internal_id": "74901c59423692cbf778eb7dcc318c26",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -7093,7 +7579,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-99", "A2-186", "A2-201", "A4-238", "A4b-244"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "69f42aa60604bf5d588619bf981b5d02",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7125,7 +7613,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42", "A4b-245", "A4b-378"],
-    "artist": "PLANETA Yamashita"
+    "artist": "PLANETA Yamashita",
+    "internal_id": "e4020235166199f037d156ede252e604",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7157,7 +7647,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-42", "A3a-103", "A4b-246", "A4b-247"],
-    "artist": "nagimiso"
+    "artist": "nagimiso",
+    "internal_id": "b5293bd3c06ab587b5ed8d7c08e5d47c",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7189,7 +7681,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-42", "A3a-103", "A4b-246", "A4b-247"],
-    "artist": "nagimiso"
+    "artist": "nagimiso",
+    "internal_id": "c9a7659363ed37186b891beb06f6c19e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -7223,7 +7717,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-43", "A3a-79", "A3a-86", "A4b-248"],
-    "artist": "PLANETA Yamashita"
+    "artist": "PLANETA Yamashita",
+    "internal_id": "c24ba5d957c56d51ea3835101353eaad",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7251,7 +7747,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-46", "A4b-249", "A4b-250"],
-    "artist": "Megumi Mizutani"
+    "artist": "Megumi Mizutani",
+    "internal_id": "fa9e2a33b4758843a777cb9ced8e9419",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7279,7 +7777,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-46", "A4b-249", "A4b-250"],
-    "artist": "Megumi Mizutani"
+    "artist": "Megumi Mizutani",
+    "internal_id": "096e42f2c749599293c2a5c8ed99ee92",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -7307,7 +7807,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-47", "A3a-80", "A3a-87", "A4b-251"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "624da8046e225da55a68c2ee15c41b61",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7335,7 +7837,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-124", "A4-194", "A4-209", "A4b-252"],
-    "artist": "PLANETA Yamashita"
+    "artist": "PLANETA Yamashita",
+    "internal_id": "90b793fe8d4162b98cc541d7aa0fb04b",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7363,7 +7867,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-57", "A2a-85", "A2a-94", "A4b-253"],
-    "artist": "PLANETA Tsuji"
+    "artist": "PLANETA Tsuji",
+    "internal_id": "b72fe65d0ec2b62c5c6245c669604b68",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7397,7 +7903,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207", "A4b-254", "A4b-368"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "723ea922e10afaad2dffec4b235f3857",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7425,7 +7933,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-119", "A4b-255", "A4b-256"],
-    "artist": "SATOSHI NAKAI"
+    "artist": "SATOSHI NAKAI",
+    "internal_id": "e58e355b7943f056caf23a775e906df0",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7453,7 +7963,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-119", "A4b-255", "A4b-256"],
-    "artist": "SATOSHI NAKAI"
+    "artist": "SATOSHI NAKAI",
+    "internal_id": "37fc852ac49a875d075679c5faadda6d",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -7481,7 +7993,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-121", "A4b-257", "A4b-258"],
-    "artist": "Shin Nagasawa"
+    "artist": "Shin Nagasawa",
+    "internal_id": "5a073916851f45758378fb58b2f72697",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7509,7 +8023,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-121", "A4b-257", "A4b-258"],
-    "artist": "Shin Nagasawa"
+    "artist": "Shin Nagasawa",
+    "internal_id": "96660d56344e85a861b3c3437315b36e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -7541,7 +8057,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-122", "A3-189", "A3-207", "A3-239", "A4b-259", "A4b-369"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "d567b1d96482ecb2fd3da3f3bfeed1f9",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7569,7 +8087,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-123", "A3-175", "A4b-260", "A4b-261"],
-    "artist": "kawayoo"
+    "artist": "kawayoo",
+    "internal_id": "90acb56d243f9c1ccbb136ed69fef5e3",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7597,7 +8117,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-123", "A3-175", "A4b-260", "A4b-261"],
-    "artist": "kawayoo"
+    "artist": "kawayoo",
+    "internal_id": "148edfc476e57dc614e9935d520f34cb",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -7625,7 +8147,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-52", "A4b-262", "A4b-263"],
-    "artist": "miki kudo"
+    "artist": "miki kudo",
+    "internal_id": "ee13ac201fd88d53d5f55c2b9ce4dbd0",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7653,7 +8177,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-52", "A4b-262", "A4b-263"],
-    "artist": "miki kudo"
+    "artist": "miki kudo",
+    "internal_id": "33b45e89a0aa66eb2995b3d1f9b7ec66",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -7681,7 +8207,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-53", "A4b-264", "A4b-265"],
-    "artist": "miki kudo"
+    "artist": "miki kudo",
+    "internal_id": "d2b8b293bafe9b51d4825552607107bc",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7709,7 +8237,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-53", "A4b-264", "A4b-265"],
-    "artist": "miki kudo"
+    "artist": "miki kudo",
+    "internal_id": "db5eaec8851d2c0b22b76e4f71f0aea9",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -7737,7 +8267,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-54", "A2b-86", "A2b-94", "A4b-266"],
-    "artist": "PLANETA Mochizuki"
+    "artist": "PLANETA Mochizuki",
+    "internal_id": "aea664828b2bafabb6eefd21fb0a4188",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7765,7 +8297,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-51", "A4b-267", "A4b-268"],
-    "artist": "Naoyo Kimura"
+    "artist": "Naoyo Kimura",
+    "internal_id": "dfd54b1fc715fa8387931aad17e1ec9a",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7793,7 +8327,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-51", "A4b-267", "A4b-268"],
-    "artist": "Naoyo Kimura"
+    "artist": "Naoyo Kimura",
+    "internal_id": "3d533c691f5fb3ec59cee2997dc5748d",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -7821,7 +8357,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-52", "A4b-269", "A4b-270"],
-    "artist": "sui"
+    "artist": "sui",
+    "internal_id": "1dafd5a331650568bc9781435689e996",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7849,7 +8387,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-52", "A4b-269", "A4b-270"],
-    "artist": "sui"
+    "artist": "sui",
+    "internal_id": "d75be06699cbc42d0473117d51b16033",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -7877,7 +8417,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-53", "A3b-82", "A3b-90", "A4b-271"],
-    "artist": "PLANETA Igarashi"
+    "artist": "PLANETA Igarashi",
+    "internal_id": "e99b9011094b199284235e2e8a1e1f58",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7905,7 +8447,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-57", "A4b-272", "A4b-273"],
-    "artist": "Shigenori Negishi"
+    "artist": "Shigenori Negishi",
+    "internal_id": "f0663701f53b21dfba16262e518d2cab",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7933,7 +8477,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-57", "A4b-272", "A4b-273"],
-    "artist": "Shigenori Negishi"
+    "artist": "Shigenori Negishi",
+    "internal_id": "2775c6020d1013d682febee78d850ac5",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -7961,7 +8507,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-58", "A4b-274", "A4b-275"],
-    "artist": "Taiga Kayama"
+    "artist": "Taiga Kayama",
+    "internal_id": "6c62a3edc31e1905591862d282b69242",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -7989,7 +8537,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-58", "A4b-274", "A4b-275"],
-    "artist": "Taiga Kayama"
+    "artist": "Taiga Kayama",
+    "internal_id": "718ed6e08936210af0fd4cba5e7d015e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8017,7 +8567,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-59", "A1a-79", "A3a-102", "A4b-276"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "c837103d19c8361a1f01af2844b1e35f",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8045,7 +8597,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-193", "A4b-277", "A4b-278"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": "ff08b1768c6311b7e77e5e8807bc2871",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8073,7 +8627,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-193", "A4b-277", "A4b-278"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": "922c665ea99af43ef25c9766893d2cc7",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8101,7 +8657,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-195", "A1-265", "A1-279", "A3-237", "A4b-279"],
-    "artist": "PLANETA Igarashi"
+    "artist": "PLANETA Igarashi",
+    "internal_id": "3d76e5d253aa86ba8d452e62bd454a4c",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8129,7 +8687,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-198", "P-A-62", "A3b-102", "A4b-280", "A4b-281", "A4b-359"],
-    "artist": "Miki Tanaka"
+    "artist": "Miki Tanaka",
+    "internal_id": "6a0fcc8e5caeb3feb17a6f091c648489",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8157,7 +8717,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-198", "P-A-62", "A3b-102", "A4b-280", "A4b-281", "A4b-359"],
-    "artist": "Miki Tanaka"
+    "artist": "Miki Tanaka",
+    "internal_id": "8a722e99c40eb2d360ff83189a4b9baf",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8185,7 +8747,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-124", "A4-230", "A4b-282", "A4b-283"],
-    "artist": "Yukiko Baba"
+    "artist": "Yukiko Baba",
+    "internal_id": "1d8fb5c8dcbbdb69046b6605f28ff724",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8213,7 +8777,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-124", "A4-230", "A4b-282", "A4b-283"],
-    "artist": "Yukiko Baba"
+    "artist": "Yukiko Baba",
+    "internal_id": "c40a5924cc30046f349b8970ec444ff6",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8241,7 +8807,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-125", "A2-189", "A2-203", "A4-239", "A4b-284"],
-    "artist": "PLANETA Igarashi"
+    "artist": "PLANETA Igarashi",
+    "internal_id": "7a6567d2c05a8daeb8d7dfefad4284da",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8269,7 +8837,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-55", "A3b-78", "A4b-285", "A4b-286"],
-    "artist": "Naoki Saito"
+    "artist": "Naoki Saito",
+    "internal_id": "e4654c902702195894573654c975361c",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8297,7 +8867,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-55", "A3b-78", "A4b-285", "A4b-286"],
-    "artist": "Naoki Saito"
+    "artist": "Naoki Saito",
+    "internal_id": "5e972d0654bd58ad31c0aeec944c784a",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8329,7 +8901,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-56", "A3b-83", "A3b-92", "A4b-287", "A4b-370", "P-A-109"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "c53e689a951a3d133490cb2ebe24575b",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8361,7 +8935,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-57", "A3b-84", "A3b-91", "A4b-288"],
-    "artist": "PLANETA Tsuji"
+    "artist": "PLANETA Tsuji",
+    "internal_id": "54e60d9744ce9ab82df04a8d15573110",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8389,7 +8965,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-149", "A4-195", "A4-211", "A4-241", "A4b-289", "A4b-371"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "e5a04d82fd4218238cdd57f7530267f7",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8417,7 +8995,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-129", "A4b-290", "A4b-291"],
-    "artist": "Sumiyoshi Kizuki"
+    "artist": "Sumiyoshi Kizuki",
+    "internal_id": "f519a638abffaa819e20155e01c330eb",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8445,7 +9025,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-129", "A4b-290", "A4b-291"],
-    "artist": "Sumiyoshi Kizuki"
+    "artist": "Sumiyoshi Kizuki",
+    "internal_id": "9942a51781f917c25fc3edc206d0e726",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8473,7 +9055,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-130", "A4b-292", "A4b-293"],
-    "artist": "0313"
+    "artist": "0313",
+    "internal_id": "b5fb29ed11aa61c2396b01f389ef56b3",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8501,7 +9085,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-130", "A4b-292", "A4b-293"],
-    "artist": "0313"
+    "artist": "0313",
+    "internal_id": "0de84e019fc4ceffd97a7158a54f200b",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8529,7 +9115,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-64", "P-A-57", "A4b-294", "A4b-295"],
-    "artist": "Sekio"
+    "artist": "Sekio",
+    "internal_id": "2424fab3cd74c6e7d9b65bae991848b2",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8557,7 +9145,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-64", "P-A-57", "A4b-294", "A4b-295"],
-    "artist": "Sekio"
+    "artist": "Sekio",
+    "internal_id": "06f66a1c83911a03e5fb36a79bfdf1e0",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8585,7 +9175,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-65", "A2b-87", "A2b-95", "A4b-296"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "d04100fae65cfa9d353091ef1d55684c",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8617,7 +9209,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-69", "A2a-81", "A4b-297", "A4b-298"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": "2b96f84611dc32afa1a2dba7849effae",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8649,7 +9243,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-69", "A2a-81", "A4b-297", "A4b-298"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": "dfb93d07a4ccc93d3b548c1d10ebb4cc",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8681,7 +9277,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-71", "A2a-86", "A2a-95", "A2a-96", "A4b-299", "A4b-372"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "2e227b2588f48efeae661d319288b9e2",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8709,7 +9307,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-60", "A4b-300", "A4b-301"],
-    "artist": "match"
+    "artist": "match",
+    "internal_id": "99e6347946d32896387992441c50facf",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8737,7 +9337,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-60", "A4b-300", "A4b-301"],
-    "artist": "match"
+    "artist": "match",
+    "internal_id": "dc0ddbb044b55e8ab990bd83d4a9f8ff",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8765,7 +9367,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-61", "A3a-74", "A4b-302", "A4b-303"],
-    "artist": "Eske Yoshinob"
+    "artist": "Eske Yoshinob",
+    "internal_id": "a830813326594f64bdbcb7f5f0bd0750",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8793,7 +9397,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-61", "A3a-74", "A4b-302", "A4b-303"],
-    "artist": "Eske Yoshinob"
+    "artist": "Eske Yoshinob",
+    "internal_id": "332155ffa7566214f4e8380c9770738f",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8825,7 +9431,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-62", "A3a-75", "A4b-304", "A4b-305"],
-    "artist": "kawayoo"
+    "artist": "kawayoo",
+    "internal_id": "688ee1751d0465c8ee9288f138cba0ae",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8857,7 +9465,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-62", "A3a-75", "A4b-304", "A4b-305"],
-    "artist": "kawayoo"
+    "artist": "kawayoo",
+    "internal_id": "2e77f1e6a936cda1bd5d2ad93a3e8b3b",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8885,7 +9495,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-68", "P-A-51", "A4b-306", "A4b-307"],
-    "artist": "HAGIYA Kaoru"
+    "artist": "HAGIYA Kaoru",
+    "internal_id": "c941f6da019729689b5bd170684a249e",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8913,7 +9525,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-68", "P-A-51", "A4b-306", "A4b-307"],
-    "artist": "HAGIYA Kaoru"
+    "artist": "HAGIYA Kaoru",
+    "internal_id": "ce4bb0133e8fd9fc14f4d42f77355fd7",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8938,7 +9552,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-66", "A3b-107", "A4b-308", "A4b-309"],
-    "artist": "AYUMI ODASHIMA"
+    "artist": "AYUMI ODASHIMA",
+    "internal_id": "b293a7b0fa6f46049ee09871d0e41131",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -8963,7 +9579,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-66", "A3b-107", "A4b-308", "A4b-309"],
-    "artist": "AYUMI ODASHIMA"
+    "artist": "AYUMI ODASHIMA",
+    "internal_id": "920e71f7baa6ea5ad5086cd3389ac895",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -8988,7 +9606,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-151", "A4b-310", "A4b-311"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": "e12c92d3310a1acb7cee8e973a729966",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9013,7 +9633,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-151", "A4b-310", "A4b-311"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": "5d4a2d73e3545dc6276a1b9e4fda3229",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9038,7 +9660,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-218", "A1a-63", "A4b-312", "A4b-313"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": "ae8ac048da341d2cc49f221ddb9d650a",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9063,7 +9687,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-218", "A1a-63", "A4b-312", "A4b-313"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": "f266f46ddcdddceeb3981407a6ea009a",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9088,7 +9714,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-144", "A4b-314", "A4b-315", "A4b-379"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": "bf3f570a0c3a34147ff76d77fd97d136",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9113,7 +9741,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-144", "A4b-314", "A4b-315", "A4b-379"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": "678afb6cd6ea75f257273e78a4d0aeb3",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9138,7 +9768,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-146", "A4b-316", "A4b-317"],
-    "artist": "Ayaka Yoshida"
+    "artist": "Ayaka Yoshida",
+    "internal_id": "a0d15999c3255b8340be97f8b153e588",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9163,7 +9795,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-146", "A4b-316", "A4b-317"],
-    "artist": "Ayaka Yoshida"
+    "artist": "Ayaka Yoshida",
+    "internal_id": "a34629f19c93b0094d92368b4f6656e3",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9188,7 +9822,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-65", "A4b-318", "A4b-319"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": "e6deab71a05e78eb5339f1c0439d3fab",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9213,7 +9849,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-65", "A4b-318", "A4b-319"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": "b08e682b97758b9eba5b5c6c5496d585",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9238,7 +9876,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-147", "A4b-320", "A4b-321"],
-    "artist": "Ryo Ueda"
+    "artist": "Ryo Ueda",
+    "internal_id": "6cb933319e583614bac512219d0f8429",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9263,7 +9903,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-147", "A4b-320", "A4b-321"],
-    "artist": "Ryo Ueda"
+    "artist": "Ryo Ueda",
+    "internal_id": "e755516ff31d620dd6e8140a41a81ea0",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9288,7 +9930,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-148", "A4b-322", "A4b-323"],
-    "artist": "Ayaka Yoshida"
+    "artist": "Ayaka Yoshida",
+    "internal_id": "beb6b14f5f9b4faba6f50898085fc7cc",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9313,7 +9957,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-148", "A4b-322", "A4b-323"],
-    "artist": "Ayaka Yoshida"
+    "artist": "Ayaka Yoshida",
+    "internal_id": "479969078145f5063fa7f720389d2b59",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9338,7 +9984,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-147", "A4b-324", "A4b-325"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": "8d2a6332978bb77abc73bd25592fbf35",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9363,7 +10011,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-147", "A4b-324", "A4b-325"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": "73ac75989f2d034eb86f8b9edbb2cce8",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9388,7 +10038,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-150", "A2-190", "A4b-326", "A4b-327"],
-    "artist": "akagi"
+    "artist": "akagi",
+    "internal_id": "b6476886a8d3e728e3d4906160f5dd70",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9413,7 +10065,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-150", "A2-190", "A4b-326", "A4b-327"],
-    "artist": "akagi"
+    "artist": "akagi",
+    "internal_id": "4bcd55e350c43faef837ecf3175f3a6b",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9438,7 +10092,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-219", "A1-266", "A4b-328", "A4b-329"],
-    "artist": "kirisAki"
+    "artist": "kirisAki",
+    "internal_id": "0276b1a6c8f2e194e8b4ef20b206bb69",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9463,7 +10119,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-219", "A1-266", "A4b-328", "A4b-329"],
-    "artist": "kirisAki"
+    "artist": "kirisAki",
+    "internal_id": "9034efb68687415acd859d3169db06c3",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9488,7 +10146,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-72", "A2a-87", "A4b-330", "A4b-331"],
-    "artist": "Atsushi Furusawa"
+    "artist": "Atsushi Furusawa",
+    "internal_id": "849948371330921dd3e8006f1f2adbf5",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9513,7 +10173,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-72", "A2a-87", "A4b-330", "A4b-331"],
-    "artist": "Atsushi Furusawa"
+    "artist": "Atsushi Furusawa",
+    "internal_id": "d85110a3bcf06fc00933cee29550548f",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9538,7 +10200,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-157", "A4-197", "A4b-332", "A4b-333"],
-    "artist": "yuu"
+    "artist": "yuu",
+    "internal_id": "634f95aa4ef406eb9f5ee3820fb7673c",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9563,7 +10227,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-157", "A4-197", "A4b-332", "A4b-333"],
-    "artist": "yuu"
+    "artist": "yuu",
+    "internal_id": "c8031443ca6a80f2f06ec6916ccb4056",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9588,7 +10254,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-223", "A1-270", "A4b-334", "A4b-335"],
-    "artist": "Hideki Ishikawa"
+    "artist": "Hideki Ishikawa",
+    "internal_id": "88046743ff0dfeea67431160f52c0a73",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9613,7 +10281,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-223", "A1-270", "A4b-334", "A4b-335"],
-    "artist": "Hideki Ishikawa"
+    "artist": "Hideki Ishikawa",
+    "internal_id": "c5b2d005c6a4ebbbcadb25154af97ab7",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9638,7 +10308,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-158", "A4-198", "A4b-336", "A4b-337"],
-    "artist": "Hideki Ishikawa"
+    "artist": "Hideki Ishikawa",
+    "internal_id": "66812105e14c1187f9138b17139193d4",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9663,7 +10335,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-158", "A4-198", "A4b-336", "A4b-337"],
-    "artist": "Hideki Ishikawa"
+    "artist": "Hideki Ishikawa",
+    "internal_id": "398831ccfcf52c5c1ab5ac4fe726012e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9688,7 +10362,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-225", "A1-272", "A4b-338", "A4b-339"],
-    "artist": "Yuu Nishida"
+    "artist": "Yuu Nishida",
+    "internal_id": "656f4f057b465611a296293e2ff59e7c",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9713,7 +10389,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-225", "A1-272", "A4b-338", "A4b-339"],
-    "artist": "Yuu Nishida"
+    "artist": "Yuu Nishida",
+    "internal_id": "6f27b981c521e17c924a54dec73407e1",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9738,7 +10416,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-69", "A2b-88", "A4b-340", "A4b-341"],
-    "artist": "saino misaki"
+    "artist": "saino misaki",
+    "internal_id": "159de040c6d3394f2c08012d9c6033aa",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9763,7 +10443,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-69", "A2b-88", "A4b-340", "A4b-341"],
-    "artist": "saino misaki"
+    "artist": "saino misaki",
+    "internal_id": "d8e68a083546d699b4272b32a4e98225",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9788,7 +10470,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-154", "A2-194", "A4b-342", "A4b-343"],
-    "artist": "saino misaki"
+    "artist": "saino misaki",
+    "internal_id": "21b32d88abd4999f11b3f94709dbd3f0",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9813,7 +10497,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-154", "A2-194", "A4b-342", "A4b-343"],
-    "artist": "saino misaki"
+    "artist": "saino misaki",
+    "internal_id": "85902f42aecbe7edf931554f091dceab",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9838,7 +10524,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-155", "A2-195", "A4b-344", "A4b-345"],
-    "artist": "Yuu Nishida"
+    "artist": "Yuu Nishida",
+    "internal_id": "8b9f8e67160560b3029d65c0d7b09427",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9863,7 +10551,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-155", "A2-195", "A4b-344", "A4b-345"],
-    "artist": "Yuu Nishida"
+    "artist": "Yuu Nishida",
+    "internal_id": "92e82a689ab4159480767b1a99d69014",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9888,7 +10578,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-68", "A1a-82", "A4b-346", "A4b-347"],
-    "artist": "En Morikura"
+    "artist": "En Morikura",
+    "internal_id": "88108fbd673789c66ad1eb1ac8aa5e2a",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9913,7 +10605,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-68", "A1a-82", "A4b-346", "A4b-347"],
-    "artist": "En Morikura"
+    "artist": "En Morikura",
+    "internal_id": "61d195cad798e59b3ba90eac1c804d5f",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9938,7 +10632,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-155", "A3-197", "A3-209", "A4b-348", "A4b-349", "A4b-374"],
-    "artist": "hechima"
+    "artist": "hechima",
+    "internal_id": "02c1129cba70ad161514b6b25832253c",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -9963,7 +10659,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-155", "A3-197", "A3-209", "A4b-348", "A4b-349", "A4b-374"],
-    "artist": "hechima"
+    "artist": "hechima",
+    "internal_id": "eb97f0c99d37cd64a024a1268f6a2f19",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -9988,7 +10686,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-69", "A3a-83", "A4b-350", "A4b-351", "A4b-375"],
-    "artist": "Taira Akitsu"
+    "artist": "Taira Akitsu",
+    "internal_id": "dc806d9f1e14d1c4039185c545414d80",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -10013,7 +10713,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-69", "A3a-83", "A4b-350", "A4b-351", "A4b-375"],
-    "artist": "Taira Akitsu"
+    "artist": "Taira Akitsu",
+    "internal_id": "9a1aff22c3e49bd2acfe5e40ab82a12f",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10038,7 +10740,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-71", "A2b-90", "A4b-352", "A4b-353"],
-    "artist": "Teeziro"
+    "artist": "Teeziro",
+    "internal_id": "5c4177a800a9fbefa60cdba5b27d0627",
+    "linked": true
   },
   {
     "expansion": "A4b",
@@ -10063,7 +10767,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-71", "A2b-90", "A4b-352", "A4b-353"],
-    "artist": "Teeziro"
+    "artist": "Teeziro",
+    "internal_id": "2a1abf7b626fe37b499549fc6af5881d",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10091,7 +10797,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-6", "A4b-51", "A4b-52", "A4b-354"],
-    "artist": "Kariya"
+    "artist": "Kariya",
+    "internal_id": "ecf4ee63902f5fe921f0770924f28680",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10123,7 +10831,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-61", "A4b-104", "A4b-105", "A4b-355"],
-    "artist": "REND"
+    "artist": "REND",
+    "internal_id": "e03f2ead1c254736576839ed8246638f",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10155,7 +10865,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-89", "P-A-19", "A3a-93", "A4b-114", "A4b-115", "A4b-356"],
-    "artist": "Noriaki Tanimura"
+    "artist": "Noriaki Tanimura",
+    "internal_id": "80c18c14970db572b322842e4e700eb7",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10187,7 +10899,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-132", "A3b-99", "A4b-168", "A4b-169", "A4b-357"],
-    "artist": "Tomomi Ozaki"
+    "artist": "Tomomi Ozaki",
+    "internal_id": "46fe879210ff1fbe4f432101e9573440",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10215,7 +10929,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-32", "A4b-175", "A4b-176", "A4b-358"],
-    "artist": "Orca"
+    "artist": "Orca",
+    "internal_id": "f8945e8dc90d157c630db1b40123b835",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10243,7 +10959,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-198", "P-A-62", "A3b-102", "A4b-280", "A4b-281", "A4b-359"],
-    "artist": "Uninori"
+    "artist": "Uninori",
+    "internal_id": "f9a149b34ba77d52aa195be4f276a2f7",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10277,7 +10995,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-6", "A3a-76", "A3a-88", "A4b-44", "A4b-360"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "098f368e9a5685b29d4e5c671f945fdc",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10311,7 +11031,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284", "A4b-59", "A4b-361"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "3d066f151cf814cf3cf6125fb5699021",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10339,7 +11061,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-34", "A4-187", "A4-210", "A4-240", "A4b-68", "A4b-362"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "8887bd7ba39d34e4b1aa51fc5b422948",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10373,7 +11097,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-49", "A2-182", "A2-204", "A2-206", "A4b-107", "A4b-363"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "960e547c9ec55c319f07eb4d21698f63",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10401,7 +11127,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285", "A4b-131", "A4b-364", "A4b-376"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "8459c2608db0861b97bef183a282c9c2",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10435,7 +11163,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50", "A4b-158", "A4b-365"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "4357762ee411b062721f7b7db0cdf392",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10469,7 +11199,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1a-32", "A1a-77", "A1a-83", "A1a-86", "A4a-102", "A4b-159", "A4b-366"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "c3ff4e614dc2ba178ffde35cf4abe58f",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10501,7 +11233,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-87", "A3-186", "A3-204", "A3-238", "A4b-184", "A4b-367"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "cc66ad750cbbbc286c097f529db1d58e",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10535,7 +11269,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-119", "A2-188", "A2-205", "A2-207", "A4b-254", "A4b-368"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "e989f00dff4773a3de326ea18d43377b",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10567,7 +11303,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-122", "A3-189", "A3-207", "A3-239", "A4b-259", "A4b-369"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "8d95fa70338a76c98cee4f986fbce17a",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10599,7 +11337,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3b-56", "A3b-83", "A3b-92", "A4b-287", "A4b-370", "P-A-109"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "11a7d791039625f49f27e6bd82cdc929",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10627,7 +11367,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A4-149", "A4-195", "A4-211", "A4-241", "A4b-289", "A4b-371"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "aa20dd317f93c67dc3d51f431fd86917",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10659,7 +11401,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2a-71", "A2a-86", "A2a-95", "A2a-96", "A4b-299", "A4b-372"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": "6519aaa6a172d222d0305b8b85d600be",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10684,7 +11428,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["P-A-7", "A4b-373"],
-    "artist": "Akira Komayama"
+    "artist": "Akira Komayama",
+    "internal_id": "11a8ecf3b994457ad49d474d27f81237",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10709,7 +11455,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-155", "A3-197", "A3-209", "A4b-348", "A4b-349", "A4b-374"],
-    "artist": "yuu"
+    "artist": "yuu",
+    "internal_id": "e14e2c9cd2f049676d8897d4506e12f9",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10734,7 +11482,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3a-69", "A3a-83", "A4b-350", "A4b-351", "A4b-375"],
-    "artist": "Taira Akitsu"
+    "artist": "Taira Akitsu",
+    "internal_id": "c3dc5cd422b18684881bad9553923d27",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10762,7 +11512,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285", "A4b-131", "A4b-364", "A4b-376"],
-    "artist": "kantaro"
+    "artist": "kantaro",
+    "internal_id": "b7fb3883986b9c20a0a0c52d535fbf6f",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10794,7 +11546,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2b-35", "A2b-83", "A2b-96", "A4b-172", "A4b-377"],
-    "artist": "PLANETA Yamashita"
+    "artist": "PLANETA Yamashita",
+    "internal_id": "00af81c22d245056fb3a24ac35c5d0ca",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10826,7 +11580,9 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42", "A4b-245", "A4b-378"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": "0e88b17d86344e75a3e33a4f75e0d601",
+    "linked": false
   },
   {
     "expansion": "A4b",
@@ -10851,6 +11607,8 @@
     "set_details": "deluxepack:ex",
     "pack": "everypack",
     "alternate_versions": ["A3-144", "A4b-314", "A4b-315", "A4b-379"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": "7314cbe4772d046e54cd45db00bb0c73",
+    "linked": false
   }
 ]

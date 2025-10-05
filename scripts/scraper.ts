@@ -316,7 +316,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
     alternate_versions,
     artist,
     internal_id,
-    linked,
+    linked, //purely for testing to see if cards are linked correctly.
   }
 }
 
