@@ -21,9 +21,15 @@ function TradePartner({ friendId }: TradePartnerProps) {
 
   const [viewHistory, setViewHistory] = useState<boolean>(false)
 
+  if (!trades) {
+    return null
+  }
+
+  const partnerTrades = trades.filter((t) => t.offering_friend_id === friendId || t.receiving_friend_id === friendId)
+
   return (
     <div className="w-full">
-      <div className="flex justify-between items-center mb-2 mx-1">
+      <div className="flex justify-between items-center mb-1 mx-1">
         <p>
           <span className="text-md">{t('tradingWith')}</span>
           <span className="text-md font-bold"> {friendAccount?.username || 'loading'} </span>
@@ -39,9 +45,7 @@ function TradePartner({ friendId }: TradePartnerProps) {
           </Button>
         </span>
       </div>
-      {friendAccount !== null && trades && (
-        <TradeList trades={trades.filter((t) => t.offering_friend_id === friendId || t.receiving_friend_id === friendId)} viewHistory={viewHistory} />
-      )}
+      {friendAccount !== null && <TradeList trades={partnerTrades} viewHistory={viewHistory} />}
     </div>
   )
 }

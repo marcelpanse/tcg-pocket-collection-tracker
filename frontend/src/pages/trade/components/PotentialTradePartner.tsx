@@ -13,16 +13,12 @@ function PotentialTradePartner({ partner }: PotentialTradePartnerProps) {
   const { t } = useTranslation('trade-matches')
 
   return (
-    <div className="w-md">
-      <div className="flex justify-between items-center mb-2 mx-1">
-        <p>{partner.username}</p>
-        <span className="flex gap-4">
-          <Button variant="outline" className="my-auto" onClick={() => navigate(`/trade/${partner.friend_id}`)}>
-            {t('viewTradePartner')}
-            <ChevronRight />
-          </Button>
-        </span>
-      </div>
+    <div className="max-w-md w-full flex justify-between items-center mx-auto px-4">
+      <p className="mr-2">{partner.username}</p>
+      <Button variant="outline" className="my-auto" onClick={() => navigate(`/trade/${partner.friend_id}`)}>
+        {t('viewTradePartner')}
+        <ChevronRight />
+      </Button>
     </div>
   )
 }

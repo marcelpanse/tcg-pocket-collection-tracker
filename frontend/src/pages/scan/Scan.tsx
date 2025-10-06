@@ -213,6 +213,11 @@ const Scan = () => {
                   return { card: c, similarity: calculateSimilarity(hash, c_hash) }
                 })
                 .sort((a, b) => b.similarity - a.similarity)
+              console.log(
+                `Confidence: ${matches[0].similarity - matches[1].similarity}\n`,
+                'Best matches:',
+                matches.slice(0, 5).map(({ card, similarity }) => ({ card_id: card.card_id, similarity })),
+              )
 
               // Best match is the first one
               const bestMatch = matches[0]

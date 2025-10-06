@@ -16,7 +16,7 @@ function TradeMatches() {
   }
 
   return (
-    <div className="flex flex-col items-center mx-auto gap-6">
+    <div className="flex flex-col gap-4">
       {tradingPartners.map((partner) => (
         <PotentialTradePartner key={partner.friend_id} partner={partner} />
       ))}
