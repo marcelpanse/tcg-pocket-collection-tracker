@@ -5,7 +5,7 @@ import type { CheerioAPI } from 'cheerio'
 import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
 import type { Card, ExpansionId, Rarity } from '../frontend/src/types'
-import { md5 } from './md5'
+import { encode } from './encoder'
 
 const BASE_URL = 'https://pocket.limitlesstcg.com'
 
@@ -147,7 +147,7 @@ function extractSetAndPackInfo($: CheerioAPI) {
   return { setDetails: 'Unknown', pack: 'Unknown' }
 }
 
-function urlToCardId(url: string) {
+function urlToCardId(url: string): { expansion: string; cardNr: number; cardId: string } {
   if (!url) {
     throw new Error('url is false')
   }
@@ -159,11 +159,15 @@ function urlToCardId(url: string) {
   if (matches.length === 0) {
     throw new Error(`couldn't extract card id from '${url}'`)
   }
-  return `${matches[0][1]}-${matches[0][2]}`
+  return {
+    expansion: matches[0][1],
+    cardNr: parseInt(matches[0][2], 10),
+    cardId: `${matches[0][1]}-${matches[0][2]}`,
+  }
 }
 
 async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string) {
-  const inPackId = cardUrl.split('/').pop()
+  const inPackId = Number.parseInt(cardUrl.split('/').pop(), 10)
   if (!inPackId) {
     throw new Error(`Faied to parse card id from url: ${cardUrl}`)
   }
@@ -256,7 +260,8 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
 
   const alternate_versions: string[] = []
   let linked = false
-  let internal_id = ''
+  let baseExpansion = expansion
+  let baseCardNr = 0
   let foundMyself = false
   $('table.card-prints-versions tr').each((_i, version) => {
     const versionName = $(version).find('a').text().trim().replace(/\s+/g, ' ')
@@ -267,29 +272,30 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
       }
       console.log('checking', alternate_card_id, versionName)
 
-      alternate_versions.push(alternate_card_id ? urlToCardId(alternate_card_id) : card_id)
+      alternate_versions.push(alternate_card_id ? urlToCardId(alternate_card_id).cardId : card_id)
       const alternate_card_rarity = $(version).find('td:last-child').text().trim() || 'P'
 
       // the alternate cards are only available up to EX card rarity (at least for now). And since limitless doesn't properly set shiny cards, we have to check it like this.
-      if (rarity.includes('◊') && alternate_card_rarity === rarity && !internal_id) {
-        internal_id = alternate_card_id ? urlToCardId(alternate_card_id) : card_id
+      if (rarity.includes('◊') && alternate_card_rarity === rarity && !baseCardNr) {
+        baseExpansion = alternate_card_id ? urlToCardId(alternate_card_id).expansion : expansion
+        baseCardNr = alternate_card_id ? urlToCardId(alternate_card_id).cardNr : inPackId
         linked = !!alternate_card_id //just for reference to double-check our db for errors
       }
 
       // only check for foil up to our current version, the foil card is always below the similar card in the list.
       if (alternate_card_id && !foundMyself) {
-        const alternateSetId = urlToCardId(alternate_card_id).split('-')[0]
-        const currentSetId = card_id.split('-')[0]
-        if (alternateSetId === currentSetId && alternate_card_rarity === rarity) {
+        const alternateSetId = urlToCardId(alternate_card_id).expansion
+        if (alternateSetId === expansion && alternate_card_rarity === rarity) {
           // same set, same rarity, means this one is an alternative art in the same set (can be foil), treat like unique card.
-          internal_id = card_id // foils don't have linked cards (at least not yet!)
+          baseExpansion = expansion // foils don't have linked cards (at least not yet!)
+          baseCardNr = inPackId
           linked = false
         }
       }
     }
   })
 
-  internal_id = md5(internal_id || card_id)
+  const internal_id = encode(baseExpansion, baseCardNr, rarity)
 
   const artist = $('div.card-text-section.card-text-artist a').text().trim() || 'Unknown'
 

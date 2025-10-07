@@ -85,8 +85,8 @@ export interface Pack {
 }
 
 export interface Card {
+  internal_id: number
   card_id: string
-  linkedCardID?: string
   expansion: ExpansionId
   name: string
   hp: string
@@ -114,8 +114,9 @@ export interface Card {
   pack: string
   alternate_versions: string[]
   artist: string
+  linked: boolean
 
-  amount_owned?: number // calculated from the collection table
+  amount_owned?: number // calculated from the card amounts table
 }
 
 export interface ImportExportRow {
