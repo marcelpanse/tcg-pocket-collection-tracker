@@ -69,6 +69,7 @@ export interface PackStructure {
 export interface Expansion {
   name: string
   id: ExpansionId
+  internalId: number
   cards: Card[]
   packs: Pack[]
   missions?: Mission[]

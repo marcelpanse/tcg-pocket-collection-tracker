@@ -75,8 +75,18 @@ const a4bMissions: Mission[] = A4bMissions as unknown as Mission[]
 
 export const expansions: Expansion[] = [
   {
+    name: 'promo-a',
+    id: 'P-A',
+    internalId: 1,
+    cards: paCards,
+    packs: [{ name: 'everypack', color: '#CCCCCC' }],
+    tradeable: false,
+    promo: true,
+  },
+  {
     name: 'geneticapex',
     id: 'A1',
+    internalId: 2,
     cards: a1Cards,
     packs: [
       { name: 'mewtwopack', color: '#986C88' },
@@ -90,6 +100,7 @@ export const expansions: Expansion[] = [
   {
     name: 'mythicalisland',
     id: 'A1a',
+    internalId: 3,
     cards: a1aCards,
     packs: [{ name: 'mewpack', color: '#FFC1EA' }],
     missions: a1aMissions,
@@ -98,6 +109,7 @@ export const expansions: Expansion[] = [
   {
     name: 'space-timesmackdown',
     id: 'A2',
+    internalId: 4,
     cards: a2Cards,
     packs: [
       { name: 'dialgapack', color: '#A0C5E8' },
@@ -110,6 +122,7 @@ export const expansions: Expansion[] = [
   {
     name: 'triumphantlight',
     id: 'A2a',
+    internalId: 5,
     cards: a2aCards,
     packs: [{ name: 'arceuspack', color: '#E4D7CA' }],
     missions: a2aMissions,
@@ -118,6 +131,7 @@ export const expansions: Expansion[] = [
   {
     name: 'shiningrevelry',
     id: 'A2b',
+    internalId: 6,
     cards: a2bCards,
     packs: [{ name: 'shiningrevelrypack', color: '#99F6E4' }],
     missions: a2bMissions,
@@ -127,6 +141,7 @@ export const expansions: Expansion[] = [
   {
     name: 'celestialguardians',
     id: 'A3',
+    internalId: 7,
     cards: a3Cards,
     packs: [
       { name: 'lunalapack', color: '#A0ABE0' },
@@ -140,6 +155,7 @@ export const expansions: Expansion[] = [
   {
     name: 'extradimensionalcrisis',
     id: 'A3a',
+    internalId: 8,
     cards: a3aCards,
     packs: [{ name: 'buzzwolepack', color: '#ef4444' }],
     missions: a3aMissions,
@@ -149,6 +165,7 @@ export const expansions: Expansion[] = [
   {
     name: 'eeveegrove',
     id: 'A3b',
+    internalId: 9,
     cards: a3bCards,
     packs: [{ name: 'eeveegrovepack', color: '#b45309' }],
     missions: a3bMissions,
@@ -158,6 +175,7 @@ export const expansions: Expansion[] = [
   {
     name: 'wisdomofseaandsky',
     id: 'A4',
+    internalId: 10,
     cards: a4Cards,
     packs: [
       { name: 'ho-ohpack', color: '#FE3A2B' },
@@ -171,6 +189,7 @@ export const expansions: Expansion[] = [
   {
     name: 'secludedsprings',
     id: 'A4a',
+    internalId: 11,
     cards: a4aCards,
     packs: [{ name: 'suicunepack', color: '#E9B00D' }],
     missions: a4aMissions,
@@ -181,6 +200,7 @@ export const expansions: Expansion[] = [
   {
     name: 'deluxepackex',
     id: 'A4b',
+    internalId: 12,
     cards: a4bCards,
     packs: [{ name: 'deluxepack', color: '#CCA331' }],
     missions: a4bMissions,
@@ -190,14 +210,6 @@ export const expansions: Expansion[] = [
     packStructure: {
       cardsPerPack: 4,
     },
-  },
-  {
-    name: 'promo-a',
-    id: 'P-A',
-    cards: paCards,
-    packs: [{ name: 'everypack', color: '#CCCCCC' }],
-    tradeable: false,
-    promo: true,
   },
 ]
 
@@ -235,12 +247,10 @@ interface NrOfCardsOwnedProps {
 export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expansion, packName, deckbuildingMode }: NrOfCardsOwnedProps): number => {
   const amounts = new Map(ownedCards.map((x) => [x.card_id, x.amount_owned]))
 
-  let allCardsWithAmounts = allCards
-    .filter((a) => !a.linkedCardID)
-    .map((ac) => {
-      const amount = amounts.get(ac.card_id) || 0
-      return { ...ac, amount_owned: amount }
-    })
+  let allCardsWithAmounts = allCards.map((ac) => {
+    const amount = amounts.get(ac.card_id) || 0
+    return { ...ac, amount_owned: amount }
+  })
   if (deckbuildingMode) {
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
@@ -282,8 +292,7 @@ interface TotalNrOfCardsProps {
   deckbuildingMode?: boolean
 }
 export const getTotalNrOfCards = ({ rarityFilter, expansion, packName, deckbuildingMode }: TotalNrOfCardsProps) => {
-  // note we have to filter out the cards with a linked card ID (Old Amber) because they are counted as the same card.
-  let filteredCards = [...allCards].filter((c) => !c.linkedCardID)
+  let filteredCards = [...allCards]
 
   if (expansion) {
     filteredCards = expansion.cards
