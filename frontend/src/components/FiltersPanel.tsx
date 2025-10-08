@@ -191,14 +191,10 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
     const amounts = new Map((cards || []).map((x) => [x.card_id, x.amount_owned]))
 
     for (const card of filteredCards) {
-      if (!card.linkedCardID) {
-        if (filters.deckbuildingMode) {
-          card.amount_owned = card.alternate_versions.reduce((acc, c) => acc + (amounts.get(c) ?? 0), 0)
-        } else {
-          card.amount_owned = amounts.get(card.card_id) ?? 0
-        }
+      if (filters.deckbuildingMode) {
+        card.amount_owned = card.alternate_versions.reduce((acc, c) => acc + (amounts.get(c) ?? 0), 0)
       } else {
-        card.amount_owned = 0
+        card.amount_owned = amounts.get(card.card_id) ?? 0
       }
     }
     filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) >= filters.minNumber)
@@ -284,7 +280,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
             </DialogTrigger>
             <DialogContent className="border-1 border-neutral-700 shadow-none max-h-[90vh] overflow-y-auto content-start">
               <DialogHeader>
-                <DialogTitle>{t('filters.filtersCount', { count: (filteredCards || []).filter((c) => !c.linkedCardID).length })}</DialogTitle>
+                <DialogTitle>{t('filters.filtersCount', { count: (filteredCards || []).length })}</DialogTitle>
               </DialogHeader>
               <div className="flex flex-col gap-3">
                 {filtersDialog.search && <SearchInput className="w-full bg-neutral-900" setSearchValue={setSearchValue} />}

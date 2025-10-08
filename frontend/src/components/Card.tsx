@@ -62,10 +62,6 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
     }
   }
 
-  if (card.linkedCardID) {
-    return null
-  }
-
   return (
     <div className={cn('group flex flex-col items-center rounded-lg', className)}>
       <button

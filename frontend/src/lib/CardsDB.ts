@@ -77,7 +77,7 @@ export const expansions: Expansion[] = [
   {
     name: 'promo-a',
     id: 'P-A',
-    internalId: 1,
+    internalId: 1, // IMPORTANT note: these should NEVER EVER change. The internals of the DB depend on it.
     cards: paCards,
     packs: [{ name: 'everypack', color: '#CCCCCC' }],
     tradeable: false,
