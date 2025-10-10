@@ -25,7 +25,7 @@ export const CardLine: FC<Props> = ({ card_id, className, amount_owned, incremen
   const { setSelectedCardId } = useSelectedCard()
 
   const card = useMemo(() => getCardById(card_id), [card_id])
-  const ownedAmount = useMemo(() => amount_owned ?? ownedCards.find((c) => c.card_id === card?.card_id)?.amount_owned ?? 0, [amount_owned, card])
+  const ownedAmount = useMemo(() => amount_owned ?? ownedCards.find((c) => c.card_id === card?.card_id)?.card_amounts.amount_owned ?? 0, [amount_owned, card])
 
   if (!card) {
     throw new Error(`Unrecognized card_id: ${card_id}`)

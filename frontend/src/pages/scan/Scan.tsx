@@ -7,6 +7,7 @@ import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { allCards, expansions } from '@/lib/CardsDB'
+import { getInteralIdByCardId } from '@/lib/CardsDB.ts'
 import { calculatePerceptualHash, calculateSimilarity, imageToBuffers } from '@/lib/hash'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
@@ -322,12 +323,14 @@ const Scan = () => {
     const updates: IncrementedCard[] = []
 
     for (const [card_id, increment] of counts) {
-      const previous_amount = ownedCards.find((row) => row.card_id === card_id)?.amount_owned ?? 0
+      const previous_amount = ownedCards.find((row) => row.card_id === card_id)?.card_amounts.amount_owned ?? 0
       updates.push({ card_id, previous_amount, increment })
     }
 
     try {
-      updateCardsMutation.mutate({ updates: updates.map((x) => ({ card_id: x.card_id, amount_owned: x.previous_amount + x.increment })) })
+      updateCardsMutation.mutate({
+        updates: updates.map((x) => ({ card_id: x.card_id, internal_id: getInteralIdByCardId(x.card_id), amount_owned: x.previous_amount + x.increment })),
+      })
     } catch (error) {
       setError(`Error incrementing card quantities: ${error}`)
       setState(State.Error)

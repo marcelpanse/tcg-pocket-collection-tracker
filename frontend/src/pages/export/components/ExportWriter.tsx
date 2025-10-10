@@ -16,7 +16,8 @@ export const ExportWriter = () => {
       return {
         Id: ac.card_id,
         CardName: getCardNameByLang(ac, i18n.language),
-        NumberOwned: ownedCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned ?? 0,
+        InternalId: ac.internal_id,
+        NumberOwned: ownedCards.find((oc) => oc.card_id === ac.card_id)?.card_amounts.amount_owned ?? 0,
         Expansion: ac.expansion,
         Pack: ac.pack,
         Rarity: ac.rarity,

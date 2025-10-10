@@ -32,7 +32,7 @@ function TradeCards() {
 
   const populateCards = (card_id: string) => {
     const card = getCardById(card_id) as Card
-    const amount_owned = ownedCards.find((c) => c.card_id === card_id)?.amount_owned ?? 0
+    const amount_owned = ownedCards.find((c) => c.card_id === card_id)?.card_amounts.amount_owned ?? 0
     return { ...card, amount_owned }
   }
 

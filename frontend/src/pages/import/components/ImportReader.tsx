@@ -3,7 +3,7 @@ import { useDropzone } from 'react-dropzone'
 import { useTranslation } from 'react-i18next'
 import XLSX from 'xlsx'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
-import type { CollectionRowUpdate, ImportExportRow } from '@/types'
+import type { CardAmountUpdate, ImportExportRow } from '@/types'
 
 export const ImportReader = () => {
   const { t } = useTranslation('pages/import')
@@ -17,7 +17,7 @@ export const ImportReader = () => {
   const [progressMessage, setProgressMessage] = useState<string>('')
 
   const processFileRows = async (data: ImportExportRow[]) => {
-    const cardArray: CollectionRowUpdate[] = []
+    const cardArray: CardAmountUpdate[] = []
 
     for (let i = 0; i < data.length; i++) {
       const r = data[i]
@@ -27,12 +27,12 @@ export const ImportReader = () => {
       const ownedCard = ownedCards.find((row) => row.card_id === r.Id)
       console.log('Owned Card', ownedCard)
 
-      cardArray.push({ card_id: cardId, amount_owned: newAmount })
+      cardArray.push({ card_id: cardId, internal_id: r.InternalId, amount_owned: newAmount })
 
       // update UI
-      if (ownedCard && ownedCard.amount_owned !== newAmount) {
+      if (ownedCard && ownedCard.card_amounts.amount_owned !== newAmount) {
         console.log('updating card', ownedCard.card_id, newAmount)
-        ownedCard.amount_owned = Math.max(0, newAmount)
+        ownedCard.card_amounts.amount_owned = Math.max(0, newAmount)
         setProcessedData((p) => [...(p ?? []), { ...r, updated: newAmount > 0, removed: newAmount === 0 }])
       } else if (!ownedCard && newAmount > 0) {
         console.log('creating card', r.Id, newAmount)

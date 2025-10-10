@@ -41,7 +41,7 @@ export interface Filters {
 }
 
 interface Props {
-  cards: CollectionRow[] | null
+  cards: CollectionRow[]
 
   filters: Filters
   setFilters: Dispatch<SetStateAction<Filters>>
@@ -95,10 +95,6 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
   const setOwned = (x: OwnedOption) => setFilterChange({ owned: x })
 
   const getFilteredCards = (filters: Filters) => {
-    if (!cards) {
-      return null // cards are still loading
-    }
-
     let filteredCards = allCards
 
     if (filters.deckbuildingMode) {
@@ -113,9 +109,9 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
     }
     if (filters.owned !== 'all') {
       if (filters.owned === 'owned') {
-        filteredCards = filteredCards.filter((card) => cards.find((oc: CollectionRow) => oc.card_id === card.card_id && oc.amount_owned > 0))
+        filteredCards = filteredCards.filter((card) => cards.find((oc: CollectionRow) => oc.card_id === card.card_id && oc.card_amounts.amount_owned > 0))
       } else if (filters.owned === 'missing') {
-        filteredCards = filteredCards.filter((card) => !cards.find((oc: CollectionRow) => oc.card_id === card.card_id && oc.amount_owned > 0))
+        filteredCards = filteredCards.filter((card) => !cards.find((oc: CollectionRow) => oc.card_id === card.card_id && oc.card_amounts.amount_owned > 0))
       }
     }
 
@@ -132,10 +128,8 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
         }
       })
     } else if (filters.sortBy === 'expansion-newest') {
-      const reversedExpansions = [...expansions]
-        .reverse()
-        .slice(1)
-        .concat(expansions[expansions.length - 1])
+      const reversedExpansions = [...expansions].reverse()
+
       filteredCards = [...filteredCards].sort((a: Card, b: Card) => {
         const expansionIndexA = reversedExpansions.findIndex((e) => e.id === a.expansion)
         const expansionIndexB = reversedExpansions.findIndex((e) => e.id === b.expansion)
@@ -188,7 +182,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
       })
     }
 
-    const amounts = new Map((cards || []).map((x) => [x.card_id, x.amount_owned]))
+    const amounts = new Map((cards || []).map((x) => [x.card_id, x.card_amounts?.amount_owned]))
 
     for (const card of filteredCards) {
       if (filters.deckbuildingMode) {

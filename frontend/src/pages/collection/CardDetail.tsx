@@ -23,7 +23,7 @@ function CardDetail() {
   const card = useMemo(() => (cardId === undefined ? undefined : getCardById(cardId)), [cardId])
   const row = useMemo(() => ownedCards.find((oc: CollectionRow) => oc.card_id === cardId), [cardId])
   const alternatives = useMemo(
-    () => card?.alternate_versions.map((card_id) => ({ card_id, amount_owned: ownedCards.find((c) => c.card_id === card_id)?.amount_owned ?? 0 })),
+    () => card?.alternate_versions.map((card_id) => ({ card_id, amount_owned: ownedCards.find((c) => c.card_id === card_id)?.card_amounts.amount_owned ?? 0 })),
     [card, ownedCards],
   )
   const expansion = useMemo(() => (card === undefined ? undefined : getExpansionById(card?.expansion)), [card])
@@ -77,7 +77,7 @@ function CardDetail() {
                 <CardComponent
                   key={cardId}
                   className="w-full"
-                  card={{ ...card, amount_owned: row?.amount_owned || 0 }}
+                  card={{ ...card, amount_owned: row?.card_amounts.amount_owned || 0 }}
                   onImageClick={() => setIsImageDialogOpen(true)}
                 />
               )}

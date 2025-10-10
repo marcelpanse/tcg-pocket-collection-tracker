@@ -16,7 +16,7 @@ function Collection() {
   const { data: friendAccount } = usePublicAccount(friendId)
   const { data: friendCards } = usePublicCollection(friendId)
 
-  const { data: ownedCards } = useCollection()
+  const { data: ownedCards = [], isLoading } = useCollection()
 
   if (friendId) {
     if (friendAccount === null) {
@@ -46,7 +46,7 @@ function Collection() {
     )
   }
 
-  if (ownedCards === undefined) {
+  if (isLoading) {
     return <p className="text-xl text-center py-8">{t('common:loading')}...</p>
   }
 

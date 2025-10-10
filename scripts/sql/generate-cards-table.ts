@@ -36,6 +36,7 @@ INSERT INTO cards_list (internal_id, card_id, rarity, tradable) VALUES
   // 3. adjust this script to enable the deduplication code
   // 4. run this script on the db
   // 5. after deployment, delete the cards table (the cards_list table is now used instead).
+  // 6. after migration remove the amount_owned column from the collections table.
 
   //deduplicate cards on card.internal_id
   // const seenIds = new Set<number>()

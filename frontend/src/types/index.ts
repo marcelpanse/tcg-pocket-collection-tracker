@@ -29,14 +29,30 @@ export interface AccountRow {
 export interface CollectionRow {
   email: string
   card_id: string
-  amount_owned: number
   rarity?: Rarity
   updated_at: string
+  card_amounts: {
+    amount_owned: number
+  }
+}
+
+export interface CardAmountUpdate {
+  amount_owned: number
+  internal_id: number
+  card_id: string
+}
+
+export interface CardAmountsRowUpdate {
+  email?: string
+  amount_owned: number
+  internal_id: number
+  updated_at?: string
 }
 
 export interface CollectionRowUpdate {
+  email?: string
   card_id: string
-  amount_owned: number
+  updated_at?: string
 }
 
 const tradeStatuses = ['offered', 'accepted', 'declined', 'finished'] as const
@@ -123,6 +139,7 @@ export interface Card {
 export interface ImportExportRow {
   Id: string
   CardName: string
+  InternalId: number
   NumberOwned: number
 }
 

@@ -245,7 +245,7 @@ interface NrOfCardsOwnedProps {
   deckbuildingMode?: boolean
 }
 export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expansion, packName, deckbuildingMode }: NrOfCardsOwnedProps): number => {
-  const amounts = new Map(ownedCards.map((x) => [x.card_id, x.amount_owned]))
+  const amounts = new Map(ownedCards.map((x) => [x.card_id, x.card_amounts.amount_owned]))
 
   let allCardsWithAmounts = allCards.map((ac) => {
     const amount = amounts.get(ac.card_id) || 0
@@ -446,7 +446,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
   const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'everypack')
 
   let cardsInPackWithAmounts = cardsInPack.map((cip) => {
-    const amount = ownedCards.find((oc) => cip.card_id === oc.card_id)?.amount_owned || 0
+    const amount = ownedCards.find((oc) => cip.card_id === oc.card_id)?.card_amounts.amount_owned || 0
     return { ...cip, amount_owned: amount }
   })
 
@@ -600,4 +600,12 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
 
   // disjoint union of probabilities
   return chanceToGetNewCard + chanceToGetNewCardInRarePack + changeToGetNewCardIn6CardPack
+}
+
+export const getInteralIdByCardId = (card_id: string) => {
+  const internalId = getCardById(card_id)?.internal_id
+  if (!internalId) {
+    throw new Error(`Internal ID for card with id ${card_id} not found`)
+  }
+  return internalId
 }
