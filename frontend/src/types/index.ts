@@ -2,7 +2,7 @@ import type { Session } from '@supabase/supabase-js'
 
 export type User = Session
 
-export const expansionIds = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'P-A'] as const
+export const expansionIds = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'A4b', 'P-A'] as const
 export type ExpansionId = (typeof expansionIds)[number]
 
 export const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', '✵', '✵✵', 'Crown Rare', 'P', ''] as const
@@ -62,6 +62,10 @@ export interface TradePartners {
   matched_cards_amount: number
 }
 
+export interface PackStructure {
+  cardsPerPack: 4 | 5
+}
+
 export interface Expansion {
   name: string
   id: ExpansionId
@@ -72,6 +76,7 @@ export interface Expansion {
   promo?: boolean
   containsShinies?: boolean
   containsBabies?: boolean
+  packStructure?: PackStructure
 }
 
 export interface Pack {
@@ -109,12 +114,6 @@ export interface Card {
   pack: string
   alternate_versions: string[]
   artist: string
-  probability: {
-    '1-3 card': string | null | undefined
-    '4 card': string | null | undefined
-    '5 card': string | null | undefined
-  }
-  crafting_cost: number
 
   amount_owned?: number // calculated from the collection table
 }

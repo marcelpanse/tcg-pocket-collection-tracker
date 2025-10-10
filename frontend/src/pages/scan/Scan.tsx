@@ -2,15 +2,16 @@ import i18n from 'i18next'
 import type { ChangeEvent, Dispatch, SetStateAction } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { CardLine } from '@/components/CardLine'
 import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
-import { allCards } from '@/lib/CardsDB'
+import { allCards, expansions } from '@/lib/CardsDB'
 import { calculatePerceptualHash, calculateSimilarity, imageToBuffers } from '@/lib/hash'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import CardDetectorService, { type DetectionResult } from '@/services/scanner/CardDetectionService'
-import type { Card, CollectionRowUpdate } from '@/types'
+import type { Card } from '@/types'
 
 interface ExtractedCard {
   imageUrl: string
@@ -22,6 +23,12 @@ interface ExtractedCard {
   }
   resolvedImageUrl?: string
   selected?: boolean
+}
+
+interface IncrementedCard {
+  card_id: string
+  previous_amount: number
+  increment: number
 }
 
 enum State {
@@ -37,8 +44,22 @@ type Hashes = Record<string, ArrayBuffer>
 
 const modelPath = '/model/model.json'
 
+function decode(base64: string): ArrayBuffer {
+  try {
+    // @ts-expect-error: Brand new api https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/fromBase64
+    return Uint8Array.fromBase64(base64).buffer
+  } catch {
+    const binary = atob(base64)
+    const bytes = new Uint8Array(binary.length)
+    for (let i = 0; i < binary.length; i++) {
+      bytes[i] = binary.charCodeAt(i)
+    }
+    return bytes.buffer
+  }
+}
+
 const Scan = () => {
-  const { t } = useTranslation('scan')
+  const { t } = useTranslation(['scan', 'common/sets'])
 
   const { data: ownedCards = [] } = useCollection()
   const updateCardsMutation = useUpdateCards()
@@ -54,9 +75,13 @@ const Scan = () => {
   const isInitialized = useMemo(() => !isLoadingModel && !!hashes && !!fallbackHashes, [isLoadingModel, hashes, fallbackHashes])
 
   const [amount, setAmount] = useState(1)
+  const [selectedExpansionId, setSelectedExpansionId] = useState<string>(() => {
+    const nonPromoExpansions = expansions.filter((exp) => !exp.promo)
+    return nonPromoExpansions[nonPromoExpansions.length - 1]?.id || 'A1'
+  })
 
   const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
-  const [incrementedCards, setIncrementedCards] = useState<number>(0)
+  const [incrementedCards, setIncrementedCards] = useState<IncrementedCard[]>([])
 
   const detectorService = useMemo(() => CardDetectorService.getInstance(), [])
 
@@ -70,8 +95,7 @@ const Scan = () => {
           return
         }
         const json = await res.json()
-        // @ts-expect-error: Brand new api https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/fromBase64
-        const decoded = Object.fromEntries(Object.entries(json).map(([k, v]) => [k, Uint8Array.fromBase64(v).buffer]))
+        const decoded = Object.fromEntries(Object.entries(json).map(([k, v]) => [k, decode(v as string)]))
         set(decoded)
       } catch (err) {
         console.error(`Failed getting hashes for '${lang}': ${err}`)
@@ -143,7 +167,7 @@ const Scan = () => {
   }
 
   // Extract card images function
-  const extractCardImages = async (file: File, detections: DetectionResult) => {
+  const extractCardImages = async (file: File, detections: DetectionResult, expansionId: string) => {
     if (!file.type.startsWith('image/')) {
       throw new Error('PokemonCardDetectorComponent.tsx:extractCardImages: Invalid file type')
     }
@@ -177,8 +201,9 @@ const Scan = () => {
               const buffers = await imageToBuffers(cardImageUrl)
               const hash = calculatePerceptualHash(buffers)
 
-              // Calculate similarityes for all cards and sort them
+              // Calculate similarityes for all cards from the selected expansion and sort them
               const matches = allCards
+                .filter((c) => c.expansion === expansionId)
                 .map((c) => {
                   const c_hash = hashes[c.card_id] ?? fallbackHashes[c.card_id]
                   if (!c_hash) {
@@ -188,6 +213,11 @@ const Scan = () => {
                   return { card: c, similarity: calculateSimilarity(hash, c_hash) }
                 })
                 .sort((a, b) => b.similarity - a.similarity)
+              console.log(
+                `Confidence: ${matches[0].similarity - matches[1].similarity}\n`,
+                'Best matches:',
+                matches.slice(0, 5).map(({ card, similarity }) => ({ card_id: card.card_id, similarity })),
+              )
 
               // Best match is the first one
               const bestMatch = matches[0]
@@ -242,7 +272,7 @@ const Scan = () => {
       // Extract card images
       const allExtractedCards: ExtractedCard[] = []
       for (let i = 0; i < imageFiles.length; i++) {
-        const extractedFromImage = await extractCardImages(imageFiles[i], detectionResults[i])
+        const extractedFromImage = await extractCardImages(imageFiles[i], detectionResults[i], selectedExpansionId)
         allExtractedCards.push(...extractedFromImage)
       }
       setExtractedCards(allExtractedCards)
@@ -273,45 +303,38 @@ const Scan = () => {
 
   const selectedCount = useMemo(() => extractedCards.filter((card) => card.selected).length, [extractedCards])
 
-  const incrementCards = async (cardIds: string[]) => {
-    const counts = new Map()
-    for (const cardId of cardIds) {
-      counts.set(cardId, (counts.get(cardId) || 0) + amount)
-    }
-
-    const cardArray: CollectionRowUpdate[] = []
-
-    for (const [card_id, increment] of counts) {
-      const ownedCard = ownedCards.find((row) => row.card_id === card_id)
-      cardArray.push({ card_id, amount_owned: (ownedCard?.amount_owned ?? 0) + increment })
-    }
-
-    updateCardsMutation.mutate({ updates: cardArray })
-
-    return cardIds.length * amount
-  }
-
   const handleConfirm = async () => {
-    if (amount === 0) {
-      setState(State.ProcessUpdates + 1)
-      setIncrementedCards(0)
-      return
-    }
-
     setState(State.ProcessUpdates)
 
     const cardIds = extractedCards.filter((card) => card.selected && card.matchedCard).map((card) => card.matchedCard.card.card_id)
 
-    if (cardIds.length > 0) {
-      try {
-        const incrementedCards = await incrementCards(cardIds.filter((id): id is string => id !== undefined))
-        setIncrementedCards(incrementedCards)
-      } catch (error) {
-        setError(`Error incrementing card quantities: ${error}`)
-        setState(State.Error)
-        return
-      }
+    if (amount === 0 || cardIds.length === 0) {
+      setState(State.ProcessUpdates + 1)
+      setIncrementedCards([])
+      return
     }
+
+    const counts = new Map()
+    for (const cardId of cardIds) {
+      counts.set(cardId, (counts.get(cardId) ?? 0) + amount)
+    }
+
+    const updates: IncrementedCard[] = []
+
+    for (const [card_id, increment] of counts) {
+      const previous_amount = ownedCards.find((row) => row.card_id === card_id)?.amount_owned ?? 0
+      updates.push({ card_id, previous_amount, increment })
+    }
+
+    try {
+      updateCardsMutation.mutate({ updates: updates.map((x) => ({ card_id: x.card_id, amount_owned: x.previous_amount + x.increment })) })
+    } catch (error) {
+      setError(`Error incrementing card quantities: ${error}`)
+      setState(State.Error)
+      return
+    }
+
+    setIncrementedCards(updates)
     setState(State.ProcessUpdates + 1)
   }
 
@@ -346,7 +369,7 @@ const Scan = () => {
           {/* Potential matches thumbnails */}
           <div className="flex justify-between items-center mb-2 w-full">
             <span className="text-sm font-medium">
-              {card.selected ? t('selected') : t('clickToSelect')} {getCardNameByLang(card.matchedCard.card, i18n.language)}
+              {card.selected ? t('selected') : t('clickToSelect')} {getCardNameByLang(card.matchedCard.card, i18n.language)} ({card.matchedCard.card.card_id})
             </span>
           </div>
         </div>
@@ -373,16 +396,29 @@ const Scan = () => {
       )}
 
       {isInitialized && state === State.UploadImages && (
-        // biome-ignore lint/a11y/noStaticElementInteractions: cant be a button because it contains another button
-        <div
-          className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-md cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900/10"
-          onClick={() => fileInputRef.current?.click()}
-        >
+        <div className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-md hover:bg-gray-50 dark:hover:bg-gray-900/10">
           <AlertDescription>
-            <p className="mb-4 text-center">{t('description')}</p>
+            <p className="text-neutral-400 mb-4 text-center">{t('description')}</p>
           </AlertDescription>
+          <label className="flex items-baseline justify-between gap-5 px-3 py-1 my-auto text-neutral-400">
+            <span className="text-sm">Which pack did you open?</span>
+            <select
+              value={selectedExpansionId}
+              onChange={(e) => setSelectedExpansionId(e.target.value)}
+              className="text-white min-h-[27px] text-sm cursor-pointer"
+            >
+              {expansions
+                .filter((exp) => !exp.promo)
+                .reverse()
+                .map((exp) => (
+                  <option key={exp.id} value={exp.id}>
+                    {t(exp.name, { ns: 'common/sets' })} ({exp.id})
+                  </option>
+                ))}
+            </select>
+          </label>
           <input type="file" ref={fileInputRef} onChange={handleImageUpload} accept="image/*" multiple className="w-full hidden" />
-          <Button variant="outline" className="mt-2">
+          <Button variant="outline" className="mt-2" onClick={() => fileInputRef.current?.click()}>
             {t('selectImages')}
           </Button>
         </div>
@@ -441,12 +477,19 @@ const Scan = () => {
       )}
 
       {state === State.Confirmation && (
-        <>
-          <p className="text-xl text-center mb-8">{t('success', { n: incrementedCards })}</p>
+        <div className="flex flex-col w-full max-w-lg mx-auto">
+          <p className="text-xl text-center mb-4">{t('success', { n: incrementedCards.reduce((acc, x) => acc + x.increment, 0) })}</p>
+          <ul className="flex flex-col gap-2 mb-8">
+            {incrementedCards.map((x) => (
+              <li key={x.card_id}>
+                <CardLine card_id={x.card_id} amount_owned={x.previous_amount} increment={x.increment} />
+              </li>
+            ))}
+          </ul>
           <Button onClick={() => setState(State.UploadImages)} variant="default">
             {t('scanMore')}
           </Button>
-        </>
+        </div>
       )}
     </div>
   )

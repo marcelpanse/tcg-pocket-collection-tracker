@@ -1,4 +1,6 @@
 name: Verify scanner hashes
+permissions:
+  contents: read
 on:
   push:
     branches:

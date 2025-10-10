@@ -64,5 +64,5 @@ export function getNeededCards(cards: CollectionRow[], amount_wanted: number): s
 
 export function umami(event: string) {
   // @ts-expect-error runtime script on window object
-  window.umami.track(event)
+  window.umami?.track(event)
 }

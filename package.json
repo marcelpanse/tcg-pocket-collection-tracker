@@ -10,14 +10,14 @@
     "prepare": "lefthook install",
     "dev": "pnpm --filter frontend run dev",
     "build": "pnpm --filter frontend run build",
-    "scraper": "node scripts/scraper.js && node scripts/download-packs.js && node scripts/scrape-missions.js && node scripts/deck-scraper-game8.js",
+    "scraper": "tsx scripts/scraper.js && node scripts/download-packs.js && node scripts/scrape-missions.js && node scripts/deck-scraper-game8.js",
     "hashes": "tsx scripts/generate-scan-hashes.ts",
     "sync-locales": "node scripts/sync-locales.js"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.4",
-    "lefthook": "^1.13.4",
-    "tsx": "^4.20.5"
+    "lefthook": "^1.13.6",
+    "tsx": "^4.20.6"
   },
   "type": "module",
   "packageManager": "pnpm@10.17.1",
@@ -31,7 +31,7 @@
       }
     },
     "overrides": {
-      "form-data": ">=4.0.4"
+      "axios@<1.12.0": ">=1.12.0"
     }
   },
   "dependencies": {
@@ -39,6 +39,6 @@
     "fs-extra": "^11.3.2",
     "glob": "^11.0.3",
     "node-fetch": "^3.3.2",
-    "sharp": "0.34.3"
+    "sharp": "0.34.4"
   }
 }

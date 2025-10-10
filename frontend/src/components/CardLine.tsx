@@ -8,6 +8,7 @@ import { useCollection, useSelectedCard } from '@/services/collection/useCollect
 interface Props {
   card_id: string
   className?: string
+  amount_owned?: number // optionally override collection amount
   increment?: number
 
   rarity?: ClassValue
@@ -17,14 +18,14 @@ interface Props {
   details?: ClassValue
 }
 
-export const CardLine: FC<Props> = ({ card_id, className, increment, rarity, id, name, amount, details }) => {
+export const CardLine: FC<Props> = ({ card_id, className, amount_owned, increment, rarity, id, name, amount, details }) => {
   const { i18n } = useTranslation('trade-matches')
 
   const { data: ownedCards = [] } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
 
   const card = useMemo(() => getCardById(card_id), [card_id])
-  const ownedAmount = useMemo(() => ownedCards.find((c) => c.card_id === card?.card_id)?.amount_owned ?? 0, [card])
+  const ownedAmount = useMemo(() => amount_owned ?? ownedCards.find((c) => c.card_id === card?.card_id)?.amount_owned ?? 0, [amount_owned, card])
 
   if (!card) {
     throw new Error(`Unrecognized card_id: ${card_id}`)
