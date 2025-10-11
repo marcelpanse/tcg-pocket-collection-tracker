@@ -45,7 +45,7 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
       let ownedMissionCards = ownedCards.reduce((acc, ownedCard) => {
         const hasCard = missionCard.options.find((cardId) => cardId === ownedCard.card_id)
         if (hasCard) {
-          for (let i = 0; i < ownedCard.amount_owned; i++) {
+          for (let i = 0; i < ownedCard.card_amounts.amount_owned; i++) {
             acc.push({ cardId: hasCard, owned: true, missionCardOptions: missionCard.options })
           }
         }

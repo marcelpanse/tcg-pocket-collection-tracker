@@ -137,7 +137,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
         <small className="text-left mb-1 md:text-right md:mb-[-25px]">
           {t('stats.summary', {
             ns: 'pages/collection',
-            selected: cards.filter((c) => !c.linkedCardID).length,
+            selected: cards.length,
             uniquesOwned: cards.filter((card) => (card.amount_owned ?? 0) > 0).length,
             totalOwned: cards.reduce((acc, card) => acc + (card.amount_owned ?? 0), 0),
           })}
@@ -164,7 +164,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
                     }}
                   />
                   <h2 className="text-center font-semibold sm:text-lg md:text-2xl ">
-                    {t((row.data as { type: string; row: Row<CardType> }).row.getValue('set_details') as string)}
+                    {t(((row.data as { type: string; row: Row<CardType> }).row.getValue('set_details') as string).replace(':', ''))}
                   </h2>
                 </div>
               ) : (

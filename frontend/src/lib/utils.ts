@@ -54,11 +54,11 @@ export function getCardNameByLang(card: Card, lang: string): string {
 }
 
 export function getExtraCards(cards: CollectionRow[], amount_wanted: number): string[] {
-  return cards.filter((c) => c.amount_owned > amount_wanted).map((c) => c.card_id)
+  return cards.filter((c) => c.card_amounts.amount_owned > amount_wanted).map((c) => c.card_id)
 }
 
 export function getNeededCards(cards: CollectionRow[], amount_wanted: number): string[] {
-  const notNeeded = new Set(cards.filter((c) => c.amount_owned >= amount_wanted).map((c) => c.card_id))
+  const notNeeded = new Set(cards.filter((c) => c.card_amounts.amount_owned >= amount_wanted).map((c) => c.card_id))
   return allCards.map((c) => c.card_id).filter((card_id) => !notNeeded.has(card_id))
 }
 

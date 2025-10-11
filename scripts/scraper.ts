@@ -4,7 +4,9 @@ import { pipeline } from 'node:stream/promises'
 import type { CheerioAPI } from 'cheerio'
 import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
-import type { Card, ExpansionId, Rarity } from '../frontend/src/types/index.ts'
+import { expansions as allExpansions } from '../frontend/src/lib/CardsDB'
+import type { Card, ExpansionId, Rarity } from '../frontend/src/types'
+import { encode } from './encoder'
 
 const BASE_URL = 'https://pocket.limitlesstcg.com'
 
@@ -12,7 +14,8 @@ const targetDir = 'frontend/assets/cards/'
 const imagesDir = 'frontend/public/images/en-US/'
 const imagesPath = '/images/en-US/'
 
-const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'A4b', 'P-A']
+// const expansions = ['A1']
+const expansions = allExpansions.map((e) => e.id)
 
 const packs = [
   'Pikachu pack',
@@ -48,8 +51,6 @@ const typeMapping = {
 }
 
 const fullArtRarities = ['☆', '☆☆', '☆☆☆', 'Crown Rare', 'P']
-
-const nonExCardsWithEx = ['Toxapex', 'Rotom Dex']
 
 const rarityOverrides = {
   A2b: [
@@ -147,7 +148,7 @@ function extractSetAndPackInfo($: CheerioAPI) {
   return { setDetails: 'Unknown', pack: 'Unknown' }
 }
 
-function urlToCardId(url: string) {
+function urlToCardId(url: string): { expansion: string; cardNr: number; cardId: string } {
   if (!url) {
     throw new Error('url is false')
   }
@@ -159,22 +160,20 @@ function urlToCardId(url: string) {
   if (matches.length === 0) {
     throw new Error(`couldn't extract card id from '${url}'`)
   }
-  return `${matches[0][1]}-${matches[0][2]}`
+  return {
+    expansion: matches[0][1],
+    cardNr: parseInt(matches[0][2], 10),
+    cardId: `${matches[0][1]}-${matches[0][2]}`,
+  }
 }
 
 async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string) {
-  const inPackId = cardUrl.split('/').pop()
+  const inPackId = Number.parseInt(cardUrl.split('/').pop(), 10)
   if (!inPackId) {
     throw new Error(`Faied to parse card id from url: ${cardUrl}`)
   }
 
-  let card_id = `${expansion}-${inPackId}`
-  let linkedCardID: string | undefined
-  if (card_id === 'A1a-63') {
-    // we set the card_id to the linkedCardID if it exists, so we really treat it as a single card even though it appears in multiple expansions.
-    card_id = 'A1-218'
-    linkedCardID = 'A1-218'
-  }
+  const card_id = `${expansion}-${inPackId}`
 
   const imageUrl = $('img.card').attr('src')
   if (!imageUrl) {
@@ -253,7 +252,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
 
   const fullart = fullArtRarities.includes(rarity)
 
-  const ex = name.includes('ex') && !nonExCardsWithEx.includes(name)
+  const ex = name.includes(' ex')
 
   // Check if card is a baby pokemon (Not currently specified exactly on Limitless TCG page)
   const baby = weakness === 'none' && hp === '30' && energy !== 'Dragon'
@@ -261,13 +260,54 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
   const { setDetails: set_details, pack } = extractSetAndPackInfo($)
 
   const alternate_versions: string[] = []
+  let linked = false
+  let baseExpansion = expansion
+  let baseCardNr = inPackId
+  let foundMyself = false
+
+  console.log('processing alternates for', card_id)
   $('table.card-prints-versions tr').each((_i, version) => {
     const versionName = $(version).find('a').text().trim().replace(/\s+/g, ' ')
-    const alternate_card_id = $(version).find('a').attr('href')
     if (versionName) {
-      alternate_versions.push(alternate_card_id ? urlToCardId(alternate_card_id) : card_id)
+      const alternate_card_id = $(version).find('a').attr('href')
+      console.log('checking', alternate_card_id, versionName)
+      if (!alternate_card_id) {
+        foundMyself = true // no link with href means this is the current version we're looking at.
+        console.log('found self reference')
+      }
+
+      alternate_versions.push(alternate_card_id ? urlToCardId(alternate_card_id).cardId : card_id)
+      const alternate_card_rarity = $(version).find('td:last-child').text().trim() || 'P'
+
+      // this checks for a card with the same rarity (up to EX card rarity) that is before the current card in the list. If so, that's the linked card
+      // the alternate cards are only available up to EX card rarity (at least for now). And since limitless doesn't properly set shiny cards, we have to check it like this.
+      if (rarity.includes('◊') && alternate_card_rarity === rarity && !foundMyself && !linked) {
+        baseExpansion = alternate_card_id ? urlToCardId(alternate_card_id).expansion : expansion
+        baseCardNr = alternate_card_id ? urlToCardId(alternate_card_id).cardNr : inPackId
+        linked = !!alternate_card_id //just for reference to double-check our db for errors
+        console.log('found alternate option', alternate_card_id, baseExpansion, baseCardNr, linked)
+      }
+
+      // However, a foil card would link to a base card, but in the game that isn't the case. So we need to check for foil cards.
+      // We consider it a foil card if we already linked it, but still find the same rarity in the same set before the current card.
+      if (alternate_card_id && !foundMyself) {
+        const alternateSetId = urlToCardId(alternate_card_id).expansion
+        if (alternateSetId === expansion && alternate_card_rarity === rarity) {
+          // same set, same rarity, means this one is an alternative art in the same set (can be foil), remove the link and treat like unique card.
+          baseExpansion = expansion // foils don't have linked cards (at least not yet!)
+          baseCardNr = inPackId
+          linked = false
+          console.log('disregarding alternate-->unique', baseExpansion, baseCardNr, linked)
+        }
+      }
     }
   })
+
+  const internal_id = encode(
+    allExpansions.find((e) => e.id === baseExpansion),
+    baseCardNr,
+    rarity,
+  )
 
   const artist = $('div.card-text-section.card-text-artist a').text().trim() || 'Unknown'
 
@@ -279,7 +319,6 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
     hp,
     energy,
     name,
-    linkedCardID,
     card_type,
     evolution_type,
     attacks,
@@ -294,6 +333,8 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
     pack,
     alternate_versions,
     artist,
+    internal_id,
+    linked, //purely for testing to see if cards are linked correctly.
   }
 }
 

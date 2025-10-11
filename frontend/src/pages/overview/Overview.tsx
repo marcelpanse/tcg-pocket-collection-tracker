@@ -35,7 +35,7 @@ function Overview() {
   const [usersCount, setUsersCount] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<ExpansionOption>(expansionOptions[expansionOptions.length - 2])
 
-  const ownedCardsCount = useMemo(() => ownedCards.reduce((total, card) => total + card.amount_owned, 0), [ownedCards])
+  const ownedCardsCount = useMemo(() => ownedCards.reduce((total, card) => total + card.card_amounts.amount_owned, 0), [ownedCards])
 
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>(() => {
     const savedRarityFilter = localStorage.getItem('rarityFilter')

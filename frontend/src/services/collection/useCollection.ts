@@ -4,7 +4,7 @@ import { DialogContext } from '@/context/DialogContext.ts'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { useUser } from '@/services/auth/useAuth.ts'
 import { getCollection, getPublicCollection, updateCards } from '@/services/collection/collectionService.ts'
-import type { CollectionRowUpdate } from '@/types'
+import type { CardAmountUpdate } from '@/types'
 
 export function useCollection() {
   const { data: user } = useUser()
@@ -34,7 +34,7 @@ export function useUpdateCards() {
 
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: ({ updates }: { updates: CollectionRowUpdate[] }) => {
+    mutationFn: ({ updates }: { updates: CardAmountUpdate[] }) => {
       if (!email) {
         throw new Error('Email is required to update cards')
       }
