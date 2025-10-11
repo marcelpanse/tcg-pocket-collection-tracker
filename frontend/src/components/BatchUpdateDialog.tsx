@@ -6,7 +6,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import ScrollArea from '@/components/ui/scroll-area'
-import { getInteralIdByCardId } from '@/lib/CardsDB.ts'
+import { getCardById, getInteralIdByCardId } from '@/lib/CardsDB.ts'
 import { useUpdateCards } from '@/services/collection/useCollection.ts'
 import type { Card } from '@/types'
 
@@ -28,6 +28,7 @@ export function BatchUpdateDialog({ filteredCards }: BatchUpdateDialogProps) {
     updateCardsMutation.mutate({
       updates: cardIds.map((card_id) => ({
         card_id,
+        rarity: getCardById(card_id)?.rarity || '',
         internal_id: getInteralIdByCardId(card_id),
         amount_owned: amount,
       })),

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast.ts'
-import { getInteralIdByCardId } from '@/lib/CardsDB.ts'
+import { getCardById, getInteralIdByCardId } from '@/lib/CardsDB.ts'
 import { umami } from '@/lib/utils.ts'
 import { TradeListRow } from '@/pages/trade/components/TradeListRow.tsx'
 import { useAccount } from '@/services/account/useAccount'
@@ -36,7 +36,8 @@ function TradeList({ trades, viewHistory }: Props) {
 
   const getAndIncrement = (card_id: string, increment: number): CardAmountUpdate => {
     const internal_id = getInteralIdByCardId(card_id)
-    return { card_id, internal_id, amount_owned: (ownedCards.find((r) => r.card_id === card_id)?.card_amounts.amount_owned ?? 0) + increment }
+    const rarity = getCardById(card_id)?.rarity || ''
+    return { card_id, internal_id, rarity, amount_owned: (ownedCards.find((r) => r.card_id === card_id)?.card_amounts.amount_owned ?? 0) + increment }
   }
 
   const increment = async (row: TradeRow) => {

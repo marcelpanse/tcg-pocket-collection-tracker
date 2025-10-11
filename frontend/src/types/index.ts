@@ -31,6 +31,7 @@ export interface CollectionRow {
   card_id: string
   rarity?: Rarity
   updated_at: string
+  internal_id: number
   card_amounts: {
     amount_owned: number
   }
@@ -40,19 +41,21 @@ export interface CardAmountUpdate {
   amount_owned: number
   internal_id: number
   card_id: string
+  rarity: Rarity
 }
 
 export interface CardAmountsRowUpdate {
-  email?: string
+  email: string
   amount_owned: number
   internal_id: number
-  updated_at?: string
+  updated_at: string
 }
 
 export interface CollectionRowUpdate {
-  email?: string
+  email: string
   card_id: string
-  updated_at?: string
+  internal_id: number
+  updated_at: string
 }
 
 const tradeStatuses = ['offered', 'accepted', 'declined', 'finished'] as const
@@ -141,6 +144,7 @@ export interface ImportExportRow {
   CardName: string
   InternalId: number
   NumberOwned: number
+  Rarity: Rarity
 }
 
 export interface Mission {

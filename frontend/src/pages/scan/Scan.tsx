@@ -6,7 +6,7 @@ import { CardLine } from '@/components/CardLine'
 import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
-import { allCards, expansions } from '@/lib/CardsDB'
+import { allCards, expansions, getCardById } from '@/lib/CardsDB'
 import { getInteralIdByCardId } from '@/lib/CardsDB.ts'
 import { calculatePerceptualHash, calculateSimilarity, imageToBuffers } from '@/lib/hash'
 import { getCardNameByLang } from '@/lib/utils'
@@ -329,7 +329,12 @@ const Scan = () => {
 
     try {
       updateCardsMutation.mutate({
-        updates: updates.map((x) => ({ card_id: x.card_id, internal_id: getInteralIdByCardId(x.card_id), amount_owned: x.previous_amount + x.increment })),
+        updates: updates.map((x) => ({
+          card_id: x.card_id,
+          rarity: getCardById(x.card_id)?.rarity ?? '',
+          internal_id: getInteralIdByCardId(x.card_id),
+          amount_owned: x.previous_amount + x.increment,
+        })),
       })
     } catch (error) {
       setError(`Error incrementing card quantities: ${error}`)

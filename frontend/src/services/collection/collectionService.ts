@@ -72,7 +72,12 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   }
 
   // Update collection records
-  const collectionRows: CollectionRowUpdate[] = rowsToUpdate.map((row) => ({ email, card_id: row.card_id, updated_at: nowString }))
+  const collectionRows: CollectionRowUpdate[] = rowsToUpdate.map((row) => ({
+    email,
+    card_id: row.card_id,
+    internal_id: row.internal_id,
+    updated_at: nowString,
+  }))
   const amountRows: CardAmountsRowUpdate[] = rowsToUpdate.map((row) => ({
     email,
     internal_id: row.internal_id,
@@ -81,7 +86,6 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   }))
 
   //then update the card amounts
-  //TODO: add new collected column to the db and mark it here as collected.
   const { error: collectionError } = await supabase.from('collection').upsert(collectionRows)
   const { error: cardAmountsError } = await supabase.from('card_amounts').upsert(amountRows)
 
@@ -92,33 +96,33 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   // Update cache with the changes
   const latestFromCache = getCollectionFromCache(email) || (await fetchCollectionFromAPI('collection', 'email', email))
 
-  const updatedCards = latestFromCache.map((row) => {
-    const updated = rowsToUpdate.find((r) => r.card_id === row.card_id)
-    if (updated === undefined) {
-      return row
+  for (const row of rowsToUpdate) {
+    // for each card that has updated, we need to find the matching cards in the cache by internal_id (can be mulitple) and update them.
+    const rowsFromCacheToUpdate = latestFromCache.filter((r) => r.internal_id === row.internal_id)
+    if (rowsFromCacheToUpdate.length > 0) {
+      for (const rowFromCacheToUpdate of rowsFromCacheToUpdate) {
+        rowFromCacheToUpdate.card_amounts.amount_owned = row.amount_owned
+        rowFromCacheToUpdate.updated_at = nowString
+      }
     } else {
-      return { ...row, ...updated }
+      // the card is not yet in the cache, so we need to add it.
+      latestFromCache.push({
+        card_id: row.card_id,
+        internal_id: row.internal_id,
+        email,
+        rarity: row.rarity,
+        updated_at: nowString,
+        card_amounts: {
+          amount_owned: row.amount_owned,
+        },
+      })
     }
-  })
+  }
 
-  //TODO: fix adding new card to the cache
-  // const newCards: CollectionRow = collectionRows
-  //   .filter((row) => latestFromCache.find((r) => r.card_id === row.card_id) === undefined)
-  //   .map((row) => ({
-  //     card_id: row.card_id,
-  //     email: row.email,
-  //     rarity: row.rarity,
-  //     updated_at: row.updated_at,
-  //     card_amounts: {
-  //       amount_owned: row.amount_owned,
-  //     },
-  //   }))
-  // updatedCards.push(...newCards)
-
-  updateCollectionCache(updatedCards, email, now)
+  updateCollectionCache(latestFromCache, email, now)
 
   return {
-    cards: updatedCards,
+    cards: latestFromCache,
     account: updatedAccount as AccountRow,
   }
 }
