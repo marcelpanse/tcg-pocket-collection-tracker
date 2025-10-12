@@ -8,7 +8,7 @@ import { CardList } from '@/pages/trade/components/CardList.tsx'
 import { TradeOffer } from '@/pages/trade/components/TradeOffer.tsx'
 import { useAccount, usePublicAccount } from '@/services/account/useAccount'
 import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
-import { type Card, type Rarity, type TradableRarity, tradableRarities } from '@/types'
+import { type Card, type CollectionRow, type Rarity, type TradableRarity, tradableRarities } from '@/types'
 
 function getTradeCards(extraCards: number[], neededCards: number[]) {
   const neededCardsSet = new Set(neededCards)
@@ -27,7 +27,7 @@ function TradeWith() {
   const { data: friendCards } = usePublicCollection(friendId)
 
   const { data: account } = useAccount()
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
 
   const [yourCard, setYourCard] = useState<Card | null>(null)
   const [friendCard, setFriendCard] = useState<Card | null>(null)

@@ -12,7 +12,7 @@ import { calculatePerceptualHash, calculateSimilarity, imageToBuffers } from '@/
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import CardDetectorService, { type DetectionResult } from '@/services/scanner/CardDetectionService'
-import type { Card } from '@/types'
+import type { Card, CollectionRow } from '@/types'
 
 interface ExtractedCard {
   imageUrl: string
@@ -62,7 +62,7 @@ function decode(base64: string): ArrayBuffer {
 const Scan = () => {
   const { t } = useTranslation(['scan', 'common/sets'])
 
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const updateCardsMutation = useUpdateCards()
 
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -324,7 +324,7 @@ const Scan = () => {
 
     for (const [card_id, increment] of counts) {
       const card = getCardById(card_id)
-      const previous_amount = ownedCards.find((row) => row.internal_id === card?.internal_id)?.amount_owned ?? 0
+      const previous_amount = ownedCards.get(card?.internal_id || 0)?.amount_owned ?? 0
       updates.push({ card_id, previous_amount, increment })
     }
 

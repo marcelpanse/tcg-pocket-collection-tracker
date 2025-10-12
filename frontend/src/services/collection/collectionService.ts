@@ -5,7 +5,7 @@ const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v2'
 const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v2'
 const PAGE_SIZE = 500
 
-export const getCollection = async (email: string, collectionLastUpdated?: Date) => {
+export const getCollection = async (email: string, collectionLastUpdated?: Date): Promise<Map<number, CollectionRow>> => {
   if (!email) {
     throw new Error('Email is required to fetch collection')
   }
@@ -18,28 +18,29 @@ export const getCollection = async (email: string, collectionLastUpdated?: Date)
 
     if (cacheLastUpdated && !Number.isNaN(cacheLastUpdated.getTime()) && cacheLastUpdated >= collectionLastUpdated && cachedCollection !== null) {
       console.log('Using cached collection', cachedCollection.length)
-      return cachedCollection
+      return new Map(cachedCollection.map((row) => [row.internal_id, row]))
     }
   }
 
   // Fetch from API if cache is invalid or not available
   const collection = await fetchCollectionFromAPI('collection', 'email', email)
-  console.log('collection', collection)
+  console.log('collection', collection.length)
 
   // Update cache with new data
   if (collectionLastUpdated) {
     updateCollectionCache(collection, email, collectionLastUpdated)
   }
 
-  return collection
+  return new Map(collection.map((row) => [row.internal_id, row]))
 }
 
-export const getPublicCollection = async (friendId: string) => {
+export const getPublicCollection = async (friendId: string): Promise<Map<number, CollectionRow>> => {
   if (!friendId) {
     throw new Error('Friend ID is required to fetch public collection')
   }
 
-  return await fetchCollectionFromAPI('public_cards', 'friend_id', friendId)
+  const collection = await fetchCollectionFromAPI('public_cards', 'friend_id', friendId)
+  return new Map(collection.map((row) => [row.internal_id, row]))
 }
 
 export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[]) => {
@@ -128,7 +129,7 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   updateCollectionCache(latestFromCache, email, now)
 
   return {
-    cards: latestFromCache,
+    cards: new Map(latestFromCache.map((row) => [row.internal_id, row])),
     account: updatedAccount as AccountRow,
   }
 }
@@ -222,8 +223,12 @@ function updateCollectionCache(collection: CollectionRow[], email: string, times
       return
     }
 
-    localStorage.setItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`, timestamp.toISOString())
-    localStorage.setItem(`${COLLECTION_CACHE_KEY}_${email}`, JSON.stringify(collection))
+    if (!timestamp) {
+      console.trace('Timestamp is not available, cannot cache collection')
+    } else {
+      localStorage.setItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`, timestamp.toISOString())
+      localStorage.setItem(`${COLLECTION_CACHE_KEY}_${email}`, JSON.stringify(collection))
+    }
 
     console.log('Collection cache updated')
   } catch (error) {

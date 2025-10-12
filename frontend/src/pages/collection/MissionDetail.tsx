@@ -38,7 +38,7 @@ function MissionDetail({ missionCardOptions, onClose }: Readonly<MissionDetailPr
           const foundCard = getCardById(cardId)
           return (
             foundCard && (
-              <div className="flex flex-col items-center">
+              <div key={cardId} className="flex flex-col items-center">
                 <div className="px-10 py-4 w-full">
                   <FancyCard card={foundCard} selected={false} />
                 </div>

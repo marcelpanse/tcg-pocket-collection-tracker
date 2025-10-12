@@ -41,7 +41,7 @@ export interface Filters {
 }
 
 interface Props {
-  cards: CollectionRow[]
+  cards: Map<number, CollectionRow>
 
   filters: Filters
   setFilters: Dispatch<SetStateAction<Filters>>
@@ -109,16 +109,16 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
     }
     if (filters.owned !== 'all') {
       if (filters.owned === 'owned') {
-        filteredCards = filteredCards.filter((card) => cards.find((oc: CollectionRow) => oc.internal_id === card.internal_id && oc.amount_owned > 0))
+        filteredCards = filteredCards.filter((card) => (cards.get(card.internal_id)?.amount_owned || 0) > 0)
       } else if (filters.owned === 'missing') {
-        filteredCards = filteredCards.filter((card) => !cards.find((oc: CollectionRow) => oc.internal_id === card.internal_id && oc.amount_owned > 0))
+        filteredCards = filteredCards.filter((card) => (cards.get(card.internal_id)?.amount_owned || 0) === 0)
       }
     }
 
     if (filters.sortBy === 'recent') {
       filteredCards = [...filteredCards].sort((a: Card, b: Card) => {
-        const isUpdatedA = cards.find((oc: CollectionRow) => oc.internal_id === a.internal_id)?.updated_at
-        const isUpdatedB = cards.find((oc: CollectionRow) => oc.internal_id === b.internal_id)?.updated_at
+        const isUpdatedA = cards.get(a.internal_id)?.updated_at
+        const isUpdatedB = cards.get(b.internal_id)?.updated_at
         if (isUpdatedA && isUpdatedB) {
           return new Date(isUpdatedB).getTime() - new Date(isUpdatedA).getTime()
         } else if (isUpdatedA && !isUpdatedB) {
@@ -182,18 +182,16 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
       })
     }
 
-    const amounts = new Map((cards || []).map((x) => [x.internal_id, x.amount_owned]))
-
     for (const card of filteredCards) {
       if (filters.deckbuildingMode) {
         card.amount_owned = card.alternate_versions.reduce((acc, c) => {
           const card = getCardById(c)
-          return acc + (amounts.get(card?.internal_id || 0) ?? 0)
+          return acc + (cards.get(card?.internal_id || 0)?.amount_owned ?? 0)
         }, 0)
       } else {
-        card.amount_owned = amounts.get(card.internal_id) ?? 0
+        card.amount_owned = cards.get(card.internal_id)?.amount_owned ?? 0
       }
-      card.collected = cards.find((oc: CollectionRow) => oc.internal_id === card.internal_id)?.collection.includes(card.card_id) ?? false
+      card.collected = cards.get(card.internal_id)?.collection.includes(card.card_id) ?? false
     }
     filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) >= filters.minNumber)
     if (filters.maxNumber !== 100) {

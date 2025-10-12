@@ -3,11 +3,11 @@ import { useDropzone } from 'react-dropzone'
 import { useTranslation } from 'react-i18next'
 import XLSX from 'xlsx'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
-import type { CardAmountUpdate, ImportExportRow } from '@/types'
+import type { CardAmountUpdate, CollectionRow, ImportExportRow } from '@/types'
 
 export const ImportReader = () => {
   const { t } = useTranslation('pages/import')
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const updateCardsMutation = useUpdateCards()
 
   const [processedData, setProcessedData] = useState<(ImportExportRow & { added?: boolean; updated?: boolean; removed?: boolean })[] | null>(null)
@@ -24,7 +24,7 @@ export const ImportReader = () => {
       console.log('Row', r)
       const newAmount = Math.max(0, Number(r.NumberOwned))
       const cardId = r.Id
-      const ownedCard = ownedCards.find((row) => row.internal_id === r.InternalId)
+      const ownedCard = ownedCards.get(r.InternalId)
       console.log('Owned Card', ownedCard)
 
       cardArray.push({ card_id: cardId, internal_id: r.InternalId, amount_owned: newAmount, rarity: r.Rarity })

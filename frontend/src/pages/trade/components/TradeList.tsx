@@ -8,7 +8,7 @@ import { TradeListRow } from '@/pages/trade/components/TradeListRow.tsx'
 import { useAccount } from '@/services/account/useAccount'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import { useUpdateTrade } from '@/services/trade/useTrade.ts'
-import type { CardAmountUpdate, TradeRow, TradeStatus } from '@/types'
+import type { CardAmountUpdate, CollectionRow, TradeRow, TradeStatus } from '@/types'
 
 interface Props {
   trades: TradeRow[]
@@ -20,7 +20,7 @@ function TradeList({ trades, viewHistory }: Props) {
   const { toast } = useToast()
 
   const { data: account } = useAccount()
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const updateCardsMutation = useUpdateCards()
 
   function interesting(row: TradeRow) {
@@ -37,7 +37,7 @@ function TradeList({ trades, viewHistory }: Props) {
   const getAndIncrement = (card_id: string, increment: number): CardAmountUpdate => {
     const internal_id = getInteralIdByCardId(card_id)
     const rarity = getCardById(card_id)?.rarity || ''
-    return { card_id, internal_id, rarity, amount_owned: (ownedCards.find((r) => r.internal_id === internal_id)?.amount_owned ?? 0) + increment }
+    return { card_id, internal_id, rarity, amount_owned: (ownedCards.get(internal_id)?.amount_owned ?? 0) + increment }
   }
 
   const increment = async (row: TradeRow) => {

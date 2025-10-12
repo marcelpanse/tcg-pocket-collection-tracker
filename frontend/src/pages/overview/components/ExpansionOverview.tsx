@@ -7,7 +7,7 @@ import * as CardsDB from '@/lib/CardsDB.ts'
 import { CompleteProgress } from '@/pages/overview/components/CompleteProgress.tsx'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import { useCollection } from '@/services/collection/useCollection'
-import type { Expansion, Rarity } from '@/types'
+import type { CollectionRow, Expansion, Rarity } from '@/types'
 import { Carousel } from './Carousel'
 
 interface ExpansionOverviewProps {
@@ -17,7 +17,7 @@ interface ExpansionOverviewProps {
   deckbuildingMode: boolean
 }
 export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckbuildingMode }: ExpansionOverviewProps) {
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
 
   const { t } = useTranslation(['expansion-overview', 'common/sets', 'common/packs'])
 
