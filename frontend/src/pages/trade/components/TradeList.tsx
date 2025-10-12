@@ -36,7 +36,10 @@ function TradeList({ trades, viewHistory }: Props) {
 
   const getAndIncrement = (card_id: string, increment: number): CardAmountUpdate => {
     const internal_id = getInteralIdByCardId(card_id)
-    const rarity = getCardById(card_id)?.rarity || ''
+    const rarity = getCardById(card_id)?.rarity
+    if (rarity === undefined) {
+      throw new Error(`Could not find card: ${card_id}`)
+    }
     return { card_id, internal_id, rarity, amount_owned: (ownedCards.get(internal_id)?.amount_owned ?? 0) + increment }
   }
 

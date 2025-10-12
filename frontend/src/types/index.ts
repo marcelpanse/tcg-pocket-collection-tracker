@@ -5,7 +5,7 @@ export type User = Session
 export const expansionIds = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'A4b', 'P-A'] as const
 export type ExpansionId = (typeof expansionIds)[number]
 
-export const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', '✵', '✵✵', 'Crown Rare', 'P', ''] as const
+export const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', '✵', '✵✵', 'Crown Rare', 'P'] as const
 export const tradableRarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆'] as const
 
 export const cardTypes = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'dragon', 'colorless', 'trainer', ''] as const
