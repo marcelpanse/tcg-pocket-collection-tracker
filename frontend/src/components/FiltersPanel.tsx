@@ -98,7 +98,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
     let filteredCards = allCards
 
     if (filters.deckbuildingMode) {
-      filteredCards = filteredCards.filter((c) => basicRarities.includes(c.rarity) || c.rarity === '' || c.rarity === 'P')
+      filteredCards = filteredCards.filter((c) => basicRarities.includes(c.rarity) || c.rarity === 'P')
     }
 
     if (filters.expansion !== 'all') {
@@ -146,7 +146,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
       if (filters.rarity.length === 0) {
         return true
       }
-      return c.rarity !== '' && filters.rarity.includes(c.rarity)
+      return filters.rarity.includes(c.rarity)
     })
     filteredCards = filteredCards.filter((c: Card) => {
       if (filters.cardType.length === 0) {

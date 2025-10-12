@@ -26,12 +26,15 @@ export function BatchUpdateDialog({ filteredCards }: BatchUpdateDialogProps) {
 
   const onBatchUpdate = async (cardIds: string[], amount: number) => {
     updateCardsMutation.mutate({
-      updates: cardIds.map((card_id) => ({
-        card_id,
-        rarity: getCardById(card_id)?.rarity || '',
-        internal_id: getInteralIdByCardId(card_id),
-        amount_owned: amount,
-      })),
+      updates: cardIds
+        .map(getCardById)
+        .filter((card): card is Card => Boolean(card))
+        .map((card) => ({
+          card_id: card.card_id,
+          rarity: card.rarity,
+          internal_id: getInteralIdByCardId(card.card_id),
+          amount_owned: amount,
+        })),
     })
   }
 

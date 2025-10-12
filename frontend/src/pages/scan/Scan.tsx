@@ -12,7 +12,7 @@ import { calculatePerceptualHash, calculateSimilarity, imageToBuffers } from '@/
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import CardDetectorService, { type DetectionResult } from '@/services/scanner/CardDetectionService'
-import type { Card, CollectionRow } from '@/types'
+import type { Card, CollectionRow, Rarity } from '@/types'
 
 interface ExtractedCard {
   imageUrl: string
@@ -332,7 +332,7 @@ const Scan = () => {
       updateCardsMutation.mutate({
         updates: updates.map((x) => ({
           card_id: x.card_id,
-          rarity: getCardById(x.card_id)?.rarity ?? '',
+          rarity: getCardById(x.card_id)?.rarity as Rarity,
           internal_id: getInteralIdByCardId(x.card_id),
           amount_owned: x.previous_amount + x.increment,
         })),
