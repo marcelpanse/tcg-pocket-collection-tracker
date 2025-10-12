@@ -23,7 +23,7 @@ export const getCollection = async (email: string, collectionLastUpdated?: Date)
   }
 
   // Fetch from API if cache is invalid or not available
-  const collection = await fetchCollectionFromAPI('collection', 'email', email)
+  const collection = await fetchCollectionFromAPI('card_amounts', 'email', email)
   console.log('collection', collection.length)
 
   // Update cache with new data
