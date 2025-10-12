@@ -39,45 +39,48 @@ Deno.serve(async (req) => {
               LIMIT 50
           ),
                your_wanted AS (
-                   SELECT c.card_id
-                   FROM cards c
-                            LEFT JOIN collection c2
-                                      ON c.card_id = c2.card_id AND c2.email = $1
-                   WHERE COALESCE(c2.amount_owned, 0) < $2
+                   SELECT c.internal_id
+                   FROM cards_list c
+                            LEFT JOIN card_amounts c2
+                                      ON c.internal_id = c2.internal_id AND c2.email = $1
+                   WHERE c.tradable = TRUE 
+                     AND c2.amount_owned < $2
                ),
                you_have AS (
-                   SELECT c.card_id
-                   FROM collection c
+                   SELECT c.internal_id
+                   FROM card_amounts c
                    WHERE c.email = $1
                      AND c.amount_owned > $3
                ),
                partner_wanted AS (
-                   SELECT a.email, c.card_id
+                   SELECT a.email, c.internal_id
                    FROM recent_accounts a
-                            CROSS JOIN cards c
-                            LEFT JOIN collection c2
-                                      ON c.card_id = c2.card_id AND c2.email = a.email
-                   WHERE COALESCE(c2.amount_owned, 0) < a.max_number_of_cards_wanted
+                            CROSS JOIN cards_list c
+                            LEFT JOIN card_amounts c2
+                                      ON c.internal_id = c2.internal_id AND c2.email = a.email
+                   WHERE c.tradable = TRUE 
+                       AND c2.amount_owned < a.max_number_of_cards_wanted
                ),
                partner_has AS (
-                   SELECT c.email, c.card_id
-                   FROM collection c
+                   SELECT c.email, c.internal_id
+                   FROM card_amounts c
                             JOIN recent_accounts ra ON ra.email = c.email
                             JOIN accounts a ON a.email = c.email
-                   WHERE c.amount_owned > a.min_number_of_cards_to_keep
+                   WHERE c.tradable = TRUE 
+                       AND c.amount_owned > a.min_number_of_cards_to_keep
                ),
                matches AS (
                    -- What you can get from them
-                   SELECT ph.email AS partner_email, COUNT(DISTINCT ph.card_id) AS they_can_give
+                   SELECT ph.email AS partner_email, COUNT(ph.internal_id) AS they_can_give
                    FROM partner_has ph
-                            JOIN your_wanted yw ON ph.card_id = yw.card_id
+                            JOIN your_wanted yw ON ph.internal_id = yw.internal_id
                    GROUP BY ph.email
                ),
                reverse_matches AS (
                    -- What they can get from you
-                   SELECT pw.email AS partner_email, COUNT(DISTINCT pw.card_id) AS you_can_give
+                   SELECT pw.email AS partner_email, COUNT(pw.internal_id) AS you_can_give
                    FROM partner_wanted pw
-                            JOIN you_have yh ON pw.card_id = yh.card_id
+                            JOIN you_have yh ON pw.internal_id = yh.internal_id
                    GROUP BY pw.email
                )
           SELECT
