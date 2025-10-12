@@ -72,7 +72,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
           onImageClick?.()
         }}
       >
-        <FancyCard card={card} selected={amountOwned > 0} />
+        <FancyCard card={card} selected={Boolean(card.collected)} />
       </button>
       <p className="w-full min-w-0 text-[12px] pt-2 text-center font-semibold leading-tight">
         <span className="block md:inline">{card.card_id}</span>

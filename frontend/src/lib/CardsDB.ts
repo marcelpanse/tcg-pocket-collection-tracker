@@ -56,9 +56,14 @@ export const allCards: Card[] = [
 ]
 
 const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
+const allCardsByInternalId: Map<number, Card> = new Map(allCards.map((card) => [card.internal_id, card]))
 
 export const getCardById = (cardId: string): Card | undefined => {
   return allCardsDict.get(cardId)
+}
+
+export const getCardByInternalId = (internalId: number): Card | undefined => {
+  return allCardsByInternalId.get(internalId)
 }
 
 const a1Missions: Mission[] = A1Missions as unknown as Mission[]
@@ -245,16 +250,19 @@ interface NrOfCardsOwnedProps {
   deckbuildingMode?: boolean
 }
 export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expansion, packName, deckbuildingMode }: NrOfCardsOwnedProps): number => {
-  const amounts = new Map(ownedCards.map((x) => [x.card_id, x.card_amounts.amount_owned]))
+  const amounts = new Map(ownedCards.map((x) => [x.internal_id, x.amount_owned]))
 
   let allCardsWithAmounts = allCards.map((ac) => {
-    const amount = amounts.get(ac.card_id) || 0
+    const amount = amounts.get(ac.internal_id) || 0
     return { ...ac, amount_owned: amount }
   })
   if (deckbuildingMode) {
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
-        const amount_owned = ac.alternate_versions.reduce((acc, rc) => acc + (amounts.get(rc) || 0), 0)
+        const amount_owned = ac.alternate_versions.reduce((acc, rc) => {
+          const card = getCardById(rc)
+          return acc + (amounts.get(card?.internal_id || 0) || 0)
+        }, 0)
         return { ...ac, amount_owned }
       })
       .filter((c) => basicRarities.includes(c.rarity))
@@ -446,7 +454,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
   const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'everypack')
 
   let cardsInPackWithAmounts = cardsInPack.map((cip) => {
-    const amount = ownedCards.find((oc) => cip.card_id === oc.card_id)?.card_amounts.amount_owned || 0
+    const amount = ownedCards.find((oc) => cip.internal_id === oc.internal_id)?.amount_owned || 0
     return { ...cip, amount_owned: amount }
   })
 

@@ -17,7 +17,7 @@ export const getCollection = async (email: string, collectionLastUpdated?: Date)
     const cacheLastUpdated = cacheLastUpdatedRaw && new Date(cacheLastUpdatedRaw)
 
     if (cacheLastUpdated && !Number.isNaN(cacheLastUpdated.getTime()) && cacheLastUpdated >= collectionLastUpdated && cachedCollection !== null) {
-      console.log('Using cached collection', cachedCollection)
+      console.log('Using cached collection', cachedCollection.length)
       return cachedCollection
     }
   }
@@ -86,35 +86,41 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   }))
 
   //then update the card amounts
-  const { error: collectionError } = await supabase.from('collection').upsert(collectionRows)
   const { error: cardAmountsError } = await supabase.from('card_amounts').upsert(amountRows)
+  if (cardAmountsError) {
+    throw new Error(`Error bulk updating collection: ${cardAmountsError?.message}`)
+  }
 
-  if (collectionError || cardAmountsError) {
-    throw new Error(`Error bulk updating collection: ${collectionError?.message}, ${cardAmountsError?.message}`)
+  const { error: collectionError } = await supabase.from('collection').upsert(collectionRows)
+  if (collectionError) {
+    throw new Error(`Error bulk updating collection: ${collectionError?.message}`)
   }
 
   // Update cache with the changes
   const latestFromCache = getCollectionFromCache(email) || (await fetchCollectionFromAPI('collection', 'email', email))
 
   for (const row of rowsToUpdate) {
-    // for each card that has updated, we need to find the matching cards in the cache by internal_id (can be mulitple) and update them.
-    const rowsFromCacheToUpdate = latestFromCache.filter((r) => r.internal_id === row.internal_id)
-    if (rowsFromCacheToUpdate.length > 0) {
-      for (const rowFromCacheToUpdate of rowsFromCacheToUpdate) {
-        rowFromCacheToUpdate.card_amounts.amount_owned = row.amount_owned
-        rowFromCacheToUpdate.updated_at = nowString
+    // for each card that has updated, we need to find the matching internal card in the cache by internal_id and update it.
+    const rowFromCacheToUpdate = latestFromCache.find((r) => r.internal_id === row.internal_id)
+    if (rowFromCacheToUpdate) {
+      rowFromCacheToUpdate.amount_owned = row.amount_owned
+      rowFromCacheToUpdate.updated_at = nowString
+
+      if (!rowFromCacheToUpdate.collection.includes(row.card_id)) {
+        //collected a new card, so add it to the collection array
+        rowFromCacheToUpdate.collection.push(row.card_id)
       }
-    } else {
+    }
+
+    if (!rowFromCacheToUpdate) {
       // the card is not yet in the cache, so we need to add it.
       latestFromCache.push({
-        card_id: row.card_id,
         internal_id: row.internal_id,
         email,
-        rarity: row.rarity,
+        created_at: nowString,
         updated_at: nowString,
-        card_amounts: {
-          amount_owned: row.amount_owned,
-        },
+        collection: [row.card_id],
+        amount_owned: row.amount_owned,
       })
     }
   }
@@ -147,11 +153,11 @@ async function fetchRange(table: string, key: string, value: string, total: numb
   console.log('fetching range', total, start, end)
 
   const { data, error } = await supabase
-    .from('collection')
+    .from('card_amounts')
     .select(`
     *,
-    card_amounts!collection_email_internal_id_fkey (
-      amount_owned
+    collection!collection_email_internal_id_fkey (
+      card_id
     )
   `)
     .eq(key, value)
@@ -161,6 +167,13 @@ async function fetchRange(table: string, key: string, value: string, total: numb
     console.log('supa error', error)
     throw new Error('Error fetching collection range')
   }
+
+  // convert to array of card_ids instead of nested objects for easier handling in the code.
+  data.forEach((row) => {
+    row.collection = row.collection.map((c: { card_id: string }) => c.card_id)
+  })
+
+  console.log('fetched range', data)
 
   if (end < total) {
     return [...data, ...(await fetchRange(table, key, value, total, end + 1, Math.min(total, end + PAGE_SIZE)))]

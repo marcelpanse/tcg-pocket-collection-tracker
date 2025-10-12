@@ -43,9 +43,9 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
     let isMissionCompleted = true
     const shownCards = mission.requiredCards.flatMap((missionCard) => {
       let ownedMissionCards = ownedCards.reduce((acc, ownedCard) => {
-        const hasCard = missionCard.options.find((cardId) => cardId === ownedCard.card_id)
+        const hasCard = missionCard.options.find((cardId) => ownedCard.collection.includes(cardId))
         if (hasCard) {
-          for (let i = 0; i < ownedCard.card_amounts.amount_owned; i++) {
+          for (let i = 0; i < ownedCard.amount_owned; i++) {
             acc.push({ cardId: hasCard, owned: true, missionCardOptions: missionCard.options })
           }
         }

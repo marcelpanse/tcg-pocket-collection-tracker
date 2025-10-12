@@ -24,15 +24,15 @@ export const ImportReader = () => {
       console.log('Row', r)
       const newAmount = Math.max(0, Number(r.NumberOwned))
       const cardId = r.Id
-      const ownedCard = ownedCards.find((row) => row.card_id === r.Id)
+      const ownedCard = ownedCards.find((row) => row.internal_id === r.InternalId)
       console.log('Owned Card', ownedCard)
 
       cardArray.push({ card_id: cardId, internal_id: r.InternalId, amount_owned: newAmount, rarity: r.Rarity })
 
       // update UI
-      if (ownedCard && ownedCard.card_amounts.amount_owned !== newAmount) {
-        console.log('updating card', ownedCard.card_id, newAmount)
-        ownedCard.card_amounts.amount_owned = Math.max(0, newAmount)
+      if (ownedCard && ownedCard.amount_owned !== newAmount) {
+        console.log('updating card', ownedCard.internal_id, newAmount)
+        ownedCard.amount_owned = Math.max(0, newAmount)
         setProcessedData((p) => [...(p ?? []), { ...r, updated: newAmount > 0, removed: newAmount === 0 }])
       } else if (!ownedCard && newAmount > 0) {
         console.log('creating card', r.Id, newAmount)

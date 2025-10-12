@@ -323,7 +323,8 @@ const Scan = () => {
     const updates: IncrementedCard[] = []
 
     for (const [card_id, increment] of counts) {
-      const previous_amount = ownedCards.find((row) => row.card_id === card_id)?.card_amounts.amount_owned ?? 0
+      const card = getCardById(card_id)
+      const previous_amount = ownedCards.find((row) => row.internal_id === card?.internal_id)?.amount_owned ?? 0
       updates.push({ card_id, previous_amount, increment })
     }
 

@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button.tsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { formatRarity } from '@/components/utils'
 import { toast } from '@/hooks/use-toast.ts'
-import { getCardById } from '@/lib/CardsDB.ts'
+import { getCardByInternalId } from '@/lib/CardsDB.ts'
 import { getExtraCards, getNeededCards } from '@/lib/utils'
 import { NoCardsNeeded } from '@/pages/trade/components/NoCardsNeeded.tsx'
 import { NoTradeableCards } from '@/pages/trade/components/NoTradeableCards.tsx'
@@ -30,9 +30,9 @@ function TradeCards() {
 
   const filterRarities = (c: Card) => (rarityFilter.length === 0 ? (tradableRarities as readonly Rarity[]) : rarityFilter).includes(c.rarity)
 
-  const populateCards = (card_id: string) => {
-    const card = getCardById(card_id) as Card
-    const amount_owned = ownedCards.find((c) => c.card_id === card_id)?.card_amounts.amount_owned ?? 0
+  const populateCards = (internal_id: number) => {
+    const card = getCardByInternalId(internal_id) as Card
+    const amount_owned = ownedCards.find((c) => c.internal_id === internal_id)?.amount_owned ?? 0
     return { ...card, amount_owned }
   }
 

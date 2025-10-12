@@ -27,14 +27,13 @@ export interface AccountRow {
 }
 
 export interface CollectionRow {
+  amount_owned: number
   email: string
-  card_id: string
-  rarity?: Rarity
+  created_at: string
   updated_at: string
   internal_id: number
-  card_amounts: {
-    amount_owned: number
-  }
+
+  collection: string[] // array of cardIds
 }
 
 export interface CardAmountUpdate {
@@ -137,6 +136,7 @@ export interface Card {
   linked: boolean
 
   amount_owned?: number // calculated from the card amounts table
+  collected?: boolean // calculated from the card amounts table
 }
 
 export interface ImportExportRow {
