@@ -39,7 +39,7 @@ export const getPublicCollection = async (friendId: string): Promise<Map<number,
     throw new Error('Friend ID is required to fetch public collection')
   }
 
-  const collection = await fetchCollectionFromAPI('public_cards', 'friend_id', friendId)
+  const collection = await fetchCollectionFromAPI('public_card_amounts', 'friend_id', friendId)
   return new Map(collection.map((row) => [row.internal_id, row]))
 }
 
@@ -154,7 +154,7 @@ async function fetchRange(table: string, key: string, value: string, total: numb
   console.log('fetching range', total, start, end)
 
   const { data, error } = await supabase
-    .from('card_amounts')
+    .from(table)
     .select(`
     *,
     collection!collection_email_internal_id_fkey (
@@ -171,7 +171,7 @@ async function fetchRange(table: string, key: string, value: string, total: numb
 
   // convert to array of card_ids instead of nested objects for easier handling in the code.
   data.forEach((row) => {
-    row.collection = row.collection.map((c: { card_id: string }) => c.card_id)
+    row.collection = row.collection?.map((c: { card_id: string }) => c.card_id) || []
   })
 
   console.log('fetched range', data)
