@@ -21,9 +21,10 @@ interface Props {
   showStats?: boolean
   extraOffset: number
   editable?: boolean
+  groupExpansions?: boolean
 }
 
-export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, editable = true }: Props) {
+export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, groupExpansions, editable = true }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const { width } = useWindowDimensions()
   const { t } = useTranslation(['common/sets', 'pages/collection'])
@@ -61,26 +62,27 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
     5: 'basis-1/5',
   }[cardsPerRow] // Make sure Tailwind can see and actually generate the classes
 
-  const groupedCards = useMemo(() => Object.entries(Object.groupBy(cards, (c) => c.expansion)), [cards])
-
-  const rows = useMemo(
+  const rows: ({ id: string; type: 'header'; expansion: Expansion } | { id: string; type: 'row'; cards: CardType[] })[] = useMemo(
     () =>
-      groupedCards.flatMap(
-        ([expansionId, cards]) =>
-          [
+      groupExpansions
+        ? Object.entries(Object.groupBy(cards, (c) => c.expansion)).flatMap(([expansionId, cards]) => [
             {
               id: `header-${expansionId}`,
-              type: 'header',
+              type: 'header' as const,
               expansion: getExpansionById(expansionId) as Expansion,
             },
             ...chunk(cards, cardsPerRow).map((rowCards, i) => ({
               id: `row-${expansionId}-${i}`,
-              type: 'row',
+              type: 'row' as const,
               cards: rowCards,
             })),
-          ] as ({ id: string; type: 'header'; expansion: Expansion } | { id: string; type: 'row'; cards: CardType[] })[],
-      ),
-    [groupedCards, cardsPerRow],
+          ])
+        : chunk(cards, cardsPerRow).map((rowCards, i) => ({
+            id: `row-${i}`,
+            type: 'row' as const,
+            cards: rowCards,
+          })),
+    [cards, cardsPerRow],
   )
 
   const rowVirtualizer = useVirtualizer({
@@ -94,7 +96,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
   return (
     <div ref={scrollRef} className="overflow-y-auto md:mt-4 px-4 flex flex-col" style={{ scrollbarWidth: 'none', height: scrollContainerHeight }}>
       {showStats && (
-        <small className="text-left mb-1 md:text-right md:mb-[-25px]">
+        <small className={`text-left mb-1 md:text-right ${groupExpansions && 'md:mb-[-25px]'}`}>
           {t('stats.summary', {
             ns: 'pages/collection',
             selected: cards.filter((c) => !c.linkedCardID).length,

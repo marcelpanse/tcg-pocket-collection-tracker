@@ -130,10 +130,10 @@ function TradeCards() {
         </div>
         <div className="mx-auto max-w-[900px] mt-6">
           <TabsContent value="looking_for">
-            {lookingForCards ? <CardsTable cards={lookingForCardsFiltered} extraOffset={105} editable={false} /> : <NoCardsNeeded />}
+            {lookingForCards ? <CardsTable cards={lookingForCardsFiltered} extraOffset={105} editable={false} groupExpansions /> : <NoCardsNeeded />}
           </TabsContent>
           <TabsContent value="for_trade">
-            {forTradeCards ? <CardsTable cards={forTradeCardsFiltered} extraOffset={105} editable={false} /> : <NoTradeableCards />}
+            {forTradeCards ? <CardsTable cards={forTradeCardsFiltered} extraOffset={105} editable={false} groupExpansions /> : <NoTradeableCards />}
           </TabsContent>
         </div>
       </Tabs>

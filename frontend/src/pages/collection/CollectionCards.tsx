@@ -67,6 +67,7 @@ export default function CollectionCards({ cards, isPublic, extraOffset }: Props)
           showStats={!filters.deckbuildingMode}
           extraOffset={extraOffset}
           editable={!filters.deckbuildingMode && !isPublic}
+          groupExpansions={filters.sortBy !== 'recent'}
         />
       )}
     </>
