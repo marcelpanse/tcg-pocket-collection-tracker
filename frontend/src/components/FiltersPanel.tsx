@@ -2,7 +2,6 @@ import i18n from 'i18next'
 import { type Dispatch, type FC, type SetStateAction, useEffect, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
-import { BatchUpdateDialog } from '@/components/BatchUpdateDialog.tsx'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
@@ -69,12 +68,11 @@ interface Props {
     deckBuildingMode?: boolean
   }
 
-  batchUpdate?: boolean
   share?: boolean
   missionsButton?: boolean
 }
 
-const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, visibleFilters, filtersDialog, batchUpdate, share, missionsButton }: Props) => {
+const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, visibleFilters, filtersDialog, share, missionsButton }: Props) => {
   const { t } = useTranslation(['pages/collection', 'common/sets', 'common/packs', 'filters'])
   const navigate = useNavigate()
   const { setIsProfileDialogOpen } = useProfileDialog()
@@ -398,8 +396,6 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
             </DialogContent>
           </Dialog>
         )}
-
-        {batchUpdate && <BatchUpdateDialog filteredCards={filteredCards || []} disabled={!filteredCards || filteredCards.length === 0} />}
 
         {share && (
           <Button variant="outline" onClick={() => setIsProfileDialogOpen(true)}>

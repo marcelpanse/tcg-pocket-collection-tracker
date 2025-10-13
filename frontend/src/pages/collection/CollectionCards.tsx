@@ -56,7 +56,6 @@ export default function CollectionCards({ cards, isPublic, extraOffset }: Props)
           deckBuildingMode: true,
           allTextSearch: true,
         }}
-        batchUpdate={!isPublic}
         missionsButton={!isPublic}
         share
       />
