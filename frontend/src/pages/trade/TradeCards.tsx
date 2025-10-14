@@ -6,14 +6,14 @@ import { Button } from '@/components/ui/button.tsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { formatRarity } from '@/components/utils'
 import { toast } from '@/hooks/use-toast.ts'
-import { getCardById } from '@/lib/CardsDB.ts'
+import { getCardByInternalId } from '@/lib/CardsDB.ts'
 import { getExtraCards, getNeededCards } from '@/lib/utils'
 import { NoCardsNeeded } from '@/pages/trade/components/NoCardsNeeded.tsx'
 import { NoTradeableCards } from '@/pages/trade/components/NoTradeableCards.tsx'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { useUser } from '@/services/auth/useAuth.ts'
 import { useCollection } from '@/services/collection/useCollection.ts'
-import { type Card, type Rarity, tradableRarities } from '@/types'
+import { type Card, type CollectionRow, type Rarity, tradableRarities } from '@/types'
 import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 
 function TradeCards() {
@@ -21,7 +21,7 @@ function TradeCards() {
 
   const { data: user } = useUser()
   const { data: account } = useAccount()
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
 
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [lookingForMaxCards, setLookingForMaxCards] = useState<number>((account?.max_number_of_cards_wanted ?? 1) - 1)
@@ -30,9 +30,9 @@ function TradeCards() {
 
   const filterRarities = (c: Card) => (rarityFilter.length === 0 ? (tradableRarities as readonly Rarity[]) : rarityFilter).includes(c.rarity)
 
-  const populateCards = (card_id: string) => {
-    const card = getCardById(card_id) as Card
-    const amount_owned = ownedCards.find((c) => c.card_id === card_id)?.amount_owned ?? 0
+  const populateCards = (internal_id: number) => {
+    const card = getCardByInternalId(internal_id) as Card
+    const amount_owned = ownedCards.get(internal_id)?.amount_owned ?? 0
     return { ...card, amount_owned }
   }
 

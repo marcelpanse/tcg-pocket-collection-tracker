@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Progress } from '@/components/ui/progress-custom.tsx'
 import { getNrOfCardsOwned, getTotalNrOfCards } from '@/lib/CardsDB.ts'
 import { useCollection } from '@/services/collection/useCollection'
-import type { Expansion, Rarity } from '@/types'
+import type { CollectionRow, Expansion, Rarity } from '@/types'
 
 interface CompleteProgressProps {
   title: string
@@ -16,7 +16,7 @@ interface CompleteProgressProps {
 }
 
 export function CompleteProgress({ title, expansion, packName, rarityFilter = [], numberFilter = 1, deckbuildingMode, barColor }: CompleteProgressProps) {
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
 
   const { t } = useTranslation('complete-progress')
 

@@ -3,8 +3,7 @@
  * This is just a helper function to get the cards into the postgres db cards table. This table is currently
  * only used for the trading matching algorithm.
  *
- * Because this is a TS file you need to run this with `bun run scripts/sql/generate-cards-table.ts`
- * Install bun with `npm install -g bun` if you don't have it already.
+ * Because this is a TS file you need to run this with `tsx scripts/sql/generate-cards-table.ts`
  */
 
 import fs from 'node:fs'
@@ -26,23 +25,42 @@ if (!fs.existsSync(outputDir)) {
 // Generate a single bulk INSERT statement for better performance
 function generateBulkInsertSQL(cards: Card[]): string {
   let sql = `
-TRUNCATE TABLE cards;
-INSERT INTO cards (card_id, rarity) VALUES
+TRUNCATE TABLE cards_list;
+INSERT INTO cards_list (internal_id, card_id, rarity, tradable) VALUES
 `
+
+  // after we ran this and migrated everyone, we can add this deduplication code back in and recreate the table contents.
+  // this is because we don't need the duplicate internal_ids. To do this:
+  // 1. delete the cards_list table
+  // 2. create the table again but with the primary key being internal_id: int4
+  // 3. adjust this script to enable the deduplication code
+  // 4. run this script on the db
+  // 5. after deployment, delete the cards table (the cards_list table is now used instead).
+  // 6. after migration remove the amount_owned column from the collections table.
+  // 7. deploy get-trading-partners deno function and test
+  // 8. drop the public_cards view
+
+  //deduplicate cards on card.internal_id
+  // const seenIds = new Set<number>()
+  // const dedupedCards = cards.filter((card) => {
+  //   if (seenIds.has(card.internal_id)) {
+  //     return false
+  //   }
+  //   seenIds.add(card.internal_id)
+  //   return true
+  // })
 
   // Generate values for bulk insert
   const values = cards
-    .filter((card) => !card.linkedCardID && (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion))
     .map((card) => {
-      // Escape single quotes in strings
-      const cardId = card.card_id.replace(/'/g, "''")
-      const rarity = card.rarity.replace(/'/g, "''")
+      const rarity = card.rarity
+      const tradable = (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion)
 
-      return `('${cardId}', '${rarity}')`
+      return `(${card.internal_id}, '${card.card_id}', '${rarity}', ${tradable})`
     })
     .join(',\n  ')
 
-  sql += `  ${values};`
+  sql += ` ${values};`
 
   return sql
 }

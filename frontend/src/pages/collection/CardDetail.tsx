@@ -15,15 +15,15 @@ function CardDetail() {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
   const { selectedCardId: cardId, setSelectedCardId: setCardId } = useSelectedCard()
 
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
 
   const [isOpen, setIsOpen] = useState(false)
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
 
   const card = useMemo(() => (cardId === undefined ? undefined : getCardById(cardId)), [cardId])
-  const row = useMemo(() => ownedCards.find((oc: CollectionRow) => oc.card_id === cardId), [cardId])
+  const row = useMemo(() => ownedCards.get(card?.internal_id || 0), [cardId])
   const alternatives = useMemo(
-    () => card?.alternate_versions.map((card_id) => ({ card_id, amount_owned: ownedCards.find((c) => c.card_id === card_id)?.amount_owned ?? 0 })),
+    () => card?.alternate_versions.map((card_id) => ({ card_id, amount_owned: ownedCards.get(card?.internal_id)?.amount_owned ?? 0 })),
     [card, ownedCards],
   )
   const expansion = useMemo(() => (card === undefined ? undefined : getExpansionById(card?.expansion)), [card])

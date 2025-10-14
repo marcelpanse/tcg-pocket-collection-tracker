@@ -5,6 +5,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { usePublicAccount } from '@/services/account/useAccount.ts'
 import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
+import type { CollectionRow } from '@/types'
 import CollectionCards from './CollectionCards'
 
 function Collection() {
@@ -16,7 +17,7 @@ function Collection() {
   const { data: friendAccount } = usePublicAccount(friendId)
   const { data: friendCards } = usePublicCollection(friendId)
 
-  const { data: ownedCards } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>(), isLoading } = useCollection()
 
   if (friendId) {
     if (friendAccount === null) {
@@ -46,7 +47,7 @@ function Collection() {
     )
   }
 
-  if (ownedCards === undefined) {
+  if (isLoading) {
     return <p className="text-xl text-center py-8">{t('common:loading')}...</p>
   }
 

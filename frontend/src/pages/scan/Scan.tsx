@@ -6,12 +6,13 @@ import { CardLine } from '@/components/CardLine'
 import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
-import { allCards, expansions } from '@/lib/CardsDB'
+import { allCards, expansions, getCardById } from '@/lib/CardsDB'
+import { getInteralIdByCardId } from '@/lib/CardsDB.ts'
 import { calculatePerceptualHash, calculateSimilarity, imageToBuffers } from '@/lib/hash'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import CardDetectorService, { type DetectionResult } from '@/services/scanner/CardDetectionService'
-import type { Card } from '@/types'
+import type { Card, CollectionRow, Rarity } from '@/types'
 
 interface ExtractedCard {
   imageUrl: string
@@ -61,7 +62,7 @@ function decode(base64: string): ArrayBuffer {
 const Scan = () => {
   const { t } = useTranslation(['scan', 'common/sets'])
 
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const updateCardsMutation = useUpdateCards()
 
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -322,12 +323,20 @@ const Scan = () => {
     const updates: IncrementedCard[] = []
 
     for (const [card_id, increment] of counts) {
-      const previous_amount = ownedCards.find((row) => row.card_id === card_id)?.amount_owned ?? 0
+      const card = getCardById(card_id)
+      const previous_amount = ownedCards.get(card?.internal_id || 0)?.amount_owned ?? 0
       updates.push({ card_id, previous_amount, increment })
     }
 
     try {
-      updateCardsMutation.mutate({ updates: updates.map((x) => ({ card_id: x.card_id, amount_owned: x.previous_amount + x.increment })) })
+      updateCardsMutation.mutate({
+        updates: updates.map((x) => ({
+          card_id: x.card_id,
+          rarity: getCardById(x.card_id)?.rarity as Rarity,
+          internal_id: getInteralIdByCardId(x.card_id),
+          amount_owned: x.previous_amount + x.increment,
+        })),
+      })
     } catch (error) {
       setError(`Error incrementing card quantities: ${error}`)
       setState(State.Error)

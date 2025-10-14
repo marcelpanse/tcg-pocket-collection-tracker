@@ -22,7 +22,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-1"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": 12582992,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -47,7 +49,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-2"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": 12583056,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -72,7 +76,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-3"],
-    "artist": "Toyste Beach"
+    "artist": "Toyste Beach",
+    "internal_id": 12583120,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -92,12 +98,14 @@
     "retreat": "N/A",
     "rarity": "P",
     "fullart": true,
-    "ex": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-4", "P-A-8"],
-    "artist": "Ryo Ueda"
+    "artist": "Ryo Ueda",
+    "internal_id": 12583184,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -122,7 +130,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-5", "A2b-111"],
-    "artist": "Ryo Ueda"
+    "artist": "Ryo Ueda",
+    "internal_id": 12583248,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -147,7 +157,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-6"],
-    "artist": "5ban Graphics"
+    "artist": "5ban Graphics",
+    "internal_id": 12583312,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -172,7 +184,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-7", "A4b-373"],
-    "artist": "Naoki Saito"
+    "artist": "Naoki Saito",
+    "internal_id": 12583376,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -192,12 +206,14 @@
     "retreat": "N/A",
     "rarity": "P",
     "fullart": true,
-    "ex": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-4", "P-A-8"],
-    "artist": "Yuu Nishida"
+    "artist": "Yuu Nishida",
+    "internal_id": 12583440,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -225,7 +241,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26", "A4b-128", "A4b-129"],
-    "artist": "Atsushi Furusawa"
+    "artist": "Atsushi Furusawa",
+    "internal_id": 12583504,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -253,7 +271,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-128", "P-A-10"],
-    "artist": "Krgc"
+    "artist": "Krgc",
+    "internal_id": 12583568,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -281,7 +301,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-202", "P-A-11"],
-    "artist": "sowsow"
+    "artist": "sowsow",
+    "internal_id": 12583632,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -309,7 +331,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-196", "A1-246", "P-A-12"],
-    "artist": "Shigenori Negishi"
+    "artist": "Shigenori Negishi",
+    "internal_id": 12583696,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -341,7 +365,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-7", "P-A-13"],
-    "artist": "miki kudo"
+    "artist": "miki kudo",
+    "internal_id": 12583760,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -369,7 +395,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-14"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": 12583824,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -397,7 +425,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26", "A4b-128", "A4b-129"],
-    "artist": "Kouki Saitou"
+    "artist": "Kouki Saitou",
+    "internal_id": 12583888,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -425,7 +455,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-113", "P-A-16"],
-    "artist": "Shibuzoh."
+    "artist": "Shibuzoh.",
+    "internal_id": 12583952,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -453,7 +485,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-17"],
-    "artist": "Souichirou Gunjima"
+    "artist": "Souichirou Gunjima",
+    "internal_id": 12584016,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -481,7 +515,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-3", "P-A-18", "A3-212"],
-    "artist": "Kuroimori"
+    "artist": "Kuroimori",
+    "internal_id": 12584080,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -513,7 +549,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-89", "P-A-19", "A3a-93", "A4b-114", "A4b-115", "A4b-356"],
-    "artist": "Sanosuke Sakuma"
+    "artist": "Sanosuke Sakuma",
+    "internal_id": 12584144,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -541,7 +579,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-20"],
-    "artist": "Mékayu"
+    "artist": "Mékayu",
+    "internal_id": 12584208,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -569,7 +609,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-150", "P-A-21"],
-    "artist": "Tomokazu Komiya"
+    "artist": "Tomokazu Komiya",
+    "internal_id": 12584272,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -597,7 +639,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-22"],
-    "artist": "Kurata So"
+    "artist": "Kurata So",
+    "internal_id": 12584336,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -625,7 +669,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-1", "A1-227", "P-A-23", "A3-210", "A4b-1", "A4b-2"],
-    "artist": "Kouki Saitou"
+    "artist": "Kouki Saitou",
+    "internal_id": 12584400,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -653,7 +699,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-97", "P-A-24", "A4-217", "A4b-133", "A4b-134"],
-    "artist": "Miki Tanaka"
+    "artist": "Miki Tanaka",
+    "internal_id": 12584464,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -687,7 +735,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103", "A4b-67"],
-    "artist": "PLANETA Igarashi"
+    "artist": "PLANETA Igarashi",
+    "internal_id": 12584528,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -715,7 +765,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26", "A4b-128", "A4b-129"],
-    "artist": "Kouki Saitou"
+    "artist": "Kouki Saitou",
+    "internal_id": 12584592,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -743,7 +795,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-27"],
-    "artist": "Yoriyuki Ikegami"
+    "artist": "Yoriyuki Ikegami",
+    "internal_id": 12584656,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -771,7 +825,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1a-14", "P-A-28"],
-    "artist": "Shin Nagasawa"
+    "artist": "Shin Nagasawa",
+    "internal_id": 12584720,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -799,7 +855,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-55", "P-A-29", "A3-217"],
-    "artist": "danciao"
+    "artist": "danciao",
+    "internal_id": 12584784,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -827,7 +885,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-30"],
-    "artist": "En Morikura"
+    "artist": "En Morikura",
+    "internal_id": 12584848,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -855,7 +915,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-213", "P-A-31"],
-    "artist": "MAHOU"
+    "artist": "MAHOU",
+    "internal_id": 12584912,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -883,7 +945,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-33", "A1-230", "P-A-32", "A4b-55", "A4b-56"],
-    "artist": "Naoyo Kimura"
+    "artist": "Naoyo Kimura",
+    "internal_id": 12584976,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -911,7 +975,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-53", "A1-232", "P-A-33", "A3-215", "A4b-83", "A4b-84"],
-    "artist": "Kanako Eo"
+    "artist": "Kanako Eo",
+    "internal_id": 12585040,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -939,7 +1005,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-35", "P-A-34"],
-    "artist": "Kariya"
+    "artist": "Kariya",
+    "internal_id": 12585104,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -967,7 +1035,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-10", "P-A-35"],
-    "artist": "Atsuko Nishida"
+    "artist": "Atsuko Nishida",
+    "internal_id": 12585168,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -995,7 +1065,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-57", "P-A-36"],
-    "artist": "Sumiyoshi Kizuki"
+    "artist": "Sumiyoshi Kizuki",
+    "internal_id": 12585232,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1027,7 +1099,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-37"],
-    "artist": "PLANETA Mochizuki"
+    "artist": "PLANETA Mochizuki",
+    "internal_id": 12585296,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1055,7 +1129,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-38"],
-    "artist": "Miki Tanaka"
+    "artist": "Miki Tanaka",
+    "internal_id": 12585360,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1083,7 +1159,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-111", "P-A-39"],
-    "artist": "Anesaki Dynamic"
+    "artist": "Anesaki Dynamic",
+    "internal_id": 12585424,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1111,7 +1189,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-27", "P-A-40", "A4a-91", "A4b-71", "A4b-72"],
-    "artist": "sui"
+    "artist": "sui",
+    "internal_id": 12585488,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1139,7 +1219,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-63", "P-A-41"],
-    "artist": "Naoyo Kimura"
+    "artist": "Naoyo Kimura",
+    "internal_id": 12585552,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1171,7 +1253,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-110", "A2-187", "A2-202", "P-A-42", "A4b-245", "A4b-378"],
-    "artist": "PLANETA Mochizuki"
+    "artist": "PLANETA Mochizuki",
+    "internal_id": 12585616,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1199,7 +1283,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2a-8", "P-A-43"],
-    "artist": "MAHOU"
+    "artist": "MAHOU",
+    "internal_id": 12585680,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1231,7 +1317,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2a-26", "P-A-44"],
-    "artist": "Kazumasa Yasukuni"
+    "artist": "Kazumasa Yasukuni",
+    "internal_id": 12585744,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1259,7 +1347,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-45"],
-    "artist": "Tomokazu Komiya"
+    "artist": "Tomokazu Komiya",
+    "internal_id": 12585808,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1287,7 +1377,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2a-45", "P-A-46", "A4a-98", "A4b-205", "A4b-206"],
-    "artist": "Uninori"
+    "artist": "Uninori",
+    "internal_id": 12585872,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1319,7 +1411,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-47"],
-    "artist": "Hasuno"
+    "artist": "Hasuno",
+    "internal_id": 12585936,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1347,7 +1441,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-50", "A2-162", "P-A-48", "A4b-108", "A4b-109"],
-    "artist": "sui"
+    "artist": "sui",
+    "internal_id": 12586000,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1375,7 +1471,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2a-63", "P-A-49"],
-    "artist": "okayamatakatoshi"
+    "artist": "okayamatakatoshi",
+    "internal_id": 12586064,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1409,7 +1507,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50", "A4b-158", "A4b-365"],
-    "artist": "PLANETA Mochizuki"
+    "artist": "PLANETA Mochizuki",
+    "internal_id": 12586128,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1437,7 +1537,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-68", "P-A-51", "A4b-306", "A4b-307"],
-    "artist": "Shigenori Negishi"
+    "artist": "Shigenori Negishi",
+    "internal_id": 12586192,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1465,7 +1567,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-5", "P-A-52", "A4b-49", "A4b-50"],
-    "artist": "MINAMINAMI Take"
+    "artist": "MINAMINAMI Take",
+    "internal_id": 12586256,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1493,7 +1597,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-53"],
-    "artist": "Shin Nagasawa"
+    "artist": "Shin Nagasawa",
+    "internal_id": 12586320,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1525,7 +1631,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-28", "P-A-54"],
-    "artist": "REND"
+    "artist": "REND",
+    "internal_id": 12586384,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1553,7 +1661,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-39", "P-A-55", "A3-225"],
-    "artist": "Masakazu Fukuda"
+    "artist": "Masakazu Fukuda",
+    "internal_id": 12586448,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1581,7 +1691,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-56"],
-    "artist": "Krgc"
+    "artist": "Krgc",
+    "internal_id": 12586512,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1609,7 +1721,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-64", "P-A-57", "A4b-294", "A4b-295"],
-    "artist": "Kouki Saitou"
+    "artist": "Kouki Saitou",
+    "internal_id": 12586576,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1637,7 +1751,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-25", "A2b-103", "P-A-58", "A4b-143", "A4b-144"],
-    "artist": "OOYAMA"
+    "artist": "OOYAMA",
+    "internal_id": 12586640,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1665,7 +1781,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2b-42", "A2b-104", "P-A-59", "A4b-210", "A4b-211"],
-    "artist": "Akira Komayama"
+    "artist": "Akira Komayama",
+    "internal_id": 12586704,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1693,7 +1811,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1a-1", "P-A-60"],
-    "artist": "0313"
+    "artist": "0313",
+    "internal_id": 12586768,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1721,7 +1841,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-87", "P-A-61", "A3a-91", "A4b-110", "A4b-111"],
-    "artist": "Sanosuke Sakuma"
+    "artist": "Sanosuke Sakuma",
+    "internal_id": 12586832,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1749,7 +1871,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-198", "P-A-62", "A3b-102", "A4b-280", "A4b-281", "A4b-359"],
-    "artist": "Eri Yamaki"
+    "artist": "Eri Yamaki",
+    "internal_id": 12586896,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1777,7 +1901,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-63"],
-    "artist": "Yoshinobu Saito"
+    "artist": "Yoshinobu Saito",
+    "internal_id": 12586960,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1805,7 +1931,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-64", "P-A-65"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": 12587024,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1833,7 +1961,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-64", "P-A-65"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": 12587088,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1861,7 +1991,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3-83", "P-A-66"],
-    "artist": "Amelicart"
+    "artist": "Amelicart",
+    "internal_id": 12587152,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1889,7 +2021,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3-85", "A3-171", "P-A-67", "A4b-180", "A4b-181"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": 12587216,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1917,7 +2051,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3-100", "P-A-68"],
-    "artist": "Ryuta Fuse"
+    "artist": "Ryuta Fuse",
+    "internal_id": 12587280,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1945,7 +2081,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3-2", "A3-156", "P-A-69"],
-    "artist": "Satoshi Shirai"
+    "artist": "Satoshi Shirai",
+    "internal_id": 12587344,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -1973,7 +2111,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3-41", "P-A-70"],
-    "artist": "tono"
+    "artist": "tono",
+    "internal_id": 12587408,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2001,7 +2141,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3-97", "P-A-71", "A4b-218", "A4b-219"],
-    "artist": "Miki Tanaka"
+    "artist": "Miki Tanaka",
+    "internal_id": 12587472,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2029,7 +2171,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-72"],
-    "artist": "Naoki Saito"
+    "artist": "Naoki Saito",
+    "internal_id": 12587536,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2057,7 +2201,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-73"],
-    "artist": "Sekio"
+    "artist": "Sekio",
+    "internal_id": 12587600,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2089,7 +2235,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-21", "P-A-74", "A4b-149", "A4b-150"],
-    "artist": "GIDORA"
+    "artist": "GIDORA",
+    "internal_id": 12587664,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2117,7 +2265,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-8", "P-A-75", "A4b-47", "A4b-48"],
-    "artist": "Hasuno"
+    "artist": "Hasuno",
+    "internal_id": 12587728,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2145,7 +2295,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-9", "A3a-72", "P-A-76"],
-    "artist": "Hasuno"
+    "artist": "Hasuno",
+    "internal_id": 12587792,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2173,7 +2325,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-20", "P-A-77"],
-    "artist": "Shin Nagasawa"
+    "artist": "Shin Nagasawa",
+    "internal_id": 12587856,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2201,7 +2355,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-78"],
-    "artist": "nagimiso"
+    "artist": "nagimiso",
+    "internal_id": 12587920,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2229,7 +2385,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-79"],
-    "artist": "nagimiso"
+    "artist": "nagimiso",
+    "internal_id": 12587984,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2257,7 +2415,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-53", "P-A-80"],
-    "artist": "Shin Nagasawa"
+    "artist": "Shin Nagasawa",
+    "internal_id": 12588048,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2291,7 +2451,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-81"],
-    "artist": "PLANETA Tsuji"
+    "artist": "PLANETA Tsuji",
+    "internal_id": 12588112,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2319,7 +2481,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-44", "P-A-82"],
-    "artist": "Megumi Mizutani"
+    "artist": "Megumi Mizutani",
+    "internal_id": 12588176,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2347,7 +2511,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-57", "P-A-83"],
-    "artist": "Kanako Eo"
+    "artist": "Kanako Eo",
+    "internal_id": 12588240,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2381,7 +2547,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3a-19", "A3a-77", "A3a-84", "P-A-84", "A4b-148"],
-    "artist": "PLANETA Tsuji"
+    "artist": "PLANETA Tsuji",
+    "internal_id": 12588304,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2409,7 +2577,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-18", "P-A-85"],
-    "artist": "OOYAMA"
+    "artist": "OOYAMA",
+    "internal_id": 12588368,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2437,7 +2607,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-25", "A3b-74", "P-A-86", "A4-219"],
-    "artist": "Mizue"
+    "artist": "Mizue",
+    "internal_id": 12588432,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2465,7 +2637,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-37", "P-A-87", "A4b-187", "A4b-188"],
-    "artist": "Tika Matsuno"
+    "artist": "Tika Matsuno",
+    "internal_id": 12588496,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2493,7 +2667,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-88"],
-    "artist": "Shinya Komatsu"
+    "artist": "Shinya Komatsu",
+    "internal_id": 12588560,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2521,7 +2697,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-89"],
-    "artist": "MAHOU"
+    "artist": "MAHOU",
+    "internal_id": 12588624,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2549,7 +2727,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-48", "P-A-90"],
-    "artist": "sowsow"
+    "artist": "sowsow",
+    "internal_id": 12588688,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2577,7 +2757,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-65", "P-A-91"],
-    "artist": "HYOGONOSUKE"
+    "artist": "HYOGONOSUKE",
+    "internal_id": 12588752,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2605,7 +2787,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A1-206", "A1-207", "A1-208", "A1-248", "P-A-92"],
-    "artist": "nisimono"
+    "artist": "nisimono",
+    "internal_id": 12588816,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2633,7 +2817,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4-77", "P-A-93"],
-    "artist": "Tika Matsuno"
+    "artist": "Tika Matsuno",
+    "internal_id": 12588880,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2661,7 +2847,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-94"],
-    "artist": "Taira Akitsu"
+    "artist": "Taira Akitsu",
+    "internal_id": 12588944,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2689,7 +2877,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-95"],
-    "artist": "Aya Kusube"
+    "artist": "Aya Kusube",
+    "internal_id": 12589008,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2717,7 +2907,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4-118", "P-A-96"],
-    "artist": "Kagemaru Himeno"
+    "artist": "Kagemaru Himeno",
+    "internal_id": 12589072,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2745,7 +2937,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4-133", "P-A-97"],
-    "artist": "Kouki Saitou"
+    "artist": "Kouki Saitou",
+    "internal_id": 12589136,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2773,7 +2967,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-98"],
-    "artist": "PLANETA CG Works"
+    "artist": "PLANETA CG Works",
+    "internal_id": 12589200,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2801,7 +2997,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4-49", "P-A-99"],
-    "artist": "Shibuzoh."
+    "artist": "Shibuzoh.",
+    "internal_id": 12589264,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2829,7 +3027,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4-116", "P-A-100"],
-    "artist": "Satoshi Shirai"
+    "artist": "Satoshi Shirai",
+    "internal_id": 12589328,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2857,7 +3057,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-36", "P-A-101"],
-    "artist": "Yuu Nishida"
+    "artist": "Yuu Nishida",
+    "internal_id": 12589392,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2885,7 +3087,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-102"],
-    "artist": "sowsow"
+    "artist": "sowsow",
+    "internal_id": 12589456,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2913,7 +3117,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-103"],
-    "artist": "MAHOU"
+    "artist": "MAHOU",
+    "internal_id": 12589520,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2945,7 +3151,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-22", "A4a-72", "P-A-104"],
-    "artist": "Hajime Kusajima"
+    "artist": "Hajime Kusajima",
+    "internal_id": 12589584,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -2973,7 +3181,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-49", "P-A-105"],
-    "artist": "Naoyo Kimura"
+    "artist": "Naoyo Kimura",
+    "internal_id": 12589648,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -3005,7 +3215,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-50", "P-A-106"],
-    "artist": "matazo"
+    "artist": "matazo",
+    "internal_id": 12589712,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -3033,7 +3245,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-62", "P-A-107"],
-    "artist": "Kanako Eo"
+    "artist": "Kanako Eo",
+    "internal_id": 12589776,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -3061,7 +3275,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-43", "A4a-76", "P-A-108"],
-    "artist": "Asako Ito"
+    "artist": "Asako Ito",
+    "internal_id": 12589840,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -3093,7 +3309,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-56", "A3b-83", "A3b-92", "A4b-287", "A4b-370", "P-A-109"],
-    "artist": "Kanami Ogata"
+    "artist": "Kanami Ogata",
+    "internal_id": 12589904,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -3125,7 +3343,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4a-10", "A4a-79", "A4a-87", "P-A-110"],
-    "artist": "PLANETA Tsuji"
+    "artist": "PLANETA Tsuji",
+    "internal_id": 12589968,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -3153,7 +3373,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-111"],
-    "artist": "sui"
+    "artist": "sui",
+    "internal_id": 12590032,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -3181,7 +3403,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-112"],
-    "artist": "PLANETA Mochizuki"
+    "artist": "PLANETA Mochizuki",
+    "internal_id": 12590096,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -3209,7 +3433,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A3b-35", "P-A-113"],
-    "artist": "Yuka Morii"
+    "artist": "Yuka Morii",
+    "internal_id": 12590160,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -3237,7 +3463,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["P-A-114"],
-    "artist": "Naoki Saito"
+    "artist": "Naoki Saito",
+    "internal_id": 12590224,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -3265,7 +3493,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-143", "A2-179", "P-A-115"],
-    "artist": "Ryuta Fuse"
+    "artist": "Ryuta Fuse",
+    "internal_id": 12590288,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -3297,7 +3527,9 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A2-22", "A2-159", "A4b-30", "A4b-31", "P-A-116"],
-    "artist": "Sekio"
+    "artist": "Sekio",
+    "internal_id": 12590352,
+    "linked": false
   },
   {
     "expansion": "P-A",
@@ -3325,6 +3557,8 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": ["A4-120", "P-A-117"],
-    "artist": "Eri Yamaki"
+    "artist": "Eri Yamaki",
+    "internal_id": 12590416,
+    "linked": false
   }
 ]

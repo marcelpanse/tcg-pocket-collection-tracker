@@ -8,7 +8,7 @@ import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
 import { getCardById, pullRateForSpecificMission } from '@/lib/CardsDB.ts'
 import { getCardNameByLang } from '@/lib/utils.ts'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
-import type { Mission as MissionType } from '@/types'
+import type { CollectionRow, Mission as MissionType } from '@/types'
 
 interface Props {
   mission: MissionType
@@ -26,7 +26,7 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
   const { width } = useWindowDimensions()
   const { t } = useTranslation('common/packs')
 
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
 
   let cardsPerRow = 5
@@ -42,18 +42,27 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
   const missionGridRows = useMemo(() => {
     let isMissionCompleted = true
     const shownCards = mission.requiredCards.flatMap((missionCard) => {
-      let ownedMissionCards = ownedCards.reduce((acc, ownedCard) => {
-        const hasCard = missionCard.options.find((cardId) => cardId === ownedCard.card_id)
-        if (hasCard) {
+      const ownedMissionCards: MissionDetailProps[] = []
+
+      // Only check the specific cards in missionCard.options
+      for (const cardId of missionCard.options) {
+        const internalId = getCardById(cardId)?.internal_id || 0
+        const ownedCard = ownedCards.get(internalId)
+        if (ownedCard?.collection.includes(cardId)) {
           for (let i = 0; i < ownedCard.amount_owned; i++) {
-            acc.push({ cardId: hasCard, owned: true, missionCardOptions: missionCard.options })
+            ownedMissionCards.push({ cardId, owned: true, missionCardOptions: missionCard.options })
+
+            // Early exit once we have enough cards
+            if (ownedMissionCards.length >= missionCard.amount) {
+              break
+            }
           }
         }
-        return acc
-      }, [] as MissionDetailProps[])
 
-      if (ownedMissionCards.length > missionCard.amount) {
-        ownedMissionCards = ownedMissionCards.slice(0, missionCard.amount)
+        // Early exit once we have enough cards
+        if (ownedMissionCards.length >= missionCard.amount) {
+          break
+        }
       }
 
       const amountToAppend = missionCard.amount - ownedMissionCards.length

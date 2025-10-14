@@ -2,19 +2,19 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
-import { getCardById, tradeableExpansions } from '@/lib/CardsDB.ts'
+import { getCardByInternalId, tradeableExpansions } from '@/lib/CardsDB.ts'
 import { getExtraCards, getNeededCards } from '@/lib/utils'
 import { CardList } from '@/pages/trade/components/CardList.tsx'
 import { TradeOffer } from '@/pages/trade/components/TradeOffer.tsx'
 import { useAccount, usePublicAccount } from '@/services/account/useAccount'
 import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
-import { type Card, type Rarity, type TradableRarity, tradableRarities } from '@/types'
+import { type Card, type CollectionRow, type Rarity, type TradableRarity, tradableRarities } from '@/types'
 
-function getTradeCards(extraCards: string[], neededCards: string[]) {
+function getTradeCards(extraCards: number[], neededCards: number[]) {
   const neededCardsSet = new Set(neededCards)
   const common = extraCards
-    .filter((card_id) => neededCardsSet.has(card_id))
-    .map((card_id) => getCardById(card_id) as Card)
+    .filter((internal_id) => neededCardsSet.has(internal_id))
+    .map((internal_id) => getCardByInternalId(internal_id) as Card)
     .filter((card) => (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion))
   return Object.groupBy(common, (card) => card.rarity as TradableRarity)
 }
@@ -27,7 +27,7 @@ function TradeWith() {
   const { data: friendCards } = usePublicCollection(friendId)
 
   const { data: account } = useAccount()
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
 
   const [yourCard, setYourCard] = useState<Card | null>(null)
   const [friendCard, setFriendCard] = useState<Card | null>(null)
