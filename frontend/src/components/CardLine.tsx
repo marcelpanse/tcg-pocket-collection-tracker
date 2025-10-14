@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { getCardById } from '@/lib/CardsDB'
 import { cn, getCardNameByLang } from '@/lib/utils'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
+import type { CollectionRow } from '@/types'
 
 interface Props {
   card_id: string
@@ -21,11 +22,11 @@ interface Props {
 export const CardLine: FC<Props> = ({ card_id, className, amount_owned, increment, rarity, id, name, amount, details }) => {
   const { i18n } = useTranslation('trade-matches')
 
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
 
   const card = useMemo(() => getCardById(card_id), [card_id])
-  const ownedAmount = useMemo(() => amount_owned ?? ownedCards.find((c) => c.card_id === card?.card_id)?.amount_owned ?? 0, [amount_owned, card])
+  const ownedAmount = useMemo(() => amount_owned ?? ownedCards.get(card?.internal_id || 0)?.amount_owned ?? 0, [amount_owned, card])
 
   if (!card) {
     throw new Error(`Unrecognized card_id: ${card_id}`)

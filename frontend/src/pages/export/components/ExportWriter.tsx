@@ -5,25 +5,24 @@ import { Button } from '@/components/ui/button.tsx'
 import { allCards } from '@/lib/CardsDB'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection } from '@/services/collection/useCollection'
-import type { ImportExportRow } from '@/types'
+import type { CollectionRow, ImportExportRow } from '@/types'
 
 export const ExportWriter = () => {
   const { t } = useTranslation('pages/export')
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
 
   const createFile = () => {
-    const json: ImportExportRow[] = allCards
-      .filter((c) => !c.linkedCardID)
-      .map((ac) => {
-        return {
-          Id: ac.card_id,
-          CardName: getCardNameByLang(ac, i18n.language),
-          NumberOwned: ownedCards.find((oc) => oc.card_id === ac.card_id)?.amount_owned ?? 0,
-          Expansion: ac.expansion,
-          Pack: ac.pack,
-          Rarity: ac.rarity,
-        }
-      })
+    const json: ImportExportRow[] = allCards.map((ac) => {
+      return {
+        Id: ac.card_id,
+        CardName: getCardNameByLang(ac, i18n.language),
+        InternalId: ac.internal_id,
+        NumberOwned: ownedCards.get(ac.internal_id)?.amount_owned ?? 0,
+        Expansion: ac.expansion,
+        Pack: ac.pack,
+        Rarity: ac.rarity,
+      }
+    })
     const sheet = XLSX.utils.json_to_sheet(json)
     const book = XLSX.utils.book_new(sheet)
     XLSX.writeFile(book, 'tcgcollectiontracterexport.csv')

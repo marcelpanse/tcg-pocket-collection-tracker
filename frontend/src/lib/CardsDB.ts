@@ -56,9 +56,14 @@ export const allCards: Card[] = [
 ]
 
 const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
+const allCardsByInternalId: Map<number, Card> = new Map(allCards.map((card) => [card.internal_id, card]))
 
 export const getCardById = (cardId: string): Card | undefined => {
   return allCardsDict.get(cardId)
+}
+
+export const getCardByInternalId = (internalId: number): Card | undefined => {
+  return allCardsByInternalId.get(internalId)
 }
 
 const a1Missions: Mission[] = A1Missions as unknown as Mission[]
@@ -74,9 +79,20 @@ const a4aMissions: Mission[] = A4aMissions as unknown as Mission[]
 const a4bMissions: Mission[] = A4bMissions as unknown as Mission[]
 
 export const expansions: Expansion[] = [
+  // internalId=0 skipped for error states
+  {
+    name: 'promo-a',
+    id: 'P-A',
+    internalId: 192, // IMPORTANT note: these should NEVER EVER change. The internals of the DB depend on it.
+    cards: paCards,
+    packs: [{ name: 'everypack', color: '#CCCCCC' }],
+    tradeable: false,
+    promo: true,
+  },
   {
     name: 'geneticapex',
     id: 'A1',
+    internalId: 1,
     cards: a1Cards,
     packs: [
       { name: 'mewtwopack', color: '#986C88' },
@@ -90,6 +106,7 @@ export const expansions: Expansion[] = [
   {
     name: 'mythicalisland',
     id: 'A1a',
+    internalId: 2,
     cards: a1aCards,
     packs: [{ name: 'mewpack', color: '#FFC1EA' }],
     missions: a1aMissions,
@@ -98,6 +115,7 @@ export const expansions: Expansion[] = [
   {
     name: 'space-timesmackdown',
     id: 'A2',
+    internalId: 3,
     cards: a2Cards,
     packs: [
       { name: 'dialgapack', color: '#A0C5E8' },
@@ -110,6 +128,7 @@ export const expansions: Expansion[] = [
   {
     name: 'triumphantlight',
     id: 'A2a',
+    internalId: 4,
     cards: a2aCards,
     packs: [{ name: 'arceuspack', color: '#E4D7CA' }],
     missions: a2aMissions,
@@ -118,6 +137,7 @@ export const expansions: Expansion[] = [
   {
     name: 'shiningrevelry',
     id: 'A2b',
+    internalId: 5,
     cards: a2bCards,
     packs: [{ name: 'shiningrevelrypack', color: '#99F6E4' }],
     missions: a2bMissions,
@@ -127,6 +147,7 @@ export const expansions: Expansion[] = [
   {
     name: 'celestialguardians',
     id: 'A3',
+    internalId: 6,
     cards: a3Cards,
     packs: [
       { name: 'lunalapack', color: '#A0ABE0' },
@@ -140,6 +161,7 @@ export const expansions: Expansion[] = [
   {
     name: 'extradimensionalcrisis',
     id: 'A3a',
+    internalId: 7,
     cards: a3aCards,
     packs: [{ name: 'buzzwolepack', color: '#ef4444' }],
     missions: a3aMissions,
@@ -149,6 +171,7 @@ export const expansions: Expansion[] = [
   {
     name: 'eeveegrove',
     id: 'A3b',
+    internalId: 8,
     cards: a3bCards,
     packs: [{ name: 'eeveegrovepack', color: '#b45309' }],
     missions: a3bMissions,
@@ -158,6 +181,7 @@ export const expansions: Expansion[] = [
   {
     name: 'wisdomofseaandsky',
     id: 'A4',
+    internalId: 9,
     cards: a4Cards,
     packs: [
       { name: 'ho-ohpack', color: '#FE3A2B' },
@@ -171,6 +195,7 @@ export const expansions: Expansion[] = [
   {
     name: 'secludedsprings',
     id: 'A4a',
+    internalId: 10,
     cards: a4aCards,
     packs: [{ name: 'suicunepack', color: '#E9B00D' }],
     missions: a4aMissions,
@@ -181,6 +206,7 @@ export const expansions: Expansion[] = [
   {
     name: 'deluxepackex',
     id: 'A4b',
+    internalId: 11,
     cards: a4bCards,
     packs: [{ name: 'deluxepack', color: '#CCA331' }],
     missions: a4bMissions,
@@ -190,14 +216,6 @@ export const expansions: Expansion[] = [
     packStructure: {
       cardsPerPack: 4,
     },
-  },
-  {
-    name: 'promo-a',
-    id: 'P-A',
-    cards: paCards,
-    packs: [{ name: 'everypack', color: '#CCCCCC' }],
-    tradeable: false,
-    promo: true,
   },
 ]
 
@@ -225,7 +243,7 @@ export const craftingCost: Partial<Record<Rarity, number>> = {
 type CardWithAmount = Card & { amount_owned: number }
 
 interface NrOfCardsOwnedProps {
-  ownedCards: CollectionRow[]
+  ownedCards: Map<number, CollectionRow>
   rarityFilter: Rarity[]
   numberFilter: number
   expansion?: Expansion
@@ -233,18 +251,17 @@ interface NrOfCardsOwnedProps {
   deckbuildingMode?: boolean
 }
 export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expansion, packName, deckbuildingMode }: NrOfCardsOwnedProps): number => {
-  const amounts = new Map(ownedCards.map((x) => [x.card_id, x.amount_owned]))
-
-  let allCardsWithAmounts = allCards
-    .filter((a) => !a.linkedCardID)
-    .map((ac) => {
-      const amount = amounts.get(ac.card_id) || 0
-      return { ...ac, amount_owned: amount }
-    })
+  let allCardsWithAmounts = allCards.map((ac) => {
+    const amount = ownedCards.get(ac.internal_id)?.amount_owned || 0
+    return { ...ac, amount_owned: amount }
+  })
   if (deckbuildingMode) {
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
-        const amount_owned = ac.alternate_versions.reduce((acc, rc) => acc + (amounts.get(rc) || 0), 0)
+        const amount_owned = ac.alternate_versions.reduce((acc, rc) => {
+          const card = getCardById(rc)
+          return acc + (ownedCards.get(card?.internal_id || 0)?.amount_owned || 0)
+        }, 0)
         return { ...ac, amount_owned }
       })
       .filter((c) => basicRarities.includes(c.rarity))
@@ -282,8 +299,7 @@ interface TotalNrOfCardsProps {
   deckbuildingMode?: boolean
 }
 export const getTotalNrOfCards = ({ rarityFilter, expansion, packName, deckbuildingMode }: TotalNrOfCardsProps) => {
-  // note we have to filter out the cards with a linked card ID (Old Amber) because they are counted as the same card.
-  let filteredCards = [...allCards].filter((c) => !c.linkedCardID)
+  let filteredCards = [...allCards]
 
   if (expansion) {
     filteredCards = expansion.cards
@@ -317,7 +333,6 @@ const createRarityProbability = (probabilities: Partial<Record<Rarity, number>>)
   '✵✵': 0,
   'Crown Rare': 0,
   P: 0,
-  '': 0,
   ...probabilities,
 })
 
@@ -422,7 +437,7 @@ const getPositionProbability = (expansion: Expansion, position: number): Record<
 }
 
 interface PullRateProps {
-  ownedCards: CollectionRow[]
+  ownedCards: Map<number, CollectionRow>
   expansion: Expansion
   pack: Pack
   rarityFilter?: Rarity[]
@@ -430,14 +445,14 @@ interface PullRateProps {
   deckbuildingMode?: boolean
 }
 export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numberFilter = 1, deckbuildingMode = false }: PullRateProps) => {
-  if (ownedCards.length === 0) {
+  if (ownedCards.size === 0) {
     return 1
   }
 
   const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'everypack')
 
   let cardsInPackWithAmounts = cardsInPack.map((cip) => {
-    const amount = ownedCards.find((oc) => cip.card_id === oc.card_id)?.amount_owned || 0
+    const amount = ownedCards.get(cip.internal_id)?.amount_owned || 0
     return { ...cip, amount_owned: amount }
   })
 
@@ -458,13 +473,8 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
   let missingCards = cardsInPackWithAmounts.filter((c) => c.amount_owned <= numberFilter - 1)
 
   if (rarityFilter.length > 0) {
-    //filter out cards that are not in the rarity filter
-    missingCards = missingCards.filter((c) => {
-      if (c.rarity === '') {
-        return false
-      }
-      return rarityFilter.includes(c.rarity)
-    })
+    // filter out cards that are not in the rarity filter
+    missingCards = missingCards.filter((c) => rarityFilter.includes(c.rarity))
   }
 
   return pullRateForCardSubset(missingCards, expansion, cardsInPack, deckbuildingMode)
@@ -515,7 +525,7 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
   for (const card of missingCardsFromPack) {
     const rarityList = [card.rarity]
     // Skip cards that cannot be picked
-    if (rarityList[0] === 'P' || rarityList[0] === '') {
+    if (rarityList[0] === 'P') {
       continue
     }
 
@@ -591,4 +601,12 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
 
   // disjoint union of probabilities
   return chanceToGetNewCard + chanceToGetNewCardInRarePack + changeToGetNewCardIn6CardPack
+}
+
+export const getInteralIdByCardId = (card_id: string) => {
+  const internalId = getCardById(card_id)?.internal_id
+  if (!internalId) {
+    throw new Error(`Internal ID for card with id ${card_id} not found`)
+  }
+  return internalId
 }

@@ -18,8 +18,6 @@ export function formatRarity(rarity: Rarity) {
       return <span className="px-1">👑</span>
     case 'P':
       return <span className="px-1">P</span>
-    case '':
-      console.warn('RarityFilter.tsx:show: Unexpected empty rarity')
-      return null
   }
+  return null
 }

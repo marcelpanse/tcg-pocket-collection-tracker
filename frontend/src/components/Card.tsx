@@ -40,7 +40,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
       }
       _inputDebounce[card_id] = window.setTimeout(async () => {
         updateCardsMutation.mutate({
-          updates: [{ card_id, amount_owned: newAmount }],
+          updates: [{ card_id, internal_id: card.internal_id, amount_owned: newAmount, rarity: card.rarity }],
         })
       }, 1000)
     },
@@ -62,10 +62,6 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
     }
   }
 
-  if (card.linkedCardID) {
-    return null
-  }
-
   return (
     <div className={cn('group flex flex-col items-center rounded-lg', className)}>
       <button
@@ -76,7 +72,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
           onImageClick?.()
         }}
       >
-        <FancyCard card={card} selected={amountOwned > 0} />
+        <FancyCard card={card} selected={Boolean(card.collected)} />
       </button>
       <p className="w-full min-w-0 text-[12px] pt-2 text-center font-semibold leading-tight">
         <span className="block md:inline">{card.card_id}</span>

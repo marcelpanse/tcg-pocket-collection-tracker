@@ -12,7 +12,7 @@ import * as CardsDB from '@/lib/CardsDB.ts'
 import { getExpansionById } from '@/lib/CardsDB.ts'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import { useCollection } from '@/services/collection/useCollection'
-import { expansionIds, type Rarity } from '@/types'
+import { type CollectionRow, expansionIds, type Rarity } from '@/types'
 import { BlogOverview } from './components/BlogOverview'
 import { ExpansionOverview } from './components/ExpansionOverview'
 
@@ -26,7 +26,7 @@ const expansionOptions = ['all', ...expansionIds] as const
 type ExpansionOption = (typeof expansionOptions)[number]
 
 function Overview() {
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
 
   const { t } = useTranslation(['pages/overview', 'filters', 'common/sets'])
 
@@ -35,7 +35,13 @@ function Overview() {
   const [usersCount, setUsersCount] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<ExpansionOption>(expansionOptions[expansionOptions.length - 2])
 
-  const ownedCardsCount = useMemo(() => ownedCards.reduce((total, card) => total + card.amount_owned, 0), [ownedCards])
+  const ownedCardsCount = useMemo(() => {
+    let total = 0
+    ownedCards.forEach((card) => {
+      total += card.amount_owned
+    })
+    return total
+  }, [ownedCards])
 
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>(() => {
     const savedRarityFilter = localStorage.getItem('rarityFilter')
@@ -79,7 +85,7 @@ function Overview() {
           fill: pack.color,
         }))
       const highestProbabilityPackCandidate = pullRates.sort((a, b) => b.percentage - a.percentage)[0]
-      if (highestProbabilityPackCandidate.percentage > (newHighestProbabilityPack?.percentage ?? 0)) {
+      if (highestProbabilityPackCandidate.percentage > (newHighestProbabilityPack?.percentage ?? -1)) {
         newHighestProbabilityPack = highestProbabilityPackCandidate
       }
     }
@@ -95,7 +101,7 @@ function Overview() {
   return (
     <main className="fade-in-up">
       <article className="mx-auto max-w-7xl px-8">
-        {ownedCards.length === 0 && (
+        {ownedCards.size === 0 && (
           <Alert className="mb-8 border-1 border-neutral-700 shadow-none">
             <Siren className="h-4 w-4" />
             <AlertTitle>{t('dontHaveCards.title')}</AlertTitle>
@@ -169,7 +175,7 @@ function Overview() {
           ))}
       </article>
 
-      {ownedCards.length > 0 && (
+      {ownedCards.size > 0 && (
         <div className="mx-auto max-w-2xl my-8">
           <Alert className="border-1 border-neutral-700 shadow-none">
             <Heart className="h-4 w-4" />

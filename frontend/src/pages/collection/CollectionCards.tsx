@@ -5,7 +5,7 @@ import FilterPanel, { type Filters } from '@/components/FiltersPanel'
 import type { Card, CollectionRow } from '@/types'
 
 interface Props {
-  cards: CollectionRow[]
+  cards: Map<number, CollectionRow>
   isPublic: boolean
   extraOffset: number
 }

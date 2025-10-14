@@ -2,12 +2,13 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast.ts'
+import { getCardById, getInteralIdByCardId } from '@/lib/CardsDB.ts'
 import { umami } from '@/lib/utils.ts'
 import { TradeListRow } from '@/pages/trade/components/TradeListRow.tsx'
 import { useAccount } from '@/services/account/useAccount'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import { useUpdateTrade } from '@/services/trade/useTrade.ts'
-import type { CollectionRowUpdate, TradeRow, TradeStatus } from '@/types'
+import type { CardAmountUpdate, CollectionRow, TradeRow, TradeStatus } from '@/types'
 
 interface Props {
   trades: TradeRow[]
@@ -19,7 +20,7 @@ function TradeList({ trades, viewHistory }: Props) {
   const { toast } = useToast()
 
   const { data: account } = useAccount()
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const updateCardsMutation = useUpdateCards()
 
   function interesting(row: TradeRow) {
@@ -33,8 +34,13 @@ function TradeList({ trades, viewHistory }: Props) {
     return null
   }
 
-  const getAndIncrement = (card_id: string, increment: number): CollectionRowUpdate => {
-    return { card_id, amount_owned: (ownedCards.find((r) => r.card_id === card_id)?.amount_owned ?? 0) + increment }
+  const getAndIncrement = (card_id: string, increment: number): CardAmountUpdate => {
+    const internal_id = getInteralIdByCardId(card_id)
+    const rarity = getCardById(card_id)?.rarity
+    if (rarity === undefined) {
+      throw new Error(`Could not find card: ${card_id}`)
+    }
+    return { card_id, internal_id, rarity, amount_owned: (ownedCards.get(internal_id)?.amount_owned ?? 0) + increment }
   }
 
   const increment = async (row: TradeRow) => {

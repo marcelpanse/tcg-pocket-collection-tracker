@@ -4,7 +4,7 @@ import FancyCard from '@/components/FancyCard'
 import { getCardById } from '@/lib/CardsDB'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
-import type { Card } from '@/types'
+import type { Card, CollectionRow } from '@/types'
 
 export interface IDeck {
   name: string
@@ -36,7 +36,7 @@ const rankClassMap: Record<string, string> = {
 }
 
 export const DeckItem = ({ deck }: { deck: IDeck }) => {
-  const { data: ownedCards = [] } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -48,9 +48,13 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
 
   function isSelected(deckCards: string[], cardObj: Card, idx: number): boolean {
     const countInDeckSoFar = deckCards.slice(0, idx + 1).filter((id) => id === cardObj.card_id).length
-    const ownedAmount = ownedCards
-      .filter((c) => cardObj.alternate_versions.includes(c.card_id.replace('_', '-')) && c.amount_owned > 0)
-      .reduce((total, card) => total + card.amount_owned, 0)
+
+    let ownedAmount = 0
+    for (const cardId of cardObj.alternate_versions) {
+      const card = getCardById(cardId)
+      ownedAmount += ownedCards.get(card?.internal_id || 0)?.amount_owned || 0
+    }
+
     return countInDeckSoFar <= ownedAmount
   }
 

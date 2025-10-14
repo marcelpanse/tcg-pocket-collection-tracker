@@ -99,7 +99,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
         <small className={`text-left mb-1 md:text-right ${groupExpansions && 'md:mb-[-25px]'}`}>
           {t('stats.summary', {
             ns: 'pages/collection',
-            selected: cards.filter((c) => !c.linkedCardID).length,
+            selected: cards.length,
             uniquesOwned: cards.filter((card) => (card.amount_owned ?? 0) > 0).length,
             totalOwned: cards.reduce((acc, card) => acc + (card.amount_owned ?? 0), 0),
           })}
@@ -124,7 +124,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
                       ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${row.expansion.name}.webp`
                     }}
                   />
-                  <h2 className="text-center font-semibold sm:text-lg md:text-2xl ">{t(row.expansion.name)}</h2>
+                  <h2 className="text-center font-semibold sm:text-lg md:text-2xl">{t(row.expansion.name)}</h2>
                 </div>
               ) : (
                 <div className="w-full flex justify-start">

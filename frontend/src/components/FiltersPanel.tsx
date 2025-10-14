@@ -7,7 +7,7 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
-import { allCards, basicRarities, expansions, getExpansionById } from '@/lib/CardsDB.ts'
+import { allCards, basicRarities, expansions, getCardById, getExpansionById } from '@/lib/CardsDB.ts'
 import { levenshtein } from '@/lib/levenshtein'
 import { getCardNameByLang } from '@/lib/utils'
 import { useProfileDialog } from '@/services/account/useAccount'
@@ -41,7 +41,7 @@ export interface Filters {
 }
 
 interface Props {
-  cards: CollectionRow[] | null
+  cards: Map<number, CollectionRow>
 
   filters: Filters
   setFilters: Dispatch<SetStateAction<Filters>>
@@ -95,14 +95,10 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
   const setOwned = (x: OwnedOption) => setFilterChange({ owned: x })
 
   const getFilteredCards = (filters: Filters) => {
-    if (!cards) {
-      return null // cards are still loading
-    }
-
     let filteredCards = allCards
 
     if (filters.deckbuildingMode) {
-      filteredCards = filteredCards.filter((c) => basicRarities.includes(c.rarity) || c.rarity === '' || c.rarity === 'P')
+      filteredCards = filteredCards.filter((c) => basicRarities.includes(c.rarity) || c.rarity === 'P')
     }
 
     if (filters.expansion !== 'all') {
@@ -113,16 +109,16 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
     }
     if (filters.owned !== 'all') {
       if (filters.owned === 'owned') {
-        filteredCards = filteredCards.filter((card) => cards.find((oc: CollectionRow) => oc.card_id === card.card_id && oc.amount_owned > 0))
+        filteredCards = filteredCards.filter((card) => (cards.get(card.internal_id)?.amount_owned || 0) > 0)
       } else if (filters.owned === 'missing') {
-        filteredCards = filteredCards.filter((card) => !cards.find((oc: CollectionRow) => oc.card_id === card.card_id && oc.amount_owned > 0))
+        filteredCards = filteredCards.filter((card) => (cards.get(card.internal_id)?.amount_owned || 0) === 0)
       }
     }
 
     if (filters.sortBy === 'recent') {
       filteredCards = [...filteredCards].sort((a: Card, b: Card) => {
-        const isUpdatedA = cards.find((oc: CollectionRow) => oc.card_id === a.card_id)?.updated_at
-        const isUpdatedB = cards.find((oc: CollectionRow) => oc.card_id === b.card_id)?.updated_at
+        const isUpdatedA = cards.get(a.internal_id)?.updated_at
+        const isUpdatedB = cards.get(b.internal_id)?.updated_at
         if (isUpdatedA && isUpdatedB) {
           return new Date(isUpdatedB).getTime() - new Date(isUpdatedA).getTime()
         } else if (isUpdatedA && !isUpdatedB) {
@@ -132,10 +128,8 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
         }
       })
     } else if (filters.sortBy === 'expansion-newest') {
-      const reversedExpansions = [...expansions]
-        .reverse()
-        .slice(1)
-        .concat(expansions[expansions.length - 1])
+      const reversedExpansions = [...expansions].reverse()
+
       filteredCards = [...filteredCards].sort((a: Card, b: Card) => {
         const expansionIndexA = reversedExpansions.findIndex((e) => e.id === a.expansion)
         const expansionIndexB = reversedExpansions.findIndex((e) => e.id === b.expansion)
@@ -152,7 +146,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
       if (filters.rarity.length === 0) {
         return true
       }
-      return c.rarity !== '' && filters.rarity.includes(c.rarity)
+      return filters.rarity.includes(c.rarity)
     })
     filteredCards = filteredCards.filter((c: Card) => {
       if (filters.cardType.length === 0) {
@@ -188,18 +182,16 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
       })
     }
 
-    const amounts = new Map((cards || []).map((x) => [x.card_id, x.amount_owned]))
-
     for (const card of filteredCards) {
-      if (!card.linkedCardID) {
-        if (filters.deckbuildingMode) {
-          card.amount_owned = card.alternate_versions.reduce((acc, c) => acc + (amounts.get(c) ?? 0), 0)
-        } else {
-          card.amount_owned = amounts.get(card.card_id) ?? 0
-        }
+      if (filters.deckbuildingMode) {
+        card.amount_owned = card.alternate_versions.reduce((acc, c) => {
+          const card = getCardById(c)
+          return acc + (cards.get(card?.internal_id || 0)?.amount_owned ?? 0)
+        }, 0)
       } else {
-        card.amount_owned = 0
+        card.amount_owned = cards.get(card.internal_id)?.amount_owned ?? 0
       }
+      card.collected = cards.get(card.internal_id)?.collection.includes(card.card_id) ?? false
     }
     filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) >= filters.minNumber)
     if (filters.maxNumber !== 100) {
@@ -284,7 +276,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
             </DialogTrigger>
             <DialogContent className="border-1 border-neutral-700 shadow-none max-h-[90vh] overflow-y-auto content-start">
               <DialogHeader>
-                <DialogTitle>{t('filters.filtersCount', { count: (filteredCards || []).filter((c) => !c.linkedCardID).length })}</DialogTitle>
+                <DialogTitle>{t('filters.filtersCount', { count: (filteredCards || []).length })}</DialogTitle>
               </DialogHeader>
               <div className="flex flex-col gap-3">
                 {filtersDialog.search && <SearchInput className="w-full bg-neutral-900" setSearchValue={setSearchValue} />}

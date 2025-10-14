@@ -6,6 +6,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import ScrollArea from '@/components/ui/scroll-area'
+import { getCardById, getInteralIdByCardId } from '@/lib/CardsDB.ts'
 import { useUpdateCards } from '@/services/collection/useCollection.ts'
 import type { Card } from '@/types'
 
@@ -25,7 +26,15 @@ export function BatchUpdateDialog({ filteredCards }: BatchUpdateDialogProps) {
 
   const onBatchUpdate = async (cardIds: string[], amount: number) => {
     updateCardsMutation.mutate({
-      updates: cardIds.map((card_id) => ({ card_id, amount_owned: amount })),
+      updates: cardIds
+        .map(getCardById)
+        .filter((card): card is Card => Boolean(card))
+        .map((card) => ({
+          card_id: card.card_id,
+          rarity: card.rarity,
+          internal_id: getInteralIdByCardId(card.card_id),
+          amount_owned: amount,
+        })),
     })
   }
 

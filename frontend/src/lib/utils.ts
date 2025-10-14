@@ -53,13 +53,19 @@ export function getCardNameByLang(card: Card, lang: string): string {
   return card.name
 }
 
-export function getExtraCards(cards: CollectionRow[], amount_wanted: number): string[] {
-  return cards.filter((c) => c.amount_owned > amount_wanted).map((c) => c.card_id)
+export function getExtraCards(cards: Map<number, CollectionRow>, amount_wanted: number): number[] {
+  return Array.from(cards.values())
+    .filter((c) => c.amount_owned > amount_wanted)
+    .map((c) => c.internal_id)
 }
 
-export function getNeededCards(cards: CollectionRow[], amount_wanted: number): string[] {
-  const notNeeded = new Set(cards.filter((c) => c.amount_owned >= amount_wanted).map((c) => c.card_id))
-  return allCards.map((c) => c.card_id).filter((card_id) => !notNeeded.has(card_id))
+export function getNeededCards(cards: Map<number, CollectionRow>, amount_wanted: number): number[] {
+  const notNeeded = new Set(
+    Array.from(cards.values())
+      .filter((c) => c.amount_owned >= amount_wanted)
+      .map((c) => c.internal_id),
+  )
+  return allCards.map((c) => c.internal_id).filter((internal_id) => !notNeeded.has(internal_id))
 }
 
 export function umami(event: string) {
