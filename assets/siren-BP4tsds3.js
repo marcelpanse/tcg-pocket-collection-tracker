@@ -1,5 +1,5 @@
-import{e as a}from"./index-Cbfo9UTx.js";/**
- * @license lucide-react v0.544.0 - ISC
+import{e as a}from"./index-DQNOb6yn.js";/**
+ * @license lucide-react v0.545.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
