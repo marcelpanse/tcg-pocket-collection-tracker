@@ -31,27 +31,27 @@ INSERT INTO cards_list (internal_id, card_id, rarity, tradable) VALUES
 
   // after we ran this and migrated everyone, we can add this deduplication code back in and recreate the table contents.
   // this is because we don't need the duplicate internal_ids. To do this:
-  // 1. delete the cards_list table
-  // 2. create the table again but with the primary key being internal_id: int4
-  // 3. adjust this script to enable the deduplication code
-  // 4. run this script on the db
-  // 5. after deployment, delete the cards table (the cards_list table is now used instead).
-  // 6. after migration remove the amount_owned column from the collections table.
-  // 7. deploy get-trading-partners deno function and test
-  // 8. drop the public_cards view
+  // 1. DONE delete the cards_list table
+  // 2. DONE create the table again but with the primary key being internal_id: int4
+  // 3. DONE adjust this script to enable the deduplication code
+  // 4. DONE run this script on the db
+  // 5. DONE after deployment, delete the cards table (the cards_list table is now used instead).
+  // 6. after migration remove the amount_owned column from the collections table. //i'll keep it for a couple week in case someone didnt migrate properly.
+  // 7. DONE deploy get-trading-partners deno function and test
+  // 8. DONE drop the public_cards view
 
   //deduplicate cards on card.internal_id
-  // const seenIds = new Set<number>()
-  // const dedupedCards = cards.filter((card) => {
-  //   if (seenIds.has(card.internal_id)) {
-  //     return false
-  //   }
-  //   seenIds.add(card.internal_id)
-  //   return true
-  // })
+  const seenIds = new Set<number>()
+  const dedupedCards = cards.filter((card) => {
+    if (seenIds.has(card.internal_id)) {
+      return false
+    }
+    seenIds.add(card.internal_id)
+    return true
+  })
 
   // Generate values for bulk insert
-  const values = cards
+  const values = dedupedCards
     .map((card) => {
       const rarity = card.rarity
       const tradable = (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion)
