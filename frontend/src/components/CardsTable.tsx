@@ -108,7 +108,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
   }, [cards])
 
   const mewCardOwned = useMemo(() => {
-    return cards.find((c) => c.card_id === 'A1-283')
+    return cards.find((c) => c.card_id === 'A1-283' && (c.amount_owned || 0) > 0)
   }, [cards])
 
   return (
@@ -123,7 +123,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
           })}
           {mewCardOwned && (
             <>
-              <Tooltip id="mewCardOwned" className="text-start" clickable={true} />
+              <Tooltip id="mewCardOwned" className="text-start max-w-72" clickable={true} />
               <CircleAlert className="h-5 w-5" data-tooltip-id="mewCardOwned" data-tooltip-content={t('stats.mewCardOwned', { ns: 'pages/collection' })} />
             </>
           )}
