@@ -118,7 +118,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
           {t('stats.summary', {
             ns: 'pages/collection',
             selected: cards.length,
-            uniquesOwned: cards.filter((card) => (card.amount_owned ?? 0) > 0).length,
+            uniquesOwned: cards.filter((card) => Boolean(card.collected)).length,
             totalOwned,
           })}
           {mewCardOwned && (
