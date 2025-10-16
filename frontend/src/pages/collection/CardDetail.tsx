@@ -63,7 +63,7 @@ function CardDetail() {
     }
   }
 
-  const isCardOwned = row?.collection.includes(cardId || '') && (row?.amount_owned || 0) > 0
+  const isCardOwned = row?.collection.includes(cardId || '')
 
   return (
     <Sheet
