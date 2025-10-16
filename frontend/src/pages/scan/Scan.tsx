@@ -416,14 +416,11 @@ const Scan = () => {
               onChange={(e) => setSelectedExpansionId(e.target.value)}
               className="text-white min-h-[27px] text-sm cursor-pointer"
             >
-              {expansions
-                .filter((exp) => !exp.promo)
-                .reverse()
-                .map((exp) => (
-                  <option key={exp.id} value={exp.id}>
-                    {t(exp.name, { ns: 'common/sets' })} ({exp.id})
-                  </option>
-                ))}
+              {expansions.reverse().map((exp) => (
+                <option key={exp.id} value={exp.id}>
+                  {t(exp.name, { ns: 'common/sets' })} ({exp.id})
+                </option>
+              ))}
             </select>
           </label>
           <input type="file" ref={fileInputRef} onChange={handleImageUpload} accept="image/*" multiple className="w-full hidden" />
