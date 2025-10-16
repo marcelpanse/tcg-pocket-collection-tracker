@@ -107,9 +107,9 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
     }
     if (filters.owned !== 'all') {
       if (filters.owned === 'owned') {
-        filteredCards = filteredCards.filter((card) => (cards.get(card.internal_id)?.amount_owned || 0) > 0)
+        filteredCards = filteredCards.filter((card) => card.collected)
       } else if (filters.owned === 'missing') {
-        filteredCards = filteredCards.filter((card) => (cards.get(card.internal_id)?.amount_owned || 0) === 0)
+        filteredCards = filteredCards.filter((card) => !card.collected)
       }
     }
 
