@@ -1,14 +1,16 @@
 import i18n from 'i18next'
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Tooltip } from 'react-tooltip'
 import { Card as CardComponent } from '@/components/Card'
 import { CardLine } from '@/components/CardLine'
+import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Radio, RadioIndicator, RadioItem } from '@/components/ui/radio'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { craftingCost, getCardById, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
 import { getCardNameByLang } from '@/lib/utils'
-import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
+import { useCollection, useDeleteCard, useSelectedCard } from '@/services/collection/useCollection'
 import type { CollectionRow } from '@/types'
 
 function CardDetail() {
@@ -16,6 +18,7 @@ function CardDetail() {
   const { selectedCardId: cardId, setSelectedCardId: setCardId } = useSelectedCard()
 
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
+  const deleteCardMutation = useDeleteCard()
 
   const [isOpen, setIsOpen] = useState(false)
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
@@ -53,6 +56,14 @@ function CardDetail() {
       timeStyle: 'long',
     }).format(new Date(timestamp))
   }
+
+  const handleUncollect = () => {
+    if (cardId && row?.collection.includes(cardId)) {
+      deleteCardMutation.mutate({ cardId })
+    }
+  }
+
+  const isCardOwned = row?.collection.includes(cardId || '') && (row?.amount_owned || 0) > 0
 
   return (
     <Sheet
@@ -177,6 +188,21 @@ function CardDetail() {
             <p className="mt-4 text-neutral-400 text-sm flex">
               <strong className="font-semibold mr-1">{t('text.updated')}</strong> {row?.updated_at ? formatTimestamp(row.updated_at) : 'N/A'}
             </p>
+
+            {isCardOwned && (
+              <div className="mt-6">
+                <Tooltip id="uncollect-tooltip" style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 14 }} />
+                <Button
+                  variant="destructive"
+                  onClick={handleUncollect}
+                  disabled={deleteCardMutation.isPending}
+                  data-tooltip-id="uncollect-tooltip"
+                  data-tooltip-content={t('text.uncollectTooltip')}
+                >
+                  {deleteCardMutation.isPending ? 'Uncollecting...' : 'Uncollect'}
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </SheetContent>

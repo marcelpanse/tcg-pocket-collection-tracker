@@ -15,7 +15,9 @@
     "abilityEffect": "Fähigkeitseffekt",
     "details": "Details",
     "updated": "Aktualisiert",
-    "alternateVersions": "Alternative Versionen"
+    "alternateVersions": "Alternative Versionen",
+    "totalAmount": "Gesamtmenge",
+    "uncollectTooltip": "Das Entsammeln einer Karte verringert nicht die Kartenanzahl, aber zeigt die Karte als nicht gesammelt an."
   },
   "cardType": {
     "pokémon": "Pokémon",

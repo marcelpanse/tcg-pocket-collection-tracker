@@ -134,6 +134,62 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   }
 }
 
+export const deleteCard = async (email: string, cardId: string) => {
+  if (!email) {
+    throw new Error('Email is required to delete card')
+  }
+  if (!cardId) {
+    throw new Error('Card ID is required to delete card')
+  }
+
+  const now = new Date()
+
+  // First fetch the current account data
+  const { data: account, error: accountError } = await supabase.from('accounts').select().eq('email', email).single()
+
+  if (accountError) {
+    throw new Error(`Error fetching account: ${accountError.message}`)
+  }
+
+  // Update account's collection_last_updated timestamp
+  const { error: accountUpdateError, data: updatedAccount } = await supabase
+    .from('accounts')
+    .upsert({ ...account, collection_last_updated: now })
+    .select()
+    .single()
+
+  if (accountUpdateError) {
+    throw new Error(`Error updating account timestamp: ${accountUpdateError.message}`)
+  }
+
+  // Delete from collection table
+  const { error: collectionError } = await supabase.from('collection').delete().eq('card_id', cardId)
+
+  if (collectionError) {
+    throw new Error(`Error deleting from collection: ${collectionError.message}`)
+  }
+
+  // Update cache by removing the card
+  const latestFromCache = getCollectionFromCache(email)
+  if (!latestFromCache) {
+    return {}
+  }
+
+  // Find and update the cache - remove the card_id from the collection array and set amount_owned to 0
+  const rowToUpdate = latestFromCache?.find((row) => row.collection.includes(cardId))
+  if (rowToUpdate) {
+    rowToUpdate.collection = rowToUpdate.collection.filter((id) => id !== cardId)
+    rowToUpdate.updated_at = now.toISOString()
+
+    updateCollectionCache(latestFromCache, email, now)
+  }
+
+  return {
+    cards: new Map(latestFromCache.map((row) => [row.internal_id, row])),
+    account: updatedAccount as AccountRow,
+  }
+}
+
 // Helper functions
 async function fetchCollectionFromAPI(table: string, key: string, value: string): Promise<CollectionRow[]> {
   const { count, error } = await supabase.from(table).select('*', { count: 'exact', head: true }).eq(key, value)

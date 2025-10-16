@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { useUser } from '@/services/auth/useAuth.ts'
-import { getCollection, getPublicCollection, updateCards } from '@/services/collection/collectionService.ts'
+import { deleteCard, getCollection, getPublicCollection, updateCards } from '@/services/collection/collectionService.ts'
 import type { CardAmountUpdate } from '@/types'
 
 export function useCollection() {
@@ -39,6 +39,27 @@ export function useUpdateCards() {
         throw new Error('Email is required to update cards')
       }
       return updateCards(email, updates)
+    },
+    onSuccess: (result) => {
+      queryClient.setQueryData(['collection', email], result.cards)
+
+      // Update account data in cache (for collection_last_updated timestamp)
+      queryClient.setQueryData(['account', email], result.account)
+    },
+  })
+}
+
+export function useDeleteCard() {
+  const { data: user } = useUser()
+  const email = user?.user.email
+
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: ({ cardId }: { cardId: string }) => {
+      if (!email) {
+        throw new Error('Email is required to delete card')
+      }
+      return deleteCard(email, cardId)
     },
     onSuccess: (result) => {
       queryClient.setQueryData(['collection', email], result.cards)

@@ -13,7 +13,10 @@
     "ability": "Habilidad",
     "abilityEffect": "Efecto de la habilidad",
     "details": "Detalles",
-    "updated": "Actualizado"
+    "updated": "Actualizado",
+    "alternateVersions": "Versiones alternativas",
+    "totalAmount": "Cantidad total",
+    "uncollectTooltip": "Descoleccionar una carta no disminuye el recuento de cartas, pero mostrará la carta como no coleccionada."
   },
   "cardType": {
     "pokémon": "Pokémon",
