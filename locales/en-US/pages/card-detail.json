@@ -16,7 +16,8 @@
     "details": "Details",
     "updated": "Updated",
     "alternateVersions": "Alternate versions",
-    "totalAmount": "Total amount"
+    "totalAmount": "Total amount",
+    "uncollectTooltip": "Uncollecting a card doesn't decrease the card count, but it will show the card as not collected."
   },
   "cardType": {
     "pokémon": "Pokémon",
