@@ -28,7 +28,12 @@ Deno.serve(async (req) => {
 
     console.log('fetching trading partners')
 
-    const tradingPartners = await connection.queryObject(
+    interface RowType {
+      friend_id: string
+      username: string
+      matched_cards_amount: number
+    }
+    const tradingPartners = await connection.queryObject<RowType>(
       `
           WITH recent_accounts AS (
               SELECT email, min_number_of_cards_to_keep, max_number_of_cards_wanted

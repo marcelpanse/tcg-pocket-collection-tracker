@@ -1,7 +1,9 @@
 import { useVirtualizer } from '@tanstack/react-virtual'
 import i18n from 'i18next'
+import { CircleAlert } from 'lucide-react'
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Tooltip } from 'react-tooltip'
 import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
 import { getExpansionById } from '@/lib/CardsDB.ts'
 import type { Card as CardType, Expansion } from '@/types'
@@ -93,16 +95,38 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
     overscan: 5,
   })
 
+  const totalOwned = useMemo(() => {
+    let total = 0
+    const uniqueCardsByCardId = new Set<number>()
+    for (const card of cards) {
+      if (!uniqueCardsByCardId.has(card.internal_id)) {
+        total += card.amount_owned || 0
+        uniqueCardsByCardId.add(card.internal_id)
+      }
+    }
+    return total
+  }, [cards])
+
+  const mewCardOwned = useMemo(() => {
+    return cards.find((c) => c.card_id === 'A1-283')
+  }, [cards])
+
   return (
     <div ref={scrollRef} className="overflow-y-auto md:mt-4 px-4 flex flex-col" style={{ scrollbarWidth: 'none', height: scrollContainerHeight }}>
       {showStats && (
-        <small className={`text-left mb-1 md:text-right ${groupExpansions && 'md:mb-[-25px]'}`}>
+        <small className={`z-10 flex justify-end gap-2 text-left mb-1 md:text-right ${groupExpansions && 'md:mb-[-25px]'}`}>
           {t('stats.summary', {
             ns: 'pages/collection',
             selected: cards.length,
             uniquesOwned: cards.filter((card) => (card.amount_owned ?? 0) > 0).length,
-            totalOwned: cards.reduce((acc, card) => acc + (card.amount_owned ?? 0), 0),
+            totalOwned,
           })}
+          {mewCardOwned && (
+            <>
+              <Tooltip id="mewCardOwned" className="text-start" clickable={true} />
+              <CircleAlert className="h-5 w-5" data-tooltip-id="mewCardOwned" data-tooltip-content={t('stats.mewCardOwned', { ns: 'pages/collection' })} />
+            </>
+          )}
         </small>
       )}
       <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
