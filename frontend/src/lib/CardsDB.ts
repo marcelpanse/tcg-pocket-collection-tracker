@@ -316,7 +316,7 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName, deckbuild
   }
 
   if (deckbuildingMode) {
-    filteredCards = filteredCards.filter((c) => !c.fullart)
+    filteredCards = filteredCards.filter((c) => basicRarities.includes(c.rarity))
 
     //deduplicate filteredCards by c.internal_id
     filteredCards = filteredCards.filter((c, i, a) => a.findIndex((t) => t.internal_id === c.internal_id) === i)

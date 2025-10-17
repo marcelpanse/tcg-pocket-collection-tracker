@@ -50,8 +50,6 @@ const typeMapping: Record<string, CardType> = {
   C: 'colorless',
 }
 
-const fullArtRarities = ['☆', '☆☆', '☆☆☆', 'Crown Rare', 'P']
-
 const rarityOverrides: Partial<Record<ExpansionId, { rarity: Rarity; start: number; end: number }[]>> = {
   A2b: [
     { rarity: '✵', start: 97, end: 106 },
@@ -290,8 +288,6 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
     }
   }
 
-  const fullart = fullArtRarities.includes(rarity)
-
   const ex = name.includes(' ex')
 
   // Check if card is a baby pokemon (Not currently specified exactly on Limitless TCG page)
@@ -367,7 +363,6 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
     weakness,
     retreat,
     rarity,
-    fullart,
     ex,
     baby,
     set_details,
