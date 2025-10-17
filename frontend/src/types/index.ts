@@ -129,7 +129,7 @@ export interface Card {
   baby: boolean
   set_details: string
   pack: string
-  alternate_versions: string[]
+  alternate_versions: number[]
   artist: string
 
   amount_owned?: number // calculated from the card amounts table

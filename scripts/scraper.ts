@@ -398,7 +398,7 @@ async function getCardLinks(mainUrl: string) {
   return links
 }
 
-const cards: Card[] = []
+const cards1: Awaited<ReturnType<typeof getCardDetails>>[] = []
 
 async function scrapeCards() {
   for (const expansion of expansions) {
@@ -419,7 +419,7 @@ async function scrapeCards() {
           promises.push(
             getCardDetails(link, expansion).then((card) => {
               if (card) {
-                cards.push(card)
+                cards1.push(card)
               }
             }),
           )
@@ -444,7 +444,7 @@ async function scrapeCards() {
 await scrapeCards().catch(console.error)
 
 // Sort the cards array by id as a number
-cards.sort((a, b) => {
+cards1.sort((a, b) => {
   const [e_a, n_a] = a.card_id.split('-')
   const [e_b, n_b] = b.card_id.split('-')
   if (e_a !== e_b) {
@@ -453,6 +453,12 @@ cards.sort((a, b) => {
   return Number.parseInt(n_a, 10) - Number.parseInt(n_b, 10)
 })
 
+const internalIds: Record<string, number> = Object.fromEntries(cards1.map((c) => [c.card_id, c.internal_id]))
+const cards2: Card[] = cards1.map((c) => ({
+  ...c,
+  alternate_versions: [...new Set(c.alternate_versions.map((card_id) => internalIds[card_id]))].toSorted((a, b) => a - b),
+}))
+
 fs.mkdirSync(targetDir, { recursive: true })
-fs.writeFileSync(path.join(targetDir, `cards.json`), JSON.stringify(cards, null, 2))
+fs.writeFileSync(path.join(targetDir, `cards.json`), JSON.stringify(cards2, null, 2))
 console.log('Cards saved to cards.json')
