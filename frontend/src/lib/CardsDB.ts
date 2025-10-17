@@ -256,6 +256,9 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
     return { ...ac, amount_owned: amount }
   })
   if (deckbuildingMode) {
+    //deduplicate allCardsWithAmounts by c.internal_id
+    allCardsWithAmounts = allCardsWithAmounts.filter((c, i, a) => a.findIndex((t) => t.internal_id === c.internal_id) === i)
+
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
         const amount_owned = ac.alternate_versions.reduce((acc, rc) => {
@@ -278,8 +281,7 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
     },
     expansion: (cr: CardWithAmount) => (expansion ? expansion.cards.find((c) => cr.card_id === c.card_id) : true),
     pack: (cr: CardWithAmount) => (expansion && packName ? expansion.cards.find((c) => c.pack === packName && cr.card_id === c.card_id) : true),
-    deckbuildingMode: (cr: CardWithAmount) =>
-      deckbuildingMode ? allCardsWithAmounts.find((c) => c.card_id === cr.card_id && c.amount_owned > numberFilter - 1) : true,
+    deckbuildingMode: (cr: CardWithAmount) => (deckbuildingMode ? cr.amount_owned > numberFilter - 1 : true),
   }
 
   // biome-ignore format: improve readability for filters
@@ -315,6 +317,9 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName, deckbuild
 
   if (deckbuildingMode) {
     filteredCards = filteredCards.filter((c) => !c.fullart)
+
+    //deduplicate filteredCards by c.internal_id
+    filteredCards = filteredCards.filter((c, i, a) => a.findIndex((t) => t.internal_id === c.internal_id) === i)
   }
 
   return filteredCards.length
