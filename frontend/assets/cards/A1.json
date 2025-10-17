@@ -4,13 +4,13 @@
     "card_id": "A1-1",
     "image": "/images/en-US/A1-1.webp",
     "hp": "70",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Bulbasaur",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Vine Whip",
         "damage": "40",
         "effect": "No effect"
@@ -34,13 +34,13 @@
     "card_id": "A1-2",
     "image": "/images/en-US/A1-2.webp",
     "hp": "90",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Ivysaur",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "colorless", "colorless"],
         "name": "Razor Leaf",
         "damage": "60",
         "effect": "No effect"
@@ -64,13 +64,13 @@
     "card_id": "A1-3",
     "image": "/images/en-US/A1-3.webp",
     "hp": "160",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Venusaur",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Grass", "Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "grass", "colorless", "colorless"],
         "name": "Mega Drain",
         "damage": "80",
         "effect": "Heal 30 damage from this Pokémon."
@@ -94,19 +94,19 @@
     "card_id": "A1-4",
     "image": "/images/en-US/A1-4.webp",
     "hp": "190",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Venusaur ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "colorless", "colorless"],
         "name": "Razor Leaf",
         "damage": "60",
         "effect": "No effect"
       },
       {
-        "cost": ["Grass", "Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "grass", "colorless", "colorless"],
         "name": "Giant Bloom",
         "damage": "100",
         "effect": "Heal 30 damage from this Pokémon."
@@ -130,13 +130,13 @@
     "card_id": "A1-5",
     "image": "/images/en-US/A1-5.webp",
     "hp": "50",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Caterpie",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Find a",
         "damage": "Friend",
         "effect": "Put 1 random [G] Pokémon from your deck into your hand."
@@ -160,13 +160,13 @@
     "card_id": "A1-6",
     "image": "/images/en-US/A1-6.webp",
     "hp": "80",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Metapod",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Bug Bite",
         "damage": "30",
         "effect": "No effect"
@@ -190,13 +190,13 @@
     "card_id": "A1-7",
     "image": "/images/en-US/A1-7.webp",
     "hp": "120",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Butterfree",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "colorless", "colorless"],
         "name": "Gust",
         "damage": "60",
         "effect": "No effect"
@@ -224,13 +224,13 @@
     "card_id": "A1-8",
     "image": "/images/en-US/A1-8.webp",
     "hp": "50",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Weedle",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Sting",
         "damage": "20",
         "effect": "No effect"
@@ -254,13 +254,13 @@
     "card_id": "A1-9",
     "image": "/images/en-US/A1-9.webp",
     "hp": "80",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Kakuna",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Bug Bite",
         "damage": "30",
         "effect": "No effect"
@@ -284,13 +284,13 @@
     "card_id": "A1-10",
     "image": "/images/en-US/A1-10.webp",
     "hp": "120",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Beedrill",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Sharp Sting",
         "damage": "70",
         "effect": "No effect"
@@ -314,13 +314,13 @@
     "card_id": "A1-11",
     "image": "/images/en-US/A1-11.webp",
     "hp": "60",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Oddish",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Ram",
         "damage": "20",
         "effect": "No effect"
@@ -344,13 +344,13 @@
     "card_id": "A1-12",
     "image": "/images/en-US/A1-12.webp",
     "hp": "80",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Gloom",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Drool",
         "damage": "40",
         "effect": "No effect"
@@ -374,13 +374,13 @@
     "card_id": "A1-13",
     "image": "/images/en-US/A1-13.webp",
     "hp": "140",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Vileplume",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Grass", "Grass", "Colorless"],
+        "cost": ["grass", "grass", "colorless"],
         "name": "Soothing Scent",
         "damage": "80",
         "effect": "Your opponent's Active Pokémon is now Asleep."
@@ -404,13 +404,13 @@
     "card_id": "A1-14",
     "image": "/images/en-US/A1-14.webp",
     "hp": "70",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Paras",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Scratch",
         "damage": "30",
         "effect": "No effect"
@@ -434,13 +434,13 @@
     "card_id": "A1-15",
     "image": "/images/en-US/A1-15.webp",
     "hp": "120",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Parasect",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Grass", "Grass", "Colorless"],
+        "cost": ["grass", "grass", "colorless"],
         "name": "Slash",
         "damage": "80",
         "effect": "No effect"
@@ -464,13 +464,13 @@
     "card_id": "A1-16",
     "image": "/images/en-US/A1-16.webp",
     "hp": "60",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Venonat",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Tackle",
         "damage": "20",
         "effect": "No effect"
@@ -494,13 +494,13 @@
     "card_id": "A1-17",
     "image": "/images/en-US/A1-17.webp",
     "hp": "80",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Venomoth",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Poison Powder",
         "damage": "30",
         "effect": "Your opponent's Active Pokémon is now Poisoned."
@@ -524,13 +524,13 @@
     "card_id": "A1-18",
     "image": "/images/en-US/A1-18.webp",
     "hp": "60",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Bellsprout",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Vine Whip",
         "damage": "20",
         "effect": "No effect"
@@ -554,13 +554,13 @@
     "card_id": "A1-19",
     "image": "/images/en-US/A1-19.webp",
     "hp": "90",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Weepinbell",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Razor Leaf",
         "damage": "40",
         "effect": "No effect"
@@ -584,13 +584,13 @@
     "card_id": "A1-20",
     "image": "/images/en-US/A1-20.webp",
     "hp": "140",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Victreebel",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Vine Whip",
         "damage": "60",
         "effect": "No effect"
@@ -618,13 +618,13 @@
     "card_id": "A1-21",
     "image": "/images/en-US/A1-21.webp",
     "hp": "50",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Exeggcute",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Seed Bomb",
         "damage": "20",
         "effect": "No effect"
@@ -648,13 +648,13 @@
     "card_id": "A1-22",
     "image": "/images/en-US/A1-22.webp",
     "hp": "130",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Exeggutor",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Stomp",
         "damage": "30+",
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
@@ -678,13 +678,13 @@
     "card_id": "A1-23",
     "image": "/images/en-US/A1-23.webp",
     "hp": "160",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Exeggutor ex",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Tropical Swing",
         "damage": "40+",
         "effect": "Flip a coin. If heads, this attack does 40 more damage."
@@ -708,13 +708,13 @@
     "card_id": "A1-24",
     "image": "/images/en-US/A1-24.webp",
     "hp": "80",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Tangela",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Absorb",
         "damage": "40",
         "effect": "Heal 10 damage from this Pokémon."
@@ -738,13 +738,13 @@
     "card_id": "A1-25",
     "image": "/images/en-US/A1-25.webp",
     "hp": "70",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Scyther",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Sharp Scythe",
         "damage": "30",
         "effect": "No effect"
@@ -768,13 +768,13 @@
     "card_id": "A1-26",
     "image": "/images/en-US/A1-26.webp",
     "hp": "90",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Pinsir",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass", "Grass"],
+        "cost": ["grass", "grass"],
         "name": "Double Horn",
         "damage": "50x",
         "effect": "Flip 2 coins. This attack does 50 damage for each heads."
@@ -798,13 +798,13 @@
     "card_id": "A1-27",
     "image": "/images/en-US/A1-27.webp",
     "hp": "50",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Cottonee",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Attach",
         "damage": "10",
         "effect": "No effect"
@@ -828,13 +828,13 @@
     "card_id": "A1-28",
     "image": "/images/en-US/A1-28.webp",
     "hp": "80",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Whimsicott",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Rolling Tackle",
         "damage": "40",
         "effect": "No effect"
@@ -858,13 +858,13 @@
     "card_id": "A1-29",
     "image": "/images/en-US/A1-29.webp",
     "hp": "60",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Petilil",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Blot",
         "damage": "10",
         "effect": "Heal 10 damage from this Pokémon."
@@ -888,13 +888,13 @@
     "card_id": "A1-30",
     "image": "/images/en-US/A1-30.webp",
     "hp": "100",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Lilligant",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Grass", "Grass"],
+        "cost": ["grass", "grass"],
         "name": "Leaf Supply",
         "damage": "50",
         "effect": "Take a [G] Energy from your Energy Zone and attach it to 1 of your Benched [G] Pokémon."
@@ -918,13 +918,13 @@
     "card_id": "A1-31",
     "image": "/images/en-US/A1-31.webp",
     "hp": "70",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Skiddo",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Surprise Attack",
         "damage": "40",
         "effect": "Flip a coin. If tails, this attack does nothing."
@@ -948,13 +948,13 @@
     "card_id": "A1-32",
     "image": "/images/en-US/A1-32.webp",
     "hp": "120",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Gogoat",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "colorless", "colorless"],
         "name": "Razor Leaf",
         "damage": "70",
         "effect": "No effect"
@@ -978,13 +978,13 @@
     "card_id": "A1-33",
     "image": "/images/en-US/A1-33.webp",
     "hp": "60",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Charmander",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Ember",
         "damage": "30",
         "effect": "Discard a [R] Energy from this Pokémon."
@@ -1008,13 +1008,13 @@
     "card_id": "A1-34",
     "image": "/images/en-US/A1-34.webp",
     "hp": "90",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Charmeleon",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Fire Claws",
         "damage": "60",
         "effect": "No effect"
@@ -1038,13 +1038,13 @@
     "card_id": "A1-35",
     "image": "/images/en-US/A1-35.webp",
     "hp": "150",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Charizard",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Fire", "Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "fire", "colorless", "colorless"],
         "name": "Fire Spin",
         "damage": "150",
         "effect": "Discard 2 [R] Energy from this Pokémon."
@@ -1068,19 +1068,19 @@
     "card_id": "A1-36",
     "image": "/images/en-US/A1-36.webp",
     "hp": "180",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Charizard ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Slash",
         "damage": "60",
         "effect": "No effect"
       },
       {
-        "cost": ["Fire", "Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "fire", "colorless", "colorless"],
         "name": "Crimson Storm",
         "damage": "200",
         "effect": "Discard 2 [R] Energy from this Pokémon."
@@ -1104,13 +1104,13 @@
     "card_id": "A1-37",
     "image": "/images/en-US/A1-37.webp",
     "hp": "50",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Vulpix",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Tail",
         "damage": "Whip",
         "effect": "Flip a coin. If heads, the Defending Pokémon can't attack during your opponent's next turn."
@@ -1134,13 +1134,13 @@
     "card_id": "A1-38",
     "image": "/images/en-US/A1-38.webp",
     "hp": "90",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Ninetales",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fire", "Fire"],
+        "cost": ["fire", "fire"],
         "name": "Flamethrower",
         "damage": "90",
         "effect": "Discard a [R] Energy from this Pokémon."
@@ -1164,13 +1164,13 @@
     "card_id": "A1-39",
     "image": "/images/en-US/A1-39.webp",
     "hp": "70",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Growlithe",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Bite",
         "damage": "20",
         "effect": "No effect"
@@ -1194,13 +1194,13 @@
     "card_id": "A1-40",
     "image": "/images/en-US/A1-40.webp",
     "hp": "130",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Arcanine",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fire", "Fire", "Colorless"],
+        "cost": ["fire", "fire", "colorless"],
         "name": "Heat Tackle",
         "damage": "100",
         "effect": "This Pokémon also does 20 damage to itself."
@@ -1224,13 +1224,13 @@
     "card_id": "A1-41",
     "image": "/images/en-US/A1-41.webp",
     "hp": "150",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Arcanine ex",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fire", "Fire", "Colorless"],
+        "cost": ["fire", "fire", "colorless"],
         "name": "Inferno Onrush",
         "damage": "120",
         "effect": "This Pokémon also does 20 damage to itself."
@@ -1254,13 +1254,13 @@
     "card_id": "A1-42",
     "image": "/images/en-US/A1-42.webp",
     "hp": "60",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Ponyta",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Flare",
         "damage": "20",
         "effect": "No effect"
@@ -1284,13 +1284,13 @@
     "card_id": "A1-43",
     "image": "/images/en-US/A1-43.webp",
     "hp": "100",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Rapidash",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Fire Mane",
         "damage": "40",
         "effect": "No effect"
@@ -1314,13 +1314,13 @@
     "card_id": "A1-44",
     "image": "/images/en-US/A1-44.webp",
     "hp": "80",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Magmar",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fire", "Fire"],
+        "cost": ["fire", "fire"],
         "name": "Magma Punch",
         "damage": "50",
         "effect": "No effect"
@@ -1344,13 +1344,13 @@
     "card_id": "A1-45",
     "image": "/images/en-US/A1-45.webp",
     "hp": "120",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Flareon",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Flamethrower",
         "damage": "110",
         "effect": "Discard 1 [R] Energy from this Pokémon."
@@ -1374,13 +1374,13 @@
     "card_id": "A1-46",
     "image": "/images/en-US/A1-46.webp",
     "hp": "100",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Moltres",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Sky Attack",
         "damage": "130",
         "effect": "Flip a coin. If tails, this attack does nothing."
@@ -1404,19 +1404,19 @@
     "card_id": "A1-47",
     "image": "/images/en-US/A1-47.webp",
     "hp": "140",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Moltres ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Inferno",
         "damage": "Dance",
         "effect": "Flip 3 coins. Take an amount of [R] Energy from your Energy Zone equal to the number of heads and attach it to your Benched [R] Pokémon in any way you like."
       },
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Heat Blast",
         "damage": "70",
         "effect": "No effect"
@@ -1440,13 +1440,13 @@
     "card_id": "A1-48",
     "image": "/images/en-US/A1-48.webp",
     "hp": "80",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Heatmor",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Combustion",
         "damage": "30",
         "effect": "No effect"
@@ -1470,13 +1470,13 @@
     "card_id": "A1-49",
     "image": "/images/en-US/A1-49.webp",
     "hp": "60",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Salandit",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Scratch",
         "damage": "20",
         "effect": "No effect"
@@ -1500,13 +1500,13 @@
     "card_id": "A1-50",
     "image": "/images/en-US/A1-50.webp",
     "hp": "90",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Salazzle",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless"],
+        "cost": ["fire", "colorless"],
         "name": "Fire Claws",
         "damage": "60",
         "effect": "No effect"
@@ -1530,13 +1530,13 @@
     "card_id": "A1-51",
     "image": "/images/en-US/A1-51.webp",
     "hp": "60",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Sizzlipede",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Gnaw",
         "damage": "10",
         "effect": "No effect"
@@ -1560,13 +1560,13 @@
     "card_id": "A1-52",
     "image": "/images/en-US/A1-52.webp",
     "hp": "130",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Centiskorch",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless", "colorless"],
         "name": "Fire Blast",
         "damage": "130",
         "effect": "Discard a [R] Energy from this Pokémon."
@@ -1590,13 +1590,13 @@
     "card_id": "A1-53",
     "image": "/images/en-US/A1-53.webp",
     "hp": "60",
-    "energy": "Water",
+    "energy": "water",
     "name": "Squirtle",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Water Gun",
         "damage": "20",
         "effect": "No effect"
@@ -1620,13 +1620,13 @@
     "card_id": "A1-54",
     "image": "/images/en-US/A1-54.webp",
     "hp": "80",
-    "energy": "Water",
+    "energy": "water",
     "name": "Wartortle",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Wave Splash",
         "damage": "40",
         "effect": "No effect"
@@ -1650,13 +1650,13 @@
     "card_id": "A1-55",
     "image": "/images/en-US/A1-55.webp",
     "hp": "150",
-    "energy": "Water",
+    "energy": "water",
     "name": "Blastoise",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Colorless"],
+        "cost": ["water", "water", "colorless"],
         "name": "Hydro Pump",
         "damage": "80+",
         "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
@@ -1680,19 +1680,19 @@
     "card_id": "A1-56",
     "image": "/images/en-US/A1-56.webp",
     "hp": "180",
-    "energy": "Water",
+    "energy": "water",
     "name": "Blastoise ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Surf",
         "damage": "40",
         "effect": "No effect"
       },
       {
-        "cost": ["Water", "Water", "Colorless"],
+        "cost": ["water", "water", "colorless"],
         "name": "Hydro Bazooka",
         "damage": "100+",
         "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
@@ -1716,13 +1716,13 @@
     "card_id": "A1-57",
     "image": "/images/en-US/A1-57.webp",
     "hp": "60",
-    "energy": "Water",
+    "energy": "water",
     "name": "Psyduck",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Headache",
         "damage": "10",
         "effect": "Your opponent can't use any Supporter cards from their hand during their next turn."
@@ -1746,13 +1746,13 @@
     "card_id": "A1-58",
     "image": "/images/en-US/A1-58.webp",
     "hp": "90",
-    "energy": "Water",
+    "energy": "water",
     "name": "Golduck",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Water"],
+        "cost": ["water", "water"],
         "name": "Aqua Edge",
         "damage": "70",
         "effect": "No effect"
@@ -1776,13 +1776,13 @@
     "card_id": "A1-59",
     "image": "/images/en-US/A1-59.webp",
     "hp": "60",
-    "energy": "Water",
+    "energy": "water",
     "name": "Poliwag",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Razor Fin",
         "damage": "10",
         "effect": "No effect"
@@ -1806,13 +1806,13 @@
     "card_id": "A1-60",
     "image": "/images/en-US/A1-60.webp",
     "hp": "90",
-    "energy": "Water",
+    "energy": "water",
     "name": "Poliwhirl",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Knuckle Punch",
         "damage": "40",
         "effect": "No effect"
@@ -1836,13 +1836,13 @@
     "card_id": "A1-61",
     "image": "/images/en-US/A1-61.webp",
     "hp": "150",
-    "energy": "Water",
+    "energy": "water",
     "name": "Poliwrath",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Water", "Colorless", "Colorless"],
+        "cost": ["water", "colorless", "colorless"],
         "name": "Mega Punch",
         "damage": "80",
         "effect": "No effect"
@@ -1870,13 +1870,13 @@
     "card_id": "A1-62",
     "image": "/images/en-US/A1-62.webp",
     "hp": "60",
-    "energy": "Water",
+    "energy": "water",
     "name": "Tentacool",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Gentle Slap",
         "damage": "20",
         "effect": "No effect"
@@ -1900,13 +1900,13 @@
     "card_id": "A1-63",
     "image": "/images/en-US/A1-63.webp",
     "hp": "110",
-    "energy": "Water",
+    "energy": "water",
     "name": "Tentacruel",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Poison Tentacles",
         "damage": "50",
         "effect": "Your opponent's Active Pokémon is now Poisoned."
@@ -1930,13 +1930,13 @@
     "card_id": "A1-64",
     "image": "/images/en-US/A1-64.webp",
     "hp": "80",
-    "energy": "Water",
+    "energy": "water",
     "name": "Seel",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Headbutt",
         "damage": "30",
         "effect": "No effect"
@@ -1960,13 +1960,13 @@
     "card_id": "A1-65",
     "image": "/images/en-US/A1-65.webp",
     "hp": "120",
-    "energy": "Water",
+    "energy": "water",
     "name": "Dewgong",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Water"],
+        "cost": ["water", "water", "water"],
         "name": "Surf",
         "damage": "90",
         "effect": "No effect"
@@ -1990,13 +1990,13 @@
     "card_id": "A1-66",
     "image": "/images/en-US/A1-66.webp",
     "hp": "60",
-    "energy": "Water",
+    "energy": "water",
     "name": "Shellder",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Tongue Slap",
         "damage": "20",
         "effect": "No effect"
@@ -2020,13 +2020,13 @@
     "card_id": "A1-67",
     "image": "/images/en-US/A1-67.webp",
     "hp": "120",
-    "energy": "Water",
+    "energy": "water",
     "name": "Cloyster",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Colorless"],
+        "cost": ["water", "water", "colorless"],
         "name": "Surf",
         "damage": "70",
         "effect": "No effect"
@@ -2054,13 +2054,13 @@
     "card_id": "A1-68",
     "image": "/images/en-US/A1-68.webp",
     "hp": "70",
-    "energy": "Water",
+    "energy": "water",
     "name": "Krabby",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Vise Grip",
         "damage": "40",
         "effect": "No effect"
@@ -2084,13 +2084,13 @@
     "card_id": "A1-69",
     "image": "/images/en-US/A1-69.webp",
     "hp": "120",
-    "energy": "Water",
+    "energy": "water",
     "name": "Kingler",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Colorless"],
+        "cost": ["water", "water", "colorless"],
         "name": "KO Crab",
         "damage": "80+",
         "effect": "Flip 2 coins. If both of them are heads, this attack does 80 more damage."
@@ -2114,13 +2114,13 @@
     "card_id": "A1-70",
     "image": "/images/en-US/A1-70.webp",
     "hp": "60",
-    "energy": "Water",
+    "energy": "water",
     "name": "Horsea",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Water Gun",
         "damage": "20",
         "effect": "No effect"
@@ -2144,13 +2144,13 @@
     "card_id": "A1-71",
     "image": "/images/en-US/A1-71.webp",
     "hp": "70",
-    "energy": "Water",
+    "energy": "water",
     "name": "Seadra",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Water"],
+        "cost": ["water", "water", "water"],
         "name": "Water",
         "damage": "Arrow",
         "effect": "This attack does 50 damage to 1 of your opponent's Pokémon."
@@ -2174,13 +2174,13 @@
     "card_id": "A1-72",
     "image": "/images/en-US/A1-72.webp",
     "hp": "60",
-    "energy": "Water",
+    "energy": "water",
     "name": "Goldeen",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Flop",
         "damage": "10",
         "effect": "No effect"
@@ -2204,13 +2204,13 @@
     "card_id": "A1-73",
     "image": "/images/en-US/A1-73.webp",
     "hp": "100",
-    "energy": "Water",
+    "energy": "water",
     "name": "Seaking",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Horn Hazard",
         "damage": "80",
         "effect": "Flip a coin. If tails, this attack does nothing."
@@ -2234,13 +2234,13 @@
     "card_id": "A1-74",
     "image": "/images/en-US/A1-74.webp",
     "hp": "50",
-    "energy": "Water",
+    "energy": "water",
     "name": "Staryu",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Smack",
         "damage": "20",
         "effect": "No effect"
@@ -2264,13 +2264,13 @@
     "card_id": "A1-75",
     "image": "/images/en-US/A1-75.webp",
     "hp": "90",
-    "energy": "Water",
+    "energy": "water",
     "name": "Starmie",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Wave Splash",
         "damage": "40",
         "effect": "No effect"
@@ -2294,13 +2294,13 @@
     "card_id": "A1-76",
     "image": "/images/en-US/A1-76.webp",
     "hp": "130",
-    "energy": "Water",
+    "energy": "water",
     "name": "Starmie ex",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Water"],
+        "cost": ["water", "water"],
         "name": "Hydro Splash",
         "damage": "90",
         "effect": "No effect"
@@ -2324,13 +2324,13 @@
     "card_id": "A1-77",
     "image": "/images/en-US/A1-77.webp",
     "hp": "30",
-    "energy": "Water",
+    "energy": "water",
     "name": "Magikarp",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Splash",
         "damage": "10",
         "effect": "No effect"
@@ -2354,13 +2354,13 @@
     "card_id": "A1-78",
     "image": "/images/en-US/A1-78.webp",
     "hp": "150",
-    "energy": "Water",
+    "energy": "water",
     "name": "Gyarados",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Water", "Water"],
+        "cost": ["water", "water", "water", "water"],
         "name": "Hyper Beam",
         "damage": "100",
         "effect": "Discard a random Energy from your opponent's Active Pokémon."
@@ -2384,13 +2384,13 @@
     "card_id": "A1-79",
     "image": "/images/en-US/A1-79.webp",
     "hp": "100",
-    "energy": "Water",
+    "energy": "water",
     "name": "Lapras",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Hydro Pump",
         "damage": "20+",
         "effect": "If this Pokémon has at least 3 extra [W] Energy attached, this attack does 70 more damage."
@@ -2414,13 +2414,13 @@
     "card_id": "A1-80",
     "image": "/images/en-US/A1-80.webp",
     "hp": "130",
-    "energy": "Water",
+    "energy": "water",
     "name": "Vaporeon",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Colorless", "Colorless"],
+        "cost": ["water", "colorless", "colorless"],
         "name": "Bubble Drain",
         "damage": "60",
         "effect": "Heal 30 damage from this Pokémon."
@@ -2444,13 +2444,13 @@
     "card_id": "A1-81",
     "image": "/images/en-US/A1-81.webp",
     "hp": "90",
-    "energy": "Water",
+    "energy": "water",
     "name": "Omanyte",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Water Gun",
         "damage": "40",
         "effect": "No effect"
@@ -2474,13 +2474,13 @@
     "card_id": "A1-82",
     "image": "/images/en-US/A1-82.webp",
     "hp": "140",
-    "energy": "Water",
+    "energy": "water",
     "name": "Omastar",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Water", "Colorless", "Colorless"],
+        "cost": ["water", "colorless", "colorless"],
         "name": "Ancient Whirlpool",
         "damage": "70",
         "effect": "During your opponent's next turn, the Defending Pokémon can't attack."
@@ -2504,13 +2504,13 @@
     "card_id": "A1-83",
     "image": "/images/en-US/A1-83.webp",
     "hp": "100",
-    "energy": "Water",
+    "energy": "water",
     "name": "Articuno",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Colorless"],
+        "cost": ["water", "water", "colorless"],
         "name": "Ice Beam",
         "damage": "60",
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
@@ -2534,19 +2534,19 @@
     "card_id": "A1-84",
     "image": "/images/en-US/A1-84.webp",
     "hp": "140",
-    "energy": "Water",
+    "energy": "water",
     "name": "Articuno ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Ice Wing",
         "damage": "40",
         "effect": "No effect"
       },
       {
-        "cost": ["Water", "Water", "Water"],
+        "cost": ["water", "water", "water"],
         "name": "Blizzard",
         "damage": "80",
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
@@ -2570,13 +2570,13 @@
     "card_id": "A1-85",
     "image": "/images/en-US/A1-85.webp",
     "hp": "50",
-    "energy": "Water",
+    "energy": "water",
     "name": "Ducklett",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Flap",
         "damage": "30",
         "effect": "No effect"
@@ -2600,13 +2600,13 @@
     "card_id": "A1-86",
     "image": "/images/en-US/A1-86.webp",
     "hp": "90",
-    "energy": "Water",
+    "energy": "water",
     "name": "Swanna",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Wing Attack",
         "damage": "70",
         "effect": "No effect"
@@ -2630,13 +2630,13 @@
     "card_id": "A1-87",
     "image": "/images/en-US/A1-87.webp",
     "hp": "60",
-    "energy": "Water",
+    "energy": "water",
     "name": "Froakie",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Flop",
         "damage": "10",
         "effect": "No effect"
@@ -2660,13 +2660,13 @@
     "card_id": "A1-88",
     "image": "/images/en-US/A1-88.webp",
     "hp": "80",
-    "energy": "Water",
+    "energy": "water",
     "name": "Frogadier",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Water Drip",
         "damage": "30",
         "effect": "No effect"
@@ -2690,13 +2690,13 @@
     "card_id": "A1-89",
     "image": "/images/en-US/A1-89.webp",
     "hp": "120",
-    "energy": "Water",
+    "energy": "water",
     "name": "Greninja",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Mist Slash",
         "damage": "60",
         "effect": "No effect"
@@ -2724,13 +2724,13 @@
     "card_id": "A1-90",
     "image": "/images/en-US/A1-90.webp",
     "hp": "70",
-    "energy": "Water",
+    "energy": "water",
     "name": "Pyukumuku",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Rain Splash",
         "damage": "30",
         "effect": "No effect"
@@ -2754,13 +2754,13 @@
     "card_id": "A1-91",
     "image": "/images/en-US/A1-91.webp",
     "hp": "90",
-    "energy": "Water",
+    "energy": "water",
     "name": "Bruxish",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Second Strike",
         "damage": "10+",
         "effect": "If your opponent's Active Pokémon has damage on it, this attack does 60 more damage."
@@ -2784,13 +2784,13 @@
     "card_id": "A1-92",
     "image": "/images/en-US/A1-92.webp",
     "hp": "50",
-    "energy": "Water",
+    "energy": "water",
     "name": "Snom",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Ram",
         "damage": "10",
         "effect": "No effect"
@@ -2814,13 +2814,13 @@
     "card_id": "A1-93",
     "image": "/images/en-US/A1-93.webp",
     "hp": "90",
-    "energy": "Water",
+    "energy": "water",
     "name": "Frosmoth",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Powder Snow",
         "damage": "40",
         "effect": "Your opponent's Active Pokémon is now Asleep."
@@ -2844,13 +2844,13 @@
     "card_id": "A1-94",
     "image": "/images/en-US/A1-94.webp",
     "hp": "60",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Pikachu",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Gnaw",
         "damage": "20",
         "effect": "No effect"
@@ -2874,13 +2874,13 @@
     "card_id": "A1-95",
     "image": "/images/en-US/A1-95.webp",
     "hp": "100",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Raichu",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning", "Lightning"],
+        "cost": ["lightning", "lightning", "lightning"],
         "name": "Thunderbolt",
         "damage": "140",
         "effect": "Discard all Energy from this Pokémon."
@@ -2904,13 +2904,13 @@
     "card_id": "A1-96",
     "image": "/images/en-US/A1-96.webp",
     "hp": "120",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Pikachu ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Circle Circuit",
         "damage": "30x",
         "effect": "This attack does 30 damage for each of your Benched [L] Pokémon."
@@ -2934,13 +2934,13 @@
     "card_id": "A1-97",
     "image": "/images/en-US/A1-97.webp",
     "hp": "60",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Magnemite",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Lightning Ball",
         "damage": "20",
         "effect": "No effect"
@@ -2964,13 +2964,13 @@
     "card_id": "A1-98",
     "image": "/images/en-US/A1-98.webp",
     "hp": "80",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Magneton",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Lightning", "Colorless", "Colorless", "Colorless"],
+        "cost": ["lightning", "colorless", "colorless", "colorless"],
         "name": "Spinning Attack",
         "damage": "60",
         "effect": "No effect"
@@ -2998,13 +2998,13 @@
     "card_id": "A1-99",
     "image": "/images/en-US/A1-99.webp",
     "hp": "60",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Voltorb",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Tackle",
         "damage": "20",
         "effect": "No effect"
@@ -3028,13 +3028,13 @@
     "card_id": "A1-100",
     "image": "/images/en-US/A1-100.webp",
     "hp": "80",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Electrode",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Electro Ball",
         "damage": "70",
         "effect": "No effect"
@@ -3058,13 +3058,13 @@
     "card_id": "A1-101",
     "image": "/images/en-US/A1-101.webp",
     "hp": "70",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Electabuzz",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Thunder Punch",
         "damage": "40+",
         "effect": "Flip a coin. If heads, this attack does 40 more damage. If tails, this Pokémon also does 20 damage to itself."
@@ -3088,13 +3088,13 @@
     "card_id": "A1-102",
     "image": "/images/en-US/A1-102.webp",
     "hp": "90",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Jolteon",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Lightning", "Colorless"],
+        "cost": ["lightning", "colorless"],
         "name": "Pin Missile",
         "damage": "40x",
         "effect": "Flip 4 coins. This attack does 40 damage for each heads."
@@ -3118,13 +3118,13 @@
     "card_id": "A1-103",
     "image": "/images/en-US/A1-103.webp",
     "hp": "100",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Zapdos",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning", "Colorless"],
+        "cost": ["lightning", "lightning", "colorless"],
         "name": "Raging Thunder",
         "damage": "100",
         "effect": "This attack also does 30 damage to 1 of your Benched Pokémon."
@@ -3148,19 +3148,19 @@
     "card_id": "A1-104",
     "image": "/images/en-US/A1-104.webp",
     "hp": "130",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Zapdos ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Peck",
         "damage": "20",
         "effect": "No effect"
       },
       {
-        "cost": ["Lightning", "Lightning", "Lightning"],
+        "cost": ["lightning", "lightning", "lightning"],
         "name": "Thundering Hurricane",
         "damage": "50x",
         "effect": "Flip 4 coins. This attack does 50 damage for each heads."
@@ -3184,13 +3184,13 @@
     "card_id": "A1-105",
     "image": "/images/en-US/A1-105.webp",
     "hp": "60",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Blitzle",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Zap Kick",
         "damage": "20",
         "effect": "No effect"
@@ -3214,13 +3214,13 @@
     "card_id": "A1-106",
     "image": "/images/en-US/A1-106.webp",
     "hp": "90",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Zebstrika",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Thunder",
         "damage": "Spear",
         "effect": "This attack does 30 damage to 1 of your opponent's Pokémon."
@@ -3244,13 +3244,13 @@
     "card_id": "A1-107",
     "image": "/images/en-US/A1-107.webp",
     "hp": "30",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Tynamo",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Tiny Charge",
         "damage": "30",
         "effect": "No effect"
@@ -3274,13 +3274,13 @@
     "card_id": "A1-108",
     "image": "/images/en-US/A1-108.webp",
     "hp": "80",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Eelektrik",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Head Bolt",
         "damage": "40",
         "effect": "No effect"
@@ -3304,13 +3304,13 @@
     "card_id": "A1-109",
     "image": "/images/en-US/A1-109.webp",
     "hp": "140",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Eelektross",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning", "Colorless"],
+        "cost": ["lightning", "lightning", "colorless"],
         "name": "Thunder Fang",
         "damage": "80",
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
@@ -3334,13 +3334,13 @@
     "card_id": "A1-110",
     "image": "/images/en-US/A1-110.webp",
     "hp": "60",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Helioptile",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Tail Whap",
         "damage": "20",
         "effect": "No effect"
@@ -3364,13 +3364,13 @@
     "card_id": "A1-111",
     "image": "/images/en-US/A1-111.webp",
     "hp": "90",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Heliolisk",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Quick Attack",
         "damage": "40+",
         "effect": "Flip a coin. If heads, this attack does 40 more damage."
@@ -3394,13 +3394,13 @@
     "card_id": "A1-112",
     "image": "/images/en-US/A1-112.webp",
     "hp": "70",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Pincurchin",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Thunder Shock",
         "damage": "30",
         "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
@@ -3424,13 +3424,13 @@
     "card_id": "A1-113",
     "image": "/images/en-US/A1-113.webp",
     "hp": "60",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Clefairy",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic"],
+        "cost": ["psychic"],
         "name": "Slap",
         "damage": "20",
         "effect": "No effect"
@@ -3454,13 +3454,13 @@
     "card_id": "A1-114",
     "image": "/images/en-US/A1-114.webp",
     "hp": "100",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Clefable",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Psychic"],
+        "cost": ["psychic"],
         "name": "Magical Shot",
         "damage": "40",
         "effect": "No effect"
@@ -3484,13 +3484,13 @@
     "card_id": "A1-115",
     "image": "/images/en-US/A1-115.webp",
     "hp": "60",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Abra",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Teleport",
         "damage": "0",
         "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
@@ -3514,13 +3514,13 @@
     "card_id": "A1-116",
     "image": "/images/en-US/A1-116.webp",
     "hp": "80",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Kadabra",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "colorless", "colorless"],
         "name": "Super Psy Bolt",
         "damage": "60",
         "effect": "No effect"
@@ -3544,13 +3544,13 @@
     "card_id": "A1-117",
     "image": "/images/en-US/A1-117.webp",
     "hp": "130",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Alakazam",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "colorless", "colorless"],
         "name": "Psychic",
         "damage": "60+",
         "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon."
@@ -3574,13 +3574,13 @@
     "card_id": "A1-118",
     "image": "/images/en-US/A1-118.webp",
     "hp": "70",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Slowpoke",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Tail Whap",
         "damage": "30",
         "effect": "No effect"
@@ -3604,13 +3604,13 @@
     "card_id": "A1-119",
     "image": "/images/en-US/A1-119.webp",
     "hp": "130",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Slowbro",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless"],
         "name": "Super Psy Bolt",
         "damage": "80",
         "effect": "No effect"
@@ -3634,13 +3634,13 @@
     "card_id": "A1-120",
     "image": "/images/en-US/A1-120.webp",
     "hp": "60",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Gastly",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic"],
+        "cost": ["psychic"],
         "name": "Suffocating Gas",
         "damage": "20",
         "effect": "No effect"
@@ -3664,13 +3664,13 @@
     "card_id": "A1-121",
     "image": "/images/en-US/A1-121.webp",
     "hp": "80",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Haunter",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Psychic"],
+        "cost": ["psychic"],
         "name": "Will-O-Wisp",
         "damage": "30",
         "effect": "No effect"
@@ -3694,13 +3694,13 @@
     "card_id": "A1-122",
     "image": "/images/en-US/A1-122.webp",
     "hp": "130",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Gengar",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Psychic"],
+        "cost": ["psychic"],
         "name": "Bother",
         "damage": "50",
         "effect": "Your opponent can't use any Supporter cards from their hand during their next turn."
@@ -3724,13 +3724,13 @@
     "card_id": "A1-123",
     "image": "/images/en-US/A1-123.webp",
     "hp": "170",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Gengar ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Psychic"],
+        "cost": ["psychic", "psychic", "psychic"],
         "name": "Spooky Shot",
         "damage": "100",
         "effect": "No effect"
@@ -3758,13 +3758,13 @@
     "card_id": "A1-124",
     "image": "/images/en-US/A1-124.webp",
     "hp": "70",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Drowzee",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Mumble",
         "damage": "30",
         "effect": "No effect"
@@ -3788,13 +3788,13 @@
     "card_id": "A1-125",
     "image": "/images/en-US/A1-125.webp",
     "hp": "100",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Hypno",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless"],
         "name": "Psypunch",
         "damage": "50",
         "effect": "No effect"
@@ -3822,13 +3822,13 @@
     "card_id": "A1-126",
     "image": "/images/en-US/A1-126.webp",
     "hp": "80",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Mr. Mime",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Barrier Attack",
         "damage": "30",
         "effect": "During your opponent's next turn, this Pokémon takes -20 damage from attacks."
@@ -3852,13 +3852,13 @@
     "card_id": "A1-127",
     "image": "/images/en-US/A1-127.webp",
     "hp": "80",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Jynx",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Psychic",
         "damage": "30+",
         "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
@@ -3882,13 +3882,13 @@
     "card_id": "A1-128",
     "image": "/images/en-US/A1-128.webp",
     "hp": "120",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Mewtwo",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless", "colorless"],
         "name": "Power Blast",
         "damage": "120",
         "effect": "Discard 2 [P] Energy from this Pokémon."
@@ -3912,19 +3912,19 @@
     "card_id": "A1-129",
     "image": "/images/en-US/A1-129.webp",
     "hp": "150",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Mewtwo ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Psychic Sphere",
         "damage": "50",
         "effect": "No effect"
       },
       {
-        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless", "colorless"],
         "name": "Psydrive",
         "damage": "150",
         "effect": "Discard 2 [P] Energy from this Pokémon."
@@ -3948,13 +3948,13 @@
     "card_id": "A1-130",
     "image": "/images/en-US/A1-130.webp",
     "hp": "60",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Ralts",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Ram",
         "damage": "10",
         "effect": "No effect"
@@ -3978,13 +3978,13 @@
     "card_id": "A1-131",
     "image": "/images/en-US/A1-131.webp",
     "hp": "80",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Kirlia",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Smack",
         "damage": "30",
         "effect": "No effect"
@@ -4008,13 +4008,13 @@
     "card_id": "A1-132",
     "image": "/images/en-US/A1-132.webp",
     "hp": "110",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Gardevoir",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless"],
         "name": "Psyshot",
         "damage": "60",
         "effect": "No effect"
@@ -4042,13 +4042,13 @@
     "card_id": "A1-133",
     "image": "/images/en-US/A1-133.webp",
     "hp": "60",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Woobat",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Gnaw",
         "damage": "10",
         "effect": "No effect"
@@ -4072,13 +4072,13 @@
     "card_id": "A1-134",
     "image": "/images/en-US/A1-134.webp",
     "hp": "90",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Swoobat",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Heart Stamp",
         "damage": "60",
         "effect": "No effect"
@@ -4102,13 +4102,13 @@
     "card_id": "A1-135",
     "image": "/images/en-US/A1-135.webp",
     "hp": "90",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Golett",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "colorless", "colorless"],
         "name": "Mega Punch",
         "damage": "50",
         "effect": "No effect"
@@ -4132,13 +4132,13 @@
     "card_id": "A1-136",
     "image": "/images/en-US/A1-136.webp",
     "hp": "140",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Golurk",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless", "colorless"],
         "name": "Double Lariat",
         "damage": "100x",
         "effect": "Flip 2 coins. This attack does 100 damage for each heads."
@@ -4162,13 +4162,13 @@
     "card_id": "A1-137",
     "image": "/images/en-US/A1-137.webp",
     "hp": "70",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Sandshrew",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Scratch",
         "damage": "10",
         "effect": "No effect"
@@ -4192,13 +4192,13 @@
     "card_id": "A1-138",
     "image": "/images/en-US/A1-138.webp",
     "hp": "100",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Sandslash",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting"],
+        "cost": ["fighting", "fighting"],
         "name": "Slash",
         "damage": "70",
         "effect": "No effect"
@@ -4222,13 +4222,13 @@
     "card_id": "A1-139",
     "image": "/images/en-US/A1-139.webp",
     "hp": "50",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Diglett",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Mud-Slap",
         "damage": "20",
         "effect": "No effect"
@@ -4252,13 +4252,13 @@
     "card_id": "A1-140",
     "image": "/images/en-US/A1-140.webp",
     "hp": "70",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Dugtrio",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Dig",
         "damage": "40",
         "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
@@ -4282,13 +4282,13 @@
     "card_id": "A1-141",
     "image": "/images/en-US/A1-141.webp",
     "hp": "60",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Mankey",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Low Kick",
         "damage": "20",
         "effect": "No effect"
@@ -4312,13 +4312,13 @@
     "card_id": "A1-142",
     "image": "/images/en-US/A1-142.webp",
     "hp": "90",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Primeape",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting"],
+        "cost": ["fighting", "fighting"],
         "name": "Fight Back",
         "damage": "40+",
         "effect": "If this Pokémon has damage on it, this attack does 60 more damage."
@@ -4342,13 +4342,13 @@
     "card_id": "A1-143",
     "image": "/images/en-US/A1-143.webp",
     "hp": "70",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Machop",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Knuckle Punch",
         "damage": "20",
         "effect": "No effect"
@@ -4372,13 +4372,13 @@
     "card_id": "A1-144",
     "image": "/images/en-US/A1-144.webp",
     "hp": "100",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Machoke",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting"],
+        "cost": ["fighting", "fighting"],
         "name": "Strength",
         "damage": "50",
         "effect": "No effect"
@@ -4402,13 +4402,13 @@
     "card_id": "A1-145",
     "image": "/images/en-US/A1-145.webp",
     "hp": "150",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Machamp",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Fighting"],
+        "cost": ["fighting", "fighting", "fighting"],
         "name": "Seismic Toss",
         "damage": "100",
         "effect": "No effect"
@@ -4432,13 +4432,13 @@
     "card_id": "A1-146",
     "image": "/images/en-US/A1-146.webp",
     "hp": "180",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Machamp ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Fighting"],
+        "cost": ["fighting", "fighting", "fighting"],
         "name": "Mega Punch",
         "damage": "120",
         "effect": "No effect"
@@ -4462,13 +4462,13 @@
     "card_id": "A1-147",
     "image": "/images/en-US/A1-147.webp",
     "hp": "70",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Geodude",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Tackle",
         "damage": "20",
         "effect": "No effect"
@@ -4492,13 +4492,13 @@
     "card_id": "A1-148",
     "image": "/images/en-US/A1-148.webp",
     "hp": "100",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Graveler",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fighting", "Colorless", "Colorless"],
+        "cost": ["fighting", "colorless", "colorless"],
         "name": "Rollout",
         "damage": "70",
         "effect": "No effect"
@@ -4522,13 +4522,13 @@
     "card_id": "A1-149",
     "image": "/images/en-US/A1-149.webp",
     "hp": "160",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Golem",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Fighting", "Colorless", "Colorless", "Colorless"],
+        "cost": ["fighting", "colorless", "colorless", "colorless"],
         "name": "Double-Edge",
         "damage": "150",
         "effect": "This Pokémon also does 50 damage to itself."
@@ -4552,13 +4552,13 @@
     "card_id": "A1-150",
     "image": "/images/en-US/A1-150.webp",
     "hp": "110",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Onix",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Fighting"],
+        "cost": ["fighting", "fighting", "fighting"],
         "name": "Land Crush",
         "damage": "70",
         "effect": "No effect"
@@ -4582,13 +4582,13 @@
     "card_id": "A1-151",
     "image": "/images/en-US/A1-151.webp",
     "hp": "60",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Cubone",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Growl",
         "damage": "0",
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do -20 damage."
@@ -4612,13 +4612,13 @@
     "card_id": "A1-152",
     "image": "/images/en-US/A1-152.webp",
     "hp": "100",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Marowak",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Bone Beatdown",
         "damage": "40",
         "effect": "No effect"
@@ -4642,13 +4642,13 @@
     "card_id": "A1-153",
     "image": "/images/en-US/A1-153.webp",
     "hp": "140",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Marowak ex",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting"],
+        "cost": ["fighting", "fighting"],
         "name": "Bonemerang",
         "damage": "80x",
         "effect": "Flip 2 coins. This attack does 80 damage for each heads."
@@ -4672,13 +4672,13 @@
     "card_id": "A1-154",
     "image": "/images/en-US/A1-154.webp",
     "hp": "80",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Hitmonlee",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Stretch",
         "damage": "Kick",
         "effect": "This attack does 30 damage to 1 of your opponent's Benched Pokémon."
@@ -4702,13 +4702,13 @@
     "card_id": "A1-155",
     "image": "/images/en-US/A1-155.webp",
     "hp": "80",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Hitmonchan",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Jab",
         "damage": "30",
         "effect": "No effect"
@@ -4732,13 +4732,13 @@
     "card_id": "A1-156",
     "image": "/images/en-US/A1-156.webp",
     "hp": "80",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Rhyhorn",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Colorless"],
+        "cost": ["fighting", "fighting", "colorless"],
         "name": "Tackle",
         "damage": "60",
         "effect": "No effect"
@@ -4762,13 +4762,13 @@
     "card_id": "A1-157",
     "image": "/images/en-US/A1-157.webp",
     "hp": "120",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Rhydon",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Fighting", "Colorless"],
+        "cost": ["fighting", "fighting", "fighting", "colorless"],
         "name": "Horn Drill",
         "damage": "100",
         "effect": "No effect"
@@ -4792,13 +4792,13 @@
     "card_id": "A1-158",
     "image": "/images/en-US/A1-158.webp",
     "hp": "90",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Kabuto",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Shell Attack",
         "damage": "40",
         "effect": "No effect"
@@ -4822,13 +4822,13 @@
     "card_id": "A1-159",
     "image": "/images/en-US/A1-159.webp",
     "hp": "140",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Kabutops",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Leech Life",
         "damage": "50",
         "effect": "Heal from this Pokémon the same amount of damage you did to your opponent's Active Pokémon."
@@ -4852,13 +4852,13 @@
     "card_id": "A1-160",
     "image": "/images/en-US/A1-160.webp",
     "hp": "60",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Mienfoo",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Pound",
         "damage": "20",
         "effect": "No effect"
@@ -4882,13 +4882,13 @@
     "card_id": "A1-161",
     "image": "/images/en-US/A1-161.webp",
     "hp": "80",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Mienshao",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Spiral Kick",
         "damage": "40",
         "effect": "No effect"
@@ -4912,13 +4912,13 @@
     "card_id": "A1-162",
     "image": "/images/en-US/A1-162.webp",
     "hp": "80",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Clobbopus",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fighting", "Colorless"],
+        "cost": ["fighting", "colorless"],
         "name": "Knuckle Punch",
         "damage": "30",
         "effect": "No effect"
@@ -4942,13 +4942,13 @@
     "card_id": "A1-163",
     "image": "/images/en-US/A1-163.webp",
     "hp": "130",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Grapploct",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Colorless"],
+        "cost": ["fighting", "fighting", "colorless"],
         "name": "Knock Back",
         "damage": "70",
         "effect": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
@@ -4972,13 +4972,13 @@
     "card_id": "A1-164",
     "image": "/images/en-US/A1-164.webp",
     "hp": "60",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Ekans",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Bite",
         "damage": "20",
         "effect": "No effect"
@@ -5002,13 +5002,13 @@
     "card_id": "A1-165",
     "image": "/images/en-US/A1-165.webp",
     "hp": "100",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Arbok",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Darkness", "Colorless"],
+        "cost": ["darkness", "colorless"],
         "name": "Corner",
         "damage": "60",
         "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
@@ -5032,13 +5032,13 @@
     "card_id": "A1-166",
     "image": "/images/en-US/A1-166.webp",
     "hp": "60",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Nidoran♀",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Call for",
         "damage": "Family",
         "effect": "Put 1 random Nidoran♂ from your deck onto your Bench."
@@ -5062,13 +5062,13 @@
     "card_id": "A1-167",
     "image": "/images/en-US/A1-167.webp",
     "hp": "80",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Nidorina",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Bite",
         "damage": "30",
         "effect": "No effect"
@@ -5092,13 +5092,13 @@
     "card_id": "A1-168",
     "image": "/images/en-US/A1-168.webp",
     "hp": "140",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Nidoqueen",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Darkness", "Darkness", "Colorless"],
+        "cost": ["darkness", "darkness", "colorless"],
         "name": "Lovestrike",
         "damage": "80+",
         "effect": "This attack does 50 more damage for each of your Benched Nidoking."
@@ -5122,13 +5122,13 @@
     "card_id": "A1-169",
     "image": "/images/en-US/A1-169.webp",
     "hp": "60",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Nidoran♂",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Peck",
         "damage": "20",
         "effect": "No effect"
@@ -5152,13 +5152,13 @@
     "card_id": "A1-170",
     "image": "/images/en-US/A1-170.webp",
     "hp": "90",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Nidorino",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Darkness", "Colorless"],
+        "cost": ["darkness", "colorless"],
         "name": "Horn Attack",
         "damage": "40",
         "effect": "No effect"
@@ -5182,13 +5182,13 @@
     "card_id": "A1-171",
     "image": "/images/en-US/A1-171.webp",
     "hp": "150",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Nidoking",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Darkness", "Darkness", "Colorless"],
+        "cost": ["darkness", "darkness", "colorless"],
         "name": "Poison Horn",
         "damage": "90",
         "effect": "Your opponent's Active Pokémon is now Poisoned."
@@ -5212,13 +5212,13 @@
     "card_id": "A1-172",
     "image": "/images/en-US/A1-172.webp",
     "hp": "50",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Zubat",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Glide",
         "damage": "10",
         "effect": "No effect"
@@ -5242,13 +5242,13 @@
     "card_id": "A1-173",
     "image": "/images/en-US/A1-173.webp",
     "hp": "70",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Golbat",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Wing Attack",
         "damage": "40",
         "effect": "No effect"
@@ -5272,13 +5272,13 @@
     "card_id": "A1-174",
     "image": "/images/en-US/A1-174.webp",
     "hp": "70",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Grimer",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Poison Gas",
         "damage": "10",
         "effect": "Your opponent's Active Pokémon is now Poisoned."
@@ -5302,13 +5302,13 @@
     "card_id": "A1-175",
     "image": "/images/en-US/A1-175.webp",
     "hp": "130",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Muk",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Darkness", "Darkness", "Colorless"],
+        "cost": ["darkness", "darkness", "colorless"],
         "name": "Venoshock",
         "damage": "70+",
         "effect": "If your opponent's Active Pokémon is Poisoned, this attack does 50 more damage."
@@ -5332,13 +5332,13 @@
     "card_id": "A1-176",
     "image": "/images/en-US/A1-176.webp",
     "hp": "70",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Koffing",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Suffocating Gas",
         "damage": "20",
         "effect": "No effect"
@@ -5362,13 +5362,13 @@
     "card_id": "A1-177",
     "image": "/images/en-US/A1-177.webp",
     "hp": "110",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Weezing",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Tackle",
         "damage": "30",
         "effect": "No effect"
@@ -5396,13 +5396,13 @@
     "card_id": "A1-178",
     "image": "/images/en-US/A1-178.webp",
     "hp": "70",
-    "energy": "Metal",
+    "energy": "metal",
     "name": "Mawile",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Metal"],
+        "cost": ["metal"],
         "name": "Crunch",
         "damage": "20",
         "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
@@ -5426,13 +5426,13 @@
     "card_id": "A1-179",
     "image": "/images/en-US/A1-179.webp",
     "hp": "50",
-    "energy": "Metal",
+    "energy": "metal",
     "name": "Pawniard",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Metal"],
+        "cost": ["metal"],
         "name": "Pierce",
         "damage": "30",
         "effect": "No effect"
@@ -5456,13 +5456,13 @@
     "card_id": "A1-180",
     "image": "/images/en-US/A1-180.webp",
     "hp": "90",
-    "energy": "Metal",
+    "energy": "metal",
     "name": "Bisharp",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Metal", "Metal"],
+        "cost": ["metal", "metal"],
         "name": "Metal Claw",
         "damage": "70",
         "effect": "No effect"
@@ -5486,13 +5486,13 @@
     "card_id": "A1-181",
     "image": "/images/en-US/A1-181.webp",
     "hp": "60",
-    "energy": "Metal",
+    "energy": "metal",
     "name": "Meltan",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Metal"],
+        "cost": ["metal"],
         "name": "Amass",
         "damage": "0",
         "effect": "Take 1 [M] Energy from your Energy Zone and attach it to this Pokémon."
@@ -5516,13 +5516,13 @@
     "card_id": "A1-182",
     "image": "/images/en-US/A1-182.webp",
     "hp": "130",
-    "energy": "Metal",
+    "energy": "metal",
     "name": "Melmetal",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Metal", "Metal", "Metal", "Colorless"],
+        "cost": ["metal", "metal", "metal", "colorless"],
         "name": "Heavy Impact",
         "damage": "120",
         "effect": "No effect"
@@ -5550,13 +5550,13 @@
     "card_id": "A1-183",
     "image": "/images/en-US/A1-183.webp",
     "hp": "70",
-    "energy": "Dragon",
+    "energy": "dragon",
     "name": "Dratini",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water", "Lightning"],
+        "cost": ["water", "lightning"],
         "name": "Ram",
         "damage": "40",
         "effect": "No effect"
@@ -5580,13 +5580,13 @@
     "card_id": "A1-184",
     "image": "/images/en-US/A1-184.webp",
     "hp": "100",
-    "energy": "Dragon",
+    "energy": "dragon",
     "name": "Dragonair",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Lightning", "Colorless"],
+        "cost": ["water", "lightning", "colorless"],
         "name": "Tail Smack",
         "damage": "80",
         "effect": "No effect"
@@ -5610,13 +5610,13 @@
     "card_id": "A1-185",
     "image": "/images/en-US/A1-185.webp",
     "hp": "160",
-    "energy": "Dragon",
+    "energy": "dragon",
     "name": "Dragonite",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Water", "Lightning", "Colorless", "Colorless"],
+        "cost": ["water", "lightning", "colorless", "colorless"],
         "name": "Draco",
         "damage": "Meteor",
         "effect": "1 of your opponent's Pokémon is chosen at random 4 times. For each time a Pokémon was chosen, do 50 damage to it."
@@ -5640,13 +5640,13 @@
     "card_id": "A1-186",
     "image": "/images/en-US/A1-186.webp",
     "hp": "60",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Pidgey",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Gust",
         "damage": "10",
         "effect": "No effect"
@@ -5670,13 +5670,13 @@
     "card_id": "A1-187",
     "image": "/images/en-US/A1-187.webp",
     "hp": "80",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Pidgeotto",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Gust",
         "damage": "30",
         "effect": "No effect"
@@ -5700,13 +5700,13 @@
     "card_id": "A1-188",
     "image": "/images/en-US/A1-188.webp",
     "hp": "130",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Pidgeot",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Wing Attack",
         "damage": "70",
         "effect": "No effect"
@@ -5734,13 +5734,13 @@
     "card_id": "A1-189",
     "image": "/images/en-US/A1-189.webp",
     "hp": "40",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Rattata",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Gnaw",
         "damage": "20",
         "effect": "No effect"
@@ -5764,13 +5764,13 @@
     "card_id": "A1-190",
     "image": "/images/en-US/A1-190.webp",
     "hp": "80",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Raticate",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Bite",
         "damage": "40",
         "effect": "No effect"
@@ -5794,13 +5794,13 @@
     "card_id": "A1-191",
     "image": "/images/en-US/A1-191.webp",
     "hp": "60",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Spearow",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Peck",
         "damage": "20",
         "effect": "No effect"
@@ -5824,13 +5824,13 @@
     "card_id": "A1-192",
     "image": "/images/en-US/A1-192.webp",
     "hp": "100",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Fearow",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Drill Run",
         "damage": "50",
         "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
@@ -5854,13 +5854,13 @@
     "card_id": "A1-193",
     "image": "/images/en-US/A1-193.webp",
     "hp": "60",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Jigglypuff",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Pound",
         "damage": "30",
         "effect": "No effect"
@@ -5884,13 +5884,13 @@
     "card_id": "A1-194",
     "image": "/images/en-US/A1-194.webp",
     "hp": "100",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Wigglytuff",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Hyper Voice",
         "damage": "60",
         "effect": "No effect"
@@ -5914,13 +5914,13 @@
     "card_id": "A1-195",
     "image": "/images/en-US/A1-195.webp",
     "hp": "140",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Wigglytuff ex",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Sleepy Song",
         "damage": "80",
         "effect": "Your opponent's Active Pokémon is now Asleep."
@@ -5944,13 +5944,13 @@
     "card_id": "A1-196",
     "image": "/images/en-US/A1-196.webp",
     "hp": "60",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Meowth",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Pay Day",
         "damage": "10",
         "effect": "Draw 1 card."
@@ -5974,13 +5974,13 @@
     "card_id": "A1-197",
     "image": "/images/en-US/A1-197.webp",
     "hp": "90",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Persian",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Shadow Claw",
         "damage": "40",
         "effect": "Flip a coin. If heads, discard a random card from your opponent's hand."
@@ -6004,13 +6004,13 @@
     "card_id": "A1-198",
     "image": "/images/en-US/A1-198.webp",
     "hp": "60",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Farfetch'd",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Leek Slap",
         "damage": "40",
         "effect": "No effect"
@@ -6034,13 +6034,13 @@
     "card_id": "A1-199",
     "image": "/images/en-US/A1-199.webp",
     "hp": "60",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Doduo",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Peck",
         "damage": "20",
         "effect": "No effect"
@@ -6064,13 +6064,13 @@
     "card_id": "A1-200",
     "image": "/images/en-US/A1-200.webp",
     "hp": "80",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Dodrio",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Drill Peck",
         "damage": "40",
         "effect": "No effect"
@@ -6094,13 +6094,13 @@
     "card_id": "A1-201",
     "image": "/images/en-US/A1-201.webp",
     "hp": "90",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Lickitung",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Continuous Lick",
         "damage": "60x",
         "effect": "Flip a coin until you get tails. This attack does 60 damage for each heads."
@@ -6124,13 +6124,13 @@
     "card_id": "A1-202",
     "image": "/images/en-US/A1-202.webp",
     "hp": "120",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Chansey",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Gentle Slap",
         "damage": "60",
         "effect": "No effect"
@@ -6154,13 +6154,13 @@
     "card_id": "A1-203",
     "image": "/images/en-US/A1-203.webp",
     "hp": "100",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Kangaskhan",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Dizzy Punch",
         "damage": "30x",
         "effect": "Flip 2 coins. This attack does 30 damage for each heads."
@@ -6184,13 +6184,13 @@
     "card_id": "A1-204",
     "image": "/images/en-US/A1-204.webp",
     "hp": "100",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Tauros",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Horn Attack",
         "damage": "50",
         "effect": "No effect"
@@ -6214,13 +6214,13 @@
     "card_id": "A1-205",
     "image": "/images/en-US/A1-205.webp",
     "hp": "70",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Ditto",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Copy",
         "damage": "Anything",
         "effect": "Choose 1 of your opponent's Pokémon's attacks and use it as this attack. If this Pokémon doesn't have the necessary Energy to use that attack, this attack does nothing."
@@ -6244,13 +6244,13 @@
     "card_id": "A1-206",
     "image": "/images/en-US/A1-206.webp",
     "hp": "60",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Eevee",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Tackle",
         "damage": "20",
         "effect": "No effect"
@@ -6274,13 +6274,13 @@
     "card_id": "A1-207",
     "image": "/images/en-US/A1-207.webp",
     "hp": "60",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Eevee",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Tackle",
         "damage": "20",
         "effect": "No effect"
@@ -6304,13 +6304,13 @@
     "card_id": "A1-208",
     "image": "/images/en-US/A1-208.webp",
     "hp": "60",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Eevee",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Tackle",
         "damage": "20",
         "effect": "No effect"
@@ -6334,13 +6334,13 @@
     "card_id": "A1-209",
     "image": "/images/en-US/A1-209.webp",
     "hp": "50",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Porygon",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Sharpen",
         "damage": "20",
         "effect": "No effect"
@@ -6368,13 +6368,13 @@
     "card_id": "A1-210",
     "image": "/images/en-US/A1-210.webp",
     "hp": "100",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Aerodactyl",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Primal",
         "damage": "Wingbeat",
         "effect": "Flip a coin. If heads, your opponent shuffles their Active Pokémon back into their deck."
@@ -6398,13 +6398,13 @@
     "card_id": "A1-211",
     "image": "/images/en-US/A1-211.webp",
     "hp": "150",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Snorlax",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless", "colorless"],
         "name": "Rollout",
         "damage": "70",
         "effect": "No effect"
@@ -6428,13 +6428,13 @@
     "card_id": "A1-212",
     "image": "/images/en-US/A1-212.webp",
     "hp": "60",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Minccino",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Tail Smack",
         "damage": "20",
         "effect": "No effect"
@@ -6458,13 +6458,13 @@
     "card_id": "A1-213",
     "image": "/images/en-US/A1-213.webp",
     "hp": "90",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Cinccino",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Do the Wave",
         "damage": "30x",
         "effect": "This attack does 30 damage for each of your Benched Pokémon."
@@ -6488,13 +6488,13 @@
     "card_id": "A1-214",
     "image": "/images/en-US/A1-214.webp",
     "hp": "70",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Wooloo",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Tackle",
         "damage": "30",
         "effect": "No effect"
@@ -6518,13 +6518,13 @@
     "card_id": "A1-215",
     "image": "/images/en-US/A1-215.webp",
     "hp": "120",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Dubwool",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Rolling Tackle",
         "damage": "80",
         "effect": "No effect"
@@ -6548,7 +6548,7 @@
     "card_id": "A1-216",
     "image": "/images/en-US/A1-216.webp",
     "hp": "40",
-    "energy": "40 HP",
+    "energy": "trainer",
     "name": "Helix Fossil",
     "card_type": "trainer",
     "evolution_type": "item",
@@ -6575,7 +6575,7 @@
     "card_id": "A1-217",
     "image": "/images/en-US/A1-217.webp",
     "hp": "40",
-    "energy": "40 HP",
+    "energy": "trainer",
     "name": "Dome Fossil",
     "card_type": "trainer",
     "evolution_type": "item",
@@ -6602,7 +6602,7 @@
     "card_id": "A1-218",
     "image": "/images/en-US/A1-218.webp",
     "hp": "40",
-    "energy": "40 HP",
+    "energy": "trainer",
     "name": "Old Amber",
     "card_type": "trainer",
     "evolution_type": "item",
@@ -6629,7 +6629,7 @@
     "card_id": "A1-219",
     "image": "/images/en-US/A1-219.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Erika",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -6656,7 +6656,7 @@
     "card_id": "A1-220",
     "image": "/images/en-US/A1-220.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Misty",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -6683,7 +6683,7 @@
     "card_id": "A1-221",
     "image": "/images/en-US/A1-221.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Blaine",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -6710,7 +6710,7 @@
     "card_id": "A1-222",
     "image": "/images/en-US/A1-222.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Koga",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -6737,7 +6737,7 @@
     "card_id": "A1-223",
     "image": "/images/en-US/A1-223.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Giovanni",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -6764,7 +6764,7 @@
     "card_id": "A1-224",
     "image": "/images/en-US/A1-224.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Brock",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -6791,7 +6791,7 @@
     "card_id": "A1-225",
     "image": "/images/en-US/A1-225.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Sabrina",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -6818,7 +6818,7 @@
     "card_id": "A1-226",
     "image": "/images/en-US/A1-226.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Lt. Surge",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -6845,13 +6845,13 @@
     "card_id": "A1-227",
     "image": "/images/en-US/A1-227.webp",
     "hp": "70",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Bulbasaur",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Vine Whip",
         "damage": "40",
         "effect": "No effect"
@@ -6875,13 +6875,13 @@
     "card_id": "A1-228",
     "image": "/images/en-US/A1-228.webp",
     "hp": "80",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Gloom",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless"],
+        "cost": ["grass", "colorless"],
         "name": "Drool",
         "damage": "40",
         "effect": "No effect"
@@ -6905,13 +6905,13 @@
     "card_id": "A1-229",
     "image": "/images/en-US/A1-229.webp",
     "hp": "90",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Pinsir",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Grass", "Grass"],
+        "cost": ["grass", "grass"],
         "name": "Double Horn",
         "damage": "50x",
         "effect": "Flip 2 coins. This attack does 50 damage for each heads."
@@ -6935,13 +6935,13 @@
     "card_id": "A1-230",
     "image": "/images/en-US/A1-230.webp",
     "hp": "60",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Charmander",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Ember",
         "damage": "30",
         "effect": "Discard a [R] Energy from this Pokémon."
@@ -6965,13 +6965,13 @@
     "card_id": "A1-231",
     "image": "/images/en-US/A1-231.webp",
     "hp": "100",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Rapidash",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Fire Mane",
         "damage": "40",
         "effect": "No effect"
@@ -6995,13 +6995,13 @@
     "card_id": "A1-232",
     "image": "/images/en-US/A1-232.webp",
     "hp": "60",
-    "energy": "Water",
+    "energy": "water",
     "name": "Squirtle",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Water Gun",
         "damage": "20",
         "effect": "No effect"
@@ -7025,13 +7025,13 @@
     "card_id": "A1-233",
     "image": "/images/en-US/A1-233.webp",
     "hp": "150",
-    "energy": "Water",
+    "energy": "water",
     "name": "Gyarados",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Water", "Water", "Water"],
+        "cost": ["water", "water", "water", "water"],
         "name": "Hyper Beam",
         "damage": "100",
         "effect": "Discard a random Energy from your opponent's Active Pokémon."
@@ -7055,13 +7055,13 @@
     "card_id": "A1-234",
     "image": "/images/en-US/A1-234.webp",
     "hp": "100",
-    "energy": "Water",
+    "energy": "water",
     "name": "Lapras",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water"],
+        "cost": ["water"],
         "name": "Hydro Pump",
         "damage": "20+",
         "effect": "If this Pokémon has at least 3 extra [W] Energy attached, this attack does 70 more damage."
@@ -7085,13 +7085,13 @@
     "card_id": "A1-235",
     "image": "/images/en-US/A1-235.webp",
     "hp": "80",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Electrode",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Electro Ball",
         "damage": "70",
         "effect": "No effect"
@@ -7115,13 +7115,13 @@
     "card_id": "A1-236",
     "image": "/images/en-US/A1-236.webp",
     "hp": "130",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Alakazam",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "colorless", "colorless"],
         "name": "Psychic",
         "damage": "60+",
         "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon."
@@ -7145,13 +7145,13 @@
     "card_id": "A1-237",
     "image": "/images/en-US/A1-237.webp",
     "hp": "70",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Slowpoke",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Tail Whap",
         "damage": "30",
         "effect": "No effect"
@@ -7175,13 +7175,13 @@
     "card_id": "A1-238",
     "image": "/images/en-US/A1-238.webp",
     "hp": "50",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Diglett",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fighting"],
+        "cost": ["fighting"],
         "name": "Mud-Slap",
         "damage": "20",
         "effect": "No effect"
@@ -7205,13 +7205,13 @@
     "card_id": "A1-239",
     "image": "/images/en-US/A1-239.webp",
     "hp": "60",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Cubone",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Growl",
         "damage": "0",
         "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do -20 damage."
@@ -7235,13 +7235,13 @@
     "card_id": "A1-240",
     "image": "/images/en-US/A1-240.webp",
     "hp": "140",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Nidoqueen",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Darkness", "Darkness", "Colorless"],
+        "cost": ["darkness", "darkness", "colorless"],
         "name": "Lovestrike",
         "damage": "80+",
         "effect": "This attack does 50 more damage for each of your Benched Nidoking."
@@ -7265,13 +7265,13 @@
     "card_id": "A1-241",
     "image": "/images/en-US/A1-241.webp",
     "hp": "150",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Nidoking",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Darkness", "Darkness", "Colorless"],
+        "cost": ["darkness", "darkness", "colorless"],
         "name": "Poison Horn",
         "damage": "90",
         "effect": "Your opponent's Active Pokémon is now Poisoned."
@@ -7295,13 +7295,13 @@
     "card_id": "A1-242",
     "image": "/images/en-US/A1-242.webp",
     "hp": "70",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Golbat",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Wing Attack",
         "damage": "40",
         "effect": "No effect"
@@ -7325,13 +7325,13 @@
     "card_id": "A1-243",
     "image": "/images/en-US/A1-243.webp",
     "hp": "110",
-    "energy": "Darkness",
+    "energy": "darkness",
     "name": "Weezing",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Darkness"],
+        "cost": ["darkness"],
         "name": "Tackle",
         "damage": "30",
         "effect": "No effect"
@@ -7359,13 +7359,13 @@
     "card_id": "A1-244",
     "image": "/images/en-US/A1-244.webp",
     "hp": "160",
-    "energy": "Dragon",
+    "energy": "dragon",
     "name": "Dragonite",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Water", "Lightning", "Colorless", "Colorless"],
+        "cost": ["water", "lightning", "colorless", "colorless"],
         "name": "Draco",
         "damage": "Meteor",
         "effect": "1 of your opponent's Pokémon is chosen at random 4 times. For each time a Pokémon was chosen, do 50 damage to it."
@@ -7389,13 +7389,13 @@
     "card_id": "A1-245",
     "image": "/images/en-US/A1-245.webp",
     "hp": "130",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Pidgeot",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless"],
+        "cost": ["colorless", "colorless"],
         "name": "Wing Attack",
         "damage": "70",
         "effect": "No effect"
@@ -7423,13 +7423,13 @@
     "card_id": "A1-246",
     "image": "/images/en-US/A1-246.webp",
     "hp": "60",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Meowth",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Pay Day",
         "damage": "10",
         "effect": "Draw 1 card."
@@ -7453,13 +7453,13 @@
     "card_id": "A1-247",
     "image": "/images/en-US/A1-247.webp",
     "hp": "70",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Ditto",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Copy",
         "damage": "Anything",
         "effect": "Choose 1 of your opponent's Pokémon's attacks and use it as this attack. If this Pokémon doesn't have the necessary Energy to use that attack, this attack does nothing."
@@ -7483,13 +7483,13 @@
     "card_id": "A1-248",
     "image": "/images/en-US/A1-248.webp",
     "hp": "60",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Eevee",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Tackle",
         "damage": "20",
         "effect": "No effect"
@@ -7513,13 +7513,13 @@
     "card_id": "A1-249",
     "image": "/images/en-US/A1-249.webp",
     "hp": "50",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Porygon",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless"],
+        "cost": ["colorless"],
         "name": "Sharpen",
         "damage": "20",
         "effect": "No effect"
@@ -7547,13 +7547,13 @@
     "card_id": "A1-250",
     "image": "/images/en-US/A1-250.webp",
     "hp": "150",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Snorlax",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless", "colorless"],
         "name": "Rollout",
         "damage": "70",
         "effect": "No effect"
@@ -7577,19 +7577,19 @@
     "card_id": "A1-251",
     "image": "/images/en-US/A1-251.webp",
     "hp": "190",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Venusaur ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "colorless", "colorless"],
         "name": "Razor Leaf",
         "damage": "60",
         "effect": "No effect"
       },
       {
-        "cost": ["Grass", "Grass", "Colorless", "Colorless"],
+        "cost": ["grass", "grass", "colorless", "colorless"],
         "name": "Giant Bloom",
         "damage": "100",
         "effect": "Heal 30 damage from this Pokémon."
@@ -7613,13 +7613,13 @@
     "card_id": "A1-252",
     "image": "/images/en-US/A1-252.webp",
     "hp": "160",
-    "energy": "Grass",
+    "energy": "grass",
     "name": "Exeggutor ex",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Grass"],
+        "cost": ["grass"],
         "name": "Tropical Swing",
         "damage": "40+",
         "effect": "Flip a coin. If heads, this attack does 40 more damage."
@@ -7643,19 +7643,19 @@
     "card_id": "A1-253",
     "image": "/images/en-US/A1-253.webp",
     "hp": "180",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Charizard ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Slash",
         "damage": "60",
         "effect": "No effect"
       },
       {
-        "cost": ["Fire", "Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "fire", "colorless", "colorless"],
         "name": "Crimson Storm",
         "damage": "200",
         "effect": "Discard 2 [R] Energy from this Pokémon."
@@ -7679,13 +7679,13 @@
     "card_id": "A1-254",
     "image": "/images/en-US/A1-254.webp",
     "hp": "150",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Arcanine ex",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fire", "Fire", "Colorless"],
+        "cost": ["fire", "fire", "colorless"],
         "name": "Inferno Onrush",
         "damage": "120",
         "effect": "This Pokémon also does 20 damage to itself."
@@ -7709,19 +7709,19 @@
     "card_id": "A1-255",
     "image": "/images/en-US/A1-255.webp",
     "hp": "140",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Moltres ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Inferno",
         "damage": "Dance",
         "effect": "Flip 3 coins. Take an amount of [R] Energy from your Energy Zone equal to the number of heads and attach it to your Benched [R] Pokémon in any way you like."
       },
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Heat Blast",
         "damage": "70",
         "effect": "No effect"
@@ -7745,19 +7745,19 @@
     "card_id": "A1-256",
     "image": "/images/en-US/A1-256.webp",
     "hp": "180",
-    "energy": "Water",
+    "energy": "water",
     "name": "Blastoise ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Surf",
         "damage": "40",
         "effect": "No effect"
       },
       {
-        "cost": ["Water", "Water", "Colorless"],
+        "cost": ["water", "water", "colorless"],
         "name": "Hydro Bazooka",
         "damage": "100+",
         "effect": "If this Pokémon has at least 2 extra [W] Energy attached, this attack does 60 more damage."
@@ -7781,13 +7781,13 @@
     "card_id": "A1-257",
     "image": "/images/en-US/A1-257.webp",
     "hp": "130",
-    "energy": "Water",
+    "energy": "water",
     "name": "Starmie ex",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Water", "Water"],
+        "cost": ["water", "water"],
         "name": "Hydro Splash",
         "damage": "90",
         "effect": "No effect"
@@ -7811,19 +7811,19 @@
     "card_id": "A1-258",
     "image": "/images/en-US/A1-258.webp",
     "hp": "140",
-    "energy": "Water",
+    "energy": "water",
     "name": "Articuno ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Ice Wing",
         "damage": "40",
         "effect": "No effect"
       },
       {
-        "cost": ["Water", "Water", "Water"],
+        "cost": ["water", "water", "water"],
         "name": "Blizzard",
         "damage": "80",
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
@@ -7847,13 +7847,13 @@
     "card_id": "A1-259",
     "image": "/images/en-US/A1-259.webp",
     "hp": "120",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Pikachu ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Circle Circuit",
         "damage": "30x",
         "effect": "This attack does 30 damage for each of your Benched [L] Pokémon."
@@ -7877,19 +7877,19 @@
     "card_id": "A1-260",
     "image": "/images/en-US/A1-260.webp",
     "hp": "130",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Zapdos ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Peck",
         "damage": "20",
         "effect": "No effect"
       },
       {
-        "cost": ["Lightning", "Lightning", "Lightning"],
+        "cost": ["lightning", "lightning", "lightning"],
         "name": "Thundering Hurricane",
         "damage": "50x",
         "effect": "Flip 4 coins. This attack does 50 damage for each heads."
@@ -7913,13 +7913,13 @@
     "card_id": "A1-261",
     "image": "/images/en-US/A1-261.webp",
     "hp": "170",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Gengar ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Psychic"],
+        "cost": ["psychic", "psychic", "psychic"],
         "name": "Spooky Shot",
         "damage": "100",
         "effect": "No effect"
@@ -7947,19 +7947,19 @@
     "card_id": "A1-262",
     "image": "/images/en-US/A1-262.webp",
     "hp": "150",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Mewtwo ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Psychic Sphere",
         "damage": "50",
         "effect": "No effect"
       },
       {
-        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless", "colorless"],
         "name": "Psydrive",
         "damage": "150",
         "effect": "Discard 2 [P] Energy from this Pokémon."
@@ -7983,13 +7983,13 @@
     "card_id": "A1-263",
     "image": "/images/en-US/A1-263.webp",
     "hp": "180",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Machamp ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Fighting"],
+        "cost": ["fighting", "fighting", "fighting"],
         "name": "Mega Punch",
         "damage": "120",
         "effect": "No effect"
@@ -8013,13 +8013,13 @@
     "card_id": "A1-264",
     "image": "/images/en-US/A1-264.webp",
     "hp": "140",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Marowak ex",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting"],
+        "cost": ["fighting", "fighting"],
         "name": "Bonemerang",
         "damage": "80x",
         "effect": "Flip 2 coins. This attack does 80 damage for each heads."
@@ -8043,13 +8043,13 @@
     "card_id": "A1-265",
     "image": "/images/en-US/A1-265.webp",
     "hp": "140",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Wigglytuff ex",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Sleepy Song",
         "damage": "80",
         "effect": "Your opponent's Active Pokémon is now Asleep."
@@ -8073,7 +8073,7 @@
     "card_id": "A1-266",
     "image": "/images/en-US/A1-266.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Erika",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -8100,7 +8100,7 @@
     "card_id": "A1-267",
     "image": "/images/en-US/A1-267.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Misty",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -8127,7 +8127,7 @@
     "card_id": "A1-268",
     "image": "/images/en-US/A1-268.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Blaine",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -8154,7 +8154,7 @@
     "card_id": "A1-269",
     "image": "/images/en-US/A1-269.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Koga",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -8181,7 +8181,7 @@
     "card_id": "A1-270",
     "image": "/images/en-US/A1-270.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Giovanni",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -8208,7 +8208,7 @@
     "card_id": "A1-271",
     "image": "/images/en-US/A1-271.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Brock",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -8235,7 +8235,7 @@
     "card_id": "A1-272",
     "image": "/images/en-US/A1-272.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Sabrina",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -8262,7 +8262,7 @@
     "card_id": "A1-273",
     "image": "/images/en-US/A1-273.webp",
     "hp": "Unknown",
-    "energy": "N/A",
+    "energy": "trainer",
     "name": "Lt. Surge",
     "card_type": "trainer",
     "evolution_type": "supporter",
@@ -8289,19 +8289,19 @@
     "card_id": "A1-274",
     "image": "/images/en-US/A1-274.webp",
     "hp": "140",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Moltres ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Fire"],
+        "cost": ["fire"],
         "name": "Inferno",
         "damage": "Dance",
         "effect": "Flip 3 coins. Take an amount of [R] Energy from your Energy Zone equal to the number of heads and attach it to your Benched [R] Pokémon in any way you like."
       },
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Heat Blast",
         "damage": "70",
         "effect": "No effect"
@@ -8325,19 +8325,19 @@
     "card_id": "A1-275",
     "image": "/images/en-US/A1-275.webp",
     "hp": "140",
-    "energy": "Water",
+    "energy": "water",
     "name": "Articuno ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Water", "Colorless"],
+        "cost": ["water", "colorless"],
         "name": "Ice Wing",
         "damage": "40",
         "effect": "No effect"
       },
       {
-        "cost": ["Water", "Water", "Water"],
+        "cost": ["water", "water", "water"],
         "name": "Blizzard",
         "damage": "80",
         "effect": "This attack also does 10 damage to each of your opponent's Benched Pokémon."
@@ -8361,19 +8361,19 @@
     "card_id": "A1-276",
     "image": "/images/en-US/A1-276.webp",
     "hp": "130",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Zapdos ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning"],
+        "cost": ["lightning"],
         "name": "Peck",
         "damage": "20",
         "effect": "No effect"
       },
       {
-        "cost": ["Lightning", "Lightning", "Lightning"],
+        "cost": ["lightning", "lightning", "lightning"],
         "name": "Thundering Hurricane",
         "damage": "50x",
         "effect": "Flip 4 coins. This attack does 50 damage for each heads."
@@ -8397,13 +8397,13 @@
     "card_id": "A1-277",
     "image": "/images/en-US/A1-277.webp",
     "hp": "170",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Gengar ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Psychic", "Psychic", "Psychic"],
+        "cost": ["psychic", "psychic", "psychic"],
         "name": "Spooky Shot",
         "damage": "100",
         "effect": "No effect"
@@ -8431,13 +8431,13 @@
     "card_id": "A1-278",
     "image": "/images/en-US/A1-278.webp",
     "hp": "180",
-    "energy": "Fighting",
+    "energy": "fighting",
     "name": "Machamp ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Fighting", "Fighting", "Fighting"],
+        "cost": ["fighting", "fighting", "fighting"],
         "name": "Mega Punch",
         "damage": "120",
         "effect": "No effect"
@@ -8461,13 +8461,13 @@
     "card_id": "A1-279",
     "image": "/images/en-US/A1-279.webp",
     "hp": "140",
-    "energy": "Colorless",
+    "energy": "colorless",
     "name": "Wigglytuff ex",
     "card_type": "pokémon",
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["Colorless", "Colorless", "Colorless"],
+        "cost": ["colorless", "colorless", "colorless"],
         "name": "Sleepy Song",
         "damage": "80",
         "effect": "Your opponent's Active Pokémon is now Asleep."
@@ -8491,19 +8491,19 @@
     "card_id": "A1-280",
     "image": "/images/en-US/A1-280.webp",
     "hp": "180",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Charizard ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Slash",
         "damage": "60",
         "effect": "No effect"
       },
       {
-        "cost": ["Fire", "Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "fire", "colorless", "colorless"],
         "name": "Crimson Storm",
         "damage": "200",
         "effect": "Discard 2 [R] Energy from this Pokémon."
@@ -8527,13 +8527,13 @@
     "card_id": "A1-281",
     "image": "/images/en-US/A1-281.webp",
     "hp": "120",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Pikachu ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Circle Circuit",
         "damage": "30x",
         "effect": "This attack does 30 damage for each of your Benched [L] Pokémon."
@@ -8557,19 +8557,19 @@
     "card_id": "A1-282",
     "image": "/images/en-US/A1-282.webp",
     "hp": "150",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Mewtwo ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Psychic Sphere",
         "damage": "50",
         "effect": "No effect"
       },
       {
-        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless", "colorless"],
         "name": "Psydrive",
         "damage": "150",
         "effect": "Discard 2 [P] Energy from this Pokémon."
@@ -8593,13 +8593,13 @@
     "card_id": "A1-283",
     "image": "/images/en-US/A1-283.webp",
     "hp": "60",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Mew",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic"],
+        "cost": ["psychic"],
         "name": "Psy Report",
         "damage": "20",
         "effect": "Your opponent reveals their hand."
@@ -8623,19 +8623,19 @@
     "card_id": "A1-284",
     "image": "/images/en-US/A1-284.webp",
     "hp": "180",
-    "energy": "Fire",
+    "energy": "fire",
     "name": "Charizard ex",
     "card_type": "pokémon",
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Slash",
         "damage": "60",
         "effect": "No effect"
       },
       {
-        "cost": ["Fire", "Fire", "Colorless", "Colorless"],
+        "cost": ["fire", "fire", "colorless", "colorless"],
         "name": "Crimson Storm",
         "damage": "200",
         "effect": "Discard 2 [R] Energy from this Pokémon."
@@ -8659,13 +8659,13 @@
     "card_id": "A1-285",
     "image": "/images/en-US/A1-285.webp",
     "hp": "120",
-    "energy": "Lightning",
+    "energy": "lightning",
     "name": "Pikachu ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Lightning", "Lightning"],
+        "cost": ["lightning", "lightning"],
         "name": "Circle Circuit",
         "damage": "30x",
         "effect": "This attack does 30 damage for each of your Benched [L] Pokémon."
@@ -8689,19 +8689,19 @@
     "card_id": "A1-286",
     "image": "/images/en-US/A1-286.webp",
     "hp": "150",
-    "energy": "Psychic",
+    "energy": "psychic",
     "name": "Mewtwo ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["Psychic", "Colorless"],
+        "cost": ["psychic", "colorless"],
         "name": "Psychic Sphere",
         "damage": "50",
         "effect": "No effect"
       },
       {
-        "cost": ["Psychic", "Psychic", "Colorless", "Colorless"],
+        "cost": ["psychic", "psychic", "colorless", "colorless"],
         "name": "Psydrive",
         "damage": "150",
         "effect": "Discard 2 [P] Energy from this Pokémon."

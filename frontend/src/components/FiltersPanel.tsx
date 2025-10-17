@@ -19,7 +19,7 @@ import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 const ownedOptions = ['all', 'missing', 'owned'] as const
 const expansionOptions = ['all', ...expansionIds] as const
 const sortByOptions = ['default', 'recent', 'expansion-newest'] as const
-const cardTypeOptions = [...cardTypes.filter((x) => x !== '')] as const
+const cardTypeOptions = cardTypes
 type OwnedOption = (typeof ownedOptions)[number]
 type ExpansionOption = (typeof expansionOptions)[number]
 type SortByOption = (typeof sortByOptions)[number]
@@ -153,7 +153,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
       if (c.card_type.toLowerCase() === 'trainer') {
         return filters.cardType.includes('trainer')
       }
-      return c.energy !== '' && filters.cardType.includes(c.energy.toLowerCase() as CardTypeOption)
+      return filters.cardType.includes(c.energy)
     })
 
     if (filters.search) {

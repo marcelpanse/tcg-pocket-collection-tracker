@@ -5,7 +5,7 @@ import type { CheerioAPI } from 'cheerio'
 import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
 import { expansions as allExpansions } from '../frontend/src/lib/CardsDB'
-import type { Card, ExpansionId, Rarity } from '../frontend/src/types'
+import { type Card, type CardType, cardTypes, type ExpansionId, type Rarity } from '../frontend/src/types'
 import { encode } from './encoder'
 
 const BASE_URL = 'https://pocket.limitlesstcg.com'
@@ -37,22 +37,22 @@ const packs = [
   'All cards',
 ]
 
-const typeMapping = {
-  G: 'Grass',
-  R: 'Fire',
-  W: 'Water',
-  L: 'Lightning',
-  P: 'Psychic',
-  F: 'Fighting',
-  D: 'Darkness',
-  M: 'Metal',
-  Y: 'Fairy',
-  C: 'Colorless',
+const typeMapping: Record<string, CardType> = {
+  G: 'grass',
+  R: 'fire',
+  W: 'water',
+  L: 'lightning',
+  P: 'psychic',
+  F: 'fighting',
+  D: 'darkness',
+  M: 'metal',
+  // Y: 'fairy',
+  C: 'colorless',
 }
 
 const fullArtRarities = ['☆', '☆☆', '☆☆☆', 'Crown Rare', 'P']
 
-const rarityOverrides = {
+const rarityOverrides: Partial<Record<ExpansionId, { rarity: Rarity; start: number; end: number }[]>> = {
   A2b: [
     { rarity: '✵', start: 97, end: 106 },
     { rarity: '✵✵', start: 107, end: 110 },
@@ -78,7 +78,7 @@ const rarityOverrides = {
     { rarity: '✵✵', start: 101, end: 104 },
   ],
   A4b: [{ rarity: '✵✵', start: 377, end: 378 }],
-} // as Record<ExpansionId, { rarity: Rarity; start: number; end: number }[]>
+}
 
 /* Helper Functions */
 
@@ -87,16 +87,11 @@ async function downloadImage(imageUrl: string, dest: string) {
 
   if (!response.ok) {
     throw new Error(`Failed to fetch image: ${response.statusText}`)
-  }
-
-  const stream = response.body
-  if (!stream) {
+  } else if (!response.body) {
     throw new Error(`Failed to download image: ${imageUrl}`)
   }
 
-  const writer = fs.createWriteStream(dest)
-
-  await pipeline(stream, writer)
+  await pipeline(response.body, fs.createWriteStream(dest))
 }
 
 async function fetchHTML(url: string) {
@@ -111,8 +106,7 @@ function mapAttackCost($: CheerioAPI, costElements) {
   costElements.each((_i, element) => {
     const costSymbol = $(element).text().trim()
 
-    if (costSymbol.length > 1) {
-      // Iterate over each letter in costSymbol
+    if (costSymbol !== '0') {
       for (const letter of costSymbol) {
         const costType = typeMapping[letter]
         if (!costType) {
@@ -120,12 +114,6 @@ function mapAttackCost($: CheerioAPI, costElements) {
         }
         costList.push(costType)
       }
-    } else {
-      const costType = typeMapping[costSymbol] || 'Unknown'
-      if (costType === 'Unknown') {
-        console.warn(`Warning: unrecognized symbol '${costSymbol}'.`)
-      }
-      costList.push(costType)
     }
   })
 
@@ -177,7 +165,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
 
   const imageUrl = $('img.card').attr('src')
   if (!imageUrl) {
-    throw new Error(`Failed to scrap image: ${cardUrl}`)
+    throw new Error(`Could not find card image: ${cardUrl}`)
   }
   const imageName = card_id + path.extname(imageUrl)
   const imageDest = path.join(imagesDir, imageName)
@@ -192,14 +180,21 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
   const title = $('p.card-text-title').text().trim()
   const titleParts = title.split(' - ')
 
+  // Assign the name from the first part
+  const name = titleParts[0].trim()
+
   // Extract the last part for HP and remove non-digit characters
   const hp = titleParts.length > 1 ? titleParts[titleParts.length - 1].replace(/\D/g, '') : 'Unknown'
 
   // Assign the energy type from the second part if it exists
-  const energy = titleParts.length > 1 ? titleParts[1].trim() : 'N/A'
-
-  // Assign the name from the first part
-  const name = titleParts[0].trim()
+  let energyString = titleParts.length > 1 ? titleParts[1].trim().toLowerCase() : 'trainer'
+  if (energyString === '40 hp' && (name.includes('Fossil') || name === 'Old Amber')) {
+    energyString = 'trainer'
+  }
+  if (!energyString || !(cardTypes as readonly string[]).includes(energyString)) {
+    throw new Error(`Failed to find energy: ${energyString}, ${cardUrl}`)
+  }
+  const energy = energyString as CardType
 
   const typeAndEvolution = $('p.card-text-type').text().trim().split('-')
   const card_type = typeAndEvolution[0].toLowerCase().trim()
@@ -255,7 +250,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
   const ex = name.includes(' ex')
 
   // Check if card is a baby pokemon (Not currently specified exactly on Limitless TCG page)
-  const baby = weakness === 'none' && hp === '30' && energy !== 'Dragon'
+  const baby = weakness === 'none' && hp === '30' && energy !== 'dragon'
 
   const { setDetails: set_details, pack } = extractSetAndPackInfo($)
 
@@ -281,6 +276,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
 
       // this checks for a card with the same rarity (up to EX card rarity) that is before the current card in the list. If so, that's the linked card
       // the alternate cards are only available up to EX card rarity (at least for now). And since limitless doesn't properly set shiny cards, we have to check it like this.
+      // Be aware that for higher rarities this would not work, as there are different fullart versions of the same card with the same rarity, eg. A1a-82 and A2a-91.
       if (rarity.includes('◊') && alternate_card_rarity === rarity && !foundMyself && !linked) {
         baseExpansion = alternate_card_id ? urlToCardId(alternate_card_id).expansion : expansion
         baseCardNr = alternate_card_id ? urlToCardId(alternate_card_id).cardNr : inPackId
