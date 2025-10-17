@@ -3,7 +3,7 @@
     "expansion": "A1",
     "card_id": "A1-1",
     "image": "/images/en-US/A1-1.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "grass",
     "name": "Bulbasaur",
     "card_type": "pokémon",
@@ -17,7 +17,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -26,14 +26,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-1", "A1-227", "P-A-23", "A3-210", "A4b-1", "A4b-2"],
     "artist": "Narumi Sato",
-    "internal_id": 65600,
-    "linked": false
+    "internal_id": 65600
   },
   {
     "expansion": "A1",
     "card_id": "A1-2",
     "image": "/images/en-US/A1-2.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "grass",
     "name": "Ivysaur",
     "card_type": "pokémon",
@@ -47,7 +46,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -56,14 +55,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-2", "A3-211", "A4b-3", "A4b-4"],
     "artist": "Kurata So",
-    "internal_id": 65665,
-    "linked": false
+    "internal_id": 65665
   },
   {
     "expansion": "A1",
     "card_id": "A1-3",
     "image": "/images/en-US/A1-3.webp",
-    "hp": "160",
+    "hp": 160,
     "energy": "grass",
     "name": "Venusaur",
     "card_type": "pokémon",
@@ -77,7 +75,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -86,14 +84,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-3", "P-A-18", "A3-212"],
     "artist": "Ryota Murayama",
-    "internal_id": 65730,
-    "linked": false
+    "internal_id": 65730
   },
   {
     "expansion": "A1",
     "card_id": "A1-4",
     "image": "/images/en-US/A1-4.webp",
-    "hp": "190",
+    "hp": 190,
     "energy": "grass",
     "name": "Venusaur ex",
     "card_type": "pokémon",
@@ -113,7 +110,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -122,14 +119,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-4", "A1-251", "A3-230", "A4b-5"],
     "artist": "PLANETA CG Works",
-    "internal_id": 65795,
-    "linked": false
+    "internal_id": 65795
   },
   {
     "expansion": "A1",
     "card_id": "A1-5",
     "image": "/images/en-US/A1-5.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "grass",
     "name": "Caterpie",
     "card_type": "pokémon",
@@ -143,7 +139,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -152,14 +148,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-5"],
     "artist": "Miki Tanaka",
-    "internal_id": 65856,
-    "linked": false
+    "internal_id": 65856
   },
   {
     "expansion": "A1",
     "card_id": "A1-6",
     "image": "/images/en-US/A1-6.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "grass",
     "name": "Metapod",
     "card_type": "pokémon",
@@ -173,7 +168,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -182,14 +177,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-6"],
     "artist": "Yuka Morii",
-    "internal_id": 65920,
-    "linked": false
+    "internal_id": 65920
   },
   {
     "expansion": "A1",
     "card_id": "A1-7",
     "image": "/images/en-US/A1-7.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "grass",
     "name": "Butterfree",
     "card_type": "pokémon",
@@ -207,7 +201,7 @@
       "effect": "Once during your turn, you may heal 20 damage from each of your Pokémon."
     },
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -216,14 +210,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-7", "P-A-13"],
     "artist": "Shin Nagasawa",
-    "internal_id": 65986,
-    "linked": false
+    "internal_id": 65986
   },
   {
     "expansion": "A1",
     "card_id": "A1-8",
     "image": "/images/en-US/A1-8.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "grass",
     "name": "Weedle",
     "card_type": "pokémon",
@@ -237,7 +230,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -246,14 +239,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-8"],
     "artist": "Hajime Kusajima",
-    "internal_id": 66048,
-    "linked": false
+    "internal_id": 66048
   },
   {
     "expansion": "A1",
     "card_id": "A1-9",
     "image": "/images/en-US/A1-9.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "grass",
     "name": "Kakuna",
     "card_type": "pokémon",
@@ -267,7 +259,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -276,14 +268,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-9"],
     "artist": "miki kudo",
-    "internal_id": 66112,
-    "linked": false
+    "internal_id": 66112
   },
   {
     "expansion": "A1",
     "card_id": "A1-10",
     "image": "/images/en-US/A1-10.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "grass",
     "name": "Beedrill",
     "card_type": "pokémon",
@@ -297,7 +288,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -306,14 +297,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-10"],
     "artist": "You Iribi",
-    "internal_id": 66178,
-    "linked": false
+    "internal_id": 66178
   },
   {
     "expansion": "A1",
     "card_id": "A1-11",
     "image": "/images/en-US/A1-11.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "grass",
     "name": "Oddish",
     "card_type": "pokémon",
@@ -327,7 +317,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -336,14 +326,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-11"],
     "artist": "HYOGONOSUKE",
-    "internal_id": 66240,
-    "linked": false
+    "internal_id": 66240
   },
   {
     "expansion": "A1",
     "card_id": "A1-12",
     "image": "/images/en-US/A1-12.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "grass",
     "name": "Gloom",
     "card_type": "pokémon",
@@ -357,7 +346,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -366,14 +355,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-12", "A1-228"],
     "artist": "Anesaki Dynamic",
-    "internal_id": 66305,
-    "linked": false
+    "internal_id": 66305
   },
   {
     "expansion": "A1",
     "card_id": "A1-13",
     "image": "/images/en-US/A1-13.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "grass",
     "name": "Vileplume",
     "card_type": "pokémon",
@@ -387,7 +375,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -396,14 +384,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-13"],
     "artist": "Kyoko Umemoto",
-    "internal_id": 66370,
-    "linked": false
+    "internal_id": 66370
   },
   {
     "expansion": "A1",
     "card_id": "A1-14",
     "image": "/images/en-US/A1-14.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "grass",
     "name": "Paras",
     "card_type": "pokémon",
@@ -417,7 +404,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -426,14 +413,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-14"],
     "artist": "Naoyo Kimura",
-    "internal_id": 66432,
-    "linked": false
+    "internal_id": 66432
   },
   {
     "expansion": "A1",
     "card_id": "A1-15",
     "image": "/images/en-US/A1-15.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "grass",
     "name": "Parasect",
     "card_type": "pokémon",
@@ -447,7 +433,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -456,14 +442,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-15"],
     "artist": "Eri Yamaki",
-    "internal_id": 66497,
-    "linked": false
+    "internal_id": 66497
   },
   {
     "expansion": "A1",
     "card_id": "A1-16",
     "image": "/images/en-US/A1-16.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "grass",
     "name": "Venonat",
     "card_type": "pokémon",
@@ -477,7 +462,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -486,14 +471,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-16"],
     "artist": "HYOGONOSUKE",
-    "internal_id": 66560,
-    "linked": false
+    "internal_id": 66560
   },
   {
     "expansion": "A1",
     "card_id": "A1-17",
     "image": "/images/en-US/A1-17.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "grass",
     "name": "Venomoth",
     "card_type": "pokémon",
@@ -507,7 +491,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -516,14 +500,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-17"],
     "artist": "Mina Nakai",
-    "internal_id": 66625,
-    "linked": false
+    "internal_id": 66625
   },
   {
     "expansion": "A1",
     "card_id": "A1-18",
     "image": "/images/en-US/A1-18.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "grass",
     "name": "Bellsprout",
     "card_type": "pokémon",
@@ -537,7 +520,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -546,14 +529,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-18"],
     "artist": "HYOGONOSUKE",
-    "internal_id": 66688,
-    "linked": false
+    "internal_id": 66688
   },
   {
     "expansion": "A1",
     "card_id": "A1-19",
     "image": "/images/en-US/A1-19.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "grass",
     "name": "Weepinbell",
     "card_type": "pokémon",
@@ -567,7 +549,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -576,14 +558,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-19"],
     "artist": "Miki Tanaka",
-    "internal_id": 66753,
-    "linked": false
+    "internal_id": 66753
   },
   {
     "expansion": "A1",
     "card_id": "A1-20",
     "image": "/images/en-US/A1-20.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "grass",
     "name": "Victreebel",
     "card_type": "pokémon",
@@ -601,7 +582,7 @@
       "effect": "If this Pokémon is in the Active Spot, once during your turn, you may switch in 1 of your opponent's Benched Basic Pokémon to the Active Spot."
     },
     "weakness": "fire",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -610,14 +591,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-20"],
     "artist": "Sumiyoshi Kizuki",
-    "internal_id": 66818,
-    "linked": false
+    "internal_id": 66818
   },
   {
     "expansion": "A1",
     "card_id": "A1-21",
     "image": "/images/en-US/A1-21.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "grass",
     "name": "Exeggcute",
     "card_type": "pokémon",
@@ -631,7 +611,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -640,14 +620,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-21", "A4b-11", "A4b-12"],
     "artist": "kawayoo",
-    "internal_id": 66880,
-    "linked": false
+    "internal_id": 66880
   },
   {
     "expansion": "A1",
     "card_id": "A1-22",
     "image": "/images/en-US/A1-22.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "grass",
     "name": "Exeggutor",
     "card_type": "pokémon",
@@ -661,7 +640,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -670,14 +649,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-22"],
     "artist": "Yukiko Baba",
-    "internal_id": 66946,
-    "linked": false
+    "internal_id": 66946
   },
   {
     "expansion": "A1",
     "card_id": "A1-23",
     "image": "/images/en-US/A1-23.webp",
-    "hp": "160",
+    "hp": 160,
     "energy": "grass",
     "name": "Exeggutor ex",
     "card_type": "pokémon",
@@ -691,7 +669,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -700,14 +678,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-23", "A1-252", "A3-231", "A4b-13"],
     "artist": "PLANETA CG Works",
-    "internal_id": 67011,
-    "linked": false
+    "internal_id": 67011
   },
   {
     "expansion": "A1",
     "card_id": "A1-24",
     "image": "/images/en-US/A1-24.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "grass",
     "name": "Tangela",
     "card_type": "pokémon",
@@ -721,7 +698,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -730,14 +707,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-24"],
     "artist": "Midori Harada",
-    "internal_id": 67072,
-    "linked": false
+    "internal_id": 67072
   },
   {
     "expansion": "A1",
     "card_id": "A1-25",
     "image": "/images/en-US/A1-25.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "grass",
     "name": "Scyther",
     "card_type": "pokémon",
@@ -751,7 +727,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -760,14 +736,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-25"],
     "artist": "Hasuno",
-    "internal_id": 67136,
-    "linked": false
+    "internal_id": 67136
   },
   {
     "expansion": "A1",
     "card_id": "A1-26",
     "image": "/images/en-US/A1-26.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "grass",
     "name": "Pinsir",
     "card_type": "pokémon",
@@ -781,7 +756,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -790,14 +765,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-26", "A1-229"],
     "artist": "Eri Yamaki",
-    "internal_id": 67201,
-    "linked": false
+    "internal_id": 67201
   },
   {
     "expansion": "A1",
     "card_id": "A1-27",
     "image": "/images/en-US/A1-27.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "grass",
     "name": "Cottonee",
     "card_type": "pokémon",
@@ -811,7 +785,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -820,14 +794,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-27"],
     "artist": "Kanako Eo",
-    "internal_id": 67264,
-    "linked": false
+    "internal_id": 67264
   },
   {
     "expansion": "A1",
     "card_id": "A1-28",
     "image": "/images/en-US/A1-28.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "grass",
     "name": "Whimsicott",
     "card_type": "pokémon",
@@ -841,7 +814,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -850,14 +823,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-28"],
     "artist": "Atsuko Nishida",
-    "internal_id": 67329,
-    "linked": false
+    "internal_id": 67329
   },
   {
     "expansion": "A1",
     "card_id": "A1-29",
     "image": "/images/en-US/A1-29.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "grass",
     "name": "Petilil",
     "card_type": "pokémon",
@@ -871,7 +843,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -880,14 +852,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-29"],
     "artist": "Naoyo Kimura",
-    "internal_id": 67392,
-    "linked": false
+    "internal_id": 67392
   },
   {
     "expansion": "A1",
     "card_id": "A1-30",
     "image": "/images/en-US/A1-30.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "grass",
     "name": "Lilligant",
     "card_type": "pokémon",
@@ -901,7 +872,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -910,14 +881,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-30"],
     "artist": "You Iribi",
-    "internal_id": 67457,
-    "linked": false
+    "internal_id": 67457
   },
   {
     "expansion": "A1",
     "card_id": "A1-31",
     "image": "/images/en-US/A1-31.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "grass",
     "name": "Skiddo",
     "card_type": "pokémon",
@@ -931,7 +901,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -940,14 +910,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-31"],
     "artist": "Naoki Saito",
-    "internal_id": 67520,
-    "linked": false
+    "internal_id": 67520
   },
   {
     "expansion": "A1",
     "card_id": "A1-32",
     "image": "/images/en-US/A1-32.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "grass",
     "name": "Gogoat",
     "card_type": "pokémon",
@@ -961,7 +930,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -970,14 +939,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-32"],
     "artist": "You Iribi",
-    "internal_id": 67584,
-    "linked": false
+    "internal_id": 67584
   },
   {
     "expansion": "A1",
     "card_id": "A1-33",
     "image": "/images/en-US/A1-33.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "fire",
     "name": "Charmander",
     "card_type": "pokémon",
@@ -991,7 +959,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1000,14 +968,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-33", "A1-230", "P-A-32", "A4b-55", "A4b-56"],
     "artist": "Teeziro",
-    "internal_id": 67648,
-    "linked": false
+    "internal_id": 67648
   },
   {
     "expansion": "A1",
     "card_id": "A1-34",
     "image": "/images/en-US/A1-34.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "fire",
     "name": "Charmeleon",
     "card_type": "pokémon",
@@ -1021,7 +988,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -1030,14 +997,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-34", "A4b-57", "A4b-58"],
     "artist": "kantaro",
-    "internal_id": 67713,
-    "linked": false
+    "internal_id": 67713
   },
   {
     "expansion": "A1",
     "card_id": "A1-35",
     "image": "/images/en-US/A1-35.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "fire",
     "name": "Charizard",
     "card_type": "pokémon",
@@ -1051,7 +1017,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -1060,14 +1026,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-35"],
     "artist": "takuyoa",
-    "internal_id": 67778,
-    "linked": false
+    "internal_id": 67778
   },
   {
     "expansion": "A1",
     "card_id": "A1-36",
     "image": "/images/en-US/A1-36.webp",
-    "hp": "180",
+    "hp": 180,
     "energy": "fire",
     "name": "Charizard ex",
     "card_type": "pokémon",
@@ -1087,7 +1052,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -1096,14 +1061,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284", "A4b-59", "A4b-361"],
     "artist": "PLANETA Mochizuki",
-    "internal_id": 67843,
-    "linked": false
+    "internal_id": 67843
   },
   {
     "expansion": "A1",
     "card_id": "A1-37",
     "image": "/images/en-US/A1-37.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "fire",
     "name": "Vulpix",
     "card_type": "pokémon",
@@ -1117,7 +1081,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1126,14 +1090,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-37"],
     "artist": "Toshinao Aoki",
-    "internal_id": 67904,
-    "linked": false
+    "internal_id": 67904
   },
   {
     "expansion": "A1",
     "card_id": "A1-38",
     "image": "/images/en-US/A1-38.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "fire",
     "name": "Ninetales",
     "card_type": "pokémon",
@@ -1147,7 +1110,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -1156,14 +1119,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-38"],
     "artist": "You Iribi",
-    "internal_id": 67969,
-    "linked": false
+    "internal_id": 67969
   },
   {
     "expansion": "A1",
     "card_id": "A1-39",
     "image": "/images/en-US/A1-39.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "fire",
     "name": "Growlithe",
     "card_type": "pokémon",
@@ -1177,7 +1139,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1186,14 +1148,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-39", "A3a-89", "A4b-61", "A4b-62"],
     "artist": "Mizue",
-    "internal_id": 68032,
-    "linked": false
+    "internal_id": 68032
   },
   {
     "expansion": "A1",
     "card_id": "A1-40",
     "image": "/images/en-US/A1-40.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "fire",
     "name": "Arcanine",
     "card_type": "pokémon",
@@ -1207,7 +1168,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -1216,14 +1177,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-40", "A3a-90"],
     "artist": "kodama",
-    "internal_id": 68098,
-    "linked": false
+    "internal_id": 68098
   },
   {
     "expansion": "A1",
     "card_id": "A1-41",
     "image": "/images/en-US/A1-41.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "fire",
     "name": "Arcanine ex",
     "card_type": "pokémon",
@@ -1237,7 +1197,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -1246,14 +1206,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-41", "A1-254", "A3a-100", "A4b-63"],
     "artist": "PLANETA Saito",
-    "internal_id": 68163,
-    "linked": false
+    "internal_id": 68163
   },
   {
     "expansion": "A1",
     "card_id": "A1-42",
     "image": "/images/en-US/A1-42.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "fire",
     "name": "Ponyta",
     "card_type": "pokémon",
@@ -1267,7 +1226,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1276,14 +1235,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-42"],
     "artist": "Uta",
-    "internal_id": 68224,
-    "linked": false
+    "internal_id": 68224
   },
   {
     "expansion": "A1",
     "card_id": "A1-43",
     "image": "/images/en-US/A1-43.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "fire",
     "name": "Rapidash",
     "card_type": "pokémon",
@@ -1297,7 +1255,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -1306,14 +1264,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-43", "A1-231"],
     "artist": "Misa Tsutsui",
-    "internal_id": 68289,
-    "linked": false
+    "internal_id": 68289
   },
   {
     "expansion": "A1",
     "card_id": "A1-44",
     "image": "/images/en-US/A1-44.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "fire",
     "name": "Magmar",
     "card_type": "pokémon",
@@ -1327,7 +1284,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1336,14 +1293,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-44"],
     "artist": "Ryuta Fuse",
-    "internal_id": 68352,
-    "linked": false
+    "internal_id": 68352
   },
   {
     "expansion": "A1",
     "card_id": "A1-45",
     "image": "/images/en-US/A1-45.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "fire",
     "name": "Flareon",
     "card_type": "pokémon",
@@ -1357,7 +1313,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -1366,14 +1322,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-45"],
     "artist": "sui",
-    "internal_id": 68418,
-    "linked": false
+    "internal_id": 68418
   },
   {
     "expansion": "A1",
     "card_id": "A1-46",
     "image": "/images/en-US/A1-46.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "fire",
     "name": "Moltres",
     "card_type": "pokémon",
@@ -1387,7 +1342,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -1396,14 +1351,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-46"],
     "artist": "Hitoshi Ariga",
-    "internal_id": 68482,
-    "linked": false
+    "internal_id": 68482
   },
   {
     "expansion": "A1",
     "card_id": "A1-47",
     "image": "/images/en-US/A1-47.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "fire",
     "name": "Moltres ex",
     "card_type": "pokémon",
@@ -1423,7 +1377,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -1432,14 +1386,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103", "A4b-67"],
     "artist": "PLANETA Tsuji",
-    "internal_id": 68547,
-    "linked": false
+    "internal_id": 68547
   },
   {
     "expansion": "A1",
     "card_id": "A1-48",
     "image": "/images/en-US/A1-48.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "fire",
     "name": "Heatmor",
     "card_type": "pokémon",
@@ -1453,7 +1406,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1462,14 +1415,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-48"],
     "artist": "Suwama Chiaki",
-    "internal_id": 68608,
-    "linked": false
+    "internal_id": 68608
   },
   {
     "expansion": "A1",
     "card_id": "A1-49",
     "image": "/images/en-US/A1-49.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "fire",
     "name": "Salandit",
     "card_type": "pokémon",
@@ -1483,7 +1435,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1492,14 +1444,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-49"],
     "artist": "Kyoko Umemoto",
-    "internal_id": 68672,
-    "linked": false
+    "internal_id": 68672
   },
   {
     "expansion": "A1",
     "card_id": "A1-50",
     "image": "/images/en-US/A1-50.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "fire",
     "name": "Salazzle",
     "card_type": "pokémon",
@@ -1513,7 +1464,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1522,14 +1473,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-50"],
     "artist": "hatachu",
-    "internal_id": 68736,
-    "linked": false
+    "internal_id": 68736
   },
   {
     "expansion": "A1",
     "card_id": "A1-51",
     "image": "/images/en-US/A1-51.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "fire",
     "name": "Sizzlipede",
     "card_type": "pokémon",
@@ -1543,7 +1493,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1552,14 +1502,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-51"],
     "artist": "Teeziro",
-    "internal_id": 68800,
-    "linked": false
+    "internal_id": 68800
   },
   {
     "expansion": "A1",
     "card_id": "A1-52",
     "image": "/images/en-US/A1-52.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "fire",
     "name": "Centiskorch",
     "card_type": "pokémon",
@@ -1573,7 +1522,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -1582,14 +1531,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-52"],
     "artist": "GOSSAN",
-    "internal_id": 68865,
-    "linked": false
+    "internal_id": 68865
   },
   {
     "expansion": "A1",
     "card_id": "A1-53",
     "image": "/images/en-US/A1-53.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "water",
     "name": "Squirtle",
     "card_type": "pokémon",
@@ -1603,7 +1551,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1612,14 +1560,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-53", "A1-232", "P-A-33", "A3-215", "A4b-83", "A4b-84"],
     "artist": "Mizue",
-    "internal_id": 68928,
-    "linked": false
+    "internal_id": 68928
   },
   {
     "expansion": "A1",
     "card_id": "A1-54",
     "image": "/images/en-US/A1-54.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "water",
     "name": "Wartortle",
     "card_type": "pokémon",
@@ -1633,7 +1580,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -1642,14 +1589,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-54", "A3-216", "A4b-85", "A4b-86"],
     "artist": "Nelnal",
-    "internal_id": 68993,
-    "linked": false
+    "internal_id": 68993
   },
   {
     "expansion": "A1",
     "card_id": "A1-55",
     "image": "/images/en-US/A1-55.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "water",
     "name": "Blastoise",
     "card_type": "pokémon",
@@ -1663,7 +1609,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -1672,14 +1618,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-55", "P-A-29", "A3-217"],
     "artist": "Nurikabe",
-    "internal_id": 69058,
-    "linked": false
+    "internal_id": 69058
   },
   {
     "expansion": "A1",
     "card_id": "A1-56",
     "image": "/images/en-US/A1-56.webp",
-    "hp": "180",
+    "hp": 180,
     "energy": "water",
     "name": "Blastoise ex",
     "card_type": "pokémon",
@@ -1699,7 +1644,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -1708,14 +1653,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-56", "A1-256", "A3-232", "A4b-87"],
     "artist": "PLANETA Tsuji",
-    "internal_id": 69123,
-    "linked": false
+    "internal_id": 69123
   },
   {
     "expansion": "A1",
     "card_id": "A1-57",
     "image": "/images/en-US/A1-57.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "water",
     "name": "Psyduck",
     "card_type": "pokémon",
@@ -1729,7 +1673,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1738,14 +1682,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-57", "A4a-93"],
     "artist": "Shibuzoh.",
-    "internal_id": 69184,
-    "linked": false
+    "internal_id": 69184
   },
   {
     "expansion": "A1",
     "card_id": "A1-58",
     "image": "/images/en-US/A1-58.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "water",
     "name": "Golduck",
     "card_type": "pokémon",
@@ -1759,7 +1702,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -1768,14 +1711,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-58", "A4a-94"],
     "artist": "Naoki Saito",
-    "internal_id": 69249,
-    "linked": false
+    "internal_id": 69249
   },
   {
     "expansion": "A1",
     "card_id": "A1-59",
     "image": "/images/en-US/A1-59.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "water",
     "name": "Poliwag",
     "card_type": "pokémon",
@@ -1789,7 +1731,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1798,14 +1740,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-59"],
     "artist": "Shibuzoh.",
-    "internal_id": 69312,
-    "linked": false
+    "internal_id": 69312
   },
   {
     "expansion": "A1",
     "card_id": "A1-60",
     "image": "/images/en-US/A1-60.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "water",
     "name": "Poliwhirl",
     "card_type": "pokémon",
@@ -1819,7 +1760,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -1828,14 +1769,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-60"],
     "artist": "Yuka Morii",
-    "internal_id": 69377,
-    "linked": false
+    "internal_id": 69377
   },
   {
     "expansion": "A1",
     "card_id": "A1-61",
     "image": "/images/en-US/A1-61.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "water",
     "name": "Poliwrath",
     "card_type": "pokémon",
@@ -1853,7 +1793,7 @@
       "effect": "If this Pokémon is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the Attacking Pokémon."
     },
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -1862,14 +1802,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-61"],
     "artist": "Akira Komayama",
-    "internal_id": 69442,
-    "linked": false
+    "internal_id": 69442
   },
   {
     "expansion": "A1",
     "card_id": "A1-62",
     "image": "/images/en-US/A1-62.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "water",
     "name": "Tentacool",
     "card_type": "pokémon",
@@ -1883,7 +1822,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1892,14 +1831,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-62"],
     "artist": "Shinya Komatsu",
-    "internal_id": 69504,
-    "linked": false
+    "internal_id": 69504
   },
   {
     "expansion": "A1",
     "card_id": "A1-63",
     "image": "/images/en-US/A1-63.webp",
-    "hp": "110",
+    "hp": 110,
     "energy": "water",
     "name": "Tentacruel",
     "card_type": "pokémon",
@@ -1913,7 +1851,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -1922,14 +1860,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-63"],
     "artist": "kodama",
-    "internal_id": 69569,
-    "linked": false
+    "internal_id": 69569
   },
   {
     "expansion": "A1",
     "card_id": "A1-64",
     "image": "/images/en-US/A1-64.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "water",
     "name": "Seel",
     "card_type": "pokémon",
@@ -1943,7 +1880,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -1952,14 +1889,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-64"],
     "artist": "Masako Yamashita",
-    "internal_id": 69632,
-    "linked": false
+    "internal_id": 69632
   },
   {
     "expansion": "A1",
     "card_id": "A1-65",
     "image": "/images/en-US/A1-65.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "water",
     "name": "Dewgong",
     "card_type": "pokémon",
@@ -1973,7 +1909,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -1982,14 +1918,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-65"],
     "artist": "Kanako Eo",
-    "internal_id": 69697,
-    "linked": false
+    "internal_id": 69697
   },
   {
     "expansion": "A1",
     "card_id": "A1-66",
     "image": "/images/en-US/A1-66.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "water",
     "name": "Shellder",
     "card_type": "pokémon",
@@ -2003,7 +1938,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2012,14 +1947,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-66"],
     "artist": "Sumiyoshi Kizuki",
-    "internal_id": 69760,
-    "linked": false
+    "internal_id": 69760
   },
   {
     "expansion": "A1",
     "card_id": "A1-67",
     "image": "/images/en-US/A1-67.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "water",
     "name": "Cloyster",
     "card_type": "pokémon",
@@ -2037,7 +1971,7 @@
       "effect": "This Pokémon takes -10 damage from attacks."
     },
     "weakness": "lightning",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -2046,14 +1980,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-67"],
     "artist": "Saya Tsuruta",
-    "internal_id": 69825,
-    "linked": false
+    "internal_id": 69825
   },
   {
     "expansion": "A1",
     "card_id": "A1-68",
     "image": "/images/en-US/A1-68.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "water",
     "name": "Krabby",
     "card_type": "pokémon",
@@ -2067,7 +2000,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2076,14 +2009,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-68", "A4a-95"],
     "artist": "Tomokazu Komiya",
-    "internal_id": 69888,
-    "linked": false
+    "internal_id": 69888
   },
   {
     "expansion": "A1",
     "card_id": "A1-69",
     "image": "/images/en-US/A1-69.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "water",
     "name": "Kingler",
     "card_type": "pokémon",
@@ -2097,7 +2029,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -2106,14 +2038,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-69", "A4a-96"],
     "artist": "Shigenori Negishi",
-    "internal_id": 69953,
-    "linked": false
+    "internal_id": 69953
   },
   {
     "expansion": "A1",
     "card_id": "A1-70",
     "image": "/images/en-US/A1-70.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "water",
     "name": "Horsea",
     "card_type": "pokémon",
@@ -2127,7 +2058,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2136,14 +2067,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-70"],
     "artist": "Saya Tsuruta",
-    "internal_id": 70016,
-    "linked": false
+    "internal_id": 70016
   },
   {
     "expansion": "A1",
     "card_id": "A1-71",
     "image": "/images/en-US/A1-71.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "water",
     "name": "Seadra",
     "card_type": "pokémon",
@@ -2157,7 +2087,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -2166,14 +2096,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-71"],
     "artist": "Sanosuke Sakuma",
-    "internal_id": 70081,
-    "linked": false
+    "internal_id": 70081
   },
   {
     "expansion": "A1",
     "card_id": "A1-72",
     "image": "/images/en-US/A1-72.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "water",
     "name": "Goldeen",
     "card_type": "pokémon",
@@ -2187,7 +2116,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2196,14 +2125,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-72"],
     "artist": "Kyoko Umemoto",
-    "internal_id": 70144,
-    "linked": false
+    "internal_id": 70144
   },
   {
     "expansion": "A1",
     "card_id": "A1-73",
     "image": "/images/en-US/A1-73.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "water",
     "name": "Seaking",
     "card_type": "pokémon",
@@ -2217,7 +2145,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2226,14 +2154,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-73"],
     "artist": "Kyoko Umemoto",
-    "internal_id": 70208,
-    "linked": false
+    "internal_id": 70208
   },
   {
     "expansion": "A1",
     "card_id": "A1-74",
     "image": "/images/en-US/A1-74.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "water",
     "name": "Staryu",
     "card_type": "pokémon",
@@ -2247,7 +2174,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2256,14 +2183,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-74", "A3-218", "A4b-93", "A4b-94"],
     "artist": "Hiroki Asanuma",
-    "internal_id": 70272,
-    "linked": false
+    "internal_id": 70272
   },
   {
     "expansion": "A1",
     "card_id": "A1-75",
     "image": "/images/en-US/A1-75.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "water",
     "name": "Starmie",
     "card_type": "pokémon",
@@ -2277,7 +2203,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "0",
+    "retreat": 0,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -2286,14 +2212,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-75", "A3-219"],
     "artist": "Yukiko Baba",
-    "internal_id": 70337,
-    "linked": false
+    "internal_id": 70337
   },
   {
     "expansion": "A1",
     "card_id": "A1-76",
     "image": "/images/en-US/A1-76.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "water",
     "name": "Starmie ex",
     "card_type": "pokémon",
@@ -2307,7 +2232,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "0",
+    "retreat": 0,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -2316,14 +2241,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-76", "A1-257", "A3-233", "A4b-95"],
     "artist": "PLANETA Igarashi",
-    "internal_id": 70403,
-    "linked": false
+    "internal_id": 70403
   },
   {
     "expansion": "A1",
     "card_id": "A1-77",
     "image": "/images/en-US/A1-77.webp",
-    "hp": "30",
+    "hp": 30,
     "energy": "water",
     "name": "Magikarp",
     "card_type": "pokémon",
@@ -2337,7 +2261,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2346,14 +2270,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-77"],
     "artist": "Sekio",
-    "internal_id": 70464,
-    "linked": false
+    "internal_id": 70464
   },
   {
     "expansion": "A1",
     "card_id": "A1-78",
     "image": "/images/en-US/A1-78.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "water",
     "name": "Gyarados",
     "card_type": "pokémon",
@@ -2367,7 +2290,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "4",
+    "retreat": 4,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -2376,14 +2299,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-78", "A1-233"],
     "artist": "Mitsuhiro Arita",
-    "internal_id": 70530,
-    "linked": false
+    "internal_id": 70530
   },
   {
     "expansion": "A1",
     "card_id": "A1-79",
     "image": "/images/en-US/A1-79.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "water",
     "name": "Lapras",
     "card_type": "pokémon",
@@ -2397,7 +2319,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -2406,14 +2328,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-79", "A1-234", "A3b-94"],
     "artist": "Sekio",
-    "internal_id": 70594,
-    "linked": false
+    "internal_id": 70594
   },
   {
     "expansion": "A1",
     "card_id": "A1-80",
     "image": "/images/en-US/A1-80.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "water",
     "name": "Vaporeon",
     "card_type": "pokémon",
@@ -2427,7 +2348,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -2436,14 +2357,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-80", "A4-216"],
     "artist": "Kagemaru Himeno",
-    "internal_id": 70658,
-    "linked": false
+    "internal_id": 70658
   },
   {
     "expansion": "A1",
     "card_id": "A1-81",
     "image": "/images/en-US/A1-81.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "water",
     "name": "Omanyte",
     "card_type": "pokémon",
@@ -2457,7 +2377,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -2466,14 +2386,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-81"],
     "artist": "Suwama Chiaki",
-    "internal_id": 70721,
-    "linked": false
+    "internal_id": 70721
   },
   {
     "expansion": "A1",
     "card_id": "A1-82",
     "image": "/images/en-US/A1-82.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "water",
     "name": "Omastar",
     "card_type": "pokémon",
@@ -2487,7 +2406,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -2496,14 +2415,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-82"],
     "artist": "kirisAki",
-    "internal_id": 70786,
-    "linked": false
+    "internal_id": 70786
   },
   {
     "expansion": "A1",
     "card_id": "A1-83",
     "image": "/images/en-US/A1-83.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "water",
     "name": "Articuno",
     "card_type": "pokémon",
@@ -2517,7 +2435,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -2526,14 +2444,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-83"],
     "artist": "Hitoshi Ariga",
-    "internal_id": 70850,
-    "linked": false
+    "internal_id": 70850
   },
   {
     "expansion": "A1",
     "card_id": "A1-84",
     "image": "/images/en-US/A1-84.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "water",
     "name": "Articuno ex",
     "card_type": "pokémon",
@@ -2553,7 +2470,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -2562,14 +2479,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-84", "A1-258", "A1-275", "A3b-104", "A4b-101"],
     "artist": "PLANETA Saito",
-    "internal_id": 70915,
-    "linked": false
+    "internal_id": 70915
   },
   {
     "expansion": "A1",
     "card_id": "A1-85",
     "image": "/images/en-US/A1-85.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "water",
     "name": "Ducklett",
     "card_type": "pokémon",
@@ -2583,7 +2499,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2592,14 +2508,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-85"],
     "artist": "Yumi",
-    "internal_id": 70976,
-    "linked": false
+    "internal_id": 70976
   },
   {
     "expansion": "A1",
     "card_id": "A1-86",
     "image": "/images/en-US/A1-86.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "water",
     "name": "Swanna",
     "card_type": "pokémon",
@@ -2613,7 +2528,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -2622,14 +2537,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-86"],
     "artist": "sui",
-    "internal_id": 71041,
-    "linked": false
+    "internal_id": 71041
   },
   {
     "expansion": "A1",
     "card_id": "A1-87",
     "image": "/images/en-US/A1-87.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "water",
     "name": "Froakie",
     "card_type": "pokémon",
@@ -2643,7 +2557,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2652,14 +2566,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-87", "P-A-61", "A3a-91", "A4b-110", "A4b-111"],
     "artist": "Aya Kusube",
-    "internal_id": 71104,
-    "linked": false
+    "internal_id": 71104
   },
   {
     "expansion": "A1",
     "card_id": "A1-88",
     "image": "/images/en-US/A1-88.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "water",
     "name": "Frogadier",
     "card_type": "pokémon",
@@ -2673,7 +2586,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -2682,14 +2595,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-88", "A3a-92", "A4b-112", "A4b-113"],
     "artist": "Akira Komayama",
-    "internal_id": 71169,
-    "linked": false
+    "internal_id": 71169
   },
   {
     "expansion": "A1",
     "card_id": "A1-89",
     "image": "/images/en-US/A1-89.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "water",
     "name": "Greninja",
     "card_type": "pokémon",
@@ -2707,7 +2619,7 @@
       "effect": "Once during your turn, you may do 20 damage to 1 of your opponent's Pokémon."
     },
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -2716,14 +2628,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-89", "P-A-19", "A3a-93", "A4b-114", "A4b-115", "A4b-356"],
     "artist": "5ban Graphics",
-    "internal_id": 71234,
-    "linked": false
+    "internal_id": 71234
   },
   {
     "expansion": "A1",
     "card_id": "A1-90",
     "image": "/images/en-US/A1-90.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "water",
     "name": "Pyukumuku",
     "card_type": "pokémon",
@@ -2737,7 +2648,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2746,14 +2657,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-90"],
     "artist": "OOYAMA",
-    "internal_id": 71296,
-    "linked": false
+    "internal_id": 71296
   },
   {
     "expansion": "A1",
     "card_id": "A1-91",
     "image": "/images/en-US/A1-91.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "water",
     "name": "Bruxish",
     "card_type": "pokémon",
@@ -2767,7 +2677,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -2776,14 +2686,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-91"],
     "artist": "Mizue",
-    "internal_id": 71361,
-    "linked": false
+    "internal_id": 71361
   },
   {
     "expansion": "A1",
     "card_id": "A1-92",
     "image": "/images/en-US/A1-92.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "water",
     "name": "Snom",
     "card_type": "pokémon",
@@ -2797,7 +2706,7 @@
       }
     ],
     "weakness": "metal",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2806,14 +2715,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-92"],
     "artist": "ryoma uratsuka",
-    "internal_id": 71424,
-    "linked": false
+    "internal_id": 71424
   },
   {
     "expansion": "A1",
     "card_id": "A1-93",
     "image": "/images/en-US/A1-93.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "water",
     "name": "Frosmoth",
     "card_type": "pokémon",
@@ -2827,7 +2735,7 @@
       }
     ],
     "weakness": "metal",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -2836,14 +2744,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-93"],
     "artist": "aoki",
-    "internal_id": 71489,
-    "linked": false
+    "internal_id": 71489
   },
   {
     "expansion": "A1",
     "card_id": "A1-94",
     "image": "/images/en-US/A1-94.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "lightning",
     "name": "Pikachu",
     "card_type": "pokémon",
@@ -2857,7 +2764,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2866,14 +2773,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-94", "P-A-9", "P-A-15", "P-A-26", "A4b-128", "A4b-129"],
     "artist": "Mitsuhiro Arita",
-    "internal_id": 71552,
-    "linked": false
+    "internal_id": 71552
   },
   {
     "expansion": "A1",
     "card_id": "A1-95",
     "image": "/images/en-US/A1-95.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "lightning",
     "name": "Raichu",
     "card_type": "pokémon",
@@ -2887,7 +2793,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -2896,14 +2802,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-95"],
     "artist": "AKIRA EGAWA",
-    "internal_id": 71618,
-    "linked": false
+    "internal_id": 71618
   },
   {
     "expansion": "A1",
     "card_id": "A1-96",
     "image": "/images/en-US/A1-96.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "lightning",
     "name": "Pikachu ex",
     "card_type": "pokémon",
@@ -2917,7 +2822,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -2926,14 +2831,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285", "A4b-131", "A4b-364", "A4b-376"],
     "artist": "PLANETA CG Works",
-    "internal_id": 71683,
-    "linked": false
+    "internal_id": 71683
   },
   {
     "expansion": "A1",
     "card_id": "A1-97",
     "image": "/images/en-US/A1-97.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "lightning",
     "name": "Magnemite",
     "card_type": "pokémon",
@@ -2947,7 +2851,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -2956,14 +2860,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-97", "P-A-24", "A4-217", "A4b-133", "A4b-134"],
     "artist": "sowsow",
-    "internal_id": 71744,
-    "linked": false
+    "internal_id": 71744
   },
   {
     "expansion": "A1",
     "card_id": "A1-98",
     "image": "/images/en-US/A1-98.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "lightning",
     "name": "Magneton",
     "card_type": "pokémon",
@@ -2981,7 +2884,7 @@
       "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to this Pokémon."
     },
     "weakness": "fighting",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -2990,14 +2893,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-98", "A4-218", "A4b-135", "A4b-136"],
     "artist": "kirisAki",
-    "internal_id": 71810,
-    "linked": false
+    "internal_id": 71810
   },
   {
     "expansion": "A1",
     "card_id": "A1-99",
     "image": "/images/en-US/A1-99.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "lightning",
     "name": "Voltorb",
     "card_type": "pokémon",
@@ -3011,7 +2913,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3020,14 +2922,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-99"],
     "artist": "SATOSHI NAKAI",
-    "internal_id": 71872,
-    "linked": false
+    "internal_id": 71872
   },
   {
     "expansion": "A1",
     "card_id": "A1-100",
     "image": "/images/en-US/A1-100.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "lightning",
     "name": "Electrode",
     "card_type": "pokémon",
@@ -3041,7 +2942,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "0",
+    "retreat": 0,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -3050,14 +2951,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-100", "A1-235"],
     "artist": "Asako Ito",
-    "internal_id": 71937,
-    "linked": false
+    "internal_id": 71937
   },
   {
     "expansion": "A1",
     "card_id": "A1-101",
     "image": "/images/en-US/A1-101.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "lightning",
     "name": "Electabuzz",
     "card_type": "pokémon",
@@ -3071,7 +2971,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3080,14 +2980,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-101"],
     "artist": "Ryuta Fuse",
-    "internal_id": 72000,
-    "linked": false
+    "internal_id": 72000
   },
   {
     "expansion": "A1",
     "card_id": "A1-102",
     "image": "/images/en-US/A1-102.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "lightning",
     "name": "Jolteon",
     "card_type": "pokémon",
@@ -3101,7 +3000,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -3110,14 +3009,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-102"],
     "artist": "Kouki Saitou",
-    "internal_id": 72066,
-    "linked": false
+    "internal_id": 72066
   },
   {
     "expansion": "A1",
     "card_id": "A1-103",
     "image": "/images/en-US/A1-103.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "lightning",
     "name": "Zapdos",
     "card_type": "pokémon",
@@ -3131,7 +3029,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -3140,14 +3038,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-103"],
     "artist": "Hitoshi Ariga",
-    "internal_id": 72130,
-    "linked": false
+    "internal_id": 72130
   },
   {
     "expansion": "A1",
     "card_id": "A1-104",
     "image": "/images/en-US/A1-104.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "lightning",
     "name": "Zapdos ex",
     "card_type": "pokémon",
@@ -3167,7 +3064,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -3176,14 +3073,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-104", "A1-260", "A1-276", "A3b-105", "A4b-139"],
     "artist": "PLANETA CG Works",
-    "internal_id": 72195,
-    "linked": false
+    "internal_id": 72195
   },
   {
     "expansion": "A1",
     "card_id": "A1-105",
     "image": "/images/en-US/A1-105.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "lightning",
     "name": "Blitzle",
     "card_type": "pokémon",
@@ -3197,7 +3093,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3206,14 +3102,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-105"],
     "artist": "Shin Nagasawa",
-    "internal_id": 72256,
-    "linked": false
+    "internal_id": 72256
   },
   {
     "expansion": "A1",
     "card_id": "A1-106",
     "image": "/images/en-US/A1-106.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "lightning",
     "name": "Zebstrika",
     "card_type": "pokémon",
@@ -3227,7 +3122,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -3236,14 +3131,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-106"],
     "artist": "Misa Tsutsui",
-    "internal_id": 72321,
-    "linked": false
+    "internal_id": 72321
   },
   {
     "expansion": "A1",
     "card_id": "A1-107",
     "image": "/images/en-US/A1-107.webp",
-    "hp": "30",
+    "hp": 30,
     "energy": "lightning",
     "name": "Tynamo",
     "card_type": "pokémon",
@@ -3257,7 +3151,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3266,14 +3160,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-107"],
     "artist": "Asako Ito",
-    "internal_id": 72384,
-    "linked": false
+    "internal_id": 72384
   },
   {
     "expansion": "A1",
     "card_id": "A1-108",
     "image": "/images/en-US/A1-108.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "lightning",
     "name": "Eelektrik",
     "card_type": "pokémon",
@@ -3287,7 +3180,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -3296,14 +3189,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-108"],
     "artist": "Midori Harada",
-    "internal_id": 72449,
-    "linked": false
+    "internal_id": 72449
   },
   {
     "expansion": "A1",
     "card_id": "A1-109",
     "image": "/images/en-US/A1-109.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "lightning",
     "name": "Eelektross",
     "card_type": "pokémon",
@@ -3317,7 +3209,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -3326,14 +3218,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-109"],
     "artist": "hatachu",
-    "internal_id": 72514,
-    "linked": false
+    "internal_id": 72514
   },
   {
     "expansion": "A1",
     "card_id": "A1-110",
     "image": "/images/en-US/A1-110.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "lightning",
     "name": "Helioptile",
     "card_type": "pokémon",
@@ -3347,7 +3238,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3356,14 +3247,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-110"],
     "artist": "5ban Graphics",
-    "internal_id": 72576,
-    "linked": false
+    "internal_id": 72576
   },
   {
     "expansion": "A1",
     "card_id": "A1-111",
     "image": "/images/en-US/A1-111.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "lightning",
     "name": "Heliolisk",
     "card_type": "pokémon",
@@ -3377,7 +3267,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3386,14 +3276,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-111"],
     "artist": "otumami",
-    "internal_id": 72640,
-    "linked": false
+    "internal_id": 72640
   },
   {
     "expansion": "A1",
     "card_id": "A1-112",
     "image": "/images/en-US/A1-112.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "lightning",
     "name": "Pincurchin",
     "card_type": "pokémon",
@@ -3407,7 +3296,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -3416,14 +3305,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-112"],
     "artist": "Tika Matsuno",
-    "internal_id": 72705,
-    "linked": false
+    "internal_id": 72705
   },
   {
     "expansion": "A1",
     "card_id": "A1-113",
     "image": "/images/en-US/A1-113.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "psychic",
     "name": "Clefairy",
     "card_type": "pokémon",
@@ -3437,7 +3325,7 @@
       }
     ],
     "weakness": "metal",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3446,14 +3334,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-113", "P-A-16"],
     "artist": "kirisAki",
-    "internal_id": 72768,
-    "linked": false
+    "internal_id": 72768
   },
   {
     "expansion": "A1",
     "card_id": "A1-114",
     "image": "/images/en-US/A1-114.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "psychic",
     "name": "Clefable",
     "card_type": "pokémon",
@@ -3467,7 +3354,7 @@
       }
     ],
     "weakness": "metal",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -3476,14 +3363,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-114"],
     "artist": "Sanosuke Sakuma",
-    "internal_id": 72833,
-    "linked": false
+    "internal_id": 72833
   },
   {
     "expansion": "A1",
     "card_id": "A1-115",
     "image": "/images/en-US/A1-115.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "psychic",
     "name": "Abra",
     "card_type": "pokémon",
@@ -3497,7 +3383,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3506,14 +3392,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-115"],
     "artist": "Aya Kusube",
-    "internal_id": 72896,
-    "linked": false
+    "internal_id": 72896
   },
   {
     "expansion": "A1",
     "card_id": "A1-116",
     "image": "/images/en-US/A1-116.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "psychic",
     "name": "Kadabra",
     "card_type": "pokémon",
@@ -3527,7 +3412,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -3536,14 +3421,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-116"],
     "artist": "Ken Sugimori",
-    "internal_id": 72961,
-    "linked": false
+    "internal_id": 72961
   },
   {
     "expansion": "A1",
     "card_id": "A1-117",
     "image": "/images/en-US/A1-117.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "psychic",
     "name": "Alakazam",
     "card_type": "pokémon",
@@ -3557,7 +3441,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -3566,14 +3450,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-117", "A1-236"],
     "artist": "Kouki Saitou",
-    "internal_id": 73026,
-    "linked": false
+    "internal_id": 73026
   },
   {
     "expansion": "A1",
     "card_id": "A1-118",
     "image": "/images/en-US/A1-118.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "psychic",
     "name": "Slowpoke",
     "card_type": "pokémon",
@@ -3587,7 +3470,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3596,14 +3479,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-118", "A1-237"],
     "artist": "Miki Tanaka",
-    "internal_id": 73088,
-    "linked": false
+    "internal_id": 73088
   },
   {
     "expansion": "A1",
     "card_id": "A1-119",
     "image": "/images/en-US/A1-119.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "psychic",
     "name": "Slowbro",
     "card_type": "pokémon",
@@ -3617,7 +3499,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -3626,14 +3508,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-119"],
     "artist": "Kagemaru Himeno",
-    "internal_id": 73153,
-    "linked": false
+    "internal_id": 73153
   },
   {
     "expansion": "A1",
     "card_id": "A1-120",
     "image": "/images/en-US/A1-120.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "psychic",
     "name": "Gastly",
     "card_type": "pokémon",
@@ -3647,7 +3528,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3656,14 +3537,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-120", "A4b-151", "A4b-152"],
     "artist": "Masako Yamashita",
-    "internal_id": 73216,
-    "linked": false
+    "internal_id": 73216
   },
   {
     "expansion": "A1",
     "card_id": "A1-121",
     "image": "/images/en-US/A1-121.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "psychic",
     "name": "Haunter",
     "card_type": "pokémon",
@@ -3677,7 +3557,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -3686,14 +3566,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-121", "A3-221", "A4b-153", "A4b-154"],
     "artist": "Nisata Niso",
-    "internal_id": 73281,
-    "linked": false
+    "internal_id": 73281
   },
   {
     "expansion": "A1",
     "card_id": "A1-122",
     "image": "/images/en-US/A1-122.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "psychic",
     "name": "Gengar",
     "card_type": "pokémon",
@@ -3707,7 +3586,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -3716,14 +3595,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-122", "A3-222"],
     "artist": "Naoyo Kimura",
-    "internal_id": 73346,
-    "linked": false
+    "internal_id": 73346
   },
   {
     "expansion": "A1",
     "card_id": "A1-123",
     "image": "/images/en-US/A1-123.webp",
-    "hp": "170",
+    "hp": 170,
     "energy": "psychic",
     "name": "Gengar ex",
     "card_type": "pokémon",
@@ -3741,7 +3619,7 @@
       "effect": "As long as this Pokémon is in the Active Spot, your opponent can't use any Supporter cards from their hand."
     },
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -3750,14 +3628,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-123", "A1-261", "A1-277", "A3-234", "A4b-155"],
     "artist": "PLANETA CG Works",
-    "internal_id": 73411,
-    "linked": false
+    "internal_id": 73411
   },
   {
     "expansion": "A1",
     "card_id": "A1-124",
     "image": "/images/en-US/A1-124.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "psychic",
     "name": "Drowzee",
     "card_type": "pokémon",
@@ -3771,7 +3648,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3780,14 +3657,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-124"],
     "artist": "Yukiko Baba",
-    "internal_id": 73472,
-    "linked": false
+    "internal_id": 73472
   },
   {
     "expansion": "A1",
     "card_id": "A1-125",
     "image": "/images/en-US/A1-125.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "psychic",
     "name": "Hypno",
     "card_type": "pokémon",
@@ -3805,7 +3681,7 @@
       "effect": "Once during your turn, you may flip a coin. If heads, your opponent's Active Pokémon is now Asleep."
     },
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -3814,14 +3690,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-125"],
     "artist": "Shigenori Negishi",
-    "internal_id": 73538,
-    "linked": false
+    "internal_id": 73538
   },
   {
     "expansion": "A1",
     "card_id": "A1-126",
     "image": "/images/en-US/A1-126.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "psychic",
     "name": "Mr. Mime",
     "card_type": "pokémon",
@@ -3835,7 +3710,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -3844,14 +3719,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-126"],
     "artist": "Kagemaru Himeno",
-    "internal_id": 73601,
-    "linked": false
+    "internal_id": 73601
   },
   {
     "expansion": "A1",
     "card_id": "A1-127",
     "image": "/images/en-US/A1-127.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "psychic",
     "name": "Jynx",
     "card_type": "pokémon",
@@ -3865,7 +3739,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3874,14 +3748,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-127", "A3a-94", "A4b-156", "A4b-157"],
     "artist": "Oswaldo KATO",
-    "internal_id": 73664,
-    "linked": false
+    "internal_id": 73664
   },
   {
     "expansion": "A1",
     "card_id": "A1-128",
     "image": "/images/en-US/A1-128.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "psychic",
     "name": "Mewtwo",
     "card_type": "pokémon",
@@ -3895,7 +3768,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -3904,14 +3777,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-128", "P-A-10"],
     "artist": "kawayoo",
-    "internal_id": 73730,
-    "linked": false
+    "internal_id": 73730
   },
   {
     "expansion": "A1",
     "card_id": "A1-129",
     "image": "/images/en-US/A1-129.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "psychic",
     "name": "Mewtwo ex",
     "card_type": "pokémon",
@@ -3931,7 +3803,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -3940,14 +3812,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50", "A4b-158", "A4b-365"],
     "artist": "PLANETA Mochizuki",
-    "internal_id": 73795,
-    "linked": false
+    "internal_id": 73795
   },
   {
     "expansion": "A1",
     "card_id": "A1-130",
     "image": "/images/en-US/A1-130.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "psychic",
     "name": "Ralts",
     "card_type": "pokémon",
@@ -3961,7 +3832,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -3970,14 +3841,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-130"],
     "artist": "Yuka Morii",
-    "internal_id": 73856,
-    "linked": false
+    "internal_id": 73856
   },
   {
     "expansion": "A1",
     "card_id": "A1-131",
     "image": "/images/en-US/A1-131.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "psychic",
     "name": "Kirlia",
     "card_type": "pokémon",
@@ -3991,7 +3861,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4000,14 +3870,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-131"],
     "artist": "sowsow",
-    "internal_id": 73921,
-    "linked": false
+    "internal_id": 73921
   },
   {
     "expansion": "A1",
     "card_id": "A1-132",
     "image": "/images/en-US/A1-132.webp",
-    "hp": "110",
+    "hp": 110,
     "energy": "psychic",
     "name": "Gardevoir",
     "card_type": "pokémon",
@@ -4025,7 +3894,7 @@
       "effect": "Once during your turn, you may take 1  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
     },
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -4034,14 +3903,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-132", "A3b-99", "A4b-168", "A4b-169", "A4b-357"],
     "artist": "Yuu Nishida",
-    "internal_id": 73986,
-    "linked": false
+    "internal_id": 73986
   },
   {
     "expansion": "A1",
     "card_id": "A1-133",
     "image": "/images/en-US/A1-133.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "psychic",
     "name": "Woobat",
     "card_type": "pokémon",
@@ -4055,7 +3923,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4064,14 +3932,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-133"],
     "artist": "MAHOU",
-    "internal_id": 74048,
-    "linked": false
+    "internal_id": 74048
   },
   {
     "expansion": "A1",
     "card_id": "A1-134",
     "image": "/images/en-US/A1-134.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "psychic",
     "name": "Swoobat",
     "card_type": "pokémon",
@@ -4085,7 +3952,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4094,14 +3961,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-134"],
     "artist": "Masakazu Fukuda",
-    "internal_id": 74112,
-    "linked": false
+    "internal_id": 74112
   },
   {
     "expansion": "A1",
     "card_id": "A1-135",
     "image": "/images/en-US/A1-135.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "psychic",
     "name": "Golett",
     "card_type": "pokémon",
@@ -4115,7 +3981,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4124,14 +3990,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-135"],
     "artist": "Kyoko Umemoto",
-    "internal_id": 74176,
-    "linked": false
+    "internal_id": 74176
   },
   {
     "expansion": "A1",
     "card_id": "A1-136",
     "image": "/images/en-US/A1-136.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "psychic",
     "name": "Golurk",
     "card_type": "pokémon",
@@ -4145,7 +4010,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "4",
+    "retreat": 4,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4154,14 +4019,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-136"],
     "artist": "match",
-    "internal_id": 74241,
-    "linked": false
+    "internal_id": 74241
   },
   {
     "expansion": "A1",
     "card_id": "A1-137",
     "image": "/images/en-US/A1-137.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "fighting",
     "name": "Sandshrew",
     "card_type": "pokémon",
@@ -4175,7 +4039,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4184,14 +4048,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-137"],
     "artist": "Miki Tanaka",
-    "internal_id": 74304,
-    "linked": false
+    "internal_id": 74304
   },
   {
     "expansion": "A1",
     "card_id": "A1-138",
     "image": "/images/en-US/A1-138.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "fighting",
     "name": "Sandslash",
     "card_type": "pokémon",
@@ -4205,7 +4068,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4214,14 +4077,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-138"],
     "artist": "Miki Tanaka",
-    "internal_id": 74369,
-    "linked": false
+    "internal_id": 74369
   },
   {
     "expansion": "A1",
     "card_id": "A1-139",
     "image": "/images/en-US/A1-139.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "fighting",
     "name": "Diglett",
     "card_type": "pokémon",
@@ -4235,7 +4097,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4244,14 +4106,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-139", "A1-238"],
     "artist": "Masako Yamashita",
-    "internal_id": 74432,
-    "linked": false
+    "internal_id": 74432
   },
   {
     "expansion": "A1",
     "card_id": "A1-140",
     "image": "/images/en-US/A1-140.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "fighting",
     "name": "Dugtrio",
     "card_type": "pokémon",
@@ -4265,7 +4126,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4274,14 +4135,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-140"],
     "artist": "Akira Komayama",
-    "internal_id": 74497,
-    "linked": false
+    "internal_id": 74497
   },
   {
     "expansion": "A1",
     "card_id": "A1-141",
     "image": "/images/en-US/A1-141.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "fighting",
     "name": "Mankey",
     "card_type": "pokémon",
@@ -4295,7 +4155,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4304,14 +4164,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-141"],
     "artist": "Kanako Eo",
-    "internal_id": 74560,
-    "linked": false
+    "internal_id": 74560
   },
   {
     "expansion": "A1",
     "card_id": "A1-142",
     "image": "/images/en-US/A1-142.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "fighting",
     "name": "Primeape",
     "card_type": "pokémon",
@@ -4325,7 +4184,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4334,14 +4193,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-142", "A4-222"],
     "artist": "Kagemaru Himeno",
-    "internal_id": 74625,
-    "linked": false
+    "internal_id": 74625
   },
   {
     "expansion": "A1",
     "card_id": "A1-143",
     "image": "/images/en-US/A1-143.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "fighting",
     "name": "Machop",
     "card_type": "pokémon",
@@ -4355,7 +4213,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4364,14 +4222,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-143", "A3-223", "A4b-189", "A4b-190"],
     "artist": "Kyoko Umemoto",
-    "internal_id": 74688,
-    "linked": false
+    "internal_id": 74688
   },
   {
     "expansion": "A1",
     "card_id": "A1-144",
     "image": "/images/en-US/A1-144.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "fighting",
     "name": "Machoke",
     "card_type": "pokémon",
@@ -4385,7 +4242,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4394,14 +4251,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-144", "A3-224", "A4b-191", "A4b-192"],
     "artist": "match",
-    "internal_id": 74753,
-    "linked": false
+    "internal_id": 74753
   },
   {
     "expansion": "A1",
     "card_id": "A1-145",
     "image": "/images/en-US/A1-145.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "fighting",
     "name": "Machamp",
     "card_type": "pokémon",
@@ -4415,7 +4271,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -4424,14 +4280,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-145"],
     "artist": "Hitoshi Ariga",
-    "internal_id": 74818,
-    "linked": false
+    "internal_id": 74818
   },
   {
     "expansion": "A1",
     "card_id": "A1-146",
     "image": "/images/en-US/A1-146.webp",
-    "hp": "180",
+    "hp": 180,
     "energy": "fighting",
     "name": "Machamp ex",
     "card_type": "pokémon",
@@ -4445,7 +4300,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -4454,14 +4309,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-146", "A1-263", "A1-278", "A3-235", "A4b-193"],
     "artist": "PLANETA CG Works",
-    "internal_id": 74883,
-    "linked": false
+    "internal_id": 74883
   },
   {
     "expansion": "A1",
     "card_id": "A1-147",
     "image": "/images/en-US/A1-147.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "fighting",
     "name": "Geodude",
     "card_type": "pokémon",
@@ -4475,7 +4329,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4484,14 +4338,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-147"],
     "artist": "Kouki Saitou",
-    "internal_id": 74944,
-    "linked": false
+    "internal_id": 74944
   },
   {
     "expansion": "A1",
     "card_id": "A1-148",
     "image": "/images/en-US/A1-148.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "fighting",
     "name": "Graveler",
     "card_type": "pokémon",
@@ -4505,7 +4358,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4514,14 +4367,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-148"],
     "artist": "Naoyo Kimura",
-    "internal_id": 75009,
-    "linked": false
+    "internal_id": 75009
   },
   {
     "expansion": "A1",
     "card_id": "A1-149",
     "image": "/images/en-US/A1-149.webp",
-    "hp": "160",
+    "hp": 160,
     "energy": "fighting",
     "name": "Golem",
     "card_type": "pokémon",
@@ -4535,7 +4387,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "4",
+    "retreat": 4,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -4544,14 +4396,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-149"],
     "artist": "Sumiyoshi Kizuki",
-    "internal_id": 75074,
-    "linked": false
+    "internal_id": 75074
   },
   {
     "expansion": "A1",
     "card_id": "A1-150",
     "image": "/images/en-US/A1-150.webp",
-    "hp": "110",
+    "hp": 110,
     "energy": "fighting",
     "name": "Onix",
     "card_type": "pokémon",
@@ -4565,7 +4416,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "4",
+    "retreat": 4,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4574,14 +4425,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-150", "P-A-21"],
     "artist": "otumami",
-    "internal_id": 75137,
-    "linked": false
+    "internal_id": 75137
   },
   {
     "expansion": "A1",
     "card_id": "A1-151",
     "image": "/images/en-US/A1-151.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "fighting",
     "name": "Cubone",
     "card_type": "pokémon",
@@ -4595,7 +4445,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4604,14 +4454,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-151", "A1-239", "A3-226", "A4b-194", "A4b-195"],
     "artist": "sowsow",
-    "internal_id": 75200,
-    "linked": false
+    "internal_id": 75200
   },
   {
     "expansion": "A1",
     "card_id": "A1-152",
     "image": "/images/en-US/A1-152.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "fighting",
     "name": "Marowak",
     "card_type": "pokémon",
@@ -4625,7 +4474,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4634,14 +4483,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-152", "A3-227"],
     "artist": "Shin Nagasawa",
-    "internal_id": 75265,
-    "linked": false
+    "internal_id": 75265
   },
   {
     "expansion": "A1",
     "card_id": "A1-153",
     "image": "/images/en-US/A1-153.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "fighting",
     "name": "Marowak ex",
     "card_type": "pokémon",
@@ -4655,7 +4503,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -4664,14 +4512,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-153", "A1-264", "A3-236", "A4b-196"],
     "artist": "PLANETA Mochizuki",
-    "internal_id": 75331,
-    "linked": false
+    "internal_id": 75331
   },
   {
     "expansion": "A1",
     "card_id": "A1-154",
     "image": "/images/en-US/A1-154.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "fighting",
     "name": "Hitmonlee",
     "card_type": "pokémon",
@@ -4685,7 +4532,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4694,14 +4541,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-154"],
     "artist": "Yukiko Baba",
-    "internal_id": 75392,
-    "linked": false
+    "internal_id": 75392
   },
   {
     "expansion": "A1",
     "card_id": "A1-155",
     "image": "/images/en-US/A1-155.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "fighting",
     "name": "Hitmonchan",
     "card_type": "pokémon",
@@ -4715,7 +4561,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4724,14 +4570,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-155"],
     "artist": "Ken Sugimori",
-    "internal_id": 75456,
-    "linked": false
+    "internal_id": 75456
   },
   {
     "expansion": "A1",
     "card_id": "A1-156",
     "image": "/images/en-US/A1-156.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "fighting",
     "name": "Rhyhorn",
     "card_type": "pokémon",
@@ -4745,7 +4590,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4754,14 +4599,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-156"],
     "artist": "Midori Harada",
-    "internal_id": 75520,
-    "linked": false
+    "internal_id": 75520
   },
   {
     "expansion": "A1",
     "card_id": "A1-157",
     "image": "/images/en-US/A1-157.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "fighting",
     "name": "Rhydon",
     "card_type": "pokémon",
@@ -4775,7 +4619,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "4",
+    "retreat": 4,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4784,14 +4628,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-157"],
     "artist": "Masakazu Fukuda",
-    "internal_id": 75585,
-    "linked": false
+    "internal_id": 75585
   },
   {
     "expansion": "A1",
     "card_id": "A1-158",
     "image": "/images/en-US/A1-158.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "fighting",
     "name": "Kabuto",
     "card_type": "pokémon",
@@ -4805,7 +4648,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4814,14 +4657,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-158"],
     "artist": "sui",
-    "internal_id": 75649,
-    "linked": false
+    "internal_id": 75649
   },
   {
     "expansion": "A1",
     "card_id": "A1-159",
     "image": "/images/en-US/A1-159.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "fighting",
     "name": "Kabutops",
     "card_type": "pokémon",
@@ -4835,7 +4677,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -4844,14 +4686,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-159"],
     "artist": "Shin Nagasawa",
-    "internal_id": 75714,
-    "linked": false
+    "internal_id": 75714
   },
   {
     "expansion": "A1",
     "card_id": "A1-160",
     "image": "/images/en-US/A1-160.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "fighting",
     "name": "Mienfoo",
     "card_type": "pokémon",
@@ -4865,7 +4706,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4874,14 +4715,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-160"],
     "artist": "match",
-    "internal_id": 75776,
-    "linked": false
+    "internal_id": 75776
   },
   {
     "expansion": "A1",
     "card_id": "A1-161",
     "image": "/images/en-US/A1-161.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "fighting",
     "name": "Mienshao",
     "card_type": "pokémon",
@@ -4895,7 +4735,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4904,14 +4744,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-161"],
     "artist": "Atsuko Nishida",
-    "internal_id": 75841,
-    "linked": false
+    "internal_id": 75841
   },
   {
     "expansion": "A1",
     "card_id": "A1-162",
     "image": "/images/en-US/A1-162.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "fighting",
     "name": "Clobbopus",
     "card_type": "pokémon",
@@ -4925,7 +4764,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4934,14 +4773,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-162"],
     "artist": "Yuu Nishida",
-    "internal_id": 75904,
-    "linked": false
+    "internal_id": 75904
   },
   {
     "expansion": "A1",
     "card_id": "A1-163",
     "image": "/images/en-US/A1-163.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "fighting",
     "name": "Grapploct",
     "card_type": "pokémon",
@@ -4955,7 +4793,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -4964,14 +4802,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-163"],
     "artist": "kurumitsu",
-    "internal_id": 75969,
-    "linked": false
+    "internal_id": 75969
   },
   {
     "expansion": "A1",
     "card_id": "A1-164",
     "image": "/images/en-US/A1-164.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "darkness",
     "name": "Ekans",
     "card_type": "pokémon",
@@ -4985,7 +4822,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -4994,14 +4831,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-164", "A3b-100"],
     "artist": "MAHOU",
-    "internal_id": 76032,
-    "linked": false
+    "internal_id": 76032
   },
   {
     "expansion": "A1",
     "card_id": "A1-165",
     "image": "/images/en-US/A1-165.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "darkness",
     "name": "Arbok",
     "card_type": "pokémon",
@@ -5015,7 +4851,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -5024,14 +4860,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-165", "A3b-101"],
     "artist": "Naoki Saito",
-    "internal_id": 76097,
-    "linked": false
+    "internal_id": 76097
   },
   {
     "expansion": "A1",
     "card_id": "A1-166",
     "image": "/images/en-US/A1-166.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "darkness",
     "name": "Nidoran♀",
     "card_type": "pokémon",
@@ -5045,7 +4880,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5054,14 +4889,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-166", "A4-223"],
     "artist": "Miki Tanaka",
-    "internal_id": 76160,
-    "linked": false
+    "internal_id": 76160
   },
   {
     "expansion": "A1",
     "card_id": "A1-167",
     "image": "/images/en-US/A1-167.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "darkness",
     "name": "Nidorina",
     "card_type": "pokémon",
@@ -5075,7 +4909,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -5084,14 +4918,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-167", "A4-224"],
     "artist": "Kagemaru Himeno",
-    "internal_id": 76225,
-    "linked": false
+    "internal_id": 76225
   },
   {
     "expansion": "A1",
     "card_id": "A1-168",
     "image": "/images/en-US/A1-168.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "darkness",
     "name": "Nidoqueen",
     "card_type": "pokémon",
@@ -5105,7 +4938,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -5114,14 +4947,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-168", "A1-240", "A4-225"],
     "artist": "nagimiso",
-    "internal_id": 76290,
-    "linked": false
+    "internal_id": 76290
   },
   {
     "expansion": "A1",
     "card_id": "A1-169",
     "image": "/images/en-US/A1-169.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "darkness",
     "name": "Nidoran♂",
     "card_type": "pokémon",
@@ -5135,7 +4967,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5144,14 +4976,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-169", "A4-226"],
     "artist": "Naoyo Kimura",
-    "internal_id": 76352,
-    "linked": false
+    "internal_id": 76352
   },
   {
     "expansion": "A1",
     "card_id": "A1-170",
     "image": "/images/en-US/A1-170.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "darkness",
     "name": "Nidorino",
     "card_type": "pokémon",
@@ -5165,7 +4996,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -5174,14 +5005,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-170", "A4-227"],
     "artist": "Kouki Saitou",
-    "internal_id": 76417,
-    "linked": false
+    "internal_id": 76417
   },
   {
     "expansion": "A1",
     "card_id": "A1-171",
     "image": "/images/en-US/A1-171.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "darkness",
     "name": "Nidoking",
     "card_type": "pokémon",
@@ -5195,7 +5025,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -5204,14 +5034,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-171", "A1-241", "A4-228"],
     "artist": "kawayoo",
-    "internal_id": 76482,
-    "linked": false
+    "internal_id": 76482
   },
   {
     "expansion": "A1",
     "card_id": "A1-172",
     "image": "/images/en-US/A1-172.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "darkness",
     "name": "Zubat",
     "card_type": "pokémon",
@@ -5225,7 +5054,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5234,14 +5063,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-172"],
     "artist": "match",
-    "internal_id": 76544,
-    "linked": false
+    "internal_id": 76544
   },
   {
     "expansion": "A1",
     "card_id": "A1-173",
     "image": "/images/en-US/A1-173.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "darkness",
     "name": "Golbat",
     "card_type": "pokémon",
@@ -5255,7 +5083,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -5264,14 +5092,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-173", "A1-242"],
     "artist": "Masakazu Fukuda",
-    "internal_id": 76609,
-    "linked": false
+    "internal_id": 76609
   },
   {
     "expansion": "A1",
     "card_id": "A1-174",
     "image": "/images/en-US/A1-174.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "darkness",
     "name": "Grimer",
     "card_type": "pokémon",
@@ -5285,7 +5112,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5294,14 +5121,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-174"],
     "artist": "Pani Kobayashi",
-    "internal_id": 76672,
-    "linked": false
+    "internal_id": 76672
   },
   {
     "expansion": "A1",
     "card_id": "A1-175",
     "image": "/images/en-US/A1-175.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "darkness",
     "name": "Muk",
     "card_type": "pokémon",
@@ -5315,7 +5141,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -5324,14 +5150,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-175"],
     "artist": "Hajime Kusajima",
-    "internal_id": 76738,
-    "linked": false
+    "internal_id": 76738
   },
   {
     "expansion": "A1",
     "card_id": "A1-176",
     "image": "/images/en-US/A1-176.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "darkness",
     "name": "Koffing",
     "card_type": "pokémon",
@@ -5345,7 +5170,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5354,14 +5179,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-176"],
     "artist": "Saya Tsuruta",
-    "internal_id": 76800,
-    "linked": false
+    "internal_id": 76800
   },
   {
     "expansion": "A1",
     "card_id": "A1-177",
     "image": "/images/en-US/A1-177.webp",
-    "hp": "110",
+    "hp": 110,
     "energy": "darkness",
     "name": "Weezing",
     "card_type": "pokémon",
@@ -5379,7 +5203,7 @@
       "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may make your opponent's Active Pokémon Poisoned."
     },
     "weakness": "fighting",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -5388,14 +5212,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-177", "A1-243"],
     "artist": "OOYAMA",
-    "internal_id": 76866,
-    "linked": false
+    "internal_id": 76866
   },
   {
     "expansion": "A1",
     "card_id": "A1-178",
     "image": "/images/en-US/A1-178.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "metal",
     "name": "Mawile",
     "card_type": "pokémon",
@@ -5409,7 +5232,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5418,14 +5241,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-178"],
     "artist": "Kagemaru Himeno",
-    "internal_id": 76928,
-    "linked": false
+    "internal_id": 76928
   },
   {
     "expansion": "A1",
     "card_id": "A1-179",
     "image": "/images/en-US/A1-179.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "metal",
     "name": "Pawniard",
     "card_type": "pokémon",
@@ -5439,7 +5261,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5448,14 +5270,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-179"],
     "artist": "Kouki Saitou",
-    "internal_id": 76992,
-    "linked": false
+    "internal_id": 76992
   },
   {
     "expansion": "A1",
     "card_id": "A1-180",
     "image": "/images/en-US/A1-180.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "metal",
     "name": "Bisharp",
     "card_type": "pokémon",
@@ -5469,7 +5290,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -5478,14 +5299,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-180"],
     "artist": "Anesaki Dynamic",
-    "internal_id": 77057,
-    "linked": false
+    "internal_id": 77057
   },
   {
     "expansion": "A1",
     "card_id": "A1-181",
     "image": "/images/en-US/A1-181.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "metal",
     "name": "Meltan",
     "card_type": "pokémon",
@@ -5499,7 +5319,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5508,14 +5328,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-181"],
     "artist": "Shin Nagasawa",
-    "internal_id": 77120,
-    "linked": false
+    "internal_id": 77120
   },
   {
     "expansion": "A1",
     "card_id": "A1-182",
     "image": "/images/en-US/A1-182.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "metal",
     "name": "Melmetal",
     "card_type": "pokémon",
@@ -5533,7 +5352,7 @@
       "effect": "This Pokémon takes -20 damage from attacks."
     },
     "weakness": "fire",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -5542,14 +5361,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-182"],
     "artist": "Kouki Saitou",
-    "internal_id": 77186,
-    "linked": false
+    "internal_id": 77186
   },
   {
     "expansion": "A1",
     "card_id": "A1-183",
     "image": "/images/en-US/A1-183.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "dragon",
     "name": "Dratini",
     "card_type": "pokémon",
@@ -5563,7 +5381,7 @@
       }
     ],
     "weakness": "none",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5572,14 +5390,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-183"],
     "artist": "Ayaka Yoshida",
-    "internal_id": 77248,
-    "linked": false
+    "internal_id": 77248
   },
   {
     "expansion": "A1",
     "card_id": "A1-184",
     "image": "/images/en-US/A1-184.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "dragon",
     "name": "Dragonair",
     "card_type": "pokémon",
@@ -5593,7 +5410,7 @@
       }
     ],
     "weakness": "none",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -5602,14 +5419,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-184"],
     "artist": "kirisAki",
-    "internal_id": 77313,
-    "linked": false
+    "internal_id": 77313
   },
   {
     "expansion": "A1",
     "card_id": "A1-185",
     "image": "/images/en-US/A1-185.webp",
-    "hp": "160",
+    "hp": 160,
     "energy": "dragon",
     "name": "Dragonite",
     "card_type": "pokémon",
@@ -5623,7 +5439,7 @@
       }
     ],
     "weakness": "none",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -5632,14 +5448,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-185", "A1-244"],
     "artist": "Hiroyuki Yamamoto",
-    "internal_id": 77378,
-    "linked": false
+    "internal_id": 77378
   },
   {
     "expansion": "A1",
     "card_id": "A1-186",
     "image": "/images/en-US/A1-186.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "colorless",
     "name": "Pidgey",
     "card_type": "pokémon",
@@ -5653,7 +5468,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5662,14 +5477,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-186", "A3a-95"],
     "artist": "Scav",
-    "internal_id": 77440,
-    "linked": false
+    "internal_id": 77440
   },
   {
     "expansion": "A1",
     "card_id": "A1-187",
     "image": "/images/en-US/A1-187.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "colorless",
     "name": "Pidgeotto",
     "card_type": "pokémon",
@@ -5683,7 +5497,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5692,14 +5506,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-187", "A3a-96"],
     "artist": "Scav",
-    "internal_id": 77504,
-    "linked": false
+    "internal_id": 77504
   },
   {
     "expansion": "A1",
     "card_id": "A1-188",
     "image": "/images/en-US/A1-188.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "colorless",
     "name": "Pidgeot",
     "card_type": "pokémon",
@@ -5717,7 +5530,7 @@
       "effect": "Once during your turn, you may switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
     },
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -5726,14 +5539,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-188", "A1-245", "A3a-97"],
     "artist": "Scav",
-    "internal_id": 77570,
-    "linked": false
+    "internal_id": 77570
   },
   {
     "expansion": "A1",
     "card_id": "A1-189",
     "image": "/images/en-US/A1-189.webp",
-    "hp": "40",
+    "hp": 40,
     "energy": "colorless",
     "name": "Rattata",
     "card_type": "pokémon",
@@ -5747,7 +5559,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5756,14 +5568,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-189"],
     "artist": "Atsushi Furusawa",
-    "internal_id": 77632,
-    "linked": false
+    "internal_id": 77632
   },
   {
     "expansion": "A1",
     "card_id": "A1-190",
     "image": "/images/en-US/A1-190.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "colorless",
     "name": "Raticate",
     "card_type": "pokémon",
@@ -5777,7 +5588,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5786,14 +5597,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-190"],
     "artist": "Shigenori Negishi",
-    "internal_id": 77696,
-    "linked": false
+    "internal_id": 77696
   },
   {
     "expansion": "A1",
     "card_id": "A1-191",
     "image": "/images/en-US/A1-191.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "colorless",
     "name": "Spearow",
     "card_type": "pokémon",
@@ -5807,7 +5617,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5816,14 +5626,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-191"],
     "artist": "Shiburingaru",
-    "internal_id": 77760,
-    "linked": false
+    "internal_id": 77760
   },
   {
     "expansion": "A1",
     "card_id": "A1-192",
     "image": "/images/en-US/A1-192.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "colorless",
     "name": "Fearow",
     "card_type": "pokémon",
@@ -5837,7 +5646,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5846,14 +5655,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-192"],
     "artist": "Satoshi Shirai",
-    "internal_id": 77824,
-    "linked": false
+    "internal_id": 77824
   },
   {
     "expansion": "A1",
     "card_id": "A1-193",
     "image": "/images/en-US/A1-193.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "colorless",
     "name": "Jigglypuff",
     "card_type": "pokémon",
@@ -5867,7 +5675,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5876,14 +5684,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-193", "A4b-277", "A4b-278"],
     "artist": "Mizue",
-    "internal_id": 77888,
-    "linked": false
+    "internal_id": 77888
   },
   {
     "expansion": "A1",
     "card_id": "A1-194",
     "image": "/images/en-US/A1-194.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "colorless",
     "name": "Wigglytuff",
     "card_type": "pokémon",
@@ -5897,7 +5704,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5906,14 +5713,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-194"],
     "artist": "Atsuko Nishida",
-    "internal_id": 77952,
-    "linked": false
+    "internal_id": 77952
   },
   {
     "expansion": "A1",
     "card_id": "A1-195",
     "image": "/images/en-US/A1-195.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "colorless",
     "name": "Wigglytuff ex",
     "card_type": "pokémon",
@@ -5927,7 +5733,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊◊◊",
     "fullart": false,
     "ex": true,
@@ -5936,14 +5742,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-195", "A1-265", "A1-279", "A3-237", "A4b-279"],
     "artist": "PLANETA Igarashi",
-    "internal_id": 78019,
-    "linked": false
+    "internal_id": 78019
   },
   {
     "expansion": "A1",
     "card_id": "A1-196",
     "image": "/images/en-US/A1-196.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "colorless",
     "name": "Meowth",
     "card_type": "pokémon",
@@ -5957,7 +5762,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -5966,14 +5771,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-196", "A1-246", "P-A-12"],
     "artist": "Mitsuhiro Arita",
-    "internal_id": 78080,
-    "linked": false
+    "internal_id": 78080
   },
   {
     "expansion": "A1",
     "card_id": "A1-197",
     "image": "/images/en-US/A1-197.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "colorless",
     "name": "Persian",
     "card_type": "pokémon",
@@ -5987,7 +5791,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -5996,14 +5800,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-197"],
     "artist": "nagimiso",
-    "internal_id": 78145,
-    "linked": false
+    "internal_id": 78145
   },
   {
     "expansion": "A1",
     "card_id": "A1-198",
     "image": "/images/en-US/A1-198.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "colorless",
     "name": "Farfetch'd",
     "card_type": "pokémon",
@@ -6017,7 +5820,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -6026,14 +5829,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-198", "P-A-62", "A3b-102", "A4b-280", "A4b-281", "A4b-359"],
     "artist": "Miki Tanaka",
-    "internal_id": 78208,
-    "linked": false
+    "internal_id": 78208
   },
   {
     "expansion": "A1",
     "card_id": "A1-199",
     "image": "/images/en-US/A1-199.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "colorless",
     "name": "Doduo",
     "card_type": "pokémon",
@@ -6047,7 +5849,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -6056,14 +5858,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-199"],
     "artist": "Yuya Oka",
-    "internal_id": 78272,
-    "linked": false
+    "internal_id": 78272
   },
   {
     "expansion": "A1",
     "card_id": "A1-200",
     "image": "/images/en-US/A1-200.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "colorless",
     "name": "Dodrio",
     "card_type": "pokémon",
@@ -6077,7 +5878,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "0",
+    "retreat": 0,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6086,14 +5887,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-200"],
     "artist": "Miki Tanaka",
-    "internal_id": 78337,
-    "linked": false
+    "internal_id": 78337
   },
   {
     "expansion": "A1",
     "card_id": "A1-201",
     "image": "/images/en-US/A1-201.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "colorless",
     "name": "Lickitung",
     "card_type": "pokémon",
@@ -6107,7 +5907,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6116,14 +5916,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-201"],
     "artist": "Kagemaru Himeno",
-    "internal_id": 78401,
-    "linked": false
+    "internal_id": 78401
   },
   {
     "expansion": "A1",
     "card_id": "A1-202",
     "image": "/images/en-US/A1-202.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "colorless",
     "name": "Chansey",
     "card_type": "pokémon",
@@ -6137,7 +5936,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6146,14 +5945,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-202", "P-A-11"],
     "artist": "MAHOU",
-    "internal_id": 78465,
-    "linked": false
+    "internal_id": 78465
   },
   {
     "expansion": "A1",
     "card_id": "A1-203",
     "image": "/images/en-US/A1-203.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "colorless",
     "name": "Kangaskhan",
     "card_type": "pokémon",
@@ -6167,7 +5965,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -6176,14 +5974,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-203"],
     "artist": "Ken Sugimori",
-    "internal_id": 78530,
-    "linked": false
+    "internal_id": 78530
   },
   {
     "expansion": "A1",
     "card_id": "A1-204",
     "image": "/images/en-US/A1-204.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "colorless",
     "name": "Tauros",
     "card_type": "pokémon",
@@ -6197,7 +5994,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6206,14 +6003,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-204"],
     "artist": "kodama",
-    "internal_id": 78593,
-    "linked": false
+    "internal_id": 78593
   },
   {
     "expansion": "A1",
     "card_id": "A1-205",
     "image": "/images/en-US/A1-205.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "colorless",
     "name": "Ditto",
     "card_type": "pokémon",
@@ -6227,7 +6023,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -6236,14 +6032,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-205", "A1-247"],
     "artist": "Miki Tanaka",
-    "internal_id": 78658,
-    "linked": false
+    "internal_id": 78658
   },
   {
     "expansion": "A1",
     "card_id": "A1-206",
     "image": "/images/en-US/A1-206.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "colorless",
     "name": "Eevee",
     "card_type": "pokémon",
@@ -6257,7 +6052,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -6266,14 +6061,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-206", "A1-207", "A1-208", "A1-248", "P-A-92"],
     "artist": "Atsuko Nishida",
-    "internal_id": 78720,
-    "linked": false
+    "internal_id": 78720
   },
   {
     "expansion": "A1",
     "card_id": "A1-207",
     "image": "/images/en-US/A1-207.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "colorless",
     "name": "Eevee",
     "card_type": "pokémon",
@@ -6287,7 +6081,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -6296,14 +6090,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-206", "A1-207", "A1-208", "A1-248", "P-A-92"],
     "artist": "Hasuno",
-    "internal_id": 78784,
-    "linked": false
+    "internal_id": 78784
   },
   {
     "expansion": "A1",
     "card_id": "A1-208",
     "image": "/images/en-US/A1-208.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "colorless",
     "name": "Eevee",
     "card_type": "pokémon",
@@ -6317,7 +6110,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -6326,14 +6119,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-206", "A1-207", "A1-208", "A1-248", "P-A-92"],
     "artist": "Sekio",
-    "internal_id": 78848,
-    "linked": false
+    "internal_id": 78848
   },
   {
     "expansion": "A1",
     "card_id": "A1-209",
     "image": "/images/en-US/A1-209.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "colorless",
     "name": "Porygon",
     "card_type": "pokémon",
@@ -6351,7 +6143,7 @@
       "effect": "Once during your turn, you may look at the top card of your deck."
     },
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6360,14 +6152,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-209", "A1-249"],
     "artist": "Ayaka Yoshida",
-    "internal_id": 78913,
-    "linked": false
+    "internal_id": 78913
   },
   {
     "expansion": "A1",
     "card_id": "A1-210",
     "image": "/images/en-US/A1-210.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "colorless",
     "name": "Aerodactyl",
     "card_type": "pokémon",
@@ -6381,7 +6172,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -6390,14 +6181,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-210", "A3a-98"],
     "artist": "Naoyo Kimura",
-    "internal_id": 78978,
-    "linked": false
+    "internal_id": 78978
   },
   {
     "expansion": "A1",
     "card_id": "A1-211",
     "image": "/images/en-US/A1-211.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "colorless",
     "name": "Snorlax",
     "card_type": "pokémon",
@@ -6411,7 +6201,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "4",
+    "retreat": 4,
     "rarity": "◊◊◊",
     "fullart": false,
     "ex": false,
@@ -6420,14 +6210,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-211", "A1-250"],
     "artist": "Naoki Saito",
-    "internal_id": 79042,
-    "linked": false
+    "internal_id": 79042
   },
   {
     "expansion": "A1",
     "card_id": "A1-212",
     "image": "/images/en-US/A1-212.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "colorless",
     "name": "Minccino",
     "card_type": "pokémon",
@@ -6441,7 +6230,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -6450,14 +6239,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-212"],
     "artist": "sui",
-    "internal_id": 79104,
-    "linked": false
+    "internal_id": 79104
   },
   {
     "expansion": "A1",
     "card_id": "A1-213",
     "image": "/images/en-US/A1-213.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "colorless",
     "name": "Cinccino",
     "card_type": "pokémon",
@@ -6471,7 +6259,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6480,14 +6268,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-213", "P-A-31"],
     "artist": "0313",
-    "internal_id": 79169,
-    "linked": false
+    "internal_id": 79169
   },
   {
     "expansion": "A1",
     "card_id": "A1-214",
     "image": "/images/en-US/A1-214.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "colorless",
     "name": "Wooloo",
     "card_type": "pokémon",
@@ -6501,7 +6288,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -6510,14 +6297,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-214"],
     "artist": "Yoriyuki Ikegami",
-    "internal_id": 79232,
-    "linked": false
+    "internal_id": 79232
   },
   {
     "expansion": "A1",
     "card_id": "A1-215",
     "image": "/images/en-US/A1-215.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "colorless",
     "name": "Dubwool",
     "card_type": "pokémon",
@@ -6531,7 +6317,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -6540,14 +6326,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-215"],
     "artist": "saino misaki",
-    "internal_id": 79296,
-    "linked": false
+    "internal_id": 79296
   },
   {
     "expansion": "A1",
     "card_id": "A1-216",
     "image": "/images/en-US/A1-216.webp",
-    "hp": "40",
+    "hp": 40,
     "energy": "trainer",
     "name": "Helix Fossil",
     "card_type": "trainer",
@@ -6558,7 +6343,6 @@
       "effect": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -6567,14 +6351,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-216"],
     "artist": "Toyste Beach",
-    "internal_id": 79360,
-    "linked": false
+    "internal_id": 79360
   },
   {
     "expansion": "A1",
     "card_id": "A1-217",
     "image": "/images/en-US/A1-217.webp",
-    "hp": "40",
+    "hp": 40,
     "energy": "trainer",
     "name": "Dome Fossil",
     "card_type": "trainer",
@@ -6585,7 +6368,6 @@
       "effect": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -6594,14 +6376,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-217"],
     "artist": "Toyste Beach",
-    "internal_id": 79424,
-    "linked": false
+    "internal_id": 79424
   },
   {
     "expansion": "A1",
     "card_id": "A1-218",
     "image": "/images/en-US/A1-218.webp",
-    "hp": "40",
+    "hp": 40,
     "energy": "trainer",
     "name": "Old Amber",
     "card_type": "trainer",
@@ -6612,7 +6393,6 @@
       "effect": "Play this card as if it were a 40-HP Basic [C] Pokémon.At any time during your turn, you may discard this card from play.This card can't retreat.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "◊",
     "fullart": false,
     "ex": false,
@@ -6621,14 +6401,12 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-218", "A1a-63", "A4b-312", "A4b-313"],
     "artist": "Toyste Beach",
-    "internal_id": 79488,
-    "linked": false
+    "internal_id": 79488
   },
   {
     "expansion": "A1",
     "card_id": "A1-219",
     "image": "/images/en-US/A1-219.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Erika",
     "card_type": "trainer",
@@ -6639,7 +6417,6 @@
       "effect": "Heal 50 damage from 1 of your [G] Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                kirisAki"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6648,14 +6425,12 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-219", "A1-266", "A4b-328", "A4b-329"],
     "artist": "kirisAki",
-    "internal_id": 79553,
-    "linked": false
+    "internal_id": 79553
   },
   {
     "expansion": "A1",
     "card_id": "A1-220",
     "image": "/images/en-US/A1-220.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Misty",
     "card_type": "trainer",
@@ -6666,7 +6441,6 @@
       "effect": "Choose 1 of your [W] Pokémon, and flip a coin until you get tails. For each heads, take a [W] Energy from your Energy Zone and attach it to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Sanosuke Sakuma"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6675,14 +6449,12 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-220", "A1-267"],
     "artist": "Sanosuke Sakuma",
-    "internal_id": 79617,
-    "linked": false
+    "internal_id": 79617
   },
   {
     "expansion": "A1",
     "card_id": "A1-221",
     "image": "/images/en-US/A1-221.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Blaine",
     "card_type": "trainer",
@@ -6693,7 +6465,6 @@
       "effect": "During this turn, attacks used by your Ninetales, Rapidash, or Magmar do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6702,14 +6473,12 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-221", "A1-268"],
     "artist": "GOSSAN",
-    "internal_id": 79681,
-    "linked": false
+    "internal_id": 79681
   },
   {
     "expansion": "A1",
     "card_id": "A1-222",
     "image": "/images/en-US/A1-222.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Koga",
     "card_type": "trainer",
@@ -6720,7 +6489,6 @@
       "effect": "Put your Muk or Weezing in the Active Spot into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Souichirou Gunjima"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6729,14 +6497,12 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-222", "A1-269"],
     "artist": "Souichirou Gunjima",
-    "internal_id": 79745,
-    "linked": false
+    "internal_id": 79745
   },
   {
     "expansion": "A1",
     "card_id": "A1-223",
     "image": "/images/en-US/A1-223.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Giovanni",
     "card_type": "trainer",
@@ -6747,7 +6513,6 @@
       "effect": "During this turn, attacks used by your Pokémon do +10 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6756,14 +6521,12 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-223", "A1-270", "A4b-334", "A4b-335"],
     "artist": "Hideki Ishikawa",
-    "internal_id": 79809,
-    "linked": false
+    "internal_id": 79809
   },
   {
     "expansion": "A1",
     "card_id": "A1-224",
     "image": "/images/en-US/A1-224.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Brock",
     "card_type": "trainer",
@@ -6774,7 +6537,6 @@
       "effect": "Take a [F] Energy from your Energy Zone and attach it to Golem or Onix.\n\n            \n                    \n    \n            Illustrated by \n            \n                Taira Akitsu"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6783,14 +6545,12 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-224", "A1-271"],
     "artist": "Taira Akitsu",
-    "internal_id": 79873,
-    "linked": false
+    "internal_id": 79873
   },
   {
     "expansion": "A1",
     "card_id": "A1-225",
     "image": "/images/en-US/A1-225.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Sabrina",
     "card_type": "trainer",
@@ -6801,7 +6561,6 @@
       "effect": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)\n\n            \n                    \n    \n            Illustrated by \n            \n                Yuu Nishida"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6810,14 +6569,12 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-225", "A1-272", "A4b-338", "A4b-339"],
     "artist": "Yuu Nishida",
-    "internal_id": 79937,
-    "linked": false
+    "internal_id": 79937
   },
   {
     "expansion": "A1",
     "card_id": "A1-226",
     "image": "/images/en-US/A1-226.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Lt. Surge",
     "card_type": "trainer",
@@ -6828,7 +6585,6 @@
       "effect": "Move all [L] Energy from your Benched Pokémon to your Raichu, Electrode, or Electabuzz in the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                nagimiso"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "◊◊",
     "fullart": false,
     "ex": false,
@@ -6837,14 +6593,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-226", "A1-273"],
     "artist": "nagimiso",
-    "internal_id": 80001,
-    "linked": false
+    "internal_id": 80001
   },
   {
     "expansion": "A1",
     "card_id": "A1-227",
     "image": "/images/en-US/A1-227.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "grass",
     "name": "Bulbasaur",
     "card_type": "pokémon",
@@ -6858,7 +6613,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -6867,14 +6622,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-1", "A1-227", "P-A-23", "A3-210", "A4b-1", "A4b-2"],
     "artist": "Ryota Murayama",
-    "internal_id": 80068,
-    "linked": false
+    "internal_id": 80068
   },
   {
     "expansion": "A1",
     "card_id": "A1-228",
     "image": "/images/en-US/A1-228.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "grass",
     "name": "Gloom",
     "card_type": "pokémon",
@@ -6888,7 +6642,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -6897,14 +6651,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-12", "A1-228"],
     "artist": "OKACHEKE",
-    "internal_id": 80132,
-    "linked": false
+    "internal_id": 80132
   },
   {
     "expansion": "A1",
     "card_id": "A1-229",
     "image": "/images/en-US/A1-229.webp",
-    "hp": "90",
+    "hp": 90,
     "energy": "grass",
     "name": "Pinsir",
     "card_type": "pokémon",
@@ -6918,7 +6671,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -6927,14 +6680,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-26", "A1-229"],
     "artist": "Scav",
-    "internal_id": 80196,
-    "linked": false
+    "internal_id": 80196
   },
   {
     "expansion": "A1",
     "card_id": "A1-230",
     "image": "/images/en-US/A1-230.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "fire",
     "name": "Charmander",
     "card_type": "pokémon",
@@ -6948,7 +6700,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -6957,14 +6709,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-33", "A1-230", "P-A-32", "A4b-55", "A4b-56"],
     "artist": "GIDORA",
-    "internal_id": 80260,
-    "linked": false
+    "internal_id": 80260
   },
   {
     "expansion": "A1",
     "card_id": "A1-231",
     "image": "/images/en-US/A1-231.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "fire",
     "name": "Rapidash",
     "card_type": "pokémon",
@@ -6978,7 +6729,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -6987,14 +6738,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-43", "A1-231"],
     "artist": "Taira Akitsu",
-    "internal_id": 80324,
-    "linked": false
+    "internal_id": 80324
   },
   {
     "expansion": "A1",
     "card_id": "A1-232",
     "image": "/images/en-US/A1-232.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "water",
     "name": "Squirtle",
     "card_type": "pokémon",
@@ -7008,7 +6758,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7017,14 +6767,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-53", "A1-232", "P-A-33", "A3-215", "A4b-83", "A4b-84"],
     "artist": "Taira Akitsu",
-    "internal_id": 80388,
-    "linked": false
+    "internal_id": 80388
   },
   {
     "expansion": "A1",
     "card_id": "A1-233",
     "image": "/images/en-US/A1-233.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "water",
     "name": "Gyarados",
     "card_type": "pokémon",
@@ -7038,7 +6787,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "4",
+    "retreat": 4,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7047,14 +6796,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-78", "A1-233"],
     "artist": "Nurikabe",
-    "internal_id": 80452,
-    "linked": false
+    "internal_id": 80452
   },
   {
     "expansion": "A1",
     "card_id": "A1-234",
     "image": "/images/en-US/A1-234.webp",
-    "hp": "100",
+    "hp": 100,
     "energy": "water",
     "name": "Lapras",
     "card_type": "pokémon",
@@ -7068,7 +6816,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7077,14 +6825,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-79", "A1-234", "A3b-94"],
     "artist": "Haru Akasaka",
-    "internal_id": 80516,
-    "linked": false
+    "internal_id": 80516
   },
   {
     "expansion": "A1",
     "card_id": "A1-235",
     "image": "/images/en-US/A1-235.webp",
-    "hp": "80",
+    "hp": 80,
     "energy": "lightning",
     "name": "Electrode",
     "card_type": "pokémon",
@@ -7098,7 +6845,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "0",
+    "retreat": 0,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7107,14 +6854,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-100", "A1-235"],
     "artist": "DOM",
-    "internal_id": 80580,
-    "linked": false
+    "internal_id": 80580
   },
   {
     "expansion": "A1",
     "card_id": "A1-236",
     "image": "/images/en-US/A1-236.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "psychic",
     "name": "Alakazam",
     "card_type": "pokémon",
@@ -7128,7 +6874,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7137,14 +6883,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-117", "A1-236"],
     "artist": "AKIRA EGAWA",
-    "internal_id": 80644,
-    "linked": false
+    "internal_id": 80644
   },
   {
     "expansion": "A1",
     "card_id": "A1-237",
     "image": "/images/en-US/A1-237.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "psychic",
     "name": "Slowpoke",
     "card_type": "pokémon",
@@ -7158,7 +6903,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7167,14 +6912,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-118", "A1-237"],
     "artist": "Miki Tanaka",
-    "internal_id": 80708,
-    "linked": false
+    "internal_id": 80708
   },
   {
     "expansion": "A1",
     "card_id": "A1-238",
     "image": "/images/en-US/A1-238.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "fighting",
     "name": "Diglett",
     "card_type": "pokémon",
@@ -7188,7 +6932,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7197,14 +6941,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-139", "A1-238"],
     "artist": "Shinya Komatsu",
-    "internal_id": 80772,
-    "linked": false
+    "internal_id": 80772
   },
   {
     "expansion": "A1",
     "card_id": "A1-239",
     "image": "/images/en-US/A1-239.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "fighting",
     "name": "Cubone",
     "card_type": "pokémon",
@@ -7218,7 +6961,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7227,14 +6970,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-151", "A1-239", "A3-226", "A4b-194", "A4b-195"],
     "artist": "Teeziro",
-    "internal_id": 80836,
-    "linked": false
+    "internal_id": 80836
   },
   {
     "expansion": "A1",
     "card_id": "A1-240",
     "image": "/images/en-US/A1-240.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "darkness",
     "name": "Nidoqueen",
     "card_type": "pokémon",
@@ -7248,7 +6990,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7257,14 +6999,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-168", "A1-240", "A4-225"],
     "artist": "aoki",
-    "internal_id": 80900,
-    "linked": false
+    "internal_id": 80900
   },
   {
     "expansion": "A1",
     "card_id": "A1-241",
     "image": "/images/en-US/A1-241.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "darkness",
     "name": "Nidoking",
     "card_type": "pokémon",
@@ -7278,7 +7019,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7287,14 +7028,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-171", "A1-241", "A4-228"],
     "artist": "nagimiso",
-    "internal_id": 80964,
-    "linked": false
+    "internal_id": 80964
   },
   {
     "expansion": "A1",
     "card_id": "A1-242",
     "image": "/images/en-US/A1-242.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "darkness",
     "name": "Golbat",
     "card_type": "pokémon",
@@ -7308,7 +7048,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7317,14 +7057,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-173", "A1-242"],
     "artist": "Tomokazu Komiya",
-    "internal_id": 81028,
-    "linked": false
+    "internal_id": 81028
   },
   {
     "expansion": "A1",
     "card_id": "A1-243",
     "image": "/images/en-US/A1-243.webp",
-    "hp": "110",
+    "hp": 110,
     "energy": "darkness",
     "name": "Weezing",
     "card_type": "pokémon",
@@ -7342,7 +7081,7 @@
       "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may make your opponent's Active Pokémon Poisoned."
     },
     "weakness": "fighting",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7351,14 +7090,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-177", "A1-243"],
     "artist": "KEIICHIRO ITO",
-    "internal_id": 81092,
-    "linked": false
+    "internal_id": 81092
   },
   {
     "expansion": "A1",
     "card_id": "A1-244",
     "image": "/images/en-US/A1-244.webp",
-    "hp": "160",
+    "hp": 160,
     "energy": "dragon",
     "name": "Dragonite",
     "card_type": "pokémon",
@@ -7372,7 +7110,7 @@
       }
     ],
     "weakness": "none",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7381,14 +7119,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-185", "A1-244"],
     "artist": "Gemi",
-    "internal_id": 81156,
-    "linked": false
+    "internal_id": 81156
   },
   {
     "expansion": "A1",
     "card_id": "A1-245",
     "image": "/images/en-US/A1-245.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "colorless",
     "name": "Pidgeot",
     "card_type": "pokémon",
@@ -7406,7 +7143,7 @@
       "effect": "Once during your turn, you may switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
     },
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7415,14 +7152,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-188", "A1-245", "A3a-97"],
     "artist": "Anesaki Dynamic",
-    "internal_id": 81220,
-    "linked": false
+    "internal_id": 81220
   },
   {
     "expansion": "A1",
     "card_id": "A1-246",
     "image": "/images/en-US/A1-246.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "colorless",
     "name": "Meowth",
     "card_type": "pokémon",
@@ -7436,7 +7172,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7445,14 +7181,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-196", "A1-246", "P-A-12"],
     "artist": "Mina Nakai",
-    "internal_id": 81284,
-    "linked": false
+    "internal_id": 81284
   },
   {
     "expansion": "A1",
     "card_id": "A1-247",
     "image": "/images/en-US/A1-247.webp",
-    "hp": "70",
+    "hp": 70,
     "energy": "colorless",
     "name": "Ditto",
     "card_type": "pokémon",
@@ -7466,7 +7201,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7475,14 +7210,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-205", "A1-247"],
     "artist": "Jerky",
-    "internal_id": 81348,
-    "linked": false
+    "internal_id": 81348
   },
   {
     "expansion": "A1",
     "card_id": "A1-248",
     "image": "/images/en-US/A1-248.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "colorless",
     "name": "Eevee",
     "card_type": "pokémon",
@@ -7496,7 +7230,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7505,14 +7239,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-206", "A1-207", "A1-208", "A1-248", "P-A-92"],
     "artist": "sowsow",
-    "internal_id": 81412,
-    "linked": false
+    "internal_id": 81412
   },
   {
     "expansion": "A1",
     "card_id": "A1-249",
     "image": "/images/en-US/A1-249.webp",
-    "hp": "50",
+    "hp": 50,
     "energy": "colorless",
     "name": "Porygon",
     "card_type": "pokémon",
@@ -7530,7 +7263,7 @@
       "effect": "Once during your turn, you may look at the top card of your deck."
     },
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7539,14 +7272,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-209", "A1-249"],
     "artist": "Akira Komayama",
-    "internal_id": 81476,
-    "linked": false
+    "internal_id": 81476
   },
   {
     "expansion": "A1",
     "card_id": "A1-250",
     "image": "/images/en-US/A1-250.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "colorless",
     "name": "Snorlax",
     "card_type": "pokémon",
@@ -7560,7 +7292,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "4",
+    "retreat": 4,
     "rarity": "☆",
     "fullart": true,
     "ex": false,
@@ -7569,14 +7301,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-211", "A1-250"],
     "artist": "HYOGONOSUKE",
-    "internal_id": 81540,
-    "linked": false
+    "internal_id": 81540
   },
   {
     "expansion": "A1",
     "card_id": "A1-251",
     "image": "/images/en-US/A1-251.webp",
-    "hp": "190",
+    "hp": 190,
     "energy": "grass",
     "name": "Venusaur ex",
     "card_type": "pokémon",
@@ -7596,7 +7327,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -7605,14 +7336,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-4", "A1-251", "A3-230", "A4b-5"],
     "artist": "PLANETA CG Works",
-    "internal_id": 81605,
-    "linked": false
+    "internal_id": 81605
   },
   {
     "expansion": "A1",
     "card_id": "A1-252",
     "image": "/images/en-US/A1-252.webp",
-    "hp": "160",
+    "hp": 160,
     "energy": "grass",
     "name": "Exeggutor ex",
     "card_type": "pokémon",
@@ -7626,7 +7356,7 @@
       }
     ],
     "weakness": "fire",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -7635,14 +7365,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-23", "A1-252", "A3-231", "A4b-13"],
     "artist": "PLANETA CG Works",
-    "internal_id": 81669,
-    "linked": false
+    "internal_id": 81669
   },
   {
     "expansion": "A1",
     "card_id": "A1-253",
     "image": "/images/en-US/A1-253.webp",
-    "hp": "180",
+    "hp": 180,
     "energy": "fire",
     "name": "Charizard ex",
     "card_type": "pokémon",
@@ -7662,7 +7391,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -7671,14 +7400,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284", "A4b-59", "A4b-361"],
     "artist": "PLANETA CG Works",
-    "internal_id": 81733,
-    "linked": false
+    "internal_id": 81733
   },
   {
     "expansion": "A1",
     "card_id": "A1-254",
     "image": "/images/en-US/A1-254.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "fire",
     "name": "Arcanine ex",
     "card_type": "pokémon",
@@ -7692,7 +7420,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -7701,14 +7429,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-41", "A1-254", "A3a-100", "A4b-63"],
     "artist": "PLANETA Saito",
-    "internal_id": 81797,
-    "linked": false
+    "internal_id": 81797
   },
   {
     "expansion": "A1",
     "card_id": "A1-255",
     "image": "/images/en-US/A1-255.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "fire",
     "name": "Moltres ex",
     "card_type": "pokémon",
@@ -7728,7 +7455,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -7737,14 +7464,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103", "A4b-67"],
     "artist": "PLANETA Saito",
-    "internal_id": 81861,
-    "linked": false
+    "internal_id": 81861
   },
   {
     "expansion": "A1",
     "card_id": "A1-256",
     "image": "/images/en-US/A1-256.webp",
-    "hp": "180",
+    "hp": 180,
     "energy": "water",
     "name": "Blastoise ex",
     "card_type": "pokémon",
@@ -7764,7 +7490,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -7773,14 +7499,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-56", "A1-256", "A3-232", "A4b-87"],
     "artist": "PLANETA CG Works",
-    "internal_id": 81925,
-    "linked": false
+    "internal_id": 81925
   },
   {
     "expansion": "A1",
     "card_id": "A1-257",
     "image": "/images/en-US/A1-257.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "water",
     "name": "Starmie ex",
     "card_type": "pokémon",
@@ -7794,7 +7519,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "0",
+    "retreat": 0,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -7803,14 +7528,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-76", "A1-257", "A3-233", "A4b-95"],
     "artist": "PLANETA Igarashi",
-    "internal_id": 81989,
-    "linked": false
+    "internal_id": 81989
   },
   {
     "expansion": "A1",
     "card_id": "A1-258",
     "image": "/images/en-US/A1-258.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "water",
     "name": "Articuno ex",
     "card_type": "pokémon",
@@ -7830,7 +7554,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -7839,14 +7563,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-84", "A1-258", "A1-275", "A3b-104", "A4b-101"],
     "artist": "PLANETA Saito",
-    "internal_id": 82053,
-    "linked": false
+    "internal_id": 82053
   },
   {
     "expansion": "A1",
     "card_id": "A1-259",
     "image": "/images/en-US/A1-259.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "lightning",
     "name": "Pikachu ex",
     "card_type": "pokémon",
@@ -7860,7 +7583,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -7869,14 +7592,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285", "A4b-131", "A4b-364", "A4b-376"],
     "artist": "PLANETA CG Works",
-    "internal_id": 82117,
-    "linked": false
+    "internal_id": 82117
   },
   {
     "expansion": "A1",
     "card_id": "A1-260",
     "image": "/images/en-US/A1-260.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "lightning",
     "name": "Zapdos ex",
     "card_type": "pokémon",
@@ -7896,7 +7618,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -7905,14 +7627,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-104", "A1-260", "A1-276", "A3b-105", "A4b-139"],
     "artist": "PLANETA Saito",
-    "internal_id": 82181,
-    "linked": false
+    "internal_id": 82181
   },
   {
     "expansion": "A1",
     "card_id": "A1-261",
     "image": "/images/en-US/A1-261.webp",
-    "hp": "170",
+    "hp": 170,
     "energy": "psychic",
     "name": "Gengar ex",
     "card_type": "pokémon",
@@ -7930,7 +7651,7 @@
       "effect": "As long as this Pokémon is in the Active Spot, your opponent can't use any Supporter cards from their hand."
     },
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -7939,14 +7660,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-123", "A1-261", "A1-277", "A3-234", "A4b-155"],
     "artist": "PLANETA CG Works",
-    "internal_id": 82245,
-    "linked": false
+    "internal_id": 82245
   },
   {
     "expansion": "A1",
     "card_id": "A1-262",
     "image": "/images/en-US/A1-262.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "psychic",
     "name": "Mewtwo ex",
     "card_type": "pokémon",
@@ -7966,7 +7686,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -7975,14 +7695,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50", "A4b-158", "A4b-365"],
     "artist": "PLANETA Mochizuki",
-    "internal_id": 82309,
-    "linked": false
+    "internal_id": 82309
   },
   {
     "expansion": "A1",
     "card_id": "A1-263",
     "image": "/images/en-US/A1-263.webp",
-    "hp": "180",
+    "hp": 180,
     "energy": "fighting",
     "name": "Machamp ex",
     "card_type": "pokémon",
@@ -7996,7 +7715,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -8005,14 +7724,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-146", "A1-263", "A1-278", "A3-235", "A4b-193"],
     "artist": "PLANETA Igarashi",
-    "internal_id": 82373,
-    "linked": false
+    "internal_id": 82373
   },
   {
     "expansion": "A1",
     "card_id": "A1-264",
     "image": "/images/en-US/A1-264.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "fighting",
     "name": "Marowak ex",
     "card_type": "pokémon",
@@ -8026,7 +7744,7 @@
       }
     ],
     "weakness": "grass",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -8035,14 +7753,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-153", "A1-264", "A3-236", "A4b-196"],
     "artist": "PLANETA Mochizuki",
-    "internal_id": 82437,
-    "linked": false
+    "internal_id": 82437
   },
   {
     "expansion": "A1",
     "card_id": "A1-265",
     "image": "/images/en-US/A1-265.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "colorless",
     "name": "Wigglytuff ex",
     "card_type": "pokémon",
@@ -8056,7 +7773,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -8065,14 +7782,12 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-195", "A1-265", "A1-279", "A3-237", "A4b-279"],
     "artist": "PLANETA Igarashi",
-    "internal_id": 82501,
-    "linked": false
+    "internal_id": 82501
   },
   {
     "expansion": "A1",
     "card_id": "A1-266",
     "image": "/images/en-US/A1-266.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Erika",
     "card_type": "trainer",
@@ -8083,7 +7798,6 @@
       "effect": "Heal 50 damage from 1 of your [G] Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                saino misaki"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": true,
     "ex": false,
@@ -8092,14 +7806,12 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-219", "A1-266", "A4b-328", "A4b-329"],
     "artist": "saino misaki",
-    "internal_id": 82565,
-    "linked": false
+    "internal_id": 82565
   },
   {
     "expansion": "A1",
     "card_id": "A1-267",
     "image": "/images/en-US/A1-267.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Misty",
     "card_type": "trainer",
@@ -8110,7 +7822,6 @@
       "effect": "Choose 1 of your [W] Pokémon, and flip a coin until you get tails. For each heads, take a [W] Energy from your Energy Zone and attach it to that Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Sanosuke Sakuma"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": true,
     "ex": false,
@@ -8119,14 +7830,12 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-220", "A1-267"],
     "artist": "Sanosuke Sakuma",
-    "internal_id": 82629,
-    "linked": false
+    "internal_id": 82629
   },
   {
     "expansion": "A1",
     "card_id": "A1-268",
     "image": "/images/en-US/A1-268.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Blaine",
     "card_type": "trainer",
@@ -8137,7 +7846,6 @@
       "effect": "During this turn, attacks used by your Ninetales, Rapidash, or Magmar do +30 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                GOSSAN"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": true,
     "ex": false,
@@ -8146,14 +7854,12 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-221", "A1-268"],
     "artist": "GOSSAN",
-    "internal_id": 82693,
-    "linked": false
+    "internal_id": 82693
   },
   {
     "expansion": "A1",
     "card_id": "A1-269",
     "image": "/images/en-US/A1-269.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Koga",
     "card_type": "trainer",
@@ -8164,7 +7870,6 @@
       "effect": "Put your Muk or Weezing in the Active Spot into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Souichirou Gunjima"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": true,
     "ex": false,
@@ -8173,14 +7878,12 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-222", "A1-269"],
     "artist": "Souichirou Gunjima",
-    "internal_id": 82757,
-    "linked": false
+    "internal_id": 82757
   },
   {
     "expansion": "A1",
     "card_id": "A1-270",
     "image": "/images/en-US/A1-270.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Giovanni",
     "card_type": "trainer",
@@ -8191,7 +7894,6 @@
       "effect": "During this turn, attacks used by your Pokémon do +10 damage to your opponent's Active Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": true,
     "ex": false,
@@ -8200,14 +7902,12 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-223", "A1-270", "A4b-334", "A4b-335"],
     "artist": "Hideki Ishikawa",
-    "internal_id": 82821,
-    "linked": false
+    "internal_id": 82821
   },
   {
     "expansion": "A1",
     "card_id": "A1-271",
     "image": "/images/en-US/A1-271.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Brock",
     "card_type": "trainer",
@@ -8218,7 +7918,6 @@
       "effect": "Take a [F] Energy from your Energy Zone and attach it to Golem or Onix.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": true,
     "ex": false,
@@ -8227,14 +7926,12 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-224", "A1-271"],
     "artist": "Ryuta Fuse",
-    "internal_id": 82885,
-    "linked": false
+    "internal_id": 82885
   },
   {
     "expansion": "A1",
     "card_id": "A1-272",
     "image": "/images/en-US/A1-272.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Sabrina",
     "card_type": "trainer",
@@ -8245,7 +7942,6 @@
       "effect": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": true,
     "ex": false,
@@ -8254,14 +7950,12 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-225", "A1-272", "A4b-338", "A4b-339"],
     "artist": "GIDORA",
-    "internal_id": 82949,
-    "linked": false
+    "internal_id": 82949
   },
   {
     "expansion": "A1",
     "card_id": "A1-273",
     "image": "/images/en-US/A1-273.webp",
-    "hp": "Unknown",
     "energy": "trainer",
     "name": "Lt. Surge",
     "card_type": "trainer",
@@ -8272,7 +7966,6 @@
       "effect": "Move all [L] Energy from your Benched Pokémon to your Raichu, Electrode, or Electabuzz in the Active Spot.\n\n            \n                    \n    \n            Illustrated by \n            \n                nagimiso"
     },
     "weakness": "N/A",
-    "retreat": "N/A",
     "rarity": "☆☆",
     "fullart": true,
     "ex": false,
@@ -8281,14 +7974,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-226", "A1-273"],
     "artist": "nagimiso",
-    "internal_id": 83013,
-    "linked": false
+    "internal_id": 83013
   },
   {
     "expansion": "A1",
     "card_id": "A1-274",
     "image": "/images/en-US/A1-274.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "fire",
     "name": "Moltres ex",
     "card_type": "pokémon",
@@ -8308,7 +8000,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -8317,14 +8009,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-47", "A1-255", "A1-274", "P-A-25", "A3b-103", "A4b-67"],
     "artist": "hncl",
-    "internal_id": 83077,
-    "linked": false
+    "internal_id": 83077
   },
   {
     "expansion": "A1",
     "card_id": "A1-275",
     "image": "/images/en-US/A1-275.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "water",
     "name": "Articuno ex",
     "card_type": "pokémon",
@@ -8344,7 +8035,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -8353,14 +8044,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-84", "A1-258", "A1-275", "A3b-104", "A4b-101"],
     "artist": "kodama",
-    "internal_id": 83141,
-    "linked": false
+    "internal_id": 83141
   },
   {
     "expansion": "A1",
     "card_id": "A1-276",
     "image": "/images/en-US/A1-276.webp",
-    "hp": "130",
+    "hp": 130,
     "energy": "lightning",
     "name": "Zapdos ex",
     "card_type": "pokémon",
@@ -8380,7 +8070,7 @@
       }
     ],
     "weakness": "lightning",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -8389,14 +8079,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-104", "A1-260", "A1-276", "A3b-105", "A4b-139"],
     "artist": "GOSSAN",
-    "internal_id": 83205,
-    "linked": false
+    "internal_id": 83205
   },
   {
     "expansion": "A1",
     "card_id": "A1-277",
     "image": "/images/en-US/A1-277.webp",
-    "hp": "170",
+    "hp": 170,
     "energy": "psychic",
     "name": "Gengar ex",
     "card_type": "pokémon",
@@ -8414,7 +8103,7 @@
       "effect": "As long as this Pokémon is in the Active Spot, your opponent can't use any Supporter cards from their hand."
     },
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -8423,14 +8112,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-123", "A1-261", "A1-277", "A3-234", "A4b-155"],
     "artist": "NC Empire",
-    "internal_id": 83269,
-    "linked": false
+    "internal_id": 83269
   },
   {
     "expansion": "A1",
     "card_id": "A1-278",
     "image": "/images/en-US/A1-278.webp",
-    "hp": "180",
+    "hp": 180,
     "energy": "fighting",
     "name": "Machamp ex",
     "card_type": "pokémon",
@@ -8444,7 +8132,7 @@
       }
     ],
     "weakness": "psychic",
-    "retreat": "3",
+    "retreat": 3,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -8453,14 +8141,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-146", "A1-263", "A1-278", "A3-235", "A4b-193"],
     "artist": "AKIRA EGAWA",
-    "internal_id": 83333,
-    "linked": false
+    "internal_id": 83333
   },
   {
     "expansion": "A1",
     "card_id": "A1-279",
     "image": "/images/en-US/A1-279.webp",
-    "hp": "140",
+    "hp": 140,
     "energy": "colorless",
     "name": "Wigglytuff ex",
     "card_type": "pokémon",
@@ -8474,7 +8161,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆",
     "fullart": true,
     "ex": true,
@@ -8483,14 +8170,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-195", "A1-265", "A1-279", "A3-237", "A4b-279"],
     "artist": "Shibuzoh.",
-    "internal_id": 83397,
-    "linked": false
+    "internal_id": 83397
   },
   {
     "expansion": "A1",
     "card_id": "A1-280",
     "image": "/images/en-US/A1-280.webp",
-    "hp": "180",
+    "hp": 180,
     "energy": "fire",
     "name": "Charizard ex",
     "card_type": "pokémon",
@@ -8510,7 +8196,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆☆",
     "fullart": true,
     "ex": true,
@@ -8519,14 +8205,13 @@
     "pack": "charizardpack",
     "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284", "A4b-59", "A4b-361"],
     "artist": "kantaro",
-    "internal_id": 83462,
-    "linked": false
+    "internal_id": 83462
   },
   {
     "expansion": "A1",
     "card_id": "A1-281",
     "image": "/images/en-US/A1-281.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "lightning",
     "name": "Pikachu ex",
     "card_type": "pokémon",
@@ -8540,7 +8225,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆☆☆",
     "fullart": true,
     "ex": true,
@@ -8549,14 +8234,13 @@
     "pack": "pikachupack",
     "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285", "A4b-131", "A4b-364", "A4b-376"],
     "artist": "Ryota Murayama",
-    "internal_id": 83526,
-    "linked": false
+    "internal_id": 83526
   },
   {
     "expansion": "A1",
     "card_id": "A1-282",
     "image": "/images/en-US/A1-282.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "psychic",
     "name": "Mewtwo ex",
     "card_type": "pokémon",
@@ -8576,7 +8260,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "☆☆☆",
     "fullart": true,
     "ex": true,
@@ -8585,14 +8269,13 @@
     "pack": "mewtwopack",
     "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50", "A4b-158", "A4b-365"],
     "artist": "Nurikabe",
-    "internal_id": 83590,
-    "linked": false
+    "internal_id": 83590
   },
   {
     "expansion": "A1",
     "card_id": "A1-283",
     "image": "/images/en-US/A1-283.webp",
-    "hp": "60",
+    "hp": 60,
     "energy": "psychic",
     "name": "Mew",
     "card_type": "pokémon",
@@ -8606,7 +8289,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "☆☆☆",
     "fullart": true,
     "ex": false,
@@ -8615,14 +8298,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-283", "A1a-31"],
     "artist": "Amelicart",
-    "internal_id": 83654,
-    "linked": false
+    "internal_id": 83654
   },
   {
     "expansion": "A1",
     "card_id": "A1-284",
     "image": "/images/en-US/A1-284.webp",
-    "hp": "180",
+    "hp": 180,
     "energy": "fire",
     "name": "Charizard ex",
     "card_type": "pokémon",
@@ -8642,7 +8324,7 @@
       }
     ],
     "weakness": "water",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "Crown Rare",
     "fullart": true,
     "ex": true,
@@ -8651,14 +8333,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-36", "A1-253", "A1-280", "A1-284", "A4b-59", "A4b-361"],
     "artist": "PLANETA CG Works",
-    "internal_id": 83724,
-    "linked": false
+    "internal_id": 83724
   },
   {
     "expansion": "A1",
     "card_id": "A1-285",
     "image": "/images/en-US/A1-285.webp",
-    "hp": "120",
+    "hp": 120,
     "energy": "lightning",
     "name": "Pikachu ex",
     "card_type": "pokémon",
@@ -8672,7 +8353,7 @@
       }
     ],
     "weakness": "fighting",
-    "retreat": "1",
+    "retreat": 1,
     "rarity": "Crown Rare",
     "fullart": true,
     "ex": true,
@@ -8681,14 +8362,13 @@
     "pack": "everypack",
     "alternate_versions": ["A1-96", "A1-259", "A1-281", "A1-285", "A4b-131", "A4b-364", "A4b-376"],
     "artist": "PLANETA CG Works",
-    "internal_id": 83788,
-    "linked": false
+    "internal_id": 83788
   },
   {
     "expansion": "A1",
     "card_id": "A1-286",
     "image": "/images/en-US/A1-286.webp",
-    "hp": "150",
+    "hp": 150,
     "energy": "psychic",
     "name": "Mewtwo ex",
     "card_type": "pokémon",
@@ -8708,7 +8388,7 @@
       }
     ],
     "weakness": "darkness",
-    "retreat": "2",
+    "retreat": 2,
     "rarity": "Crown Rare",
     "fullart": true,
     "ex": true,
@@ -8717,7 +8397,6 @@
     "pack": "everypack",
     "alternate_versions": ["A1-129", "A1-262", "A1-282", "A1-286", "P-A-50", "A4b-158", "A4b-365"],
     "artist": "PLANETA Mochizuki",
-    "internal_id": 83852,
-    "linked": false
+    "internal_id": 83852
   }
 ]

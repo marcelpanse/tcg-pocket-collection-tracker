@@ -108,7 +108,7 @@ export interface Card {
   card_id: string
   expansion: ExpansionId
   name: string
-  hp: string
+  hp?: number
   energy: CardType
   card_type: string
   evolution_type: string
@@ -124,7 +124,7 @@ export interface Card {
     effect: string
   }
   weakness: string
-  retreat: string
+  retreat?: number
   rarity: Rarity
   fullart: boolean
   ex: boolean
@@ -133,7 +133,6 @@ export interface Card {
   pack: string
   alternate_versions: string[]
   artist: string
-  linked: boolean
 
   amount_owned?: number // calculated from the card amounts table
   collected?: boolean // calculated from the card amounts table

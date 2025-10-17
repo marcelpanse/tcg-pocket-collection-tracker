@@ -146,12 +146,16 @@ function CardDetail() {
             <p className="mt-1 flex">
               <strong className="block min-w-[175px]">{t('text.weakness')}</strong> {(card && t(`${card.weakness}`, { ns: 'common/types' })) || 'N/A'}
             </p>
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.hp')}</strong> {card?.hp}
-            </p>
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.retreat')}</strong> {card?.retreat || 'N/A'}
-            </p>
+            {card?.hp && (
+              <p className="mt-1 flex">
+                <strong className="block min-w-[175px]">{t('text.hp')}</strong> {card?.hp}
+              </p>
+            )}
+            {card?.retreat && (
+              <p className="mt-1 flex">
+                <strong className="block min-w-[175px]">{t('text.retreat')}</strong> {card.retreat}
+              </p>
+            )}
 
             <p className="mt-1 flex">
               <strong className="block min-w-[175px]">{t('text.ability')}</strong> {card?.ability?.name ?? <i>None</i>}

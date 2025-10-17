@@ -120,6 +120,49 @@ function mapAttackCost($: CheerioAPI, costElements) {
   return costList.length > 0 ? costList : ['No Cost']
 }
 
+function extractAbility($: CheerioAPI) {
+  const cardType = $('p.card-text-type').text().trim()
+  if (cardType.startsWith('Trainer')) {
+    // handle the effect for Trainer cards explicitly
+    const abilitySection = $('div.card-text-section')
+    if (abilitySection.length) {
+      const nextSection = abilitySection.next('div.card-text-section')
+      if (!nextSection) {
+        return undefined
+      }
+      return {
+        name: '',
+        effect: nextSection.text().trim(),
+      }
+    }
+    return undefined
+  } else {
+    // For other cards, extract ability name and effect
+    const abilitySection = $('div.card-text-ability')
+    if (abilitySection.length) {
+      const abilityName = abilitySection.find('p.card-text-ability-info').text().replace('Ability:', '').trim()
+      let abilityEffect = abilitySection.find('p.card-text-ability-effect').text().trim()
+
+      // Remove text within square brackets, similar to Python's re.sub(r'\[.*?\]', '')
+      abilityEffect = abilityEffect.replace(/\[.*?]/g, '').trim()
+
+      if (Boolean(abilityName) !== Boolean(abilityEffect)) {
+        throw new Error('Ability name and effect presence missmatch')
+      }
+
+      if (!abilityName) {
+        return undefined
+      }
+
+      return {
+        name: abilityName || 'No ability',
+        effect: abilityEffect || 'No effect',
+      }
+    }
+    return undefined
+  }
+}
+
 function extractSetAndPackInfo($: CheerioAPI) {
   const setInfo = $('div.card-prints-current')
 
@@ -184,7 +227,8 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
   const name = titleParts[0].trim()
 
   // Extract the last part for HP and remove non-digit characters
-  const hp = titleParts.length > 1 ? titleParts[titleParts.length - 1].replace(/\D/g, '') : 'Unknown'
+  const hpString = titleParts.length > 1 ? titleParts[titleParts.length - 1].replace(/\D/g, '') : undefined
+  const hp: number | undefined = hpString && parseInt(hpString, 10)
 
   // Assign the energy type from the second part if it exists
   let energyString = titleParts.length > 1 ? titleParts[1].trim().toLowerCase() : 'trainer'
@@ -233,7 +277,8 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
   const ability = extractAbility($)
   const weaknessAndRetreat = $('p.card-text-wrr').text().trim().split('\n')
   const weakness = weaknessAndRetreat[0]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
-  const retreat = weaknessAndRetreat[1]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
+  const retreatString = weaknessAndRetreat[1]?.split(': ')[1]?.toLowerCase().trim()
+  const retreat: number | undefined = retreatString && parseInt(retreatString, 10)
 
   const raritySection = $('table.card-prints-versions tr.current')
   let rarity = (cardUrl.toString().includes('P-A') ? 'P' : raritySection.find('td:last-child').text().trim() || 'P') as Rarity
@@ -250,7 +295,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
   const ex = name.includes(' ex')
 
   // Check if card is a baby pokemon (Not currently specified exactly on Limitless TCG page)
-  const baby = weakness === 'none' && hp === '30' && energy !== 'dragon'
+  const baby = weakness === 'none' && hp === 30 && energy !== 'dragon'
 
   const { setDetails: set_details, pack } = extractSetAndPackInfo($)
 
@@ -330,7 +375,6 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
     alternate_versions,
     artist,
     internal_id,
-    linked, //purely for testing to see if cards are linked correctly.
   }
 }
 
@@ -342,48 +386,6 @@ async function getCardDetails(cardUrl: string, expansionId: string) {
   } catch (error) {
     console.error(`Error fetching details for ${cardUrl}:`, error)
     return null // Return null or a default object to continue the process for other cards
-  }
-}
-function extractAbility($: CheerioAPI) {
-  const cardType = $('p.card-text-type').text().trim()
-  if (cardType.startsWith('Trainer')) {
-    // handle the effect for Trainer cards explicitly
-    const abilitySection = $('div.card-text-section')
-    if (abilitySection.length) {
-      const nextSection = abilitySection.next('div.card-text-section')
-      if (!nextSection) {
-        return undefined
-      }
-      return {
-        name: '',
-        effect: nextSection.text().trim(),
-      }
-    }
-    return undefined
-  } else {
-    // For other cards, extract ability name and effect
-    const abilitySection = $('div.card-text-ability')
-    if (abilitySection.length) {
-      const abilityName = abilitySection.find('p.card-text-ability-info').text().replace('Ability:', '').trim()
-      let abilityEffect = abilitySection.find('p.card-text-ability-effect').text().trim()
-
-      // Remove text within square brackets, similar to Python's re.sub(r'\[.*?\]', '')
-      abilityEffect = abilityEffect.replace(/\[.*?]/g, '').trim()
-
-      if (Boolean(abilityName) !== Boolean(abilityEffect)) {
-        throw new Error('Ability name and effect presence missmatch')
-      }
-
-      if (!abilityName) {
-        return undefined
-      }
-
-      return {
-        name: abilityName || 'No ability',
-        effect: abilityEffect || 'No effect',
-      }
-    }
-    return undefined
   }
 }
 
