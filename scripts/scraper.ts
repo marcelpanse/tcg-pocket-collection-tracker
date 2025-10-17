@@ -10,7 +10,7 @@ import { encode } from './encoder'
 
 const BASE_URL = 'https://pocket.limitlesstcg.com'
 
-const targetDir = 'frontend/assets/cards/'
+const targetDir = 'frontend/assets/'
 const imagesDir = 'frontend/public/images/en-US/'
 const imagesPath = '/images/en-US/'
 
@@ -321,7 +321,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
       if (rarity.includes('◊') && alternate_card_rarity === rarity && !foundMyself && !linked) {
         baseExpansion = alternate_card_id ? urlToCardId(alternate_card_id).expansion : expansion
         baseCardNr = alternate_card_id ? urlToCardId(alternate_card_id).cardNr : inPackId
-        linked = !!alternate_card_id //just for reference to double-check our db for errors
+        linked = !!alternate_card_id // just for reference to double-check
         console.log('found alternate option', alternate_card_id, baseExpansion, baseCardNr, linked)
       }
 
@@ -398,6 +398,8 @@ async function getCardLinks(mainUrl: string) {
   return links
 }
 
+const cards: Card[] = []
+
 async function scrapeCards() {
   for (const expansion of expansions) {
     try {
@@ -406,10 +408,7 @@ async function scrapeCards() {
       console.log(`Found ${cardLinks.length} card links.`)
 
       const concurrencyLimit = 10
-      const cards: Card[] = []
       let index = 0 // Track the current index of the cardLinks being processed
-
-      fs.mkdirSync(targetDir, { recursive: true })
 
       // Function to process a batch of tasks with a given concurrency limit
       async function processBatch() {
@@ -436,18 +435,24 @@ async function scrapeCards() {
 
       // Start processing the batches
       await processBatch()
-
-      console.log(`Scraping completed. Found ${cards.length} cards.`)
-
-      // Sort the cards array by id as a number
-      cards.sort((a, b) => Number.parseInt(a.card_id.split('-').pop(), 10) - Number.parseInt(b.card_id.split('-').pop(), 10))
-
-      fs.writeFileSync(path.join(targetDir, `${expansion}.json`), JSON.stringify(cards, null, 2))
-      console.log('Cards saved to cards.json')
     } catch (error) {
       console.error('Error scraping cards:', error)
     }
   }
 }
 
-scrapeCards().catch(console.error)
+await scrapeCards().catch(console.error)
+
+// Sort the cards array by id as a number
+cards.sort((a, b) => {
+  const [e_a, n_a] = a.card_id.split('-')
+  const [e_b, n_b] = b.card_id.split('-')
+  if (e_a !== e_b) {
+    return e_a < e_b ? -1 : 1
+  }
+  return Number.parseInt(n_a, 10) - Number.parseInt(n_b, 10)
+})
+
+fs.mkdirSync(targetDir, { recursive: true })
+fs.writeFileSync(path.join(targetDir, `cards.json`), JSON.stringify(cards, null, 2))
+console.log('Cards saved to cards.json')

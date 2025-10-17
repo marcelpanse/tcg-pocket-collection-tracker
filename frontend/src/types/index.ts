@@ -88,7 +88,6 @@ export interface Expansion {
   name: string
   id: ExpansionId
   internalId: number
-  cards: Card[]
   packs: Pack[]
   missions?: Mission[]
   tradeable: boolean
@@ -126,7 +125,6 @@ export interface Card {
   weakness: string
   retreat?: number
   rarity: Rarity
-  fullart: boolean
   ex: boolean
   baby: boolean
   set_details: string

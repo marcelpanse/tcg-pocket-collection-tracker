@@ -1,17 +1,6 @@
 import type { MissionDetailProps } from '@/components/Mission.tsx'
-import type { Card, CollectionRow, Expansion, Mission, Pack, Rarity } from '@/types'
-import A1 from '../../assets/cards/A1.json'
-import A1a from '../../assets/cards/A1a.json'
-import A2 from '../../assets/cards/A2.json'
-import A2a from '../../assets/cards/A2a.json'
-import A2b from '../../assets/cards/A2b.json'
-import A3 from '../../assets/cards/A3.json'
-import A3a from '../../assets/cards/A3a.json'
-import A3b from '../../assets/cards/A3b.json'
-import A4 from '../../assets/cards/A4.json'
-import A4a from '../../assets/cards/A4a.json'
-import A4b from '../../assets/cards/A4b.json'
-import PA from '../../assets/cards/P-A.json'
+import type { Card, CollectionRow, Expansion, ExpansionId, Mission, Pack, Rarity } from '@/types'
+import AllCardsJson from '../../assets/cards.json'
 import A1Missions from '../../assets/themed-collections/A1-missions.json'
 import A1aMissions from '../../assets/themed-collections/A1a-missions.json'
 import A2Missions from '../../assets/themed-collections/A2-missions.json'
@@ -28,32 +17,7 @@ const equivalent = (firstCard: Card, secondCard: Card) => {
   return firstCard.alternate_versions.includes(secondCard.card_id)
 }
 
-export const a1Cards: Card[] = A1 as Card[]
-export const a1aCards: Card[] = A1a as Card[]
-export const a2Cards: Card[] = A2 as Card[]
-export const a2aCards: Card[] = A2a as Card[]
-export const a2bCards: Card[] = A2b as Card[]
-export const a3Cards: Card[] = A3 as Card[]
-export const a3aCards: Card[] = A3a as Card[]
-export const a3bCards: Card[] = A3b as Card[]
-export const a4Cards: Card[] = A4 as Card[]
-export const a4aCards: Card[] = A4a as Card[]
-export const a4bCards: Card[] = A4b as Card[]
-export const paCards: Card[] = PA as Card[]
-export const allCards: Card[] = [
-  ...a1Cards,
-  ...a1aCards,
-  ...a2Cards,
-  ...a2aCards,
-  ...a2bCards,
-  ...a3Cards,
-  ...a3aCards,
-  ...a3bCards,
-  ...a4Cards,
-  ...a4aCards,
-  ...a4bCards,
-  ...paCards,
-]
+export const allCards: Card[] = AllCardsJson as Card[]
 
 const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
 const allCardsByInternalId: Map<number, Card> = new Map(allCards.map((card) => [card.internal_id, card]))
@@ -84,7 +48,6 @@ export const expansions: Expansion[] = [
     name: 'promo-a',
     id: 'P-A',
     internalId: 192, // IMPORTANT note: these should NEVER EVER change. The internals of the DB depend on it.
-    cards: paCards,
     packs: [{ name: 'everypack', color: '#CCCCCC' }],
     tradeable: false,
     promo: true,
@@ -93,7 +56,6 @@ export const expansions: Expansion[] = [
     name: 'geneticapex',
     id: 'A1',
     internalId: 1,
-    cards: a1Cards,
     packs: [
       { name: 'mewtwopack', color: '#986C88' },
       { name: 'charizardpack', color: '#E2711B' },
@@ -107,7 +69,6 @@ export const expansions: Expansion[] = [
     name: 'mythicalisland',
     id: 'A1a',
     internalId: 2,
-    cards: a1aCards,
     packs: [{ name: 'mewpack', color: '#FFC1EA' }],
     missions: a1aMissions,
     tradeable: true,
@@ -116,7 +77,6 @@ export const expansions: Expansion[] = [
     name: 'space-timesmackdown',
     id: 'A2',
     internalId: 3,
-    cards: a2Cards,
     packs: [
       { name: 'dialgapack', color: '#A0C5E8' },
       { name: 'palkiapack', color: '#D5A6BD' },
@@ -129,7 +89,6 @@ export const expansions: Expansion[] = [
     name: 'triumphantlight',
     id: 'A2a',
     internalId: 4,
-    cards: a2aCards,
     packs: [{ name: 'arceuspack', color: '#E4D7CA' }],
     missions: a2aMissions,
     tradeable: true,
@@ -138,7 +97,6 @@ export const expansions: Expansion[] = [
     name: 'shiningrevelry',
     id: 'A2b',
     internalId: 5,
-    cards: a2bCards,
     packs: [{ name: 'shiningrevelrypack', color: '#99F6E4' }],
     missions: a2bMissions,
     tradeable: true,
@@ -148,7 +106,6 @@ export const expansions: Expansion[] = [
     name: 'celestialguardians',
     id: 'A3',
     internalId: 6,
-    cards: a3Cards,
     packs: [
       { name: 'lunalapack', color: '#A0ABE0' },
       { name: 'solgaleopack', color: '#CA793F' },
@@ -162,7 +119,6 @@ export const expansions: Expansion[] = [
     name: 'extradimensionalcrisis',
     id: 'A3a',
     internalId: 7,
-    cards: a3aCards,
     packs: [{ name: 'buzzwolepack', color: '#ef4444' }],
     missions: a3aMissions,
     tradeable: true,
@@ -172,7 +128,6 @@ export const expansions: Expansion[] = [
     name: 'eeveegrove',
     id: 'A3b',
     internalId: 8,
-    cards: a3bCards,
     packs: [{ name: 'eeveegrovepack', color: '#b45309' }],
     missions: a3bMissions,
     tradeable: true,
@@ -182,7 +137,6 @@ export const expansions: Expansion[] = [
     name: 'wisdomofseaandsky',
     id: 'A4',
     internalId: 9,
-    cards: a4Cards,
     packs: [
       { name: 'ho-ohpack', color: '#FE3A2B' },
       { name: 'lugiapack', color: '#E9EEFA' },
@@ -196,7 +150,6 @@ export const expansions: Expansion[] = [
     name: 'secludedsprings',
     id: 'A4a',
     internalId: 10,
-    cards: a4aCards,
     packs: [{ name: 'suicunepack', color: '#E9B00D' }],
     missions: a4aMissions,
     tradeable: true,
@@ -207,7 +160,6 @@ export const expansions: Expansion[] = [
     name: 'deluxepackex',
     id: 'A4b',
     internalId: 11,
-    cards: a4bCards,
     packs: [{ name: 'deluxepack', color: '#CCA331' }],
     missions: a4bMissions,
     tradeable: false,
@@ -218,6 +170,8 @@ export const expansions: Expansion[] = [
     },
   },
 ]
+
+const expansionCards = Object.fromEntries(expansions.map((e) => [e.id, allCards.filter((c) => c.expansion === e.id)])) as Record<ExpansionId, Card[]>
 
 const expansionsDict: Map<string, Expansion> = new Map(expansions.map((expansion) => [expansion.id, expansion]))
 
@@ -279,8 +233,8 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
       }
       return rarityFilter.includes(cardRarity)
     },
-    expansion: (cr: CardWithAmount) => (expansion ? expansion.cards.find((c) => cr.card_id === c.card_id) : true),
-    pack: (cr: CardWithAmount) => (expansion && packName ? expansion.cards.find((c) => c.pack === packName && cr.card_id === c.card_id) : true),
+    expansion: (cr: CardWithAmount) => (expansion ? expansionCards[expansion.id].find((c) => cr.card_id === c.card_id) : true),
+    pack: (cr: CardWithAmount) => (expansion && packName ? expansionCards[expansion.id].find((c) => c.pack === packName && cr.card_id === c.card_id) : true),
     deckbuildingMode: (cr: CardWithAmount) => (deckbuildingMode ? cr.amount_owned > numberFilter - 1 : true),
   }
 
@@ -304,7 +258,7 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName, deckbuild
   let filteredCards = [...allCards]
 
   if (expansion) {
-    filteredCards = expansion.cards
+    filteredCards = expansionCards[expansion.id]
   }
   if (packName) {
     filteredCards = filteredCards.filter((c) => c.pack === packName)
@@ -454,7 +408,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
     return 1
   }
 
-  const cardsInPack = expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'everypack')
+  const cardsInPack = expansionCards[expansion.id].filter((c) => c.pack === pack.name || c.pack === 'everypack')
 
   let cardsInPackWithAmounts = cardsInPack.map((cip) => {
     const amount = ownedCards.get(cip.internal_id)?.amount_owned || 0
@@ -487,7 +441,7 @@ export const pullRate = ({ ownedCards, expansion, pack, rarityFilter = [], numbe
 
 export const pullRateForSpecificCard = (expansion: Expansion, packName: string, card: Card) => {
   const validatedPackName = packName === 'everypack' ? expansion?.packs[0].name : packName
-  const cardsInPack = expansion.cards.filter((c) => c.pack === validatedPackName || c.pack === 'everypack')
+  const cardsInPack = expansionCards[expansion.id].filter((c) => c.pack === validatedPackName || c.pack === 'everypack')
   return pullRateForCardSubset([card], expansion, cardsInPack, false) * 100
 }
 
@@ -511,7 +465,7 @@ export const pullRateForSpecificMission = (mission: Mission, missionGridRows: Mi
           pullRateForCardSubset(
             missingCards,
             expansion,
-            expansion.cards.filter((c) => c.pack === pack.name || c.pack === 'everypack'),
+            expansionCards[expansion.id].filter((c) => c.pack === pack.name || c.pack === 'everypack'),
             false,
           ) * 100,
         ] as const,
