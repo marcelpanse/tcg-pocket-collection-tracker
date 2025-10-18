@@ -317,7 +317,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
 
       // this checks for a card with the same rarity (up to EX card rarity) that is before the current card in the list. If so, that's the linked card
       // the alternate cards are only available up to EX card rarity (at least for now). And since limitless doesn't properly set shiny cards, we have to check it like this.
-      // Be aware that for higher rarities this would not work, as there are different fullart versions of the same card with the same rarity, eg. A1a-82 and A2a-91.
+      // Be aware that for higher rarities this would not work, as there are different fullart versions of the same card with the same rarity, eg. A2a-82 and A2a-91.
       if (rarity.includes('◊') && alternate_card_rarity === rarity && !foundMyself && !linked) {
         baseExpansion = alternate_card_id ? urlToCardId(alternate_card_id).expansion : expansion
         baseCardNr = alternate_card_id ? urlToCardId(alternate_card_id).cardNr : inPackId
