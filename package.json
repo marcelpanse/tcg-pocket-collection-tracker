@@ -22,7 +22,7 @@
   "type": "module",
   "packageManager": "pnpm@10.18.3",
   "engines": {
-    "node": ">=22"
+    "node": ">=20"
   },
   "pnpm": {
     "peerDependencyRules": {
