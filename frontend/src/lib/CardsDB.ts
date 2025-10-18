@@ -171,7 +171,7 @@ export const expansions: Expansion[] = [
   },
 ]
 
-const expansionCards = Object.fromEntries(expansions.map((e) => [e.id, allCards.filter((c) => c.expansion === e.id)])) as Record<ExpansionId, Card[]>
+const expansionCards = Object.groupBy(allCards, (c) => c.expansion) as Record<ExpansionId, Card[]>
 
 const expansionsDict: Map<string, Expansion> = new Map(expansions.map((expansion) => [expansion.id, expansion]))
 
