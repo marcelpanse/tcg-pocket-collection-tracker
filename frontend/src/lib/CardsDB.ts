@@ -14,7 +14,7 @@ import A4aMissions from '../../assets/themed-collections/A4a-missions.json'
 import A4bMissions from '../../assets/themed-collections/A4b-missions.json'
 
 const equivalent = (firstCard: Card, secondCard: Card) => {
-  return firstCard.alternate_versions.includes(secondCard.card_id)
+  return firstCard.alternate_versions.includes(secondCard.internal_id)
 }
 
 export const allCards: Card[] = AllCardsJson as Card[]
@@ -216,7 +216,7 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
         const amount_owned = ac.alternate_versions.reduce((acc, rc) => {
-          const card = getCardById(rc)
+          const card = getCardByInternalId(rc)
           return acc + (ownedCards.get(card?.internal_id || 0)?.amount_owned || 0)
         }, 0)
         return { ...ac, amount_owned }

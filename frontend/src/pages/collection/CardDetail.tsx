@@ -8,10 +8,10 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Radio, RadioIndicator, RadioItem } from '@/components/ui/radio'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
-import { craftingCost, getCardById, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
+import { craftingCost, getCardById, getCardByInternalId, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useDeleteCard, useSelectedCard } from '@/services/collection/useCollection'
-import type { CollectionRow } from '@/types'
+import type { Card, CollectionRow } from '@/types'
 
 function CardDetail() {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
@@ -26,7 +26,7 @@ function CardDetail() {
   const card = useMemo(() => (cardId === undefined ? undefined : getCardById(cardId)), [cardId])
   const row = useMemo(() => ownedCards.get(card?.internal_id || 0), [cardId])
   const alternatives = useMemo(
-    () => card?.alternate_versions.map((card_id) => ({ card_id, amount_owned: ownedCards.get(card?.internal_id)?.amount_owned ?? 0 })),
+    () => card?.alternate_versions.map((id) => ({ card: getCardByInternalId(id) as Card, amount_owned: ownedCards.get(id)?.amount_owned ?? 0 })),
     [card, ownedCards],
   )
   const expansion = useMemo(() => (card === undefined ? undefined : getExpansionById(card?.expansion)), [card])
@@ -118,11 +118,11 @@ function CardDetail() {
               {alternatives && (
                 <Radio className="w-fit" value={cardId} onValueChange={setCardId}>
                   {alternatives.map((x) => (
-                    <label key={x.card_id} className="flex items-center cursor-pointer" htmlFor={`radio-${x.card_id}`}>
-                      <RadioItem id={`radio-${x.card_id}`} value={x.card_id}>
+                    <label key={x.card.card_id} className="flex items-center cursor-pointer" htmlFor={`radio-${x.card.card_id}`}>
+                      <RadioItem id={`radio-${x.card.card_id}`} value={x.card.card_id}>
                         <RadioIndicator />
                       </RadioItem>
-                      <CardLine className="w-auto bg-transparent" card_id={x.card_id} rarity="w-14" name="hidden" details="hidden" amount="pl-4" />
+                      <CardLine className="w-auto bg-transparent" card_id={x.card.card_id} rarity="w-14" name="hidden" details="hidden" amount="pl-4" />
                     </label>
                   ))}
                   <p className="flex items-baseline mt-1">

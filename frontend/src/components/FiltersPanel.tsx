@@ -6,7 +6,7 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
-import { allCards, basicRarities, expansions, getCardById, getExpansionById } from '@/lib/CardsDB.ts'
+import { allCards, basicRarities, expansions, getCardByInternalId, getExpansionById } from '@/lib/CardsDB.ts'
 import { levenshtein } from '@/lib/levenshtein'
 import { getCardNameByLang } from '@/lib/utils'
 import { useProfileDialog } from '@/services/account/useAccount'
@@ -183,7 +183,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
     for (const card of filteredCards) {
       if (filters.deckbuildingMode) {
         card.amount_owned = card.alternate_versions.reduce((acc, c) => {
-          const card = getCardById(c)
+          const card = getCardByInternalId(c)
           return acc + (cards.get(card?.internal_id || 0)?.amount_owned ?? 0)
         }, 0)
       } else {
