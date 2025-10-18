@@ -6,16 +6,9 @@ import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
 import { getExpansionById } from '@/lib/CardsDB.ts'
+import { chunk } from '@/lib/utils.ts'
 import type { Card as CardType, Expansion } from '@/types'
 import { Card } from './Card.tsx'
-
-function chunk<T>(arr: T[], size: number): T[][] {
-  const res: T[][] = []
-  for (let i = 0; i < arr.length; i += size) {
-    res.push(arr.slice(i, i + size))
-  }
-  return res
-}
 
 interface Props {
   cards: CardType[]

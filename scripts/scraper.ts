@@ -5,12 +5,12 @@ import type { CheerioAPI } from 'cheerio'
 import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
 import { expansions as allExpansions } from '../frontend/src/lib/CardsDB'
-import type { Card, ExpansionId, Rarity } from '../frontend/src/types'
+import { type Card, type CardType, cardTypes, type ExpansionId, type Rarity } from '../frontend/src/types'
 import { encode } from './encoder'
 
 const BASE_URL = 'https://pocket.limitlesstcg.com'
 
-const targetDir = 'frontend/assets/cards/'
+const targetDir = 'frontend/assets/'
 const imagesDir = 'frontend/public/images/en-US/'
 const imagesPath = '/images/en-US/'
 
@@ -37,22 +37,20 @@ const packs = [
   'All cards',
 ]
 
-const typeMapping = {
-  G: 'Grass',
-  R: 'Fire',
-  W: 'Water',
-  L: 'Lightning',
-  P: 'Psychic',
-  F: 'Fighting',
-  D: 'Darkness',
-  M: 'Metal',
-  Y: 'Fairy',
-  C: 'Colorless',
+const typeMapping: Record<string, CardType> = {
+  G: 'grass',
+  R: 'fire',
+  W: 'water',
+  L: 'lightning',
+  P: 'psychic',
+  F: 'fighting',
+  D: 'darkness',
+  M: 'metal',
+  // Y: 'fairy',
+  C: 'colorless',
 }
 
-const fullArtRarities = ['☆', '☆☆', '☆☆☆', 'Crown Rare', 'P']
-
-const rarityOverrides = {
+const rarityOverrides: Partial<Record<ExpansionId, { rarity: Rarity; start: number; end: number }[]>> = {
   A2b: [
     { rarity: '✵', start: 97, end: 106 },
     { rarity: '✵✵', start: 107, end: 110 },
@@ -78,7 +76,7 @@ const rarityOverrides = {
     { rarity: '✵✵', start: 101, end: 104 },
   ],
   A4b: [{ rarity: '✵✵', start: 377, end: 378 }],
-} // as Record<ExpansionId, { rarity: Rarity; start: number; end: number }[]>
+}
 
 /* Helper Functions */
 
@@ -87,16 +85,11 @@ async function downloadImage(imageUrl: string, dest: string) {
 
   if (!response.ok) {
     throw new Error(`Failed to fetch image: ${response.statusText}`)
-  }
-
-  const stream = response.body
-  if (!stream) {
+  } else if (!response.body) {
     throw new Error(`Failed to download image: ${imageUrl}`)
   }
 
-  const writer = fs.createWriteStream(dest)
-
-  await pipeline(stream, writer)
+  await pipeline(response.body, fs.createWriteStream(dest))
 }
 
 async function fetchHTML(url: string) {
@@ -111,8 +104,7 @@ function mapAttackCost($: CheerioAPI, costElements) {
   costElements.each((_i, element) => {
     const costSymbol = $(element).text().trim()
 
-    if (costSymbol.length > 1) {
-      // Iterate over each letter in costSymbol
+    if (costSymbol !== '0') {
       for (const letter of costSymbol) {
         const costType = typeMapping[letter]
         if (!costType) {
@@ -120,16 +112,53 @@ function mapAttackCost($: CheerioAPI, costElements) {
         }
         costList.push(costType)
       }
-    } else {
-      const costType = typeMapping[costSymbol] || 'Unknown'
-      if (costType === 'Unknown') {
-        console.warn(`Warning: unrecognized symbol '${costSymbol}'.`)
-      }
-      costList.push(costType)
     }
   })
 
   return costList.length > 0 ? costList : ['No Cost']
+}
+
+function extractAbility($: CheerioAPI) {
+  const cardType = $('p.card-text-type').text().trim()
+  if (cardType.startsWith('Trainer')) {
+    // handle the effect for Trainer cards explicitly
+    const abilitySection = $('div.card-text-section')
+    if (abilitySection.length) {
+      const nextSection = abilitySection.next('div.card-text-section')
+      if (!nextSection) {
+        return undefined
+      }
+      return {
+        name: '',
+        effect: nextSection.text().trim(),
+      }
+    }
+    return undefined
+  } else {
+    // For other cards, extract ability name and effect
+    const abilitySection = $('div.card-text-ability')
+    if (abilitySection.length) {
+      const abilityName = abilitySection.find('p.card-text-ability-info').text().replace('Ability:', '').trim()
+      let abilityEffect = abilitySection.find('p.card-text-ability-effect').text().trim()
+
+      // Remove text within square brackets, similar to Python's re.sub(r'\[.*?\]', '')
+      abilityEffect = abilityEffect.replace(/\[.*?]/g, '').trim()
+
+      if (Boolean(abilityName) !== Boolean(abilityEffect)) {
+        throw new Error('Ability name and effect presence missmatch')
+      }
+
+      if (!abilityName) {
+        return undefined
+      }
+
+      return {
+        name: abilityName || 'No ability',
+        effect: abilityEffect || 'No effect',
+      }
+    }
+    return undefined
+  }
 }
 
 function extractSetAndPackInfo($: CheerioAPI) {
@@ -177,7 +206,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
 
   const imageUrl = $('img.card').attr('src')
   if (!imageUrl) {
-    throw new Error(`Failed to scrap image: ${cardUrl}`)
+    throw new Error(`Could not find card image: ${cardUrl}`)
   }
   const imageName = card_id + path.extname(imageUrl)
   const imageDest = path.join(imagesDir, imageName)
@@ -192,14 +221,22 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
   const title = $('p.card-text-title').text().trim()
   const titleParts = title.split(' - ')
 
-  // Extract the last part for HP and remove non-digit characters
-  const hp = titleParts.length > 1 ? titleParts[titleParts.length - 1].replace(/\D/g, '') : 'Unknown'
-
-  // Assign the energy type from the second part if it exists
-  const energy = titleParts.length > 1 ? titleParts[1].trim() : 'N/A'
-
   // Assign the name from the first part
   const name = titleParts[0].trim()
+
+  // Extract the last part for HP and remove non-digit characters
+  const hpString = titleParts.length > 1 ? titleParts[titleParts.length - 1].replace(/\D/g, '') : undefined
+  const hp: number | undefined = hpString && parseInt(hpString, 10)
+
+  // Assign the energy type from the second part if it exists
+  let energyString = titleParts.length > 1 ? titleParts[1].trim().toLowerCase() : 'trainer'
+  if (energyString === '40 hp' && (name.includes('Fossil') || name === 'Old Amber')) {
+    energyString = 'trainer'
+  }
+  if (!energyString || !(cardTypes as readonly string[]).includes(energyString)) {
+    throw new Error(`Failed to find energy: ${energyString}, ${cardUrl}`)
+  }
+  const energy = energyString as CardType
 
   const typeAndEvolution = $('p.card-text-type').text().trim().split('-')
   const card_type = typeAndEvolution[0].toLowerCase().trim()
@@ -238,7 +275,8 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
   const ability = extractAbility($)
   const weaknessAndRetreat = $('p.card-text-wrr').text().trim().split('\n')
   const weakness = weaknessAndRetreat[0]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
-  const retreat = weaknessAndRetreat[1]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
+  const retreatString = weaknessAndRetreat[1]?.split(': ')[1]?.toLowerCase().trim()
+  const retreat: number | undefined = retreatString && parseInt(retreatString, 10)
 
   const raritySection = $('table.card-prints-versions tr.current')
   let rarity = (cardUrl.toString().includes('P-A') ? 'P' : raritySection.find('td:last-child').text().trim() || 'P') as Rarity
@@ -250,12 +288,10 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
     }
   }
 
-  const fullart = fullArtRarities.includes(rarity)
-
   const ex = name.includes(' ex')
 
   // Check if card is a baby pokemon (Not currently specified exactly on Limitless TCG page)
-  const baby = weakness === 'none' && hp === '30' && energy !== 'Dragon'
+  const baby = weakness === 'none' && hp === 30 && energy !== 'dragon'
 
   const { setDetails: set_details, pack } = extractSetAndPackInfo($)
 
@@ -281,10 +317,11 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
 
       // this checks for a card with the same rarity (up to EX card rarity) that is before the current card in the list. If so, that's the linked card
       // the alternate cards are only available up to EX card rarity (at least for now). And since limitless doesn't properly set shiny cards, we have to check it like this.
+      // Be aware that for higher rarities this would not work, as there are different fullart versions of the same card with the same rarity, eg. A2a-82 and A2a-91.
       if (rarity.includes('◊') && alternate_card_rarity === rarity && !foundMyself && !linked) {
         baseExpansion = alternate_card_id ? urlToCardId(alternate_card_id).expansion : expansion
         baseCardNr = alternate_card_id ? urlToCardId(alternate_card_id).cardNr : inPackId
-        linked = !!alternate_card_id //just for reference to double-check our db for errors
+        linked = !!alternate_card_id // just for reference to double-check
         console.log('found alternate option', alternate_card_id, baseExpansion, baseCardNr, linked)
       }
 
@@ -326,7 +363,6 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
     weakness,
     retreat,
     rarity,
-    fullart,
     ex,
     baby,
     set_details,
@@ -334,7 +370,6 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
     alternate_versions,
     artist,
     internal_id,
-    linked, //purely for testing to see if cards are linked correctly.
   }
 }
 
@@ -346,48 +381,6 @@ async function getCardDetails(cardUrl: string, expansionId: string) {
   } catch (error) {
     console.error(`Error fetching details for ${cardUrl}:`, error)
     return null // Return null or a default object to continue the process for other cards
-  }
-}
-function extractAbility($: CheerioAPI) {
-  const cardType = $('p.card-text-type').text().trim()
-  if (cardType.startsWith('Trainer')) {
-    // handle the effect for Trainer cards explicitly
-    const abilitySection = $('div.card-text-section')
-    if (abilitySection.length) {
-      const nextSection = abilitySection.next('div.card-text-section')
-      if (!nextSection) {
-        return undefined
-      }
-      return {
-        name: '',
-        effect: nextSection.text().trim(),
-      }
-    }
-    return undefined
-  } else {
-    // For other cards, extract ability name and effect
-    const abilitySection = $('div.card-text-ability')
-    if (abilitySection.length) {
-      const abilityName = abilitySection.find('p.card-text-ability-info').text().replace('Ability:', '').trim()
-      let abilityEffect = abilitySection.find('p.card-text-ability-effect').text().trim()
-
-      // Remove text within square brackets, similar to Python's re.sub(r'\[.*?\]', '')
-      abilityEffect = abilityEffect.replace(/\[.*?]/g, '').trim()
-
-      if (Boolean(abilityName) !== Boolean(abilityEffect)) {
-        throw new Error('Ability name and effect presence missmatch')
-      }
-
-      if (!abilityName) {
-        return undefined
-      }
-
-      return {
-        name: abilityName || 'No ability',
-        effect: abilityEffect || 'No effect',
-      }
-    }
-    return undefined
   }
 }
 
@@ -405,6 +398,8 @@ async function getCardLinks(mainUrl: string) {
   return links
 }
 
+const cards1: Awaited<ReturnType<typeof getCardDetails>>[] = []
+
 async function scrapeCards() {
   for (const expansion of expansions) {
     try {
@@ -413,10 +408,7 @@ async function scrapeCards() {
       console.log(`Found ${cardLinks.length} card links.`)
 
       const concurrencyLimit = 10
-      const cards: Card[] = []
       let index = 0 // Track the current index of the cardLinks being processed
-
-      fs.mkdirSync(targetDir, { recursive: true })
 
       // Function to process a batch of tasks with a given concurrency limit
       async function processBatch() {
@@ -427,7 +419,7 @@ async function scrapeCards() {
           promises.push(
             getCardDetails(link, expansion).then((card) => {
               if (card) {
-                cards.push(card)
+                cards1.push(card)
               }
             }),
           )
@@ -443,18 +435,30 @@ async function scrapeCards() {
 
       // Start processing the batches
       await processBatch()
-
-      console.log(`Scraping completed. Found ${cards.length} cards.`)
-
-      // Sort the cards array by id as a number
-      cards.sort((a, b) => Number.parseInt(a.card_id.split('-').pop(), 10) - Number.parseInt(b.card_id.split('-').pop(), 10))
-
-      fs.writeFileSync(path.join(targetDir, `${expansion}.json`), JSON.stringify(cards, null, 2))
-      console.log('Cards saved to cards.json')
     } catch (error) {
       console.error('Error scraping cards:', error)
     }
   }
 }
 
-scrapeCards().catch(console.error)
+await scrapeCards().catch(console.error)
+
+// Sort the cards array by id as a number
+cards1.sort((a, b) => {
+  const [e_a, n_a] = a.card_id.split('-')
+  const [e_b, n_b] = b.card_id.split('-')
+  if (e_a !== e_b) {
+    return e_a < e_b ? -1 : 1
+  }
+  return Number.parseInt(n_a, 10) - Number.parseInt(n_b, 10)
+})
+
+const internalIds: Record<string, number> = Object.fromEntries(cards1.map((c) => [c.card_id, c.internal_id]))
+const cards2: Card[] = cards1.map((c) => ({
+  ...c,
+  alternate_versions: [...new Set(c.alternate_versions.map((card_id) => internalIds[card_id]))].toSorted((a, b) => a - b),
+}))
+
+fs.mkdirSync(targetDir, { recursive: true })
+fs.writeFileSync(path.join(targetDir, `cards.json`), JSON.stringify(cards2, null, 2))
+console.log('Cards saved to cards.json')

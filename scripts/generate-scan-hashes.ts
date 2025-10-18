@@ -2,7 +2,9 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { parseArgs } from 'node:util'
 import sharp from 'sharp'
-import { calculatePerceptualHash, calculateSimilarity, hashSize } from '../frontend/src/lib/hash.ts'
+import { allCards } from '../frontend/src/lib/CardsDB'
+import { calculatePerceptualHash, calculateSimilarity, hashSize } from '../frontend/src/lib/hash'
+import { chunk } from '../frontend/src/lib/utils'
 import type { Card } from '../frontend/src/types/index.ts'
 
 console.log(`Using sharp ${sharp.versions.sharp}`)
@@ -11,7 +13,6 @@ console.log(`Using libwebp ${sharp.versions.webp}`)
 
 const imagesDir = 'frontend/public/images'
 const targetDir = 'frontend/public/hashes'
-const cardsDir = 'frontend/assets/cards'
 const locales = ['en-US', 'es-ES', 'fr-FR', 'it-IT', 'pt-BR']
 
 const { values } = parseArgs({
@@ -124,15 +125,8 @@ const handleCard = async (card_id: string, locale: string) => {
   }
 }
 
-const expansionFiles = await fs.promises.readdir(cardsDir)
-for (const expansionFile of expansionFiles) {
-  if (values.expansion && !values.expansion.includes(path.basename(expansionFile, '.json'))) {
-    continue
-  }
-  const data = await fs.promises.readFile(path.join(cardsDir, expansionFile), 'utf8')
-  const cards = JSON.parse(data)
-  console.log(expansionFile)
-  for (const locale of locales) {
+for (const locale of locales) {
+  for (const cards of chunk(allCards, 10)) {
     await Promise.all(cards.map((card: Card) => handleCard(card.card_id, locale)))
   }
 }
