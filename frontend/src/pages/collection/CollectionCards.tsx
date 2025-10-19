@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { CardsTable } from '@/components/CardsTable.tsx'
-import FilterPanel, { type Filters } from '@/components/FiltersPanel'
-import type { Card, CollectionRow } from '@/types'
+import FilterPanel from '@/components/FiltersPanel'
+import { type Filters, getFilteredCards } from '@/lib/filters'
+import type { CollectionRow } from '@/types'
 
 interface Props {
   cards: Map<number, CollectionRow>
@@ -12,8 +13,6 @@ interface Props {
 
 export default function CollectionCards({ cards, isPublic, extraOffset }: Props) {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' }) // tailwind "md"
-
-  const [filteredCards, setFilteredCards] = useState<Card[] | null>(null)
 
   const [filters, setFilters] = useState<Filters>({
     search: '',
@@ -28,6 +27,8 @@ export default function CollectionCards({ cards, isPublic, extraOffset }: Props)
     deckbuildingMode: false,
     allTextSearch: false,
   })
+  const filteredCards = useMemo(() => getFilteredCards(filters, cards), [filters, cards])
+
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
 
   useEffect(() => {
@@ -39,10 +40,8 @@ export default function CollectionCards({ cards, isPublic, extraOffset }: Props)
   return (
     <>
       <FilterPanel
-        cards={cards}
         filters={filters}
         setFilters={setFilters}
-        onFiltersChanged={(cards) => setFilteredCards(cards)}
         visibleFilters={{ expansions: !isMobile, allTextSearch: !isMobile, search: true, owned: !isMobile, rarity: !isMobile }}
         filtersDialog={{
           expansions: true,
