@@ -1,4 +1,4 @@
-import { type Dispatch, type FC, type SetStateAction, useMemo } from 'react'
+import { type FC, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
@@ -15,7 +15,7 @@ import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 
 interface Props {
   filters: Filters
-  setFilters: Dispatch<SetStateAction<Filters>>
+  setFilters: (updates: Partial<Filters>) => void
 
   visibleFilters?: {
     expansions?: boolean
@@ -47,7 +47,7 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, visibleFilters, filtersDi
   const navigate = useNavigate()
   const { setIsProfileDialogOpen } = useProfileDialog()
 
-  const changeFilter = (k: keyof Filters) => (x: Filters[typeof k]) => setFilters((prefFilters) => ({ ...prefFilters, [k]: x }))
+  const changeFilter = (k: keyof Filters) => (x: Filters[typeof k]) => setFilters({ [k]: x })
 
   const packsToShow = useMemo(() => {
     const expansion = getExpansionById(filters.expansion)
@@ -59,8 +59,9 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, visibleFilters, filtersDi
   }, [filters.expansion])
 
   function onExpansionChange(x: ExpansionOption) {
-    setFilters((prevFilters) => ({ ...prevFilters, expansion: x, pack: 'all' }))
+    setFilters({ expansion: x, pack: 'all' })
   }
+
   const getLocalizedExpansion = (id: ExpansionOption) => {
     const expansion_name = id === 'all' ? 'all' : (getExpansionById(id)?.name ?? 'unknown')
     return t(expansion_name, { ns: 'common/sets' })
