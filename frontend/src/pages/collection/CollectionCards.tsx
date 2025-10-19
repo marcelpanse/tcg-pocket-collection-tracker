@@ -60,6 +60,8 @@ export default function CollectionCards({ cards, isPublic, extraOffset }: Props)
     }
   }
 
+  const clearFilters = () => setSearchParams(new URLSearchParams())
+
   const filteredCards = useMemo(() => getFilteredCards(filters, cards), [filters, cards])
 
   const [resetScrollTrigger, setResetScrollTrigger] = useState(false)
@@ -75,6 +77,7 @@ export default function CollectionCards({ cards, isPublic, extraOffset }: Props)
       <FilterPanel
         filters={filters}
         setFilters={setFilters}
+        clearFilters={clearFilters}
         visibleFilters={{ expansions: !isMobile, allTextSearch: !isMobile, search: true, owned: !isMobile, rarity: !isMobile }}
         filtersDialog={{
           expansions: true,

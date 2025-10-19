@@ -16,6 +16,7 @@ import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 interface Props {
   filters: Filters
   setFilters: (updates: Partial<Filters>) => void
+  clearFilters: () => void
 
   visibleFilters?: {
     expansions?: boolean
@@ -42,7 +43,7 @@ interface Props {
   missionsButton?: boolean
 }
 
-const FilterPanel: FC<Props> = ({ filters, setFilters, visibleFilters, filtersDialog, share, missionsButton }: Props) => {
+const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters, visibleFilters, filtersDialog, share, missionsButton }: Props) => {
   const { t } = useTranslation(['pages/collection', 'common/sets', 'common/packs', 'filters'])
   const navigate = useNavigate()
   const { setIsProfileDialogOpen } = useProfileDialog()
@@ -205,26 +206,7 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, visibleFilters, filtersDi
                 {filtersDialog.deckBuildingMode && (
                   <DeckbuildingFilter deckbuildingMode={filters.deckbuildingMode} setDeckbuildingMode={changeFilter('deckbuildingMode')} />
                 )}
-                <Button
-                  variant="outline"
-                  className="!text-red-700"
-                  onClick={() => {
-                    const filters: Filters = {
-                      search: '',
-                      expansion: 'all',
-                      pack: 'all',
-                      cardType: [],
-                      rarity: [],
-                      owned: 'all',
-                      sortBy: 'expansion-newest',
-                      minNumber: 0,
-                      maxNumber: 100,
-                      deckbuildingMode: false,
-                      allTextSearch: false,
-                    }
-                    setFilters(filters)
-                  }}
-                >
+                <Button variant="outline" className="!text-red-700" onClick={clearFilters}>
                   {t('filters.clear')}
                 </Button>
                 {missionsButton && (
