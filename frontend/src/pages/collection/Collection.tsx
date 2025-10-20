@@ -62,7 +62,7 @@ function FriendCollection({ friendId }: { friendId: string }) {
   )
 }
 
-function Collection() {
+export default function Collection() {
   const { t } = useTranslation(['pages/collection', 'common'])
   const navigate = useNavigate()
 
@@ -70,7 +70,7 @@ function Collection() {
   const { data: account, isLoading: isLoadingAccount } = useAccount()
 
   useEffect(() => {
-    if (!isLoadingAccount && !rawFriendId && account?.friend_id) {
+    if (!rawFriendId && !isLoadingAccount && account?.friend_id) {
       navigate(`/collection/${account.friend_id}`, { replace: true })
     }
   }, [isLoadingAccount, rawFriendId, account?.friend_id, navigate])
@@ -87,5 +87,3 @@ function Collection() {
     return <OwnCollection />
   }
 }
-
-export default Collection

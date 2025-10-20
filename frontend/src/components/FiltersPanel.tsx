@@ -82,7 +82,7 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters, visibleFilt
     if (!share) {
       setIsProfileDialogOpen(true)
     } else if (navigator.share) {
-      await navigator.share({ url: window.location.href })
+      await navigator.share({ title: 'My Pokemon TCG Pocket collection', url: window.location.href })
     } else {
       await navigator.clipboard.writeText(window.location.href)
       toast({ title: 'Copied to clipboard', variant: 'default' })
