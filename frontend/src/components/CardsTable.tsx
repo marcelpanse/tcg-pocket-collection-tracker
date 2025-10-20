@@ -145,7 +145,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
                     alt={row.expansion.name}
                     className="max-w-[60px]"
                     onError={(e) => {
-                      ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${row.expansion.name}.webp`
+                      ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${row.expansion.id}.webp`
                     }}
                   />
                   <h2 className="text-center font-semibold sm:text-lg md:text-2xl">{t(row.expansion.name)}</h2>
