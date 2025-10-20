@@ -3,8 +3,27 @@ import { useMediaQuery } from 'react-responsive'
 import { useSearchParams } from 'react-router'
 import { CardsTable } from '@/components/CardsTable.tsx'
 import FilterPanel from '@/components/FiltersPanel'
-import { type Filters, filterUrlParsers, getFilteredCards } from '@/lib/filters'
-import type { CollectionRow } from '@/types'
+import { type CardTypeOption, cardTypeOptions, expansionOptions, type Filters, getFilteredCards, ownedOptions, sortByOptions } from '@/lib/filters'
+import { type CollectionRow, type Rarity, rarities } from '@/types'
+
+const numberParser = (s: string) => {
+  const x = Number(s)
+  return Number.isNaN(x) ? undefined : x
+}
+
+export const filterParsers: { [K in keyof Filters]: (s: string) => Filters[K] | undefined } = {
+  search: (s) => s,
+  expansion: (s) => ((expansionOptions as readonly string[]).includes(s) ? (s as Filters['expansion']) : undefined),
+  pack: (s) => s,
+  cardType: (s) => s.split(',').filter((x): x is CardTypeOption => (cardTypeOptions as readonly string[]).includes(x)),
+  rarity: (s) => s.split(',').filter((x): x is Rarity => (rarities as readonly string[]).includes(x)),
+  owned: (s) => ((ownedOptions as readonly string[]).includes(s) ? (s as Filters['owned']) : undefined),
+  sortBy: (s) => ((sortByOptions as readonly string[]).includes(s) ? (s as Filters['sortBy']) : undefined),
+  minNumber: numberParser,
+  maxNumber: numberParser,
+  deckbuildingMode: (s) => s === 'true',
+  allTextSearch: (s) => s === 'true',
+}
 
 interface Props {
   cards: Map<number, CollectionRow>
@@ -33,7 +52,10 @@ export default function CollectionCards({ cards, isPublic, extraOffset }: Props)
     }
 
     const updateFilter = <K extends keyof Filters>(key: K, value: string) => {
-      res[key] = filterUrlParsers[key](value) as Filters[K]
+      const parsed = filterParsers[key](value) as Filters[K]
+      if (parsed !== undefined) {
+        res[key] = parsed
+      }
     }
 
     for (const key in res) {

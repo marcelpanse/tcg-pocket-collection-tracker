@@ -27,20 +27,6 @@ export interface Filters {
   allTextSearch: boolean
 }
 
-export const filterUrlParsers: { [K in keyof Filters]: (s: string) => Filters[K] } = {
-  search: (s) => s,
-  expansion: (s) => s as Filters['expansion'],
-  pack: (s) => s,
-  cardType: (s) => s.split(',') as Filters['cardType'],
-  rarity: (s) => s.split(',') as Filters['rarity'],
-  owned: (s) => s as Filters['owned'],
-  sortBy: (s) => s as Filters['sortBy'],
-  minNumber: (s) => Number(s),
-  maxNumber: (s) => Number(s),
-  deckbuildingMode: (s) => s === 'true',
-  allTextSearch: (s) => s === 'true',
-}
-
 export function getFilteredCards(filters: Filters, cards: Map<number, CollectionRow>) {
   let filteredCards = allCards
 
