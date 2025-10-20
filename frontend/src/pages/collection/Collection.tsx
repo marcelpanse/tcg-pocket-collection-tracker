@@ -11,13 +11,14 @@ import CollectionCards from './CollectionCards'
 
 function OwnCollection() {
   const { t } = useTranslation('common')
-  const { data: cards = new Map<number, CollectionRow>(), isLoading } = useCollection()
-  if (isLoading) {
+  const { data: account, isLoading: isLoadingAccount } = useAccount()
+  const { data: cards = new Map<number, CollectionRow>(), isLoading: isLoadingCards } = useCollection()
+  if (isLoadingAccount && isLoadingCards) {
     return <p className="text-xl text-center py-8">{t('common:loading')}</p>
   }
   return (
     <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">
-      <CollectionCards cards={cards} isPublic={false} extraOffset={20} />
+      <CollectionCards cards={cards} isPublic={false} extraOffset={20} share={account !== undefined && account.friend_id !== '' && account.is_public} />
     </div>
   )
 }

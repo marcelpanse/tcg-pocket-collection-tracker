@@ -5,6 +5,7 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
+import { useToast } from '@/hooks/use-toast'
 import { getExpansionById } from '@/lib/CardsDB.ts'
 import { type CardTypeOption, cardTypeOptions, type ExpansionOption, expansionOptions, type Filters, ownedOptions, sortByOptions } from '@/lib/filters'
 import { useProfileDialog } from '@/services/account/useAccount'
@@ -39,11 +40,12 @@ interface Props {
     deckBuildingMode?: boolean
   }
 
-  share?: boolean
+  share?: boolean // undefined => disable, false => open settings, true => copy link
   missionsButton?: boolean
 }
 
 const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters, visibleFilters, filtersDialog, share, missionsButton }: Props) => {
+  const { toast } = useToast()
   const { t } = useTranslation(['pages/collection', 'common/sets', 'common/packs', 'filters'])
   const navigate = useNavigate()
   const { setIsProfileDialogOpen } = useProfileDialog()
@@ -63,7 +65,7 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters, visibleFilt
     setFilters({ expansion: x, pack: 'all' })
   }
 
-  const getLocalizedExpansion = (id: ExpansionOption) => {
+  function getLocalizedExpansion(id: ExpansionOption) {
     const expansion_name = id === 'all' ? 'all' : (getExpansionById(id)?.name ?? 'unknown')
     return t(expansion_name, { ns: 'common/sets' })
   }
@@ -73,6 +75,17 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters, visibleFilt
       return 'T'
     } else {
       return <img src={`/images/energy/${x}.webp`} alt={x} className="h-4" />
+    }
+  }
+
+  async function onShare() {
+    if (!share) {
+      setIsProfileDialogOpen(true)
+    } else if (navigator.share) {
+      await navigator.share({ url: window.location.href })
+    } else {
+      await navigator.clipboard.writeText(window.location.href)
+      toast({ title: 'Copied to clipboard', variant: 'default' })
     }
   }
 
@@ -219,8 +232,8 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters, visibleFilt
           </Dialog>
         )}
 
-        {share && (
-          <Button variant="outline" onClick={() => setIsProfileDialogOpen(true)}>
+        {share !== undefined && (
+          <Button variant="outline" onClick={onShare}>
             {t('filters.share')}
           </Button>
         )}

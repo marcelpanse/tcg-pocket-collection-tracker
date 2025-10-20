@@ -10,8 +10,11 @@ const numberParser = (s: string) => {
   const x = Number(s)
   return Number.isNaN(x) ? undefined : x
 }
+const boolParser = (s: string) => {
+  return s === 'true' ? true : s === 'false' ? false : undefined
+}
 
-export const filterParsers: { [K in keyof Filters]: (s: string) => Filters[K] | undefined } = {
+const filterParsers: { [K in keyof Filters]: (s: string) => Filters[K] | undefined } = {
   search: (s) => s,
   expansion: (s) => ((expansionOptions as readonly string[]).includes(s) ? (s as Filters['expansion']) : undefined),
   pack: (s) => s,
@@ -21,17 +24,18 @@ export const filterParsers: { [K in keyof Filters]: (s: string) => Filters[K] | 
   sortBy: (s) => ((sortByOptions as readonly string[]).includes(s) ? (s as Filters['sortBy']) : undefined),
   minNumber: numberParser,
   maxNumber: numberParser,
-  deckbuildingMode: (s) => s === 'true',
-  allTextSearch: (s) => s === 'true',
+  deckbuildingMode: boolParser,
+  allTextSearch: boolParser,
 }
 
 interface Props {
   cards: Map<number, CollectionRow>
   isPublic: boolean
   extraOffset: number
+  share?: boolean // undefined => disable, false => open settings, true => copy link
 }
 
-export default function CollectionCards({ cards, isPublic, extraOffset }: Props) {
+export default function CollectionCards({ cards, isPublic, extraOffset, share }: Props) {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' }) // tailwind "md"
 
   const [searchParams, setSearchParams] = useSearchParams()
@@ -114,7 +118,7 @@ export default function CollectionCards({ cards, isPublic, extraOffset }: Props)
           allTextSearch: true,
         }}
         missionsButton={!isPublic}
-        share
+        share={share}
       />
       {filteredCards && (
         <CardsTable
