@@ -1,13 +1,13 @@
 import i18n from '@/i18n'
 import { type CollectionRow, cardTypes, expansionIds, type Rarity } from '@/types'
-import { allCards, basicRarities, expansions, getCardById } from './CardsDB'
+import { allCards, basicRarities, expansions, getCardByInternalId } from './CardsDB'
 import { levenshtein } from './levenshtein'
 import { getCardNameByLang } from './utils'
 
 export const ownedOptions = ['all', 'missing', 'owned'] as const
 export const expansionOptions = ['all', ...expansionIds] as const
 export const sortByOptions = ['default', 'recent', 'expansion-newest'] as const
-export const cardTypeOptions = [...cardTypes.filter((x) => x !== '')] as const
+export const cardTypeOptions = cardTypes
 export type OwnedOption = (typeof ownedOptions)[number]
 export type ExpansionOption = (typeof expansionOptions)[number]
 export type SortByOption = (typeof sortByOptions)[number]
@@ -88,7 +88,7 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
     if (c.card_type.toLowerCase() === 'trainer') {
       return filters.cardType.includes('trainer')
     }
-    return c.energy !== '' && filters.cardType.includes(c.energy.toLowerCase() as CardTypeOption)
+    return filters.cardType.includes(c.energy.toLowerCase() as CardTypeOption)
   })
 
   if (filters.search) {
@@ -118,7 +118,7 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
   for (const card of filteredCards) {
     if (filters.deckbuildingMode) {
       card.amount_owned = card.alternate_versions.reduce((acc, c) => {
-        const card = getCardById(c)
+        const card = getCardByInternalId(c)
         return acc + (cards.get(card?.internal_id || 0)?.amount_owned ?? 0)
       }, 0)
     } else {

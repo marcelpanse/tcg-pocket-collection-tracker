@@ -6,16 +6,9 @@ import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
 import { getExpansionById } from '@/lib/CardsDB.ts'
+import { chunk } from '@/lib/utils.ts'
 import type { Card as CardType, Expansion } from '@/types'
 import { Card } from './Card.tsx'
-
-function chunk<T>(arr: T[], size: number): T[][] {
-  const res: T[][] = []
-  for (let i = 0; i < arr.length; i += size) {
-    res.push(arr.slice(i, i + size))
-  }
-  return res
-}
 
 interface Props {
   cards: CardType[]
@@ -145,7 +138,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
                     alt={row.expansion.name}
                     className="max-w-[60px]"
                     onError={(e) => {
-                      ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${row.expansion.name}.webp`
+                      ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${row.expansion.id}.webp`
                     }}
                   />
                   <h2 className="text-center font-semibold sm:text-lg md:text-2xl">{t(row.expansion.name)}</h2>
