@@ -8,7 +8,7 @@ export type ExpansionId = (typeof expansionIds)[number]
 export const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', '✵', '✵✵', 'Crown Rare', 'P'] as const
 export const tradableRarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆'] as const
 
-export const cardTypes = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'dragon', 'colorless', 'trainer', ''] as const
+export const cardTypes = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'dragon', 'colorless', 'trainer'] as const
 
 export type Rarity = (typeof rarities)[number]
 export type TradableRarity = (typeof tradableRarities)[number]
@@ -88,7 +88,6 @@ export interface Expansion {
   name: string
   id: ExpansionId
   internalId: number
-  cards: Card[]
   packs: Pack[]
   missions?: Mission[]
   tradeable: boolean
@@ -108,8 +107,8 @@ export interface Card {
   card_id: string
   expansion: ExpansionId
   name: string
-  hp: string
-  energy: string
+  hp?: number
+  energy: CardType
   card_type: string
   evolution_type: string
   image: string
@@ -124,16 +123,14 @@ export interface Card {
     effect: string
   }
   weakness: string
-  retreat: string
+  retreat?: number
   rarity: Rarity
-  fullart: boolean
   ex: boolean
   baby: boolean
   set_details: string
   pack: string
-  alternate_versions: string[]
+  alternate_versions: number[]
   artist: string
-  linked: boolean
 
   amount_owned?: number // calculated from the card amounts table
   collected?: boolean // calculated from the card amounts table

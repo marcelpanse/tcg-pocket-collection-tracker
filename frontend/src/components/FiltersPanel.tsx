@@ -6,7 +6,7 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
-import { allCards, basicRarities, expansions, getCardById, getExpansionById } from '@/lib/CardsDB.ts'
+import { allCards, basicRarities, expansions, getCardByInternalId, getExpansionById } from '@/lib/CardsDB.ts'
 import { levenshtein } from '@/lib/levenshtein'
 import { getCardNameByLang } from '@/lib/utils'
 import { useProfileDialog } from '@/services/account/useAccount'
@@ -19,7 +19,7 @@ import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 const ownedOptions = ['all', 'missing', 'owned'] as const
 const expansionOptions = ['all', ...expansionIds] as const
 const sortByOptions = ['default', 'recent', 'expansion-newest'] as const
-const cardTypeOptions = [...cardTypes.filter((x) => x !== '')] as const
+const cardTypeOptions = cardTypes
 type OwnedOption = (typeof ownedOptions)[number]
 type ExpansionOption = (typeof expansionOptions)[number]
 type SortByOption = (typeof sortByOptions)[number]
@@ -153,7 +153,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
       if (c.card_type.toLowerCase() === 'trainer') {
         return filters.cardType.includes('trainer')
       }
-      return c.energy !== '' && filters.cardType.includes(c.energy.toLowerCase() as CardTypeOption)
+      return filters.cardType.includes(c.energy)
     })
 
     if (filters.search) {
@@ -183,7 +183,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
     for (const card of filteredCards) {
       if (filters.deckbuildingMode) {
         card.amount_owned = card.alternate_versions.reduce((acc, c) => {
-          const card = getCardById(c)
+          const card = getCardByInternalId(c)
           return acc + (cards.get(card?.internal_id || 0)?.amount_owned ?? 0)
         }, 0)
       } else {
