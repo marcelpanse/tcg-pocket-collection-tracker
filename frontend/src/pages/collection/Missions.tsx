@@ -21,12 +21,12 @@ export default function Missions() {
   const [selectedMissionCardOptions, setSelectedMissionCardOptions] = useState<string[]>([])
   const [resetScrollTrigger] = useState(false)
 
-  const getLocalizedExpansion = (id: ExpansionId) => t(getExpansionById(id)?.name ?? 'unknown', { ns: 'common/sets' })
+  const getLocalizedExpansion = (id: ExpansionId) => t(getExpansionById(id).name, { ns: 'common/sets' })
 
   useEffect(() => {
-    let missions = getExpansionById(expansion)?.missions
+    let missions = getExpansionById(expansion).missions
     if (!missions) {
-      throw new Error(`Unrecognized expansion id: ${expansion}`)
+      throw new Error(`This expansion has no missions: ${expansion}`)
     }
     if (ownedFilter === 'owned') {
       missions = missions.filter((mission) => mission.completed)
