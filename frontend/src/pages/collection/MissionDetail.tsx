@@ -2,8 +2,9 @@ import i18n from 'i18next'
 import { useTranslation } from 'react-i18next'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
-import { expansions, getCardById, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
+import { getCardById, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
 import { getCardNameByLang } from '@/lib/utils.ts'
+import type { ExpansionId } from '@/types'
 
 interface MissionDetailProps {
   missionCardOptions: string[]
@@ -13,9 +14,9 @@ interface MissionDetailProps {
 function MissionDetail({ missionCardOptions, onClose }: Readonly<MissionDetailProps>) {
   const { t } = useTranslation(['common/sets', 'common/packs', 'pages/collection'])
   const gettingExpansion = missionCardOptions[0] || ''
-  const expansionId = gettingExpansion.length > 0 ? gettingExpansion.split('-')[0] : 'Unknown'
-  const expansion = getExpansionById(expansionId) || expansions[0]
-  const expansionName = expansion.name
+  const expansionId = gettingExpansion.length > 0 ? gettingExpansion.split('-')[0] : undefined
+  const expansion = expansionId === undefined ? undefined : getExpansionById(expansionId as ExpansionId)
+  const expansionName = expansion?.name
   return (
     <Sheet
       open={!!missionCardOptions.length}
@@ -33,7 +34,7 @@ function MissionDetail({ missionCardOptions, onClose }: Readonly<MissionDetailPr
               : t('missionDetail.eligibleCards-plural', { ns: 'pages/collection', options: missionCardOptions.length })}
           </SheetTitle>
         </SheetHeader>
-        {t(expansionName)}
+        {t(expansionName ?? 'Unknown expansion')}
         {missionCardOptions.map((cardId) => {
           const foundCard = getCardById(cardId)
           return (
@@ -45,11 +46,12 @@ function MissionDetail({ missionCardOptions, onClose }: Readonly<MissionDetailPr
                 <p className="max-w-[130px] whitespace-nowrap font-semibold text-[12px] pt-2">
                   {cardId} - {getCardNameByLang(foundCard, i18n.language)}
                   <br />
-                  {t('missionDetail.chanceFrom', {
-                    ns: 'pages/collection',
-                    pack: t(foundCard.pack, { ns: 'common/packs' }),
-                    chance: pullRateForSpecificCard(expansion, foundCard.pack, foundCard).toFixed(2),
-                  })}
+                  {expansion &&
+                    t('missionDetail.chanceFrom', {
+                      ns: 'pages/collection',
+                      pack: t(foundCard.pack, { ns: 'common/packs' }),
+                      chance: pullRateForSpecificCard(expansion, foundCard.pack, foundCard).toFixed(2),
+                    })}
                 </p>
               </div>
             )

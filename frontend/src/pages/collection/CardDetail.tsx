@@ -29,7 +29,7 @@ function CardDetail() {
     () => card?.alternate_versions.map((id) => ({ card: getCardByInternalId(id) as Card, amount_owned: ownedCards.get(id)?.amount_owned ?? 0 })),
     [card, ownedCards],
   )
-  const expansion = useMemo(() => (card === undefined ? undefined : getExpansionById(card?.expansion)), [card])
+  const expansion = useMemo(() => card && getExpansionById(card.expansion), [card])
 
   useEffect(() => {
     if (cardId) {

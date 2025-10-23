@@ -7,7 +7,7 @@ import { Tooltip } from 'react-tooltip'
 import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
 import { getExpansionById } from '@/lib/CardsDB.ts'
 import { chunk } from '@/lib/utils.ts'
-import type { Card as CardType, Expansion } from '@/types'
+import type { Card as CardType, Expansion, ExpansionId } from '@/types'
 import { Card } from './Card.tsx'
 
 interface Props {
@@ -64,7 +64,7 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
             {
               id: `header-${expansionId}`,
               type: 'header' as const,
-              expansion: getExpansionById(expansionId) as Expansion,
+              expansion: getExpansionById(expansionId as ExpansionId),
             },
             ...chunk(cards, cardsPerRow).map((rowCards, i) => ({
               id: `row-${expansionId}-${i}`,

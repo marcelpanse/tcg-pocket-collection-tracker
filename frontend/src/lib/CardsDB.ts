@@ -175,8 +175,12 @@ const expansionCards = Object.groupBy(allCards, (c) => c.expansion) as Record<Ex
 
 const expansionsDict: Map<string, Expansion> = new Map(expansions.map((expansion) => [expansion.id, expansion]))
 
-export const getExpansionById = (expansion: string): Expansion | undefined => {
-  return expansionsDict.get(expansion)
+export const getExpansionById = (id: ExpansionId): Expansion => {
+  const expansion = expansionsDict.get(id)
+  if (expansion === undefined) {
+    throw new Error(`Unrecognized expansionId: ${id}`)
+  }
+  return expansion
 }
 
 export const tradeableExpansions = expansions.filter((e) => e.tradeable).map((e) => e.id)
