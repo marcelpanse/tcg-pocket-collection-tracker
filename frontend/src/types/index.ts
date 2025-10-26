@@ -40,7 +40,6 @@ export interface CardAmountUpdate {
   amount_owned: number
   internal_id: number
   card_id: string
-  rarity: Rarity
 }
 
 export interface CardAmountsRowUpdate {

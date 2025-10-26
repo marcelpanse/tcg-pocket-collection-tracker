@@ -27,7 +27,7 @@ export const ImportReader = () => {
       const ownedCard = ownedCards.get(r.InternalId)
       console.log('Owned Card', ownedCard)
 
-      cardArray.push({ card_id: cardId, internal_id: r.InternalId, amount_owned: newAmount, rarity: r.Rarity })
+      cardArray.push({ card_id: cardId, internal_id: r.InternalId, amount_owned: newAmount })
 
       // update UI
       if (ownedCard && ownedCard.amount_owned !== newAmount) {
