@@ -81,11 +81,14 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters, visibleFilt
   async function onShare() {
     if (!share) {
       setIsProfileDialogOpen(true)
-    } else if (navigator.share) {
-      await navigator.share({ title: 'My Pokemon TCG Pocket collection', url: window.location.href })
     } else {
-      await navigator.clipboard.writeText(window.location.href)
-      toast({ title: 'Copied to clipboard', variant: 'default' })
+      // @ts-expect-error: Experimental api https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/mobile
+      if (navigator.share && (navigator.userAgentData?.mobile || /Mobi|Android/i.test(navigator.userAgent))) {
+        await navigator.share({ title: 'My Pokemon TCG Pocket collection', url: window.location.href })
+      } else {
+        await navigator.clipboard.writeText(window.location.href)
+        toast({ title: 'Copied to clipboard', variant: 'default' })
+      }
     }
   }
 
