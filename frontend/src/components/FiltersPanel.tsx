@@ -53,11 +53,15 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters, visibleFilt
   const changeFilter = (k: keyof Filters) => (x: Filters[typeof k]) => setFilters({ [k]: x })
 
   const packsToShow = useMemo(() => {
-    const expansion = getExpansionById(filters.expansion)
-    if (!expansion || expansion.packs.length <= 1) {
+    if (filters.expansion === 'all') {
       return undefined
     } else {
-      return ['all', ...expansion.packs.map((pack) => pack.name).filter((pack) => pack !== 'everypack')]
+      return [
+        'all',
+        ...getExpansionById(filters.expansion)
+          .packs.map((pack) => pack.name)
+          .filter((pack) => pack !== 'everypack'),
+      ]
     }
   }, [filters.expansion])
 
@@ -66,8 +70,7 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters, visibleFilt
   }
 
   function getLocalizedExpansion(id: ExpansionOption) {
-    const expansion_name = id === 'all' ? 'all' : (getExpansionById(id)?.name ?? 'unknown')
-    return t(expansion_name, { ns: 'common/sets' })
+    return t(id === 'all' ? 'all' : getExpansionById(id).name, { ns: 'common/sets' })
   }
 
   function showCardType(x: CardTypeOption) {

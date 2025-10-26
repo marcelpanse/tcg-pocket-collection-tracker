@@ -30,7 +30,6 @@ function Overview() {
 
   const { t } = useTranslation(['pages/overview', 'filters', 'common/sets'])
 
-  const [highestProbabilityPack, setHighestProbabilityPack] = useState<Pack | undefined>()
   const [collectionCount, setCollectionCount] = useState('')
   const [usersCount, setUsersCount] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<ExpansionOption>(expansionOptions[expansionOptions.length - 2])
@@ -58,22 +57,7 @@ function Overview() {
 
   const totalUniqueCards = CardsDB.getTotalNrOfCards({ rarityFilter, deckbuildingMode })
 
-  useEffect(() => {
-    fetch('https://vcwloujmsjuacqpwthee.supabase.co/storage/v1/object/public/stats/stats.json')
-      .then((response) => response.json())
-      .then((data) => {
-        setCollectionCount(data.collectionCount)
-        setUsersCount(data.usersCount)
-      })
-  }, [])
-
-  useEffect(() => {
-    localStorage.setItem('rarityFilter', JSON.stringify(rarityFilter))
-    localStorage.setItem('numberFilter', numberFilter.toString())
-    localStorage.setItem('deckbuildingFilter', JSON.stringify(deckbuildingMode))
-  }, [rarityFilter, numberFilter, deckbuildingMode])
-
-  useEffect(() => {
+  const highestProbabilityPack = useMemo(() => {
     let newHighestProbabilityPack: Pack | undefined
     const filteredExpansions = CardsDB.expansions.filter((expansion) => !expansion.promo)
     for (const expansion of filteredExpansions) {
@@ -89,12 +73,26 @@ function Overview() {
         newHighestProbabilityPack = highestProbabilityPackCandidate
       }
     }
+    return newHighestProbabilityPack
+  }, [ownedCards, rarityFilter, numberFilter, deckbuildingMode])
 
-    setHighestProbabilityPack(newHighestProbabilityPack)
-  }, [ownedCardsCount, rarityFilter, numberFilter, deckbuildingMode]) //use the memo-ed ownedCardsCount instead of ownedCards to avoid re-rendering when ownedCards changes
+  useEffect(() => {
+    fetch('https://vcwloujmsjuacqpwthee.supabase.co/storage/v1/object/public/stats/stats.json')
+      .then((response) => response.json())
+      .then((data) => {
+        setCollectionCount(data.collectionCount)
+        setUsersCount(data.usersCount)
+      })
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('rarityFilter', JSON.stringify(rarityFilter))
+    localStorage.setItem('numberFilter', numberFilter.toString())
+    localStorage.setItem('deckbuildingFilter', JSON.stringify(deckbuildingMode))
+  }, [rarityFilter, numberFilter, deckbuildingMode])
 
   const getLocalizedExpansion = (id: ExpansionOption) => {
-    const expansion_name = id === 'all' ? 'all' : (getExpansionById(id)?.name ?? 'unknown')
+    const expansion_name = id === 'all' ? 'all' : getExpansionById(id).name
     return t(expansion_name, { ns: 'common/sets' })
   }
 
