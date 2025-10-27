@@ -5,19 +5,18 @@ import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import FancyCard from '@/components/FancyCard.tsx'
 import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
-import { getCardById, pullRateForSpecificMission } from '@/lib/CardsDB.ts'
+import { getCardById, getCardByInternalId, pullRateForSpecificMission } from '@/lib/CardsDB.ts'
 import { getCardNameByLang } from '@/lib/utils.ts'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
 import type { CollectionRow, Mission as MissionType } from '@/types'
 
 interface Props {
   mission: MissionType
-  resetScrollTrigger?: boolean
   setSelectedMissionCardOptions: (options: string[]) => void
 }
 
 export interface MissionDetailProps {
-  cardId: string
+  id: number
   owned: boolean
   missionCardOptions: string[]
 }
@@ -50,7 +49,7 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
         const ownedCard = ownedCards.get(internalId)
         if (ownedCard?.collection.includes(cardId)) {
           for (let i = 0; i < ownedCard.amount_owned; i++) {
-            ownedMissionCards.push({ cardId, owned: true, missionCardOptions: missionCard.options })
+            ownedMissionCards.push({ id: internalId, owned: true, missionCardOptions: missionCard.options })
 
             // Early exit once we have enough cards
             if (ownedMissionCards.length >= missionCard.amount) {
@@ -67,7 +66,7 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
 
       const amountToAppend = missionCard.amount - ownedMissionCards.length
       for (let i = 0; i < amountToAppend; i++) {
-        ownedMissionCards.push({ cardId: missionCard.options[0], owned: false, missionCardOptions: missionCard.options })
+        ownedMissionCards.push({ id: getCardById(missionCard.options[0])?.internal_id as number, owned: false, missionCardOptions: missionCard.options })
       }
       isMissionCompleted = isMissionCompleted && amountToAppend === 0
       return ownedMissionCards
@@ -81,43 +80,37 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
     return gridRows
   }, [cardsPerRow])
 
-  const missionHeight = cardHeight * missionGridRows.length + 72
+  const missionHeight = cardHeight * missionGridRows.length + 48
   return (
-    <div style={{ height: `${missionHeight}px` }} className="relative w-full">
+    <div className="relative w-full">
       <div style={{ height: `${missionHeight}px` }} className="relative w-full">
-        {missionGridRows.map((gridRow, i) => {
-          return (
-            <div key={i} style={{ height: `${cardHeight}px`, transform: `translateY(${cardHeight * i + 72}px)` }} className="absolute top-0 left-0 w-full">
-              <div className="flex justify-start gap-x-3">
-                {gridRow.map((card, j) => {
-                  const foundCard = getCardById(card.cardId)
-                  return (
-                    foundCard && (
-                      <div key={`${mission.name}__${j}`} className={'group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer'}>
-                        <button
-                          type="button"
-                          onClick={() => (card.owned ? setSelectedCardId(card.cardId) : setSelectedMissionCardOptions(card.missionCardOptions))}
-                        >
-                          <FancyCard card={foundCard} selected={card.owned} />
-                        </button>
-                        <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">
-                          {card.cardId} - {getCardNameByLang(foundCard, i18n.language)}
-                        </p>
-                      </div>
-                    )
+        {missionGridRows.map((gridRow, i) => (
+          <div key={i} style={{ height: `${cardHeight}px`, transform: `translateY(${cardHeight * i + 72}px)` }} className="absolute top-0 left-0 w-full">
+            <div className="flex justify-start gap-x-3">
+              {gridRow.map((card, j) => {
+                const foundCard = getCardByInternalId(card.id)
+                return (
+                  foundCard && (
+                    <div key={`${mission.name}__${j}`} className={'group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer'}>
+                      <button type="button" onClick={() => (card.owned ? setSelectedCardId(card.id) : setSelectedMissionCardOptions(card.missionCardOptions))}>
+                        <FancyCard card={foundCard} selected={card.owned} />
+                      </button>
+                      <p className="max-w-[130px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-[12px] pt-2">
+                        {getCardNameByLang(foundCard, i18n.language)}
+                      </p>
+                    </div>
                   )
-                })}
-              </div>
+                )
+              })}
             </div>
-          )
-        })}
+          </div>
+        ))}
       </div>
 
       {/* note header is absolute and has to be below table for the tooltip to work */}
-      <div key={'header'} style={{ height: '72px' }} className="absolute top-0 left-0 w-full">
-        <h2 className="flex items-center gap-x-4 mx-auto mt-10 w-full max-w-[900px] scroll-m-20 border-b-2 border-slate-600 pb-2 font-semibold text-md sm:text-lg md:text-2xl tracking-tight transition-colors first:mt-0">
+      <div key={'header'} className="absolute top-0 left-0 w-full">
+        <h2 className="flex items-center gap-x-4 mx-auto w-full max-w-[900px] scroll-m-20 border-b-2 border-slate-600 pb-2 font-semibold text-md sm:text-lg md:text-2xl tracking-tight transition-colors">
           {mission.name}
-
           <Tooltip id={`rewardDescription${mission.name}`} style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 16 }} clickable={true} />
           <Trophy className="h-6 w-6" data-tooltip-id={`rewardDescription${mission.name}`} data-tooltip-html={mission.reward} />
           <Tooltip id={`probability${mission.name}`} style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 16 }} clickable={true} />

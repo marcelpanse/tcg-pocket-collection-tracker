@@ -41,7 +41,7 @@ function App() {
   const authSSOQuery = useAuthSSO()
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false)
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false)
-  const [selectedCardId, setSelectedCardId] = useState<string | undefined>(undefined)
+  const [selectedCardId, setSelectedCardId] = useState<number | undefined>(undefined)
 
   // Check for SSO parameters
   useEffect(() => {

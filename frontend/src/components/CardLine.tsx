@@ -26,7 +26,7 @@ export const CardLine: FC<Props> = ({ card_id, className, amount_owned, incremen
   const { setSelectedCardId } = useSelectedCard()
 
   const card = useMemo(() => getCardById(card_id), [card_id])
-  const ownedAmount = useMemo(() => amount_owned ?? ownedCards.get(card?.internal_id || 0)?.amount_owned ?? 0, [amount_owned, card])
+  const ownedAmount = useMemo(() => amount_owned ?? ownedCards.get(card?.internal_id || 0)?.amount_owned ?? 0, [amount_owned, card, ownedCards])
 
   if (!card) {
     throw new Error(`Unrecognized card_id: ${card_id}`)
@@ -50,7 +50,7 @@ export const CardLine: FC<Props> = ({ card_id, className, amount_owned, incremen
         className={cn('rounded bg-zinc-600 px-1 cursor-pointer', details)}
         onClick={(e) => {
           e.stopPropagation()
-          setSelectedCardId(card_id)
+          setSelectedCardId(card.internal_id)
         }}
       >
         <svg className="fill-neutral-100 w-4 h-4 my-auto" viewBox="0 0 122.88 112.5">

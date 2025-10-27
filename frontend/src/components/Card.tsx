@@ -68,7 +68,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
         type="button"
         className="cursor-pointer"
         onClick={() => {
-          setSelectedCardId(card.card_id)
+          setSelectedCardId(card.internal_id)
           onImageClick?.()
         }}
       >
