@@ -5,7 +5,7 @@ import fetch from 'node-fetch'
 
 const BASE_URL = 'https://bulbapedia.bulbagarden.net/wiki'
 const targetDir = './frontend/assets/themed-collections/'
-const expansions = ['A4b']
+const expansions = ['B1']
 // const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a']
 const expansionToName = {
   A1: 'Genetic_Apex',
@@ -19,6 +19,7 @@ const expansionToName = {
   A4: 'Wisdom of Sea and Sky',
   A4a: 'Secluded Springs',
   A4b: 'Deluxe Pack: ex',
+  B1: 'Mega Rising',
 }
 
 async function fetchHTML(url) {

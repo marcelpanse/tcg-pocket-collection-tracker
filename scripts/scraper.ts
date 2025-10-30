@@ -14,27 +14,29 @@ const targetDir = 'frontend/assets/'
 const imagesDir = 'frontend/public/images/en-US/'
 const imagesPath = '/images/en-US/'
 
-// const expansions = ['A1']
 const expansions = allExpansions.map((e) => e.id)
 
 const packs = [
-  'Pikachu pack',
-  'Charizard pack',
-  'Mewtwo pack',
-  'Dialga pack',
-  'Palkia pack',
-  'Mew pack',
-  'Arceus pack',
-  'Shining revelry pack',
-  'Lunala pack',
-  'Solgaleo pack',
-  'Buzzwole pack',
-  'Eevee grove pack',
-  'Ho-Oh pack',
-  'Lugia pack',
-  'Suicune pack',
-  'Deluxe pack',
-  'All cards',
+  'pikachupack',
+  'charizardpack',
+  'mewtwopack',
+  'dialgapack',
+  'palkiapack',
+  'mewpack',
+  'arceuspack',
+  'shiningrevelrypack',
+  'lunala pack',
+  'solgaleopack',
+  'buzzwolepack',
+  'eeveegrovepack',
+  'ho-ohpack',
+  'lugiapack',
+  'suicunepack',
+  'deluxepack',
+  'megaaltariapack',
+  'megablazikenpack',
+  'megagyaradospack',
+  'allcards',
 ]
 
 const typeMapping: Record<string, CardType> = {
@@ -76,6 +78,10 @@ const rarityOverrides: Partial<Record<ExpansionId, { rarity: Rarity; start: numb
     { rarity: '✵✵', start: 101, end: 104 },
   ],
   A4b: [{ rarity: '✵✵', start: 377, end: 378 }],
+  B1: [
+    { rarity: '✵', start: 287, end: 316 },
+    { rarity: '✵✵', start: 317, end: 328 },
+  ],
 }
 
 /* Helper Functions */
@@ -164,17 +170,22 @@ function extractAbility($: CheerioAPI) {
 function extractSetAndPackInfo($: CheerioAPI) {
   const setInfo = $('div.card-prints-current')
 
-  if (setInfo.length) {
-    const setDetailsElement = setInfo.find('span.text-lg')
-    const setDetails = setDetailsElement.length ? setDetailsElement.text().replaceAll(' ', '').toLowerCase().trim() : 'Unknown'
-
-    const packTemp = setInfo.find('span').last().text().trim()
-    const packInfo = packTemp.split('·').pop().trim().split(/\s+/).join(' ')
-    const pack = packs.includes(packInfo) ? packInfo.replace(' ', '').toLowerCase() : 'everypack'
-
-    return { setDetails, pack }
+  if (!setInfo.length) {
+    throw new Error(`Faied fetching set info`)
   }
-  return { setDetails: 'Unknown', pack: 'Unknown' }
+
+  const setDetailsElement = setInfo.find('span.text-lg')
+  if (!setDetailsElement.length) {
+    throw new Error(`Failed fetching set info`)
+  }
+  const setDetails = setDetailsElement.text().replaceAll(' ', '').toLowerCase().trim()
+
+  const packTemp = setInfo.find('span').last().text().trim()
+  const packInfo = packTemp.split('·').pop().trim().replaceAll(' ', '').toLowerCase()
+  const pack = packs.includes(packInfo) ? packInfo : 'everypack'
+  console.log(`packInfo = ${packInfo}, pack = ${pack}`)
+
+  return { setDetails, pack }
 }
 
 function urlToCardId(url: string): { expansion: string; cardNr: number; cardId: string } {
@@ -306,10 +317,8 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
     const versionName = $(version).find('a').text().trim().replace(/\s+/g, ' ')
     if (versionName) {
       const alternate_card_id = $(version).find('a').attr('href')
-      console.log('checking', alternate_card_id, versionName)
       if (!alternate_card_id) {
         foundMyself = true // no link with href means this is the current version we're looking at.
-        console.log('found self reference')
       }
 
       alternate_versions.push(alternate_card_id ? urlToCardId(alternate_card_id).cardId : card_id)
