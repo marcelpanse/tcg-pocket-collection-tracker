@@ -1,51 +1,23 @@
-import i18n from 'i18next'
-import { type Dispatch, type FC, type SetStateAction, useEffect, useMemo } from 'react'
+import { type FC, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx'
-import { allCards, basicRarities, expansions, getCardByInternalId, getExpansionById } from '@/lib/CardsDB.ts'
-import { levenshtein } from '@/lib/levenshtein'
-import { getCardNameByLang } from '@/lib/utils'
+import { useToast } from '@/hooks/use-toast'
+import { getExpansionById } from '@/lib/CardsDB.ts'
+import { type CardTypeOption, cardTypeOptions, type ExpansionOption, expansionOptions, type Filters, ownedOptions, sortByOptions } from '@/lib/filters'
 import { useProfileDialog } from '@/services/account/useAccount'
-import { type Card, type CollectionRow, cardTypes, expansionIds, type Rarity } from '@/types'
 import { DropdownFilter, TabsFilter, ToggleFilter } from './Filters'
 import AllTextSearchFilter from './filters/AllTextSearchFilter'
 import DeckbuildingFilter from './filters/DeckbuildingFilter'
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 
-const ownedOptions = ['all', 'missing', 'owned'] as const
-const expansionOptions = ['all', ...expansionIds] as const
-const sortByOptions = ['default', 'recent', 'expansion-newest'] as const
-const cardTypeOptions = cardTypes
-type OwnedOption = (typeof ownedOptions)[number]
-type ExpansionOption = (typeof expansionOptions)[number]
-type SortByOption = (typeof sortByOptions)[number]
-type CardTypeOption = (typeof cardTypeOptions)[number]
-
-export interface Filters {
-  search: string
-  expansion: ExpansionOption
-  pack: string
-  cardType: CardTypeOption[]
-  rarity: Rarity[]
-  owned: OwnedOption
-  sortBy: SortByOption
-  minNumber: number
-  maxNumber: number
-  deckbuildingMode: boolean
-  allTextSearch: boolean
-}
-
 interface Props {
-  cards: Map<number, CollectionRow>
-
   filters: Filters
-  setFilters: Dispatch<SetStateAction<Filters>>
-
-  onFiltersChanged: (cards: Card[] | null) => void
+  setFilters: (updates: Partial<Filters>) => void
+  clearFilters: () => void
 
   visibleFilters?: {
     expansions?: boolean
@@ -68,138 +40,17 @@ interface Props {
     deckBuildingMode?: boolean
   }
 
-  share?: boolean
+  share?: boolean // undefined => disable, false => open settings, true => copy link
   missionsButton?: boolean
 }
 
-const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, visibleFilters, filtersDialog, share, missionsButton }: Props) => {
+const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters, visibleFilters, filtersDialog, share, missionsButton }: Props) => {
+  const { toast } = useToast()
   const { t } = useTranslation(['pages/collection', 'common/sets', 'common/packs', 'filters'])
   const navigate = useNavigate()
   const { setIsProfileDialogOpen } = useProfileDialog()
 
-  const setFilterChange = (filters: Partial<Filters>) => {
-    setFilters((prevFilters) => {
-      const newFilters = { ...prevFilters, ...filters }
-      const cards = getFilteredCards(newFilters)
-      onFiltersChanged(cards)
-      return newFilters
-    })
-  }
-
-  const setSearchValue = (x: string) => setFilterChange({ search: x })
-  const setAllTextSearch = (x: boolean) => setFilterChange({ allTextSearch: x })
-  const setPack = (x: string) => setFilterChange({ pack: x })
-  const setRarity = (x: Rarity[]) => setFilterChange({ rarity: x })
-  const setOwned = (x: OwnedOption) => setFilterChange({ owned: x })
-
-  const getFilteredCards = (filters: Filters) => {
-    let filteredCards = allCards
-
-    if (filters.deckbuildingMode) {
-      filteredCards = filteredCards.filter((c) => basicRarities.includes(c.rarity) || c.rarity === 'P')
-    }
-
-    if (filters.expansion !== 'all') {
-      filteredCards = filteredCards.filter((card) => card.expansion === filters.expansion)
-    }
-    if (filters.pack !== 'all') {
-      filteredCards = filteredCards.filter((card) => card.pack === filters.pack || card.pack === 'everypack')
-    }
-    if (filters.owned !== 'all') {
-      if (filters.owned === 'owned') {
-        filteredCards = filteredCards.filter((card) => card.collected)
-      } else if (filters.owned === 'missing') {
-        filteredCards = filteredCards.filter((card) => !card.collected)
-      }
-    }
-
-    if (filters.sortBy === 'recent') {
-      filteredCards = [...filteredCards].sort((a: Card, b: Card) => {
-        const isUpdatedA = cards.get(a.internal_id)?.updated_at
-        const isUpdatedB = cards.get(b.internal_id)?.updated_at
-        if (isUpdatedA && isUpdatedB) {
-          return new Date(isUpdatedB).getTime() - new Date(isUpdatedA).getTime()
-        } else if (isUpdatedA && !isUpdatedB) {
-          return -1
-        } else {
-          return 1
-        }
-      })
-    } else if (filters.sortBy === 'expansion-newest') {
-      const reversedExpansions = [...expansions].reverse()
-
-      filteredCards = [...filteredCards].sort((a: Card, b: Card) => {
-        const expansionIndexA = reversedExpansions.findIndex((e) => e.id === a.expansion)
-        const expansionIndexB = reversedExpansions.findIndex((e) => e.id === b.expansion)
-
-        if (expansionIndexA !== expansionIndexB) {
-          return expansionIndexA - expansionIndexB
-        }
-
-        return a.card_id.localeCompare(b.card_id, i18n.language || 'en', { numeric: true })
-      })
-    }
-
-    filteredCards = filteredCards.filter((c: Card) => {
-      if (filters.rarity.length === 0) {
-        return true
-      }
-      return filters.rarity.includes(c.rarity)
-    })
-    filteredCards = filteredCards.filter((c: Card) => {
-      if (filters.cardType.length === 0) {
-        return true
-      }
-      if (c.card_type.toLowerCase() === 'trainer') {
-        return filters.cardType.includes('trainer')
-      }
-      return filters.cardType.includes(c.energy)
-    })
-
-    if (filters.search) {
-      const threshold = 2 // tweak if needed
-
-      filteredCards = filteredCards.filter((card) => {
-        const name = getCardNameByLang(card, i18n.language).toLowerCase()
-        const query = filters.search.toLowerCase()
-
-        let filterAllText = false
-        if (filters.allTextSearch) {
-          filterAllText =
-            (card.ability && (card.ability.name.toLowerCase().includes(query) || card.ability.effect.toLowerCase().includes(query))) ||
-            card.attacks.some(
-              (attack) =>
-                attack.name?.toLowerCase().includes(query) || (attack.effect?.toLowerCase() !== 'no effect' && attack.effect?.toLowerCase()?.includes(query)),
-            )
-        }
-        const isExactMatch = name.includes(query)
-        const isFuzzyMatch = levenshtein(name, query) <= threshold
-        const isIdMatch = card.card_id.toLowerCase().includes(query)
-
-        return filterAllText || isExactMatch || isFuzzyMatch || isIdMatch
-      })
-    }
-
-    for (const card of filteredCards) {
-      if (filters.deckbuildingMode) {
-        card.amount_owned = card.alternate_versions.reduce((acc, c) => {
-          const card = getCardByInternalId(c)
-          return acc + (cards.get(card?.internal_id || 0)?.amount_owned ?? 0)
-        }, 0)
-      } else {
-        card.amount_owned = cards.get(card.internal_id)?.amount_owned ?? 0
-      }
-      card.collected = cards.get(card.internal_id)?.collection.includes(card.card_id) ?? false
-    }
-    filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) >= filters.minNumber)
-    if (filters.maxNumber !== 100) {
-      filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) <= filters.maxNumber)
-    }
-
-    return filteredCards
-  }
-
-  const filteredCards = useMemo(() => getFilteredCards(filters), [filters, cards])
+  const changeFilter = (k: keyof Filters) => (x: Filters[typeof k]) => setFilters({ [k]: x })
 
   const packsToShow = useMemo(() => {
     if (filters.expansion === 'all') {
@@ -214,14 +65,11 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
     }
   }, [filters.expansion])
 
-  useEffect(() => {
-    onFiltersChanged(filteredCards)
-  }, [])
-
   function onExpansionChange(x: ExpansionOption) {
-    setFilterChange({ expansion: x, pack: 'all' })
+    setFilters({ expansion: x, pack: 'all' })
   }
-  const getLocalizedExpansion = (id: ExpansionOption) => {
+
+  function getLocalizedExpansion(id: ExpansionOption) {
     return t(id === 'all' ? 'all' : getExpansionById(id).name, { ns: 'common/sets' })
   }
 
@@ -230,6 +78,20 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
       return 'T'
     } else {
       return <img src={`/images/energy/${x}.webp`} alt={x} className="h-4" />
+    }
+  }
+
+  async function onShare() {
+    if (!share) {
+      setIsProfileDialogOpen(true)
+    } else {
+      // @ts-expect-error: Experimental api https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/mobile
+      if (navigator.share && (navigator.userAgentData?.mobile || /Mobi|Android/i.test(navigator.userAgent))) {
+        await navigator.share({ title: 'My Pokemon TCG Pocket collection', url: window.location.href })
+      } else {
+        await navigator.clipboard.writeText(window.location.href)
+        toast({ title: 'Copied to clipboard', variant: 'default' })
+      }
     }
   }
 
@@ -244,13 +106,18 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
             onChange={onExpansionChange}
             show={getLocalizedExpansion}
           />
-          {packsToShow && <TabsFilter options={packsToShow} value={filters.pack} onChange={setPack} show={(x) => t(x, { ns: 'common/packs' })} />}
+          {packsToShow && <TabsFilter options={packsToShow} value={filters.pack} onChange={changeFilter('pack')} show={(x) => t(x, { ns: 'common/packs' })} />}
         </div>
       )}
       <div className="gap-2 flex-row gap-y-1 px-4 flex">
-        {visibleFilters?.search && <SearchInput className="w-full sm:w-32" setSearchValue={setSearchValue} />}
+        {visibleFilters?.search && <SearchInput className="w-full sm:w-32" setSearchValue={changeFilter('search')} />}
         {visibleFilters?.owned && (
-          <TabsFilter options={ownedOptions} value={filters.owned} onChange={setOwned} show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-owned' })} />
+          <TabsFilter
+            options={ownedOptions}
+            value={filters.owned}
+            onChange={changeFilter('owned')}
+            show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-owned' })}
+          />
         )}
         {visibleFilters?.rarity && (
           <Popover>
@@ -263,7 +130,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
               <RarityFilter
                 className="flex-col bg-transparent"
                 rarityFilter={filters.rarity}
-                setRarityFilter={setRarity}
+                setRarityFilter={changeFilter('rarity')}
                 deckbuildingMode={filters.deckbuildingMode}
               />
             </PopoverContent>
@@ -277,11 +144,11 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
             </DialogTrigger>
             <DialogContent className="border-1 border-neutral-700 shadow-none max-h-[90vh] overflow-y-auto content-start">
               <DialogHeader>
-                <DialogTitle>{t('filters.filtersCount', { count: (filteredCards || []).length })}</DialogTitle>
+                <DialogTitle>{t('filters.filtersCount')}</DialogTitle>
               </DialogHeader>
               <div className="flex flex-col gap-3">
-                {filtersDialog.search && <SearchInput className="w-full bg-neutral-900" setSearchValue={setSearchValue} />}
-                {filtersDialog.allTextSearch && <AllTextSearchFilter allTextSearch={filters.allTextSearch} setAllTextSearch={setAllTextSearch} />}
+                {filtersDialog.search && <SearchInput className="w-full bg-neutral-900" setSearchValue={changeFilter('search')} />}
+                {filtersDialog.allTextSearch && <AllTextSearchFilter allTextSearch={filters.allTextSearch} setAllTextSearch={changeFilter('allTextSearch')} />}
                 {filtersDialog.expansions && (
                   <DropdownFilter
                     className="bg-neutral-900"
@@ -297,7 +164,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
                     className="w-full bg-neutral-900"
                     options={packsToShow}
                     value={filters.pack}
-                    onChange={setPack}
+                    onChange={changeFilter('pack')}
                     show={(x) => t(x, { ns: 'common/packs' })}
                   />
                 )}
@@ -305,7 +172,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
                   <RarityFilter
                     className="bg-neutral-900"
                     rarityFilter={filters.rarity}
-                    setRarityFilter={setRarity}
+                    setRarityFilter={changeFilter('rarity')}
                     deckbuildingMode={filters.deckbuildingMode}
                   />
                 )}
@@ -314,7 +181,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
                     className="bg-neutral-900"
                     options={cardTypeOptions}
                     value={filters.cardType}
-                    onChange={(x) => setFilterChange({ cardType: x })}
+                    onChange={changeFilter('cardType')}
                     show={showCardType}
                   />
                 )}
@@ -323,7 +190,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
                     className="w-full bg-neutral-900"
                     options={ownedOptions}
                     value={filters.owned}
-                    onChange={setOwned}
+                    onChange={changeFilter('owned')}
                     show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-owned' })}
                   />
                 )}
@@ -333,7 +200,7 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
                     label={t('f-sortBy.sortBy', { ns: 'filters' })}
                     options={sortByOptions}
                     value={filters.sortBy}
-                    onChange={(x) => setFilterChange({ sortBy: x })}
+                    onChange={changeFilter('sortBy')}
                     show={(x) => t(`f-sortBy.${x}`, { ns: 'filters' })}
                   />
                 )}
@@ -344,42 +211,21 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
                       label={t('f-number.minNum', { ns: 'filters' })}
                       options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
                       value={filters.minNumber}
-                      onChange={(x) => setFilterChange({ minNumber: x })}
+                      onChange={changeFilter('minNumber')}
                     />
                     <DropdownFilter
                       className="bg-neutral-900"
                       label={t('f-number.maxNum', { ns: 'filters' })}
                       options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
                       value={filters.maxNumber}
-                      onChange={(x) => setFilterChange({ maxNumber: x })}
+                      onChange={changeFilter('maxNumber')}
                     />
                   </>
                 )}
                 {filtersDialog.deckBuildingMode && (
-                  <DeckbuildingFilter deckbuildingMode={filters.deckbuildingMode} setDeckbuildingMode={(x) => setFilterChange({ deckbuildingMode: x })} />
+                  <DeckbuildingFilter deckbuildingMode={filters.deckbuildingMode} setDeckbuildingMode={changeFilter('deckbuildingMode')} />
                 )}
-                <Button
-                  variant="outline"
-                  className="!text-red-700"
-                  onClick={() => {
-                    const filters: Filters = {
-                      search: '',
-                      expansion: 'all',
-                      pack: 'all',
-                      cardType: [],
-                      rarity: [],
-                      owned: 'all',
-                      sortBy: 'expansion-newest',
-                      minNumber: 0,
-                      maxNumber: 100,
-                      deckbuildingMode: false,
-                      allTextSearch: false,
-                    }
-                    const cards = getFilteredCards(filters)
-                    onFiltersChanged(cards)
-                    setFilters(filters)
-                  }}
-                >
+                <Button variant="outline" className="!text-red-700" onClick={clearFilters}>
                   {t('filters.clear')}
                 </Button>
                 {missionsButton && (
@@ -392,8 +238,8 @@ const FilterPanel: FC<Props> = ({ cards, filters, setFilters, onFiltersChanged, 
           </Dialog>
         )}
 
-        {share && (
-          <Button variant="outline" onClick={() => setIsProfileDialogOpen(true)}>
+        {share !== undefined && (
+          <Button variant="outline" onClick={onShare}>
             {t('filters.share')}
           </Button>
         )}
