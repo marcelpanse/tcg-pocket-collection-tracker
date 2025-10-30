@@ -57,15 +57,15 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
 
   if (!yourCard && !friendCard) {
     return (
-      <div className="flex rounded-lg border-1 border-neutral-700 border-solid p-2 w-full items-center justify-around text-center h-[206px] sm:h-[138px]">
+      <div className="sticky top-0 z-10 flex rounded-lg border-1 bg-neutral-900 border-neutral-700 border-solid p-2 w-full items-center justify-around text-center h-[166px] sm:h-[110px]">
         <h4 className="text-lg font-medium">{t('selectCardsToTrade')}</h4>
       </div>
     )
   }
 
   return (
-    <div className="bg-neutral-900 rounded-lg border-1 border-neutral-700 border-solid p-2">
-      <div className="flex flex-col sm:flex-row gap-4 p-4">
+    <div className="sticky top-0 z-10 bg-neutral-900 rounded-lg border-1 border-neutral-700 border-solid p-1">
+      <div className="flex flex-col sm:flex-row gap-x-4 gap-y-1 p-1">
         <div className="w-full sm:w-1/2">
           <h4 className="text-lg font-medium">{t('youGive')}</h4>
           {card(yourCard)}
@@ -75,7 +75,7 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
           {card(friendCard)}
         </div>
       </div>
-      <Button className="block w-full sm:w-1/2 mx-auto text-center" type="button" variant="outline" onClick={submit} disabled={!enabled}>
+      <Button className="block w-full sm:w-96 mx-auto mt-1 text-center" type="button" variant="outline" onClick={submit} disabled={!enabled}>
         {t('offerTrades')}
       </Button>
     </div>
