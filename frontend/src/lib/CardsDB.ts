@@ -12,6 +12,7 @@ import A3bMissions from '../../assets/themed-collections/A3b-missions.json'
 import A4Missions from '../../assets/themed-collections/A4-missions.json'
 import A4aMissions from '../../assets/themed-collections/A4a-missions.json'
 import A4bMissions from '../../assets/themed-collections/A4b-missions.json'
+import B1Missions from '../../assets/themed-collections/B1-missions.json'
 
 const equivalent = (firstCard: Card, secondCard: Card) => {
   return firstCard.alternate_versions.includes(secondCard.internal_id)
@@ -41,21 +42,14 @@ const a3bMissions: Mission[] = A3bMissions as unknown as Mission[]
 const a4Missions: Mission[] = A4Missions as unknown as Mission[]
 const a4aMissions: Mission[] = A4aMissions as unknown as Mission[]
 const a4bMissions: Mission[] = A4bMissions as unknown as Mission[]
+const b1Missions: Mission[] = B1Missions as unknown as Mission[]
 
 export const expansions: Expansion[] = [
   // internalId=0 skipped for error states
   {
-    name: 'promo-a',
-    id: 'P-A',
-    internalId: 192, // IMPORTANT note: these should NEVER EVER change. The internals of the DB depend on it.
-    packs: [{ name: 'everypack', color: '#CCCCCC' }],
-    tradeable: false,
-    promo: true,
-  },
-  {
     name: 'geneticapex',
     id: 'A1',
-    internalId: 1,
+    internalId: 1, // IMPORTANT note: these should NEVER EVER change. The internals of the DB depend on it.
     packs: [
       { name: 'mewtwopack', color: '#986C88' },
       { name: 'charizardpack', color: '#E2711B' },
@@ -162,12 +156,42 @@ export const expansions: Expansion[] = [
     internalId: 11,
     packs: [{ name: 'deluxepack', color: '#CCA331' }],
     missions: a4bMissions,
-    tradeable: false,
+    tradeable: true,
     containsShinies: true,
     containsBabies: false,
     packStructure: {
       cardsPerPack: 4,
     },
+  },
+  {
+    name: 'megarising',
+    id: 'B1',
+    internalId: 12,
+    packs: [
+      { name: 'megaaltariapack', color: '#7EBECD' },
+      { name: 'megablazikenpack', color: '#F56C46' },
+      { name: 'megagyaradospack', color: '#0A75F0' },
+    ],
+    missions: b1Missions,
+    tradeable: true,
+    containsShinies: true,
+    containsBabies: false,
+  },
+  {
+    name: 'promo-a',
+    id: 'P-A',
+    internalId: 192, // IMPORTANT note: these should NEVER EVER change. The internals of the DB depend on it.
+    packs: [{ name: 'everypack', color: '#CCCCCC' }],
+    tradeable: false,
+    promo: true,
+  },
+  {
+    name: 'promo-b',
+    id: 'P-B',
+    internalId: 193,
+    packs: [{ name: 'everypack', color: '#CCCCCC' }],
+    tradeable: false,
+    promo: true,
   },
 ]
 
