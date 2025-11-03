@@ -58,6 +58,7 @@ export const expansions: Expansion[] = [
     ],
     missions: a1Missions,
     tradeable: true,
+    openable: true,
   },
   {
     name: 'mythicalisland',
@@ -66,6 +67,7 @@ export const expansions: Expansion[] = [
     packs: [{ name: 'mewpack', color: '#FFC1EA' }],
     missions: a1aMissions,
     tradeable: true,
+    openable: true,
   },
   {
     name: 'space-timesmackdown',
@@ -78,6 +80,7 @@ export const expansions: Expansion[] = [
     ],
     missions: a2Missions,
     tradeable: true,
+    openable: true,
   },
   {
     name: 'triumphantlight',
@@ -86,6 +89,7 @@ export const expansions: Expansion[] = [
     packs: [{ name: 'arceuspack', color: '#E4D7CA' }],
     missions: a2aMissions,
     tradeable: true,
+    openable: true,
   },
   {
     name: 'shiningrevelry',
@@ -95,6 +99,7 @@ export const expansions: Expansion[] = [
     missions: a2bMissions,
     tradeable: true,
     containsShinies: true,
+    openable: true,
   },
   {
     name: 'celestialguardians',
@@ -107,6 +112,7 @@ export const expansions: Expansion[] = [
     ],
     missions: a3Missions,
     tradeable: true,
+    openable: true,
     containsShinies: true,
   },
   {
@@ -116,6 +122,7 @@ export const expansions: Expansion[] = [
     packs: [{ name: 'buzzwolepack', color: '#ef4444' }],
     missions: a3aMissions,
     tradeable: true,
+    openable: true,
     containsShinies: true,
   },
   {
@@ -125,6 +132,7 @@ export const expansions: Expansion[] = [
     packs: [{ name: 'eeveegrovepack', color: '#b45309' }],
     missions: a3bMissions,
     tradeable: true,
+    openable: true,
     containsShinies: true,
   },
   {
@@ -137,6 +145,7 @@ export const expansions: Expansion[] = [
     ],
     missions: a4Missions,
     tradeable: true,
+    openable: true,
     containsShinies: true,
     containsBabies: true,
   },
@@ -147,6 +156,7 @@ export const expansions: Expansion[] = [
     packs: [{ name: 'suicunepack', color: '#E9B00D' }],
     missions: a4aMissions,
     tradeable: true,
+    openable: true,
     containsShinies: true,
     containsBabies: true,
   },
@@ -157,6 +167,7 @@ export const expansions: Expansion[] = [
     packs: [{ name: 'deluxepack', color: '#CCA331' }],
     missions: a4bMissions,
     tradeable: true,
+    openable: false,
     containsShinies: true,
     containsBabies: false,
     packStructure: {
@@ -174,6 +185,7 @@ export const expansions: Expansion[] = [
     ],
     missions: b1Missions,
     tradeable: true,
+    openable: true,
     containsShinies: true,
     containsBabies: false,
   },
@@ -183,6 +195,7 @@ export const expansions: Expansion[] = [
     internalId: 192, // IMPORTANT note: these should NEVER EVER change. The internals of the DB depend on it.
     packs: [{ name: 'everypack', color: '#CCCCCC' }],
     tradeable: false,
+    openable: false,
     promo: true,
   },
   {
@@ -191,6 +204,7 @@ export const expansions: Expansion[] = [
     internalId: 193,
     packs: [{ name: 'everypack', color: '#CCCCCC' }],
     tradeable: false,
+    openable: false,
     promo: true,
   },
 ]

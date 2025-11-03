@@ -91,6 +91,7 @@ export interface Expansion {
   packs: Pack[]
   missions?: Mission[]
   tradeable: boolean
+  openable: boolean
   promo?: boolean
   containsShinies?: boolean
   containsBabies?: boolean

@@ -22,7 +22,7 @@ interface Pack {
   fill: string
 }
 
-const expansionOptions = ['all', ...expansionIds] as const
+const expansionOptions = ['all', ...expansionIds.filter((id) => getExpansionById(id).openable)] as const
 type ExpansionOption = (typeof expansionOptions)[number]
 
 function Overview() {
@@ -32,7 +32,7 @@ function Overview() {
 
   const [collectionCount, setCollectionCount] = useState('')
   const [usersCount, setUsersCount] = useState('')
-  const [expansionFilter, setExpansionFilter] = useState<ExpansionOption>(expansionOptions[expansionOptions.length - 3])
+  const [expansionFilter, setExpansionFilter] = useState<ExpansionOption>(expansionOptions[expansionOptions.length - 1])
 
   const ownedCardsCount = useMemo(() => {
     let total = 0
@@ -59,7 +59,7 @@ function Overview() {
 
   const highestProbabilityPack = useMemo(() => {
     let newHighestProbabilityPack: Pack | undefined
-    const filteredExpansions = CardsDB.expansions.filter((expansion) => !expansion.promo)
+    const filteredExpansions = CardsDB.expansions.filter((expansion) => expansion.openable)
     for (const expansion of filteredExpansions) {
       const pullRates = expansion.packs
         .filter((p) => p.name !== 'everypack')
@@ -161,7 +161,7 @@ function Overview() {
 
       <article className="mx-auto max-w-7xl sm:p-6 p-0 pt-6 grid grid-cols-8 gap-6">
         {CardsDB.expansions
-          .filter((expansion) => expansionFilter === 'all' || expansionFilter === expansion.id)
+          .filter((expansion) => (expansionFilter === 'all' && expansion.openable) || expansionFilter === expansion.id)
           .map((expansion) => (
             <ExpansionOverview
               key={expansion.id}
