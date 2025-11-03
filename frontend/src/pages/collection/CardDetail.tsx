@@ -1,4 +1,5 @@
 import i18n from 'i18next'
+import { CircleHelp } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
@@ -8,14 +9,14 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Radio, RadioIndicator, RadioItem } from '@/components/ui/radio'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
-import { craftingCost, getCardById, getCardByInternalId, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
+import { craftingCost, getCardByInternalId, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useDeleteCard, useSelectedCard } from '@/services/collection/useCollection'
 import type { Card, CollectionRow } from '@/types'
 
 function CardDetail() {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
-  const { selectedCardId: cardId, setSelectedCardId: setCardId } = useSelectedCard()
+  const { selectedCardId: id, setSelectedCardId: setId } = useSelectedCard()
 
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const deleteCardMutation = useDeleteCard()
@@ -23,22 +24,26 @@ function CardDetail() {
   const [isOpen, setIsOpen] = useState(false)
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
 
-  const card = useMemo(() => (cardId === undefined ? undefined : getCardById(cardId)), [cardId])
-  const row = useMemo(() => ownedCards.get(card?.internal_id || 0), [cardId])
+  const card = useMemo(() => (id === undefined ? undefined : getCardByInternalId(id)), [id])
+  const row = useMemo(() => (id === undefined ? undefined : ownedCards.get(id)), [id, ownedCards])
   const alternatives = useMemo(
-    () => card?.alternate_versions.map((id) => ({ card: getCardByInternalId(id) as Card, amount_owned: ownedCards.get(id)?.amount_owned ?? 0 })),
+    () =>
+      card?.alternate_versions.map((alternate_id) => ({
+        card: getCardByInternalId(alternate_id) as Card,
+        amount_owned: ownedCards.get(alternate_id)?.amount_owned ?? 0,
+      })),
     [card, ownedCards],
   )
   const expansion = useMemo(() => card && getExpansionById(card.expansion), [card])
 
   useEffect(() => {
-    if (cardId) {
+    if (id) {
       setIsOpen(true)
     }
-  }, [cardId])
+  }, [id])
 
-  if (cardId && !card) {
-    console.log(`Unrecognized card_id: ${cardId}`)
+  if (id && !card) {
+    console.log(`Unrecognized card id: ${id}`)
     return null
   }
 
@@ -57,21 +62,19 @@ function CardDetail() {
     }).format(new Date(timestamp))
   }
 
-  const handleUncollect = () => {
-    if (cardId && row?.collection.includes(cardId)) {
+  const handleUncollect = (cardId: string) => {
+    if (id && row?.collection.includes(cardId)) {
       deleteCardMutation.mutate({ cardId })
     }
   }
 
-  const isCardOwned = row?.collection.includes(cardId || '')
-
   return (
     <Sheet
-      open={Boolean(cardId) && isOpen}
+      open={Boolean(id) && isOpen}
       onOpenChange={(open) => {
         if (!open) {
           setIsOpen(open)
-          setTimeout(() => setCardId(undefined), 300) // keep content when sliding out
+          setTimeout(() => setId(undefined), 300) // keep content when sliding out
         }
       }}
     >
@@ -85,12 +88,7 @@ function CardDetail() {
           <div className="px-10 py-4 w-full">
             <div className="cursor-pointer">
               {card && (
-                <CardComponent
-                  key={cardId}
-                  className="w-full"
-                  card={{ ...card, amount_owned: row?.amount_owned || 0 }}
-                  onImageClick={() => setIsImageDialogOpen(true)}
-                />
+                <CardComponent className="w-full" card={{ ...card, amount_owned: row?.amount_owned || 0 }} onImageClick={() => setIsImageDialogOpen(true)} />
               )}
             </div>
           </div>
@@ -116,10 +114,10 @@ function CardDetail() {
             <div className="mb-3">
               <h2 className="text-xl font-semibold">{t('text.alternateVersions')}</h2>
               {alternatives && (
-                <Radio className="w-fit" value={cardId} onValueChange={setCardId}>
+                <Radio className="w-fit" value={String(id)} onValueChange={(x) => setId(Number(x))}>
                   {alternatives.map((x) => (
                     <label key={x.card.card_id} className="flex items-center cursor-pointer" htmlFor={`radio-${x.card.card_id}`}>
-                      <RadioItem id={`radio-${x.card.card_id}`} value={x.card.card_id}>
+                      <RadioItem id={`radio-${x.card.card_id}`} value={String(x.card.internal_id)}>
                         <RadioIndicator />
                       </RadioItem>
                       <CardLine className="w-auto bg-transparent" card_id={x.card.card_id} rarity="w-14" name="hidden" details="hidden" amount="pl-4" />
@@ -189,24 +187,36 @@ function CardDetail() {
               <strong className="block min-w-[175px]">{t('text.artist')}</strong> {card?.artist}
             </p>
 
+            {!!row?.collection?.length && (
+              <>
+                <p className="flex items-center gap-2 mt-6 mb-1">
+                  <span>Collected in</span>
+                  <Tooltip id="minInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
+                  <CircleHelp className="h-4 w-4" data-tooltip-id="minInput" data-tooltip-content={t('text.uncollectTooltip')} />
+                </p>
+                {deleteCardMutation.isPending ? (
+                  <p>{t('text.uncollecting')}</p>
+                ) : (
+                  <div className="flex flex-col gap-1 w-fit">
+                    {row?.collection.map((cardId) => (
+                      <Button
+                        key={cardId}
+                        variant="destructive"
+                        className="mr-auto min-w-48 w-full"
+                        onClick={() => handleUncollect(cardId)}
+                        disabled={deleteCardMutation.isPending}
+                      >
+                        {t('text.uncollect')} {cardId}
+                      </Button>
+                    ))}
+                  </div>
+                )}
+              </>
+            )}
+
             <p className="mt-4 text-neutral-400 text-sm flex">
               <strong className="font-semibold mr-1">{t('text.updated')}</strong> {row?.updated_at ? formatTimestamp(row.updated_at) : 'N/A'}
             </p>
-
-            {isCardOwned && (
-              <div className="mt-6">
-                <Tooltip id="uncollect-tooltip" style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 14 }} />
-                <Button
-                  variant="destructive"
-                  onClick={handleUncollect}
-                  disabled={deleteCardMutation.isPending}
-                  data-tooltip-id="uncollect-tooltip"
-                  data-tooltip-content={t('text.uncollectTooltip')}
-                >
-                  {deleteCardMutation.isPending ? 'Uncollecting...' : 'Uncollect'}
-                </Button>
-              </div>
-            )}
           </div>
         </div>
       </SheetContent>

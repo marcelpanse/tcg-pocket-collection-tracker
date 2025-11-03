@@ -7,7 +7,7 @@ import { Tooltip } from 'react-tooltip'
 import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
 import { getExpansionById } from '@/lib/CardsDB.ts'
 import { chunk } from '@/lib/utils.ts'
-import type { Card as CardType, Expansion, ExpansionId } from '@/types'
+import { type Card as CardType, type Expansion, type ExpansionId, expansionIds } from '@/types'
 import { Card } from './Card.tsx'
 
 interface Props {
@@ -60,18 +60,20 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
   const rows: ({ id: string; type: 'header'; expansion: Expansion } | { id: string; type: 'row'; cards: CardType[] })[] = useMemo(
     () =>
       groupExpansions
-        ? Object.entries(Object.groupBy(cards, (c) => c.expansion)).flatMap(([expansionId, cards]) => [
-            {
-              id: `header-${expansionId}`,
-              type: 'header' as const,
-              expansion: getExpansionById(expansionId as ExpansionId),
-            },
-            ...chunk(cards, cardsPerRow).map((rowCards, i) => ({
-              id: `row-${expansionId}-${i}`,
-              type: 'row' as const,
-              cards: rowCards,
-            })),
-          ])
+        ? Object.entries(Object.groupBy(cards, (c) => c.expansion))
+            .toSorted(([id1, _cards1], [id2, _cards2]) => expansionIds.indexOf(id1 as ExpansionId) - expansionIds.indexOf(id2 as ExpansionId))
+            .flatMap(([expansionId, cards]) => [
+              {
+                id: `header-${expansionId}`,
+                type: 'header' as const,
+                expansion: getExpansionById(expansionId as ExpansionId),
+              },
+              ...chunk(cards, cardsPerRow).map((rowCards, i) => ({
+                id: `row-${expansionId}-${i}`,
+                type: 'row' as const,
+                cards: rowCards,
+              })),
+            ])
         : chunk(cards, cardsPerRow).map((rowCards, i) => ({
             id: `row-${i}`,
             type: 'row' as const,
