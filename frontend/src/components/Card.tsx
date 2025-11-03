@@ -40,7 +40,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
       }
       _inputDebounce[card_id] = window.setTimeout(async () => {
         updateCardsMutation.mutate({
-          updates: [{ card_id, internal_id: card.internal_id, amount_owned: newAmount, rarity: card.rarity }],
+          updates: [{ card_id, internal_id: card.internal_id, amount_owned: newAmount }],
         })
       }, 1000)
     },
