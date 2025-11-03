@@ -6,7 +6,6 @@ const MASK_8 = 0xff // 255 - for expansion and rarity (up to 199)
 const MASK_10 = 0x3ff // 1023 - for card number (up to 999)
 
 export function encode(expansion: Expansion, cardNr: number, rarity: Rarity): number {
-  console.log('encoding', expansion.id, cardNr, rarity)
   const expansionId = expansion.internalId
   const rarityId = rarityToId[rarity]
 
@@ -23,9 +22,6 @@ export function encode(expansion: Expansion, cardNr: number, rarity: Rarity): nu
   // Layout: [8 bits expansion][10 bits cardNr][6 bits rarity] = 24 bits total
   const encoded = (expansionId << 16) | (cardNr << 6) | rarityId
   const x = encoded >>> 0 // unsigned 32-bit
-
-  console.log('encoded', x)
-  console.log('decoded', decode(x)) // sanity check
 
   return x
 }

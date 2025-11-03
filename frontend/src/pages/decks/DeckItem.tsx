@@ -95,7 +95,7 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
             return (
               cardObj && (
                 <div className={'group flex w-fit max-w-30 flex-col items-center rounded-lg cursor-pointer'} key={`${cardObj.name}-${idx}`}>
-                  <button type="button" className="cursor-pointer" onClick={() => setSelectedCardId(cardObj.card_id)}>
+                  <button type="button" className="cursor-pointer" onClick={() => setSelectedCardId(cardObj.internal_id)}>
                     <FancyCard card={cardObj} selected={selected} />
                   </button>
 
