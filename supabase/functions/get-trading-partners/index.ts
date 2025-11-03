@@ -49,7 +49,7 @@ Deno.serve(async (req) => {
                             LEFT JOIN card_amounts c2
                                       ON c.internal_id = c2.internal_id AND c2.email = $1
                    WHERE c.tradable = TRUE 
-                     AND c2.amount_owned < $2
+                     AND (c2.amount_owned IS NULL OR c2.amount_owned < $2)
                ),
                you_have AS (
                    SELECT c.internal_id
@@ -64,7 +64,7 @@ Deno.serve(async (req) => {
                             LEFT JOIN card_amounts c2
                                       ON c.internal_id = c2.internal_id AND c2.email = a.email
                    WHERE c.tradable = TRUE 
-                       AND c2.amount_owned < a.max_number_of_cards_wanted
+                       AND (c2.amount_owned IS NULL OR c2.amount_owned < a.max_number_of_cards_wanted)
                ),
                partner_has AS (
                    SELECT c.email, c.internal_id
