@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next'
 import { getCardById } from '@/lib/CardsDB'
 import { cn, getCardNameByLang } from '@/lib/utils'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
-import type { CollectionRow } from '@/types'
 
 interface Props {
   card_id: string
@@ -22,11 +21,14 @@ interface Props {
 export const CardLine: FC<Props> = ({ card_id, className, amount_owned, increment, rarity, id, name, amount, details }) => {
   const { i18n } = useTranslation('trade-matches')
 
-  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
+  const { data: ownedCards } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
 
   const card = useMemo(() => getCardById(card_id), [card_id])
-  const ownedAmount = useMemo(() => amount_owned ?? ownedCards.get(card?.internal_id || 0)?.amount_owned ?? 0, [amount_owned, card])
+  const ownedAmount = useMemo(
+    () => amount_owned ?? (ownedCards && (ownedCards.get(card?.internal_id || 0)?.amount_owned ?? 0)),
+    [ownedCards, amount_owned, card],
+  )
 
   if (!card) {
     throw new Error(`Unrecognized card_id: ${card_id}`)
@@ -36,21 +38,23 @@ export const CardLine: FC<Props> = ({ card_id, className, amount_owned, incremen
     <span className={cn('flex rounded pl-1 bg-zinc-800', className)}>
       <span className={cn('mr-2 sm:min-w-10', rarity)}>{card.rarity === 'Crown Rare' ? '♛' : card.rarity} </span>
       <span className={cn('mr-2 sm:min-w-14 me-4', id)}>{card.card_id} </span>
-      <span className={cn('mr-1', name)}>{getCardNameByLang(card, i18n.language)}</span>
-      <span className={cn('text-neutral-400 ml-auto mr-2', amount)}>
-        ×{ownedAmount}
-        {increment && (
-          <>
-            <span className="mx-1">→</span>×{ownedAmount + increment}
-          </>
-        )}
-      </span>
+      <span className={cn('mr-auto', name)}>{getCardNameByLang(card, i18n.language)}</span>
+      {ownedAmount !== undefined && (
+        <span className={cn('text-neutral-400 ml-1 mr-2', amount)}>
+          ×{ownedAmount}
+          {increment && (
+            <>
+              <span className="mx-1">→</span>×{ownedAmount + increment}
+            </>
+          )}
+        </span>
+      )}
       <button
         type="button"
         className={cn('rounded bg-zinc-600 px-1 cursor-pointer', details)}
         onClick={(e) => {
           e.stopPropagation()
-          setSelectedCardId(card_id)
+          setSelectedCardId(card.internal_id)
         }}
       >
         <svg className="fill-neutral-100 w-4 h-4 my-auto" viewBox="0 0 122.88 112.5">
