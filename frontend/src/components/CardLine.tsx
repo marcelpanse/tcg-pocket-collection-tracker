@@ -54,7 +54,7 @@ export const CardLine: FC<Props> = ({ card_id, className, amount_owned, incremen
         className={cn('rounded bg-zinc-600 px-1 cursor-pointer', details)}
         onClick={(e) => {
           e.stopPropagation()
-          setSelectedCardId(card_id)
+          setSelectedCardId(card.internal_id)
         }}
       >
         <svg className="fill-neutral-100 w-4 h-4 my-auto" viewBox="0 0 122.88 112.5">

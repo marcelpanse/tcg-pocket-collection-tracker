@@ -5,8 +5,8 @@ export interface IDialogContext {
   setIsProfileDialogOpen: (isOpen: boolean) => void
   isLoginDialogOpen: boolean
   setIsLoginDialogOpen: (isOpen: boolean) => void
-  selectedCardId: string | undefined
-  setSelectedCardId: (id: string | undefined) => void
+  selectedCardId: number | undefined
+  setSelectedCardId: (id: number | undefined) => void
 }
 
 export const DialogContext = createContext<IDialogContext>({
