@@ -32,7 +32,7 @@ function Overview() {
 
   const [collectionCount, setCollectionCount] = useState('')
   const [usersCount, setUsersCount] = useState('')
-  const [expansionFilter, setExpansionFilter] = useState<ExpansionOption>(expansionOptions[expansionOptions.length - 3])
+  const [expansionFilter, setExpansionFilter] = useState<ExpansionOption>(expansionOptions[1])
 
   const ownedCardsCount = useMemo(() => {
     let total = 0
