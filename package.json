@@ -15,8 +15,8 @@
     "sync-locales": "node scripts/sync-locales.js"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.6",
-    "lefthook": "^1.13.6",
+    "@biomejs/biome": "2.3.3",
+    "lefthook": "^2.0.2",
     "tsx": "^4.20.6"
   },
   "type": "module",
