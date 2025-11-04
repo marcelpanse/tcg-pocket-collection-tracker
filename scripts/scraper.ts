@@ -25,7 +25,7 @@ const packs = [
   'mewpack',
   'arceuspack',
   'shiningrevelrypack',
-  'lunala pack',
+  'lunalapack',
   'solgaleopack',
   'buzzwolepack',
   'eeveegrovepack',
