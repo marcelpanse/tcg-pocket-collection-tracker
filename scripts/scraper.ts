@@ -25,7 +25,7 @@ const packs = [
   'mewpack',
   'arceuspack',
   'shiningrevelrypack',
-  'lunala pack',
+  'lunalapack',
   'solgaleopack',
   'buzzwolepack',
   'eeveegrovepack',
@@ -454,12 +454,10 @@ await scrapeCards().catch(console.error)
 
 // Sort the cards array by id as a number
 cards1.sort((a, b) => {
-  const [e_a, n_a] = a.card_id.split('-')
-  const [e_b, n_b] = b.card_id.split('-')
-  if (e_a !== e_b) {
-    return e_a < e_b ? -1 : 1
+  if (a.expansion !== b.expansion) {
+    return a.expansion < b.expansion ? -1 : 1
   }
-  return Number.parseInt(n_a, 10) - Number.parseInt(n_b, 10)
+  return Number.parseInt(a.card_id.split('-').pop(), 10) - Number.parseInt(b.card_id.split('-').pop(), 10)
 })
 
 const internalIds: Record<string, number> = Object.fromEntries(cards1.map((c) => [c.card_id, c.internal_id]))
