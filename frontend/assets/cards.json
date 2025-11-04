@@ -78666,42 +78666,16 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-7",
-    "image": "/images/en-US/P-A-7.webp",
+    "card_id": "P-A-1",
+    "image": "/images/en-US/P-A-1.webp",
     "energy": "trainer",
-    "name": "Professor's Research",
-    "card_type": "trainer",
-    "evolution_type": "supporter",
-    "attacks": [],
-    "ability": {
-      "name": "",
-      "effect": "Draw 2 cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                Naoki Saito"
-    },
-    "weakness": "N/A",
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      744773,
-      12583376
-    ],
-    "artist": "Naoki Saito",
-    "internal_id": 12583376
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-6",
-    "image": "/images/en-US/P-A-6.webp",
-    "energy": "trainer",
-    "name": "Red Card",
+    "name": "Potion",
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Your opponent shuffles their hand into their deck and draws 3 cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics"
+      "effect": "Heal 20 damage from 1 of your Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics"
     },
     "weakness": "N/A",
     "rarity": "P",
@@ -78710,23 +78684,23 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      12583312
+      12582992
     ],
     "artist": "5ban Graphics",
-    "internal_id": 12583312
+    "internal_id": 12582992
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-5",
-    "image": "/images/en-US/P-A-5.webp",
+    "card_id": "P-A-2",
+    "image": "/images/en-US/P-A-2.webp",
     "energy": "trainer",
-    "name": "Poké Ball",
+    "name": "X Speed",
     "card_type": "trainer",
     "evolution_type": "item",
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Put 1 random Basic Pokemon from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda"
+      "effect": "During this turn, the Retreat Cost of your Active Pokémon is 1 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
     },
     "weakness": "N/A",
     "rarity": "P",
@@ -78735,11 +78709,35 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      334796,
-      12583248
+      12583056
     ],
-    "artist": "Ryo Ueda",
-    "internal_id": 12583248
+    "artist": "Toyste Beach",
+    "internal_id": 12583056
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-3",
+    "image": "/images/en-US/P-A-3.webp",
+    "energy": "trainer",
+    "name": "Hand Scope",
+    "card_type": "trainer",
+    "evolution_type": "item",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Your opponent reveals their hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
+    "weakness": "N/A",
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12583120
+    ],
+    "artist": "Toyste Beach",
+    "internal_id": 12583120
   },
   {
     "expansion": "P-A",
@@ -78769,39 +78767,80 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-10",
-    "image": "/images/en-US/P-A-10.webp",
-    "hp": 120,
-    "energy": "psychic",
-    "name": "Mewtwo",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "psychic",
-          "psychic",
-          "colorless",
-          "colorless"
-        ],
-        "name": "Power Blast",
-        "damage": "120",
-        "effect": "Discard 2 [P] Energy from this Pokémon."
-      }
-    ],
-    "weakness": "darkness",
-    "retreat": 2,
+    "card_id": "P-A-5",
+    "image": "/images/en-US/P-A-5.webp",
+    "energy": "trainer",
+    "name": "Poké Ball",
+    "card_type": "trainer",
+    "evolution_type": "item",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Put 1 random Basic Pokemon from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryo Ueda"
+    },
+    "weakness": "N/A",
     "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      73730,
-      12583568
+      334796,
+      12583248
     ],
-    "artist": "Krgc",
-    "internal_id": 12583568
+    "artist": "Ryo Ueda",
+    "internal_id": 12583248
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-6",
+    "image": "/images/en-US/P-A-6.webp",
+    "energy": "trainer",
+    "name": "Red Card",
+    "card_type": "trainer",
+    "evolution_type": "item",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Your opponent shuffles their hand into their deck and draws 3 cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics"
+    },
+    "weakness": "N/A",
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12583312
+    ],
+    "artist": "5ban Graphics",
+    "internal_id": 12583312
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-7",
+    "image": "/images/en-US/P-A-7.webp",
+    "energy": "trainer",
+    "name": "Professor's Research",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Draw 2 cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                Naoki Saito"
+    },
+    "weakness": "N/A",
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      744773,
+      12583376
+    ],
+    "artist": "Naoki Saito",
+    "internal_id": 12583376
   },
   {
     "expansion": "P-A",
@@ -78828,81 +78867,6 @@
     ],
     "artist": "Yuu Nishida",
     "internal_id": 12583440
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-3",
-    "image": "/images/en-US/P-A-3.webp",
-    "energy": "trainer",
-    "name": "Hand Scope",
-    "card_type": "trainer",
-    "evolution_type": "item",
-    "attacks": [],
-    "ability": {
-      "name": "",
-      "effect": "Your opponent reveals their hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
-    },
-    "weakness": "N/A",
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12583120
-    ],
-    "artist": "Toyste Beach",
-    "internal_id": 12583120
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-2",
-    "image": "/images/en-US/P-A-2.webp",
-    "energy": "trainer",
-    "name": "X Speed",
-    "card_type": "trainer",
-    "evolution_type": "item",
-    "attacks": [],
-    "ability": {
-      "name": "",
-      "effect": "During this turn, the Retreat Cost of your Active Pokémon is 1 less.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
-    },
-    "weakness": "N/A",
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12583056
-    ],
-    "artist": "Toyste Beach",
-    "internal_id": 12583056
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-1",
-    "image": "/images/en-US/P-A-1.webp",
-    "energy": "trainer",
-    "name": "Potion",
-    "card_type": "trainer",
-    "evolution_type": "item",
-    "attacks": [],
-    "ability": {
-      "name": "",
-      "effect": "Heal 20 damage from 1 of your Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                5ban Graphics"
-    },
-    "weakness": "N/A",
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12582992
-    ],
-    "artist": "5ban Graphics",
-    "internal_id": 12582992
   },
   {
     "expansion": "P-A",
@@ -78942,38 +78906,39 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-12",
-    "image": "/images/en-US/P-A-12.webp",
-    "hp": 60,
-    "energy": "colorless",
-    "name": "Meowth",
+    "card_id": "P-A-10",
+    "image": "/images/en-US/P-A-10.webp",
+    "hp": 120,
+    "energy": "psychic",
+    "name": "Mewtwo",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
         "cost": [
+          "psychic",
+          "psychic",
+          "colorless",
           "colorless"
         ],
-        "name": "Pay Day",
-        "damage": "10",
-        "effect": "Draw 1 card."
+        "name": "Power Blast",
+        "damage": "120",
+        "effect": "Discard 2 [P] Energy from this Pokémon."
       }
     ],
-    "weakness": "fighting",
-    "retreat": 1,
+    "weakness": "darkness",
+    "retreat": 2,
     "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      78080,
-      81284,
-      806408,
-      12583696
+      73730,
+      12583568
     ],
-    "artist": "Shigenori Negishi",
-    "internal_id": 12583696
+    "artist": "Krgc",
+    "internal_id": 12583568
   },
   {
     "expansion": "P-A",
@@ -79012,61 +78977,24 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-18",
-    "image": "/images/en-US/P-A-18.webp",
-    "hp": 160,
-    "energy": "grass",
-    "name": "Venusaur",
-    "card_type": "pokémon",
-    "evolution_type": "stage2",
-    "attacks": [
-      {
-        "cost": [
-          "grass",
-          "grass",
-          "colorless",
-          "colorless"
-        ],
-        "name": "Mega Drain",
-        "damage": "80",
-        "effect": "Heal 30 damage from this Pokémon."
-      }
-    ],
-    "weakness": "fire",
-    "retreat": 3,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      65730,
-      406792,
-      12584080
-    ],
-    "artist": "Kuroimori",
-    "internal_id": 12584080
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-17",
-    "image": "/images/en-US/P-A-17.webp",
-    "hp": 50,
-    "energy": "fighting",
-    "name": "Mankey",
+    "card_id": "P-A-12",
+    "image": "/images/en-US/P-A-12.webp",
+    "hp": 60,
+    "energy": "colorless",
+    "name": "Meowth",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
         "cost": [
-          "fighting"
+          "colorless"
         ],
-        "name": "Reckless Charge",
-        "damage": "30",
-        "effect": "This Pokémon also does 10 damage to itself."
+        "name": "Pay Day",
+        "damage": "10",
+        "effect": "Draw 1 card."
       }
     ],
-    "weakness": "psychic",
+    "weakness": "fighting",
     "retreat": 1,
     "rarity": "P",
     "ex": false,
@@ -79074,44 +79002,13 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      12584016
+      78080,
+      81284,
+      806408,
+      12583696
     ],
-    "artist": "Souichirou Gunjima",
-    "internal_id": 12584016
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-14",
-    "image": "/images/en-US/P-A-14.webp",
-    "hp": 140,
-    "energy": "water",
-    "name": "Lapras ex",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "water",
-          "water",
-          "colorless"
-        ],
-        "name": "Bubble Drain",
-        "damage": "80",
-        "effect": "Heal 20 damage from this Pokémon."
-      }
-    ],
-    "weakness": "lightning",
-    "retreat": 3,
-    "rarity": "P",
-    "ex": true,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12583824
-    ],
-    "artist": "PLANETA CG Works",
-    "internal_id": 12583824
+    "artist": "Shigenori Negishi",
+    "internal_id": 12583696
   },
   {
     "expansion": "P-A",
@@ -79154,68 +79051,37 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-16",
-    "image": "/images/en-US/P-A-16.webp",
-    "hp": 60,
-    "energy": "psychic",
-    "name": "Clefairy",
+    "card_id": "P-A-14",
+    "image": "/images/en-US/P-A-14.webp",
+    "hp": 140,
+    "energy": "water",
+    "name": "Lapras ex",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
         "cost": [
-          "psychic"
+          "water",
+          "water",
+          "colorless"
         ],
-        "name": "Slap",
-        "damage": "20",
-        "effect": "No effect"
+        "name": "Bubble Drain",
+        "damage": "80",
+        "effect": "Heal 20 damage from this Pokémon."
       }
     ],
-    "weakness": "metal",
-    "retreat": 1,
+    "weakness": "lightning",
+    "retreat": 3,
     "rarity": "P",
-    "ex": false,
+    "ex": true,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      72768,
-      12583952
+      12583824
     ],
-    "artist": "Shibuzoh.",
-    "internal_id": 12583952
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-20",
-    "image": "/images/en-US/P-A-20.webp",
-    "hp": 70,
-    "energy": "psychic",
-    "name": "Haunter",
-    "card_type": "pokémon",
-    "evolution_type": "stage1",
-    "attacks": [
-      {
-        "cost": [
-          "psychic"
-        ],
-        "name": "Surprise Attack",
-        "damage": "50",
-        "effect": "Flip a coin. If tails, this attack does nothing."
-      }
-    ],
-    "weakness": "darkness",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12584208
-    ],
-    "artist": "Mékayu",
-    "internal_id": 12584208
+    "artist": "PLANETA CG Works",
+    "internal_id": 12583824
   },
   {
     "expansion": "P-A",
@@ -79252,6 +79118,108 @@
     ],
     "artist": "Kouki Saitou",
     "internal_id": 12583888
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-16",
+    "image": "/images/en-US/P-A-16.webp",
+    "hp": 60,
+    "energy": "psychic",
+    "name": "Clefairy",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic"
+        ],
+        "name": "Slap",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      72768,
+      12583952
+    ],
+    "artist": "Shibuzoh.",
+    "internal_id": 12583952
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-17",
+    "image": "/images/en-US/P-A-17.webp",
+    "hp": 50,
+    "energy": "fighting",
+    "name": "Mankey",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting"
+        ],
+        "name": "Reckless Charge",
+        "damage": "30",
+        "effect": "This Pokémon also does 10 damage to itself."
+      }
+    ],
+    "weakness": "psychic",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12584016
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 12584016
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-18",
+    "image": "/images/en-US/P-A-18.webp",
+    "hp": 160,
+    "energy": "grass",
+    "name": "Venusaur",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "grass",
+          "grass",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Mega Drain",
+        "damage": "80",
+        "effect": "Heal 30 damage from this Pokémon."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      65730,
+      406792,
+      12584080
+    ],
+    "artist": "Kuroimori",
+    "internal_id": 12584080
   },
   {
     "expansion": "P-A",
@@ -79296,6 +79264,38 @@
   },
   {
     "expansion": "P-A",
+    "card_id": "P-A-20",
+    "image": "/images/en-US/P-A-20.webp",
+    "hp": 70,
+    "energy": "psychic",
+    "name": "Haunter",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "psychic"
+        ],
+        "name": "Surprise Attack",
+        "damage": "50",
+        "effect": "Flip a coin. If tails, this attack does nothing."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12584208
+    ],
+    "artist": "Mékayu",
+    "internal_id": 12584208
+  },
+  {
+    "expansion": "P-A",
     "card_id": "P-A-21",
     "image": "/images/en-US/P-A-21.webp",
     "hp": 110,
@@ -79328,6 +79328,75 @@
     ],
     "artist": "Tomokazu Komiya",
     "internal_id": 12584272
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-22",
+    "image": "/images/en-US/P-A-22.webp",
+    "hp": 60,
+    "energy": "colorless",
+    "name": "Jigglypuff",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Sing",
+        "damage": "0",
+        "effect": "Your opponent's Active Pokémon is now Asleep."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12584336
+    ],
+    "artist": "Kurata So",
+    "internal_id": 12584336
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-23",
+    "image": "/images/en-US/P-A-23.webp",
+    "hp": 70,
+    "energy": "grass",
+    "name": "Bulbasaur",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "grass",
+          "colorless"
+        ],
+        "name": "Vine Whip",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      65600,
+      80068,
+      406664,
+      721024,
+      12584400
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 12584400
   },
   {
     "expansion": "P-A",
@@ -79412,21 +79481,56 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-23",
-    "image": "/images/en-US/P-A-23.webp",
-    "hp": 70,
-    "energy": "grass",
-    "name": "Bulbasaur",
+    "card_id": "P-A-26",
+    "image": "/images/en-US/P-A-26.webp",
+    "hp": 60,
+    "energy": "lightning",
+    "name": "Pikachu",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
         "cost": [
-          "grass",
-          "colorless"
+          "lightning"
         ],
-        "name": "Vine Whip",
-        "damage": "40",
+        "name": "Gnaw",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      71552,
+      729152,
+      12583504,
+      12583888,
+      12584592
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 12584592
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-27",
+    "image": "/images/en-US/P-A-27.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Snivy",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Tackle",
+        "damage": "20",
         "effect": "No effect"
       }
     ],
@@ -79438,46 +79542,45 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      65600,
-      80068,
-      406664,
-      721024,
-      12584400
+      12584656
     ],
-    "artist": "Kouki Saitou",
-    "internal_id": 12584400
+    "artist": "Yoriyuki Ikegami",
+    "internal_id": 12584656
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-22",
-    "image": "/images/en-US/P-A-22.webp",
-    "hp": 60,
-    "energy": "colorless",
-    "name": "Jigglypuff",
+    "card_id": "P-A-28",
+    "image": "/images/en-US/P-A-28.webp",
+    "hp": 120,
+    "energy": "fire",
+    "name": "Volcarona",
     "card_type": "pokémon",
-    "evolution_type": "basic",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": [
+          "fire",
+          "fire",
           "colorless"
         ],
-        "name": "Sing",
-        "damage": "0",
-        "effect": "Your opponent's Active Pokémon is now Asleep."
+        "name": "Volcanic",
+        "damage": "Ash",
+        "effect": "Discard 2 [R] Energy from this Pokémon. This attack does 80 damage to 1 of your opponent's Pokémon."
       }
     ],
-    "weakness": "fighting",
-    "retreat": 1,
+    "weakness": "water",
+    "retreat": 2,
     "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      12584336
+      131970,
+      12584720
     ],
-    "artist": "Kurata So",
-    "internal_id": 12584336
+    "artist": "Shin Nagasawa",
+    "internal_id": 12584720
   },
   {
     "expansion": "P-A",
@@ -79517,109 +79620,6 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-26",
-    "image": "/images/en-US/P-A-26.webp",
-    "hp": 60,
-    "energy": "lightning",
-    "name": "Pikachu",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "lightning"
-        ],
-        "name": "Gnaw",
-        "damage": "20",
-        "effect": "No effect"
-      }
-    ],
-    "weakness": "fighting",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      71552,
-      729152,
-      12583504,
-      12583888,
-      12584592
-    ],
-    "artist": "Kouki Saitou",
-    "internal_id": 12584592
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-28",
-    "image": "/images/en-US/P-A-28.webp",
-    "hp": 120,
-    "energy": "fire",
-    "name": "Volcarona",
-    "card_type": "pokémon",
-    "evolution_type": "stage1",
-    "attacks": [
-      {
-        "cost": [
-          "fire",
-          "fire",
-          "colorless"
-        ],
-        "name": "Volcanic",
-        "damage": "Ash",
-        "effect": "Discard 2 [R] Energy from this Pokémon. This attack does 80 damage to 1 of your opponent's Pokémon."
-      }
-    ],
-    "weakness": "water",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      131970,
-      12584720
-    ],
-    "artist": "Shin Nagasawa",
-    "internal_id": 12584720
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-27",
-    "image": "/images/en-US/P-A-27.webp",
-    "hp": 60,
-    "energy": "grass",
-    "name": "Snivy",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "grass"
-        ],
-        "name": "Tackle",
-        "damage": "20",
-        "effect": "No effect"
-      }
-    ],
-    "weakness": "fire",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12584656
-    ],
-    "artist": "Yoriyuki Ikegami",
-    "internal_id": 12584656
-  },
-  {
-    "expansion": "P-A",
     "card_id": "P-A-30",
     "image": "/images/en-US/P-A-30.webp",
     "hp": 60,
@@ -79649,6 +79649,213 @@
     ],
     "artist": "En Morikura",
     "internal_id": 12584848
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-31",
+    "image": "/images/en-US/P-A-31.webp",
+    "hp": 90,
+    "energy": "colorless",
+    "name": "Cinccino",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Do the Wave",
+        "damage": "30x",
+        "effect": "This attack does 30 damage for each of your Benched Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      79169,
+      12584912
+    ],
+    "artist": "MAHOU",
+    "internal_id": 12584912
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-32",
+    "image": "/images/en-US/P-A-32.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Charmander",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fire"
+        ],
+        "name": "Ember",
+        "damage": "30",
+        "effect": "Discard a [R] Energy from this Pokémon."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      67648,
+      80260,
+      724480,
+      12584976
+    ],
+    "artist": "Naoyo Kimura",
+    "internal_id": 12584976
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-33",
+    "image": "/images/en-US/P-A-33.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Squirtle",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Water Gun",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      68928,
+      80388,
+      406984,
+      726272,
+      12585040
+    ],
+    "artist": "Kanako Eo",
+    "internal_id": 12585040
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-34",
+    "image": "/images/en-US/P-A-34.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Piplup",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Nap",
+        "damage": "0",
+        "effect": "Heal 20 damage from this Pokémon."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      198848,
+      12585104
+    ],
+    "artist": "Kariya",
+    "internal_id": 12585104
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-35",
+    "image": "/images/en-US/P-A-35.webp",
+    "hp": 80,
+    "energy": "grass",
+    "name": "Turtwig",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "grass",
+          "colorless"
+        ],
+        "name": "Bite",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      197248,
+      12585168
+    ],
+    "artist": "Atsuko Nishida",
+    "internal_id": 12585168
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-36",
+    "image": "/images/en-US/P-A-36.webp",
+    "hp": 120,
+    "energy": "lightning",
+    "name": "Electivire",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "Exciting Voltage",
+        "damage": "40+",
+        "effect": "If this Pokémon has at least 2 extra [L] Energy attached, this attack does 80 more damage."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 3,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      200258,
+      12585232
+    ],
+    "artist": "Sumiyoshi Kizuki",
+    "internal_id": 12585232
   },
   {
     "expansion": "P-A",
@@ -79690,37 +79897,68 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-36",
-    "image": "/images/en-US/P-A-36.webp",
-    "hp": 120,
-    "energy": "lightning",
-    "name": "Electivire",
+    "card_id": "P-A-38",
+    "image": "/images/en-US/P-A-38.webp",
+    "hp": 60,
+    "energy": "psychic",
+    "name": "Misdreavus",
     "card_type": "pokémon",
-    "evolution_type": "stage1",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": [
-          "lightning",
-          "lightning"
+          "psychic"
         ],
-        "name": "Exciting Voltage",
-        "damage": "40+",
-        "effect": "If this Pokémon has at least 2 extra [L] Energy attached, this attack does 80 more damage."
+        "name": "Confuse",
+        "damage": "Ray",
+        "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
-    "weakness": "fighting",
-    "retreat": 3,
+    "weakness": "darkness",
+    "retreat": 1,
     "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      200258,
-      12585232
+      12585360
     ],
-    "artist": "Sumiyoshi Kizuki",
-    "internal_id": 12585232
+    "artist": "Miki Tanaka",
+    "internal_id": 12585360
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-39",
+    "image": "/images/en-US/P-A-39.webp",
+    "hp": 80,
+    "energy": "metal",
+    "name": "Skarmory",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "metal"
+        ],
+        "name": "Metal Arms",
+        "damage": "20+",
+        "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 30 more damage."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      203713,
+      12585424
+    ],
+    "artist": "Anesaki Dynamic",
+    "internal_id": 12585424
   },
   {
     "expansion": "P-A",
@@ -79759,217 +79997,11 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-33",
-    "image": "/images/en-US/P-A-33.webp",
-    "hp": 60,
-    "energy": "water",
-    "name": "Squirtle",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "water"
-        ],
-        "name": "Water Gun",
-        "damage": "20",
-        "effect": "No effect"
-      }
-    ],
-    "weakness": "lightning",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      68928,
-      80388,
-      406984,
-      726272,
-      12585040
-    ],
-    "artist": "Kanako Eo",
-    "internal_id": 12585040
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-39",
-    "image": "/images/en-US/P-A-39.webp",
-    "hp": 80,
-    "energy": "metal",
-    "name": "Skarmory",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "metal"
-        ],
-        "name": "Metal Arms",
-        "damage": "20+",
-        "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 30 more damage."
-      }
-    ],
-    "weakness": "lightning",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      203713,
-      12585424
-    ],
-    "artist": "Anesaki Dynamic",
-    "internal_id": 12585424
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-32",
-    "image": "/images/en-US/P-A-32.webp",
-    "hp": 60,
-    "energy": "fire",
-    "name": "Charmander",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "fire"
-        ],
-        "name": "Ember",
-        "damage": "30",
-        "effect": "Discard a [R] Energy from this Pokémon."
-      }
-    ],
-    "weakness": "water",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      67648,
-      80260,
-      724480,
-      12584976
-    ],
-    "artist": "Naoyo Kimura",
-    "internal_id": 12584976
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-34",
-    "image": "/images/en-US/P-A-34.webp",
-    "hp": 60,
-    "energy": "water",
-    "name": "Piplup",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "colorless"
-        ],
-        "name": "Nap",
-        "damage": "0",
-        "effect": "Heal 20 damage from this Pokémon."
-      }
-    ],
-    "weakness": "lightning",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      198848,
-      12585104
-    ],
-    "artist": "Kariya",
-    "internal_id": 12585104
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-31",
-    "image": "/images/en-US/P-A-31.webp",
-    "hp": 90,
-    "energy": "colorless",
-    "name": "Cinccino",
-    "card_type": "pokémon",
-    "evolution_type": "stage1",
-    "attacks": [
-      {
-        "cost": [
-          "colorless",
-          "colorless",
-          "colorless"
-        ],
-        "name": "Do the Wave",
-        "damage": "30x",
-        "effect": "This attack does 30 damage for each of your Benched Pokémon."
-      }
-    ],
-    "weakness": "fighting",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      79169,
-      12584912
-    ],
-    "artist": "MAHOU",
-    "internal_id": 12584912
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-35",
-    "image": "/images/en-US/P-A-35.webp",
-    "hp": 80,
-    "energy": "grass",
-    "name": "Turtwig",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "grass",
-          "colorless"
-        ],
-        "name": "Bite",
-        "damage": "30",
-        "effect": "No effect"
-      }
-    ],
-    "weakness": "fire",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      197248,
-      12585168
-    ],
-    "artist": "Atsuko Nishida",
-    "internal_id": 12585168
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-38",
-    "image": "/images/en-US/P-A-38.webp",
-    "hp": 60,
+    "card_id": "P-A-41",
+    "image": "/images/en-US/P-A-41.webp",
+    "hp": 50,
     "energy": "psychic",
-    "name": "Misdreavus",
+    "name": "Togepi",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
@@ -79977,44 +80009,12 @@
         "cost": [
           "psychic"
         ],
-        "name": "Confuse",
-        "damage": "Ray",
-        "effect": "Your opponent's Active Pokémon is now Confused."
-      }
-    ],
-    "weakness": "darkness",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12585360
-    ],
-    "artist": "Miki Tanaka",
-    "internal_id": 12585360
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-46",
-    "image": "/images/en-US/P-A-46.webp",
-    "hp": 60,
-    "energy": "fighting",
-    "name": "Gible",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "fighting"
-        ],
-        "name": "Tackle",
+        "name": "Pound",
         "damage": "20",
         "effect": "No effect"
       }
     ],
-    "weakness": "grass",
+    "weakness": "metal",
     "retreat": 1,
     "rarity": "P",
     "ex": false,
@@ -80022,62 +80022,11 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      265024,
-      661640,
-      734080,
-      12585872
+      200640,
+      12585552
     ],
-    "artist": "Uninori",
-    "internal_id": 12585872
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-50",
-    "image": "/images/en-US/P-A-50.webp",
-    "hp": 150,
-    "energy": "psychic",
-    "name": "Mewtwo ex",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "psychic",
-          "colorless"
-        ],
-        "name": "Psychic Sphere",
-        "damage": "50",
-        "effect": "No effect"
-      },
-      {
-        "cost": [
-          "psychic",
-          "psychic",
-          "colorless",
-          "colorless"
-        ],
-        "name": "Psydrive",
-        "damage": "150",
-        "effect": "Discard 2 [P] Energy from this Pokémon."
-      }
-    ],
-    "weakness": "darkness",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": true,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      73795,
-      82309,
-      83590,
-      83852,
-      744261,
-      12586128
-    ],
-    "artist": "PLANETA Mochizuki",
-    "internal_id": 12586128
+    "artist": "Naoyo Kimura",
+    "internal_id": 12585552
   },
   {
     "expansion": "P-A",
@@ -80120,182 +80069,6 @@
     ],
     "artist": "PLANETA Mochizuki",
     "internal_id": 12585616
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-45",
-    "image": "/images/en-US/P-A-45.webp",
-    "hp": 60,
-    "energy": "fighting",
-    "name": "Nosepass",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "colorless",
-          "colorless"
-        ],
-        "name": "Iron",
-        "damage": "Defense",
-        "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage done to this Pokémon by attacks."
-      }
-    ],
-    "weakness": "grass",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12585808
-    ],
-    "artist": "Tomokazu Komiya",
-    "internal_id": 12585808
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-47",
-    "image": "/images/en-US/P-A-47.webp",
-    "hp": 140,
-    "energy": "colorless",
-    "name": "Staraptor",
-    "card_type": "pokémon",
-    "evolution_type": "stage2",
-    "attacks": [
-      {
-        "cost": [
-          "colorless",
-          "colorless",
-          "colorless"
-        ],
-        "name": "Wing Attack",
-        "damage": "90",
-        "effect": "No effect"
-      }
-    ],
-    "ability": {
-      "name": "Defensive Whirlwind",
-      "effect": "This Pokémon takes −30 damage from attacks from  Pokémon."
-    },
-    "weakness": "lightning",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12585936
-    ],
-    "artist": "Hasuno",
-    "internal_id": 12585936
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-49",
-    "image": "/images/en-US/P-A-49.webp",
-    "hp": 140,
-    "energy": "colorless",
-    "name": "Snorlax",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "colorless",
-          "colorless",
-          "colorless",
-          "colorless"
-        ],
-        "name": "Collapse",
-        "damage": "100",
-        "effect": "This Pokémon is now Asleep."
-      }
-    ],
-    "weakness": "fighting",
-    "retreat": 4,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      266177,
-      12586064
-    ],
-    "artist": "okayamatakatoshi",
-    "internal_id": 12586064
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-48",
-    "image": "/images/en-US/P-A-48.webp",
-    "hp": 50,
-    "energy": "water",
-    "name": "Manaphy",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "water"
-        ],
-        "name": "Oceanic",
-        "damage": "Gift",
-        "effect": "Choose 2 of your Benched Pokémon. For each of those Pokémon, take a [W] Energy from your Energy Zone and attach it to that Pokémon."
-      }
-    ],
-    "weakness": "lightning",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      199809,
-      206980,
-      727873,
-      805576,
-      12586000
-    ],
-    "artist": "sui",
-    "internal_id": 12586000
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-41",
-    "image": "/images/en-US/P-A-41.webp",
-    "hp": 50,
-    "energy": "psychic",
-    "name": "Togepi",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "psychic"
-        ],
-        "name": "Pound",
-        "damage": "20",
-        "effect": "No effect"
-      }
-    ],
-    "weakness": "metal",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      200640,
-      12585552
-    ],
-    "artist": "Naoyo Kimura",
-    "internal_id": 12585552
   },
   {
     "expansion": "P-A",
@@ -80371,6 +80144,233 @@
   },
   {
     "expansion": "P-A",
+    "card_id": "P-A-45",
+    "image": "/images/en-US/P-A-45.webp",
+    "hp": 60,
+    "energy": "fighting",
+    "name": "Nosepass",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Iron",
+        "damage": "Defense",
+        "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage done to this Pokémon by attacks."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12585808
+    ],
+    "artist": "Tomokazu Komiya",
+    "internal_id": 12585808
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-46",
+    "image": "/images/en-US/P-A-46.webp",
+    "hp": 60,
+    "energy": "fighting",
+    "name": "Gible",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting"
+        ],
+        "name": "Tackle",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      265024,
+      661640,
+      734080,
+      12585872
+    ],
+    "artist": "Uninori",
+    "internal_id": 12585872
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-47",
+    "image": "/images/en-US/P-A-47.webp",
+    "hp": 140,
+    "energy": "colorless",
+    "name": "Staraptor",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Wing Attack",
+        "damage": "90",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Defensive Whirlwind",
+      "effect": "This Pokémon takes −30 damage from attacks from  Pokémon."
+    },
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12585936
+    ],
+    "artist": "Hasuno",
+    "internal_id": 12585936
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-48",
+    "image": "/images/en-US/P-A-48.webp",
+    "hp": 50,
+    "energy": "water",
+    "name": "Manaphy",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Oceanic",
+        "damage": "Gift",
+        "effect": "Choose 2 of your Benched Pokémon. For each of those Pokémon, take a [W] Energy from your Energy Zone and attach it to that Pokémon."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      199809,
+      206980,
+      727873,
+      805576,
+      12586000
+    ],
+    "artist": "sui",
+    "internal_id": 12586000
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-49",
+    "image": "/images/en-US/P-A-49.webp",
+    "hp": 140,
+    "energy": "colorless",
+    "name": "Snorlax",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Collapse",
+        "damage": "100",
+        "effect": "This Pokémon is now Asleep."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 4,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      266177,
+      12586064
+    ],
+    "artist": "okayamatakatoshi",
+    "internal_id": 12586064
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-50",
+    "image": "/images/en-US/P-A-50.webp",
+    "hp": 150,
+    "energy": "psychic",
+    "name": "Mewtwo ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "colorless"
+        ],
+        "name": "Psychic Sphere",
+        "damage": "50",
+        "effect": "No effect"
+      },
+      {
+        "cost": [
+          "psychic",
+          "psychic",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Psydrive",
+        "damage": "150",
+        "effect": "Discard 2 [P] Energy from this Pokémon."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": true,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      73795,
+      82309,
+      83590,
+      83852,
+      744261,
+      12586128
+    ],
+    "artist": "PLANETA Mochizuki",
+    "internal_id": 12586128
+  },
+  {
+    "expansion": "P-A",
     "card_id": "P-A-51",
     "image": "/images/en-US/P-A-51.webp",
     "hp": 80,
@@ -80402,38 +80402,6 @@
     ],
     "artist": "Shigenori Negishi",
     "internal_id": 12586192
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-56",
-    "image": "/images/en-US/P-A-56.webp",
-    "hp": 60,
-    "energy": "darkness",
-    "name": "Ekans",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "darkness"
-        ],
-        "name": "Poison",
-        "damage": "Sting",
-        "effect": "Your opponent's Active Pokémon is now Poisoned."
-      }
-    ],
-    "weakness": "fighting",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12586512
-    ],
-    "artist": "Krgc",
-    "internal_id": 12586512
   },
   {
     "expansion": "P-A",
@@ -80471,41 +80439,6 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-58",
-    "image": "/images/en-US/P-A-58.webp",
-    "hp": 70,
-    "energy": "lightning",
-    "name": "Pachirisu",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "lightning"
-        ],
-        "name": "Plasma",
-        "damage": "10",
-        "effect": "Take a [L] Energy from your Energy Zone and attach it to 1 of your Benched [L] Pokémon."
-      }
-    ],
-    "weakness": "fighting",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      329281,
-      334280,
-      730113,
-      12586640
-    ],
-    "artist": "OOYAMA",
-    "internal_id": 12586640
-  },
-  {
-    "expansion": "P-A",
     "card_id": "P-A-53",
     "image": "/images/en-US/P-A-53.webp",
     "hp": 100,
@@ -80535,41 +80468,6 @@
     ],
     "artist": "Shin Nagasawa",
     "internal_id": 12586320
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-57",
-    "image": "/images/en-US/P-A-57.webp",
-    "hp": 70,
-    "energy": "colorless",
-    "name": "Bidoof",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "colorless",
-          "colorless"
-        ],
-        "name": "Headbutt",
-        "damage": "30",
-        "effect": "No effect"
-      }
-    ],
-    "weakness": "fighting",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      331776,
-      739776,
-      12586576
-    ],
-    "artist": "Kouki Saitou",
-    "internal_id": 12586576
   },
   {
     "expansion": "P-A",
@@ -80646,6 +80544,108 @@
   },
   {
     "expansion": "P-A",
+    "card_id": "P-A-56",
+    "image": "/images/en-US/P-A-56.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Ekans",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness"
+        ],
+        "name": "Poison",
+        "damage": "Sting",
+        "effect": "Your opponent's Active Pokémon is now Poisoned."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12586512
+    ],
+    "artist": "Krgc",
+    "internal_id": 12586512
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-57",
+    "image": "/images/en-US/P-A-57.webp",
+    "hp": 70,
+    "energy": "colorless",
+    "name": "Bidoof",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Headbutt",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      331776,
+      739776,
+      12586576
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 12586576
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-58",
+    "image": "/images/en-US/P-A-58.webp",
+    "hp": 70,
+    "energy": "lightning",
+    "name": "Pachirisu",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Plasma",
+        "damage": "10",
+        "effect": "Take a [L] Energy from your Energy Zone and attach it to 1 of your Benched [L] Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      329281,
+      334280,
+      730113,
+      12586640
+    ],
+    "artist": "OOYAMA",
+    "internal_id": 12586640
+  },
+  {
+    "expansion": "P-A",
     "card_id": "P-A-59",
     "image": "/images/en-US/P-A-59.webp",
     "hp": 70,
@@ -80715,39 +80715,38 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-64",
-    "image": "/images/en-US/P-A-64.webp",
-    "hp": 140,
-    "energy": "colorless",
-    "name": "Rayquaza ex",
+    "card_id": "P-A-61",
+    "image": "/images/en-US/P-A-61.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Froakie",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
         "cost": [
-          "colorless",
-          "colorless",
-          "colorless",
           "colorless"
         ],
-        "name": "Draco",
-        "damage": "Meteor",
-        "effect": "1 of your opponent's Pokémon is chosen at random 4 times. For each time a Pokémon was chosen, do 40 damage to it."
+        "name": "Flop",
+        "damage": "10",
+        "effect": "No effect"
       }
     ],
     "weakness": "lightning",
-    "retreat": 2,
+    "retreat": 1,
     "rarity": "P",
-    "ex": true,
+    "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      12587024,
-      12587088
+      71104,
+      464584,
+      728000,
+      12586832
     ],
-    "artist": "PLANETA CG Works",
-    "internal_id": 12587024
+    "artist": "Sanosuke Sakuma",
+    "internal_id": 12586832
   },
   {
     "expansion": "P-A",
@@ -80787,76 +80786,6 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-67",
-    "image": "/images/en-US/P-A-67.webp",
-    "hp": 60,
-    "energy": "psychic",
-    "name": "Cosmog",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "colorless"
-        ],
-        "name": "Teleport",
-        "damage": "0",
-        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
-      }
-    ],
-    "weakness": "darkness",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      398656,
-      404164,
-      732480,
-      12587216
-    ],
-    "artist": "Mizue",
-    "internal_id": 12587216
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-61",
-    "image": "/images/en-US/P-A-61.webp",
-    "hp": 60,
-    "energy": "water",
-    "name": "Froakie",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "colorless"
-        ],
-        "name": "Flop",
-        "damage": "10",
-        "effect": "No effect"
-      }
-    ],
-    "weakness": "lightning",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      71104,
-      464584,
-      728000,
-      12586832
-    ],
-    "artist": "Sanosuke Sakuma",
-    "internal_id": 12586832
-  },
-  {
-    "expansion": "P-A",
     "card_id": "P-A-63",
     "image": "/images/en-US/P-A-63.webp",
     "hp": 100,
@@ -80889,6 +80818,42 @@
     ],
     "artist": "Yoshinobu Saito",
     "internal_id": 12586960
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-64",
+    "image": "/images/en-US/P-A-64.webp",
+    "hp": 140,
+    "energy": "colorless",
+    "name": "Rayquaza ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Draco",
+        "damage": "Meteor",
+        "effect": "1 of your opponent's Pokémon is chosen at random 4 times. For each time a Pokémon was chosen, do 40 damage to it."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": true,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12587024,
+      12587088
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 12587024
   },
   {
     "expansion": "P-A",
@@ -80928,6 +80893,110 @@
   },
   {
     "expansion": "P-A",
+    "card_id": "P-A-66",
+    "image": "/images/en-US/P-A-66.webp",
+    "hp": 70,
+    "energy": "psychic",
+    "name": "Mimikyu",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "colorless"
+        ],
+        "name": "Shadow Hit",
+        "damage": "60",
+        "effect": "This attack also does 20 damage to 1 of your Pokémon."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      398528,
+      12587152
+    ],
+    "artist": "Amelicart",
+    "internal_id": 12587152
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-67",
+    "image": "/images/en-US/P-A-67.webp",
+    "hp": 60,
+    "energy": "psychic",
+    "name": "Cosmog",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Teleport",
+        "damage": "0",
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      398656,
+      404164,
+      732480,
+      12587216
+    ],
+    "artist": "Mizue",
+    "internal_id": 12587216
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-68",
+    "image": "/images/en-US/P-A-68.webp",
+    "hp": 100,
+    "energy": "fighting",
+    "name": "Lycanroc",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "fighting",
+          "colorless"
+        ],
+        "name": "Crunch",
+        "damage": "80",
+        "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      399618,
+      12587280
+    ],
+    "artist": "Ryuta Fuse",
+    "internal_id": 12587280
+  },
+  {
+    "expansion": "P-A",
     "card_id": "P-A-69",
     "image": "/images/en-US/P-A-69.webp",
     "hp": 150,
@@ -80961,40 +81030,6 @@
     ],
     "artist": "Satoshi Shirai",
     "internal_id": 12587344
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-66",
-    "image": "/images/en-US/P-A-66.webp",
-    "hp": 70,
-    "energy": "psychic",
-    "name": "Mimikyu",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "psychic",
-          "colorless"
-        ],
-        "name": "Shadow Hit",
-        "damage": "60",
-        "effect": "This attack also does 20 damage to 1 of your Pokémon."
-      }
-    ],
-    "weakness": "darkness",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      398528,
-      12587152
-    ],
-    "artist": "Amelicart",
-    "internal_id": 12587152
   },
   {
     "expansion": "P-A",
@@ -81033,38 +81068,102 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-68",
-    "image": "/images/en-US/P-A-68.webp",
-    "hp": 100,
+    "card_id": "P-A-71",
+    "image": "/images/en-US/P-A-71.webp",
+    "hp": 70,
     "energy": "fighting",
-    "name": "Lycanroc",
+    "name": "Crabrawler",
     "card_type": "pokémon",
-    "evolution_type": "stage1",
+    "evolution_type": "basic",
     "attacks": [
       {
         "cost": [
-          "fighting",
-          "fighting",
           "colorless"
         ],
-        "name": "Crunch",
-        "damage": "80",
-        "effect": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon."
+        "name": "Punch",
+        "damage": "20",
+        "effect": "No effect"
       }
     ],
-    "weakness": "grass",
-    "retreat": 1,
+    "weakness": "psychic",
+    "retreat": 2,
     "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      399618,
-      12587280
+      399424,
+      734912,
+      12587472
     ],
-    "artist": "Ryuta Fuse",
-    "internal_id": 12587280
+    "artist": "Miki Tanaka",
+    "internal_id": 12587472
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-72",
+    "image": "/images/en-US/P-A-72.webp",
+    "hp": 70,
+    "energy": "darkness",
+    "name": "Alolan Grimer",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness"
+        ],
+        "name": "Poison",
+        "damage": "Gas",
+        "effect": "Your opponent's Active Pokémon is now Poisoned."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12587536
+    ],
+    "artist": "Naoki Saito",
+    "internal_id": 12587536
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-73",
+    "image": "/images/en-US/P-A-73.webp",
+    "hp": 140,
+    "energy": "colorless",
+    "name": "Toucannon",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Beak Blast",
+        "damage": "80",
+        "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Burned."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12587600
+    ],
+    "artist": "Sekio",
+    "internal_id": 12587600
   },
   {
     "expansion": "P-A",
@@ -81142,139 +81241,6 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-73",
-    "image": "/images/en-US/P-A-73.webp",
-    "hp": 140,
-    "energy": "colorless",
-    "name": "Toucannon",
-    "card_type": "pokémon",
-    "evolution_type": "stage2",
-    "attacks": [
-      {
-        "cost": [
-          "colorless",
-          "colorless"
-        ],
-        "name": "Beak Blast",
-        "damage": "80",
-        "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Burned."
-      }
-    ],
-    "weakness": "lightning",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12587600
-    ],
-    "artist": "Sekio",
-    "internal_id": 12587600
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-71",
-    "image": "/images/en-US/P-A-71.webp",
-    "hp": 70,
-    "energy": "fighting",
-    "name": "Crabrawler",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "colorless"
-        ],
-        "name": "Punch",
-        "damage": "20",
-        "effect": "No effect"
-      }
-    ],
-    "weakness": "psychic",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      399424,
-      734912,
-      12587472
-    ],
-    "artist": "Miki Tanaka",
-    "internal_id": 12587472
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-72",
-    "image": "/images/en-US/P-A-72.webp",
-    "hp": 70,
-    "energy": "darkness",
-    "name": "Alolan Grimer",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "darkness"
-        ],
-        "name": "Poison",
-        "damage": "Gas",
-        "effect": "Your opponent's Active Pokémon is now Poisoned."
-      }
-    ],
-    "weakness": "fighting",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12587536
-    ],
-    "artist": "Naoki Saito",
-    "internal_id": 12587536
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-80",
-    "image": "/images/en-US/P-A-80.webp",
-    "hp": 110,
-    "energy": "metal",
-    "name": "Stakataka",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "metal",
-          "colorless"
-        ],
-        "name": "Brass Rock",
-        "damage": "40",
-        "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
-      }
-    ],
-    "weakness": "fire",
-    "retreat": 3,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      462145,
-      12588048
-    ],
-    "artist": "Shin Nagasawa",
-    "internal_id": 12588048
-  },
-  {
-    "expansion": "P-A",
     "card_id": "P-A-76",
     "image": "/images/en-US/P-A-76.webp",
     "hp": 100,
@@ -81308,40 +81274,6 @@
     ],
     "artist": "Hasuno",
     "internal_id": 12587792
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-78",
-    "image": "/images/en-US/P-A-78.webp",
-    "hp": 110,
-    "energy": "psychic",
-    "name": "Dawn Wings Necrozma",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "psychic",
-          "colorless",
-          "colorless"
-        ],
-        "name": "Psychobilly",
-        "damage": "100",
-        "effect": "This Pokémon also does 30 damage to itself."
-      }
-    ],
-    "weakness": "darkness",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12587920
-    ],
-    "artist": "nagimiso",
-    "internal_id": 12587920
   },
   {
     "expansion": "P-A",
@@ -81380,6 +81312,40 @@
   },
   {
     "expansion": "P-A",
+    "card_id": "P-A-78",
+    "image": "/images/en-US/P-A-78.webp",
+    "hp": 110,
+    "energy": "psychic",
+    "name": "Dawn Wings Necrozma",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Psychobilly",
+        "damage": "100",
+        "effect": "This Pokémon also does 30 damage to itself."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12587920
+    ],
+    "artist": "nagimiso",
+    "internal_id": 12587920
+  },
+  {
+    "expansion": "P-A",
     "card_id": "P-A-79",
     "image": "/images/en-US/P-A-79.webp",
     "hp": 110,
@@ -81411,6 +81377,40 @@
     ],
     "artist": "nagimiso",
     "internal_id": 12587984
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-80",
+    "image": "/images/en-US/P-A-80.webp",
+    "hp": 110,
+    "energy": "metal",
+    "name": "Stakataka",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "colorless"
+        ],
+        "name": "Brass Rock",
+        "damage": "40",
+        "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      462145,
+      12588048
+    ],
+    "artist": "Shin Nagasawa",
+    "internal_id": 12588048
   },
   {
     "expansion": "P-A",
@@ -81526,74 +81526,6 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-86",
-    "image": "/images/en-US/P-A-86.webp",
-    "hp": 90,
-    "energy": "lightning",
-    "name": "Jolteon",
-    "card_type": "pokémon",
-    "evolution_type": "stage1",
-    "attacks": [
-      {
-        "cost": [
-          "lightning"
-        ],
-        "name": "Beginning Bolt",
-        "damage": "40+",
-        "effect": "If this Pokémon evolved during this turn, this attack does 20 more damage."
-      }
-    ],
-    "weakness": "fighting",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      525890,
-      529028,
-      603848,
-      12588432
-    ],
-    "artist": "Mizue",
-    "internal_id": 12588432
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-85",
-    "image": "/images/en-US/P-A-85.webp",
-    "hp": 60,
-    "energy": "water",
-    "name": "Vanillite",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "water"
-        ],
-        "name": "Sweets Relay",
-        "damage": "10+",
-        "effect": "If 1 of your Pokémon used Sweets Relay during your last turn, this attack does 20 more damage."
-      }
-    ],
-    "weakness": "metal",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      525440,
-      12588368
-    ],
-    "artist": "OOYAMA",
-    "internal_id": 12588368
-  },
-  {
-    "expansion": "P-A",
     "card_id": "P-A-84",
     "image": "/images/en-US/P-A-84.webp",
     "hp": 130,
@@ -81640,25 +81572,24 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-90",
-    "image": "/images/en-US/P-A-90.webp",
-    "hp": 80,
-    "energy": "metal",
-    "name": "Togedemaru",
+    "card_id": "P-A-85",
+    "image": "/images/en-US/P-A-85.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Vanillite",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
         "cost": [
-          "metal",
-          "metal"
+          "water"
         ],
-        "name": "Bristling Spikes",
-        "damage": "30",
-        "effect": "During your opponent's next turn, if this Pokémon is damaged by an attack, do 30 damage to the Attacking Pokémon."
+        "name": "Sweets Relay",
+        "damage": "10+",
+        "effect": "If 1 of your Pokémon used Sweets Relay during your last turn, this attack does 20 more damage."
       }
     ],
-    "weakness": "fire",
+    "weakness": "metal",
     "retreat": 1,
     "rarity": "P",
     "ex": false,
@@ -81666,44 +81597,46 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      527360,
-      12588688
+      525440,
+      12588368
     ],
-    "artist": "sowsow",
-    "internal_id": 12588688
+    "artist": "OOYAMA",
+    "internal_id": 12588368
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-89",
-    "image": "/images/en-US/P-A-89.webp",
-    "hp": 100,
-    "energy": "colorless",
-    "name": "Audino",
+    "card_id": "P-A-86",
+    "image": "/images/en-US/P-A-86.webp",
+    "hp": 90,
+    "energy": "lightning",
+    "name": "Jolteon",
     "card_type": "pokémon",
-    "evolution_type": "basic",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": [
-          "colorless",
-          "colorless"
+          "lightning"
         ],
-        "name": "Drain Slap",
-        "damage": "40",
-        "effect": "Heal 10 damage from this Pokémon."
+        "name": "Beginning Bolt",
+        "damage": "40+",
+        "effect": "If this Pokémon evolved during this turn, this attack does 20 more damage."
       }
     ],
     "weakness": "fighting",
-    "retreat": 2,
+    "retreat": 1,
     "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      12588624
+      525890,
+      529028,
+      603848,
+      12588432
     ],
-    "artist": "MAHOU",
-    "internal_id": 12588624
+    "artist": "Mizue",
+    "internal_id": 12588432
   },
   {
     "expansion": "P-A",
@@ -81773,11 +81706,113 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-99",
-    "image": "/images/en-US/P-A-99.webp",
+    "card_id": "P-A-89",
+    "image": "/images/en-US/P-A-89.webp",
+    "hp": 100,
+    "energy": "colorless",
+    "name": "Audino",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Drain Slap",
+        "damage": "40",
+        "effect": "Heal 10 damage from this Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12588624
+    ],
+    "artist": "MAHOU",
+    "internal_id": 12588624
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-90",
+    "image": "/images/en-US/P-A-90.webp",
+    "hp": 80,
+    "energy": "metal",
+    "name": "Togedemaru",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "metal"
+        ],
+        "name": "Bristling Spikes",
+        "damage": "30",
+        "effect": "During your opponent's next turn, if this Pokémon is damaged by an attack, do 30 damage to the Attacking Pokémon."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      527360,
+      12588688
+    ],
+    "artist": "sowsow",
+    "internal_id": 12588688
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-91",
+    "image": "/images/en-US/P-A-91.webp",
+    "hp": 120,
+    "energy": "colorless",
+    "name": "Greedent",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Enhanced Fang",
+        "damage": "50+",
+        "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 50 more damage."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      528449,
+      12588752
+    ],
+    "artist": "HYOGONOSUKE",
+    "internal_id": 12588752
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-92",
+    "image": "/images/en-US/P-A-92.webp",
     "hp": 60,
-    "energy": "water",
-    "name": "Marill",
+    "energy": "colorless",
+    "name": "Eevee",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
@@ -81786,11 +81821,11 @@
           "colorless"
         ],
         "name": "Tackle",
-        "damage": "10",
+        "damage": "20",
         "effect": "No effect"
       }
     ],
-    "weakness": "lightning",
+    "weakness": "fighting",
     "retreat": 1,
     "rarity": "P",
     "ex": false,
@@ -81798,11 +81833,47 @@
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      592960,
-      12589264
+      78720,
+      78784,
+      78848,
+      81412,
+      12588816
     ],
-    "artist": "Shibuzoh.",
-    "internal_id": 12589264
+    "artist": "nisimono",
+    "internal_id": 12588816
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-93",
+    "image": "/images/en-US/P-A-93.webp",
+    "hp": 30,
+    "energy": "psychic",
+    "name": "Cleffa",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "No Cost"
+        ],
+        "name": "Twinkly",
+        "damage": "Call",
+        "effect": "Put a random Pokémon from your deck into your hand."
+      }
+    ],
+    "weakness": "none",
+    "retreat": 0,
+    "rarity": "P",
+    "ex": false,
+    "baby": true,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      594754,
+      12588880
+    ],
+    "artist": "Tika Matsuno",
+    "internal_id": 12588880
   },
   {
     "expansion": "P-A",
@@ -81870,39 +81941,6 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-100",
-    "image": "/images/en-US/P-A-100.webp",
-    "hp": 80,
-    "energy": "darkness",
-    "name": "Weavile",
-    "card_type": "pokémon",
-    "evolution_type": "stage1",
-    "attacks": [
-      {
-        "cost": [
-          "darkness"
-        ],
-        "name": "Slash",
-        "damage": "50",
-        "effect": "No effect"
-      }
-    ],
-    "weakness": "grass",
-    "retreat": 0,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      597249,
-      12589328
-    ],
-    "artist": "Satoshi Shirai",
-    "internal_id": 12589328
-  },
-  {
-    "expansion": "P-A",
     "card_id": "P-A-96",
     "image": "/images/en-US/P-A-96.webp",
     "hp": 110,
@@ -81938,44 +81976,11 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-93",
-    "image": "/images/en-US/P-A-93.webp",
-    "hp": 30,
-    "energy": "psychic",
-    "name": "Cleffa",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "No Cost"
-        ],
-        "name": "Twinkly",
-        "damage": "Call",
-        "effect": "Put a random Pokémon from your deck into your hand."
-      }
-    ],
-    "weakness": "none",
-    "retreat": 0,
-    "rarity": "P",
-    "ex": false,
-    "baby": true,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      594754,
-      12588880
-    ],
-    "artist": "Tika Matsuno",
-    "internal_id": 12588880
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-92",
-    "image": "/images/en-US/P-A-92.webp",
-    "hp": 60,
+    "card_id": "P-A-97",
+    "image": "/images/en-US/P-A-97.webp",
+    "hp": 100,
     "energy": "colorless",
-    "name": "Eevee",
+    "name": "Kangaskhan",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
@@ -81983,62 +81988,24 @@
         "cost": [
           "colorless"
         ],
-        "name": "Tackle",
-        "damage": "20",
-        "effect": "No effect"
+        "name": "Cross-Cut",
+        "damage": "20+",
+        "effect": "If your opponent's Active Pokémon is an Evolution Pokémon, this attack does 40 more damage."
       }
     ],
     "weakness": "fighting",
-    "retreat": 1,
+    "retreat": 3,
     "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      78720,
-      78784,
-      78848,
-      81412,
-      12588816
+      598338,
+      12589136
     ],
-    "artist": "nisimono",
-    "internal_id": 12588816
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-91",
-    "image": "/images/en-US/P-A-91.webp",
-    "hp": 120,
-    "energy": "colorless",
-    "name": "Greedent",
-    "card_type": "pokémon",
-    "evolution_type": "stage1",
-    "attacks": [
-      {
-        "cost": [
-          "colorless",
-          "colorless",
-          "colorless"
-        ],
-        "name": "Enhanced Fang",
-        "damage": "50+",
-        "effect": "If this Pokémon has a Pokémon Tool attached, this attack does 50 more damage."
-      }
-    ],
-    "weakness": "fighting",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      528449,
-      12588752
-    ],
-    "artist": "HYOGONOSUKE",
-    "internal_id": 12588752
+    "artist": "Kouki Saitou",
+    "internal_id": 12589136
   },
   {
     "expansion": "P-A",
@@ -82077,11 +82044,11 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-97",
-    "image": "/images/en-US/P-A-97.webp",
-    "hp": 100,
-    "energy": "colorless",
-    "name": "Kangaskhan",
+    "card_id": "P-A-99",
+    "image": "/images/en-US/P-A-99.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Marill",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
@@ -82089,57 +82056,57 @@
         "cost": [
           "colorless"
         ],
-        "name": "Cross-Cut",
-        "damage": "20+",
-        "effect": "If your opponent's Active Pokémon is an Evolution Pokémon, this attack does 40 more damage."
+        "name": "Tackle",
+        "damage": "10",
+        "effect": "No effect"
       }
     ],
-    "weakness": "fighting",
-    "retreat": 3,
+    "weakness": "lightning",
+    "retreat": 1,
     "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      598338,
-      12589136
+      592960,
+      12589264
     ],
-    "artist": "Kouki Saitou",
-    "internal_id": 12589136
+    "artist": "Shibuzoh.",
+    "internal_id": 12589264
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-102",
-    "image": "/images/en-US/P-A-102.webp",
-    "hp": 100,
-    "energy": "grass",
-    "name": "Tropius",
+    "card_id": "P-A-100",
+    "image": "/images/en-US/P-A-100.webp",
+    "hp": 80,
+    "energy": "darkness",
+    "name": "Weavile",
     "card_type": "pokémon",
-    "evolution_type": "basic",
+    "evolution_type": "stage1",
     "attacks": [
       {
         "cost": [
-          "colorless",
-          "colorless"
+          "darkness"
         ],
-        "name": "Double Smash",
-        "damage": "40x",
-        "effect": "Flip 2 coins. This attack does 40 damage for each heads."
+        "name": "Slash",
+        "damage": "50",
+        "effect": "No effect"
       }
     ],
-    "weakness": "fire",
-    "retreat": 2,
+    "weakness": "grass",
+    "retreat": 0,
     "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      12589456
+      597249,
+      12589328
     ],
-    "artist": "sowsow",
-    "internal_id": 12589456
+    "artist": "Satoshi Shirai",
+    "internal_id": 12589328
   },
   {
     "expansion": "P-A",
@@ -82176,181 +82143,36 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-105",
-    "image": "/images/en-US/P-A-105.webp",
-    "hp": 60,
-    "energy": "darkness",
-    "name": "Zorua",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "darkness"
-        ],
-        "name": "Ram",
-        "damage": "20",
-        "effect": "No effect"
-      }
-    ],
-    "weakness": "grass",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      658496,
-      12589648
-    ],
-    "artist": "Naoyo Kimura",
-    "internal_id": 12589648
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-106",
-    "image": "/images/en-US/P-A-106.webp",
+    "card_id": "P-A-102",
+    "image": "/images/en-US/P-A-102.webp",
     "hp": 100,
-    "energy": "darkness",
-    "name": "Zoroark",
-    "card_type": "pokémon",
-    "evolution_type": "stage1",
-    "attacks": [
-      {
-        "cost": [
-          "darkness",
-          "darkness"
-        ],
-        "name": "Night Daze",
-        "damage": "70",
-        "effect": "No effect"
-      }
-    ],
-    "ability": {
-      "name": "Illusive Trickery",
-      "effect": "If your opponent's Pokémon is Knocked Out by damage from this Pokémon's attacks, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
-    },
-    "weakness": "grass",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      658562,
-      12589712
-    ],
-    "artist": "matazo",
-    "internal_id": 12589712
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-108",
-    "image": "/images/en-US/P-A-108.webp",
-    "hp": 70,
-    "energy": "fighting",
-    "name": "Phanpy",
+    "energy": "grass",
+    "name": "Tropius",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
         "cost": [
-          "fighting"
-        ],
-        "name": "Flail",
-        "damage": "0",
-        "effect": "This attack does damage to your opponent's Active Pokémon equal to the damage this Pokémon has on it."
-      }
-    ],
-    "weakness": "grass",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      658112,
-      660228,
-      12589840
-    ],
-    "artist": "Asako Ito",
-    "internal_id": 12589840
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-110",
-    "image": "/images/en-US/P-A-110.webp",
-    "hp": 140,
-    "energy": "fire",
-    "name": "Entei ex",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "fire",
-          "fire"
-        ],
-        "name": "Blazing Beatdown",
-        "damage": "60+",
-        "effect": "If this Pokémon has at least 2 extra [R] Energy attached, this attack does 60 more damage."
-      }
-    ],
-    "ability": {
-      "name": "Legendary Pulse",
-      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
-    },
-    "weakness": "water",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": true,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      656003,
-      660421,
-      660933,
-      12589968
-    ],
-    "artist": "PLANETA Tsuji",
-    "internal_id": 12589968
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-107",
-    "image": "/images/en-US/P-A-107.webp",
-    "hp": 110,
-    "energy": "colorless",
-    "name": "Miltank",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
+          "colorless",
           "colorless"
         ],
-        "name": "Rolling Frenzy",
-        "damage": "10",
-        "effect": "Until this Pokémon leaves the Active Spot, this Pokémon's Rolling Frenzy attack does +30 damage. This effect stacks."
+        "name": "Double Smash",
+        "damage": "40x",
+        "effect": "Flip 2 coins. This attack does 40 damage for each heads."
       }
     ],
-    "weakness": "fighting",
-    "retreat": 3,
+    "weakness": "fire",
+    "retreat": 2,
     "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-a",
     "pack": "everypack",
     "alternate_versions": [
-      659329,
-      12589776
+      12589456
     ],
-    "artist": "Kanako Eo",
-    "internal_id": 12589776
+    "artist": "sowsow",
+    "internal_id": 12589456
   },
   {
     "expansion": "P-A",
@@ -82425,6 +82247,144 @@
   },
   {
     "expansion": "P-A",
+    "card_id": "P-A-105",
+    "image": "/images/en-US/P-A-105.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Zorua",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness"
+        ],
+        "name": "Ram",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      658496,
+      12589648
+    ],
+    "artist": "Naoyo Kimura",
+    "internal_id": 12589648
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-106",
+    "image": "/images/en-US/P-A-106.webp",
+    "hp": 100,
+    "energy": "darkness",
+    "name": "Zoroark",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness"
+        ],
+        "name": "Night Daze",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Illusive Trickery",
+      "effect": "If your opponent's Pokémon is Knocked Out by damage from this Pokémon's attacks, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
+    },
+    "weakness": "grass",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      658562,
+      12589712
+    ],
+    "artist": "matazo",
+    "internal_id": 12589712
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-107",
+    "image": "/images/en-US/P-A-107.webp",
+    "hp": 110,
+    "energy": "colorless",
+    "name": "Miltank",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Rolling Frenzy",
+        "damage": "10",
+        "effect": "Until this Pokémon leaves the Active Spot, this Pokémon's Rolling Frenzy attack does +30 damage. This effect stacks."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 3,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      659329,
+      12589776
+    ],
+    "artist": "Kanako Eo",
+    "internal_id": 12589776
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-108",
+    "image": "/images/en-US/P-A-108.webp",
+    "hp": 70,
+    "energy": "fighting",
+    "name": "Phanpy",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting"
+        ],
+        "name": "Flail",
+        "damage": "0",
+        "effect": "This attack does damage to your opponent's Active Pokémon equal to the damage this Pokémon has on it."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      658112,
+      660228,
+      12589840
+    ],
+    "artist": "Asako Ito",
+    "internal_id": 12589840
+  },
+  {
+    "expansion": "P-A",
     "card_id": "P-A-109",
     "image": "/images/en-US/P-A-109.webp",
     "hp": 90,
@@ -82465,6 +82425,46 @@
   },
   {
     "expansion": "P-A",
+    "card_id": "P-A-110",
+    "image": "/images/en-US/P-A-110.webp",
+    "hp": 140,
+    "energy": "fire",
+    "name": "Entei ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "name": "Blazing Beatdown",
+        "damage": "60+",
+        "effect": "If this Pokémon has at least 2 extra [R] Energy attached, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": true,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      656003,
+      660421,
+      660933,
+      12589968
+    ],
+    "artist": "PLANETA Tsuji",
+    "internal_id": 12589968
+  },
+  {
+    "expansion": "P-A",
     "card_id": "P-A-111",
     "image": "/images/en-US/P-A-111.webp",
     "hp": 60,
@@ -82495,6 +82495,108 @@
     ],
     "artist": "sui",
     "internal_id": 12590032
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-112",
+    "image": "/images/en-US/P-A-112.webp",
+    "hp": 140,
+    "energy": "lightning",
+    "name": "Raichu ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning",
+          "lightning"
+        ],
+        "name": "Volt Tackle",
+        "damage": "130",
+        "effect": "This Pokémon also does 30 damage to itself."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": true,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12590096
+    ],
+    "artist": "PLANETA Mochizuki",
+    "internal_id": 12590096
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-113",
+    "image": "/images/en-US/P-A-113.webp",
+    "hp": 70,
+    "energy": "psychic",
+    "name": "Mimikyu",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "name": "Try to",
+        "damage": "Imitate",
+        "effect": "Flip a coin. If heads, choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      526529,
+      12590160
+    ],
+    "artist": "Yuka Morii",
+    "internal_id": 12590160
+  },
+  {
+    "expansion": "P-A",
+    "card_id": "P-A-114",
+    "image": "/images/en-US/P-A-114.webp",
+    "hp": 150,
+    "energy": "fighting",
+    "name": "Machamp",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "fighting",
+          "fighting"
+        ],
+        "name": "Hurricane Punch",
+        "damage": "50x",
+        "effect": "Flip 4 coins. This attack does 50 damage for each heads."
+      }
+    ],
+    "weakness": "psychic",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-a",
+    "pack": "everypack",
+    "alternate_versions": [
+      12590224
+    ],
+    "artist": "Naoki Saito",
+    "internal_id": 12590224
   },
   {
     "expansion": "P-A",
@@ -82535,40 +82637,6 @@
   },
   {
     "expansion": "P-A",
-    "card_id": "P-A-114",
-    "image": "/images/en-US/P-A-114.webp",
-    "hp": 150,
-    "energy": "fighting",
-    "name": "Machamp",
-    "card_type": "pokémon",
-    "evolution_type": "stage2",
-    "attacks": [
-      {
-        "cost": [
-          "fighting",
-          "fighting",
-          "fighting"
-        ],
-        "name": "Hurricane Punch",
-        "damage": "50x",
-        "effect": "Flip 4 coins. This attack does 50 damage for each heads."
-      }
-    ],
-    "weakness": "psychic",
-    "retreat": 2,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12590224
-    ],
-    "artist": "Naoki Saito",
-    "internal_id": 12590224
-  },
-  {
-    "expansion": "P-A",
     "card_id": "P-A-116",
     "image": "/images/en-US/P-A-116.webp",
     "hp": 60,
@@ -82606,74 +82674,6 @@
     ],
     "artist": "Sekio",
     "internal_id": 12590352
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-113",
-    "image": "/images/en-US/P-A-113.webp",
-    "hp": 70,
-    "energy": "psychic",
-    "name": "Mimikyu",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "psychic",
-          "psychic"
-        ],
-        "name": "Try to",
-        "damage": "Imitate",
-        "effect": "Flip a coin. If heads, choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
-      }
-    ],
-    "weakness": "metal",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      526529,
-      12590160
-    ],
-    "artist": "Yuka Morii",
-    "internal_id": 12590160
-  },
-  {
-    "expansion": "P-A",
-    "card_id": "P-A-112",
-    "image": "/images/en-US/P-A-112.webp",
-    "hp": 140,
-    "energy": "lightning",
-    "name": "Raichu ex",
-    "card_type": "pokémon",
-    "evolution_type": "stage1",
-    "attacks": [
-      {
-        "cost": [
-          "lightning",
-          "lightning",
-          "lightning"
-        ],
-        "name": "Volt Tackle",
-        "damage": "130",
-        "effect": "This Pokémon also does 30 damage to itself."
-      }
-    ],
-    "weakness": "fighting",
-    "retreat": 1,
-    "rarity": "P",
-    "ex": true,
-    "baby": false,
-    "set_details": "promo-a",
-    "pack": "everypack",
-    "alternate_versions": [
-      12590096
-    ],
-    "artist": "PLANETA Mochizuki",
-    "internal_id": 12590096
   },
   {
     "expansion": "P-A",
@@ -82775,141 +82775,6 @@
   },
   {
     "expansion": "P-B",
-    "card_id": "P-B-7",
-    "image": "/images/en-US/P-B-7.webp",
-    "hp": 60,
-    "energy": "fire",
-    "name": "Torchic",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "fire"
-        ],
-        "name": "Peck",
-        "damage": "20",
-        "effect": "No effect"
-      }
-    ],
-    "weakness": "water",
-    "retreat": 1,
-    "rarity": "◊◊◊",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-b",
-    "pack": "everypack",
-    "alternate_versions": [
-      788544,
-      12648898
-    ],
-    "artist": "MAHOU",
-    "internal_id": 12648898
-  },
-  {
-    "expansion": "P-B",
-    "card_id": "P-B-8",
-    "image": "/images/en-US/P-B-8.webp",
-    "hp": 60,
-    "energy": "water",
-    "name": "Psyduck",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "water"
-        ],
-        "name": "Rain Splash",
-        "damage": "20",
-        "effect": "No effect"
-      }
-    ],
-    "weakness": "lightning",
-    "retreat": 1,
-    "rarity": "◊◊◊",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-b",
-    "pack": "everypack",
-    "alternate_versions": [
-      789504,
-      12648962
-    ],
-    "artist": "OKACHEKE",
-    "internal_id": 12648962
-  },
-  {
-    "expansion": "P-B",
-    "card_id": "P-B-10",
-    "image": "/images/en-US/P-B-10.webp",
-    "hp": 100,
-    "energy": "psychic",
-    "name": "Drifblim",
-    "card_type": "pokémon",
-    "evolution_type": "stage1",
-    "attacks": [
-      {
-        "cost": [
-          "psychic",
-          "colorless"
-        ],
-        "name": "Balloon Barrage",
-        "damage": "20+",
-        "effect": "This attack does 20 more damage for each Energy attached to this Pokémon."
-      }
-    ],
-    "weakness": "darkness",
-    "retreat": 2,
-    "rarity": "◊◊◊",
-    "ex": false,
-    "baby": false,
-    "set_details": "promo-b",
-    "pack": "everypack",
-    "alternate_versions": [
-      793345,
-      12649090
-    ],
-    "artist": "Kyoko Umemoto",
-    "internal_id": 12649090
-  },
-  {
-    "expansion": "P-B",
-    "card_id": "P-B-9",
-    "image": "/images/en-US/P-B-9.webp",
-    "hp": 170,
-    "energy": "darkness",
-    "name": "Mega Absol ex",
-    "card_type": "pokémon",
-    "evolution_type": "basic",
-    "attacks": [
-      {
-        "cost": [
-          "darkness",
-          "darkness"
-        ],
-        "name": "Darkness Claw",
-        "damage": "80",
-        "effect": "Your opponent reveals their hand. Choose a Supporter card you find there and discard it."
-      }
-    ],
-    "weakness": "grass",
-    "retreat": 1,
-    "rarity": "◊◊◊◊",
-    "ex": true,
-    "baby": false,
-    "set_details": "promo-b",
-    "pack": "everypack",
-    "alternate_versions": [
-      796099,
-      803205,
-      804357
-    ],
-    "artist": "PLANETA CG Works",
-    "internal_id": 796099
-  },
-  {
-    "expansion": "P-B",
     "card_id": "P-B-3",
     "image": "/images/en-US/P-B-3.webp",
     "hp": 60,
@@ -82940,40 +82805,6 @@
     ],
     "artist": "Kyoko Umemoto",
     "internal_id": 12648640
-  },
-  {
-    "expansion": "P-B",
-    "card_id": "P-B-6",
-    "image": "/images/en-US/P-B-6.webp",
-    "hp": 210,
-    "energy": "colorless",
-    "name": "Mega Pidgeot ex",
-    "card_type": "pokémon",
-    "evolution_type": "stage2",
-    "attacks": [
-      {
-        "cost": [
-          "colorless",
-          "colorless",
-          "colorless"
-        ],
-        "name": "Giant Twister",
-        "damage": "100",
-        "effect": "Flip 3 coins. For each heads, discard a random Energy from your opponent's Active Pokémon. If all of them are tails, this attack does nothing."
-      }
-    ],
-    "weakness": "lightning",
-    "retreat": 2,
-    "rarity": "◊◊◊◊",
-    "ex": true,
-    "baby": false,
-    "set_details": "promo-b",
-    "pack": "everypack",
-    "alternate_versions": [
-      12648835
-    ],
-    "artist": "PLANETA CG Works",
-    "internal_id": 12648835
   },
   {
     "expansion": "P-B",
@@ -83041,6 +82872,175 @@
     ],
     "artist": "Tomokazu Komiya",
     "internal_id": 797952
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-6",
+    "image": "/images/en-US/P-B-6.webp",
+    "hp": 210,
+    "energy": "colorless",
+    "name": "Mega Pidgeot ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Giant Twister",
+        "damage": "100",
+        "effect": "Flip 3 coins. For each heads, discard a random Energy from your opponent's Active Pokémon. If all of them are tails, this attack does nothing."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      12648835
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 12648835
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-7",
+    "image": "/images/en-US/P-B-7.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Torchic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fire"
+        ],
+        "name": "Peck",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      788544,
+      12648898
+    ],
+    "artist": "MAHOU",
+    "internal_id": 12648898
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-8",
+    "image": "/images/en-US/P-B-8.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Psyduck",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Rain Splash",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      789504,
+      12648962
+    ],
+    "artist": "OKACHEKE",
+    "internal_id": 12648962
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-9",
+    "image": "/images/en-US/P-B-9.webp",
+    "hp": 170,
+    "energy": "darkness",
+    "name": "Mega Absol ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness"
+        ],
+        "name": "Darkness Claw",
+        "damage": "80",
+        "effect": "Your opponent reveals their hand. Choose a Supporter card you find there and discard it."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      796099,
+      803205,
+      804357
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 796099
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-10",
+    "image": "/images/en-US/P-B-10.webp",
+    "hp": 100,
+    "energy": "psychic",
+    "name": "Drifblim",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "colorless"
+        ],
+        "name": "Balloon Barrage",
+        "damage": "20+",
+        "effect": "This attack does 20 more damage for each Energy attached to this Pokémon."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      793345,
+      12649090
+    ],
+    "artist": "Kyoko Umemoto",
+    "internal_id": 12649090
   },
   {
     "expansion": "P-B",
