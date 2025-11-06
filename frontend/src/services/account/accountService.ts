@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabase'
-import type { AccountRow } from '@/types'
+import { type AccountRow, tradableRarities } from '@/types'
 
 export const getAccount = async (email: string) => {
   if (!email) {
@@ -17,6 +17,11 @@ export const getAccount = async (email: string) => {
 
   if (data.length > 0) {
     data[0].collection_last_updated = new Date(data[0].collection_last_updated)
+    // TESTING
+    data[0].trade_rarity_settings = [
+      { rarity: '◊', to_collect: '2', to_keep: '6' },
+      { rarity: '◊◊', to_collect: '2', to_keep: '2' },
+    ]
     return data[0] as AccountRow
   }
 
@@ -24,8 +29,7 @@ export const getAccount = async (email: string) => {
   return await updateAccount({
     email,
     username: '',
-    min_number_of_cards_to_keep: 1,
-    max_number_of_cards_wanted: 1,
+    trade_rarity_settings: tradableRarities.map((rarity) => ({ rarity, to_collect: 1, to_keep: 1 })),
   } as AccountRow)
 }
 
@@ -44,6 +48,11 @@ export const getPublicAccount = async (friendId: string) => {
   console.log('fetched public account', data)
 
   if (data.length > 0) {
+    // TESTING
+    data[0].trade_rarity_settings = [
+      { rarity: '◊', to_collect: '2', to_keep: '2' },
+      { rarity: '◊◊', to_collect: '2', to_keep: '2' },
+    ]
     return data[0] as AccountRow
   }
 

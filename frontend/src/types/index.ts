@@ -14,6 +14,12 @@ export type Rarity = (typeof rarities)[number]
 export type TradableRarity = (typeof tradableRarities)[number]
 export type CardType = (typeof cardTypes)[number]
 
+export interface RaritySettingsRow {
+  rarity: Rarity
+  to_collect: number
+  to_keep: number
+}
+
 export interface AccountRow {
   $id: string
   email: string
@@ -24,6 +30,7 @@ export interface AccountRow {
   is_active_trading: boolean
   min_number_of_cards_to_keep: number
   max_number_of_cards_wanted: number
+  trade_rarity_settings: RaritySettingsRow[]
 }
 
 export interface CollectionRow {
