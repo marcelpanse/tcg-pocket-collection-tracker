@@ -1,6 +1,6 @@
 import { type FC, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router'
+import { Link } from 'react-router'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
@@ -47,7 +47,6 @@ interface Props {
 const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters, visibleFilters, filtersDialog, share, missionsButton }: Props) => {
   const { toast } = useToast()
   const { t } = useTranslation(['pages/collection', 'common/sets', 'common/packs', 'filters'])
-  const navigate = useNavigate()
   const { setIsProfileDialogOpen } = useProfileDialog()
 
   const changeFilter = (k: keyof Filters) => (x: Filters[typeof k]) => setFilters({ [k]: x })
@@ -229,9 +228,11 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters, visibleFilt
                   {t('filters.clear')}
                 </Button>
                 {missionsButton && (
-                  <Button className="mt-2" variant="outline" onClick={() => navigate('/collection/missions')}>
-                    {t('goToMissions')}
-                  </Button>
+                  <Link className="mt-2" to="/collection/missions">
+                    <Button className="w-full" variant="outline">
+                      {t('goToMissions')}
+                    </Button>
+                  </Link>
                 )}
               </div>
             </DialogContent>
