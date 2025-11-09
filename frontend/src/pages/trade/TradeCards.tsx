@@ -1,20 +1,19 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CardsTable } from '@/components/CardsTable'
-import { DropdownFilter, ToggleFilter } from '@/components/Filters'
+import { DropdownFilter, TabsFilter, ToggleFilter } from '@/components/Filters'
 import { Button } from '@/components/ui/button.tsx'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { formatRarity } from '@/components/utils'
 import { toast } from '@/hooks/use-toast.ts'
 import { getCardByInternalId } from '@/lib/CardsDB.ts'
 import { getExtraCards, getNeededCards } from '@/lib/utils'
-import { NoCardsNeeded } from '@/pages/trade/components/NoCardsNeeded.tsx'
-import { NoTradeableCards } from '@/pages/trade/components/NoTradeableCards.tsx'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { useUser } from '@/services/auth/useAuth.ts'
 import { useCollection } from '@/services/collection/useCollection.ts'
 import { type Card, type CollectionRow, type Rarity, tradableRarities } from '@/types'
 import { UserNotLoggedIn } from './components/UserNotLoggedIn'
+
+const options = ['lookingFor', 'forTrade'] as const
 
 function TradeCards() {
   const { t } = useTranslation(['pages/trade', 'filters'])
@@ -26,7 +25,7 @@ function TradeCards() {
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [lookingForMaxCards, setLookingForMaxCards] = useState<number>((account?.max_number_of_cards_wanted ?? 1) - 1)
   const [forTradeMinCards, setForTradeMinCards] = useState<number>((account?.min_number_of_cards_to_keep ?? 1) + 1)
-  const [currentTab, setCurrentTab] = useState('looking_for')
+  const [currentTab, setCurrentTab] = useState<(typeof options)[number]>('lookingFor')
 
   const filterRarities = (c: Card) => (rarityFilter.length === 0 ? (tradableRarities as readonly Rarity[]) : rarityFilter).includes(c.rarity)
 
@@ -98,46 +97,31 @@ function TradeCards() {
   }
 
   return (
-    <div className="flex flex-col gap-y-4">
-      <Tabs defaultValue={currentTab} onValueChange={setCurrentTab}>
-        <div className="mx-auto max-w-[900px] flex flex-row flex-wrap align-center gap-x-4 gap-y-2">
-          <TabsList className="flex-grow m-auto flex-wrap h-auto border-1 border-neutral-700 rounded-md">
-            <TabsTrigger value="looking_for">{t('lookingFor')}</TabsTrigger>
-            <TabsTrigger value="for_trade">{t('forTrade')}</TabsTrigger>
-          </TabsList>
-          <ToggleFilter options={tradableRarities} value={rarityFilter} onChange={setRarityFilter} show={formatRarity} asChild />
-          <div className="sm:mt-1 flex flex-row flex-wrap align-center gap-x-4 gap-y-1">
-            {currentTab === 'looking_for' && (
-              <DropdownFilter
-                label={t('f-number.maxNum', { ns: 'filters' })}
-                options={[1, 2, 3, 4, 5] as const}
-                value={lookingForMaxCards}
-                onChange={setLookingForMaxCards}
-              />
-            )}
-            {currentTab === 'for_trade' && (
-              <DropdownFilter
-                label={t('f-number.minNum', { ns: 'filters' })}
-                options={[2, 3, 4, 5] as const}
-                value={forTradeMinCards}
-                onChange={setForTradeMinCards}
-              />
-            )}
-            <Button variant="outline" onClick={copyToClipboard}>
-              Copy to clipboard
-            </Button>
-          </div>
-        </div>
-        <div className="mx-auto max-w-[900px] mt-6">
-          <TabsContent value="looking_for">
-            {lookingForCards ? <CardsTable cards={lookingForCardsFiltered} extraOffset={105} editable={false} groupExpansions /> : <NoCardsNeeded />}
-          </TabsContent>
-          <TabsContent value="for_trade">
-            {forTradeCards ? <CardsTable cards={forTradeCardsFiltered} extraOffset={105} editable={false} groupExpansions /> : <NoTradeableCards />}
-          </TabsContent>
-        </div>
-      </Tabs>
-    </div>
+    <CardsTable cards={currentTab === 'lookingFor' ? lookingForCardsFiltered : forTradeCardsFiltered}>
+      <div className="flex flex-wrap gap-2 mx-2 mb-2">
+        <TabsFilter options={options} value={currentTab} onChange={setCurrentTab} show={t} />
+        <ToggleFilter options={tradableRarities} value={rarityFilter} onChange={setRarityFilter} show={formatRarity} asChild />
+        {currentTab === 'lookingFor' && (
+          <DropdownFilter
+            label={t('f-number.maxNum', { ns: 'filters' })}
+            options={[1, 2, 3, 4, 5] as const}
+            value={lookingForMaxCards}
+            onChange={setLookingForMaxCards}
+          />
+        )}
+        {currentTab === 'forTrade' && (
+          <DropdownFilter
+            label={t('f-number.minNum', { ns: 'filters' })}
+            options={[2, 3, 4, 5] as const}
+            value={forTradeMinCards}
+            onChange={setForTradeMinCards}
+          />
+        )}
+        <Button variant="outline" onClick={copyToClipboard}>
+          Copy to clipboard
+        </Button>
+      </div>
+    </CardsTable>
   )
 }
 

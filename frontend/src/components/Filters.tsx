@@ -18,7 +18,7 @@ interface PropsTabs<T> extends Props<T> {
 export function TabsFilter<T extends string>({ options, value, onChange, className, show = (x) => x }: PropsTabs<T>) {
   return (
     <Tabs value={value} onValueChange={(x) => onChange(x as T)}>
-      <TabsList className={cn(commonClassName, className)}>
+      <TabsList className={cn(commonClassName, 'flex-wrap', className)}>
         {options.map((x) => (
           <TabsTrigger key={x} value={x}>
             {show(x)}
