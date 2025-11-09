@@ -1,7 +1,7 @@
 import { Siren } from 'lucide-react'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useNavigate, useParams } from 'react-router'
+import { Link, useNavigate, useParams } from 'react-router'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { useAccount, usePublicAccount } from '@/services/account/useAccount.ts'
@@ -24,7 +24,6 @@ function OwnCollection() {
 }
 
 function FriendCollection({ friendId }: { friendId: string }) {
-  const navigate = useNavigate()
   const { t } = useTranslation(['pages/collection', 'common'])
   const { data: account, isLoading: isLoadingAccount } = usePublicAccount(friendId)
   const { data: cards, isLoading: isLoadingCards } = usePublicCollection(friendId)
@@ -51,9 +50,9 @@ function FriendCollection({ friendId }: { friendId: string }) {
         <AlertDescription>
           <div className="flex items-center">
             {t('publicCollectionDescription')}
-            <Button className="mb-4" onClick={() => navigate(`/trade/${friendId}`)}>
-              {t('showPossibleTrades')}
-            </Button>
+            <Link to={`/trade/${friendId}`}>
+              <Button className="mb-4">{t('showPossibleTrades')}</Button>
+            </Link>
           </div>
         </AlertDescription>
       </Alert>
