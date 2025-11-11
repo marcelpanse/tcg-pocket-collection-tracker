@@ -79,12 +79,15 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
     internal_id: row.internal_id,
     updated_at: nowString,
   }))
-  const amountRows: CardAmountsRowUpdate[] = rowsToUpdate.map((row) => ({
-    email,
-    internal_id: row.internal_id,
-    amount_owned: row.amount_owned,
-    updated_at: nowString,
-  }))
+  const amountRows: CardAmountsRowUpdate[] = rowsToUpdate
+    .map((row) => ({
+      email,
+      internal_id: row.internal_id,
+      amount_owned: row.amount_owned,
+      updated_at: nowString,
+    }))
+    //deduplicate amountRows on internal_id, needed for card csv import feature
+    .filter((row, index, self) => index === self.findIndex((r) => r.internal_id === row.internal_id))
 
   //then update the card amounts
   const { error: cardAmountsError } = await supabase.from('card_amounts').upsert(amountRows)

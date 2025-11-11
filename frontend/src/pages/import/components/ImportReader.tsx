@@ -10,7 +10,6 @@ export const ImportReader = () => {
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const updateCardsMutation = useUpdateCards()
 
-  const [processedData, setProcessedData] = useState<(ImportExportRow & { added?: boolean; updated?: boolean; removed?: boolean })[] | null>(null)
   const [numberProcessed, setNumberProcessed] = useState<number>(0)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [errorMessage, setErrorMessage] = useState<string>('')
@@ -27,18 +26,16 @@ export const ImportReader = () => {
       const ownedCard = ownedCards.get(r.InternalId)
       console.log('Owned Card', ownedCard)
 
-      cardArray.push({ card_id: cardId, internal_id: r.InternalId, amount_owned: newAmount })
+      if (r.Collected) {
+        cardArray.push({ card_id: cardId, internal_id: r.InternalId, amount_owned: newAmount })
+      }
 
       // update UI
-      if (ownedCard && ownedCard.amount_owned !== newAmount) {
-        console.log('updating card', ownedCard.internal_id, newAmount)
-        ownedCard.amount_owned = Math.max(0, newAmount)
-        setProcessedData((p) => [...(p ?? []), { ...r, updated: newAmount > 0, removed: newAmount === 0 }])
-      } else if (!ownedCard && newAmount > 0) {
-        console.log('creating card', r.Id, newAmount)
-        setProcessedData((p) => [...(p ?? []), { ...r, added: true }])
+      if (i + 1 === data.length) {
+        setProgressMessage(`Done! Processed ${data.length} cards.`)
+      } else {
+        setProgressMessage(`Processed ${i + 1} of ${data.length}`)
       }
-      setProgressMessage(`Processed ${i + 1} of ${data.length}`)
       setNumberProcessed((n) => n + 1)
     }
 
@@ -95,45 +92,7 @@ export const ImportReader = () => {
         </>
       )}
       {errorMessage?.length > 0 && <p className="text-red-400 mb-2">{errorMessage}</p>}
-      {progressMessage?.length > 0 && <p className="text-gray-200 mb-2">{progressMessage}</p>}
-      {processedData && console.log('Processed Data', processedData) && (
-        <div>
-          {processedData.length > 0 ? (
-            <pre>
-              {t('dataUpdated')}
-              <table className="w-full text-left table-auto">
-                <thead>
-                  <tr>
-                    <th>{t('expansionName')}</th>
-                    <th>{t('id')}</th>
-                    <th>{t('cardName')}</th>
-                    <th>{t('statusCount')}</th>
-                  </tr>
-                </thead>
-                {processedData.map((d, index) => (
-                  <tbody key={`data-${d.Id}-${index}`}>
-                    <tr>
-                      <td>{d.Id}</td>
-                      <td>{d.CardName}</td>
-                      <td>
-                        {d.added
-                          ? t('added', { count: d.NumberOwned })
-                          : d.updated
-                            ? t('updated', { count: d.NumberOwned })
-                            : d.removed
-                              ? t('removed')
-                              : t('unknown')}
-                      </td>
-                    </tr>
-                  </tbody>
-                ))}
-              </table>
-            </pre>
-          ) : (
-            <pre>{t('noDataUpdated')}</pre>
-          )}
-        </div>
-      )}
+      {progressMessage?.length > 0 && <p className="text-gray-200 mt-4 mb-2">{progressMessage}</p>}
     </>
   )
 }
