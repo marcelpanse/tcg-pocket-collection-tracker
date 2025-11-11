@@ -90,33 +90,31 @@ function FiltersSidePanel({ children, cards, share, isPublic }: FiltersSidePanel
 
   return (
     <div className="flex flex-col h-fit gap-2">
+      <small className="flex gap-2">
+        {t('stats.summary', {
+          selected: cards.length,
+          uniquesOwned: cards.filter((card) => Boolean(card.collected)).length,
+          totalOwned,
+        })}
+        {mewCardOwned && (
+          <>
+            <Tooltip id="mewCardOwned" className="text-start max-w-72" clickable={true} />
+            <CircleAlert className="h-5 w-5" data-tooltip-id="mewCardOwned" data-tooltip-content={t('stats.mewCardOwned')} />
+          </>
+        )}
+      </small>
+      {children}
       <div className="flex flex-col mt-4 gap-2">
-        <small className="flex gap-2">
-          {t('stats.summary', {
-            selected: cards.length,
-            uniquesOwned: cards.filter((card) => Boolean(card.collected)).length,
-            totalOwned,
-          })}
-          {mewCardOwned && (
-            <>
-              <Tooltip id="mewCardOwned" className="text-start max-w-72" clickable={true} />
-              <CircleAlert className="h-5 w-5" data-tooltip-id="mewCardOwned" data-tooltip-content={t('stats.mewCardOwned')} />
-            </>
-          )}
-        </small>
-        {children}
-        <div className="flex flex-col mt-4 gap-2">
-          {share !== undefined && (
-            <Button variant="outline" onClick={onShare}>
-              {t('filters.share')}
-            </Button>
-          )}
-          {!isPublic && (
-            <Button variant="outline" onClick={() => navigate('/collection/missions')}>
-              {t('goToMissions')}
-            </Button>
-          )}
-        </div>
+        {share !== undefined && (
+          <Button variant="outline" onClick={onShare}>
+            {t('filters.share')}
+          </Button>
+        )}
+        {!isPublic && (
+          <Button variant="outline" onClick={() => navigate('/collection/missions')}>
+            {t('goToMissions')}
+          </Button>
+        )}
       </div>
     </div>
   )
@@ -195,14 +193,14 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
               <SheetTitle>Filters</SheetTitle>
             </SheetHeader>
             <FiltersSidePanel cards={filteredCards} share={share} isPublic={isPublic}>
-              <FilterPanel filters={filters} setFilters={setFilters} clearFilters={clearFilters} />
+              <FilterPanel className="flex flex-col gap-y-3" filters={filters} setFilters={setFilters} clearFilters={clearFilters} />
             </FiltersSidePanel>
           </SheetContent>
         </Sheet>
       ) : (
         <div className="w-80">
           <FiltersSidePanel cards={filteredCards} share={share} isPublic={isPublic}>
-            <FilterPanel filters={filters} setFilters={setFilters} clearFilters={clearFilters} />
+            <FilterPanel className="flex flex-col gap-y-3" filters={filters} setFilters={setFilters} clearFilters={clearFilters} />
           </FiltersSidePanel>
         </div>
       )}

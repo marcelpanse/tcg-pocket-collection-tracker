@@ -10,12 +10,13 @@ import AllTextSearchFilter from './filters/AllTextSearchFilter'
 import DeckbuildingFilter from './filters/DeckbuildingFilter'
 
 interface Props {
+  className?: string
   filters: Filters
   setFilters: (updates: Partial<Filters>) => void
   clearFilters: () => void
 }
 
-const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters }: Props) => {
+const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }: Props) => {
   const { t } = useTranslation(['pages/collection', 'common/sets', 'common/packs', 'filters'])
 
   const changeFilter = (k: keyof Filters) => (x: Filters[typeof k]) => setFilters({ [k]: x })
@@ -54,7 +55,7 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters }: Props) =>
   }
 
   return (
-    <>
+    <div className={className}>
       {filters.search !== undefined && <SearchInput setSearchValue={changeFilter('search')} />}
       {filters.allTextSearch !== undefined && <AllTextSearchFilter allTextSearch={filters.allTextSearch} setAllTextSearch={changeFilter('allTextSearch')} />}
       {filters.expansion !== undefined && (
@@ -67,7 +68,7 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters }: Props) =>
         />
       )}
       {filters.pack !== undefined && packsToShow && (
-        <TabsFilter options={packsToShow} value={filters.pack} onChange={changeFilter('pack')} show={(x) => t(x, { ns: 'common/packs' })} />
+        <TabsFilter className="block" options={packsToShow} value={filters.pack} onChange={changeFilter('pack')} show={(x) => t(x, { ns: 'common/packs' })} />
       )}
       {filters.rarity !== undefined && (
         <RarityFilter rarityFilter={filters.rarity} setRarityFilter={changeFilter('rarity')} deckbuildingMode={filters.deckbuildingMode} />
@@ -76,7 +77,13 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters }: Props) =>
         <ToggleFilter options={cardTypeOptions} value={filters.cardType} onChange={changeFilter('cardType')} show={showCardType} />
       )}
       {filters.owned !== undefined && (
-        <TabsFilter options={ownedOptions} value={filters.owned} onChange={changeFilter('owned')} show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-owned' })} />
+        <TabsFilter
+          className="block"
+          options={ownedOptions}
+          value={filters.owned}
+          onChange={changeFilter('owned')}
+          show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-owned' })}
+        />
       )}
       {filters.sortBy !== undefined && (
         <DropdownFilter
@@ -109,7 +116,7 @@ const FilterPanel: FC<Props> = ({ filters, setFilters, clearFilters }: Props) =>
       <Button variant="outline" className="!text-red-700" onClick={clearFilters}>
         {t('filters.clear')}
       </Button>
-    </>
+    </div>
   )
 }
 
