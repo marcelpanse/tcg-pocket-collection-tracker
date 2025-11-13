@@ -23,7 +23,7 @@ function Decks() {
 
   return (
     <div className="flex flex-col gap-4 px-1 sm:px-8 md:mx-auto max-w-[1360px]">
-      <SearchInput className="w-full sm:w-96" setSearchValue={setSearchValue} />
+      <SearchInput className="w-full sm:w-96" value={searchValue} setValue={setSearchValue} />
       {filteredAndSortedDecks.map((deck) => (
         <DeckItem key={deck.name} deck={deck} />
       ))}

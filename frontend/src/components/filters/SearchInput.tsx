@@ -6,10 +6,11 @@ import { cn } from '@/lib/utils'
 let _searchDebounce: number | null = null
 
 type Props = {
-  setSearchValue: (searchValue: string) => void
+  value: string
+  setValue: (searchValue: string) => void
   className?: string
 }
-const SearchInput: FC<Props> = ({ setSearchValue, className }) => {
+const SearchInput: FC<Props> = ({ value, setValue, className }) => {
   const { t } = useTranslation('search-input')
   return (
     <Input
@@ -17,12 +18,13 @@ const SearchInput: FC<Props> = ({ setSearchValue, className }) => {
       placeholder={t('search')}
       className={cn('border-2 h-[38px] bg-neutral-800', className)}
       style={{ borderColor: '#45556C' }}
+      defaultValue={value}
       onChange={(e) => {
         if (_searchDebounce) {
           window.clearTimeout(_searchDebounce)
         }
         _searchDebounce = window.setTimeout(() => {
-          setSearchValue(e.target.value)
+          setValue(e.target.value)
         }, 500)
       }}
     />

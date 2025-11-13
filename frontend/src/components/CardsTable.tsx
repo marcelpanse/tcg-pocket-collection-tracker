@@ -1,61 +1,53 @@
 import { useVirtualizer } from '@tanstack/react-virtual'
 import i18n from 'i18next'
-import { CircleAlert } from 'lucide-react'
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Tooltip } from 'react-tooltip'
-import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
 import { getExpansionById } from '@/lib/CardsDB.ts'
 import { chunk } from '@/lib/utils.ts'
 import { type Card as CardType, type Expansion, type ExpansionId, expansionIds } from '@/types'
 import { Card } from './Card.tsx'
 
 interface Props {
+  children?: ReactNode
   cards: CardType[]
-  resetScrollTrigger?: boolean
-  showStats?: boolean
-  extraOffset: number
   editable?: boolean
   groupExpansions?: boolean
 }
 
-export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, groupExpansions, editable = true }: Props) {
-  const scrollRef = useRef<HTMLDivElement>(null)
-  const { width } = useWindowDimensions()
+export function CardsTable({ children, cards, groupExpansions, editable = true }: Props) {
   const { t } = useTranslation(['common/sets', 'pages/collection'])
+
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const [width, setWidth] = useState(900)
   const [scrollContainerHeight, setScrollContainerHeight] = useState('auto')
 
-  const updateScrollContainerHeight = () => {
-    if (scrollRef.current) {
-      const headerHeight = (document.querySelector('#header') as HTMLElement | null)?.offsetHeight || 0
-      const filterbarHeight = (document.querySelector('#filterbar') as HTMLElement | null)?.offsetHeight || 0
-      const maxHeight = window.innerHeight - headerHeight - filterbarHeight - extraOffset
-      setScrollContainerHeight(`${maxHeight}px`)
-    }
-  }
-
-  useLayoutEffect(() => {
-    updateScrollContainerHeight()
-  }, [width, extraOffset])
-
   useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = 0
+    const el = scrollRef.current
+    if (!el) {
+      return
     }
-  }, [resetScrollTrigger])
+    const observer = new ResizeObserver((entries) => {
+      setWidth(entries[0].contentRect.width)
+      const headerHeight = (document.querySelector('#header') as HTMLElement | null)?.offsetHeight || 0
+      const maxHeight = window.innerHeight - headerHeight
+      setScrollContainerHeight(`${maxHeight}px`)
+    })
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
-  const aspectRatio = 1.4
-  // height of the card name + action buttons
-  const descriptionOffset = width <= 780 ? 40 : 20
-  const extraPadding = 8
-  const trueWidth = Math.min(width, 900) - extraPadding
-  const cardsPerRow = Math.max(Math.min(Math.floor(trueWidth / 170), 5), 3)
-  const cardHeight = Math.round(aspectRatio * (trueWidth / cardsPerRow)) + descriptionOffset
-  const basis = {
-    3: 'basis-1/3',
-    4: 'basis-1/4',
-    5: 'basis-1/5',
-  }[cardsPerRow] // Make sure Tailwind can see and actually generate the classes
+  const { cardsPerRow, cardHeight, basis } = useMemo(() => {
+    const aspectRatio = 1.4
+    const descriptionOffset = 40 // height of the card name + action buttons
+    const cardsPerRow = Math.max(Math.min(Math.floor(width / 170), 5), 3)
+    const cardHeight = Math.round(aspectRatio * (width / cardsPerRow)) + descriptionOffset
+    const basis = {
+      3: 'basis-1/3',
+      4: 'basis-1/4',
+      5: 'basis-1/5',
+    }[cardsPerRow] // Make sure Tailwind can see and actually generate the classes
+    return { cardsPerRow, cardHeight, basis }
+  }, [width])
 
   const rows: ({ id: string; type: 'header'; expansion: Expansion } | { id: string; type: 'row'; cards: CardType[] })[] = useMemo(
     () =>
@@ -86,75 +78,47 @@ export function CardsTable({ cards, resetScrollTrigger, showStats, extraOffset, 
     getScrollElement: () => scrollRef.current,
     count: rows.length,
     getItemKey: (index) => rows[index].id, // critical: stable keys per logical row
-    estimateSize: (index) => (rows[index].type === 'header' ? 60 : cardHeight) + 12,
+    estimateSize: (index) => (rows[index].type === 'header' ? 52 : cardHeight + 8),
     overscan: 5,
   })
 
-  const totalOwned = useMemo(() => {
-    let total = 0
-    const uniqueCardsByCardId = new Set<number>()
-    for (const card of cards) {
-      if (!uniqueCardsByCardId.has(card.internal_id)) {
-        total += card.amount_owned || 0
-        uniqueCardsByCardId.add(card.internal_id)
-      }
-    }
-    return total
-  }, [cards])
-
-  const mewCardOwned = useMemo(() => {
-    return cards.find((c) => c.card_id === 'A1-283' && (c.amount_owned || 0) > 0)
-  }, [cards])
-
   return (
-    <div ref={scrollRef} className="overflow-y-auto md:mt-4 px-4 flex flex-col" style={{ scrollbarWidth: 'none', height: scrollContainerHeight }}>
-      {showStats && (
-        <small className={`z-10 flex justify-end gap-2 text-left mb-1 md:text-right ${groupExpansions && 'md:mb-[-25px]'}`}>
-          {t('stats.summary', {
-            ns: 'pages/collection',
-            selected: cards.length,
-            uniquesOwned: cards.filter((card) => Boolean(card.collected)).length,
-            totalOwned,
+    <div ref={scrollRef} className="overflow-y-auto">
+      <div style={{ height: scrollContainerHeight }}>
+        {children}
+        {cards.length === 0 && <p className="text-xl text-center py-8">No cards to show</p>}
+        <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
+          {rowVirtualizer.getVirtualItems().map((virtualRow) => {
+            const row = rows[virtualRow.index]
+            return (
+              <div
+                key={virtualRow.key}
+                style={{ height: `${virtualRow.size}px`, transform: `translateY(${virtualRow.start}px)` }}
+                className="absolute top-0 left-0 w-full"
+              >
+                {row.type === 'header' ? (
+                  <div className="flex items-center gap-2 scroll-m-20 border-b-2 border-slate-600 pb-2 tracking-tight transition-colors">
+                    <img
+                      src={`/images/sets/${i18n.language}/${row.expansion.id}.webp`}
+                      alt={row.expansion.name}
+                      className="max-w-[60px]"
+                      onError={(e) => {
+                        ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${row.expansion.id}.webp`
+                      }}
+                    />
+                    <h2 className="text-center font-semibold sm:text-lg md:text-2xl">{t(row.expansion.name)}</h2>
+                  </div>
+                ) : (
+                  <div className="w-full flex justify-start">
+                    {row.cards.map((c) => (
+                      <Card key={c.card_id + c.amount_owned} card={c} editable={editable} className={`${basis} min-w-0 px-2`} />
+                    ))}
+                  </div>
+                )}
+              </div>
+            )
           })}
-          {mewCardOwned && (
-            <>
-              <Tooltip id="mewCardOwned" className="text-start max-w-72" clickable={true} />
-              <CircleAlert className="h-5 w-5" data-tooltip-id="mewCardOwned" data-tooltip-content={t('stats.mewCardOwned', { ns: 'pages/collection' })} />
-            </>
-          )}
-        </small>
-      )}
-      <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
-        {rowVirtualizer.getVirtualItems().map((virtualRow) => {
-          const row = rows[virtualRow.index]
-          return (
-            <div
-              key={virtualRow.key}
-              style={{ height: `${virtualRow.size}px`, transform: `translateY(${virtualRow.start}px)` }}
-              className="absolute top-0 left-0 w-full"
-            >
-              {row.type === 'header' ? (
-                <div className="flex items-center justify-start gap-2 mx-auto max-w-[900px] scroll-m-20 border-b-2 border-slate-600 pb-2 tracking-tight transition-colors first:mt-0">
-                  <img
-                    src={`/images/sets/${i18n.language}/${row.expansion.id}.webp`}
-                    alt={row.expansion.name}
-                    className="max-w-[60px]"
-                    onError={(e) => {
-                      ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${row.expansion.id}.webp`
-                    }}
-                  />
-                  <h2 className="text-center font-semibold sm:text-lg md:text-2xl">{t(row.expansion.name)}</h2>
-                </div>
-              ) : (
-                <div className="w-full flex justify-start">
-                  {row.cards.map((c) => (
-                    <Card key={c.card_id + c.amount_owned} card={c} editable={editable} className={`${basis} min-w-0 px-1 sm:px-2`} />
-                  ))}
-                </div>
-              )}
-            </div>
-          )
-        })}
+        </div>
       </div>
     </div>
   )
