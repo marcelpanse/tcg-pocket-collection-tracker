@@ -46,6 +46,20 @@ interface Props {
   share?: boolean // undefined => disable, false => open settings, true => copy link
 }
 
+const defaultFilters: Filters = {
+  search: '',
+  expansion: 'all',
+  pack: 'all',
+  cardType: [],
+  rarity: [],
+  owned: 'all',
+  sortBy: 'expansion-newest',
+  minNumber: 0,
+  maxNumber: 100,
+  deckbuildingMode: false,
+  allTextSearch: false,
+}
+
 export default function CollectionCards({ children, cards, isPublic, share }: Props) {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' }) // tailwind "md"
 
@@ -54,19 +68,7 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
   const [searchParams, setSearchParams] = useSearchParams()
 
   const filters = useMemo(() => {
-    const res: Filters = {
-      search: '',
-      expansion: 'all',
-      pack: 'all',
-      cardType: [],
-      rarity: [],
-      owned: 'all',
-      sortBy: 'expansion-newest',
-      minNumber: 0,
-      maxNumber: 100,
-      deckbuildingMode: false,
-      allTextSearch: false,
-    }
+    const res: Filters = { ...defaultFilters }
 
     const updateFilter = <K extends keyof Filters>(key: K, value: string) => {
       const parsed = filterParsers[key](value) as Filters[K]
@@ -100,6 +102,17 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
   }
 
   const clearFilters = () => setSearchParams(new URLSearchParams())
+
+  const activeFilters = useMemo(() => {
+    let res = 0
+    for (const key in filters) {
+      const k = key as keyof FiltersAll
+      if (filters[k] !== defaultFilters[k]) {
+        res++
+      }
+    }
+    return res
+  }, [filters])
 
   const filteredCards = useMemo(() => getFilteredCards(filters, cards), [filters, cards])
 
@@ -137,13 +150,12 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
         {isMobile && (
           <Button variant="outline" className="w-full mb-1" onClick={() => setIsFiltersSheetOpen(true)}>
             Filters
+            {activeFilters > 0 && ` (${activeFilters})`}
           </Button>
         )}
-        {filteredCards && (
-          <CardsTable cards={filteredCards} editable={!filters.deckbuildingMode && !isPublic} groupExpansions={filters.sortBy !== 'recent'}>
-            {children}
-          </CardsTable>
-        )}
+        <CardsTable cards={filteredCards} editable={!filters.deckbuildingMode && !isPublic} groupExpansions={filters.sortBy !== 'recent'}>
+          {children}
+        </CardsTable>
       </div>
     </div>
   )

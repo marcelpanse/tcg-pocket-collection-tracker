@@ -56,7 +56,7 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
 
   return (
     <div className={className}>
-      {filters.search !== undefined && <SearchInput setSearchValue={changeFilter('search')} />}
+      {filters.search !== undefined && <SearchInput value={filters.search} setValue={changeFilter('search')} />}
       {filters.allTextSearch !== undefined && <AllTextSearchFilter allTextSearch={filters.allTextSearch} setAllTextSearch={changeFilter('allTextSearch')} />}
       {filters.expansion !== undefined && (
         <DropdownFilter
