@@ -1,10 +1,13 @@
 import i18n from 'i18next'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
+import { Link } from 'react-router'
 import FancyCard from '@/components/FancyCard'
+import { Button } from '@/components/ui/button'
 import { getCardById } from '@/lib/CardsDB'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
 import type { Card, CollectionRow } from '@/types'
+import { serializeDeckToUrl } from './utils'
 
 export interface IDeck {
   name: string
@@ -52,12 +55,20 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
     return countInDeckSoFar <= ownedAmount
   }
 
+  const editLink = useMemo(() => {
+    const cards = deck.cards.map((card_id) => getCardById(card_id)?.internal_id).filter((id): id is number => Boolean(id))
+    const map = new Map<number, number>()
+    for (const id of cards) {
+      map.set(id, (map.get(id) ?? 0) + 1)
+    }
+    return `/decks/edit?${new URLSearchParams({ deckCards: serializeDeckToUrl(map) }).toString()}`
+  }, [deck.cards])
+
   return (
     <div key={deck.name} className="flex flex-col rounded border-1 border-neutral-700 bg-neutral-800 p-1">
-      {/* biome-ignore lint/a11y/useSemanticElements: want to manage click on all div but can't use button for easthetic reasons */}
-      <div
+      <button
         className="flex-wrap tracking-tight flex flex-col-reverse sm:flex-row gap-y-1 gap-x-4 cursor-pointer"
-        role="button"
+        type="button"
         tabIndex={0}
         aria-expanded={isOpen}
         onClick={() => setIsOpen(!isOpen)}
@@ -76,12 +87,14 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
             ))}
           </div>
         </div>
-
         <div className="flex flex-wrap items-baseline my-auto gap-x-2">
           <h2 className="text-nowrap font-semibold text-md sm:text-lg md:text-2xl">{deck.name}</h2>
           {missingCards.length > 0 && <span className="text-nowrap">{missingCards.length} missing</span>}
         </div>
-      </div>
+        <Link className="absolute right-2 sm:relative ml-auto my-auto" to={editLink}>
+          <Button onClick={(e) => e.stopPropagation()}>Copy and edit</Button>
+        </Link>
+      </button>
 
       {/* Animated collapse/expand container */}
       <div

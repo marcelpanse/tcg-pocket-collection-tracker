@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 let _searchDebounce: number | null = null
 
 type Props = {
-  value: string
+  value?: string
   setValue: (searchValue: string) => void
   className?: string
 }

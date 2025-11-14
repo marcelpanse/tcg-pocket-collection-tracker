@@ -1,5 +1,8 @@
+import { ChevronRight } from 'lucide-react'
 import { useState } from 'react'
+import { Link } from 'react-router'
 import SearchInput from '@/components/filters/SearchInput'
+import { Button } from '@/components/ui/button'
 import sampleDecks8 from '../../../assets/decks/decks-game8.json'
 import { DeckItem, type IDeck } from './DeckItem'
 
@@ -22,8 +25,16 @@ function Decks() {
     .sort((a, b) => (rankOrder[b.rank] ?? 999) - (rankOrder[a.rank] ?? 999))
 
   return (
-    <div className="flex flex-col gap-4 px-1 sm:px-8 md:mx-auto max-w-[1360px]">
-      <SearchInput className="w-full sm:w-96" value={searchValue} setValue={setSearchValue} />
+    <div className="flex flex-col gap-4 mx-auto max-w-[1360px] px-1">
+      <div className="flex flex-col sm:flex-row gap-2 sm:justify-between">
+        <Link to="/decks/edit" className="w-full sm:max-w-48">
+          <Button className="w-full">
+            New deck
+            <ChevronRight />
+          </Button>
+        </Link>
+        <SearchInput className="w-full sm:max-w-96" setValue={setSearchValue} />
+      </div>
       {filteredAndSortedDecks.map((deck) => (
         <DeckItem key={deck.name} deck={deck} />
       ))}
