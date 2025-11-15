@@ -47,7 +47,7 @@ export default function Missions() {
         />
         <TabsFilter options={ownedOptions} value={ownedFilter} onChange={setOwnedFilter} show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-owned' })} />
         <Link to="/collection">
-          <Button className="ml-auto cursor-pointer" variant="outline">
+          <Button className="ml-auto" variant="outline">
             {t('goToCollection')}
           </Button>
         </Link>
