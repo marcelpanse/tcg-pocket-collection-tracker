@@ -54,7 +54,7 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
 
   return (
     <li
-      className={`flex cursor-pointer rounded gap-1 md:gap-4 p-1 ${selectedTradeId === row.id && 'bg-green-900'} hover:bg-neutral-500`}
+      className={`flex rounded gap-1 md:gap-4 p-1 ${selectedTradeId === row.id && 'bg-green-900'} hover:bg-neutral-600 transition-colors`}
       onClick={() => onClick(row)}
     >
       {status(row)}

@@ -56,7 +56,7 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
     <div key={deck.name} className="flex flex-col rounded border-1 border-neutral-700 bg-neutral-800 p-1">
       {/* biome-ignore lint/a11y/useSemanticElements: want to manage click on all div but can't use button for easthetic reasons */}
       <div
-        className="flex-wrap tracking-tight flex flex-col-reverse sm:flex-row gap-y-1 gap-x-4 cursor-pointer"
+        className="flex-wrap tracking-tight flex flex-col-reverse sm:flex-row gap-y-1 gap-x-4"
         role="button"
         tabIndex={0}
         aria-expanded={isOpen}
@@ -94,8 +94,8 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
             const selected = cardObj ? isSelected(deck.cards, cardObj, idx) : false
             return (
               cardObj && (
-                <div className={'group flex w-fit max-w-30 flex-col items-center rounded-lg cursor-pointer'} key={`${cardObj.name}-${idx}`}>
-                  <button type="button" className="cursor-pointer" onClick={() => setSelectedCardId(cardObj.internal_id)}>
+                <div className={'group flex w-fit max-w-30 flex-col items-center rounded-lg'} key={`${cardObj.name}-${idx}`}>
+                  <button type="button" onClick={() => setSelectedCardId(cardObj.internal_id)}>
                     <FancyCard card={cardObj} selected={selected} />
                   </button>
 

@@ -39,7 +39,7 @@ export function DropdownFilter<T extends string | number>({ label, options, valu
   return (
     <label className={cn(commonClassName, 'flex items-baseline justify-between gap-5 px-3 py-1 my-auto text-neutral-400', className)}>
       <span className="text-sm">{label}</span>
-      <select value={value} onChange={(e) => onChange(e.target.value as T)} className="min-h-[27px] text-sm text-right cursor-pointer">
+      <select value={value} onChange={(e) => onChange(e.target.value as T)} className="min-h-[27px] text-sm text-right">
         {options.map((x) => (
           <option key={x} value={x}>
             {show(x)}
@@ -60,7 +60,7 @@ export function ToggleFilter<T extends string>({ options, value, onChange, class
   return (
     <ToggleGroup type="multiple" size="sm" className={cn(commonClassName, 'flex flex-wrap justify-start', className)} value={value} onValueChange={onChange}>
       {options.map((x) => (
-        <ToggleGroupItem key={x} value={x} aria-label={x} className="text-gray-400 hover:text-gray-500 px-1 cursor-pointer" asChild={asChild}>
+        <ToggleGroupItem key={x} value={x} aria-label={x} className="text-gray-400 hover:text-gray-500 px-1" asChild={asChild}>
           {show(x)}
         </ToggleGroupItem>
       ))}

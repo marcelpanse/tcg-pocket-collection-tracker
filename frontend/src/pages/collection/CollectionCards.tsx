@@ -148,7 +148,7 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
       )}
       <div className="w-full max-w-[900px]">
         {isMobile && (
-          <div className="h-9 flex overflow-hidden text-center rounded-md text-sm font-medium border shadow-sm border-neutral-700 divide-x divide-neutral-700 [&>*]:cursor-pointer [&>*]:hover:bg-neutral-600 [&>*]:hover:text-neutral-50">
+          <div className="h-9 flex overflow-hidden text-center rounded-md text-sm font-medium border shadow-sm border-neutral-700 divide-x divide-neutral-700 [&>*]:hover:bg-neutral-600 [&>*]:hover:text-neutral-50">
             <button type="button" className="flex-1" onClick={() => setIsFiltersSheetOpen(true)}>
               Filters
               {activeFilters > 0 && ` (${activeFilters})`}

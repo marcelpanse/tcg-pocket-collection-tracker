@@ -352,7 +352,7 @@ const Scan = () => {
       <button
         type="button"
         key={index}
-        className={`border rounded-md p-2 cursor-pointer transition-all duration-200 ${
+        className={`border rounded-md p-2 transition-all duration-200 ${
           card.selected ? 'border-blue-300 bg-blue-50 dark:bg-blue-900/70' : 'border-gray-200 grayscale'
         }`}
         onClick={() => handleSelect(index, !card.selected)}
@@ -411,11 +411,7 @@ const Scan = () => {
           </AlertDescription>
           <label className="flex items-baseline justify-between gap-5 px-3 py-1 my-auto text-neutral-400">
             <span className="text-sm">Which pack did you open?</span>
-            <select
-              value={selectedExpansionId}
-              onChange={(e) => setSelectedExpansionId(e.target.value)}
-              className="text-white min-h-[27px] text-sm cursor-pointer"
-            >
+            <select value={selectedExpansionId} onChange={(e) => setSelectedExpansionId(e.target.value)} className="text-white min-h-[27px] text-sm">
               {expansions.reverse().map((exp) => (
                 <option key={exp.id} value={exp.id}>
                   {t(exp.name, { ns: 'common/sets' })} ({exp.id})
@@ -454,11 +450,11 @@ const Scan = () => {
 
           <div className="flex flex-col items-center text-center mt-4">
             <div className="flex gap-4">
-              <label className="flex items-center space-x-2 cursor-pointer">
+              <label className="flex items-center space-x-2">
                 <input type="radio" name="incrementType" value="increment" checked={amount === 1} onChange={() => setAmount(1)} />
                 <span>{t('increment')}</span>
               </label>
-              <label className="flex items-center space-x-2 cursor-pointer">
+              <label className="flex items-center space-x-2">
                 <input type="radio" name="incrementType" value="decrement" checked={amount === -1} onChange={() => setAmount(-1)} />
                 <span>{t('decrement')}</span>
               </label>

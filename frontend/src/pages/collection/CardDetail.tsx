@@ -86,11 +86,9 @@ function CardDetail() {
         </SheetHeader>
         <div className="flex flex-col items-center">
           <div className="px-10 py-4 w-full">
-            <div className="cursor-pointer">
-              {card && (
-                <CardComponent className="w-full" card={{ ...card, amount_owned: row?.amount_owned || 0 }} onImageClick={() => setIsImageDialogOpen(true)} />
-              )}
-            </div>
+            {card && (
+              <CardComponent className="w-full" card={{ ...card, amount_owned: row?.amount_owned || 0 }} onImageClick={() => setIsImageDialogOpen(true)} />
+            )}
           </div>
 
           <Dialog open={isImageDialogOpen} onOpenChange={setIsImageDialogOpen}>
@@ -116,7 +114,7 @@ function CardDetail() {
               {alternatives && (
                 <Radio className="w-fit" value={String(id)} onValueChange={(x) => setId(Number(x))}>
                   {alternatives.map((x) => (
-                    <label key={x.card.card_id} className="flex items-center cursor-pointer" htmlFor={`radio-${x.card.card_id}`}>
+                    <label key={x.card.card_id} className="flex items-center" htmlFor={`radio-${x.card.card_id}`}>
                       <RadioItem id={`radio-${x.card.card_id}`} value={String(x.card.internal_id)}>
                         <RadioIndicator />
                       </RadioItem>

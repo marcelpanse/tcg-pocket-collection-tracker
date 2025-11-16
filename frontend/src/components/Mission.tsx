@@ -91,7 +91,7 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
                 const foundCard = getCardByInternalId(card.id)
                 return (
                   foundCard && (
-                    <div key={`${mission.name}__${j}`} className={'group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg cursor-pointer'}>
+                    <div key={`${mission.name}__${j}`} className={'group flex w-fit max-w-32 md:max-w-40 flex-col items-center rounded-lg'}>
                       <button type="button" onClick={() => (card.owned ? setSelectedCardId(card.id) : setSelectedMissionCardOptions(card.missionCardOptions))}>
                         <FancyCard card={foundCard} selected={card.owned} />
                       </button>

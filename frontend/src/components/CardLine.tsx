@@ -51,7 +51,7 @@ export const CardLine: FC<Props> = ({ card_id, className, amount_owned, incremen
       )}
       <button
         type="button"
-        className={cn('rounded bg-zinc-600 px-1 cursor-pointer', details)}
+        className={cn('rounded px-1 bg-zinc-600 hover:bg-zinc-500 transition-colors', details)}
         onClick={(e) => {
           e.stopPropagation()
           setSelectedCardId(card.internal_id)

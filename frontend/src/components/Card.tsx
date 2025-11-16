@@ -66,7 +66,6 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
     <div className={cn('group flex flex-col items-center rounded-lg', className)}>
       <button
         type="button"
-        className="cursor-pointer"
         onClick={() => {
           setSelectedCardId(card.internal_id)
           onImageClick?.()
