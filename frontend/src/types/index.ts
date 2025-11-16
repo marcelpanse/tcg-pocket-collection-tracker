@@ -34,7 +34,6 @@ export interface CollectionRow {
   internal_id: number
 
   collection: string[] // array of cardIds
-  collected_card_ids?: string[]
 }
 
 export interface CardAmountUpdate {
