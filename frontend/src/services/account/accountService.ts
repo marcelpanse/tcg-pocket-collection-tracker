@@ -6,7 +6,14 @@ export const getAccount = async (email: string) => {
     throw new Error('Email is required to fetch account')
   }
 
-  const { data, error } = await supabase.from('accounts').select().eq('email', email).limit(1)
+  const { data, error } = await supabase
+    .from('accounts')
+    .select(`
+    *,
+    trade_rarity_settings:trade_rarity_settings!email(*)
+  `)
+    .eq('email', email)
+    .single()
 
   if (error) {
     console.log('supa error', error)
@@ -15,21 +22,23 @@ export const getAccount = async (email: string) => {
 
   console.log('fetched account', data)
 
-  if (data.length > 0) {
-    data[0].collection_last_updated = new Date(data[0].collection_last_updated)
-    // TESTING
-    data[0].trade_rarity_settings = [
-      { rarity: '◊', to_collect: '2', to_keep: '6' },
-      { rarity: '◊◊', to_collect: '2', to_keep: '2' },
-    ]
-    return data[0] as AccountRow
+  if (data) {
+    const accountRow = data as AccountRow
+
+    for (const rarity of tradableRarities) {
+      //set default values for each rarity that we don't have a setting for yet.
+      if (!accountRow.trade_rarity_settings.find((r) => r.rarity === rarity)) {
+        accountRow.trade_rarity_settings.push({ rarity, to_collect: 1, to_keep: 1 })
+      }
+    }
+
+    return accountRow
   }
 
   // no account exists yet, create one
   return await updateAccount({
     email,
     username: '',
-    trade_rarity_settings: tradableRarities.map((rarity) => ({ rarity, to_collect: 1, to_keep: 1 })),
   } as AccountRow)
 }
 
