@@ -28,7 +28,11 @@ export const getAccount = async (email: string) => {
     for (const rarity of tradableRarities) {
       //set default values for each rarity that we don't have a setting for yet.
       if (!accountRow.trade_rarity_settings.find((r) => r.rarity === rarity)) {
-        accountRow.trade_rarity_settings.push({ rarity, to_collect: 1, to_keep: 1 })
+        accountRow.trade_rarity_settings.push({
+          rarity,
+          to_collect: accountRow.max_number_of_cards_wanted || 1,
+          to_keep: accountRow.min_number_of_cards_to_keep || 1,
+        })
       }
     }
 
