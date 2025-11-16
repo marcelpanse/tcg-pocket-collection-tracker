@@ -1,7 +1,7 @@
 import { Siren } from 'lucide-react'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useNavigate, useParams } from 'react-router'
+import { Link, useNavigate, useParams } from 'react-router'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { useAccount, usePublicAccount } from '@/services/account/useAccount.ts'
@@ -16,15 +16,10 @@ function OwnCollection() {
   if (isLoadingAccount && isLoadingCards) {
     return <p className="text-xl text-center py-8">{t('common:loading')}</p>
   }
-  return (
-    <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">
-      <CollectionCards cards={cards} isPublic={false} extraOffset={20} share={account !== undefined && account.friend_id !== '' && account.is_public} />
-    </div>
-  )
+  return <CollectionCards cards={cards} isPublic={false} share={account !== undefined && account.friend_id !== '' && account.is_public} />
 }
 
 function FriendCollection({ friendId }: { friendId: string }) {
-  const navigate = useNavigate()
   const { t } = useTranslation(['pages/collection', 'common'])
   const { data: account, isLoading: isLoadingAccount } = usePublicAccount(friendId)
   const { data: cards, isLoading: isLoadingCards } = usePublicCollection(friendId)
@@ -44,20 +39,21 @@ function FriendCollection({ friendId }: { friendId: string }) {
   }
 
   return (
-    <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">
-      <Alert className="mb-1 border-1 border-neutral-700 shadow-none">
-        <Siren className="h-4 w-4" />
-        <AlertTitle>{t('publicCollectionTitle', { username: account.username })}</AlertTitle>
-        <AlertDescription>
-          <div className="flex items-center">
-            {t('publicCollectionDescription')}
-            <Button className="mb-4" onClick={() => navigate(`/trade/${friendId}`)}>
-              {t('showPossibleTrades')}
-            </Button>
-          </div>
-        </AlertDescription>
-      </Alert>
-      <CollectionCards cards={cards} isPublic={true} extraOffset={124} />
+    <div className="flex flex-col gap-y-1">
+      <CollectionCards cards={cards} isPublic={true}>
+        <Alert className="mb-1 border-1 border-neutral-700 shadow-none">
+          <Siren className="h-4 w-4" />
+          <AlertTitle>{t('publicCollectionTitle', { username: account.username })}</AlertTitle>
+          <AlertDescription>
+            <div className="flex items-center">
+              {t('publicCollectionDescription')}
+              <Link to={`/trade/${friendId}`}>
+                <Button className="mb-4">{t('showPossibleTrades')}</Button>
+              </Link>
+            </div>
+          </AlertDescription>
+        </Alert>
+      </CollectionCards>
     </div>
   )
 }

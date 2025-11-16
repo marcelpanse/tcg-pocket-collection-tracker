@@ -39,7 +39,7 @@ export const getPublicCollection = async (friendId: string): Promise<Map<number,
     throw new Error('Friend ID is required to fetch public collection')
   }
 
-  const collection = await fetchCollectionFromAPI('public_card_amounts', 'friend_id', friendId)
+  const collection = await fetchCollectionFromAPI('public_card_amounts_collection', 'friend_id', friendId)
   return new Map(collection.map((row) => [row.internal_id, row]))
 }
 
@@ -79,12 +79,15 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
     internal_id: row.internal_id,
     updated_at: nowString,
   }))
-  const amountRows: CardAmountsRowUpdate[] = rowsToUpdate.map((row) => ({
-    email,
-    internal_id: row.internal_id,
-    amount_owned: row.amount_owned,
-    updated_at: nowString,
-  }))
+  const amountRows: CardAmountsRowUpdate[] = rowsToUpdate
+    .map((row) => ({
+      email,
+      internal_id: row.internal_id,
+      amount_owned: row.amount_owned,
+      updated_at: nowString,
+    }))
+    //deduplicate amountRows on internal_id, needed for card csv import feature
+    .filter((row, index, self) => index === self.findIndex((r) => r.internal_id === row.internal_id))
 
   //then update the card amounts
   const { error: cardAmountsError } = await supabase.from('card_amounts').upsert(amountRows)
@@ -225,11 +228,22 @@ async function fetchRange(table: string, key: string, value: string, total: numb
   }
   const rows = data as unknown as CollectionRow[]
 
-  // convert to array of card_ids instead of nested objects for easier handling in the code.
-  rows.forEach((row) => {
-    // @ts-expect-error
-    row.collection = row.collection?.map((c: { card_id: string }) => c.card_id) || []
-  })
+  // collection is either an array of objects in case of the join, or it's an array of strings in case we get it from the public view.
+  // convert them here to array of card_ids for easier handling in the code.
+  for (const row of rows) {
+    if (row.collection) {
+      row.collection =
+        row.collection
+          .filter((c) => c !== null)
+          .map((c: { card_id: string } | string) => {
+            if (typeof c === 'string') {
+              return c
+            } else {
+              return c.card_id
+            }
+          }) || []
+    }
+  }
 
   console.log('fetched range', data)
 

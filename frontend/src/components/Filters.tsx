@@ -18,7 +18,7 @@ interface PropsTabs<T> extends Props<T> {
 export function TabsFilter<T extends string>({ options, value, onChange, className, show = (x) => x }: PropsTabs<T>) {
   return (
     <Tabs value={value} onValueChange={(x) => onChange(x as T)}>
-      <TabsList className={cn(commonClassName, className)}>
+      <TabsList className={cn(commonClassName, 'flex-wrap', className)}>
         {options.map((x) => (
           <TabsTrigger key={x} value={x}>
             {show(x)}
@@ -58,7 +58,7 @@ interface PropsToggle<T> extends Props<T> {
 
 export function ToggleFilter<T extends string>({ options, value, onChange, className, show = (x) => x, asChild }: PropsToggle<T>) {
   return (
-    <ToggleGroup type="multiple" size="sm" className={cn(commonClassName, 'flex flex-wrap justify-center', className)} value={value} onValueChange={onChange}>
+    <ToggleGroup type="multiple" size="sm" className={cn(commonClassName, 'flex flex-wrap justify-start', className)} value={value} onValueChange={onChange}>
       {options.map((x) => (
         <ToggleGroupItem key={x} value={x} aria-label={x} className="text-gray-400 hover:text-gray-500 px-1 cursor-pointer" asChild={asChild}>
           {show(x)}

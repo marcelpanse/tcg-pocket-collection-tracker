@@ -40,6 +40,7 @@ Deno.serve(async (req) => {
               FROM accounts
               WHERE is_active_trading = TRUE
                 AND is_public = TRUE
+                AND collection_last_updated IS NOT NULL
               ORDER BY collection_last_updated DESC, email
               LIMIT 50
           ),

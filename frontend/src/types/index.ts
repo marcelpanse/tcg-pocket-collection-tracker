@@ -149,6 +149,7 @@ export interface ImportExportRow {
   InternalId: number
   NumberOwned: number
   Rarity: Rarity
+  Collected: boolean
 }
 
 export interface Mission {
