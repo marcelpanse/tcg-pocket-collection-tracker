@@ -36,6 +36,7 @@ export const getAccount = async (email: string) => {
       }
     }
 
+    console.log('returning account', accountRow)
     return accountRow
   }
 
@@ -92,21 +93,36 @@ export const updateAccountTradingFields = async ({
   is_active_trading,
   min_number_of_cards_to_keep,
   max_number_of_cards_wanted,
+  trade_rarity_settings,
 }: {
   email: string
   username: string
   is_active_trading: boolean
   min_number_of_cards_to_keep: number
   max_number_of_cards_wanted: number
+  trade_rarity_settings: AccountRow['trade_rarity_settings']
 }) => {
+  const { data: rarityData, error: rarityError } = await supabase
+    .from('trade_rarity_settings')
+    .upsert(trade_rarity_settings.map((r) => ({ email, ...r })))
+    .select()
+
+  if (rarityError) {
+    throw new Error(`Error updating trade rarity settings: ${rarityError.message}`)
+  }
+
   const { data, error } = await supabase
     .from('accounts')
     .upsert({ email, username, is_active_trading, min_number_of_cards_to_keep, max_number_of_cards_wanted })
     .select()
     .single()
+
   if (error) {
     throw new Error(`Error updating account: ${error.message}`)
   }
 
+  data.trade_rarity_settings = rarityData
+
+  console.log('updated account', data)
   return data as AccountRow
 }
