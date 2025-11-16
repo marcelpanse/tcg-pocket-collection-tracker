@@ -1,8 +1,8 @@
+import { Trash2 } from 'lucide-react'
 import { type ReactNode, useMemo, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { useSearchParams } from 'react-router'
 import { CardsTable } from '@/components/CardsTable.tsx'
-import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import {
   type CardTypeOption,
@@ -148,10 +148,17 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
       )}
       <div className="w-full max-w-[900px]">
         {isMobile && (
-          <Button variant="outline" className="w-full mb-1" onClick={() => setIsFiltersSheetOpen(true)}>
-            Filters
-            {activeFilters > 0 && ` (${activeFilters})`}
-          </Button>
+          <div className="h-9 flex overflow-hidden text-center rounded-md text-sm font-medium border shadow-sm border-neutral-700 divide-x divide-neutral-700 [&>*]:cursor-pointer [&>*]:hover:bg-neutral-600 [&>*]:hover:text-neutral-50">
+            <button type="button" className="flex-1" onClick={() => setIsFiltersSheetOpen(true)}>
+              Filters
+              {activeFilters > 0 && ` (${activeFilters})`}
+            </button>
+            {activeFilters > 0 && (
+              <button type="button" className="group px-2" onClick={clearFilters}>
+                <Trash2 className="stroke-neutral-200 group-hover:stroke-neutral-50" />
+              </button>
+            )}
+          </div>
         )}
         <CardsTable cards={filteredCards} editable={!filters.deckbuildingMode && !isPublic} groupExpansions={filters.sortBy !== 'recent'}>
           {children}
