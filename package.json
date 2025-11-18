@@ -37,7 +37,7 @@
   "dependencies": {
     "cheerio": "^1.1.2",
     "fs-extra": "^11.3.2",
-    "glob": "^11.0.3",
+    "glob": "^11.1.0",
     "node-fetch": "^3.3.2",
     "sharp": "0.34.5"
   }
