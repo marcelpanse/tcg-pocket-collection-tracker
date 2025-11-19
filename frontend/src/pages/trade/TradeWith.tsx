@@ -89,23 +89,24 @@ function TradeWith() {
       )}
 
       {tradableRarities.map(
-        (rarity) =>
-          friendTrades[rarity] &&
-          userTrades[rarity] && (
-            <div key={rarity} className="mt-4">
-              <h3 className="text-xl font-semibold mb-2 text-center">[ {rarity} ]</h3>
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                <div className="w-full sm:w-1/2">
-                  <h4 className="text-md font-medium mb-1 ml-2">{t('youHave')}</h4>
-                  <CardList cards={userTrades[rarity]} selected={yourCard} setSelected={setYourCard} />
-                </div>
-                <div className="w-full sm:w-1/2">
-                  <h4 className="text-md font-medium mb-1 ml-2">{t('friendHas')}</h4>
-                  <CardList cards={friendTrades[rarity]} selected={friendCard} setSelected={setFriendCard} />
-                </div>
+        (rarity) => (
+          // friendTrades[rarity] &&
+          // userTrades[rarity] && (
+          <div key={rarity} className="mt-4">
+            <h3 className="text-xl font-semibold mb-2 text-center">[ {rarity} ]</h3>
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+              <div className="w-full sm:w-1/2">
+                <h4 className="text-md font-medium mb-1 ml-2">{t('youHave')}</h4>
+                <CardList cards={userTrades[rarity] ?? []} selected={yourCard} setSelected={setYourCard} />
+              </div>
+              <div className="w-full sm:w-1/2">
+                <h4 className="text-md font-medium mb-1 ml-2">{t('friendHas')}</h4>
+                <CardList cards={friendTrades[rarity] ?? []} selected={friendCard} setSelected={setFriendCard} />
               </div>
             </div>
-          ),
+          </div>
+        ),
+        // ),
       )}
     </div>
   )

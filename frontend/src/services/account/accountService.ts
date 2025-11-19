@@ -63,10 +63,11 @@ export const getPublicAccount = async (friendId: string) => {
 
   if (data.length > 0) {
     // TESTING
-    data[0].trade_rarity_settings = [
-      { rarity: '◊', to_collect: '2', to_keep: '2' },
-      { rarity: '◊◊', to_collect: '2', to_keep: '2' },
-    ]
+    data[0].trade_rarity_settings = tradableRarities.map((r) => ({
+      rarity: r,
+      to_collect: data[0].max_number_of_cards_wanted,
+      to_keep: data[0].min_number_of_cards_to_keep,
+    }))
     return data[0] as AccountRow
   }
 
