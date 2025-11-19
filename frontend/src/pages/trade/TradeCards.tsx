@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Card as CardComponent } from '@/components/Card'
 import { CardsTable } from '@/components/CardsTable'
 import { DropdownFilter, TabsFilter, ToggleFilter } from '@/components/Filters'
 import { Button } from '@/components/ui/button.tsx'
@@ -97,7 +98,10 @@ function TradeCards() {
   }
 
   return (
-    <CardsTable cards={currentTab === 'lookingFor' ? lookingForCardsFiltered : forTradeCardsFiltered}>
+    <CardsTable
+      cards={currentTab === 'lookingFor' ? lookingForCardsFiltered : forTradeCardsFiltered}
+      render={(c) => <CardComponent card={c} editable={false} />}
+    >
       <div className="flex flex-wrap gap-2 mx-2 mb-2">
         <TabsFilter options={options} value={currentTab} onChange={setCurrentTab} show={t} />
         <ToggleFilter options={tradableRarities} value={rarityFilter} onChange={setRarityFilter} show={formatRarity} asChild />

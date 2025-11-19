@@ -3,18 +3,19 @@ import i18n from 'i18next'
 import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getExpansionById } from '@/lib/CardsDB.ts'
-import { chunk } from '@/lib/utils.ts'
+import { chunk, cn } from '@/lib/utils.ts'
 import { type Card as CardType, type Expansion, type ExpansionId, expansionIds } from '@/types'
-import { Card } from './Card.tsx'
 
 interface Props {
+  className?: string
   children?: ReactNode
   cards: CardType[]
-  editable?: boolean
   groupExpansions?: boolean
+
+  render: (card: CardType) => ReactNode
 }
 
-export function CardsTable({ children, cards, groupExpansions, editable = true }: Props) {
+export function CardsTable({ className, children, cards, groupExpansions, render }: Props) {
   const { t } = useTranslation(['common/sets', 'pages/collection'])
 
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -83,10 +84,10 @@ export function CardsTable({ children, cards, groupExpansions, editable = true }
   })
 
   return (
-    <div ref={scrollRef} className="overflow-y-auto">
+    <div ref={scrollRef} className={cn('overflow-y-auto', className)}>
+      {children}
+      {cards.length === 0 && <p className="text-xl text-center py-8">No cards to show</p>}
       <div style={{ height: scrollContainerHeight }}>
-        {children}
-        {cards.length === 0 && <p className="text-xl text-center py-8">No cards to show</p>}
         <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
           {rowVirtualizer.getVirtualItems().map((virtualRow) => {
             const row = rows[virtualRow.index]
@@ -111,7 +112,9 @@ export function CardsTable({ children, cards, groupExpansions, editable = true }
                 ) : (
                   <div className="w-full flex justify-start">
                     {row.cards.map((c) => (
-                      <Card key={c.card_id + c.amount_owned} card={c} editable={editable} className={`${basis} min-w-0 px-2`} />
+                      <div key={`${c.expansion}-${c.internal_id}-${c.amount_owned}`} className={`${basis} min-w-0 px-2`}>
+                        {render(c)}
+                      </div>
                     ))}
                   </div>
                 )}
