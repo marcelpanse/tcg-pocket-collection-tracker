@@ -13,7 +13,6 @@ import { getExpansionById } from '@/lib/CardsDB.ts'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import { useCollection } from '@/services/collection/useCollection'
 import { type CollectionRow, expansionIds, type Rarity } from '@/types'
-import { BlogOverview } from './components/BlogOverview'
 import { ExpansionOverview } from './components/ExpansionOverview'
 
 interface Pack {
@@ -146,8 +145,6 @@ function Overview() {
           </div>
         </section>
       </article>
-
-      <BlogOverview />
 
       <article className="flex mx-auto max-w-7xl px-8 pt-10 -mb-4">
         <DropdownFilter
