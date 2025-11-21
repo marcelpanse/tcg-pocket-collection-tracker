@@ -73,7 +73,7 @@ const CustomTooltipContent: FC<CustomTooltipContentProps> = (props) => {
         value: `: ${Math.round(entry.value * 10) / 10}%`,
       }
     })
-    return <ChartTooltipContent {...props} payload={newPayload} />
+    return <ChartTooltipContent {...props} payload={newPayload} className="bg-black" />
   }
   return null
 }
