@@ -121,7 +121,10 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
     } else {
       card.amount_owned = cards.get(card.internal_id)?.amount_owned ?? 0
     }
-    card.collected = cards.get(card.internal_id)?.collection.includes(card.card_id) ?? false
+
+    const ownedCard = cards.get(card.internal_id)
+    card.collected = ownedCard?.collection.includes(card.card_id) ?? false
+    card.updated_at = ownedCard?.updated_at
   }
   if (filters.minNumber) {
     const minNumber = filters.minNumber
