@@ -1,5 +1,6 @@
+EXPLAIN ANALYZE
 WITH recent_accounts AS (
-    SELECT email, friend_id, min_number_of_cards_to_keep, max_number_of_cards_wanted
+    SELECT email, friend_id
     FROM accounts
     WHERE
         is_active_trading = TRUE
@@ -9,13 +10,11 @@ WITH recent_accounts AS (
     LIMIT 50
 )
 SELECT
-    email,
     friend_id,
     SUM(LEAST(num_to_give, num_to_get)) as trade_matches
 FROM
     (
         SELECT
-            a.email,
             a.friend_id,
             -- t.rarity,
             (to_give.internal_id & 63) as rarity,
@@ -48,7 +47,7 @@ FROM
             ) as to_give
             CROSS JOIN recent_accounts a
             LEFT JOIN card_amounts ca ON ca.email = a.email AND ca.internal_id = to_give.internal_id
-            LEFT JOIN trade_rarity_settings t ON ca.email = t.email AND (to_give.internal_id & 63) = (
+            INNER JOIN trade_rarity_settings t ON t.email = a.email AND (to_give.internal_id & 63) = (
                     CASE
                         WHEN t.rarity = '◊' THEN 0
                         WHEN t.rarity = '◊◊' THEN 1
@@ -65,13 +64,12 @@ FROM
                     END
                 )
             WHERE
-                COALESCE(ca.amount_owned, 0) < COALESCE(t.to_collect, a.max_number_of_cards_wanted)
-        GROUP BY a.email, a.friend_id, (to_give.internal_id & 63)
+                COALESCE(ca.amount_owned, 0) < t.to_collect
+        GROUP BY a.friend_id, (to_give.internal_id & 63)
     )
     NATURAL JOIN
     (
         SELECT
-            a.email,
             a.friend_id,
             -- t.rarity,
             (to_get.internal_id & 63) as rarity,
@@ -100,11 +98,11 @@ FROM
                             END
                         )
                 WHERE
-                    COALESCE(ca.amount_owned, 0) < t.to_collect
+                    t.to_collect > 0 AND (ca.amount_owned IS NULL OR ca.amount_owned < t.to_collect)
             ) as to_get
             CROSS JOIN recent_accounts a
             INNER JOIN card_amounts ca ON ca.email = a.email AND ca.internal_id = to_get.internal_id
-            LEFT JOIN trade_rarity_settings t ON ca.email = t.email AND (ca.internal_id & 63) = (
+            INNER JOIN trade_rarity_settings t ON t.email = a.email AND (ca.internal_id & 63) = (
                     CASE
                         WHEN t.rarity = '◊' THEN 0
                         WHEN t.rarity = '◊◊' THEN 1
@@ -121,9 +119,9 @@ FROM
                     END
                 )
             WHERE
-                ca.amount_owned > COALESCE(t.to_keep, a.min_number_of_cards_to_keep)
-        GROUP BY a.email, a.friend_id, (to_get.internal_id & 63)
+                ca.amount_owned > t.to_keep
+        GROUP BY a.friend_id, (to_get.internal_id & 63)
     )
-GROUP BY email, friend_id
+GROUP BY friend_id
 ORDER BY trade_matches DESC
 ;
