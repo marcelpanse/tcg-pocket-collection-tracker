@@ -282,7 +282,7 @@ function getCollectionFromCache(email: string): CollectionRow[] | null {
   return null
 }
 
-function updateCollectionCache(collection: CollectionRow[], email: string, timestamp: Date) {
+function updateCollectionCache(collection: CollectionRow[], email: string, timestamp: Date | string) {
   if (!email) {
     return
   }
@@ -297,7 +297,8 @@ function updateCollectionCache(collection: CollectionRow[], email: string, times
     if (!timestamp) {
       console.trace('Timestamp is not available, cannot cache collection')
     } else {
-      localStorage.setItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`, timestamp.toISOString())
+      // TODO: sometimes timestamp is a string, but I don't know why
+      localStorage.setItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`, typeof timestamp === 'string' ? timestamp : timestamp.toISOString())
       localStorage.setItem(`${COLLECTION_CACHE_KEY}_${email}`, JSON.stringify(collection))
     }
 

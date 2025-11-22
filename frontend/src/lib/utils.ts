@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import type { Card, CollectionRow } from '@/types'
+import type { Card, CollectionRow, RaritySettingsRow } from '@/types'
 import pokemonTranslations from '../../assets/pokemon_translations.json'
 import toolTranslations from '../../assets/tools_translations.json'
 import trainerTranslations from '../../assets/trainers_translations.json'
@@ -61,19 +61,28 @@ export function getCardNameByLang(card: Card, lang: string): string {
   return card.name
 }
 
-export function getExtraCards(cards: Map<number, CollectionRow>, amount_wanted: number): number[] {
-  return Array.from(cards.values())
-    .filter((c) => c.amount_owned > amount_wanted)
-    .map((c) => c.internal_id)
+function getTradingCards(
+  collection: Map<number, CollectionRow>,
+  settings_rows: RaritySettingsRow[],
+  filter_func: (card: Card & { amount_owned: number }, settings: Omit<RaritySettingsRow, 'rarity'>) => boolean,
+) {
+  const settings_map = Object.fromEntries(settings_rows.map(({ rarity, ...rest }) => [rarity, rest]))
+  const arr = allCards
+    .map((card) => ({
+      card: { ...card, amount_owned: collection.get(card.internal_id)?.amount_owned ?? 0 },
+      settings: settings_map[card.rarity],
+    }))
+    .filter(({ card, settings }) => settings !== undefined && filter_func(card, settings))
+    .map(({ card }) => card.internal_id)
+  return [...new Set(arr)]
 }
 
-export function getNeededCards(cards: Map<number, CollectionRow>, amount_wanted: number): number[] {
-  const notNeeded = new Set(
-    Array.from(cards.values())
-      .filter((c) => c.amount_owned >= amount_wanted)
-      .map((c) => c.internal_id),
-  )
-  return allCards.map((c) => c.internal_id).filter((internal_id) => !notNeeded.has(internal_id))
+export function getExtraCards(cards: Map<number, CollectionRow>, settings_rows: RaritySettingsRow[]): number[] {
+  return getTradingCards(cards, settings_rows, (c, settings) => c.amount_owned > settings.to_keep)
+}
+
+export function getNeededCards(cards: Map<number, CollectionRow>, settings_rows: RaritySettingsRow[]): number[] {
+  return getTradingCards(cards, settings_rows, (c, settings) => c.amount_owned < settings.to_collect)
 }
 
 export function umami(event: string) {
