@@ -63,6 +63,7 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
     }
     const params = new URLSearchParams({
       deckName: deck.name,
+      deckEnergy: deck.energy.join(','),
       deckCards: serializeDeckToUrl(map),
     })
     return `/decks/edit?${params.toString()}`

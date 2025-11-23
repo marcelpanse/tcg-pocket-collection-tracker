@@ -5,13 +5,16 @@ import { useSearchParams } from 'react-router'
 import { CardLine } from '@/components/CardLine'
 import { CardsTable } from '@/components/CardsTable'
 import FancyCard from '@/components/FancyCard'
+import { ToggleFilter } from '@/components/Filters'
 import FiltersPanel from '@/components/FiltersPanel'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
+import { showCardType } from '@/components/utils'
 import { allCards, getCardByInternalId } from '@/lib/CardsDB'
 import { type Filters, type FiltersAll, getFilteredCards } from '@/lib/filters'
 import { useCollection } from '@/services/collection/useCollection'
+import { type Energy, energies } from '@/types'
 import { serializeDeckToUrl } from './utils'
 
 const defaultFilters: Filters = {
@@ -47,9 +50,14 @@ export default function DeckBuilder() {
   }, [filters])
 
   const [isDeckSheetOpen, setIsDeckSheetOpen] = useState(false) // used only on mobile
-
   const [deckName, setDeckName] = useState(() => searchParams.get('deckName') ?? 'New deck')
-
+  const [deckEnergy, setDeckEnergy] = useState<Energy[]>(() => {
+    const param = searchParams.get('deckEnergy')
+    if (!param) {
+      return []
+    }
+    return param.split(',').filter((x): x is Energy => (energies as readonly string[]).includes(x))
+  })
   const [deckCards, setDeckCards] = useState<Map<number, number>>(() => {
     const param = searchParams.get('deckCards')
     if (!param) {
@@ -101,9 +109,10 @@ export default function DeckBuilder() {
   useEffect(() => {
     setSearchParams({
       deckName,
+      deckEnergy: deckEnergy.join(','),
       deckCards: serializeDeckToUrl(deckCards),
     })
-  }, [deckCards, deckName])
+  }, [deckCards, deckName, deckEnergy])
 
   const addCard = useCallback(
     (id: number) => {
@@ -140,8 +149,9 @@ export default function DeckBuilder() {
   )
 
   const deckNode = (
-    <>
-      <Input type="text" className="mb-2" value={deckName} onChange={(e) => setDeckName(e.target.value)} />
+    <div className="flex flex-col gap-2">
+      <Input className="bg-neutral-800" type="text" value={deckName} onChange={(e) => setDeckName(e.target.value)} />
+      <ToggleFilter options={energies} value={deckEnergy} onChange={setDeckEnergy} show={showCardType} />
       <ul className="overflow-y-auto space-y-1">
         {sortedDeckCards.map(([id, amount]) => {
           const card = getCardByInternalId(id)
@@ -170,13 +180,13 @@ export default function DeckBuilder() {
           )
         })}
       </ul>
-      <p className="mt-2 text-neutral-400">
+      <p className="text-neutral-400">
         <span className={`${deckSize > 20 ? 'text-red-300' : ''}`}>{deckSize}</span>
         <span className="text-sm">/20 cards</span>
         {missingCards > 0 && <span className="text-sm"> ({missingCards} missing)</span>}
       </p>
-      <p className="mt-2 text-sm text-neutral-400">Want to save your deck? Bookmark this page!</p>
-    </>
+      <p className="text-sm text-neutral-400">Want to save your deck? Bookmark this page!</p>
+    </div>
   )
 
   return (

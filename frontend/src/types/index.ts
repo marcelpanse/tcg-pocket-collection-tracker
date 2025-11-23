@@ -8,7 +8,9 @@ export type ExpansionId = (typeof expansionIds)[number]
 export const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', '✵', '✵✵', 'Crown Rare', 'P'] as const
 export const tradableRarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '✵', '✵✵'] as const
 
-export const cardTypes = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'dragon', 'colorless', 'trainer'] as const
+export const energies = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal'] as const
+export type Energy = (typeof energies)[number]
+export const cardTypes = [...energies, 'dragon', 'colorless', 'trainer'] as const
 
 export type Rarity = (typeof rarities)[number]
 export type TradableRarity = (typeof tradableRarities)[number]
