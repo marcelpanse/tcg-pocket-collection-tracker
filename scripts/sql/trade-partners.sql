@@ -18,8 +18,7 @@ FROM
         SELECT
             a.friend_id,
             a.username,
-            -- t.rarity,
-            (to_give.internal_id & 63) as rarity,
+            t.rarity_id,
             COUNT(*) as num_to_give
         FROM
             (
@@ -27,9 +26,9 @@ FROM
                     ca.internal_id
                 FROM
                     card_amounts ca
-                        INNER JOIN trade_rarity_settings t ON t.email = 'g-kwacz@hotmail.com' AND (ca.internal_id & 63) = t.rarity_id
+                        INNER JOIN trade_rarity_settings t ON t.email = 'tcg@example.com' AND (ca.internal_id & 63) = t.rarity_id
                 WHERE
-                    ca.email = 'g-kwacz@hotmail.com'
+                    ca.email = 'tcg@example.com'
                   AND ca.amount_owned > t.to_keep
             ) as to_give
                 CROSS JOIN recent_accounts a
@@ -37,15 +36,14 @@ FROM
                 INNER JOIN trade_rarity_settings t ON t.email = a.email AND (to_give.internal_id & 63) = t.rarity_id
         WHERE
             COALESCE(ca.amount_owned, 0) < t.to_collect
-        GROUP BY a.friend_id, username, (to_give.internal_id & 63)
+        GROUP BY a.friend_id, username, t.rarity_id
     )
         NATURAL JOIN
     (
         SELECT
             a.friend_id,
             a.username,
-            -- t.rarity,
-            (to_get.internal_id & 63) as rarity,
+            t.rarity_id,
             COUNT(*) as num_to_get
         FROM
             (
@@ -53,8 +51,8 @@ FROM
                     cl.internal_id
                 FROM
                     cards_list cl
-                        LEFT JOIN card_amounts ca ON ca.email = 'g-kwacz@hotmail.com' AND cl.internal_id = ca.internal_id
-                        INNER JOIN trade_rarity_settings t ON t.email = 'g-kwacz@hotmail.com' AND (cl.internal_id & 63) = t.rarity_id
+                        LEFT JOIN card_amounts ca ON ca.email = 'tcg@example.com' AND cl.internal_id = ca.internal_id
+                        INNER JOIN trade_rarity_settings t ON t.email = 'tcg@example.com' AND (cl.internal_id & 63) = t.rarity_id
                 WHERE
                     t.to_collect > 0 AND (ca.amount_owned IS NULL OR ca.amount_owned < t.to_collect)
             ) as to_get
@@ -63,7 +61,7 @@ FROM
                 INNER JOIN trade_rarity_settings t ON t.email = a.email AND (ca.internal_id & 63) = t.rarity_id
         WHERE
             ca.amount_owned > t.to_keep
-        GROUP BY a.friend_id, username, (to_get.internal_id & 63)
+        GROUP BY a.friend_id, username, t.rarity_id
     )
 GROUP BY friend_id, username
 ORDER BY trade_matches DESC
