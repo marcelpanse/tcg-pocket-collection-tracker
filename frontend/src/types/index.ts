@@ -141,6 +141,7 @@ export interface Card {
 
   amount_owned?: number // calculated from the card amounts table
   collected?: boolean // calculated from the card amounts table
+  updated_at?: string // calculated from the card amounts table
 }
 
 export interface ImportExportRow {
