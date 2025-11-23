@@ -7,6 +7,7 @@ import { CardsTable } from '@/components/CardsTable'
 import FancyCard from '@/components/FancyCard'
 import FiltersPanel from '@/components/FiltersPanel'
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { allCards, getCardByInternalId } from '@/lib/CardsDB'
 import { type Filters, type FiltersAll, getFilteredCards } from '@/lib/filters'
@@ -46,6 +47,9 @@ export default function DeckBuilder() {
   }, [filters])
 
   const [isDeckSheetOpen, setIsDeckSheetOpen] = useState(false) // used only on mobile
+
+  const [deckName, setDeckName] = useState(() => searchParams.get('deckName') ?? 'New deck')
+
   const [deckCards, setDeckCards] = useState<Map<number, number>>(() => {
     const param = searchParams.get('deckCards')
     if (!param) {
@@ -84,8 +88,11 @@ export default function DeckBuilder() {
   )
 
   useEffect(() => {
-    setSearchParams({ deckCards: serializeDeckToUrl(deckCards) })
-  }, [deckCards])
+    setSearchParams({
+      deckName,
+      deckCards: serializeDeckToUrl(deckCards),
+    })
+  }, [deckCards, deckName])
 
   const addCard = useCallback(
     (id: number) => {
@@ -123,6 +130,7 @@ export default function DeckBuilder() {
 
   const deckNode = (
     <>
+      <Input type="text" className="mb-2" value={deckName} onChange={(e) => setDeckName(e.target.value)} />
       <ul className="overflow-y-auto space-y-1">
         {sortedDeckCards.map(([id, amount]) => {
           const card = getCardByInternalId(id)
@@ -151,12 +159,12 @@ export default function DeckBuilder() {
           )
         })}
       </ul>
-      <p className="mt-2">
+      <p className="mt-2 text-neutral-400">
         <span className={`${deckSize > 20 ? 'text-red-300' : ''}`}>{deckSize}</span>
         <span className="text-sm">/20 cards</span>
         {missingCards > 0 && <span className="text-sm"> ({missingCards} missing)</span>}
       </p>
-      <p className="mt-2 text-sm">Want to save your deck? Bookmark this page!</p>
+      <p className="mt-2 text-sm text-neutral-400">Want to save your deck? Bookmark this page!</p>
     </>
   )
 

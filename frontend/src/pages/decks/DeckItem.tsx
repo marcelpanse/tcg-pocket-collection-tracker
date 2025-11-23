@@ -61,7 +61,11 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
     for (const id of cards) {
       map.set(id, (map.get(id) ?? 0) + 1)
     }
-    return `/decks/edit?${new URLSearchParams({ deckCards: serializeDeckToUrl(map) }).toString()}`
+    const params = new URLSearchParams({
+      deckName: deck.name,
+      deckCards: serializeDeckToUrl(map),
+    })
+    return `/decks/edit?${params.toString()}`
   }, [deck.cards])
 
   return (
