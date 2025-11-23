@@ -69,15 +69,15 @@ const DonationPopup = () => {
       className="border border-neutral-700 p-4 shadow-lg bg-gray-900 rounded-lg"
     >
       <div className="flex justify-between items-start mb-2">
-        <h3 className="font-medium">Enjoying the site? Your support helps keep it running!</h3>
+        <h3 className="font-medium">We’d Like to Stay Ad-Free</h3>
         <button onClick={handleDismiss} className="text-neutral-400 hover:text-neutral-100" aria-label="Close" type="button">
           <X size={18} />
         </button>
       </div>
 
       <div className="flex justify-between items-center">
-        <p className="mb-4">
-          This site is a passion project, and your generous donations cover the costs of hosting and maintenance. Thank you for your consideration!
+        <p className="mb-4 mr-2">
+          Rising hosting costs make it harder to keep this site running without ads. If you can, please chip in. Every donation helps keep the experience clean.
         </p>
         <Button asChild variant="default">
           <a href="https://buymeacoffee.com/pocketcollectiontracker" target="_blank" rel="noopener noreferrer">

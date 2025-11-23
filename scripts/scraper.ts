@@ -82,6 +82,7 @@ const rarityOverrides: Partial<Record<ExpansionId, { rarity: Rarity; start: numb
     { rarity: '✵', start: 287, end: 316 },
     { rarity: '✵✵', start: 317, end: 328 },
   ],
+  'P-B': [{ rarity: 'P', start: 0, end: 999 }],
 }
 
 /* Helper Functions */

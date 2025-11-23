@@ -20738,7 +20738,7 @@
     "pack": "arceuspack",
     "alternate_versions": [
       263744,
-      12648516
+      12648528
     ],
     "artist": "MAHOU",
     "internal_id": 263744
@@ -68506,7 +68506,7 @@
     "pack": "megablazikenpack",
     "alternate_versions": [
       788544,
-      12648898
+      12648912
     ],
     "artist": "GOSSAN",
     "internal_id": 788544
@@ -69007,7 +69007,7 @@
     "pack": "megablazikenpack",
     "alternate_versions": [
       789504,
-      12648962
+      12648976
     ],
     "artist": "nagimiso",
     "internal_id": 789504
@@ -70364,7 +70364,8 @@
     "pack": "megablazikenpack",
     "alternate_versions": [
       792066,
-      801604
+      801604,
+      12648720
     ],
     "artist": "Ryota Murayama",
     "internal_id": 792066
@@ -71022,7 +71023,7 @@
     "pack": "megaaltariapack",
     "alternate_versions": [
       793345,
-      12649090
+      12649104
     ],
     "artist": "Yumi",
     "internal_id": 793345
@@ -72452,7 +72453,8 @@
     "alternate_versions": [
       796099,
       803205,
-      804357
+      804357,
+      12649040
     ],
     "artist": "PLANETA CG Works",
     "internal_id": 796099
@@ -73446,7 +73448,8 @@
     "set_details": "megarising(b1)",
     "pack": "everypack",
     "alternate_versions": [
-      797952
+      797952,
+      12648784
     ],
     "artist": "kodama",
     "internal_id": 797952
@@ -73584,7 +73587,7 @@
     "pack": "megagyaradospack",
     "alternate_versions": [
       798208,
-      12649154
+      12649168
     ],
     "artist": "MAHOU",
     "internal_id": 798208
@@ -75275,7 +75278,8 @@
     "pack": "megablazikenpack",
     "alternate_versions": [
       792066,
-      801604
+      801604,
+      12648720
     ],
     "artist": "GIDORA",
     "internal_id": 801604
@@ -76167,7 +76171,8 @@
     "alternate_versions": [
       796099,
       803205,
-      804357
+      804357,
+      12649040
     ],
     "artist": "PLANETA CG Works",
     "internal_id": 803205
@@ -76773,7 +76778,8 @@
     "alternate_versions": [
       796099,
       803205,
-      804357
+      804357,
+      12649040
     ],
     "artist": "kawayoo",
     "internal_id": 804357
@@ -82729,17 +82735,17 @@
     ],
     "weakness": "fighting",
     "retreat": 1,
-    "rarity": "☆",
+    "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-b",
     "pack": "everypack",
     "alternate_versions": [
       263744,
-      12648516
+      12648528
     ],
     "artist": "You Iribi",
-    "internal_id": 12648516
+    "internal_id": 12648528
   },
   {
     "expansion": "P-B",
@@ -82762,16 +82768,16 @@
     ],
     "weakness": "fire",
     "retreat": 1,
-    "rarity": "◊",
+    "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-b",
     "pack": "everypack",
     "alternate_versions": [
-      12648576
+      12648592
     ],
     "artist": "Yukiko Baba",
-    "internal_id": 12648576
+    "internal_id": 12648592
   },
   {
     "expansion": "P-B",
@@ -82795,16 +82801,16 @@
     ],
     "weakness": "lightning",
     "retreat": 1,
-    "rarity": "◊",
+    "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-b",
     "pack": "everypack",
     "alternate_versions": [
-      12648640
+      12648656
     ],
     "artist": "Kyoko Umemoto",
-    "internal_id": 12648640
+    "internal_id": 12648656
   },
   {
     "expansion": "P-B",
@@ -82828,17 +82834,18 @@
     ],
     "weakness": "fighting",
     "retreat": 0,
-    "rarity": "◊◊◊",
+    "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-b",
     "pack": "everypack",
     "alternate_versions": [
       792066,
-      801604
+      801604,
+      12648720
     ],
     "artist": "Hasuno",
-    "internal_id": 792066
+    "internal_id": 12648720
   },
   {
     "expansion": "P-B",
@@ -82862,16 +82869,17 @@
     ],
     "weakness": "lightning",
     "retreat": 1,
-    "rarity": "◊",
+    "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-b",
     "pack": "everypack",
     "alternate_versions": [
-      797952
+      797952,
+      12648784
     ],
     "artist": "Tomokazu Komiya",
-    "internal_id": 797952
+    "internal_id": 12648784
   },
   {
     "expansion": "P-B",
@@ -82896,16 +82904,16 @@
     ],
     "weakness": "lightning",
     "retreat": 2,
-    "rarity": "◊◊◊◊",
+    "rarity": "P",
     "ex": true,
     "baby": false,
     "set_details": "promo-b",
     "pack": "everypack",
     "alternate_versions": [
-      12648835
+      12648848
     ],
     "artist": "PLANETA CG Works",
-    "internal_id": 12648835
+    "internal_id": 12648848
   },
   {
     "expansion": "P-B",
@@ -82928,17 +82936,17 @@
     ],
     "weakness": "water",
     "retreat": 1,
-    "rarity": "◊◊◊",
+    "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-b",
     "pack": "everypack",
     "alternate_versions": [
       788544,
-      12648898
+      12648912
     ],
     "artist": "MAHOU",
-    "internal_id": 12648898
+    "internal_id": 12648912
   },
   {
     "expansion": "P-B",
@@ -82961,17 +82969,17 @@
     ],
     "weakness": "lightning",
     "retreat": 1,
-    "rarity": "◊◊◊",
+    "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-b",
     "pack": "everypack",
     "alternate_versions": [
       789504,
-      12648962
+      12648976
     ],
     "artist": "OKACHEKE",
-    "internal_id": 12648962
+    "internal_id": 12648976
   },
   {
     "expansion": "P-B",
@@ -82995,7 +83003,7 @@
     ],
     "weakness": "grass",
     "retreat": 1,
-    "rarity": "◊◊◊◊",
+    "rarity": "P",
     "ex": true,
     "baby": false,
     "set_details": "promo-b",
@@ -83003,10 +83011,11 @@
     "alternate_versions": [
       796099,
       803205,
-      804357
+      804357,
+      12649040
     ],
     "artist": "PLANETA CG Works",
-    "internal_id": 796099
+    "internal_id": 12649040
   },
   {
     "expansion": "P-B",
@@ -83030,17 +83039,17 @@
     ],
     "weakness": "darkness",
     "retreat": 2,
-    "rarity": "◊◊◊",
+    "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-b",
     "pack": "everypack",
     "alternate_versions": [
       793345,
-      12649090
+      12649104
     ],
     "artist": "Kyoko Umemoto",
-    "internal_id": 12649090
+    "internal_id": 12649104
   },
   {
     "expansion": "P-B",
@@ -83067,16 +83076,16 @@
     },
     "weakness": "fighting",
     "retreat": 1,
-    "rarity": "◊◊◊",
+    "rarity": "P",
     "ex": false,
     "baby": false,
     "set_details": "promo-b",
     "pack": "everypack",
     "alternate_versions": [
       798208,
-      12649154
+      12649168
     ],
     "artist": "Aya Kusube",
-    "internal_id": 12649154
+    "internal_id": 12649168
   }
 ]
