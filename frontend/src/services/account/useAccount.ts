@@ -46,11 +46,13 @@ export function useUpdateAccountTradingFields() {
       is_active_trading,
       min_number_of_cards_to_keep,
       max_number_of_cards_wanted,
+      trade_rarity_settings,
     }: {
       username: string
       is_active_trading: boolean
       min_number_of_cards_to_keep: number
       max_number_of_cards_wanted: number
+      trade_rarity_settings: AccountRow['trade_rarity_settings']
     }) => {
       if (!email) {
         throw new Error('Email is required to update account')
@@ -65,6 +67,7 @@ export function useUpdateAccountTradingFields() {
         is_active_trading,
         min_number_of_cards_to_keep,
         max_number_of_cards_wanted,
+        trade_rarity_settings,
       })
     },
     onSuccess: (updatedAccount) => {
