@@ -83,7 +83,18 @@ export default function DeckBuilder() {
   }, [deckCards])
 
   const missingCards = useMemo(
-    () => (ownedCards ? sortedDeckCards.reduce((acc, [id, amount]) => acc + Math.max(0, amount - (ownedCards.get(id)?.amount_owned ?? 0)), 0) : 0),
+    () =>
+      ownedCards
+        ? sortedDeckCards.reduce(
+            (acc, [id, amount]) =>
+              acc +
+              Math.max(
+                0,
+                amount - (getCardByInternalId(id)?.alternate_versions?.reduce((acc2, id2) => acc2 + (ownedCards.get(id2)?.amount_owned ?? 0), 0) ?? 0),
+              ),
+            0,
+          )
+        : 0,
     [sortedDeckCards, ownedCards],
   )
 
