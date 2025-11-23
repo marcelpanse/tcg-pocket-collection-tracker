@@ -45,7 +45,7 @@ function TradeWith() {
   }
 
   if (friendAccountLoading || friendCardsLoading) {
-    return <p className="text-xl text-center py-8">{t('common:loading')}...</p>
+    return <p className="text-xl text-center py-8">{t('common:loading')}</p>
   }
 
   if (!friendAccount?.is_active_trading) {
@@ -88,26 +88,29 @@ function TradeWith() {
         </div>
       )}
 
-      {tradableRarities.map(
-        (rarity) => (
-          // friendTrades[rarity] &&
-          // userTrades[rarity] && (
-          <div key={rarity} className="mt-4">
-            <h3 className="text-xl font-semibold mb-2 text-center">[ {rarity} ]</h3>
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-              <div className="w-full sm:w-1/2">
-                <h4 className="text-md font-medium mb-1 ml-2">{t('youHave')}</h4>
-                <CardList cards={userTrades[rarity] ?? []} selected={yourCard} setSelected={setYourCard} />
-              </div>
-              <div className="w-full sm:w-1/2">
-                <h4 className="text-md font-medium mb-1 ml-2">{t('friendHas')}</h4>
-                <CardList cards={friendTrades[rarity] ?? []} selected={friendCard} setSelected={setFriendCard} />
-              </div>
+      {tradableRarities.map((rarity) => (
+        <div key={rarity} className="mt-4">
+          <h3 className="text-xl font-semibold mb-2 text-center">[ {rarity} ]</h3>
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+            <div className="w-full sm:w-1/2">
+              <h4 className="text-md font-medium mb-1 ml-2">{t('youHave')}</h4>
+              {userTrades[rarity] ? (
+                <CardList cards={userTrades[rarity]} selected={yourCard} setSelected={setYourCard} />
+              ) : (
+                <div className="text-center text-neutral-500 rounded-lg border-1 border-neutral-700 border-solid p-2">No cards to trade</div>
+              )}
+            </div>
+            <div className="w-full sm:w-1/2">
+              <h4 className="text-md font-medium mb-1 ml-2">{t('friendHas')}</h4>
+              {friendTrades[rarity] ? (
+                <CardList cards={friendTrades[rarity]} selected={friendCard} setSelected={setFriendCard} />
+              ) : (
+                <div className="text-center text-neutral-500  rounded-lg border-1 border-neutral-700 border-solid p-2">No cards to trade</div>
+              )}
             </div>
           </div>
-        ),
-        // ),
-      )}
+        </div>
+      ))}
     </div>
   )
 }
