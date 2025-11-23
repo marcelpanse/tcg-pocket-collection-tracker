@@ -36,72 +36,73 @@ Deno.serve(async (req) => {
     const tradingPartners = await connection.queryObject<RowType>(
       `
           WITH recent_accounts AS (
-              SELECT email, min_number_of_cards_to_keep, max_number_of_cards_wanted
+              SELECT email, friend_id, username
               FROM accounts
-              WHERE is_active_trading = TRUE
+              WHERE
+                  is_active_trading = TRUE
                 AND is_public = TRUE
                 AND collection_last_updated IS NOT NULL
-              ORDER BY collection_last_updated DESC, email
+              ORDER BY collection_last_updated DESC
               LIMIT 50
-          ),
-               your_wanted AS (
-                   SELECT c.internal_id
-                   FROM cards_list c
-                            LEFT JOIN card_amounts c2
-                                      ON c.internal_id = c2.internal_id AND c2.email = $1
-                   WHERE c.tradable = TRUE 
-                     AND (c2.amount_owned IS NULL OR c2.amount_owned < $2)
-               ),
-               you_have AS (
-                   SELECT c.internal_id
-                   FROM card_amounts c
-                   WHERE c.email = $1
-                     AND c.amount_owned > $3
-               ),
-               partner_wanted AS (
-                   SELECT a.email, c.internal_id
-                   FROM recent_accounts a
-                            CROSS JOIN cards_list c
-                            LEFT JOIN card_amounts c2
-                                      ON c.internal_id = c2.internal_id AND c2.email = a.email
-                   WHERE c.tradable = TRUE 
-                       AND (c2.amount_owned IS NULL OR c2.amount_owned < a.max_number_of_cards_wanted)
-               ),
-               partner_has AS (
-                   SELECT c.email, c.internal_id
-                   FROM card_amounts c
-                            JOIN recent_accounts ra ON ra.email = c.email
-                            JOIN accounts a ON a.email = c.email
-                   WHERE c.amount_owned > a.min_number_of_cards_to_keep
-               ),
-               matches AS (
-                   -- What you can get from them
-                   SELECT ph.email AS partner_email, COUNT(ph.internal_id) AS they_can_give
-                   FROM partner_has ph
-                            JOIN your_wanted yw ON ph.internal_id = yw.internal_id
-                   GROUP BY ph.email
-               ),
-               reverse_matches AS (
-                   -- What they can get from you
-                   SELECT pw.email AS partner_email, COUNT(pw.internal_id) AS you_can_give
-                   FROM partner_wanted pw
-                            JOIN you_have yh ON pw.internal_id = yh.internal_id
-                   GROUP BY pw.email
-               )
+          )
           SELECT
-              a.friend_id,
-              a.username,
-              LEAST(COALESCE(m.they_can_give,0), COALESCE(rm.you_can_give,0)) AS matched_cards_amount
-          FROM accounts a
-                   JOIN recent_accounts ra ON ra.email = a.email
-                   LEFT JOIN matches m ON m.partner_email = a.email
-                   LEFT JOIN reverse_matches rm ON rm.partner_email = a.email
-          WHERE a.email != $1
-            AND COALESCE(m.they_can_give,0) > 0
-            AND COALESCE(rm.you_can_give,0) > 0
-          ORDER BY matched_cards_amount DESC;
+              friend_id,
+              username,
+              SUM(LEAST(num_to_give, num_to_get)) as trade_matches
+          FROM
+              (
+                  SELECT
+                      a.friend_id,
+                      a.username,
+                      (to_give.internal_id & 63) as rarity,
+                      COUNT(*) as num_to_give
+                  FROM
+                      (
+                          SELECT
+                              ca.internal_id
+                          FROM
+                              card_amounts ca
+                                  INNER JOIN trade_rarity_settings t ON t.email = $1 AND (ca.internal_id & 63) = t.rarity_id
+                          WHERE
+                              ca.email = $1
+                            AND ca.amount_owned > t.to_keep
+                      ) as to_give
+                          CROSS JOIN recent_accounts a
+                          LEFT JOIN card_amounts ca ON ca.email = a.email AND ca.internal_id = to_give.internal_id
+                          INNER JOIN trade_rarity_settings t ON t.email = a.email AND (to_give.internal_id & 63) = t.rarity_id
+                  WHERE
+                      COALESCE(ca.amount_owned, 0) < t.to_collect
+                  GROUP BY a.friend_id, username, (to_give.internal_id & 63)
+              )
+                  NATURAL JOIN
+              (
+                  SELECT
+                      a.friend_id,
+                      a.username,
+                      (to_get.internal_id & 63) as rarity,
+                      COUNT(*) as num_to_get
+                  FROM
+                      (
+                          SELECT
+                              cl.internal_id
+                          FROM
+                              cards_list cl
+                                  LEFT JOIN card_amounts ca ON ca.email = $1 AND cl.internal_id = ca.internal_id
+                                  INNER JOIN trade_rarity_settings t ON t.email = $1 AND (cl.internal_id & 63) = t.rarity_id
+                          WHERE
+                              t.to_collect > 0 AND (ca.amount_owned IS NULL OR ca.amount_owned < t.to_collect)
+                      ) as to_get
+                          CROSS JOIN recent_accounts a
+                          INNER JOIN card_amounts ca ON ca.email = a.email AND ca.internal_id = to_get.internal_id
+                          INNER JOIN trade_rarity_settings t ON t.email = a.email AND (ca.internal_id & 63) = t.rarity_id
+                  WHERE
+                      ca.amount_owned > t.to_keep
+                  GROUP BY a.friend_id, username, (to_get.internal_id & 63)
+              )
+          GROUP BY friend_id, username
+          ORDER BY trade_matches DESC;
 `,
-      [email, maxNumberOfCardsWanted, minNumberOfCardsToKeep],
+      [email],
     )
 
     const serializedRows = tradingPartners.rows.map((row) => ({
