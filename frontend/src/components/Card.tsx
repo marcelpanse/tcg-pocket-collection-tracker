@@ -23,12 +23,13 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
   const { setSelectedCardId } = useSelectedCard()
   const updateCardsMutation = useUpdateCards()
   const deleteCardMutation = useDeleteCard()
-  const [amountOwned, setAmountOwned] = useState(card.amount_owned || 0)
-  const [inputValue, setInputValue] = useState<number | undefined>(undefined)
+  const [amountOwned, setAmountOwned] = useState(card.amount_owned ?? 0)
 
   useEffect(() => {
-    setInputValue(amountOwned)
-  }, [amountOwned])
+    if (card.amount_owned !== undefined) {
+      setAmountOwned(card.amount_owned)
+    }
+  }, [card.amount_owned])
 
   const updateCardCount = useCallback(
     async (newAmountIn: number) => {
@@ -57,12 +58,12 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
   }, [updateCardCount, setIsLoginDialogOpen])
 
   const handleMinusButtonClick = useCallback(async () => {
-    if (card.collected && inputValue === 0) {
+    if (card.collected && amountOwned === 0) {
       deleteCardMutation.mutate({ cardId: card.card_id })
     } else {
       await removeCard()
     }
-  }, [card.collected, card.card_id, inputValue, deleteCardMutation, removeCard])
+  }, [card.collected, card.card_id, amountOwned, deleteCardMutation, removeCard])
 
   const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)
@@ -101,16 +102,16 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
               onClick={handleMinusButtonClick}
               className="rounded-full"
               tabIndex={-1}
-              disabled={!card.collected && inputValue === 0}
-              title={inputValue === 0 ? 'Remove from card dex' : 'Decrease amount'}
+              disabled={!card.collected && amountOwned === 0}
+              title={amountOwned === 0 ? 'Remove from card dex' : 'Decrease amount'}
             >
-              {card.collected && inputValue === 0 ? <Trash2Icon /> : <MinusIcon />}
+              {card.collected && amountOwned === 0 ? <Trash2Icon /> : <MinusIcon />}
             </Button>
             <input
               min="0"
               max="99"
               type="text"
-              value={inputValue}
+              value={amountOwned}
               onChange={handleInputChange}
               className="w-7 text-center border-none rounded"
               onFocus={(event) => event.target.select()}

@@ -54,22 +54,10 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   const now = new Date()
   const nowString = now.toISOString()
 
-  // First fetch the current account data
-  const { data: account, error: accountError } = await supabase.from('accounts').select().eq('email', email).single()
+  const { data: account, error: accountError } = await supabase.from('accounts').update({ collection_last_updated: now }).eq('email', email).select().single()
 
   if (accountError) {
     throw new Error(`Error fetching account: ${accountError.message}`)
-  }
-
-  // Update account's collection_last_updated timestamp
-  const { error: accountUpdateError, data: updatedAccount } = await supabase
-    .from('accounts')
-    .upsert({ ...account, collection_last_updated: now })
-    .select()
-    .single()
-
-  if (accountUpdateError) {
-    throw new Error(`Error updating account timestamp: ${accountUpdateError.message}`)
   }
 
   // Update collection records
@@ -133,7 +121,7 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
 
   return {
     cards: new Map(latestFromCache.map((row) => [row.internal_id, row])),
-    account: updatedAccount as AccountRow,
+    account: account as AccountRow,
   }
 }
 

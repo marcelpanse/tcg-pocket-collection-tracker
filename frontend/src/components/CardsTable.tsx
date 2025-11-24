@@ -111,7 +111,7 @@ export function CardsTable({ children, cards, groupExpansions, editable = true }
                 ) : (
                   <div className="w-full flex justify-start">
                     {row.cards.map((c) => (
-                      <Card key={c.card_id + c.amount_owned} card={c} editable={editable} className={`${basis} min-w-0 px-2`} />
+                      <Card key={c.card_id} card={c} editable={editable} className={`${basis} min-w-0 px-2`} />
                     ))}
                   </div>
                 )}
