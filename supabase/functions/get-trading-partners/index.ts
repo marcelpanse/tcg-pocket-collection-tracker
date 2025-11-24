@@ -20,10 +20,10 @@ Deno.serve(async (req) => {
 
   const connection = await pool.connect()
   try {
-    const { email, maxNumberOfCardsWanted, minNumberOfCardsToKeep } = await req.json()
+    const { email } = await req.json()
 
-    if (!email || !maxNumberOfCardsWanted || !minNumberOfCardsToKeep) {
-      return new Response('Missing email or maxNumberOfCardsWanted', { status: 400 })
+    if (!email) {
+      return new Response('Missing email', { status: 400 })
     }
 
     console.log('fetching trading partners')
