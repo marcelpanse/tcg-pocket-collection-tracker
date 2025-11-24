@@ -1,10 +1,9 @@
 import i18n from 'i18next'
 import { MinusIcon, PlusIcon, Trash2Icon } from 'lucide-react'
-import { useCallback, useEffect, useState } from 'react'
+import { startTransition, useCallback, useOptimistic } from 'react'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { cn, getCardNameByLang } from '@/lib/utils'
-import { useLoginDialog } from '@/services/auth/useAuth'
 import { useDeleteCard, useSelectedCard, useUpdateCards } from '@/services/collection/useCollection'
 import type { Card as CardType } from '@/types'
 
@@ -15,60 +14,37 @@ interface CardProps {
   onImageClick?: () => void
 }
 
-// keep track of the debounce timeouts for each card
-const _inputDebounce: Record<string, number | null> = {}
-
 export function Card({ card, onImageClick, className, editable = true }: CardProps) {
-  const { setIsLoginDialogOpen } = useLoginDialog()
   const { setSelectedCardId } = useSelectedCard()
   const updateCardsMutation = useUpdateCards()
   const deleteCardMutation = useDeleteCard()
-  const [amountOwned, setAmountOwned] = useState(card.amount_owned ?? 0)
+  const [amountOwned, setAmountOwned] = useOptimistic(card.amount_owned ?? 0, (_prev, curr: number) => curr)
 
-  useEffect(() => {
-    if (card.amount_owned !== undefined) {
-      setAmountOwned(card.amount_owned)
-    }
-  }, [card.amount_owned])
-
-  const updateCardCount = useCallback(
-    async (newAmountIn: number) => {
-      const card_id = card.card_id
-      const newAmount = Math.max(0, newAmountIn)
-      setAmountOwned(newAmount)
-
-      if (_inputDebounce[card_id]) {
-        window.clearTimeout(_inputDebounce[card_id])
-      }
-      _inputDebounce[card_id] = window.setTimeout(async () => {
-        updateCardsMutation.mutate({
-          updates: [{ card_id, internal_id: card.internal_id, amount_owned: newAmount }],
+  const updateCardCount = (x: number) => {
+    setAmountOwned(x)
+    startTransition(async () => {
+      try {
+        await updateCardsMutation.mutateAsync({
+          updates: [{ card_id: card.card_id, internal_id: card.internal_id, amount_owned: x }],
         })
-      }, 1000)
-    },
-    [amountOwned, updateCardsMutation, card.card_id],
-  )
+      } catch (error) {
+        console.log('Failed updating card count:', error)
+      }
+    })
+  }
 
-  const addCard = useCallback(async () => {
-    await updateCardCount(amountOwned + 1)
-  }, [updateCardCount, setIsLoginDialogOpen])
-
-  const removeCard = useCallback(async () => {
-    await updateCardCount(amountOwned - 1)
-  }, [updateCardCount, setIsLoginDialogOpen])
-
-  const handleMinusButtonClick = useCallback(async () => {
+  const handleMinusButtonClick = useCallback(() => {
     if (card.collected && amountOwned === 0) {
       deleteCardMutation.mutate({ cardId: card.card_id })
     } else {
-      await removeCard()
+      updateCardCount(amountOwned - 1)
     }
-  }, [card.collected, card.card_id, amountOwned, deleteCardMutation, removeCard])
+  }, [card.collected, card.card_id, amountOwned, deleteCardMutation])
 
   const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)
     if (!Number.isNaN(value) && value >= 0) {
-      await updateCardCount(value)
+      updateCardCount(value)
     }
   }
 
@@ -116,7 +92,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
               className="w-7 text-center border-none rounded"
               onFocus={(event) => event.target.select()}
             />
-            <Button variant="ghost" size="icon" className="rounded-full" onClick={addCard} tabIndex={-1} title="Increase amount">
+            <Button variant="ghost" size="icon" className="rounded-full" onClick={() => updateCardCount(amountOwned + 1)} tabIndex={-1} title="Increase amount">
               <PlusIcon />
             </Button>
           </>
