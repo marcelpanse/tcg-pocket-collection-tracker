@@ -28,8 +28,6 @@ export interface AccountRow {
   collection_last_updated: Date
   is_public: boolean
   is_active_trading: boolean
-  min_number_of_cards_to_keep: number
-  max_number_of_cards_wanted: number
   trade_rarity_settings: RaritySettingsRow[]
 }
 

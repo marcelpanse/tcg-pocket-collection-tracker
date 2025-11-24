@@ -22,8 +22,6 @@ function TradeSettings() {
 
   const formSchema = z.object({
     is_active_trading: z.boolean(),
-    min_number_of_cards_to_keep: z.coerce.number().min(1).max(10),
-    max_number_of_cards_wanted: z.coerce.number().min(1).max(10),
     trade_rarity_settings: z.array(
       z.object({
         rarity: z.enum(rarities),
@@ -38,8 +36,6 @@ function TradeSettings() {
     resolver: zodResolver(formSchema) as Resolver<FormSchema>,
     values: {
       is_active_trading: account?.is_active_trading || false,
-      min_number_of_cards_to_keep: account?.min_number_of_cards_to_keep || 1,
-      max_number_of_cards_wanted: account?.max_number_of_cards_wanted || 1,
       trade_rarity_settings: account?.trade_rarity_settings || [],
     },
   })
@@ -49,8 +45,6 @@ function TradeSettings() {
       updateAccountTradingFieldsMutation.mutate({
         username: account?.username as string,
         is_active_trading: values.is_active_trading,
-        min_number_of_cards_to_keep: values.min_number_of_cards_to_keep,
-        max_number_of_cards_wanted: values.max_number_of_cards_wanted,
         trade_rarity_settings: values.trade_rarity_settings,
       })
 
@@ -83,44 +77,6 @@ function TradeSettings() {
                     <FormDescription className="grow">{field.value ? 'active' : 'disabled'}</FormDescription>
                     <Tooltip id="activeInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
                     <CircleHelp className="h-4 w-4" data-tooltip-id="activeInput" data-tooltip-content={t('activeTradingInputTooltip')} />
-                  </div>
-                </FormControl>
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="min_number_of_cards_to_keep"
-            render={({ field }) => (
-              <FormItem className="flex flex-col items-start">
-                <FormControl>
-                  <div className="flex items-center gap-x-4 flex-wrap">
-                    <FormLabel className="flex sm:w-72">{t('minNumberOfCardsToKeep')}</FormLabel>
-                    <div className="grow-1">
-                      <Input className="w-24" type="number" {...field} />
-                    </div>
-                    <Tooltip id="minInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
-                    <CircleHelp className="h-4 w-4" data-tooltip-id="minInput" data-tooltip-content={t('minInputTooltip')} />
-                  </div>
-                </FormControl>
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="max_number_of_cards_wanted"
-            render={({ field }) => (
-              <FormItem className="flex flex-col items-start">
-                <FormControl>
-                  <div className="flex items-center gap-x-4 flex-wrap">
-                    <FormLabel className="flex sm:w-72">{t('maxNumberOfCardsWanted')}</FormLabel>
-                    <div className="grow-1">
-                      <Input className="w-24" type="number" {...field} />
-                    </div>
-                    <Tooltip id="maxInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
-                    <CircleHelp className="h-4 w-4" data-tooltip-id="maxInput" data-tooltip-content={t('maxInputTooltip')} />
                   </div>
                 </FormControl>
               </FormItem>
