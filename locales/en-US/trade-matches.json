@@ -16,8 +16,6 @@
   "noPossibleTradesDescription": "No trades between you and your friend are currently possible.",
   "featureDescription": "This dialog will show you the possible trades between your cards and that of the selected friend ID. It shows you duplicate cards that the other party doesn't own yet.",
   "isActiveTrading": "Trading page status",
-  "minNumberOfCardsToKeep": "Minimum number of cards to keep",
-  "maxNumberOfCardsWanted": "Maximum number of cards wanted",
   "inActiveTradePage": "The user \"{{username}}\" is currently not accepting any trades.",
   "inActiveTradeDescription": "Their trading page is set to disabled. Please contact them if you want to trade.",
   "minFilterTooltip": "The maximum amount of cards you'd like to collect through trading.",
