@@ -21,8 +21,8 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
   const [amountOwned, setAmountOwned] = useOptimistic(card.amount_owned ?? 0, (_prev, curr: number) => curr)
 
   const updateCardCount = (x: number) => {
-    setAmountOwned(x)
     startTransition(async () => {
+      setAmountOwned(x)
       try {
         await updateCardsMutation.mutateAsync({
           updates: [{ card_id: card.card_id, internal_id: card.internal_id, amount_owned: x }],
