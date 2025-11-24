@@ -48,7 +48,7 @@ export const getPublicAccount = async (friendId: string) => {
     throw new Error('Friend ID is required to fetch public account')
   }
 
-  const { data, error } = await supabase.from('public_accounts').select().eq('friend_id', friendId).limit(1)
+  const { data, error } = await supabase.from('public_accounts').select().eq('friend_id', friendId).single()
 
   if (error) {
     console.log('supa error', error)
@@ -57,14 +57,8 @@ export const getPublicAccount = async (friendId: string) => {
 
   console.log('fetched public account', data)
 
-  if (data.length > 0) {
-    // TESTING
-    data[0].trade_rarity_settings = tradableRarities.map((r) => ({
-      rarity: r,
-      to_collect: data[0].max_number_of_cards_wanted,
-      to_keep: data[0].min_number_of_cards_to_keep,
-    }))
-    return data[0] as AccountRow
+  if (data) {
+    return data as AccountRow
   }
 
   return null
