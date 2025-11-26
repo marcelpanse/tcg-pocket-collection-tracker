@@ -13,7 +13,7 @@ if (!root) {
 }
 
 window.addEventListener('vite:preloadError', () => {
-  console.warn('Vite pre-loading failed. Reloading page...')
+  console.warn('A new version was deployed. Reloading page...')
   window.location.reload()
 })
 
