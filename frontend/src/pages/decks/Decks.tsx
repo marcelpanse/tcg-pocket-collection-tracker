@@ -26,14 +26,14 @@ function Decks() {
 
   return (
     <div className="flex flex-col gap-4 mx-auto max-w-[1360px] px-1">
-      <div className="flex flex-col sm:flex-row gap-2 sm:justify-between">
+      <div className="flex flex-col-reverse sm:flex-row gap-2 sm:justify-between">
+        <SearchInput className="w-full sm:max-w-96" setValue={setSearchValue} />
         <Link to="/decks/edit" className="w-full sm:max-w-48">
           <Button className="w-full">
             New deck
             <ChevronRight />
           </Button>
         </Link>
-        <SearchInput className="w-full sm:max-w-96" setValue={setSearchValue} />
       </div>
       {filteredAndSortedDecks.map((deck) => (
         <DeckItem key={deck.name} deck={deck} />

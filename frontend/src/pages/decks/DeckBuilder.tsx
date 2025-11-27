@@ -13,7 +13,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sh
 import { showCardType } from '@/components/utils'
 import { allCards, getCardByInternalId } from '@/lib/CardsDB'
 import { type Filters, type FiltersAll, getFilteredCards } from '@/lib/filters'
-import { useCollection } from '@/services/collection/useCollection'
+import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
 import { type Energy, energies } from '@/types'
 import { serializeDeckToUrl } from './utils'
 
@@ -32,6 +32,7 @@ export default function DeckBuilder() {
 
   const [searchParams, setSearchParams] = useSearchParams()
   const { data: ownedCards } = useCollection()
+  const { setSelectedCardId } = useSelectedCard()
 
   const [isFiltersSheetOpen, setIsFiltersSheetOpen] = useState(false) // used only on mobile
   const [filters, setFilters] = useState<Filters>(defaultFilters)
@@ -50,16 +51,16 @@ export default function DeckBuilder() {
   }, [filters])
 
   const [isDeckSheetOpen, setIsDeckSheetOpen] = useState(false) // used only on mobile
-  const [deckName, setDeckName] = useState(() => searchParams.get('deckName') ?? 'New deck')
+  const [deckName, setDeckName] = useState(() => searchParams.get('title') ?? 'New deck')
   const [deckEnergy, setDeckEnergy] = useState<Energy[]>(() => {
-    const param = searchParams.get('deckEnergy')
+    const param = searchParams.get('energy')
     if (!param) {
       return []
     }
     return param.split(',').filter((x): x is Energy => (energies as readonly string[]).includes(x))
   })
   const [deckCards, setDeckCards] = useState<Map<number, number>>(() => {
-    const param = searchParams.get('deckCards')
+    const param = searchParams.get('cards')
     if (!param) {
       return new Map()
     } else {
@@ -107,11 +108,14 @@ export default function DeckBuilder() {
   )
 
   useEffect(() => {
-    setSearchParams({
-      deckName,
-      deckEnergy: deckEnergy.join(','),
-      deckCards: serializeDeckToUrl(deckCards),
-    })
+    setSearchParams(
+      {
+        title: deckName,
+        energy: deckEnergy.join(','),
+        cards: serializeDeckToUrl(deckCards),
+      },
+      { replace: true },
+    )
   }, [deckCards, deckName, deckEnergy])
 
   const addCard = useCallback(
@@ -149,9 +153,12 @@ export default function DeckBuilder() {
   )
 
   const deckNode = (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col [&>h2]:text-lg [&>h2:not(:first-child)]:mt-2">
+      <h2>Title</h2>
       <Input className="bg-neutral-800" type="text" value={deckName} onChange={(e) => setDeckName(e.target.value)} />
+      <h2>Energy</h2>
       <ToggleFilter options={energies} value={deckEnergy} onChange={setDeckEnergy} show={showCardType} />
+      <h2>Cards</h2>
       <ul className="overflow-y-auto space-y-1">
         {sortedDeckCards.map(([id, amount]) => {
           const card = getCardByInternalId(id)
@@ -165,7 +172,7 @@ export default function DeckBuilder() {
               <button type="button" className="enabled:cursor-pointer" onClick={() => removeCard(id)}>
                 <SquareMinus className="size-5" />
               </button>
-              <button type="button" className="enabled:cursor-pointer" onClick={() => addCard(id)} disabled={amount >= 2}>
+              <button type="button" className="enabled:cursor-pointer disabled:opacity-50" onClick={() => addCard(id)} disabled={amount >= 2}>
                 <SquarePlus className="size-5" />
               </button>
               <b className="mx-2">{amount}×</b>
@@ -180,7 +187,7 @@ export default function DeckBuilder() {
           )
         })}
       </ul>
-      <p className="text-neutral-400">
+      <p className="text-neutral-400 mt-2">
         <span className={`${deckSize > 20 ? 'text-red-300' : ''}`}>{deckSize}</span>
         <span className="text-sm">/20 cards</span>
         {missingCards > 0 && <span className="text-sm"> ({missingCards} missing)</span>}
@@ -216,14 +223,38 @@ export default function DeckBuilder() {
       <CardsTable
         className="w-full lg:w-152 px-2"
         cards={filteredCards}
-        render={(card) => (
-          <>
-            <button type="button" className="cursor-pointer" key={card.card_id} onClick={() => addCard(card.internal_id)}>
-              <FancyCard card={card} selected={true} />
-            </button>
-            <p className="text-center">{card.name}</p>
-          </>
-        )}
+        render={(card) => {
+          const amount = deckCards.get(card.internal_id) ?? 0
+          const amount_owned = ownedCards
+            ? Math.min(
+                2,
+                card.alternate_versions.reduce((acc, curr) => acc + (ownedCards.get(curr)?.amount_owned ?? 0), 0),
+              )
+            : 2
+          return (
+            <>
+              <button type="button" className="cursor-pointer" key={card.card_id} onClick={() => setSelectedCardId(card.internal_id)}>
+                <FancyCard card={card} selected={true} />
+              </button>
+              <div className="flex gap-1 justify-center">
+                <button
+                  type="button"
+                  className="enabled:cursor-pointer disabled:opacity-50"
+                  onClick={() => removeCard(card.internal_id)}
+                  disabled={amount <= 0}
+                >
+                  <SquareMinus className="size-6" />
+                </button>
+                <span className={amount > amount_owned ? 'text-red-300' : ''}>
+                  {amount}/{amount_owned ?? 2}
+                </span>
+                <button type="button" className="enabled:cursor-pointer disabled:opacity-50" onClick={() => addCard(card.internal_id)} disabled={amount >= 2}>
+                  <SquarePlus className="size-6" />
+                </button>
+              </div>
+            </>
+          )
+        }}
       >
         <div className="flex flex-col sticky top-0 z-10 bg-neutral-900 mb-2">
           {filtersCollapsed && (
