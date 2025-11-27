@@ -1,6 +1,6 @@
 import i18n from 'i18next'
 import { MinusIcon, PlusIcon, Trash2Icon } from 'lucide-react'
-import { startTransition, useCallback, useOptimistic } from 'react'
+import { useCallback, useOptimistic, useTransition } from 'react'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { cn, getCardNameByLang } from '@/lib/utils'
@@ -18,6 +18,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
   const { setSelectedCardId } = useSelectedCard()
   const updateCardsMutation = useUpdateCards()
   const deleteCardMutation = useDeleteCard()
+  const [isPending, startTransition] = useTransition()
   const [amountOwned, setAmountOwned] = useOptimistic(card.amount_owned ?? 0, (_prev, curr: number) => curr)
 
   const updateCardCount = (x: number) => {
@@ -35,7 +36,9 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
 
   const handleMinusButtonClick = useCallback(() => {
     if (card.collected && amountOwned === 0) {
-      deleteCardMutation.mutate({ cardId: card.card_id })
+      startTransition(async () => {
+        await deleteCardMutation.mutateAsync({ cardId: card.card_id })
+      })
     } else {
       updateCardCount(amountOwned - 1)
     }
@@ -52,13 +55,18 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
     <div className={cn('group flex flex-col items-center rounded-lg', className)}>
       <button
         type="button"
-        className="cursor-pointer"
+        className="relative cursor-pointer"
         onClick={() => {
           setSelectedCardId(card.internal_id)
           onImageClick?.()
         }}
       >
-        <FancyCard card={card} selected={Boolean(card.collected)} />
+        <FancyCard card={card} selected={Boolean(card.collected) && !isPending} />
+        {isPending && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="animate-spin rounded-full size-12 border-4 border-white border-t-transparent"></div>
+          </div>
+        )}
       </button>
       <p
         className="w-full min-w-0 text-[12px] pt-2 text-center font-semibold leading-tight"
