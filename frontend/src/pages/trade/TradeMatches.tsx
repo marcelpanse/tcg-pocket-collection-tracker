@@ -8,15 +8,21 @@ function TradeMatches() {
   const { data: tradingPartners, isLoading, isError } = useTradingPartners()
 
   if (isLoading) {
-    return <p>{t('common:loading')}</p>
+    return (
+      <p className="text-xl text-center py-8">
+        {t('common:loading')}
+        <br />
+        {t('longOperation')}
+      </p>
+    )
   }
 
   if (isError) {
-    return <p>{t('common:error')}</p>
+    return <p className="text-xl text-center py-8">{t('common:error')}</p>
   }
 
   if (!tradingPartners?.length) {
-    return <p>{t('noTradePartners')}</p>
+    return <p className="text-xl text-center py-8">{t('noTradePartners')}</p>
   }
 
   return (

@@ -13,8 +13,6 @@
   "noPossibleTradesDescription": "Es wurden keine möglichen Tauschmöglichkeiten gefunden. Dies kann daran liegen, dass ihr beide die gleichen Karten besitzt oder dass dein Freund keine Karten zum Tauschen eingestellt hat.",
   "featureDescription": "Dieses Fenster zeigt mögliche Tauschoptionen mit deinem Freund an. Es zeigt deine doppelten Karten an, die dein Freund benötigt, und umgekehrt.",
   "isActiveTrading": "Tauschstatus",
-  "minNumberOfCardsToKeep": "Minimale Anzahl der Karten die du behalten möchtest",
-  "maxNumberOfCardsWanted": "Maximale Anzahl der Karten die du sammeln möchtest",
   "inActiveTradePage": "Der Benutzer \"{{username}}\" nimmt aktuell keine Tauschangebote an.",
   "inActiveTradeDescription": "Die Tauschseite ist aktuell deaktiviert. Kontaktiere den Benutzer, wenn du Interesse an einem Tausch hast.",
   "minFilterTooltip": "Die Maximale Anzahl an Karten, die du durch Tauschen sammeln möchtest.",
@@ -46,5 +44,9 @@
   "viewHistory": "Verlauf ansehen",
   "tabCards": "Karten",
   "tabOffers": "Angebote",
-  "tabSettings": "Einstellungen"
+  "tabSettings": "Einstellungen",
+  "raritySettings": "Seltenheitseinstellungen",
+  "rarity": "Seltenheit",
+  "toCollect": "Zu Sammeln",
+  "toKeep": "Zu Behalten"
 }

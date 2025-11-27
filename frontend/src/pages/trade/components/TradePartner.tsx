@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { Button } from '@/components/ui/button.tsx'
+import { FriendIdDisplay } from '@/components/ui/friend-id-display.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
 import TradeList from '@/pages/trade/components/TradeList.tsx'
 import { usePublicAccount } from '@/services/account/useAccount.ts'
@@ -32,6 +33,7 @@ function TradePartner({ friendId }: TradePartnerProps) {
         <p>
           <span className="text-md">{t('tradingWith')}</span>
           <span className="text-md font-bold"> {friendAccount?.username || 'loading'} </span>
+          {friendAccount && <FriendIdDisplay friendId={friendAccount.friend_id} showFriendId={false} className="ml-1" />}
         </p>
         <span className="flex gap-4">
           <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">

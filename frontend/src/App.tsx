@@ -58,7 +58,7 @@ function App() {
     }
   }, [user, toast, authSSOQuery])
 
-  const errorDiv = <div className="m-4">A new version was deployed, please refresh the page to see the latest changes.</div>
+  const errorDiv = <div className="m-4">Something went wrong, please refresh the page to try again.</div>
 
   const router = createHashRouter([
     {

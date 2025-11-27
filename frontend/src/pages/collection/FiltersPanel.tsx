@@ -43,7 +43,7 @@ export default function CollectionFiltersPanel({ cards, filters, setFilters, cle
     let total = 0
     const uniqueCardsByCardId = new Set<number>()
     for (const card of cards) {
-      if (!uniqueCardsByCardId.has(card.internal_id)) {
+      if (card.collected && !uniqueCardsByCardId.has(card.internal_id)) {
         total += card.amount_owned || 0
         uniqueCardsByCardId.add(card.internal_id)
       }

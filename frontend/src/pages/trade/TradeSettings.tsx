@@ -12,6 +12,7 @@ import { Input } from '@/components/ui/input.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
 import { toast } from '@/hooks/use-toast.ts'
 import { useAccount, useUpdateAccountTradingFields } from '@/services/account/useAccount.ts'
+import { rarities } from '@/types/index.ts'
 
 function TradeSettings() {
   const { t } = useTranslation('trade-matches')
@@ -21,8 +22,13 @@ function TradeSettings() {
 
   const formSchema = z.object({
     is_active_trading: z.boolean(),
-    min_number_of_cards_to_keep: z.coerce.number().min(1).max(10),
-    max_number_of_cards_wanted: z.coerce.number().min(1).max(10),
+    trade_rarity_settings: z.array(
+      z.object({
+        rarity: z.enum(rarities),
+        to_collect: z.coerce.number().min(0).max(100),
+        to_keep: z.coerce.number().min(0).max(100),
+      }),
+    ),
   })
   type FormSchema = z.infer<typeof formSchema>
 
@@ -30,8 +36,7 @@ function TradeSettings() {
     resolver: zodResolver(formSchema) as Resolver<FormSchema>,
     values: {
       is_active_trading: account?.is_active_trading || false,
-      min_number_of_cards_to_keep: account?.min_number_of_cards_to_keep || 1,
-      max_number_of_cards_wanted: account?.max_number_of_cards_wanted || 1,
+      trade_rarity_settings: account?.trade_rarity_settings || [],
     },
   })
 
@@ -40,8 +45,7 @@ function TradeSettings() {
       updateAccountTradingFieldsMutation.mutate({
         username: account?.username as string,
         is_active_trading: values.is_active_trading,
-        min_number_of_cards_to_keep: values.min_number_of_cards_to_keep,
-        max_number_of_cards_wanted: values.max_number_of_cards_wanted,
+        trade_rarity_settings: values.trade_rarity_settings,
       })
 
       toast({ title: t('accountSaved'), variant: 'default' })
@@ -79,43 +83,40 @@ function TradeSettings() {
             )}
           />
 
-          <FormField
-            control={form.control}
-            name="min_number_of_cards_to_keep"
-            render={({ field }) => (
-              <FormItem className="flex flex-col items-start">
-                <FormControl>
-                  <div className="flex items-center gap-x-4 flex-wrap">
-                    <FormLabel className="flex sm:w-72">{t('minNumberOfCardsToKeep')}</FormLabel>
-                    <div className="grow-1">
-                      <Input className="w-24" type="number" {...field} />
-                    </div>
-                    <Tooltip id="minInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
-                    <CircleHelp className="h-4 w-4" data-tooltip-id="minInput" data-tooltip-content={t('minInputTooltip')} />
-                  </div>
-                </FormControl>
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="max_number_of_cards_wanted"
-            render={({ field }) => (
-              <FormItem className="flex flex-col items-start">
-                <FormControl>
-                  <div className="flex items-center gap-x-4 flex-wrap">
-                    <FormLabel className="flex sm:w-72">{t('maxNumberOfCardsWanted')}</FormLabel>
-                    <div className="grow-1">
-                      <Input className="w-24" type="number" {...field} />
-                    </div>
-                    <Tooltip id="maxInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
-                    <CircleHelp className="h-4 w-4" data-tooltip-id="maxInput" data-tooltip-content={t('maxInputTooltip')} />
-                  </div>
-                </FormControl>
-              </FormItem>
-            )}
-          />
+          <div className="mt-6">
+            <div className="flex items-center gap-x-4 mb-2">
+              <div className="flex-1">{t('rarity')}</div>
+              <div className="flex-1">{t('toCollect')}</div>
+              <div className="flex-1">{t('toKeep')}</div>
+            </div>
+            {form.watch('trade_rarity_settings').map((setting, index) => (
+              <div key={index} className="flex items-center gap-x-4 mb-2">
+                <div className="flex-1">{setting.rarity}</div>
+                <FormField
+                  control={form.control}
+                  name={`trade_rarity_settings.${index}.to_collect`}
+                  render={({ field }) => (
+                    <FormItem className="flex-1">
+                      <FormControl>
+                        <Input className="w-24" type="number" {...field} />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name={`trade_rarity_settings.${index}.to_keep`}
+                  render={({ field }) => (
+                    <FormItem className="flex-1">
+                      <FormControl>
+                        <Input className="w-24" type="number" {...field} />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+              </div>
+            ))}
+          </div>
 
           <div className="w-full flex justify-end mt-8">
             <Button type="submit">{t('save')}</Button>

@@ -12,6 +12,11 @@ if (!root) {
   throw new Error('No root element found!')
 }
 
+window.addEventListener('vite:preloadError', () => {
+  console.warn('A new version was deployed. Reloading page...')
+  window.location.reload()
+})
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {

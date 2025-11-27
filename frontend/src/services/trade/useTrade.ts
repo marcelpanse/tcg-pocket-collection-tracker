@@ -15,7 +15,7 @@ export function useTradingPartners() {
 
   return useQuery({
     queryKey: ['trading-partners'],
-    queryFn: () => getTradingPartners(account?.email as string, account?.max_number_of_cards_wanted as number, account?.min_number_of_cards_to_keep as number),
+    queryFn: () => getTradingPartners(account?.email as string),
     enabled: !!account,
   })
 }
