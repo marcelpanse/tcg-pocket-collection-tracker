@@ -112,7 +112,7 @@ export function CardsTable({ className, children, cards, groupExpansions, render
                 ) : (
                   <div className="w-full flex justify-start">
                     {row.cards.map((c) => (
-                      <div key={`${c.expansion}-${c.internal_id}-${c.amount_owned}`} className={`${basis} min-w-0 px-2`}>
+                      <div key={`${c.expansion}-${c.internal_id}`} className={`${basis} min-w-0 px-2`}>
                         {render(c)}
                       </div>
                     ))}

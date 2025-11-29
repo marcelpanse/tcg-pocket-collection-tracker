@@ -1,10 +1,9 @@
 import i18n from 'i18next'
 import { MinusIcon, PlusIcon, Trash2Icon } from 'lucide-react'
-import { useCallback, useEffect, useState } from 'react'
+import { startTransition, useCallback, useOptimistic } from 'react'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { cn, getCardNameByLang } from '@/lib/utils'
-import { useLoginDialog } from '@/services/auth/useAuth'
 import { useDeleteCard, useSelectedCard, useUpdateCards } from '@/services/collection/useCollection'
 import type { Card as CardType } from '@/types'
 
@@ -15,59 +14,40 @@ interface CardProps {
   onImageClick?: () => void
 }
 
-// keep track of the debounce timeouts for each card
-const _inputDebounce: Record<string, number | null> = {}
-
 export function Card({ card, onImageClick, className, editable = true }: CardProps) {
-  const { setIsLoginDialogOpen } = useLoginDialog()
   const { setSelectedCardId } = useSelectedCard()
   const updateCardsMutation = useUpdateCards()
   const deleteCardMutation = useDeleteCard()
-  const [amountOwned, setAmountOwned] = useState(card.amount_owned || 0)
-  const [inputValue, setInputValue] = useState<number | undefined>(undefined)
+  const isPending = updateCardsMutation.isPending || deleteCardMutation.isPending
+  const [amountOwned, setAmountOwned] = useOptimistic(card.amount_owned ?? 0, (_prev, curr: number) => curr)
 
-  useEffect(() => {
-    setInputValue(amountOwned)
-  }, [amountOwned])
-
-  const updateCardCount = useCallback(
-    async (newAmountIn: number) => {
-      const card_id = card.card_id
-      const newAmount = Math.max(0, newAmountIn)
-      setAmountOwned(newAmount)
-
-      if (_inputDebounce[card_id]) {
-        window.clearTimeout(_inputDebounce[card_id])
-      }
-      _inputDebounce[card_id] = window.setTimeout(async () => {
-        updateCardsMutation.mutate({
-          updates: [{ card_id, internal_id: card.internal_id, amount_owned: newAmount }],
+  const updateCardCount = (x: number) => {
+    startTransition(async () => {
+      setAmountOwned(x)
+      try {
+        await updateCardsMutation.mutateAsync({
+          updates: [{ card_id: card.card_id, internal_id: card.internal_id, amount_owned: x }],
         })
-      }, 1000)
-    },
-    [amountOwned, updateCardsMutation, card.card_id],
-  )
+      } catch (error) {
+        console.log('Failed updating card count:', error)
+      }
+    })
+  }
 
-  const addCard = useCallback(async () => {
-    await updateCardCount(amountOwned + 1)
-  }, [updateCardCount, setIsLoginDialogOpen])
-
-  const removeCard = useCallback(async () => {
-    await updateCardCount(amountOwned - 1)
-  }, [updateCardCount, setIsLoginDialogOpen])
-
-  const handleMinusButtonClick = useCallback(async () => {
-    if (card.collected && inputValue === 0) {
-      deleteCardMutation.mutate({ cardId: card.card_id })
+  const handleMinusButtonClick = useCallback(() => {
+    if (card.collected && amountOwned === 0) {
+      startTransition(async () => {
+        await deleteCardMutation.mutateAsync({ cardId: card.card_id })
+      })
     } else {
-      await removeCard()
+      updateCardCount(amountOwned - 1)
     }
-  }, [card.collected, card.card_id, inputValue, deleteCardMutation, removeCard])
+  }, [card.collected, card.card_id, amountOwned, deleteCardMutation])
 
   const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)
     if (!Number.isNaN(value) && value >= 0) {
-      await updateCardCount(value)
+      updateCardCount(value)
     }
   }
 
@@ -75,13 +55,18 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
     <div className={cn('group flex flex-col items-center rounded-lg', className)}>
       <button
         type="button"
-        className="cursor-pointer"
+        className="relative cursor-pointer"
         onClick={() => {
           setSelectedCardId(card.internal_id)
           onImageClick?.()
         }}
       >
-        <FancyCard card={card} selected={Boolean(card.collected)} />
+        <FancyCard card={card} selected={Boolean(card.collected) && !isPending} />
+        {isPending && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="animate-spin rounded-full size-12 border-4 border-white border-t-transparent"></div>
+          </div>
+        )}
       </button>
       <p
         className="w-full min-w-0 text-[12px] pt-2 text-center font-semibold leading-tight"
@@ -101,21 +86,21 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
               onClick={handleMinusButtonClick}
               className="rounded-full"
               tabIndex={-1}
-              disabled={!card.collected && inputValue === 0}
-              title={inputValue === 0 ? 'Remove from card dex' : 'Decrease amount'}
+              disabled={!card.collected && amountOwned === 0}
+              title={amountOwned === 0 ? 'Remove from card dex' : 'Decrease amount'}
             >
-              {card.collected && inputValue === 0 ? <Trash2Icon /> : <MinusIcon />}
+              {card.collected && amountOwned === 0 ? <Trash2Icon /> : <MinusIcon />}
             </Button>
             <input
               min="0"
               max="99"
               type="text"
-              value={inputValue}
+              value={amountOwned}
               onChange={handleInputChange}
               className="w-7 text-center border-none rounded"
               onFocus={(event) => event.target.select()}
             />
-            <Button variant="ghost" size="icon" className="rounded-full" onClick={addCard} tabIndex={-1} title="Increase amount">
+            <Button variant="ghost" size="icon" className="rounded-full" onClick={() => updateCardCount(amountOwned + 1)} tabIndex={-1} title="Increase amount">
               <PlusIcon />
             </Button>
           </>
