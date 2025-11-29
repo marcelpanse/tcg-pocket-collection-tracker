@@ -1,6 +1,6 @@
 import i18n from 'i18next'
 import { MinusIcon, PlusIcon, Trash2Icon } from 'lucide-react'
-import { useCallback, useOptimistic, useTransition } from 'react'
+import { startTransition, useCallback, useOptimistic } from 'react'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { cn, getCardNameByLang } from '@/lib/utils'
@@ -18,7 +18,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
   const { setSelectedCardId } = useSelectedCard()
   const updateCardsMutation = useUpdateCards()
   const deleteCardMutation = useDeleteCard()
-  const [isPending, startTransition] = useTransition()
+  const isPending = updateCardsMutation.isPending || deleteCardMutation.isPending
   const [amountOwned, setAmountOwned] = useOptimistic(card.amount_owned ?? 0, (_prev, curr: number) => curr)
 
   const updateCardCount = (x: number) => {
