@@ -2,6 +2,7 @@ import { Trash2 } from 'lucide-react'
 import { type ReactNode, useMemo, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { useSearchParams } from 'react-router'
+import { Card } from '@/components/Card'
 import { CardsTable } from '@/components/CardsTable.tsx'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import {
@@ -160,7 +161,11 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
             )}
           </div>
         )}
-        <CardsTable cards={filteredCards} editable={!filters.deckbuildingMode && !isPublic} groupExpansions={filters.sortBy !== 'recent'}>
+        <CardsTable
+          cards={filteredCards}
+          groupExpansions={filters.sortBy !== 'recent'}
+          render={(c) => <Card card={c} editable={!filters.deckbuildingMode && !isPublic} />}
+        >
           {children}
         </CardsTable>
       </div>

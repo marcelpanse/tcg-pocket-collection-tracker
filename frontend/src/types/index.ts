@@ -8,7 +8,9 @@ export type ExpansionId = (typeof expansionIds)[number]
 export const rarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '☆☆☆', '✵', '✵✵', 'Crown Rare', 'P'] as const
 export const tradableRarities = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', '☆', '☆☆', '✵', '✵✵'] as const
 
-export const cardTypes = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'dragon', 'colorless', 'trainer'] as const
+export const energies = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal'] as const
+export type Energy = (typeof energies)[number]
+export const cardTypes = [...energies, 'dragon', 'colorless', 'trainer'] as const
 
 export type Rarity = (typeof rarities)[number]
 export type TradableRarity = (typeof tradableRarities)[number]
@@ -28,8 +30,6 @@ export interface AccountRow {
   collection_last_updated: Date
   is_public: boolean
   is_active_trading: boolean
-  min_number_of_cards_to_keep: number
-  max_number_of_cards_wanted: number
   trade_rarity_settings: RaritySettingsRow[]
 }
 

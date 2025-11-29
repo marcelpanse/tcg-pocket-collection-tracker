@@ -4,10 +4,11 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { getExpansionById } from '@/lib/CardsDB.ts'
-import { type CardTypeOption, cardTypeOptions, type ExpansionOption, expansionOptions, type Filters, ownedOptions, sortByOptions } from '@/lib/filters'
+import { cardTypeOptions, type ExpansionOption, expansionOptions, type Filters, ownedOptions, sortByOptions } from '@/lib/filters'
 import { DropdownFilter, TabsFilter, ToggleFilter } from './Filters'
 import AllTextSearchFilter from './filters/AllTextSearchFilter'
 import DeckbuildingFilter from './filters/DeckbuildingFilter'
+import { showCardType } from './utils'
 
 interface Props {
   className?: string
@@ -44,14 +45,6 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
 
   function getLocalizedExpansion(id: ExpansionOption) {
     return t(id === 'all' ? 'all' : getExpansionById(id).name, { ns: 'common/sets' })
-  }
-
-  function showCardType(x: CardTypeOption) {
-    if (x === 'trainer') {
-      return 'T'
-    } else {
-      return <img src={`/images/energy/${x}.webp`} alt={x} className="h-4" />
-    }
   }
 
   return (

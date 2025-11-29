@@ -1,3 +1,4 @@
+import type { CardTypeOption } from '@/lib/filters'
 import type { Rarity } from '@/types'
 
 export function formatRarity(rarity: Rarity) {
@@ -20,4 +21,12 @@ export function formatRarity(rarity: Rarity) {
       return <span className="px-1">P</span>
   }
   return null
+}
+
+export function showCardType(x: CardTypeOption) {
+  if (x === 'trainer') {
+    return 'T'
+  } else {
+    return <img src={`/images/energy/${x}.webp`} alt={x} className="h-4" />
+  }
 }

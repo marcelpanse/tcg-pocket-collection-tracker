@@ -8,9 +8,10 @@ interface FriendIdDisplayProps {
   friendId: string
   className?: string
   showCopyButton?: boolean
+  showFriendId?: boolean
 }
 
-export const FriendIdDisplay: FC<FriendIdDisplayProps> = ({ friendId, className = '', showCopyButton = true }) => {
+export const FriendIdDisplay: FC<FriendIdDisplayProps> = ({ friendId, className = '', showFriendId = true, showCopyButton = true }) => {
   const { toast } = useToast()
 
   const handleCopy = async () => {
@@ -37,7 +38,7 @@ export const FriendIdDisplay: FC<FriendIdDisplayProps> = ({ friendId, className 
 
   return (
     <span className={cn('inline-flex items-center gap-1', className)}>
-      <span className="font-mono">{formatFriendId(friendId)}</span>
+      {showFriendId && <span className="font-mono">{formatFriendId(friendId)}</span>}
       {showCopyButton && (
         <Button
           variant="ghost"
