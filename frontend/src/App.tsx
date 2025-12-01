@@ -53,10 +53,11 @@ function App() {
       if (sso && sig) {
         toast({ title: 'Logging in', description: 'Please wait...', variant: 'default' })
 
+        console.log('invoke sso')
         authSSOQuery.mutate({ user, sso, sig })
       }
     }
-  }, [user, toast, authSSOQuery])
+  }, [user])
 
   const errorDiv = <div className="m-4">Something went wrong, please refresh the page to try again.</div>
 

@@ -33,5 +33,6 @@ export const authSSO = async (user: User, sso: string, sig: string) => {
     throw new Error('Error logging in')
   }
 
+  console.log('supa sso data', data)
   return data
 }
