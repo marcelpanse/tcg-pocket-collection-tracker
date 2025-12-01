@@ -30,7 +30,7 @@ export function TabsFilter<T extends string>({ options, value, onChange, classNa
 }
 
 interface PropsDropdown<T> extends Props<T> {
-  label: string
+  label?: string
   value: T
   onChange: (value: T) => void
 }
@@ -38,7 +38,7 @@ interface PropsDropdown<T> extends Props<T> {
 export function DropdownFilter<T extends string | number>({ label, options, value, onChange, className, show = (x) => String(x) }: PropsDropdown<T>) {
   return (
     <label className={cn(commonClassName, 'flex items-baseline justify-between gap-5 px-3 py-1 my-auto text-neutral-400', className)}>
-      <span className="text-sm">{label}</span>
+      {label && <span className="text-sm">{label}</span>}
       <select value={value} onChange={(e) => onChange(e.target.value as T)} className="min-h-[27px] text-sm text-right cursor-pointer">
         {options.map((x) => (
           <option key={x} value={x}>

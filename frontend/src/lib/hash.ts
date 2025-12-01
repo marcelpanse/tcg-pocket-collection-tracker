@@ -1,6 +1,8 @@
 export const hashSize = 96
 export const freqSize = 8
 
+export type Hashes = Record<string, ArrayBuffer>
+
 export interface PixelData {
   r: Array<number>
   g: Array<number>
