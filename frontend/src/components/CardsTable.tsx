@@ -84,7 +84,7 @@ export function CardsTable({ className, children, cards, groupExpansions, render
   })
 
   return (
-    <div ref={scrollRef} className={cn('overflow-y-auto', className)}>
+    <div ref={scrollRef} className={cn('overflow-y-auto', className)} style={{ scrollbarWidth: 'thin' }}>
       {children}
       {cards.length === 0 && <p className="text-xl text-center py-8">No cards to show</p>}
       <div style={{ height: scrollContainerHeight }}>
