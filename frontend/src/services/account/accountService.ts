@@ -13,7 +13,7 @@ export const getAccount = async (email: string) => {
     trade_rarity_settings:trade_rarity_settings!email(*)
   `)
     .eq('email', email)
-    .single()
+    .maybeSingle()
 
   if (error) {
     console.log('supa error', error)
@@ -48,7 +48,7 @@ export const getPublicAccount = async (friendId: string) => {
     throw new Error('Friend ID is required to fetch public account')
   }
 
-  const { data, error } = await supabase.from('public_accounts').select().eq('friend_id', friendId).single()
+  const { data, error } = await supabase.from('public_accounts').select().eq('friend_id', friendId).maybeSingle()
 
   if (error) {
     console.log('supa error', error)
