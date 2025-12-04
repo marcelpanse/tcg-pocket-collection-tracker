@@ -1,5 +1,5 @@
 import * as tf from '@tensorflow/tfjs'
-import { getCardById } from '@/lib/CardsDB'
+import { getCardByInternalId } from '@/lib/CardsDB'
 import { calculatePerceptualHash, calculateSimilarity, type Hashes, imageToBuffers } from '@/lib/hash'
 import type { Card } from '@/types'
 
@@ -264,12 +264,12 @@ export async function extractCardImages(file: File, detections: DetectionResult,
 
             // Calculate similarityes for all cards from the selected expansion and sort them
             const matches = Object.keys(hashes)
-              .map((k) => [k, calculateSimilarity(hash, hashes[k])] as [string, number])
+              .map((k) => [Number(k), calculateSimilarity(hash, hashes[k])] as [number, number])
               .sort(([_1, a], [_2, b]) => b - a)
             console.log(`Confidence: ${matches[0][1] - matches[1][1]}\n`, 'Best matches:', matches.slice(0, 5))
 
-            const [card_id, similarity] = matches[0]
-            const card = getCardById(card_id)
+            const [id, similarity] = matches[0]
+            const card = getCardByInternalId(id)
             if (!card) {
               throw new Error('Hashes key does not correspond to any card')
             }
