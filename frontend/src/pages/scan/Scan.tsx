@@ -250,7 +250,7 @@ const Scan = () => {
                 setExtractedCards((arr) => arr.map((x, i) => (i === index ? { ...x, matchedCard: { ...x.matchedCard, card: targetCard } } : x)))
               }
               return (
-                <div key={index} className={`border-2 rounded-md p-2 ${card.increment > 0 && 'border-green-300'} ${card.increment < 0 && 'border-red-300'}`}>
+                <div key={index} className={`border-3 rounded-lg p-2 ${card.increment > 0 && 'border-green-400'} ${card.increment < 0 && 'border-red-400'}`}>
                   <h3 className="flex mb-2">
                     {isSelected ? <SquareCheck /> : <SquareX />}
                     <CardLine
