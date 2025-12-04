@@ -228,7 +228,7 @@ const Scan = () => {
         <>
           <h2 className="text-center text-xl">Found {extractedCards.length} cards</h2>
           <p className="text-center text-sm text-neutral-400 px-2">
-            Select the increment amount for the matched cards. You can click the image to quickly exclude or include a card.
+            Select the increment amount for the matched cards. Click the image to quickly exclude or include a card.
           </p>
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 my-2">
             {extractedCards.map((card, index) => {
