@@ -9,5 +9,11 @@
     "numberCards": "Número de cartas desejadas",
     "maxNum": "Número máximo de cartas",
     "minNum": "Número mínimo de cartas"
+  },
+  "f-sortBy": {
+    "sortBy": "Sort By",
+    "default": "Card ID",
+    "recent": "Recently updated",
+    "expansion-newest": "Expansion newest first"
   }
 }

@@ -19,5 +19,8 @@
   "aboutUsDialog": {
     "title": "Su di noi",
     "content": "TCG Pocket Tracker è un progetto gratuito e open source il cui scopo è aiutarti a tenere traccia della tua collezione di Pokémon Pocket. Fornisce un'interfaccia semplice e intuitiva per gestire la propria collezione. Il progetto è open source e accoglie contributi dalla community. Se hai qualsiasi domanda o feedback, entra in contatto con noi sul <a href=\"https://community.tcgpocketcollectiontracker.com\" style=\"text-decoration: underline;\">nostro forum della community</a> o su <a href=\"https://github.com/marcelpanse/tcg-pocket-collection-tracker\" style=\"text-decoration: underline;\">GitHub</a>."
-  }
+  },
+  "decks": "Decks",
+  "blog": "Blog ↗",
+  "support": "The site is hosted on Github Pages and Supabase. Costs are covered by me as a hobby project. If you like the project, please consider supporting me using the coffee button in the bottom right corner."
 }

@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-const CARD_DATA_DIR = 'frontend/assets/cards'
+const CARD_DATA_DIR = 'frontend/assets'
 const TRANSLATIONS_DIR = 'frontend/assets'
 const SUPPORTED_LANGUAGES = ['en-US', 'es-ES', 'pt-BR', 'fr-FR', 'it-IT']
 
@@ -23,7 +23,7 @@ function saveJsonFile(filePath, data) {
 function createTranslationEntry(cardName, cardType, ex) {
   const entry = {}
   let enUSName = cardName
-  if (cardType === 'pokémon' && ex === 'yes') {
+  if (cardType === 'pokémon' && ex === true) {
     enUSName = cardName.slice(0, -3)
   }
   for (const lang of SUPPORTED_LANGUAGES) {
@@ -41,7 +41,7 @@ function transformCardNameToKey(cardName, cardType, ex) {
 
 function getAllCardFiles() {
   const files = fs.readdirSync(CARD_DATA_DIR)
-  return files.filter((file) => file.endsWith('.json')).map((file) => path.join(CARD_DATA_DIR, file))
+  return files.filter((file) => file.endsWith('cards.json')).map((file) => path.join(CARD_DATA_DIR, file))
 }
 
 function extractCardsFromFile(filePath) {
@@ -55,7 +55,7 @@ function extractCardsFromFile(filePath) {
   }
 }
 
-function syncTranslations() {
+function syncCardTranslations() {
   console.log('Starting translation sync...')
 
   const pokemonTranslations = loadJsonFile(path.join(TRANSLATIONS_DIR, 'pokemon_translations.json'))
@@ -117,4 +117,4 @@ function syncTranslations() {
   }
 }
 
-syncTranslations()
+syncCardTranslations()
