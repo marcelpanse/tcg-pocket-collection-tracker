@@ -1,8 +1,8 @@
 {
-  "publicCollectionTitle": "Estás viendo una colección pública",
-  "publicCollectionDescription": "Estás viendo una colección pública. Haz clic en cualquiera de los elementos de navegación para volver a tu propia colección.",
   "goToCollection": "Go to collection",
   "goToMissions": "Go to missions",
+  "publicCollectionTitle": "You are viewing the public collection of \"{{username}}\".",
+  "publicCollectionDescription": "You are currently viewing a public collection. Click any of the navigation items to return to your own collection.",
   "showPossibleTrades": "Show possible trades",
   "missionDetail": {
     "eligibleCards-singular": "List of eligible cards: {{options}} option",

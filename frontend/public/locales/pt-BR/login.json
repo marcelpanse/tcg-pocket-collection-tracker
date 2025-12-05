@@ -3,5 +3,12 @@
   "validEmail": "Por favor, insira um endereço de e-mail válido",
   "fill6Digit": "Obrigado. Preencha o código de 6 dígitos que enviamos por e-mail.",
   "fillEmail": "Digite seu endereço de e-mail para receber um link mágico para fazer login. Se você ainda não tiver uma conta, criaremos uma automaticamente para você. Não utilizaremos seu endereço de e-mail para mais nada.",
-  "button": "Entrar / Cadastrar"
+  "button": "Entrar / Cadastrar",
+  "emailRequired": "Email is required",
+  "emailInvalid": "Email must be valid",
+  "emailTooLong": "Email must be less than 255 characters",
+  "otpVerifyError": "There was an error verifying your OTP. Please try again.",
+  "otpSendError": "There was an error sending your OTP email. Please try again.",
+  "onlyEmail": "We'll only use your email for login.",
+  "email": "Email"
 }

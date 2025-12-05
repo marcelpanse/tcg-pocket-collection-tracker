@@ -13,5 +13,9 @@
   "uniqueCards": "cartas únicas",
   "numberOfCopies-single": "com pelo menos 1 cópia",
   "numberOfCopies-plural": "com pelo menos {{numberFilter}} cópias",
-  "cardsTotal": "cartas no total"
+  "cardsTotal": "cartas no total",
+  "stats": {
+    "title": "Thank you for being part of our community",
+    "description": "At present, our community of {{usersCount}} users has collectively tracked {{collectionCount}} total cards!"
+  }
 }
