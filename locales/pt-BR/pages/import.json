@@ -1,0 +1,23 @@
+{
+  "title": "Import",
+  "description": "This will OVERWRITE your current collection with the values from the imported CSV file. ONLY do this process if your spreadsheet contains the exact count values you want in your collection.",
+  "fileWasAborted": "File Was Aborted",
+  "errorWithFile": "Error With File",
+  "errorProcessingExcel": "Error processing Excel file:",
+  "dragNDrop": "Drag 'n' drop some files here, or click to select files",
+  "loading": "Excel file is loading",
+  "dataUpdated": "Data updated:",
+  "expansionName": "Expansion Name",
+  "id": "ID",
+  "cardName": "Card Name",
+  "statusCount": "Status (Count)",
+  "added": "Added ({{count}})",
+  "updated": "Updated ({{count}})",
+  "removed": "Removed",
+  "unknown": "Unknown",
+  "noDataUpdated": "No Data Updated.",
+  "loggedOut": {
+    "title": "Sign up to import your cards",
+    "description": "To import your spreadsheet, please log in."
+  }
+}
