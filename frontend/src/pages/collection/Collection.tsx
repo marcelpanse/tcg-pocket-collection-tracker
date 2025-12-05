@@ -42,7 +42,7 @@ function FriendCollection({ friendId }: { friendId: string }) {
       <CollectionCards cards={cards} isPublic={true}>
         <div className="flex justify-between my-2">
           <h1>
-            <span className="text-2xl font-light">Collection of</span>
+            <span className="text-2xl font-light">{t('collectionOf')}</span>
             <span className="text-2xl font-bold"> {account.username} </span>
             <span className="block sm:inline text-sm">
               <FriendIdDisplay friendId={account.friend_id} />
