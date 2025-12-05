@@ -1,9 +1,9 @@
-import { Siren } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate, useParams } from 'react-router'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
+import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { useAccount, usePublicAccount } from '@/services/account/useAccount.ts'
 import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
 import type { CollectionRow } from '@/types'
@@ -40,18 +40,21 @@ function FriendCollection({ friendId }: { friendId: string }) {
   return (
     <div className="flex flex-col gap-y-1">
       <CollectionCards cards={cards} isPublic={true}>
-        <Alert className="mb-1 border-1 border-neutral-700 shadow-none">
-          <Siren className="h-4 w-4" />
-          <AlertTitle>{t('publicCollectionTitle', { username: account.username })}</AlertTitle>
-          <AlertDescription>
-            <div className="flex items-center">
-              {t('publicCollectionDescription')}
-              <Link to={`/trade/${friendId}`}>
-                <Button className="mb-4">{t('showPossibleTrades')}</Button>
-              </Link>
-            </div>
-          </AlertDescription>
-        </Alert>
+        <div className="flex justify-between my-2">
+          <h1>
+            <span className="text-2xl font-light">Collection of</span>
+            <span className="text-2xl font-bold"> {account.username} </span>
+            <span className="block sm:inline text-sm">
+              <FriendIdDisplay friendId={account.friend_id} />
+            </span>
+          </h1>
+          <Link to={`/trade/${friendId}`}>
+            <Button>
+              {t('showPossibleTrades')}
+              <ChevronRight />
+            </Button>
+          </Link>
+        </div>
       </CollectionCards>
     </div>
   )
