@@ -25,7 +25,7 @@ const expansionOptions = ['all', ...expansionIds.filter((id) => getExpansionById
 type ExpansionOption = (typeof expansionOptions)[number]
 
 function Overview() {
-  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
+  const { data: ownedCards = new Map<number, CollectionRow>(), isLoading } = useCollection()
 
   const { t } = useTranslation(['pages/overview', 'filters', 'common/sets'])
 
@@ -93,6 +93,10 @@ function Overview() {
   const getLocalizedExpansion = (id: ExpansionOption) => {
     const expansion_name = id === 'all' ? 'all' : getExpansionById(id).name
     return t(expansion_name, { ns: 'common/sets' })
+  }
+
+  if (isLoading) {
+    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
   }
 
   return (

@@ -45,7 +45,7 @@ function TradeWith() {
   }
 
   if (friendAccountLoading || friendCardsLoading) {
-    return <p className="text-xl text-center py-8">{t('common:loading')}</p>
+    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
   }
 
   if (!friendAccount?.is_active_trading) {

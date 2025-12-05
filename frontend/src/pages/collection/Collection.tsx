@@ -10,11 +10,10 @@ import type { CollectionRow } from '@/types'
 import CollectionCards from './CollectionCards'
 
 function OwnCollection() {
-  const { t } = useTranslation('common')
   const { data: account, isLoading: isLoadingAccount } = useAccount()
   const { data: cards = new Map<number, CollectionRow>(), isLoading: isLoadingCards } = useCollection()
   if (isLoadingAccount && isLoadingCards) {
-    return <p className="text-xl text-center py-8">{t('common:loading')}</p>
+    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
   }
   return <CollectionCards cards={cards} isPublic={false} share={account !== undefined && account.friend_id !== '' && account.is_public} />
 }
@@ -25,7 +24,7 @@ function FriendCollection({ friendId }: { friendId: string }) {
   const { data: cards, isLoading: isLoadingCards } = usePublicCollection(friendId)
 
   if (isLoadingAccount || isLoadingCards) {
-    return <p className="text-xl text-center py-8">{t('common:loading')}</p>
+    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
   }
   if (account === undefined || cards === undefined) {
     return <p className="text-xl text-center py-8">Something went wrong</p>
@@ -59,7 +58,6 @@ function FriendCollection({ friendId }: { friendId: string }) {
 }
 
 export default function Collection() {
-  const { t } = useTranslation(['pages/collection', 'common'])
   const navigate = useNavigate()
 
   const { friendId: rawFriendId } = useParams()
@@ -72,7 +70,7 @@ export default function Collection() {
   }, [isLoadingAccount, rawFriendId, account?.friend_id, navigate])
 
   if (isLoadingAccount) {
-    return <p className="text-xl text-center py-8">{t('common:loading')}</p>
+    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
   }
 
   const friendId = rawFriendId ?? account?.friend_id

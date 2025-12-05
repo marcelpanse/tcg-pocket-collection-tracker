@@ -11,7 +11,7 @@ import { getExtraCards, getNeededCards } from '@/lib/utils'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { useUser } from '@/services/auth/useAuth.ts'
 import { useCollection } from '@/services/collection/useCollection.ts'
-import { type Card, type CollectionRow, type Rarity, tradableRarities } from '@/types'
+import { type Card, type Rarity, tradableRarities } from '@/types'
 import { UserNotLoggedIn } from './components/UserNotLoggedIn'
 
 const options = ['lookingFor', 'forTrade'] as const
@@ -21,7 +21,7 @@ function TradeCards() {
 
   const { data: user } = useUser()
   const { data: account, isLoading: isLoadingAccount } = useAccount()
-  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
+  const { data: ownedCards, isLoading: isLoadingCollection } = useCollection()
 
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>([])
   const [currentTab, setCurrentTab] = useState<(typeof options)[number]>('lookingFor')
@@ -29,19 +29,28 @@ function TradeCards() {
   const filterRarities = (c: Card) => (rarityFilter.length === 0 ? (tradableRarities as readonly Rarity[]) : rarityFilter).includes(c.rarity)
 
   const populateCards = (internal_id: number) => {
+    if (!ownedCards) {
+      throw new Error('populateCards called before collection loaded')
+    }
     const card = getCardByInternalId(internal_id) as Card
     const amount_owned = ownedCards.get(internal_id)?.amount_owned ?? 0
     return { ...card, amount_owned }
   }
 
-  const lookingForCards = useMemo(() => account && getNeededCards(ownedCards, account.trade_rarity_settings).map(populateCards), [ownedCards, account])
+  const lookingForCards = useMemo(
+    () => account && ownedCards && getNeededCards(ownedCards, account.trade_rarity_settings).map(populateCards),
+    [ownedCards, account],
+  )
   const lookingForCardsFiltered = useMemo(() => lookingForCards?.filter(filterRarities), [lookingForCards, rarityFilter])
 
-  const forTradeCards = useMemo(() => account && getExtraCards(ownedCards, account.trade_rarity_settings).map(populateCards), [ownedCards, account])
+  const forTradeCards = useMemo(
+    () => account && ownedCards && getExtraCards(ownedCards, account.trade_rarity_settings).map(populateCards),
+    [ownedCards, account],
+  )
   const forTradeCardsFiltered = useMemo(() => forTradeCards?.filter(filterRarities), [forTradeCards, rarityFilter])
 
-  if (isLoadingAccount) {
-    return <p className="text-xl text-center py-8">{t('common:loading')}...</p>
+  if (isLoadingAccount || isLoadingCollection) {
+    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
   }
 
   if (!user || !account) {

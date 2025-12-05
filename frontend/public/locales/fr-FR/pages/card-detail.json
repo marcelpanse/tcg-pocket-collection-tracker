@@ -17,7 +17,9 @@
     "updated": "Actualisé",
     "alternateVersions": "Versions alternatives",
     "totalAmount": "Nombre total",
-    "uncollectTooltip": "Décollectionner une carte ne diminue pas le nombre de cartes, mais affichera la carte comme non collectionnée."
+    "uncollectTooltip": "Retirer une carte ne diminue pas le nombre de cartes, mais affichera la carte comme non collectionnée.",
+    "uncollect": "Retirer",
+    "uncollecting": "Retrait en cours..."
   },
   "cardType": {
     "pokémon": "Pokémon",

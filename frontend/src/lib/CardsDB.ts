@@ -261,7 +261,7 @@ export const getNrOfCardsOwned = ({ ownedCards, rarityFilter, numberFilter, expa
   })
   if (deckbuildingMode) {
     //deduplicate allCardsWithAmounts by c.internal_id
-    allCardsWithAmounts = allCardsWithAmounts.filter((c, i, a) => a.findIndex((t) => t.internal_id === c.internal_id) === i)
+    allCardsWithAmounts = [...new Map(allCardsWithAmounts.map((c) => [c.internal_id, c])).values()]
 
     allCardsWithAmounts = allCardsWithAmounts
       .map((ac) => {
@@ -322,8 +322,8 @@ export const getTotalNrOfCards = ({ rarityFilter, expansion, packName, deckbuild
   if (deckbuildingMode) {
     filteredCards = filteredCards.filter((c) => basicRarities.includes(c.rarity))
 
-    //deduplicate filteredCards by c.internal_id
-    filteredCards = filteredCards.filter((c, i, a) => a.findIndex((t) => t.internal_id === c.internal_id) === i)
+    // deduplicate filteredCards by c.internal_id
+    filteredCards = [...new Map(filteredCards.map((c) => [c.internal_id, c])).values()]
   }
 
   return filteredCards.length

@@ -14,5 +14,9 @@
   "isPublicButton": "Compartir colección",
   "isPublicTradeButton": "Compartir página de intercambio",
   "isPublicToggle": "Es público",
-  "save": "Guardar"
+  "save": "Guardar",
+  "usernameTooShort": "Username must be at least 2 characters.",
+  "friendIdInvalid": "Friend ID is not valid, it must be 16 digits without dashes.",
+  "accountSaved": "Account saved.",
+  "accountSavingError": "Error saving your account."
 }

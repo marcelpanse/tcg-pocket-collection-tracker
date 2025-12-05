@@ -32,6 +32,7 @@ export function useAuthSSO() {
   return useMutation({
     mutationFn: ({ user, sso, sig }: { user: User; sso: string; sig: string }) => authSSO(user, sso, sig),
     onSuccess: (data) => {
+      console.log('on success sso')
       window.location.href = data.redirectUrl
     },
   })
