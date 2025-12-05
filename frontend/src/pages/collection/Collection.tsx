@@ -39,6 +39,7 @@ function FriendCollection({ friendId }: { friendId: string }) {
 
   return (
     <div className="flex flex-col gap-y-1">
+      <title>{`${account.username} collection – TCG Pocket Collection Tracker`}</title>
       <CollectionCards cards={cards} isPublic={true}>
         <Alert className="mb-1 border-1 border-neutral-700 shadow-none">
           <Siren className="h-4 w-4" />

@@ -198,6 +198,7 @@ export default function DeckBuilder() {
 
   return (
     <div className="w-full mx-auto flex px-2 gap-4 justify-center">
+      <title>{`${deckName} – TCG Pocket Collection Tracker`}</title>
       {filtersCollapsed ? (
         <Sheet open={isFiltersSheetOpen} onOpenChange={setIsFiltersSheetOpen}>
           <SheetContent side="left" className="w-full">
