@@ -176,7 +176,7 @@ const Scan = () => {
         updates: updates.map((x) => ({
           card_id: x.card_id,
           internal_id: getInteralIdByCardId(x.card_id),
-          amount_owned: x.previous_amount + x.increment,
+          amount_owned: Math.max(0, x.previous_amount + x.increment),
         })),
       })
     } catch (error) {
