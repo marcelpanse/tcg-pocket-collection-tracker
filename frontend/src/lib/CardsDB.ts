@@ -22,6 +22,7 @@ export const allCards: Card[] = AllCardsJson as Card[]
 
 const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
 const allCardsByInternalId: Map<number, Card> = new Map(allCards.map((card) => [card.internal_id, card]))
+const allCardsByInternalIdList: Partial<Record<number, Card[]>> = Object.groupBy(allCards, (c) => c.internal_id)
 
 export const getCardById = (cardId: string): Card | undefined => {
   return allCardsDict.get(cardId)
@@ -29,6 +30,10 @@ export const getCardById = (cardId: string): Card | undefined => {
 
 export const getCardByInternalId = (internalId: number): Card | undefined => {
   return allCardsByInternalId.get(internalId)
+}
+
+export function getCardsByInternalId(internalId: number) {
+  return allCardsByInternalIdList[internalId]
 }
 
 const a1Missions: Mission[] = A1Missions as unknown as Mission[]

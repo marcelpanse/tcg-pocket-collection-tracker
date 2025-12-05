@@ -2,10 +2,9 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { parseArgs } from 'node:util'
 import sharp from 'sharp'
-import { allCards } from '../frontend/src/lib/CardsDB'
+import { allCards, getCardByInternalId } from '../frontend/src/lib/CardsDB'
 import { calculatePerceptualHash, calculateSimilarity, hashSize } from '../frontend/src/lib/hash'
 import { chunk } from '../frontend/src/lib/utils'
-import type { Card } from '../frontend/src/types/index.ts'
 
 console.log(`Using sharp ${sharp.versions.sharp}`)
 console.log(`Using libvips ${sharp.versions.vips}`)
@@ -62,8 +61,12 @@ async function loadImage(imgPath: string) {
   return colorPixels
 }
 
-async function generateHash(card_id: string, locale: string) {
-  const imgPath = path.join(imagesDir, locale, `${card_id}.webp`)
+async function generateHash(id: number, locale: string) {
+  const card = getCardByInternalId(id)
+  if (!card) {
+    throw new Error(`Wrong internal id: ${id}`)
+  }
+  const imgPath = path.join(imagesDir, locale, `${card.card_id}.webp`)
 
   // check if localized image exists
   try {
@@ -104,30 +107,32 @@ function decode(hash: string) {
   return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength)
 }
 
-const handleCard = async (card_id: string, locale: string) => {
-  const stored_string = hashes[locale][card_id]
+const handleCard = async (id: number, locale: string) => {
+  const stored_string = hashes[locale][id]
   const stored_hash = stored_string && decode(stored_string)
   if (values.verify) {
-    const hash = await generateHash(card_id, locale)
+    const hash = await generateHash(id, locale)
     if (!checkSimilar(hash, stored_hash)) {
-      console.log(`Incorrect hash for ${card_id} for locale ${locale}:`)
+      console.log(`Incorrect hash for ${id} for locale ${locale}:`)
       console.log(`Stored:     ${stored_string}`)
       console.log(`Calculated: ${hash && Buffer.from(new Uint8Array(hash)).toString('base64')}`)
       ret |= 1
     }
   } else {
     if (!stored_hash || values.force) {
-      const hash = await generateHash(card_id, locale)
+      const hash = await generateHash(id, locale)
       if (hash) {
-        hashes[locale][card_id] = Buffer.from(new Uint8Array(hash)).toString('base64')
+        hashes[locale][id] = Buffer.from(new Uint8Array(hash)).toString('base64')
       }
     }
   }
 }
 
+const all_ids = [...new Set(allCards.map((c) => c.internal_id))]
+
 for (const locale of locales) {
-  for (const cards of chunk(allCards, 10)) {
-    await Promise.all(cards.map((card: Card) => handleCard(card.card_id, locale)))
+  for (const ids of chunk(all_ids, 10)) {
+    await Promise.all(ids.map((id) => handleCard(id, locale)))
   }
 }
 
