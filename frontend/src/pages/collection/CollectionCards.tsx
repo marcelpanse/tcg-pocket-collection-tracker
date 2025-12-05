@@ -161,13 +161,12 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
             )}
           </div>
         )}
+        {children}
         <CardsTable
           cards={filteredCards}
           groupExpansions={filters.sortBy !== 'recent'}
           render={(c) => <Card card={c} editable={!filters.deckbuildingMode && !isPublic} />}
-        >
-          {children}
-        </CardsTable>
+        />
       </div>
     </div>
   )

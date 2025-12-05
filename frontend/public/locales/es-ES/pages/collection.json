@@ -1,6 +1,4 @@
 {
-  "publicCollectionTitle": "Estás viendo una colección pública",
-  "publicCollectionDescription": "Estás viendo una colección pública. Haz clic en cualquiera de los elementos de navegación para volver a tu propia colección.",
   "goToCollection": "Go to collection",
   "goToMissions": "Go to missions",
   "showPossibleTrades": "Show possible trades",
@@ -18,5 +16,6 @@
   "stats": {
     "summary": "{{selected}} selected, {{uniquesOwned}} uniques owned, {{totalOwned}} total owned",
     "mewCardOwned": "You unlocked the special Mew card! This is included in our totals, but note that the in-game totals don't include this card."
-  }
+  },
+  "collectionOf": "Collection of"
 }

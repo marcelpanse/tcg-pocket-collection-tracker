@@ -1,6 +1,8 @@
+import { ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useParams } from 'react-router'
+import { Link, useParams } from 'react-router'
+import { Button } from '@/components/ui/button'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { getCardByInternalId, tradeableExpansions } from '@/lib/CardsDB.ts'
 import { getExtraCards, getNeededCards } from '@/lib/utils'
@@ -64,13 +66,21 @@ function TradeWith() {
 
   return (
     <div className="kap-4 justify-center w-full m-auto px-1 sm:px-2">
-      <h1 className="mb-4 ms-1">
-        <span className="text-2xl font-light">{t('tradingWith')}</span>
-        <span className="text-2xl font-bold"> {friendAccount.username} </span>
-        <span className="block sm:inline text-sm">
-          <FriendIdDisplay friendId={friendAccount.friend_id} />
-        </span>
-      </h1>
+      <div className="mb-4 mx-1 flex justify-between">
+        <h1>
+          <span className="text-2xl font-light">{t('tradingWith')}</span>
+          <span className="text-2xl font-bold"> {friendAccount.username} </span>
+          <span className="block sm:inline text-sm">
+            <FriendIdDisplay friendId={friendAccount.friend_id} />
+          </span>
+        </h1>
+        <Link to={`/collection/${friendId}`}>
+          <Button>
+            Collection
+            <ChevronRight />
+          </Button>
+        </Link>
+      </div>
 
       <TradeOffer
         yourId={account.friend_id}
