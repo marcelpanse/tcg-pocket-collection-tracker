@@ -22,7 +22,7 @@ WITH recent_accounts AS (
 SELECT
     a.friend_id,
     a.username,
-    COUNT(*) as num_to_give
+    COUNT(*) as trade_matches
 FROM
     (
         SELECT internal_id
@@ -41,5 +41,5 @@ FROM
 WHERE
     COALESCE(ca.amount_owned, 0) < a.to_collect
 GROUP BY a.friend_id, a.username
-ORDER BY num_to_give DESC
+ORDER BY trade_matches DESC
 ;
