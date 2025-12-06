@@ -83,7 +83,7 @@ export interface TradeRow {
 export interface TradePartners {
   friend_id: string
   username: string
-  matched_cards_amount: number
+  trade_matches: number
 }
 
 export interface PackStructure {
