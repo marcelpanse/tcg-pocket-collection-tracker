@@ -12,7 +12,7 @@ import CollectionCards from './CollectionCards'
 function OwnCollection() {
   const { data: account, isLoading: isLoadingAccount } = useAccount()
   const { data: cards = new Map<number, CollectionRow>(), isLoading: isLoadingCards } = useCollection()
-  if (isLoadingAccount && isLoadingCards) {
+  if (isLoadingAccount || isLoadingCards) {
     return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
   }
   return <CollectionCards cards={cards} isPublic={false} share={account !== undefined && account.friend_id !== '' && account.is_public} />
