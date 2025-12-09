@@ -40,10 +40,10 @@ export const updateTrade = async (id: number, trade: Partial<TradeRow>) => {
   return data as TradeRow
 }
 
-export const getTradingPartners = async (email: string, card_id?: number) => {
+export const getTradingPartners = async (email: string, cardId?: number) => {
   const { data, error } = await supabase.functions.invoke('get-trading-partners', {
     method: 'POST',
-    body: { email, card_id },
+    body: { email, card_id: cardId },
   })
   if (error) {
     console.log('supa error', error)

@@ -1,19 +1,25 @@
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { useMemo, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { CardLine } from '@/components/CardLine'
 import SearchInput from '@/components/filters/SearchInput'
 import { Button } from '@/components/ui/button'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { getFilteredCards } from '@/lib/filters'
+import PotentialTradePartner from '@/pages/trade/components/PotentialTradePartner.tsx'
+import { useTradingPartners } from '@/services/trade/useTrade.ts'
 import { tradableRarities } from '@/types'
 
 function TradeMatches() {
-  // const { t } = useTranslation(['trade-matches', 'common'])
+  const { t } = useTranslation(['trade-matches', 'common'])
 
   const scrollRef = useRef(null)
   const [search, setSearch] = useState('')
   const [selectedCard, setSelectedCard] = useState<number>()
   const cards = useMemo(() => getFilteredCards({ search, rarity: [...tradableRarities] }, new Map()), [search])
+  const [type, setType] = useState<'all' | 'single' | undefined>(undefined)
+
+  const { data: tradingPartners, isLoading, isError } = useTradingPartners(type, selectedCard)
 
   const virtualizer = useVirtualizer({
     getScrollElement: () => scrollRef.current,
@@ -21,6 +27,34 @@ function TradeMatches() {
     getItemKey: (index) => cards[index].card_id,
     estimateSize: () => 32,
   })
+
+  if (isLoading) {
+    return (
+      <p className="text-xl text-center py-8">
+        {t('common:loading')}
+        <br />
+        {t('longOperation')}
+      </p>
+    )
+  }
+
+  if (isError) {
+    return <p className="text-xl text-center py-8">{t('common:error')}</p>
+  }
+
+  if (type && tradingPartners?.length === 0) {
+    return <p className="text-xl text-center py-8">{t('noTradePartners')}</p>
+  }
+
+  if (type && tradingPartners) {
+    return (
+      <div className="flex flex-col gap-4">
+        {tradingPartners.map((partner) => (
+          <PotentialTradePartner key={partner.friend_id} partner={partner} />
+        ))}
+      </div>
+    )
+  }
 
   return (
     <div className="max-w-sm mx-auto">
@@ -44,10 +78,23 @@ function TradeMatches() {
         </ul>
       </div>
       <div className="flex gap-2">
-        <Button className="w-1/2" disabled={!selectedCard}>
+        <Button
+          className="w-1/2"
+          disabled={!selectedCard}
+          onClick={() => {
+            setType('single')
+          }}
+        >
           {selectedCard ? `Search ${getCardByInternalId(selectedCard)?.name}` : `Select card to search`}
         </Button>
-        <Button className="w-1/2">Search all cards</Button>
+        <Button
+          className="w-1/2"
+          onClick={() => {
+            setType('all')
+          }}
+        >
+          Search all cards
+        </Button>
       </div>
     </div>
   )

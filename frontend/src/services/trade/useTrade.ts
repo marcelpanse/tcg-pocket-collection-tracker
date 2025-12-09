@@ -10,13 +10,13 @@ export function useTrades() {
   })
 }
 
-export function useTradingPartners() {
+export function useTradingPartners(type?: 'all' | 'single', cardId?: number) {
   const { data: account } = useAccount()
 
   return useQuery({
-    queryKey: ['trading-partners'],
-    queryFn: () => getTradingPartners(account?.email as string),
-    enabled: !!account,
+    queryKey: ['trading-partners', type, cardId],
+    queryFn: () => getTradingPartners(account?.email as string, cardId),
+    enabled: !!account && !!type,
   })
 }
 
