@@ -16,7 +16,7 @@ function PotentialTradePartner({ partner }: PotentialTradePartnerProps) {
       <p className="mr-2">{partner.username}</p>
       <Link to={`/trade/${partner.friend_id}`}>
         <Button variant="outline" className="my-auto">
-          {t('viewTradePartner')}
+          {t('viewTradePartner', { tradeMatches: partner.trade_matches })}
           <ChevronRight />
         </Button>
       </Link>

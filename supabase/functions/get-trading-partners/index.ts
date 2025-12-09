@@ -150,7 +150,7 @@ Deno.serve(async (req) => {
       trade_matches: number
     }
 
-    const tradingPartners = card_id
+    const tradingPartners = !card_id
       ? await connection.queryObject<RowType>(all_matches_query, [email])
       : await connection.queryObject<RowType>(single_card_query, [email, card_id])
 
