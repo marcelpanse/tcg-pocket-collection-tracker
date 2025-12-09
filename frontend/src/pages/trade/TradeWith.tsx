@@ -66,6 +66,7 @@ function TradeWith() {
 
   return (
     <div className="kap-4 justify-center w-full m-auto px-1 sm:px-2">
+      <title>{`Trade with ${friendAccount.username} – TCG Pocket Collection Tracker`}</title>
       <div className="mb-4 mx-1 flex justify-between">
         <h1>
           <span className="text-2xl font-light">{t('tradingWith')}</span>

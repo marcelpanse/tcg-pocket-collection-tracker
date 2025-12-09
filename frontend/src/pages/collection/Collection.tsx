@@ -39,6 +39,7 @@ function FriendCollection({ friendId }: { friendId: string }) {
 
   return (
     <div className="flex flex-col gap-y-1">
+      <title>{`${account.username} collection – TCG Pocket Collection Tracker`}</title>
       <CollectionCards cards={cards} isPublic={true}>
         <div className="flex justify-between my-2">
           <h1>
