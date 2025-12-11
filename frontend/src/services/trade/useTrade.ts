@@ -10,13 +10,13 @@ export function useTrades() {
   })
 }
 
-export function useTradingPartners(cardId: number | undefined) {
+export function useTradingPartners(enabled: boolean, cardId: number | undefined) {
   const { data: account } = useAccount()
 
   return useQuery({
     queryKey: ['trading-partners', cardId],
     queryFn: () => getTradingPartners(account?.email as string, cardId),
-    enabled: !!account,
+    enabled: !!account && enabled,
   })
 }
 

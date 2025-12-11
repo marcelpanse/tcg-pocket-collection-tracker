@@ -20,7 +20,7 @@ function TradeMatches() {
   const [showResults, setShowResults] = useState(false)
   const cards = useMemo(() => getFilteredCards({ search, rarity: [...tradableRarities] }, new Map()), [search])
 
-  const { data: tradingPartners, isLoading, isError } = useTradingPartners(selectedCard)
+  const { data: tradingPartners, isLoading, isError } = useTradingPartners(showResults, selectedCard)
 
   const virtualizer = useVirtualizer({
     getScrollElement: () => scrollRef.current,
