@@ -5,20 +5,35 @@ const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v2'
 const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v2'
 const PAGE_SIZE = 500
 
-export const getCollection = async (email: string, collectionLastUpdated?: Date): Promise<Map<number, CollectionRow>> => {
+export const getCollection = async (email: string, collectionLastUpdatedRaw?: Date | string): Promise<Map<number, CollectionRow>> => {
   if (!email) {
     throw new Error('Email is required to fetch collection')
+  }
+
+  // it seems sometimes the collectionLastUpdated is a string, then we need to parse it into a Date.
+  let collectionLastUpdated: Date | undefined
+  if (typeof collectionLastUpdatedRaw === 'string') {
+    collectionLastUpdated = new Date(collectionLastUpdatedRaw)
+  } else {
+    collectionLastUpdated = collectionLastUpdatedRaw
   }
 
   // Check if we should use cached data
   if (collectionLastUpdated) {
     const cachedCollection = getCollectionFromCache(email)
     const cacheLastUpdatedRaw = localStorage.getItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
-    const cacheLastUpdated = cacheLastUpdatedRaw && new Date(cacheLastUpdatedRaw)
 
-    if (cacheLastUpdated && !Number.isNaN(cacheLastUpdated.getTime()) && cacheLastUpdated >= collectionLastUpdated && cachedCollection !== null) {
-      console.log('Using cached collection', cachedCollection.length)
-      return new Map(cachedCollection.map((row) => [row.internal_id, row]))
+    if (cacheLastUpdatedRaw) {
+      try {
+        const cacheLastUpdated = new Date(cacheLastUpdatedRaw)
+
+        if (cacheLastUpdated && !Number.isNaN(cacheLastUpdated.getTime()) && cacheLastUpdated >= collectionLastUpdated && cachedCollection !== null) {
+          console.log('Using cached collection', cachedCollection.length)
+          return new Map(cachedCollection.map((row) => [row.internal_id, row]))
+        }
+      } catch (e) {
+        console.log('Error parsing cache timestamp', e)
+      }
     }
   }
 
