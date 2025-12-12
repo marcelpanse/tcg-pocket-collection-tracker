@@ -121,7 +121,7 @@ function TradeCards() {
         <TabsFilter options={options} value={currentTab} onChange={setCurrentTab} show={t} />
         <ToggleFilter options={tradableRarities} value={rarityFilter} onChange={setRarityFilter} show={formatRarity} asChild />
         <Button variant="outline" onClick={copyToClipboard}>
-          Copy to clipboard
+          {t('copyToClipboard')}
         </Button>
       </div>
     </CardsTable>
