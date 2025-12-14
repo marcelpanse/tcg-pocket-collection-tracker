@@ -37,7 +37,7 @@ export default function DeckBuilder() {
   const [isFiltersSheetOpen, setIsFiltersSheetOpen] = useState(false) // used only on mobile
   const [filters, setFilters] = useState<Filters>(defaultFilters)
 
-  const filteredCards = useMemo(() => getFilteredCards({ ...filters, deckbuildingMode: true }, ownedCards ?? new Map(), []), [allCards, ownedCards, filters])
+  const filteredCards = useMemo(() => getFilteredCards({ ...filters, deckbuildingMode: true }, ownedCards ?? new Map()), [allCards, ownedCards, filters])
 
   const activeFilters = useMemo(() => {
     let res = 0

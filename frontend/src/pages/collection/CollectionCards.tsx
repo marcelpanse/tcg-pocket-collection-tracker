@@ -122,7 +122,7 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
     return res
   }, [filters])
 
-  const filteredCards = useMemo(() => getFilteredCards(filters, cards, account?.trade_rarity_settings ?? []), [filters, cards, account])
+  const filteredCards = useMemo(() => getFilteredCards(filters, cards, account?.trade_rarity_settings), [filters, cards, account])
 
   const getTradingMessage = useCallback(() => {
     if (!account) {

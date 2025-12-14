@@ -28,7 +28,7 @@ export interface FiltersAll {
 }
 export type Filters = Partial<FiltersAll>
 
-export function getFilteredCards(filters: Filters, cards: Map<number, CollectionRow>, tradingSettings: RaritySettingsRow[]) {
+export function getFilteredCards(filters: Filters, cards: Map<number, CollectionRow>, tradingSettings?: RaritySettingsRow[]) {
   let filteredCards = allCards
 
   if (filters.deckbuildingMode) {
@@ -42,6 +42,9 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
     filteredCards = filteredCards.filter((card) => card.pack === filters.pack || card.pack === 'everypack')
   }
   if (filters.trading !== undefined && filters.trading !== 'all') {
+    if (!tradingSettings) {
+      throw new Error('Cannot filter by trading status without trading settings')
+    }
     const filtered = new Set(filters.trading === 'wanted' ? getNeededCards(cards, tradingSettings) : getExtraCards(cards, tradingSettings))
     filteredCards = filteredCards.filter((card) => filtered.has(card.internal_id))
   }
