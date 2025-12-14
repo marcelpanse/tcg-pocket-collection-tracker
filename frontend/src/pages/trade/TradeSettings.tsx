@@ -72,9 +72,9 @@ function TradeSettings() {
             render={({ field }) => (
               <FormItem className="flex flex-col items-start">
                 <FormControl>
-                  <FormLabel htmlFor="active-trading" className="flex">
+                  <FormLabel className="flex">
                     {t('isActiveTrading')}
-                    <Switch id="active-trading" className="ml-2" checked={field.value} onCheckedChange={field.onChange} />
+                    <Switch className="ml-2" checked={field.value} onCheckedChange={field.onChange} />
                   </FormLabel>
                 </FormControl>
               </FormItem>
