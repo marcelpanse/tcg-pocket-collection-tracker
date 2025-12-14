@@ -79,7 +79,7 @@ const EditProfile: FC = () => {
             navigate(`/trade/settings`)
           }}
         >
-          {t('isPublicTradeButton')}
+          {t('openTradingSettings')}
         </Button>
 
         <Form {...form}>

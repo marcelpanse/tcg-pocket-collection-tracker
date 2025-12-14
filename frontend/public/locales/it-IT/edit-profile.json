@@ -12,11 +12,11 @@
   "friendIDDescription": "Usa lo stessso ID amico che hai su Pokémon Pocket qui (senza trattini)",
   "isPublicDescription": "Se vuoi condividere la tua collezione o pagina di scambi, puoi farlo da qui.",
   "isPublicButton": "Condividi collezione",
-  "isPublicTradeButton": "Apri pagina scambi",
   "isPublicToggle": "Pubblico",
   "save": "Salva",
   "usernameTooShort": "Username must be at least 2 characters.",
   "friendIdInvalid": "Friend ID is not valid, it must be 16 digits without dashes.",
   "accountSaved": "Account saved.",
-  "accountSavingError": "Error saving your account."
+  "accountSavingError": "Error saving your account.",
+  "openTradingSettings": "Open trading settings"
 }
