@@ -5,8 +5,6 @@ import {
   FacebookShareButton,
   LinkedinIcon,
   LinkedinShareButton,
-  PinterestIcon,
-  PinterestShareButton,
   RedditIcon,
   RedditShareButton,
   TelegramIcon,
@@ -26,23 +24,20 @@ import { cn } from '@/lib/utils'
 import { useAccount } from '@/services/account/useAccount'
 
 export const SocialShareButtons = ({ className }: { className?: string }) => {
-  const { data: account } = useAccount()
+  const { data: account, isLoading } = useAccount()
   const collectionShareUrl = `https://tcgpocketcollectiontracker.com/#/collection/${account?.friend_id}`
   const tradeShareUrl = `https://tcgpocketcollectiontracker.com/#/trade/${account?.friend_id}`
   const title = 'My Pokemon Pocket collection'
+  const copyLink = (link: string) =>
+    navigator.clipboard.writeText(link).then(() => toast({ title: 'Copied to clipboard!', variant: 'default', duration: 3000 }))
+
+  if (isLoading) {
+    return null
+  }
 
   return (
     <div className={cn('flex gap-2 items-center flex-wrap', className)}>
       <small>Share on</small>
-      <Button
-        variant="outline"
-        onClick={async () => {
-          toast({ title: 'Copied trading page URL to clipboard!', variant: 'default', duration: 3000 })
-          await navigator.clipboard.writeText(tradeShareUrl)
-        }}
-      >
-        Copy link
-      </Button>
 
       <FacebookShareButton url={collectionShareUrl}>
         <FacebookIcon size={32} round />
@@ -53,9 +48,6 @@ export const SocialShareButtons = ({ className }: { className?: string }) => {
       <RedditShareButton url={collectionShareUrl} title={title} windowWidth={660} windowHeight={460}>
         <RedditIcon size={32} round />
       </RedditShareButton>
-      <PinterestShareButton url={String(window.location)} media="https://tcgpocketcollectiontracker.com/images/en-US/A1_285_EN.webp">
-        <PinterestIcon size={32} round />
-      </PinterestShareButton>
       <LinkedinShareButton url={collectionShareUrl}>
         <LinkedinIcon size={32} round />
       </LinkedinShareButton>
@@ -65,7 +57,7 @@ export const SocialShareButtons = ({ className }: { className?: string }) => {
       <TelegramShareButton url={collectionShareUrl} title={title}>
         <TelegramIcon size={32} round />
       </TelegramShareButton>
-      <VKShareButton url={collectionShareUrl} image="https://tcgpocketcollectiontracker.com/images/en-US/A1_285_EN.webp">
+      <VKShareButton url={collectionShareUrl}>
         <VKIcon size={32} round />
       </VKShareButton>
       <ThreadsShareButton url={collectionShareUrl} title={title}>
@@ -74,6 +66,13 @@ export const SocialShareButtons = ({ className }: { className?: string }) => {
       <BlueskyShareButton url={collectionShareUrl} title={title} windowWidth={660} windowHeight={460}>
         <BlueskyIcon size={32} round />
       </BlueskyShareButton>
+
+      <Button variant="outline" onClick={() => copyLink(tradeShareUrl)} disabled={!account?.is_active_trading}>
+        Copy trading link
+      </Button>
+      <Button variant="outline" onClick={() => copyLink(collectionShareUrl)}>
+        Copy collection link
+      </Button>
     </div>
   )
 }

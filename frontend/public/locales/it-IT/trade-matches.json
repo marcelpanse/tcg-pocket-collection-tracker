@@ -7,13 +7,9 @@
   "featureDescription": "Questa finestra mostrerà gli scambi possibili tra le tue carte e quelle dell'ID dell'amico selezionato. Mostra le tue carte duplicate che l'altro non possiede.",
   "ownCollection": "Stai osservando la tua collezione.",
   "ownCollectionDescription": "Condividi questa pagina con altri per permettergli di trovare scambi possibili.",
-  "isActiveTrading": "Status pagina scambi",
   "inActiveTradePage": "Al momento l'utente \"{{username}}\" non accetta scambi.",
   "inActiveTradeDescription": "La pagina di scambi è disabilitata. Contatta l'utente se desideri scambiare.",
   "friendAccountDetails": "ID amico: {{friend_id}} ({{username}}).",
-  "minFilterTooltip": "La quantità massima di carte che si desidera ottenere attraverso gli scambi.",
-  "maxFilterTooltip": "La quantità minima di carte che è necessario possedere prima di apparire come opzione per gli scambi.",
-  "minInputTooltip": "La quantità minima di carte che vuoi mantenere dopo lo scambio.",
   "activeTradingInputTooltip": "Suggerimento: puoi disattivare (temporaneamente) la pagina di scambi nel caso in cui tu esaurisca i Gettoni scambio.",
   "raritySettings": "Impostazioni di Rarità",
   "rarity": "Rarità",
@@ -30,7 +26,6 @@
   "offerTrades": "Offer trade",
   "youGive": "You give",
   "youReceive": "You receive",
-  "maxInputTooltip": "The maximum amount of cards you want to collect by trading.",
   "accountSaved": "Account saved.",
   "errorSavingAccount": "Error saving your account.",
   "amountYouOwn": "Amount you own",
@@ -58,5 +53,8 @@
   "tabMatches": "Matches",
   "tabSettings": "Settings",
   "noAccount": "First set up your account using 'Edit profile' in the top right corner.",
-  "longOperation": "This might take a while."
+  "longOperation": "This might take a while.",
+  "isActiveTrading": "Accepting new trades",
+  "toCollectTooltip": "The amount of cards you want to collect by trading. Tip: Set this value to 0 to exclude a rarity from trading.",
+  "toKeepTooltip": "The minimum amount of cards you want to trade down to."
 }
