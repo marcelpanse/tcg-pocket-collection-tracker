@@ -22,14 +22,8 @@
   "offerTrades": "Offer trade",
   "youGive": "You give",
   "youReceive": "You receive",
-  "isActiveTrading": "Trading page status",
   "inActiveTradePage": "The user \"{{username}}\" is currently not accepting any trades.",
   "inActiveTradeDescription": "Their trading page is set to disabled. Please contact them if you want to trade.",
-  "minFilterTooltip": "The maximum amount of cards you'd like to collect through trading.",
-  "maxFilterTooltip": "The minimum amount of cards you need to own before appearing as a trade option.",
-  "minInputTooltip": "The minimum amount of cards you want to trade down to.",
-  "maxInputTooltip": "The maximum amount of cards you want to collect by trading.",
-  "activeTradingInputTooltip": "Tip: You can (temporarily) switch off your trading page in case you run out of trading tokens.",
   "accountSaved": "Account saved.",
   "errorSavingAccount": "Error saving your account.",
   "amountYouOwn": "Amount you own",
@@ -57,5 +51,8 @@
   "tabMatches": "Matches",
   "tabSettings": "Settings",
   "noAccount": "First set up your account using 'Edit profile' in the top right corner.",
-  "longOperation": "This might take a while."
+  "longOperation": "This might take a while.",
+  "isActiveTrading": "Accepting new trades",
+  "toCollectTooltip": "The amount of cards you want to collect by trading. Tip: Set this value to 0 to exclude a rarity from trading.",
+  "toKeepTooltip": "The minimum amount of cards you want to trade down to."
 }
