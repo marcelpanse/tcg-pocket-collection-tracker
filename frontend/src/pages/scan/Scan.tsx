@@ -1,11 +1,11 @@
 import type { GraphModel } from '@tensorflow/tfjs'
 import i18n from 'i18next'
-import { SquareCheck, SquareX } from 'lucide-react'
+import { Minus, Plus, SquareCheck, SquareX } from 'lucide-react'
 import type { ChangeEvent, Dispatch, SetStateAction } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CardLine } from '@/components/CardLine'
-import { DropdownFilter, TabsFilter } from '@/components/Filters'
+import { DropdownFilter } from '@/components/Filters'
 import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
@@ -249,6 +249,9 @@ const Scan = () => {
                 }
                 setExtractedCards((arr) => arr.map((x, i) => (i === index ? { ...x, matchedCard: { ...x.matchedCard, card: targetCard } } : x)))
               }
+              const currentAmount = ownedCards?.get(card.matchedCard.card.internal_id)?.amount_owned ?? 0
+              const newAmount = currentAmount + card.increment
+              const canDecrement = newAmount > 0
               return (
                 <div key={index} className={`border-3 rounded-lg p-2 ${card.increment > 0 && 'border-green-400'} ${card.increment < 0 && 'border-red-400'}`}>
                   <h3 className="flex mb-2">
@@ -263,7 +266,21 @@ const Scan = () => {
                     />
                   </h3>
                   <div className="flex gap-2 justify-between mb-2">
-                    <TabsFilter options={['-1', '0', '+1']} value={(card.increment > 0 ? '+' : '') + String(card.increment)} onChange={onIncrementChange} />
+                    <div className="flex items-center gap-1">
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="h-8 w-8"
+                        onClick={() => onIncrementChange(String(card.increment - 1))}
+                        disabled={!canDecrement}
+                      >
+                        <Minus className="h-4 w-4" />
+                      </Button>
+                      <div className="min-w-8 text-center font-semibold select-none">{card.increment > 0 ? `+${card.increment}` : card.increment}</div>
+                      <Button variant="outline" size="icon" className="h-8 w-8" onClick={() => onIncrementChange(String(card.increment + 1))}>
+                        <Plus className="h-4 w-4" />
+                      </Button>
+                    </div>
                     {expansions.length > 1 && (
                       <DropdownFilter className="inline-block" options={expansions} value={card.matchedCard.card.expansion} onChange={onExpansionChange} />
                     )}
