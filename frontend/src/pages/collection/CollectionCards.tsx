@@ -1,10 +1,15 @@
-import { Trash2 } from 'lucide-react'
-import { type ReactNode, useMemo, useState } from 'react'
+import { CircleAlert, Trash2 } from 'lucide-react'
+import { type ReactNode, useCallback, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
-import { useSearchParams } from 'react-router'
+import { Link, useSearchParams } from 'react-router'
+import { Tooltip } from 'react-tooltip'
 import { Card } from '@/components/Card'
 import { CardsTable } from '@/components/CardsTable.tsx'
+import FiltersPanel from '@/components/FiltersPanel'
+import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
+import { toast } from '@/hooks/use-toast'
 import {
   type CardTypeOption,
   cardTypeOptions,
@@ -15,9 +20,8 @@ import {
   sortByOptions,
   tradingOptions,
 } from '@/lib/filters'
-import { useAccount } from '@/services/account/useAccount'
-import { type CollectionRow, type Rarity, rarities } from '@/types'
-import CollectionFiltersPanel from './FiltersPanel'
+import { useAccount, useProfileDialog } from '@/services/account/useAccount'
+import { type Card as CardType, type CollectionRow, type Rarity, rarities } from '@/types'
 
 const numberParser = (s: string) => {
   const x = Number(s)
@@ -63,8 +67,10 @@ const defaultFilters: Filters = {
 }
 
 export default function CollectionCards({ children, cards, isPublic, share }: Props) {
+  const { t } = useTranslation('pages/collection')
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' }) // tailwind "md"
 
+  const { setIsProfileDialogOpen } = useProfileDialog()
   const [isFiltersSheetOpen, setIsFiltersSheetOpen] = useState(false) // used only on mobile
   const [searchParams, setSearchParams] = useSearchParams()
   const { data: account } = useAccount()
@@ -118,6 +124,119 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
 
   const filteredCards = useMemo(() => getFilteredCards(filters, cards, account?.trade_rarity_settings ?? []), [filters, cards, account])
 
+  const getTradingMessage = useCallback(() => {
+    if (!account) {
+      throw new Error('Cannot copy trade message without account')
+    }
+    let cardValues = ''
+
+    if (account.is_public) {
+      cardValues += `${t('trade.publicTradePage')}: https://tcgpocketcollectiontracker.com/#/trade/${account?.friend_id}\n`
+    }
+    if (account.username) {
+      cardValues += `${t('trade.friendID')}: ${account.friend_id} (${account.username})\n\n`
+    }
+
+    const putCards = (arr: CardType[]) => {
+      arr.sort((a: CardType, b: CardType) => {
+        const expansionComparison = a.expansion.localeCompare(b.expansion)
+        if (expansionComparison !== 0) {
+          return expansionComparison
+        }
+        return a.rarity.localeCompare(b.rarity)
+      })
+
+      for (let i = 0; i < arr.length; i++) {
+        const prevExpansion = i > 0 ? arr[i - 1].expansion : ''
+        if (prevExpansion !== arr[i].expansion) {
+          cardValues += `\n${arr[i].expansion}:\n`
+        }
+        cardValues += `${arr[i].rarity} ${arr[i].card_id} - ${arr[i].name}\n`
+      }
+    }
+
+    cardValues += `${t('trade.lookingForCards')}:\n`
+    putCards(getFilteredCards({ ...filters, trading: 'wanted' }, cards, account.trade_rarity_settings))
+
+    cardValues += `\n\n${t('trade.forTradeCards')}:\n`
+    putCards(getFilteredCards({ ...filters, trading: 'extra' }, cards, account.trade_rarity_settings))
+
+    return cardValues
+  }, [cards, filters, account])
+
+  async function onShare() {
+    if (!share) {
+      setIsProfileDialogOpen(true)
+    } else {
+      // @ts-expect-error: Experimental api https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/mobile
+      if (navigator.share && (navigator.userAgentData?.mobile || /Mobi|Android/i.test(navigator.userAgent))) {
+        await navigator.share({ title: 'My Pokemon TCG Pocket collection', url: window.location.href })
+      } else {
+        await navigator.clipboard.writeText(window.location.href)
+        toast({ title: 'Copied to clipboard', variant: 'default' })
+      }
+    }
+  }
+
+  const totalOwned = useMemo(() => {
+    let total = 0
+    const uniqueCardsByCardId = new Set<number>()
+    for (const card of filteredCards) {
+      if (card.collected && !uniqueCardsByCardId.has(card.internal_id)) {
+        total += card.amount_owned || 0
+        uniqueCardsByCardId.add(card.internal_id)
+      }
+    }
+    return total
+  }, [cards])
+
+  const mewCardOwned = useMemo(() => Boolean((cards?.get(83654)?.amount_owned ?? 0) > 0), [cards])
+
+  const filtersPanel = (
+    <div className="flex flex-col h-fit gap-2">
+      <small className="flex gap-2">
+        {t('stats.summary', {
+          selected: filteredCards.length,
+          uniquesOwned: filteredCards.filter((card) => Boolean(card.collected)).length,
+          totalOwned,
+        })}
+        {mewCardOwned && (
+          <>
+            <Tooltip id="mewCardOwned" className="text-start max-w-72" clickable={true} />
+            <CircleAlert className="h-5 w-5" data-tooltip-id="mewCardOwned" data-tooltip-content={t('stats.mewCardOwned')} />
+          </>
+        )}
+      </small>
+      <FiltersPanel className="flex flex-col gap-y-3" filters={filters} setFilters={setFilters} clearFilters={clearFilters} />
+      <div className="flex flex-col mt-4 gap-2">
+        {share !== undefined && (
+          <Button variant="outline" onClick={onShare}>
+            {t('filters.share')}
+          </Button>
+        )}
+        {!isPublic && (
+          <Button
+            className="w-full"
+            variant="outline"
+            disabled={!account}
+            onClick={() =>
+              navigator.clipboard.writeText(getTradingMessage()).then(() => toast({ title: t('trade.copiedInClipboard'), variant: 'default', duration: 3000 }))
+            }
+          >
+            Copy trade message
+          </Button>
+        )}
+        {!isPublic && (
+          <Link className="w-full" to="/collection/missions">
+            <Button className="w-full" variant="outline">
+              {t('goToMissions')}
+            </Button>
+          </Link>
+        )}
+      </div>
+    </div>
+  )
+
   return (
     <div className="flex justify-center gap-2 xl:gap-8 px-1">
       {isMobile ? (
@@ -126,27 +245,11 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
             <SheetHeader>
               <SheetTitle>Filters</SheetTitle>
             </SheetHeader>
-            <CollectionFiltersPanel
-              cards={filteredCards}
-              filters={filters}
-              setFilters={setFilters}
-              clearFilters={clearFilters}
-              share={share}
-              missions={!isPublic}
-            />
+            {filtersPanel}
           </SheetContent>
         </Sheet>
       ) : (
-        <div className="w-80">
-          <CollectionFiltersPanel
-            cards={filteredCards}
-            filters={filters}
-            setFilters={setFilters}
-            clearFilters={clearFilters}
-            share={share}
-            missions={!isPublic}
-          />
-        </div>
+        <div className="w-80">{filtersPanel}</div>
       )}
       <div className="w-full max-w-[900px]">
         {isMobile && (
