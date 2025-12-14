@@ -1,7 +1,7 @@
 import { ChevronRight } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link, useParams } from 'react-router'
+import { Link, useParams, useSearchParams } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { getCardByInternalId, tradeableExpansions } from '@/lib/CardsDB.ts'
@@ -24,6 +24,7 @@ function getTradeCards(extraCards: number[], neededCards: number[]) {
 function TradeWith() {
   const { t } = useTranslation(['trade-matches', 'common'])
   const { friendId } = useParams()
+  const [searchParams] = useSearchParams()
 
   const { data: friendAccount, isLoading: friendAccountLoading, isError: friendAccountError } = usePublicAccount(friendId)
   const { data: friendCards = new Map<number, CollectionRow>(), isLoading: friendCardsLoading, isError: friendCardsError } = usePublicCollection(friendId)
@@ -32,7 +33,25 @@ function TradeWith() {
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
 
   const [yourCard, setYourCard] = useState<Card | null>(null)
-  const [friendCard, setFriendCard] = useState<Card | null>(null)
+  const [friendCard, setFriendCard] = useState<Card | null>(() => {
+    const id = searchParams.get('friend_card')
+    return id ? (getCardByInternalId(Number(id)) ?? null) : null
+  })
+
+  useEffect(() => {
+    const id = searchParams.get('friend_card')
+    if (!id || !friendCards || !ownedCards) {
+      return
+    }
+    const card = getCardByInternalId(Number(id))
+    if (!card) {
+      return
+    }
+    const el = document.getElementById(card.rarity)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [searchParams, friendCards, ownedCards])
 
   if (!account) {
     return null
@@ -101,7 +120,9 @@ function TradeWith() {
 
       {tradableRarities.map((rarity) => (
         <div key={rarity} className="mt-4">
-          <h3 className="text-xl font-semibold mb-2 text-center">[ {rarity} ]</h3>
+          <h3 id={rarity} className="text-xl font-semibold mb-2 text-center">
+            [ {rarity} ]
+          </h3>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
             <div className="w-full sm:w-1/2">
               <h4 className="text-md font-medium mb-1 ml-2">{t('youHave')}</h4>
