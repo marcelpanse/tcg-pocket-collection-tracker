@@ -223,7 +223,7 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
               navigator.clipboard.writeText(getTradingMessage()).then(() => toast({ title: t('trade.copiedInClipboard'), variant: 'default', duration: 3000 }))
             }
           >
-            Copy trade message
+            {t('trade.button')}
           </Button>
         )}
         {!isPublic && (

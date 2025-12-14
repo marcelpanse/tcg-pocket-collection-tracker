@@ -17,5 +17,13 @@
     "summary": "{{selected}} selected, {{uniquesOwned}} uniques owned, {{totalOwned}} total owned",
     "mewCardOwned": "You unlocked the special Mew card! This is included in our totals, but note that the in-game totals don't include this card."
   },
-  "collectionOf": "Collection of"
+  "collectionOf": "Collection of",
+  "trade": {
+    "button": "Copy trade message",
+    "publicTradePage": "Public trade page",
+    "friendID": "Friend ID",
+    "lookingForCards": "Looking for cards",
+    "forTradeCards": "For trade cards",
+    "copiedInClipboard": "Copied cards for trading to clipboard!"
+  }
 }
