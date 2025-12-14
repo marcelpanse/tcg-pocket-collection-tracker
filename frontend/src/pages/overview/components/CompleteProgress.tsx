@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Progress } from '@/components/ui/progress-custom.tsx'
+import { Progress } from '@/components/ui/progress.tsx'
 import { getNrOfCardsOwned, getTotalNrOfCards } from '@/lib/CardsDB.ts'
 import { useCollection } from '@/services/collection/useCollection'
 import type { CollectionRow, Expansion, Rarity } from '@/types'
