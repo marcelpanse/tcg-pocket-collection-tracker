@@ -27,54 +27,60 @@ const EditProfile: FC = () => {
   const { t } = useTranslation('edit-profile')
 
   const formSchema = z.object({
-    username: z.string().min(2, {
-      message: t('usernameTooShort'),
-    }),
-    friend_id: z.string().regex(/^[0-9]{16}$/, {
-      message: t('friendIdInvalid'),
-    }),
+    username: z.string().min(2, { message: t('usernameTooShort') }),
+    friend_id: z.string().regex(/^\d{16}$/, { message: t('friendIdInvalid') }),
     is_public: z.boolean().optional(),
   })
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     values: {
-      username: account?.username || '',
-      friend_id: account?.friend_id || '',
-      is_public: account?.is_public || false,
+      username: account?.username ?? '',
+      friend_id: account?.friend_id ?? '',
+      is_public: account?.is_public ?? false,
     },
   })
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    try {
-      await updateAccountMutation.mutateAsync({
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    updateAccountMutation.mutate(
+      {
         email: user?.user.email as string,
         username: values.username,
         friend_id: values.friend_id,
         is_public: values.is_public,
-      } as AccountRow)
-
-      toast({ title: t('accountSaved'), variant: 'default' })
-    } catch (e) {
-      console.error('error saving account', e)
-      toast({ title: t('accountSavingError'), variant: 'destructive' })
-    }
+      } as AccountRow,
+      {
+        onSuccess: () => toast({ title: t('accountSaved'), variant: 'default' }),
+        onError: (e) => {
+          console.error('error saving account', e)
+          toast({ title: t('accountSavingError'), variant: 'destructive' })
+        },
+      },
+    )
   }
-
-  const shareUrl = `https://tcgpocketcollectiontracker.com/#/collection/${account?.friend_id}`
 
   return (
     <Dialog open={isProfileDialogOpen} onOpenChange={setIsProfileDialogOpen}>
-      <DialogContent className="border-1 border-neutral-700 shadow-none h-[90vh] content-start">
+      <DialogContent className="border-1 border-neutral-700">
         <DialogHeader>
           <DialogTitle>{t('editProfile')}</DialogTitle>
         </DialogHeader>
 
-        <Alert className="mb-2 border-1 border-neutral-700 shadow-none">
-          <Siren className="h-4 w-4" />
+        <Alert className="mb-2">
+          <Siren className="size-4" />
           <AlertTitle>{t('updateProfile.title')}</AlertTitle>
           <AlertDescription>{t('updateProfile.description')}</AlertDescription>
         </Alert>
+
+        <Button
+          onClick={(e) => {
+            e.preventDefault()
+            setIsProfileDialogOpen(false)
+            navigate(`/trade/settings`)
+          }}
+        >
+          {t('isPublicTradeButton')}
+        </Button>
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -83,7 +89,7 @@ const EditProfile: FC = () => {
               render={() => (
                 <FormItem>
                   <FormLabel>{t('email')}</FormLabel>
-                  <FormControl className="mt-2">
+                  <FormControl className="mt-1">
                     <Input placeholder={t('email')} disabled value={user?.user.email} />
                   </FormControl>
                   <FormDescription>{t('registeredEmail')}</FormDescription>
@@ -96,7 +102,7 @@ const EditProfile: FC = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t('username')}</FormLabel>
-                  <FormControl className="mt-2">
+                  <FormControl className="mt-1">
                     <Input placeholder={t('username')} {...field} />
                   </FormControl>
                   <FormDescription>{t('usernameDescription')}</FormDescription>
@@ -110,7 +116,7 @@ const EditProfile: FC = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t('friendID')}</FormLabel>
-                  <FormControl className="mt-2">
+                  <FormControl className="mt-1">
                     <Input placeholder={t('friendID')} {...field} />
                   </FormControl>
                   <FormDescription>{t('friendIDDescription')}</FormDescription>
@@ -124,43 +130,24 @@ const EditProfile: FC = () => {
               render={({ field }) => (
                 <FormItem className="flex flex-col items-start">
                   <FormControl className="mt-2">
-                    <div className="flex items-center gap-x-2 w-full flex-wrap">
-                      <FormLabel>{t('isPublicToggle')}</FormLabel>
-                      <div className="grow-1">
-                        <Switch checked={field.value} onCheckedChange={field.onChange} />
-                      </div>
-                      <Button
-                        disabled={!account?.is_public}
-                        onClick={async (e) => {
-                          e.preventDefault()
-
-                          toast({ title: 'Copied public collection page URL to clipboard!', variant: 'default', duration: 3000 })
-                          await navigator.clipboard.writeText(shareUrl)
-                        }}
-                      >
-                        {t('isPublicButton')}
-                      </Button>
-                      <Button
-                        disabled={!account?.is_public}
-                        onClick={async (e) => {
-                          e.preventDefault()
-
-                          setIsProfileDialogOpen(false)
-                          navigate(`/trade/${account?.friend_id}`)
-                        }}
-                      >
-                        {t('isPublicTradeButton')}
-                      </Button>
-                    </div>
+                    <FormLabel className="flex items-center">
+                      {t('isPublicToggle')}
+                      <Switch className="ml-2" checked={field.value} onCheckedChange={field.onChange} />
+                    </FormLabel>
                   </FormControl>
                   <FormDescription>{t('isPublicDescription')}</FormDescription>
                 </FormItem>
               )}
             />
-            {account?.is_public && <SocialShareButtons />}
-            <Button type="submit">{t('save')}</Button>
+            <Button type="submit" className="block ml-auto" disabled={updateAccountMutation.isPending}>
+              {t('save')}
+              {updateAccountMutation.isPending && (
+                <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />
+              )}
+            </Button>
           </form>
         </Form>
+        {account?.is_public && <SocialShareButtons className="mt-4" />}
       </DialogContent>
     </Dialog>
   )

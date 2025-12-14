@@ -7,7 +7,7 @@ import { z } from 'zod'
 import { SocialShareButtons } from '@/components/SocialShareButtons'
 import { Alert } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button'
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel } from '@/components/ui/form'
+import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form'
 import { Input } from '@/components/ui/input.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
 import { toast } from '@/hooks/use-toast.ts'
@@ -41,18 +41,20 @@ function TradeSettings() {
   })
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    try {
-      updateAccountTradingFieldsMutation.mutate({
+    updateAccountTradingFieldsMutation.mutate(
+      {
         username: account?.username as string,
         is_active_trading: values.is_active_trading,
         trade_rarity_settings: values.trade_rarity_settings,
-      })
-
-      toast({ title: t('accountSaved'), variant: 'default' })
-    } catch (e) {
-      console.error('error saving account', e)
-      toast({ title: t('errorSavingAccount'), variant: 'destructive' })
-    }
+      },
+      {
+        onSuccess: () => toast({ title: t('accountSaved'), variant: 'default' }),
+        onError: (e) => {
+          console.error('error saving account', e)
+          toast({ title: t('errorSavingAccount'), variant: 'destructive' })
+        },
+      },
+    )
   }
 
   if (!account || !account.username) {
@@ -62,37 +64,42 @@ function TradeSettings() {
   return (
     <div>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="border-1 border-neutral-700 space-y-2 p-4 mx-auto">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="rounded-md border-1 border-neutral-700 space-y-2 p-4 mx-auto max-w-xl">
+          <h2 className="text-xl text-center mb-6">Trading settings</h2>
           <FormField
             control={form.control}
             name="is_active_trading"
             render={({ field }) => (
               <FormItem className="flex flex-col items-start">
                 <FormControl>
-                  <div className="flex items-center gap-x-4 flex-wrap">
-                    <FormLabel className="flex sm:w-72">{t('isActiveTrading')}</FormLabel>
-                    <div className="grow-1">
-                      <Switch checked={field.value} onCheckedChange={field.onChange} />
-                    </div>
-                    <FormDescription className="grow">{field.value ? 'active' : 'disabled'}</FormDescription>
-                    <Tooltip id="activeInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
-                    <CircleHelp className="h-4 w-4" data-tooltip-id="activeInput" data-tooltip-content={t('activeTradingInputTooltip')} />
-                  </div>
+                  <FormLabel htmlFor="active-trading" className="flex">
+                    {t('isActiveTrading')}
+                    <Switch id="active-trading" className="ml-2" checked={field.value} onCheckedChange={field.onChange} />
+                  </FormLabel>
                 </FormControl>
               </FormItem>
             )}
           />
 
-          <div className="mt-6">
-            <div className="flex items-center gap-x-4 mb-2">
-              <div className="flex-1">{t('rarity')}</div>
-              <div className="flex-1">{t('toCollect')}</div>
-              <div className="flex-1">{t('toKeep')}</div>
-            </div>
+          <div className="grid grid-cols-3 gap-y-2 gap-x-8 w-fit mt-6">
+            <span>{t('rarity')}</span>
+            <span className="flex items-center">
+              {t('toCollect')}
+              <Tooltip id="to-collect" />
+              <CircleHelp className="size-4 ml-1" data-tooltip-id="to-collect" data-tooltip-content={t('toCollectTooltip')} />
+            </span>
+            <span className="flex items-center">
+              {t('toKeep')}
+              <Tooltip id="to-collect" />
+              <CircleHelp className="size-4 ml-1" data-tooltip-id="to-collect" data-tooltip-content={t('toKeepTooltip')} />
+            </span>
             {form.watch('trade_rarity_settings').map((setting, index) => (
-              <div key={index} className="flex items-center gap-x-4 mb-2">
-                <div className="flex-1">{setting.rarity}</div>
+              <>
+                <div key={`label-${setting.rarity}`} className="flex-1">
+                  {setting.rarity}
+                </div>
                 <FormField
+                  key={`to-collect-${setting.rarity}`}
                   control={form.control}
                   name={`trade_rarity_settings.${index}.to_collect`}
                   render={({ field }) => (
@@ -104,6 +111,7 @@ function TradeSettings() {
                   )}
                 />
                 <FormField
+                  key={`to-keep-${setting.rarity}`}
                   control={form.control}
                   name={`trade_rarity_settings.${index}.to_keep`}
                   render={({ field }) => (
@@ -114,16 +122,19 @@ function TradeSettings() {
                     </FormItem>
                   )}
                 />
-              </div>
+              </>
             ))}
           </div>
 
-          <div className="w-full flex justify-end mt-8">
-            <Button type="submit">{t('save')}</Button>
-          </div>
+          <Button type="submit" className="block ml-auto mt-4" disabled={updateAccountTradingFieldsMutation.isPending}>
+            {t('save')}
+            {updateAccountTradingFieldsMutation.isPending && (
+              <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />
+            )}
+          </Button>
         </form>
       </Form>
-      <SocialShareButtons className="mt-4" />
+      <SocialShareButtons className="mt-4 mx-auto w-fit" />
     </div>
   )
 }
