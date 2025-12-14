@@ -1,10 +1,5 @@
 {
   "rarity": "Raridade",
-  "f-owned": {
-    "all": "Todos",
-    "missing": "Falta",
-    "owned": "Possuí"
-  },
   "f-number": {
     "numberCards": "Número de cartas desejadas",
     "maxNum": "Número máximo de cartas",
@@ -15,5 +10,10 @@
     "default": "Card ID",
     "recent": "Recently updated",
     "expansion-newest": "Expansion newest first"
+  },
+  "f-trading": {
+    "all": "All",
+    "wanted": "Wanted",
+    "extra": "For trade"
   }
 }

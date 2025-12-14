@@ -1,10 +1,5 @@
 {
   "rarity": "Rareté",
-  "f-owned": {
-    "all": "Tout",
-    "missing": "Manquant",
-    "owned": "Obtenu"
-  },
   "f-sortBy": {
     "sortBy": "Trier par",
     "default": "ID de carte",
@@ -15,5 +10,10 @@
     "numberCards": "Nombre d'exemplaire voulu",
     "maxNum": "Nombre maximum de cartes",
     "minNum": "Nombre minimum de cartes"
+  },
+  "f-trading": {
+    "all": "All",
+    "wanted": "Wanted",
+    "extra": "For trade"
   }
 }

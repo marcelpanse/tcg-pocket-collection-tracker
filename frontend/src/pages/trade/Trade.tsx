@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'
 import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import TradeWith from '@/pages/trade/TradeWith.tsx'
-import TradeCards from './TradeCards.tsx'
 import TradeMatches from './TradeMatches'
 import TradeOffers from './TradeOffers'
 import TradeSettings from './TradeSettings.tsx'
@@ -39,7 +38,7 @@ function Trade() {
       </TabsList>
       <Routes>
         <Route path="/" element={<Navigate to="/trade/offers" replace />} />
-        <Route path="cards" element={<TradeCards />} />
+        <Route path="cards" element={<p>You can now manage your trading cards on your collection page.</p> /* TODO: remove the tab after 14.01.2026 */} />
         <Route path="offers" element={<TradeOffers />} />
         <Route path="matches" element={<TradeMatches />} />
         <Route path="settings" element={<TradeSettings />} />

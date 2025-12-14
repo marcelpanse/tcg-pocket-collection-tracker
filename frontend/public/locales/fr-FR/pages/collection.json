@@ -17,5 +17,13 @@
     "summary": "{{selected}} sélectionnée(s), {{uniquesOwned}} unique(s) possédée(s), {{totalOwned}} total possédée(s)",
     "mewCardOwned": "Vous avez débloqué la carte spéciale de Mew ! Elle est incluse dans votre total de carte, mais le total dans le jeu n'inclus pas la carte."
   },
-  "collectionOf": "Collection of"
+  "collectionOf": "Collection of",
+  "trade": {
+    "button": "Copy trade message",
+    "publicTradePage": "Page d'échange publique ",
+    "friendID": "ID d'ami(e) ",
+    "lookingForCards": "Cartes recherchées ",
+    "forTradeCards": "Cartes à échanger ",
+    "copiedInClipboard": "Cartes à échanger copiées dans le presse-papiers !"
+  }
 }
