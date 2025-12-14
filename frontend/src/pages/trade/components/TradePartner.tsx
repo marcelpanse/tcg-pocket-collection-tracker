@@ -14,15 +14,19 @@ interface TradePartnerProps {
 }
 
 function TradePartner({ friendId }: TradePartnerProps) {
-  const { t } = useTranslation('trade-matches')
+  const { t } = useTranslation(['trade-matches', 'common'])
 
-  const { data: trades } = useTrades()
-  const { data: friendAccount } = usePublicAccount(friendId)
+  const { data: trades, isLoading: isLoadingTrades } = useTrades()
+  const { data: friendAccount, isLoading: isLoadingAccount } = usePublicAccount(friendId)
 
   const [viewHistory, setViewHistory] = useState<boolean>(false)
 
-  if (!trades) {
+  if (isLoadingTrades || isLoadingAccount) {
     return null
+  }
+
+  if (!trades) {
+    return <p className="text-xl text-center py-8">{t('common:error')}</p>
   }
 
   const partnerTrades = trades.filter((t) => t.offering_friend_id === friendId || t.receiving_friend_id === friendId)
@@ -32,7 +36,7 @@ function TradePartner({ friendId }: TradePartnerProps) {
       <div className="flex justify-between items-center mb-1 mx-1">
         <p>
           <span className="text-md">{t('tradingWith')}</span>
-          <span className="text-md font-bold"> {friendAccount?.username || 'loading'} </span>
+          <span className="text-md font-bold"> {friendAccount?.username || 'unknown'} </span>
           {friendAccount && <FriendIdDisplay friendId={friendAccount.friend_id} showFriendId={false} className="ml-1" />}
         </p>
         <span className="flex gap-4">

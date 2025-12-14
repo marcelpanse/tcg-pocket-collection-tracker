@@ -1,3 +1,5 @@
+import { Slot } from '@radix-ui/react-slot'
+import { ArrowLeft, ArrowRight, ArrowRightLeft, Check, X } from 'lucide-react'
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
@@ -14,10 +16,14 @@ interface Props {
 export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTradeId }) => {
   const { t } = useTranslation('trade-matches')
 
-  const { data: account } = useAccount()
+  const { data: account, isLoading } = useAccount()
+
+  if (isLoading) {
+    return null
+  }
 
   if (!account) {
-    return null
+    return <p className="text-xl text-center py-8">{t('common:error')}</p>
   }
 
   const yourCard = row.offering_friend_id === account.friend_id ? row.offer_card_id : row.receiver_card_id
@@ -33,34 +39,30 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
 
   const status = (row: TradeRow) => {
     const style = {
-      offered: { icon: row.offering_friend_id === account.friend_id ? '→' : '←', color: 'bg-amber-600' },
-      accepted: { icon: '↔', color: 'bg-lime-600' },
-      declined: { icon: 'X', color: 'bg-stone-600' },
-      finished: { icon: '✓', color: 'bg-indigo-600' },
+      offered: row.offering_friend_id === account.friend_id ? <ArrowRight className="bg-amber-600" /> : <ArrowLeft className="bg-amber-600" />,
+      accepted: <ArrowRightLeft className="bg-lime-600" />,
+      declined: <X className="bg-stone-600" />,
+      finished: <Check className="bg-indigo-600" />,
     }
     return (
-      <div className="flex items-center">
-        <Tooltip id={`tooltip-${row.id}`} />
-        <span
-          className={`rounded-full text-center w-7 md:w-9 ${style[row.status].color}`}
-          data-tooltip-id={`tooltip-${row.id}`}
-          data-tooltip-content={t(`status.${row.status}`)}
-        >
-          {style[row.status].icon}
-        </span>
-      </div>
+      <>
+        <Tooltip id={`status-${row.id}`} />
+        <Slot className="rounded-full p-[3px] my-auto" data-tooltip-id={`status-${row.id}`} data-tooltip-content={t(`status.${row.status}`)}>
+          {style[row.status]}
+        </Slot>
+      </>
     )
   }
 
   return (
     <li
-      className={`flex cursor-pointer rounded gap-1 md:gap-4 p-1 ${selectedTradeId === row.id && 'bg-green-900'} hover:bg-neutral-500`}
+      className={`flex cursor-pointer rounded gap-1 md:gap-2 p-1 ${selectedTradeId === row.id && 'bg-green-900'} hover:bg-neutral-500`}
       onClick={() => onClick(row)}
     >
       {status(row)}
-      <div className="flex flex-col sm:flex-row w-full justify-between gap-1 md:gap-4">
-        <CardLine className="sm:w-1/2" card_id={yourCard} increment={-1} />
-        <CardLine className="sm:w-1/2" card_id={friendCard} increment={1} />
+      <div className="flex flex-col md:flex-row grow-1 justify-between gap-1 md:gap-2">
+        <CardLine className="md:w-1/2" card_id={yourCard} increment={-1} />
+        <CardLine className="md:w-1/2" card_id={friendCard} increment={1} />
       </div>
     </li>
   )

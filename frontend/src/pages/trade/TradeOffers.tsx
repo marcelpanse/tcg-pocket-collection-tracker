@@ -5,13 +5,17 @@ import { useTrades } from '@/services/trade/useTrade.ts'
 import type { TradeRow } from '@/types'
 
 function TradeOffers() {
-  const { t } = useTranslation('trade-matches')
+  const { t } = useTranslation(['trade-matches', 'common'])
 
-  const { data: account } = useAccount()
-  const { data: trades } = useTrades()
+  const { data: account, isLoading: isLoadingAccount } = useAccount()
+  const { data: trades, isLoading: isLoadingTrades } = useTrades()
+
+  if (isLoadingAccount || isLoadingTrades) {
+    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+  }
 
   if (!trades || !account) {
-    return null
+    return <p className="text-xl text-center py-8">{t('common:error')}</p>
   }
 
   if (trades.length === 0) {
