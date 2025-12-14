@@ -1,17 +1,17 @@
 import i18n from '@/i18n'
-import { type CollectionRow, cardTypes, expansionIds, type Rarity } from '@/types'
+import { type CollectionRow, cardTypes, expansionIds, type Rarity, type RaritySettingsRow } from '@/types'
 import { allCards, getCardByInternalId } from './CardsDB'
 import { levenshtein } from './levenshtein'
-import { getCardNameByLang } from './utils'
+import { getCardNameByLang, getExtraCards, getNeededCards } from './utils'
 
-export const ownedOptions = ['all', 'missing', 'owned'] as const
 export const expansionOptions = ['all', ...expansionIds] as const
 export const sortByOptions = ['default', 'recent', 'expansion-newest'] as const
 export const cardTypeOptions = cardTypes
-export type OwnedOption = (typeof ownedOptions)[number]
+export const tradingOptions = ['all', 'wanted', 'extra'] as const
 export type ExpansionOption = (typeof expansionOptions)[number]
 export type SortByOption = (typeof sortByOptions)[number]
 export type CardTypeOption = (typeof cardTypeOptions)[number]
+export type TradingOption = (typeof tradingOptions)[number]
 
 export interface FiltersAll {
   search: string
@@ -19,7 +19,7 @@ export interface FiltersAll {
   pack: string
   cardType: CardTypeOption[]
   rarity: Rarity[]
-  owned: OwnedOption
+  trading: TradingOption
   sortBy: SortByOption
   minNumber: number
   maxNumber: number
@@ -28,7 +28,7 @@ export interface FiltersAll {
 }
 export type Filters = Partial<FiltersAll>
 
-export function getFilteredCards(filters: Filters, cards: Map<number, CollectionRow>) {
+export function getFilteredCards(filters: Filters, cards: Map<number, CollectionRow>, tradingSettings: RaritySettingsRow[]) {
   let filteredCards = allCards
 
   if (filters.deckbuildingMode) {
@@ -41,12 +41,9 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
   if (filters.expansion !== undefined && filters.pack !== undefined && filters.pack !== 'all') {
     filteredCards = filteredCards.filter((card) => card.pack === filters.pack || card.pack === 'everypack')
   }
-  if (filters.owned !== undefined && filters.owned !== 'all') {
-    if (filters.owned === 'owned') {
-      filteredCards = filteredCards.filter((card) => card.collected)
-    } else if (filters.owned === 'missing') {
-      filteredCards = filteredCards.filter((card) => !card.collected)
-    }
+  if (filters.trading !== undefined && filters.trading !== 'all') {
+    const filtered = new Set(filters.trading === 'wanted' ? getNeededCards(cards, tradingSettings) : getExtraCards(cards, tradingSettings))
+    filteredCards = filteredCards.filter((card) => filtered.has(card.internal_id))
   }
 
   if (filters.sortBy !== undefined) {

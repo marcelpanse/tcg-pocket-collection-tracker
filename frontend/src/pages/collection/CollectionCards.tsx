@@ -12,9 +12,10 @@ import {
   type Filters,
   type FiltersAll,
   getFilteredCards,
-  ownedOptions,
   sortByOptions,
+  tradingOptions,
 } from '@/lib/filters'
+import { useAccount } from '@/services/account/useAccount'
 import { type CollectionRow, type Rarity, rarities } from '@/types'
 import CollectionFiltersPanel from './FiltersPanel'
 
@@ -32,7 +33,7 @@ const filterParsers: { [K in keyof FiltersAll]: (s: string) => Filters[K] | unde
   pack: (s) => s,
   cardType: (s) => s.split(',').filter((x): x is CardTypeOption => (cardTypeOptions as readonly string[]).includes(x)),
   rarity: (s) => s.split(',').filter((x): x is Rarity => (rarities as readonly string[]).includes(x)),
-  owned: (s) => ((ownedOptions as readonly string[]).includes(s) ? (s as Filters['owned']) : undefined),
+  trading: (s) => ((tradingOptions as readonly string[]).includes(s) ? (s as Filters['trading']) : undefined),
   sortBy: (s) => ((sortByOptions as readonly string[]).includes(s) ? (s as Filters['sortBy']) : undefined),
   minNumber: numberParser,
   maxNumber: numberParser,
@@ -53,7 +54,7 @@ const defaultFilters: Filters = {
   pack: 'all',
   cardType: [],
   rarity: [],
-  owned: 'all',
+  trading: 'all',
   sortBy: 'expansion-newest',
   minNumber: 0,
   maxNumber: 100,
@@ -65,8 +66,8 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' }) // tailwind "md"
 
   const [isFiltersSheetOpen, setIsFiltersSheetOpen] = useState(false) // used only on mobile
-
   const [searchParams, setSearchParams] = useSearchParams()
+  const { data: account } = useAccount()
 
   const filters = useMemo(() => {
     const res: Filters = { ...defaultFilters }
@@ -115,7 +116,7 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
     return res
   }, [filters])
 
-  const filteredCards = useMemo(() => getFilteredCards(filters, cards), [filters, cards])
+  const filteredCards = useMemo(() => getFilteredCards(filters, cards, account?.trade_rarity_settings ?? []), [filters, cards, account])
 
   return (
     <div className="flex justify-center gap-2 xl:gap-8 px-1">
