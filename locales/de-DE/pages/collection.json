@@ -13,5 +13,13 @@
   },
   "stats": {
     "summary": "{{selected}} ausgewählt, {{uniquesOwned}} einzigartige im Besitz, {{totalOwned}} Gesamt"
+  },
+  "trade": {
+    "button": "Copy trade message",
+    "publicTradePage": "Öffentliche Tauschseite",
+    "friendID": "Freundescode",
+    "lookingForCards": "Suche",
+    "forTradeCards": "Tausche",
+    "copiedInClipboard": "Zu tauschende Karten wurden in die Zwischenablage kopiert!"
   }
 }
