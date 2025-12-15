@@ -1,6 +1,6 @@
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { ChevronRight } from 'lucide-react'
-import { useCallback, useMemo, useRef, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { CardLine } from '@/components/CardLine'
@@ -22,14 +22,10 @@ function TradeMatches() {
 
   const { data: tradingPartners, isLoading, isError } = useTradingPartners(showResults, selectedCard)
 
-  const getItemKey = useCallback((index: number) => {
-    return cards[index].card_id
-  }, [])
-
   const virtualizer = useVirtualizer({
     getScrollElement: () => scrollRef.current,
     count: cards.length,
-    getItemKey,
+    getItemKey: (index) => cards[index].card_id,
     estimateSize: () => 32,
   })
 

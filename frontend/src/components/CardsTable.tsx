@@ -1,6 +1,6 @@
 import { useVirtualizer } from '@tanstack/react-virtual'
 import i18n from 'i18next'
-import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getExpansionById } from '@/lib/CardsDB.ts'
 import { chunk, cn } from '@/lib/utils.ts'
@@ -75,14 +75,10 @@ export function CardsTable({ className, children, cards, groupExpansions, render
     [cards, cardsPerRow],
   )
 
-  const getItemKey = useCallback((index: number) => {
-    return rows[index].id // critical: stable keys per logical row
-  }, [])
-
   const rowVirtualizer = useVirtualizer({
     getScrollElement: () => scrollRef.current,
     count: rows.length,
-    getItemKey,
+    getItemKey: (index) => rows[index].id, // critical: stable keys per logical row
     estimateSize: (index) => (rows[index].type === 'header' ? 52 : cardHeight + 8),
     overscan: 5,
   })
@@ -106,7 +102,7 @@ export function CardsTable({ className, children, cards, groupExpansions, render
                     <img
                       src={`/images/sets/${i18n.language}/${row.expansion.id}.webp`}
                       alt={row.expansion.name}
-                      className="max-w-15"
+                      className="max-w-[60px]"
                       onError={(e) => {
                         ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${row.expansion.id}.webp`
                       }}
