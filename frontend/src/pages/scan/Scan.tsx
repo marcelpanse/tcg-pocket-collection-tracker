@@ -290,13 +290,13 @@ const Scan = () => {
                     className={`flex w-full cursor-pointer gap-2 ${!isSelected && 'grayscale'} transition-all duration-200`}
                     onClick={() => (isSelected ? onIncrementChange('0') : onIncrementChange('+1'))}
                   >
-                    <div className="w-1/2 relative">
+                    <div className="w-1/2 flex flex-col gap-1 justify-between">
                       <img src={card.imageUrl} alt={`Detected card ${index + 1}`} className="w-full h-auto object-contain" />
-                      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs px-1 py-0.5 text-center">{t('extractedCard')}</div>
+                      <div className="bg-gray-500 text-white text-xs px-1 py-0.5 text-center">{t('extractedCard')}</div>
                     </div>
-                    <div className="w-1/2 relative">
+                    <div className="w-1/2 flex flex-col gap-1 justify-between">
                       <img src={card.resolvedImageUrl} alt="Best match" className="w-full h-auto object-contain" />
-                      <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
+                      <div className="bg-green-600 text-white text-xs px-1 py-0.5 text-center">
                         {t('percentMatch', { match: (card.matchedCard.similarity * 100).toFixed(0) })}
                       </div>
                     </div>
