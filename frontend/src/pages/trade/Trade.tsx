@@ -38,7 +38,7 @@ function Trade() {
       </TabsList>
       <Routes>
         <Route path="/" element={<Navigate to="/trade/offers" replace />} />
-        <Route path="cards" element={<p>You can now manage your trading cards on your collection page.</p> /* TODO: remove the tab after 14.01.2026 */} />
+        <Route path="cards" element={<p>{t('movedToCollectionPage')}</p> /* TODO: remove the tab after 14.01.2026 */} />
         <Route path="offers" element={<TradeOffers />} />
         <Route path="matches" element={<TradeMatches />} />
         <Route path="settings" element={<TradeSettings />} />
