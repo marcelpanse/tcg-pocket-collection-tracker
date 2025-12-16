@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import {
   BlueskyIcon,
   BlueskyShareButton,
@@ -24,6 +25,7 @@ import { cn } from '@/lib/utils'
 import { useAccount } from '@/services/account/useAccount'
 
 export const SocialShareButtons = ({ className }: { className?: string }) => {
+  const { t } = useTranslation('socials')
   const { data: account, isLoading } = useAccount()
   const collectionShareUrl = `https://tcgpocketcollectiontracker.com/#/collection/${account?.friend_id}`
   const tradeShareUrl = `https://tcgpocketcollectiontracker.com/#/trade/${account?.friend_id}`
@@ -37,7 +39,7 @@ export const SocialShareButtons = ({ className }: { className?: string }) => {
 
   return (
     <div className={cn('flex gap-2 items-center flex-wrap', className)}>
-      <small>Share on</small>
+      <small>{t('shareOn')}</small>
 
       <FacebookShareButton url={collectionShareUrl}>
         <FacebookIcon size={32} round />
@@ -68,10 +70,10 @@ export const SocialShareButtons = ({ className }: { className?: string }) => {
       </BlueskyShareButton>
 
       <Button variant="outline" onClick={() => copyLink(tradeShareUrl)} disabled={!account?.is_active_trading}>
-        Copy trading link
+        {t('copyTradeLink')}
       </Button>
       <Button variant="outline" onClick={() => copyLink(collectionShareUrl)}>
-        Copy collection link
+        {t('copyCollectionLink')}
       </Button>
     </div>
   )

@@ -1,4 +1,5 @@
 import { useVirtualizer } from '@tanstack/react-virtual'
+import i18n from 'i18next'
 import { ChevronRight } from 'lucide-react'
 import { useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -8,6 +9,7 @@ import SearchInput from '@/components/filters/SearchInput'
 import { Button } from '@/components/ui/button'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { getFilteredCards } from '@/lib/filters'
+import { getCardNameByLang } from '@/lib/utils.ts'
 import { useTradingPartners } from '@/services/trade/useTrade.ts'
 import { tradableRarities } from '@/types'
 
@@ -19,6 +21,7 @@ function TradeMatches() {
   const [selectedCard, setSelectedCard] = useState<number>()
   const [showResults, setShowResults] = useState(false)
   const cards = useMemo(() => getFilteredCards({ search, rarity: [...tradableRarities] }, new Map()), [search])
+  const card = useMemo(() => selectedCard && getCardByInternalId(selectedCard), [selectedCard])
 
   const { data: tradingPartners, isLoading, isError } = useTradingPartners(showResults, selectedCard)
 
@@ -28,6 +31,10 @@ function TradeMatches() {
     getItemKey: (index) => cards[index].card_id,
     estimateSize: () => 32,
   })
+
+  if (selectedCard && !card) {
+    throw new Error('Card selected was not found in the database!')
+  }
 
   if (!showResults) {
     return (
@@ -59,7 +66,7 @@ function TradeMatches() {
               setShowResults(true)
             }}
           >
-            {selectedCard ? `Search ${getCardByInternalId(selectedCard)?.name}` : `Select card to search`}
+            {card ? t('search.byCard', { cardName: getCardNameByLang(card, i18n.language) }) : t('search.selectCard')}
           </Button>
           <Button
             className="w-1/2"
@@ -68,7 +75,7 @@ function TradeMatches() {
               setShowResults(true)
             }}
           >
-            Search all cards
+            {t('search.allCards')}
           </Button>
         </div>
       </div>

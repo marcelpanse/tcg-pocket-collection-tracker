@@ -1,3 +1,4 @@
+import i18n from 'i18next'
 import { CircleAlert, Trash2 } from 'lucide-react'
 import { type ReactNode, useCallback, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -20,6 +21,7 @@ import {
   sortByOptions,
   tradingOptions,
 } from '@/lib/filters'
+import { getCardNameByLang } from '@/lib/utils.ts'
 import { useAccount, useProfileDialog } from '@/services/account/useAccount'
 import { type Card as CardType, type CollectionRow, type Rarity, rarities } from '@/types'
 
@@ -151,7 +153,7 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
         if (prevExpansion !== arr[i].expansion) {
           cardValues += `\n${arr[i].expansion}:\n`
         }
-        cardValues += `${arr[i].rarity} ${arr[i].card_id} - ${arr[i].name}\n`
+        cardValues += `${arr[i].rarity} ${arr[i].card_id} - ${getCardNameByLang(arr[i], i18n.language)}\n`
       }
     }
 
