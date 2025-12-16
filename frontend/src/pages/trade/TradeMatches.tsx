@@ -21,6 +21,7 @@ function TradeMatches() {
   const [selectedCard, setSelectedCard] = useState<number>()
   const [showResults, setShowResults] = useState(false)
   const cards = useMemo(() => getFilteredCards({ search, rarity: [...tradableRarities] }, new Map()), [search])
+  const card = useMemo(() => selectedCard && getCardByInternalId(selectedCard), [selectedCard])
 
   const { data: tradingPartners, isLoading, isError } = useTradingPartners(showResults, selectedCard)
 
@@ -30,6 +31,10 @@ function TradeMatches() {
     getItemKey: (index) => cards[index].card_id,
     estimateSize: () => 32,
   })
+
+  if (selectedCard && !card) {
+    throw new Error('Card selected was not found in the database!')
+  }
 
   if (!showResults) {
     return (
@@ -61,7 +66,7 @@ function TradeMatches() {
               setShowResults(true)
             }}
           >
-            {selectedCard ? t('search.byCard', { cardName: getCardNameByLang(getCardByInternalId(selectedCard), i18n.language) }) : t('search.selectCard')}
+            {card ? t('search.byCard', { cardName: getCardNameByLang(card, i18n.language) }) : t('search.selectCard')}
           </Button>
           <Button
             className="w-1/2"
