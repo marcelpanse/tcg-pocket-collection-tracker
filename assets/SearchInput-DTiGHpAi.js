@@ -1,1 +1,0 @@
-import{f as n,j as o,Z as l,h as u}from"./index-BwFQZhe2.js";const p=({value:e,setValue:a,className:r})=>{const{t:s}=n("search-input");return o.jsx(l,{type:"search",placeholder:s("search"),className:u("border-2 h-[38px] bg-neutral-800",r),style:{borderColor:"#45556C"},defaultValue:e,onChange:t=>a(t.target.value)})};export{p as S};
