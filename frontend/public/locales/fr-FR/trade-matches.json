@@ -52,5 +52,10 @@
   "isActiveTrading": "Accepter de recevoir des échanges",
   "toCollectTooltip": "Le nombre de carte que vous souhaitez collectionner après échange. Astuce : définissez cette valeur à 0 pour exclure une rareté des échanges.",
   "toKeepTooltip": "Le nombre minimum de cartes que vous souhaitez conserver après échange.",
-  "movedToCollectionPage": "Vous pouvez maintenant gérer vos cartes à échanger sur votre page de collection."
+  "movedToCollectionPage": "Vous pouvez maintenant gérer vos cartes à échanger sur votre page de collection.",
+  "search": {
+    "byCard": "Rechercher {{cardName}}",
+    "selectCard": "Sélectionner une carte",
+    "allCards": "Chercher toutes les cartes"
+  }
 }
