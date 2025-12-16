@@ -1,4 +1,5 @@
 import { useVirtualizer } from '@tanstack/react-virtual'
+import i18n from 'i18next'
 import { ChevronRight } from 'lucide-react'
 import { useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -8,6 +9,7 @@ import SearchInput from '@/components/filters/SearchInput'
 import { Button } from '@/components/ui/button'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { getFilteredCards } from '@/lib/filters'
+import { getCardNameByLang } from '@/lib/utils.ts'
 import { useTradingPartners } from '@/services/trade/useTrade.ts'
 import { tradableRarities } from '@/types'
 
@@ -59,7 +61,7 @@ function TradeMatches() {
               setShowResults(true)
             }}
           >
-            {selectedCard ? `Search ${getCardByInternalId(selectedCard)?.name}` : `Select card to search`}
+            {selectedCard ? t('search.byCard', { cardName: getCardNameByLang(getCardByInternalId(selectedCard), i18n.language) }) : t('search.selectCard')}
           </Button>
           <Button
             className="w-1/2"
@@ -68,7 +70,7 @@ function TradeMatches() {
               setShowResults(true)
             }}
           >
-            Search all cards
+            {t('search.allCards')}
           </Button>
         </div>
       </div>
