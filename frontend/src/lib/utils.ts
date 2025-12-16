@@ -25,8 +25,8 @@ export function formatFriendId(friendId: string): string {
   return `${friendId.slice(0, 4)}-${friendId.slice(4, 8)}-${friendId.slice(8, 12)}-${friendId.slice(12, 16)}`
 }
 
-export function getCardNameByLang(card: Card | undefined, lang: string): string {
-  if (card === undefined || card.name === undefined || card.name === null) {
+export function getCardNameByLang(card: Card, lang: string): string {
+  if (card.name === undefined || card.name === null) {
     return ''
   }
 
