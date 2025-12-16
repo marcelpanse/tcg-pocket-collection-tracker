@@ -11,7 +11,7 @@ export const getTrades = async () => {
 
   console.log('fetched trades', data)
 
-  return data as TradeRow[]
+  return data.map((x) => ({ ...x, created_at: new Date(x.created_at), updated_at: new Date(x.updated_at) })) as TradeRow[]
 }
 
 export const insertTrade = async (trade: TradeRow) => {
