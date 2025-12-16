@@ -126,11 +126,11 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
     card.collected = ownedCard?.collection.includes(card.card_id) ?? false
     card.updated_at = ownedCard?.updated_at
   }
-  if (filters.minNumber) {
+  if (filters.minNumber !== undefined) {
     const minNumber = filters.minNumber
     filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) >= minNumber)
   }
-  if (filters.maxNumber && filters.maxNumber !== 100) {
+  if (filters.maxNumber !== undefined && filters.maxNumber !== 100) {
     const maxNumber = filters.maxNumber
     filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) <= maxNumber)
   }
