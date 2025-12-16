@@ -44,12 +44,18 @@
   "tabMatches": "Correspondances",
   "tabSettings": "Options",
   "noAccount": "Commencez par configurer votre compte via « Modifier le profil » dans le coin supérieur droit.",
-  "raritySettings": "Paramètres de Rareté",
+  "raritySettings": "Paramètres de rareté",
   "rarity": "Rareté",
-  "toCollect": "À Collectionner",
-  "toKeep": "À Conserver",
+  "toCollect": "À collectionner",
+  "toKeep": "À conserver",
   "longOperation": "Cela peut prendre un moment.",
-  "isActiveTrading": "Accepting new trades",
-  "toCollectTooltip": "The amount of cards you want to collect by trading. Tip: Set this value to 0 to exclude a rarity from trading.",
-  "toKeepTooltip": "The minimum amount of cards you want to trade down to."
+  "isActiveTrading": "Accepter de recevoir des échanges",
+  "toCollectTooltip": "Le nombre de carte que vous souhaitez collectionner après échange. Astuce : définissez cette valeur à 0 pour exclure une rareté des échanges.",
+  "toKeepTooltip": "Le nombre minimum de cartes que vous souhaitez conserver après échange.",
+  "movedToCollectionPage": "Vous pouvez maintenant gérer vos cartes à échanger sur votre page de collection.",
+  "search": {
+    "byCard": "Rechercher {{cardName}}",
+    "selectCard": "Sélectionner une carte",
+    "allCards": "Chercher toutes les cartes"
+  }
 }
