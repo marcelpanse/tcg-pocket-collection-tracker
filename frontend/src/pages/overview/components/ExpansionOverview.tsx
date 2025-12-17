@@ -51,7 +51,9 @@ export function ExpansionOverview({ expansion, rarityFilter, numberFilter, deckb
           alt={`${expansion.id}`}
           className="mr-2 inline max-w-[80px]"
           onError={(e) => {
-            ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${expansion.id}.webp`
+            if (i18n.language !== 'en-US') {
+              ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${expansion.id}.webp`
+            }
           }}
         />
         {t(expansion.name, { ns: 'common/sets' })}
