@@ -104,7 +104,9 @@ export function CardsTable({ className, children, cards, groupExpansions, render
                       alt={row.expansion.name}
                       className="max-w-[60px]"
                       onError={(e) => {
-                        ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${row.expansion.id}.webp`
+                        if (i18n.language !== 'en-US') {
+                          ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${row.expansion.id}.webp`
+                        }
                       }}
                     />
                     <h2 className="text-center font-semibold sm:text-lg md:text-2xl">{t(row.expansion.name)}</h2>
