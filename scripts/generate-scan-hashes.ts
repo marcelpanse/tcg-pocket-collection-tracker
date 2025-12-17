@@ -131,8 +131,14 @@ const handleCard = async (id: number, locale: string) => {
 const all_ids = [...new Set(allCards.map((c) => c.internal_id))]
 
 for (const locale of locales) {
-  for (const ids of chunk(all_ids, 10)) {
+  console.log(`\nProcessing locale: ${locale}`)
+  const chunks = chunk(all_ids, 10)
+  let processed = 0
+
+  for (const ids of chunks) {
     await Promise.all(ids.map((id) => handleCard(id, locale)))
+    processed += ids.length
+    console.log(`Progress: ${processed}/${all_ids.length} cards (${Math.round((processed / all_ids.length) * 100)}%)`)
   }
 }
 
