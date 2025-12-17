@@ -202,10 +202,7 @@ export const expansions: Expansion[] = [
     name: 'crimsonblaze',
     id: 'B1a',
     internalId: 13,
-    packs: [
-      { name: 'crimsonblazepack', color: '#bf8f78' },
-      { name: 'everypack', color: '#c0c0c0' },
-    ],
+    packs: [{ name: 'crimsonblazepack', color: '#bf8f78' }],
     missions: b1aMissions,
     tradeable: true,
     openable: true,
