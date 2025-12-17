@@ -13,6 +13,7 @@ import A4Missions from '../../assets/themed-collections/A4-missions.json'
 import A4aMissions from '../../assets/themed-collections/A4a-missions.json'
 import A4bMissions from '../../assets/themed-collections/A4b-missions.json'
 import B1Missions from '../../assets/themed-collections/B1-missions.json'
+import B1aMissions from '../../assets/themed-collections/B1a-missions.json'
 
 const equivalent = (firstCard: Card, secondCard: Card) => {
   return firstCard.alternate_versions.includes(secondCard.internal_id)
@@ -48,6 +49,7 @@ const a4Missions: Mission[] = A4Missions as unknown as Mission[]
 const a4aMissions: Mission[] = A4aMissions as unknown as Mission[]
 const a4bMissions: Mission[] = A4bMissions as unknown as Mission[]
 const b1Missions: Mission[] = B1Missions as unknown as Mission[]
+const b1aMissions: Mission[] = B1aMissions as unknown as Mission[]
 
 export const expansions: Expansion[] = [
   // internalId=0 skipped for error states
@@ -191,6 +193,20 @@ export const expansions: Expansion[] = [
       { name: 'everypack', color: '#c0c0c0' },
     ],
     missions: b1Missions,
+    tradeable: true,
+    openable: true,
+    containsShinies: true,
+    containsBabies: false,
+  },
+  {
+    name: 'crimsonblaze',
+    id: 'B1a',
+    internalId: 13,
+    packs: [
+      { name: 'crimsonblazepack', color: '#bf8f78' },
+      { name: 'everypack', color: '#c0c0c0' },
+    ],
+    missions: b1aMissions,
     tradeable: true,
     openable: true,
     containsShinies: true,
