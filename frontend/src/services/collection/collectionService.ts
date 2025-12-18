@@ -69,7 +69,12 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   const now = new Date()
   const nowString = now.toISOString()
 
-  const { data: account, error: accountError } = await supabase.from('accounts').update({ collection_last_updated: now }).eq('email', email).select().single()
+  const { data: account, error: accountError } = await supabase
+    .from('accounts')
+    .update({ collection_last_updated: now })
+    .eq('email', email)
+    .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
+    .single()
 
   if (accountError) {
     throw new Error(`Error fetching account: ${accountError.message}`)
