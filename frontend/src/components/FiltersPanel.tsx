@@ -98,7 +98,7 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
       {filters.maxNumber !== undefined && (
         <DropdownFilter
           label={t('f-number.maxNum', { ns: 'filters' })}
-          options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
+          options={['∞', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
           value={filters.maxNumber}
           onChange={changeFilter('maxNumber')}
         />
