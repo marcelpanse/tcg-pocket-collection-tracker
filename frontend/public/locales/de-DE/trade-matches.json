@@ -42,5 +42,20 @@
   "raritySettings": "Seltenheitseinstellungen",
   "rarity": "Seltenheit",
   "toCollect": "Zu Sammeln",
-  "toKeep": "Zu Behalten"
+  "toKeep": "Zu Behalten",
+  "notFound": "Account not found",
+  "viewTradePartner": "View matches",
+  "noTradePartners": "We couldn't find anyone for you to trade with.",
+  "isActiveTrading": "Accepting new trades",
+  "toCollectTooltip": "The amount of cards you want to collect by trading. Tip: Set this value to 0 to exclude a rarity from trading.",
+  "toKeepTooltip": "The minimum amount of cards you want to trade down to.",
+  "tabMatches": "Matches",
+  "noAccount": "First set up your account using 'Edit profile' in the top right corner.",
+  "longOperation": "This might take a while.",
+  "movedToCollectionPage": "You can now manage your trading cards on your collection page.",
+  "search": {
+    "byCard": "Search {{cardName}}",
+    "selectCard": "Select card to search",
+    "allCards": "Search all cards"
+  }
 }

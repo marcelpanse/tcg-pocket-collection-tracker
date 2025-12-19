@@ -10,5 +10,15 @@
     "numberCards": "Anzahl der gesuchten Karten",
     "maxNum": "Maximale Anzahl der Karten",
     "minNum": "Minimale Anzahl der Karten"
+  },
+  "f-ownership": {
+    "all": "All",
+    "missing": "Missing",
+    "collected": "Collected"
+  },
+  "f-trading": {
+    "all": "All",
+    "wanted": "Wanted",
+    "extra": "For trade"
   }
 }

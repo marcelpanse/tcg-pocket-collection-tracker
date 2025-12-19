@@ -4,7 +4,7 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { getExpansionById } from '@/lib/CardsDB.ts'
-import { cardTypeOptions, type ExpansionOption, expansionOptions, type Filters, sortByOptions, tradingOptions } from '@/lib/filters'
+import { cardTypeOptions, type ExpansionOption, expansionOptions, type Filters, ownershipOptions, sortByOptions, tradingOptions } from '@/lib/filters'
 import { DropdownFilter, TabsFilter, ToggleFilter } from './Filters'
 import AllTextSearchFilter from './filters/AllTextSearchFilter'
 import DeckbuildingFilter from './filters/DeckbuildingFilter'
@@ -68,6 +68,15 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
       )}
       {filters.cardType !== undefined && (
         <ToggleFilter options={cardTypeOptions} value={filters.cardType} onChange={changeFilter('cardType')} show={showCardType} />
+      )}
+      {filters.ownership !== undefined && (
+        <TabsFilter
+          className="block"
+          options={ownershipOptions}
+          value={filters.ownership}
+          onChange={changeFilter('ownership')}
+          show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-ownership' })}
+        />
       )}
       {filters.trading !== undefined && (
         <TabsFilter

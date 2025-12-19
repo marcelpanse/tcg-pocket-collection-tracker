@@ -2,15 +2,17 @@ import i18n from '@/i18n'
 import { type CollectionRow, cardTypes, expansionIds, type Rarity, type RaritySettingsRow } from '@/types'
 import { allCards, getCardByInternalId } from './CardsDB'
 import { levenshtein } from './levenshtein'
-import { getCardNameByLang, getExtraCards, getMissingCards, getNeededCards, getOwnedCards } from './utils'
+import { getCardNameByLang, getExtraCards, getNeededCards } from './utils'
 
 export const expansionOptions = ['all', ...expansionIds] as const
 export const sortByOptions = ['default', 'recent', 'expansion-newest'] as const
 export const cardTypeOptions = cardTypes
-export const tradingOptions = ['all', 'wanted', 'extra', 'missing', 'owned'] as const
+export const ownershipOptions = ['all', 'missing', 'collected'] as const
+export const tradingOptions = ['all', 'wanted', 'extra'] as const
 export type ExpansionOption = (typeof expansionOptions)[number]
 export type SortByOption = (typeof sortByOptions)[number]
 export type CardTypeOption = (typeof cardTypeOptions)[number]
+export type OwnershipOptions = (typeof ownershipOptions)[number]
 export type TradingOption = (typeof tradingOptions)[number]
 
 export interface FiltersAll {
@@ -19,6 +21,7 @@ export interface FiltersAll {
   pack: string
   cardType: CardTypeOption[]
   rarity: Rarity[]
+  ownership: OwnershipOptions
   trading: TradingOption
   sortBy: SortByOption
   minNumber: number
@@ -41,24 +44,14 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
   if (filters.expansion !== undefined && filters.pack !== undefined && filters.pack !== 'all') {
     filteredCards = filteredCards.filter((card) => card.pack === filters.pack || card.pack === 'everypack')
   }
+  if (filters.ownership !== undefined && filters.ownership !== 'all') {
+    filteredCards = filteredCards.filter((card) => (filters.ownership === 'missing' ? !card.collected : card.collected))
+  }
   if (filters.trading !== undefined && filters.trading !== 'all') {
     if (!tradingSettings) {
       throw new Error('Cannot filter by trading status without trading settings')
     }
-    const filtered = new Set(
-      (() => {
-        switch (filters.trading) {
-          case 'wanted':
-            return getNeededCards(cards, tradingSettings)
-          case 'extra':
-            return getExtraCards(cards, tradingSettings)
-          case 'missing':
-            return getMissingCards(cards)
-          case 'owned':
-            return getOwnedCards(cards)
-        }
-      })(),
-    )
+    const filtered = new Set(filters.trading === 'wanted' ? getNeededCards(cards, tradingSettings) : getExtraCards(cards, tradingSettings))
     filteredCards = filteredCards.filter((card) => filtered.has(card.internal_id))
   }
 

@@ -1,11 +1,14 @@
 {
   "rarity": "Rarity",
+  "f-ownership": {
+    "all": "All",
+    "missing": "Missing",
+    "collected": "Collected"
+  },
   "f-trading": {
     "all": "All",
     "wanted": "Wanted",
-    "extra": "For trade",
-    "missing": "Missing",
-    "owned": "Owned"
+    "extra": "For trade"
   },
   "f-sortBy": {
     "sortBy": "Sort By",

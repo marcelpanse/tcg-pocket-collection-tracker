@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import { type Card, type CollectionRow, type RaritySettingsRow, rarities } from '@/types'
+import type { Card, CollectionRow, RaritySettingsRow } from '@/types'
 import pokemonTranslations from '../../assets/pokemon_translations.json'
 import toolTranslations from '../../assets/tools_translations.json'
 import trainerTranslations from '../../assets/trainers_translations.json'
@@ -83,24 +83,6 @@ export function getExtraCards(cards: Map<number, CollectionRow>, settings_rows: 
 
 export function getNeededCards(cards: Map<number, CollectionRow>, settings_rows: RaritySettingsRow[]): number[] {
   return getTradingCards(cards, settings_rows, (c, settings) => c.amount_owned < settings.to_collect)
-}
-
-export function getMissingCards(cards: Map<number, CollectionRow>): number[] {
-  const allRarities: RaritySettingsRow[] = rarities.map((rarity) => ({
-    rarity: rarity,
-    to_collect: 0,
-    to_keep: 0,
-  }))
-  return getTradingCards(cards, allRarities, (c) => c.amount_owned === 0)
-}
-
-export function getOwnedCards(cards: Map<number, CollectionRow>): number[] {
-  const allRarities: RaritySettingsRow[] = rarities.map((rarity) => ({
-    rarity: rarity,
-    to_collect: 1,
-    to_keep: 1,
-  }))
-  return getTradingCards(cards, allRarities, (c) => c.amount_owned !== 0)
 }
 
 export function umami(event: string) {
