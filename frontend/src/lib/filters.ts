@@ -7,7 +7,7 @@ import { getCardNameByLang, getExtraCards, getNeededCards } from './utils'
 export const expansionOptions = ['all', ...expansionIds] as const
 export const sortByOptions = ['default', 'recent', 'expansion-newest'] as const
 export const cardTypeOptions = cardTypes
-export const ownershipOptions = ['all', 'missing', 'collected'] as const
+export const ownershipOptions = ['all', 'missing', 'registered'] as const
 export const tradingOptions = ['all', 'wanted', 'extra'] as const
 export type ExpansionOption = (typeof expansionOptions)[number]
 export type SortByOption = (typeof sortByOptions)[number]
