@@ -12,20 +12,28 @@ interface Props<T> {
 
 interface PropsTabs<T> extends Props<T> {
   value: T
+  label?: string
   onChange: (value: T) => void
 }
 
-export function TabsFilter<T extends string>({ options, value, onChange, className, show = (x) => x }: PropsTabs<T>) {
+export function TabsFilter<T extends string>({ options, value, onChange, className, label, show = (x) => x }: PropsTabs<T>) {
   return (
-    <Tabs value={value} onValueChange={(x) => onChange(x as T)}>
-      <TabsList className={cn(commonClassName, 'flex-wrap', className)}>
-        {options.map((x) => (
-          <TabsTrigger key={x} value={x}>
-            {show(x)}
-          </TabsTrigger>
-        ))}
-      </TabsList>
-    </Tabs>
+    <div className="inline-block">
+      {label && (
+        <span className="block w-fit bg-neutral-800 border border-b-0 rounded-t-md border-neutral-700 text-neutral-400 px-4 py-0.5 text-xs relative">
+          {label}
+        </span>
+      )}
+      <Tabs value={value} onValueChange={(x) => onChange(x as T)}>
+        <TabsList className={cn(commonClassName, 'flex-wrap', className, label && 'rounded-tl-none -mt-px')}>
+          {options.map((x) => (
+            <TabsTrigger key={x} value={x}>
+              {show(x)}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </Tabs>
+    </div>
   )
 }
 

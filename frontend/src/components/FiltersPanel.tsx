@@ -75,6 +75,7 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
           options={ownershipOptions}
           value={filters.ownership}
           onChange={changeFilter('ownership')}
+          label={t('carddex', { ns: 'filters' })}
           show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-ownership' })}
         />
       )}
@@ -84,6 +85,7 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
           options={tradingOptions}
           value={filters.trading}
           onChange={changeFilter('trading')}
+          label={t('trading', { ns: 'filters' })}
           show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-trading' })}
         />
       )}
