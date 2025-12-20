@@ -66,7 +66,7 @@ const defaultFilters: Filters = {
   trading: 'all',
   sortBy: 'expansion-newest',
   minNumber: 0,
-  maxNumber: 100,
+  maxNumber: '∞',
   deckbuildingMode: false,
   allTextSearch: false,
 }

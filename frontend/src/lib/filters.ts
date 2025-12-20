@@ -5,7 +5,7 @@ import { levenshtein } from './levenshtein'
 import { getCardNameByLang, getExtraCards, getNeededCards } from './utils'
 
 export const expansionOptions = ['all', ...expansionIds] as const
-export const sortByOptions = ['default', 'recent', 'expansion-newest'] as const
+export const sortByOptions = ['expansion-newest', 'recent'] as const
 export const cardTypeOptions = cardTypes
 export const ownershipOptions = ['all', 'missing', 'registered'] as const
 export const tradingOptions = ['all', 'wanted', 'extra'] as const
@@ -25,7 +25,7 @@ export interface FiltersAll {
   trading: TradingOption
   sortBy: SortByOption
   minNumber: number
-  maxNumber: number
+  maxNumber: number | '∞'
   deckbuildingMode: boolean
   allTextSearch: boolean
 }
@@ -55,44 +55,14 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
     filteredCards = filteredCards.filter((card) => filtered.has(card.internal_id))
   }
 
-  if (filters.sortBy !== undefined) {
-    if (filters.sortBy === 'recent') {
-      filteredCards = filteredCards.toSorted((a, b) => {
-        const isUpdatedA = cards.get(a.internal_id)?.updated_at
-        const isUpdatedB = cards.get(b.internal_id)?.updated_at
-        if (isUpdatedA && isUpdatedB) {
-          return new Date(isUpdatedB).getTime() - new Date(isUpdatedA).getTime()
-        } else if (isUpdatedA && !isUpdatedB) {
-          return -1
-        } else {
-          return 1
-        }
-      })
-    } else if (filters.sortBy === 'expansion-newest') {
-      filteredCards = [...filteredCards].sort((a, b) => {
-        if (a.expansion !== b.expansion) {
-          return expansionIds.indexOf(a.expansion) - expansionIds.indexOf(b.expansion)
-        }
-        return a.card_id.localeCompare(b.card_id, i18n.language || 'en', { numeric: true })
-      })
-    }
+  if (filters.rarity !== undefined && filters.rarity.length > 0) {
+    const rarity = filters.rarity
+    filteredCards = filteredCards.filter((c) => rarity.includes(c.rarity))
   }
-
-  filteredCards = filteredCards.filter((c) => {
-    if (filters.rarity === undefined || filters.rarity.length === 0) {
-      return true
-    }
-    return filters.rarity.includes(c.rarity)
-  })
-  filteredCards = filteredCards.filter((c) => {
-    if (filters.cardType === undefined || filters.cardType.length === 0) {
-      return true
-    }
-    if (c.card_type.toLowerCase() === 'trainer') {
-      return filters.cardType.includes('trainer')
-    }
-    return filters.cardType.includes(c.energy.toLowerCase() as CardTypeOption)
-  })
+  if (filters.cardType !== undefined && filters.cardType.length > 0) {
+    const cardType = filters.cardType
+    filteredCards = filteredCards.filter((c) => (c.card_type.toLowerCase() === 'trainer' ? cardType.includes('trainer') : cardType.includes(c.energy)))
+  }
 
   if (filters.search) {
     const query = filters.search.toLowerCase()
@@ -118,6 +88,7 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
     })
   }
 
+  // Fill up `collected` and `updated at`
   for (const card of filteredCards) {
     if (filters.deckbuildingMode) {
       card.amount_owned = card.alternate_versions.reduce((acc, c) => {
@@ -132,13 +103,35 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
     card.collected = ownedCard?.collection.includes(card.card_id) ?? false
     card.updated_at = ownedCard?.updated_at
   }
+
   if (filters.minNumber !== undefined) {
     const minNumber = filters.minNumber
     filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) >= minNumber)
   }
-  if (filters.maxNumber !== undefined && filters.maxNumber !== 100) {
+  if (filters.maxNumber !== undefined && filters.maxNumber !== '∞') {
     const maxNumber = filters.maxNumber
     filteredCards = filteredCards.filter((f) => (f.amount_owned ?? 0) <= maxNumber)
+  }
+
+  if (filters.sortBy !== undefined) {
+    if (filters.sortBy === 'recent') {
+      filteredCards.sort((a, b) => {
+        if (a.updated_at && b.updated_at) {
+          return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+        } else if (a.updated_at && !b.updated_at) {
+          return -1
+        } else {
+          return 1
+        }
+      })
+    } else if (filters.sortBy === 'expansion-newest') {
+      filteredCards.sort((a, b) => {
+        if (a.expansion !== b.expansion) {
+          return expansionIds.indexOf(a.expansion) - expansionIds.indexOf(b.expansion)
+        }
+        return a.card_id.localeCompare(b.card_id, i18n.language || 'en', { numeric: true })
+      })
+    }
   }
 
   return filteredCards
