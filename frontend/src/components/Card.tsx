@@ -1,6 +1,6 @@
 import i18n from 'i18next'
 import { MinusIcon, PlusIcon, Trash2Icon } from 'lucide-react'
-import { startTransition, useCallback, useOptimistic } from 'react'
+import { startTransition, useOptimistic } from 'react'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { cn, getCardNameByLang } from '@/lib/utils'
@@ -34,7 +34,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
     })
   }
 
-  const handleMinusButtonClick = useCallback(() => {
+  const handleMinusButtonClick = () => {
     if (card.collected && amountOwned === 0) {
       startTransition(async () => {
         await deleteCardMutation.mutateAsync({ cardId: card.card_id })
@@ -42,7 +42,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
     } else {
       updateCardCount(amountOwned - 1)
     }
-  }, [card.collected, card.card_id, amountOwned, deleteCardMutation])
+  }
 
   const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)

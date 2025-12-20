@@ -1,5 +1,5 @@
 import type { ClassValue } from 'clsx'
-import { type FC, useMemo } from 'react'
+import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getCardById } from '@/lib/CardsDB'
 import { cn, getCardNameByLang } from '@/lib/utils'
@@ -24,11 +24,8 @@ export const CardLine: FC<Props> = ({ card_id, className, amount_owned, incremen
   const { data: ownedCards } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
 
-  const card = useMemo(() => getCardById(card_id), [card_id])
-  const ownedAmount = useMemo(
-    () => amount_owned ?? (ownedCards && (ownedCards.get(card?.internal_id || 0)?.amount_owned ?? 0)),
-    [ownedCards, amount_owned, card],
-  )
+  const card = getCardById(card_id)
+  const ownedAmount = amount_owned ?? (ownedCards && (ownedCards.get(card?.internal_id || 0)?.amount_owned ?? 0))
 
   if (!card) {
     throw new Error(`Unrecognized card_id: ${card_id}`)

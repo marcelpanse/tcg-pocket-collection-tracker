@@ -1,6 +1,6 @@
 import loadable from '@loadable/component'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { createHashRouter, Navigate, Outlet, RouterProvider, useLocation, useParams } from 'react-router'
 import DonationPopup from '@/components/DonationPopup.tsx'
@@ -85,17 +85,14 @@ function App() {
     },
   ])
 
-  const dialogContextValue = useMemo(
-    () => ({
-      isLoginDialogOpen,
-      setIsLoginDialogOpen,
-      isProfileDialogOpen,
-      setIsProfileDialogOpen,
-      selectedCardId,
-      setSelectedCardId,
-    }),
-    [isLoginDialogOpen, isProfileDialogOpen, selectedCardId],
-  )
+  const dialogContextValue = {
+    isLoginDialogOpen,
+    setIsLoginDialogOpen,
+    isProfileDialogOpen,
+    setIsProfileDialogOpen,
+    selectedCardId,
+    setSelectedCardId,
+  }
 
   return (
     <DialogContext.Provider value={dialogContextValue}>

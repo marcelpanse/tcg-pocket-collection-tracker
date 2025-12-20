@@ -1,5 +1,5 @@
 import { SquareMinus, SquarePlus, Trash2 } from 'lucide-react'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { useSearchParams } from 'react-router'
 import { CardLine } from '@/components/CardLine'
@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { showCardType } from '@/components/utils'
-import { allCards, getCardByInternalId } from '@/lib/CardsDB'
+import { getCardByInternalId } from '@/lib/CardsDB'
 import { type Filters, type FiltersAll, getFilteredCards } from '@/lib/filters'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
 import { type Energy, energies } from '@/types'
@@ -37,9 +37,9 @@ export default function DeckBuilder() {
   const [isFiltersSheetOpen, setIsFiltersSheetOpen] = useState(false) // used only on mobile
   const [filters, setFilters] = useState<Filters>(defaultFilters)
 
-  const filteredCards = useMemo(() => getFilteredCards({ ...filters, deckbuildingMode: true }, ownedCards ?? new Map()), [allCards, ownedCards, filters])
+  const filteredCards = getFilteredCards({ ...filters, deckbuildingMode: true }, ownedCards ?? new Map())
 
-  const activeFilters = useMemo(() => {
+  const activeFilters = () => {
     let res = 0
     for (const key in filters) {
       const k = key as keyof FiltersAll
@@ -48,7 +48,7 @@ export default function DeckBuilder() {
       }
     }
     return res
-  }, [filters])
+  }
 
   const [isDeckSheetOpen, setIsDeckSheetOpen] = useState(false) // used only on mobile
   const [deckName, setDeckName] = useState(() => searchParams.get('title') ?? 'New deck')
@@ -79,33 +79,24 @@ export default function DeckBuilder() {
     }
   })
 
-  const sortedDeckCards = useMemo(() => {
-    return [...deckCards].toSorted(([id1, _amount1], [id2, _amount2]) => id1 - id2)
-  }, [deckCards])
+  const sortedDeckCards = [...deckCards].toSorted(([id1, _amount1], [id2, _amount2]) => id1 - id2)
 
-  const deckSize = useMemo(() => {
+  const deckSize = () => {
     let n = 0
     deckCards.forEach((val) => {
       n += val
     })
     return n
-  }, [deckCards])
+  }
 
-  const missingCards = useMemo(
-    () =>
-      ownedCards
-        ? sortedDeckCards.reduce(
-            (acc, [id, amount]) =>
-              acc +
-              Math.max(
-                0,
-                amount - (getCardByInternalId(id)?.alternate_versions?.reduce((acc2, id2) => acc2 + (ownedCards.get(id2)?.amount_owned ?? 0), 0) ?? 0),
-              ),
-            0,
-          )
-        : 0,
-    [sortedDeckCards, ownedCards],
-  )
+  const missingCards = ownedCards
+    ? sortedDeckCards.reduce(
+        (acc, [id, amount]) =>
+          acc +
+          Math.max(0, amount - (getCardByInternalId(id)?.alternate_versions?.reduce((acc2, id2) => acc2 + (ownedCards.get(id2)?.amount_owned ?? 0), 0) ?? 0)),
+        0,
+      )
+    : 0
 
   useEffect(() => {
     setSearchParams(
@@ -118,39 +109,33 @@ export default function DeckBuilder() {
     )
   }, [deckCards, deckName, deckEnergy])
 
-  const addCard = useCallback(
-    (id: number) => {
-      setDeckCards((m1) => {
-        const val = m1.get(id) ?? 0
-        if (val >= 2) {
-          return m1
-        }
-        const m2 = new Map(m1)
-        m2.set(id, val + 1)
-        return m2
-      })
-    },
-    [setDeckCards],
-  )
+  const addCard = (id: number) => {
+    setDeckCards((m1) => {
+      const val = m1.get(id) ?? 0
+      if (val >= 2) {
+        return m1
+      }
+      const m2 = new Map(m1)
+      m2.set(id, val + 1)
+      return m2
+    })
+  }
 
-  const removeCard = useCallback(
-    (id: number) => {
-      setDeckCards((m1) => {
-        const val = m1.get(id)
-        if (val === undefined) {
-          return m1
-        }
-        const m2 = new Map(m1)
-        if (val <= 1) {
-          m2.delete(id)
-        } else {
-          m2.set(id, val - 1)
-        }
-        return m2
-      })
-    },
-    [setDeckCards],
-  )
+  const removeCard = (id: number) => {
+    setDeckCards((m1) => {
+      const val = m1.get(id)
+      if (val === undefined) {
+        return m1
+      }
+      const m2 = new Map(m1)
+      if (val <= 1) {
+        m2.delete(id)
+      } else {
+        m2.set(id, val - 1)
+      }
+      return m2
+    })
+  }
 
   const deckNode = (
     <div className="flex flex-col [&>h2]:text-lg [&>h2:not(:first-child)]:mt-2">
@@ -188,7 +173,7 @@ export default function DeckBuilder() {
         })}
       </ul>
       <p className="text-neutral-400 mt-2">
-        <span className={`${deckSize > 20 ? 'text-red-300' : ''}`}>{deckSize}</span>
+        <span className={`${deckSize() > 20 ? 'text-red-300' : ''}`}>{deckSize()}</span>
         <span className="text-sm">/20 cards</span>
         {missingCards > 0 && <span className="text-sm"> ({missingCards} missing)</span>}
       </p>
@@ -262,9 +247,9 @@ export default function DeckBuilder() {
             <div className="h-9 mb-2 z-10 flex overflow-hidden text-center rounded-md text-sm font-medium border shadow-sm border-neutral-700 divide-x divide-neutral-700 [&>*]:cursor-pointer [&>*]:hover:bg-neutral-600 [&>*]:hover:text-neutral-50">
               <button type="button" className="flex-1" onClick={() => setIsFiltersSheetOpen(true)}>
                 Filters
-                {activeFilters > 0 && ` (${activeFilters})`}
+                {activeFilters() > 0 && ` (${activeFilters()})`}
               </button>
-              {activeFilters > 0 && (
+              {activeFilters() > 0 && (
                 <button type="button" className="group px-2" onClick={() => setFilters(defaultFilters)}>
                   <Trash2 className="stroke-neutral-200 group-hover:stroke-neutral-50" />
                 </button>

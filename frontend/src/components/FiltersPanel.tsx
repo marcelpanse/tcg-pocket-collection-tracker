@@ -1,4 +1,4 @@
-import { type FC, useMemo } from 'react'
+import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
@@ -22,7 +22,7 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
 
   const changeFilter = (k: keyof Filters) => (x: Filters[typeof k]) => setFilters({ [k]: x })
 
-  const packsToShow = useMemo(() => {
+  const getPacksToShow = () => {
     if (filters.expansion === undefined || filters.expansion === 'all') {
       return undefined
     } else {
@@ -33,7 +33,8 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
           .filter((pack) => pack !== 'everypack'),
       ]
     }
-  }, [filters.expansion])
+  }
+  const packsToShow = getPacksToShow()
 
   function onExpansionChange(x: ExpansionOption) {
     if (filters.pack === undefined) {
