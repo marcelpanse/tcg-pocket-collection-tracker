@@ -1,5 +1,12 @@
 {
   "rarity": "Rarity",
+  "carddex": "Card Dex",
+  "trading": "Trading",
+  "f-ownership": {
+    "all": "All",
+    "missing": "Missing",
+    "registered": "Registered"
+  },
   "f-trading": {
     "all": "All",
     "wanted": "Wanted",
