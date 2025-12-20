@@ -4,25 +4,24 @@ import { useTranslation } from 'react-i18next'
 import { DropdownFilter } from '@/components/Filters'
 import Footer from '@/components/Footer.tsx'
 import DeckbuildingFilter from '@/components/filters/DeckbuildingFilter'
-import RarityFilter from '@/components/filters/RarityFilter.tsx'
+import RarityFilter from '@/components/filters/RarityFilter'
 import { RadialChart } from '@/components/RadialChart'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTitle } from '@/components/ui/alert.tsx'
-import * as CardsDB from '@/lib/CardsDB.ts'
-import { getExpansionById } from '@/lib/CardsDB.ts'
+import { expansions, getExpansionById } from '@/lib/CardsDB.ts'
+import { getFilteredCards } from '@/lib/filters'
+import { pullRate } from '@/lib/stats'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import { useCollection } from '@/services/collection/useCollection'
-import { type CollectionRow, expansionIds, type Rarity } from '@/types'
+import { type Card, type CollectionRow, expansionIds, type Rarity } from '@/types'
 import { ExpansionOverview } from './components/ExpansionOverview'
-
-interface Pack {
-  packName: string
-  percentage: number
-  fill: string
-}
 
 const expansionOptions = ['all', ...expansionIds.filter((id) => getExpansionById(id).openable)] as const
 type ExpansionOption = (typeof expansionOptions)[number]
+
+function getUniqueCount(cards: Card[]) {
+  return new Set(cards.map((c) => c.internal_id)).size
+}
 
 function Overview() {
   const { data: ownedCards = new Map<number, CollectionRow>(), isLoading } = useCollection()
@@ -41,30 +40,24 @@ function Overview() {
     return total
   }, [ownedCards])
 
-  const [rarityFilter, setRarityFilter] = useState<Rarity[]>(() => {
-    const savedRarityFilter = localStorage.getItem('rarityFilter')
-    return savedRarityFilter ? JSON.parse(savedRarityFilter) : []
-  })
-  const [numberFilter, setNumberFilter] = useState(() => {
-    const savedNumberFilter = localStorage.getItem('numberFilter')
-    return savedNumberFilter ? Number.parseInt(savedNumberFilter, 10) : 1
-  })
-  const [deckbuildingMode, setDeckbuildingMode] = useState(() => {
-    const savedDeckbuildingFilter = localStorage.getItem('deckbuildingFilter')
-    return savedDeckbuildingFilter === 'true'
+  const [filters, setFilters] = useState<{ rarity: Rarity[]; number: number; deckbuildingMode: boolean }>(() => {
+    const savedFilters = localStorage.getItem('overview-filters')
+    return savedFilters ? JSON.parse(savedFilters) : { rarity: [], number: 1, deckbuildingMode: false }
   })
 
-  const totalUniqueCards = CardsDB.getTotalNrOfCards({ rarityFilter, deckbuildingMode })
+  const availableCards = useMemo(() => getFilteredCards(filters, ownedCards), [ownedCards, filters])
+  const collectedCards = useMemo(() => ownedCards && getFilteredCards({ ...filters, minNumber: filters.number }, ownedCards), [ownedCards, filters])
+  const wantedCards = useMemo(() => ownedCards && getFilteredCards({ ...filters, maxNumber: filters.number - 1 }, ownedCards), [ownedCards, filters])
 
   const highestProbabilityPack = useMemo(() => {
-    let newHighestProbabilityPack: Pack | undefined
-    const filteredExpansions = CardsDB.expansions.filter((expansion) => expansion.openable)
+    let newHighestProbabilityPack: { packName: string; percentage: number; fill: string } | undefined
+    const filteredExpansions = expansions.filter((expansion) => expansion.openable)
     for (const expansion of filteredExpansions) {
       const pullRates = expansion.packs
         .filter((p) => p.name !== 'everypack')
         .map((pack) => ({
           packName: pack.name,
-          percentage: CardsDB.pullRate({ ownedCards, expansion, pack, rarityFilter, numberFilter, deckbuildingMode }),
+          percentage: pullRate(wantedCards, expansion, pack, filters.deckbuildingMode),
           fill: pack.color,
         }))
       const highestProbabilityPackCandidate = pullRates.sort((a, b) => b.percentage - a.percentage)[0]
@@ -73,7 +66,7 @@ function Overview() {
       }
     }
     return newHighestProbabilityPack
-  }, [ownedCards, rarityFilter, numberFilter, deckbuildingMode])
+  }, [ownedCards, filters])
 
   useEffect(() => {
     fetch('https://vcwloujmsjuacqpwthee.supabase.co/storage/v1/object/public/stats/stats.json')
@@ -84,11 +77,7 @@ function Overview() {
       })
   }, [])
 
-  useEffect(() => {
-    localStorage.setItem('rarityFilter', JSON.stringify(rarityFilter))
-    localStorage.setItem('numberFilter', numberFilter.toString())
-    localStorage.setItem('deckbuildingFilter', JSON.stringify(deckbuildingMode))
-  }, [rarityFilter, numberFilter, deckbuildingMode])
+  useEffect(() => localStorage.setItem('overview-filters', JSON.stringify(filters)), [filters])
 
   const getLocalizedExpansion = (id: ExpansionOption) => {
     const expansion_name = id === 'all' ? 'all' : getExpansionById(id).name
@@ -100,7 +89,7 @@ function Overview() {
   }
 
   return (
-    <main className="fade-in-up">
+    <main>
       <article className="mx-auto max-w-7xl px-8">
         {ownedCards.size === 0 && (
           <Alert className="mb-8 border-1 border-neutral-700 shadow-none">
@@ -111,29 +100,36 @@ function Overview() {
         )}
 
         <div className="mb-8 flex items-center gap-2 flex-wrap">
-          <RarityFilter rarityFilter={rarityFilter} setRarityFilter={setRarityFilter} deckbuildingMode={deckbuildingMode} />
+          <RarityFilter
+            rarityFilter={filters.rarity}
+            setRarityFilter={(rarity) => setFilters((prev) => ({ ...prev, rarity }))}
+            deckbuildingMode={filters.deckbuildingMode}
+          />
           <DropdownFilter
             label={t('f-number.numberCards', { ns: 'filters' })}
             options={[1, 2, 3, 4, 5] as const}
-            value={numberFilter}
-            onChange={setNumberFilter}
+            value={filters.number}
+            onChange={(number) => setFilters((prev) => ({ ...prev, number }))}
           />
           <div className="grow" />
-          <DeckbuildingFilter deckbuildingMode={deckbuildingMode} setDeckbuildingMode={setDeckbuildingMode} />
+          <DeckbuildingFilter
+            deckbuildingMode={filters.deckbuildingMode}
+            setDeckbuildingMode={(deckbuildingMode) => setFilters((prev) => ({ ...prev, deckbuildingMode }))}
+          />
         </div>
 
         <section className="grid grid-cols-8 gap-4 sm:gap-6">
           <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-lg border-1 border-neutral-700 bg-neutral-800 border-solid p-3 sm:p-6 md:p-8 mb-4 md:mb-0">
             <h2 className="font-bold mb-4 text-center text-base sm:text-lg md:text-3xl">{t('uniqueCards')}</h2>
             <RadialChart
-              value={totalUniqueCards === 0 ? 0 : CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode }) / totalUniqueCards}
-              label={`${CardsDB.getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, deckbuildingMode })}`}
-              sublabel={`/ ${totalUniqueCards}`}
+              value={availableCards.length === 0 ? 0 : getUniqueCount(collectedCards) / getUniqueCount(availableCards)}
+              label={String(getUniqueCount(collectedCards))}
+              sublabel={`/ ${getUniqueCount(availableCards)}`}
               color="#92C5FD"
               strokeWidth={24}
             />
             <h2 className="mt-6 text-balance text-center text-sm sm:text-md md:text-md">
-              {numberFilter === 1 ? t('numberOfCopies-single') : t('numberOfCopies-plural', { numberFilter: numberFilter })}
+              {filters.number === 1 ? t('numberOfCopies-single') : t('numberOfCopies-plural', { numberFilter: filters.number })}
             </h2>
           </div>
           <GradientCard
@@ -161,15 +157,16 @@ function Overview() {
       </article>
 
       <article className="mx-auto max-w-7xl sm:p-6 p-0 pt-6 grid grid-cols-8 gap-6">
-        {CardsDB.expansions
+        {expansions
           .filter((expansion) => (expansionFilter === 'all' && expansion.openable) || expansionFilter === expansion.id)
           .map((expansion) => (
             <ExpansionOverview
               key={expansion.id}
               expansion={expansion}
-              rarityFilter={rarityFilter}
-              numberFilter={numberFilter}
-              deckbuildingMode={deckbuildingMode}
+              collectedCards={collectedCards.filter((c) => c.expansion === expansion.id)}
+              wantedCards={wantedCards.filter((c) => c.expansion === expansion.id)}
+              availableCards={availableCards.filter((c) => c.expansion === expansion.id)}
+              deckbuildingMode={filters.deckbuildingMode}
             />
           ))}
       </article>
