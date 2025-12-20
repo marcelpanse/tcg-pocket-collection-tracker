@@ -18,6 +18,7 @@ import {
   type Filters,
   type FiltersAll,
   getFilteredCards,
+  ownershipOptions,
   sortByOptions,
   tradingOptions,
 } from '@/lib/filters'
@@ -39,6 +40,7 @@ const filterParsers: { [K in keyof FiltersAll]: (s: string) => Filters[K] | unde
   pack: (s) => s,
   cardType: (s) => s.split(',').filter((x): x is CardTypeOption => (cardTypeOptions as readonly string[]).includes(x)),
   rarity: (s) => s.split(',').filter((x): x is Rarity => (rarities as readonly string[]).includes(x)),
+  ownership: (s) => ((ownershipOptions as readonly string[]).includes(s) ? (s as Filters['ownership']) : undefined),
   trading: (s) => ((tradingOptions as readonly string[]).includes(s) ? (s as Filters['trading']) : undefined),
   sortBy: (s) => ((sortByOptions as readonly string[]).includes(s) ? (s as Filters['sortBy']) : undefined),
   minNumber: numberParser,
@@ -60,6 +62,7 @@ const defaultFilters: Filters = {
   pack: 'all',
   cardType: [],
   rarity: [],
+  ownership: 'all',
   trading: 'all',
   sortBy: 'expansion-newest',
   minNumber: 0,

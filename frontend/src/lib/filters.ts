@@ -7,10 +7,12 @@ import { getCardNameByLang, getExtraCards, getNeededCards } from './utils'
 export const expansionOptions = ['all', ...expansionIds] as const
 export const sortByOptions = ['default', 'recent', 'expansion-newest'] as const
 export const cardTypeOptions = cardTypes
+export const ownershipOptions = ['all', 'missing', 'registered'] as const
 export const tradingOptions = ['all', 'wanted', 'extra'] as const
 export type ExpansionOption = (typeof expansionOptions)[number]
 export type SortByOption = (typeof sortByOptions)[number]
 export type CardTypeOption = (typeof cardTypeOptions)[number]
+export type OwnershipOptions = (typeof ownershipOptions)[number]
 export type TradingOption = (typeof tradingOptions)[number]
 
 export interface FiltersAll {
@@ -19,6 +21,7 @@ export interface FiltersAll {
   pack: string
   cardType: CardTypeOption[]
   rarity: Rarity[]
+  ownership: OwnershipOptions
   trading: TradingOption
   sortBy: SortByOption
   minNumber: number
@@ -40,6 +43,9 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
   }
   if (filters.expansion !== undefined && filters.pack !== undefined && filters.pack !== 'all') {
     filteredCards = filteredCards.filter((card) => card.pack === filters.pack || card.pack === 'everypack')
+  }
+  if (filters.ownership !== undefined && filters.ownership !== 'all') {
+    filteredCards = filteredCards.filter((card) => (filters.ownership === 'missing' ? !card.collected : card.collected))
   }
   if (filters.trading !== undefined && filters.trading !== 'all') {
     if (!tradingSettings) {
