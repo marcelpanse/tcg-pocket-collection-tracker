@@ -20,7 +20,8 @@ export function CardsTable({ className, children, cards, groupExpansions, render
 
   const scrollRef = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState(900)
-  const [scrollContainerHeight, setScrollContainerHeight] = useState('auto')
+  // this has to be a small number because it is what initially is rendered before we calculated the actual max height. When setting it to 'auto' it will render the entire collection on first render.
+  const [scrollContainerHeight, setScrollContainerHeight] = useState('100px')
 
   useEffect(() => {
     const el = scrollRef.current
