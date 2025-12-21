@@ -1,6 +1,6 @@
 import i18n from 'i18next'
 import { CircleHelp } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import { Card as CardComponent } from '@/components/Card'
@@ -25,17 +25,13 @@ function CardDetail() {
   const [isOpen, setIsOpen] = useState(false)
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
 
-  const card = useMemo(() => (id === undefined ? undefined : getCardByInternalId(id)), [id])
-  const row = useMemo(() => (id === undefined ? undefined : ownedCards.get(id)), [id, ownedCards])
-  const alternatives = useMemo(
-    () =>
-      card?.alternate_versions.map((alternate_id) => ({
-        card: getCardByInternalId(alternate_id) as Card,
-        amount_owned: ownedCards.get(alternate_id)?.amount_owned ?? 0,
-      })),
-    [card, ownedCards],
-  )
-  const expansion = useMemo(() => card && getExpansionById(card.expansion), [card])
+  const card = id === undefined ? undefined : getCardByInternalId(id)
+  const row = id === undefined ? undefined : ownedCards.get(id)
+  const alternatives = card?.alternate_versions.map((alternate_id) => ({
+    card: getCardByInternalId(alternate_id) as Card,
+    amount_owned: ownedCards.get(alternate_id)?.amount_owned ?? 0,
+  }))
+  const expansion = card && getExpansionById(card.expansion)
 
   useEffect(() => {
     if (id) {

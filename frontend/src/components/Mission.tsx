@@ -1,6 +1,6 @@
 import i18n from 'i18next'
 import { CircleHelp, Trophy } from 'lucide-react'
-import { type FC, useMemo } from 'react'
+import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import FancyCard from '@/components/FancyCard.tsx'
@@ -39,7 +39,7 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
     cardHeight = width / 3 + 100
   }
 
-  const missionGridRows = useMemo(() => {
+  const missionGridRows = () => {
     let isMissionCompleted = true
     const shownCards = mission.requiredCards.flatMap((missionCard) => {
       const ownedMissionCards: MissionDetailProps[] = []
@@ -79,13 +79,13 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
       gridRows.push(shownCards.slice(i, i + cardsPerRow))
     }
     return gridRows
-  }, [cardsPerRow])
+  }
 
-  const missionHeight = cardHeight * missionGridRows.length + 48
+  const missionHeight = cardHeight * missionGridRows().length + 48
   return (
     <div className="relative w-full">
       <div style={{ height: `${missionHeight}px` }} className="relative w-full">
-        {missionGridRows.map((gridRow, i) => (
+        {missionGridRows().map((gridRow, i) => (
           <div key={i} style={{ height: `${cardHeight}px`, transform: `translateY(${cardHeight * i + 72}px)` }} className="absolute top-0 left-0 w-full">
             <div className="flex justify-start gap-x-3">
               {gridRow.map((card, j) => {
@@ -121,7 +121,7 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
             data-tooltip-html={
               mission.completed
                 ? 'Completed!'
-                : pullRateForSpecificMission(mission, missionGridRows)
+                : pullRateForSpecificMission(mission, missionGridRows())
                     .filter(([packName, probability]) => packName !== 'everypack' && probability > 0)
                     .map(([packName, probability]) => `${t(packName)}: ${probability.toFixed(2)}%`)
                     .join('<br/>')

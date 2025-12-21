@@ -1,5 +1,4 @@
 import i18n from 'i18next'
-import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
 import { BarChartComponent } from '@/components/BarChart.tsx'
@@ -21,25 +20,18 @@ export function ExpansionOverview({ expansion, collectedCards, availableCards, w
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
-  const { highestProbabilityPack, chartData } = useMemo(() => {
-    let { packs } = expansion
+  let { packs } = expansion
 
-    if (packs.length > 1) {
-      packs = packs.filter((pack) => pack.name !== 'everypack')
-    }
-    const chartData = packs.map((pack) => ({
-      packName: t(pack.name, { ns: 'common/packs' }),
-      percentage: pullRate(wantedCards, expansion, pack, deckbuildingMode),
-      fill: pack.color,
-    }))
+  if (packs.length > 1) {
+    packs = packs.filter((pack) => pack.name !== 'everypack')
+  }
+  const chartData = packs.map((pack) => ({
+    packName: t(pack.name, { ns: 'common/packs' }),
+    percentage: pullRate(wantedCards, expansion, pack, deckbuildingMode),
+    fill: pack.color,
+  }))
 
-    const highestProbabilityPack = chartData.sort((a, b) => b.percentage - a.percentage)[0]
-
-    return {
-      highestProbabilityPack,
-      chartData,
-    }
-  }, [wantedCards, expansion, deckbuildingMode])
+  const highestProbabilityPack = chartData.sort((a, b) => b.percentage - a.percentage)[0]
 
   return (
     <>

@@ -1,6 +1,6 @@
 import { useVirtualizer } from '@tanstack/react-virtual'
 import i18n from 'i18next'
-import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react'
+import { type ReactNode, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getExpansionById } from '@/lib/CardsDB.ts'
 import { chunk, cn } from '@/lib/utils.ts'
@@ -20,7 +20,8 @@ export function CardsTable({ className, children, cards, groupExpansions, render
 
   const scrollRef = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState(900)
-  const [scrollContainerHeight, setScrollContainerHeight] = useState('auto')
+  // this has to be a small number because it is what initially is rendered before we calculated the actual max height. When setting it to 'auto' it will render the entire collection on first render.
+  const [scrollContainerHeight, setScrollContainerHeight] = useState('100px')
 
   useEffect(() => {
     const el = scrollRef.current
@@ -37,43 +38,36 @@ export function CardsTable({ className, children, cards, groupExpansions, render
     return () => observer.disconnect()
   }, [])
 
-  const { cardsPerRow, cardHeight, basis } = useMemo(() => {
-    const aspectRatio = 1.4
-    const descriptionOffset = 40 // height of the card name + action buttons
-    const cardsPerRow = Math.max(Math.min(Math.floor(width / 170), 5), 3)
-    const cardHeight = Math.round(aspectRatio * (width / cardsPerRow)) + descriptionOffset
-    const basis = {
-      3: 'basis-1/3',
-      4: 'basis-1/4',
-      5: 'basis-1/5',
-    }[cardsPerRow] // Make sure Tailwind can see and actually generate the classes
-    return { cardsPerRow, cardHeight, basis }
-  }, [width])
+  const aspectRatio = 1.4
+  const descriptionOffset = 40 // height of the card name + action buttons
+  const cardsPerRow = Math.max(Math.min(Math.floor(width / 170), 5), 3)
+  const cardHeight = Math.round(aspectRatio * (width / cardsPerRow)) + descriptionOffset
+  const basis = {
+    3: 'basis-1/3',
+    4: 'basis-1/4',
+    5: 'basis-1/5',
+  }[cardsPerRow] // Make sure Tailwind can see and actually generate the classes
 
-  const rows: ({ id: string; type: 'header'; expansion: Expansion } | { id: string; type: 'row'; cards: CardType[] })[] = useMemo(
-    () =>
-      groupExpansions
-        ? Object.entries(Object.groupBy(cards, (c) => c.expansion))
-            .toSorted(([id1, _cards1], [id2, _cards2]) => expansionIds.indexOf(id1 as ExpansionId) - expansionIds.indexOf(id2 as ExpansionId))
-            .flatMap(([expansionId, cards]) => [
-              {
-                id: `header-${expansionId}`,
-                type: 'header' as const,
-                expansion: getExpansionById(expansionId as ExpansionId),
-              },
-              ...chunk(cards, cardsPerRow).map((rowCards, i) => ({
-                id: `row-${expansionId}-${i}`,
-                type: 'row' as const,
-                cards: rowCards,
-              })),
-            ])
-        : chunk(cards, cardsPerRow).map((rowCards, i) => ({
-            id: `row-${i}`,
+  const rows: ({ id: string; type: 'header'; expansion: Expansion } | { id: string; type: 'row'; cards: CardType[] })[] = groupExpansions
+    ? Object.entries(Object.groupBy(cards, (c) => c.expansion))
+        .toSorted(([id1, _cards1], [id2, _cards2]) => expansionIds.indexOf(id1 as ExpansionId) - expansionIds.indexOf(id2 as ExpansionId))
+        .flatMap(([expansionId, cards]) => [
+          {
+            id: `header-${expansionId}`,
+            type: 'header' as const,
+            expansion: getExpansionById(expansionId as ExpansionId),
+          },
+          ...chunk(cards, cardsPerRow).map((rowCards, i) => ({
+            id: `row-${expansionId}-${i}`,
             type: 'row' as const,
             cards: rowCards,
           })),
-    [cards, cardsPerRow],
-  )
+        ])
+    : chunk(cards, cardsPerRow).map((rowCards, i) => ({
+        id: `row-${i}`,
+        type: 'row' as const,
+        cards: rowCards,
+      }))
 
   const rowVirtualizer = useVirtualizer({
     getScrollElement: () => scrollRef.current,

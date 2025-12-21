@@ -1,6 +1,6 @@
 import i18n from 'i18next'
 import { CircleAlert, Trash2 } from 'lucide-react'
-import { type ReactNode, useCallback, useMemo, useState } from 'react'
+import { type ReactNode, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
 import { Link, useSearchParams } from 'react-router'
@@ -80,7 +80,7 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
   const [searchParams, setSearchParams] = useSearchParams()
   const { data: account } = useAccount()
 
-  const filters = useMemo(() => {
+  const filters = () => {
     const res: Filters = { ...defaultFilters }
 
     const updateFilter = <K extends keyof Filters>(key: K, value: string) => {
@@ -97,7 +97,7 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
       }
     }
     return res
-  }, [searchParams])
+  }
 
   const setFilters = (updates: Partial<Filters>) => {
     const params = new URLSearchParams(searchParams)
@@ -116,20 +116,21 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
 
   const clearFilters = () => setSearchParams(new URLSearchParams())
 
-  const activeFilters = useMemo(() => {
+  const activeFilters = () => {
     let res = 0
-    for (const key in filters) {
+    const currentFilters = filters()
+    for (const key in currentFilters) {
       const k = key as keyof FiltersAll
-      if (filters[k] !== defaultFilters[k]) {
+      if (currentFilters[k] !== defaultFilters[k]) {
         res++
       }
     }
     return res
-  }, [filters])
+  }
 
-  const filteredCards = useMemo(() => getFilteredCards(filters, cards, account?.trade_rarity_settings), [filters, cards, account])
+  const filteredCards = getFilteredCards(filters(), cards, account?.trade_rarity_settings)
 
-  const getTradingMessage = useCallback(() => {
+  const getTradingMessage = () => {
     if (!account) {
       throw new Error('Cannot copy trade message without account')
     }
@@ -161,13 +162,13 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
     }
 
     cardValues += `${t('trade.lookingForCards')}:\n`
-    putCards(getFilteredCards({ ...filters, trading: 'wanted' }, cards, account.trade_rarity_settings))
+    putCards(getFilteredCards({ ...filters(), trading: 'wanted' }, cards, account.trade_rarity_settings))
 
     cardValues += `\n\n${t('trade.forTradeCards')}:\n`
-    putCards(getFilteredCards({ ...filters, trading: 'extra' }, cards, account.trade_rarity_settings))
+    putCards(getFilteredCards({ ...filters(), trading: 'extra' }, cards, account.trade_rarity_settings))
 
     return cardValues
-  }, [cards, filters, account])
+  }
 
   async function onShare() {
     if (!share) {
@@ -183,7 +184,7 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
     }
   }
 
-  const totalOwned = useMemo(() => {
+  const totalOwned = () => {
     let total = 0
     const uniqueCardsByCardId = new Set<number>()
     for (const card of filteredCards) {
@@ -193,9 +194,9 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
       }
     }
     return total
-  }, [cards])
+  }
 
-  const mewCardOwned = useMemo(() => Boolean((cards?.get(83654)?.amount_owned ?? 0) > 0), [cards])
+  const mewCardOwned = Boolean((cards?.get(83654)?.amount_owned ?? 0) > 0)
 
   const filtersPanel = (
     <div className="flex flex-col h-fit gap-2">
@@ -203,7 +204,7 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
         {t('stats.summary', {
           selected: filteredCards.length,
           uniquesOwned: filteredCards.filter((card) => Boolean(card.collected)).length,
-          totalOwned,
+          totalOwned: totalOwned(),
         })}
         {mewCardOwned && (
           <>
@@ -212,7 +213,7 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
           </>
         )}
       </small>
-      <FiltersPanel className="flex flex-col gap-y-3" filters={filters} setFilters={setFilters} clearFilters={clearFilters} />
+      <FiltersPanel className="flex flex-col gap-y-3" filters={filters()} setFilters={setFilters} clearFilters={clearFilters} />
       <div className="flex flex-col mt-4 gap-2">
         {share !== undefined && (
           <Button variant="outline" onClick={onShare}>
@@ -261,9 +262,9 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
           <div className="h-9 flex overflow-hidden text-center rounded-md text-sm font-medium border shadow-sm border-neutral-700 divide-x divide-neutral-700 [&>*]:cursor-pointer [&>*]:hover:bg-neutral-600 [&>*]:hover:text-neutral-50">
             <button type="button" className="flex-1" onClick={() => setIsFiltersSheetOpen(true)}>
               Filters
-              {activeFilters > 0 && ` (${activeFilters})`}
+              {activeFilters() > 0 && ` (${activeFilters()})`}
             </button>
-            {activeFilters > 0 && (
+            {activeFilters() > 0 && (
               <button type="button" className="group px-2" onClick={clearFilters}>
                 <Trash2 className="stroke-neutral-200 group-hover:stroke-neutral-50" />
               </button>
@@ -273,8 +274,8 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
         {children}
         <CardsTable
           cards={filteredCards}
-          groupExpansions={filters.sortBy !== 'recent'}
-          render={(c) => <Card card={c} editable={!filters.deckbuildingMode && !isPublic} />}
+          groupExpansions={filters().sortBy !== 'recent'}
+          render={(c) => <Card card={c} editable={!filters().deckbuildingMode && !isPublic} />}
         />
       </div>
     </div>

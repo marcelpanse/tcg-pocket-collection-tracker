@@ -1,7 +1,7 @@
 import { useVirtualizer } from '@tanstack/react-virtual'
 import i18n from 'i18next'
 import { ChevronRight } from 'lucide-react'
-import { useMemo, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { CardLine } from '@/components/CardLine'
@@ -20,8 +20,8 @@ function TradeMatches() {
   const [search, setSearch] = useState('')
   const [selectedCard, setSelectedCard] = useState<number>()
   const [showResults, setShowResults] = useState(false)
-  const cards = useMemo(() => getFilteredCards({ search, rarity: [...tradableRarities] }, new Map()), [search])
-  const card = useMemo(() => selectedCard && getCardByInternalId(selectedCard), [selectedCard])
+  const cards = getFilteredCards({ search, rarity: [...tradableRarities] }, new Map())
+  const card = selectedCard && getCardByInternalId(selectedCard)
 
   const { data: tradingPartners, isLoading, isError } = useTradingPartners(showResults, selectedCard)
 

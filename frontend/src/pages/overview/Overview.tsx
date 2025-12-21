@@ -1,5 +1,5 @@
 import { Heart, Siren } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { DropdownFilter } from '@/components/Filters'
 import Footer from '@/components/Footer.tsx'
@@ -32,24 +32,35 @@ function Overview() {
   const [usersCount, setUsersCount] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<ExpansionOption>(expansionOptions[1])
 
-  const ownedCardsCount = useMemo(() => {
+  const ownedCardsCount = () => {
     let total = 0
     ownedCards.forEach((card) => {
       total += card.amount_owned
     })
     return total
-  }, [ownedCards])
+  }
 
   const [filters, setFilters] = useState<{ rarity: Rarity[]; number: number; deckbuildingMode: boolean }>(() => {
     const savedFilters = localStorage.getItem('overview-filters')
     return savedFilters ? JSON.parse(savedFilters) : { rarity: [], number: 1, deckbuildingMode: false }
   })
 
-  const availableCards = useMemo(() => getFilteredCards(filters, ownedCards), [ownedCards, filters])
-  const collectedCards = useMemo(() => ownedCards && getFilteredCards({ ...filters, minNumber: filters.number }, ownedCards), [ownedCards, filters])
-  const wantedCards = useMemo(() => ownedCards && getFilteredCards({ ...filters, maxNumber: filters.number - 1 }, ownedCards), [ownedCards, filters])
+  useEffect(() => {
+    fetch('https://vcwloujmsjuacqpwthee.supabase.co/storage/v1/object/public/stats/stats.json')
+      .then((response) => response.json())
+      .then((data) => {
+        setCollectionCount(data.collectionCount)
+        setUsersCount(data.usersCount)
+      })
+  }, [])
 
-  const highestProbabilityPack = useMemo(() => {
+  useEffect(() => localStorage.setItem('overview-filters', JSON.stringify(filters)), [filters])
+
+  const availableCards = getFilteredCards(filters, ownedCards)
+  const collectedCards = ownedCards && getFilteredCards({ ...filters, minNumber: filters.number }, ownedCards)
+  const wantedCards = ownedCards && getFilteredCards({ ...filters, maxNumber: filters.number - 1 }, ownedCards)
+
+  const getHighestProbabilityPack = () => {
     let newHighestProbabilityPack: { packName: string; percentage: number; fill: string } | undefined
     const filteredExpansions = expansions.filter((expansion) => expansion.openable)
     for (const expansion of filteredExpansions) {
@@ -66,18 +77,8 @@ function Overview() {
       }
     }
     return newHighestProbabilityPack
-  }, [ownedCards, filters])
-
-  useEffect(() => {
-    fetch('https://vcwloujmsjuacqpwthee.supabase.co/storage/v1/object/public/stats/stats.json')
-      .then((response) => response.json())
-      .then((data) => {
-        setCollectionCount(data.collectionCount)
-        setUsersCount(data.usersCount)
-      })
-  }, [])
-
-  useEffect(() => localStorage.setItem('overview-filters', JSON.stringify(filters)), [filters])
+  }
+  const highestProbabilityPack = getHighestProbabilityPack()
 
   const getLocalizedExpansion = (id: ExpansionOption) => {
     const expansion_name = id === 'all' ? 'all' : getExpansionById(id).name
@@ -140,7 +141,7 @@ function Overview() {
           />
           <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-lg border-1 border-neutral-700 bg-neutral-800 border-solid p-3 sm:p-6 md:p-8">
             <h2 className="mb-1 text-center text-base sm:text-lg md:text-2xl">{t('youHave')}</h2>
-            <h1 className="mb-2 text-balance text-center font-semibold text-2xl sm:text-3xl md:text-7xl">{ownedCardsCount}</h1>
+            <h1 className="mb-2 text-balance text-center font-semibold text-2xl sm:text-3xl md:text-7xl">{ownedCardsCount()}</h1>
             <h2 className="text-balance text-center text-base sm:text-lg md:text-2xl">{t('cardsTotal')}</h2>
           </div>
         </section>
