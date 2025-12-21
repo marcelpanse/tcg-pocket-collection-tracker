@@ -69,6 +69,11 @@ export const expansions: Expansion[] = [
     missions: a1Missions,
     tradeable: true,
     openable: true,
+    packStructure: {
+      containsShinies: false,
+      containsBabies: false,
+      cardsPerPack: 5,
+    },
   },
   {
     name: 'mythicalisland',
@@ -78,6 +83,11 @@ export const expansions: Expansion[] = [
     missions: a1aMissions,
     tradeable: true,
     openable: true,
+    packStructure: {
+      containsShinies: false,
+      containsBabies: false,
+      cardsPerPack: 5,
+    },
   },
   {
     name: 'space-timesmackdown',
@@ -91,6 +101,11 @@ export const expansions: Expansion[] = [
     missions: a2Missions,
     tradeable: true,
     openable: true,
+    packStructure: {
+      containsShinies: false,
+      containsBabies: false,
+      cardsPerPack: 5,
+    },
   },
   {
     name: 'triumphantlight',
@@ -100,6 +115,11 @@ export const expansions: Expansion[] = [
     missions: a2aMissions,
     tradeable: true,
     openable: true,
+    packStructure: {
+      containsShinies: false,
+      containsBabies: false,
+      cardsPerPack: 5,
+    },
   },
   {
     name: 'shiningrevelry',
@@ -108,8 +128,12 @@ export const expansions: Expansion[] = [
     packs: [{ name: 'shiningrevelrypack', color: '#78b3c0' }],
     missions: a2bMissions,
     tradeable: true,
-    containsShinies: true,
     openable: true,
+    packStructure: {
+      containsShinies: true,
+      containsBabies: false,
+      cardsPerPack: 5,
+    },
   },
   {
     name: 'celestialguardians',
@@ -123,7 +147,11 @@ export const expansions: Expansion[] = [
     missions: a3Missions,
     tradeable: true,
     openable: true,
-    containsShinies: true,
+    packStructure: {
+      containsShinies: true,
+      containsBabies: false,
+      cardsPerPack: 5,
+    },
   },
   {
     name: 'extradimensionalcrisis',
@@ -133,7 +161,11 @@ export const expansions: Expansion[] = [
     missions: a3aMissions,
     tradeable: true,
     openable: true,
-    containsShinies: true,
+    packStructure: {
+      containsShinies: true,
+      containsBabies: false,
+      cardsPerPack: 5,
+    },
   },
   {
     name: 'eeveegrove',
@@ -143,7 +175,11 @@ export const expansions: Expansion[] = [
     missions: a3bMissions,
     tradeable: true,
     openable: true,
-    containsShinies: true,
+    packStructure: {
+      containsShinies: true,
+      containsBabies: false,
+      cardsPerPack: 5,
+    },
   },
   {
     name: 'wisdomofseaandsky',
@@ -157,8 +193,11 @@ export const expansions: Expansion[] = [
     missions: a4Missions,
     tradeable: true,
     openable: true,
-    containsShinies: true,
-    containsBabies: true,
+    packStructure: {
+      containsShinies: true,
+      containsBabies: true,
+      cardsPerPack: 5,
+    },
   },
   {
     name: 'secludedsprings',
@@ -168,8 +207,11 @@ export const expansions: Expansion[] = [
     missions: a4aMissions,
     tradeable: true,
     openable: true,
-    containsShinies: true,
-    containsBabies: true,
+    packStructure: {
+      containsShinies: true,
+      containsBabies: true,
+      cardsPerPack: 5,
+    },
   },
   {
     name: 'deluxepackex',
@@ -179,9 +221,9 @@ export const expansions: Expansion[] = [
     missions: a4bMissions,
     tradeable: true,
     openable: false,
-    containsShinies: true,
-    containsBabies: false,
     packStructure: {
+      containsShinies: true,
+      containsBabies: false,
       cardsPerPack: 4,
     },
   },
@@ -198,8 +240,11 @@ export const expansions: Expansion[] = [
     missions: b1Missions,
     tradeable: true,
     openable: true,
-    containsShinies: true,
-    containsBabies: false,
+    packStructure: {
+      containsShinies: true,
+      containsBabies: false,
+      cardsPerPack: 5,
+    },
   },
   {
     name: 'crimsonblaze',
@@ -209,8 +254,11 @@ export const expansions: Expansion[] = [
     missions: b1aMissions,
     tradeable: true,
     openable: true,
-    containsShinies: true,
-    containsBabies: false,
+    packStructure: {
+      containsShinies: true,
+      containsBabies: false,
+      cardsPerPack: 5,
+    },
   },
   // Pack colors should have saturation 37.5% (96) and value 75% (192). The distance in hue between any two packs should not be smaller than 3.33% (12)
   {

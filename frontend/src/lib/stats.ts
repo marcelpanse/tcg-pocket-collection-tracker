@@ -1,10 +1,6 @@
 import type { MissionDetailProps } from '@/components/Mission'
-import type { Card, Expansion, ExpansionId, Mission, Pack, Rarity } from '@/types'
+import type { Card, Expansion, ExpansionId, Mission, Pack, PackStructure, Rarity } from '@/types'
 import { allCards, getCardById, getExpansionById } from './CardsDB'
-
-const equivalent = (firstCard: Card, secondCard: Card) => {
-  return firstCard.alternate_versions.includes(secondCard.internal_id)
-}
 
 const expansionCards = Object.groupBy(allCards, (c) => c.expansion) as Record<ExpansionId, Card[]>
 
@@ -100,11 +96,9 @@ const probabilityPerRarityBaby: Record<Rarity, number> = createRarityProbability
   '☆': 12.9,
 })
 
-const getPositionProbability = (expansion: Expansion, position: number): Record<Rarity, number> => {
-  const packStructure = expansion.packStructure
-
+function getPositionProbability(strucutre: PackStructure, position: number): Record<Rarity, number> {
   // 4-card deluxe pack
-  if (packStructure?.cardsPerPack === 4) {
+  if (strucutre?.cardsPerPack === 4) {
     const positionKey = `position${position}` as keyof typeof deluxePackProbabilities
     return deluxePackProbabilities[positionKey] || standardPackProbabilities.positions1to3
   }
@@ -114,41 +108,50 @@ const getPositionProbability = (expansion: Expansion, position: number): Record<
     return standardPackProbabilities.positions1to3
   }
   if (position === 4) {
-    return expansion.containsShinies ? standardPackProbabilities.position4Shiny : standardPackProbabilities.position4
+    return strucutre.containsShinies ? standardPackProbabilities.position4Shiny : standardPackProbabilities.position4
   }
   if (position === 5) {
-    return expansion.containsShinies ? standardPackProbabilities.position5Shiny : standardPackProbabilities.position5
+    return strucutre.containsShinies ? standardPackProbabilities.position5Shiny : standardPackProbabilities.position5
   }
 
-  // Fallback (should never reach here)
-  return standardPackProbabilities.positions1to3
+  throw new Error('Invalid within pack pull position')
 }
 
 export function pullRate(wantedCards: Card[], expansion: Expansion, pack: Pack, deckbuildingMode: boolean) {
+  if (!expansion.packStructure) {
+    throw new Error(`${expansion.id}: can't calculate probability without 'packStructure' field`)
+  }
   const cardsInPack = expansionCards[expansion.id].filter((c) => c.pack === pack.name || c.pack === 'everypack')
   return pullRateForCardSubset(
     wantedCards.filter((c) => c.expansion === expansion.id),
-    expansion,
     cardsInPack,
+    expansion.packStructure,
     deckbuildingMode,
   )
 }
 
 export const pullRateForSpecificCard = (expansion: Expansion, packName: string, card: Card) => {
+  if (!expansion.packStructure) {
+    throw new Error(`${expansion.id}: can't calculate probability without 'packStructure' field`)
+  }
   const validatedPackName = packName === 'everypack' ? expansion?.packs[0].name : packName
   const cardsInPack = expansionCards[expansion.id].filter((c) => c.pack === validatedPackName || c.pack === 'everypack')
-  return pullRateForCardSubset([card], expansion, cardsInPack, false) * 100
+  return pullRateForCardSubset([card], cardsInPack, expansion.packStructure, false) * 100
 }
 
 export const pullRateForSpecificMission = (mission: Mission, missionGridRows: MissionDetailProps[][]) => {
   const expansion = getExpansionById(mission.expansionId)
+  const packStructure = expansion.packStructure
+  if (!packStructure) {
+    throw new Error(`${expansion.id}: can't calculate probability without 'packStructure' field`)
+  }
   const missingCards = [
     ...new Set(
       missionGridRows
         .flat()
         .filter((card) => !card.owned)
         .flatMap((card) => card.missionCardOptions)
-        .map((cardId) => getCardById(cardId))
+        .map(getCardById)
         .filter((card) => card !== undefined),
     ),
   ]
@@ -159,8 +162,8 @@ export const pullRateForSpecificMission = (mission: Mission, missionGridRows: Mi
           pack.name,
           pullRateForCardSubset(
             missingCards,
-            expansion,
             expansionCards[expansion.id].filter((c) => c.pack === pack.name || c.pack === 'everypack'),
+            packStructure,
             false,
           ) * 100,
         ] as const,
@@ -168,12 +171,15 @@ export const pullRateForSpecificMission = (mission: Mission, missionGridRows: Mi
   )
 }
 
-const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cardsInPack: Card[], deckbuildingMode: boolean) => {
+const pullRateForCardSubset = (missingCards: Card[], cardsInPack: Card[], structure: PackStructure, deckbuildingMode: boolean) => {
   const cardsInRarePack = cardsInPack.filter((c) => abilityByRarityToBeInRarePack[c.rarity] === 1)
-  const missingCardsFromPack = missingCards.filter((c) => cardsInPack.some((card) => c.card_id === card.card_id))
 
-  const cardsPerPack = expansion.packStructure?.cardsPerPack || 5
-  const totalProbabilityPerPosition = Array(cardsPerPack).fill(0)
+  const missingIds = new Set(missingCards.map((c) => c.internal_id))
+  const missingCardsFromPack = cardsInPack.filter(
+    deckbuildingMode ? (c) => c.alternate_versions.some((id) => missingIds.has(id)) : (c) => missingIds.has(c.internal_id),
+  )
+
+  const totalProbabilityPerPosition = Array(structure.cardsPerPack).fill(0)
   let rareProbability1_5 = 0
   let babyProbability = 0
   for (const card of missingCardsFromPack) {
@@ -183,25 +189,12 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
       continue
     }
 
-    if (deckbuildingMode) {
-      // while in deckbuilding mode, we only have diamond cards in the list,
-      // but want to include the chance of getting one of the missing cards as a more rare version,
-      // so we add the rarities here
-      const matchingCards = cardsInPack.filter((cip) => equivalent(cip, card))
-
-      for (const mc of matchingCards) {
-        if (!rarityList.includes(mc.rarity)) {
-          rarityList.push(mc.rarity)
-        }
-      }
-    }
-
-    const chanceToGetThisCardPerPosition = Array(cardsPerPack).fill(0)
+    const chanceToGetThisCardPerPosition = Array(structure.cardsPerPack).fill(0)
     let chanceToGetThisCardRare1_5 = 0
     let chanceToGetThisCardBaby = 0
 
     for (const rarity of rarityList) {
-      if (card.baby && rarity !== 'Crown Rare' && expansion.containsBabies) {
+      if (card.baby && rarity !== 'Crown Rare' && structure.containsBabies) {
         // if the card is a baby (but not Crown Rare), we only consider 6-card packs
         const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && c.baby).length
 
@@ -211,20 +204,20 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
         const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && (rarity === 'Crown Rare' || !c.baby)).length
 
         // Calculate probability for each position
-        for (let position = 1; position <= cardsPerPack; position++) {
-          const positionProbability = getPositionProbability(expansion, position)
+        for (let position = 1; position <= structure.cardsPerPack; position++) {
+          const positionProbability = getPositionProbability(structure, position)
           chanceToGetThisCardPerPosition[position - 1] += positionProbability[rarity] / 100 / nrOfcardsOfThisRarity
         }
 
         // Rare pack probability (only for 5-card packs)
-        if (cardsPerPack === 5) {
+        if (structure.cardsPerPack === 5) {
           chanceToGetThisCardRare1_5 += abilityByRarityToBeInRarePack[rarity] / cardsInRarePack.length
         }
       }
     }
 
     // add up the chances to get this card
-    for (let i = 0; i < cardsPerPack; i++) {
+    for (let i = 0; i < structure.cardsPerPack; i++) {
       totalProbabilityPerPosition[i] += chanceToGetThisCardPerPosition[i]
     }
     rareProbability1_5 += chanceToGetThisCardRare1_5
@@ -235,7 +228,7 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
   const chanceToGetInStandardPack = totalProbabilityPerPosition.reduce((acc, posProb) => acc * (1 - posProb), 1)
 
   // 4-card packs: no special packs (rare/baby)
-  if (cardsPerPack === 4) {
+  if (structure.cardsPerPack === 4) {
     return 1 - chanceToGetInStandardPack
   }
 
@@ -244,7 +237,7 @@ const pullRateForCardSubset = (missingCards: Card[], expansion: Expansion, cards
   let chanceToGetNewCardInRarePack = 0
   let changeToGetNewCardIn6CardPack = 0
 
-  if (expansion.containsBabies) {
+  if (structure.containsBabies) {
     chanceToGetNewCard = 0.9162 * (1 - chanceToGetInStandardPack)
     chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - rareProbability1_5) ** 5)
     changeToGetNewCardIn6CardPack = 0.0833 * (1 - chanceToGetInStandardPack * (1 - babyProbability))

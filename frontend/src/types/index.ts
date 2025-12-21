@@ -87,6 +87,8 @@ export interface TradePartners {
 }
 
 export interface PackStructure {
+  containsShinies: boolean
+  containsBabies: boolean
   cardsPerPack: 4 | 5
 }
 
@@ -99,8 +101,6 @@ export interface Expansion {
   tradeable: boolean
   openable: boolean
   promo?: boolean
-  containsShinies?: boolean
-  containsBabies?: boolean
   packStructure?: PackStructure
 }
 
