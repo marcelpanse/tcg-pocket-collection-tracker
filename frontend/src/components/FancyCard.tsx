@@ -21,11 +21,13 @@ function FancyCard({ selected, card, size = 'default' }: Readonly<FancyCardProps
     throttledSetPos.current({ x: e.clientX, y: e.clientY })
   }
 
+  // note this useCallback we still need despite using react-compiler
   const handleMouseEnter = useCallback(() => {
     setIsHovering(true)
     window.addEventListener('mousemove', updateMousePos)
   }, [])
 
+  // note this useCallback we still need despite using react-compiler
   const handleMouseLeave = useCallback(() => {
     setIsHovering(false)
     window.removeEventListener('mousemove', updateMousePos)

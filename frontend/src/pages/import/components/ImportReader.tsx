@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { useTranslation } from 'react-i18next'
 import XLSX from 'xlsx'
@@ -42,7 +42,7 @@ export const ImportReader = () => {
     updateCardsMutation.mutate({ updates: cardArray })
   }
 
-  const onDrop = useCallback((acceptedFiles: File[]) => {
+  const onDrop = (acceptedFiles: File[]) => {
     setIsLoading(true)
     setErrorMessage('')
     const file = acceptedFiles[0]
@@ -76,7 +76,7 @@ export const ImportReader = () => {
     }
 
     reader.readAsArrayBuffer(file)
-  }, [])
+  }
   const { getRootProps, getInputProps } = useDropzone({ onDrop })
 
   return (

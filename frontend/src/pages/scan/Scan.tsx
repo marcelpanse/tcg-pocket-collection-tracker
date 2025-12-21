@@ -2,7 +2,7 @@ import type { GraphModel } from '@tensorflow/tfjs'
 import i18n from 'i18next'
 import { Minus, Plus, SquareCheck, SquareX } from 'lucide-react'
 import type { ChangeEvent, Dispatch, SetStateAction } from 'react'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CardLine } from '@/components/CardLine'
 import { DropdownFilter } from '@/components/Filters'
@@ -61,22 +61,6 @@ const Scan = () => {
   const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
   const [incrementedCards, setIncrementedCards] = useState<IncrementedCard[]>([])
 
-  const cardIncrements = useMemo(() => {
-    const card_ids = extractedCards
-      .filter((card) => card.increment !== 0 && card.matchedCard)
-      .map((card) => ({ card_id: card.matchedCard.card.card_id, increment: card.increment }))
-    const counts = new Map<string, number>()
-    for (const { card_id, increment } of card_ids) {
-      counts.set(card_id, (counts.get(card_id) ?? 0) + increment)
-    }
-    for (const card_id of counts.keys()) {
-      if (counts.get(card_id) === 0) {
-        counts.delete(card_id)
-      }
-    }
-    return counts
-  }, [extractedCards])
-
   useEffect(() => {
     const fetchHashes = async (lang: string, set: Dispatch<SetStateAction<Hashes | undefined>>) => {
       try {
@@ -114,6 +98,19 @@ const Scan = () => {
   useEffect(() => {
     loadModel().then(setModel)
   }, [])
+
+  const card_ids = extractedCards
+    .filter((card) => card.increment !== 0 && card.matchedCard)
+    .map((card) => ({ card_id: card.matchedCard.card.card_id, increment: card.increment }))
+  const cardIncrements = new Map<string, number>()
+  for (const { card_id, increment } of card_ids) {
+    cardIncrements.set(card_id, (cardIncrements.get(card_id) ?? 0) + increment)
+  }
+  for (const card_id of cardIncrements.keys()) {
+    if (cardIncrements.get(card_id) === 0) {
+      cardIncrements.delete(card_id)
+    }
+  }
 
   // Extract card images function
   const handleImageUpload = async (event: ChangeEvent<HTMLInputElement>) => {

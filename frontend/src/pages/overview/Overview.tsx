@@ -1,5 +1,5 @@
 import { Heart, Siren } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { DropdownFilter } from '@/components/Filters'
 import Footer from '@/components/Footer.tsx'
@@ -33,14 +33,6 @@ function Overview() {
   const [usersCount, setUsersCount] = useState('')
   const [expansionFilter, setExpansionFilter] = useState<ExpansionOption>(expansionOptions[1])
 
-  const ownedCardsCount = useMemo(() => {
-    let total = 0
-    ownedCards.forEach((card) => {
-      total += card.amount_owned
-    })
-    return total
-  }, [ownedCards])
-
   const [rarityFilter, setRarityFilter] = useState<Rarity[]>(() => {
     const savedRarityFilter = localStorage.getItem('rarityFilter')
     return savedRarityFilter ? JSON.parse(savedRarityFilter) : []
@@ -54,9 +46,32 @@ function Overview() {
     return savedDeckbuildingFilter === 'true'
   })
 
+  useEffect(() => {
+    fetch('https://vcwloujmsjuacqpwthee.supabase.co/storage/v1/object/public/stats/stats.json')
+      .then((response) => response.json())
+      .then((data) => {
+        setCollectionCount(data.collectionCount)
+        setUsersCount(data.usersCount)
+      })
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('rarityFilter', JSON.stringify(rarityFilter))
+    localStorage.setItem('numberFilter', numberFilter.toString())
+    localStorage.setItem('deckbuildingFilter', JSON.stringify(deckbuildingMode))
+  }, [rarityFilter, numberFilter, deckbuildingMode])
+
+  const ownedCardsCount = () => {
+    let total = 0
+    ownedCards.forEach((card) => {
+      total += card.amount_owned
+    })
+    return total
+  }
+
   const totalUniqueCards = CardsDB.getTotalNrOfCards({ rarityFilter, deckbuildingMode })
 
-  const highestProbabilityPack = useMemo(() => {
+  const getHighestProbabilityPack = () => {
     let newHighestProbabilityPack: Pack | undefined
     const filteredExpansions = CardsDB.expansions.filter((expansion) => expansion.openable)
     for (const expansion of filteredExpansions) {
@@ -73,22 +88,8 @@ function Overview() {
       }
     }
     return newHighestProbabilityPack
-  }, [ownedCards, rarityFilter, numberFilter, deckbuildingMode])
-
-  useEffect(() => {
-    fetch('https://vcwloujmsjuacqpwthee.supabase.co/storage/v1/object/public/stats/stats.json')
-      .then((response) => response.json())
-      .then((data) => {
-        setCollectionCount(data.collectionCount)
-        setUsersCount(data.usersCount)
-      })
-  }, [])
-
-  useEffect(() => {
-    localStorage.setItem('rarityFilter', JSON.stringify(rarityFilter))
-    localStorage.setItem('numberFilter', numberFilter.toString())
-    localStorage.setItem('deckbuildingFilter', JSON.stringify(deckbuildingMode))
-  }, [rarityFilter, numberFilter, deckbuildingMode])
+  }
+  const highestProbabilityPack = getHighestProbabilityPack()
 
   const getLocalizedExpansion = (id: ExpansionOption) => {
     const expansion_name = id === 'all' ? 'all' : getExpansionById(id).name
@@ -144,7 +145,7 @@ function Overview() {
           />
           <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-lg border-1 border-neutral-700 bg-neutral-800 border-solid p-3 sm:p-6 md:p-8">
             <h2 className="mb-1 text-center text-base sm:text-lg md:text-2xl">{t('youHave')}</h2>
-            <h1 className="mb-2 text-balance text-center font-semibold text-2xl sm:text-3xl md:text-7xl">{ownedCardsCount}</h1>
+            <h1 className="mb-2 text-balance text-center font-semibold text-2xl sm:text-3xl md:text-7xl">{ownedCardsCount()}</h1>
             <h2 className="text-balance text-center text-base sm:text-lg md:text-2xl">{t('cardsTotal')}</h2>
           </div>
         </section>

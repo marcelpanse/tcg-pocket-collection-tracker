@@ -1,6 +1,6 @@
 import i18n from 'i18next'
 import { ChevronRight } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router'
 import FancyCard from '@/components/FancyCard'
 import { Button } from '@/components/ui/button'
@@ -59,7 +59,7 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
     return countInDeckSoFar <= ownedAmount
   }
 
-  const editLink = useMemo(() => {
+  const editLink = () => {
     const cards = deck.cards.map((card_id) => getCardById(card_id)?.internal_id).filter((id): id is number => Boolean(id))
     const map = new Map<number, number>()
     for (const id of cards) {
@@ -71,7 +71,7 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
       cards: serializeDeckToUrl(map),
     })
     return `/decks/edit?${params.toString()}`
-  }, [deck.name, deck.cards, deck.energy])
+  }
 
   return (
     <div key={deck.name} className="flex flex-col rounded border-1 border-neutral-700 bg-neutral-800 p-1">
@@ -102,7 +102,7 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
             {missingCards.length > 0 && <span className="text-nowrap">{missingCards.length} missing</span>}
           </div>
         </button>
-        <Link className="w-full sm:w-fit mt-2 sm:my-auto" to={editLink}>
+        <Link className="w-full sm:w-fit mt-2 sm:my-auto" to={editLink()}>
           <Button className="w-full">
             Copy and edit
             <ChevronRight />

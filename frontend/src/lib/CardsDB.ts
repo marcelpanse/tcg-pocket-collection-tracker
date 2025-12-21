@@ -1,25 +1,27 @@
 import type { MissionDetailProps } from '@/components/Mission.tsx'
 import type { Card, CollectionRow, Expansion, ExpansionId, Mission, Pack, Rarity } from '@/types'
-import AllCardsJson from '../../assets/cards.json'
-import A1Missions from '../../assets/themed-collections/A1-missions.json'
-import A1aMissions from '../../assets/themed-collections/A1a-missions.json'
-import A2Missions from '../../assets/themed-collections/A2-missions.json'
-import A2aMissions from '../../assets/themed-collections/A2a-missions.json'
-import A2bMissions from '../../assets/themed-collections/A2b-missions.json'
-import A3Missions from '../../assets/themed-collections/A3-missions.json'
-import A3aMissions from '../../assets/themed-collections/A3a-missions.json'
-import A3bMissions from '../../assets/themed-collections/A3b-missions.json'
-import A4Missions from '../../assets/themed-collections/A4-missions.json'
-import A4aMissions from '../../assets/themed-collections/A4a-missions.json'
-import A4bMissions from '../../assets/themed-collections/A4b-missions.json'
-import B1Missions from '../../assets/themed-collections/B1-missions.json'
-import B1aMissions from '../../assets/themed-collections/B1a-missions.json'
+
+// Lazy load large JSON files
+const AllCardsJson = await import('../../assets/cards.json')
+const A1Missions = await import('../../assets/themed-collections/A1-missions.json')
+const A1aMissions = await import('../../assets/themed-collections/A1a-missions.json')
+const A2Missions = await import('../../assets/themed-collections/A2-missions.json')
+const A2aMissions = await import('../../assets/themed-collections/A2a-missions.json')
+const A2bMissions = await import('../../assets/themed-collections/A2b-missions.json')
+const A3Missions = await import('../../assets/themed-collections/A3-missions.json')
+const A3aMissions = await import('../../assets/themed-collections/A3a-missions.json')
+const A3bMissions = await import('../../assets/themed-collections/A3b-missions.json')
+const A4Missions = await import('../../assets/themed-collections/A4-missions.json')
+const A4aMissions = await import('../../assets/themed-collections/A4a-missions.json')
+const A4bMissions = await import('../../assets/themed-collections/A4b-missions.json')
+const B1Missions = await import('../../assets/themed-collections/B1-missions.json')
+const B1aMissions = await import('../../assets/themed-collections/B1a-missions.json')
 
 const equivalent = (firstCard: Card, secondCard: Card) => {
   return firstCard.alternate_versions.includes(secondCard.internal_id)
 }
 
-export const allCards: Card[] = AllCardsJson as Card[]
+export const allCards: Card[] = AllCardsJson.default as Card[]
 
 const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
 const allCardsByInternalId: Map<number, Card> = new Map(allCards.map((card) => [card.internal_id, card]))
@@ -37,19 +39,19 @@ export function getCardsByInternalId(internalId: number) {
   return allCardsByInternalIdList[internalId]
 }
 
-const a1Missions: Mission[] = A1Missions as unknown as Mission[]
-const a1aMissions: Mission[] = A1aMissions as unknown as Mission[]
-const a2Missions: Mission[] = A2Missions as unknown as Mission[]
-const a2aMissions: Mission[] = A2aMissions as unknown as Mission[]
-const a2bMissions: Mission[] = A2bMissions as unknown as Mission[]
-const a3Missions: Mission[] = A3Missions as unknown as Mission[]
-const a3aMissions: Mission[] = A3aMissions as unknown as Mission[]
-const a3bMissions: Mission[] = A3bMissions as unknown as Mission[]
-const a4Missions: Mission[] = A4Missions as unknown as Mission[]
-const a4aMissions: Mission[] = A4aMissions as unknown as Mission[]
-const a4bMissions: Mission[] = A4bMissions as unknown as Mission[]
-const b1Missions: Mission[] = B1Missions as unknown as Mission[]
-const b1aMissions: Mission[] = B1aMissions as unknown as Mission[]
+const a1Missions: Mission[] = A1Missions.default as unknown as Mission[]
+const a1aMissions: Mission[] = A1aMissions.default as unknown as Mission[]
+const a2Missions: Mission[] = A2Missions.default as unknown as Mission[]
+const a2aMissions: Mission[] = A2aMissions.default as unknown as Mission[]
+const a2bMissions: Mission[] = A2bMissions.default as unknown as Mission[]
+const a3Missions: Mission[] = A3Missions.default as unknown as Mission[]
+const a3aMissions: Mission[] = A3aMissions.default as unknown as Mission[]
+const a3bMissions: Mission[] = A3bMissions.default as unknown as Mission[]
+const a4Missions: Mission[] = A4Missions.default as unknown as Mission[]
+const a4aMissions: Mission[] = A4aMissions.default as unknown as Mission[]
+const a4bMissions: Mission[] = A4bMissions.default as unknown as Mission[]
+const b1Missions: Mission[] = B1Missions.default as unknown as Mission[]
+const b1aMissions: Mission[] = B1aMissions.default as unknown as Mission[]
 
 export const expansions: Expansion[] = [
   // internalId=0 skipped for error states
