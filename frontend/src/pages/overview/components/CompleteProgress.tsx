@@ -1,33 +1,22 @@
 import { useTranslation } from 'react-i18next'
 import { Progress } from '@/components/ui/progress.tsx'
-import { getNrOfCardsOwned, getTotalNrOfCards } from '@/lib/CardsDB.ts'
-import { useCollection } from '@/services/collection/useCollection'
-import type { CollectionRow, Expansion, Rarity } from '@/types'
 
 interface CompleteProgressProps {
+  className?: string
   title: string
-  expansion: Expansion
-  packName?: string
-  rarityFilter?: Rarity[]
-  numberFilter?: number
-  deckbuildingMode?: boolean
   barColor?: string
+  collected: number
+  available: number
 }
 
-export function CompleteProgress({ title, expansion, packName, rarityFilter = [], numberFilter = 1, deckbuildingMode, barColor }: CompleteProgressProps) {
-  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
-
-  const { t } = useTranslation('complete-progress')
-
-  const nrOfCardsOwned = getNrOfCardsOwned({ ownedCards, rarityFilter, numberFilter, expansion, packName, deckbuildingMode })
-  const totalNrOfCards = getTotalNrOfCards({ rarityFilter, expansion, packName, deckbuildingMode })
-  const progressValue = (nrOfCardsOwned / totalNrOfCards) * 100
+export function CompleteProgress({ className, title, barColor, collected, available }: CompleteProgressProps) {
+  const { t } = useTranslation('expansion-overview')
 
   return (
-    <div className="sm:mt-4">
+    <div className={className}>
       {title}
-      <Progress value={progressValue || 100} barColor={barColor} />
-      {t('youHave', { nCardsOwned: nrOfCardsOwned, nTotalCards: totalNrOfCards })}
+      <Progress value={(collected / available) * 100} barColor={barColor} />
+      {t('youHave', { nCardsOwned: collected, nTotalCards: available })}
     </div>
   )
 }
