@@ -1,6 +1,5 @@
 import { lazy } from '@loadable/component'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import pMinDelay from 'p-min-delay'
 import { Suspense, useEffect, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { createHashRouter, Navigate, Outlet, RouterProvider, useLocation, useParams } from 'react-router'
@@ -13,15 +12,15 @@ import { Toaster } from './components/ui/toaster.tsx'
 import { DialogContext } from './context/DialogContext.ts'
 
 // Lazy import for chunking
-const Overview = lazy(() => pMinDelay(import(/* webpackPrefetch: true */ './pages/overview/Overview.tsx'), 200))
-const Collection = lazy(() => import(/* webpackPrefetch: true */ './pages/collection/Collection.tsx'))
-const Missions = lazy(() => import(/* webpackPrefetch: true */ './pages/collection/Missions.tsx'))
-const Decks = lazy(() => import(/* webpackPrefetch: true */ './pages/decks/Decks.tsx'))
-const DeckBuilder = lazy(() => import(/* webpackPrefetch: true */ './pages/decks/DeckBuilder.tsx'))
-const Trade = lazy(() => import(/* webpackPrefetch: true */ './pages/trade/Trade.tsx'))
-const Scan = lazy(() => import(/* webpackPrefetch: true */ './pages/scan/Scan.tsx'))
-const EditProfile = lazy(() => import(/* webpackPrefetch: true */ './components/EditProfile.tsx'))
-const CardDetail = lazy(() => import(/* webpackPrefetch: true */ './pages/collection/CardDetail.tsx'))
+const Overview = lazy(() => import('./pages/overview/Overview.tsx'))
+const Collection = lazy(() => import('./pages/collection/Collection.tsx'))
+const Missions = lazy(() => import('./pages/collection/Missions.tsx'))
+const Decks = lazy(() => import('./pages/decks/Decks.tsx'))
+const DeckBuilder = lazy(() => import('./pages/decks/DeckBuilder.tsx'))
+const Trade = lazy(() => import('./pages/trade/Trade.tsx'))
+const Scan = lazy(() => import('./pages/scan/Scan.tsx'))
+const EditProfile = lazy(() => import('./components/EditProfile.tsx'))
+const CardDetail = lazy(() => import('./pages/collection/CardDetail.tsx'))
 
 const TradeWithRedirect = () => {
   const { friendId } = useParams()
