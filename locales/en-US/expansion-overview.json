@@ -1,5 +1,6 @@
 {
   "probabilityNewCard": "Probability of obtaining new cards",
   "totalCards": "Total cards",
-  "percentage": "percentage"
+  "percentage": "percentage",
+  "youHave": "{{nCardsOwned}} / {{nTotalCards}} cards"
 }
