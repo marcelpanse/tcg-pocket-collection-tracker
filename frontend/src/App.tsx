@@ -1,6 +1,7 @@
-import loadable from '@loadable/component'
+import { lazy } from '@loadable/component'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { useEffect, useState } from 'react'
+import pMinDelay from 'p-min-delay'
+import { Suspense, useEffect, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { createHashRouter, Navigate, Outlet, RouterProvider, useLocation, useParams } from 'react-router'
 import DonationPopup from '@/components/DonationPopup.tsx'
@@ -12,15 +13,15 @@ import { Toaster } from './components/ui/toaster.tsx'
 import { DialogContext } from './context/DialogContext.ts'
 
 // Lazy import for chunking
-const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
-const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
-const Missions = loadable(() => import('./pages/collection/Missions.tsx'))
-const Decks = loadable(() => import('./pages/decks/Decks.tsx'))
-const DeckBuilder = loadable(() => import('./pages/decks/DeckBuilder.tsx'))
-const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
-const Scan = loadable(() => import('./pages/scan/Scan.tsx'))
-const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
-const CardDetail = loadable(() => import('./pages/collection/CardDetail.tsx'))
+const Overview = lazy(() => pMinDelay(import(/* webpackPrefetch: true */ './pages/overview/Overview.tsx'), 200))
+const Collection = lazy(() => import(/* webpackPrefetch: true */ './pages/collection/Collection.tsx'))
+const Missions = lazy(() => import(/* webpackPrefetch: true */ './pages/collection/Missions.tsx'))
+const Decks = lazy(() => import(/* webpackPrefetch: true */ './pages/decks/Decks.tsx'))
+const DeckBuilder = lazy(() => import(/* webpackPrefetch: true */ './pages/decks/DeckBuilder.tsx'))
+const Trade = lazy(() => import(/* webpackPrefetch: true */ './pages/trade/Trade.tsx'))
+const Scan = lazy(() => import(/* webpackPrefetch: true */ './pages/scan/Scan.tsx'))
+const EditProfile = lazy(() => import(/* webpackPrefetch: true */ './components/EditProfile.tsx'))
+const CardDetail = lazy(() => import(/* webpackPrefetch: true */ './pages/collection/CardDetail.tsx'))
 
 const TradeWithRedirect = () => {
   const { friendId } = useParams()
@@ -61,6 +62,12 @@ function App() {
 
   const errorDiv = <div className="m-4">Something went wrong, please refresh the page to try again.</div>
 
+  const Loading = () => (
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="animate-spin rounded-full size-12 border-4 border-white border-t-transparent"></div>
+    </div>
+  )
+
   const router = createHashRouter([
     {
       element: (
@@ -73,14 +80,63 @@ function App() {
       ),
       errorElement: errorDiv,
       children: [
-        { path: '/', element: <Overview /> },
-        { path: '/collection/missions', element: <Missions /> },
-        { path: '/collection/:friendId?', element: <Collection /> },
+        {
+          path: '/',
+          element: (
+            <Suspense fallback={<Loading />}>
+              <Overview />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/collection/missions',
+          element: (
+            <Suspense fallback={<Loading />}>
+              <Missions />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/collection/:friendId?',
+          element: (
+            <Suspense fallback={<Loading />}>
+              <Collection />
+            </Suspense>
+          ),
+        },
         { path: '/collection/:friendId/trade', element: <TradeWithRedirect /> }, // support old trading path
-        { path: '/decks', element: <Decks /> },
-        { path: '/decks/edit', element: <DeckBuilder /> },
-        { path: '/scan', element: <Scan /> },
-        { path: '/trade*', element: <Trade /> },
+        {
+          path: '/decks',
+          element: (
+            <Suspense fallback={<Loading />}>
+              <Decks />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/decks/edit',
+          element: (
+            <Suspense fallback={<Loading />}>
+              <DeckBuilder />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/scan',
+          element: (
+            <Suspense fallback={<Loading />}>
+              <Scan />{' '}
+            </Suspense>
+          ),
+        },
+        {
+          path: '/trade*',
+          element: (
+            <Suspense fallback={<Loading />}>
+              <Trade />
+            </Suspense>
+          ),
+        },
       ],
     },
   ])
