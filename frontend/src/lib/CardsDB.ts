@@ -1,20 +1,7 @@
-import type { Card, Expansion, ExpansionId, Mission, Rarity } from '@/types'
+import type { Card, Expansion, ExpansionId, Rarity } from '@/types'
 
 // Lazy load large JSON files
 const AllCardsJson = await import('../../assets/cards.json')
-const A1Missions = await import('../../assets/themed-collections/A1-missions.json')
-const A1aMissions = await import('../../assets/themed-collections/A1a-missions.json')
-const A2Missions = await import('../../assets/themed-collections/A2-missions.json')
-const A2aMissions = await import('../../assets/themed-collections/A2a-missions.json')
-const A2bMissions = await import('../../assets/themed-collections/A2b-missions.json')
-const A3Missions = await import('../../assets/themed-collections/A3-missions.json')
-const A3aMissions = await import('../../assets/themed-collections/A3a-missions.json')
-const A3bMissions = await import('../../assets/themed-collections/A3b-missions.json')
-const A4Missions = await import('../../assets/themed-collections/A4-missions.json')
-const A4aMissions = await import('../../assets/themed-collections/A4a-missions.json')
-const A4bMissions = await import('../../assets/themed-collections/A4b-missions.json')
-const B1Missions = await import('../../assets/themed-collections/B1-missions.json')
-const B1aMissions = await import('../../assets/themed-collections/B1a-missions.json')
 
 export const allCards: Card[] = AllCardsJson.default as Card[]
 
@@ -42,20 +29,6 @@ export const getInteralIdByCardId = (card_id: string) => {
   return internalId
 }
 
-const a1Missions: Mission[] = A1Missions.default as unknown as Mission[]
-const a1aMissions: Mission[] = A1aMissions.default as unknown as Mission[]
-const a2Missions: Mission[] = A2Missions.default as unknown as Mission[]
-const a2aMissions: Mission[] = A2aMissions.default as unknown as Mission[]
-const a2bMissions: Mission[] = A2bMissions.default as unknown as Mission[]
-const a3Missions: Mission[] = A3Missions.default as unknown as Mission[]
-const a3aMissions: Mission[] = A3aMissions.default as unknown as Mission[]
-const a3bMissions: Mission[] = A3bMissions.default as unknown as Mission[]
-const a4Missions: Mission[] = A4Missions.default as unknown as Mission[]
-const a4aMissions: Mission[] = A4aMissions.default as unknown as Mission[]
-const a4bMissions: Mission[] = A4bMissions.default as unknown as Mission[]
-const b1Missions: Mission[] = B1Missions.default as unknown as Mission[]
-const b1aMissions: Mission[] = B1aMissions.default as unknown as Mission[]
-
 export const expansions: Expansion[] = [
   // internalId=0 skipped for error states
   {
@@ -68,7 +41,6 @@ export const expansions: Expansion[] = [
       { name: 'pikachupack', color: '#c0af78' },
       { name: 'everypack', color: '#c0c0c0' },
     ],
-    missions: a1Missions,
     tradeable: true,
     openable: true,
     packStructure: {
@@ -82,7 +54,6 @@ export const expansions: Expansion[] = [
     id: 'A1a',
     internalId: 2,
     packs: [{ name: 'mewpack', color: '#c07898' }],
-    missions: a1aMissions,
     tradeable: true,
     openable: true,
     packStructure: {
@@ -100,7 +71,6 @@ export const expansions: Expansion[] = [
       { name: 'palkiapack', color: '#c07898' },
       { name: 'everypack', color: '#c0c0c0' },
     ],
-    missions: a2Missions,
     tradeable: true,
     openable: true,
     packStructure: {
@@ -114,7 +84,6 @@ export const expansions: Expansion[] = [
     id: 'A2a',
     internalId: 4,
     packs: [{ name: 'arceuspack', color: '#c0b278' }],
-    missions: a2aMissions,
     tradeable: true,
     openable: true,
     packStructure: {
@@ -128,7 +97,6 @@ export const expansions: Expansion[] = [
     id: 'A2b',
     internalId: 5,
     packs: [{ name: 'shiningrevelrypack', color: '#78b3c0' }],
-    missions: a2bMissions,
     tradeable: true,
     openable: true,
     packStructure: {
@@ -146,7 +114,6 @@ export const expansions: Expansion[] = [
       { name: 'solgaleopack', color: '#c09e78' },
       { name: 'everypack', color: '#c0c0c0' },
     ],
-    missions: a3Missions,
     tradeable: true,
     openable: true,
     packStructure: {
@@ -160,7 +127,6 @@ export const expansions: Expansion[] = [
     id: 'A3a',
     internalId: 7,
     packs: [{ name: 'buzzwolepack', color: '#c07878' }],
-    missions: a3aMissions,
     tradeable: true,
     openable: true,
     packStructure: {
@@ -174,7 +140,6 @@ export const expansions: Expansion[] = [
     id: 'A3b',
     internalId: 8,
     packs: [{ name: 'eeveegrovepack', color: '#c0a378' }],
-    missions: a3bMissions,
     tradeable: true,
     openable: true,
     packStructure: {
@@ -192,7 +157,6 @@ export const expansions: Expansion[] = [
       { name: 'lugiapack', color: '#789ec0' },
       { name: 'everypack', color: '#c0c0c0' },
     ],
-    missions: a4Missions,
     tradeable: true,
     openable: true,
     packStructure: {
@@ -206,7 +170,6 @@ export const expansions: Expansion[] = [
     id: 'A4a',
     internalId: 10,
     packs: [{ name: 'suicunepack', color: '#78c0be' }],
-    missions: a4aMissions,
     tradeable: true,
     openable: true,
     packStructure: {
@@ -220,7 +183,6 @@ export const expansions: Expansion[] = [
     id: 'A4b',
     internalId: 11,
     packs: [{ name: 'deluxepack', color: '#c0af78' }],
-    missions: a4bMissions,
     tradeable: true,
     openable: false,
     packStructure: {
@@ -239,7 +201,6 @@ export const expansions: Expansion[] = [
       { name: 'megagyaradospack', color: '#788ac0' },
       { name: 'everypack', color: '#c0c0c0' },
     ],
-    missions: b1Missions,
     tradeable: true,
     openable: true,
     packStructure: {
@@ -253,7 +214,6 @@ export const expansions: Expansion[] = [
     id: 'B1a',
     internalId: 13,
     packs: [{ name: 'crimsonblazepack', color: '#bf8f78' }],
-    missions: b1aMissions,
     tradeable: true,
     openable: true,
     packStructure: {
