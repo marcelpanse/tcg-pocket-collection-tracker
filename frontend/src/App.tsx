@@ -113,7 +113,7 @@ function App() {
           ),
         },
         {
-          path: '/decks/edit',
+          path: '/decks/edit/:id?',
           element: (
             <Suspense fallback={<Loading />}>
               <DeckBuilder />
@@ -129,7 +129,7 @@ function App() {
           ),
         },
         {
-          path: '/trade*',
+          path: '/trade/*',
           element: (
             <Suspense fallback={<Loading />}>
               <Trade />

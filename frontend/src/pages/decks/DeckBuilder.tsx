@@ -1,7 +1,7 @@
 import { SquareMinus, SquarePlus, Trash2 } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { useLocation } from 'react-router'
+import { useLocation, useNavigate, useParams } from 'react-router'
 import { CardLine } from '@/components/CardLine'
 import { CardsTable } from '@/components/CardsTable'
 import FancyCard from '@/components/FancyCard'
@@ -14,6 +14,7 @@ import { showCardType } from '@/components/utils'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { type Filters, type FiltersAll, getFilteredCards } from '@/lib/filters'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
+import { useDeck, useDeleteDeck, useUpdateDeck } from '@/services/decks/useDeck'
 import { type Deck, energies } from '@/types'
 
 const defaultFilters: Filters = {
@@ -34,7 +35,13 @@ function getDeckCardCounts(cards: number[]) {
 }
 
 export default function DeckBuilder() {
+  const { id: deckId } = useParams()
   const location = useLocation()
+  const navigate = useNavigate()
+  const { data: savedDeck, isLoading } = useDeck(deckId === undefined ? undefined : Number(deckId))
+
+  const updateDeckMutation = useUpdateDeck()
+  const deleteDeckMutation = useDeleteDeck()
 
   const filtersCollapsed = useMediaQuery({ query: '(max-width: 1024px)' }) // tailwind "lg"
   const deckCollapsed = useMediaQuery({ query: '(max-width: 767px)' }) // tailwind "md"
@@ -59,6 +66,12 @@ export default function DeckBuilder() {
   }
 
   const [deck, setDeck] = useState<Deck>(location.state ?? ({ is_public: false, name: 'New deck', energy: [], cards: [] } satisfies Deck))
+
+  useEffect(() => {
+    if (deckId && savedDeck) {
+      setDeck(savedDeck)
+    }
+  }, [deckId, savedDeck])
 
   const [isDeckSheetOpen, setIsDeckSheetOpen] = useState(deckCollapsed && !!location.state) // used only on mobile
   const cards = getDeckCardCounts(deck.cards)
@@ -85,6 +98,27 @@ export default function DeckBuilder() {
       }
       return { ...deck, cards: deck.cards.filter((_, i) => i !== idx) }
     })
+  }
+
+  const onSave = () => {
+    updateDeckMutation.mutateAsync(deck).then((deck) => {
+      console.log(deck)
+      setDeck(deck) // fill id and email
+    })
+  }
+
+  const onDelete = () => {
+    if (!deck.id) {
+      throw new Error("Can't delete deck that has no id")
+    }
+    deleteDeckMutation.mutateAsync(deck.id).then(() => {
+      console.log('Successfully deleted deck')
+      navigate('/decks')
+    })
+  }
+
+  if (deckId !== undefined && !isLoading && !savedDeck) {
+    return 'Error'
   }
 
   const deckNode = (
@@ -137,7 +171,14 @@ export default function DeckBuilder() {
         />
         <label htmlFor="is_public">Public</label>
       </div>
-      <Button className="inline-block w-fit ml-auto">Save</Button>
+      <div className="flex justify-between mt-2">
+        <Button className="w-fit" onClick={onSave}>
+          Save
+        </Button>
+        <Button variant="destructive" className="w-fit" disabled={!deck.id} onClick={onDelete}>
+          Delete
+        </Button>
+      </div>
     </div>
   )
 
