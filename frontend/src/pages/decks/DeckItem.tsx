@@ -7,8 +7,7 @@ import { Button } from '@/components/ui/button'
 import { getCardById } from '@/lib/CardsDB'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
-import type { Card } from '@/types'
-import { serializeDeckToUrl } from './utils'
+import type { Card, Deck, Energy } from '@/types'
 
 export interface IDeck {
   name: string
@@ -18,7 +17,7 @@ export interface IDeck {
   rank: string
   main_card_id: string
   main_card_id2: string
-  energy: string[]
+  energy: Energy[]
 }
 
 const rankInfo: Record<string, string> = {
@@ -59,20 +58,6 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
     return countInDeckSoFar <= ownedAmount
   }
 
-  const editLink = () => {
-    const cards = deck.cards.map((card_id) => getCardById(card_id)?.internal_id).filter((id): id is number => Boolean(id))
-    const map = new Map<number, number>()
-    for (const id of cards) {
-      map.set(id, (map.get(id) ?? 0) + 1)
-    }
-    const params = new URLSearchParams({
-      title: deck.name,
-      energy: deck.energy.join(','),
-      cards: serializeDeckToUrl(map),
-    })
-    return `/decks/edit?${params.toString()}`
-  }
-
   return (
     <div key={deck.name} className="flex flex-col rounded border-1 border-neutral-700 bg-neutral-800 p-1">
       <div className="flex flex-col sm:flex-row">
@@ -102,7 +87,20 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
             {missingCards.length > 0 && <span className="text-nowrap">{missingCards.length} missing</span>}
           </div>
         </button>
-        <Link className="w-full sm:w-fit mt-2 sm:my-auto" to={editLink()}>
+        <Link
+          className="w-full sm:w-fit mt-2 sm:my-auto"
+          to="/decks/edit"
+          state={
+            {
+              name: deck.name,
+              energy: deck.energy,
+              cards: deck.cards
+                .map((card_id) => getCardById(card_id))
+                .filter((c) => !!c)
+                .map((c) => c.internal_id),
+            } satisfies Deck
+          }
+        >
           <Button className="w-full">
             Copy and edit
             <ChevronRight />
