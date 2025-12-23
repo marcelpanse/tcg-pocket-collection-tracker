@@ -58,7 +58,7 @@ export default function DeckBuilder() {
     return res
   }
 
-  const [deck, setDeck] = useState<Deck>(location.state ?? { name: 'New deck', energy: [], cards: [] })
+  const [deck, setDeck] = useState<Deck>(location.state ?? ({ is_public: false, name: 'New deck', energy: [], cards: [] } satisfies Deck))
 
   const [isDeckSheetOpen, setIsDeckSheetOpen] = useState(deckCollapsed && !!location.state) // used only on mobile
   const cards = getDeckCardCounts(deck.cards)
@@ -94,6 +94,11 @@ export default function DeckBuilder() {
       <h2>Energy</h2>
       <ToggleFilter options={energies} value={deck.energy} onChange={(energy) => setDeck((deck) => ({ ...deck, energy }))} show={showCardType} />
       <h2>Cards</h2>
+      <p className="text-neutral-400">
+        <span className={`${deck.cards.length < 20 ? 'text-red-300' : ''}`}>{deck.cards.length}</span>
+        <span className="text-sm">/20 cards</span>
+        {missingCards > 0 && <span className="text-sm"> ({missingCards} missing)</span>}
+      </p>
       <ul className="overflow-y-auto space-y-1">
         {cards.map(([id, amount]) => {
           const card = getCardByInternalId(id)
@@ -122,11 +127,17 @@ export default function DeckBuilder() {
           )
         })}
       </ul>
-      <p className="text-neutral-400 mt-2">
-        <span className={`${deck.cards.length < 20 ? 'text-red-300' : ''}`}>{deck.cards.length}</span>
-        <span className="text-sm">/20 cards</span>
-        {missingCards > 0 && <span className="text-sm"> ({missingCards} missing)</span>}
-      </p>
+      <div className="flex items-center gap-x-2 mt-2">
+        <input
+          className="size-5"
+          name="is_public"
+          type="checkbox"
+          checked={deck.is_public}
+          onChange={() => setDeck((deck) => ({ ...deck, is_public: !deck.is_public }))}
+        />
+        <label htmlFor="is_public">Public</label>
+      </div>
+      <Button className="inline-block w-fit ml-auto">Save</Button>
     </div>
   )
 

@@ -92,6 +92,7 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
           to="/decks/edit"
           state={
             {
+              is_public: false,
               name: deck.name,
               energy: deck.energy,
               cards: deck.cards

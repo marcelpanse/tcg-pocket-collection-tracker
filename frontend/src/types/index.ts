@@ -169,6 +169,7 @@ export interface MissionCard {
 
 export interface Deck {
   id?: number
+  is_public: boolean
   name: string
   energy: Energy[]
   cards: number[]
