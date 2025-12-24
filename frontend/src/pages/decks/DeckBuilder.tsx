@@ -178,11 +178,17 @@ export default function DeckBuilder() {
         <label htmlFor="is_public">Public</label>
       </div>
       <div className="flex justify-between mt-2">
-        <Button className="w-fit" onClick={onSave}>
+        <Button className="w-fit" onClick={onSave} disabled={updateDeckMutation.isPending || deleteDeckMutation.isPending}>
           Save
+          {updateDeckMutation.isPending && (
+            <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />
+          )}
         </Button>
-        <Button variant="destructive" className="w-fit" disabled={!deck.id} onClick={onDelete}>
+        <Button variant="destructive" className="w-fit" disabled={!deck.id || updateDeckMutation.isPending || deleteDeckMutation.isPending} onClick={onDelete}>
           Delete
+          {deleteDeckMutation.isPending && (
+            <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />
+          )}
         </Button>
       </div>
     </div>
