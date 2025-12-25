@@ -7,7 +7,12 @@ export async function getDeck(id: number) {
     console.error('supabase error', error)
     throw new Error('Failed fetching decks')
   }
-  return data as Deck | null
+  if (!data) {
+    console.error('dupa')
+    throw new Error('No deck with such id')
+  }
+  console.log('successfully fetched deck', data)
+  return data as Deck
 }
 
 export async function getMyDecks() {

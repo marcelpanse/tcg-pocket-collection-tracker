@@ -14,9 +14,11 @@ import { showCardType } from '@/components/utils'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { type Filters, type FiltersAll, getFilteredCards } from '@/lib/filters'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
-import { useDeck, useDeleteDeck, useUpdateDeck } from '@/services/decks/useDeck'
+import { useDeleteDeck, useUpdateDeck } from '@/services/decks/useDeck'
 import { type Deck, energies } from '@/types'
 import { useToast } from '@/hooks/use-toast'
+import { useQuery } from '@tanstack/react-query'
+import { getDeck } from '@/services/decks/deckService'
 
 const defaultFilters: Filters = {
   search: '',
@@ -51,10 +53,19 @@ export default function DeckBuilder() {
 
   const { data: ownedCards } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
-  const { data: savedDeck, isLoading } = useDeck(deckId === undefined ? undefined : Number(deckId))
 
   const [deck, setDeck] = useState<Deck>(location.state ?? ({ is_public: false, name: 'New deck', energy: [], cards: [] } satisfies Deck))
-  const cards = getDeckCardCounts(deck.cards)
+  const deckQuery = useQuery({
+    queryKey: ['deck', deckId],
+    queryFn: () => getDeck(Number(deckId)),
+    enabled: !location.state && deckId !== undefined,
+    retry: false, // Don't try to retry if deck doesn't exist
+  })
+  useEffect(() => {
+    if (deckQuery.isEnabled && deckQuery.isFetched) {
+      setDeck(deckQuery.data as Deck)
+    }
+  }, [deckQuery])
 
   const [filters, setFilters] = useState<Filters>(defaultFilters)
   const filteredCards = getFilteredCards({ ...filters, deckbuildingMode: true }, ownedCards ?? new Map())
@@ -70,13 +81,7 @@ export default function DeckBuilder() {
     return res
   }
 
-  useEffect(() => {
-    if (deckId && savedDeck) {
-      setDeck(savedDeck)
-    }
-  }, [deckId, savedDeck])
-
-
+  const cards = getDeckCardCounts(deck.cards)
   const missingCards = ownedCards
     ? cards.reduce(
         (acc, [id, amount]) =>
@@ -133,7 +138,11 @@ export default function DeckBuilder() {
     })
   }
 
-  if (deckId !== undefined && !isLoading && !savedDeck) {
+  if (deckQuery.isLoading) {
+    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+  }
+
+  if (deckQuery.isError) {
     return 'Error'
   }
 
