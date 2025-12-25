@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router'
 import SearchInput from '@/components/filters/SearchInput'
 import { Button } from '@/components/ui/button'
+import { useMyDecks } from '@/services/decks/useDeck'
 import sampleDecks8 from '../../../assets/decks/decks-game8.json'
 import { DeckItem, type IDeck } from './DeckItem'
 
@@ -16,6 +17,36 @@ export const rankOrder: Record<string, number> = {
 }
 
 function Decks() {
+  const { data: decks, isLoading } = useMyDecks()
+
+  if (isLoading || !decks) {
+    return null
+  }
+
+  return (
+    <div className="max-w-[900px] mx-auto">
+      <Link to="/decks/edit" className="w-full sm:max-w-48">
+        <Button className="w-full">
+          New deck
+          <ChevronRight />
+        </Button>
+      </Link>
+      <div className="mt-4 flex flex-col gap-2">
+        {decks.map((deck) => (
+          <div key={deck.id} className="flex justify-between">
+            <h2>{deck.name}</h2>
+            <Link to={`/decks/edit/${deck.id}`}>
+              <Button>
+                Edit
+                <ChevronRight />
+              </Button>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+
   const decksMeta8 = sampleDecks8 as IDeck[]
 
   const [searchValue, setSearchValue] = useState('')

@@ -1,7 +1,7 @@
 import { SquareMinus, SquarePlus, Trash2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { useSearchParams } from 'react-router'
+import { useLocation, useNavigate, useParams } from 'react-router'
 import { CardLine } from '@/components/CardLine'
 import { CardsTable } from '@/components/CardsTable'
 import FancyCard from '@/components/FancyCard'
@@ -14,8 +14,11 @@ import { showCardType } from '@/components/utils'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { type Filters, type FiltersAll, getFilteredCards } from '@/lib/filters'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
-import { type Energy, energies } from '@/types'
-import { serializeDeckToUrl } from './utils'
+import { useDeleteDeck, useUpdateDeck } from '@/services/decks/useDeck'
+import { type Deck, energies } from '@/types'
+import { useToast } from '@/hooks/use-toast'
+import { useQuery } from '@tanstack/react-query'
+import { getDeck } from '@/services/decks/deckService'
 
 const defaultFilters: Filters = {
   search: '',
@@ -26,17 +29,45 @@ const defaultFilters: Filters = {
   allTextSearch: false,
 }
 
+function getDeckCardCounts(cards: number[]) {
+  const map = new Map<number, number>()
+  for (const id of cards) {
+    map.set(id, (map.get(id) ?? 0) + 1)
+  }
+  return [...map].toSorted(([a, _n1], [b, _n2]) => a - b)
+}
+
 export default function DeckBuilder() {
+  const { id: deckId } = useParams()
+  const location = useLocation()
+  const navigate = useNavigate()
+  const { toast } = useToast()
+
+  const updateDeckMutation = useUpdateDeck()
+  const deleteDeckMutation = useDeleteDeck()
+
   const filtersCollapsed = useMediaQuery({ query: '(max-width: 1024px)' }) // tailwind "lg"
   const deckCollapsed = useMediaQuery({ query: '(max-width: 767px)' }) // tailwind "md"
+  const [isFiltersSheetOpen, setIsFiltersSheetOpen] = useState(false) // used only on mobile
+  const [isDeckSheetOpen, setIsDeckSheetOpen] = useState(deckCollapsed && !!location.state) // used only on mobile
 
-  const [searchParams, setSearchParams] = useSearchParams()
   const { data: ownedCards } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
 
-  const [isFiltersSheetOpen, setIsFiltersSheetOpen] = useState(false) // used only on mobile
-  const [filters, setFilters] = useState<Filters>(defaultFilters)
+  const [deck, setDeck] = useState<Deck>(location.state ?? ({ is_public: false, name: 'New deck', energy: [], cards: [] } satisfies Deck))
+  const deckQuery = useQuery({
+    queryKey: ['deck', deckId],
+    queryFn: () => getDeck(Number(deckId)),
+    enabled: !location.state && deckId !== undefined,
+    retry: false, // Don't try to retry if deck doesn't exist
+  })
+  useEffect(() => {
+    if (deckQuery.isEnabled && deckQuery.isFetched) {
+      setDeck(deckQuery.data as Deck)
+    }
+  }, [deckQuery])
 
+  const [filters, setFilters] = useState<Filters>(defaultFilters)
   const filteredCards = getFilteredCards({ ...filters, deckbuildingMode: true }, ownedCards ?? new Map())
 
   const activeFilters = () => {
@@ -50,47 +81,9 @@ export default function DeckBuilder() {
     return res
   }
 
-  const [isDeckSheetOpen, setIsDeckSheetOpen] = useState(false) // used only on mobile
-  const [deckName, setDeckName] = useState(() => searchParams.get('title') ?? 'New deck')
-  const [deckEnergy, setDeckEnergy] = useState<Energy[]>(() => {
-    const param = searchParams.get('energy')
-    if (!param) {
-      return []
-    }
-    return param.split(',').filter((x): x is Energy => (energies as readonly string[]).includes(x))
-  })
-  const [deckCards, setDeckCards] = useState<Map<number, number>>(() => {
-    const param = searchParams.get('cards')
-    if (!param) {
-      return new Map()
-    } else {
-      const arr = param
-        .split(',')
-        .map((str) => {
-          const a = str.split(':')
-          if (a.length !== 2) {
-            return undefined
-          }
-          return [Number(a[0]), Math.min(Number(a[1]), 2)] as [number, number]
-        })
-        .filter((x) => !!x)
-        .filter(([id, amount]) => !!getCardByInternalId(id) && amount > 0)
-      return new Map(arr)
-    }
-  })
-
-  const sortedDeckCards = [...deckCards].toSorted(([id1, _amount1], [id2, _amount2]) => id1 - id2)
-
-  const deckSize = () => {
-    let n = 0
-    deckCards.forEach((val) => {
-      n += val
-    })
-    return n
-  }
-
+  const cards = getDeckCardCounts(deck.cards)
   const missingCards = ownedCards
-    ? sortedDeckCards.reduce(
+    ? cards.reduce(
         (acc, [id, amount]) =>
           acc +
           Math.max(0, amount - (getCardByInternalId(id)?.alternate_versions?.reduce((acc2, id2) => acc2 + (ownedCards.get(id2)?.amount_owned ?? 0), 0) ?? 0)),
@@ -98,54 +91,75 @@ export default function DeckBuilder() {
       )
     : 0
 
-  useEffect(() => {
-    setSearchParams(
-      {
-        title: deckName,
-        energy: deckEnergy.join(','),
-        cards: serializeDeckToUrl(deckCards),
-      },
-      { replace: true },
-    )
-  }, [deckCards, deckName, deckEnergy])
-
   const addCard = (id: number) => {
-    setDeckCards((m1) => {
-      const val = m1.get(id) ?? 0
-      if (val >= 2) {
-        return m1
-      }
-      const m2 = new Map(m1)
-      m2.set(id, val + 1)
-      return m2
-    })
+    setDeck((deck) => ({ ...deck, cards: [...deck.cards, id] }))
   }
 
   const removeCard = (id: number) => {
-    setDeckCards((m1) => {
-      const val = m1.get(id)
-      if (val === undefined) {
-        return m1
+    setDeck((deck) => {
+      const idx = deck.cards.indexOf(id)
+      if (idx === -1) {
+        console.error(`Can't remove card ${id}: card not in the deck`)
+        return deck
       }
-      const m2 = new Map(m1)
-      if (val <= 1) {
-        m2.delete(id)
-      } else {
-        m2.set(id, val - 1)
-      }
-      return m2
+      return { ...deck, cards: deck.cards.filter((_, i) => i !== idx) }
     })
+  }
+
+  const onSave = () => {
+    updateDeckMutation.mutateAsync(deck, {
+      onSuccess: (savedDeck) => {
+        console.log(savedDeck)
+        if (!deck.id) {
+          navigate(`/decks/edit/${savedDeck.id}`, { state: savedDeck, replace: true })
+        }
+        setDeck(savedDeck) // fill autogenerated fields
+        toast({ description: 'Deck saved' })
+      },
+      onError: () => {
+        toast({ variant: 'destructive', description: 'Failed saving deck' })
+      },
+    })
+  }
+
+  const onDelete = () => {
+    if (!deck.id) {
+      throw new Error("Can't delete deck that has no id")
+    }
+    deleteDeckMutation.mutate(deck.id, {
+      onSuccess: () => {
+        console.log('Successfully deleted deck')
+        toast({ description: "Deck deleted" })
+        navigate('/decks')
+      },
+      onError: () => {
+        toast({ variant: 'destructive', description: 'Failed deleting deck'})
+      },
+    })
+  }
+
+  if (deckQuery.isLoading) {
+    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+  }
+
+  if (deckQuery.isError) {
+    return 'Error'
   }
 
   const deckNode = (
     <div className="flex flex-col [&>h2]:text-lg [&>h2:not(:first-child)]:mt-2">
       <h2>Title</h2>
-      <Input className="bg-neutral-800" type="text" value={deckName} onChange={(e) => setDeckName(e.target.value)} />
+      <Input className="bg-neutral-800" type="text" value={deck.name} onChange={(e) => setDeck((deck) => ({ ...deck, name: e.target.value }))} />
       <h2>Energy</h2>
-      <ToggleFilter options={energies} value={deckEnergy} onChange={setDeckEnergy} show={showCardType} />
+      <ToggleFilter options={energies} value={deck.energy} onChange={(energy) => setDeck((deck) => ({ ...deck, energy }))} show={showCardType} />
       <h2>Cards</h2>
+      <p className="text-neutral-400">
+        <span className={`${deck.cards.length < 20 ? 'text-red-300' : ''}`}>{deck.cards.length}</span>
+        <span className="text-sm">/20 cards</span>
+        {missingCards > 0 && <span className="text-sm"> ({missingCards} missing)</span>}
+      </p>
       <ul className="overflow-y-auto space-y-1">
-        {sortedDeckCards.map(([id, amount]) => {
+        {cards.map(([id, amount]) => {
           const card = getCardByInternalId(id)
           if (!card) {
             return null
@@ -172,18 +186,36 @@ export default function DeckBuilder() {
           )
         })}
       </ul>
-      <p className="text-neutral-400 mt-2">
-        <span className={`${deckSize() > 20 ? 'text-red-300' : ''}`}>{deckSize()}</span>
-        <span className="text-sm">/20 cards</span>
-        {missingCards > 0 && <span className="text-sm"> ({missingCards} missing)</span>}
-      </p>
-      <p className="text-sm text-neutral-400">Want to save your deck? Bookmark this page!</p>
+      <div className="flex items-center gap-x-2 mt-2">
+        <input
+          className="size-5"
+          name="is_public"
+          type="checkbox"
+          checked={deck.is_public}
+          onChange={() => setDeck((deck) => ({ ...deck, is_public: !deck.is_public }))}
+        />
+        <label htmlFor="is_public">Public</label>
+      </div>
+      <div className="flex justify-between mt-2">
+        <Button className="w-fit" onClick={onSave} disabled={updateDeckMutation.isPending || deleteDeckMutation.isPending}>
+          Save
+          {updateDeckMutation.isPending && (
+            <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />
+          )}
+        </Button>
+        <Button variant="destructive" className="w-fit" disabled={!deck.id || updateDeckMutation.isPending || deleteDeckMutation.isPending} onClick={onDelete}>
+          Delete
+          {deleteDeckMutation.isPending && (
+            <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />
+          )}
+        </Button>
+      </div>
     </div>
   )
 
   return (
     <div className="w-full mx-auto flex px-2 gap-4 justify-center">
-      <title>{`${deckName} – TCG Pocket Collection Tracker`}</title>
+      <title>{`${deck.name} – TCG Pocket Collection Tracker`}</title>
       {filtersCollapsed ? (
         <Sheet open={isFiltersSheetOpen} onOpenChange={setIsFiltersSheetOpen}>
           <SheetContent side="left" className="w-full">
@@ -210,7 +242,7 @@ export default function DeckBuilder() {
         className="w-full lg:w-152 px-2"
         cards={filteredCards}
         render={(card) => {
-          const amount = deckCards.get(card.internal_id) ?? 0
+          const amount = cards.find(([id, _]) => card.internal_id === id)?.[1] ?? 0
           const amount_owned = ownedCards
             ? Math.min(
                 2,
