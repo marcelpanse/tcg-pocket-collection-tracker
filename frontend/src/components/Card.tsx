@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button.tsx'
 import { cn, getCardNameByLang } from '@/lib/utils'
 import { useDeleteCard, useSelectedCard, useUpdateCards } from '@/services/collection/useCollection'
 import type { Card as CardType } from '@/types'
+import { Spinner } from './Spinner'
 
 interface CardProps {
   card: CardType
@@ -62,11 +63,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
         }}
       >
         <FancyCard card={card} selected={Boolean(card.collected) && !isPending} />
-        {isPending && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="animate-spin rounded-full size-12 border-4 border-white border-t-transparent"></div>
-          </div>
-        )}
+        {isPending && <Spinner size="md" overlay />}
       </button>
       <p
         className="w-full min-w-0 text-[12px] pt-2 text-center font-semibold leading-tight"

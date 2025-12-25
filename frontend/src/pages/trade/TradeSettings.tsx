@@ -126,11 +126,13 @@ function TradeSettings() {
             ))}
           </div>
 
-          <Button type="submit" className="block ml-auto mt-4" disabled={updateAccountTradingFieldsMutation.isPending}>
+          <Button
+            type="submit"
+            className="block ml-auto flex gap-2"
+            disabled={updateAccountTradingFieldsMutation.isPending}
+            isPending={updateAccountTradingFieldsMutation.isPending}
+          >
             {t('save')}
-            {updateAccountTradingFieldsMutation.isPending && (
-              <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />
-            )}
           </Button>
         </form>
       </Form>

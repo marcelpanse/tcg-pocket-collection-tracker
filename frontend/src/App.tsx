@@ -8,6 +8,7 @@ import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useAuthSSO, useUser } from '@/services/auth/useAuth'
 import { Header } from './components/Header.tsx'
+import { Spinner } from './components/Spinner.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { DialogContext } from './context/DialogContext.ts'
 
@@ -61,11 +62,7 @@ function App() {
 
   const errorDiv = <div className="m-4">Something went wrong, please refresh the page to try again.</div>
 
-  const Loading = () => (
-    <div className="absolute inset-0 flex items-center justify-center">
-      <div className="animate-spin rounded-full size-12 border-4 border-white border-t-transparent"></div>
-    </div>
-  )
+  const Loading = () => <Spinner size="lg" overlay />
 
   const router = createHashRouter([
     {
