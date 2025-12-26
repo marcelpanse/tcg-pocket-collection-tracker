@@ -1,6 +1,6 @@
 import i18n from 'i18next'
 import { CircleHelp } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { type ReactNode, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import { Card as CardComponent } from '@/components/Card'
@@ -15,7 +15,16 @@ import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useDeleteCard, useSelectedCard } from '@/services/collection/useCollection'
 import type { Card, CollectionRow } from '@/types'
 
-function CardDetail() {
+function CardProperty({ name, children }: { name: string; children: ReactNode }) {
+  return (
+    <p className="flex">
+      <strong className="block min-w-[175px]">{name}</strong>
+      {children}
+    </p>
+  )
+}
+
+export default function CardDetail() {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
   const { selectedCardId: id, setSelectedCardId: setId } = useSelectedCard()
 
@@ -128,61 +137,23 @@ function CardDetail() {
               )}
             </div>
 
-            <p className="mt-8 flex">
-              <strong className="block min-w-[175px]">{t('text.expansion')}</strong> {card?.expansion}
-            </p>
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.pack')}</strong> {card && t(`${card.pack}`, { ns: 'common/packs' })}
-            </p>
-
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">Energy</strong> {card?.energy}
-            </p>
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.weakness')}</strong> {(card && t(`${card.weakness}`, { ns: 'common/types' })) || 'N/A'}
-            </p>
-            {card?.hp && (
-              <p className="mt-1 flex">
-                <strong className="block min-w-[175px]">{t('text.hp')}</strong> {card?.hp}
-              </p>
-            )}
-            {card?.retreat && (
-              <p className="mt-1 flex">
-                <strong className="block min-w-[175px]">{t('text.retreat')}</strong> {card.retreat}
-              </p>
-            )}
-
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.ability')}</strong> {card?.ability?.name ?? <i>None</i>}
-            </p>
-            {card?.ability && (
-              <p className="mt-1 flex">
-                <strong className="block min-w-[175px]">{t('text.abilityEffect')}</strong> {card?.ability.effect}
-              </p>
-            )}
-
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.cardType')}</strong> {card && t(`cardType.${card.card_type}`)}
-            </p>
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.evolutionType')}</strong> {card && t(`evolutionType.${card.evolution_type}`)}
-            </p>
-
-            {expansion && packName && (
-              <p className="mt-1 flex">
-                <strong className="block min-w-[175px]">{t('text.chanceToPull', { ns: 'pages/card-detail' })}</strong>
-                {card && pullRateForSpecificCard(expansion, packName, card).toFixed(2)}%
-              </p>
-            )}
-            {card && craftingCost[card.rarity] && (
-              <p className="mt-1 flex">
-                <strong className="block min-w-[175px]">{t('text.craftingCost')}</strong> {craftingCost[card.rarity]}
-              </p>
-            )}
-
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.artist')}</strong> {card?.artist}
-            </p>
+            <div className="mt-8">
+              <CardProperty name={t('text.expansion')}>{card?.expansion}</CardProperty>
+              <CardProperty name={t('text.pack')}>{card && t(`${card.pack}`, { ns: 'common/packs' })}</CardProperty>
+              <CardProperty name="Energy">{card?.energy}</CardProperty>
+              <CardProperty name={t('text.weakness')}>{(card && t(`${card.weakness}`, { ns: 'common/types' })) || 'N/A'}</CardProperty>
+              {card?.hp && <CardProperty name={t('text.hp')}>{card?.hp}</CardProperty>}
+              {card?.retreat && <CardProperty name={t('text.retreat')}>{card.retreat}</CardProperty>}
+              <CardProperty name={t('text.ability')}>{card?.ability?.name ?? <i>None</i>}</CardProperty>
+              {card?.ability && <CardProperty name={t('text.abilityEffect')}>{card?.ability.effect}</CardProperty>}
+              <CardProperty name={t('text.cardType')}>{card && t(`cardType.${card.card_type}`)}</CardProperty>
+              <CardProperty name={t('text.evolutionType')}>{card && t(`evolutionType.${card.evolution_type}`)}</CardProperty>
+              {expansion && packName && (
+                <CardProperty name={t('text.chanceToPull')}>{card && pullRateForSpecificCard(expansion, packName, card).toFixed(2)}%</CardProperty>
+              )}
+              {card && craftingCost[card.rarity] && <CardProperty name={t('text.craftingCost')}>{craftingCost[card.rarity]}</CardProperty>}
+              <CardProperty name={t('text.artist')}>{card?.artist}</CardProperty>
+            </div>
 
             {!!row?.collection?.length && (
               <>
@@ -220,5 +191,3 @@ function CardDetail() {
     </Sheet>
   )
 }
-
-export default CardDetail
