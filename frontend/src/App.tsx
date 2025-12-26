@@ -7,6 +7,7 @@ import DonationPopup from '@/components/DonationPopup.tsx'
 import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useAuthSSO, useUser } from '@/services/auth/useAuth'
+import ErrorAlert from './components/ErrorAlert.tsx'
 import { Header } from './components/Header.tsx'
 import { Spinner } from './components/Spinner.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
@@ -60,79 +61,30 @@ function App() {
     }
   }, [user])
 
-  const errorDiv = <div className="m-4">Something went wrong, please refresh the page to try again.</div>
-
-  const Loading = () => <Spinner size="lg" overlay />
-
   const router = createHashRouter([
     {
       element: (
         <>
           <Analytics />
           <Header />
-          <Outlet />
+          <ErrorBoundary fallback={<ErrorAlert />}>
+            <Suspense fallback={<Spinner size="lg" overlay />}>
+              <Outlet />
+            </Suspense>
+          </ErrorBoundary>
           <EditProfile />
         </>
       ),
-      errorElement: errorDiv,
+      errorElement: <ErrorAlert />,
       children: [
-        {
-          path: '/',
-          element: (
-            <Suspense fallback={<Loading />}>
-              <Overview />
-            </Suspense>
-          ),
-        },
-        {
-          path: '/collection/missions',
-          element: (
-            <Suspense fallback={<Loading />}>
-              <Missions />
-            </Suspense>
-          ),
-        },
-        {
-          path: '/collection/:friendId?',
-          element: (
-            <Suspense fallback={<Loading />}>
-              <Collection />
-            </Suspense>
-          ),
-        },
+        { path: '/', element: <Overview /> },
+        { path: '/collection/missions', element: <Missions /> },
+        { path: '/collection/:friendId?', element: <Collection /> },
         { path: '/collection/:friendId/trade', element: <TradeWithRedirect /> }, // support old trading path
-        {
-          path: '/decks',
-          element: (
-            <Suspense fallback={<Loading />}>
-              <Decks />
-            </Suspense>
-          ),
-        },
-        {
-          path: '/decks/edit',
-          element: (
-            <Suspense fallback={<Loading />}>
-              <DeckBuilder />
-            </Suspense>
-          ),
-        },
-        {
-          path: '/scan',
-          element: (
-            <Suspense fallback={<Loading />}>
-              <Scan />{' '}
-            </Suspense>
-          ),
-        },
-        {
-          path: '/trade*',
-          element: (
-            <Suspense fallback={<Loading />}>
-              <Trade />
-            </Suspense>
-          ),
-        },
+        { path: '/decks', element: <Decks /> },
+        { path: '/decks/edit', element: <DeckBuilder /> },
+        { path: '/scan', element: <Scan /> },
+        { path: '/trade/*', element: <Trade /> },
       ],
     },
   ])
@@ -147,8 +99,8 @@ function App() {
   }
 
   return (
-    <DialogContext.Provider value={dialogContextValue}>
-      <ErrorBoundary fallback={errorDiv}>
+    <ErrorBoundary fallback={<ErrorAlert />}>
+      <DialogContext.Provider value={dialogContextValue}>
         <Toaster />
         <RouterProvider router={router} />
         <InstallPrompt />
@@ -156,8 +108,8 @@ function App() {
         <CardDetail />
         {/* Add React Query DevTools (only in development) */}
         {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
-      </ErrorBoundary>
-    </DialogContext.Provider>
+      </DialogContext.Provider>
+    </ErrorBoundary>
   )
 }
 
