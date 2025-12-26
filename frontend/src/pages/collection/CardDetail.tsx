@@ -139,16 +139,16 @@ export default function CardDetail() {
 
             <div className="mt-8">
               <CardProperty name={t('text.expansion')}>{card?.expansion}</CardProperty>
-              <CardProperty name={t('text.pack')}>{card && t(`${card.pack}`, { ns: 'common/packs' })}</CardProperty>
+              <CardProperty name={t('text.pack')}>{card && t(card.pack, { ns: 'common/packs' })}</CardProperty>
               <CardProperty name="Energy">{card?.energy}</CardProperty>
-              <CardProperty name={t('text.weakness')}>{(card && t(`${card.weakness}`, { ns: 'common/types' })) || 'N/A'}</CardProperty>
+              <CardProperty name={t('text.weakness')}>{(card && t(card.weakness, { ns: 'common/types' })) || 'N/A'}</CardProperty>
               {card?.hp && <CardProperty name={t('text.hp')}>{card?.hp}</CardProperty>}
               {card?.retreat && <CardProperty name={t('text.retreat')}>{card.retreat}</CardProperty>}
               <CardProperty name={t('text.ability')}>{card?.ability?.name ?? <i>None</i>}</CardProperty>
               {card?.ability && <CardProperty name={t('text.abilityEffect')}>{card?.ability.effect}</CardProperty>}
               <CardProperty name={t('text.cardType')}>{card && t(`cardType.${card.card_type}`)}</CardProperty>
               <CardProperty name={t('text.evolutionType')}>{card && t(`evolutionType.${card.evolution_type}`)}</CardProperty>
-              {expansion && packName && (
+              {expansion && packName && card && card.rarity !== 'P' && (
                 <CardProperty name={t('text.chanceToPull')}>{card && pullRateForSpecificCard(expansion, packName, card).toFixed(2)}%</CardProperty>
               )}
               {card && craftingCost[card.rarity] && <CardProperty name={t('text.craftingCost')}>{craftingCost[card.rarity]}</CardProperty>}
