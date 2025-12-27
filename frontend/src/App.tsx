@@ -105,7 +105,9 @@ function App() {
         <RouterProvider router={router} />
         <InstallPrompt />
         <DonationPopup />
-        <CardDetail />
+        <ErrorBoundary fallback={null} onError={() => toast({ variant: 'destructive', description: 'Failed opening card details.' })}>
+          <CardDetail />
+        </ErrorBoundary>
         {/* Add React Query DevTools (only in development) */}
         {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
       </DialogContext.Provider>
