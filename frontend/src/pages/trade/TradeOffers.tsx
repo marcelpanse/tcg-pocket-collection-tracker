@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { Spinner } from '@/components/Spinner'
 import TradePartner from '@/pages/trade/components/TradePartner.tsx'
 import { useAccount } from '@/services/account/useAccount'
 import { useTrades } from '@/services/trade/useTrade.ts'
@@ -11,7 +12,7 @@ function TradeOffers() {
   const { data: trades, isLoading: isLoadingTrades } = useTrades()
 
   if (isLoadingAccount || isLoadingTrades) {
-    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+    return <Spinner size="lg" overlay />
   }
 
   if (!trades || !account) {

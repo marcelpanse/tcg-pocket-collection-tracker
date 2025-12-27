@@ -191,23 +191,20 @@ function CardDetail() {
                   <Tooltip id="minInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
                   <CircleHelp className="h-4 w-4" data-tooltip-id="minInput" data-tooltip-content={t('text.uncollectTooltip')} />
                 </p>
-                {deleteCardMutation.isPending ? (
-                  <p>{t('text.uncollecting')}</p>
-                ) : (
-                  <div className="flex flex-col gap-1 w-fit">
-                    {row?.collection.map((cardId) => (
-                      <Button
-                        key={cardId}
-                        variant="destructive"
-                        className="mr-auto min-w-48 w-full"
-                        onClick={() => handleUncollect(cardId)}
-                        disabled={deleteCardMutation.isPending}
-                      >
-                        {t('text.uncollect')} {cardId}
-                      </Button>
-                    ))}
-                  </div>
-                )}
+                <div className="flex flex-col gap-1 w-fit">
+                  {row?.collection.map((cardId) => (
+                    <Button
+                      key={cardId}
+                      variant="destructive"
+                      className="mr-auto min-w-48 w-full"
+                      onClick={() => handleUncollect(cardId)}
+                      disabled={deleteCardMutation.isPending}
+                      isPending={deleteCardMutation.isPending}
+                    >
+                      {t('text.uncollect')} {cardId}
+                    </Button>
+                  ))}
+                </div>
               </>
             )}
 

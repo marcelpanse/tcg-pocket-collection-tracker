@@ -2,6 +2,7 @@ import { ChevronRight } from 'lucide-react'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate, useParams } from 'react-router'
+import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { useAccount, usePublicAccount } from '@/services/account/useAccount.ts'
@@ -13,7 +14,7 @@ function OwnCollection() {
   const { data: account, isLoading: isLoadingAccount } = useAccount()
   const { data: cards = new Map<number, CollectionRow>(), isLoading: isLoadingCards } = useCollection()
   if (isLoadingAccount || isLoadingCards) {
-    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+    return <Spinner size="lg" overlay />
   }
   return <CollectionCards cards={cards} isPublic={false} share={account !== undefined && account.friend_id !== '' && account.is_public} />
 }
@@ -24,7 +25,7 @@ function FriendCollection({ friendId }: { friendId: string }) {
   const { data: cards, isLoading: isLoadingCards } = usePublicCollection(friendId)
 
   if (isLoadingAccount || isLoadingCards) {
-    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+    return <Spinner size="lg" overlay />
   }
   if (account === undefined || cards === undefined) {
     return <p className="text-xl text-center py-8">Something went wrong</p>
@@ -74,7 +75,7 @@ export default function Collection() {
   }, [isLoadingAccount, rawFriendId, account?.friend_id, navigate])
 
   if (isLoadingAccount) {
-    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+    return <Spinner size="lg" overlay />
   }
 
   const friendId = rawFriendId ?? account?.friend_id

@@ -2,6 +2,7 @@ import { ChevronRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useParams, useSearchParams } from 'react-router'
+import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { getCardByInternalId, tradeableExpansions } from '@/lib/CardsDB.ts'
@@ -66,7 +67,7 @@ function TradeWith() {
   }
 
   if (friendAccountLoading || friendCardsLoading) {
-    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+    return <Spinner size="lg" overlay />
   }
 
   if (!friendAccount?.is_active_trading) {
