@@ -67,7 +67,7 @@ function App() {
         <>
           <Analytics />
           <Header />
-          <ErrorBoundary fallback={<ErrorAlert />}>
+          <ErrorBoundary FallbackComponent={ErrorAlert}>
             <Suspense fallback={<Spinner size="lg" overlay />}>
               <Outlet />
             </Suspense>
@@ -99,7 +99,7 @@ function App() {
   }
 
   return (
-    <ErrorBoundary fallback={<ErrorAlert />}>
+    <ErrorBoundary FallbackComponent={ErrorAlert}>
       <DialogContext.Provider value={dialogContextValue}>
         <Toaster />
         <RouterProvider router={router} />
