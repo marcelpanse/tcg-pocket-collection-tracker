@@ -7,18 +7,18 @@ import { CardsTable } from '@/components/CardsTable'
 import FancyCard from '@/components/FancyCard'
 import { ToggleFilter } from '@/components/Filters'
 import FiltersPanel from '@/components/FiltersPanel'
+import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { showCardType } from '@/components/utils'
+import { useToast } from '@/hooks/use-toast'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { type Filters, type FiltersAll, getFilteredCards } from '@/lib/filters'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
+import { getDeck } from '@/services/decks/deckService'
 import { useDeleteDeck, useUpdateDeck } from '@/services/decks/useDeck'
 import { type Deck, energies } from '@/types'
-import { useToast } from '@/hooks/use-toast'
-import { useQuery } from '@tanstack/react-query'
-import { getDeck } from '@/services/decks/deckService'
 
 const defaultFilters: Filters = {
   search: '',
@@ -54,18 +54,25 @@ export default function DeckBuilder() {
   const { data: ownedCards } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
 
+  const shouldFetch = !location.state && deckId !== undefined
   const [deck, setDeck] = useState<Deck>(location.state ?? ({ is_public: false, name: 'New deck', energy: [], cards: [] } satisfies Deck))
-  const deckQuery = useQuery({
-    queryKey: ['deck', deckId],
-    queryFn: () => getDeck(Number(deckId)),
-    enabled: !location.state && deckId !== undefined,
-    retry: false, // Don't try to retry if deck doesn't exist
-  })
+  const [isLoading, setIsLoading] = useState(shouldFetch)
+  const [isError, setIsError] = useState(false)
   useEffect(() => {
-    if (deckQuery.isEnabled && deckQuery.isFetched) {
-      setDeck(deckQuery.data as Deck)
+    if (shouldFetch) {
+      setIsLoading(true)
+      setIsError(false)
+      getDeck(Number(deckId))
+        .then((deck) => {
+          setDeck(deck)
+          setIsLoading(false)
+        })
+        .catch(() => {
+          setIsLoading(false)
+          setIsError(true)
+        })
     }
-  }, [deckQuery])
+  }, [deckId])
 
   const [filters, setFilters] = useState<Filters>(defaultFilters)
   const filteredCards = getFilteredCards({ ...filters, deckbuildingMode: true }, ownedCards ?? new Map())
@@ -129,20 +136,20 @@ export default function DeckBuilder() {
     deleteDeckMutation.mutate(deck.id, {
       onSuccess: () => {
         console.log('Successfully deleted deck')
-        toast({ description: "Deck deleted" })
+        toast({ description: 'Deck deleted' })
         navigate('/decks')
       },
       onError: () => {
-        toast({ variant: 'destructive', description: 'Failed deleting deck'})
+        toast({ variant: 'destructive', description: 'Failed deleting deck' })
       },
     })
   }
 
-  if (deckQuery.isLoading) {
-    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+  if (isLoading) {
+    return <Spinner size="lg" overlay />
   }
 
-  if (deckQuery.isError) {
+  if (isError) {
     return 'Error'
   }
 
@@ -199,15 +206,11 @@ export default function DeckBuilder() {
       <div className="flex justify-between mt-2">
         <Button className="w-fit" onClick={onSave} disabled={updateDeckMutation.isPending || deleteDeckMutation.isPending}>
           Save
-          {updateDeckMutation.isPending && (
-            <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />
-          )}
+          {updateDeckMutation.isPending && <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />}
         </Button>
         <Button variant="destructive" className="w-fit" disabled={!deck.id || updateDeckMutation.isPending || deleteDeckMutation.isPending} onClick={onDelete}>
           Delete
-          {deleteDeckMutation.isPending && (
-            <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />
-          )}
+          {deleteDeckMutation.isPending && <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />}
         </Button>
       </div>
     </div>
