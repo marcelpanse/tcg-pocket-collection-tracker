@@ -139,11 +139,8 @@ const EditProfile: FC = () => {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="block ml-auto" disabled={updateAccountMutation.isPending}>
+            <Button type="submit" className="block ml-auto" disabled={updateAccountMutation.isPending} isPending={updateAccountMutation.isPending}>
               {t('save')}
-              {updateAccountMutation.isPending && (
-                <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />
-              )}
             </Button>
           </form>
         </Form>

@@ -69,17 +69,6 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   const now = new Date()
   const nowString = now.toISOString()
 
-  const { data: account, error: accountError } = await supabase
-    .from('accounts')
-    .update({ collection_last_updated: now })
-    .eq('email', email)
-    .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
-    .single()
-
-  if (accountError) {
-    throw new Error(`Error fetching account: ${accountError.message}`)
-  }
-
   // Update collection records
   const collectionRows: CollectionRowUpdate[] = rowsToUpdate.map((row) => ({
     email,
@@ -97,15 +86,36 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
     //deduplicate amountRows on internal_id, needed for card csv import feature
     .filter((row, index, self) => index === self.findIndex((r) => r.internal_id === row.internal_id))
 
-  //then update the card amounts
-  const { error: cardAmountsError } = await supabase.from('card_amounts').upsert(amountRows)
-  if (cardAmountsError) {
-    throw new Error(`Error bulk updating collection: ${cardAmountsError?.message}`)
-  }
+  // Execute all three database calls in parallel
+  let account: AccountRow
+  try {
+    const [accountResult, cardAmountsResult, collectionResult] = await Promise.all([
+      supabase
+        .from('accounts')
+        .update({ collection_last_updated: now })
+        .eq('email', email)
+        .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
+        .single(),
+      supabase.from('card_amounts').upsert(amountRows),
+      supabase.from('collection').upsert(collectionRows),
+    ])
 
-  const { error: collectionError } = await supabase.from('collection').upsert(collectionRows)
-  if (collectionError) {
-    throw new Error(`Error bulk updating collection: ${collectionError?.message}`)
+    if (accountResult.error) {
+      throw new Error(`Error fetching account: ${accountResult.error.message}`)
+    }
+    if (cardAmountsResult.error) {
+      throw new Error(`Error bulk updating card amounts: ${cardAmountsResult.error.message}`)
+    }
+    if (collectionResult.error) {
+      throw new Error(`Error bulk updating collection: ${collectionResult.error.message}`)
+    }
+
+    account = accountResult.data as AccountRow
+  } catch (error) {
+    // Invalidate local cache by removing records from localStorage
+    localStorage.removeItem(`${COLLECTION_CACHE_KEY}_${email}`)
+    localStorage.removeItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
+    throw error
   }
 
   // Update cache with the changes

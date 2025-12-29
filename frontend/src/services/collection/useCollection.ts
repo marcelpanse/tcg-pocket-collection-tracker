@@ -1,6 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
+import { useToast } from '@/hooks/use-toast.ts'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { useUser } from '@/services/auth/useAuth.ts'
 import { deleteCard, getCollection, getPublicCollection, updateCards } from '@/services/collection/collectionService.ts'
@@ -30,6 +31,7 @@ export function usePublicCollection(friendId: string | undefined) {
 }
 
 export function useUpdateCards() {
+  const { toast } = useToast()
   const { data: user } = useUser()
   const email = user?.user.email
 
@@ -46,6 +48,11 @@ export function useUpdateCards() {
 
       // Update account data in cache (for collection_last_updated timestamp)
       queryClient.setQueryData(['account', email], result.account)
+    },
+    onError: async (error) => {
+      toast({ title: 'Error updating cards', description: error.message, variant: 'destructive' })
+      await queryClient.invalidateQueries({ queryKey: ['collection'] })
+      await queryClient.invalidateQueries({ queryKey: ['account'] })
     },
   })
 }

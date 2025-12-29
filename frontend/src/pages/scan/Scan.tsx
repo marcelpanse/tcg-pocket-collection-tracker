@@ -195,7 +195,7 @@ const Scan = () => {
   }
 
   if (!model || !hashes || !fallbackHashes) {
-    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+    return <Spinner size="lg" overlay />
   }
 
   return (
@@ -215,7 +215,7 @@ const Scan = () => {
       {state === State.UploadingImages && (
         <Alert variant="default">
           <AlertDescription className="flex items-center space-x-2">
-            <Spinner />
+            <Spinner size="inline" />
             <p>{t('processing')}</p>
           </AlertDescription>
         </Alert>
@@ -315,7 +315,7 @@ const Scan = () => {
       {state === State.ProcessUpdates && (
         <Alert variant="default">
           <AlertDescription className="flex items-center space-x-2">
-            <Spinner />
+            <Spinner size="inline" />
             <p>{t('processing')}</p>
           </AlertDescription>
         </Alert>

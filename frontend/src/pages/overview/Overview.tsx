@@ -6,6 +6,7 @@ import Footer from '@/components/Footer.tsx'
 import DeckbuildingFilter from '@/components/filters/DeckbuildingFilter'
 import RarityFilter from '@/components/filters/RarityFilter'
 import { RadialChart } from '@/components/RadialChart'
+import { Spinner } from '@/components/Spinner'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTitle } from '@/components/ui/alert.tsx'
 import { expansions, getExpansionById } from '@/lib/CardsDB.ts'
@@ -86,7 +87,7 @@ function Overview() {
   }
 
   if (isLoading) {
-    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+    return <Spinner size="lg" overlay />
   }
 
   return (
