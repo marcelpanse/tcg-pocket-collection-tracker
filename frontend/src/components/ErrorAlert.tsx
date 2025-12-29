@@ -7,7 +7,6 @@ interface Props {
 
 export default function ErrorAlert({ error }: Props) {
   const { t } = useTranslation('common')
-  console.warn('dupa', error?.message, error?.stack)
   return (
     <Alert className="mt-12 mx-auto max-w-xl">
       <AlertTitle className="text-lg">{t('error')}</AlertTitle>
