@@ -24,6 +24,15 @@ export async function getMyDecks() {
   return data as Deck[]
 }
 
+export async function getPublicDecks() {
+  const { data, error } = await supabase.from('public_decks').select('*')
+  if (error) {
+    console.error('supabase error', error)
+    throw new Error('Failed fetching public decks')
+  }
+  return data as Deck[]
+}
+
 export async function updateDeck(deck: Deck) {
   const { data, error } = await supabase.from('decks').upsert(deck).select().single()
   if (error) {

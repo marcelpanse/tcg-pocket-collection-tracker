@@ -10,14 +10,11 @@ import { useCollection, useSelectedCard } from '@/services/collection/useCollect
 import type { Card, Deck, Energy } from '@/types'
 
 export interface IDeck {
-  name: string
   img_url: string
-  deck_id: string
-  cards: string[]
   rank: string
-  main_card_id: string
-  main_card_id2: string
+  name: string
   energy: Energy[]
+  cards: string[]
 }
 
 const rankInfo: Record<string, string> = {
@@ -38,7 +35,7 @@ const rankClassMap: Record<string, string> = {
   S: 'bg-red-600 font-bold',
 }
 
-export const DeckItem = ({ deck }: { deck: IDeck }) => {
+export function DeckItemGame8({ deck }: { deck: IDeck }) {
   const { data: ownedCards } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
   const [isOpen, setIsOpen] = useState(false)
@@ -132,6 +129,25 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
           })}
         </div>
       </div>
+    </div>
+  )
+}
+
+export function DeckItem({ deck }: { deck: Deck }) {
+  return (
+    <div key={deck.id} className="flex items-center gap-2 bg-neutral-800 border border-neutral-700 rounded-md p-2">
+      <div className="flex flex-wrap gap-1 items-center justify-center w-10">
+        {deck.energy.map((energy) => (
+          <img key={energy} src={`/images/energy/${energy}.webp`} alt={energy} className="size-4" />
+        ))}
+      </div>
+      <h2 className="font-semibold">{deck.name}</h2>
+      <Link className="ml-auto" to={`/decks/edit/${deck.id}`}>
+        <Button>
+          Edit
+          <ChevronRight />
+        </Button>
+      </Link>
     </div>
   )
 }

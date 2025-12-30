@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import type { Deck } from '@/types'
 import { useUser } from '../auth/useAuth'
-import { deleteDeck, getDeck, getMyDecks, updateDeck } from './deckService'
+import { deleteDeck, getDeck, getMyDecks, getPublicDecks, updateDeck } from './deckService'
 
 export function useDeck(id?: number) {
   return useQuery({
@@ -17,6 +17,13 @@ export function useMyDecks() {
     queryKey: ['decks', 'my'],
     queryFn: () => getMyDecks(),
     enabled: !!user && !!user.user.email,
+  })
+}
+
+export function usePublicDecks() {
+  return useQuery({
+    queryKey: ['decks', 'public'],
+    queryFn: () => getPublicDecks(),
   })
 }
 
