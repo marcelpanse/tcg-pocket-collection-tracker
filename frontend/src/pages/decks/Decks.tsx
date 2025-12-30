@@ -2,6 +2,7 @@ import type { UseQueryResult } from '@tanstack/react-query'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router'
+import ErrorAlert from '@/components/ErrorAlert'
 import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -24,7 +25,7 @@ function DeckList({ decks }: { decks: UseQueryResult<Deck[], Error> }) {
     return <Spinner size="md" overlay />
   }
   if (decks.isError) {
-    throw decks.error
+    return <ErrorAlert error={decks.error} />
   }
   if (!decks.data) {
     throw new Error('Deck list assertion error')
@@ -71,7 +72,7 @@ export default function Decks() {
         </TabsContent>
         <TabsContent value="community" className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
-            Page {page + 1}
+            <span>Page {page + 1}</span>
             <Button variant="outline" onClick={() => setPage((prev) => Math.max(prev - 1, 0))} disabled={page <= 0}>
               <ChevronLeft />
             </Button>
