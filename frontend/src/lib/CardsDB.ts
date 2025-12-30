@@ -19,7 +19,7 @@ const B1aMissions = await import('../../assets/themed-collections/B1a-missions.j
 export const allCards: Card[] = AllCardsJson.default as Card[]
 
 const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
-const allCardsByInternalId: Map<number, Card> = new Map(allCards.map((card) => [card.internal_id, card]))
+const allCardsByInternalId: Map<number, Card> = new Map(allCards.toReversed().map((card) => [card.internal_id, card]))
 const allCardsByInternalIdList: Partial<Record<number, Card[]>> = Object.groupBy(allCards, (c) => c.internal_id)
 
 export const getCardById = (cardId: string): Card | undefined => {

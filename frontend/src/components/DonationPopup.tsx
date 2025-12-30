@@ -1,6 +1,5 @@
 import { X } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { umami } from '@/lib/utils.ts'
 
@@ -80,9 +79,11 @@ const DonationPopup = () => {
         <p className="mb-4 mr-2">
           Rising hosting costs make it harder to keep this site running without ads. If you can, please chip in. Every donation helps keep the experience clean.
         </p>
-        <Link to="https://buymeacoffee.com/pocketcollectiontracker" target="_blank" rel="noopener noreferrer">
-          <Button>Donate</Button>
-        </Link>
+        <Button variant="default">
+          <a href="https://buymeacoffee.com/pocketcollectiontracker" target="_blank" rel="noopener noreferrer">
+            Donate
+          </a>
+        </Button>
       </div>
     </div>
   )

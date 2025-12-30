@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
 import { supabase } from '@/lib/supabase.ts'
 import { authSSO, getCurrentUser, logout } from '@/services/auth/authService.ts'
+import { removeLocalCacheItems } from '@/services/collection/collectionService.ts'
 import type { User } from '@/types'
 
 export function useUser() {
@@ -14,6 +15,8 @@ export function useUser() {
 }
 
 export function useLogout() {
+  const { data: user } = useUser()
+  const email = user?.user.email
   const queryClient = useQueryClient()
 
   return useMutation({
@@ -24,6 +27,9 @@ export function useLogout() {
       await queryClient.invalidateQueries({ queryKey: ['account'] })
       await queryClient.invalidateQueries({ queryKey: ['collection'] })
       await queryClient.invalidateQueries({ queryKey: ['trade'] })
+      if (email) {
+        removeLocalCacheItems(email)
+      }
     },
   })
 }
