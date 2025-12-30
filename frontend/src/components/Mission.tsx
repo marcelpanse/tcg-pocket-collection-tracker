@@ -1,5 +1,5 @@
 import i18n from 'i18next'
-import { CircleHelp, Trophy } from 'lucide-react'
+import { CircleCheck, CircleHelp, Trophy } from 'lucide-react'
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
@@ -8,6 +8,7 @@ import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
 import { getCardById, getCardByInternalId } from '@/lib/CardsDB.ts'
 import { pullRateForSpecificMission } from '@/lib/stats'
 import { getCardNameByLang } from '@/lib/utils.ts'
+import { useAccount, useUpdateAccount } from '@/services/account/useAccount'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
 import type { CollectionRow, Mission as MissionType } from '@/types'
 
@@ -25,9 +26,15 @@ export interface MissionDetailProps {
 export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) => {
   const { width } = useWindowDimensions()
   const { t } = useTranslation('common/packs')
+  const { t: tCollection } = useTranslation('pages/collection')
 
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
+  const { data: account } = useAccount()
+  const { mutate: updateAccount } = useUpdateAccount()
+
+  const missionKey = `${mission.expansionId}_${mission.name}`
+  const isManuallyCompleted = account?.completed_missions?.includes(missionKey) || false
 
   let cardsPerRow = 5
   let cardHeight = Math.min(width, 890) / 5 + 120
@@ -73,12 +80,28 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
       return ownedMissionCards
     })
 
-    mission.completed = isMissionCompleted
+    mission.completed = isMissionCompleted || isManuallyCompleted
     const gridRows = []
     for (let i = 0; i < shownCards.length; i += cardsPerRow) {
       gridRows.push(shownCards.slice(i, i + cardsPerRow))
     }
     return gridRows
+  }
+
+  const handleManualComplete = () => {
+    if (!account) {
+      return
+    }
+
+    const currentCompletedMissions = account.completed_missions || []
+    const updatedMissions = isManuallyCompleted ? currentCompletedMissions.filter((m) => m !== missionKey) : [...currentCompletedMissions, missionKey]
+
+    const mergedAccount = {
+      ...account,
+      completed_missions: updatedMissions,
+    }
+    delete mergedAccount.trade_rarity_settings
+    updateAccount(mergedAccount)
   }
 
   const missionHeight = cardHeight * missionGridRows().length + 48
@@ -126,6 +149,13 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
                     .map(([packName, probability]) => `${t(packName)}: ${probability.toFixed(2)}%`)
                     .join('<br/>')
             }
+          />
+          <Tooltip id={`manualComplete${mission.name}`} style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 16 }} clickable={true} />
+          <CircleCheck
+            className={`h-6 w-6 cursor-pointer ${isManuallyCompleted ? 'text-green-500' : 'text-white'}`}
+            data-tooltip-id={`manualComplete${mission.name}`}
+            data-tooltip-html={isManuallyCompleted ? tCollection('missionDetail.manuallyMarkedComplete') : tCollection('missionDetail.manuallyMarkComplete')}
+            onClick={handleManualComplete}
           />
         </h2>
       </div>
