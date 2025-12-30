@@ -24,13 +24,18 @@ export async function getMyDecks() {
   return data as Deck[]
 }
 
-export async function getPublicDecks() {
-  const { data, error } = await supabase.from('public_decks').select('*')
+export async function getPublicDecks(page: number) {
+  const pageSize = 25
+  console.warn(page)
+  const { data, error } = await supabase
+    .from('public_decks')
+    .select('*')
+    .range(page * pageSize, (page + 1) * pageSize - 1)
   if (error) {
     console.error('supabase error', error)
     throw new Error('Failed fetching public decks')
   }
-  return data as Deck[]
+  return data.map((x) => ({ ...x, is_public: true })) as Deck[]
 }
 
 export async function updateDeck(deck: Deck) {

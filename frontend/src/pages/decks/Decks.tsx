@@ -1,8 +1,7 @@
 import type { UseQueryResult } from '@tanstack/react-query'
-import { ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router'
-import SearchInput from '@/components/filters/SearchInput'
 import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -40,15 +39,11 @@ function DeckList({ decks }: { decks: UseQueryResult<Deck[], Error> }) {
 }
 
 export default function Decks() {
+  const [page, setPage] = useState(0)
+
   const decksMy = useMyDecks()
-  const decksPublic = usePublicDecks()
-  const decksMeta8 = sampleDecks8 as IDeck[]
-
-  const [searchValue, setSearchValue] = useState('')
-
-  const filteredAndSortedDecks = decksMeta8
-    .filter((deck) => deck.name.toLowerCase().includes(searchValue.toLowerCase()))
-    .sort((a, b) => (rankOrder[b.rank] ?? 999) - (rankOrder[a.rank] ?? 999))
+  const decksPublic = usePublicDecks(page)
+  const decksMeta8 = (sampleDecks8 as IDeck[]).sort((a, b) => (rankOrder[b.rank] ?? 999) - (rankOrder[a.rank] ?? 999))
 
   const [tab, setTab] = useState('my')
 
@@ -60,24 +55,30 @@ export default function Decks() {
           <TabsTrigger value="my">My decks</TabsTrigger>
           <TabsTrigger value="community">Community decks</TabsTrigger>
         </TabsList>
-        <div className="flex flex-col-reverse sm:flex-row gap-2 sm:justify-between">
-          <SearchInput className="w-full sm:max-w-96" setValue={setSearchValue} />
-          <Link to="/decks/edit" className="w-full sm:max-w-48">
+        <TabsContent value="game8" className="flex flex-col gap-2">
+          {decksMeta8.map((deck) => (
+            <DeckItemGame8 key={deck.name} deck={deck} />
+          ))}
+        </TabsContent>
+        <TabsContent value="my" className="flex flex-col gap-2">
+          <Link to="/decks/edit" className="inline-block sm:max-w-48 ml-auto">
             <Button className="w-full">
               New deck
               <ChevronRight />
             </Button>
           </Link>
-        </div>
-        <TabsContent value="game8" className="flex flex-col gap-2">
-          {filteredAndSortedDecks.map((deck) => (
-            <DeckItemGame8 key={deck.name} deck={deck} />
-          ))}
-        </TabsContent>
-        <TabsContent value="my" className="flex flex-col gap-2">
           <DeckList decks={decksMy} />
         </TabsContent>
         <TabsContent value="community" className="flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            Page {page + 1}
+            <Button variant="outline" onClick={() => setPage((prev) => Math.max(prev - 1, 0))} disabled={page <= 0}>
+              <ChevronLeft />
+            </Button>
+            <Button variant="outline" onClick={() => setPage((prev) => Math.max(prev + 1, 0))} disabled={decksPublic.data?.length === 0}>
+              <ChevronRight />
+            </Button>
+          </div>
           <DeckList decks={decksPublic} />
         </TabsContent>
       </Tabs>

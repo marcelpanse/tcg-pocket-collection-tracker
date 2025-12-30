@@ -20,10 +20,11 @@ export function useMyDecks() {
   })
 }
 
-export function usePublicDecks() {
+export function usePublicDecks(page: number) {
   return useQuery({
-    queryKey: ['decks', 'public'],
-    queryFn: () => getPublicDecks(),
+    queryKey: ['decks', 'public', page],
+    queryFn: () => getPublicDecks(page),
+    enabled: page >= 0,
   })
 }
 
