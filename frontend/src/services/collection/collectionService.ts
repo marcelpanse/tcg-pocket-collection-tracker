@@ -5,6 +5,12 @@ const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v2'
 const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v2'
 const PAGE_SIZE = 500
 
+export const removeLocalCacheItems = (email: string) => {
+  // Invalidate local cache by removing records from localStorage
+  localStorage.removeItem(`${COLLECTION_CACHE_KEY}_${email}`)
+  localStorage.removeItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
+}
+
 export const getCollection = async (email: string, collectionLastUpdatedRaw?: Date | string): Promise<Map<number, CollectionRow>> => {
   if (!email) {
     throw new Error('Email is required to fetch collection')
@@ -112,9 +118,7 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
 
     account = accountResult.data as AccountRow
   } catch (error) {
-    // Invalidate local cache by removing records from localStorage
-    localStorage.removeItem(`${COLLECTION_CACHE_KEY}_${email}`)
-    localStorage.removeItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
+    removeLocalCacheItems(email)
     throw error
   }
 
