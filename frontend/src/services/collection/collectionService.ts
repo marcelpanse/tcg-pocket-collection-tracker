@@ -95,7 +95,7 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   // Execute all three database calls in parallel
   let account: AccountRow
   try {
-    const [accountResult, cardAmountsResult, collectionResult] = await Promise.all([
+    const [accountResult, cardAmountsResult] = await Promise.all([
       supabase
         .from('accounts')
         .update({ collection_last_updated: now })
@@ -103,7 +103,6 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
         .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
         .single(),
       supabase.from('card_amounts').upsert(amountRows),
-      supabase.from('collection').upsert(collectionRows),
     ])
 
     if (accountResult.error) {
@@ -112,6 +111,9 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
     if (cardAmountsResult.error) {
       throw new Error(`Error bulk updating card amounts: ${cardAmountsResult.error.message}`)
     }
+
+    // this has to be after the card amounts update because otherwise the FK can't be created.
+    const collectionResult = await supabase.from('collection').upsert(collectionRows)
     if (collectionResult.error) {
       throw new Error(`Error bulk updating collection: ${collectionResult.error.message}`)
     }
