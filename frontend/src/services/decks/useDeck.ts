@@ -1,32 +1,13 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import type { Deck } from '@/types'
 import { useUser } from '../auth/useAuth'
-import { deleteDeck, getLikedDecks, getMyDecks, getPublicDecks, isLiked, likeDeck, unlikeDeck, updateDeck } from './deckService'
+import { type DeckFilters, deleteDeck, getDecks, isLiked, likeDeck, unlikeDeck, updateDeck } from './deckService'
 
-export function useMyDecks() {
-  const { data: user } = useUser()
+export function useDecksSearch(filters: DeckFilters) {
   return useQuery({
-    queryKey: ['decks', 'my'],
-    queryFn: () => getMyDecks(),
-    enabled: !!user && !!user.user.email,
-  })
-}
-
-export function useLikedDecks() {
-  const { data: user } = useUser()
-  const email = user?.user.email
-  return useQuery({
-    queryKey: ['decks', 'liked', email],
-    queryFn: () => getLikedDecks(),
-    enabled: !!email,
-  })
-}
-
-export function usePublicDecks(page: number) {
-  return useQuery({
-    queryKey: ['decks', 'public', page],
-    queryFn: () => getPublicDecks(page),
-    enabled: page >= 0,
+    queryKey: ['decks', filters],
+    queryFn: () => getDecks(filters),
+    enabled: filters.page >= 0,
   })
 }
 

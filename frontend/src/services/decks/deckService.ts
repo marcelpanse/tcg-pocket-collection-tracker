@@ -1,6 +1,14 @@
 import { supabase } from '@/lib/supabase'
 import type { Deck } from '@/types'
 
+export const deckKinds = ['my', 'liked', 'community'] as const
+
+export interface DeckFilters {
+  kind: (typeof deckKinds)[number]
+  page: number
+}
+const pageSize = 25
+
 export async function getDeck(id: number) {
   const [personal, community] = await Promise.all([
     supabase.from('decks').select('*').eq('id', id).maybeSingle(),
@@ -21,32 +29,46 @@ export async function getDeck(id: number) {
   throw new Error('Failed fetching deck')
 }
 
-export async function getMyDecks() {
-  const { data, error } = await supabase.from('decks').select('*')
+export function getDecks(filters: DeckFilters) {
+  if (filters.kind === 'my') {
+    return getMyDecks(filters)
+  } else if (filters.kind === 'liked') {
+    return getLikedDecks(filters)
+  } else if (filters.kind === 'community') {
+    return getPublicDecks(filters)
+  } else {
+    throw new Error('Unrecognized deck `filters.kind`')
+  }
+}
+
+async function getMyDecks(filters: DeckFilters) {
+  const { data, error } = await supabase
+    .from('decks')
+    .select('*')
+    .range(filters.page * pageSize, (filters.page + 1) * pageSize - 1)
   if (error) {
-    console.error('supabase error', error)
-    throw new Error('Failed fetching user decks')
+    throw new Error(`Failed fetching user decks: ${error.message}`)
   }
   return data as Deck[]
 }
 
-export async function getLikedDecks() {
-  const { data, error } = await supabase.from('deck_likes').select('*, public_decks!id(*)')
+async function getLikedDecks(filters: DeckFilters) {
+  const { data, error } = await supabase
+    .from('deck_likes')
+    .select('*, public_decks!id(*)')
+    .range(filters.page * pageSize, (filters.page + 1) * pageSize - 1)
   if (error) {
     throw new Error(`Failed fetching liked decks: ${error.message}`)
   }
-  const res = data.map((x) => ({ ...x.public_decks, is_public: true }))
-  console.warn(res)
-  return res as Deck[]
+  return data.map((x) => ({ ...x.public_decks, is_public: true })) as Deck[]
 }
 
-export async function getPublicDecks(page: number) {
-  const pageSize = 25
+async function getPublicDecks(filters: DeckFilters) {
   const { data, error } = await supabase
     .from('public_decks')
     .select('*')
     .order('likes', { ascending: false })
-    .range(page * pageSize, (page + 1) * pageSize - 1)
+    .range(filters.page * pageSize, (filters.page + 1) * pageSize - 1)
   if (error) {
     throw new Error(`Failed fetching public decks: ${error.message}`)
   }
