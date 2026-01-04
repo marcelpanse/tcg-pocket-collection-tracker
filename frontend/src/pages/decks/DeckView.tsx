@@ -1,3 +1,4 @@
+import { Slot } from '@radix-ui/react-slot'
 import { ChevronRight, Heart, HeartMinus, HeartPlus } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router'
@@ -6,6 +7,7 @@ import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { showCardType } from '@/components/utils'
 import { getCardByInternalId } from '@/lib/CardsDB'
+import { cn } from '@/lib/utils'
 import { useAccount } from '@/services/account/useAccount'
 import { useCollection } from '@/services/collection/useCollection'
 import { getDeck } from '@/services/decks/deckService'
@@ -86,19 +88,11 @@ export default function DeckView() {
       </ul>
       <div className="flex items-center mt-2">
         {deck.is_public ? (
-          liked ? (
-            <Button variant="ghost" className="group" onClick={unlike}>
-              <Heart className="group-hover:hidden" />
-              <HeartMinus className="hidden group-hover:block" />
-              <span>7</span>
-            </Button>
-          ) : (
-            <Button variant="ghost" className="group" onClick={like}>
-              <Heart className="group-hover:hidden" />
-              <HeartPlus className="hidden group-hover:block" />
-              <span>7</span>
-            </Button>
-          )
+          <Button variant="ghost" className="group" onClick={liked ? unlike : like}>
+            <Heart className={cn('group-hover:hidden', liked && 'fill-current')} />
+            <Slot className="hidden group-hover:block">{liked ? <HeartMinus /> : <HeartPlus />}</Slot>
+            <span>7</span>
+          </Button>
         ) : (
           <span className="italic text-neutral-400 text-sm">Private</span>
         )}
