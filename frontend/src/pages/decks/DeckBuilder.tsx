@@ -19,6 +19,7 @@ import { useCollection, useSelectedCard } from '@/services/collection/useCollect
 import { getDeck } from '@/services/decks/deckService'
 import { useDeleteDeck, useUpdateDeck } from '@/services/decks/useDeck'
 import { type Deck, energies } from '@/types'
+import { getDeckCardCounts, getMissingCardsCount } from './utils'
 
 const defaultFilters: Filters = {
   search: '',
@@ -27,14 +28,6 @@ const defaultFilters: Filters = {
   rarity: [],
   sortBy: 'expansion-newest',
   allTextSearch: false,
-}
-
-function getDeckCardCounts(cards: number[]) {
-  const map = new Map<number, number>()
-  for (const id of cards) {
-    map.set(id, (map.get(id) ?? 0) + 1)
-  }
-  return [...map].toSorted(([a, _n1], [b, _n2]) => a - b)
 }
 
 export default function DeckBuilder() {
@@ -72,7 +65,7 @@ export default function DeckBuilder() {
           setIsError(true)
         })
     }
-  }, [deckId])
+  }, [shouldFetch, deckId])
 
   const [filters, setFilters] = useState<Filters>(defaultFilters)
   const filteredCards = getFilteredCards({ ...filters, deckbuildingMode: true }, ownedCards ?? new Map())
@@ -89,14 +82,7 @@ export default function DeckBuilder() {
   }
 
   const cards = getDeckCardCounts(deck.cards)
-  const missingCards = ownedCards
-    ? cards.reduce(
-        (acc, [id, amount]) =>
-          acc +
-          Math.max(0, amount - (getCardByInternalId(id)?.alternate_versions?.reduce((acc2, id2) => acc2 + (ownedCards.get(id2)?.amount_owned ?? 0), 0) ?? 0)),
-        0,
-      )
-    : 0
+  const missingCards = ownedCards ? getMissingCardsCount(cards, ownedCards) : 0
 
   const addCard = (id: number) => {
     setDeck((deck) => ({ ...deck, cards: [...deck.cards, id] }))
@@ -204,13 +190,22 @@ export default function DeckBuilder() {
         <label htmlFor="is_public">Public</label>
       </div>
       <div className="flex justify-between mt-2">
-        <Button className="w-fit" onClick={onSave} disabled={updateDeckMutation.isPending || deleteDeckMutation.isPending}>
+        <Button
+          className="w-fit"
+          onClick={onSave}
+          disabled={updateDeckMutation.isPending || deleteDeckMutation.isPending}
+          isPending={updateDeckMutation.isPending}
+        >
           Save
-          {updateDeckMutation.isPending && <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />}
         </Button>
-        <Button variant="destructive" className="w-fit" disabled={!deck.id || updateDeckMutation.isPending || deleteDeckMutation.isPending} onClick={onDelete}>
+        <Button
+          variant="destructive"
+          className="w-fit"
+          onClick={onDelete}
+          disabled={!deck.id || updateDeckMutation.isPending || deleteDeckMutation.isPending}
+          isPending={deleteDeckMutation.isPending}
+        >
           Delete
-          {deleteDeckMutation.isPending && <div className="ml-2 inline-block animate-spin rounded-full size-4 border-2 border-black border-t-transparent" />}
         </Button>
       </div>
     </div>

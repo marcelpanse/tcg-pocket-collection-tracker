@@ -1,12 +1,11 @@
 import i18n from 'i18next'
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight, Heart } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router'
 import FancyCard from '@/components/FancyCard'
 import { Button } from '@/components/ui/button'
 import { getCardById } from '@/lib/CardsDB'
 import { getCardNameByLang } from '@/lib/utils'
-import { useAccount } from '@/services/account/useAccount'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
 import type { Card, Deck, Energy } from '@/types'
 
@@ -135,21 +134,24 @@ export function DeckItemGame8({ deck }: { deck: IDeck }) {
 }
 
 export function DeckItem({ deck }: { deck: Deck }) {
-  const { data: account } = useAccount()
   return (
-    <div key={deck.id} className="flex items-center gap-2 bg-neutral-800 border border-neutral-700 rounded-md p-2">
-      <div className="flex flex-wrap gap-1 items-center justify-center w-10">
-        {deck.energy.map((energy) => (
-          <img key={energy} src={`/images/energy/${energy}.webp`} alt={energy} className="size-4" />
-        ))}
+    <Link to={`/decks/${deck.id ?? ''}`} state={deck}>
+      <div key={deck.id} className="flex items-center gap-2 bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 rounded-md p-2">
+        <div className="flex flex-wrap gap-1 items-center justify-center w-10">
+          {deck.energy.map((energy) => (
+            <img key={energy} src={`/images/energy/${energy}.webp`} alt={energy} className="size-4" />
+          ))}
+        </div>
+        <h2 className="font-semibold">{deck.name}</h2>
+        {deck.is_public ? (
+          <span className="ml-auto inline-flex gap-1">
+            <span>7</span>
+            <Heart />
+          </span>
+        ) : (
+          <span className="ml-auto italic text-neutral-400 text-sm">Private</span>
+        )}
       </div>
-      <h2 className="font-semibold">{deck.name}</h2>
-      <Link className="ml-auto" to={`/decks/edit/${deck.id ?? ''}`} state={deck}>
-        <Button>
-          {deck.email !== undefined && deck.email === account?.email ? 'Edit' : 'Copy and edit'}
-          <ChevronRight />
-        </Button>
-      </Link>
-    </div>
+    </Link>
   )
 }
