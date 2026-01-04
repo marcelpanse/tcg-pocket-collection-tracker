@@ -30,7 +30,8 @@ export interface AccountRow {
   collection_last_updated: Date
   is_public: boolean
   is_active_trading: boolean
-  trade_rarity_settings: RaritySettingsRow[]
+  trade_rarity_settings?: RaritySettingsRow[]
+  completed_missions?: string[]
 }
 
 export interface CollectionRow {

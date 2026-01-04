@@ -5,6 +5,7 @@ import { DropdownFilter, TabsFilter } from '@/components/Filters'
 import { MissionsTable } from '@/components/MissionsTable'
 import { Button } from '@/components/ui/button'
 import { getExpansionById } from '@/lib/CardsDB'
+import { useAccount } from '@/services/account/useAccount'
 import { type ExpansionId, expansionIds, type Mission } from '@/types'
 import MissionDetail from './MissionDetail'
 
@@ -13,6 +14,7 @@ type OwnedOption = (typeof ownedOptions)[number]
 
 export default function Missions() {
   const { t } = useTranslation(['pages/collection', 'filters'])
+  const { data: account } = useAccount()
 
   const [expansion, setExpansion] = useState<ExpansionId>('A1')
   const [ownedFilter, setOwnedFilter] = useState<OwnedOption>('all')
@@ -28,12 +30,20 @@ export default function Missions() {
       throw new Error(`This expansion has no missions: ${expansion}`)
     }
     if (ownedFilter === 'owned') {
-      missions = missions.filter((mission) => mission.completed)
+      missions = missions.filter((mission) => {
+        const missionKey = `${mission.expansionId}_${mission.name}`
+        const isManuallyCompleted = account?.completed_missions?.includes(missionKey) || false
+        return mission.completed || isManuallyCompleted
+      })
     } else if (ownedFilter === 'missing') {
-      missions = missions.filter((mission) => !mission.completed)
+      missions = missions.filter((mission) => {
+        const missionKey = `${mission.expansionId}_${mission.name}`
+        const isManuallyCompleted = account?.completed_missions?.includes(missionKey) || false
+        return !mission.completed && !isManuallyCompleted
+      })
     }
     setMissions(missions)
-  }, [expansion, ownedFilter])
+  }, [expansion, ownedFilter, account?.completed_missions])
 
   return (
     <div className="flex flex-col gap-y-1 mx-auto max-w-[900px]">
