@@ -2,17 +2,23 @@ import { supabase } from '@/lib/supabase'
 import type { Deck } from '@/types'
 
 export async function getDeck(id: number) {
-  const { data, error } = await supabase.from('decks').select('*').eq('id', id).maybeSingle()
-  if (error) {
-    console.error('supabase error', error)
-    throw new Error('Failed fetching decks')
+  const [personal, community] = await Promise.all([
+    supabase.from('decks').select('*').eq('id', id).maybeSingle(),
+    supabase.from('public_decks').select('*').eq('id', id).maybeSingle(),
+  ])
+  let ret = {}
+  if (!community.error && !!community.data) {
+    ret = { ...ret, ...community.data, is_public: true }
   }
-  if (!data) {
-    console.error('dupa')
-    throw new Error('No deck with such id')
+  if (!personal.error && !!personal.data) {
+    ret = { ...ret, ...personal.data }
   }
-  console.log('successfully fetched deck', data)
-  return data as Deck
+  if (Object.keys(ret).length > 0) {
+    // some query succeded
+    return ret as Deck
+  }
+  console.error('supabase error?', personal.error, community.error)
+  throw new Error('Failed fetching deck')
 }
 
 export async function getMyDecks() {
@@ -24,16 +30,25 @@ export async function getMyDecks() {
   return data as Deck[]
 }
 
+export async function getLikedDecks() {
+  const { data, error } = await supabase.from('deck_likes').select('*, public_decks!id(*)')
+  if (error) {
+    throw new Error(`Failed fetching liked decks: ${error.message}`)
+  }
+  const res = data.map((x) => ({ ...x.public_decks, is_public: true }))
+  console.warn(res)
+  return res as Deck[]
+}
+
 export async function getPublicDecks(page: number) {
   const pageSize = 25
-  console.warn(page)
   const { data, error } = await supabase
     .from('public_decks')
     .select('*')
+    .order('likes', { ascending: false })
     .range(page * pageSize, (page + 1) * pageSize - 1)
   if (error) {
-    console.error('supabase error', error)
-    throw new Error('Failed fetching public decks')
+    throw new Error(`Failed fetching public decks: ${error.message}`)
   }
   return data.map((x) => ({ ...x, is_public: true })) as Deck[]
 }
@@ -54,4 +69,26 @@ export async function deleteDeck(id: number) {
     throw new Error('Failed updating decks')
   }
   return data as Deck
+}
+
+export async function isLiked(id: number) {
+  const { data, error } = await supabase.from('deck_likes').select('*').eq('id', id).maybeSingle()
+  if (error) {
+    throw new Error(`Failed getting deck liked status: ${error.message}`)
+  }
+  return Boolean(data)
+}
+
+export async function likeDeck(email: string, id: number) {
+  const { error } = await supabase.from('deck_likes').insert({ email, id })
+  if (error) {
+    throw new Error(`Failed liking deck: ${error.message}`)
+  }
+}
+
+export async function unlikeDeck(email: string, id: number) {
+  const { error } = await supabase.from('deck_likes').delete().eq('email', email).eq('id', id)
+  if (error) {
+    throw new Error(`Failed unliking deck: ${error.message}`)
+  }
 }

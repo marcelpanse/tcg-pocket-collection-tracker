@@ -1,6 +1,6 @@
 import { Slot } from '@radix-ui/react-slot'
+import { useQuery } from '@tanstack/react-query'
 import { ChevronRight, Heart, HeartMinus, HeartPlus } from 'lucide-react'
-import { useEffect, useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router'
 import { CardLine } from '@/components/CardLine'
 import { Spinner } from '@/components/Spinner'
@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils'
 import { useAccount } from '@/services/account/useAccount'
 import { useCollection } from '@/services/collection/useCollection'
 import { getDeck } from '@/services/decks/deckService'
-import type { Deck } from '@/types'
+import { useDeckLiked, useLikeDeck } from '@/services/decks/useDeck'
 import { getDeckCardCounts, getMissingCardsCount } from './utils'
 
 export default function DeckView() {
@@ -21,35 +21,21 @@ export default function DeckView() {
   const { data: account } = useAccount()
   const { data: ownedCards } = useCollection()
 
-  const shouldFetch = !location.state && deckId !== undefined
-  const [deck, setDeck] = useState<Deck>(location.state ?? ({ is_public: false, name: 'New deck', energy: [], cards: [] } satisfies Deck))
-  const [isLoading, setIsLoading] = useState(shouldFetch)
-  const [isError, setIsError] = useState(false)
-  useEffect(() => {
-    if (shouldFetch) {
-      setIsLoading(true)
-      setIsError(false)
-      getDeck(Number(deckId))
-        .then((deck) => {
-          setDeck(deck)
-          setIsLoading(false)
-        })
-        .catch(() => {
-          setIsLoading(false)
-          setIsError(true)
-        })
-    }
-  }, [shouldFetch, deckId])
+  const { data: deck, isLoading } = useQuery({
+    queryKey: ['deck', Number(deckId)],
+    queryFn: () => getDeck(Number(deckId)),
+    placeholderData: location.state,
+    throwOnError: true,
+  })
 
-  const [liked, setLiked] = useState(false)
-  const like = () => setLiked(true)
-  const unlike = () => setLiked(false)
+  const { data: liked } = useDeckLiked(Number(deckId))
+  const likeMutation = useLikeDeck(Number(deckId))
 
   if (isLoading) {
     return <Spinner size="lg" overlay />
   }
 
-  if (isError) {
+  if (!deck) {
     return 'Error'
   }
 
@@ -59,10 +45,10 @@ export default function DeckView() {
   return (
     <div className="flex flex-col mx-auto max-w-sm p-2 rounded border border-neutral-700">
       <h2 className="text-lg font-semibold">{deck.name}</h2>
-      <p className="flex items-center gap-2">
+      <div className="flex items-center gap-2">
         <h3>Energy</h3>
         <span className="inline-flex gap-1">{deck.energy.map(showCardType)}</span>
-      </p>
+      </div>
       <h3>Cards {missingCards > 0 && <span className="text-neutral-400 text-sm"> ({missingCards} missing)</span>}</h3>
       <ul className="overflow-y-auto space-y-1">
         {cards.map(([id, amount]) => {
@@ -88,11 +74,24 @@ export default function DeckView() {
       </ul>
       <div className="flex items-center mt-2">
         {deck.is_public ? (
-          <Button variant="ghost" className="group" onClick={liked ? unlike : like}>
-            <Heart className={cn('group-hover:hidden', liked && 'fill-current')} />
-            <Slot className="hidden group-hover:block">{liked ? <HeartMinus /> : <HeartPlus />}</Slot>
-            <span>7</span>
-          </Button>
+          deck.email !== undefined && deck.email === account?.email ? (
+            <p className="flex items-center gap-1">
+              <Heart className="size-[1em]" />
+              <span>{deck.likes}</span>
+            </p>
+          ) : (
+            <Button
+              variant="ghost"
+              className="group"
+              onClick={() => likeMutation.mutate(!liked)}
+              disabled={likeMutation.isPending}
+              isPending={likeMutation.isPending}
+            >
+              <Heart className={cn('group-hover:hidden', liked && 'fill-current')} />
+              <Slot className="hidden group-hover:block">{liked ? <HeartMinus /> : <HeartPlus />}</Slot>
+              {deck.likes !== undefined && <span>{deck.likes}</span>}
+            </Button>
+          )
         ) : (
           <span className="italic text-neutral-400 text-sm">Private</span>
         )}

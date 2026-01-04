@@ -6,7 +6,7 @@ import ErrorAlert from '@/components/ErrorAlert'
 import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { useMyDecks, usePublicDecks } from '@/services/decks/useDeck'
+import { useLikedDecks, useMyDecks, usePublicDecks } from '@/services/decks/useDeck'
 import type { Deck } from '@/types'
 import sampleDecks8 from '../../../assets/decks/decks-game8.json'
 import { DeckItem, DeckItemGame8, type IDeck } from './DeckItem'
@@ -43,6 +43,7 @@ export default function Decks() {
   const [page, setPage] = useState(0)
 
   const decksMy = useMyDecks()
+  const decksLiked = useLikedDecks()
   const decksPublic = usePublicDecks(page)
   const decksMeta8 = (sampleDecks8 as IDeck[]).sort((a, b) => (rankOrder[b.rank] ?? 999) - (rankOrder[a.rank] ?? 999))
 
@@ -72,7 +73,7 @@ export default function Decks() {
           <DeckList decks={decksMy} />
         </TabsContent>
         <TabsContent value="liked" className="flex flex-col gap-2">
-          <DeckList decks={decksMy} />
+          <DeckList decks={decksLiked} />
         </TabsContent>
         <TabsContent value="community" className="flex flex-col gap-2">
           <div className="flex items-center gap-2">

@@ -170,6 +170,7 @@ export interface MissionCard {
 export interface Deck {
   id?: number
   email?: string
+  likes?: number
   is_public: boolean
   name: string
   energy: Energy[]
