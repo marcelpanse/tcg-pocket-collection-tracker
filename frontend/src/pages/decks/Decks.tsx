@@ -54,6 +54,7 @@ export default function Decks() {
         <TabsList className="flex gap-4 mb-2">
           <TabsTrigger value="game8">Featured decks</TabsTrigger>
           <TabsTrigger value="my">My decks</TabsTrigger>
+          <TabsTrigger value="liked">Liked decks</TabsTrigger>
           <TabsTrigger value="community">Community decks</TabsTrigger>
         </TabsList>
         <TabsContent value="game8" className="flex flex-col gap-2">
@@ -68,6 +69,9 @@ export default function Decks() {
               <ChevronRight />
             </Button>
           </Link>
+          <DeckList decks={decksMy} />
+        </TabsContent>
+        <TabsContent value="liked" className="flex flex-col gap-2">
           <DeckList decks={decksMy} />
         </TabsContent>
         <TabsContent value="community" className="flex flex-col gap-2">
