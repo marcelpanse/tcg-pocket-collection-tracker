@@ -143,15 +143,13 @@ export function DeckItem({ deck }: { deck: Deck }) {
           ))}
         </div>
         <h2 className="font-semibold">{deck.name}</h2>
-        {deck.is_public ? (
-          deck.likes !== undefined && (
-            <span className="ml-auto inline-flex gap-1">
-              <span>{deck.likes}</span>
-              <Heart />
-            </span>
-          )
+        {deck.likes !== undefined ? (
+          <span className="ml-auto inline-flex gap-1">
+            <span>{deck.likes}</span>
+            <Heart />
+          </span>
         ) : (
-          <span className="ml-auto italic text-neutral-400 text-sm">Private</span>
+          <span className="ml-auto italic text-neutral-400 text-sm">{deck.is_public ? 'Public' : 'Private'}</span>
         )}
       </div>
     </Link>

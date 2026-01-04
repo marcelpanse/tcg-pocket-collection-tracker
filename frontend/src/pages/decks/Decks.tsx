@@ -30,6 +30,9 @@ function DeckList({ decks }: { decks: UseQueryResult<Deck[], Error> }) {
   if (!decks.data) {
     throw new Error('Deck list assertion error')
   }
+  if (decks.data.length === 0) {
+    return 'Nothing to show'
+  }
   return (
     <>
       {decks.data.map((deck) => (
