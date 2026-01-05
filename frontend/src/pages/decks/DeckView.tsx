@@ -42,6 +42,8 @@ export default function DeckView() {
   const cards = getDeckCardCounts(deck.cards)
   const missingCards = ownedCards ? getMissingCardsCount(cards, ownedCards) : 0
 
+  const isOwn = deck.email !== undefined && deck.email === account?.email
+
   return (
     <div className="flex flex-col mx-auto max-w-sm p-2 rounded border border-neutral-700">
       <h2 className="text-lg font-semibold">{deck.name}</h2>
@@ -95,9 +97,9 @@ export default function DeckView() {
         ) : (
           <span className="italic text-neutral-400 text-sm">Private</span>
         )}
-        <Link className="ml-auto" to={`/decks/edit/${deck.id ?? ''}`} state={deck}>
+        <Link className="ml-auto" to={`/decks/edit/${isOwn ? deck.id : ''}`} state={isOwn ? deck : { ...deck, id: undefined }}>
           <Button>
-            {deck.email !== undefined && deck.email === account?.email ? 'Edit' : 'Copy and edit'}
+            {isOwn ? 'Edit' : 'Copy and edit'}
             <ChevronRight />
           </Button>
         </Link>
