@@ -222,7 +222,7 @@ export default function DeckBuilder() {
             </SheetHeader>
             <FiltersPanel
               className="flex flex-col w-80 h-fit gap-2"
-              filters={filters}
+              filters={{ ...filters, deckbuildingMode: true }}
               setFilters={(obj) => setFilters((old) => ({ ...old, ...obj }))}
               clearFilters={() => setFilters(defaultFilters)}
             />
@@ -231,7 +231,7 @@ export default function DeckBuilder() {
       ) : (
         <FiltersPanel
           className="flex flex-col w-80 h-fit gap-2"
-          filters={filters}
+          filters={{ ...filters, deckbuildingMode: true }}
           setFilters={(obj) => setFilters((old) => ({ ...old, ...obj }))}
           clearFilters={() => setFilters(defaultFilters)}
         />
