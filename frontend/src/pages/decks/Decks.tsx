@@ -2,24 +2,17 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router'
 import ErrorAlert from '@/components/ErrorAlert'
-import { TabsFilter } from '@/components/Filters'
+import { TabsFilter, ToggleFilter } from '@/components/Filters'
 import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
+import { showCardType } from '@/components/utils'
 import { type DeckFilters, deckKinds } from '@/services/decks/deckService'
 import { useDecksSearch } from '@/services/decks/useDeck'
+import { energies } from '@/types'
 import { DeckItem } from './DeckItem'
 
-export const rankOrder: Record<string, number> = {
-  D: 0,
-  C: 1,
-  B: 2,
-  A: 3,
-  'A+': 4,
-  S: 5,
-}
-
 export default function Decks() {
-  const [filters, setFilters] = useState<DeckFilters>({ kind: 'my', page: 0 })
+  const [filters, setFilters] = useState<DeckFilters>({ kind: 'my', page: 0, energy: [] })
   const { data, isLoading, isError, error } = useDecksSearch(filters)
 
   return (
@@ -33,8 +26,15 @@ export default function Decks() {
       <TabsFilter
         options={deckKinds}
         value={filters.kind}
-        onChange={(x) => setFilters((prev) => ({ ...prev, kind: x }))}
+        onChange={(kind) => setFilters((prev) => ({ ...prev, kind }))}
         show={(kind) => `${kind.charAt(0).toUpperCase() + kind.slice(1)} decks`}
+      />
+      <ToggleFilter
+        className="w-fit"
+        options={energies}
+        value={filters.energy}
+        onChange={(energy) => setFilters((prev) => ({ ...prev, energy }))}
+        show={showCardType}
       />
       <div className="flex items-center gap-2">
         <span>Page {filters.page + 1}</span>
@@ -51,7 +51,7 @@ export default function Decks() {
         ) : isError || !data ? (
           <ErrorAlert error={error ?? undefined} />
         ) : data.length === 0 ? (
-          'Nothing to show'
+          <p className="italic text-neutral-400">Nothing to show</p>
         ) : (
           data.map((deck) => <DeckItem key={deck.id} deck={deck} />)
         )}

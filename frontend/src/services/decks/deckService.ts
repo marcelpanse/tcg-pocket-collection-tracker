@@ -1,11 +1,12 @@
 import { supabase } from '@/lib/supabase'
-import type { Deck } from '@/types'
+import type { Deck, Energy } from '@/types'
 
 export const deckKinds = ['my', 'liked', 'community'] as const
 
 export interface DeckFilters {
   kind: (typeof deckKinds)[number]
   page: number
+  energy: Energy[]
 }
 const pageSize = 25
 
@@ -45,6 +46,7 @@ async function getMyDecks(filters: DeckFilters) {
   const { data, error } = await supabase
     .from('decks')
     .select('*')
+    .contains('energy', filters.energy)
     .range(filters.page * pageSize, (filters.page + 1) * pageSize - 1)
   if (error) {
     throw new Error(`Failed fetching user decks: ${error.message}`)
@@ -56,6 +58,7 @@ async function getLikedDecks(filters: DeckFilters) {
   const { data, error } = await supabase
     .from('deck_likes')
     .select('*, public_decks!id(*)')
+    .contains('public_decks.energy', filters.energy)
     .range(filters.page * pageSize, (filters.page + 1) * pageSize - 1)
   if (error) {
     throw new Error(`Failed fetching liked decks: ${error.message}`)
@@ -67,6 +70,7 @@ async function getPublicDecks(filters: DeckFilters) {
   const { data, error } = await supabase
     .from('public_decks')
     .select('*')
+    .contains('energy', filters.energy)
     .order('likes', { ascending: false })
     .range(filters.page * pageSize, (filters.page + 1) * pageSize - 1)
   if (error) {
