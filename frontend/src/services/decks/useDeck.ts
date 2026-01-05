@@ -24,7 +24,7 @@ export function useUpdateDeck() {
     },
     onSuccess: (deck) => {
       queryClient.setQueryData(['deck', deck.id], deck)
-      queryClient.invalidateQueries({ queryKey: ['decks', 'my'] })
+      queryClient.invalidateQueries({ queryKey: ['decks'] })
     },
   })
 }
