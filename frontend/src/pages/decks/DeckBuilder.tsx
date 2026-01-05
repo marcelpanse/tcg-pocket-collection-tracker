@@ -91,7 +91,7 @@ export default function DeckBuilder() {
   const formSchema = z.object({
     id: z.number().optional(),
     is_public: z.boolean(),
-    name: z.string().min(4, { message: 'Name too short' }),
+    name: z.string().min(4),
     energy: z.array(z.enum(energies)).min(1),
     cards: z.array(z.number()).length(20),
   })
