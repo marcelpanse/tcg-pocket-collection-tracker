@@ -39,7 +39,7 @@ export async function getDecks(filters: DeckFilters) {
   } else if (filters.kind === 'liked') {
     tbl = tbl.from('deck_likes').select('*, public_decks!id(*)')
   } else if (filters.kind === 'community') {
-    tbl = tbl.from('public_decks').select('*')
+    tbl = tbl.from('public_decks').select('*').order('likes', { ascending: false })
   }
 
   const col_prefix = filters.kind === 'liked' ? 'public_decks.' : ''
