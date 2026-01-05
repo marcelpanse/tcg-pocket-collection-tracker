@@ -52,7 +52,7 @@ export default function DeckBuilder() {
   const { setSelectedCardId } = useSelectedCard()
 
   const shouldFetch = !location.state && deckId !== undefined
-  const [deck, setDeck] = useState<Deck>(location.state ?? ({ is_public: false, name: 'New deck', energy: [], cards: [] } satisfies Deck))
+  const [deck, setDeck] = useState<Deck>(location.state ?? ({ is_public: false, name: '', energy: [], cards: [] } satisfies Deck))
   const [isLoading, setIsLoading] = useState(shouldFetch)
   const [isError, setIsError] = useState(false)
   useEffect(() => {
