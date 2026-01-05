@@ -167,3 +167,13 @@ export interface MissionCard {
   options: string[]
   owned?: number
 }
+
+export interface Deck {
+  id?: number
+  email?: string
+  likes?: number
+  is_public: boolean
+  name: string
+  energy: Energy[]
+  cards: number[]
+}

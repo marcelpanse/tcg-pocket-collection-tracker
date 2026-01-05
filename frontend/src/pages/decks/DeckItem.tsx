@@ -1,5 +1,5 @@
 import i18n from 'i18next'
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight, Heart } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router'
 import FancyCard from '@/components/FancyCard'
@@ -7,18 +7,14 @@ import { Button } from '@/components/ui/button'
 import { getCardById } from '@/lib/CardsDB'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
-import type { Card } from '@/types'
-import { serializeDeckToUrl } from './utils'
+import type { Card, Deck, Energy } from '@/types'
 
 export interface IDeck {
-  name: string
   img_url: string
-  deck_id: string
-  cards: string[]
   rank: string
-  main_card_id: string
-  main_card_id2: string
-  energy: string[]
+  name: string
+  energy: Energy[]
+  cards: string[]
 }
 
 const rankInfo: Record<string, string> = {
@@ -39,7 +35,7 @@ const rankClassMap: Record<string, string> = {
   S: 'bg-red-600 font-bold',
 }
 
-export const DeckItem = ({ deck }: { deck: IDeck }) => {
+export function DeckItemGame8({ deck }: { deck: IDeck }) {
   const { data: ownedCards } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
   const [isOpen, setIsOpen] = useState(false)
@@ -57,20 +53,6 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
     const countInDeckSoFar = deckCards.slice(0, idx + 1).filter((id) => id === cardObj.card_id).length
     const ownedAmount = cardObj.alternate_versions.reduce((acc, id) => acc + (ownedCards.get(id)?.amount_owned ?? 0), 0)
     return countInDeckSoFar <= ownedAmount
-  }
-
-  const editLink = () => {
-    const cards = deck.cards.map((card_id) => getCardById(card_id)?.internal_id).filter((id): id is number => Boolean(id))
-    const map = new Map<number, number>()
-    for (const id of cards) {
-      map.set(id, (map.get(id) ?? 0) + 1)
-    }
-    const params = new URLSearchParams({
-      title: deck.name,
-      energy: deck.energy.join(','),
-      cards: serializeDeckToUrl(map),
-    })
-    return `/decks/edit?${params.toString()}`
   }
 
   return (
@@ -102,7 +84,21 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
             {missingCards.length > 0 && <span className="text-nowrap">{missingCards.length} missing</span>}
           </div>
         </button>
-        <Link className="w-full sm:w-fit mt-2 sm:my-auto" to={editLink()}>
+        <Link
+          className="w-full sm:w-fit mt-2 sm:my-auto"
+          to="/decks/edit"
+          state={
+            {
+              is_public: false,
+              name: deck.name,
+              energy: deck.energy,
+              cards: deck.cards
+                .map((card_id) => getCardById(card_id))
+                .filter((c) => !!c)
+                .map((c) => c.internal_id),
+            } satisfies Deck
+          }
+        >
           <Button className="w-full">
             Copy and edit
             <ChevronRight />
@@ -134,5 +130,28 @@ export const DeckItem = ({ deck }: { deck: IDeck }) => {
         </div>
       </div>
     </div>
+  )
+}
+
+export function DeckItem({ deck }: { deck: Deck }) {
+  return (
+    <Link to={`/decks/${deck.id ?? ''}`} state={deck}>
+      <div key={deck.id} className="flex items-center gap-2 bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 rounded-md p-2">
+        <div className="flex flex-wrap gap-1 items-center justify-center w-10">
+          {deck.energy.map((energy) => (
+            <img key={energy} src={`/images/energy/${energy}.webp`} alt={energy} className="size-4" />
+          ))}
+        </div>
+        <h2 className="font-semibold">{deck.name}</h2>
+        {deck.likes !== undefined ? (
+          <span className="ml-auto inline-flex gap-1">
+            <span>{deck.likes}</span>
+            <Heart />
+          </span>
+        ) : (
+          <span className="ml-auto italic text-neutral-400 text-sm">{deck.is_public ? 'Public' : 'Private'}</span>
+        )}
+      </div>
+    </Link>
   )
 }

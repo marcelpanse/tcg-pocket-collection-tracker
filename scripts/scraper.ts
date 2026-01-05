@@ -89,6 +89,9 @@ const rarityOverrides: Partial<Record<ExpansionId, { rarity: Rarity; start: numb
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],
 }
 
+// The cards that should be the deckbuilding version, instead of the default "smallest internal_id"
+const deckbuildingOverrides = [12583376, 12583248, 133058]
+
 /* Helper Functions */
 
 async function downloadImage(imageUrl: string, dest: string) {
@@ -470,6 +473,16 @@ const cards2: Card[] = cards1.map((c) => ({
   ...c,
   alternate_versions: [...new Set(c.alternate_versions.map((card_id) => internalIds[card_id]))].toSorted((a, b) => a - b),
 }))
+
+for (const overriding_id of deckbuildingOverrides) {
+  for (const card of cards2) {
+    const idx = card.alternate_versions.indexOf(overriding_id)
+    if (idx >= 0) {
+      card.alternate_versions.splice(idx, 1)
+      card.alternate_versions.unshift(overriding_id)
+    }
+  }
+}
 
 fs.mkdirSync(targetDir, { recursive: true })
 fs.writeFileSync(path.join(targetDir, `cards.json`), JSON.stringify(cards2, null, 2))

@@ -12,6 +12,7 @@ import { Header } from './components/Header.tsx'
 import { Spinner } from './components/Spinner.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { DialogContext } from './context/DialogContext.ts'
+import DeckView from './pages/decks/DeckView.tsx'
 
 // Lazy import for chunking
 const Overview = lazy(() => import('./pages/overview/Overview.tsx'))
@@ -82,7 +83,8 @@ function App() {
         { path: '/collection/:friendId?', element: <Collection /> },
         { path: '/collection/:friendId/trade', element: <TradeWithRedirect /> }, // support old trading path
         { path: '/decks', element: <Decks /> },
-        { path: '/decks/edit', element: <DeckBuilder /> },
+        { path: '/decks/edit/:id?', element: <DeckBuilder /> },
+        { path: '/decks/:id', element: <DeckView /> },
         { path: '/scan', element: <Scan /> },
         { path: '/trade/*', element: <Trade /> },
       ],
