@@ -35,7 +35,7 @@ export function useDeleteDeck() {
     mutationFn: deleteDeck,
     onSuccess: (deck) => {
       queryClient.invalidateQueries({ queryKey: ['deck', deck.id] })
-      queryClient.invalidateQueries({ queryKey: ['decks', 'my'] })
+      queryClient.invalidateQueries({ queryKey: ['decks'] })
     },
   })
 }
