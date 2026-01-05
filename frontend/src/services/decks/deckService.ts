@@ -69,10 +69,13 @@ export async function getDecks(filters: DeckFilters) {
 }
 
 export async function updateDeck(deck: Deck) {
-  const { data, error } = await supabase.from('decks').upsert(deck).select().single()
+  const { data, error } = await supabase
+    .from('decks')
+    .upsert({ ...deck, likes: undefined })
+    .select()
+    .single()
   if (error) {
-    console.error('supabase error', error)
-    throw new Error('Failed updating decks')
+    throw new Error(`Failed updating decks: ${error.message}`)
   }
   return data as Deck
 }
