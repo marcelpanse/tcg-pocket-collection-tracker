@@ -17,20 +17,23 @@ export default function Decks() {
 
   return (
     <div className="flex flex-col gap-2 mx-auto max-w-[900px] px-1">
-      <Link to="/decks/edit" className="inline-block sm:max-w-48 ml-auto">
-        <Button className="w-full">
-          New deck
-          <ChevronRight />
-        </Button>
-      </Link>
-      <TabsFilter
-        options={deckKinds}
-        value={filters.kind}
-        onChange={(kind) => setFilters((prev) => ({ ...prev, kind }))}
-        show={(kind) => `${kind.charAt(0).toUpperCase() + kind.slice(1)} decks`}
-      />
+      <div className="flex gap-2 flex-col sm:flex-row-reverse sm:justify-between">
+        <Link to="/decks/edit" className="inline-block sm:max-w-48">
+          <Button className="w-full">
+            New deck
+            <ChevronRight />
+          </Button>
+        </Link>
+        <TabsFilter
+          className="w-full sm:w-fit"
+          options={deckKinds}
+          value={filters.kind}
+          onChange={(kind) => setFilters((prev) => ({ ...prev, kind }))}
+          show={(kind) => `${kind.charAt(0).toUpperCase() + kind.slice(1)} decks`}
+        />
+      </div>
       <ToggleFilter
-        className="w-fit"
+        className="w-full sm:w-fit"
         options={energies}
         value={filters.energy}
         onChange={(energy) => setFilters((prev) => ({ ...prev, energy }))}

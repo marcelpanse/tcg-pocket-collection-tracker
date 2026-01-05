@@ -30,53 +30,35 @@ export async function getDeck(id: number) {
   throw new Error('Failed fetching deck')
 }
 
-export function getDecks(filters: DeckFilters) {
+export async function getDecks(filters: DeckFilters) {
+  // biome-ignore lint: supabase query builder is hard to type
+  let tbl: any = supabase
+
   if (filters.kind === 'my') {
-    return getMyDecks(filters)
+    tbl = tbl.from('decks').select('*')
   } else if (filters.kind === 'liked') {
-    return getLikedDecks(filters)
+    tbl = tbl.from('deck_likes').select('*, public_decks!id(*)')
   } else if (filters.kind === 'community') {
-    return getPublicDecks(filters)
+    tbl = tbl.from('public_decks').select('*')
+  }
+
+  const col_prefix = filters.kind === 'liked' ? 'public_decks.' : ''
+
+  if (filters.energy.length > 0) {
+    tbl = tbl.contains(`${col_prefix}energy`, filters.energy)
+  }
+
+  const { data, error } = await tbl.range(filters.page * pageSize, (filters.page + 1) * pageSize - 1)
+  if (error) {
+    throw new Error(`Failed fetching decks: ${error.message}`)
+  }
+
+  if (filters.kind === 'liked') {
+    // biome-ignore lint: joins are hard to type
+    return data.map((row: any) => ({ ...row.public_decks, is_public: true })) as Deck[]
   } else {
-    throw new Error('Unrecognized deck `filters.kind`')
+    return data as Deck[]
   }
-}
-
-async function getMyDecks(filters: DeckFilters) {
-  const { data, error } = await supabase
-    .from('decks')
-    .select('*')
-    .contains('energy', filters.energy)
-    .range(filters.page * pageSize, (filters.page + 1) * pageSize - 1)
-  if (error) {
-    throw new Error(`Failed fetching user decks: ${error.message}`)
-  }
-  return data as Deck[]
-}
-
-async function getLikedDecks(filters: DeckFilters) {
-  const { data, error } = await supabase
-    .from('deck_likes')
-    .select('*, public_decks!id(*)')
-    .contains('public_decks.energy', filters.energy)
-    .range(filters.page * pageSize, (filters.page + 1) * pageSize - 1)
-  if (error) {
-    throw new Error(`Failed fetching liked decks: ${error.message}`)
-  }
-  return data.map((x) => ({ ...x.public_decks, is_public: true })) as Deck[]
-}
-
-async function getPublicDecks(filters: DeckFilters) {
-  const { data, error } = await supabase
-    .from('public_decks')
-    .select('*')
-    .contains('energy', filters.energy)
-    .order('likes', { ascending: false })
-    .range(filters.page * pageSize, (filters.page + 1) * pageSize - 1)
-  if (error) {
-    throw new Error(`Failed fetching public decks: ${error.message}`)
-  }
-  return data.map((x) => ({ ...x, is_public: true })) as Deck[]
 }
 
 export async function updateDeck(deck: Deck) {
