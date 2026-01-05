@@ -1,7 +1,10 @@
+import { zodResolver } from '@hookform/resolvers/zod'
 import { SquareMinus, SquarePlus, Trash2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { useForm } from 'react-hook-form'
 import { useMediaQuery } from 'react-responsive'
 import { useLocation, useNavigate, useParams } from 'react-router'
+import z from 'zod'
 import { CardLine } from '@/components/CardLine'
 import { CardsTable } from '@/components/CardsTable'
 import FancyCard from '@/components/FancyCard'
@@ -9,6 +12,7 @@ import { ToggleFilter } from '@/components/Filters'
 import FiltersPanel from '@/components/FiltersPanel'
 import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { showCardType } from '@/components/utils'
@@ -84,6 +88,19 @@ export default function DeckBuilder() {
   const cards = getDeckCardCounts(deck.cards)
   const missingCards = ownedCards ? getMissingCardsCount(cards, ownedCards) : 0
 
+  const formSchema = z.object({
+    id: z.number().optional(),
+    is_public: z.boolean(),
+    name: z.string().min(4, { message: 'Name too short' }),
+    energy: z.array(z.enum(energies)).min(1),
+    cards: z.array(z.number()).length(20),
+  })
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    values: deck,
+  })
+
   const addCard = (id: number) => {
     setDeck((deck) => ({ ...deck, cards: [...deck.cards, id] }))
   }
@@ -99,7 +116,7 @@ export default function DeckBuilder() {
     })
   }
 
-  const onSave = () => {
+  const onSave = (deck: Deck) => {
     updateDeckMutation.mutateAsync(deck, {
       onSuccess: (savedDeck) => {
         console.log(savedDeck)
@@ -140,75 +157,108 @@ export default function DeckBuilder() {
   }
 
   const deckNode = (
-    <div className="flex flex-col [&>h2]:text-lg [&>h2:not(:first-child)]:mt-2">
-      <h2>Title</h2>
-      <Input className="bg-neutral-800" type="text" value={deck.name} onChange={(e) => setDeck((deck) => ({ ...deck, name: e.target.value }))} />
-      <h2>Energy</h2>
-      <ToggleFilter options={energies} value={deck.energy} onChange={(energy) => setDeck((deck) => ({ ...deck, energy }))} show={showCardType} />
-      <h2>Cards</h2>
-      <p className="text-neutral-400">
-        <span className={`${deck.cards.length < 20 ? 'text-red-300' : ''}`}>{deck.cards.length}</span>
-        <span className="text-sm">/20 cards</span>
-        {missingCards > 0 && <span className="text-sm"> ({missingCards} missing)</span>}
-      </p>
-      <ul className="overflow-y-auto space-y-1">
-        {cards.map(([id, amount]) => {
-          const card = getCardByInternalId(id)
-          if (!card) {
-            return null
-          }
-          const amount_owned = ownedCards && card.alternate_versions.reduce((acc, curr) => acc + (ownedCards.get(curr)?.amount_owned ?? 0), 0)
-          const owned = amount_owned !== undefined && amount_owned < amount
-          return (
-            <li key={id} className="flex gap-1 rounded">
-              <button type="button" className="enabled:cursor-pointer" onClick={() => removeCard(id)}>
-                <SquareMinus className="size-5" />
-              </button>
-              <button type="button" className="enabled:cursor-pointer disabled:opacity-50" onClick={() => addCard(id)} disabled={amount >= 2}>
-                <SquarePlus className="size-5" />
-              </button>
-              <b className="mx-2">{amount}×</b>
-              <CardLine
-                className={`w-full ${owned ? 'bg-red-950' : ''}`}
-                card_id={getCardByInternalId(id)?.card_id as string}
-                id="hidden"
-                amount={owned ? 'text-red-300' : ''}
-                amount_owned={amount_owned}
-              />
-            </li>
-          )
-        })}
-      </ul>
-      <div className="flex items-center gap-x-2 mt-2">
-        <input
-          className="size-5"
-          name="is_public"
-          type="checkbox"
-          checked={deck.is_public}
-          onChange={() => setDeck((deck) => ({ ...deck, is_public: !deck.is_public }))}
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSave)} className="flex flex-col">
+        <FormField
+          control={form.control}
+          name="name"
+          render={() => (
+            <FormItem>
+              <FormLabel>Title</FormLabel>
+              <FormControl>
+                <Input className="bg-neutral-800" type="text" value={deck.name} onChange={(e) => setDeck((deck) => ({ ...deck, name: e.target.value }))} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
-        <label htmlFor="is_public">Public</label>
-      </div>
-      <div className="flex justify-between mt-2">
-        <Button
-          className="w-fit"
-          onClick={onSave}
-          disabled={updateDeckMutation.isPending || deleteDeckMutation.isPending}
-          isPending={updateDeckMutation.isPending}
-        >
-          Save
-        </Button>
-        <Button
-          variant="destructive"
-          className="w-fit"
-          onClick={onDelete}
-          disabled={!deck.id || updateDeckMutation.isPending || deleteDeckMutation.isPending}
-          isPending={deleteDeckMutation.isPending}
-        >
-          Delete
-        </Button>
-      </div>
-    </div>
+        <FormField
+          control={form.control}
+          name="energy"
+          render={() => (
+            <FormItem>
+              <FormLabel>Energy</FormLabel>
+              <FormControl>
+                <ToggleFilter options={energies} value={deck.energy} onChange={(energy) => setDeck((deck) => ({ ...deck, energy }))} show={showCardType} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="cards"
+          render={() => (
+            <FormItem>
+              <FormLabel>Cards</FormLabel>
+              <p className="text-neutral-400">
+                <span className={`${deck.cards.length < 20 ? 'text-red-300' : ''}`}>{deck.cards.length}</span>
+                <span className="text-sm">/20 cards</span>
+                {missingCards > 0 && <span className="text-sm"> ({missingCards} missing)</span>}
+              </p>
+              <ul className="overflow-y-auto space-y-1">
+                {cards.map(([id, amount]) => {
+                  const card = getCardByInternalId(id)
+                  if (!card) {
+                    return null
+                  }
+                  const amount_owned = ownedCards && card.alternate_versions.reduce((acc, curr) => acc + (ownedCards.get(curr)?.amount_owned ?? 0), 0)
+                  const owned = amount_owned !== undefined && amount_owned < amount
+                  return (
+                    <li key={id} className="flex gap-1 rounded">
+                      <button type="button" className="enabled:cursor-pointer" onClick={() => removeCard(id)}>
+                        <SquareMinus className="size-5" />
+                      </button>
+                      <button type="button" className="enabled:cursor-pointer disabled:opacity-50" onClick={() => addCard(id)} disabled={amount >= 2}>
+                        <SquarePlus className="size-5" />
+                      </button>
+                      <b className="mx-2">{amount}×</b>
+                      <CardLine
+                        className={`w-full ${owned ? 'bg-red-950' : ''}`}
+                        card_id={getCardByInternalId(id)?.card_id as string}
+                        id="hidden"
+                        amount={owned ? 'text-red-300' : ''}
+                        amount_owned={amount_owned}
+                      />
+                    </li>
+                  )
+                })}
+              </ul>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="flex items-center gap-x-2 mt-2">
+          <input
+            className="size-5"
+            name="is_public"
+            type="checkbox"
+            checked={deck.is_public}
+            onChange={() => setDeck((deck) => ({ ...deck, is_public: !deck.is_public }))}
+          />
+          <label htmlFor="is_public">Public</label>
+        </div>
+        <div className="flex justify-between mt-2">
+          <Button
+            type="submit"
+            className="w-fit"
+            disabled={updateDeckMutation.isPending || deleteDeckMutation.isPending}
+            isPending={updateDeckMutation.isPending}
+          >
+            Save
+          </Button>
+          <Button
+            variant="destructive"
+            className="w-fit"
+            onClick={onDelete}
+            disabled={!deck.id || updateDeckMutation.isPending || deleteDeckMutation.isPending}
+            isPending={deleteDeckMutation.isPending}
+          >
+            Delete
+          </Button>
+        </div>
+      </form>
+    </Form>
   )
 
   return (
