@@ -166,7 +166,13 @@ export default function DeckBuilder() {
             <FormItem>
               <FormLabel>Title</FormLabel>
               <FormControl>
-                <Input className="bg-neutral-800" type="text" value={deck.name} onChange={(e) => setDeck((deck) => ({ ...deck, name: e.target.value }))} />
+                <Input
+                  className="bg-neutral-800"
+                  type="text"
+                  placeholder="Name your deck..."
+                  value={deck.name}
+                  onChange={(e) => setDeck((deck) => ({ ...deck, name: e.target.value }))}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
