@@ -1,7 +1,7 @@
 import { Slot } from '@radix-ui/react-slot'
 import { useQuery } from '@tanstack/react-query'
-import { ChevronRight, Heart, HeartMinus, HeartPlus } from 'lucide-react'
-import { Link, useLocation, useParams } from 'react-router'
+import { ChevronLeft, ChevronRight, Heart, HeartMinus, HeartPlus } from 'lucide-react'
+import { Link, useLocation, useNavigate, useParams } from 'react-router'
 import { CardLine } from '@/components/CardLine'
 import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
@@ -17,6 +17,7 @@ import { getDeckCardCounts, getMissingCardsCount } from './utils'
 export default function DeckView() {
   const { id: deckId } = useParams()
   const location = useLocation()
+  const navigate = useNavigate()
 
   const { data: account } = useAccount()
   const { data: ownedCards } = useCollection()
@@ -49,7 +50,11 @@ export default function DeckView() {
       <h2 className="text-lg font-semibold">{deck.name}</h2>
       <div className="flex items-center gap-2">
         <h3>Energy</h3>
-        <span className="inline-flex gap-1">{deck.energy.map(showCardType)}</span>
+        <span className="inline-flex gap-1">
+          {deck.energy.map((x) => (
+            <span key={x}>{showCardType(x)}</span>
+          ))}
+        </span>
       </div>
       <h3>Cards {missingCards > 0 && <span className="text-neutral-400 text-sm"> ({missingCards} missing)</span>}</h3>
       <ul className="overflow-y-auto space-y-1">
@@ -74,7 +79,7 @@ export default function DeckView() {
           )
         })}
       </ul>
-      <div className="flex items-center mt-2">
+      <div className="flex items-center mt-2 justify-between">
         {deck.is_public ? (
           deck.email !== undefined && deck.email === account?.email ? (
             <p className="flex items-center gap-1">
@@ -97,12 +102,19 @@ export default function DeckView() {
         ) : (
           <span className="italic text-neutral-400 text-sm">Private</span>
         )}
-        <Link className="ml-auto" to={`/decks/edit/${isOwn ? deck.id : ''}`} state={isOwn ? deck : { ...deck, id: undefined }}>
-          <Button>
-            {isOwn ? 'Edit' : 'Copy and edit'}
-            <ChevronRight />
+
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" onClick={() => navigate(-1)}>
+            <ChevronLeft /> Back
           </Button>
-        </Link>
+
+          <Link to={`/decks/edit/${isOwn ? deck.id : ''}`} state={isOwn ? deck : { ...deck, id: undefined }}>
+            <Button>
+              {isOwn ? 'Edit' : 'Copy and edit'}
+              <ChevronRight />
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   )

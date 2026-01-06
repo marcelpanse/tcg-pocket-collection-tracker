@@ -1,7 +1,7 @@
 import { supabase } from '@/lib/supabase'
 import type { Deck, Energy } from '@/types'
 
-export const deckKinds = ['my', 'liked', 'community'] as const
+export const deckKinds = ['popular', 'liked', 'my'] as const
 
 export interface DeckFilters {
   kind: (typeof deckKinds)[number]
@@ -15,13 +15,13 @@ export async function getDeck(id: number) {
   2. Public decks have column `likes`, which private decks don't, and private decks have column `email` which public don't.
      So to have both columns for a user looking at his public deck, we need to merge the results.
   */
-  const [personal, community] = await Promise.all([
+  const [personal, popular] = await Promise.all([
     supabase.from('decks').select('*').eq('id', id).maybeSingle(),
     supabase.from('public_decks').select('*').eq('id', id).maybeSingle(),
   ])
   let res = {}
-  if (!community.error && !!community.data) {
-    res = { ...res, ...community.data, is_public: true }
+  if (!popular.error && !!popular.data) {
+    res = { ...res, ...popular.data, is_public: true }
   }
   if (!personal.error && !!personal.data) {
     res = { ...res, ...personal.data }
@@ -30,7 +30,7 @@ export async function getDeck(id: number) {
     // at least one query succeded
     return res as Deck
   }
-  console.error('supabase error?', personal.error, community.error)
+  console.error('supabase error?', personal.error, popular.error)
   throw new Error('Failed fetching deck')
 }
 
@@ -43,7 +43,7 @@ export async function getDecks(filters: DeckFilters) {
     tbl = tbl.from('decks').select('*', { count: 'exact' })
   } else if (filters.kind === 'liked') {
     tbl = tbl.from('deck_likes').select('*, public_decks!id(*)', { count: 'exact' })
-  } else if (filters.kind === 'community') {
+  } else if (filters.kind === 'popular') {
     tbl = tbl.from('public_decks').select('*', { count: 'exact' }).order('likes', { ascending: false })
   }
 

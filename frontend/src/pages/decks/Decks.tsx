@@ -1,6 +1,6 @@
 import { ChevronFirst, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
-import { Link } from 'react-router'
+import { Link, useNavigate, useParams } from 'react-router'
 import ErrorAlert from '@/components/ErrorAlert'
 import { TabsFilter, ToggleFilter } from '@/components/Filters'
 import { Spinner } from '@/components/Spinner'
@@ -12,8 +12,17 @@ import { energies } from '@/types'
 import { DeckItem } from './DeckItem'
 
 export default function Decks() {
-  const [filters, setFilters] = useState<DeckFilters>({ kind: 'my', page: 0, energy: [] })
+  const navigate = useNavigate()
+  const { kind } = useParams<{ kind: DeckFilters['kind'] }>()
+  const validKind = kind && deckKinds.includes(kind) ? kind : 'popular'
+
+  const [filters, setFilters] = useState<DeckFilters>({ kind: validKind, page: 0, energy: [] })
   const { data, isLoading, isError, error } = useDecksSearch(filters)
+
+  const handleKindChange = (newKind: DeckFilters['kind']) => {
+    setFilters((prev) => ({ ...prev, kind: newKind, page: 0 }))
+    navigate(`/decks/filter/${newKind}`, { replace: true })
+  }
 
   return (
     <div className="flex gap-4 flex-col sm:flex-row sm:w-fit mx-auto px-1">
@@ -28,7 +37,7 @@ export default function Decks() {
           className="w-full"
           options={deckKinds}
           value={filters.kind}
-          onChange={(kind) => setFilters((prev) => ({ ...prev, kind }))}
+          onChange={handleKindChange}
           show={(kind) => `${kind.charAt(0).toUpperCase() + kind.slice(1)} decks`}
         />
         <ToggleFilter options={energies} value={filters.energy} onChange={(energy) => setFilters((prev) => ({ ...prev, energy }))} show={showCardType} />
