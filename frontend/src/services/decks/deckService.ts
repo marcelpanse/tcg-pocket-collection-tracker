@@ -11,8 +11,8 @@ export interface DeckFilters {
 
 export async function getDeck(id: number) {
   /* This function might look weird, but there are two reasons why it's like this:
-  1. We want to support the path `/decks/:id` for both private and public decks, and we can't deduce thich one it is beforehand.
-  2. Public decks have column `likes`, which private decks don't, and private decks have column `email` which public don't.
+  1. We want to support the path `/decks/:id` for both private and public decks, and we can't deduce which one it is beforehand.
+  2. Public decks have column `likes`, which private decks don't, and private decks have column `email` which public decks don't.
      So to have both columns for a user looking at his public deck, we need to merge the results.
   */
   const [personal, popular] = await Promise.all([
@@ -27,7 +27,7 @@ export async function getDeck(id: number) {
     res = { ...res, ...personal.data }
   }
   if (Object.keys(res).length > 0) {
-    // at least one query succeded
+    // at least one query succeeded
     return res as Deck
   }
   console.error('supabase error?', personal.error, popular.error)
@@ -69,9 +69,12 @@ export async function getDecks(filters: DeckFilters) {
 }
 
 export async function updateDeck(deck: Deck) {
+  const now = new Date()
+  const nowString = now.toISOString()
+
   const { data, error } = await supabase
     .from('decks')
-    .upsert({ ...deck, likes: undefined })
+    .upsert({ ...deck, updated_at: nowString, likes: undefined })
     .select()
     .single()
   if (error) {
