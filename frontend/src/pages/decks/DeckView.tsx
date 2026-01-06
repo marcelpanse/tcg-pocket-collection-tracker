@@ -80,9 +80,13 @@ export default function DeckView() {
         })}
       </ul>
       <div className="flex items-center justify-center gap-1 mt-2 text-sm text-neutral-400">
-        <span>Created {new Date(deck.created_at).toLocaleDateString() ?? 'N/A'}</span>
-        <span>by</span>
-        <span>{deck.username}</span>
+        <span>Created on {deck.created_at ? new Date(deck.created_at).toLocaleDateString() : 'N/A'}</span>
+        {deck.username && (
+          <>
+            <span>by</span>
+            <span>{deck.username}</span>
+          </>
+        )}
       </div>
       <div className="flex items-center mt-2 justify-between">
         {deck.is_public ? (

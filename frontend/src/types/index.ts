@@ -171,12 +171,12 @@ export interface MissionCard {
 export interface Deck {
   id?: number
   email?: string
-  username: string
+  username?: string
   likes?: number
   is_public: boolean
   name: string
   energy: Energy[]
   cards: number[]
-  created_at: string
-  updated_at: string
+  created_at?: string
+  updated_at?: string
 }
