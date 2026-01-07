@@ -3,6 +3,8 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import Backend from 'i18next-http-backend'
 import { initReactI18next } from 'react-i18next'
 
+export const allLocales = ['en-US', 'es-ES', 'pt-BR', 'fr-FR', 'it-IT', 'de-DE']
+
 i18n
   .use(Backend)
   .use(initReactI18next)
@@ -14,7 +16,7 @@ i18n
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
-    supportedLngs: ['en-US', 'es-ES', 'pt-BR', 'fr-FR', 'it-IT', 'de-DE'],
+    supportedLngs: allLocales,
   })
 
 export default i18n
