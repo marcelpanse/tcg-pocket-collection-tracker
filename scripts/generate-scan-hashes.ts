@@ -98,7 +98,7 @@ function checkSimilar(hash1: ArrayBuffer | undefined, hash2: ArrayBuffer | undef
   } else if (hash1 === undefined || hash2 === undefined) {
     return false
   } else {
-    return calculateSimilarity(hash1, hash2) > 0.99
+    return calculateSimilarity(hash1, hash2) > 0.97
   }
 }
 
