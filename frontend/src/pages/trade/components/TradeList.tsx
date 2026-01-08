@@ -113,7 +113,13 @@ function TradeList({ trades }: Props) {
         }
         return (
           <>
-            <Button type="button" onClick={() => increment(row)}>
+            <Button
+              type="button"
+              onClick={async () => {
+                await increment(row)
+                await end()
+              }}
+            >
               {t('actionUpdate')}
             </Button>
             <Button type="button" onClick={end}>
