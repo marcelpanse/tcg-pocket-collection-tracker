@@ -8,14 +8,14 @@ on:
     paths:
       - 'frontend/public/images/**'
       - 'frontend/public/hashes/**'
-      - 'frontend/assets/cards/**'
+      - 'frontend/assets/cards.json'
       - 'package.json'
       - 'pnpm-lock.yaml'
   pull_request:
     paths:
       - 'frontend/public/images/**'
       - 'frontend/public/hashes/**'
-      - 'frontend/assets/cards/**'
+      - 'frontend/assets/cards.json'
       - 'package.json'
       - 'pnpm-lock.yaml'
 jobs:

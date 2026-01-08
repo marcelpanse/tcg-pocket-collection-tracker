@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import { I18nextProvider } from 'react-i18next'
 import App from './App.tsx'
-import i18n from './i18n.tsx'
+import i18n from './i18n'
 import './index.css'
 import './registerServiceWorker.js'
 

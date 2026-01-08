@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { parseArgs } from 'node:util'
 import sharp from 'sharp'
+import { allLocales } from '../frontend/src/i18n'
 import { allCards, getCardByInternalId } from '../frontend/src/lib/CardsDB'
 import { calculatePerceptualHash, calculateSimilarity, hashSize } from '../frontend/src/lib/hash'
 import { chunk } from '../frontend/src/lib/utils'
@@ -12,7 +13,6 @@ console.log(`Using libwebp ${sharp.versions.webp}`)
 
 const imagesDir = 'frontend/public/images'
 const targetDir = 'frontend/public/hashes'
-const locales = ['en-US', 'es-ES', 'fr-FR', 'it-IT', 'pt-BR']
 
 const { values } = parseArgs({
   options: {
@@ -81,7 +81,7 @@ async function generateHash(id: number, locale: string) {
 
 const hashes = Object.fromEntries(
   await Promise.all(
-    locales.map(async (x) => {
+    allLocales.map(async (x) => {
       try {
         const data = await fs.promises.readFile(hashPath(x), 'utf8')
         return [x, JSON.parse(data)]
@@ -98,7 +98,7 @@ function checkSimilar(hash1: ArrayBuffer | undefined, hash2: ArrayBuffer | undef
   } else if (hash1 === undefined || hash2 === undefined) {
     return false
   } else {
-    return calculateSimilarity(hash1, hash2) > 0.99
+    return calculateSimilarity(hash1, hash2) > 0.97
   }
 }
 
@@ -130,7 +130,7 @@ const handleCard = async (id: number, locale: string) => {
 
 const all_ids = [...new Set(allCards.map((c) => c.internal_id))]
 
-for (const locale of locales) {
+for (const locale of allLocales) {
   console.log(`\nProcessing locale: ${locale}`)
   const chunks = chunk(all_ids, 10)
   let processed = 0
@@ -138,8 +138,9 @@ for (const locale of locales) {
   for (const ids of chunks) {
     await Promise.all(ids.map((id) => handleCard(id, locale)))
     processed += ids.length
-    console.log(`Progress: ${processed}/${all_ids.length} cards (${Math.round((processed / all_ids.length) * 100)}%)`)
+    process.stdout.write(`\rProgress: ${processed}/${all_ids.length} cards (${((100 * processed) / all_ids.length).toFixed()}%)`)
   }
+  console.log()
 }
 
 if (values.verify) {
