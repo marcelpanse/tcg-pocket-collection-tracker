@@ -40,7 +40,7 @@ const sortComparators: Record<SortByOption, (a: Card, b: Card) => number> = {
     return a.card_id.localeCompare(b.card_id, i18n.language || 'en', { numeric: true })
   },
   rarity: (a, b) => (a.internal_id & 63) - (b.internal_id & 63),
-  type: (a, b) => cardTypeOptions.indexOf(a.card_type) - cardTypeOptions.indexOf(b.card_type),
+  type: (a, b) => cardTypeOptions.indexOf(a.energy) - cardTypeOptions.indexOf(b.energy),
   recent: (a, b) => {
     if (a.updated_at && b.updated_at) {
       return b.updated_at.getTime() - a.updated_at.getTime()

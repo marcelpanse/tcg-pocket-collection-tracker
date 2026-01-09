@@ -117,7 +117,7 @@ export interface Card {
   name: string
   hp?: number
   energy: CardType
-  card_type: CardType
+  card_type: 'pokémon' | 'trainer'
   evolution_type: string
   image: string
   attacks: {
