@@ -117,7 +117,7 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
     if (filters.sortBy === 'recent') {
       filteredCards.sort((a, b) => {
         if (a.updated_at && b.updated_at) {
-          return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+          return b.updated_at.getTime() - a.updated_at.getTime()
         } else if (a.updated_at && !b.updated_at) {
           return -1
         } else {
