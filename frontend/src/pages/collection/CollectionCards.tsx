@@ -43,6 +43,7 @@ const filterParsers: { [K in keyof FiltersAll]: (s: string) => Filters[K] | unde
   ownership: (s) => ((ownershipOptions as readonly string[]).includes(s) ? (s as Filters['ownership']) : undefined),
   trading: (s) => ((tradingOptions as readonly string[]).includes(s) ? (s as Filters['trading']) : undefined),
   sortBy: (s) => ((sortByOptions as readonly string[]).includes(s) ? (s as Filters['sortBy']) : undefined),
+  sortDesc: boolParser,
   minNumber: numberParser,
   maxNumber: numberParser,
   deckbuildingMode: boolParser,
@@ -65,6 +66,7 @@ const defaultFilters: Filters = {
   ownership: 'all',
   trading: 'all',
   sortBy: 'expansion-newest',
+  sortDesc: false,
   minNumber: 0,
   maxNumber: '∞',
   deckbuildingMode: false,
@@ -274,7 +276,7 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
         {children}
         <CardsTable
           cards={filteredCards}
-          groupExpansions={filters().sortBy !== 'recent'}
+          groupExpansions={filters().sortBy === 'expansion-newest'}
           render={(c) => <Card card={c} editable={!filters().deckbuildingMode && !isPublic} />}
         />
       </div>

@@ -117,7 +117,7 @@ export interface Card {
   name: string
   hp?: number
   energy: CardType
-  card_type: string
+  card_type: CardType
   evolution_type: string
   image: string
   attacks: {
