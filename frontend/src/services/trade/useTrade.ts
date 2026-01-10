@@ -1,4 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { getCardByInternalId } from '@/lib/CardsDB'
 import { supabase } from '@/lib/supabase'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { getActiveTrades, getTradingPartners, insertTrade, updateTrade } from '@/services/trade/tradeService.ts'
@@ -15,12 +16,13 @@ export function useActiveTrades() {
   })
 }
 
-export function useTradingPartners(enabled: boolean, cardId: number | undefined) {
+export function useTradingPartners(cardId: number | undefined) {
   const { data: account } = useAccount()
   return useQuery({
     queryKey: ['trading-partners', cardId],
     queryFn: () => getTradingPartners(account?.email as string, cardId),
-    enabled: !!account && enabled,
+    enabled: !!account && (cardId === undefined || getCardByInternalId(cardId) !== undefined),
+    throwOnError: true,
   })
 }
 

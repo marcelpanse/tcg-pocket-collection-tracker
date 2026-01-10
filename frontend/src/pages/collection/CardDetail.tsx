@@ -2,6 +2,7 @@ import i18n from 'i18next'
 import { CircleHelp } from 'lucide-react'
 import { type ReactNode, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router'
 import { Tooltip } from 'react-tooltip'
 import { Card as CardComponent } from '@/components/Card'
 import { CardLine } from '@/components/CardLine'
@@ -13,7 +14,7 @@ import { craftingCost, getCardByInternalId, getExpansionById } from '@/lib/Cards
 import { pullRateForSpecificCard } from '@/lib/stats'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useDeleteCard, useSelectedCard } from '@/services/collection/useCollection'
-import type { Card, CollectionRow } from '@/types'
+import { type Card, type CollectionRow, tradableRarities } from '@/types'
 
 function CardProperty({ name, children }: { name: string; children: ReactNode }) {
   return (
@@ -74,16 +75,15 @@ export default function CardDetail() {
     }
   }
 
+  const setOpen = (open: boolean) => {
+    if (!open) {
+      setIsOpen(open)
+      setTimeout(() => setId(undefined), 300) // keep content when sliding out
+    }
+  }
+
   return (
-    <Sheet
-      open={Boolean(id) && isOpen}
-      onOpenChange={(open) => {
-        if (!open) {
-          setIsOpen(open)
-          setTimeout(() => setId(undefined), 300) // keep content when sliding out
-        }
-      }}
-    >
+    <Sheet open={Boolean(id) && isOpen} onOpenChange={setOpen}>
       <SheetContent className="transition-all duration-300 ease-in-out border-slate-600 overflow-y-auto w-full md:w-[725px]">
         <SheetHeader>
           <SheetTitle>
@@ -136,6 +136,12 @@ export default function CardDetail() {
                 </Radio>
               )}
             </div>
+
+            {card?.rarity && tradableRarities.includes(card.rarity as (typeof tradableRarities)[number]) && (
+              <Link to={`/trade/matches/results?card_id=${card?.internal_id}`} onClick={() => setOpen(false)}>
+                <Button>Find trades</Button>
+              </Link>
+            )}
 
             <div className="mt-8">
               <CardProperty name={t('text.expansion')}>{card?.expansion}</CardProperty>
