@@ -4,6 +4,7 @@ import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import TradeWith from '@/pages/trade/TradeWith.tsx'
 import TradeMatches from './TradeMatches'
+import TradeMatchesResults from './TradeMatchesResults.tsx'
 import TradeOffers from './TradeOffers'
 import TradeSettings from './TradeSettings.tsx'
 
@@ -23,9 +24,6 @@ function Trade() {
   return (
     <Tabs className="flex flex-col mx-auto max-w-[900px]" value={currentTab} onValueChange={(value) => navigate(`/trade/${value}`)}>
       <TabsList className="gap-4 mb-6 rounded-lg border-b-1 border-neutral-700 border-solid dark:bg-transparent pb-2">
-        <TabsTrigger className="text-md" value="cards">
-          {t('tabCards')}
-        </TabsTrigger>
         <TabsTrigger className="text-md" value="offers">
           {t('tabOffers')}
         </TabsTrigger>
@@ -38,9 +36,9 @@ function Trade() {
       </TabsList>
       <Routes>
         <Route path="/" element={<Navigate to="/trade/offers" replace />} />
-        <Route path="cards" element={<p>{t('movedToCollectionPage')}</p> /* TODO: remove the tab after 14.01.2026 */} />
         <Route path="offers" element={<TradeOffers />} />
         <Route path="matches" element={<TradeMatches />} />
+        <Route path="matches/results" element={<TradeMatchesResults />} />
         <Route path="settings" element={<TradeSettings />} />
         <Route path=":friendId" element={<TradeWith />} />
       </Routes>

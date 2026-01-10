@@ -73,6 +73,9 @@ function App() {
               <Outlet />
             </Suspense>
           </ErrorBoundary>
+          <ErrorBoundary fallback={null} onError={() => toast({ variant: 'destructive', description: 'Failed opening card details.' })}>
+            <CardDetail />
+          </ErrorBoundary>
           <EditProfile />
         </>
       ),
@@ -108,9 +111,6 @@ function App() {
         <RouterProvider router={router} />
         <InstallPrompt />
         <DonationPopup />
-        <ErrorBoundary fallback={null} onError={() => toast({ variant: 'destructive', description: 'Failed opening card details.' })}>
-          <CardDetail />
-        </ErrorBoundary>
         {/* Add React Query DevTools (only in development) */}
         {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
       </DialogContext.Provider>
