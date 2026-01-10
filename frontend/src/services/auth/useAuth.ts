@@ -26,7 +26,7 @@ export function useLogout() {
       await queryClient.invalidateQueries({ queryKey: ['user'] })
       await queryClient.invalidateQueries({ queryKey: ['account'] })
       await queryClient.invalidateQueries({ queryKey: ['collection'] })
-      await queryClient.invalidateQueries({ queryKey: ['trade'] })
+      await queryClient.invalidateQueries({ queryKey: ['trades'] })
       if (email) {
         removeLocalCacheItems(email)
       }
@@ -64,7 +64,7 @@ export function useVerifyOTP() {
       await queryClient.invalidateQueries({ queryKey: ['user'] })
       await queryClient.invalidateQueries({ queryKey: ['account'] })
       await queryClient.invalidateQueries({ queryKey: ['collection'] })
-      await queryClient.invalidateQueries({ queryKey: ['trade'] })
+      await queryClient.invalidateQueries({ queryKey: ['trades'] })
     },
   })
 }

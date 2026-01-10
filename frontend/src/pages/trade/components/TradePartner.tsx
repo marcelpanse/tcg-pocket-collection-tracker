@@ -1,35 +1,37 @@
+import { useQuery } from '@tanstack/react-query'
 import { ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
+import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button.tsx'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
 import TradeList from '@/pages/trade/components/TradeList.tsx'
 import { usePublicAccount } from '@/services/account/useAccount.ts'
-import { useTrades } from '@/services/trade/useTrade.ts'
+import { getAllTrades } from '@/services/trade/tradeService'
+import type { TradeRow } from '@/types'
 
 interface TradePartnerProps {
   friendId: string
+  activeTrades: TradeRow[]
 }
 
-function TradePartner({ friendId }: TradePartnerProps) {
+function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
   const { t } = useTranslation(['trade-matches', 'common'])
 
-  const { data: trades, isLoading: isLoadingTrades } = useTrades()
   const { data: friendAccount, isLoading: isLoadingAccount } = usePublicAccount(friendId)
 
   const [viewHistory, setViewHistory] = useState<boolean>(false)
+  const allTrades = useQuery({
+    queryKey: ['trades', friendId],
+    queryFn: () => getAllTrades(friendId),
+    enabled: viewHistory,
+  })
 
-  if (isLoadingTrades || isLoadingAccount) {
+  if (isLoadingAccount) {
     return null
   }
-
-  if (!trades) {
-    return <p className="text-xl text-center py-8">{t('common:error')}</p>
-  }
-
-  const partnerTrades = trades.filter((t) => t.offering_friend_id === friendId || t.receiving_friend_id === friendId)
 
   return (
     <div className="w-full">
@@ -52,7 +54,15 @@ function TradePartner({ friendId }: TradePartnerProps) {
           </Link>
         </span>
       </div>
-      {friendAccount !== null && <TradeList trades={partnerTrades} viewHistory={viewHistory} />}
+      {viewHistory ? (
+        allTrades.isLoading ? (
+          <Spinner size="md" />
+        ) : (
+          allTrades.data && <TradeList trades={allTrades.data} />
+        )
+      ) : (
+        <TradeList trades={activeTrades} />
+      )}
     </div>
   )
 }
