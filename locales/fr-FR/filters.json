@@ -4,7 +4,9 @@
     "sortBy": "Trier par",
     "default": "ID de carte",
     "recent": "Mise à jour récemment",
-    "expansion-newest": "Plus récent en premier"
+    "expansion-newest": "Plus récent en premier",
+    "rarity": "Rarity",
+    "type": "Type"
   },
   "f-number": {
     "numberCards": "Nombre d'exemplaire voulu",
@@ -22,5 +24,10 @@
     "registered": "Obtenues"
   },
   "carddex": "Card Dex",
-  "trading": "Échanges"
+  "trading": "Échanges",
+  "f-owned": {
+    "all": "All",
+    "owned": "Owned",
+    "missing": "Missing"
+  }
 }

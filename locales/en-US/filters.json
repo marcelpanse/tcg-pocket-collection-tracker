@@ -14,9 +14,10 @@
   },
   "f-sortBy": {
     "sortBy": "Sort By",
-    "default": "Card ID",
-    "recent": "Recently updated",
-    "expansion-newest": "Expansion newest first"
+    "expansion-newest": "Expansion newest first",
+    "rarity": "Rarity",
+    "type": "Type",
+    "recent": "Recently updated"
   },
   "f-number": {
     "numberCards": "Number of cards wanted",

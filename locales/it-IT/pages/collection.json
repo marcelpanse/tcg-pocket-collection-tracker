@@ -3,7 +3,9 @@
   "missionDetail": {
     "eligibleCards-singular": "Elenco delle carte idonee: {{options}} opzione",
     "eligibleCards-plural": "Elenco delle carte idonee: {{options}} opzioni",
-    "chanceFrom": "Probabilità da {{pack}}: {{chance}}%"
+    "chanceFrom": "Probabilità da {{pack}}: {{chance}}%",
+    "manuallyMarkedComplete": "Manually marked as completed",
+    "manuallyMarkComplete": "Manually mark as complete"
   },
   "filters": {
     "allFilters": "Tutti i filtri",
