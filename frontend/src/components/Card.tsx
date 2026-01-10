@@ -67,7 +67,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
       </button>
       <p
         className="w-full min-w-0 text-[12px] pt-2 text-center font-semibold leading-tight"
-        title={card.updated_at ? `Last update ${new Date(card.updated_at).toLocaleString()}` : undefined}
+        title={card.updated_at ? `Last update ${card.updated_at.toLocaleString()}` : undefined}
       >
         <span className="block md:inline">{card.card_id}</span>
         <span className="hidden md:inline"> – </span>

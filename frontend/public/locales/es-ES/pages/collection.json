@@ -5,7 +5,9 @@
   "missionDetail": {
     "eligibleCards-singular": "List of eligible cards: {{options}} option",
     "eligibleCards-plural": "List of eligible cards: {{options}} options",
-    "chanceFrom": "Chance from {{pack}}: {{chance}}%"
+    "chanceFrom": "Chance from {{pack}}: {{chance}}%",
+    "manuallyMarkedComplete": "Manually marked as completed",
+    "manuallyMarkComplete": "Manually mark as complete"
   },
   "filters": {
     "allFilters": "All filters",

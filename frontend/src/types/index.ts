@@ -37,8 +37,8 @@ export interface AccountRow {
 export interface CollectionRow {
   amount_owned: number
   email: string
-  created_at: string
-  updated_at: string
+  created_at: Date
+  updated_at: Date
   internal_id: number
 
   collection: string[] // array of cardIds
@@ -54,14 +54,14 @@ export interface CardAmountsRowUpdate {
   email: string
   amount_owned: number
   internal_id: number
-  updated_at: string
+  updated_at: Date
 }
 
 export interface CollectionRowUpdate {
   email: string
   card_id: string
   internal_id: number
-  updated_at: string
+  updated_at: Date
 }
 
 const tradeStatuses = ['offered', 'accepted', 'declined', 'finished'] as const
@@ -117,7 +117,7 @@ export interface Card {
   name: string
   hp?: number
   energy: CardType
-  card_type: string
+  card_type: 'pokémon' | 'trainer'
   evolution_type: string
   image: string
   attacks: {
@@ -142,7 +142,7 @@ export interface Card {
 
   amount_owned?: number // calculated from the card amounts table
   collected?: boolean // calculated from the card amounts table
-  updated_at?: string // calculated from the card amounts table
+  updated_at?: Date // calculated from the card amounts table
 }
 
 export interface ImportExportRow {

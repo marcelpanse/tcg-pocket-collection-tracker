@@ -1,3 +1,5 @@
+import { Slot } from '@radix-ui/react-slot'
+import { ArrowDownAZ, ArrowUpAZ } from 'lucide-react'
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
@@ -91,13 +93,25 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
         />
       )}
       {filters.sortBy !== undefined && (
-        <DropdownFilter
-          label={t('f-sortBy.sortBy', { ns: 'filters' })}
-          options={sortByOptions}
-          value={filters.sortBy}
-          onChange={changeFilter('sortBy')}
-          show={(x) => t(`f-sortBy.${x}`, { ns: 'filters' })}
-        />
+        <div className="flex gap-2">
+          <DropdownFilter
+            className="flex-1"
+            label={t('f-sortBy.sortBy', { ns: 'filters' })}
+            options={sortByOptions}
+            value={filters.sortBy}
+            onChange={changeFilter('sortBy')}
+            show={(x) => t(`f-sortBy.${x}`, { ns: 'filters' })}
+          />
+          {filters.sortDesc !== undefined && (
+            <button
+              type="button"
+              onClick={() => setFilters({ sortDesc: !filters.sortDesc })}
+              className="group h-auto aspect-square bg-neutral-800 hover:bg-neutral-600 rounded-md border border-neutral-700 flex items-center justify-center"
+            >
+              <Slot className="stroke-neutral-400 group-hover:stroke-neutral-300">{filters.sortDesc ? <ArrowUpAZ /> : <ArrowDownAZ />}</Slot>
+            </button>
+          )}
+        </div>
       )}
       {filters.minNumber !== undefined && (
         <DropdownFilter
