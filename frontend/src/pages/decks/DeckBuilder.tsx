@@ -31,6 +31,7 @@ const defaultFilters: Filters = {
   cardType: [],
   rarity: [],
   sortBy: 'expansion-newest',
+  sortDesc: false,
   allTextSearch: false,
 }
 

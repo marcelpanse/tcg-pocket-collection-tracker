@@ -4,7 +4,9 @@
     "sortBy": "Sortiere nach",
     "default": "Kartennummer",
     "recent": "Zuletzt hinzugefügt",
-    "expansion-newest": "Neueste Erweiterung"
+    "expansion-newest": "Neueste Erweiterung",
+    "rarity": "Rarity",
+    "type": "Type"
   },
   "f-number": {
     "numberCards": "Anzahl der gesuchten Karten",
@@ -22,5 +24,10 @@
     "extra": "For trade"
   },
   "carddex": "Card Dex",
-  "trading": "Trading"
+  "trading": "Trading",
+  "f-owned": {
+    "all": "All",
+    "owned": "Owned",
+    "missing": "Missing"
+  }
 }

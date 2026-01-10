@@ -1,15 +1,31 @@
 import { supabase } from '@/lib/supabase.ts'
 import type { TradePartners, TradeRow } from '@/types'
 
-export const getTrades = async () => {
-  const { data, error } = await supabase.from('trades').select().limit(35).order('updated_at', { ascending: false })
+export async function getActiveTrades(userFriendId: string) {
+  if (!userFriendId.match(/^\d{16}$/)) {
+    throw new Error('Error fetching active trades: Invalid friendId')
+  }
+  const { data, error } = await supabase
+    .from('trades')
+    .select()
+    .or(`and(offering_friend_id.eq.${userFriendId},offerer_ended.eq.false),and(receiving_friend_id.eq.${userFriendId},receiver_ended.eq.false)`)
 
   if (error) {
-    console.log('supa error', error)
-    throw new Error('Error fetching trades')
+    throw new Error(`Error fetching active trades: ${error.message}`)
   }
 
-  console.log('fetched trades', data)
+  return data.map((x) => ({ ...x, created_at: new Date(x.created_at), updated_at: new Date(x.updated_at) })) as TradeRow[]
+}
+
+export async function getAllTrades(friendId: string) {
+  if (!friendId.match(/^\d{16}$/)) {
+    throw new Error('Error fetching active trades: Invalid friendId')
+  }
+  const { data, error } = await supabase.from('trades').select().or(`offering_friend_id.eq.${friendId},receiving_friend_id.eq.${friendId}`)
+
+  if (error) {
+    throw new Error(`Error fetching active trades with ${friendId}: ${error.message}`)
+  }
 
   return data.map((x) => ({ ...x, created_at: new Date(x.created_at), updated_at: new Date(x.updated_at) })) as TradeRow[]
 }

@@ -1,11 +1,11 @@
 import i18n from '@/i18n'
-import { type CollectionRow, cardTypes, expansionIds, type Rarity, type RaritySettingsRow } from '@/types'
+import { type Card, type CollectionRow, cardTypes, expansionIds, type Rarity, type RaritySettingsRow } from '@/types'
 import { allCards, getCardByInternalId } from './CardsDB'
 import { levenshtein } from './levenshtein'
 import { getCardNameByLang, getExtraCards, getNeededCards } from './utils'
 
 export const expansionOptions = ['all', ...expansionIds] as const
-export const sortByOptions = ['expansion-newest', 'recent'] as const
+export const sortByOptions = ['expansion-newest', 'rarity', 'type', 'recent'] as const
 export const cardTypeOptions = cardTypes
 export const ownershipOptions = ['all', 'missing', 'registered'] as const
 export const tradingOptions = ['all', 'wanted', 'extra'] as const
@@ -24,12 +24,33 @@ export interface FiltersAll {
   ownership: OwnershipOptions
   trading: TradingOption
   sortBy: SortByOption
+  sortDesc: boolean
   minNumber: number
   maxNumber: number | '∞'
   deckbuildingMode: boolean
   allTextSearch: boolean
 }
 export type Filters = Partial<FiltersAll>
+
+const sortComparators: Record<SortByOption, (a: Card, b: Card) => number> = {
+  'expansion-newest': (a, b) => {
+    if (a.expansion !== b.expansion) {
+      return expansionIds.indexOf(a.expansion) - expansionIds.indexOf(b.expansion)
+    }
+    return a.card_id.localeCompare(b.card_id, i18n.language || 'en', { numeric: true })
+  },
+  rarity: (a, b) => (a.internal_id & 63) - (b.internal_id & 63),
+  type: (a, b) => cardTypeOptions.indexOf(a.energy) - cardTypeOptions.indexOf(b.energy),
+  recent: (a, b) => {
+    if (a.updated_at && b.updated_at) {
+      return b.updated_at.getTime() - a.updated_at.getTime()
+    } else if (a.updated_at && !b.updated_at) {
+      return -1
+    } else {
+      return 1
+    }
+  },
+}
 
 export function getFilteredCards(filters: Filters, cards: Map<number, CollectionRow>, tradingSettings?: RaritySettingsRow[]) {
   let filteredCards = allCards
@@ -114,24 +135,10 @@ export function getFilteredCards(filters: Filters, cards: Map<number, Collection
   }
 
   if (filters.sortBy !== undefined) {
-    if (filters.sortBy === 'recent') {
-      filteredCards.sort((a, b) => {
-        if (a.updated_at && b.updated_at) {
-          return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
-        } else if (a.updated_at && !b.updated_at) {
-          return -1
-        } else {
-          return 1
-        }
-      })
-    } else if (filters.sortBy === 'expansion-newest') {
-      filteredCards.sort((a, b) => {
-        if (a.expansion !== b.expansion) {
-          return expansionIds.indexOf(a.expansion) - expansionIds.indexOf(b.expansion)
-        }
-        return a.card_id.localeCompare(b.card_id, i18n.language || 'en', { numeric: true })
-      })
-    }
+    filteredCards.sort(sortComparators[filters.sortBy])
+  }
+  if (filters.sortDesc) {
+    filteredCards.reverse()
   }
 
   return filteredCards

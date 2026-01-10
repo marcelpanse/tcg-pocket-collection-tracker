@@ -9,7 +9,9 @@
     "sortBy": "Sort By",
     "default": "Card ID",
     "recent": "Recently updated",
-    "expansion-newest": "Expansion newest first"
+    "expansion-newest": "Expansion newest first",
+    "rarity": "Rarity",
+    "type": "Type"
   },
   "f-trading": {
     "all": "All",
@@ -22,5 +24,10 @@
     "registered": "Registered"
   },
   "carddex": "Card Dex",
-  "trading": "Trading"
+  "trading": "Trading",
+  "f-owned": {
+    "all": "All",
+    "owned": "Owned",
+    "missing": "Missing"
+  }
 }

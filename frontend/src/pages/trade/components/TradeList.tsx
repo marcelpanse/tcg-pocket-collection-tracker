@@ -12,10 +12,9 @@ import type { CardAmountUpdate, CollectionRow, TradeRow, TradeStatus } from '@/t
 
 interface Props {
   trades: TradeRow[]
-  viewHistory: boolean
 }
 
-function TradeList({ trades, viewHistory }: Props) {
+function TradeList({ trades }: Props) {
   const { t } = useTranslation('trade-matches')
   const { toast } = useToast()
 
@@ -23,10 +22,6 @@ function TradeList({ trades, viewHistory }: Props) {
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const updateCardsMutation = useUpdateCards()
 
-  function interesting(row: TradeRow) {
-    return (row.offering_friend_id === account?.friend_id && !row.offerer_ended) || (row.receiving_friend_id === account?.friend_id && !row.receiver_ended)
-  }
-  const filteredTrades = viewHistory ? trades.filter((x) => !interesting(x)) : trades.filter(interesting)
   const [selectedTradeId, setSelectedTradeId] = useState<number | undefined>(undefined)
   const updateTradeMutation = useUpdateTrade()
 
@@ -138,9 +133,9 @@ function TradeList({ trades, viewHistory }: Props) {
     }
   }
 
-  const selectedTrade = filteredTrades.find((r) => r.id === selectedTradeId)
+  const selectedTrade = trades.find((r) => r.id === selectedTradeId)
 
-  if (filteredTrades.length === 0) {
+  if (trades.length === 0) {
     return null
   }
 
@@ -151,7 +146,7 @@ function TradeList({ trades, viewHistory }: Props) {
         <h4 className="text-lg font-medium w-1/2 ml-8">{t('youReceive')}</h4>
       </div>
       <ul className="flex flex-col gap-2 md:gap-0">
-        {filteredTrades
+        {trades
           .toSorted((a, b) => (a.created_at > b.created_at ? -1 : 1))
           .map((x) => (
             <TradeListRow key={x.id} row={x} selectedTradeId={selectedTradeId} setSelectedTradeId={setSelectedTradeId} />

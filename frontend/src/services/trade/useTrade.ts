@@ -1,19 +1,23 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { getCardByInternalId } from '@/lib/CardsDB'
+import { supabase } from '@/lib/supabase'
 import { useAccount } from '@/services/account/useAccount.ts'
-import { getTrades, getTradingPartners, insertTrade, updateTrade } from '@/services/trade/tradeService.ts'
+import { getActiveTrades, getTradingPartners, insertTrade, updateTrade } from '@/services/trade/tradeService.ts'
 import type { TradeRow } from '@/types'
 
-export function useTrades() {
+export function useActiveTrades() {
+  const { data: account } = useAccount()
+  const friendId = account?.friend_id
   return useQuery({
-    queryKey: ['trade'],
-    queryFn: getTrades,
+    queryKey: ['trades'],
+    queryFn: () => getActiveTrades(friendId as string),
+    enabled: Boolean(friendId),
+    throwOnError: true,
   })
 }
 
 export function useTradingPartners(cardId: number | undefined) {
   const { data: account } = useAccount()
-
   return useQuery({
     queryKey: ['trading-partners', cardId],
     queryFn: () => getTradingPartners(account?.email as string, cardId),
@@ -29,9 +33,7 @@ export function useInsertTrade() {
 
   return useMutation({
     mutationFn: (trade: TradeRow) => insertTrade(trade),
-    onSuccess: async () => {
-      await queryClient.invalidateQueries({ queryKey: ['trade'] })
-    },
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['trades'] }),
   })
 }
 
@@ -40,52 +42,30 @@ export function useUpdateTrade() {
 
   return useMutation({
     mutationFn: ({ id, trade }: { id: number; trade: Partial<TradeRow> }) => updateTrade(id, trade),
-    onSuccess: async () => {
-      await queryClient.invalidateQueries({ queryKey: ['trade'] })
-      await queryClient.invalidateQueries({ queryKey: ['actionableTradeCount'] })
-    },
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['trades'] }),
   })
 }
 
 export function useActionableTradeCount() {
-  const { data: trades } = useTrades()
   const { data: account } = useAccount()
 
   return useQuery({
-    queryKey: ['actionableTradeCount', trades, account?.friend_id],
-    queryFn: () => {
-      console.log('openTrades', trades, account)
-      if (!account || !trades) {
-        console.log('no account or trades')
-        return 0
+    queryKey: ['trades', 'new'],
+    queryFn: async () => {
+      if (!account) {
+        throw new Error('Account is needed to fetch new trades')
       }
-
-      // trades where i'm the receiver but didn't accept/decline yet
-      const sentTrades = trades?.filter((t) => t.receiving_friend_id === account?.friend_id && t.status === 'offered')
-      console.log('sentTrades', sentTrades)
-
-      const nonCompletedTrades = trades?.filter((t) => {
-        if (t.status !== 'finished') {
-          return false //trade marked as completed
-        }
-
-        if (t.offering_friend_id === account?.friend_id && t.offerer_ended) {
-          return false //I initiated and also ended
-        }
-        if (t.receiving_friend_id === account?.friend_id && t.receiver_ended) {
-          return false //I received and also ended
-        }
-
-        if (!sentTrades?.includes(t)) {
-          return false //already counted in the sentTrades array, so don't count twice
-        }
-
-        return true
-      })
-
-      console.log('nonCompletedTrades', nonCompletedTrades)
-
-      return sentTrades?.length + nonCompletedTrades?.length
+      const { count, error } = await supabase
+        .from('trades')
+        .select('*', { count: 'exact', head: true })
+        .eq('status', 'offered')
+        .eq('receiving_friend_id', account?.friend_id)
+      if (error) {
+        console.log('supabase error', error)
+        throw new Error('Failed fetching new trades')
+      }
+      return count as number
     },
+    enabled: Boolean(account?.friend_id),
   })
 }

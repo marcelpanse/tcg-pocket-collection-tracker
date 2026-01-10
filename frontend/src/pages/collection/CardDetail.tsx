@@ -62,11 +62,11 @@ export default function CardDetail() {
   // if we draw from 'everypack' we need to take one of the packs to base calculations on
   const packName = card?.pack === 'everypack' ? expansion?.packs[0].name : card?.pack
 
-  const formatTimestamp = (timestamp: string) => {
+  const formatTimestamp = (date: Date) => {
     return new Intl.DateTimeFormat(undefined, {
       dateStyle: 'long',
       timeStyle: 'long',
-    }).format(new Date(timestamp))
+    }).format(date)
   }
 
   const handleUncollect = (cardId: string) => {

@@ -73,21 +73,20 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   }
 
   const now = new Date()
-  const nowString = now.toISOString()
 
   // Update collection records
   const collectionRows: CollectionRowUpdate[] = rowsToUpdate.map((row) => ({
     email,
     card_id: row.card_id,
     internal_id: row.internal_id,
-    updated_at: nowString,
+    updated_at: now,
   }))
   const amountRows: CardAmountsRowUpdate[] = rowsToUpdate
     .map((row) => ({
       email,
       internal_id: row.internal_id,
       amount_owned: row.amount_owned,
-      updated_at: nowString,
+      updated_at: now,
     }))
     //deduplicate amountRows on internal_id, needed for card csv import feature
     .filter((row, index, self) => index === self.findIndex((r) => r.internal_id === row.internal_id))
@@ -132,7 +131,7 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
     const rowFromCacheToUpdate = latestFromCache.find((r) => r.internal_id === row.internal_id)
     if (rowFromCacheToUpdate) {
       rowFromCacheToUpdate.amount_owned = row.amount_owned
-      rowFromCacheToUpdate.updated_at = nowString
+      rowFromCacheToUpdate.updated_at = now
 
       if (!rowFromCacheToUpdate.collection.includes(row.card_id)) {
         //collected a new card, so add it to the collection array
@@ -145,8 +144,8 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
       latestFromCache.push({
         internal_id: row.internal_id,
         email,
-        created_at: nowString,
-        updated_at: nowString,
+        created_at: now,
+        updated_at: now,
         collection: [row.card_id],
         amount_owned: row.amount_owned,
       })
@@ -206,7 +205,7 @@ export const deleteCard = async (email: string, cardId: string) => {
   const rowToUpdate = latestFromCache?.find((row) => row.collection.includes(cardId))
   if (rowToUpdate) {
     rowToUpdate.collection = rowToUpdate.collection.filter((id) => id !== cardId)
-    rowToUpdate.updated_at = now.toISOString()
+    rowToUpdate.updated_at = now
 
     updateCollectionCache(latestFromCache, email, now)
   }
@@ -222,33 +221,23 @@ async function fetchCollectionFromAPI(table: string, key: string, value: string)
   const { count, error } = await supabase.from(table).select('*', { count: 'exact', head: true }).eq(key, value)
 
   if (error) {
-    console.log(error)
     throw new Error(`Error fetching collection: ${error.message}`)
   }
 
-  if (!count) {
-    return []
-  }
-
-  return await fetchRange(table, key, value, count, 0, PAGE_SIZE)
+  return count ? await fetchRange(table, key, value, count, 0, PAGE_SIZE) : []
 }
 
 async function fetchRange(table: string, key: string, value: string, total: number, start: number, end: number): Promise<CollectionRow[]> {
   console.log('fetching range', total, start, end)
 
-  let select = `
-    *
-  `
+  let select = '*'
   if (!table.startsWith('public_')) {
-    select += `, collection (
-      card_id
-    )`
+    select += ', collection(card_id)'
   }
   const { data, error } = await supabase.from(table).select(select).eq(key, value).range(start, end)
 
   if (error) {
-    console.log('supabase error', error)
-    throw new Error('Error fetching collection range')
+    throw new Error(`Error fetching collection range: ${error.message}`)
   }
   const rows = data as unknown as CollectionRow[]
 
@@ -269,8 +258,6 @@ async function fetchRange(table: string, key: string, value: string, total: numb
     }
   }
 
-  console.log('fetched range', data)
-
   if (end < total) {
     return [...rows, ...(await fetchRange(table, key, value, total, end + 1, Math.min(total, end + PAGE_SIZE)))]
   } else {
@@ -287,7 +274,8 @@ function getCollectionFromCache(email: string): CollectionRow[] | null {
   try {
     const cachedData = localStorage.getItem(`${COLLECTION_CACHE_KEY}_${email}`)
     if (cachedData) {
-      return JSON.parse(cachedData)
+      const data = JSON.parse(cachedData) as CollectionRow[]
+      return data.map((row) => ({ ...row, updated_at: new Date(row.updated_at), created_at: new Date(row.created_at) }))
     }
   } catch (error) {
     console.error('Error retrieving collection from cache:', error)
@@ -295,8 +283,7 @@ function getCollectionFromCache(email: string): CollectionRow[] | null {
     // If parse error, try to clear the corrupted cache
     if (error instanceof SyntaxError) {
       try {
-        localStorage.removeItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
-        localStorage.removeItem(`${COLLECTION_CACHE_KEY}_${email}`)
+        removeLocalCacheItems(email)
         console.log('Cleared corrupted cache data')
       } catch (clearError) {
         console.error('Failed to clear corrupted cache:', clearError)
@@ -306,7 +293,7 @@ function getCollectionFromCache(email: string): CollectionRow[] | null {
   return null
 }
 
-function updateCollectionCache(collection: CollectionRow[], email: string, timestamp: Date | string) {
+function updateCollectionCache(collection: CollectionRow[], email: string, timestamp: Date) {
   if (!email) {
     return
   }
@@ -321,7 +308,7 @@ function updateCollectionCache(collection: CollectionRow[], email: string, times
     if (!timestamp) {
       console.trace('Timestamp is not available, cannot cache collection')
     } else {
-      // TODO: sometimes timestamp is a string, but I don't know why
+      // FIXIT: sometimes timestamp is a string, but I don't know why
       localStorage.setItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`, typeof timestamp === 'string' ? timestamp : timestamp.toISOString())
       localStorage.setItem(`${COLLECTION_CACHE_KEY}_${email}`, JSON.stringify(collection))
     }
