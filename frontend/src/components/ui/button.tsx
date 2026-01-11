@@ -33,9 +33,9 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   isPending?: boolean
 }
 
-export function Button({ className, variant, size, isPending, children, ...props }: ButtonProps) {
+export function Button({ className, variant, size, isPending, children, type, ...props }: ButtonProps) {
   return (
-    <button className={cn(buttonVariants({ variant, size }), className)} {...props}>
+    <button type={type ?? 'button'} className={cn(buttonVariants({ variant, size }), className)} {...props}>
       {children}
       {isPending && <Spinner size="inline" className="inline-block ml-2" />}
     </button>

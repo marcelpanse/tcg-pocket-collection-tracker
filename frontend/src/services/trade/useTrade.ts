@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { supabase } from '@/lib/supabase'
 import { useAccount } from '@/services/account/useAccount.ts'
-import { getActiveTrades, getTradingPartners, insertTrade, updateTrade } from '@/services/trade/tradeService.ts'
+import { getActiveTrades, getAllTrades, getTradingPartners, insertTrade, updateTrade } from '@/services/trade/tradeService.ts'
 import type { TradeRow } from '@/types'
 
 export function useActiveTrades() {
@@ -13,6 +13,14 @@ export function useActiveTrades() {
     queryFn: () => getActiveTrades(friendId as string),
     enabled: Boolean(friendId),
     throwOnError: true,
+  })
+}
+
+export function useAllTrades(friendId: string | undefined, page: number, enabled: boolean) {
+  return useQuery({
+    queryKey: ['trades', friendId, page],
+    queryFn: () => getAllTrades(friendId as string, page),
+    enabled: friendId !== undefined && enabled,
   })
 }
 

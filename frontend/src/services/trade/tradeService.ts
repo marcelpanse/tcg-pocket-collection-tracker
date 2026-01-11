@@ -17,17 +17,24 @@ export async function getActiveTrades(userFriendId: string) {
   return data.map((x) => ({ ...x, created_at: new Date(x.created_at), updated_at: new Date(x.updated_at) })) as TradeRow[]
 }
 
-export async function getAllTrades(friendId: string) {
+const pageSize = 15
+export async function getAllTrades(friendId: string, page: number) {
   if (!friendId.match(/^\d{16}$/)) {
     throw new Error('Error fetching active trades: Invalid friendId')
   }
-  const { data, error } = await supabase.from('trades').select().or(`offering_friend_id.eq.${friendId},receiving_friend_id.eq.${friendId}`)
+  const { data, count, error } = await supabase
+    .from('trades')
+    .select('*', { count: 'exact' })
+    .or(`offering_friend_id.eq.${friendId},receiving_friend_id.eq.${friendId}`)
+    .order('updated_at', { ascending: false })
+    .range(page * pageSize, (page + 1) * pageSize - 1)
 
   if (error) {
     throw new Error(`Error fetching active trades with ${friendId}: ${error.message}`)
   }
 
-  return data.map((x) => ({ ...x, created_at: new Date(x.created_at), updated_at: new Date(x.updated_at) })) as TradeRow[]
+  const trades = data.map((x) => ({ ...x, created_at: new Date(x.created_at), updated_at: new Date(x.updated_at) })) as TradeRow[]
+  return { trades, count, hasNext: (page + 1) * pageSize < (count ?? 0) }
 }
 
 export const insertTrade = async (trade: TradeRow) => {

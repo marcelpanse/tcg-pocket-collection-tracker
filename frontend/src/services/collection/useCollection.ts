@@ -37,7 +37,7 @@ export function useUpdateCards() {
 
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: ({ updates }: { updates: CardAmountUpdate[] }) => {
+    mutationFn: (updates: CardAmountUpdate[]) => {
       if (!email) {
         throw new Error('Email is required to update cards')
       }
@@ -51,8 +51,7 @@ export function useUpdateCards() {
     },
     onError: async (error) => {
       toast({ title: 'Error updating cards', description: error.message, variant: 'destructive' })
-      await queryClient.invalidateQueries({ queryKey: ['collection'] })
-      await queryClient.invalidateQueries({ queryKey: ['account'] })
+      await Promise.all([queryClient.invalidateQueries({ queryKey: ['collection'] }), queryClient.invalidateQueries({ queryKey: ['account'] })])
     },
   })
 }

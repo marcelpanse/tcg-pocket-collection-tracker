@@ -78,7 +78,7 @@ const InstallPrompt = () => {
     >
       <p className="pb-2">{t('install')}</p>
       <div className="justify-between flex">
-        <Button onClick={handleInstallClick} type="button" variant="default">
+        <Button onClick={handleInstallClick} variant="default">
           {t('accept')}
         </Button>
         <Button

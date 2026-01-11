@@ -1,138 +1,15 @@
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { Button } from '@/components/ui/button'
-import { useToast } from '@/hooks/use-toast.ts'
-import { getInteralIdByCardId } from '@/lib/CardsDB.ts'
-import { umami } from '@/lib/utils.ts'
+import { type ReactNode, useState } from 'react'
 import { TradeListRow } from '@/pages/trade/components/TradeListRow.tsx'
-import { useAccount } from '@/services/account/useAccount'
-import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
-import { useUpdateTrade } from '@/services/trade/useTrade.ts'
-import type { CardAmountUpdate, CollectionRow, TradeRow, TradeStatus } from '@/types'
+import type { TradeRow } from '@/types'
+import Actions from './Actions'
 
 interface Props {
+  children?: ReactNode
   trades: TradeRow[]
 }
 
-function TradeList({ trades }: Props) {
-  const { t } = useTranslation('trade-matches')
-  const { toast } = useToast()
-
-  const { data: account } = useAccount()
-  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
-  const updateCardsMutation = useUpdateCards()
-
+function TradeList({ children, trades }: Props) {
   const [selectedTradeId, setSelectedTradeId] = useState<number | undefined>(undefined)
-  const updateTradeMutation = useUpdateTrade()
-
-  if (!account) {
-    return null
-  }
-
-  const getAndIncrement = (card_id: string, increment: number): CardAmountUpdate => {
-    const internal_id = getInteralIdByCardId(card_id)
-    return { card_id, internal_id, amount_owned: (ownedCards.get(internal_id)?.amount_owned ?? 0) + increment }
-  }
-
-  const increment = async (row: TradeRow) => {
-    if (row.offer_card_id === row.receiver_card_id) {
-      return
-    }
-
-    if (row.offering_friend_id === account.friend_id) {
-      const updates = [getAndIncrement(row.offer_card_id, -1), getAndIncrement(row.receiver_card_id, 1)]
-      updateCardsMutation.mutate({ updates })
-      toast({ title: t('collectionUpdated'), variant: 'default' })
-    } else if (row.receiving_friend_id === account.friend_id) {
-      const updates = [getAndIncrement(row.offer_card_id, 1), getAndIncrement(row.receiver_card_id, -1)]
-      updateCardsMutation.mutate({ updates })
-      toast({ title: t('collectionUpdated'), variant: 'default' })
-    } else {
-      console.log(row, "can't match friend id")
-    }
-  }
-
-  const actions = (row: TradeRow) => {
-    const updateStatus = async (status: TradeStatus) => {
-      updateTradeMutation.mutate({ id: row.id, trade: { status: status } })
-      setSelectedTradeId(row.id)
-      umami(`Updated trade: ${status}`)
-    }
-
-    const end = async () => {
-      const trade =
-        row.offering_friend_id === account.friend_id ? { offerer_ended: true } : row.receiving_friend_id === account.friend_id ? { receiver_ended: true } : null
-      if (trade === null) {
-        console.log(row, " doesn't match your friend_id")
-        return
-      }
-      updateTradeMutation.mutate({ id: row.id, trade })
-
-      setSelectedTradeId(undefined)
-      umami('Updated trade: ended')
-    }
-
-    const i_ended = (row.offering_friend_id === account.friend_id && row.offerer_ended) || (row.receiving_friend_id === account.friend_id && row.receiver_ended)
-    switch (row.status) {
-      case 'offered':
-        return (
-          <>
-            {row.receiving_friend_id === account.friend_id && (
-              <Button type="button" onClick={async () => updateStatus('accepted')}>
-                {t('actionAccept')}
-              </Button>
-            )}
-            <Button type="button" onClick={async () => updateStatus('declined')}>
-              {row.receiving_friend_id === account.friend_id ? t('actionDecline') : t('actionCancel')}
-            </Button>
-          </>
-        )
-      case 'accepted':
-        return (
-          <>
-            <Button type="button" onClick={async () => updateStatus('finished')}>
-              {t('actionComplete')}
-            </Button>
-            <Button type="button" onClick={async () => updateStatus('declined')}>
-              {t('actionCancel')}
-            </Button>
-          </>
-        )
-      case 'declined':
-        if (i_ended) {
-          return null
-        }
-        return (
-          <Button type="button" onClick={end}>
-            {t('actionHide')}
-          </Button>
-        )
-      case 'finished':
-        if (i_ended) {
-          return null
-        }
-        return (
-          <>
-            <Button
-              type="button"
-              onClick={async () => {
-                await increment(row)
-                await end()
-              }}
-            >
-              {t('actionUpdate')}
-            </Button>
-            <Button type="button" onClick={end}>
-              {t('actionHide')}
-            </Button>
-          </>
-        )
-      default:
-        console.log(`Unknown trade status ${row.status}`)
-        return null
-    }
-  }
-
   const selectedTrade = trades.find((r) => r.id === selectedTradeId)
 
   if (trades.length === 0) {
@@ -141,10 +18,6 @@ function TradeList({ trades }: Props) {
 
   return (
     <div className="rounded-lg border-1 border-neutral-700 border-solid p-1 md:p-2">
-      <div className="hidden md:flex pr-1">
-        <h4 className="text-lg font-medium w-1/2 ml-8">{t('youGive')}</h4>
-        <h4 className="text-lg font-medium w-1/2 ml-8">{t('youReceive')}</h4>
-      </div>
       <ul className="flex flex-col gap-2 md:gap-0">
         {trades
           .toSorted((a, b) => (a.created_at > b.created_at ? -1 : 1))
@@ -152,7 +25,12 @@ function TradeList({ trades }: Props) {
             <TradeListRow key={x.id} row={x} selectedTradeId={selectedTradeId} setSelectedTradeId={setSelectedTradeId} />
           ))}
       </ul>
-      {selectedTrade && <div className="flex gap-4 text-center items-center mt-2">{actions(selectedTrade)}</div>}
+      {children}
+      {selectedTrade && (
+        <div className="flex gap-2 text-center items-center mt-2">
+          <Actions trade={selectedTrade} setSelected={setSelectedTradeId} />
+        </div>
+      )}
     </div>
   )
 }
