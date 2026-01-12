@@ -1,14 +1,24 @@
 import { supabase } from '@/lib/supabase.ts'
 import type { TradePartners, TradeRow } from '@/types'
 
-export async function getActiveTrades(userFriendId: string) {
+export async function getActiveTrades(userFriendId: string, friendFriendId?: string) {
   if (!userFriendId.match(/^\d{16}$/)) {
-    throw new Error('Error fetching active trades: Invalid friendId')
+    throw new Error('Error fetching active trades: Invalid user friendId')
   }
-  const { data, error } = await supabase
+
+  let tbl = supabase
     .from('trades')
     .select()
     .or(`and(offering_friend_id.eq.${userFriendId},offerer_ended.eq.false),and(receiving_friend_id.eq.${userFriendId},receiver_ended.eq.false)`)
+
+  if (friendFriendId !== undefined) {
+    if (!friendFriendId.match(/^\d{16}$/)) {
+      throw new Error('Error fetching active trades: Invalid friend friendId')
+    }
+    tbl = tbl.or(`offering_friend_id.eq.${friendFriendId},receiving_friend_id.eq.${friendFriendId}`)
+  }
+
+  const { data, error } = await tbl
 
   if (error) {
     throw new Error(`Error fetching active trades: ${error.message}`)

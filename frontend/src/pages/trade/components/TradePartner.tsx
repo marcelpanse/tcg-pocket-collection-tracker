@@ -23,7 +23,7 @@ function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
 
   const [viewHistory, setViewHistory] = useState(false)
   const [pageHistory, setPageHistory] = useState(0)
-  const allTrades = useAllTrades(friendId, pageHistory, viewHistory)
+  const allTrades = useAllTrades(friendId, viewHistory, pageHistory, viewHistory)
 
   if (isLoadingAccount) {
     return null

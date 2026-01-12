@@ -16,11 +16,20 @@ export function useActiveTrades() {
   })
 }
 
-export function useAllTrades(friendId: string | undefined, page: number, enabled: boolean) {
+export function useAllTrades(friendId: string | undefined, viewHistory: boolean, page: number, enabled: boolean) {
+  const { data: account } = useAccount()
+  const userFriendId = account?.friend_id
   return useQuery({
-    queryKey: ['trades', friendId, page],
-    queryFn: () => getAllTrades(friendId as string, page),
-    enabled: friendId !== undefined && enabled,
+    queryKey: ['trades', friendId, viewHistory, page],
+    queryFn: async () => {
+      if (viewHistory) {
+        return await getAllTrades(friendId as string, page)
+      } else {
+        const trades = await getActiveTrades(userFriendId as string, friendId as string)
+        return { trades, count: trades.length, hasNext: false }
+      }
+    },
+    enabled: friendId !== undefined && (viewHistory || Boolean(userFriendId)) && enabled,
   })
 }
 

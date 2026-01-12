@@ -38,7 +38,7 @@ function TradeWith() {
 
   const [viewHistory, setViewHistory] = useState(false)
   const [pageHistory, setPageHistory] = useState(0)
-  const allTrades = useAllTrades(friendAccount?.friend_id, pageHistory, viewHistory)
+  const allTrades = useAllTrades(friendAccount?.friend_id, viewHistory, pageHistory, true)
 
   const [yourCard, setYourCard] = useState<Card | null>(null)
   const [friendCard, setFriendCard] = useState<Card | null>(() => {
@@ -111,7 +111,15 @@ function TradeWith() {
         <div className="flex flex-col-reverse sm:flex-row gap-2">
           <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">
             {t('viewHistory')}
-            <Switch id={`history-${friendId}`} className="ml-2 my-auto" checked={viewHistory} onCheckedChange={setViewHistory} />
+            <Switch
+              id={`history-${friendId}`}
+              className="ml-2 my-auto"
+              checked={viewHistory}
+              onCheckedChange={(x) => {
+                setViewHistory(x)
+                setPageHistory(0)
+              }}
+            />
           </label>
           <Link to={`/collection/${friendId}`}>
             <Button>
@@ -121,30 +129,29 @@ function TradeWith() {
           </Link>
         </div>
       </div>
-      {viewHistory &&
-        (allTrades.isLoading ? (
-          <Spinner size="md" />
-        ) : (
-          allTrades.data && (
-            <TradeList trades={allTrades.data.trades}>
-              <p className="flex justify-between mt-2">
-                <span className="text-neutral-400">{allTrades.data.count} total offers</span>
-                <div className="flex items-center gap-2">
-                  <span>Page {pageHistory + 1}</span>
-                  <Button variant="outline" onClick={() => setPageHistory(() => 0)} disabled={pageHistory <= 0}>
-                    <ChevronFirst />
-                  </Button>
-                  <Button variant="outline" onClick={() => setPageHistory((prev) => prev - 1)} disabled={pageHistory <= 0}>
-                    <ChevronLeft />
-                  </Button>
-                  <Button variant="outline" onClick={() => setPageHistory((prev) => prev + 1)} disabled={!allTrades.data.hasNext}>
-                    <ChevronRight />
-                  </Button>
-                </div>
-              </p>
-            </TradeList>
-          )
-        ))}
+      {allTrades.isLoading ? (
+        <Spinner size="md" />
+      ) : (
+        allTrades.data && (
+          <TradeList trades={allTrades.data.trades}>
+            <div className="flex justify-between mt-2">
+              <span className="text-neutral-400">{allTrades.data.count} total offers</span>
+              <div className="flex items-center gap-2">
+                <span>Page {pageHistory + 1}</span>
+                <Button variant="outline" onClick={() => setPageHistory(() => 0)} disabled={pageHistory <= 0}>
+                  <ChevronFirst />
+                </Button>
+                <Button variant="outline" onClick={() => setPageHistory((prev) => prev - 1)} disabled={pageHistory <= 0}>
+                  <ChevronLeft />
+                </Button>
+                <Button variant="outline" onClick={() => setPageHistory((prev) => prev + 1)} disabled={!allTrades.data.hasNext}>
+                  <ChevronRight />
+                </Button>
+              </div>
+            </div>
+          </TradeList>
+        )
+      )}
 
       <TradeOffer
         yourId={account.friend_id}
