@@ -168,18 +168,13 @@ const Scan = () => {
       updates.push({ card_id, previous_amount, increment })
     }
 
-    try {
-      updateCardsMutation.mutate({
-        updates: updates.map((x) => ({
-          card_id: x.card_id,
-          internal_id: getInteralIdByCardId(x.card_id),
-          amount_owned: Math.max(0, x.previous_amount + x.increment),
-        })),
-      })
-    } catch (error) {
-      setError(`Error incrementing card quantities: ${error}`)
-      return
-    }
+    updateCardsMutation.mutate(
+      updates.map((x) => ({
+        card_id: x.card_id,
+        internal_id: getInteralIdByCardId(x.card_id),
+        amount_owned: Math.max(0, x.previous_amount + x.increment),
+      })),
+    )
 
     setIncrementedCards(updates)
     setState(State.ProcessUpdates + 1)

@@ -39,7 +39,7 @@ export const ImportReader = () => {
       setNumberProcessed((n) => n + 1)
     }
 
-    updateCardsMutation.mutate({ updates: cardArray })
+    updateCardsMutation.mutate(cardArray)
   }
 
   const onDrop = (acceptedFiles: File[]) => {

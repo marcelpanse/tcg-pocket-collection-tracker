@@ -1,5 +1,4 @@
-import { useQuery } from '@tanstack/react-query'
-import { ChevronRight } from 'lucide-react'
+import { ChevronFirst, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
@@ -9,7 +8,7 @@ import { FriendIdDisplay } from '@/components/ui/friend-id-display.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
 import TradeList from '@/pages/trade/components/TradeList.tsx'
 import { usePublicAccount } from '@/services/account/useAccount.ts'
-import { getAllTrades } from '@/services/trade/tradeService'
+import { useAllTrades } from '@/services/trade/useTrade'
 import type { TradeRow } from '@/types'
 
 interface TradePartnerProps {
@@ -22,12 +21,9 @@ function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
 
   const { data: friendAccount, isLoading: isLoadingAccount } = usePublicAccount(friendId)
 
-  const [viewHistory, setViewHistory] = useState<boolean>(false)
-  const allTrades = useQuery({
-    queryKey: ['trades', friendId],
-    queryFn: () => getAllTrades(friendId),
-    enabled: viewHistory,
-  })
+  const [viewHistory, setViewHistory] = useState(false)
+  const [pageHistory, setPageHistory] = useState(0)
+  const allTrades = useAllTrades(friendId, viewHistory, pageHistory, viewHistory)
 
   if (isLoadingAccount) {
     return null
@@ -58,7 +54,25 @@ function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
         allTrades.isLoading ? (
           <Spinner size="md" />
         ) : (
-          allTrades.data && <TradeList trades={allTrades.data} />
+          allTrades.data && (
+            <TradeList trades={allTrades.data.trades}>
+              <p className="flex justify-between mt-2">
+                <span className="text-neutral-400">{allTrades.data.count} total offers</span>
+                <div className="flex items-center gap-2">
+                  <span>Page {pageHistory + 1}</span>
+                  <Button variant="outline" onClick={() => setPageHistory(() => 0)} disabled={pageHistory <= 0}>
+                    <ChevronFirst />
+                  </Button>
+                  <Button variant="outline" onClick={() => setPageHistory((prev) => prev - 1)} disabled={pageHistory <= 0}>
+                    <ChevronLeft />
+                  </Button>
+                  <Button variant="outline" onClick={() => setPageHistory((prev) => prev + 1)} disabled={!allTrades.data.hasNext}>
+                    <ChevronRight />
+                  </Button>
+                </div>
+              </p>
+            </TradeList>
+          )
         )
       ) : (
         <TradeList trades={activeTrades} />

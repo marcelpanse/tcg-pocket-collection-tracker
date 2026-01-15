@@ -26,9 +26,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
     startTransition(async () => {
       setAmountOwned(x)
       try {
-        await updateCardsMutation.mutateAsync({
-          updates: [{ card_id: card.card_id, internal_id: card.internal_id, amount_owned: x }],
-        })
+        await updateCardsMutation.mutateAsync([{ card_id: card.card_id, internal_id: card.internal_id, amount_owned: x }])
       } catch (error) {
         console.log('Failed updating card count:', error)
       }

@@ -1,5 +1,5 @@
 import { Slot } from '@radix-ui/react-slot'
-import { ArrowLeft, ArrowRight, ArrowRightLeft, Check, X } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ArrowRightLeft, Check, ChevronsDown, ChevronsUp, X } from 'lucide-react'
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
@@ -60,9 +60,15 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
       onClick={() => onClick(row)}
     >
       {status(row)}
-      <div className="flex flex-col md:flex-row grow-1 justify-between gap-1 md:gap-2">
-        <CardLine className="md:w-1/2" card_id={yourCard} increment={-1} />
-        <CardLine className="md:w-1/2" card_id={friendCard} increment={1} />
+      <div className="flex flex-col-reverse md:flex-row grow-1 justify-between gap-1 md:gap-2">
+        <div className="flex flex-1">
+          <ChevronsUp />
+          <CardLine className="flex-1" card_id={yourCard} increment={-1} />
+        </div>
+        <div className="flex flex-1">
+          <ChevronsDown />
+          <CardLine className="flex-1" card_id={friendCard} increment={1} />
+        </div>
       </div>
     </li>
   )
