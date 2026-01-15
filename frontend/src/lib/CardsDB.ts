@@ -222,7 +222,7 @@ export const expansions: Expansion[] = [
     packs: [{ name: 'deluxepack', color: '#c0af78' }],
     missions: a4bMissions,
     tradeable: true,
-    openable: false,
+    openable: true,
     packStructure: {
       containsShinies: true,
       containsBabies: false,
