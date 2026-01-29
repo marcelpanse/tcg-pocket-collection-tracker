@@ -52,7 +52,11 @@ const typeMapping: Record<string, CardType> = {
   C: 'colorless',
 }
 
-const rarityOverrides: Partial<Record<ExpansionId, { rarity: Rarity; start: number; end: number }[]>> = {
+const rarityOverrides: Record<ExpansionId, { rarity: Rarity; start: number; end: number }[]> = {
+  A1: [],
+  A1a: [],
+  A2: [],
+  A2a: [],
   A2b: [
     { rarity: '✵', start: 97, end: 106 },
     { rarity: '✵✵', start: 107, end: 110 },
@@ -86,6 +90,11 @@ const rarityOverrides: Partial<Record<ExpansionId, { rarity: Rarity; start: numb
     { rarity: '✵', start: 88, end: 97 },
     { rarity: '✵✵', start: 98, end: 101 },
   ],
+  B2: [
+    { rarity: '✵', start: 205, end: 224 },
+    { rarity: '✵✵', start: 225, end: 232 },
+  ],
+  'P-A': [],
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],
 }
 
@@ -299,11 +308,9 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
 
   const raritySection = $('table.card-prints-versions tr.current')
   let rarity = (cardUrl.toString().includes('P-A') ? 'P' : raritySection.find('td:last-child').text().trim() || 'P') as Rarity
-  if (rarityOverrides[expansion]) {
-    for (const { rarity: rarityOverride, start, end } of rarityOverrides[expansion]) {
-      if (start <= inPackId && inPackId <= end) {
-        rarity = rarityOverride
-      }
+  for (const { rarity: rarityOverride, start, end } of rarityOverrides[expansion]) {
+    if (start <= inPackId && inPackId <= end) {
+      rarity = rarityOverride
     }
   }
 
