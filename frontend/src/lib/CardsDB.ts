@@ -42,19 +42,20 @@ export const getInteralIdByCardId = (card_id: string) => {
   return internalId
 }
 
-const a1Missions: Mission[] = A1Missions.default as unknown as Mission[]
-const a1aMissions: Mission[] = A1aMissions.default as unknown as Mission[]
-const a2Missions: Mission[] = A2Missions.default as unknown as Mission[]
-const a2aMissions: Mission[] = A2aMissions.default as unknown as Mission[]
-const a2bMissions: Mission[] = A2bMissions.default as unknown as Mission[]
-const a3Missions: Mission[] = A3Missions.default as unknown as Mission[]
-const a3aMissions: Mission[] = A3aMissions.default as unknown as Mission[]
-const a3bMissions: Mission[] = A3bMissions.default as unknown as Mission[]
-const a4Missions: Mission[] = A4Missions.default as unknown as Mission[]
-const a4aMissions: Mission[] = A4aMissions.default as unknown as Mission[]
-const a4bMissions: Mission[] = A4bMissions.default as unknown as Mission[]
-const b1Missions: Mission[] = B1Missions.default as unknown as Mission[]
-const b1aMissions: Mission[] = B1aMissions.default as unknown as Mission[]
+const a1Missions: Mission[] = A1Missions.default as Mission[]
+const a1aMissions: Mission[] = A1aMissions.default as Mission[]
+const a2Missions: Mission[] = A2Missions.default as Mission[]
+const a2aMissions: Mission[] = A2aMissions.default as Mission[]
+const a2bMissions: Mission[] = A2bMissions.default as Mission[]
+const a3Missions: Mission[] = A3Missions.default as Mission[]
+const a3aMissions: Mission[] = A3aMissions.default as Mission[]
+const a3bMissions: Mission[] = A3bMissions.default as Mission[]
+const a4Missions: Mission[] = A4Missions.default as Mission[]
+const a4aMissions: Mission[] = A4aMissions.default as Mission[]
+const a4bMissions: Mission[] = A4bMissions.default as Mission[]
+const b1Missions: Mission[] = B1Missions.default as Mission[]
+const b1aMissions: Mission[] = B1aMissions.default as Mission[]
+const b2Missions: Mission[] = B1aMissions.default as Mission[]
 
 export const expansions: Expansion[] = [
   // internalId=0 skipped for error states
@@ -222,7 +223,7 @@ export const expansions: Expansion[] = [
     packs: [{ name: 'deluxepack', color: '#c0af78' }],
     missions: a4bMissions,
     tradeable: true,
-    openable: true,
+    openable: false,
     packStructure: {
       containsShinies: true,
       containsBabies: false,
@@ -254,6 +255,20 @@ export const expansions: Expansion[] = [
     internalId: 13,
     packs: [{ name: 'crimsonblazepack', color: '#bf8f78' }],
     missions: b1aMissions,
+    tradeable: true,
+    openable: true,
+    packStructure: {
+      containsShinies: true,
+      containsBabies: false,
+      cardsPerPack: 5,
+    },
+  },
+  {
+    name: 'fantasticalparade',
+    id: 'B2',
+    internalId: 14,
+    packs: [{ name: 'megagardevoirpack', color: '#b9c078' }],
+    missions: b2Missions,
     tradeable: true,
     openable: true,
     packStructure: {
