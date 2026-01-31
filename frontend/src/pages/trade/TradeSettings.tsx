@@ -74,7 +74,24 @@ function TradeSettings() {
                 <FormControl>
                   <FormLabel className="flex">
                     {t('isActiveTrading')}
-                    <Switch className="ml-2" checked={field.value} onCheckedChange={field.onChange} />
+                    <Switch
+                      className="ml-2"
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                      disabled={!account?.is_public}
+                      data-tooltip-id="is-active-trading-disabled"
+                      data-tooltip-content={!account?.is_public ? t('isActiveTradingDisabledTooltip') : undefined}
+                    />
+                    {!account?.is_public && (
+                      <>
+                        <Tooltip id="is-active-trading-disabled" />
+                        <CircleHelp
+                          className="size-4 ml-1"
+                          data-tooltip-id="is-active-trading-disabled"
+                          data-tooltip-content={t('isActiveTradingDisabledTooltip')}
+                        />
+                      </>
+                    )}
                   </FormLabel>
                 </FormControl>
               </FormItem>

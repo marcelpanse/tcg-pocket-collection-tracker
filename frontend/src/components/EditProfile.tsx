@@ -48,6 +48,7 @@ const EditProfile: FC = () => {
         username: values.username,
         friend_id: values.friend_id,
         is_public: values.is_public,
+        is_active_trading: values.is_public === false ? false : account?.is_active_trading,
       } as AccountRow,
       {
         onSuccess: () => toast({ title: t('accountSaved'), variant: 'default' }),
