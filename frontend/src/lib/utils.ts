@@ -18,6 +18,10 @@ export function chunk<T>(arr: T[], size: number): T[][] {
   return res
 }
 
+export function capitalize(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
 export function formatFriendId(friendId: string): string {
   if (!friendId || friendId.length !== 16) {
     return friendId
