@@ -1,10 +1,12 @@
 import { supabase } from '@/lib/supabase'
 import type { Deck, Energy } from '@/types'
 
-export const deckKinds = ['popular', 'liked', 'my'] as const
+export const deckKinds = ['community', 'liked', 'my'] as const
+export const deckOrder = ['popular', 'new'] as const
 
 export interface DeckFilters {
   kind: (typeof deckKinds)[number]
+  orderby: (typeof deckOrder)[number]
   page: number
   energy: Energy[]
 }
@@ -43,8 +45,13 @@ export async function getDecks(filters: DeckFilters) {
     tbl = tbl.from('decks').select('*', { count: 'exact' })
   } else if (filters.kind === 'liked') {
     tbl = tbl.from('deck_likes').select('*, public_decks!id(*)', { count: 'exact' })
-  } else if (filters.kind === 'popular') {
-    tbl = tbl.from('public_decks').select('*', { count: 'exact' }).order('likes', { ascending: false })
+  } else if (filters.kind === 'community') {
+    tbl = tbl.from('public_decks').select('*', { count: 'exact' })
+    if (filters.orderby === 'popular') {
+      tbl = tbl.order('likes', { ascending: false })
+    } else if (filters.orderby === 'new') {
+      tbl = tbl.order('created_at', { ascending: false })
+    }
   }
 
   const col_prefix = filters.kind === 'liked' ? 'public_decks.' : ''
