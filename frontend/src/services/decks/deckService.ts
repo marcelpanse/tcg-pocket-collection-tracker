@@ -5,7 +5,7 @@ export const deckKinds = ['community', 'liked', 'my'] as const
 export const deckOrder = ['popular', 'new'] as const
 
 export interface DeckFilters {
-  kind: (typeof deckKinds)[number]
+  from: (typeof deckKinds)[number]
   orderby: (typeof deckOrder)[number]
   page: number
   energy: Energy[]
@@ -41,11 +41,11 @@ export async function getDecks(filters: DeckFilters) {
   // biome-ignore lint: supabase query builder is hard to type
   let tbl: any = supabase
 
-  if (filters.kind === 'my') {
+  if (filters.from === 'my') {
     tbl = tbl.from('decks').select('*', { count: 'exact' })
-  } else if (filters.kind === 'liked') {
+  } else if (filters.from === 'liked') {
     tbl = tbl.from('deck_likes').select('*, public_decks!id(*)', { count: 'exact' })
-  } else if (filters.kind === 'community') {
+  } else if (filters.from === 'community') {
     tbl = tbl.from('public_decks').select('*', { count: 'exact' })
     if (filters.orderby === 'popular') {
       tbl = tbl.order('likes', { ascending: false })
@@ -54,7 +54,7 @@ export async function getDecks(filters: DeckFilters) {
     }
   }
 
-  const col_prefix = filters.kind === 'liked' ? 'public_decks.' : ''
+  const col_prefix = filters.from === 'liked' ? 'public_decks.' : ''
 
   if (filters.energy.length > 0) {
     tbl = tbl.contains(`${col_prefix}energy`, filters.energy)
@@ -66,7 +66,7 @@ export async function getDecks(filters: DeckFilters) {
   }
 
   let decks: Deck[]
-  if (filters.kind === 'liked') {
+  if (filters.from === 'liked') {
     // biome-ignore lint: joins are hard to type
     decks = data.map((row: any) => ({ ...row.public_decks, is_public: true })) as Deck[]
   } else {
