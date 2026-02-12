@@ -85,8 +85,7 @@ function App() {
         { path: '/collection/missions', element: <Missions /> },
         { path: '/collection/:friendId?', element: <Collection /> },
         { path: '/collection/:friendId/trade', element: <TradeWithRedirect /> }, // support old trading path
-        { path: '/decks', element: <Navigate to="/decks/filter/popular" replace /> },
-        { path: '/decks/filter/:kind', element: <Decks /> },
+        { path: '/decks', element: <Decks /> },
         { path: '/decks/edit/:id?', element: <DeckBuilder /> },
         { path: '/decks/:id', element: <DeckView /> },
         { path: '/scan', element: <Scan /> },
