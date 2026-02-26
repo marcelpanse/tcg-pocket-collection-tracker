@@ -23446,7 +23446,8 @@
     "alternate_versions": [
       328130,
       332356,
-      724354
+      724354,
+      990600
     ],
     "artist": "mashu",
     "internal_id": 328130
@@ -25052,7 +25053,8 @@
     "alternate_versions": [
       331139,
       333189,
-      333701
+      333701,
+      991305
     ],
     "artist": "PLANETA Mochizuki",
     "internal_id": 331139
@@ -25155,7 +25157,8 @@
     "pack": "everypack",
     "alternate_versions": [
       331330,
-      332612
+      332612,
+      991048
     ],
     "artist": "HYOGONOSUKE",
     "internal_id": 331330
@@ -25557,7 +25560,8 @@
     "alternate_versions": [
       332097,
       333317,
-      742721
+      742721,
+      989829
     ],
     "artist": "saino misaki",
     "internal_id": 332097
@@ -25671,7 +25675,8 @@
     "alternate_versions": [
       328130,
       332356,
-      724354
+      724354,
+      990600
     ],
     "artist": "danciao",
     "internal_id": 332356
@@ -25814,7 +25819,8 @@
     "pack": "everypack",
     "alternate_versions": [
       331330,
-      332612
+      332612,
+      991048
     ],
     "artist": "Jerky",
     "internal_id": 332612
@@ -26157,7 +26163,8 @@
     "alternate_versions": [
       331139,
       333189,
-      333701
+      333701,
+      991305
     ],
     "artist": "PLANETA Igarashi",
     "internal_id": 333189
@@ -26222,7 +26229,8 @@
     "alternate_versions": [
       332097,
       333317,
-      742721
+      742721,
+      989829
     ],
     "artist": "saino misaki",
     "internal_id": 333317
@@ -26410,7 +26418,8 @@
     "alternate_versions": [
       331139,
       333189,
-      333701
+      333701,
+      991305
     ],
     "artist": "kurumitsu",
     "internal_id": 333701
@@ -41035,7 +41044,8 @@
     "pack": "everypack",
     "alternate_versions": [
       528705,
-      529797
+      529797,
+      990021
     ],
     "artist": "Susumu Maeya",
     "internal_id": 528705
@@ -41638,7 +41648,8 @@
     "pack": "everypack",
     "alternate_versions": [
       528705,
-      529797
+      529797,
+      990021
     ],
     "artist": "Susumu Maeya",
     "internal_id": 529797
@@ -50901,6 +50912,7 @@
       656003,
       660421,
       660933,
+      991113,
       12589968
     ],
     "artist": "PLANETA CG Works",
@@ -51233,7 +51245,8 @@
     "alternate_versions": [
       656643,
       660485,
-      661126
+      661126,
+      991177
     ],
     "artist": "PLANETA CG Works",
     "internal_id": 656643
@@ -51410,7 +51423,8 @@
     "alternate_versions": [
       656963,
       660549,
-      660997
+      660997,
+      991241
     ],
     "artist": "PLANETA CG Works",
     "internal_id": 656963
@@ -53208,6 +53222,7 @@
       656003,
       660421,
       660933,
+      991113,
       12589968
     ],
     "artist": "PLANETA CG Works",
@@ -53247,7 +53262,8 @@
     "alternate_versions": [
       656643,
       660485,
-      661126
+      661126,
+      991177
     ],
     "artist": "PLANETA CG Works",
     "internal_id": 660485
@@ -53286,7 +53302,8 @@
     "alternate_versions": [
       656963,
       660549,
-      660997
+      660997,
+      991241
     ],
     "artist": "PLANETA CG Works",
     "internal_id": 660549
@@ -53474,6 +53491,7 @@
       656003,
       660421,
       660933,
+      991113,
       12589968
     ],
     "artist": "Tsuyoshi Nagano",
@@ -53513,7 +53531,8 @@
     "alternate_versions": [
       656963,
       660549,
-      660997
+      660997,
+      991241
     ],
     "artist": "Tsuyoshi Nagano",
     "internal_id": 660997
@@ -53588,7 +53607,8 @@
     "alternate_versions": [
       656643,
       660485,
-      661126
+      661126,
+      991177
     ],
     "artist": "mele",
     "internal_id": 661126
@@ -56029,7 +56049,8 @@
     "alternate_versions": [
       328130,
       332356,
-      724354
+      724354,
+      990600
     ],
     "artist": "mashu",
     "internal_id": 328130
@@ -56064,7 +56085,8 @@
     "alternate_versions": [
       328130,
       332356,
-      724354
+      724354,
+      990600
     ],
     "artist": "mashu",
     "internal_id": 724354
@@ -63766,7 +63788,8 @@
     "alternate_versions": [
       331139,
       333189,
-      333701
+      333701,
+      991305
     ],
     "artist": "PLANETA Mochizuki",
     "internal_id": 331139
@@ -66111,7 +66134,8 @@
     "alternate_versions": [
       332097,
       333317,
-      742721
+      742721,
+      989829
     ],
     "artist": "saino misaki",
     "internal_id": 332097
@@ -66138,7 +66162,8 @@
     "alternate_versions": [
       332097,
       333317,
-      742721
+      742721,
+      989829
     ],
     "artist": "saino misaki",
     "internal_id": 742721
@@ -90162,6 +90187,4386 @@
     "internal_id": 932492
   },
   {
+    "expansion": "B2a",
+    "card_id": "B2a-1",
+    "image": "/images/en-US/B2a-1.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Sprigatito",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Leafage",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983104,
+      990472
+    ],
+    "artist": "Saya Tsuruta",
+    "internal_id": 983104
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-2",
+    "image": "/images/en-US/B2a-2.webp",
+    "hp": 90,
+    "energy": "grass",
+    "name": "Floragato",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Leaf Step",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983168,
+      990536
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 983168
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-3",
+    "image": "/images/en-US/B2a-3.webp",
+    "hp": 160,
+    "energy": "grass",
+    "name": "Meowscarada ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Flower",
+        "damage": "Trick",
+        "effect": "Choose a spot from among your opponent's Active Spot and Bench. At the end of your opponent's next turn, do 70 damage to the Pokémon in the spot you chose."
+      },
+      {
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "name": "Solar Beam",
+        "damage": "80",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983235,
+      989445,
+      990085
+    ],
+    "artist": "5ban Graphics",
+    "internal_id": 983235
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-4",
+    "image": "/images/en-US/B2a-4.webp",
+    "hp": 50,
+    "energy": "grass",
+    "name": "Tarountula",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Hook",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983296
+    ],
+    "artist": "Mina Nakai",
+    "internal_id": 983296
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-5",
+    "image": "/images/en-US/B2a-5.webp",
+    "hp": 100,
+    "energy": "grass",
+    "name": "Spidops",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Bind Down",
+        "damage": "40",
+        "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983361
+    ],
+    "artist": "Anesaki Dynamic",
+    "internal_id": 983361
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-6",
+    "image": "/images/en-US/B2a-6.webp",
+    "hp": 40,
+    "energy": "grass",
+    "name": "Nymble",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "U-turn",
+        "damage": "10",
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983424
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 983424
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-7",
+    "image": "/images/en-US/B2a-7.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Smoliv",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Absorb",
+        "damage": "10",
+        "effect": "Heal 10 damage from this Pokémon."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983488
+    ],
+    "artist": "yuu",
+    "internal_id": 983488
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-8",
+    "image": "/images/en-US/B2a-8.webp",
+    "hp": 90,
+    "energy": "grass",
+    "name": "Dolliv",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "grass",
+          "colorless"
+        ],
+        "name": "Seed Bomb",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983552
+    ],
+    "artist": "Mizue",
+    "internal_id": 983552
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-9",
+    "image": "/images/en-US/B2a-9.webp",
+    "hp": 130,
+    "energy": "grass",
+    "name": "Arboliva",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Seed Bomb",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Extra Heal",
+      "effect": "Once during your turn, you may heal 60 damage from 1 of your Pokémon ex that has any Energy attached. If you do, discard a random Energy from that Pokémon."
+    },
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983618
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 983618
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-10",
+    "image": "/images/en-US/B2a-10.webp",
+    "hp": 50,
+    "energy": "grass",
+    "name": "Bramblin",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Rollout",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983680
+    ],
+    "artist": "Miki Tanaka",
+    "internal_id": 983680
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-11",
+    "image": "/images/en-US/B2a-11.webp",
+    "hp": 100,
+    "energy": "grass",
+    "name": "Brambleghast",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "grass",
+          "colorless"
+        ],
+        "name": "Continuous Tumble",
+        "damage": "60x",
+        "effect": "Flip a coin until you get tails. This attack does 60 damage for each heads."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983745
+    ],
+    "artist": "KEIICHIRO ITO",
+    "internal_id": 983745
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-12",
+    "image": "/images/en-US/B2a-12.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Capsakid",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Playful Kick",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983808
+    ],
+    "artist": "GIDORA",
+    "internal_id": 983808
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-13",
+    "image": "/images/en-US/B2a-13.webp",
+    "hp": 100,
+    "energy": "grass",
+    "name": "Scovillain",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "grass",
+          "colorless"
+        ],
+        "name": "Red-Hot Headbutt",
+        "damage": "60+",
+        "effect": "If your opponent's Active Pokémon is a [G] or [M] Pokémon, this attack does 40 more damage."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983873
+    ],
+    "artist": "kodama",
+    "internal_id": 983873
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-14",
+    "image": "/images/en-US/B2a-14.webp",
+    "hp": 50,
+    "energy": "grass",
+    "name": "Rellor",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Ball Roll",
+        "damage": "20x",
+        "effect": "Flip a coin until you get tails. This attack does 20 damage for each heads."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983936
+    ],
+    "artist": "Anesaki Dynamic",
+    "internal_id": 983936
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-15",
+    "image": "/images/en-US/B2a-15.webp",
+    "hp": 120,
+    "energy": "grass",
+    "name": "Wo-Chien",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "grass",
+          "grass",
+          "grass",
+          "colorless"
+        ],
+        "name": "Binding Greed",
+        "damage": "90",
+        "effect": "During your opponent's next turn, attacks used by the Defending Pokémon cost 2 [C] more."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984002
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 984002
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-16",
+    "image": "/images/en-US/B2a-16.webp",
+    "hp": 70,
+    "energy": "fire",
+    "name": "Fuecoco",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Cheerful",
+        "damage": "Singing",
+        "effect": "Put 1 random Basic Pokémon from your deck onto your Bench."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984064,
+      989060
+    ],
+    "artist": "Akira Komayama",
+    "internal_id": 984064
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-17",
+    "image": "/images/en-US/B2a-17.webp",
+    "hp": 100,
+    "energy": "fire",
+    "name": "Crocalor",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "colorless"
+        ],
+        "name": "Bite",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 3,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984128
+    ],
+    "artist": "kantaro",
+    "internal_id": 984128
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-18",
+    "image": "/images/en-US/B2a-18.webp",
+    "hp": 150,
+    "energy": "fire",
+    "name": "Skeledirge",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "colorless"
+        ],
+        "name": "Heat Crash",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Passionate Voice",
+      "effect": "Once during your turn, you may discard 1  Energy from this Pokémon in order to use this Ability. During this turn, attacks used by your  Pokémon do +50 damage to your opponent's Active Pokémon."
+    },
+    "weakness": "water",
+    "retreat": 3,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984194
+    ],
+    "artist": "nagimiso",
+    "internal_id": 984194
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-19",
+    "image": "/images/en-US/B2a-19.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Charcadet",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Punch",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984256
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 984256
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-20",
+    "image": "/images/en-US/B2a-20.webp",
+    "hp": 140,
+    "energy": "fire",
+    "name": "Armarouge ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Armor Cannon",
+        "damage": "120",
+        "effect": "Discard a [R] Energy from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Armor",
+      "effect": "This Pokémon takes −30 damage from attacks."
+    },
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984323,
+      989509,
+      990149
+    ],
+    "artist": "takuyoa",
+    "internal_id": 984323
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-21",
+    "image": "/images/en-US/B2a-21.webp",
+    "hp": 80,
+    "energy": "fire",
+    "name": "Chi-Yu",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "colorless"
+        ],
+        "name": "Megafire of Envy",
+        "damage": "40+",
+        "effect": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 60 more damage."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984386
+    ],
+    "artist": "Dsuke",
+    "internal_id": 984386
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-22",
+    "image": "/images/en-US/B2a-22.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Quaxly",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Splashing Dodge",
+        "damage": "10",
+        "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984448
+    ],
+    "artist": "Naoki Saito",
+    "internal_id": 984448
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-23",
+    "image": "/images/en-US/B2a-23.webp",
+    "hp": 80,
+    "energy": "water",
+    "name": "Quaxwell",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water"
+        ],
+        "name": "Splashing Turn",
+        "damage": "40",
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984512
+    ],
+    "artist": "kirisAki",
+    "internal_id": 984512
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-24",
+    "image": "/images/en-US/B2a-24.webp",
+    "hp": 150,
+    "energy": "water",
+    "name": "Quaquaval",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "colorless"
+        ],
+        "name": "Hydro Kick",
+        "damage": "90",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Torrent",
+      "effect": "If this Pokémon's remaining HP is 50 or less, attacks used by this Pokémon do +60 damage to your opponent's Active Pokémon."
+    },
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984578
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 984578
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-25",
+    "image": "/images/en-US/B2a-25.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Wiglett",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Water Gun",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984640
+    ],
+    "artist": "Shin Nagasawa",
+    "internal_id": 984640
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-26",
+    "image": "/images/en-US/B2a-26.webp",
+    "hp": 90,
+    "energy": "water",
+    "name": "Wugtrio",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Triple Whip",
+        "damage": "30x",
+        "effect": "Flip 3 coins. This attack does 30 damage for each heads."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984705
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 984705
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-27",
+    "image": "/images/en-US/B2a-27.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Finizen",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Razor Fin",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984768
+    ],
+    "artist": "kodama",
+    "internal_id": 984768
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-28",
+    "image": "/images/en-US/B2a-28.webp",
+    "hp": 130,
+    "energy": "water",
+    "name": "Palafin",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "name": "Jet Punch",
+        "damage": "50",
+        "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokémon."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984834
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 984834
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-29",
+    "image": "/images/en-US/B2a-29.webp",
+    "hp": 100,
+    "energy": "water",
+    "name": "Cetoddle",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "colorless"
+        ],
+        "name": "Icicle Missile",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 3,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984896
+    ],
+    "artist": "Sekio",
+    "internal_id": 984896
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-30",
+    "image": "/images/en-US/B2a-30.webp",
+    "hp": 150,
+    "energy": "water",
+    "name": "Cetitan",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Ice Punch",
+        "damage": "80",
+        "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 4,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984961
+    ],
+    "artist": "Anesaki Dynamic",
+    "internal_id": 984961
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-31",
+    "image": "/images/en-US/B2a-31.webp",
+    "hp": 100,
+    "energy": "water",
+    "name": "Veluza",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Shedding Spiral",
+        "damage": "90",
+        "effect": "If you have no cards in your deck, this attack can be used for 1 [W] Energy."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985025
+    ],
+    "artist": "Oswaldo KATO",
+    "internal_id": 985025
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-32",
+    "image": "/images/en-US/B2a-32.webp",
+    "hp": 130,
+    "energy": "water",
+    "name": "Dondozo",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "water",
+          "colorless"
+        ],
+        "name": "Giga Impact",
+        "damage": "120",
+        "effect": "During your next turn, this Pokémon can't attack."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 4,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985089
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 985089
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-33",
+    "image": "/images/en-US/B2a-33.webp",
+    "hp": 70,
+    "energy": "water",
+    "name": "Tatsugiri",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Rally Back",
+        "damage": "20+",
+        "effect": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 60 more damage."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985153
+    ],
+    "artist": "OKACHEKE",
+    "internal_id": 985153
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-34",
+    "image": "/images/en-US/B2a-34.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Frigibax",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Chilly",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985216
+    ],
+    "artist": "AKIRA EGAWA",
+    "internal_id": 985216
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-35",
+    "image": "/images/en-US/B2a-35.webp",
+    "hp": 90,
+    "energy": "water",
+    "name": "Arctibax",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "colorless"
+        ],
+        "name": "Frost Smash",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985280
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 985280
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-36",
+    "image": "/images/en-US/B2a-36.webp",
+    "hp": 140,
+    "energy": "water",
+    "name": "Baxcalibur",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "name": "Buster Tail",
+        "damage": "90",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Ice Maker",
+      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
+    },
+    "weakness": "metal",
+    "retreat": 3,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985346,
+      991372
+    ],
+    "artist": "Oswaldo KATO",
+    "internal_id": 985346
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-37",
+    "image": "/images/en-US/B2a-37.webp",
+    "hp": 130,
+    "energy": "water",
+    "name": "Chien-Pao ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Icicle",
+        "damage": "20",
+        "effect": "No effect"
+      },
+      {
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "name": "Diving",
+        "damage": "Icicles",
+        "effect": "Discard all [W] Energy from this Pokémon. This attack does 130 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 1,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985411,
+      989573,
+      990213
+    ],
+    "artist": "aky CG Works",
+    "internal_id": 985411
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-38",
+    "image": "/images/en-US/B2a-38.webp",
+    "hp": 60,
+    "energy": "lightning",
+    "name": "Pawmi",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Random",
+        "damage": "Spark",
+        "effect": "This attack does 10 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985472,
+      990664
+    ],
+    "artist": "kantaro",
+    "internal_id": 985472
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-39",
+    "image": "/images/en-US/B2a-39.webp",
+    "hp": 90,
+    "energy": "lightning",
+    "name": "Pawmo",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Head Bolt",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985536,
+      990728
+    ],
+    "artist": "Kanami Ogata",
+    "internal_id": 985536
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-40",
+    "image": "/images/en-US/B2a-40.webp",
+    "hp": 140,
+    "energy": "lightning",
+    "name": "Pawmot",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "Thunder Blast",
+        "damage": "100",
+        "effect": "Discard a [L] Energy from this Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985601,
+      990792
+    ],
+    "artist": "Mizue",
+    "internal_id": 985601
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-41",
+    "image": "/images/en-US/B2a-41.webp",
+    "hp": 60,
+    "energy": "lightning",
+    "name": "Tadbulb",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Electro Ball",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985664
+    ],
+    "artist": "Saya Tsuruta",
+    "internal_id": 985664
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-42",
+    "image": "/images/en-US/B2a-42.webp",
+    "hp": 160,
+    "energy": "lightning",
+    "name": "Bellibolt ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "High-Voltage Cannon",
+        "damage": "70+",
+        "effect": "If you have 4 or more [L] Energy in play, this attack does 70 more damage."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 3,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985731,
+      989637,
+      990277
+    ],
+    "artist": "PLANETA Yamashita",
+    "internal_id": 985731
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-43",
+    "image": "/images/en-US/B2a-43.webp",
+    "hp": 60,
+    "energy": "lightning",
+    "name": "Wattrel",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Flap",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985792
+    ],
+    "artist": "sowsow",
+    "internal_id": 985792
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-44",
+    "image": "/images/en-US/B2a-44.webp",
+    "hp": 90,
+    "energy": "lightning",
+    "name": "Kilowattrel",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Speed Wing",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 0,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985857
+    ],
+    "artist": "Pani Kobayashi",
+    "internal_id": 985857
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-45",
+    "image": "/images/en-US/B2a-45.webp",
+    "hp": 120,
+    "energy": "lightning",
+    "name": "Miraidon",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning",
+          "lightning"
+        ],
+        "name": "Lightning Laser",
+        "damage": "60",
+        "effect": "This attack also does 30 damage to 1 of your opponent's Benched Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985922
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 985922
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-46",
+    "image": "/images/en-US/B2a-46.webp",
+    "hp": 60,
+    "energy": "psychic",
+    "name": "Fidough",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic"
+        ],
+        "name": "Rear Kick",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985984
+    ],
+    "artist": "Mizue",
+    "internal_id": 985984
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-47",
+    "image": "/images/en-US/B2a-47.webp",
+    "hp": 100,
+    "energy": "psychic",
+    "name": "Dachsbun",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "name": "Play Rough",
+        "damage": "50+",
+        "effect": "Flip a coin. If heads, this attack does 50 more damage."
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986049
+    ],
+    "artist": "You Iribi",
+    "internal_id": 986049
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-48",
+    "image": "/images/en-US/B2a-48.webp",
+    "hp": 110,
+    "energy": "psychic",
+    "name": "Ceruledge",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "psychic",
+          "colorless"
+        ],
+        "name": "Fighting Sword",
+        "damage": "70+",
+        "effect": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 70 more damage."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986114
+    ],
+    "artist": "Ryota Murayama",
+    "internal_id": 986114
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-49",
+    "image": "/images/en-US/B2a-49.webp",
+    "hp": 70,
+    "energy": "psychic",
+    "name": "Rabsca",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "name": "Psybeam",
+        "damage": "80",
+        "effect": "Your opponent's Active Pokémon is now Confused."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986177
+    ],
+    "artist": "Oswaldo KATO",
+    "internal_id": 986177
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-50",
+    "image": "/images/en-US/B2a-50.webp",
+    "hp": 50,
+    "energy": "psychic",
+    "name": "Flittle",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic"
+        ],
+        "name": "Flop",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986240
+    ],
+    "artist": "kodama",
+    "internal_id": 986240
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-51",
+    "image": "/images/en-US/B2a-51.webp",
+    "hp": 90,
+    "energy": "psychic",
+    "name": "Espathra",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "psychic"
+        ],
+        "name": "Psychic",
+        "damage": "30+",
+        "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986305
+    ],
+    "artist": "Sanosuke Sakuma",
+    "internal_id": 986305
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-52",
+    "image": "/images/en-US/B2a-52.webp",
+    "hp": 70,
+    "energy": "psychic",
+    "name": "Greavard",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic"
+        ],
+        "name": "Soul Shot",
+        "damage": "30",
+        "effect": "Discard a card from your hand. If you can't, this attack does nothing."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986368,
+      989124
+    ],
+    "artist": "yuu",
+    "internal_id": 986368
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-53",
+    "image": "/images/en-US/B2a-53.webp",
+    "hp": 130,
+    "energy": "psychic",
+    "name": "Houndstone",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "colorless"
+        ],
+        "name": "Last Respects",
+        "damage": "50+",
+        "effect": "This attack does 20 more damage for each [P] Pokémon in your discard pile."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 3,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986433
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 986433
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-54",
+    "image": "/images/en-US/B2a-54.webp",
+    "hp": 60,
+    "energy": "psychic",
+    "name": "Gimmighoul",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Continuous Coin Toss",
+        "damage": "20x",
+        "effect": "Flip a coin until you get tails. This attack does 20 damage for each heads."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986496,
+      989188,
+      990856
+    ],
+    "artist": "Mizue",
+    "internal_id": 986496
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-55",
+    "image": "/images/en-US/B2a-55.webp",
+    "hp": 60,
+    "energy": "fighting",
+    "name": "Mankey",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting"
+        ],
+        "name": "Fury Swipes",
+        "damage": "10x",
+        "effect": "Flip 3 coins. This attack does 10 damage for each heads."
+      }
+    ],
+    "weakness": "psychic",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986560
+    ],
+    "artist": "nagimiso",
+    "internal_id": 986560
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-56",
+    "image": "/images/en-US/B2a-56.webp",
+    "hp": 80,
+    "energy": "fighting",
+    "name": "Primeape",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fighting"
+        ],
+        "name": "Rage",
+        "damage": "30+",
+        "effect": "This attack does more damage equal to the damage this Pokémon has on it."
+      }
+    ],
+    "weakness": "psychic",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986624
+    ],
+    "artist": "Shin Nagasawa",
+    "internal_id": 986624
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-57",
+    "image": "/images/en-US/B2a-57.webp",
+    "hp": 140,
+    "energy": "fighting",
+    "name": "Annihilape",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "fighting"
+        ],
+        "name": "Dynamite Punch",
+        "damage": "90",
+        "effect": "This Pokémon also does 30 damage to itself."
+      }
+    ],
+    "weakness": "psychic",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986689
+    ],
+    "artist": "Anesaki Dynamic",
+    "internal_id": 986689
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-58",
+    "image": "/images/en-US/B2a-58.webp",
+    "hp": 100,
+    "energy": "fighting",
+    "name": "Paldean Tauros",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "colorless"
+        ],
+        "name": "Rear Kick",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "psychic",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986753
+    ],
+    "artist": "Shin Nagasawa",
+    "internal_id": 986753
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-59",
+    "image": "/images/en-US/B2a-59.webp",
+    "hp": 60,
+    "energy": "fighting",
+    "name": "Toedscool",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting"
+        ],
+        "name": "Smash Kick",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986816
+    ],
+    "artist": "Oswaldo KATO",
+    "internal_id": 986816
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-60",
+    "image": "/images/en-US/B2a-60.webp",
+    "hp": 120,
+    "energy": "fighting",
+    "name": "Toedscruel",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "fighting",
+          "colorless"
+        ],
+        "name": "Stun Spore",
+        "damage": "70",
+        "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986881
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 986881
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-61",
+    "image": "/images/en-US/B2a-61.webp",
+    "hp": 100,
+    "energy": "fighting",
+    "name": "Klawf",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "name": "Adrenaline Hammer",
+        "damage": "70",
+        "effect": "This Pokémon is now Confused."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 3,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986944
+    ],
+    "artist": "nagimiso",
+    "internal_id": 986944
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-62",
+    "image": "/images/en-US/B2a-62.webp",
+    "hp": 120,
+    "energy": "fighting",
+    "name": "Ting-Lu",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "fighting",
+          "fighting"
+        ],
+        "name": "Arrogant Impact",
+        "damage": "130",
+        "effect": "If this Pokémon's remaining HP is 60 or less, this attack does nothing."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 3,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987010
+    ],
+    "artist": "AKIRA EGAWA",
+    "internal_id": 987010
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-63",
+    "image": "/images/en-US/B2a-63.webp",
+    "hp": 120,
+    "energy": "fighting",
+    "name": "Koraidon",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "fighting",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Rampaging Fang",
+        "damage": "120",
+        "effect": "Discard 2 [F] Energy from this Pokémon."
+      }
+    ],
+    "weakness": "psychic",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987074
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 987074
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-64",
+    "image": "/images/en-US/B2a-64.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Paldean Wooper",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "colorless"
+        ],
+        "name": "Flop",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987136,
+      989252
+    ],
+    "artist": "Pani Kobayashi",
+    "internal_id": 987136
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-65",
+    "image": "/images/en-US/B2a-65.webp",
+    "hp": 120,
+    "energy": "darkness",
+    "name": "Paldean Clodsire",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness",
+          "colorless"
+        ],
+        "name": "Muddy Hammer",
+        "damage": "70",
+        "effect": "Discard the top card of your opponent's deck."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 3,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987201
+    ],
+    "artist": "Shin Nagasawa",
+    "internal_id": 987201
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-66",
+    "image": "/images/en-US/B2a-66.webp",
+    "hp": 100,
+    "energy": "darkness",
+    "name": "Lokix",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "darkness"
+        ],
+        "name": "Rocket Jump",
+        "damage": "80",
+        "effect": "Flip a coin. If tails, this attack does nothing."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987265
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 987265
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-67",
+    "image": "/images/en-US/B2a-67.webp",
+    "hp": 70,
+    "energy": "darkness",
+    "name": "Maschiff",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "colorless"
+        ],
+        "name": "Bite",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987328
+    ],
+    "artist": "KEIICHIRO ITO",
+    "internal_id": 987328
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-68",
+    "image": "/images/en-US/B2a-68.webp",
+    "hp": 120,
+    "energy": "darkness",
+    "name": "Mabosstiff",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness",
+          "colorless"
+        ],
+        "name": "Wild Tackle",
+        "damage": "110",
+        "effect": "This Pokémon also does 20 damage to itself."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 3,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987393
+    ],
+    "artist": "KIYOTAKA OSHIYAMA",
+    "internal_id": 987393
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-69",
+    "image": "/images/en-US/B2a-69.webp",
+    "hp": 50,
+    "energy": "darkness",
+    "name": "Shroodle",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Scratch",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987456
+    ],
+    "artist": "Akira Komayama",
+    "internal_id": 987456
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-70",
+    "image": "/images/en-US/B2a-70.webp",
+    "hp": 90,
+    "energy": "darkness",
+    "name": "Grafaiai",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Colorful Attack",
+        "damage": "30+",
+        "effect": "If your Pokémon in play have 3 or more different types of Energy attached, this attack does 60 more damage."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987521
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 987521
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-71",
+    "image": "/images/en-US/B2a-71.webp",
+    "hp": 90,
+    "energy": "darkness",
+    "name": "Bombirdier",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Fly",
+        "damage": "70",
+        "effect": "Flip a coin. If tails, this attack does nothing. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987584
+    ],
+    "artist": "nagimiso",
+    "internal_id": 987584
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-72",
+    "image": "/images/en-US/B2a-72.webp",
+    "hp": 60,
+    "energy": "metal",
+    "name": "Tinkatink",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "colorless"
+        ],
+        "name": "Beat",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987648,
+      990920
+    ],
+    "artist": "Pani Kobayashi",
+    "internal_id": 987648
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-73",
+    "image": "/images/en-US/B2a-73.webp",
+    "hp": 80,
+    "energy": "metal",
+    "name": "Tinkatuff",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "colorless"
+        ],
+        "name": "Light Punch",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987712,
+      990984
+    ],
+    "artist": "Akira Komayama",
+    "internal_id": 987712
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-74",
+    "image": "/images/en-US/B2a-74.webp",
+    "hp": 150,
+    "energy": "metal",
+    "name": "Tinkaton",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "metal",
+          "colorless"
+        ],
+        "name": "Gigaton Hammer",
+        "damage": "140",
+        "effect": "During your next turn, this Pokémon can't use Gigaton Hammer."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987778
+    ],
+    "artist": "KEIICHIRO ITO",
+    "internal_id": 987778
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-75",
+    "image": "/images/en-US/B2a-75.webp",
+    "hp": 60,
+    "energy": "metal",
+    "name": "Varoom",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "metal"
+        ],
+        "name": "Ram",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987840
+    ],
+    "artist": "nagimiso",
+    "internal_id": 987840
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-76",
+    "image": "/images/en-US/B2a-76.webp",
+    "hp": 110,
+    "energy": "metal",
+    "name": "Revavroom",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "colorless"
+        ],
+        "name": "Poison Gas",
+        "damage": "50",
+        "effect": "Your opponent's Active Pokémon is now Poisoned."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987905
+    ],
+    "artist": "Anesaki Dynamic",
+    "internal_id": 987905
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-77",
+    "image": "/images/en-US/B2a-77.webp",
+    "hp": 100,
+    "energy": "metal",
+    "name": "Orthworm",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "metal"
+        ],
+        "name": "Iron Supply",
+        "damage": "10",
+        "effect": "Take a [M] Energy from your Energy Zone and attach it to 1 of your Benched Pokémon."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987969,
+      989316
+    ],
+    "artist": "Pani Kobayashi",
+    "internal_id": 987969
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-78",
+    "image": "/images/en-US/B2a-78.webp",
+    "hp": 150,
+    "energy": "metal",
+    "name": "Gholdengo ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal"
+        ],
+        "name": "Spending",
+        "damage": "Rush",
+        "effect": "1 of your opponent's Pokémon is chosen at random for each [M] Energy attached to this Pokémon. For each time a Pokémon was chosen, do 40 damage to it."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988035,
+      989701,
+      990341
+    ],
+    "artist": "takuyoa",
+    "internal_id": 988035
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-79",
+    "image": "/images/en-US/B2a-79.webp",
+    "hp": 60,
+    "energy": "colorless",
+    "name": "Lechonk",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Tackle",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988096
+    ],
+    "artist": "kodama",
+    "internal_id": 988096
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-80",
+    "image": "/images/en-US/B2a-80.webp",
+    "hp": 110,
+    "energy": "colorless",
+    "name": "Oinkologne",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Leg Stomp",
+        "damage": "100",
+        "effect": "Flip a coin. If tails, during your next turn, this Pokémon can't attack."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988160
+    ],
+    "artist": "Pani Kobayashi",
+    "internal_id": 988160
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-81",
+    "image": "/images/en-US/B2a-81.webp",
+    "hp": 30,
+    "energy": "colorless",
+    "name": "Tandemaus",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Double Hit",
+        "damage": "30x",
+        "effect": "Flip 2 coins. This attack does 30 damage for each heads."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 0,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988224
+    ],
+    "artist": "Akira Komayama",
+    "internal_id": 988224
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-82",
+    "image": "/images/en-US/B2a-82.webp",
+    "hp": 60,
+    "energy": "colorless",
+    "name": "Maushold",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Triple Gnawing",
+        "damage": "60",
+        "effect": "Flip 3 coins. For each heads, discard a random Energy from your opponent's Active Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988289,
+      989380
+    ],
+    "artist": "Saya Tsuruta",
+    "internal_id": 988289
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-83",
+    "image": "/images/en-US/B2a-83.webp",
+    "hp": 70,
+    "energy": "colorless",
+    "name": "Squawkabilly",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Quick Attack",
+        "damage": "30+",
+        "effect": "Flip a coin. If heads, this attack does 30 more damage."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988352
+    ],
+    "artist": "Oswaldo KATO",
+    "internal_id": 988352
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-84",
+    "image": "/images/en-US/B2a-84.webp",
+    "hp": 90,
+    "energy": "colorless",
+    "name": "Cyclizar",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Driving Buddy",
+        "damage": "40+",
+        "effect": "If you played a Supporter card from your hand during this turn, this attack does 60 more damage."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988417
+    ],
+    "artist": "AKIRA EGAWA",
+    "internal_id": 988417
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-85",
+    "image": "/images/en-US/B2a-85.webp",
+    "hp": 90,
+    "energy": "colorless",
+    "name": "Flamigo",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Wing Attack",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988480
+    ],
+    "artist": "kantaro",
+    "internal_id": 988480
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-86",
+    "image": "/images/en-US/B2a-86.webp",
+    "energy": "trainer",
+    "name": "Electric Generator",
+    "card_type": "trainer",
+    "evolution_type": "item",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Flip a coin. If heads, take a [L] Energy from your Energy Zone and attach it to 1 of your Benched [L] Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988545,
+      991436
+    ],
+    "artist": "Toyste Beach",
+    "internal_id": 988545
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-87",
+    "image": "/images/en-US/B2a-87.webp",
+    "energy": "trainer",
+    "name": "Big Air Balloon",
+    "card_type": "trainer",
+    "evolution_type": "tool",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "The Stage 2 Pokémon this card is attached to has no Retreat Cost.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988609
+    ],
+    "artist": "Toyste Beach",
+    "internal_id": 988609
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-88",
+    "image": "/images/en-US/B2a-88.webp",
+    "energy": "trainer",
+    "name": "Team Star Grunt",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Discard a random Energy from among the Energy attached to all of your opponent's Pokémon that have an Ability.\n\n            \n                    \n    \n            Illustrated by \n            \n                nagimiso"
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988673,
+      989765
+    ],
+    "artist": "nagimiso",
+    "internal_id": 988673
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-89",
+    "image": "/images/en-US/B2a-89.webp",
+    "energy": "trainer",
+    "name": "Iono",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Each player shuffles the cards in their hand into their deck, then draws that many cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                Sanosuke Sakuma"
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      332097,
+      333317,
+      742721,
+      989829
+    ],
+    "artist": "Sanosuke Sakuma",
+    "internal_id": 332097
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-90",
+    "image": "/images/en-US/B2a-90.webp",
+    "energy": "trainer",
+    "name": "Nemona",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Pawmot do +80 damage to your opponent's Active Pokémon ex.\n\n            \n                    \n    \n            Illustrated by \n            \n                Sanosuke Sakuma"
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988801,
+      989893
+    ],
+    "artist": "Sanosuke Sakuma",
+    "internal_id": 988801
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-91",
+    "image": "/images/en-US/B2a-91.webp",
+    "energy": "trainer",
+    "name": "Arven",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Flip a coin. If heads, put a random Item card from your deck into your hand. If tails, put a random Pokémon Tool card from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA"
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988865,
+      989957,
+      990406
+    ],
+    "artist": "GIDORA",
+    "internal_id": 988865
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-92",
+    "image": "/images/en-US/B2a-92.webp",
+    "energy": "trainer",
+    "name": "Penny",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Look at a random Supporter card that's not Penny from your opponent's deck and shuffle it back into their deck. Use the effect of that card as the effect of this card.\n\n            \n                    \n    \n            Illustrated by \n            \n                yuu"
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      528705,
+      529797,
+      990021
+    ],
+    "artist": "yuu",
+    "internal_id": 528705
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-93",
+    "image": "/images/en-US/B2a-93.webp",
+    "energy": "trainer",
+    "name": "Mesagoza",
+    "card_type": "trainer",
+    "evolution_type": "stadium",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Once during each player's turn, that player may flip a coin. If heads, that player puts a random Pokémon from their deck into their hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Oswaldo KATO"
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988993
+    ],
+    "artist": "Oswaldo KATO",
+    "internal_id": 988993
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-94",
+    "image": "/images/en-US/B2a-94.webp",
+    "hp": 70,
+    "energy": "fire",
+    "name": "Fuecoco",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Cheerful",
+        "damage": "Singing",
+        "effect": "Put 1 random Basic Pokémon from your deck onto your Bench."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984064,
+      989060
+    ],
+    "artist": "Shimaris Yukichi",
+    "internal_id": 989060
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-95",
+    "image": "/images/en-US/B2a-95.webp",
+    "hp": 70,
+    "energy": "psychic",
+    "name": "Greavard",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic"
+        ],
+        "name": "Soul Shot",
+        "damage": "30",
+        "effect": "Discard a card from your hand. If you can't, this attack does nothing."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986368,
+      989124
+    ],
+    "artist": "sowsow",
+    "internal_id": 989124
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-96",
+    "image": "/images/en-US/B2a-96.webp",
+    "hp": 60,
+    "energy": "psychic",
+    "name": "Gimmighoul",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Continuous Coin Toss",
+        "damage": "20x",
+        "effect": "Flip a coin until you get tails. This attack does 20 damage for each heads."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986496,
+      989188,
+      990856
+    ],
+    "artist": "Akira Komayama",
+    "internal_id": 989188
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-97",
+    "image": "/images/en-US/B2a-97.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Paldean Wooper",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "colorless"
+        ],
+        "name": "Flop",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987136,
+      989252
+    ],
+    "artist": "Miki Tanaka",
+    "internal_id": 989252
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-98",
+    "image": "/images/en-US/B2a-98.webp",
+    "hp": 100,
+    "energy": "metal",
+    "name": "Orthworm",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "metal"
+        ],
+        "name": "Iron Supply",
+        "damage": "10",
+        "effect": "Take a [M] Energy from your Energy Zone and attach it to 1 of your Benched Pokémon."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987969,
+      989316
+    ],
+    "artist": "OKACHEKE",
+    "internal_id": 989316
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-99",
+    "image": "/images/en-US/B2a-99.webp",
+    "hp": 60,
+    "energy": "colorless",
+    "name": "Maushold",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Triple Gnawing",
+        "damage": "60",
+        "effect": "Flip 3 coins. For each heads, discard a random Energy from your opponent's Active Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988289,
+      989380
+    ],
+    "artist": "Mizue",
+    "internal_id": 989380
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-100",
+    "image": "/images/en-US/B2a-100.webp",
+    "hp": 160,
+    "energy": "grass",
+    "name": "Meowscarada ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Flower",
+        "damage": "Trick",
+        "effect": "Choose a spot from among your opponent's Active Spot and Bench. At the end of your opponent's next turn, do 70 damage to the Pokémon in the spot you chose."
+      },
+      {
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "name": "Solar Beam",
+        "damage": "80",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983235,
+      989445,
+      990085
+    ],
+    "artist": "5ban Graphics",
+    "internal_id": 989445
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-101",
+    "image": "/images/en-US/B2a-101.webp",
+    "hp": 140,
+    "energy": "fire",
+    "name": "Armarouge ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Armor Cannon",
+        "damage": "120",
+        "effect": "Discard a [R] Energy from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Armor",
+      "effect": "This Pokémon takes −30 damage from attacks."
+    },
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984323,
+      989509,
+      990149
+    ],
+    "artist": "takuyoa",
+    "internal_id": 989509
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-102",
+    "image": "/images/en-US/B2a-102.webp",
+    "hp": 130,
+    "energy": "water",
+    "name": "Chien-Pao ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Icicle",
+        "damage": "20",
+        "effect": "No effect"
+      },
+      {
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "name": "Diving",
+        "damage": "Icicles",
+        "effect": "Discard all [W] Energy from this Pokémon. This attack does 130 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 1,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985411,
+      989573,
+      990213
+    ],
+    "artist": "aky CG Works",
+    "internal_id": 989573
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-103",
+    "image": "/images/en-US/B2a-103.webp",
+    "hp": 160,
+    "energy": "lightning",
+    "name": "Bellibolt ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "High-Voltage Cannon",
+        "damage": "70+",
+        "effect": "If you have 4 or more [L] Energy in play, this attack does 70 more damage."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 3,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985731,
+      989637,
+      990277
+    ],
+    "artist": "PLANETA Yamashita",
+    "internal_id": 989637
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-104",
+    "image": "/images/en-US/B2a-104.webp",
+    "hp": 150,
+    "energy": "metal",
+    "name": "Gholdengo ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal"
+        ],
+        "name": "Spending",
+        "damage": "Rush",
+        "effect": "1 of your opponent's Pokémon is chosen at random for each [M] Energy attached to this Pokémon. For each time a Pokémon was chosen, do 40 damage to it."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988035,
+      989701,
+      990341
+    ],
+    "artist": "takuyoa",
+    "internal_id": 989701
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-105",
+    "image": "/images/en-US/B2a-105.webp",
+    "energy": "trainer",
+    "name": "Team Star Grunt",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Discard a random Energy from among the Energy attached to all of your opponent's Pokémon that have an Ability.\n\n            \n                    \n    \n            Illustrated by \n            \n                nagimiso"
+    },
+    "weakness": "N/A",
+    "rarity": "☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988673,
+      989765
+    ],
+    "artist": "nagimiso",
+    "internal_id": 989765
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-106",
+    "image": "/images/en-US/B2a-106.webp",
+    "energy": "trainer",
+    "name": "Iono",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Each player shuffles the cards in their hand into their deck, then draws that many cards.\n\n            \n                    \n    \n            Illustrated by \n            \n                Sanosuke Sakuma"
+    },
+    "weakness": "N/A",
+    "rarity": "☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      332097,
+      333317,
+      742721,
+      989829
+    ],
+    "artist": "Sanosuke Sakuma",
+    "internal_id": 989829
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-107",
+    "image": "/images/en-US/B2a-107.webp",
+    "energy": "trainer",
+    "name": "Nemona",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "During this turn, attacks used by your Pawmot do +80 damage to your opponent's Active Pokémon ex.\n\n            \n                    \n    \n            Illustrated by \n            \n                Hideki Ishikawa"
+    },
+    "weakness": "N/A",
+    "rarity": "☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988801,
+      989893
+    ],
+    "artist": "Hideki Ishikawa",
+    "internal_id": 989893
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-108",
+    "image": "/images/en-US/B2a-108.webp",
+    "energy": "trainer",
+    "name": "Arven",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Flip a coin. If heads, put a random Item card from your deck into your hand. If tails, put a random Pokémon Tool card from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA"
+    },
+    "weakness": "N/A",
+    "rarity": "☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988865,
+      989957,
+      990406
+    ],
+    "artist": "GIDORA",
+    "internal_id": 989957
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-109",
+    "image": "/images/en-US/B2a-109.webp",
+    "energy": "trainer",
+    "name": "Penny",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Look at a random Supporter card that's not Penny from your opponent's deck and shuffle it back into their deck. Use the effect of that card as the effect of this card.\n\n            \n                    \n    \n            Illustrated by \n            \n                yuu"
+    },
+    "weakness": "N/A",
+    "rarity": "☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      528705,
+      529797,
+      990021
+    ],
+    "artist": "yuu",
+    "internal_id": 990021
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-110",
+    "image": "/images/en-US/B2a-110.webp",
+    "hp": 160,
+    "energy": "grass",
+    "name": "Meowscarada ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Flower",
+        "damage": "Trick",
+        "effect": "Choose a spot from among your opponent's Active Spot and Bench. At the end of your opponent's next turn, do 70 damage to the Pokémon in the spot you chose."
+      },
+      {
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "name": "Solar Beam",
+        "damage": "80",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983235,
+      989445,
+      990085
+    ],
+    "artist": "kodama",
+    "internal_id": 990085
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-111",
+    "image": "/images/en-US/B2a-111.webp",
+    "hp": 140,
+    "energy": "fire",
+    "name": "Armarouge ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Armor Cannon",
+        "damage": "120",
+        "effect": "Discard a [R] Energy from this Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Armor",
+      "effect": "This Pokémon takes −30 damage from attacks."
+    },
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      984323,
+      989509,
+      990149
+    ],
+    "artist": "Raita Kazama",
+    "internal_id": 990149
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-112",
+    "image": "/images/en-US/B2a-112.webp",
+    "hp": 130,
+    "energy": "water",
+    "name": "Chien-Pao ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Icicle",
+        "damage": "20",
+        "effect": "No effect"
+      },
+      {
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "name": "Diving",
+        "damage": "Icicles",
+        "effect": "Discard all [W] Energy from this Pokémon. This attack does 130 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 1,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985411,
+      989573,
+      990213
+    ],
+    "artist": "kodama",
+    "internal_id": 990213
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-113",
+    "image": "/images/en-US/B2a-113.webp",
+    "hp": 160,
+    "energy": "lightning",
+    "name": "Bellibolt ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "High-Voltage Cannon",
+        "damage": "70+",
+        "effect": "If you have 4 or more [L] Energy in play, this attack does 70 more damage."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 3,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985731,
+      989637,
+      990277
+    ],
+    "artist": "REND",
+    "internal_id": 990277
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-114",
+    "image": "/images/en-US/B2a-114.webp",
+    "hp": 150,
+    "energy": "metal",
+    "name": "Gholdengo ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal"
+        ],
+        "name": "Spending",
+        "damage": "Rush",
+        "effect": "1 of your opponent's Pokémon is chosen at random for each [M] Energy attached to this Pokémon. For each time a Pokémon was chosen, do 40 damage to it."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988035,
+      989701,
+      990341
+    ],
+    "artist": "Akira Komayama",
+    "internal_id": 990341
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-115",
+    "image": "/images/en-US/B2a-115.webp",
+    "energy": "trainer",
+    "name": "Arven",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Flip a coin. If heads, put a random Item card from your deck into your hand. If tails, put a random Pokémon Tool card from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                GIDORA"
+    },
+    "weakness": "N/A",
+    "rarity": "☆☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988865,
+      989957,
+      990406
+    ],
+    "artist": "GIDORA",
+    "internal_id": 990406
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-116",
+    "image": "/images/en-US/B2a-116.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Sprigatito",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Leafage",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983104,
+      990472
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 990472
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-117",
+    "image": "/images/en-US/B2a-117.webp",
+    "hp": 90,
+    "energy": "grass",
+    "name": "Floragato",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Leaf Step",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983168,
+      990536
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 990536
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-118",
+    "image": "/images/en-US/B2a-118.webp",
+    "hp": 140,
+    "energy": "grass",
+    "name": "Meowscarada",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "name": "Fighting Claws",
+        "damage": "60+",
+        "effect": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 70 more damage."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      328130,
+      332356,
+      724354,
+      990600
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 990600
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-119",
+    "image": "/images/en-US/B2a-119.webp",
+    "hp": 60,
+    "energy": "lightning",
+    "name": "Pawmi",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Random",
+        "damage": "Spark",
+        "effect": "This attack does 10 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985472,
+      990664
+    ],
+    "artist": "whomor Inc.",
+    "internal_id": 990664
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-120",
+    "image": "/images/en-US/B2a-120.webp",
+    "hp": 90,
+    "energy": "lightning",
+    "name": "Pawmo",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Head Bolt",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985536,
+      990728
+    ],
+    "artist": "whomor Inc.",
+    "internal_id": 990728
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-121",
+    "image": "/images/en-US/B2a-121.webp",
+    "hp": 140,
+    "energy": "lightning",
+    "name": "Pawmot",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "Thunder Blast",
+        "damage": "100",
+        "effect": "Discard a [L] Energy from this Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985601,
+      990792
+    ],
+    "artist": "whomor Inc.",
+    "internal_id": 990792
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-122",
+    "image": "/images/en-US/B2a-122.webp",
+    "hp": 60,
+    "energy": "psychic",
+    "name": "Gimmighoul",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Continuous Coin Toss",
+        "damage": "20x",
+        "effect": "Flip a coin until you get tails. This attack does 20 damage for each heads."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      986496,
+      989188,
+      990856
+    ],
+    "artist": "Tomowaka",
+    "internal_id": 990856
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-123",
+    "image": "/images/en-US/B2a-123.webp",
+    "hp": 60,
+    "energy": "metal",
+    "name": "Tinkatink",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "colorless"
+        ],
+        "name": "Beat",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987648,
+      990920
+    ],
+    "artist": "kurumitsu",
+    "internal_id": 990920
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-124",
+    "image": "/images/en-US/B2a-124.webp",
+    "hp": 80,
+    "energy": "metal",
+    "name": "Tinkatuff",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "colorless"
+        ],
+        "name": "Light Punch",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      987712,
+      990984
+    ],
+    "artist": "kurumitsu",
+    "internal_id": 990984
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-125",
+    "image": "/images/en-US/B2a-125.webp",
+    "hp": 120,
+    "energy": "metal",
+    "name": "Gholdengo",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Scintillating Surfing",
+        "damage": "50x",
+        "effect": "Flip a coin for each [M] Energy attached to this Pokémon. This attack does 50 damage for each heads."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      331330,
+      332612,
+      991048
+    ],
+    "artist": "Tomowaka",
+    "internal_id": 991048
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-126",
+    "image": "/images/en-US/B2a-126.webp",
+    "hp": 140,
+    "energy": "fire",
+    "name": "Entei ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "name": "Blazing Beatdown",
+        "damage": "60+",
+        "effect": "If this Pokémon has at least 2 extra [R] Energy attached, this attack does 60 more damage."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      656003,
+      660421,
+      660933,
+      991113,
+      12589968
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 991113
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-127",
+    "image": "/images/en-US/B2a-127.webp",
+    "hp": 140,
+    "energy": "water",
+    "name": "Suicune ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water"
+        ],
+        "name": "Crystal Waltz",
+        "damage": "20x",
+        "effect": "This attack does 20 damage for each Benched Pokémon (both yours and your opponent's)."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      656643,
+      660485,
+      661126,
+      991177
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 991177
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-128",
+    "image": "/images/en-US/B2a-128.webp",
+    "hp": 130,
+    "energy": "lightning",
+    "name": "Raikou ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "Voltaic Bullet",
+        "damage": "60",
+        "effect": "This attack also does 10 damage to 1 of your opponent's Benched Pokémon."
+      }
+    ],
+    "ability": {
+      "name": "Legendary Pulse",
+      "effect": "At the end of your turn, if this Pokémon is in the Active Spot, draw a card."
+    },
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      656963,
+      660549,
+      660997,
+      991241
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 991241
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-129",
+    "image": "/images/en-US/B2a-129.webp",
+    "hp": 170,
+    "energy": "metal",
+    "name": "Tinkaton ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "metal",
+          "colorless"
+        ],
+        "name": "Terrific Thumping",
+        "damage": "80+",
+        "effect": "Flip a coin. If heads, this attack does 80 more damage."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      331139,
+      333189,
+      333701,
+      991305
+    ],
+    "artist": "PLANETA Igarashi",
+    "internal_id": 991305
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-130",
+    "image": "/images/en-US/B2a-130.webp",
+    "hp": 140,
+    "energy": "water",
+    "name": "Baxcalibur",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "name": "Buster Tail",
+        "damage": "90",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Ice Maker",
+      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
+    },
+    "weakness": "metal",
+    "retreat": 3,
+    "rarity": "Crown Rare",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      985346,
+      991372
+    ],
+    "artist": "PLANETA Igarashi",
+    "internal_id": 991372
+  },
+  {
+    "expansion": "B2a",
+    "card_id": "B2a-131",
+    "image": "/images/en-US/B2a-131.webp",
+    "energy": "trainer",
+    "name": "Electric Generator",
+    "card_type": "trainer",
+    "evolution_type": "item",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Flip a coin. If heads, take a [L] Energy from your Energy Zone and attach it to 1 of your Benched [L] Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
+    "weakness": "N/A",
+    "rarity": "Crown Rare",
+    "ex": false,
+    "baby": false,
+    "set_details": "paldeanwonders(b2a)",
+    "pack": "everypack",
+    "alternate_versions": [
+      988545,
+      991436
+    ],
+    "artist": "Toyste Beach",
+    "internal_id": 991436
+  },
+  {
     "expansion": "P-A",
     "card_id": "P-A-1",
     "image": "/images/en-US/P-A-1.webp",
@@ -93957,6 +98362,7 @@
       656003,
       660421,
       660933,
+      991113,
       12589968
     ],
     "artist": "PLANETA Tsuji",

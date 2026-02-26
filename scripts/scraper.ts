@@ -36,6 +36,7 @@ const packs = [
   'megaaltariapack',
   'megablazikenpack',
   'megagyaradospack',
+  'paldeanwonderspack',
   'allcards',
 ]
 
@@ -93,6 +94,10 @@ const rarityOverrides: Record<ExpansionId, { rarity: Rarity; start: number; end:
   B2: [
     { rarity: '✵', start: 205, end: 224 },
     { rarity: '✵✵', start: 225, end: 232 },
+  ],
+  B2a: [
+    { rarity: '✵', start: 116, end: 125 },
+    { rarity: '✵✵', start: 126, end: 129 },
   ],
   'P-A': [],
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],
@@ -476,6 +481,7 @@ cards1.sort((a, b) => {
 })
 
 const internalIds: Record<string, number> = Object.fromEntries(cards1.map((c) => [c.card_id, c.internal_id]))
+// @ts-expect-error
 const cards2: Card[] = cards1.map((c) => ({
   ...c,
   alternate_versions: [...new Set(c.alternate_versions.map((card_id) => internalIds[card_id]))].toSorted((a, b) => a - b),

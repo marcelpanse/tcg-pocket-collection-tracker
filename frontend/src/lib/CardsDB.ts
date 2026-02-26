@@ -15,6 +15,7 @@ const A4aMissions = await import('../../assets/themed-collections/A4a-missions.j
 const A4bMissions = await import('../../assets/themed-collections/A4b-missions.json')
 const B1Missions = await import('../../assets/themed-collections/B1-missions.json')
 const B1aMissions = await import('../../assets/themed-collections/B1a-missions.json')
+const B2aMissions = await import('../../assets/themed-collections/B2a-missions.json')
 
 export const allCards: Card[] = AllCardsJson.default as Card[]
 
@@ -56,6 +57,7 @@ const a4bMissions: Mission[] = A4bMissions.default as Mission[]
 const b1Missions: Mission[] = B1Missions.default as Mission[]
 const b1aMissions: Mission[] = B1aMissions.default as Mission[]
 const b2Missions: Mission[] = B1aMissions.default as Mission[]
+const b2aMissions: Mission[] = B2aMissions.default as Mission[]
 
 export const expansions: Expansion[] = [
   // internalId=0 skipped for error states
@@ -269,6 +271,20 @@ export const expansions: Expansion[] = [
     internalId: 14,
     packs: [{ name: 'megagardevoirpack', color: '#b9c078' }],
     missions: b2Missions,
+    tradeable: true,
+    openable: true,
+    packStructure: {
+      containsShinies: true,
+      containsBabies: false,
+      cardsPerPack: 5,
+    },
+  },
+  {
+    name: 'paldeanwonders',
+    id: 'B2a',
+    internalId: 15,
+    packs: [{ name: 'paldeanwonderspack', color: '#78b9c0' }],
+    missions: b2aMissions,
     tradeable: true,
     openable: true,
     packStructure: {

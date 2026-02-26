@@ -2,7 +2,7 @@ import type { MissionDetailProps } from '@/components/Mission'
 import type { Card, Expansion, ExpansionId, Mission, Pack, PackStructure, Rarity } from '@/types'
 import { allCards, getCardById, getExpansionById } from './CardsDB'
 
-const expansionCards = Object.groupBy(allCards, (c) => c.expansion) as Record<ExpansionId, Card[]>
+const expansionCards = Object.groupBy(allCards, (c) => c.expansion) as Partial<Record<ExpansionId, Card[]>>
 
 // Helper to create a full rarity probability record with defaults
 const createRarityProbability = (probabilities: Partial<Record<Rarity, number>>): Record<Rarity, number> => ({
@@ -121,7 +121,7 @@ export function pullRate(wantedCards: Card[], expansion: Expansion, pack: Pack, 
   if (!expansion.packStructure) {
     throw new Error(`${expansion.id}: can't calculate probability without 'packStructure' field`)
   }
-  const cardsInPack = expansionCards[expansion.id].filter((c) => c.pack === pack.name || c.pack === 'everypack')
+  const cardsInPack = (expansionCards[expansion.id] ?? []).filter((c) => c.pack === pack.name || c.pack === 'everypack')
   return pullRateForCardSubset(
     wantedCards.filter((c) => c.expansion === expansion.id),
     cardsInPack,
@@ -135,7 +135,7 @@ export const pullRateForSpecificCard = (expansion: Expansion, packName: string, 
     throw new Error(`${expansion.id}: can't calculate probability without 'packStructure' field`)
   }
   const validatedPackName = packName === 'everypack' ? expansion?.packs[0].name : packName
-  const cardsInPack = expansionCards[expansion.id].filter((c) => c.pack === validatedPackName || c.pack === 'everypack')
+  const cardsInPack = (expansionCards[expansion.id] ?? []).filter((c) => c.pack === validatedPackName || c.pack === 'everypack')
   return pullRateForCardSubset([card], cardsInPack, expansion.packStructure, false) * 100
 }
 
@@ -162,7 +162,7 @@ export const pullRateForSpecificMission = (mission: Mission, missionGridRows: Mi
           pack.name,
           pullRateForCardSubset(
             missingCards,
-            expansionCards[expansion.id].filter((c) => c.pack === pack.name || c.pack === 'everypack'),
+            (expansionCards[expansion.id] ?? []).filter((c) => c.pack === pack.name || c.pack === 'everypack'),
             packStructure,
             false,
           ) * 100,
