@@ -25,6 +25,8 @@ const Scan = lazy(() => import('./pages/scan/Scan.tsx'))
 const EditProfile = lazy(() => import('./components/EditProfile.tsx'))
 const CardDetail = lazy(() => import('./pages/collection/CardDetail.tsx'))
 
+const Friends = lazy(() => import('./pages/friends/Friends.tsx'))
+
 const TradeWithRedirect = () => {
   const { friendId } = useParams()
   return <Navigate to={`/trade/${friendId}`} replace />
@@ -90,6 +92,7 @@ function App() {
         { path: '/decks/:id', element: <DeckView /> },
         { path: '/scan', element: <Scan /> },
         { path: '/trade/*', element: <Trade /> },
+        { path: '/friends', element: <Friends /> },
       ],
     },
   ])
