@@ -2,13 +2,14 @@ import { useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { useTranslation } from 'react-i18next'
 import XLSX from 'xlsx'
-import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
+import { useCollection, useDeleteCard, useUpdateCards } from '@/services/collection/useCollection'
 import type { CardAmountUpdate, CollectionRow, ImportExportRow } from '@/types'
 
 export const ImportReader = () => {
   const { t } = useTranslation('pages/import')
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const updateCardsMutation = useUpdateCards()
+  const deleteCardMutation = useDeleteCard()
 
   const [numberProcessed, setNumberProcessed] = useState<number>(0)
   const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -17,6 +18,7 @@ export const ImportReader = () => {
 
   const processFileRows = async (data: ImportExportRow[]) => {
     const cardArray: CardAmountUpdate[] = []
+    const cardIdsToDelete: string[] = []
 
     for (let i = 0; i < data.length; i++) {
       const r = data[i]
@@ -28,6 +30,9 @@ export const ImportReader = () => {
 
       if (r.Collected) {
         cardArray.push({ card_id: cardId, internal_id: r.InternalId, amount_owned: newAmount })
+      } else if (ownedCard?.collection.includes(cardId)) {
+        // Card is currently collected but CSV says it should be uncollected — delete it
+        cardIdsToDelete.push(cardId)
       }
 
       // update UI
@@ -39,7 +44,13 @@ export const ImportReader = () => {
       setNumberProcessed((n) => n + 1)
     }
 
-    updateCardsMutation.mutate(cardArray)
+    if (cardArray.length > 0) {
+      updateCardsMutation.mutate(cardArray)
+    }
+
+    for (const cardId of cardIdsToDelete) {
+      await deleteCardMutation.mutateAsync({ cardId })
+    }
   }
 
   const onDrop = (acceptedFiles: File[]) => {
