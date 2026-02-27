@@ -5,7 +5,7 @@ import type { CheerioAPI } from 'cheerio'
 import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
 import { expansions as allExpansions } from '../frontend/src/lib/CardsDB'
-import { type Card, type CardType, cardTypes, type ExpansionId, type Rarity } from '../frontend/src/types'
+import { type Card, type CardType, cardTypes, type Expansion, type ExpansionId, type Rarity } from '../frontend/src/types'
 import { encode } from './encoder'
 
 const BASE_URL = 'https://pocket.limitlesstcg.com'
@@ -13,8 +13,6 @@ const BASE_URL = 'https://pocket.limitlesstcg.com'
 const targetDir = 'frontend/assets/'
 const imagesDir = 'frontend/public/images/en-US/'
 const imagesPath = '/images/en-US/'
-
-const expansions = allExpansions.map((e) => e.id)
 
 const packs = [
   'pikachupack',
@@ -229,13 +227,13 @@ function urlToCardId(url: string): { expansion: string; cardNr: number; cardId: 
   }
 }
 
-async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string) {
+async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expansion) {
   const inPackId = Number.parseInt(cardUrl.split('/').pop(), 10)
   if (!inPackId) {
     throw new Error(`Faied to parse card id from url: ${cardUrl}`)
   }
 
-  const card_id = `${expansion}-${inPackId}`
+  const card_id = `${expansion.id}-${inPackId}`
 
   const imageUrl = $('img.card').attr('src')
   if (!imageUrl) {
@@ -313,7 +311,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
 
   const raritySection = $('table.card-prints-versions tr.current')
   let rarity = (cardUrl.toString().includes('P-A') ? 'P' : raritySection.find('td:last-child').text().trim() || 'P') as Rarity
-  for (const { rarity: rarityOverride, start, end } of rarityOverrides[expansion]) {
+  for (const { rarity: rarityOverride, start, end } of rarityOverrides[expansion.id]) {
     if (start <= inPackId && inPackId <= end) {
       rarity = rarityOverride
     }
@@ -328,9 +326,10 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
 
   const alternate_versions: string[] = []
   let linked = false
-  let baseExpansion = expansion
+  let baseExpansion = expansion.id
   let baseCardNr = inPackId
   let foundMyself = false
+  const containsLinkedCards = expansion.packStructure?.containsLinkedCards
 
   console.log('processing alternates for', card_id)
   $('table.card-prints-versions tr').each((_i, version) => {
@@ -348,8 +347,8 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
       // the alternate cards are only available up to EX card rarity (at least for now). And since limitless doesn't properly set shiny cards, we have to check it like this.
       // Be aware that for higher rarities this would not work, as there are different fullart versions of the same card with the same rarity, eg. A2a-82 and A2a-91.
       if (rarity.includes('◊') && alternate_card_rarity === rarity && !foundMyself && !linked) {
-        baseExpansion = alternate_card_id ? urlToCardId(alternate_card_id).expansion : expansion
-        baseCardNr = alternate_card_id ? urlToCardId(alternate_card_id).cardNr : inPackId
+        baseExpansion = alternate_card_id ? (urlToCardId(alternate_card_id).expansion as ExpansionId) : expansion.id
+        baseCardNr = alternate_card_id && containsLinkedCards ? urlToCardId(alternate_card_id).cardNr : inPackId
         linked = !!alternate_card_id // just for reference to double-check
         console.log('found alternate option', alternate_card_id, baseExpansion, baseCardNr, linked)
       }
@@ -358,9 +357,9 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
       // We consider it a foil card if we already linked it, but still find the same rarity in the same set before the current card.
       if (alternate_card_id && !foundMyself) {
         const alternateSetId = urlToCardId(alternate_card_id).expansion
-        if (alternateSetId === expansion && alternate_card_rarity === rarity) {
+        if (alternateSetId === expansion.id && alternate_card_rarity === rarity) {
           // same set, same rarity, means this one is an alternative art in the same set (can be foil), remove the link and treat like unique card.
-          baseExpansion = expansion // foils don't have linked cards (at least not yet!)
+          baseExpansion = expansion.id // foils don't have linked cards (at least not yet!)
           baseCardNr = inPackId
           linked = false
           console.log('disregarding alternate-->unique', baseExpansion, baseCardNr, linked)
@@ -379,7 +378,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
 
   console.log('returning card info', card_id)
   return {
-    expansion: expansion as ExpansionId,
+    expansion: expansion.id as ExpansionId,
     card_id,
     image,
     hp,
@@ -402,11 +401,11 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: string
   }
 }
 
-async function getCardDetails(cardUrl: string, expansionId: string) {
+async function getCardDetails(cardUrl: string, expansion: Expansion) {
   try {
     console.log(`Fetching details for ${cardUrl}...`)
     const $ = await fetchHTML(cardUrl)
-    return await extractCardInfo($, cardUrl, expansionId)
+    return await extractCardInfo($, cardUrl, expansion)
   } catch (error) {
     console.error(`Error fetching details for ${cardUrl}:`, error)
     return null // Return null or a default object to continue the process for other cards
@@ -430,9 +429,9 @@ async function getCardLinks(mainUrl: string) {
 const cards1: Awaited<ReturnType<typeof getCardDetails>>[] = []
 
 async function scrapeCards() {
-  for (const expansion of expansions) {
+  for (const expansion of allExpansions) {
     try {
-      const mainUrl = `${BASE_URL}/cards/${expansion}`
+      const mainUrl = `${BASE_URL}/cards/${expansion.id}`
       const cardLinks = await getCardLinks(mainUrl)
       console.log(`Found ${cardLinks.length} card links.`)
 

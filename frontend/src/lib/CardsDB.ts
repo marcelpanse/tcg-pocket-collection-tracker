@@ -77,6 +77,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: false,
       containsBabies: false,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },
@@ -91,6 +92,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: false,
       containsBabies: false,
+      containsLinkedCards: true,
       cardsPerPack: 5,
     },
   },
@@ -109,6 +111,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: false,
       containsBabies: false,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },
@@ -123,6 +126,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: false,
       containsBabies: false,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },
@@ -137,6 +141,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: true,
       containsBabies: false,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },
@@ -155,6 +160,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: true,
       containsBabies: false,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },
@@ -169,6 +175,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: true,
       containsBabies: false,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },
@@ -183,6 +190,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: true,
       containsBabies: false,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },
@@ -201,6 +209,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: true,
       containsBabies: true,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },
@@ -215,6 +224,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: true,
       containsBabies: true,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },
@@ -229,6 +239,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: true,
       containsBabies: false,
+      containsLinkedCards: true,
       cardsPerPack: 4,
     },
   },
@@ -248,6 +259,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: true,
       containsBabies: false,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },
@@ -262,6 +274,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: true,
       containsBabies: false,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },
@@ -276,6 +289,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: true,
       containsBabies: false,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },
@@ -290,6 +304,7 @@ export const expansions: Expansion[] = [
     packStructure: {
       containsShinies: true,
       containsBabies: false,
+      containsLinkedCards: false,
       cardsPerPack: 5,
     },
   },

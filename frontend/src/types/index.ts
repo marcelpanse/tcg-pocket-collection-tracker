@@ -90,6 +90,7 @@ export interface TradePartners {
 export interface PackStructure {
   containsShinies: boolean
   containsBabies: boolean
+  containsLinkedCards: boolean
   cardsPerPack: 4 | 5
 }
 
