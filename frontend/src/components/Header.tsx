@@ -21,6 +21,7 @@ import Export from '@/pages/export/Export'
 import Import from '@/pages/import/Import'
 import { useProfileDialog } from '@/services/account/useAccount'
 import { useLoginDialog, useLogout, useUser } from '@/services/auth/useAuth'
+import { usePendingRequests } from '@/services/friends/useFriends'
 import { useActionableTradeCount } from '@/services/trade/useTrade.ts'
 import { Badge } from './ui/badge'
 
@@ -29,6 +30,8 @@ export function Header() {
   const { t, i18n } = useTranslation('header')
   const { data: user } = useUser()
   const { data: actionableTradeCount } = useActionableTradeCount()
+  const { data: pendingRequests = [] } = usePendingRequests()
+  const pendingFriendCount = pendingRequests.length
   const logoutMutation = useLogout()
 
   const { isLoginDialogOpen, setIsLoginDialogOpen } = useLoginDialog()
@@ -62,7 +65,7 @@ export function Header() {
         <NavigationMenu className="max-w-full justify-start">
           <NavigationMenuList>
             {/* dynamic item for mobile that switches between overview and collection depending on the current page */}
-            <NavigationMenuLink asChild className="block sm:hidden">
+            <NavigationMenuLink asChild className="block md:hidden">
               <Link to={isOverviewPage ? '/collection' : '/'}>
                 <Button className="px-2 sm:px-4" variant="ghost">
                   {isOverviewPage ? t('collection') : t('overview')}
@@ -70,28 +73,28 @@ export function Header() {
               </Link>
             </NavigationMenuLink>
 
-            <NavigationMenuLink asChild className="hidden sm:block">
+            <NavigationMenuLink asChild className="hidden md:block">
               <Link to="/">
                 <Button className="px-2 sm:px-4" variant="ghost">
                   {t('overview')}
                 </Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild className="hidden sm:block">
+            <NavigationMenuLink asChild className="hidden md:block">
               <Link to="/collection">
                 <Button className="px-2 sm:px-4" variant="ghost">
                   {t('collection')}
                 </Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild className="hidden sm:block">
+            <NavigationMenuLink asChild className="hidden md:block">
               <Link to="/decks">
                 <Button className="px-2 sm:px-4" variant="ghost">
                   {t('Decks')}
                 </Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild className={`${actionableTradeCount ? 'block' : 'hidden'} sm:block`}>
+            <NavigationMenuLink asChild className={`${actionableTradeCount ? 'block' : 'hidden'} md:block`}>
               <Link to="/trade">
                 <Button className="px-2 sm:px-4" variant="ghost">
                   {t('trade')}
@@ -104,7 +107,20 @@ export function Header() {
                 </Button>
               </Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild className={`${actionableTradeCount ? 'hidden sm:block' : ''}`}>
+            <NavigationMenuLink asChild className={`${pendingFriendCount && !actionableTradeCount ? 'block' : 'hidden'} md:block`}>
+              <Link to="/friends">
+                <Button className="px-2 sm:px-4" variant="ghost">
+                  {t('friends')}
+                  <Badge
+                    className={`h-5 min-w-5 rounded-full font-mono tabular-nums -mt-2 ${pendingFriendCount ? 'flex' : 'hidden'} justify-center`}
+                    variant="destructive"
+                  >
+                    {pendingFriendCount}
+                  </Badge>
+                </Button>
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild className={`${actionableTradeCount || pendingFriendCount ? 'hidden sm:block' : ''}`}>
               <Link to="/scan">
                 <Button className="px-2 sm:px-4" variant="ghost">
                   {t('scan')}
@@ -112,14 +128,14 @@ export function Header() {
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden lg:block">
-              <Link to="https://blog.tcgpocketcollectiontracker.com" className="hidden md:block">
+              <Link to="https://blog.tcgpocketcollectiontracker.com" className="hidden lg:block">
                 <Button className="px-2 sm:px-4" variant="ghost">
                   {t('blog')}
                 </Button>
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden lg:block">
-              <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden md:block">
+              <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden lg:block">
                 <Button className="px-2 sm:px-4" variant="ghost">
                   {t('community')}
                 </Button>

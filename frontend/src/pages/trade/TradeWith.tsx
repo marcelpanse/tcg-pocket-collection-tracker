@@ -1,4 +1,4 @@
-import { ChevronFirst, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronFirst, ChevronLeft, ChevronRight, UserPlus } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useParams, useSearchParams } from 'react-router'
@@ -6,12 +6,14 @@ import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { Switch } from '@/components/ui/switch'
+import { useToast } from '@/hooks/use-toast'
 import { getCardByInternalId, tradeableExpansions } from '@/lib/CardsDB.ts'
 import { getExtraCards, getNeededCards } from '@/lib/utils'
 import { CardList } from '@/pages/trade/components/CardList.tsx'
 import { TradeOffer } from '@/pages/trade/components/TradeOffer.tsx'
 import { useAccount, usePublicAccount } from '@/services/account/useAccount'
 import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
+import { useFriends, useManageFriend } from '@/services/friends/useFriends'
 import { useAllTrades } from '@/services/trade/useTrade'
 import { type Card, type CollectionRow, type Rarity, type TradableRarity, tradableRarities } from '@/types'
 import TradeList from './components/TradeList'
@@ -35,6 +37,9 @@ function TradeWith() {
 
   const { data: account } = useAccount()
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
+  const { data: friends = [] } = useFriends()
+  const manageFriend = useManageFriend()
+  const { toast } = useToast()
 
   const [viewHistory, setViewHistory] = useState(false)
   const [pageHistory, setPageHistory] = useState(0)
@@ -96,6 +101,17 @@ function TradeWith() {
   )
 
   const hasPossibleTrades = tradableRarities.some((r) => (userTrades[r] ?? []).length > 0 && (friendTrades[r] ?? []).length > 0)
+  const isAlreadyFriend = friends.some((f) => f.friend_id === friendAccount.friend_id)
+
+  const handleAddFriend = () => {
+    manageFriend.mutate(
+      { friend_id: friendAccount.friend_id, action: 'send_request' },
+      {
+        onSuccess: () => toast({ title: 'Friend request sent!' }),
+        onError: (err) => toast({ variant: 'destructive', title: 'Error', description: err.message }),
+      },
+    )
+  }
 
   return (
     <div className="flex flex-col gap-4 w-full px-1 sm:px-2">
@@ -121,6 +137,12 @@ function TradeWith() {
               }}
             />
           </label>
+          {!isAlreadyFriend && (
+            <Button onClick={handleAddFriend} disabled={manageFriend.isPending}>
+              <UserPlus className="h-4 w-4 mr-1" />
+              Add Friend
+            </Button>
+          )}
           <Link to={`/collection/${friendId}`}>
             <Button>
               Collection

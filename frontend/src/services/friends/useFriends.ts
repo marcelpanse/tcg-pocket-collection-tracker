@@ -10,6 +10,8 @@ export function useFriends() {
     queryKey: ['friends'],
     queryFn: () => getFriends(email as string),
     enabled: !!email,
+    refetchInterval: 10_000,
+    refetchIntervalInBackground: false,
   })
 }
 
@@ -21,6 +23,8 @@ export function usePendingRequests() {
     queryKey: ['friendRequests'],
     queryFn: () => getPendingRequests(email as string),
     enabled: !!email,
+    refetchInterval: 10_000,
+    refetchIntervalInBackground: false,
   })
 }
 
