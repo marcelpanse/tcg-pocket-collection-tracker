@@ -10,18 +10,23 @@ const pool = new postgres.Pool(databaseUrl, 3, true)
 Deno.serve(async (_req) => {
   try {
     // Grab a connection from the pool
+    console.log('Acquiring database connection from pool')
     const connection = await pool.connect()
+    console.log('Database connection acquired')
 
     try {
       // Run a query
-      const collectionCountResult = await connection.queryObject<{ count: number }>('SELECT SUM(amount_owned) as count FROM collection;')
-      const usersCountResult = await connection.queryObject<{ count: number }>('SELECT count(*) as count FROM auth.users')
-
+      const collectionSql = 'SELECT SUM(amount_owned) as count FROM collection;'
+      console.log('Executing SQL:', collectionSql)
+      const collectionCountResult = await connection.queryObject<{ count: number }>(collectionSql)
       const collectionCount = collectionCountResult.rows[0]?.count.toLocaleString()
-      console.log('result', collectionCount)
+      console.log('collectionCount result:', collectionCount)
 
+      const usersSql = 'SELECT count(*) as count FROM auth.users'
+      console.log('Executing SQL:', usersSql)
+      const usersCountResult = await connection.queryObject<{ count: number }>(usersSql)
       const usersCount = usersCountResult.rows[0]?.count.toLocaleString()
-      console.log('result', usersCount)
+      console.log('usersCount result:', usersCount)
 
       const supabase = createClient(Deno.env.get('SUPABASE_URL') ?? '', Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '', {
         global: { headers: { Authorization: `Bearer ${Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')}` } },
@@ -30,6 +35,7 @@ Deno.serve(async (_req) => {
       // Encode the result as pretty printed JSON
       const body = JSON.stringify({ collectionCount, usersCount })
 
+      console.log('Uploading stats to storage:', body)
       const { error } = await supabase.storage.from('stats').update('stats.json', body, {
         cacheControl: '60',
         upsert: true,
@@ -40,6 +46,7 @@ Deno.serve(async (_req) => {
         console.error('Error uploading stats', error)
         throw new Error('Error uploading stats')
       }
+      console.log('Stats uploaded successfully')
 
       // Return the response with the correct content type header
       return new Response(body, {
@@ -48,6 +55,7 @@ Deno.serve(async (_req) => {
       })
     } finally {
       // Release the connection back into the pool
+      console.log('Releasing database connection back to pool')
       connection.release()
     }
   } catch (err) {

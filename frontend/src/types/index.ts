@@ -181,3 +181,13 @@ export interface Deck {
   created_at?: string
   updated_at?: string
 }
+
+export type FriendState = 'accepted' | 'declined' | 'revoked' | 'pending'
+
+export interface FriendRow {
+  id: number
+  friend_id: string // the OTHER person's public friend_id
+  username: string // the OTHER person's username
+  state: FriendState
+  created_at: Date
+}
