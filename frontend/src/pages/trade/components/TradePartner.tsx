@@ -6,8 +6,10 @@ import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button.tsx'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
+import { useChatContext } from '@/context/ChatContext'
 import TradeList from '@/pages/trade/components/TradeList.tsx'
 import { usePublicAccount } from '@/services/account/useAccount.ts'
+import { useFriends } from '@/services/friends/useFriends'
 import { useAllTrades } from '@/services/trade/useTrade'
 import type { TradeRow } from '@/types'
 
@@ -20,6 +22,9 @@ function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
   const { t } = useTranslation(['trade-matches', 'common'])
 
   const { data: friendAccount, isLoading: isLoadingAccount } = usePublicAccount(friendId)
+  const { data: friends = [] } = useFriends()
+  const { openChat } = useChatContext()
+  const isAlreadyFriend = friends.some((f) => f.friend_id === friendId)
 
   const [viewHistory, setViewHistory] = useState(false)
   const [pageHistory, setPageHistory] = useState(0)
@@ -35,7 +40,14 @@ function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
         <p>
           <span className="text-md">{t('tradingWith')}</span>
           <span className="text-md font-bold"> {friendAccount?.username || 'unknown'} </span>
-          {friendAccount && <FriendIdDisplay friendId={friendAccount.friend_id} showFriendId={false} className="ml-1" />}
+          {friendAccount && (
+            <FriendIdDisplay
+              friendId={friendAccount.friend_id}
+              showFriendId={false}
+              className="ml-1"
+              onChat={isAlreadyFriend ? () => openChat(friendAccount.friend_id, friendAccount.username || friendAccount.friend_id) : undefined}
+            />
+          )}
         </p>
         <span className="flex gap-4">
           <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">

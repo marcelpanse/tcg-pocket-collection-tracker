@@ -6,6 +6,7 @@ import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { Switch } from '@/components/ui/switch'
+import { useChatContext } from '@/context/ChatContext'
 import { useToast } from '@/hooks/use-toast'
 import { getCardByInternalId, tradeableExpansions } from '@/lib/CardsDB.ts'
 import { getExtraCards, getNeededCards } from '@/lib/utils'
@@ -40,6 +41,7 @@ function TradeWith() {
   const { data: friends = [] } = useFriends()
   const manageFriend = useManageFriend()
   const { toast } = useToast()
+  const { openChat } = useChatContext()
 
   const [viewHistory, setViewHistory] = useState(false)
   const [pageHistory, setPageHistory] = useState(0)
@@ -121,7 +123,10 @@ function TradeWith() {
           <span className="text-2xl font-light">{t('tradingWith')}</span>
           <span className="text-2xl font-bold"> {friendAccount.username} </span>
           <span className="block sm:inline text-sm">
-            <FriendIdDisplay friendId={friendAccount.friend_id} />
+            <FriendIdDisplay
+              friendId={friendAccount.friend_id}
+              onChat={isAlreadyFriend ? () => openChat(friendAccount.friend_id, friendAccount.username || friendAccount.friend_id) : undefined}
+            />
           </span>
         </h1>
         <div className="flex flex-col-reverse sm:flex-row gap-2">
