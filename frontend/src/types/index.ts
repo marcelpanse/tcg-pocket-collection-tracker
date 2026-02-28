@@ -191,3 +191,12 @@ export interface FriendRow {
   state: FriendState
   created_at: Date
 }
+
+export interface MessageRow {
+  id: number
+  sender_friend_id: string
+  receiver_friend_id: string
+  content: string
+  created_at: Date
+  read_at: Date | null
+}
