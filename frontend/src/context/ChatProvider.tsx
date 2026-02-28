@@ -10,6 +10,13 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
   const [openChats, setOpenChats] = useState<OpenChat[]>([])
   const channelRef = useRef<ReturnType<typeof supabase.channel> | null>(null)
 
+  // Request notification permission when user is logged in
+  useEffect(() => {
+    if (myFriendId && 'Notification' in window && Notification.permission === 'default') {
+      Notification.requestPermission()
+    }
+  }, [myFriendId])
+
   // On mount (when account loads), fetch unread counts and open minimized chats
   useEffect(() => {
     if (!myFriendId) {
@@ -38,9 +45,19 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
       .on('broadcast', { event: 'message' }, ({ payload }) => {
         const senderFriendId: string = payload.sender_friend_id
         const senderUsername: string = payload.sender_username ?? senderFriendId
+        const content: string = payload.content ?? 'New message'
 
         setOpenChats((prev) => {
           const existing = prev.find((c) => c.friendId === senderFriendId)
+          const chatIsMinimizedOrClosed = !existing || existing.minimized
+
+          if ('Notification' in window && Notification.permission === 'granted' && (document.hidden || chatIsMinimizedOrClosed)) {
+            new Notification(`${senderUsername}`, {
+              body: content,
+              icon: '/pokemon-icon128.png',
+            })
+          }
+
           if (!existing) {
             return [...prev, { friendId: senderFriendId, username: senderUsername, minimized: true, unreadCount: 1 }]
           }
