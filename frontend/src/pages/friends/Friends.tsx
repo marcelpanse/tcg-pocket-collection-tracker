@@ -1,9 +1,10 @@
-import { ArrowRight, Clock, UserCheck, UserPlus, Users, UserX } from 'lucide-react'
+import { ArrowRight, Clock, MessageSquare, UserCheck, UserPlus, Users, UserX } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { Input } from '@/components/ui/input'
+import { useChatContext } from '@/context/ChatContext'
 import { useToast } from '@/hooks/use-toast'
 import { useAccount } from '@/services/account/useAccount'
 import { useLoginDialog, useUser } from '@/services/auth/useAuth'
@@ -24,6 +25,7 @@ export default function Friends() {
   const { data: pendingRequests = [], isLoading: pendingLoading } = usePendingRequests()
   const manageFriend = useManageFriend()
   const { toast } = useToast()
+  const { openChat } = useChatContext()
   const [friendIdInput, setFriendIdInput] = useState('')
 
   if (!user) {
@@ -202,7 +204,10 @@ export default function Friends() {
           ) : (
             <div className="flex flex-col gap-2">
               {acceptedFriends.map((friend) => (
-                <div key={friend.id} className="flex items-center justify-between rounded-lg bg-neutral-900/60 border border-neutral-700 p-3 gap-3">
+                <div
+                  key={friend.id}
+                  className="flex flex-col gap-2 rounded-lg bg-neutral-900/60 border border-neutral-700 p-3 md:flex-row md:items-center md:justify-between"
+                >
                   <div className="flex items-center gap-3 min-w-0">
                     <FriendAvatar name={friend.username || friend.friend_id} />
                     <div className="min-w-0">
@@ -211,8 +216,17 @@ export default function Friends() {
                     </div>
                   </div>
                   <div className="flex gap-2 shrink-0">
-                    <Link to={`/trade/${friend.friend_id}`}>
-                      <Button size="sm" variant="outline">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="flex-1 md:flex-none"
+                      onClick={() => openChat(friend.friend_id, friend.username || friend.friend_id)}
+                    >
+                      <MessageSquare className="h-3.5 w-3.5 mr-1.5" />
+                      Chat
+                    </Button>
+                    <Link to={`/trade/${friend.friend_id}`} className="flex-1 md:flex-none">
+                      <Button size="sm" variant="outline" className="w-full">
                         Trade matches
                         <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
                       </Button>

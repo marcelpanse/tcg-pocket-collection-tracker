@@ -7,10 +7,12 @@ import DonationPopup from '@/components/DonationPopup.tsx'
 import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useAuthSSO, useUser } from '@/services/auth/useAuth'
+import { ChatManager } from './components/chat/ChatManager.tsx'
 import ErrorAlert from './components/ErrorAlert.tsx'
 import { Header } from './components/Header.tsx'
 import { Spinner } from './components/Spinner.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
+import { ChatProvider } from './context/ChatProvider.tsx'
 import { DialogContext } from './context/DialogContext.ts'
 import DeckView from './pages/decks/DeckView.tsx'
 
@@ -109,12 +111,15 @@ function App() {
   return (
     <ErrorBoundary FallbackComponent={ErrorAlert}>
       <DialogContext.Provider value={dialogContextValue}>
-        <Toaster />
-        <RouterProvider router={router} />
-        <InstallPrompt />
-        <DonationPopup />
-        {/* Add React Query DevTools (only in development) */}
-        {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
+        <ChatProvider>
+          <Toaster />
+          <RouterProvider router={router} />
+          <InstallPrompt />
+          <DonationPopup />
+          <ChatManager />
+          {/* Add React Query DevTools (only in development) */}
+          {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
+        </ChatProvider>
       </DialogContext.Provider>
     </ErrorBoundary>
   )
