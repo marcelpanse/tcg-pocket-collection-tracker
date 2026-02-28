@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Alert, AlertDescription, AlertTitle } from './ui/alert'
 
 interface Props {
-  error?: Error
+  error?: unknown
 }
 
 export default function ErrorAlert({ error }: Props) {
@@ -22,7 +22,7 @@ export default function ErrorAlert({ error }: Props) {
         {error !== undefined && (
           <p>
             Please include the following error message:
-            <span className="block font-mono border-1 border-neutral-700 p-1 rounded mt-1">{error.message}</span>
+            <span className="block font-mono border-1 border-neutral-700 p-1 rounded mt-1">{error instanceof Error ? error.message : String(error)}</span>
           </p>
         )}
       </AlertDescription>
