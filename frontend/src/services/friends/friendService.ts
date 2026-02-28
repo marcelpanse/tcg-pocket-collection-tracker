@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase'
+import { umami } from '@/lib/utils.ts'
 import type { FriendRow } from '@/types'
 
 export async function getFriends(email: string): Promise<FriendRow[]> {
@@ -40,6 +41,8 @@ export async function getPendingRequests(email: string): Promise<FriendRow[]> {
 }
 
 export async function manageFriend(friend_id: string, action: string): Promise<void> {
+  umami(`Friend: ${action}`)
+
   const { error } = await supabase.functions.invoke('manage-friend', {
     method: 'POST',
     body: { friend_id, action },
