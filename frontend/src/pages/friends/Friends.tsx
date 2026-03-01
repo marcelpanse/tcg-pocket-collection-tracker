@@ -159,7 +159,10 @@ export default function Friends() {
             ) : (
               <div className="flex flex-col gap-2">
                 {pendingRequests.map((req) => (
-                  <div key={req.id} className="flex items-center justify-between rounded-lg bg-neutral-800/80 border border-neutral-700 p-3 gap-3">
+                  <div
+                    key={req.id}
+                    className="flex flex-col gap-2 rounded-lg bg-neutral-800/80 border border-neutral-700 p-3 md:flex-row md:items-center md:justify-between"
+                  >
                     <div className="flex items-center gap-3 min-w-0">
                       <FriendAvatar name={req.username || req.friend_id} />
                       <div className="min-w-0">
@@ -167,12 +170,18 @@ export default function Friends() {
                         <FriendIdDisplay friendId={req.friend_id} showCopyButton={false} className="text-xs text-neutral-500" />
                       </div>
                     </div>
-                    <div className="flex gap-2 shrink-0">
-                      <Button size="sm" onClick={() => handleAccept(req.friend_id)} disabled={manageFriend.isPending}>
+                    <div className="flex gap-2">
+                      <Button size="sm" className="flex-1 md:flex-none" onClick={() => handleAccept(req.friend_id)} disabled={manageFriend.isPending}>
                         <UserCheck className="h-4 w-4 mr-1" />
                         Accept
                       </Button>
-                      <Button size="sm" variant="outline" onClick={() => handleDecline(req.friend_id)} disabled={manageFriend.isPending}>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="flex-1 md:flex-none"
+                        onClick={() => handleDecline(req.friend_id)}
+                        disabled={manageFriend.isPending}
+                      >
                         <UserX className="h-4 w-4 mr-1" />
                         Decline
                       </Button>
@@ -232,6 +241,7 @@ export default function Friends() {
                       </Button>
                     </Link>
                     <Button
+                      title="remove friend"
                       size="sm"
                       variant="ghost"
                       onClick={() => handleRevoke(friend.friend_id)}
