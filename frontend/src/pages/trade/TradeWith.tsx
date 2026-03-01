@@ -103,7 +103,7 @@ function TradeWith() {
   )
 
   const hasPossibleTrades = tradableRarities.some((r) => (userTrades[r] ?? []).length > 0 && (friendTrades[r] ?? []).length > 0)
-  const isAlreadyFriend = friends.some((f) => f.friend_id === friendAccount.friend_id)
+  const isAlreadyFriend = friends.some((f) => f.friend_id === friendAccount.friend_id && f.state === 'accepted')
 
   const handleAddFriend = () => {
     manageFriend.mutate(

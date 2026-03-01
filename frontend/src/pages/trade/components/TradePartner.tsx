@@ -24,7 +24,7 @@ function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
   const { data: friendAccount, isLoading: isLoadingAccount } = usePublicAccount(friendId)
   const { data: friends = [] } = useFriends()
   const { openChat } = useChatContext()
-  const isAlreadyFriend = friends.some((f) => f.friend_id === friendId)
+  const isAlreadyFriend = friends.some((f) => f.friend_id === friendId && f.state === 'accepted')
 
   const [viewHistory, setViewHistory] = useState(false)
   const [pageHistory, setPageHistory] = useState(0)
