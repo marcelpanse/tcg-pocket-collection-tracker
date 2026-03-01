@@ -1,6 +1,5 @@
-import { lazy } from '@loadable/component'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { Suspense, useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { createHashRouter, Navigate, Outlet, RouterProvider, useLocation, useParams } from 'react-router'
 import DonationPopup from '@/components/DonationPopup.tsx'
