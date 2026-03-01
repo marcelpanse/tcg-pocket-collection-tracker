@@ -21,12 +21,13 @@ For an exstensive technical overview of the project, take a look at [this wiki p
 ## Features
 
 - Card tracker
+- Optimal pack calculation tool
+- Automatic card scanner from screenshots - take a look at the [details here](https://github.com/1vcian/Pokemon-TCGP-Card-Scanner)
 - Filter capabilities by expansion, pack, and rarity
 - Search functionality
 - Collection summary insights
-- Optimal pack calculation tool
-- Trade facilitation support
-- Automatic card scanner from screenshots - take a look at the [details here](https://github.com/1vcian/Pokemon-TCGP-Card-Scanner)
+- Trade support & finding trade partners
+- Friend & chat system
 - Community forum
 
 For upcoming features and tasks, please consult our [issues list](https://github.com/marcelpanse/tcg-pocket-collection-tracker/issues).
