@@ -2,11 +2,13 @@ import { useEffect, useRef, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import { useAccount } from '@/services/account/useAccount'
 import { getUnreadCounts } from '@/services/chat/chatService'
+import { useFriends } from '@/services/friends/useFriends'
 import { ChatContext, type OpenChat } from './ChatContext'
 
 export function ChatProvider({ children }: { children: React.ReactNode }) {
   const { data: account } = useAccount()
   const myFriendId = account?.friend_id
+  const { data: friends = [] } = useFriends()
   const [openChats, setOpenChats] = useState<OpenChat[]>([])
   const channelRef = useRef<ReturnType<typeof supabase.channel> | null>(null)
 
@@ -75,6 +77,22 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
       channelRef.current = null
     }
   }, [myFriendId])
+
+  // Fix usernames that fell back to friend_id while friends data was loading
+  useEffect(() => {
+    if (friends.length === 0) {
+      return
+    }
+    setOpenChats((prev) =>
+      prev.map((chat) => {
+        if (chat.username !== chat.friendId) {
+          return chat
+        }
+        const friend = friends.find((f) => f.friend_id === chat.friendId)
+        return friend ? { ...chat, username: friend.username } : chat
+      }),
+    )
+  }, [friends])
 
   const isMobile = () => window.matchMedia('(max-width: 639px)').matches
 
