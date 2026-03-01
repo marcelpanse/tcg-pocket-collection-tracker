@@ -1,28 +1,28 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { useUser } from '@/services/auth/useAuth.ts'
+import { useAccount } from '@/services/account/useAccount'
 import { getFriends, getPendingRequests, manageFriend } from './friendService'
 
 export function useFriends() {
-  const { data: user } = useUser()
-  const email = user?.user.email
+  const { data: account } = useAccount()
+  const friendId = account?.friend_id
 
   return useQuery({
     queryKey: ['friends'],
-    queryFn: () => getFriends(email as string),
-    enabled: !!email,
+    queryFn: () => getFriends(friendId as string),
+    enabled: !!friendId,
     refetchInterval: 10_000,
     refetchIntervalInBackground: false,
   })
 }
 
 export function usePendingRequests() {
-  const { data: user } = useUser()
-  const email = user?.user.email
+  const { data: account } = useAccount()
+  const friendId = account?.friend_id
 
   return useQuery({
     queryKey: ['friendRequests'],
-    queryFn: () => getPendingRequests(email as string),
-    enabled: !!email,
+    queryFn: () => getPendingRequests(friendId as string),
+    enabled: !!friendId,
     refetchInterval: 10_000,
     refetchIntervalInBackground: false,
   })

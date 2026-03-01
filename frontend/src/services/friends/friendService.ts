@@ -2,18 +2,18 @@ import { supabase } from '@/lib/supabase'
 import { umami } from '@/lib/utils.ts'
 import type { FriendRow } from '@/types'
 
-export async function getFriends(email: string): Promise<FriendRow[]> {
+export async function getFriends(userId: string): Promise<FriendRow[]> {
   const { data, error } = await supabase
     .from('friends')
-    .select('*')
-    .or(`and(email_requester.eq.${email},state.in.(accepted,pending)),and(email_accepter.eq.${email},state.eq.accepted)`)
+    .select('id,created_at,friend_id_accepter,friend_id_requester,state,username_accepter,username_requester')
+    .or(`and(friend_id_requester.eq.${userId},state.in.(accepted,pending)),and(friend_id_accepter.eq.${userId},state.eq.accepted)`)
 
   if (error) {
     throw new Error(`Error fetching friends: ${error.message}`)
   }
 
   return (data ?? []).map((row) => {
-    const isRequester = row.email_requester === email
+    const isRequester = row.friend_id_requester === userId
     return {
       id: row.id,
       friend_id: isRequester ? row.friend_id_accepter : row.friend_id_requester,
@@ -24,8 +24,8 @@ export async function getFriends(email: string): Promise<FriendRow[]> {
   })
 }
 
-export async function getPendingRequests(email: string): Promise<FriendRow[]> {
-  const { data, error } = await supabase.from('friends').select('*').eq('email_accepter', email).eq('state', 'pending')
+export async function getPendingRequests(userId: string): Promise<FriendRow[]> {
+  const { data, error } = await supabase.from('friends').select('*').eq('friend_id_accepter', userId).eq('state', 'pending')
 
   if (error) {
     throw new Error(`Error fetching pending requests: ${error.message}`)
