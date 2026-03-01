@@ -38,17 +38,10 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          // React core
+          // React core (no external deps, safe to manually chunk)
           'react-vendor': ['react', 'react-dom', 'react-router'],
-          // Heavy data/query libraries
-          'query-vendor': ['@tanstack/react-query', '@tanstack/react-virtual'],
-          // Supabase
+          // Standalone libraries with no React dependency (safe to manually chunk)
           'supabase-vendor': ['@supabase/supabase-js'],
-          // i18n
-          'i18n-vendor': ['i18next', 'react-i18next', 'i18next-browser-languagedetector', 'i18next-http-backend'],
-          // Charts (only loaded on overview)
-          'charts-vendor': ['recharts'],
-          // Heavy utility libraries
           'tensorflow-vendor': ['@tensorflow/tfjs'],
           'xlsx-vendor': ['xlsx'],
         },
