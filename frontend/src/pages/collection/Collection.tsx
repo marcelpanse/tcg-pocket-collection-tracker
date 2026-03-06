@@ -45,8 +45,9 @@ function FriendCollection({ friendId }: { friendId: string }) {
         <div className="flex justify-between my-2">
           <h1>
             <span className="text-2xl font-light">{t('collectionOf')}</span>
-            <span className="text-2xl font-bold"> {account.username} </span>
-            <span className="block sm:inline text-sm">
+            <span className="text-2xl font-bold"> {account.username}</span>
+            {account.language && <span className="text-lg bg-neutral-800 px-2 rounded-full ml-1">{account.language}</span>}
+            <span className="block sm:inline text-sm sm:ml-1">
               <FriendIdDisplay friendId={account.friend_id} />
             </span>
           </h1>
