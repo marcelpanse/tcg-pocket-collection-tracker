@@ -41,7 +41,10 @@ export default function TradeMatchesResults() {
     <div className="flex flex-col gap-4">
       {data.map((partner) => (
         <div key={partner.friend_id} className="max-w-md w-full flex justify-between items-center mx-auto px-4">
-          <p className="mr-2">{partner.username}</p>
+          <p className="mr-2">
+            <span>{partner.username}</span>
+            {partner.language && <small className="bg-neutral-800 px-2 rounded-full ml-1">{partner.language}</small>}
+          </p>
           <Link to={`/trade/${partner.friend_id}${linkSuffix}`}>
             <Button variant="outline" className="my-auto">
               {t('viewTradePartner', { tradeMatches: partner.trade_matches })}

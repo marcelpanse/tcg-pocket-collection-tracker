@@ -121,8 +121,9 @@ function TradeWith() {
       <div className="mx-1 flex justify-between">
         <h1>
           <span className="text-2xl font-light">{t('tradingWith')}</span>
-          <span className="text-2xl font-bold"> {friendAccount.username} </span>
-          <span className="block sm:inline text-sm">
+          <span className="text-2xl font-bold"> {friendAccount.username}</span>
+          {friendAccount.language && <span className="text-lg bg-neutral-800 px-2 rounded-full ml-1">{friendAccount.language}</span>}
+          <span className="block sm:inline text-sm ml-1">
             <FriendIdDisplay
               friendId={friendAccount.friend_id}
               onChat={isAlreadyFriend ? () => openChat(friendAccount.friend_id, friendAccount.username || friendAccount.friend_id) : undefined}

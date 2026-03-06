@@ -13,7 +13,7 @@ const corsHeaders = {
 
 const all_matches_query = `
 WITH recent_accounts AS (
-    SELECT email, friend_id, username
+    SELECT email, friend_id, username, language
     FROM accounts
     WHERE
         is_active_trading = TRUE
@@ -31,6 +31,7 @@ FROM
         SELECT
             a.friend_id,
             a.username,
+            a.language,
             t.rarity_id as rarity,
             COUNT(*) as num_to_give
         FROM
@@ -82,7 +83,7 @@ ORDER BY trade_matches DESC;
 
 const single_card_query = `
 WITH recent_accounts AS (
-    SELECT a.email, a.friend_id, a.username, t.to_collect
+    SELECT a.email, a.friend_id, a.username, a.language, t.to_collect
     FROM
         accounts a
         INNER JOIN trade_rarity_settings t ON t.email = a.email AND t.rarity_id = ($2 & 63)
