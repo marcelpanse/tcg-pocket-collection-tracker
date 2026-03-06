@@ -42,7 +42,7 @@ export async function getDecks(filters: DeckFilters) {
   let tbl: any = supabase
 
   if (filters.from === 'my') {
-    tbl = tbl.from('decks').select('*', { count: 'exact' })
+    tbl = tbl.from('decks').select('*', { count: 'exact' }).order('updated_at', { ascending: false })
   } else if (filters.from === 'liked') {
     tbl = tbl.from('deck_likes').select('*, public_decks!id(*)', { count: 'exact' })
   } else if (filters.from === 'community') {
