@@ -4,12 +4,27 @@ import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
 import { CardLine } from '@/components/CardLine'
+import { DropdownFilter } from '@/components/Filters'
 import SearchInput from '@/components/filters/SearchInput'
 import { Button } from '@/components/ui/button'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { getFilteredCards } from '@/lib/filters'
-import { getCardNameByLang } from '@/lib/utils.ts'
-import { tradableRarities } from '@/types'
+import { formatLanguage, getCardNameByLang } from '@/lib/utils.ts'
+import { type GameLanguage, gameLanguages, tradableRarities } from '@/types'
+
+function buildUrl(card: number | undefined, language: GameLanguage | '') {
+  const url = '/trade/matches/results'
+
+  const params = new URLSearchParams()
+  if (card !== undefined) {
+    params.append('card_id', String(card))
+  }
+  if (language !== '') {
+    params.append('language', language)
+  }
+
+  return params.size > 0 ? `${url}?${params.toString()}` : url
+}
 
 export default function TradeMatches() {
   const { t } = useTranslation(['trade-matches', 'common'])
@@ -18,6 +33,7 @@ export default function TradeMatches() {
   const scrollRef = useRef(null)
   const [search, setSearch] = useState('')
   const [selectedCard, setSelectedCard] = useState<number>()
+  const [selectedLanguage, setSelectedLanguage] = useState<GameLanguage | ''>('')
   const cards = getFilteredCards({ search, rarity: [...tradableRarities] }, new Map())
   const card = selectedCard && getCardByInternalId(selectedCard)
 
@@ -35,7 +51,7 @@ export default function TradeMatches() {
   return (
     <div className="sm:w-sm mx-auto">
       <SearchInput setValue={setSearch} />
-      <div ref={scrollRef} className="my-2 h-96 rounded border border-neutral-700 px-1 overflow-y-auto">
+      <div ref={scrollRef} className="mt-2 h-72 rounded-md border border-neutral-700 px-1 overflow-y-auto">
         <ul style={{ height: `${virtualizer.getTotalSize()}px` }} className="relative">
           {virtualizer.getVirtualItems().map((row) => {
             const c = cards[row.index]
@@ -53,12 +69,17 @@ export default function TradeMatches() {
           })}
         </ul>
       </div>
-      <div className="flex gap-2">
-        <Button className="w-1/2" disabled={!selectedCard} onClick={() => navigate(`/trade/matches/results?card_id=${selectedCard}`)}>
-          {card ? t('search.byCard', { cardName: getCardNameByLang(card, i18n.language) }) : t('search.selectCard')}
-        </Button>
-        <Button className="w-1/2" onClick={() => navigate('/trade/matches/results')}>
-          {t('search.allCards')}
+      <DropdownFilter
+        className="mt-2"
+        label="Card language"
+        options={['', ...gameLanguages]}
+        value={selectedLanguage}
+        onChange={setSelectedLanguage}
+        show={(x) => (x === '' ? 'Any language' : formatLanguage[x])}
+      />
+      <div className="flex gap-2 mt-4">
+        <Button className="w-full" onClick={() => navigate(buildUrl(selectedCard, selectedLanguage))}>
+          {card ? t('search.byCard', { cardName: getCardNameByLang(card, i18n.language) }) : t('search.allCards')}
         </Button>
       </div>
     </div>

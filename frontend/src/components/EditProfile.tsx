@@ -14,20 +14,8 @@ import { Switch } from '@/components/ui/switch.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useAccount, useProfileDialog, useUpdateAccount } from '@/services/account/useAccount'
 import { useUser } from '@/services/auth/useAuth'
-import { type AccountRow, type GameLanguage, gameLanguages } from '@/types'
+import type { AccountRow } from '@/types'
 import { SocialShareButtons } from './SocialShareButtons'
-
-const formatLanguage: Record<GameLanguage, string> = {
-  en: 'English',
-  fr: 'Français',
-  it: 'Italiano',
-  de: 'Deutsch',
-  es: 'Español',
-  pt: 'Português',
-  ja: '日本語',
-  zh: '中文',
-  ko: '한국어',
-}
 
 const EditProfile: FC = () => {
   const navigate = useNavigate()
@@ -41,7 +29,6 @@ const EditProfile: FC = () => {
   const formSchema = z.object({
     username: z.string().min(2, { message: t('usernameTooShort') }),
     friend_id: z.string().regex(/^\d{16}$/, { message: t('friendIdInvalid') }),
-    language: z.enum([...gameLanguages, '']).optional(),
     is_public: z.boolean().optional(),
   })
 
@@ -50,7 +37,6 @@ const EditProfile: FC = () => {
     values: {
       username: account?.username ?? '',
       friend_id: account?.friend_id ?? '',
-      language: account?.language,
       is_public: account?.is_public ?? false,
     },
   })
@@ -61,7 +47,6 @@ const EditProfile: FC = () => {
         email: user?.user.email as string,
         username: values.username,
         friend_id: values.friend_id,
-        language: values.language === '' ? null : values.language,
         is_public: values.is_public,
         is_active_trading: values.is_public === false ? false : account?.is_active_trading,
       } as AccountRow,
@@ -134,29 +119,6 @@ const EditProfile: FC = () => {
                   <FormLabel>{t('friendID')}</FormLabel>
                   <FormControl className="mt-1">
                     <Input placeholder={t('friendID')} {...field} />
-                  </FormControl>
-                  <FormDescription>{t('friendIDDescription')}</FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="language"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Trading language</FormLabel>
-                  <FormControl className="mt-1">
-                    <div className="rounded-md border-1 border-neutral-800 px-3 py-1">
-                      <select {...field}>
-                        <option value="">Any language</option>
-                        {gameLanguages.map((code) => (
-                          <option key={code} value={code}>
-                            {formatLanguage[code]}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
                   </FormControl>
                   <FormDescription>{t('friendIDDescription')}</FormDescription>
                   <FormMessage />

@@ -44,10 +44,12 @@ export function useUpdateAccountTradingFields() {
     mutationFn: ({
       username,
       is_active_trading,
+      language,
       trade_rarity_settings,
     }: {
       username: string
       is_active_trading: boolean
+      language: AccountRow['language']
       trade_rarity_settings: AccountRow['trade_rarity_settings']
     }) => {
       if (!email) {
@@ -61,6 +63,7 @@ export function useUpdateAccountTradingFields() {
         email,
         username,
         is_active_trading,
+        language,
         trade_rarity_settings,
       })
     },

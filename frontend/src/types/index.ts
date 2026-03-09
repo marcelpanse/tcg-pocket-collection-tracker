@@ -30,7 +30,7 @@ export interface AccountRow {
   email: string
   username: string
   friend_id: string
-  language?: GameLanguage
+  language: GameLanguage | null
   collection_last_updated: Date
   is_public: boolean
   is_active_trading: boolean

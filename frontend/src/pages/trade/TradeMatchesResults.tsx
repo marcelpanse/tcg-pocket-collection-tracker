@@ -5,14 +5,17 @@ import ErrorAlert from '@/components/ErrorAlert'
 import { Button } from '@/components/ui/button'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { useTradingPartners } from '@/services/trade/useTrade'
+import { type GameLanguage, gameLanguages } from '@/types'
 
 export default function TradeMatchesResults() {
   const { t } = useTranslation(['trade-matches', 'common'])
 
   const [searchParams] = useSearchParams()
   const card_id = searchParams.has('card_id') ? Number(searchParams.get('card_id')) : undefined
+  const languageRaw = searchParams.get('language') ?? undefined
+  const language = languageRaw === undefined ? undefined : gameLanguages.includes(languageRaw as GameLanguage) ? (languageRaw as GameLanguage) : undefined
 
-  const { data, isLoading } = useTradingPartners(card_id)
+  const { data, isLoading } = useTradingPartners(card_id, language)
 
   if (card_id !== undefined && getCardByInternalId(card_id) === undefined) {
     throw new Error('Requested card was not found in the database')

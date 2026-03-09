@@ -19,12 +19,14 @@ WITH recent_accounts AS (
         is_active_trading = TRUE
       AND is_public = TRUE
       AND collection_last_updated IS NOT NULL
+      AND ($3 IS NULL OR language = $3)
     ORDER BY collection_last_updated DESC
     LIMIT 50
 )
 SELECT
     friend_id,
     username,
+    language
     SUM(LEAST(num_to_give, num_to_get)) as trade_matches
 FROM
     (
@@ -99,12 +101,14 @@ WITH recent_accounts AS (
                 AND ca.internal_id = $2
                 AND ca.amount_owned > t.to_keep
         )
+        AND ($3 IS NULL OR language = $3)
     ORDER BY collection_last_updated DESC
     LIMIT 50
 )
 SELECT
     a.friend_id,
     a.username,
+    a.language,
     COUNT(*) as trade_matches
 FROM
     (
@@ -137,7 +141,7 @@ Deno.serve(async (req) => {
 
   const connection = await pool.connect()
   try {
-    const { email, card_id } = await req.json()
+    const { email, card_id, language } = await req.json()
 
     if (!email) {
       return new Response('Missing email', { status: 400 })
@@ -151,9 +155,7 @@ Deno.serve(async (req) => {
       trade_matches: number
     }
 
-    const tradingPartners = !card_id
-      ? await connection.queryObject<RowType>(all_matches_query, [email])
-      : await connection.queryObject<RowType>(single_card_query, [email, card_id])
+    const tradingPartners = await connection.queryObject<RowType>(card_id ? single_card_query : all_matches_query, [email, card_id, language])
 
     const serializedRows = tradingPartners.rows.map((row) => ({
       ...row,
