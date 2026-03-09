@@ -148,8 +148,8 @@ importers:
         specifier: ^7.13.1
         version: 7.13.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react-share:
-        specifier: ^5.2.2
-        version: 5.2.2(react@19.2.4)
+        specifier: ^5.3.0
+        version: 5.3.0(react@19.2.4)
       react-tooltip:
         specifier: ^5.30.0
         version: 5.30.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -2543,8 +2543,8 @@ packages:
       react-dom:
         optional: true
 
-  react-share@5.2.2:
-    resolution: {integrity: sha512-z0nbOX6X6vHHWAvXduNkYeJUKTKNpKM5Xpmc5a2BxjJhUWl+sE7AsSEMmYEUj2DuDjZr5m7KFIGF0sQPKcUN6w==}
+  react-share@5.3.0:
+    resolution: {integrity: sha512-NU4TqizVi2TuyLpN93/ng2ux+uIGHK5b2dT15cHvZDwfi5b5NuzGych4htCGObN8lubygeamhRxUot4lZ0Pv6Q==}
     peerDependencies:
       react: ^17 || ^18 || ^19
 
@@ -4887,7 +4887,7 @@ snapshots:
     optionalDependencies:
       react-dom: 19.2.4(react@19.2.4)
 
-  react-share@5.2.2(react@19.2.4):
+  react-share@5.3.0(react@19.2.4):
     dependencies:
       classnames: 2.5.1
       jsonp: 0.2.1
