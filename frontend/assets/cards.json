@@ -90826,7 +90826,8 @@
     "set_details": "paldeanwonders(b2a)",
     "pack": "everypack",
     "alternate_versions": [
-      984256
+      984256,
+      12650704
     ],
     "artist": "Souichirou Gunjima",
     "internal_id": 984256
@@ -90931,7 +90932,8 @@
     "set_details": "paldeanwonders(b2a)",
     "pack": "everypack",
     "alternate_versions": [
-      984448
+      984448,
+      12650576
     ],
     "artist": "Naoki Saito",
     "internal_id": 984448
@@ -91303,7 +91305,8 @@
     "set_details": "paldeanwonders(b2a)",
     "pack": "everypack",
     "alternate_versions": [
-      985153
+      985153,
+      12650768
     ],
     "artist": "OKACHEKE",
     "internal_id": 985153
@@ -91484,7 +91487,8 @@
     "pack": "everypack",
     "alternate_versions": [
       985472,
-      990664
+      990664,
+      12650960
     ],
     "artist": "kantaro",
     "internal_id": 985472
@@ -92377,7 +92381,8 @@
     "set_details": "paldeanwonders(b2a)",
     "pack": "everypack",
     "alternate_versions": [
-      987201
+      987201,
+      12651024
     ],
     "artist": "Shin Nagasawa",
     "internal_id": 987201
@@ -92676,7 +92681,8 @@
     "set_details": "paldeanwonders(b2a)",
     "pack": "everypack",
     "alternate_versions": [
-      987778
+      987778,
+      12650896
     ],
     "artist": "KEIICHIRO ITO",
     "internal_id": 987778
@@ -94143,7 +94149,8 @@
     "pack": "everypack",
     "alternate_versions": [
       985472,
-      990664
+      990664,
+      12650960
     ],
     "artist": "whomor Inc.",
     "internal_id": 990664
@@ -99703,5 +99710,272 @@
     ],
     "artist": "nagimiso",
     "internal_id": 12650512
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-33",
+    "image": "/images/en-US/P-B-33.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Quaxly",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Splashing Dodge",
+        "damage": "10",
+        "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      984448,
+      12650576
+    ],
+    "artist": "buchi",
+    "internal_id": 12650576
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-34",
+    "image": "/images/en-US/P-B-34.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Smoliv",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Nutrients",
+        "damage": "0",
+        "effect": "Heal 20 damage from 1 of your Pokémon."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      12650640
+    ],
+    "artist": "Shibuzoh.",
+    "internal_id": 12650640
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-35",
+    "image": "/images/en-US/P-B-35.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Charcadet",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Punch",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      984256,
+      12650704
+    ],
+    "artist": "Oswaldo KATO",
+    "internal_id": 12650704
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-36",
+    "image": "/images/en-US/P-B-36.webp",
+    "hp": 70,
+    "energy": "water",
+    "name": "Tatsugiri",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Rally Back",
+        "damage": "20+",
+        "effect": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 60 more damage."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      985153,
+      12650768
+    ],
+    "artist": "Shibuzoh.",
+    "internal_id": 12650768
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-37",
+    "image": "/images/en-US/P-B-37.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Frigibax",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Stiffen",
+        "damage": "0",
+        "effect": "During your opponent's next turn, this Pokémon takes −20 damage from attacks."
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      12650832
+    ],
+    "artist": "Akira Komayama",
+    "internal_id": 12650832
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-38",
+    "image": "/images/en-US/P-B-38.webp",
+    "hp": 150,
+    "energy": "metal",
+    "name": "Tinkaton",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "metal",
+          "colorless"
+        ],
+        "name": "Gigaton Hammer",
+        "damage": "140",
+        "effect": "During your next turn, this Pokémon can't use Gigaton Hammer."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      987778,
+      12650896
+    ],
+    "artist": "DOM",
+    "internal_id": 12650896
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-39",
+    "image": "/images/en-US/P-B-39.webp",
+    "hp": 60,
+    "energy": "lightning",
+    "name": "Pawmi",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Random",
+        "damage": "Spark",
+        "effect": "This attack does 10 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      985472,
+      990664,
+      12650960
+    ],
+    "artist": "sowsow",
+    "internal_id": 12650960
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-40",
+    "image": "/images/en-US/P-B-40.webp",
+    "hp": 120,
+    "energy": "darkness",
+    "name": "Paldean Clodsire",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness",
+          "colorless"
+        ],
+        "name": "Muddy Hammer",
+        "damage": "70",
+        "effect": "Discard the top card of your opponent's deck."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 3,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      987201,
+      12651024
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 12651024
   }
 ]
