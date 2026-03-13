@@ -104,6 +104,7 @@ function TradeWith() {
 
   const hasPossibleTrades = tradableRarities.some((r) => (userTrades[r] ?? []).length > 0 && (friendTrades[r] ?? []).length > 0)
   const isAlreadyFriend = friends.some((f) => f.friend_id === friendAccount.friend_id && f.state === 'accepted')
+  const hasPendingRequest = friends.some((f) => f.friend_id === friendAccount.friend_id && f.state === 'pending')
 
   const handleAddFriend = () => {
     manageFriend.mutate(
@@ -143,9 +144,13 @@ function TradeWith() {
             />
           </label>
           {!isAlreadyFriend && (
-            <Button onClick={handleAddFriend} disabled={manageFriend.isPending}>
+            <Button
+              onClick={handleAddFriend}
+              disabled={manageFriend.isPending || hasPendingRequest}
+              title={hasPendingRequest ? 'Friend request already sent' : undefined}
+            >
               <UserPlus className="h-4 w-4 mr-1" />
-              Add Friend
+              {hasPendingRequest ? 'Request Sent' : 'Add Friend'}
             </Button>
           )}
           <Link to={`/collection/${friendId}`}>
