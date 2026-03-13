@@ -1,6 +1,6 @@
 import { useVirtualizer } from '@tanstack/react-virtual'
 import i18n from 'i18next'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
 import { CardLine } from '@/components/CardLine'
@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { getFilteredCards } from '@/lib/filters'
 import { formatLanguage, getCardNameByLang } from '@/lib/utils.ts'
+import { useAccount } from '@/services/account/useAccount'
 import { type GameLanguage, gameLanguages, tradableRarities } from '@/types'
 
 function buildUrl(card: number | undefined, language: GameLanguage | '') {
@@ -33,7 +34,13 @@ export default function TradeMatches() {
   const scrollRef = useRef(null)
   const [search, setSearch] = useState('')
   const [selectedCard, setSelectedCard] = useState<number>()
+  const { data: account } = useAccount()
   const [selectedLanguage, setSelectedLanguage] = useState<GameLanguage | ''>('')
+  useEffect(() => {
+    if (account?.language) {
+      setSelectedLanguage(account.language as GameLanguage)
+    }
+  }, [account?.language])
   const cards = getFilteredCards({ search, rarity: [...tradableRarities] }, new Map())
   const card = selectedCard && getCardByInternalId(selectedCard)
 
