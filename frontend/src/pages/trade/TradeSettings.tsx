@@ -7,12 +7,13 @@ import { z } from 'zod'
 import { SocialShareButtons } from '@/components/SocialShareButtons'
 import { Alert } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button'
-import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
 import { toast } from '@/hooks/use-toast.ts'
+import { formatLanguage } from '@/lib/utils'
 import { useAccount, useUpdateAccountTradingFields } from '@/services/account/useAccount.ts'
-import { rarities } from '@/types/index.ts'
+import { gameLanguages, rarities } from '@/types/index.ts'
 
 function TradeSettings() {
   const { t } = useTranslation('trade-matches')
@@ -22,6 +23,7 @@ function TradeSettings() {
 
   const formSchema = z.object({
     is_active_trading: z.boolean(),
+    language: z.enum([...gameLanguages, '']),
     trade_rarity_settings: z.array(
       z.object({
         rarity: z.enum(rarities),
@@ -35,8 +37,9 @@ function TradeSettings() {
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema) as Resolver<FormSchema>,
     values: {
-      is_active_trading: account?.is_active_trading || false,
-      trade_rarity_settings: account?.trade_rarity_settings || [],
+      is_active_trading: account?.is_active_trading ?? false,
+      language: account?.language ?? '',
+      trade_rarity_settings: account?.trade_rarity_settings ?? [],
     },
   })
 
@@ -45,6 +48,7 @@ function TradeSettings() {
       {
         username: account?.username as string,
         is_active_trading: values.is_active_trading,
+        language: values.language === '' ? null : values.language,
         trade_rarity_settings: values.trade_rarity_settings,
       },
       {
@@ -94,6 +98,36 @@ function TradeSettings() {
                     )}
                   </FormLabel>
                 </FormControl>
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="language"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>
+                  Card language
+                  <Tooltip id="is-active-trading-disabled" />
+                  <CircleHelp
+                    className="inline size-4 ml-1"
+                    data-tooltip-id="is-active-trading-disabled"
+                    data-tooltip-content="Indicates that you want to only trade cards in this language."
+                  />
+                  <FormControl className="ml-2">
+                    <span className="rounded-md border-1 border-neutral-800 px-3 py-1">
+                      <select {...field}>
+                        <option value="">Any language</option>
+                        {gameLanguages.map((code) => (
+                          <option key={code} value={code}>
+                            {formatLanguage[code]}
+                          </option>
+                        ))}
+                      </select>
+                    </span>
+                  </FormControl>
+                </FormLabel>
+                <FormMessage />
               </FormItem>
             )}
           />

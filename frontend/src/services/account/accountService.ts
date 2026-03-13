@@ -82,11 +82,13 @@ export const updateAccountTradingFields = async ({
   email,
   username,
   is_active_trading,
+  language,
   trade_rarity_settings,
 }: {
   email: string
   username: string
   is_active_trading: boolean
+  language: AccountRow['language']
   trade_rarity_settings: AccountRow['trade_rarity_settings']
 }) => {
   const { data: rarityData, error: rarityError } = await supabase
@@ -98,7 +100,7 @@ export const updateAccountTradingFields = async ({
     throw new Error(`Error updating trade rarity settings: ${rarityError.message}`)
   }
 
-  const { data, error } = await supabase.from('accounts').upsert({ email, username, is_active_trading }).select().single()
+  const { data, error } = await supabase.from('accounts').upsert({ email, username, is_active_trading, language: language }).select().single()
 
   if (error) {
     throw new Error(`Error updating account: ${error.message}`)

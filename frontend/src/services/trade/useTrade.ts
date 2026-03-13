@@ -3,7 +3,7 @@ import { getCardByInternalId } from '@/lib/CardsDB'
 import { supabase } from '@/lib/supabase'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { getActiveTrades, getAllTrades, getTradingPartners, insertTrade, updateTrade } from '@/services/trade/tradeService.ts'
-import type { TradeRow } from '@/types'
+import type { GameLanguage, TradeRow } from '@/types'
 
 export function useActiveTrades() {
   const { data: account } = useAccount()
@@ -33,11 +33,11 @@ export function useAllTrades(friendId: string | undefined, viewHistory: boolean,
   })
 }
 
-export function useTradingPartners(cardId: number | undefined) {
+export function useTradingPartners(cardId: number | undefined, language: GameLanguage | undefined) {
   const { data: account } = useAccount()
   return useQuery({
-    queryKey: ['trading-partners', cardId],
-    queryFn: () => getTradingPartners(account?.email as string, cardId),
+    queryKey: ['trading-partners', cardId, language],
+    queryFn: () => getTradingPartners(account?.email as string, cardId, language),
     enabled: !!account && (cardId === undefined || getCardByInternalId(cardId) !== undefined),
     throwOnError: true,
   })

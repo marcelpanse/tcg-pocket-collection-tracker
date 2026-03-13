@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabase.ts'
-import type { TradePartners, TradeRow } from '@/types'
+import type { GameLanguage, TradePartners, TradeRow } from '@/types'
 
 export async function getActiveTrades(userFriendId: string, friendFriendId?: string) {
   if (!userFriendId.match(/^\d{16}$/)) {
@@ -73,11 +73,17 @@ export const updateTrade = async (id: number, trade: Partial<TradeRow>) => {
   return data as TradeRow
 }
 
-export const getTradingPartners = async (email: string, cardId?: number) => {
-  const { data, error } = await supabase.functions.invoke('get-trading-partners', {
-    method: 'POST',
-    body: { email, card_id: cardId },
-  })
+export const getTradingPartners = async (email: string, cardId: number | undefined, gameLanguage: GameLanguage | undefined) => {
+  // biome-ignore lint: no need to re-type types from function signature
+  const body: any = { email }
+  if (cardId !== undefined) {
+    body.card_id = cardId
+  }
+  if (gameLanguage !== undefined) {
+    body.language = gameLanguage
+  }
+
+  const { data, error } = await supabase.functions.invoke('get-trading-partners', { method: 'POST', body })
   if (error) {
     console.log('supa error', error)
     throw new Error('Error fetching trade partners')

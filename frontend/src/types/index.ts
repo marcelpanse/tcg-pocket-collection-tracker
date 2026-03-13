@@ -12,6 +12,9 @@ export const energies = ['grass', 'fire', 'water', 'lightning', 'psychic', 'figh
 export type Energy = (typeof energies)[number]
 export const cardTypes = [...energies, 'dragon', 'colorless', 'trainer'] as const
 
+export const gameLanguages = ['en', 'fr', 'it', 'de', 'es', 'pt', 'ja', 'zh', 'ko'] as const
+export type GameLanguage = (typeof gameLanguages)[number]
+
 export type Rarity = (typeof rarities)[number]
 export type TradableRarity = (typeof tradableRarities)[number]
 export type CardType = (typeof cardTypes)[number]
@@ -27,6 +30,7 @@ export interface AccountRow {
   email: string
   username: string
   friend_id: string
+  language: GameLanguage | null
   collection_last_updated: Date
   is_public: boolean
   is_active_trading: boolean
@@ -84,6 +88,7 @@ export interface TradeRow {
 export interface TradePartners {
   friend_id: string
   username: string
+  language?: GameLanguage
   trade_matches: number
 }
 
