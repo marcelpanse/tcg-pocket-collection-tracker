@@ -82423,7 +82423,7 @@
           "grass"
         ],
         "name": "Trip Over",
-        "damage": "10x",
+        "damage": "10+",
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
@@ -82525,7 +82525,7 @@
           "colorless"
         ],
         "name": "Spike Rend",
-        "damage": "60x",
+        "damage": "60+",
         "effect": "If your opponent's Active Pokémon has damage on it, this attack does 60 more damage."
       }
     ],
@@ -82758,7 +82758,7 @@
           "grass"
         ],
         "name": "Ground Beat",
-        "damage": "40x",
+        "damage": "40+",
         "effect": "If your opponent has gotten exactly 1 points, this attack does 40 more damage."
       }
     ],
@@ -82856,7 +82856,7 @@
           "grass"
         ],
         "name": "Energized Leaves",
-        "damage": "60x",
+        "damage": "60+",
         "effect": "If the amount of Energy attached to both Active Pokémon is 5 or more, this attack does 60 more damage."
       }
     ],
@@ -83338,7 +83338,7 @@
           "water"
         ],
         "name": "Triple Spin",
-        "damage": "60+",
+        "damage": "60x",
         "effect": "Flip 3 coins. This attack does 60 damage for each heads."
       }
     ],
@@ -83603,7 +83603,7 @@
           "water"
         ],
         "name": "Sweets Relay",
-        "damage": "60x",
+        "damage": "60+",
         "effect": "If 1 of your Pokémon used Sweets Relay during your last turn, this attack does 60 more damage."
       }
     ],
@@ -84272,7 +84272,7 @@
           "psychic"
         ],
         "name": "Photon Laser",
-        "damage": "40x",
+        "damage": "40+",
         "effect": "If you have 5 or more [P] Energy in play, this attack does 60 more damage."
       }
     ],
@@ -84603,7 +84603,7 @@
           "psychic"
         ],
         "name": "Past Friends",
-        "damage": "60x",
+        "damage": "60+",
         "effect": "This attack does 20 more damage for each Supporter card in your discard pile."
       }
     ],
@@ -84879,7 +84879,7 @@
           "fighting"
         ],
         "name": "Double Scratch",
-        "damage": "20+",
+        "damage": "20x",
         "effect": "Flip 2 coins. This attack does 20 damage for each heads."
       }
     ],
@@ -84912,7 +84912,7 @@
           "fighting"
         ],
         "name": "Fury Swipes",
-        "damage": "30+",
+        "damage": "30x",
         "effect": "Flip 3 coins. This attack does 30 damage for each heads."
       }
     ],
@@ -85106,7 +85106,7 @@
           "colorless"
         ],
         "name": "Psykick",
-        "damage": "50x",
+        "damage": "50+",
         "effect": "If this Pokémon has any [P] Energy attached, this attack does 50 more damage."
       }
     ],
@@ -85310,7 +85310,7 @@
           "fighting"
         ],
         "name": "Tyrannical Fang",
-        "damage": "100x",
+        "damage": "100+",
         "effect": "If you have fewer Pokémon in play than your opponent, this attack does 80 more damage."
       }
     ],
@@ -85646,7 +85646,7 @@
           "darkness"
         ],
         "name": "Merciless Strike",
-        "damage": "70x",
+        "damage": "70+",
         "effect": "If your opponent's Active Pokémon has damage on it, this attack does 50 more damage."
       }
     ],
@@ -85816,7 +85816,7 @@
           "darkness"
         ],
         "name": "Fasten Claws",
-        "damage": "30x",
+        "damage": "30+",
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
@@ -85881,7 +85881,7 @@
           "darkness"
         ],
         "name": "Crush the Weak",
-        "damage": "50x",
+        "damage": "50+",
         "effect": "If this Pokémon has more Energy attached than your opponent's Active Pokémon, this attack does 50 more damage."
       }
     ],
@@ -86188,7 +86188,7 @@
           "colorless"
         ],
         "name": "Pummel",
-        "damage": "40x",
+        "damage": "40+",
         "effect": "Flip a coin. If heads, this attack does 60 more damage."
       }
     ],
@@ -86286,7 +86286,7 @@
           "metal"
         ],
         "name": "Dual Blades",
-        "damage": "40+",
+        "damage": "40x",
         "effect": "Flip 2 coins. This attack does 40 damage for each heads."
       }
     ],
@@ -86524,7 +86524,7 @@
           "colorless"
         ],
         "name": "Steady Punch",
-        "damage": "60x",
+        "damage": "60+",
         "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
@@ -86592,7 +86592,7 @@
           "colorless"
         ],
         "name": "Tail Rap",
-        "damage": "20+",
+        "damage": "20x",
         "effect": "Flip 2 coins. This attack does 20 damage for each heads."
       }
     ],
@@ -86696,7 +86696,7 @@
           "colorless"
         ],
         "name": "Aeroblast",
-        "damage": "80x",
+        "damage": "80+",
         "effect": "Flip 2 coins. This attack does 40 more damage for each heads."
       }
     ],
@@ -86934,7 +86934,7 @@
           "colorless"
         ],
         "name": "Blow Through",
-        "damage": "40x",
+        "damage": "40+",
         "effect": "If a Stadium is in play, this attack does 40 more damage."
       }
     ],
@@ -87102,7 +87102,7 @@
           "colorless"
         ],
         "name": "Family Beatdown",
-        "damage": "60+",
+        "damage": "60x",
         "effect": "Flip a coin for each Tandemaus and Maushold you have in play. This attack does 60 damage for each heads."
       }
     ],
@@ -87242,7 +87242,8 @@
     "set_details": "fantasticalparade(b2)",
     "pack": "everypack",
     "alternate_versions": [
-      926977
+      926977,
+      1056076
     ],
     "artist": "Studio Bora Inc.",
     "internal_id": 926977
@@ -87544,7 +87545,7 @@
           "grass"
         ],
         "name": "Ground Beat",
-        "damage": "40x",
+        "damage": "40+",
         "effect": "If your opponent has gotten exactly 1 points, this attack does 40 more damage."
       }
     ],
@@ -87915,7 +87916,7 @@
           "fighting"
         ],
         "name": "Double Scratch",
-        "damage": "20+",
+        "damage": "20x",
         "effect": "Flip 2 coins. This attack does 20 damage for each heads."
       }
     ],
@@ -87950,7 +87951,7 @@
           "fighting"
         ],
         "name": "Tyrannical Fang",
-        "damage": "100x",
+        "damage": "100+",
         "effect": "If you have fewer Pokémon in play than your opponent, this attack does 80 more damage."
       }
     ],
@@ -88128,7 +88129,7 @@
           "darkness"
         ],
         "name": "Merciless Strike",
-        "damage": "70x",
+        "damage": "70+",
         "effect": "If your opponent's Active Pokémon has damage on it, this attack does 50 more damage."
       }
     ],
@@ -88268,7 +88269,7 @@
           "grass"
         ],
         "name": "Energized Leaves",
-        "damage": "60x",
+        "damage": "60+",
         "effect": "If the amount of Energy attached to both Active Pokémon is 5 or more, this attack does 60 more damage."
       }
     ],
@@ -88744,7 +88745,7 @@
           "grass"
         ],
         "name": "Energized Leaves",
-        "damage": "60x",
+        "damage": "60+",
         "effect": "If the amount of Energy attached to both Active Pokémon is 5 or more, this attack does 60 more damage."
       }
     ],
@@ -90494,7 +90495,8 @@
     "set_details": "paldeanwonders(b2a)",
     "pack": "everypack",
     "alternate_versions": [
-      983618
+      983618,
+      1056012
     ],
     "artist": "Kouki Saitou",
     "internal_id": 983618
@@ -94582,6 +94584,3943 @@
     ],
     "artist": "Toyste Beach",
     "internal_id": 991436
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-1",
+    "image": "/images/en-US/B2b-1.webp",
+    "hp": 70,
+    "energy": "grass",
+    "name": "Scyther",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "U-turn",
+        "damage": "10",
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1048640,
+      1054152
+    ],
+    "artist": "GIDORA",
+    "internal_id": 1048640
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-2",
+    "image": "/images/en-US/B2b-2.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Pineco",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Hang Down",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1048704,
+      1054216
+    ],
+    "artist": "Shigenori Negishi",
+    "internal_id": 1048704
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-3",
+    "image": "/images/en-US/B2b-3.webp",
+    "hp": 80,
+    "energy": "grass",
+    "name": "Volbeat",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Confuse Ray",
+        "damage": "10",
+        "effect": "Your opponent's Active Pokémon is now Confused."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1048768
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 1048768
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-4",
+    "image": "/images/en-US/B2b-4.webp",
+    "hp": 80,
+    "energy": "grass",
+    "name": "Illumise",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "grass"
+        ],
+        "name": "Mental Crush",
+        "damage": "20+",
+        "effect": "If your opponent's Active Pokémon is Confused, this attack does 40 more damage."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1048832
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 1048832
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-5",
+    "image": "/images/en-US/B2b-5.webp",
+    "hp": 70,
+    "energy": "grass",
+    "name": "Phantump",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Tackle",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1048896,
+      1054280
+    ],
+    "artist": "OKACHEKE",
+    "internal_id": 1048896
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-6",
+    "image": "/images/en-US/B2b-6.webp",
+    "hp": 120,
+    "energy": "grass",
+    "name": "Trevenant",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "grass",
+          "colorless"
+        ],
+        "name": "Rumble Stomp",
+        "damage": "40+",
+        "effect": "Flip a coin until you get tails. This attack does 40 more damage for each heads."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1048961,
+      1054344
+    ],
+    "artist": "Narumi Sato",
+    "internal_id": 1048961
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-7",
+    "image": "/images/en-US/B2b-7.webp",
+    "hp": 70,
+    "energy": "fire",
+    "name": "Charmander",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "colorless"
+        ],
+        "name": "Flame Tail",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049024,
+      1054408
+    ],
+    "artist": "Masakazu Fukuda",
+    "internal_id": 1049024
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-8",
+    "image": "/images/en-US/B2b-8.webp",
+    "hp": 80,
+    "energy": "fire",
+    "name": "Charmeleon",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "name": "Slash",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Ignition",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may take a  Energy from your Energy Zone and attach it to your Active  Pokémon."
+    },
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049089,
+      1054472
+    ],
+    "artist": "Shin Nagasawa",
+    "internal_id": 1049089
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-9",
+    "image": "/images/en-US/B2b-9.webp",
+    "hp": 220,
+    "energy": "fire",
+    "name": "Mega Charizard X ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "name": "Raging Blaze",
+        "damage": "100+",
+        "effect": "If this Pokémon's remaining HP is 110 or less, this attack does 80 more damage."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049155,
+      1053445,
+      1055689
+    ],
+    "artist": "PLANETA Igarashi",
+    "internal_id": 1049155
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-10",
+    "image": "/images/en-US/B2b-10.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Ponyta",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fire"
+        ],
+        "name": "Singe",
+        "damage": "0",
+        "effect": "Your opponent's Active Pokémon is now Burned."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049216,
+      1054536
+    ],
+    "artist": "Nurikabe",
+    "internal_id": 1049216
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-11",
+    "image": "/images/en-US/B2b-11.webp",
+    "hp": 100,
+    "energy": "fire",
+    "name": "Rapidash",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fire"
+        ],
+        "name": "Overdrive Smash",
+        "damage": "30",
+        "effect": "During your next turn, this Pokémon's Overdrive Smash attack does +30 damage."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049280,
+      1054600
+    ],
+    "artist": "Lee HyunJung",
+    "internal_id": 1049280
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-12",
+    "image": "/images/en-US/B2b-12.webp",
+    "hp": 80,
+    "energy": "fire",
+    "name": "Magmar",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Tail Whap",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049344
+    ],
+    "artist": "Yukiko Baba",
+    "internal_id": 1049344
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-13",
+    "image": "/images/en-US/B2b-13.webp",
+    "hp": 130,
+    "energy": "fire",
+    "name": "Magmortar",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Thundering Volcano",
+        "damage": "70",
+        "effect": "If Electivire is on your Bench, this attack also does 20 damage to each of your opponent's Benched Pokémon."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049409
+    ],
+    "artist": "AKIRA EGAWA",
+    "internal_id": 1049409
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-14",
+    "image": "/images/en-US/B2b-14.webp",
+    "hp": 100,
+    "energy": "fire",
+    "name": "Paldean Tauros",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "name": "Take Down",
+        "damage": "60",
+        "effect": "This Pokémon also does 20 damage to itself."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049472
+    ],
+    "artist": "AKIRA EGAWA",
+    "internal_id": 1049472
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-15",
+    "image": "/images/en-US/B2b-15.webp",
+    "hp": 70,
+    "energy": "water",
+    "name": "Slowpoke",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "colorless"
+        ],
+        "name": "Headbutt",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049536,
+      1054664
+    ],
+    "artist": "Narumi Sato",
+    "internal_id": 1049536
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-16",
+    "image": "/images/en-US/B2b-16.webp",
+    "hp": 200,
+    "energy": "water",
+    "name": "Mega Slowbro ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "colorless"
+        ],
+        "name": "Laundry-Go-Round",
+        "damage": "90",
+        "effect": "Flip 3 coins. This attack also does 20 damage for each heads to each of your opponent's Benched Pokémon."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 3,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049603,
+      1053509,
+      1053893,
+      1055753
+    ],
+    "artist": "PLANETA Yamashita",
+    "internal_id": 1049603
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-17",
+    "image": "/images/en-US/B2b-17.webp",
+    "hp": 100,
+    "energy": "water",
+    "name": "Lapras",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "colorless"
+        ],
+        "name": "Raging Freeze",
+        "damage": "60",
+        "effect": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, your opponent's Active Pokémon is now Paralyzed."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049665,
+      1053060
+    ],
+    "artist": "buchi",
+    "internal_id": 1049665
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-18",
+    "image": "/images/en-US/B2b-18.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Piplup",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Water Gun",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049728
+    ],
+    "artist": "Shibuzoh.",
+    "internal_id": 1049728
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-19",
+    "image": "/images/en-US/B2b-19.webp",
+    "hp": 80,
+    "energy": "water",
+    "name": "Prinplup",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "colorless"
+        ],
+        "name": "Water Splash",
+        "damage": "30+",
+        "effect": "Flip a coin. If heads, this attack does 30 more damage."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049793
+    ],
+    "artist": "Suwama Chiaki",
+    "internal_id": 1049793
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-20",
+    "image": "/images/en-US/B2b-20.webp",
+    "hp": 130,
+    "energy": "water",
+    "name": "Empoleon",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "colorless"
+        ],
+        "name": "Emperor’s Strike",
+        "damage": "80+",
+        "effect": "If your opponent's Active Pokémon has more remaining HP than this Pokémon, this attack does 60 more damage."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049858,
+      1053124
+    ],
+    "artist": "kawayoo",
+    "internal_id": 1049858
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-21",
+    "image": "/images/en-US/B2b-21.webp",
+    "hp": 70,
+    "energy": "water",
+    "name": "Phione",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Aqua Turbo",
+        "damage": "10",
+        "effect": "Take a [W] Energy from your Energy Zone and attach it to 1 of your Benched [W] Pokémon."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049921
+    ],
+    "artist": "kawayoo",
+    "internal_id": 1049921
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-22",
+    "image": "/images/en-US/B2b-22.webp",
+    "hp": 70,
+    "energy": "lightning",
+    "name": "Pikachu",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Static Shock",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049984,
+      1054728
+    ],
+    "artist": "Ryuta Fuse",
+    "internal_id": 1049984
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-23",
+    "image": "/images/en-US/B2b-23.webp",
+    "hp": 100,
+    "energy": "lightning",
+    "name": "Raichu",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "Thunder",
+        "damage": "90",
+        "effect": "This Pokémon also does 30 damage to itself."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050049,
+      1054792
+    ],
+    "artist": "Megumi Mizutani",
+    "internal_id": 1050049
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-24",
+    "image": "/images/en-US/B2b-24.webp",
+    "hp": 70,
+    "energy": "lightning",
+    "name": "Electabuzz",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Head Bolt",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050112
+    ],
+    "artist": "OKACHEKE",
+    "internal_id": 1050112
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-25",
+    "image": "/images/en-US/B2b-25.webp",
+    "hp": 130,
+    "energy": "lightning",
+    "name": "Electivire",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "colorless"
+        ],
+        "name": "Incendiary Thunder",
+        "damage": "50+",
+        "effect": "If Magmortar is on your Bench, this attack does 70 more damage."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 3,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050177
+    ],
+    "artist": "AKIRA EGAWA",
+    "internal_id": 1050177
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-26",
+    "image": "/images/en-US/B2b-26.webp",
+    "hp": 60,
+    "energy": "lightning",
+    "name": "Electrike",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Quick Attack",
+        "damage": "10+",
+        "effect": "Flip a coin. If heads, this attack does 30 more damage."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050240,
+      1054856
+    ],
+    "artist": "Akira Komayama",
+    "internal_id": 1050240
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-27",
+    "image": "/images/en-US/B2b-27.webp",
+    "hp": 180,
+    "energy": "lightning",
+    "name": "Mega Manectric ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "Lightning Accelerator",
+        "damage": "80+",
+        "effect": "This attack does 30 more damage for each point you have gotten."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 0,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050307,
+      1053573,
+      1053957,
+      1055817
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1050307
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-28",
+    "image": "/images/en-US/B2b-28.webp",
+    "hp": 60,
+    "energy": "psychic",
+    "name": "Drowzee",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Hypnosis",
+        "damage": "0",
+        "effect": "Your opponent's Active Pokémon is now Asleep."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050368
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 1050368
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-29",
+    "image": "/images/en-US/B2b-29.webp",
+    "hp": 100,
+    "energy": "psychic",
+    "name": "Hypno",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Hypnoblast",
+        "damage": "60",
+        "effect": "Your opponent's Active Pokémon is now Asleep."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050433
+    ],
+    "artist": "OOYAMA",
+    "internal_id": 1050433
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-30",
+    "image": "/images/en-US/B2b-30.webp",
+    "hp": 50,
+    "energy": "psychic",
+    "name": "Mew",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "colorless"
+        ],
+        "name": "Miraculous",
+        "damage": "Memory",
+        "effect": "1 attack from among the Pokémon in your opponent's hand and deck is chosen at random, and you use the chosen attack as this attack."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050498,
+      1054022,
+      1054086
+    ],
+    "artist": "Atsuko Nishida",
+    "internal_id": 1050498
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-31",
+    "image": "/images/en-US/B2b-31.webp",
+    "hp": 60,
+    "energy": "psychic",
+    "name": "Spoink",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic"
+        ],
+        "name": "Psyshot",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050560
+    ],
+    "artist": "MAHOU",
+    "internal_id": 1050560
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-32",
+    "image": "/images/en-US/B2b-32.webp",
+    "hp": 110,
+    "energy": "psychic",
+    "name": "Grumpig",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "psychic"
+        ],
+        "name": "Swaying Dance",
+        "damage": "40+",
+        "effect": "If your opponent has exactly 2, 4, or 6 cards in their hand, this attack does 40 more damage."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 3,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050625
+    ],
+    "artist": "Sanosuke Sakuma",
+    "internal_id": 1050625
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-33",
+    "image": "/images/en-US/B2b-33.webp",
+    "hp": 60,
+    "energy": "fighting",
+    "name": "Diglett",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting"
+        ],
+        "name": "Slight Intrusion",
+        "damage": "30",
+        "effect": "This Pokémon also does 10 damage to itself."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050688
+    ],
+    "artist": "Kyoko Umemoto",
+    "internal_id": 1050688
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-34",
+    "image": "/images/en-US/B2b-34.webp",
+    "hp": 80,
+    "energy": "fighting",
+    "name": "Dugtrio",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "colorless"
+        ],
+        "name": "Mud Bomb",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 0,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050753
+    ],
+    "artist": "Kyoko Umemoto",
+    "internal_id": 1050753
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-35",
+    "image": "/images/en-US/B2b-35.webp",
+    "hp": 130,
+    "energy": "fighting",
+    "name": "Groudon",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "fighting",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Gaia Blast",
+        "damage": "130",
+        "effect": "Discard 2 random Energy from among the Energy attached to all of your Pokémon."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 3,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050818,
+      1053188
+    ],
+    "artist": "Uta",
+    "internal_id": 1050818
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-36",
+    "image": "/images/en-US/B2b-36.webp",
+    "hp": 80,
+    "energy": "fighting",
+    "name": "Hawlucha",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Take Down",
+        "damage": "50",
+        "effect": "This Pokémon also does 10 damage to itself."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050880,
+      1054920
+    ],
+    "artist": "GOSSAN",
+    "internal_id": 1050880
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-37",
+    "image": "/images/en-US/B2b-37.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Gastly",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness"
+        ],
+        "name": "Mumble",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050944,
+      1054984
+    ],
+    "artist": "Nobuhiro Imagawa",
+    "internal_id": 1050944
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-38",
+    "image": "/images/en-US/B2b-38.webp",
+    "hp": 80,
+    "energy": "darkness",
+    "name": "Haunter",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness"
+        ],
+        "name": "Spin Turn",
+        "damage": "40",
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051009,
+      1055048
+    ],
+    "artist": "DOM",
+    "internal_id": 1051009
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-39",
+    "image": "/images/en-US/B2b-39.webp",
+    "hp": 210,
+    "energy": "darkness",
+    "name": "Mega Gengar ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness",
+          "darkness",
+          "colorless"
+        ],
+        "name": "Labyrinth of Shadows",
+        "damage": "120",
+        "effect": "During your opponent's next turn, they can't play any Trainer cards from their hand."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051075,
+      1053637,
+      1055881
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1051075
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-40",
+    "image": "/images/en-US/B2b-40.webp",
+    "hp": 100,
+    "energy": "darkness",
+    "name": "Darkrai",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Dark Slumber",
+        "damage": "40",
+        "effect": "Your opponent's Active Pokémon is now Asleep."
+      }
+    ],
+    "ability": {
+      "name": "Bad Dreams",
+      "effect": "At the end of each turn, if your opponent's Active Pokémon is Asleep, do 20 damage to that Pokémon."
+    },
+    "weakness": "grass",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051138
+    ],
+    "artist": "nagimiso",
+    "internal_id": 1051138
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-41",
+    "image": "/images/en-US/B2b-41.webp",
+    "hp": 70,
+    "energy": "darkness",
+    "name": "Trubbish",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness"
+        ],
+        "name": "Sludge Toss",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051200
+    ],
+    "artist": "kawayoo",
+    "internal_id": 1051200
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-42",
+    "image": "/images/en-US/B2b-42.webp",
+    "hp": 120,
+    "energy": "darkness",
+    "name": "Garbodor",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness"
+        ],
+        "name": "Sludge Whirlpool",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 3,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051264
+    ],
+    "artist": "sui",
+    "internal_id": 1051264
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-43",
+    "image": "/images/en-US/B2b-43.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Zorua",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness"
+        ],
+        "name": "Surprise Attack",
+        "damage": "40",
+        "effect": "Flip a coin. If tails, this attack does nothing."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051328,
+      1055112
+    ],
+    "artist": "nagimiso",
+    "internal_id": 1051328
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-44",
+    "image": "/images/en-US/B2b-44.webp",
+    "hp": 100,
+    "energy": "darkness",
+    "name": "Zoroark",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "darkness"
+        ],
+        "name": "Energy Crush",
+        "damage": "20x",
+        "effect": "This attack does 20 damage for each Energy attached to all of your opponent's Pokémon."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051394,
+      1055176
+    ],
+    "artist": "Misa Tsutsui",
+    "internal_id": 1051394
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-45",
+    "image": "/images/en-US/B2b-45.webp",
+    "hp": 70,
+    "energy": "darkness",
+    "name": "Morpeko",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness"
+        ],
+        "name": "Energizer Wheel",
+        "damage": "50",
+        "effect": "Move 2 [D] Energy from this Pokémon to 1 of your Benched Pokémon."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051456,
+      1053252
+    ],
+    "artist": "Cona Nitanda",
+    "internal_id": 1051456
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-46",
+    "image": "/images/en-US/B2b-46.webp",
+    "hp": 100,
+    "energy": "metal",
+    "name": "Forretress",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "metal",
+          "metal"
+        ],
+        "name": "Enormous Explosion",
+        "damage": "100",
+        "effect": "This Pokémon also does 100 damage to itself and 50 damage to all Benched Pokémon (both yours and your opponent's)."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051521,
+      1055240
+    ],
+    "artist": "Lee HyunJung",
+    "internal_id": 1051521
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-47",
+    "image": "/images/en-US/B2b-47.webp",
+    "hp": 200,
+    "energy": "metal",
+    "name": "Mega Scizor ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "metal",
+          "colorless"
+        ],
+        "name": "Bullet Slugger",
+        "damage": "100+",
+        "effect": "If this Pokémon moved from your Bench to the Active Spot this turn, this attack does 50 more damage."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051587,
+      1053701,
+      1055945
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1051587
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-48",
+    "image": "/images/en-US/B2b-48.webp",
+    "hp": 60,
+    "energy": "metal",
+    "name": "Kartana",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "metal"
+        ],
+        "name": "Thrash Metal",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051649
+    ],
+    "artist": "Shin Nagasawa",
+    "internal_id": 1051649
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-49",
+    "image": "/images/en-US/B2b-49.webp",
+    "hp": 70,
+    "energy": "metal",
+    "name": "Varoom",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "colorless"
+        ],
+        "name": "Suffocating Gas",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051712
+    ],
+    "artist": "Saya Tsuruta",
+    "internal_id": 1051712
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-50",
+    "image": "/images/en-US/B2b-50.webp",
+    "hp": 110,
+    "energy": "metal",
+    "name": "Revavroom",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "colorless"
+        ],
+        "name": "Outta-Control Dash",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Metal Transport",
+      "effect": "Once during your turn, you may switch your Active  Pokémon with 1 of your Benched Pokémon."
+    },
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051778,
+      1053316
+    ],
+    "artist": "DOM",
+    "internal_id": 1051778
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-51",
+    "image": "/images/en-US/B2b-51.webp",
+    "hp": 60,
+    "energy": "dragon",
+    "name": "Dratini",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Tail Strike",
+        "damage": "10+",
+        "effect": "Flip a coin. If heads, this attack does 20 more damage."
+      }
+    ],
+    "weakness": "none",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051840,
+      1055304
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 1051840
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-52",
+    "image": "/images/en-US/B2b-52.webp",
+    "hp": 80,
+    "energy": "dragon",
+    "name": "Dragonair",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Sky’s",
+        "damage": "Blessing",
+        "effect": "Take a [W] and a [L] Energy from your Energy Zone and attach them to this Pokémon."
+      }
+    ],
+    "weakness": "none",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051905,
+      1055368
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 1051905
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-53",
+    "image": "/images/en-US/B2b-53.webp",
+    "hp": 150,
+    "energy": "dragon",
+    "name": "Dragonite",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "lightning",
+          "colorless"
+        ],
+        "name": "Dragon Wave",
+        "damage": "150",
+        "effect": "Discard a [W] and a [L] Energy from this Pokémon."
+      }
+    ],
+    "weakness": "none",
+    "retreat": 3,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051970,
+      1055432
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 1051970
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-54",
+    "image": "/images/en-US/B2b-54.webp",
+    "hp": 70,
+    "energy": "dragon",
+    "name": "Axew",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "metal"
+        ],
+        "name": "Sharp Fang",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "none",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052032,
+      1055496
+    ],
+    "artist": "Yukiko Baba",
+    "internal_id": 1052032
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-55",
+    "image": "/images/en-US/B2b-55.webp",
+    "hp": 90,
+    "energy": "dragon",
+    "name": "Fraxure",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "metal"
+        ],
+        "name": "Dragon Claw",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "none",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052097,
+      1055560
+    ],
+    "artist": "Hataya",
+    "internal_id": 1052097
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-56",
+    "image": "/images/en-US/B2b-56.webp",
+    "hp": 150,
+    "energy": "dragon",
+    "name": "Haxorus",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "metal",
+          "colorless"
+        ],
+        "name": "Frenzied Blade",
+        "damage": "50+",
+        "effect": "This attack does 20 more damage for each Benched Pokémon (both yours and your opponent's)."
+      }
+    ],
+    "weakness": "none",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052162,
+      1055624
+    ],
+    "artist": "Anesaki Dynamic",
+    "internal_id": 1052162
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-57",
+    "image": "/images/en-US/B2b-57.webp",
+    "hp": 100,
+    "energy": "dragon",
+    "name": "Druddigon",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Clutch",
+        "damage": "40",
+        "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
+      }
+    ],
+    "weakness": "none",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052224
+    ],
+    "artist": "kawayoo",
+    "internal_id": 1052224
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-58",
+    "image": "/images/en-US/B2b-58.webp",
+    "hp": 70,
+    "energy": "colorless",
+    "name": "Jigglypuff",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Stampede",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052288
+    ],
+    "artist": "Kagemaru Himeno",
+    "internal_id": 1052288
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-59",
+    "image": "/images/en-US/B2b-59.webp",
+    "hp": 110,
+    "energy": "colorless",
+    "name": "Wigglytuff",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Hammer In",
+        "damage": "80",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052352
+    ],
+    "artist": "Asako Ito",
+    "internal_id": 1052352
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-60",
+    "image": "/images/en-US/B2b-60.webp",
+    "hp": 110,
+    "energy": "colorless",
+    "name": "Miltank",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Rout",
+        "damage": "10+",
+        "effect": "This attack does 20 more damage for each of your opponent's Benched Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052417,
+      1053380
+    ],
+    "artist": "Miki Tanaka",
+    "internal_id": 1052417
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-61",
+    "image": "/images/en-US/B2b-61.webp",
+    "hp": 70,
+    "energy": "colorless",
+    "name": "Chatot",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Spinning Draw",
+        "damage": "10",
+        "effect": "Draw a card."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052480
+    ],
+    "artist": "Kagemaru Himeno",
+    "internal_id": 1052480
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-62",
+    "image": "/images/en-US/B2b-62.webp",
+    "hp": 60,
+    "energy": "colorless",
+    "name": "Minccino",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Play Rough",
+        "damage": "10+",
+        "effect": "Flip a coin. If heads, this attack does 20 more damage."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052544
+    ],
+    "artist": "kirisAki",
+    "internal_id": 1052544
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-63",
+    "image": "/images/en-US/B2b-63.webp",
+    "hp": 90,
+    "energy": "colorless",
+    "name": "Cinccino",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Gentle Slap",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052608
+    ],
+    "artist": "Kagemaru Himeno",
+    "internal_id": 1052608
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-64",
+    "image": "/images/en-US/B2b-64.webp",
+    "hp": 80,
+    "energy": "colorless",
+    "name": "Furfrou",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Quick Blow",
+        "damage": "40+",
+        "effect": "Flip a coin. If heads, this attack does 20 more damage."
+      }
+    ],
+    "ability": {
+      "name": "Fur Coat",
+      "effect": "This Pokémon takes −20 damage from attacks."
+    },
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052673
+    ],
+    "artist": "Hitoshi Ariga",
+    "internal_id": 1052673
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-65",
+    "image": "/images/en-US/B2b-65.webp",
+    "energy": "trainer",
+    "name": "Nasty Notice",
+    "card_type": "trainer",
+    "evolution_type": "item",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Your opponent discards cards from their hand until they have 4 cards in their hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Studio Bora Inc."
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052737
+    ],
+    "artist": "Studio Bora Inc.",
+    "internal_id": 1052737
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-66",
+    "image": "/images/en-US/B2b-66.webp",
+    "energy": "trainer",
+    "name": "Maintenance",
+    "card_type": "trainer",
+    "evolution_type": "item",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Shuffle 2 cards from your hand into your deck. Draw a card. If you can't shuffle in 2 cards, you can't use this card.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052801
+    ],
+    "artist": "Toyste Beach",
+    "internal_id": 1052801
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-67",
+    "image": "/images/en-US/B2b-67.webp",
+    "energy": "trainer",
+    "name": "Iris",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "During this turn, if your opponent's Active Pokémon is Knocked Out by damage from an attack used by your Haxorus, you get 1 more point.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya"
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052865,
+      1053765
+    ],
+    "artist": "Susumu Maeya",
+    "internal_id": 1052865
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-68",
+    "image": "/images/en-US/B2b-68.webp",
+    "energy": "trainer",
+    "name": "Calem",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Draw a card for each Mega Evolution Pokémon ex in play (both yours and your opponent's).\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse"
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052929,
+      1053829
+    ],
+    "artist": "Ryuta Fuse",
+    "internal_id": 1052929
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-69",
+    "image": "/images/en-US/B2b-69.webp",
+    "energy": "trainer",
+    "name": "Hiking Trail",
+    "card_type": "trainer",
+    "evolution_type": "stadium",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "At the end of each player's turn, that player draws cards until they have 3 cards in their hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                AYUMI ODASHIMA"
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052993
+    ],
+    "artist": "AYUMI ODASHIMA",
+    "internal_id": 1052993
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-70",
+    "image": "/images/en-US/B2b-70.webp",
+    "hp": 100,
+    "energy": "water",
+    "name": "Lapras",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "colorless"
+        ],
+        "name": "Raging Freeze",
+        "damage": "60",
+        "effect": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, your opponent's Active Pokémon is now Paralyzed."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049665,
+      1053060
+    ],
+    "artist": "zig",
+    "internal_id": 1053060
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-71",
+    "image": "/images/en-US/B2b-71.webp",
+    "hp": 130,
+    "energy": "water",
+    "name": "Empoleon",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "colorless"
+        ],
+        "name": "Emperor’s Strike",
+        "damage": "80+",
+        "effect": "If your opponent's Active Pokémon has more remaining HP than this Pokémon, this attack does 60 more damage."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049858,
+      1053124
+    ],
+    "artist": "kawayoo",
+    "internal_id": 1053124
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-72",
+    "image": "/images/en-US/B2b-72.webp",
+    "hp": 130,
+    "energy": "fighting",
+    "name": "Groudon",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "fighting",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Gaia Blast",
+        "damage": "130",
+        "effect": "Discard 2 random Energy from among the Energy attached to all of your Pokémon."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 3,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050818,
+      1053188
+    ],
+    "artist": "Nurikabe",
+    "internal_id": 1053188
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-73",
+    "image": "/images/en-US/B2b-73.webp",
+    "hp": 70,
+    "energy": "darkness",
+    "name": "Morpeko",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness"
+        ],
+        "name": "Energizer Wheel",
+        "damage": "50",
+        "effect": "Move 2 [D] Energy from this Pokémon to 1 of your Benched Pokémon."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051456,
+      1053252
+    ],
+    "artist": "Yuu Nishida",
+    "internal_id": 1053252
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-74",
+    "image": "/images/en-US/B2b-74.webp",
+    "hp": 110,
+    "energy": "metal",
+    "name": "Revavroom",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "colorless"
+        ],
+        "name": "Outta-Control Dash",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Metal Transport",
+      "effect": "Once during your turn, you may switch your Active  Pokémon with 1 of your Benched Pokémon."
+    },
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051778,
+      1053316
+    ],
+    "artist": "Rianti Hidayat",
+    "internal_id": 1053316
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-75",
+    "image": "/images/en-US/B2b-75.webp",
+    "hp": 110,
+    "energy": "colorless",
+    "name": "Miltank",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Rout",
+        "damage": "10+",
+        "effect": "This attack does 20 more damage for each of your opponent's Benched Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052417,
+      1053380
+    ],
+    "artist": "Yuu Nishida",
+    "internal_id": 1053380
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-76",
+    "image": "/images/en-US/B2b-76.webp",
+    "hp": 220,
+    "energy": "fire",
+    "name": "Mega Charizard X ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "name": "Raging Blaze",
+        "damage": "100+",
+        "effect": "If this Pokémon's remaining HP is 110 or less, this attack does 80 more damage."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049155,
+      1053445,
+      1055689
+    ],
+    "artist": "PLANETA Igarashi",
+    "internal_id": 1053445
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-77",
+    "image": "/images/en-US/B2b-77.webp",
+    "hp": 200,
+    "energy": "water",
+    "name": "Mega Slowbro ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "colorless"
+        ],
+        "name": "Laundry-Go-Round",
+        "damage": "90",
+        "effect": "Flip 3 coins. This attack also does 20 damage for each heads to each of your opponent's Benched Pokémon."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 3,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049603,
+      1053509,
+      1053893,
+      1055753
+    ],
+    "artist": "PLANETA Yamashita",
+    "internal_id": 1053509
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-78",
+    "image": "/images/en-US/B2b-78.webp",
+    "hp": 180,
+    "energy": "lightning",
+    "name": "Mega Manectric ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "Lightning Accelerator",
+        "damage": "80+",
+        "effect": "This attack does 30 more damage for each point you have gotten."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 0,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050307,
+      1053573,
+      1053957,
+      1055817
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1053573
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-79",
+    "image": "/images/en-US/B2b-79.webp",
+    "hp": 210,
+    "energy": "darkness",
+    "name": "Mega Gengar ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness",
+          "darkness",
+          "colorless"
+        ],
+        "name": "Labyrinth of Shadows",
+        "damage": "120",
+        "effect": "During your opponent's next turn, they can't play any Trainer cards from their hand."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051075,
+      1053637,
+      1055881
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1053637
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-80",
+    "image": "/images/en-US/B2b-80.webp",
+    "hp": 200,
+    "energy": "metal",
+    "name": "Mega Scizor ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "metal",
+          "colorless"
+        ],
+        "name": "Bullet Slugger",
+        "damage": "100+",
+        "effect": "If this Pokémon moved from your Bench to the Active Spot this turn, this attack does 50 more damage."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051587,
+      1053701,
+      1055945
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1053701
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-81",
+    "image": "/images/en-US/B2b-81.webp",
+    "energy": "trainer",
+    "name": "Iris",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "During this turn, if your opponent's Active Pokémon is Knocked Out by damage from an attack used by your Haxorus, you get 1 more point.\n\n            \n                    \n    \n            Illustrated by \n            \n                Susumu Maeya"
+    },
+    "weakness": "N/A",
+    "rarity": "☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052865,
+      1053765
+    ],
+    "artist": "Susumu Maeya",
+    "internal_id": 1053765
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-82",
+    "image": "/images/en-US/B2b-82.webp",
+    "energy": "trainer",
+    "name": "Calem",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Draw a card for each Mega Evolution Pokémon ex in play (both yours and your opponent's).\n\n            \n                    \n    \n            Illustrated by \n            \n                Ryuta Fuse"
+    },
+    "weakness": "N/A",
+    "rarity": "☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052929,
+      1053829
+    ],
+    "artist": "Ryuta Fuse",
+    "internal_id": 1053829
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-83",
+    "image": "/images/en-US/B2b-83.webp",
+    "hp": 200,
+    "energy": "water",
+    "name": "Mega Slowbro ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "colorless"
+        ],
+        "name": "Laundry-Go-Round",
+        "damage": "90",
+        "effect": "Flip 3 coins. This attack also does 20 damage for each heads to each of your opponent's Benched Pokémon."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 3,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049603,
+      1053509,
+      1053893,
+      1055753
+    ],
+    "artist": "USGMEN",
+    "internal_id": 1053893
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-84",
+    "image": "/images/en-US/B2b-84.webp",
+    "hp": 180,
+    "energy": "lightning",
+    "name": "Mega Manectric ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "Lightning Accelerator",
+        "damage": "80+",
+        "effect": "This attack does 30 more damage for each point you have gotten."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 0,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050307,
+      1053573,
+      1053957,
+      1055817
+    ],
+    "artist": "GOSSAN",
+    "internal_id": 1053957
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-85",
+    "image": "/images/en-US/B2b-85.webp",
+    "hp": 50,
+    "energy": "psychic",
+    "name": "Mew",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "colorless"
+        ],
+        "name": "Miraculous",
+        "damage": "Memory",
+        "effect": "1 attack from among the Pokémon in your opponent's hand and deck is chosen at random, and you use the chosen attack as this attack."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "☆☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050498,
+      1054022,
+      1054086
+    ],
+    "artist": "Ryota Murayama",
+    "internal_id": 1054022
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-86",
+    "image": "/images/en-US/B2b-86.webp",
+    "hp": 50,
+    "energy": "psychic",
+    "name": "Mew",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "psychic",
+          "colorless"
+        ],
+        "name": "Miraculous",
+        "damage": "Memory",
+        "effect": "1 attack from among the Pokémon in your opponent's hand and deck is chosen at random, and you use the chosen attack as this attack."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "☆☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050498,
+      1054022,
+      1054086
+    ],
+    "artist": "Ryota Murayama",
+    "internal_id": 1054086
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-87",
+    "image": "/images/en-US/B2b-87.webp",
+    "hp": 70,
+    "energy": "grass",
+    "name": "Scyther",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "U-turn",
+        "damage": "10",
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1048640,
+      1054152
+    ],
+    "artist": "Krgc",
+    "internal_id": 1054152
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-88",
+    "image": "/images/en-US/B2b-88.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Pineco",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Hang Down",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1048704,
+      1054216
+    ],
+    "artist": "Taiga Kasai",
+    "internal_id": 1054216
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-89",
+    "image": "/images/en-US/B2b-89.webp",
+    "hp": 70,
+    "energy": "grass",
+    "name": "Phantump",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Tackle",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1048896,
+      1054280
+    ],
+    "artist": "Taiga Kasai",
+    "internal_id": 1054280
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-90",
+    "image": "/images/en-US/B2b-90.webp",
+    "hp": 120,
+    "energy": "grass",
+    "name": "Trevenant",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "grass",
+          "colorless"
+        ],
+        "name": "Rumble Stomp",
+        "damage": "40+",
+        "effect": "Flip a coin until you get tails. This attack does 40 more damage for each heads."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1048961,
+      1054344
+    ],
+    "artist": "Taiga Kasai",
+    "internal_id": 1054344
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-91",
+    "image": "/images/en-US/B2b-91.webp",
+    "hp": 70,
+    "energy": "fire",
+    "name": "Charmander",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "colorless"
+        ],
+        "name": "Flame Tail",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049024,
+      1054408
+    ],
+    "artist": "whomor Inc.",
+    "internal_id": 1054408
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-92",
+    "image": "/images/en-US/B2b-92.webp",
+    "hp": 80,
+    "energy": "fire",
+    "name": "Charmeleon",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "name": "Slash",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Ignition",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may take a  Energy from your Energy Zone and attach it to your Active  Pokémon."
+    },
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049089,
+      1054472
+    ],
+    "artist": "whomor Inc.",
+    "internal_id": 1054472
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-93",
+    "image": "/images/en-US/B2b-93.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Ponyta",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fire"
+        ],
+        "name": "Singe",
+        "damage": "0",
+        "effect": "Your opponent's Active Pokémon is now Burned."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049216,
+      1054536
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 1054536
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-94",
+    "image": "/images/en-US/B2b-94.webp",
+    "hp": 100,
+    "energy": "fire",
+    "name": "Rapidash",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fire"
+        ],
+        "name": "Overdrive Smash",
+        "damage": "30",
+        "effect": "During your next turn, this Pokémon's Overdrive Smash attack does +30 damage."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049280,
+      1054600
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 1054600
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-95",
+    "image": "/images/en-US/B2b-95.webp",
+    "hp": 70,
+    "energy": "water",
+    "name": "Slowpoke",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "colorless"
+        ],
+        "name": "Headbutt",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049536,
+      1054664
+    ],
+    "artist": "Shigenori Negishi",
+    "internal_id": 1054664
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-96",
+    "image": "/images/en-US/B2b-96.webp",
+    "hp": 70,
+    "energy": "lightning",
+    "name": "Pikachu",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Static Shock",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049984,
+      1054728
+    ],
+    "artist": "MAHOU",
+    "internal_id": 1054728
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-97",
+    "image": "/images/en-US/B2b-97.webp",
+    "hp": 100,
+    "energy": "lightning",
+    "name": "Raichu",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "Thunder",
+        "damage": "90",
+        "effect": "This Pokémon also does 30 damage to itself."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050049,
+      1054792
+    ],
+    "artist": "MAHOU",
+    "internal_id": 1054792
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-98",
+    "image": "/images/en-US/B2b-98.webp",
+    "hp": 60,
+    "energy": "lightning",
+    "name": "Electrike",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Quick Attack",
+        "damage": "10+",
+        "effect": "Flip a coin. If heads, this attack does 30 more damage."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050240,
+      1054856
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 1054856
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-99",
+    "image": "/images/en-US/B2b-99.webp",
+    "hp": 80,
+    "energy": "fighting",
+    "name": "Hawlucha",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Take Down",
+        "damage": "50",
+        "effect": "This Pokémon also does 10 damage to itself."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050880,
+      1054920
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 1054920
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-100",
+    "image": "/images/en-US/B2b-100.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Gastly",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness"
+        ],
+        "name": "Mumble",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050944,
+      1054984
+    ],
+    "artist": "Shigenori Negishi",
+    "internal_id": 1054984
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-101",
+    "image": "/images/en-US/B2b-101.webp",
+    "hp": 80,
+    "energy": "darkness",
+    "name": "Haunter",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness"
+        ],
+        "name": "Spin Turn",
+        "damage": "40",
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051009,
+      1055048
+    ],
+    "artist": "Shigenori Negishi",
+    "internal_id": 1055048
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-102",
+    "image": "/images/en-US/B2b-102.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Zorua",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness"
+        ],
+        "name": "Surprise Attack",
+        "damage": "40",
+        "effect": "Flip a coin. If tails, this attack does nothing."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051328,
+      1055112
+    ],
+    "artist": "Krgc",
+    "internal_id": 1055112
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-103",
+    "image": "/images/en-US/B2b-103.webp",
+    "hp": 100,
+    "energy": "darkness",
+    "name": "Zoroark",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "darkness"
+        ],
+        "name": "Energy Crush",
+        "damage": "20x",
+        "effect": "This attack does 20 damage for each Energy attached to all of your opponent's Pokémon."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051394,
+      1055176
+    ],
+    "artist": "Krgc",
+    "internal_id": 1055176
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-104",
+    "image": "/images/en-US/B2b-104.webp",
+    "hp": 100,
+    "energy": "metal",
+    "name": "Forretress",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "metal",
+          "metal"
+        ],
+        "name": "Enormous Explosion",
+        "damage": "100",
+        "effect": "This Pokémon also does 100 damage to itself and 50 damage to all Benched Pokémon (both yours and your opponent's)."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051521,
+      1055240
+    ],
+    "artist": "Taiga Kasai",
+    "internal_id": 1055240
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-105",
+    "image": "/images/en-US/B2b-105.webp",
+    "hp": 60,
+    "energy": "dragon",
+    "name": "Dratini",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Tail Strike",
+        "damage": "10+",
+        "effect": "Flip a coin. If heads, this attack does 20 more damage."
+      }
+    ],
+    "weakness": "none",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051840,
+      1055304
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 1055304
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-106",
+    "image": "/images/en-US/B2b-106.webp",
+    "hp": 80,
+    "energy": "dragon",
+    "name": "Dragonair",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Sky’s",
+        "damage": "Blessing",
+        "effect": "Take a [W] and a [L] Energy from your Energy Zone and attach them to this Pokémon."
+      }
+    ],
+    "weakness": "none",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051905,
+      1055368
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 1055368
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-107",
+    "image": "/images/en-US/B2b-107.webp",
+    "hp": 150,
+    "energy": "dragon",
+    "name": "Dragonite",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "lightning",
+          "colorless"
+        ],
+        "name": "Dragon Wave",
+        "damage": "150",
+        "effect": "Discard a [W] and a [L] Energy from this Pokémon."
+      }
+    ],
+    "weakness": "none",
+    "retreat": 3,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051970,
+      1055432
+    ],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 1055432
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-108",
+    "image": "/images/en-US/B2b-108.webp",
+    "hp": 70,
+    "energy": "dragon",
+    "name": "Axew",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "metal"
+        ],
+        "name": "Sharp Fang",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "none",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052032,
+      1055496
+    ],
+    "artist": "Nisota Niso",
+    "internal_id": 1055496
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-109",
+    "image": "/images/en-US/B2b-109.webp",
+    "hp": 90,
+    "energy": "dragon",
+    "name": "Fraxure",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "metal"
+        ],
+        "name": "Dragon Claw",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "none",
+    "retreat": 2,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052097,
+      1055560
+    ],
+    "artist": "Nisota Niso",
+    "internal_id": 1055560
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-110",
+    "image": "/images/en-US/B2b-110.webp",
+    "hp": 150,
+    "energy": "dragon",
+    "name": "Haxorus",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "metal",
+          "colorless"
+        ],
+        "name": "Frenzied Blade",
+        "damage": "50+",
+        "effect": "This attack does 20 more damage for each Benched Pokémon (both yours and your opponent's)."
+      }
+    ],
+    "weakness": "none",
+    "retreat": 2,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052162,
+      1055624
+    ],
+    "artist": "Nisota Niso",
+    "internal_id": 1055624
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-111",
+    "image": "/images/en-US/B2b-111.webp",
+    "hp": 220,
+    "energy": "fire",
+    "name": "Mega Charizard X ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "name": "Raging Blaze",
+        "damage": "100+",
+        "effect": "If this Pokémon's remaining HP is 110 or less, this attack does 80 more damage."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049155,
+      1053445,
+      1055689
+    ],
+    "artist": "PLANETA Igarashi",
+    "internal_id": 1055689
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-112",
+    "image": "/images/en-US/B2b-112.webp",
+    "hp": 200,
+    "energy": "water",
+    "name": "Mega Slowbro ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "water",
+          "colorless"
+        ],
+        "name": "Laundry-Go-Round",
+        "damage": "90",
+        "effect": "Flip 3 coins. This attack also does 20 damage for each heads to each of your opponent's Benched Pokémon."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 3,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049603,
+      1053509,
+      1053893,
+      1055753
+    ],
+    "artist": "PLANETA Yamashita",
+    "internal_id": 1055753
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-113",
+    "image": "/images/en-US/B2b-113.webp",
+    "hp": 180,
+    "energy": "lightning",
+    "name": "Mega Manectric ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "name": "Lightning Accelerator",
+        "damage": "80+",
+        "effect": "This attack does 30 more damage for each point you have gotten."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 0,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050307,
+      1053573,
+      1053957,
+      1055817
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1055817
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-114",
+    "image": "/images/en-US/B2b-114.webp",
+    "hp": 210,
+    "energy": "darkness",
+    "name": "Mega Gengar ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "darkness",
+          "darkness",
+          "darkness",
+          "colorless"
+        ],
+        "name": "Labyrinth of Shadows",
+        "damage": "120",
+        "effect": "During your opponent's next turn, they can't play any Trainer cards from their hand."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051075,
+      1053637,
+      1055881
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1055881
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-115",
+    "image": "/images/en-US/B2b-115.webp",
+    "hp": 200,
+    "energy": "metal",
+    "name": "Mega Scizor ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "metal",
+          "metal",
+          "colorless"
+        ],
+        "name": "Bullet Slugger",
+        "damage": "100+",
+        "effect": "If this Pokémon moved from your Bench to the Active Spot this turn, this attack does 50 more damage."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      1051587,
+      1053701,
+      1055945
+    ],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1055945
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-116",
+    "image": "/images/en-US/B2b-116.webp",
+    "hp": 130,
+    "energy": "grass",
+    "name": "Arboliva",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "name": "Seed Bomb",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Extra Heal",
+      "effect": "Once during your turn, you may heal 60 damage from 1 of your Pokémon ex that has any Energy attached. If you do, discard a random Energy from that Pokémon."
+    },
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "Crown Rare",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      983618,
+      1056012
+    ],
+    "artist": "PLANETA Yamashita",
+    "internal_id": 1056012
+  },
+  {
+    "expansion": "B2b",
+    "card_id": "B2b-117",
+    "image": "/images/en-US/B2b-117.webp",
+    "energy": "trainer",
+    "name": "Metal Core Barrier",
+    "card_type": "trainer",
+    "evolution_type": "tool",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "If this card is attached to 1 of your Pokémon, discard it at the end of your opponent's turn.The [M] Pokémon this card is attached to takes −50 damage from attacks from your opponent's Pokémon.\n\n            \n                    \n    \n            Illustrated by \n            \n                Studio Bora Inc."
+    },
+    "weakness": "N/A",
+    "rarity": "Crown Rare",
+    "ex": false,
+    "baby": false,
+    "set_details": "megashine(b2b)",
+    "pack": "everypack",
+    "alternate_versions": [
+      926977,
+      1056076
+    ],
+    "artist": "Studio Bora Inc.",
+    "internal_id": 1056076
   },
   {
     "expansion": "P-A",
@@ -99593,7 +103532,7 @@
           "colorless"
         ],
         "name": "Chakra Fist",
-        "damage": "100x",
+        "damage": "100+",
         "effect": "If this Pokémon has any [P] Energy attached, this attack does 40 more damage. This attack's damage isn't affected by any effects on your opponent's Active Pokémon."
       }
     ],
@@ -99626,7 +103565,7 @@
           "colorless"
         ],
         "name": "Blow Through",
-        "damage": "40x",
+        "damage": "40+",
         "effect": "If a Stadium is in play, this attack does 40 more damage."
       }
     ],

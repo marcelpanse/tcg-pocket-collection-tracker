@@ -135,6 +135,18 @@ For **all other locales**, append at the end (before the closing `}`):
 - `<IdCamel>` = set ID as camelCase import name, e.g. `B2a` → `B2aMissions`
 - `<idCamel>` = set ID as camelCase variable, e.g. `B2a` → `b2aMissions`
 
+---
+
+## Step 7 — Set banner image
+
+Place the set artwork image at:
+```
+frontend/public/images/sets/en-US/<ID>.webp
+```
+This is a **manually sourced asset** — the scraper only downloads individual card images, not set banners. Remind the user to add this file manually after obtaining it from official sources.
+
+---
+
 ## Important notes
 
 - `internalId` must **never change** after a set is released — the DB encoding depends on it.

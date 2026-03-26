@@ -35,6 +35,7 @@ const packs = [
   'megablazikenpack',
   'megagyaradospack',
   'paldeanwonderspack',
+  'megashinepack',
   'allcards',
 ]
 
@@ -96,6 +97,10 @@ const rarityOverrides: Record<ExpansionId, { rarity: Rarity; start: number; end:
   B2a: [
     { rarity: '✵', start: 116, end: 125 },
     { rarity: '✵✵', start: 126, end: 129 },
+  ],
+  B2b: [
+    { rarity: '✵', start: 87, end: 110 },
+    { rarity: '✵✵', start: 111, end: 115 },
   ],
   'P-A': [],
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],
