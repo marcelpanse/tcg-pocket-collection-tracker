@@ -5,12 +5,13 @@ import { LicenseModal } from './LicenseModal'
 export default function Footer() {
   const [showLicense, setShowLicense] = useState(false)
   const { t } = useTranslation('footer')
+  const year = new Date().getFullYear()
 
   return (
     <>
       <footer className="text-center py-4 mx-2 text-gray-300 text-xs leading-snug">
         <p className="m-1">
-          © 2025 TCG Pocket Collection Tracker.{' '}
+          © {year} TCG Pocket Collection Tracker.{' '}
           <button type="button" onClick={() => setShowLicense(true)} className="text-blue-300 underline hover:text-blue-500 cursor-pointer">
             {t('licenseDisclaimer')}
           </button>
