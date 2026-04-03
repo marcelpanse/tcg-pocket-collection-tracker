@@ -1,6 +1,5 @@
-import type { Session } from '@supabase/supabase-js'
-
-export type User = Session
+// biome-ignore lint/suspicious/noExplicitAny: PocketBase record fields are dynamic
+export type User = Record<string, any> | null
 
 export const expansionIds = ['B2b', 'B2a', 'B2', 'B1a', 'B1', 'A4b', 'A4a', 'A4', 'A3b', 'A3a', 'A3', 'A2b', 'A2a', 'A2', 'A1a', 'A1', 'P-B', 'P-A'] as const
 export type ExpansionId = (typeof expansionIds)[number]

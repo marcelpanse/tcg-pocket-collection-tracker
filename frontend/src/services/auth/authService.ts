@@ -1,38 +1,33 @@
-import { supabase } from '@/lib/supabase'
+import { pb } from '@/lib/pocketbase'
 import type { User } from '@/types'
 
 export const getCurrentUser = async () => {
-  const { data, error } = await supabase.auth.getSession()
-  if (error) {
-    throw new Error('Failed to get user session')
-  }
-  return data.session
+  return pb.authStore.record
 }
 
 export const logout = async () => {
-  const { error } = await supabase.auth.signOut()
-  if (error) {
-    throw new Error('Error logging out')
-  }
+  pb.authStore.clear()
 }
 
-export const authSSO = async (user: User, sso: string, sig: string) => {
+export const authSSO = async (_user: User, sso: string, sig: string) => {
   console.log('Initializing SSO for discourse', sso, sig)
 
-  const authToken = user.access_token
-  const { data, error } = await supabase.functions.invoke('sso', {
+  const response = await fetch(pb.buildUrl('/api/sso'), {
     method: 'POST',
-    body: { sso, sig },
     headers: {
-      Authorization: `Bearer ${authToken}`,
+      'Content-Type': 'application/json',
+      Authorization: pb.authStore.token,
     },
+    body: JSON.stringify({ sso, sig }),
   })
 
-  if (error) {
-    console.log('supa sso error', error)
+  const data = await response.json()
+
+  if (!response.ok) {
+    console.log('PocketBase SSO error', data)
     throw new Error('Error logging in')
   }
 
-  console.log('supa sso data', data)
+  console.log('PocketBase SSO data', data)
   return data
 }

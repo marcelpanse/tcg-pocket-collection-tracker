@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
-import { supabase } from '@/lib/supabase.ts'
+import { pb } from '@/lib/pocketbase'
 import { authSSO, getCurrentUser, logout } from '@/services/auth/authService.ts'
 import { removeLocalCacheItems } from '@/services/collection/collectionService.ts'
 import type { User } from '@/types'
@@ -16,7 +16,7 @@ export function useUser() {
 
 export function useLogout() {
   const { data: user } = useUser()
-  const email = user?.user.email
+  const email = user?.email
   const queryClient = useQueryClient()
 
   return useMutation({
@@ -44,22 +44,19 @@ export function useAuthSSO() {
   })
 }
 
-export function useVerifyOTP() {
+export function loginWithPassword({ email, password }: { email: string; password: string }) {
+  return pb.collection('users').authWithPassword(email, password)
+}
+
+export function register({ email, password }: { email: string; password: string }) {
+  return pb.collection('users').create({ email, password, passwordConfirm: password })
+}
+
+export function useLogin() {
   const queryClient = useQueryClient()
 
   return useMutation({
-    mutationFn: async ({ email, otp }: { email: string; otp: string }) => {
-      const { error } = await supabase.auth.verifyOtp({
-        email,
-        token: otp,
-        type: 'email',
-      })
-
-      if (error) {
-        console.log('supabase OTP error', error)
-        throw new Error('Error verifying the OTP')
-      }
-    },
+    mutationFn: loginWithPassword,
     onSuccess: async () => {
       await queryClient.invalidateQueries({ queryKey: ['user'] })
       await queryClient.invalidateQueries({ queryKey: ['account'] })
@@ -69,12 +66,10 @@ export function useVerifyOTP() {
   })
 }
 
-export async function signInWithOtp({ email }: { email: string }) {
-  const { error } = await supabase.auth.signInWithOtp({ email })
-  if (error) {
-    console.log('supabase sign in with OTP error', error)
-    throw new Error('Error sending the OTP')
-  }
+export function useRegister() {
+  return useMutation({
+    mutationFn: register,
+  })
 }
 
 export function useLoginDialog() {
