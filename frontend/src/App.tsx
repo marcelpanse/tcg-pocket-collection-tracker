@@ -1,26 +1,32 @@
-import loadable from '@loadable/component'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { useEffect, useMemo, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { createHashRouter, Navigate, Outlet, RouterProvider, useLocation, useParams } from 'react-router'
 import DonationPopup from '@/components/DonationPopup.tsx'
 import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useAuthSSO, useUser } from '@/services/auth/useAuth'
+import { ChatManager } from './components/chat/ChatManager.tsx'
+import ErrorAlert from './components/ErrorAlert.tsx'
 import { Header } from './components/Header.tsx'
+import { Spinner } from './components/Spinner.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
+import { ChatProvider } from './context/ChatProvider.tsx'
 import { DialogContext } from './context/DialogContext.ts'
+import DeckView from './pages/decks/DeckView.tsx'
 
 // Lazy import for chunking
-const Overview = loadable(() => import('./pages/overview/Overview.tsx'))
-const Collection = loadable(() => import('./pages/collection/Collection.tsx'))
-const Missions = loadable(() => import('./pages/collection/Missions.tsx'))
-const Decks = loadable(() => import('./pages/decks/Decks.tsx'))
-const DeckBuilder = loadable(() => import('./pages/decks/DeckBuilder.tsx'))
-const Trade = loadable(() => import('./pages/trade/Trade.tsx'))
-const Scan = loadable(() => import('./pages/scan/Scan.tsx'))
-const EditProfile = loadable(() => import('./components/EditProfile.tsx'))
-const CardDetail = loadable(() => import('./pages/collection/CardDetail.tsx'))
+const Overview = lazy(() => import('./pages/overview/Overview.tsx'))
+const Collection = lazy(() => import('./pages/collection/Collection.tsx'))
+const Missions = lazy(() => import('./pages/collection/Missions.tsx'))
+const Decks = lazy(() => import('./pages/decks/Decks.tsx'))
+const DeckBuilder = lazy(() => import('./pages/decks/DeckBuilder.tsx'))
+const Trade = lazy(() => import('./pages/trade/Trade.tsx'))
+const Scan = lazy(() => import('./pages/scan/Scan.tsx'))
+const EditProfile = lazy(() => import('./components/EditProfile.tsx'))
+const CardDetail = lazy(() => import('./pages/collection/CardDetail.tsx'))
+
+const Friends = lazy(() => import('./pages/friends/Friends.tsx'))
 
 const TradeWithRedirect = () => {
   const { friendId } = useParams()
@@ -59,56 +65,62 @@ function App() {
     }
   }, [user])
 
-  const errorDiv = <div className="m-4">Something went wrong, please refresh the page to try again.</div>
-
   const router = createHashRouter([
     {
       element: (
         <>
           <Analytics />
           <Header />
-          <Outlet />
+          <ErrorBoundary FallbackComponent={ErrorAlert}>
+            <Suspense fallback={<Spinner size="lg" overlay />}>
+              <Outlet />
+            </Suspense>
+          </ErrorBoundary>
+          <ErrorBoundary fallback={null} onError={() => toast({ variant: 'destructive', description: 'Failed opening card details.' })}>
+            <CardDetail />
+          </ErrorBoundary>
           <EditProfile />
         </>
       ),
-      errorElement: errorDiv,
+      errorElement: <ErrorAlert />,
       children: [
         { path: '/', element: <Overview /> },
         { path: '/collection/missions', element: <Missions /> },
         { path: '/collection/:friendId?', element: <Collection /> },
         { path: '/collection/:friendId/trade', element: <TradeWithRedirect /> }, // support old trading path
         { path: '/decks', element: <Decks /> },
-        { path: '/decks/edit', element: <DeckBuilder /> },
+        { path: '/decks/edit/:id?', element: <DeckBuilder /> },
+        { path: '/decks/:id', element: <DeckView /> },
         { path: '/scan', element: <Scan /> },
-        { path: '/trade*', element: <Trade /> },
+        { path: '/trade/*', element: <Trade /> },
+        { path: '/friends', element: <Friends /> },
       ],
     },
   ])
 
-  const dialogContextValue = useMemo(
-    () => ({
-      isLoginDialogOpen,
-      setIsLoginDialogOpen,
-      isProfileDialogOpen,
-      setIsProfileDialogOpen,
-      selectedCardId,
-      setSelectedCardId,
-    }),
-    [isLoginDialogOpen, isProfileDialogOpen, selectedCardId],
-  )
+  const dialogContextValue = {
+    isLoginDialogOpen,
+    setIsLoginDialogOpen,
+    isProfileDialogOpen,
+    setIsProfileDialogOpen,
+    selectedCardId,
+    setSelectedCardId,
+  }
 
   return (
-    <DialogContext.Provider value={dialogContextValue}>
-      <ErrorBoundary fallback={errorDiv}>
-        <Toaster />
-        <RouterProvider router={router} />
-        <InstallPrompt />
-        <DonationPopup />
-        <CardDetail />
-        {/* Add React Query DevTools (only in development) */}
-        {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
-      </ErrorBoundary>
-    </DialogContext.Provider>
+    <ErrorBoundary FallbackComponent={ErrorAlert}>
+      <DialogContext.Provider value={dialogContextValue}>
+        <ChatProvider>
+          <Toaster />
+          <RouterProvider router={router} />
+          <InstallPrompt />
+          <DonationPopup />
+          <ChatManager />
+          {/* Add React Query DevTools (only in development) */}
+          {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
+        </ChatProvider>
+      </DialogContext.Provider>
+    </ErrorBoundary>
   )
 }
 

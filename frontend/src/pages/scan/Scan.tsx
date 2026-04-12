@@ -1,11 +1,11 @@
 import type { GraphModel } from '@tensorflow/tfjs'
 import i18n from 'i18next'
-import { SquareCheck, SquareX } from 'lucide-react'
+import { Minus, Plus, SquareCheck, SquareX } from 'lucide-react'
 import type { ChangeEvent, Dispatch, SetStateAction } from 'react'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CardLine } from '@/components/CardLine'
-import { DropdownFilter, TabsFilter } from '@/components/Filters'
+import { DropdownFilter } from '@/components/Filters'
 import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
@@ -61,22 +61,6 @@ const Scan = () => {
   const [extractedCards, setExtractedCards] = useState<ExtractedCard[]>([])
   const [incrementedCards, setIncrementedCards] = useState<IncrementedCard[]>([])
 
-  const cardIncrements = useMemo(() => {
-    const card_ids = extractedCards
-      .filter((card) => card.increment !== 0 && card.matchedCard)
-      .map((card) => ({ card_id: card.matchedCard.card.card_id, increment: card.increment }))
-    const counts = new Map<string, number>()
-    for (const { card_id, increment } of card_ids) {
-      counts.set(card_id, (counts.get(card_id) ?? 0) + increment)
-    }
-    for (const card_id of counts.keys()) {
-      if (counts.get(card_id) === 0) {
-        counts.delete(card_id)
-      }
-    }
-    return counts
-  }, [extractedCards])
-
   useEffect(() => {
     const fetchHashes = async (lang: string, set: Dispatch<SetStateAction<Hashes | undefined>>) => {
       try {
@@ -114,6 +98,19 @@ const Scan = () => {
   useEffect(() => {
     loadModel().then(setModel)
   }, [])
+
+  const card_ids = extractedCards
+    .filter((card) => card.increment !== 0 && card.matchedCard)
+    .map((card) => ({ card_id: card.matchedCard.card.card_id, increment: card.increment }))
+  const cardIncrements = new Map<string, number>()
+  for (const { card_id, increment } of card_ids) {
+    cardIncrements.set(card_id, (cardIncrements.get(card_id) ?? 0) + increment)
+  }
+  for (const card_id of cardIncrements.keys()) {
+    if (cardIncrements.get(card_id) === 0) {
+      cardIncrements.delete(card_id)
+    }
+  }
 
   // Extract card images function
   const handleImageUpload = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -171,18 +168,13 @@ const Scan = () => {
       updates.push({ card_id, previous_amount, increment })
     }
 
-    try {
-      updateCardsMutation.mutate({
-        updates: updates.map((x) => ({
-          card_id: x.card_id,
-          internal_id: getInteralIdByCardId(x.card_id),
-          amount_owned: Math.max(0, x.previous_amount + x.increment),
-        })),
-      })
-    } catch (error) {
-      setError(`Error incrementing card quantities: ${error}`)
-      return
-    }
+    updateCardsMutation.mutate(
+      updates.map((x) => ({
+        card_id: x.card_id,
+        internal_id: getInteralIdByCardId(x.card_id),
+        amount_owned: Math.max(0, x.previous_amount + x.increment),
+      })),
+    )
 
     setIncrementedCards(updates)
     setState(State.ProcessUpdates + 1)
@@ -198,7 +190,7 @@ const Scan = () => {
   }
 
   if (!model || !hashes || !fallbackHashes) {
-    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+    return <Spinner size="lg" overlay />
   }
 
   return (
@@ -218,7 +210,7 @@ const Scan = () => {
       {state === State.UploadingImages && (
         <Alert variant="default">
           <AlertDescription className="flex items-center space-x-2">
-            <Spinner />
+            <Spinner size="inline" />
             <p>{t('processing')}</p>
           </AlertDescription>
         </Alert>
@@ -249,6 +241,9 @@ const Scan = () => {
                 }
                 setExtractedCards((arr) => arr.map((x, i) => (i === index ? { ...x, matchedCard: { ...x.matchedCard, card: targetCard } } : x)))
               }
+              const currentAmount = ownedCards?.get(card.matchedCard.card.internal_id)?.amount_owned ?? 0
+              const newAmount = currentAmount + card.increment
+              const canDecrement = newAmount > 0
               return (
                 <div key={index} className={`border-3 rounded-lg p-2 ${card.increment > 0 && 'border-green-400'} ${card.increment < 0 && 'border-red-400'}`}>
                   <h3 className="flex mb-2">
@@ -263,7 +258,21 @@ const Scan = () => {
                     />
                   </h3>
                   <div className="flex gap-2 justify-between mb-2">
-                    <TabsFilter options={['-1', '0', '+1']} value={(card.increment > 0 ? '+' : '') + String(card.increment)} onChange={onIncrementChange} />
+                    <div className="flex items-center gap-1">
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="h-8 w-8"
+                        onClick={() => onIncrementChange(String(card.increment - 1))}
+                        disabled={!canDecrement}
+                      >
+                        <Minus className="h-4 w-4" />
+                      </Button>
+                      <div className="min-w-8 text-center font-semibold select-none">{card.increment > 0 ? `+${card.increment}` : card.increment}</div>
+                      <Button variant="outline" size="icon" className="h-8 w-8" onClick={() => onIncrementChange(String(card.increment + 1))}>
+                        <Plus className="h-4 w-4" />
+                      </Button>
+                    </div>
                     {expansions.length > 1 && (
                       <DropdownFilter className="inline-block" options={expansions} value={card.matchedCard.card.expansion} onChange={onExpansionChange} />
                     )}
@@ -273,13 +282,13 @@ const Scan = () => {
                     className={`flex w-full cursor-pointer gap-2 ${!isSelected && 'grayscale'} transition-all duration-200`}
                     onClick={() => (isSelected ? onIncrementChange('0') : onIncrementChange('+1'))}
                   >
-                    <div className="w-1/2 relative">
+                    <div className="w-1/2 flex flex-col gap-1 justify-between">
                       <img src={card.imageUrl} alt={`Detected card ${index + 1}`} className="w-full h-auto object-contain" />
-                      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs px-1 py-0.5 text-center">{t('extractedCard')}</div>
+                      <div className="bg-gray-500 text-white text-xs px-1 py-0.5 text-center">{t('extractedCard')}</div>
                     </div>
-                    <div className="w-1/2 relative">
+                    <div className="w-1/2 flex flex-col gap-1 justify-between">
                       <img src={card.resolvedImageUrl} alt="Best match" className="w-full h-auto object-contain" />
-                      <div className="absolute bottom-0 left-0 right-0 bg-green-500/80 text-white text-xs px-1 py-0.5 text-center">
+                      <div className="bg-green-600 text-white text-xs px-1 py-0.5 text-center">
                         {t('percentMatch', { match: (card.matchedCard.similarity * 100).toFixed(0) })}
                       </div>
                     </div>
@@ -301,7 +310,7 @@ const Scan = () => {
       {state === State.ProcessUpdates && (
         <Alert variant="default">
           <AlertDescription className="flex items-center space-x-2">
-            <Spinner />
+            <Spinner size="inline" />
             <p>{t('processing')}</p>
           </AlertDescription>
         </Alert>

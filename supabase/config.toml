@@ -31,3 +31,9 @@ entrypoint = "./functions/get-trading-partners/index.ts"
 # Specifies static files to be bundled with the function. Supports glob patterns.
 # For example, if you want to serve static HTML pages in your function:
 # static_files = [ "./functions/get-trading-partners/*.html" ]
+
+[functions.manage-friend]
+enabled = true
+verify_jwt = true
+import_map = "./functions/manage-friend/deno.json"
+entrypoint = "./functions/manage-friend/index.ts"

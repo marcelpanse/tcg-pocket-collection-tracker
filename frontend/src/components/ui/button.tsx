@@ -1,9 +1,8 @@
-import { Slot } from '@radix-ui/react-slot'
 import { cva, type VariantProps } from 'class-variance-authority'
-import { forwardRef } from 'react'
 import { cn } from '@/lib/utils'
+import { Spinner } from '../Spinner'
 
-const buttonVariants = cva(
+export const buttonVariants = cva(
   'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 dark:focus-visible:ring-neutral-300',
   {
     variants: {
@@ -31,13 +30,14 @@ const buttonVariants = cva(
 )
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
-  asChild?: boolean
+  isPending?: boolean
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ className, variant, size, asChild = false, ...props }, ref) => {
-  const Comp = asChild ? Slot : 'button'
-  return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
-})
-Button.displayName = 'Button'
-
-export { Button, buttonVariants }
+export function Button({ className, variant, size, isPending, children, type, ...props }: ButtonProps) {
+  return (
+    <button type={type ?? 'button'} className={cn(buttonVariants({ variant, size }), className)} {...props}>
+      {children}
+      {isPending && <Spinner size="inline" className="inline-block ml-2" />}
+    </button>
+  )
+}

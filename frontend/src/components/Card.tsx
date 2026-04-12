@@ -1,11 +1,12 @@
 import i18n from 'i18next'
 import { MinusIcon, PlusIcon, Trash2Icon } from 'lucide-react'
-import { startTransition, useCallback, useOptimistic } from 'react'
+import { startTransition, useOptimistic } from 'react'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { cn, getCardNameByLang } from '@/lib/utils'
 import { useDeleteCard, useSelectedCard, useUpdateCards } from '@/services/collection/useCollection'
 import type { Card as CardType } from '@/types'
+import { Spinner } from './Spinner'
 
 interface CardProps {
   card: CardType
@@ -25,16 +26,14 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
     startTransition(async () => {
       setAmountOwned(x)
       try {
-        await updateCardsMutation.mutateAsync({
-          updates: [{ card_id: card.card_id, internal_id: card.internal_id, amount_owned: x }],
-        })
+        await updateCardsMutation.mutateAsync([{ card_id: card.card_id, internal_id: card.internal_id, amount_owned: x }])
       } catch (error) {
         console.log('Failed updating card count:', error)
       }
     })
   }
 
-  const handleMinusButtonClick = useCallback(() => {
+  const handleMinusButtonClick = () => {
     if (card.collected && amountOwned === 0) {
       startTransition(async () => {
         await deleteCardMutation.mutateAsync({ cardId: card.card_id })
@@ -42,7 +41,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
     } else {
       updateCardCount(amountOwned - 1)
     }
-  }, [card.collected, card.card_id, amountOwned, deleteCardMutation])
+  }
 
   const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value === '' ? 0 : Number.parseInt(e.target.value, 10)
@@ -62,15 +61,11 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
         }}
       >
         <FancyCard card={card} selected={Boolean(card.collected) && !isPending} />
-        {isPending && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="animate-spin rounded-full size-12 border-4 border-white border-t-transparent"></div>
-          </div>
-        )}
+        {isPending && <Spinner size="md" overlay />}
       </button>
       <p
         className="w-full min-w-0 text-[12px] pt-2 text-center font-semibold leading-tight"
-        title={card.updated_at ? `Last update ${new Date(card.updated_at).toLocaleString()}` : undefined}
+        title={card.updated_at ? `Last update ${card.updated_at.toLocaleString()}` : undefined}
       >
         <span className="block md:inline">{card.card_id}</span>
         <span className="hidden md:inline"> – </span>

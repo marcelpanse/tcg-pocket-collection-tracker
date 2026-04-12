@@ -3,6 +3,7 @@ import { Trans, useTranslation } from 'react-i18next'
 
 export function LicenseModal({ onClose }: { onClose: () => void }) {
   const { t } = useTranslation('footer')
+  const year = new Date().getFullYear()
 
   useEffect(() => {
     const esc = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
@@ -43,7 +44,7 @@ export function LicenseModal({ onClose }: { onClose: () => void }) {
 
         <p className="font-semibold">{t('modal.disclaimerTitle')}</p>
         <p className="text-sm mb-2 whitespace-pre-line">{t('modal.disclaimerText')}</p>
-        <p className="text-sm">{t('modal.copyright', { projectName: 'TCG Pocket Collection Tracker' })}</p>
+        <p className="text-sm">{t('modal.copyright', { projectName: 'TCG Pocket Collection Tracker', year: year })}</p>
       </div>
     </button>
   )

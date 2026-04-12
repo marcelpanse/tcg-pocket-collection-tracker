@@ -1,3 +1,4 @@
+import { ChevronsDown, ChevronsUp } from 'lucide-react'
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CardLine } from '@/components/CardLine'
@@ -17,10 +18,7 @@ interface Props {
 }
 
 function card(c: Card | null) {
-  if (!c) {
-    return '—'
-  }
-  return <CardLine card_id={c.card_id} details="hidden" />
+  return c === null ? <span className="inline-block mx-auto">—</span> : <CardLine className="flex-1" card_id={c.card_id} details="hidden" />
 }
 
 export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, setYourCard, setFriendCard }) => {
@@ -57,25 +55,25 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
 
   if (!yourCard && !friendCard) {
     return (
-      <div className="sticky top-0 z-10 flex rounded-lg border-1 bg-neutral-900 border-neutral-700 border-solid p-2 w-full items-center justify-around text-center h-[166px] sm:h-[110px]">
-        <h4 className="text-lg font-medium">{t('selectCardsToTrade')}</h4>
+      <div className="sticky top-0 z-10 flex rounded-lg border-1 bg-neutral-900 border-neutral-700 border-solid p-2 w-full items-center justify-around text-center h-[110px] sm:h-[82px]">
+        <h4 className="text-lg font-medium text-neutral-400">{t('selectCardsToTrade')}</h4>
       </div>
     )
   }
 
   return (
     <div className="sticky top-0 z-10 bg-neutral-900 rounded-lg border-1 border-neutral-700 border-solid p-1">
-      <div className="flex flex-col sm:flex-row gap-x-4 gap-y-1 p-1">
-        <div className="w-full sm:w-1/2">
-          <h4 className="text-lg font-medium">{t('youGive')}</h4>
+      <div className="flex flex-col-reverse sm:flex-row gap-x-4 gap-y-1 p-1">
+        <div className="flex w-full sm:w-1/2">
+          <ChevronsUp />
           {card(yourCard)}
         </div>
-        <div className="w-full sm:w-1/2">
-          <h4 className="text-lg font-medium">{t('youReceive')}</h4>
+        <div className="flex w-full sm:w-1/2">
+          <ChevronsDown />
           {card(friendCard)}
         </div>
       </div>
-      <Button className="block w-full sm:w-96 mx-auto mt-1 text-center" type="button" variant="outline" onClick={submit} disabled={!enabled}>
+      <Button className="block w-full sm:w-96 mx-auto mt-1 text-center" variant="outline" onClick={submit} disabled={!enabled}>
         {t('offerTrades')}
       </Button>
     </div>

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.4/schema.json",
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "formatter": {
     "enabled": true,
@@ -72,6 +72,7 @@
     }
   },
   "files": {
+    "maxSize": 2000000,
     "ignoreUnknown": true,
     "includes": ["**", "!**/node_modules/**/*", "!**/dist/**/*"]
   }

@@ -1,12 +1,14 @@
 import i18n from 'i18next'
-import { CircleHelp, Trophy } from 'lucide-react'
-import { type FC, useMemo } from 'react'
+import { CircleCheck, CircleHelp, Trophy } from 'lucide-react'
+import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import FancyCard from '@/components/FancyCard.tsx'
 import useWindowDimensions from '@/hooks/useWindowDimensionsHook.ts'
-import { getCardById, getCardByInternalId, pullRateForSpecificMission } from '@/lib/CardsDB.ts'
+import { getCardById, getCardByInternalId } from '@/lib/CardsDB.ts'
+import { pullRateForSpecificMission } from '@/lib/stats'
 import { getCardNameByLang } from '@/lib/utils.ts'
+import { useAccount, useUpdateAccount } from '@/services/account/useAccount'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
 import type { CollectionRow, Mission as MissionType } from '@/types'
 
@@ -24,9 +26,15 @@ export interface MissionDetailProps {
 export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) => {
   const { width } = useWindowDimensions()
   const { t } = useTranslation('common/packs')
+  const { t: tCollection } = useTranslation('pages/collection')
 
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const { setSelectedCardId } = useSelectedCard()
+  const { data: account } = useAccount()
+  const { mutate: updateAccount } = useUpdateAccount()
+
+  const missionKey = `${mission.expansionId}_${mission.name}`
+  const isManuallyCompleted = account?.completed_missions?.includes(missionKey) || false
 
   let cardsPerRow = 5
   let cardHeight = Math.min(width, 890) / 5 + 120
@@ -38,7 +46,7 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
     cardHeight = width / 3 + 100
   }
 
-  const missionGridRows = useMemo(() => {
+  const missionGridRows = () => {
     let isMissionCompleted = true
     const shownCards = mission.requiredCards.flatMap((missionCard) => {
       const ownedMissionCards: MissionDetailProps[] = []
@@ -72,19 +80,35 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
       return ownedMissionCards
     })
 
-    mission.completed = isMissionCompleted
+    mission.completed = isMissionCompleted || isManuallyCompleted
     const gridRows = []
     for (let i = 0; i < shownCards.length; i += cardsPerRow) {
       gridRows.push(shownCards.slice(i, i + cardsPerRow))
     }
     return gridRows
-  }, [cardsPerRow])
+  }
 
-  const missionHeight = cardHeight * missionGridRows.length + 48
+  const handleManualComplete = () => {
+    if (!account) {
+      return
+    }
+
+    const currentCompletedMissions = account.completed_missions || []
+    const updatedMissions = isManuallyCompleted ? currentCompletedMissions.filter((m) => m !== missionKey) : [...currentCompletedMissions, missionKey]
+
+    const mergedAccount = {
+      ...account,
+      completed_missions: updatedMissions,
+    }
+    delete mergedAccount.trade_rarity_settings
+    updateAccount(mergedAccount)
+  }
+
+  const missionHeight = cardHeight * missionGridRows().length + 48
   return (
     <div className="relative w-full">
       <div style={{ height: `${missionHeight}px` }} className="relative w-full">
-        {missionGridRows.map((gridRow, i) => (
+        {missionGridRows().map((gridRow, i) => (
           <div key={i} style={{ height: `${cardHeight}px`, transform: `translateY(${cardHeight * i + 72}px)` }} className="absolute top-0 left-0 w-full">
             <div className="flex justify-start gap-x-3">
               {gridRow.map((card, j) => {
@@ -120,11 +144,18 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
             data-tooltip-html={
               mission.completed
                 ? 'Completed!'
-                : pullRateForSpecificMission(mission, missionGridRows)
+                : pullRateForSpecificMission(mission, missionGridRows())
                     .filter(([packName, probability]) => packName !== 'everypack' && probability > 0)
                     .map(([packName, probability]) => `${t(packName)}: ${probability.toFixed(2)}%`)
                     .join('<br/>')
             }
+          />
+          <Tooltip id={`manualComplete${mission.name}`} style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 16 }} clickable={true} />
+          <CircleCheck
+            className={`h-6 w-6 cursor-pointer ${isManuallyCompleted ? 'text-green-500' : 'text-white'}`}
+            data-tooltip-id={`manualComplete${mission.name}`}
+            data-tooltip-html={isManuallyCompleted ? tCollection('missionDetail.manuallyMarkedComplete') : tCollection('missionDetail.manuallyMarkComplete')}
+            onClick={handleManualComplete}
           />
         </h2>
       </div>

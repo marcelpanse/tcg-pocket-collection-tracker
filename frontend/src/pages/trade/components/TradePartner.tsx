@@ -1,39 +1,54 @@
-import { ChevronRight } from 'lucide-react'
+import { ChevronFirst, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
+import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button.tsx'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
+import { useChatContext } from '@/context/ChatContext'
 import TradeList from '@/pages/trade/components/TradeList.tsx'
 import { usePublicAccount } from '@/services/account/useAccount.ts'
-import { useTrades } from '@/services/trade/useTrade.ts'
+import { useFriends } from '@/services/friends/useFriends'
+import { useAllTrades } from '@/services/trade/useTrade'
+import type { TradeRow } from '@/types'
 
 interface TradePartnerProps {
   friendId: string
+  activeTrades: TradeRow[]
 }
 
-function TradePartner({ friendId }: TradePartnerProps) {
-  const { t } = useTranslation('trade-matches')
+function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
+  const { t } = useTranslation(['trade-matches', 'common'])
 
-  const { data: trades } = useTrades()
-  const { data: friendAccount } = usePublicAccount(friendId)
+  const { data: friendAccount, isLoading: isLoadingAccount } = usePublicAccount(friendId)
+  const { data: friends = [] } = useFriends()
+  const { openChat } = useChatContext()
+  const isAlreadyFriend = friends.some((f) => f.friend_id === friendId && f.state === 'accepted')
 
-  const [viewHistory, setViewHistory] = useState<boolean>(false)
+  const [viewHistory, setViewHistory] = useState(false)
+  const [pageHistory, setPageHistory] = useState(0)
+  const allTrades = useAllTrades(friendId, viewHistory, pageHistory, viewHistory)
 
-  if (!trades) {
+  if (isLoadingAccount) {
     return null
   }
-
-  const partnerTrades = trades.filter((t) => t.offering_friend_id === friendId || t.receiving_friend_id === friendId)
 
   return (
     <div className="w-full">
       <div className="flex justify-between items-center mb-1 mx-1">
         <p>
           <span className="text-md">{t('tradingWith')}</span>
-          <span className="text-md font-bold"> {friendAccount?.username || 'loading'} </span>
-          {friendAccount && <FriendIdDisplay friendId={friendAccount.friend_id} showFriendId={false} className="ml-1" />}
+          <span className="text-md font-bold"> {friendAccount?.username || 'unknown'} </span>
+          {friendAccount?.language && <small className="bg-neutral-800 px-2 rounded-full">{friendAccount.language}</small>}
+          {friendAccount && (
+            <FriendIdDisplay
+              friendId={friendAccount.friend_id}
+              showFriendId={false}
+              className="ml-1"
+              onChat={isAlreadyFriend ? () => openChat(friendAccount.friend_id, friendAccount.username || friendAccount.friend_id) : undefined}
+            />
+          )}
         </p>
         <span className="flex gap-4">
           <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">
@@ -48,7 +63,33 @@ function TradePartner({ friendId }: TradePartnerProps) {
           </Link>
         </span>
       </div>
-      {friendAccount !== null && <TradeList trades={partnerTrades} viewHistory={viewHistory} />}
+      {viewHistory ? (
+        allTrades.isLoading ? (
+          <Spinner size="md" />
+        ) : (
+          allTrades.data && (
+            <TradeList trades={allTrades.data.trades}>
+              <p className="flex justify-between mt-2">
+                <span className="text-neutral-400">{allTrades.data.count} total offers</span>
+                <div className="flex items-center gap-2">
+                  <span>Page {pageHistory + 1}</span>
+                  <Button variant="outline" onClick={() => setPageHistory(() => 0)} disabled={pageHistory <= 0}>
+                    <ChevronFirst />
+                  </Button>
+                  <Button variant="outline" onClick={() => setPageHistory((prev) => prev - 1)} disabled={pageHistory <= 0}>
+                    <ChevronLeft />
+                  </Button>
+                  <Button variant="outline" onClick={() => setPageHistory((prev) => prev + 1)} disabled={!allTrades.data.hasNext}>
+                    <ChevronRight />
+                  </Button>
+                </div>
+              </p>
+            </TradeList>
+          )
+        )
+      ) : (
+        <TradeList trades={activeTrades} />
+      )}
     </div>
   )
 }

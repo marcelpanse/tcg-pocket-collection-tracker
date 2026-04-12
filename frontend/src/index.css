@@ -24,10 +24,6 @@
     }
   }
 
-  .fade-in-up {
-    animation: fadeInUp 0.4s ease-out;
-  }
-
   body {
     background-color: #181818;
     color: #ebebeb;

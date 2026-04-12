@@ -40,6 +40,7 @@ const CustomTooltipContent = (props: CustomTooltipContentProps) => {
     const newPayload = payload.map((entry) => ({
       ...entry,
       value: `${entry.value * 100}%`,
+      graphicalItemId: entry.key,
     }))
     return <ChartTooltipContent {...props} payload={newPayload} />
   }

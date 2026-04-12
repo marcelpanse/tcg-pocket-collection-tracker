@@ -1,13 +1,13 @@
 {
   "goToCollection": "Go to collection",
   "goToMissions": "Go to missions",
-  "publicCollectionTitle": "You are viewing the public collection of \"{{username}}\".",
-  "publicCollectionDescription": "You are currently viewing a public collection. Click any of the navigation items to return to your own collection.",
   "showPossibleTrades": "Show possible trades",
   "missionDetail": {
     "eligibleCards-singular": "List of eligible cards: {{options}} option",
     "eligibleCards-plural": "List of eligible cards: {{options}} options",
-    "chanceFrom": "Chance from {{pack}}: {{chance}}%"
+    "chanceFrom": "Chance from {{pack}}: {{chance}}%",
+    "manuallyMarkedComplete": "Manually marked as completed",
+    "manuallyMarkComplete": "Manually mark as complete"
   },
   "filters": {
     "allFilters": "All filters",
@@ -18,5 +18,14 @@
   "stats": {
     "summary": "{{selected}} selected, {{uniquesOwned}} uniques owned, {{totalOwned}} total owned",
     "mewCardOwned": "You unlocked the special Mew card! This is included in our totals, but note that the in-game totals don't include this card."
+  },
+  "collectionOf": "Collection of",
+  "trade": {
+    "button": "Copy trade message",
+    "publicTradePage": "Public trade page",
+    "friendID": "Friend ID",
+    "lookingForCards": "Looking for cards",
+    "forTradeCards": "For trade cards",
+    "copiedInClipboard": "Copied cards for trading to clipboard!"
   }
 }

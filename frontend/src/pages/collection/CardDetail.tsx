@@ -1,7 +1,8 @@
 import i18n from 'i18next'
 import { CircleHelp } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
+import { type ReactNode, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router'
 import { Tooltip } from 'react-tooltip'
 import { Card as CardComponent } from '@/components/Card'
 import { CardLine } from '@/components/CardLine'
@@ -9,12 +10,22 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Radio, RadioIndicator, RadioItem } from '@/components/ui/radio'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
-import { craftingCost, getCardByInternalId, getExpansionById, pullRateForSpecificCard } from '@/lib/CardsDB.ts'
+import { craftingCost, getCardByInternalId, getExpansionById } from '@/lib/CardsDB.ts'
+import { pullRateForSpecificCard } from '@/lib/stats'
 import { getCardNameByLang } from '@/lib/utils'
 import { useCollection, useDeleteCard, useSelectedCard } from '@/services/collection/useCollection'
-import type { Card, CollectionRow } from '@/types'
+import { type Card, type CollectionRow, tradableRarities } from '@/types'
 
-function CardDetail() {
+function CardProperty({ name, children }: { name: string; children: ReactNode }) {
+  return (
+    <p className="flex">
+      <strong className="block min-w-[175px]">{name}</strong>
+      {children}
+    </p>
+  )
+}
+
+export default function CardDetail() {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
   const { selectedCardId: id, setSelectedCardId: setId } = useSelectedCard()
 
@@ -24,17 +35,13 @@ function CardDetail() {
   const [isOpen, setIsOpen] = useState(false)
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
 
-  const card = useMemo(() => (id === undefined ? undefined : getCardByInternalId(id)), [id])
-  const row = useMemo(() => (id === undefined ? undefined : ownedCards.get(id)), [id, ownedCards])
-  const alternatives = useMemo(
-    () =>
-      card?.alternate_versions.map((alternate_id) => ({
-        card: getCardByInternalId(alternate_id) as Card,
-        amount_owned: ownedCards.get(alternate_id)?.amount_owned ?? 0,
-      })),
-    [card, ownedCards],
-  )
-  const expansion = useMemo(() => card && getExpansionById(card.expansion), [card])
+  const card = id === undefined ? undefined : getCardByInternalId(id)
+  const row = id === undefined ? undefined : ownedCards.get(id)
+  const alternatives = card?.alternate_versions.map((alternate_id) => ({
+    card: getCardByInternalId(alternate_id) as Card,
+    amount_owned: ownedCards.get(alternate_id)?.amount_owned ?? 0,
+  }))
+  const expansion = card && getExpansionById(card.expansion)
 
   useEffect(() => {
     if (id) {
@@ -55,11 +62,11 @@ function CardDetail() {
   // if we draw from 'everypack' we need to take one of the packs to base calculations on
   const packName = card?.pack === 'everypack' ? expansion?.packs[0].name : card?.pack
 
-  const formatTimestamp = (timestamp: string) => {
+  const formatTimestamp = (date: Date) => {
     return new Intl.DateTimeFormat(undefined, {
       dateStyle: 'long',
       timeStyle: 'long',
-    }).format(new Date(timestamp))
+    }).format(date)
   }
 
   const handleUncollect = (cardId: string) => {
@@ -68,16 +75,15 @@ function CardDetail() {
     }
   }
 
+  const setOpen = (open: boolean) => {
+    if (!open) {
+      setIsOpen(open)
+      setTimeout(() => setId(undefined), 300) // keep content when sliding out
+    }
+  }
+
   return (
-    <Sheet
-      open={Boolean(id) && isOpen}
-      onOpenChange={(open) => {
-        if (!open) {
-          setIsOpen(open)
-          setTimeout(() => setId(undefined), 300) // keep content when sliding out
-        }
-      }}
-    >
+    <Sheet open={Boolean(id) && isOpen} onOpenChange={setOpen}>
       <SheetContent className="transition-all duration-300 ease-in-out border-slate-600 overflow-y-auto w-full md:w-[725px]">
         <SheetHeader>
           <SheetTitle>
@@ -131,61 +137,29 @@ function CardDetail() {
               )}
             </div>
 
-            <p className="mt-8 flex">
-              <strong className="block min-w-[175px]">{t('text.expansion')}</strong> {card?.expansion}
-            </p>
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.pack')}</strong> {card && t(`${card.pack}`, { ns: 'common/packs' })}
-            </p>
-
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">Energy</strong> {card?.energy}
-            </p>
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.weakness')}</strong> {(card && t(`${card.weakness}`, { ns: 'common/types' })) || 'N/A'}
-            </p>
-            {card?.hp && (
-              <p className="mt-1 flex">
-                <strong className="block min-w-[175px]">{t('text.hp')}</strong> {card?.hp}
-              </p>
-            )}
-            {card?.retreat && (
-              <p className="mt-1 flex">
-                <strong className="block min-w-[175px]">{t('text.retreat')}</strong> {card.retreat}
-              </p>
+            {card?.rarity && tradableRarities.includes(card.rarity as (typeof tradableRarities)[number]) && (
+              <Link to={`/trade/matches/results?card_id=${card?.internal_id}`} onClick={() => setOpen(false)}>
+                <Button>Find trades</Button>
+              </Link>
             )}
 
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.ability')}</strong> {card?.ability?.name ?? <i>None</i>}
-            </p>
-            {card?.ability && (
-              <p className="mt-1 flex">
-                <strong className="block min-w-[175px]">{t('text.abilityEffect')}</strong> {card?.ability.effect}
-              </p>
-            )}
-
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.cardType')}</strong> {card && t(`cardType.${card.card_type}`)}
-            </p>
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.evolutionType')}</strong> {card && t(`evolutionType.${card.evolution_type}`)}
-            </p>
-
-            {expansion && packName && (
-              <p className="mt-1 flex">
-                <strong className="block min-w-[175px]">{t('text.chanceToPull', { ns: 'pages/card-detail' })}</strong>
-                {card && pullRateForSpecificCard(expansion, packName, card).toFixed(2)}%
-              </p>
-            )}
-            {card && craftingCost[card.rarity] && (
-              <p className="mt-1 flex">
-                <strong className="block min-w-[175px]">{t('text.craftingCost')}</strong> {craftingCost[card.rarity]}
-              </p>
-            )}
-
-            <p className="mt-1 flex">
-              <strong className="block min-w-[175px]">{t('text.artist')}</strong> {card?.artist}
-            </p>
+            <div className="mt-8">
+              <CardProperty name={t('text.expansion')}>{card?.expansion}</CardProperty>
+              <CardProperty name={t('text.pack')}>{card && t(card.pack, { ns: 'common/packs' })}</CardProperty>
+              <CardProperty name="Energy">{card?.energy}</CardProperty>
+              <CardProperty name={t('text.weakness')}>{(card && t(card.weakness, { ns: 'common/types' })) || 'N/A'}</CardProperty>
+              {card?.hp && <CardProperty name={t('text.hp')}>{card?.hp}</CardProperty>}
+              {card?.retreat && <CardProperty name={t('text.retreat')}>{card.retreat}</CardProperty>}
+              <CardProperty name={t('text.ability')}>{card?.ability?.name ?? <i>None</i>}</CardProperty>
+              {card?.ability && <CardProperty name={t('text.abilityEffect')}>{card?.ability.effect}</CardProperty>}
+              <CardProperty name={t('text.cardType')}>{card && t(`cardType.${card.card_type}`)}</CardProperty>
+              <CardProperty name={t('text.evolutionType')}>{card && t(`evolutionType.${card.evolution_type}`)}</CardProperty>
+              {expansion && packName && card && card.rarity !== 'P' && (
+                <CardProperty name={t('text.chanceToPull')}>{card && pullRateForSpecificCard(expansion, packName, card).toFixed(2)}%</CardProperty>
+              )}
+              {card && craftingCost[card.rarity] && <CardProperty name={t('text.craftingCost')}>{craftingCost[card.rarity]}</CardProperty>}
+              <CardProperty name={t('text.artist')}>{card?.artist}</CardProperty>
+            </div>
 
             {!!row?.collection?.length && (
               <>
@@ -194,23 +168,20 @@ function CardDetail() {
                   <Tooltip id="minInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
                   <CircleHelp className="h-4 w-4" data-tooltip-id="minInput" data-tooltip-content={t('text.uncollectTooltip')} />
                 </p>
-                {deleteCardMutation.isPending ? (
-                  <p>{t('text.uncollecting')}</p>
-                ) : (
-                  <div className="flex flex-col gap-1 w-fit">
-                    {row?.collection.map((cardId) => (
-                      <Button
-                        key={cardId}
-                        variant="destructive"
-                        className="mr-auto min-w-48 w-full"
-                        onClick={() => handleUncollect(cardId)}
-                        disabled={deleteCardMutation.isPending}
-                      >
-                        {t('text.uncollect')} {cardId}
-                      </Button>
-                    ))}
-                  </div>
-                )}
+                <div className="flex flex-col gap-1 w-fit">
+                  {row?.collection.map((cardId) => (
+                    <Button
+                      key={cardId}
+                      variant="destructive"
+                      className="mr-auto min-w-48 w-full"
+                      onClick={() => handleUncollect(cardId)}
+                      disabled={deleteCardMutation.isPending}
+                      isPending={deleteCardMutation.isPending}
+                    >
+                      {t('text.uncollect')} {cardId}
+                    </Button>
+                  ))}
+                </div>
               </>
             )}
 
@@ -223,5 +194,3 @@ function CardDetail() {
     </Sheet>
   )
 }
-
-export default CardDetail

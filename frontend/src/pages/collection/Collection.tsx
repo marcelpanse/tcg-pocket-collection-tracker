@@ -1,9 +1,10 @@
-import { Siren } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate, useParams } from 'react-router'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
+import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { useAccount, usePublicAccount } from '@/services/account/useAccount.ts'
 import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
 import type { CollectionRow } from '@/types'
@@ -12,8 +13,8 @@ import CollectionCards from './CollectionCards'
 function OwnCollection() {
   const { data: account, isLoading: isLoadingAccount } = useAccount()
   const { data: cards = new Map<number, CollectionRow>(), isLoading: isLoadingCards } = useCollection()
-  if (isLoadingAccount && isLoadingCards) {
-    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+  if (isLoadingAccount || isLoadingCards) {
+    return <Spinner size="lg" overlay />
   }
   return <CollectionCards cards={cards} isPublic={false} share={account !== undefined && account.friend_id !== '' && account.is_public} />
 }
@@ -24,7 +25,7 @@ function FriendCollection({ friendId }: { friendId: string }) {
   const { data: cards, isLoading: isLoadingCards } = usePublicCollection(friendId)
 
   if (isLoadingAccount || isLoadingCards) {
-    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+    return <Spinner size="lg" overlay />
   }
   if (account === undefined || cards === undefined) {
     return <p className="text-xl text-center py-8">Something went wrong</p>
@@ -39,19 +40,24 @@ function FriendCollection({ friendId }: { friendId: string }) {
 
   return (
     <div className="flex flex-col gap-y-1">
+      <title>{`${account.username} collection – TCG Pocket Collection Tracker`}</title>
       <CollectionCards cards={cards} isPublic={true}>
-        <Alert className="mb-1 border-1 border-neutral-700 shadow-none">
-          <Siren className="h-4 w-4" />
-          <AlertTitle>{t('publicCollectionTitle', { username: account.username })}</AlertTitle>
-          <AlertDescription>
-            <div className="flex items-center">
-              {t('publicCollectionDescription')}
-              <Link to={`/trade/${friendId}`}>
-                <Button className="mb-4">{t('showPossibleTrades')}</Button>
-              </Link>
-            </div>
-          </AlertDescription>
-        </Alert>
+        <div className="flex justify-between my-2">
+          <h1>
+            <span className="text-2xl font-light">{t('collectionOf')}</span>
+            <span className="text-2xl font-bold"> {account.username}</span>
+            {account.language && <span className="text-lg bg-neutral-800 px-2 rounded-full ml-1">{account.language}</span>}
+            <span className="block sm:inline text-sm sm:ml-1">
+              <FriendIdDisplay friendId={account.friend_id} />
+            </span>
+          </h1>
+          <Link to={`/trade/${friendId}`}>
+            <Button>
+              {t('showPossibleTrades')}
+              <ChevronRight />
+            </Button>
+          </Link>
+        </div>
       </CollectionCards>
     </div>
   )
@@ -70,7 +76,7 @@ export default function Collection() {
   }, [isLoadingAccount, rawFriendId, account?.friend_id, navigate])
 
   if (isLoadingAccount) {
-    return <div className="mx-auto mt-12 animate-spin rounded-full size-12 border-4 border-white border-t-transparent" />
+    return <Spinner size="lg" overlay />
   }
 
   const friendId = rawFriendId ?? account?.friend_id

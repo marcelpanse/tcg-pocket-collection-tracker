@@ -12,20 +12,28 @@ interface Props<T> {
 
 interface PropsTabs<T> extends Props<T> {
   value: T
+  label?: string
   onChange: (value: T) => void
 }
 
-export function TabsFilter<T extends string>({ options, value, onChange, className, show = (x) => x }: PropsTabs<T>) {
+export function TabsFilter<T extends string>({ options, value, onChange, className, label, show = (x) => x }: PropsTabs<T>) {
   return (
-    <Tabs value={value} onValueChange={(x) => onChange(x as T)}>
-      <TabsList className={cn(commonClassName, 'flex-wrap', className)}>
-        {options.map((x) => (
-          <TabsTrigger key={x} value={x}>
-            {show(x)}
-          </TabsTrigger>
-        ))}
-      </TabsList>
-    </Tabs>
+    <div className="inline-block">
+      {label && (
+        <span className="block w-fit bg-neutral-800 border border-b-0 rounded-t-md border-neutral-700 text-neutral-400 px-4 py-0.5 text-xs relative">
+          {label}
+        </span>
+      )}
+      <Tabs value={value} onValueChange={(x) => onChange(x as T)}>
+        <TabsList className={cn(commonClassName, 'flex-wrap', className, label && 'rounded-tl-none -mt-px')}>
+          {options.map((x) => (
+            <TabsTrigger key={x} value={x}>
+              {show(x)}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </Tabs>
+    </div>
   )
 }
 
@@ -37,7 +45,7 @@ interface PropsDropdown<T> extends Props<T> {
 
 export function DropdownFilter<T extends string | number>({ label, options, value, onChange, className, show = (x) => String(x) }: PropsDropdown<T>) {
   return (
-    <label className={cn(commonClassName, 'flex items-baseline justify-between gap-5 px-3 py-1 my-auto text-neutral-400', className)}>
+    <label className={cn(commonClassName, 'flex items-baseline justify-between gap-5 px-3 py-1 text-neutral-400', className)}>
       {label && <span className="text-sm">{label}</span>}
       <select value={value} onChange={(e) => onChange(e.target.value as T)} className="min-h-[27px] text-sm text-right cursor-pointer">
         {options.map((x) => (

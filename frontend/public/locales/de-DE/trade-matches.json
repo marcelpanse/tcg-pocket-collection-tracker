@@ -12,14 +12,8 @@
   "noPossibleTrades": "Keine Tauschmöglichkeiten gefunden",
   "noPossibleTradesDescription": "Es wurden keine möglichen Tauschmöglichkeiten gefunden. Dies kann daran liegen, dass ihr beide die gleichen Karten besitzt oder dass dein Freund keine Karten zum Tauschen eingestellt hat.",
   "featureDescription": "Dieses Fenster zeigt mögliche Tauschoptionen mit deinem Freund an. Es zeigt deine doppelten Karten an, die dein Freund benötigt, und umgekehrt.",
-  "isActiveTrading": "Tauschstatus",
   "inActiveTradePage": "Der Benutzer \"{{username}}\" nimmt aktuell keine Tauschangebote an.",
   "inActiveTradeDescription": "Die Tauschseite ist aktuell deaktiviert. Kontaktiere den Benutzer, wenn du Interesse an einem Tausch hast.",
-  "minFilterTooltip": "Die Maximale Anzahl an Karten, die du durch Tauschen sammeln möchtest.",
-  "maxFilterTooltip": "Die minimale Anzahl an Karten, die du besitzen musst bevor sie als Tauschoption erscheint.",
-  "minInputTooltip": "Die minimale Anzahl an Karten, die du behalten möchtest.",
-  "maxInputTooltip": "Die maximale Anzahl an Karten, die du durch Tauschen sammeln möchtest.",
-  "activeTradingInputTooltip": "Tipp: Du kannst deine Tauschseite (vorübergehend) deaktivieren, falls dir die Tausch-Token ausgehen.",
   "accountSaved": "Konto gespeichert.",
   "errorSavingAccount": "Fehler beim Speichern des Kontos.",
   "amountYouOwn": "Du besitzt",
@@ -48,5 +42,20 @@
   "raritySettings": "Seltenheitseinstellungen",
   "rarity": "Seltenheit",
   "toCollect": "Zu Sammeln",
-  "toKeep": "Zu Behalten"
+  "toKeep": "Zu Behalten",
+  "notFound": "Account not found",
+  "viewTradePartner": "View matches",
+  "noTradePartners": "We couldn't find anyone for you to trade with.",
+  "isActiveTrading": "Accepting new trades",
+  "isActiveTradingDisabledTooltip": "Du musst dein Profil öffentlich machen, bevor du den aktiven Tausch aktivieren kannst.",
+  "toCollectTooltip": "The amount of cards you want to collect by trading. Tip: Set this value to 0 to exclude a rarity from trading.",
+  "toKeepTooltip": "The minimum amount of cards you want to trade down to.",
+  "tabMatches": "Matches",
+  "noAccount": "First set up your account using 'Edit profile' in the top right corner.",
+  "longOperation": "This might take a while.",
+  "search": {
+    "byCard": "Search {{cardName}}",
+    "selectCard": "Select card to search",
+    "allCards": "Search all cards"
+  }
 }

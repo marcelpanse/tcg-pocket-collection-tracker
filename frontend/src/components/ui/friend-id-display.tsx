@@ -1,4 +1,4 @@
-import { Copy } from 'lucide-react'
+import { Copy, MessageSquare } from 'lucide-react'
 import type { FC } from 'react'
 import { useToast } from '@/hooks/use-toast.ts'
 import { cn, formatFriendId } from '@/lib/utils'
@@ -9,9 +9,10 @@ interface FriendIdDisplayProps {
   className?: string
   showCopyButton?: boolean
   showFriendId?: boolean
+  onChat?: () => void
 }
 
-export const FriendIdDisplay: FC<FriendIdDisplayProps> = ({ friendId, className = '', showFriendId = true, showCopyButton = true }) => {
+export const FriendIdDisplay: FC<FriendIdDisplayProps> = ({ friendId, className = '', showFriendId = true, showCopyButton = true, onChat }) => {
   const { toast } = useToast()
 
   const handleCopy = async () => {
@@ -41,6 +42,7 @@ export const FriendIdDisplay: FC<FriendIdDisplayProps> = ({ friendId, className 
       {showFriendId && <span className="font-mono">{formatFriendId(friendId)}</span>}
       {showCopyButton && (
         <Button
+          title="copy id"
           variant="ghost"
           size="icon"
           onClick={handleCopy}
@@ -48,6 +50,18 @@ export const FriendIdDisplay: FC<FriendIdDisplayProps> = ({ friendId, className 
           aria-label="Copy friend ID"
         >
           <Copy className="h-2.5 w-2.5" />
+        </Button>
+      )}
+      {onChat && (
+        <Button
+          title="open chat"
+          variant="ghost"
+          size="icon"
+          onClick={onChat}
+          className="h-4 w-4 text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+          aria-label="Open chat"
+        >
+          <MessageSquare className="h-2.5 w-2.5" />
         </Button>
       )}
     </span>

@@ -1,10 +1,5 @@
 {
   "rarity": "Raridade",
-  "f-owned": {
-    "all": "Todos",
-    "missing": "Falta",
-    "owned": "Possuí"
-  },
   "f-number": {
     "numberCards": "Número de cartas desejadas",
     "maxNum": "Número máximo de cartas",
@@ -14,6 +9,25 @@
     "sortBy": "Sort By",
     "default": "Card ID",
     "recent": "Recently updated",
-    "expansion-newest": "Expansion newest first"
+    "expansion-newest": "Expansion newest first",
+    "rarity": "Rarity",
+    "type": "Type"
+  },
+  "f-trading": {
+    "all": "All",
+    "wanted": "Wanted",
+    "extra": "For trade"
+  },
+  "f-ownership": {
+    "all": "All",
+    "missing": "Missing",
+    "registered": "Registered"
+  },
+  "carddex": "Card Dex",
+  "trading": "Trading",
+  "f-owned": {
+    "all": "All",
+    "owned": "Owned",
+    "missing": "Missing"
   }
 }

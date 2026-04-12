@@ -1,3 +1,4 @@
+import { Minus } from 'lucide-react'
 import { type FC, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { z } from 'zod'
@@ -5,7 +6,7 @@ import { Button } from '@/components/ui/button.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { signInWithOtp, useLoginDialog, useVerifyOTP } from '@/services/auth/useAuth'
 import { Input } from './ui/input.tsx'
-import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from './ui/input-otp.tsx'
+import { InputOTP, InputOTPGroup, InputOTPSlot } from './ui/input-otp.tsx'
 
 export const Login: FC = () => {
   const { setIsLoginDialogOpen } = useLoginDialog()
@@ -58,7 +59,7 @@ export const Login: FC = () => {
               <InputOTPSlot index={1} />
               <InputOTPSlot index={2} />
             </InputOTPGroup>
-            <InputOTPSeparator />
+            <Minus />
             <InputOTPGroup className="border-1 border-neutral-700 shadow-none">
               <InputOTPSlot index={3} />
               <InputOTPSlot index={4} />

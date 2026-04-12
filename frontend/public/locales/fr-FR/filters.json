@@ -1,19 +1,33 @@
 {
   "rarity": "Rareté",
-  "f-owned": {
-    "all": "Tout",
-    "missing": "Manquant",
-    "owned": "Obtenu"
-  },
   "f-sortBy": {
     "sortBy": "Trier par",
     "default": "ID de carte",
     "recent": "Mise à jour récemment",
-    "expansion-newest": "Plus récent en premier"
+    "expansion-newest": "Plus récent en premier",
+    "rarity": "Rarity",
+    "type": "Type"
   },
   "f-number": {
     "numberCards": "Nombre d'exemplaire voulu",
     "maxNum": "Nombre maximum de cartes",
     "minNum": "Nombre minimum de cartes"
+  },
+  "f-trading": {
+    "all": "Tout",
+    "wanted": "Recherchées",
+    "extra": "À échanger"
+  },
+  "f-ownership": {
+    "all": "Tout",
+    "missing": "Manquantes",
+    "registered": "Obtenues"
+  },
+  "carddex": "Card Dex",
+  "trading": "Échanges",
+  "f-owned": {
+    "all": "All",
+    "owned": "Owned",
+    "missing": "Missing"
   }
 }

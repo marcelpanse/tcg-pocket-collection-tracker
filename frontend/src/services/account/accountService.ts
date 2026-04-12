@@ -27,8 +27,8 @@ export const getAccount = async (email: string) => {
 
     for (const rarity of tradableRarities) {
       //set default values for each rarity that we don't have a setting for yet.
-      if (!accountRow.trade_rarity_settings.find((r) => r.rarity === rarity)) {
-        accountRow.trade_rarity_settings.push({ rarity, to_collect: 1, to_keep: 1 })
+      if (!accountRow.trade_rarity_settings?.find((r) => r.rarity === rarity)) {
+        accountRow.trade_rarity_settings?.push({ rarity, to_collect: 1, to_keep: 1 })
       }
     }
 
@@ -82,23 +82,25 @@ export const updateAccountTradingFields = async ({
   email,
   username,
   is_active_trading,
+  language,
   trade_rarity_settings,
 }: {
   email: string
   username: string
   is_active_trading: boolean
+  language: AccountRow['language']
   trade_rarity_settings: AccountRow['trade_rarity_settings']
 }) => {
   const { data: rarityData, error: rarityError } = await supabase
     .from('trade_rarity_settings')
-    .upsert(trade_rarity_settings.map((r) => ({ email, ...r })))
+    .upsert(trade_rarity_settings?.map((r) => ({ email, ...r })))
     .select()
 
   if (rarityError) {
     throw new Error(`Error updating trade rarity settings: ${rarityError.message}`)
   }
 
-  const { data, error } = await supabase.from('accounts').upsert({ email, username, is_active_trading }).select().single()
+  const { data, error } = await supabase.from('accounts').upsert({ email, username, is_active_trading, language: language }).select().single()
 
   if (error) {
     throw new Error(`Error updating account: ${error.message}`)

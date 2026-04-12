@@ -504,11 +504,11 @@
   },
   {
     "expansionId": "B1",
-    "name": "Collect 3 Darkrai cards",
+    "name": "Collect 5 Darkrai cards",
     "requiredCards": [
       {
         "options": ["B1-154"],
-        "amount": 3
+        "amount": 5
       }
     ],
     "reward": "Darkrai (profile icon)"

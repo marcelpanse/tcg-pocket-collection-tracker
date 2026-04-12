@@ -124,7 +124,7 @@ function ChartTooltipContent({
   } & Omit<RechartsPrimitive.DefaultTooltipContentProps<ValueType, NameType>, 'accessibilityLayer'>) {
   const { config } = useChart()
 
-  const tooltipLabel = React.useMemo(() => {
+  const tooltipLabel = () => {
     if (hideLabel || !payload?.length) {
       return null
     }
@@ -143,7 +143,7 @@ function ChartTooltipContent({
     }
 
     return <div className={cn('font-medium', labelClassName)}>{value}</div>
-  }, [config, hideLabel, label, labelClassName, labelFormatter, labelKey, payload])
+  }
 
   if (!active || !payload?.length) {
     return null
@@ -153,7 +153,7 @@ function ChartTooltipContent({
 
   return (
     <div className={cn('grid min-w-[8rem] items-start gap-1.5 rounded-lg border border-border/50 bg-background px-2.5 py-1.5 text-xs shadow-xl', className)}>
-      {!nestLabel ? tooltipLabel : null}
+      {!nestLabel ? tooltipLabel() : null}
       <div className="grid gap-1.5">
         {payload.map((item, index) => {
           const key = `${nameKey ?? item.name ?? item.dataKey ?? 'value'}`
@@ -194,7 +194,7 @@ function ChartTooltipContent({
                   )}
                   <div className={cn('flex flex-1 justify-between leading-none', nestLabel ? 'items-end' : 'items-center')}>
                     <div className="grid gap-1.5">
-                      {nestLabel ? tooltipLabel : null}
+                      {nestLabel ? tooltipLabel() : null}
                       <span className="text-muted-foreground">{itemConfig?.label ?? item.name}</span>
                     </div>
                     {item.value != null && (

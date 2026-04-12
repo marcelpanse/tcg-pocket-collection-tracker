@@ -79,7 +79,7 @@ const DonationPopup = () => {
         <p className="mb-4 mr-2">
           Rising hosting costs make it harder to keep this site running without ads. If you can, please chip in. Every donation helps keep the experience clean.
         </p>
-        <Button asChild variant="default">
+        <Button variant="default">
           <a href="https://buymeacoffee.com/pocketcollectiontracker" target="_blank" rel="noopener noreferrer">
             Donate
           </a>

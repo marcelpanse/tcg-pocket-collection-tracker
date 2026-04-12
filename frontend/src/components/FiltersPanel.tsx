@@ -1,10 +1,12 @@
-import { type FC, useMemo } from 'react'
+import { Slot } from '@radix-ui/react-slot'
+import { ArrowDownAZ, ArrowUpAZ } from 'lucide-react'
+import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { getExpansionById } from '@/lib/CardsDB.ts'
-import { cardTypeOptions, type ExpansionOption, expansionOptions, type Filters, ownedOptions, sortByOptions } from '@/lib/filters'
+import { cardTypeOptions, type ExpansionOption, expansionOptions, type Filters, ownershipOptions, sortByOptions, tradingOptions } from '@/lib/filters'
 import { DropdownFilter, TabsFilter, ToggleFilter } from './Filters'
 import AllTextSearchFilter from './filters/AllTextSearchFilter'
 import DeckbuildingFilter from './filters/DeckbuildingFilter'
@@ -22,7 +24,7 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
 
   const changeFilter = (k: keyof Filters) => (x: Filters[typeof k]) => setFilters({ [k]: x })
 
-  const packsToShow = useMemo(() => {
+  const getPacksToShow = () => {
     if (filters.expansion === undefined || filters.expansion === 'all') {
       return undefined
     } else {
@@ -33,7 +35,8 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
           .filter((pack) => pack !== 'everypack'),
       ]
     }
-  }, [filters.expansion])
+  }
+  const packsToShow = getPacksToShow()
 
   function onExpansionChange(x: ExpansionOption) {
     if (filters.pack === undefined) {
@@ -69,23 +72,46 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
       {filters.cardType !== undefined && (
         <ToggleFilter options={cardTypeOptions} value={filters.cardType} onChange={changeFilter('cardType')} show={showCardType} />
       )}
-      {filters.owned !== undefined && (
+      {filters.ownership !== undefined && (
         <TabsFilter
           className="block"
-          options={ownedOptions}
-          value={filters.owned}
-          onChange={changeFilter('owned')}
-          show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-owned' })}
+          options={ownershipOptions}
+          value={filters.ownership}
+          onChange={changeFilter('ownership')}
+          label={t('carddex', { ns: 'filters' })}
+          show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-ownership' })}
+        />
+      )}
+      {filters.trading !== undefined && (
+        <TabsFilter
+          className="block"
+          options={tradingOptions}
+          value={filters.trading}
+          onChange={changeFilter('trading')}
+          label={t('trading', { ns: 'filters' })}
+          show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-trading' })}
         />
       )}
       {filters.sortBy !== undefined && (
-        <DropdownFilter
-          label={t('f-sortBy.sortBy', { ns: 'filters' })}
-          options={sortByOptions}
-          value={filters.sortBy}
-          onChange={changeFilter('sortBy')}
-          show={(x) => t(`f-sortBy.${x}`, { ns: 'filters' })}
-        />
+        <div className="flex gap-2">
+          <DropdownFilter
+            className="flex-1"
+            label={t('f-sortBy.sortBy', { ns: 'filters' })}
+            options={sortByOptions}
+            value={filters.sortBy}
+            onChange={changeFilter('sortBy')}
+            show={(x) => t(`f-sortBy.${x}`, { ns: 'filters' })}
+          />
+          {filters.sortDesc !== undefined && (
+            <button
+              type="button"
+              onClick={() => setFilters({ sortDesc: !filters.sortDesc })}
+              className="group h-auto aspect-square bg-neutral-800 hover:bg-neutral-600 rounded-md border border-neutral-700 flex items-center justify-center"
+            >
+              <Slot className="stroke-neutral-400 group-hover:stroke-neutral-300">{filters.sortDesc ? <ArrowUpAZ /> : <ArrowDownAZ />}</Slot>
+            </button>
+          )}
+        </div>
       )}
       {filters.minNumber !== undefined && (
         <DropdownFilter
@@ -98,7 +124,7 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
       {filters.maxNumber !== undefined && (
         <DropdownFilter
           label={t('f-number.maxNum', { ns: 'filters' })}
-          options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
+          options={['∞', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
           value={filters.maxNumber}
           onChange={changeFilter('maxNumber')}
         />

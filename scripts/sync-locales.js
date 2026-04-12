@@ -12,7 +12,7 @@ import { glob } from 'glob'
 
 const BASE_LOCALE = 'en-US'
 const LOCALES_DIR = './frontend/public/locales'
-const TARGET_LOCALES = ['es-ES', 'fr-FR', 'it-IT', 'pt-BR']
+const TARGET_LOCALES = ['de-DE', 'es-ES', 'fr-FR', 'it-IT', 'pt-BR']
 
 // Parse command line arguments
 const args = process.argv.slice(2)

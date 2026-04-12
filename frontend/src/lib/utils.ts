@@ -1,10 +1,22 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import type { Card, CollectionRow, RaritySettingsRow } from '@/types'
+import type { Card, CollectionRow, GameLanguage, RaritySettingsRow } from '@/types'
 import pokemonTranslations from '../../assets/pokemon_translations.json'
 import toolTranslations from '../../assets/tools_translations.json'
 import trainerTranslations from '../../assets/trainers_translations.json'
 import { allCards } from './CardsDB'
+
+export const formatLanguage: Record<GameLanguage, string> = {
+  en: 'English',
+  fr: 'Français',
+  it: 'Italiano',
+  de: 'Deutsch',
+  es: 'Español',
+  pt: 'Português',
+  ja: '日本語',
+  zh: '中文',
+  ko: '한국어',
+}
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -16,6 +28,10 @@ export function chunk<T>(arr: T[], size: number): T[][] {
     res.push(arr.slice(i, i + size))
   }
   return res
+}
+
+export function capitalize(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
 export function formatFriendId(friendId: string): string {

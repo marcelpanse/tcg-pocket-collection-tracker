@@ -15,14 +15,9 @@
   "noPossibleTrades": "Aucun échange possible.",
   "noPossibleTradesDescription": "Aucun échange entre vous et votre ami(e) n'est actuellement possible.",
   "featureDescription": "Cette boîte de dialogue affiche les échanges possibles entre vos cartes et celles de l'ID de l'ami(e) sélectionné(e). Elle montre les cartes en double que l'autre personne ne possède pas encore.",
-  "isActiveTrading": "Statut de la page d'échanges",
+  "isActiveTradingDisabledTooltip": "Vous devez rendre votre profil public avant d'activer les échanges.",
   "inActiveTradePage": "L'utilisateur « {{username}} » n'accepte actuellement aucun échange.",
   "inActiveTradeDescription": "Leur page d'échanges est désactivée. Veuillez les contacter si vous souhaitez faire un échange.",
-  "minFilterTooltip": "La quantité maximale de cartes que vous souhaitez collectionner via les échanges.",
-  "maxFilterTooltip": "La quantité minimale de cartes que vous devez posséder avant qu'elles n'apparaissent comme une option d'échange.",
-  "minInputTooltip": "Le nombre minimum de cartes que vous souhaitez conserver après l'échange.",
-  "maxInputTooltip": "Le nombre maximum de cartes que vous souhaitez collectionner avec les échanges.",
-  "activeTradingInputTooltip": "Astuce : Vous pouvez désactiver (temporairement) votre page d'échanges si vous manquez de jetons d'échange.",
   "accountSaved": "Compte enregistré.",
   "errorSavingAccount": "Erreur lors de l'enregistrement de votre compte.",
   "amountYouOwn": "Quantité que vous possédez",
@@ -50,9 +45,17 @@
   "tabMatches": "Correspondances",
   "tabSettings": "Options",
   "noAccount": "Commencez par configurer votre compte via « Modifier le profil » dans le coin supérieur droit.",
-  "raritySettings": "Paramètres de Rareté",
+  "raritySettings": "Paramètres de rareté",
   "rarity": "Rareté",
-  "toCollect": "À Collectionner",
-  "toKeep": "À Conserver",
-  "longOperation": "Cela peut prendre un moment."
+  "toCollect": "À collectionner",
+  "toKeep": "À conserver",
+  "longOperation": "Cela peut prendre un moment.",
+  "isActiveTrading": "Accepter de recevoir des échanges",
+  "toCollectTooltip": "Le nombre de carte que vous souhaitez collectionner après échange. Astuce : définissez cette valeur à 0 pour exclure une rareté des échanges.",
+  "toKeepTooltip": "Le nombre minimum de cartes que vous souhaitez conserver après échange.",
+  "search": {
+    "byCard": "Rechercher {{cardName}}",
+    "selectCard": "Sélectionner une carte",
+    "allCards": "Chercher toutes les cartes"
+  }
 }
