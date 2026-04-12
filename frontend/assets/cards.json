@@ -91456,7 +91456,8 @@
     "alternate_versions": [
       985411,
       989573,
-      990213
+      990213,
+      12651025
     ],
     "artist": "aky CG Works",
     "internal_id": 985411
@@ -93588,7 +93589,8 @@
     "alternate_versions": [
       985411,
       989573,
-      990213
+      990213,
+      12651025
     ],
     "artist": "aky CG Works",
     "internal_id": 989573
@@ -93920,7 +93922,8 @@
     "alternate_versions": [
       985411,
       989573,
-      990213
+      990213,
+      12651025
     ],
     "artist": "kodama",
     "internal_id": 990213
@@ -95085,7 +95088,8 @@
     "pack": "everypack",
     "alternate_versions": [
       1049536,
-      1054664
+      1054664,
+      12651026
     ],
     "artist": "Narumi Sato",
     "internal_id": 1049536
@@ -95823,7 +95827,8 @@
     "pack": "everypack",
     "alternate_versions": [
       1050944,
-      1054984
+      1054984,
+      12651031
     ],
     "artist": "Nobuhiro Imagawa",
     "internal_id": 1050944
@@ -96476,7 +96481,8 @@
     "pack": "everypack",
     "alternate_versions": [
       1052162,
-      1055624
+      1055624,
+      12651029
     ],
     "artist": "Anesaki Dynamic",
     "internal_id": 1052162
@@ -96576,7 +96582,8 @@
     "set_details": "megashine(b2b)",
     "pack": "everypack",
     "alternate_versions": [
-      1052352
+      1052352,
+      12651032
     ],
     "artist": "Asako Ito",
     "internal_id": 1052352
@@ -96642,7 +96649,8 @@
     "set_details": "megashine(b2b)",
     "pack": "everypack",
     "alternate_versions": [
-      1052480
+      1052480,
+      12651030
     ],
     "artist": "Kagemaru Himeno",
     "internal_id": 1052480
@@ -97765,7 +97773,8 @@
     "pack": "everypack",
     "alternate_versions": [
       1049536,
-      1054664
+      1054664,
+      12651026
     ],
     "artist": "Shigenori Negishi",
     "internal_id": 1054664
@@ -97932,7 +97941,8 @@
     "pack": "everypack",
     "alternate_versions": [
       1050944,
-      1054984
+      1054984,
+      12651031
     ],
     "artist": "Shigenori Negishi",
     "internal_id": 1054984
@@ -98271,7 +98281,8 @@
     "pack": "everypack",
     "alternate_versions": [
       1052162,
-      1055624
+      1055624,
+      12651029
     ],
     "artist": "Nisota Niso",
     "internal_id": 1055624
@@ -103916,5 +103927,287 @@
     ],
     "artist": "Kouki Saitou",
     "internal_id": 12651024
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-41",
+    "image": "/images/en-US/P-B-41.webp",
+    "hp": 130,
+    "energy": "water",
+    "name": "Chien-Pao ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water"
+        ],
+        "name": "Icicle",
+        "damage": "20",
+        "effect": "No effect"
+      },
+      {
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "name": "Diving",
+        "damage": "Icicles",
+        "effect": "Discard all [W] Energy from this Pokémon. This attack does 130 damage to 1 of your opponent's Pokémon."
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": true,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      985411,
+      989573,
+      990213,
+      12651025
+    ],
+    "artist": "aky CG Works",
+    "internal_id": 12651025
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-42",
+    "image": "/images/en-US/P-B-42.webp",
+    "hp": 70,
+    "energy": "water",
+    "name": "Slowpoke",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "water",
+          "colorless"
+        ],
+        "name": "Headbutt",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      1049536,
+      1054664,
+      12651026
+    ],
+    "artist": "Yoshimi Miyoshi",
+    "internal_id": 12651026
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-43",
+    "image": "/images/en-US/P-B-43.webp",
+    "hp": 60,
+    "energy": "lightning",
+    "name": "Electrike",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "lightning"
+        ],
+        "name": "Reckless Charge",
+        "damage": "30",
+        "effect": "This Pokémon also does 10 damage to itself."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      12651027
+    ],
+    "artist": "Miki Tanaka",
+    "internal_id": 12651027
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-44",
+    "image": "/images/en-US/P-B-44.webp",
+    "hp": 60,
+    "energy": "metal",
+    "name": "Varoom",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "metal"
+        ],
+        "name": "Poison Gas",
+        "damage": "0",
+        "effect": "Your opponent's Active Pokémon is now Poisoned."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      12651028
+    ],
+    "artist": "Kouki Saitou",
+    "internal_id": 12651028
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-45",
+    "image": "/images/en-US/P-B-45.webp",
+    "hp": 150,
+    "energy": "dragon",
+    "name": "Haxorus",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": [
+          "fighting",
+          "metal",
+          "colorless"
+        ],
+        "name": "Frenzied Blade",
+        "damage": "50+",
+        "effect": "This attack does 20 more damage for each Benched Pokémon (both yours and your opponent's)."
+      }
+    ],
+    "weakness": "none",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052162,
+      1055624,
+      12651029
+    ],
+    "artist": "Uta",
+    "internal_id": 12651029
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-46",
+    "image": "/images/en-US/P-B-46.webp",
+    "hp": 70,
+    "energy": "colorless",
+    "name": "Chatot",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "colorless"
+        ],
+        "name": "Spinning Draw",
+        "damage": "10",
+        "effect": "Draw a card."
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052480,
+      12651030
+    ],
+    "artist": "0313",
+    "internal_id": 12651030
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-47",
+    "image": "/images/en-US/P-B-47.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Gastly",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": [
+          "darkness"
+        ],
+        "name": "Mumble",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      1050944,
+      1054984,
+      12651031
+    ],
+    "artist": "kodama",
+    "internal_id": 12651031
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-48",
+    "image": "/images/en-US/P-B-48.webp",
+    "hp": 110,
+    "energy": "colorless",
+    "name": "Wigglytuff",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": [
+          "colorless",
+          "colorless",
+          "colorless"
+        ],
+        "name": "Hammer In",
+        "damage": "80",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [
+      1052352,
+      12651032
+    ],
+    "artist": "Mizue",
+    "internal_id": 12651032
   }
 ]
