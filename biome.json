@@ -72,7 +72,7 @@
     }
   },
   "files": {
-    "maxSize": 2000000,
+    "maxSize": 3000000,
     "ignoreUnknown": true,
     "includes": ["**", "!**/node_modules/**/*", "!**/dist/**/*"]
   }
