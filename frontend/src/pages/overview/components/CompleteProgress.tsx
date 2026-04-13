@@ -3,7 +3,7 @@ import { Progress } from '@/components/ui/progress.tsx'
 
 interface CompleteProgressProps {
   className?: string
-  title: string
+  title?: string
   barColor?: string
   collected: number
   available: number
