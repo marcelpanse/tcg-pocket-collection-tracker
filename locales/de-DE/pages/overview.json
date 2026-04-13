@@ -17,5 +17,10 @@
   "uniqueCards": "Einzigartige Karten",
   "numberOfCopies-single": "mit mindestens einer Kopie",
   "numberOfCopies-plural": "mit mindestens {{numberFilter}} Kopien",
-  "cardsTotal": "Karten"
+  "cardsTotal": "Karten",
+  "table": {
+    "expansion": "Erweiterung",
+    "collectedCards": "Gesammelte Karten",
+    "newCard": "Neue Karte"
+  }
 }
