@@ -18,8 +18,9 @@ Start by asking the user for the following details (ask all in one message):
 7. **Tradeable?** – yes/no (default: yes)
 8. **Openable?** – yes/no (default: yes)
 9. **Contains shinies?** – yes/no (default: yes)
-10. **Contains babies?** – yes/no (default: no)
-11. **Cards per pack** – number (default: 5)
+10. **Shiny ranges** (only if contains shinies) – card number ranges for `✵` (1-shiny) and `✵✵` (2-shiny) cards, e.g. `✵: 87–110, ✵✵: 111–115`. These are the card index numbers within the set.
+11. **Contains babies?** – yes/no (default: no)
+12. **Cards per pack** – number (default: 5)
 
 Once you have all the details, perform **all** of the following steps:
 
@@ -82,10 +83,14 @@ const <idCamel>Missions: Mission[] = <IdCamel>Missions.default as Mission[]
 '<packname>',
 ```
 
-**4b.** Add the set to `rarityOverrides` (empty for now — fill in after scraping):
+**4b.** Add the set to `rarityOverrides` with the shiny ranges provided. If the set contains shinies:
 ```ts
-<ID>: [],
+<ID>: [
+  { rarity: '✵', start: <shiny1Start>, end: <shiny1End> },
+  { rarity: '✵✵', start: <shiny2Start>, end: <shiny2End> },
+],
 ```
+If no shinies (or ranges unknown), use an empty array: `<ID>: []`
 Place it in the correct alphabetical/sequential position among the other set IDs.
 
 ---
@@ -151,4 +156,4 @@ This is a **manually sourced asset** — the scraper only downloads individual c
 
 - `internalId` must **never change** after a set is released — the DB encoding depends on it.
 - Promo sets use internalIds 192+ to avoid conflicts with regular sets.
-- After all edits are done, remind the user that shiny card rarity ranges in `rarityOverrides` in `scripts/scraper.ts` should be filled in once the set's card list is confirmed.
+- If shiny ranges were not provided upfront, remind the user to fill in `rarityOverrides` in `scripts/scraper.ts` once the set's card list is confirmed.
