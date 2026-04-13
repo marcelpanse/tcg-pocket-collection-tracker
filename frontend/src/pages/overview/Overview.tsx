@@ -141,9 +141,9 @@ function Overview() {
         <div className="w-full mx-auto mt-4 overflow-hidden rounded-lg border border-neutral-700 bg-neutral-800 ">
           <table className="w-full [&>tr>td]:py-1 [&>tr>td]:px-2 [&>tr>th]:p-2 divide-y [&>tr]:divide-x divide-neutral-700 [&>tr]:divide-neutral-700">
             <tr>
-              <th>Expansion</th>
-              <th className="sm:min-w-48">Collected cards</th>
-              <th>New card</th>
+              <th className="text-left">Expansion</th>
+              <th className="text-left sm:min-w-48">Collected cards</th>
+              <th className="text-left">New card</th>
             </tr>
             {expansions
               .toReversed()
@@ -163,9 +163,9 @@ function Overview() {
                           value={(collected.length / available.length) * 100}
                           barColor={expansion.packs[0].color}
                         />
-                        {t('youHave', { ns: 'expansion-overview', nCardsOwned: collected.length, nTotalCards: available.length })}
+                        {collected.length} / {available.length}
                       </td>
-                      <td className="text-center">
+                      <td>
                         {expansion.packs.length === 1 && (
                           <>{(100 * pullRate(wantedCards, expansion, expansion.packs[0], filters.deckbuildingMode)).toFixed(1)}%</>
                         )}
@@ -180,11 +180,9 @@ function Overview() {
                             <td className="!pl-8">{t(pack.name, { ns: 'common/packs' })}</td>
                             <td>
                               <Progress className="sm:inline-block sm:w-1/2 sm:mr-2" value={(nCardsOwned / nTotalCards) * 100} barColor={pack.color} />
-                              {t('youHave', { ns: 'expansion-overview', nCardsOwned, nTotalCards })}
+                              {nCardsOwned} / {nTotalCards}
                             </td>
-                            <td className="text-center">
-                              {pack.name !== 'everypack' && <>{(100 * pullRate(wantedCards, expansion, pack, filters.deckbuildingMode)).toFixed(1)}%</>}
-                            </td>
+                            <td>{pack.name !== 'everypack' && <>{(100 * pullRate(wantedCards, expansion, pack, filters.deckbuildingMode)).toFixed(1)}%</>}</td>
                           </tr>
                         )
                       })}
