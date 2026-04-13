@@ -17,5 +17,10 @@
   "stats": {
     "title": "Thank you for being part of our community",
     "description": "At present, our community of {{usersCount}} users has collectively tracked {{collectionCount}} total cards!"
+  },
+  "table": {
+    "expansion": "Expansão",
+    "collectedCards": "Cartas coletadas",
+    "newCard": "Nova carta"
   }
 }

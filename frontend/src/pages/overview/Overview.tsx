@@ -1,5 +1,5 @@
 import { Heart, Siren } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { DropdownFilter } from '@/components/Filters'
 import Footer from '@/components/Footer.tsx'
@@ -138,57 +138,80 @@ function Overview() {
           </div>
         </section>
 
-        <div className="w-full mx-auto mt-4 overflow-hidden rounded-lg border border-neutral-700 bg-neutral-800 ">
-          <table className="w-full [&>tr>td]:py-1 [&>tr>td]:px-2 [&>tr>th]:p-2 divide-y [&>tr]:divide-x divide-neutral-700 [&>tr]:divide-neutral-700">
-            <tr>
-              <th className="text-left">Expansion</th>
-              <th className="text-left sm:min-w-48">Collected cards</th>
-              <th className="text-left">New card</th>
-            </tr>
-            {expansions
-              .toReversed()
-              .filter((expansion) => expansion.openable)
-              .map((expansion) => {
-                const collected = collectedCards.filter((c) => c.expansion === expansion.id)
-                const available = availableCards.filter((c) => c.expansion === expansion.id)
-                const collectedPack = Object.groupBy(collected, (c) => c.pack)
-                const availablePack = Object.groupBy(available, (c) => c.pack)
-                return (
-                  <>
-                    <tr key={expansion.id}>
-                      <td>{t(expansion.name, { ns: 'common/sets' })}</td>
-                      <td>
-                        <Progress
-                          className="sm:inline-block sm:w-1/2 sm:mr-2"
-                          value={(collected.length / available.length) * 100}
-                          barColor={expansion.packs[0].color}
-                        />
-                        {collected.length} / {available.length}
-                      </td>
-                      <td>
-                        {expansion.packs.length === 1 && (
-                          <>{(100 * pullRate(wantedCards, expansion, expansion.packs[0], filters.deckbuildingMode)).toFixed(1)}%</>
-                        )}
-                      </td>
-                    </tr>
-                    {expansion.packs.length > 1 &&
-                      expansion.packs.map((pack) => {
-                        const nCardsOwned = (collectedPack[pack.name] ?? []).length
-                        const nTotalCards = (availablePack[pack.name] ?? []).length
-                        return (
-                          <tr key={`${expansion.name}-${pack.name}`}>
-                            <td className="!pl-8">{t(pack.name, { ns: 'common/packs' })}</td>
-                            <td>
-                              <Progress className="sm:inline-block sm:w-1/2 sm:mr-2" value={(nCardsOwned / nTotalCards) * 100} barColor={pack.color} />
-                              {nCardsOwned} / {nTotalCards}
-                            </td>
-                            <td>{pack.name !== 'everypack' && <>{(100 * pullRate(wantedCards, expansion, pack, filters.deckbuildingMode)).toFixed(1)}%</>}</td>
-                          </tr>
-                        )
-                      })}
-                  </>
-                )
-              })}
+        <div className="w-full mx-auto mt-4 overflow-hidden rounded-lg border border-neutral-700 bg-neutral-800">
+          <table className="w-full table-fixed">
+            <thead className="z-10 bg-neutral-700">
+              <tr>
+                <th className="text-left w-1/4 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-neutral-400">{t('table.expansion')}</th>
+                <th className="text-left w-1/2 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-neutral-400">{t('table.collectedCards')}</th>
+                <th className="text-left w-1/4 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-neutral-400">{t('table.newCard')}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {expansions
+                .toReversed()
+                .filter((expansion) => expansion.openable)
+                .map((expansion, expansionIndex) => {
+                  const collected = collectedCards.filter((c) => c.expansion === expansion.id)
+                  const available = availableCards.filter((c) => c.expansion === expansion.id)
+                  const collectedPack = Object.groupBy(collected, (c) => c.pack)
+                  const availablePack = Object.groupBy(available, (c) => c.pack)
+                  const isEven = expansionIndex % 2 === 0
+                  return (
+                    <Fragment key={expansion.id}>
+                      <tr className={`${isEven ? 'bg-neutral-800/50' : ''} border-t border-neutral-700`}>
+                        <td className="px-4 py-3 font-medium">{t(expansion.name, { ns: 'common/sets' })}</td>
+                        <td className="px-4 py-3">
+                          <Progress
+                            className="sm:inline-block sm:w-1/2 sm:mr-2"
+                            value={(collected.length / available.length) * 100}
+                            barColor={expansion.packs[0].color}
+                            title={`${((collected.length / available.length) * 100).toFixed(1)}%`}
+                          />
+                          {collected.length} / {available.length}
+                        </td>
+                        <td className="px-4 py-3">
+                          {expansion.packs.length === 1 &&
+                            (() => {
+                              const pct = 100 * pullRate(wantedCards, expansion, expansion.packs[0], filters.deckbuildingMode)
+                              return <span className={pct >= 10 ? 'text-green-400' : pct >= 3 ? 'text-yellow-400' : 'text-neutral-500'}>{pct.toFixed(1)}%</span>
+                            })()}
+                        </td>
+                      </tr>
+                      {expansion.packs.length > 1 &&
+                        expansion.packs.map((pack) => {
+                          const nCardsOwned = (collectedPack[pack.name] ?? []).length
+                          const nTotalCards = (availablePack[pack.name] ?? []).length
+                          return (
+                            <tr key={`${expansion.name}-${pack.name}`} className={`${isEven ? 'bg-neutral-800/50' : ''}`}>
+                              <td className="pl-8 pr-4 py-2 text-neutral-400 text-sm">{t(pack.name, { ns: 'common/packs' })}</td>
+                              <td className="px-4 py-2">
+                                <Progress
+                                  className="sm:inline-block sm:w-1/2 sm:mr-2"
+                                  value={(nCardsOwned / nTotalCards) * 100}
+                                  barColor={pack.color}
+                                  title={`${((nCardsOwned / nTotalCards) * 100).toFixed(1)}%`}
+                                />
+                                {nCardsOwned} / {nTotalCards}
+                              </td>
+                              <td className="px-4 py-2">
+                                {pack.name !== 'everypack' &&
+                                  (() => {
+                                    const pct = 100 * pullRate(wantedCards, expansion, pack, filters.deckbuildingMode)
+                                    return (
+                                      <span className={pct >= 10 ? 'text-green-400' : pct >= 3 ? 'text-yellow-400' : 'text-neutral-500'}>
+                                        {pct.toFixed(1)}%
+                                      </span>
+                                    )
+                                  })()}
+                              </td>
+                            </tr>
+                          )
+                        })}
+                    </Fragment>
+                  )
+                })}
+            </tbody>
           </table>
         </div>
       </article>
