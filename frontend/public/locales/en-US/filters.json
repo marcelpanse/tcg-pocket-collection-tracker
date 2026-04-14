@@ -28,5 +28,11 @@
     "all": "All",
     "owned": "Owned",
     "missing": "Missing"
+  },
+  "f-missiontype": {
+    "all": "All",
+    "normal": "Normal",
+    "secret": "Secret",
+    "complete": "Complete"
   }
 }

@@ -3,7 +3,7 @@ import { CircleAlert, Trash2 } from 'lucide-react'
 import { type ReactNode, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
-import { Link, useSearchParams } from 'react-router'
+import { useSearchParams } from 'react-router'
 import { Tooltip } from 'react-tooltip'
 import { z } from 'zod'
 import { Card } from '@/components/Card'
@@ -156,13 +156,6 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
           >
             {t('trade.button')}
           </Button>
-        )}
-        {!isPublic && (
-          <Link className="w-full" to="/collection/missions">
-            <Button className="w-full" variant="outline">
-              {t('goToMissions')}
-            </Button>
-          </Link>
         )}
       </div>
     </div>

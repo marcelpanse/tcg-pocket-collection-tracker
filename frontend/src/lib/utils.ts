@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import type { Card, CollectionRow, GameLanguage, RaritySettingsRow } from '@/types'
+import type { Card, CollectionRow, GameLanguage, Mission, RaritySettingsRow } from '@/types'
 import pokemonTranslations from '../../assets/pokemon_translations.json'
 import toolTranslations from '../../assets/tools_translations.json'
 import trainerTranslations from '../../assets/trainers_translations.json'
@@ -104,4 +104,25 @@ export function getNeededCards(cards: Map<number, CollectionRow>, settings_rows:
 export function umami(event: string) {
   // @ts-expect-error runtime script on window object
   window.umami?.track(event)
+}
+
+export type MissionType = 'all' | 'normal' | 'secret' | 'complete'
+
+export function getMissionType(mission: Mission): Exclude<MissionType, 'all'> {
+  const name = mission.name.toLowerCase()
+  const reward = (mission.reward || '').toLowerCase()
+  if (name.includes('complete') || name.includes('pokedex') || name.includes('pokédex') || name.endsWith('immersive experience')) {
+    return 'complete'
+  }
+  if (
+    name.includes('museum') ||
+    name.startsWith('collect ') ||
+    name.includes('immersive') ||
+    reward.includes('pack hourglass') ||
+    (reward.includes('(emblem)') && !reward.includes('emblem ticket')) ||
+    mission.requiredCards.some((card) => card.amount > 1)
+  ) {
+    return 'secret'
+  }
+  return 'normal'
 }

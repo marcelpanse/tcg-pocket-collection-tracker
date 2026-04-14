@@ -88,6 +88,13 @@ export function Header() {
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden md:block">
+              <Link to="/missions">
+                <Button className="px-2 sm:px-4" variant="ghost">
+                  {t('missions')}
+                </Button>
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild className="hidden md:block">
               <Link to="/decks">
                 <Button className="px-2 sm:px-4" variant="ghost">
                   {t('Decks')}
