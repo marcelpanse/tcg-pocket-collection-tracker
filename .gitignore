@@ -141,3 +141,6 @@ dist
 
 #webstorm IDE
 .idea/
+
+# Claude local settings
+.claude/settings.local.json
