@@ -59,7 +59,7 @@ export function getCardNameByLang(card: Card, lang: string): string {
       return card.ex ? `${cardName} ex` : cardName
     }
     case 'trainer': {
-      if (card.evolution_type === 'item' || card.evolution_type === 'tool') {
+      if (card.evolution_type === 'item' || card.evolution_type === 'tool' || card.evolution_type === 'stadium') {
         const toolNameTranslations = toolTranslations[card.name.toLowerCase() as keyof typeof toolTranslations]
         if (toolNameTranslations) {
           return toolNameTranslations[lang as keyof typeof toolNameTranslations] || card.name

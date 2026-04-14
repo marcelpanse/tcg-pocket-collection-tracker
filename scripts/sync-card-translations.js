@@ -33,7 +33,7 @@ function createTranslationEntry(cardName, cardType, ex) {
 }
 
 function transformCardNameToKey(cardName, cardType, ex) {
-  if (cardType === 'pokémon' && ex === 'yes') {
+  if (cardType === 'pokémon' && ex === true) {
     return cardName.slice(0, -3).toLowerCase()
   }
   return cardName.toLowerCase()
@@ -87,7 +87,7 @@ function syncCardTranslations() {
           pokemonAdded++
         }
       } else if (card.card_type === 'trainer') {
-        if (card.evolution_type === 'item' || card.evolution_type === 'tool') {
+        if (card.evolution_type === 'item' || card.evolution_type === 'tool' || card.evolution_type === 'stadium') {
           if (!toolsTranslations[key]) {
             toolsTranslations[key] = createTranslationEntry(card.name, card.card_type, card.ex)
             toolsAdded++
