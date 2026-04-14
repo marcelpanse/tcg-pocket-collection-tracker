@@ -15,6 +15,7 @@ const A4aMissions = await import('../../assets/themed-collections/A4a-missions.j
 const A4bMissions = await import('../../assets/themed-collections/A4b-missions.json')
 const B1Missions = await import('../../assets/themed-collections/B1-missions.json')
 const B1aMissions = await import('../../assets/themed-collections/B1a-missions.json')
+const B2Missions = await import('../../assets/themed-collections/B2-missions.json')
 const B2aMissions = await import('../../assets/themed-collections/B2a-missions.json')
 const B2bMissions = await import('../../assets/themed-collections/B2b-missions.json')
 
@@ -57,7 +58,7 @@ const a4aMissions: Mission[] = A4aMissions.default as Mission[]
 const a4bMissions: Mission[] = A4bMissions.default as Mission[]
 const b1Missions: Mission[] = B1Missions.default as Mission[]
 const b1aMissions: Mission[] = B1aMissions.default as Mission[]
-const b2Missions: Mission[] = B1aMissions.default as Mission[]
+const b2Missions: Mission[] = B2Missions.default as Mission[]
 const b2aMissions: Mission[] = B2aMissions.default as Mission[]
 const b2bMissions: Mission[] = B2bMissions.default as Mission[]
 

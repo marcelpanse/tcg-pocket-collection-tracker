@@ -85,7 +85,8 @@ function App() {
       errorElement: <ErrorAlert />,
       children: [
         { path: '/', element: <Overview /> },
-        { path: '/collection/missions', element: <Missions /> },
+        { path: '/missions', element: <Missions /> },
+        { path: '/collection/missions', element: <Navigate to="/missions" replace /> },
         { path: '/collection/:friendId?', element: <Collection /> },
         { path: '/collection/:friendId/trade', element: <TradeWithRedirect /> }, // support old trading path
         { path: '/decks', element: <Decks /> },

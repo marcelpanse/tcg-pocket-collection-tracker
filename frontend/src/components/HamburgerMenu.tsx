@@ -19,6 +19,7 @@ type MenuItem = {
 const menuItems: MenuItem[] = [
   { title: 'overview', href: '/' },
   { title: 'collection', href: '/collection' },
+  { title: 'missions', href: '/missions' },
   { title: 'decks', href: '/decks' },
   { title: 'trade', href: '/trade' },
   { title: 'friends', href: '/friends' },

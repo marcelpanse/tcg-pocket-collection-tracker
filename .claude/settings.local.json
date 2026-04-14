@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E '\"card_id\"|\"internal_id\"|\"alternate_versions\"|\\\\[|[0-9]{5,}')",
+      "WebFetch(domain:pocket.limitlesstcg.com)",
+      "Bash(node -e \"require\\('./frontend/assets/cards.json'\\)\")",
+      "Bash(node -e \"require\\('./frontend/assets/cards.json'\\); console.log\\('JSON válido'\\)\")",
+      "WebFetch(domain:limitlesstcg.nyc3.cdn.digitaloceanspaces.com)",
+      "Bash(gh pr:*)",
+      "Bash(python3 -c ':*)",
+      "Bash(node -e ':*)",
+      "WebFetch(domain:play.limitlesstcg.com)",
+      "Bash(xargs grep:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm lint:fix)",
+      "WebFetch(domain:www.pokemon-zone.com)",
+      "WebFetch(domain:bulbapedia.bulbagarden.net)",
+      "WebFetch(domain:www.serebii.net)",
+      "Bash(node -e 'const d=require\\('\\\\''./__TRACKED_VAR__'\\\\''\\); console.log\\(d.length\\)')",
+      "Bash(pnpm biome:*)",
+      "Bash(grep -v \"^$\")",
+      "Bash(node --experimental-vm-modules --input-type=module scripts/scrape-missions.js)",
+      "Bash(node scripts/scrape-missions.js)"
+    ]
+  }
+}
