@@ -46,6 +46,16 @@ We maintain code standards with Biome, ensuring up-to-date formatting and lintin
 
 We encourage contributors to incrementally improve the project by making small changes and submitting pull requests for review and potential merging.
 
+### Adding a new set
+
+When adding a new set, the easiest way to do this is to use the "/add-set" skill you can run with Claude code (or OpenCode). It will prompt you for the variables it needs like the set name, ID, pack names, etc and then updates the code accordingly. 
+
+When adding a new set manually follow the steps outlined in this file: https://github.com/marcelpanse/tcg-pocket-collection-tracker/blob/main/.claude/skills/add-set/SKILL.md
+
+### Adding cards to existing set
+
+Modyfing existing sets is as easy as executing `pnpm run scraper`.
+
 ## Contributors
 
 <table>

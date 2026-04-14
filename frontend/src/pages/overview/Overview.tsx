@@ -1,5 +1,5 @@
 import { Heart, Siren } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { DropdownFilter } from '@/components/Filters'
 import Footer from '@/components/Footer.tsx'
@@ -9,16 +9,13 @@ import { RadialChart } from '@/components/RadialChart'
 import { Spinner } from '@/components/Spinner'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTitle } from '@/components/ui/alert.tsx'
-import { expansions, getExpansionById } from '@/lib/CardsDB.ts'
+import { Progress } from '@/components/ui/progress'
+import { expansions } from '@/lib/CardsDB.ts'
 import { getFilteredCards } from '@/lib/filters'
 import { pullRate } from '@/lib/stats'
 import { GradientCard } from '@/pages/overview/components/GradientCard.tsx'
 import { useCollection } from '@/services/collection/useCollection'
-import { type Card, type CollectionRow, expansionIds, type Rarity } from '@/types'
-import { ExpansionOverview } from './components/ExpansionOverview'
-
-const expansionOptions = ['all', ...expansionIds.filter((id) => getExpansionById(id).openable)] as const
-type ExpansionOption = (typeof expansionOptions)[number]
+import type { Card, CollectionRow, Rarity } from '@/types'
 
 function getUniqueCount(cards: Card[]) {
   return new Set(cards.map((c) => c.internal_id)).size
@@ -27,11 +24,10 @@ function getUniqueCount(cards: Card[]) {
 function Overview() {
   const { data: ownedCards = new Map<number, CollectionRow>(), isLoading } = useCollection()
 
-  const { t } = useTranslation(['pages/overview', 'filters', 'common/sets'])
+  const { t } = useTranslation(['pages/overview', 'filters', 'common/sets', 'expansion-overview'])
 
   const [collectionCount, setCollectionCount] = useState('')
   const [usersCount, setUsersCount] = useState('')
-  const [expansionFilter, setExpansionFilter] = useState<ExpansionOption>(expansionOptions[1])
 
   const ownedCardsCount = () => {
     let total = 0
@@ -81,18 +77,13 @@ function Overview() {
   }
   const highestProbabilityPack = getHighestProbabilityPack()
 
-  const getLocalizedExpansion = (id: ExpansionOption) => {
-    const expansion_name = id === 'all' ? 'all' : getExpansionById(id).name
-    return t(expansion_name, { ns: 'common/sets' })
-  }
-
   if (isLoading) {
     return <Spinner size="lg" overlay />
   }
 
   return (
     <main>
-      <article className="mx-auto max-w-7xl px-8">
+      <article className="mx-auto max-w-7xl px-4">
         {ownedCards.size === 0 && (
           <Alert className="mb-8 border-1 border-neutral-700 shadow-none">
             <Siren className="h-4 w-4" />
@@ -101,7 +92,7 @@ function Overview() {
           </Alert>
         )}
 
-        <div className="mb-8 flex items-center gap-2 flex-wrap">
+        <div className="mb-4 flex items-center gap-2 flex-wrap">
           <RarityFilter
             rarityFilter={filters.rarity}
             setRarityFilter={(rarity) => setFilters((prev) => ({ ...prev, rarity }))}
@@ -120,8 +111,8 @@ function Overview() {
           />
         </div>
 
-        <section className="grid grid-cols-8 gap-4 sm:gap-6">
-          <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-lg border-1 border-neutral-700 bg-neutral-800 border-solid p-3 sm:p-6 md:p-8 mb-4 md:mb-0">
+        <section className="grid grid-cols-8 gap-4 sm:gap-4">
+          <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-lg border-1 border-neutral-700 bg-neutral-800 border-solid p-3 sm:p-6 md:p-8">
             <h2 className="font-bold mb-4 text-center text-base sm:text-lg md:text-3xl">{t('uniqueCards')}</h2>
             <RadialChart
               value={availableCards.length === 0 ? 0 : getUniqueCount(collectedCards) / getUniqueCount(availableCards)}
@@ -137,7 +128,7 @@ function Overview() {
           <GradientCard
             title={highestProbabilityPack?.packName ?? ''}
             percentage={highestProbabilityPack?.percentage ?? 0}
-            className="col-span-8 md:col-span-4 col-start-1 md:col-start-3 mb-4 md:mb-0"
+            className="col-span-8 md:col-span-4 col-start-1 md:col-start-3"
             backgroundColor={highestProbabilityPack?.fill}
           />
           <div className="col-span-8 md:col-span-2 flex flex-col items-center justify-center rounded-lg border-1 border-neutral-700 bg-neutral-800 border-solid p-3 sm:p-6 md:p-8">
@@ -146,31 +137,83 @@ function Overview() {
             <h2 className="text-balance text-center text-base sm:text-lg md:text-2xl">{t('cardsTotal')}</h2>
           </div>
         </section>
-      </article>
 
-      <article className="flex mx-auto max-w-7xl px-8 pt-10 -mb-4">
-        <DropdownFilter
-          label={t('expansion', { ns: 'common/sets' })}
-          options={expansionOptions}
-          value={expansionFilter}
-          onChange={setExpansionFilter}
-          show={getLocalizedExpansion}
-        />
-      </article>
-
-      <article className="mx-auto max-w-7xl sm:p-6 p-0 pt-6 grid grid-cols-8 gap-6">
-        {expansions
-          .filter((expansion) => (expansionFilter === 'all' && expansion.openable) || expansionFilter === expansion.id)
-          .map((expansion) => (
-            <ExpansionOverview
-              key={expansion.id}
-              expansion={expansion}
-              collectedCards={collectedCards.filter((c) => c.expansion === expansion.id)}
-              wantedCards={wantedCards.filter((c) => c.expansion === expansion.id)}
-              availableCards={availableCards.filter((c) => c.expansion === expansion.id)}
-              deckbuildingMode={filters.deckbuildingMode}
-            />
-          ))}
+        <div className="w-full mx-auto mt-4 overflow-hidden rounded-lg border border-neutral-700 bg-neutral-800">
+          <table className="w-full table-fixed">
+            <thead className="z-10 bg-neutral-700">
+              <tr>
+                <th className="text-left w-1/4 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-neutral-400">{t('table.expansion')}</th>
+                <th className="text-left w-1/2 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-neutral-400">{t('table.collectedCards')}</th>
+                <th className="text-left w-1/4 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-neutral-400">{t('table.newCard')}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {expansions
+                .toReversed()
+                .filter((expansion) => expansion.openable)
+                .map((expansion, expansionIndex) => {
+                  const collected = collectedCards.filter((c) => c.expansion === expansion.id)
+                  const available = availableCards.filter((c) => c.expansion === expansion.id)
+                  const collectedPack = Object.groupBy(collected, (c) => c.pack)
+                  const availablePack = Object.groupBy(available, (c) => c.pack)
+                  const isEven = expansionIndex % 2 === 0
+                  return (
+                    <Fragment key={expansion.id}>
+                      <tr className={`${isEven ? 'bg-neutral-800/50' : ''} border-t border-neutral-700`}>
+                        <td className="px-4 py-3 font-medium">{t(expansion.name, { ns: 'common/sets' })}</td>
+                        <td className="px-4 py-3">
+                          <Progress
+                            className="sm:inline-block sm:w-1/2 sm:mr-2"
+                            value={(collected.length / available.length) * 100}
+                            barColor={expansion.packs[0].color}
+                            title={`${((collected.length / available.length) * 100).toFixed(1)}%`}
+                          />
+                          {collected.length} / {available.length}
+                        </td>
+                        <td className="px-4 py-3">
+                          {expansion.packs.length === 1 &&
+                            (() => {
+                              const pct = 100 * pullRate(wantedCards, expansion, expansion.packs[0], filters.deckbuildingMode)
+                              return <span className={pct >= 10 ? 'text-green-400' : pct >= 3 ? 'text-yellow-400' : 'text-neutral-500'}>{pct.toFixed(1)}%</span>
+                            })()}
+                        </td>
+                      </tr>
+                      {expansion.packs.length > 1 &&
+                        expansion.packs.map((pack) => {
+                          const nCardsOwned = (collectedPack[pack.name] ?? []).length
+                          const nTotalCards = (availablePack[pack.name] ?? []).length
+                          return (
+                            <tr key={`${expansion.name}-${pack.name}`} className={`${isEven ? 'bg-neutral-800/50' : ''}`}>
+                              <td className="pl-8 pr-4 py-2 text-neutral-400 text-sm">{t(pack.name, { ns: 'common/packs' })}</td>
+                              <td className="px-4 py-2">
+                                <Progress
+                                  className="sm:inline-block sm:w-1/2 sm:mr-2"
+                                  value={(nCardsOwned / nTotalCards) * 100}
+                                  barColor={pack.color}
+                                  title={`${((nCardsOwned / nTotalCards) * 100).toFixed(1)}%`}
+                                />
+                                {nCardsOwned} / {nTotalCards}
+                              </td>
+                              <td className="px-4 py-2">
+                                {pack.name !== 'everypack' &&
+                                  (() => {
+                                    const pct = 100 * pullRate(wantedCards, expansion, pack, filters.deckbuildingMode)
+                                    return (
+                                      <span className={pct >= 10 ? 'text-green-400' : pct >= 3 ? 'text-yellow-400' : 'text-neutral-500'}>
+                                        {pct.toFixed(1)}%
+                                      </span>
+                                    )
+                                  })()}
+                              </td>
+                            </tr>
+                          )
+                        })}
+                    </Fragment>
+                  )
+                })}
+            </tbody>
+          </table>
+        </div>
       </article>
 
       {ownedCards.size > 0 && (
