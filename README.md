@@ -1,5 +1,5 @@
 # TCG Pocket Collection Tracker
-[![All Contributors](https://img.shields.io/badge/all_contributors-33-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-34-orange.svg?style=flat-square)](#contributors-)
 
 TCG Pocket Collection Tracker is an application designed to help users efficiently track their Pokémon Pocket game cards, identify optimal card packs to open, manage trades, and engage with both friends and the community at large. Our application is completely free, open-source, and prioritizes user privacy by not selling data, tracking analytics or using advertisements.
 
@@ -102,6 +102,7 @@ Modyfing existing sets is as easy as executing `pnpm run scraper`.
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gregormaclaine"><img src="https://avatars.githubusercontent.com/u/18427765?v=4?s=100" width="100px;" alt="MarkoOleksiyenko"/><br /><sub><b>MarkoOleksiyenko</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=MarkoOleksiyenko" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mkslzk"><img src="https://avatars.githubusercontent.com/u/68415033?v=4?s=100" width="100px;" alt="mkslzk"/><br /><sub><b>mkslzk</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=mkslzk" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/WickiRiama"><img src="https://avatars.githubusercontent.com/u/88334930?v=4?s=100" width="100px;" alt="WickiRiama"/><br /><sub><b>WickiRiama</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=WickiRiama" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/diegomarnie"><img src="https://avatars.githubusercontent.com/u/242843530?v=4&s=100" width="100px;" alt="Diego Martínez"/><br /><sub><b>Diego Martínez</b></sub></a><br /><a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker/commits?author=diegomarnie" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
