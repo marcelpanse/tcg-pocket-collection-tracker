@@ -14,7 +14,10 @@ import type { CollectionRow, Mission as MissionType } from '@/types'
 
 type RewardItem = { label: string; qty: string; type: string }
 
-function parseRewards(rewardStr: string): RewardItem[] {
+function parseRewards(rewardStr?: string): RewardItem[] {
+  if (!rewardStr) {
+    return []
+  }
   return rewardStr.split('<br />').map((item) => {
     const trimmed = item.trim()
     const qtyMatch = trimmed.match(/\s×(\d+)$/)
