@@ -3,7 +3,8 @@ import { z } from 'zod'
 
 function safeJson(val: string) {
   try {
-    return JSON.parse(val)
+    const parsed = JSON.parse(val)
+    return parsed === null ? val : parsed
   } catch {
     return val
   }
