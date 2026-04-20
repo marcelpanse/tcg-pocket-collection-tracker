@@ -25,8 +25,27 @@ function CardProperty({ name, children }: { name: string; children: ReactNode })
   )
 }
 
+const energySymbolMap: Record<string, string> = {
+  G: 'grass',
+  R: 'fire',
+  W: 'water',
+  L: 'lightning',
+  P: 'psychic',
+  F: 'fighting',
+  D: 'darkness',
+  M: 'metal',
+  C: 'colorless',
+}
+
 export default function CardDetail() {
   const { t } = useTranslation(['pages/card-detail', 'common/types', 'common/packs', 'common/sets'])
+
+  const translateEnergySymbols = (text: string) =>
+    text.replace(/\[([A-Z])\]/g, (_, letter) => {
+      const key = energySymbolMap[letter]
+      return key ? t(key, { ns: 'common/types' }) : letter
+    })
+
   const { selectedCardId: id, setSelectedCardId: setId } = useSelectedCard()
 
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
@@ -146,12 +165,12 @@ export default function CardDetail() {
             <div className="mt-8">
               <CardProperty name={t('text.expansion')}>{card?.expansion}</CardProperty>
               <CardProperty name={t('text.pack')}>{card && t(card.pack, { ns: 'common/packs' })}</CardProperty>
-              <CardProperty name="Energy">{card?.energy}</CardProperty>
+              <CardProperty name="Energy">{(card && t(card.energy, { ns: 'common/types' })) || 'N/A'}</CardProperty>
               <CardProperty name={t('text.weakness')}>{(card && t(card.weakness, { ns: 'common/types' })) || 'N/A'}</CardProperty>
               {card?.hp && <CardProperty name={t('text.hp')}>{card?.hp}</CardProperty>}
               {card?.retreat && <CardProperty name={t('text.retreat')}>{card.retreat}</CardProperty>}
               <CardProperty name={t('text.ability')}>{card?.ability?.name ?? <i>None</i>}</CardProperty>
-              {card?.ability && <CardProperty name={t('text.abilityEffect')}>{card?.ability.effect}</CardProperty>}
+              {card?.ability && <CardProperty name={t('text.abilityEffect')}>{translateEnergySymbols(card.ability.effect)}</CardProperty>}
               <CardProperty name={t('text.cardType')}>{card && t(`cardType.${card.card_type}`)}</CardProperty>
               <CardProperty name={t('text.evolutionType')}>{card && t(`evolutionType.${card.evolution_type}`)}</CardProperty>
               {expansion && packName && card && card.rarity !== 'P' && (
