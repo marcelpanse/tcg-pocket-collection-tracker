@@ -77,17 +77,25 @@ export function getCardNameByLang(card: Card, lang: string): string {
   return card.name
 }
 
+interface TradeSettings {
+  to_collect: number
+  to_keep: number
+}
+
 function getTradingCards(
   collection: Map<number, CollectionRow>,
   settings_rows: RaritySettingsRow[],
-  filter_func: (card: Card & { amount_owned: number }, settings: Omit<RaritySettingsRow, 'rarity'>) => boolean,
+  filter_func: (card: Card & { amount_owned: number }, settings: TradeSettings) => boolean,
 ) {
   const settings_map = Object.fromEntries(settings_rows.map(({ rarity, ...rest }) => [rarity, rest]))
   const arr = allCards
-    .map((card) => ({
-      card: { ...card, amount_owned: collection.get(card.internal_id)?.amount_owned ?? 0 },
-      settings: settings_map[card.rarity],
-    }))
+    .map((card) => {
+      const row = collection.get(card.internal_id)
+      return {
+        card: { ...card, amount_owned: row?.amount_owned ?? 0 },
+        settings: row !== undefined && row.amount_wanted !== null ? { to_keep: row.amount_wanted, to_collect: row.amount_wanted } : settings_map[card.rarity],
+      }
+    })
     .filter(({ card, settings }) => settings !== undefined && filter_func(card, settings))
     .map(({ card }) => card.internal_id)
   return [...new Set(arr)]
