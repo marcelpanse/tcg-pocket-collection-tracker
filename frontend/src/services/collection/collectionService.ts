@@ -42,7 +42,7 @@ export const getCollection = async (email: string, collectionLastUpdatedRaw?: Da
 
         if (cacheLastUpdated && !Number.isNaN(cacheLastUpdated.getTime()) && cacheLastUpdated >= collectionLastUpdated && cachedCollection !== null) {
           console.log('Using cached collection', cachedCollection.length)
-          return new Map(cachedCollection.map((row) => [row.internal_id, row]))
+          return new Map(cachedCollection.map((row) => [row.internal_id, { ...row, amount_wanted: row.amount_wanted ?? null }]))
         }
       } catch (e) {
         console.log('Error parsing cache timestamp', e)
@@ -59,7 +59,7 @@ export const getCollection = async (email: string, collectionLastUpdatedRaw?: Da
     updateCollectionCache(collection, email, collectionLastUpdated)
   }
 
-  return new Map(collection.map((row) => [row.internal_id, row]))
+  return new Map(collection.map((row) => [row.internal_id, { ...row, amount_wanted: row.amount_wanted ?? null }]))
 }
 
 export const getPublicCollection = async (friendId: string): Promise<Map<number, CollectionRow>> => {
@@ -68,7 +68,7 @@ export const getPublicCollection = async (friendId: string): Promise<Map<number,
   }
 
   const collection = await fetchCollectionFromAPI('public_card_amounts_collection', 'friend_id', friendId)
-  return new Map(collection.map((row) => [row.internal_id, row]))
+  return new Map(collection.map((row) => [row.internal_id, { ...row, amount_wanted: row.amount_wanted ?? null }]))
 }
 
 export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[]) => {

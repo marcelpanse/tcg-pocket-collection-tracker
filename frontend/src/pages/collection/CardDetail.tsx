@@ -13,7 +13,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sh
 import { craftingCost, getCardByInternalId, getExpansionById } from '@/lib/CardsDB.ts'
 import { pullRateForSpecificCard } from '@/lib/stats'
 import { getCardNameByLang } from '@/lib/utils'
-import { useCollection, useDeleteCard, useSelectedCard } from '@/services/collection/useCollection'
+import { useCollection, useDeleteCard, useSelectedCard, useUpdateCards } from '@/services/collection/useCollection'
 import { type Card, type CollectionRow, tradableRarities } from '@/types'
 
 function CardProperty({ name, children }: { name: string; children: ReactNode }) {
@@ -50,6 +50,7 @@ export default function CardDetail() {
 
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const deleteCardMutation = useDeleteCard()
+  const updateCardsMutation = useUpdateCards()
 
   const [isOpen, setIsOpen] = useState(false)
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
@@ -63,10 +64,13 @@ export default function CardDetail() {
   const expansion = card && getExpansionById(card.expansion)
 
   const [amountWanted, setAmountWanted] = useOptimistic<number | null, number | null>(row?.amount_wanted ?? null, (_prev, curr: number | null) => curr)
-  const updateAmountWanted = (x: number | null) => {
+  const updateAmountWanted = (amount_wanted: number | null) => {
+    if (id === undefined) {
+      return
+    }
     startTransition(async () => {
-      setAmountWanted(x)
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      setAmountWanted(amount_wanted)
+      await updateCardsMutation.mutateAsync([{ internal_id: id, amount_wanted }])
     })
   }
 

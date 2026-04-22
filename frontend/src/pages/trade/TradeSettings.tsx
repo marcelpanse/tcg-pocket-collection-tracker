@@ -4,6 +4,7 @@ import { type Resolver, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import { z } from 'zod'
+import { CardLine } from '@/components/CardLine'
 import { SocialShareButtons } from '@/components/SocialShareButtons'
 import { Alert } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button'
@@ -11,8 +12,10 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
 import { toast } from '@/hooks/use-toast.ts'
+import { getCardByInternalId } from '@/lib/CardsDB'
 import { formatLanguage } from '@/lib/utils'
 import { useAccount, useUpdateAccountTradingFields } from '@/services/account/useAccount.ts'
+import { useCollection } from '@/services/collection/useCollection'
 import { gameLanguages, rarities } from '@/types/index.ts'
 
 function TradeSettings() {
@@ -20,6 +23,9 @@ function TradeSettings() {
 
   const { data: account } = useAccount()
   const updateAccountTradingFieldsMutation = useUpdateAccountTradingFields()
+
+  const { data: ownedCards } = useCollection()
+  const overridenCards = ownedCards !== undefined ? [...ownedCards.values()].filter((row) => row.amount_wanted !== null) : []
 
   const formSchema = z.object({
     is_active_trading: z.boolean(),
@@ -188,6 +194,18 @@ function TradeSettings() {
         </form>
       </Form>
       <SocialShareButtons className="mt-4 mx-auto w-fit" />
+      <div className="rounded-md border-1 border-neutral-700 space-y-2 p-4 mx-auto max-w-xl mt-4">
+        <h2 className="text-xl text-center">Wanted card amounts</h2>
+        <p className="text-neutral-400">The cards below have custom amount wanted and are not affected by rarity settings.</p>
+        {overridenCards.length === 0 && <p className="text-neutral-400">You do not have any custom wanted card amounts.</p>}
+        {overridenCards.map((row) => (
+          <CardLine
+            key={row.internal_id}
+            card_id={getCardByInternalId(row.internal_id)?.card_id ?? ''}
+            increment={(row.amount_wanted ?? 0) - row.amount_owned}
+          />
+        ))}
+      </div>
     </div>
   )
 }

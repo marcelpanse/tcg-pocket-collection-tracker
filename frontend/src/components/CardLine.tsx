@@ -39,7 +39,7 @@ export const CardLine: FC<Props> = ({ card_id, className, amount_owned, incremen
       {ownedAmount !== undefined && (
         <span className={cn('text-neutral-400 ml-1 mr-2', amount)}>
           ×{ownedAmount}
-          {increment && (
+          {increment !== undefined && (
             <>
               <span className="mx-1">→</span>×{Math.max(0, ownedAmount + increment)}
             </>
