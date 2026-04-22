@@ -170,10 +170,7 @@ function extractAbility($: CheerioAPI) {
     const abilitySection = $('div.card-text-ability')
     if (abilitySection.length) {
       const abilityName = abilitySection.find('p.card-text-ability-info').text().replace('Ability:', '').trim()
-      let abilityEffect = abilitySection.find('p.card-text-ability-effect').text().trim()
-
-      // Remove text within square brackets, similar to Python's re.sub(r'\[.*?\]', '')
-      abilityEffect = abilityEffect.replace(/\[.*?]/g, '').trim()
+      const abilityEffect = abilitySection.find('p.card-text-ability-effect').text().trim()
 
       if (Boolean(abilityName) !== Boolean(abilityEffect)) {
         throw new Error('Ability name and effect presence missmatch')

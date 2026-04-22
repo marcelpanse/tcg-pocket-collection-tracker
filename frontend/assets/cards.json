@@ -2784,7 +2784,7 @@
     ],
     "ability": {
       "name": "Volt Charge",
-      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to this Pokémon."
+      "effect": "Once during your turn, you may take a [L] Energy from your Energy Zone and attach it to this Pokémon."
     },
     "weakness": "fighting",
     "retreat": 2,
@@ -3760,7 +3760,7 @@
     ],
     "ability": {
       "name": "Psy Shadow",
-      "effect": "Once during your turn, you may take 1  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
+      "effect": "Once during your turn, you may take 1 [P] Energy from your Energy Zone and attach it to the [P] Pokémon in the Active Spot."
     },
     "weakness": "darkness",
     "retreat": 2,
@@ -8272,7 +8272,7 @@
     ],
     "ability": {
       "name": "Jungle Totem",
-      "effect": "Each  Energy attached to your  Pokémon provides 2  Energy. This effect doesn't stack."
+      "effect": "Each [G] Energy attached to your [G] Pokémon provides 2 [G] Energy. This effect doesn't stack."
     },
     "weakness": "fire",
     "retreat": 2,
@@ -8640,7 +8640,7 @@
     ],
     "ability": {
       "name": "Wash Out",
-      "effect": "As often as you like during your turn, you may move a  Energy from 1 of your Benched  Pokémon to your Active  Pokémon."
+      "effect": "As often as you like during your turn, you may move a [W] Energy from 1 of your Benched [W] Pokémon to your Active [W] Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -10057,7 +10057,7 @@
     ],
     "ability": {
       "name": "Jungle Totem",
-      "effect": "Each  Energy attached to your  Pokémon provides 2  Energy. This effect doesn't stack."
+      "effect": "Each [G] Energy attached to your [G] Pokémon provides 2 [G] Energy. This effect doesn't stack."
     },
     "weakness": "fire",
     "retreat": 2,
@@ -10117,7 +10117,7 @@
     ],
     "ability": {
       "name": "Wash Out",
-      "effect": "As often as you like during your turn, you may move a  Energy from 1 of your Benched  Pokémon to your Active  Pokémon."
+      "effect": "As often as you like during your turn, you may move a [W] Energy from 1 of your Benched [W] Pokémon to your Active [W] Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -11424,7 +11424,7 @@
     ],
     "ability": {
       "name": "Thick Fat",
-      "effect": "This Pokémon takes −20 damage from attacks from  or  Pokémon."
+      "effect": "This Pokémon takes −20 damage from attacks from [R] or [W] Pokémon."
     },
     "weakness": "metal",
     "retreat": 3,
@@ -11456,7 +11456,7 @@
     ],
     "ability": {
       "name": "Thick Fat",
-      "effect": "This Pokémon takes −30 damage from attacks from  or  Pokémon."
+      "effect": "This Pokémon takes −30 damage from attacks from [R] or [W] Pokémon."
     },
     "weakness": "metal",
     "retreat": 4,
@@ -13134,7 +13134,7 @@
     ],
     "ability": {
       "name": "Fighting Coach",
-      "effect": "Attacks used by your  Pokémon do +20 damage to your opponent's Active Pokémon."
+      "effect": "Attacks used by your [F] Pokémon do +20 damage to your opponent's Active Pokémon."
     },
     "weakness": "psychic",
     "retreat": 2,
@@ -13642,7 +13642,7 @@
     ],
     "ability": {
       "name": "Nightmare Aura",
-      "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
+      "effect": "Whenever you attach a [D] Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
     },
     "weakness": "grass",
     "retreat": 2,
@@ -15004,7 +15004,7 @@
     ],
     "ability": {
       "name": "Thick Fat",
-      "effect": "This Pokémon takes −30 damage from attacks from  or  Pokémon."
+      "effect": "This Pokémon takes −30 damage from attacks from [R] or [W] Pokémon."
     },
     "weakness": "metal",
     "retreat": 4,
@@ -15292,7 +15292,7 @@
     ],
     "ability": {
       "name": "Fighting Coach",
-      "effect": "Attacks used by your  Pokémon do +20 damage to your opponent's Active Pokémon."
+      "effect": "Attacks used by your [F] Pokémon do +20 damage to your opponent's Active Pokémon."
     },
     "weakness": "psychic",
     "retreat": 2,
@@ -15782,7 +15782,7 @@
     ],
     "ability": {
       "name": "Nightmare Aura",
-      "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
+      "effect": "Whenever you attach a [D] Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
     },
     "weakness": "grass",
     "retreat": 2,
@@ -16182,7 +16182,7 @@
     ],
     "ability": {
       "name": "Nightmare Aura",
-      "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
+      "effect": "Whenever you attach a [D] Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
     },
     "weakness": "grass",
     "retreat": 2,
@@ -16634,7 +16634,7 @@
     ],
     "ability": {
       "name": "Forest Breath",
-      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a  Energy from your Energy Zone and attach it to 1 of your  Pokémon."
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a [G] Energy from your Energy Zone and attach it to 1 of your [G] Pokémon."
     },
     "weakness": "fire",
     "retreat": 1,
@@ -16950,7 +16950,7 @@
     ],
     "ability": {
       "name": "Vigor Link",
-      "effect": "If you have Arceus or Arceus ex in play, attacks used by this Pokémon cost 1 less  Energy."
+      "effect": "If you have Arceus or Arceus ex in play, attacks used by this Pokémon cost 1 less [C] Energy."
     },
     "weakness": "metal",
     "retreat": 3,
@@ -18692,7 +18692,7 @@
     ],
     "ability": {
       "name": "Forest Breath",
-      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a  Energy from your Energy Zone and attach it to 1 of your  Pokémon."
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a [G] Energy from your Energy Zone and attach it to 1 of your [G] Pokémon."
     },
     "weakness": "fire",
     "retreat": 1,
@@ -18942,7 +18942,7 @@
     ],
     "ability": {
       "name": "Forest Breath",
-      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a  Energy from your Energy Zone and attach it to 1 of your  Pokémon."
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a [G] Energy from your Energy Zone and attach it to 1 of your [G] Pokémon."
     },
     "weakness": "fire",
     "retreat": 1,
@@ -20098,7 +20098,7 @@
     ],
     "ability": {
       "name": "Broken-Space Bellow",
-      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to this Pokémon. If you use this Ability, your turn ends."
+      "effect": "Once during your turn, you may take a [P] Energy from your Energy Zone and attach it to this Pokémon. If you use this Ability, your turn ends."
     },
     "weakness": "darkness",
     "retreat": 2,
@@ -21452,7 +21452,7 @@
     ],
     "ability": {
       "name": "Broken-Space Bellow",
-      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to this Pokémon. If you use this Ability, your turn ends."
+      "effect": "Once during your turn, you may take a [P] Energy from your Energy Zone and attach it to this Pokémon. If you use this Ability, your turn ends."
     },
     "weakness": "darkness",
     "retreat": 2,
@@ -21800,7 +21800,7 @@
     ],
     "ability": {
       "name": "Broken-Space Bellow",
-      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to this Pokémon. If you use this Ability, your turn ends."
+      "effect": "Once during your turn, you may take a [P] Energy from your Energy Zone and attach it to this Pokémon. If you use this Ability, your turn ends."
     },
     "weakness": "darkness",
     "retreat": 2,
@@ -23585,7 +23585,7 @@
     ],
     "ability": {
       "name": "Melodious Healing",
-      "effect": "Once during your turn, you may heal 30 damage from each of your  Pokémon."
+      "effect": "Once during your turn, you may heal 30 damage from each of your [W] Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -24493,7 +24493,7 @@
     ],
     "ability": {
       "name": "Flower Shield",
-      "effect": "Each of your Pokémon that has any  Energy attached recovers from all Special Conditions and can't be affected by any Special Conditions."
+      "effect": "Each of your Pokémon that has any [P] Energy attached recovers from all Special Conditions and can't be affected by any Special Conditions."
     },
     "weakness": "metal",
     "retreat": 1,
@@ -24693,7 +24693,7 @@
     ],
     "ability": {
       "name": "Psychic Connect",
-      "effect": "Once during your turn, you may move all  Energy from 1 of your Benched  Pokémon to your Active Pokémon."
+      "effect": "Once during your turn, you may move all [P] Energy from 1 of your Benched [P] Pokémon to your Active Pokémon."
     },
     "weakness": "darkness",
     "retreat": 1,
@@ -25177,7 +25177,7 @@
     ],
     "ability": {
       "name": "Offload Pass",
-      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, move all  Energy from this Pokémon to 1 of your Benched Pokémon."
+      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, move all [F] Energy from this Pokémon to 1 of your Benched Pokémon."
     },
     "weakness": "psychic",
     "retreat": 2,
@@ -26923,7 +26923,7 @@
     ],
     "ability": {
       "name": "Flower Shield",
-      "effect": "Each of your Pokémon that has any  Energy attached recovers from all Special Conditions and can't be affected by any Special Conditions."
+      "effect": "Each of your Pokémon that has any [P] Energy attached recovers from all Special Conditions and can't be affected by any Special Conditions."
     },
     "weakness": "metal",
     "retreat": 1,
@@ -27447,7 +27447,7 @@
     ],
     "ability": {
       "name": "Psychic Connect",
-      "effect": "Once during your turn, you may move all  Energy from 1 of your Benched  Pokémon to your Active Pokémon."
+      "effect": "Once during your turn, you may move all [P] Energy from 1 of your Benched [P] Pokémon to your Active Pokémon."
     },
     "weakness": "darkness",
     "retreat": 1,
@@ -27479,7 +27479,7 @@
     ],
     "ability": {
       "name": "Offload Pass",
-      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, move all  Energy from this Pokémon to 1 of your Benched Pokémon."
+      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, move all [F] Energy from this Pokémon to 1 of your Benched Pokémon."
     },
     "weakness": "psychic",
     "retreat": 2,
@@ -27935,7 +27935,7 @@
     ],
     "ability": {
       "name": "Psychic Connect",
-      "effect": "Once during your turn, you may move all  Energy from 1 of your Benched  Pokémon to your Active Pokémon."
+      "effect": "Once during your turn, you may move all [P] Energy from 1 of your Benched [P] Pokémon to your Active Pokémon."
     },
     "weakness": "darkness",
     "retreat": 1,
@@ -27967,7 +27967,7 @@
     ],
     "ability": {
       "name": "Offload Pass",
-      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, move all  Energy from this Pokémon to 1 of your Benched Pokémon."
+      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, move all [F] Energy from this Pokémon to 1 of your Benched Pokémon."
     },
     "weakness": "psychic",
     "retreat": 2,
@@ -28909,7 +28909,7 @@
     ],
     "ability": {
       "name": "Psychic Connect",
-      "effect": "Once during your turn, you may move all  Energy from 1 of your Benched  Pokémon to your Active Pokémon."
+      "effect": "Once during your turn, you may move all [P] Energy from 1 of your Benched [P] Pokémon to your Active Pokémon."
     },
     "weakness": "darkness",
     "retreat": 1,
@@ -29549,7 +29549,7 @@
     ],
     "ability": {
       "name": "Thunderclap Flash",
-      "effect": "At the end of your first turn, take a  Energy from your Energy Zone and attach it to this Pokémon."
+      "effect": "At the end of your first turn, take a [L] Energy from your Energy Zone and attach it to this Pokémon."
     },
     "weakness": "fighting",
     "retreat": 1,
@@ -30555,7 +30555,7 @@
     ],
     "ability": {
       "name": "Guard Dog Visage",
-      "effect": "As long as this Pokémon is in the Active Spot, attacks used by your opponent's Active Pokémon cost 1  more."
+      "effect": "As long as this Pokémon is in the Active Spot, attacks used by your opponent's Active Pokémon cost 1 [C] more."
     },
     "weakness": "fighting",
     "retreat": 2,
@@ -32137,7 +32137,7 @@
     ],
     "ability": {
       "name": "Combust",
-      "effect": "Once during your turn, you may attach a  Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
+      "effect": "Once during your turn, you may attach a [R] Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
     },
     "weakness": "water",
     "retreat": 2,
@@ -34103,7 +34103,7 @@
     ],
     "ability": {
       "name": "Combust",
-      "effect": "Once during your turn, you may attach a  Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
+      "effect": "Once during your turn, you may attach a [R] Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
     },
     "weakness": "water",
     "retreat": 2,
@@ -34339,7 +34339,7 @@
     ],
     "ability": {
       "name": "Combust",
-      "effect": "Once during your turn, you may attach a  Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
+      "effect": "Once during your turn, you may attach a [R] Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
     },
     "weakness": "water",
     "retreat": 2,
@@ -34697,7 +34697,7 @@
     ],
     "ability": {
       "name": "Psy Shadow",
-      "effect": "Once during your turn, you may take 1  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
+      "effect": "Once during your turn, you may take 1 [P] Energy from your Energy Zone and attach it to the [P] Pokémon in the Active Spot."
     },
     "weakness": "darkness",
     "retreat": 2,
@@ -35590,7 +35590,7 @@
     ],
     "ability": {
       "name": "En-fruits-iastic",
-      "effect": "If this Pokémon has a Pokémon Tool attached, attacks used by this Pokémon cost 1 less  Energy."
+      "effect": "If this Pokémon has a Pokémon Tool attached, attacks used by this Pokémon cost 1 less [G] Energy."
     },
     "weakness": "fire",
     "retreat": 1,
@@ -36358,7 +36358,7 @@
     ],
     "ability": {
       "name": "Thick Fat",
-      "effect": "This Pokémon takes −30 damage from attacks from  or  Pokémon."
+      "effect": "This Pokémon takes −30 damage from attacks from [R] or [W] Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -38318,7 +38318,7 @@
     ],
     "ability": {
       "name": "Energy Plunder",
-      "effect": "Once during your turn, you may move all  Energy from each of your Pokémon to this Pokémon."
+      "effect": "Once during your turn, you may move all [D] Energy from each of your Pokémon to this Pokémon."
     },
     "weakness": "grass",
     "retreat": 4,
@@ -39955,7 +39955,7 @@
     ],
     "ability": {
       "name": "Energy Plunder",
-      "effect": "Once during your turn, you may move all  Energy from each of your Pokémon to this Pokémon."
+      "effect": "Once during your turn, you may move all [D] Energy from each of your Pokémon to this Pokémon."
     },
     "weakness": "grass",
     "retreat": 4,
@@ -41049,7 +41049,7 @@
     ],
     "ability": {
       "name": "Volt Charge",
-      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to this Pokémon."
+      "effect": "Once during your turn, you may take a [L] Energy from your Energy Zone and attach it to this Pokémon."
     },
     "weakness": "fighting",
     "retreat": 2,
@@ -41473,7 +41473,7 @@
     ],
     "ability": {
       "name": "Forest Breath",
-      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a  Energy from your Energy Zone and attach it to 1 of your  Pokémon."
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a [G] Energy from your Energy Zone and attach it to 1 of your [G] Pokémon."
     },
     "weakness": "fire",
     "retreat": 1,
@@ -42329,7 +42329,7 @@
     ],
     "ability": {
       "name": "Healing Ripples",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may heal 60 damage from 1 of your  Pokémon."
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may heal 60 damage from 1 of your [W] Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -43736,7 +43736,7 @@
     ],
     "ability": {
       "name": "Healing Ripples",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may heal 60 damage from 1 of your  Pokémon."
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may heal 60 damage from 1 of your [W] Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -45411,7 +45411,7 @@
     ],
     "ability": {
       "name": "En-fruits-iastic",
-      "effect": "If this Pokémon has a Pokémon Tool attached, attacks used by this Pokémon cost 1 less  Energy."
+      "effect": "If this Pokémon has a Pokémon Tool attached, attacks used by this Pokémon cost 1 less [G] Energy."
     },
     "weakness": "fire",
     "retreat": 1,
@@ -45443,7 +45443,7 @@
     ],
     "ability": {
       "name": "En-fruits-iastic",
-      "effect": "If this Pokémon has a Pokémon Tool attached, attacks used by this Pokémon cost 1 less  Energy."
+      "effect": "If this Pokémon has a Pokémon Tool attached, attacks used by this Pokémon cost 1 less [G] Energy."
     },
     "weakness": "fire",
     "retreat": 1,
@@ -45531,7 +45531,7 @@
     ],
     "ability": {
       "name": "Forest Breath",
-      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a  Energy from your Energy Zone and attach it to 1 of your  Pokémon."
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may take a [G] Energy from your Energy Zone and attach it to 1 of your [G] Pokémon."
     },
     "weakness": "fire",
     "retreat": 1,
@@ -45739,7 +45739,7 @@
     ],
     "ability": {
       "name": "Jungle Totem",
-      "effect": "Each  Energy attached to your  Pokémon provides 2  Energy. This effect doesn't stack."
+      "effect": "Each [G] Energy attached to your [G] Pokémon provides 2 [G] Energy. This effect doesn't stack."
     },
     "weakness": "fire",
     "retreat": 2,
@@ -45771,7 +45771,7 @@
     ],
     "ability": {
       "name": "Jungle Totem",
-      "effect": "Each  Energy attached to your  Pokémon provides 2  Energy. This effect doesn't stack."
+      "effect": "Each [G] Energy attached to your [G] Pokémon provides 2 [G] Energy. This effect doesn't stack."
     },
     "weakness": "fire",
     "retreat": 2,
@@ -46611,7 +46611,7 @@
     ],
     "ability": {
       "name": "Combust",
-      "effect": "Once during your turn, you may attach a  Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
+      "effect": "Once during your turn, you may attach a [R] Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
     },
     "weakness": "water",
     "retreat": 2,
@@ -47565,7 +47565,7 @@
     ],
     "ability": {
       "name": "Wash Out",
-      "effect": "As often as you like during your turn, you may move a  Energy from 1 of your Benched  Pokémon to your Active  Pokémon."
+      "effect": "As often as you like during your turn, you may move a [W] Energy from 1 of your Benched [W] Pokémon to your Active [W] Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -47597,7 +47597,7 @@
     ],
     "ability": {
       "name": "Wash Out",
-      "effect": "As often as you like during your turn, you may move a  Energy from 1 of your Benched  Pokémon to your Active  Pokémon."
+      "effect": "As often as you like during your turn, you may move a [W] Energy from 1 of your Benched [W] Pokémon to your Active [W] Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -48619,7 +48619,7 @@
     ],
     "ability": {
       "name": "Volt Charge",
-      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to this Pokémon."
+      "effect": "Once during your turn, you may take a [L] Energy from your Energy Zone and attach it to this Pokémon."
     },
     "weakness": "fighting",
     "retreat": 2,
@@ -48651,7 +48651,7 @@
     ],
     "ability": {
       "name": "Volt Charge",
-      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to this Pokémon."
+      "effect": "Once during your turn, you may take a [L] Energy from your Energy Zone and attach it to this Pokémon."
     },
     "weakness": "fighting",
     "retreat": 2,
@@ -49039,7 +49039,7 @@
     ],
     "ability": {
       "name": "Thunderclap Flash",
-      "effect": "At the end of your first turn, take a  Energy from your Energy Zone and attach it to this Pokémon."
+      "effect": "At the end of your first turn, take a [L] Energy from your Energy Zone and attach it to this Pokémon."
     },
     "weakness": "fighting",
     "retreat": 1,
@@ -49071,7 +49071,7 @@
     ],
     "ability": {
       "name": "Thunderclap Flash",
-      "effect": "At the end of your first turn, take a  Energy from your Energy Zone and attach it to this Pokémon."
+      "effect": "At the end of your first turn, take a [L] Energy from your Energy Zone and attach it to this Pokémon."
     },
     "weakness": "fighting",
     "retreat": 1,
@@ -49599,7 +49599,7 @@
     ],
     "ability": {
       "name": "Psy Shadow",
-      "effect": "Once during your turn, you may take 1  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
+      "effect": "Once during your turn, you may take 1 [P] Energy from your Energy Zone and attach it to the [P] Pokémon in the Active Spot."
     },
     "weakness": "darkness",
     "retreat": 2,
@@ -49631,7 +49631,7 @@
     ],
     "ability": {
       "name": "Psy Shadow",
-      "effect": "Once during your turn, you may take 1  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
+      "effect": "Once during your turn, you may take 1 [P] Energy from your Energy Zone and attach it to the [P] Pokémon in the Active Spot."
     },
     "weakness": "darkness",
     "retreat": 2,
@@ -49727,7 +49727,7 @@
     ],
     "ability": {
       "name": "Broken-Space Bellow",
-      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to this Pokémon. If you use this Ability, your turn ends."
+      "effect": "Once during your turn, you may take a [P] Energy from your Energy Zone and attach it to this Pokémon. If you use this Ability, your turn ends."
     },
     "weakness": "darkness",
     "retreat": 2,
@@ -50071,7 +50071,7 @@
     ],
     "ability": {
       "name": "Psychic Connect",
-      "effect": "Once during your turn, you may move all  Energy from 1 of your Benched  Pokémon to your Active Pokémon."
+      "effect": "Once during your turn, you may move all [P] Energy from 1 of your Benched [P] Pokémon to your Active Pokémon."
     },
     "weakness": "darkness",
     "retreat": 1,
@@ -50869,7 +50869,7 @@
     ],
     "ability": {
       "name": "Fighting Coach",
-      "effect": "Attacks used by your  Pokémon do +20 damage to your opponent's Active Pokémon."
+      "effect": "Attacks used by your [F] Pokémon do +20 damage to your opponent's Active Pokémon."
     },
     "weakness": "psychic",
     "retreat": 2,
@@ -50901,7 +50901,7 @@
     ],
     "ability": {
       "name": "Fighting Coach",
-      "effect": "Attacks used by your  Pokémon do +20 damage to your opponent's Active Pokémon."
+      "effect": "Attacks used by your [F] Pokémon do +20 damage to your opponent's Active Pokémon."
     },
     "weakness": "psychic",
     "retreat": 2,
@@ -51185,7 +51185,7 @@
     ],
     "ability": {
       "name": "Offload Pass",
-      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, move all  Energy from this Pokémon to 1 of your Benched Pokémon."
+      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, move all [F] Energy from this Pokémon to 1 of your Benched Pokémon."
     },
     "weakness": "psychic",
     "retreat": 2,
@@ -51817,7 +51817,7 @@
     ],
     "ability": {
       "name": "Nightmare Aura",
-      "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
+      "effect": "Whenever you attach a [D] Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
     },
     "weakness": "grass",
     "retreat": 2,
@@ -54789,7 +54789,7 @@
     ],
     "ability": {
       "name": "Psy Shadow",
-      "effect": "Once during your turn, you may take 1  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
+      "effect": "Once during your turn, you may take 1 [P] Energy from your Energy Zone and attach it to the [P] Pokémon in the Active Spot."
     },
     "weakness": "darkness",
     "retreat": 2,
@@ -55103,7 +55103,7 @@
     ],
     "ability": {
       "name": "Psychic Connect",
-      "effect": "Once during your turn, you may move all  Energy from 1 of your Benched  Pokémon to your Active Pokémon."
+      "effect": "Once during your turn, you may move all [P] Energy from 1 of your Benched [P] Pokémon to your Active Pokémon."
     },
     "weakness": "darkness",
     "retreat": 1,
@@ -55390,7 +55390,7 @@
     ],
     "ability": {
       "name": "Broken-Space Bellow",
-      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to this Pokémon. If you use this Ability, your turn ends."
+      "effect": "Once during your turn, you may take a [P] Energy from your Energy Zone and attach it to this Pokémon. If you use this Ability, your turn ends."
     },
     "weakness": "darkness",
     "retreat": 2,
@@ -55422,7 +55422,7 @@
     ],
     "ability": {
       "name": "Nightmare Aura",
-      "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
+      "effect": "Whenever you attach a [D] Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
     },
     "weakness": "grass",
     "retreat": 2,
@@ -55953,7 +55953,7 @@
     ],
     "ability": {
       "name": "Toughness Aroma",
-      "effect": "Each of your  Pokémon gets +20 HP."
+      "effect": "Each of your [G] Pokémon gets +20 HP."
     },
     "weakness": "fire",
     "retreat": 1,
@@ -57393,7 +57393,7 @@
     ],
     "ability": {
       "name": "Bouncy Body",
-      "effect": "If this Pokémon is in the Active Spot and is damaged by an attack from your opponent's Pokémon, take a  Energy from your Energy Zone and attach it to 1 of your Benched Pokémon."
+      "effect": "If this Pokémon is in the Active Spot and is damaged by an attack from your opponent's Pokémon, take a [W] Energy from your Energy Zone and attach it to 1 of your Benched Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -57509,7 +57509,7 @@
     ],
     "ability": {
       "name": "Shifting Stream",
-      "effect": "Once during your turn, you may switch your Active  Pokémon with 1 of your Benched Pokémon."
+      "effect": "Once during your turn, you may switch your Active [W] Pokémon with 1 of your Benched Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -59885,7 +59885,7 @@
     ],
     "ability": {
       "name": "Roar in Unison",
-      "effect": "Once during your turn, you may take 2  Energy from your Energy Zone and attach it to this Pokémon. If you do, do 30 damage to this Pokémon."
+      "effect": "Once during your turn, you may take 2 [D] Energy from your Energy Zone and attach it to this Pokémon. If you do, do 30 damage to this Pokémon."
     },
     "weakness": "grass",
     "retreat": 2,
@@ -60313,7 +60313,7 @@
     ],
     "ability": {
       "name": "Cursed Metal",
-      "effect": "Attacks used by your  Pokémon and  Pokémon do +30 damage to your opponent's Active Pokémon."
+      "effect": "Attacks used by your [P] Pokémon and [M] Pokémon do +30 damage to your opponent's Active Pokémon."
     },
     "weakness": "fire",
     "retreat": 2,
@@ -60463,7 +60463,7 @@
     ],
     "ability": {
       "name": "Sticky Membrane",
-      "effect": "As long as this Pokémon is in the Active Spot, attacks used by your opponent's Active Pokémon cost 1  more."
+      "effect": "As long as this Pokémon is in the Active Spot, attacks used by your opponent's Active Pokémon cost 1 [C] more."
     },
     "weakness": "none",
     "retreat": 1,
@@ -62021,7 +62021,7 @@
     ],
     "ability": {
       "name": "Bouncy Body",
-      "effect": "If this Pokémon is in the Active Spot and is damaged by an attack from your opponent's Pokémon, take a  Energy from your Energy Zone and attach it to 1 of your Benched Pokémon."
+      "effect": "If this Pokémon is in the Active Spot and is damaged by an attack from your opponent's Pokémon, take a [W] Energy from your Energy Zone and attach it to 1 of your Benched Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -62337,7 +62337,7 @@
     ],
     "ability": {
       "name": "Roar in Unison",
-      "effect": "Once during your turn, you may take 2  Energy from your Energy Zone and attach it to this Pokémon. If you do, do 30 damage to this Pokémon."
+      "effect": "Once during your turn, you may take 2 [D] Energy from your Energy Zone and attach it to this Pokémon. If you do, do 30 damage to this Pokémon."
     },
     "weakness": "grass",
     "retreat": 2,
@@ -62397,7 +62397,7 @@
     ],
     "ability": {
       "name": "Sticky Membrane",
-      "effect": "As long as this Pokémon is in the Active Spot, attacks used by your opponent's Active Pokémon cost 1  more."
+      "effect": "As long as this Pokémon is in the Active Spot, attacks used by your opponent's Active Pokémon cost 1 [C] more."
     },
     "weakness": "none",
     "retreat": 1,
@@ -62657,7 +62657,7 @@
     ],
     "ability": {
       "name": "Shifting Stream",
-      "effect": "Once during your turn, you may switch your Active  Pokémon with 1 of your Benched Pokémon."
+      "effect": "Once during your turn, you may switch your Active [W] Pokémon with 1 of your Benched Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -63181,7 +63181,7 @@
     ],
     "ability": {
       "name": "Shifting Stream",
-      "effect": "Once during your turn, you may switch your Active  Pokémon with 1 of your Benched Pokémon."
+      "effect": "Once during your turn, you may switch your Active [W] Pokémon with 1 of your Benched Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -64027,7 +64027,7 @@
     ],
     "ability": {
       "name": "Thunderclap Flash",
-      "effect": "At the end of your first turn, take a  Energy from your Energy Zone and attach it to this Pokémon."
+      "effect": "At the end of your first turn, take a [L] Energy from your Energy Zone and attach it to this Pokémon."
     },
     "weakness": "fighting",
     "retreat": 1,
@@ -64625,7 +64625,7 @@
     ],
     "ability": {
       "name": "Offload Pass",
-      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, move all  Energy from this Pokémon to 1 of your Benched Pokémon."
+      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, move all [F] Energy from this Pokémon to 1 of your Benched Pokémon."
     },
     "weakness": "psychic",
     "retreat": 2,
@@ -64779,7 +64779,7 @@
     ],
     "ability": {
       "name": "Toughness Aroma",
-      "effect": "Each of your  Pokémon gets +20 HP."
+      "effect": "Each of your [G] Pokémon gets +20 HP."
     },
     "weakness": "fire",
     "retreat": 1,
@@ -65178,7 +65178,7 @@
     ],
     "ability": {
       "name": "Ignition",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may take a  Energy from your Energy Zone and attach it to your Active  Pokémon."
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may take a [R] Energy from your Energy Zone and attach it to your Active [R] Pokémon."
     },
     "weakness": "water",
     "retreat": 2,
@@ -65802,7 +65802,7 @@
     ],
     "ability": {
       "name": "Infinite Increase",
-      "effect": "This Pokémon gets +30 HP for each  Energy attached to it."
+      "effect": "This Pokémon gets +30 HP for each [P] Energy attached to it."
     },
     "weakness": "darkness",
     "retreat": 3,
@@ -66858,7 +66858,7 @@
     ],
     "ability": {
       "name": "Infinite Increase",
-      "effect": "This Pokémon gets +30 HP for each  Energy attached to it."
+      "effect": "This Pokémon gets +30 HP for each [P] Energy attached to it."
     },
     "weakness": "darkness",
     "retreat": 3,
@@ -67614,7 +67614,7 @@
     ],
     "ability": {
       "name": "Psychic Connect",
-      "effect": "Once during your turn, you may move all  Energy from 1 of your Benched  Pokémon to your Active Pokémon."
+      "effect": "Once during your turn, you may move all [P] Energy from 1 of your Benched [P] Pokémon to your Active Pokémon."
     },
     "weakness": "darkness",
     "retreat": 1,
@@ -67712,7 +67712,7 @@
     ],
     "ability": {
       "name": "Cursed Metal",
-      "effect": "Attacks used by your  Pokémon and  Pokémon do +30 damage to your opponent's Active Pokémon."
+      "effect": "Attacks used by your [P] Pokémon and [M] Pokémon do +30 damage to your opponent's Active Pokémon."
     },
     "weakness": "fire",
     "retreat": 2,
@@ -68126,7 +68126,7 @@
         "cost": ["grass", "grass"],
         "name": "Ground Beat",
         "damage": "40+",
-        "effect": "If your opponent has gotten exactly 1 points, this attack does 40 more damage."
+        "effect": "If your opponent has gotten exactly 1 point, this attack does 40 more damage."
       }
     ],
     "weakness": "fire",
@@ -69713,7 +69713,7 @@
     ],
     "ability": {
       "name": "Strange Singing",
-      "effect": "At the beginning of your turn, if this Pokémon is in the Active Spot, put a random  Pokémon from your deck into your hand."
+      "effect": "At the beginning of your turn, if this Pokémon is in the Active Spot, put a random [P] Pokémon from your deck into your hand."
     },
     "weakness": "darkness",
     "retreat": 1,
@@ -72190,7 +72190,7 @@
         "cost": ["grass", "grass"],
         "name": "Ground Beat",
         "damage": "40+",
-        "effect": "If your opponent has gotten exactly 1 points, this attack does 40 more damage."
+        "effect": "If your opponent has gotten exactly 1 point, this attack does 40 more damage."
       }
     ],
     "weakness": "fire",
@@ -74071,7 +74071,7 @@
     ],
     "ability": {
       "name": "Combust",
-      "effect": "Once during your turn, you may attach a  Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
+      "effect": "Once during your turn, you may attach a [R] Energy from your discard pile to this Pokémon. If you do, do 20 damage to this Pokémon."
     },
     "weakness": "water",
     "retreat": 2,
@@ -74311,7 +74311,7 @@
     ],
     "ability": {
       "name": "Strange Singing",
-      "effect": "At the beginning of your turn, if this Pokémon is in the Active Spot, put a random  Pokémon from your deck into your hand."
+      "effect": "At the beginning of your turn, if this Pokémon is in the Active Spot, put a random [P] Pokémon from your deck into your hand."
     },
     "weakness": "darkness",
     "retreat": 1,
@@ -74852,7 +74852,7 @@
     ],
     "ability": {
       "name": "Passionate Voice",
-      "effect": "Once during your turn, you may discard 1  Energy from this Pokémon in order to use this Ability. During this turn, attacks used by your  Pokémon do +50 damage to your opponent's Active Pokémon."
+      "effect": "Once during your turn, you may discard 1 [R] Energy from this Pokémon in order to use this Ability. During this turn, attacks used by your [R] Pokémon do +50 damage to your opponent's Active Pokémon."
     },
     "weakness": "water",
     "retreat": 3,
@@ -75368,7 +75368,7 @@
     ],
     "ability": {
       "name": "Ice Maker",
-      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
+      "effect": "Once during your turn, you may take a [W] Energy from your Energy Zone and attach it to the [W] Pokémon in the Active Spot."
     },
     "weakness": "metal",
     "retreat": 3,
@@ -77984,7 +77984,7 @@
     ],
     "ability": {
       "name": "Ice Maker",
-      "effect": "Once during your turn, you may take a  Energy from your Energy Zone and attach it to the  Pokémon in the Active Spot."
+      "effect": "Once during your turn, you may take a [W] Energy from your Energy Zone and attach it to the [W] Pokémon in the Active Spot."
     },
     "weakness": "metal",
     "retreat": 3,
@@ -78235,7 +78235,7 @@
     ],
     "ability": {
       "name": "Ignition",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may take a  Energy from your Energy Zone and attach it to your Active  Pokémon."
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may take a [R] Energy from your Energy Zone and attach it to your Active [R] Pokémon."
     },
     "weakness": "water",
     "retreat": 2,
@@ -79419,7 +79419,7 @@
     ],
     "ability": {
       "name": "Metal Transport",
-      "effect": "Once during your turn, you may switch your Active  Pokémon with 1 of your Benched Pokémon."
+      "effect": "Once during your turn, you may switch your Active [M] Pokémon with 1 of your Benched Pokémon."
     },
     "weakness": "fire",
     "retreat": 3,
@@ -80074,7 +80074,7 @@
     ],
     "ability": {
       "name": "Metal Transport",
-      "effect": "Once during your turn, you may switch your Active  Pokémon with 1 of your Benched Pokémon."
+      "effect": "Once during your turn, you may switch your Active [M] Pokémon with 1 of your Benched Pokémon."
     },
     "weakness": "fire",
     "retreat": 3,
@@ -80572,7 +80572,7 @@
     ],
     "ability": {
       "name": "Ignition",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may take a  Energy from your Energy Zone and attach it to your Active  Pokémon."
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may take a [R] Energy from your Energy Zone and attach it to your Active [R] Pokémon."
     },
     "weakness": "water",
     "retreat": 2,
@@ -82285,7 +82285,7 @@
     ],
     "ability": {
       "name": "Lunar Plumage",
-      "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, heal 20 damage from this Pokémon."
+      "effect": "Whenever you attach a [P] Energy from your Energy Zone to this Pokémon, heal 20 damage from this Pokémon."
     },
     "weakness": "darkness",
     "retreat": 2,
@@ -82429,7 +82429,7 @@
     ],
     "ability": {
       "name": "Nightmare Aura",
-      "effect": "Whenever you attach a  Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
+      "effect": "Whenever you attach a [D] Energy from your Energy Zone to this Pokémon, do 20 damage to your opponent's Active Pokémon."
     },
     "weakness": "grass",
     "retreat": 2,
@@ -82577,7 +82577,7 @@
     ],
     "ability": {
       "name": "Defensive Whirlwind",
-      "effect": "This Pokémon takes −30 damage from attacks from  Pokémon."
+      "effect": "This Pokémon takes −30 damage from attacks from [F] Pokémon."
     },
     "weakness": "lightning",
     "retreat": 1,
@@ -83347,7 +83347,7 @@
     ],
     "ability": {
       "name": "Thunderclap Flash",
-      "effect": "At the end of your first turn, take a  Energy from your Energy Zone and attach it to this Pokémon."
+      "effect": "At the end of your first turn, take a [L] Energy from your Energy Zone and attach it to this Pokémon."
     },
     "weakness": "fighting",
     "retreat": 1,
@@ -84203,7 +84203,7 @@
     ],
     "ability": {
       "name": "Healing Ripples",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may heal 60 damage from 1 of your  Pokémon."
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may heal 60 damage from 1 of your [W] Pokémon."
     },
     "weakness": "lightning",
     "retreat": 2,
@@ -85151,7 +85151,7 @@
     ],
     "ability": {
       "name": "Ignition",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may take a  Energy from your Energy Zone and attach it to your Active  Pokémon."
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may take a [R] Energy from your Energy Zone and attach it to your Active [R] Pokémon."
     },
     "weakness": "water",
     "retreat": 2,
