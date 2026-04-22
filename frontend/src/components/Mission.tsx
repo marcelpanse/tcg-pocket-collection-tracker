@@ -1,6 +1,6 @@
 import i18n from 'i18next'
 import { Check, CircleCheck, CircleHelp, X } from 'lucide-react'
-import type { FC } from 'react'
+import { type FC, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import FancyCard from '@/components/FancyCard.tsx'
@@ -85,16 +85,31 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
 
   const missionKey = `${mission.expansionId}_${mission.name}`
   const isManuallyCompleted = account?.completed_missions?.includes(missionKey) || false
+  const headerRef = useRef<HTMLDivElement>(null)
 
-  let cardsPerRow = 5
-  let cardHeight = Math.min(width, 890) / 5 + 120
-  if (width > 600 && width < 800) {
+  // Dynamic sizing: scales from Mobile S (320px) to 4K (2560px)
+  const CARD_ASPECT_RATIO = 88 / 63 // standard TCG card portrait ratio (~1.397)
+  const CARD_NAME_HEIGHT = 28 // 12px text + pt-2 + breathing room
+  const ROW_BUFFER = 16 // gap between card rows
+
+  const MAX_CONTAINER_WIDTH = 900
+  const effectiveWidth = Math.min(width, MAX_CONTAINER_WIDTH)
+
+  let cardsPerRow: number
+  if (width >= 1024) {
+    cardsPerRow = 5
+  } else if (width >= 640) {
     cardsPerRow = 4
-    cardHeight = width / 3 + 50
-  } else if (width <= 600) {
+  } else if (width >= 400) {
     cardsPerRow = 3
-    cardHeight = width / 3 + 100
+  } else {
+    cardsPerRow = 2
   }
+
+  const GAP_X = 12 // tailwind gap-x-3
+  const MAX_CARD_WIDTH = width >= 768 ? 160 : 128 // matches max-w-32 / md:max-w-40
+  const cardWidth = Math.min((effectiveWidth - GAP_X * (cardsPerRow - 1)) / cardsPerRow, MAX_CARD_WIDTH)
+  const cardHeight = cardWidth * CARD_ASPECT_RATIO + CARD_NAME_HEIGHT + ROW_BUFFER
 
   const missionGridRows = () => {
     let isMissionCompleted = true
@@ -154,12 +169,17 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
     updateAccount(mergedAccount)
   }
 
-  const missionHeight = cardHeight * missionGridRows().length + 48
+  const missionHeight = cardHeight * missionGridRows().length + (headerRef.current?.offsetHeight ?? 72)
+  const missionGap = Math.max((headerRef.current?.offsetHeight ?? 72) * 0.2, 12)
   return (
-    <div className="relative w-full">
+    <div className="relative w-full" style={{ marginBottom: `${missionGap}px` }}>
       <div style={{ height: `${missionHeight}px` }} className="relative w-full">
         {missionGridRows().map((gridRow, i) => (
-          <div key={i} style={{ height: `${cardHeight}px`, transform: `translateY(${cardHeight * i + 72}px)` }} className="absolute top-0 left-0 w-full">
+          <div
+            key={i}
+            style={{ height: `${cardHeight}px`, transform: `translateY(${cardHeight * i + (headerRef.current?.offsetHeight ?? 72)}px)` }}
+            className="absolute top-0 left-0 w-full"
+          >
             <div className="flex justify-start gap-x-3">
               {gridRow.map((card, j) => {
                 const foundCard = getCardByInternalId(card.id)
@@ -193,52 +213,61 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
       </div>
 
       {/* note header is absolute and has to be below table for the tooltip to work */}
-      <div key={'header'} className="absolute top-0 left-0 w-full">
-        <h2 className="flex items-center gap-x-4 mx-auto w-full max-w-[900px] scroll-m-20 border-b-2 border-slate-600 pb-2 font-semibold text-md sm:text-lg md:text-2xl tracking-tight transition-colors">
-          {mission.name}
-          {(() => {
-            const allCards = missionGridRows().flat()
-            const owned = allCards.filter((c) => c.owned).length
-            const total = allCards.length
-            return (
-              <span
-                className={`text-sm font-normal px-2 py-0.5 rounded-full ${owned === total ? 'bg-green-700 text-white' : 'bg-neutral-700 text-neutral-300'}`}
-              >
-                {owned}/{total}
-              </span>
-            )
-          })()}
-          <div className="flex flex-wrap gap-1">
-            {parseRewards(mission.reward).map((item, idx) => {
-              const cfg = rewardConfig[item.type]
-              return (
-                <span key={idx} className={`inline-flex items-center gap-1 text-xs font-normal text-white px-2 py-0.5 rounded-full ${cfg.bg}`}>
-                  {cfg.emoji} {cfg.short(item.label)}
-                  {item.qty && <span className="font-semibold">{item.qty}</span>}
-                </span>
-              )
-            })}
+      <div ref={headerRef} key={'header'} className="absolute top-0 left-0 w-full">
+        <h2 className="flex items-start gap-x-2 mx-auto w-full max-w-[900px] scroll-m-20 border-b-2 border-slate-600 pb-2 mb-4 font-semibold text-md sm:text-lg md:text-2xl tracking-tight transition-colors">
+          <div className="flex flex-col gap-y-2 flex-1 min-w-0">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+              {mission.name}
+              {(() => {
+                const allCards = missionGridRows().flat()
+                const owned = allCards.filter((c) => c.owned).length
+                const total = allCards.length
+                return (
+                  <span
+                    className={`text-sm font-normal px-2 py-0.5 rounded-full ${owned === total ? 'bg-green-700 text-white' : 'bg-neutral-700 text-neutral-300'}`}
+                  >
+                    {owned}/{total}
+                  </span>
+                )
+              })()}
+            </div>
+            <div className="flex flex-wrap gap-1">
+              {parseRewards(mission.reward).map((item, idx) => {
+                const cfg = rewardConfig[item.type]
+                return (
+                  <span
+                    key={idx}
+                    className={`inline-flex items-center gap-1 text-xs font-normal text-white px-2 py-0.5 rounded-full whitespace-nowrap ${cfg.bg}`}
+                  >
+                    {cfg.emoji} {cfg.short(item.label)}
+                    {item.qty && <span className="font-semibold">{item.qty}</span>}
+                  </span>
+                )
+              })}
+            </div>
           </div>
-          <Tooltip id={`probability${mission.name}`} style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 16 }} clickable={true} />
-          <CircleHelp
-            className="h-6 w-6"
-            data-tooltip-id={`probability${mission.name}`}
-            data-tooltip-html={
-              mission.completed
-                ? 'Completed!'
-                : pullRateForSpecificMission(mission, missionGridRows())
-                    .filter(([packName, probability]) => packName !== 'everypack' && probability > 0)
-                    .map(([packName, probability]) => `${t(packName)}: ${probability.toFixed(2)}%`)
-                    .join('<br/>')
-            }
-          />
-          <Tooltip id={`manualComplete${mission.name}`} style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 16 }} clickable={true} />
-          <CircleCheck
-            className={`h-6 w-6 cursor-pointer ${isManuallyCompleted ? 'text-green-500' : 'text-white'}`}
-            data-tooltip-id={`manualComplete${mission.name}`}
-            data-tooltip-html={isManuallyCompleted ? tCollection('missionDetail.manuallyMarkedComplete') : tCollection('missionDetail.manuallyMarkComplete')}
-            onClick={handleManualComplete}
-          />
+          <div className="flex items-center gap-x-2 flex-shrink-0 ml-auto pt-0.5">
+            <Tooltip id={`probability${mission.name}`} style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 16 }} clickable={true} />
+            <CircleHelp
+              className="h-6 w-6"
+              data-tooltip-id={`probability${mission.name}`}
+              data-tooltip-html={
+                mission.completed
+                  ? 'Completed!'
+                  : pullRateForSpecificMission(mission, missionGridRows())
+                      .filter(([packName, probability]) => packName !== 'everypack' && probability > 0)
+                      .map(([packName, probability]) => `${t(packName)}: ${probability.toFixed(2)}%`)
+                      .join('<br/>')
+              }
+            />
+            <Tooltip id={`manualComplete${mission.name}`} style={{ maxWidth: '300px', whiteSpace: 'normal', fontSize: 16 }} clickable={true} />
+            <CircleCheck
+              className={`h-6 w-6 cursor-pointer ${isManuallyCompleted ? 'text-green-500' : 'text-white'}`}
+              data-tooltip-id={`manualComplete${mission.name}`}
+              data-tooltip-html={isManuallyCompleted ? tCollection('missionDetail.manuallyMarkedComplete') : tCollection('missionDetail.manuallyMarkComplete')}
+              onClick={handleManualComplete}
+            />
+          </div>
         </h2>
       </div>
     </div>
