@@ -25,7 +25,12 @@ function TradeSettings() {
   const updateAccountTradingFieldsMutation = useUpdateAccountTradingFields()
 
   const { data: ownedCards } = useCollection()
-  const overridenCards = ownedCards !== undefined ? [...ownedCards.values()].filter((row) => row.amount_wanted !== null) : []
+  const overridenCards = (ownedCards !== undefined ? [...ownedCards.values()].filter((row) => row.amount_wanted !== null) : []).toSorted((a, b) => {
+    if ((a.internal_id & 63) !== (b.internal_id & 63)) {
+      return (a.internal_id & 63) - (b.internal_id & 63)
+    }
+    return b.internal_id - a.internal_id
+  })
 
   const formSchema = z.object({
     is_active_trading: z.boolean(),
@@ -193,11 +198,13 @@ function TradeSettings() {
           </Button>
         </form>
       </Form>
-      <SocialShareButtons className="mt-4 mx-auto w-fit" />
       <div className="rounded-md border-1 border-neutral-700 space-y-2 p-4 mx-auto max-w-xl mt-4">
         <h2 className="text-xl text-center">Wanted card amounts</h2>
-        <p className="text-neutral-400">The cards below have custom amount wanted and are not affected by rarity settings.</p>
-        {overridenCards.length === 0 && <p className="text-neutral-400">You do not have any custom wanted card amounts.</p>}
+        <p className="text-neutral-400">
+          {overridenCards.length !== 0
+            ? 'You can set the number of cards wanted for specific cards on the collection page. It allows you to keep generic per rarity settings and additionally marking some cards as wanted or for trade.'
+            : 'The cards below have custom amount wanted and are not affected by rarity settings.'}
+        </p>
         {overridenCards.map((row) => (
           <CardLine
             key={row.internal_id}
@@ -206,6 +213,7 @@ function TradeSettings() {
           />
         ))}
       </div>
+      <SocialShareButtons className="mt-4 mx-auto w-fit" />
     </div>
   )
 }
