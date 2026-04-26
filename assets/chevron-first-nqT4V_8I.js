@@ -1,0 +1,1 @@
+import{q as e}from"./useAccount-Bj6x4gcA.js";var t=e(`chevron-first`,[[`path`,{d:`m17 18-6-6 6-6`,key:`1yerx2`}],[`path`,{d:`M7 6v12`,key:`1p53r6`}]]);export{t};
