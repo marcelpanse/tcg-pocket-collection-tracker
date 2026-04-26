@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.13",
-    "lefthook": "^2.1.2",
+    "lefthook": "^2.1.6",
     "tsx": "^4.21.0"
   },
   "type": "module",
@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "cheerio": "^1.1.2",
-    "fs-extra": "^11.3.3",
+    "fs-extra": "^11.3.4",
     "glob": "^13.0.0",
     "node-fetch": "^3.3.2",
     "sharp": "0.34.5"

@@ -1,22 +1,14 @@
 import path from 'node:path'
+import babel from '@rolldown/plugin-babel'
 import tailwindcss from '@tailwindcss/vite'
-import react from '@vitejs/plugin-react'
+import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import mkcert from 'vite-plugin-mkcert'
 import stripComments from 'vite-plugin-strip-comments'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react({
-      babel: {
-        plugins: ['babel-plugin-react-compiler'],
-      },
-    }),
-    tailwindcss(),
-    stripComments({ type: 'none' }),
-    mkcert(),
-  ],
+  plugins: [react(), babel({ presets: [reactCompilerPreset()] }), tailwindcss(), stripComments({ type: 'none' }), mkcert()],
 
   resolve: {
     alias: {
@@ -37,13 +29,13 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        manualChunks: {
-          // React core (no external deps, safe to manually chunk)
-          'react-vendor': ['react', 'react-dom', 'react-router'],
-          // Standalone libraries with no React dependency (safe to manually chunk)
-          'supabase-vendor': ['@supabase/supabase-js'],
-          'tensorflow-vendor': ['@tensorflow/tfjs'],
-          'xlsx-vendor': ['xlsx'],
+        codeSplitting: {
+          groups: [
+            { name: 'react-vendor', test: /node_modules[\\/](react|react-dom|react-router)[\\/]/ },
+            { name: 'supabase-vendor', test: /node_modules[\\/]@supabase[\\/]/ },
+            { name: 'tensorflow-vendor', test: /node_modules[\\/]@tensorflow[\\/]/ },
+            { name: 'xlsx-vendor', test: /node_modules[\\/]xlsx[\\/]/ },
+          ],
         },
       },
     },

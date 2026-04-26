@@ -20,7 +20,6 @@
     "composite": true,
     "forceConsistentCasingInFileNames": true,
 
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "@assets/*": ["./assets/*"],
