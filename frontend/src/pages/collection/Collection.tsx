@@ -1,7 +1,7 @@
 import { ChevronRight } from 'lucide-react'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link, useNavigate, useParams } from 'react-router'
+import { Link, useLocation, useNavigate, useParams } from 'react-router'
 import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
@@ -65,15 +65,16 @@ function FriendCollection({ friendId }: { friendId: string }) {
 
 export default function Collection() {
   const navigate = useNavigate()
+  const { search } = useLocation()
 
   const { friendId: rawFriendId } = useParams()
   const { data: account, isLoading: isLoadingAccount } = useAccount()
 
   useEffect(() => {
     if (!rawFriendId && !isLoadingAccount && account?.friend_id) {
-      navigate(`/collection/${account.friend_id}`, { replace: true })
+      navigate(`/collection/${account.friend_id}${search}`, { replace: true })
     }
-  }, [isLoadingAccount, rawFriendId, account?.friend_id, navigate])
+  }, [isLoadingAccount, rawFriendId, account?.friend_id, navigate, search])
 
   if (isLoadingAccount) {
     return <Spinner size="lg" overlay />

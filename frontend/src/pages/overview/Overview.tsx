@@ -1,6 +1,7 @@
 import { Heart, Siren } from 'lucide-react'
 import { Fragment, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router'
 import { DropdownFilter } from '@/components/Filters'
 import Footer from '@/components/Footer.tsx'
 import DeckbuildingFilter from '@/components/filters/DeckbuildingFilter'
@@ -23,6 +24,7 @@ function getUniqueCount(cards: Card[]) {
 
 function Overview() {
   const { data: ownedCards = new Map<number, CollectionRow>(), isLoading } = useCollection()
+  const navigate = useNavigate()
 
   const { t } = useTranslation(['pages/overview', 'filters', 'common/sets', 'expansion-overview'])
 
@@ -159,7 +161,10 @@ function Overview() {
                   const isEven = expansionIndex % 2 === 0
                   return (
                     <Fragment key={expansion.id}>
-                      <tr className={`${isEven ? 'bg-neutral-800/50' : ''} border-t border-neutral-700`}>
+                      <tr
+                        className={`${isEven ? 'bg-neutral-800/50' : ''} border-t border-neutral-700 cursor-pointer hover:bg-neutral-700/50 transition-colors`}
+                        onClick={() => navigate(`/collection?expansion=${expansion.id}`)}
+                      >
                         <td className="px-4 py-3 font-medium">{t(expansion.name, { ns: 'common/sets' })}</td>
                         <td className="px-4 py-3">
                           <Progress
@@ -183,7 +188,11 @@ function Overview() {
                           const nCardsOwned = (collectedPack[pack.name] ?? []).length
                           const nTotalCards = (availablePack[pack.name] ?? []).length
                           return (
-                            <tr key={`${expansion.name}-${pack.name}`} className={`${isEven ? 'bg-neutral-800/50' : ''}`}>
+                            <tr
+                              key={`${expansion.name}-${pack.name}`}
+                              className={`${isEven ? 'bg-neutral-800/50' : ''} cursor-pointer hover:bg-neutral-700/50 transition-colors`}
+                              onClick={() => navigate(`/collection?expansion=${expansion.id}&pack=${pack.name}`)}
+                            >
                               <td className="pl-8 pr-4 py-2 text-neutral-400 text-sm">{t(pack.name, { ns: 'common/packs' })}</td>
                               <td className="px-4 py-2">
                                 <Progress
