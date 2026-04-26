@@ -22,10 +22,10 @@ export async function getDeck(id: number) {
     supabase.from('public_decks').select('*').eq('id', id).maybeSingle(),
   ])
   let res = {}
-  if (!popular.error && !!popular.data) {
+  if (!popular.error && popular.data) {
     res = { ...res, ...popular.data, is_public: true }
   }
-  if (!personal.error && !!personal.data) {
+  if (!personal.error && personal.data) {
     res = { ...res, ...personal.data }
   }
   if (Object.keys(res).length > 0) {

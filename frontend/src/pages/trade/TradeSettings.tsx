@@ -61,7 +61,7 @@ function TradeSettings() {
     )
   }
 
-  if (!account || !account.username) {
+  if (!account?.username) {
     return <Alert className="mb-8 border-1 border-neutral-700 shadow-none">{t('noAccount')}</Alert>
   }
 
