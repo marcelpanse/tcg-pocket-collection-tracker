@@ -14,7 +14,7 @@ The frontend is built as a static HTML site, powered by React and TypeScript. We
 Our backend infrastructure utilizes Supabase. The backend manages user authentication (via OTP email) and includes a database for card storage.
 
 ### Technical overview
-For an exstensive technical overview of the project, take a look at [this wiki page](https://deepwiki.com/marcelpanse/tcg-pocket-collection-tracker).
+For an extensive technical overview of the project, take a look at [this wiki page](https://deepwiki.com/marcelpanse/tcg-pocket-collection-tracker).
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/marcelpanse/tcg-pocket-collection-tracker)
 
@@ -54,7 +54,7 @@ When adding a new set manually follow the steps outlined in this file: https://g
 
 ### Adding cards to existing set
 
-Modyfing existing sets is as easy as executing `pnpm run scraper`.
+Modifying existing sets is as easy as executing `pnpm run scraper`.
 
 ## Contributors
 
