@@ -39,7 +39,6 @@ export default function TradeMatchesResults() {
     return <p className="text-xl text-center py-8">{t('noTradePartners')}</p>
   }
 
-  const linkSuffix = card_id ? `?friend_card=${card_id}` : ''
   return (
     <div className="flex flex-col gap-4">
       {data.map((partner) => (
@@ -48,7 +47,7 @@ export default function TradeMatchesResults() {
             <span>{partner.username}</span>
             {partner.language && <small className="bg-neutral-800 px-2 rounded-full ml-1">{partner.language}</small>}
           </p>
-          <Link to={`/trade/${partner.friend_id}${linkSuffix}`}>
+          <Link to={`/trade/${partner.friend_id}`} state={{ friendCard: card_id }}>
             <Button variant="outline" className="my-auto">
               {t('viewTradePartner', { tradeMatches: partner.trade_matches })}
               <ChevronRight />

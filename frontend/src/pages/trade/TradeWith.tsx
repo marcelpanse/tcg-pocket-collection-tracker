@@ -1,7 +1,7 @@
 import { ChevronFirst, ChevronLeft, ChevronRight, UserPlus } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link, useParams, useSearchParams } from 'react-router'
+import { Link, useLocation, useParams } from 'react-router'
 import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
@@ -31,7 +31,7 @@ function getTradeCards(extraCards: number[], neededCards: number[]) {
 function TradeWith() {
   const { t } = useTranslation(['trade-matches', 'common'])
   const { friendId } = useParams()
-  const [searchParams] = useSearchParams()
+  const location = useLocation()
 
   const { data: friendAccount, isLoading: friendAccountLoading, isError: friendAccountError } = usePublicAccount(friendId)
   const { data: friendCards = new Map<number, CollectionRow>(), isLoading: friendCardsLoading, isError: friendCardsError } = usePublicCollection(friendId)
@@ -48,17 +48,16 @@ function TradeWith() {
   const allTrades = useAllTrades(friendAccount?.friend_id, viewHistory, pageHistory, true)
 
   const [yourCard, setYourCard] = useState<Card | null>(null)
-  const [friendCard, setFriendCard] = useState<Card | null>(() => {
-    const id = searchParams.get('friend_card')
-    return id ? (getCardByInternalId(Number(id)) ?? null) : null
-  })
+  const [friendCard, setFriendCard] = useState<Card | null>(
+    location.state?.friendCard === undefined ? null : (getCardByInternalId(location.state.friendCard) ?? null),
+  )
 
   useEffect(() => {
-    const id = searchParams.get('friend_card')
+    const id = location.state?.friendCard
     if (!id || !friendCards || !ownedCards) {
       return
     }
-    const card = getCardByInternalId(Number(id))
+    const card = getCardByInternalId(id)
     if (!card) {
       return
     }
@@ -66,7 +65,7 @@ function TradeWith() {
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' })
     }
-  }, [searchParams, friendCards, ownedCards])
+  }, [location, friendCards, ownedCards?.size]) // Uses size because ReactQuery returns a different object every 10 seconds
 
   if (!account) {
     return null
