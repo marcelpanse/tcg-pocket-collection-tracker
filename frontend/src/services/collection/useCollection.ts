@@ -4,7 +4,14 @@ import { DialogContext } from '@/context/DialogContext.ts'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { useUser } from '@/services/auth/useAuth.ts'
-import { deleteCard, getCollection, getPublicCollection, updateCards } from '@/services/collection/collectionService.ts'
+import {
+  deleteCard,
+  getCollection,
+  getPublicCollection,
+  updateAmountWanted,
+  updateCards,
+  updateCollectionTimestamp,
+} from '@/services/collection/collectionService.ts'
 import type { CardAmountUpdate } from '@/types'
 
 export function useCollection() {
@@ -48,6 +55,31 @@ export function useUpdateCards() {
 
       // Update account data in cache (for collection_last_updated timestamp)
       queryClient.setQueryData(['account', email], result.account)
+    },
+    onError: async (error) => {
+      toast({ title: 'Error updating cards', description: error.message, variant: 'destructive' })
+      await Promise.all([queryClient.invalidateQueries({ queryKey: ['collection'] }), queryClient.invalidateQueries({ queryKey: ['account'] })])
+    },
+  })
+}
+
+export function useUpdateAmountWanted() {
+  const { toast } = useToast()
+  const { data: user } = useUser()
+  const email = user?.user.email
+
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: ({ internal_id, amount_wanted, do_insert }: { internal_id: number; amount_wanted: number | null; do_insert?: boolean }) => {
+      if (!email) {
+        throw new Error('Email is required to update amount wanted')
+      }
+      const now = new Date()
+      return Promise.all([updateAmountWanted(email, internal_id, amount_wanted, now, do_insert), updateCollectionTimestamp(email, now)])
+    },
+    onSuccess: async ([cards, account]) => {
+      queryClient.setQueryData(['collection', email], cards)
+      queryClient.setQueryData(['account', email], account)
     },
     onError: async (error) => {
       toast({ title: 'Error updating cards', description: error.message, variant: 'destructive' })

@@ -71,6 +71,19 @@ export const getPublicCollection = async (friendId: string): Promise<Map<number,
   return new Map(collection.map((row) => [row.internal_id, { ...row, amount_wanted: row.amount_wanted ?? null }]))
 }
 
+export async function updateCollectionTimestamp(email: string, now: Date) {
+  const { error, data } = await supabase
+    .from('accounts')
+    .update({ collection_last_updated: now })
+    .eq('email', email)
+    .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
+    .single()
+  if (error) {
+    throw new Error(`Failed updating account: ${error.message}`)
+  }
+  return data as AccountRow
+}
+
 export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[]) => {
   if (!email) {
     throw new Error('Email is required to update cards')
@@ -91,32 +104,22 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
       updated_at: now,
     }))
   const amountRows: CardAmountsRowUpdate[] = rowsToUpdate
-    .filter((row) => row.amount_owned)
+    .filter((row) => row.amount_owned !== undefined || row.amount_wanted !== undefined)
     .map((row) => ({
       email,
       internal_id: row.internal_id,
       amount_owned: row.amount_owned as number,
+      amount_wanted: row.amount_wanted,
       updated_at: now,
     }))
-    //deduplicate amountRows on internal_id, needed for card csv import feature
+    // Deduplicate amountRows on internal_id, needed for card csv import feature
     .filter((row, index, self) => index === self.findIndex((r) => r.internal_id === row.internal_id))
 
   // Execute all three database calls in parallel
   let account: AccountRow
   try {
-    const [accountResult, cardAmountsResult] = await Promise.all([
-      supabase
-        .from('accounts')
-        .update({ collection_last_updated: now })
-        .eq('email', email)
-        .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
-        .single(),
-      supabase.from('card_amounts').upsert(amountRows),
-    ])
+    const [accountResult, cardAmountsResult] = await Promise.all([updateCollectionTimestamp(email, now), supabase.from('card_amounts').upsert(amountRows)])
 
-    if (accountResult.error) {
-      throw new Error(`Error fetching account: ${accountResult.error.message}`)
-    }
     if (cardAmountsResult.error) {
       throw new Error(`Error bulk updating card amounts: ${cardAmountsResult.error.message}`)
     }
@@ -127,7 +130,7 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
       throw new Error(`Error bulk updating collection: ${collectionResult.error.message}`)
     }
 
-    account = accountResult.data as AccountRow
+    account = accountResult
   } catch (error) {
     removeLocalCacheItems(email)
     throw error
@@ -168,6 +171,47 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
     cards: new Map(latestCollection.map((row) => [row.internal_id, row])),
     account: account as AccountRow,
   }
+}
+
+export async function updateAmountWanted(email: string, internal_id: number, amount_wanted: number | null, updated_at: Date, do_insert?: boolean) {
+  if (do_insert) {
+    const { error } = await supabase.from('card_amounts').insert({ email, internal_id })
+    if (error) {
+      throw new Error(`Failed insering a new card_amounts row: ${error.message}`)
+    }
+  }
+  const { error } = await supabase.from('card_amounts').update({ amount_wanted, updated_at }).eq('email', email).eq('internal_id', internal_id)
+  if (error) {
+    throw new Error(`Failed updating amount_wanted: ${error.message}`)
+  }
+
+  const latestCollection = getCollectionFromCache(email) || (await fetchCollectionFromAPI('collection', 'email', email))
+  const existing = latestCollection.find((r) => r.internal_id === internal_id)
+
+  if (existing) {
+    if (do_insert) {
+      throw new Error('Called `updateAmountWanted` with do_insert=true while a row existed in cache')
+    }
+    existing.amount_wanted = amount_wanted
+    existing.updated_at = updated_at
+  } else {
+    if (!do_insert) {
+      throw new Error('Called `updateAmountWanted` with do_insert=false while a row did not exist in cache')
+    }
+    latestCollection.push({
+      email,
+      internal_id,
+      amount_owned: 0,
+      amount_wanted: amount_wanted,
+      created_at: updated_at,
+      updated_at: updated_at,
+      collection: [],
+    })
+  }
+
+  updateCollectionCache(latestCollection, email, updated_at)
+
+  return new Map(latestCollection.map((row) => [row.internal_id, row]))
 }
 
 export const deleteCard = async (email: string, cardId: string) => {

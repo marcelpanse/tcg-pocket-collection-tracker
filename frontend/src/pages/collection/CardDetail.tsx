@@ -13,7 +13,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sh
 import { craftingCost, getCardByInternalId, getExpansionById } from '@/lib/CardsDB.ts'
 import { pullRateForSpecificCard } from '@/lib/stats'
 import { getCardNameByLang } from '@/lib/utils'
-import { useCollection, useDeleteCard, useSelectedCard, useUpdateCards } from '@/services/collection/useCollection'
+import { useCollection, useDeleteCard, useSelectedCard, useUpdateAmountWanted } from '@/services/collection/useCollection'
 import { type Card, type CollectionRow, tradableRarities } from '@/types'
 
 function CardProperty({ name, children }: { name: string; children: ReactNode }) {
@@ -50,7 +50,7 @@ export default function CardDetail() {
 
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const deleteCardMutation = useDeleteCard()
-  const updateCardsMutation = useUpdateCards()
+  const updateAmountWantedMutation = useUpdateAmountWanted()
 
   const [isOpen, setIsOpen] = useState(false)
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
@@ -69,8 +69,9 @@ export default function CardDetail() {
       return
     }
     startTransition(async () => {
+      console.log(`updateAmountWanted(${amount_wanted})`)
       setAmountWanted(amount_wanted)
-      await updateCardsMutation.mutateAsync([{ internal_id: id, amount_wanted }])
+      await updateAmountWantedMutation.mutateAsync({ internal_id: id, amount_wanted, do_insert: row === undefined })
     })
   }
 
