@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { CircleHelp } from 'lucide-react'
+import { CircleHelp, Trash2 } from 'lucide-react'
 import { type Resolver, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
@@ -15,7 +15,7 @@ import { toast } from '@/hooks/use-toast.ts'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { formatLanguage } from '@/lib/utils'
 import { useAccount, useUpdateAccountTradingFields } from '@/services/account/useAccount.ts'
-import { useCollection } from '@/services/collection/useCollection'
+import { useCollection, useUpdateAmountWanted } from '@/services/collection/useCollection'
 import { gameLanguages, rarities } from '@/types/index.ts'
 
 function TradeSettings() {
@@ -23,6 +23,7 @@ function TradeSettings() {
 
   const { data: account } = useAccount()
   const updateAccountTradingFieldsMutation = useUpdateAccountTradingFields()
+  const updateAmountWantedMutation = useUpdateAmountWanted()
 
   const { data: ownedCards } = useCollection()
   const overridenCards = (ownedCards !== undefined ? [...ownedCards.values()].filter((row) => row.amount_wanted !== null) : []).toSorted((a, b) => {
@@ -206,11 +207,20 @@ function TradeSettings() {
             : 'The cards below have custom amount wanted and are not affected by rarity settings.'}
         </p>
         {overridenCards.map((row) => (
-          <CardLine
-            key={row.internal_id}
-            card_id={getCardByInternalId(row.internal_id)?.card_id ?? ''}
-            increment={(row.amount_wanted ?? 0) - row.amount_owned}
-          />
+          <div key={row.internal_id} className="flex gap-2">
+            <CardLine
+              className="flex-1 h-6"
+              card_id={getCardByInternalId(row.internal_id)?.card_id ?? ''}
+              increment={(row.amount_wanted ?? 0) - row.amount_owned}
+            />
+            <Button
+              variant="outline"
+              className="flex-0 size-6"
+              onClick={async () => updateAmountWantedMutation.mutateAsync({ internal_id: row.internal_id, amount_wanted: null })}
+            >
+              <Trash2 />
+            </Button>
+          </div>
         ))}
       </div>
       <SocialShareButtons className="mt-4 mx-auto w-fit" />

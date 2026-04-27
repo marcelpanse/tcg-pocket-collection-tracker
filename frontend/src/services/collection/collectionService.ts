@@ -177,7 +177,8 @@ export async function updateAmountWanted(email: string, internal_id: number, amo
   if (do_insert) {
     const { error } = await supabase.from('card_amounts').insert({ email, internal_id })
     if (error) {
-      throw new Error(`Failed insering a new card_amounts row: ${error.message}`)
+      // Do not hard fail, as it might be a second request in a row
+      console.warn(`Failed insering a new card_amounts row: ${error.message}`)
     }
   }
   const { error } = await supabase.from('card_amounts').update({ amount_wanted, updated_at }).eq('email', email).eq('internal_id', internal_id)
@@ -189,15 +190,9 @@ export async function updateAmountWanted(email: string, internal_id: number, amo
   const existing = latestCollection.find((r) => r.internal_id === internal_id)
 
   if (existing) {
-    if (do_insert) {
-      throw new Error('Called `updateAmountWanted` with do_insert=true while a row existed in cache')
-    }
     existing.amount_wanted = amount_wanted
     existing.updated_at = updated_at
   } else {
-    if (!do_insert) {
-      throw new Error('Called `updateAmountWanted` with do_insert=false while a row did not exist in cache')
-    }
     latestCollection.push({
       email,
       internal_id,

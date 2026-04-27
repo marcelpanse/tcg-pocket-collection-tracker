@@ -71,7 +71,7 @@ export default function CardDetail() {
     startTransition(async () => {
       console.log(`updateAmountWanted(${amount_wanted})`)
       setAmountWanted(amount_wanted)
-      await updateAmountWantedMutation.mutateAsync({ internal_id: id, amount_wanted, do_insert: row === undefined })
+      await updateAmountWantedMutation.mutateAsync({ internal_id: id, amount_wanted, do_insert: row === undefined && !updateAmountWantedMutation.isPending })
     })
   }
 
