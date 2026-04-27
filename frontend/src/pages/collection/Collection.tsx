@@ -16,7 +16,7 @@ function OwnCollection() {
   if (isLoadingAccount || isLoadingCards) {
     return <Spinner size="lg" overlay />
   }
-  return <CollectionCards cards={cards} isPublic={false} share={account !== undefined && account.friend_id !== '' && account.is_public} />
+  return <CollectionCards cards={cards} account={account} />
 }
 
 function FriendCollection({ friendId }: { friendId: string }) {
@@ -41,7 +41,7 @@ function FriendCollection({ friendId }: { friendId: string }) {
   return (
     <div className="flex flex-col gap-y-1">
       <title>{`${account.username} collection – TCG Pocket Collection Tracker`}</title>
-      <CollectionCards cards={cards} isPublic={true}>
+      <CollectionCards cards={cards} account={account}>
         <div className="flex justify-between my-2">
           <h1>
             <span className="text-2xl font-light">{t('collectionOf')}</span>

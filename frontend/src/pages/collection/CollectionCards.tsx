@@ -15,8 +15,8 @@ import useSearchState from '@/hooks/use-search-state'
 import { toast } from '@/hooks/use-toast'
 import { getFilteredCards, ownershipOptions, sortByOptions, tradingOptions } from '@/lib/filters'
 import { getCardNameByLang } from '@/lib/utils.ts'
-import { useAccount, useProfileDialog } from '@/services/account/useAccount'
-import { type Card as CardType, type CollectionRow, cardTypes, expansionIds, rarities } from '@/types'
+import { useProfileDialog } from '@/services/account/useAccount'
+import { type AccountRow, type Card as CardType, type CollectionRow, cardTypes, expansionIds, rarities } from '@/types'
 
 const schema = z.object({
   search: z.string().default(''),
@@ -37,17 +37,16 @@ const schema = z.object({
 interface Props {
   children?: ReactNode
   cards: Map<number, CollectionRow>
-  isPublic: boolean
-  share?: boolean // undefined => disable, false => open settings, true => copy link
+  account: AccountRow | undefined
 }
 
-export default function CollectionCards({ children, cards, isPublic, share }: Props) {
+export default function CollectionCards({ children, cards, account }: Props) {
   const { t } = useTranslation('pages/collection')
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' }) // tailwind "md"
 
   const { setIsProfileDialogOpen } = useProfileDialog()
   const [isFiltersSheetOpen, setIsFiltersSheetOpen] = useState(false) // used only on mobile
-  const { data: account } = useAccount()
+  const isPublic = account?.email === undefined
 
   const [filters, setFilters, activeFilters] = useSearchState(schema)
   const [_, setSearchParams] = useSearchParams()
@@ -96,7 +95,10 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
   }
 
   async function onShare() {
-    if (!share) {
+    if (account?.email === undefined) {
+      throw new Error("Can't share collection: not logged in or not on own collection")
+    }
+    if (account.friend_id === '' || !account.is_public) {
       setIsProfileDialogOpen(true)
     } else {
       // @ts-expect-error: Experimental api https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/mobile
@@ -140,22 +142,24 @@ export default function CollectionCards({ children, cards, isPublic, share }: Pr
       </small>
       <FiltersPanel className="flex flex-col gap-y-3" filters={filters} setFilters={setFilters} clearFilters={clearFilters} />
       <div className="flex flex-col mt-4 gap-2">
-        {share !== undefined && (
-          <Button variant="outline" onClick={onShare}>
-            {t('filters.share')}
-          </Button>
-        )}
         {!isPublic && (
-          <Button
-            className="w-full"
-            variant="outline"
-            disabled={!account}
-            onClick={() =>
-              navigator.clipboard.writeText(getTradingMessage()).then(() => toast({ title: t('trade.copiedInClipboard'), variant: 'default', duration: 3000 }))
-            }
-          >
-            {t('trade.button')}
-          </Button>
+          <>
+            <Button variant="outline" onClick={onShare}>
+              {t('filters.share')}
+            </Button>
+            <Button
+              className="w-full"
+              variant="outline"
+              disabled={!account}
+              onClick={() =>
+                navigator.clipboard
+                  .writeText(getTradingMessage())
+                  .then(() => toast({ title: t('trade.copiedInClipboard'), variant: 'default', duration: 3000 }))
+              }
+            >
+              {t('trade.button')}
+            </Button>
+          </>
         )}
       </div>
     </div>
