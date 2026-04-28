@@ -17,7 +17,7 @@ export function useCollection() {
     queryKey: ['collection', email],
     queryFn: () => getCollection(email as string, collectionLastUpdated),
     enabled: Boolean(email && account),
-    staleTime: 10, //set a short stale time here because we handle the cache internally already (in case someone is using two devices at the same time)
+    staleTime: 10, // Set a short stale time here because we handle the cache internally already (in case someone is using two devices at the same time)
   })
 }
 
