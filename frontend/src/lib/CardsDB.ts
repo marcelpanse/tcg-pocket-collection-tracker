@@ -18,6 +18,7 @@ const B1aMissions = await import('../../assets/themed-collections/B1a-missions.j
 const B2Missions = await import('../../assets/themed-collections/B2-missions.json')
 const B2aMissions = await import('../../assets/themed-collections/B2a-missions.json')
 const B2bMissions = await import('../../assets/themed-collections/B2b-missions.json')
+const B3Missions = await import('../../assets/themed-collections/B3-missions.json')
 
 export const allCards: Card[] = AllCardsJson.default as Card[]
 
@@ -61,6 +62,7 @@ const b1aMissions: Mission[] = B1aMissions.default as Mission[]
 const b2Missions: Mission[] = B2Missions.default as Mission[]
 const b2aMissions: Mission[] = B2aMissions.default as Mission[]
 const b2bMissions: Mission[] = B2bMissions.default as Mission[]
+const b3Missions: Mission[] = B3Missions.default as Mission[]
 
 export const expansions: Expansion[] = [
   // internalId=0 skipped for error states
@@ -321,6 +323,21 @@ export const expansions: Expansion[] = [
     openable: true,
     packStructure: {
       containsShinies: true,
+      containsBabies: false,
+      containsLinkedCards: false,
+      cardsPerPack: 5,
+    },
+  },
+  {
+    name: 'pulsingaura',
+    id: 'B3',
+    internalId: 17,
+    packs: [{ name: 'pulsingaurapack', color: '#a878c0' }],
+    missions: b3Missions,
+    tradeable: true,
+    openable: true,
+    packStructure: {
+      containsShinies: false,
       containsBabies: false,
       containsLinkedCards: false,
       cardsPerPack: 5,
