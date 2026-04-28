@@ -1,0 +1,1 @@
+import{q as e}from"./useAccount-Cll0qV17.js";var t=e(`chevron-right`,[[`path`,{d:`m9 18 6-6-6-6`,key:`mthhwq`}]]);export{t};
