@@ -1,1 +1,0 @@
-import{q as e}from"./useAccount-Bj6x4gcA.js";var t=e(`minus`,[[`path`,{d:`M5 12h14`,key:`1ays0h`}]]);export{t};
