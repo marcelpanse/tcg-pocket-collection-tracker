@@ -103,7 +103,10 @@ const rarityOverrides: Record<ExpansionId, { rarity: Rarity; start: number; end:
     { rarity: '✵', start: 87, end: 110 },
     { rarity: '✵✵', start: 111, end: 115 },
   ],
-  B3: [],
+  B3: [
+    { rarity: '✵', start: 205, end: 224 },
+    { rarity: '✵✵', start: 225, end: 232 },
+  ],
   'P-A': [],
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],
 }
