@@ -31,6 +31,8 @@ function parseRewards(rewardStr?: string): RewardItem[] {
       type = 'pack-hourglass'
     } else if (label === 'Shop Ticket') {
       type = 'shop-ticket'
+    } else if (label === 'Shinedust') {
+      type = 'shinedust'
     } else if (label.startsWith('Emblem Ticket')) {
       type = 'emblem-ticket'
     } else if (label.endsWith('(emblem)')) {
@@ -53,6 +55,7 @@ const rewardConfig: Record<string, { emoji: string; bg: string; short: (label: s
   'wonder-hourglass': { emoji: '⏳', bg: 'bg-yellow-600', short: () => 'Wonder Hourglass' },
   'pack-hourglass': { emoji: '⏳', bg: 'bg-orange-600', short: () => 'Pack Hourglass' },
   'shop-ticket': { emoji: '🎫', bg: 'bg-blue-600', short: () => 'Shop Ticket' },
+  shinedust: { emoji: '✨', bg: 'bg-rose-500', short: () => 'Shinedust' },
   'emblem-ticket': { emoji: '🎟️', bg: 'bg-purple-700', short: () => 'Emblem Ticket' },
   emblem: { emoji: '🏅', bg: 'bg-amber-600', short: (label) => label.replace(' (emblem)', '') },
   'profile-icon': { emoji: '👤', bg: 'bg-teal-600', short: (label) => label.replace(' (profile icon)', '') },

@@ -14,13 +14,10 @@
       {
         "options": ["B2a-3", "B2a-100", "B2a-110"],
         "amount": 1
-      },
-      {
-        "options": ["B2a-118"],
-        "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Paldean Wonders) ×10"
+    "reward": "Shinedust ×1000",
+    "secret": false
   },
   {
     "expansionId": "B2a",
@@ -39,7 +36,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Paldean Wonders) ×4"
+    "reward": "Shinedust ×400",
+    "secret": false
   },
   {
     "expansionId": "B2a",
@@ -58,7 +56,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Paldean Wonders) ×4"
+    "reward": "Shinedust ×400",
+    "secret": false
   },
   {
     "expansionId": "B2a",
@@ -73,7 +72,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Paldean Wonders) ×6"
+    "reward": "Shinedust ×600",
+    "secret": false
   },
   {
     "expansionId": "B2a",
@@ -88,7 +88,7 @@
         "amount": 1
       },
       {
-        "options": ["B2a-37", "B2a-102", "B2a-112"],
+        "options": ["B2a-37", "B2a-102", "B2a-112", "P-B-41"],
         "amount": 1
       },
       {
@@ -96,7 +96,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Paldean Wonders) ×19"
+    "reward": "Shinedust ×1900",
+    "secret": false
   },
   {
     "expansionId": "B2a",
@@ -111,7 +112,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Paldean Wonders) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2a",
@@ -122,11 +124,12 @@
         "amount": 1
       },
       {
-        "options": ["B2a-91", "B2a-108"],
+        "options": ["B2a-91", "B2a-108", "B2a-115"],
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Paldean Wonders) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2a",
@@ -145,7 +148,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Paldean Wonders) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2a",
@@ -172,7 +176,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Paldean Wonders) ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×200<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2a",
@@ -187,7 +192,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Paldean Wonders) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2a",
@@ -198,7 +204,8 @@
         "amount": 5
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Paldean Wonders) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2a",
@@ -209,7 +216,24 @@
         "amount": 5
       }
     ],
-    "reward": "Iono (profile icon)"
+    "reward": "Iono (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B2a",
+    "name": "Coin Collecting",
+    "requiredCards": [
+      {
+        "options": ["B2a-96"],
+        "amount": 1
+      },
+      {
+        "options": ["B2a-114"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "B2a",
@@ -240,7 +264,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "B2a",
@@ -267,22 +292,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
-  },
-  {
-    "expansionId": "B2a",
-    "name": "Coin Collecting",
-    "requiredCards": [
-      {
-        "options": ["B2a-96"],
-        "amount": 1
-      },
-      {
-        "options": ["B2a-114"],
-        "amount": 1
-      }
-    ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "B2a",
@@ -333,6 +344,7 @@
         "amount": 1
       }
     ],
-    "reward": "Mabosstiff (emblem)"
+    "reward": "Mabosstiff (emblem)",
+    "secret": true
   }
 ]

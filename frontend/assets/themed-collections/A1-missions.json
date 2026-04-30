@@ -4,19 +4,20 @@
     "name": "First Choice",
     "requiredCards": [
       {
-        "options": ["A1-1", "A1-227"],
+        "options": ["A4b-1", "A1-227", "A3-210", "A4b-2", "P-A-23"],
         "amount": 1
       },
       {
-        "options": ["A1-33", "A1-230"],
+        "options": ["A4b-55", "A1-230", "A4b-56", "P-A-32"],
         "amount": 1
       },
       {
-        "options": ["A1-53", "A1-232"],
+        "options": ["A4b-83", "A1-232", "A3-215", "A4b-84", "P-A-33"],
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Genetic Apex) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "A1",
@@ -31,7 +32,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Genetic Apex) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "A1",
@@ -54,11 +56,12 @@
         "amount": 1
       },
       {
-        "options": ["A1-94", "A1-96", "A1-259", "A1-281", "A1-285"],
+        "options": ["A4b-128", "A4b-129", "P-A-9", "P-A-15", "P-A-26"],
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Genetic Apex) ×2"
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Shinedust ×200",
+    "secret": false
   },
   {
     "expansionId": "A1",
@@ -73,11 +76,12 @@
         "amount": 1
       },
       {
-        "options": ["A1-188", "A1-245"],
+        "options": ["A1-188", "A1-245", "A3a-97"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Genetic Apex) ×7"
+    "reward": "Shinedust ×700",
+    "secret": false
   },
   {
     "expansionId": "A1",
@@ -92,7 +96,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-168", "A1-240"],
+        "options": ["A1-168", "A1-240", "A4-225"],
         "amount": 1
       },
       {
@@ -104,11 +108,12 @@
         "amount": 1
       },
       {
-        "options": ["A1-171", "A1-241"],
+        "options": ["A1-171", "A1-241", "A4-228"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Genetic Apex) ×14"
+    "reward": "Shinedust ×1400",
+    "secret": false
   },
   {
     "expansionId": "A1",
@@ -135,33 +140,35 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Genetic Apex) ×20"
+    "reward": "Shinedust ×2000",
+    "secret": false
   },
   {
     "expansionId": "A1",
     "name": "The Legendary Flight",
     "requiredCards": [
       {
-        "options": ["A1-46", "A1-47", "A1-255", "A1-274"],
+        "options": ["A1-46", "B1-292"],
         "amount": 1
       },
       {
-        "options": ["A1-83", "A1-84", "A1-258", "A1-275"],
+        "options": ["A1-83", "B1-298"],
         "amount": 1
       },
       {
-        "options": ["A1-103", "A1-104", "A1-260", "A1-276"],
+        "options": ["A1-103", "B1-302"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Genetic Apex) ×17"
+    "reward": "Shinedust ×1700",
+    "secret": false
   },
   {
     "expansionId": "A1",
     "name": "Triple Power",
     "requiredCards": [
       {
-        "options": ["A1-22", "A1-23", "A1-252"],
+        "options": ["A1-22"],
         "amount": 1
       },
       {
@@ -177,7 +184,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Genetic Apex) ×12"
+    "reward": "Shinedust ×1200",
+    "secret": false
   },
   {
     "expansionId": "A1",
@@ -200,7 +208,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Genetic Apex) ×14"
+    "reward": "Shinedust ×1400",
+    "secret": false
   },
   {
     "expansionId": "A1",
@@ -211,11 +220,11 @@
         "amount": 1
       },
       {
-        "options": ["A1-121"],
+        "options": ["A1-127"],
         "amount": 1
       },
       {
-        "options": ["A1-127"],
+        "options": ["A4b-153"],
         "amount": 1
       },
       {
@@ -235,14 +244,15 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×24<br />Shop Ticket ×5<br />Emblem Ticket (Genetic Apex) ×4"
+    "reward": "Wonder Hourglass ×24<br />Shop Ticket ×5<br />Shinedust ×400",
+    "secret": false
   },
   {
     "expansionId": "A1",
     "name": "The Gym Leaders of the Kanto Region",
     "requiredCards": [
       {
-        "options": ["A1-219", "A1-266"],
+        "options": ["A4b-328", "A1-266", "A4b-329"],
         "amount": 1
       },
       {
@@ -258,7 +268,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-223", "A1-270"],
+        "options": ["A4b-334", "A1-270", "A4b-335"],
         "amount": 1
       },
       {
@@ -266,34 +276,35 @@
         "amount": 1
       },
       {
-        "options": ["A1-225", "A1-272"],
+        "options": ["A1-226", "A1-273"],
         "amount": 1
       },
       {
-        "options": ["A1-226", "A1-273"],
+        "options": ["A4b-338", "A1-272", "A4b-339"],
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×24<br />Shop Ticket ×5<br />Emblem Ticket (Genetic Apex) ×8"
+    "reward": "Wonder Hourglass ×24<br />Shop Ticket ×5<br />Shinedust ×800",
+    "secret": false
   },
   {
     "expansionId": "A1",
     "name": "Different Journeys, Different Growth",
     "requiredCards": [
       {
-        "options": ["A1-1", "A1-227"],
+        "options": ["A4b-1", "A1-227", "A3-210", "A4b-2", "P-A-23"],
         "amount": 1
       },
       {
-        "options": ["A1-2"],
+        "options": ["A1-3", "A3-212", "P-A-18"],
         "amount": 1
       },
       {
-        "options": ["A1-3", "A1-4", "A1-251"],
+        "options": ["A4b-3"],
         "amount": 1
       },
       {
-        "options": ["A1-33", "A1-230"],
+        "options": ["A4b-55", "A1-230", "A4b-56", "P-A-32"],
         "amount": 1
       },
       {
@@ -301,11 +312,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-35", "A1-36", "A1-253", "A1-280", "A1-284"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-53", "A1-232"],
+        "options": ["A1-35"],
         "amount": 1
       },
       {
@@ -313,11 +320,16 @@
         "amount": 1
       },
       {
-        "options": ["A1-55", "A1-56", "A1-256"],
+        "options": ["A1-55", "A3-217", "P-A-29"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-83", "A1-232", "A3-215", "A4b-84", "P-A-33"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Genetic Apex) ×22"
+    "reward": "Shinedust ×2200",
+    "secret": false
   },
   {
     "expansionId": "A1",
@@ -368,18 +380,19 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Genetic Apex) ×12"
+    "reward": "Shinedust ×1200",
+    "secret": false
   },
   {
     "expansionId": "A1",
     "name": "Category: Mouse Pokémon",
     "requiredCards": [
       {
-        "options": ["A1-94", "A1-96", "A1-259", "A1-281", "A1-285"],
+        "options": ["A1-95"],
         "amount": 1
       },
       {
-        "options": ["A1-95"],
+        "options": ["A4b-128", "A4b-129", "P-A-9", "P-A-15", "P-A-26"],
         "amount": 1
       },
       {
@@ -399,14 +412,15 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Genetic Apex) ×3"
+    "reward": "Shinedust ×300",
+    "secret": false
   },
   {
     "expansionId": "A1",
     "name": "Pokémon Super Express",
     "requiredCards": [
       {
-        "options": ["A1-40", "A1-41", "A1-254"],
+        "options": ["A1-40", "A3a-90"],
         "amount": 1
       },
       {
@@ -422,7 +436,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Genetic Apex) ×13"
+    "reward": "Shinedust ×1300",
+    "secret": false
   },
   {
     "expansionId": "A1",
@@ -433,18 +448,8 @@
         "amount": 3
       }
     ],
-    "reward": "Electrode (profile icon)"
-  },
-  {
-    "expansionId": "A1",
-    "name": "Collect 5 Gardevoir cards",
-    "requiredCards": [
-      {
-        "options": ["A1-132"],
-        "amount": 5
-      }
-    ],
-    "reward": "Gardevoir (profile icon)"
+    "reward": "Electrode (profile icon)",
+    "secret": false
   },
   {
     "expansionId": "A1",
@@ -455,7 +460,8 @@
         "amount": 5
       }
     ],
-    "reward": "Charizard (profile icon)"
+    "reward": "Charizard (profile icon)",
+    "secret": false
   },
   {
     "expansionId": "A1",
@@ -466,220 +472,23 @@
         "amount": 5
       }
     ],
-    "reward": "Mewtwo (profile icon)"
+    "reward": "Mewtwo (profile icon)",
+    "secret": false
   },
   {
     "expansionId": "A1",
-    "name": "Genetic Apex Museum 1 (Mewtwo)",
+    "name": "Complete the Kanto Pokédex!",
     "requiredCards": [
       {
-        "options": ["A1-227"],
+        "options": ["A4b-1", "A1-227", "A3-210", "A4b-2", "P-A-23"],
         "amount": 1
       },
       {
-        "options": ["A1-239"],
+        "options": ["A4b-3"],
         "amount": 1
       },
       {
-        "options": ["A1-242"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-243"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-244"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-245"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-247"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-249"],
-        "amount": 1
-      }
-    ],
-    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×20"
-  },
-  {
-    "expansionId": "A1",
-    "name": "Genetic Apex Museum 2 (Charizard)",
-    "requiredCards": [
-      {
-        "options": ["A1-228"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-229"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-230"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-231"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-234"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-236"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-237"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-246"],
-        "amount": 1
-      }
-    ],
-    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×20"
-  },
-  {
-    "expansionId": "A1",
-    "name": "Genetic Apex Museum 3 (Pikachu)",
-    "requiredCards": [
-      {
-        "options": ["A1-232"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-233"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-235"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-238"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-240"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-241"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-248"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-250"],
-        "amount": 1
-      }
-    ],
-    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×20"
-  },
-  {
-    "expansionId": "A1",
-    "name": "The Gym Leaders of the Kanto Region 2",
-    "requiredCards": [
-      {
-        "options": ["A1-266"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-267"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-268"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-269"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-270"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-271"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-272"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-273"],
-        "amount": 1
-      }
-    ],
-    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×48<br />Shop Ticket ×10"
-  },
-  {
-    "expansionId": "A1",
-    "name": "The Legendary Flight Continues",
-    "requiredCards": [
-      {
-        "options": ["A1-274"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-275"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-276"],
-        "amount": 1
-      }
-    ],
-    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Moltres, Zapdos, and Articuno (emblem)"
-  },
-  {
-    "expansionId": "A1",
-    "name": "The Immersive 4",
-    "requiredCards": [
-      {
-        "options": ["A1-280"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-281"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-282"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-283"],
-        "amount": 1
-      }
-    ],
-    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×48<br />Shop Ticket ×20"
-  },
-  {
-    "expansionId": "A1",
-    "name": "Complete the Kanto Pokedex",
-    "requiredCards": [
-      {
-        "options": ["A1-1", "A1-227"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-2"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-3", "A1-4", "A1-251"],
+        "options": ["A1-3", "A3-212", "P-A-18"],
         "amount": 1
       },
       {
@@ -751,7 +560,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-22", "A1-23", "A1-252"],
+        "options": ["A1-22"],
         "amount": 1
       },
       {
@@ -767,7 +576,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-33", "A1-230"],
+        "options": ["A4b-55", "A1-230", "A4b-56", "P-A-32"],
         "amount": 1
       },
       {
@@ -775,7 +584,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-35", "A1-36", "A1-253", "A1-280", "A1-284"],
+        "options": ["A1-35"],
         "amount": 1
       },
       {
@@ -791,7 +600,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-40", "A1-41", "A1-254"],
+        "options": ["A1-40", "A3a-90"],
         "amount": 1
       },
       {
@@ -811,11 +620,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-46", "A1-47", "A1-255", "A1-274"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-53", "A1-232"],
+        "options": ["A1-46", "B1-292"],
         "amount": 1
       },
       {
@@ -823,7 +628,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-55", "A1-56", "A1-256"],
+        "options": ["A1-55", "A3-217", "P-A-29"],
         "amount": 1
       },
       {
@@ -899,7 +704,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-75", "A1-76", "A1-257"],
+        "options": ["A1-75", "A3-219"],
         "amount": 1
       },
       {
@@ -911,7 +716,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-79", "A1-234"],
+        "options": ["A1-79", "A1-234", "A3b-94"],
         "amount": 1
       },
       {
@@ -927,19 +732,15 @@
         "amount": 1
       },
       {
-        "options": ["A1-83", "A1-84", "A1-258", "A1-275"],
+        "options": ["A4b-83", "A1-232", "A3-215", "A4b-84", "P-A-33"],
         "amount": 1
       },
       {
-        "options": ["A1-94", "A1-96", "A1-259", "A1-281", "A1-285"],
+        "options": ["A1-83", "B1-298"],
         "amount": 1
       },
       {
         "options": ["A1-95"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-97"],
         "amount": 1
       },
       {
@@ -963,7 +764,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-103", "A1-104", "A1-260", "A1-276"],
+        "options": ["A1-103", "B1-302"],
         "amount": 1
       },
       {
@@ -999,11 +800,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-121"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-122", "A1-123", "A1-261", "A1-277"],
+        "options": ["A1-122", "A3-222"],
         "amount": 1
       },
       {
@@ -1023,7 +820,15 @@
         "amount": 1
       },
       {
-        "options": ["A1-128", "A1-129", "A1-262", "A1-282", "A1-286"],
+        "options": ["A4b-128", "A4b-129", "P-A-9", "P-A-15", "P-A-26"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-128", "P-A-10"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-133"],
         "amount": 1
       },
       {
@@ -1059,7 +864,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-145", "A1-146", "A1-263", "A1-278"],
+        "options": ["A1-145"],
         "amount": 1
       },
       {
@@ -1079,11 +884,11 @@
         "amount": 1
       },
       {
-        "options": ["A1-151", "A1-239"],
+        "options": ["A1-152", "A3-227"],
         "amount": 1
       },
       {
-        "options": ["A1-152", "A1-153", "A1-264"],
+        "options": ["A4b-153"],
         "amount": 1
       },
       {
@@ -1127,7 +932,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-168", "A1-240"],
+        "options": ["A1-168", "A1-240", "A4-225"],
         "amount": 1
       },
       {
@@ -1139,7 +944,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-171", "A1-241"],
+        "options": ["A1-171", "A1-241", "A4-228"],
         "amount": 1
       },
       {
@@ -1187,7 +992,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-188", "A1-245"],
+        "options": ["A1-188", "A1-245", "A3a-97"],
         "amount": 1
       },
       {
@@ -1211,19 +1016,19 @@
         "amount": 1
       },
       {
-        "options": ["A1-194", "A1-195", "A1-265", "A1-279"],
+        "options": ["A4b-194", "A1-239", "A3-226", "A4b-195"],
         "amount": 1
       },
       {
-        "options": ["A1-196", "A1-246"],
+        "options": ["A1-194"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-196", "A1-246", "B1-312", "P-A-12"],
         "amount": 1
       },
       {
         "options": ["A1-197"],
-        "amount": 1
-      },
-      {
-        "options": ["A1-198"],
         "amount": 1
       },
       {
@@ -1255,7 +1060,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-206", "A1-207", "A1-208", "A1-248"],
+        "options": ["A1-206", "A1-207", "A1-208", "A1-248", "P-A-92"],
         "amount": 1
       },
       {
@@ -1269,8 +1074,217 @@
       {
         "options": ["A1-211", "A1-250"],
         "amount": 1
+      },
+      {
+        "options": ["A4b-280"],
+        "amount": 1
       }
     ],
-    "reward": "Immersive Mew"
+    "reward": "Mew ×1",
+    "secret": true
+  },
+  {
+    "expansionId": "A1",
+    "name": "Genetic Apex Museum 1 (Mewtwo)",
+    "requiredCards": [
+      {
+        "options": ["A1-227"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-239"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-242"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-243"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-244"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-245"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-247"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-249"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  },
+  {
+    "expansionId": "A1",
+    "name": "Genetic Apex Museum 2 (Charizard)",
+    "requiredCards": [
+      {
+        "options": ["A1-228"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-229"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-230"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-231"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-234"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-236"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-237"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-246"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  },
+  {
+    "expansionId": "A1",
+    "name": "Genetic Apex Museum 3 (Pikachu)",
+    "requiredCards": [
+      {
+        "options": ["A1-232"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-233"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-235"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-238"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-240"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-241"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-248"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-250"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  },
+  {
+    "expansionId": "A1",
+    "name": "The Gym Leaders of the Kanto Region 2",
+    "requiredCards": [
+      {
+        "options": ["A1-266"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-267"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-268"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-269"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-270"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-271"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-272"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-273"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×48<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  },
+  {
+    "expansionId": "A1",
+    "name": "The Legendary Flight Continues",
+    "requiredCards": [
+      {
+        "options": ["A1-274"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-275"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-276"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×48<br />Pack Hourglass ×12<br />Moltres, Zapdos, And Articuno (emblem)",
+    "secret": true
+  },
+  {
+    "expansionId": "A1",
+    "name": "The Immersive 4",
+    "requiredCards": [
+      {
+        "options": ["A1-280"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-281"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-282"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-283"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×48<br />Pack Hourglass ×12<br />Shop Ticket ×20",
+    "secret": true
   }
 ]

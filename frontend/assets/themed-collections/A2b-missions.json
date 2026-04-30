@@ -12,15 +12,16 @@
         "amount": 1
       },
       {
-        "options": ["A2b-10", "A2b-80", "A2b-108"],
+        "options": ["A4b-60", "A2b-80", "A2b-108"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×3"
+    "reward": "Shinedust ×300",
+    "secret": false
   },
   {
     "expansionId": "A2b",
-    "name": "Magmar's Evolution",
+    "name": "Magmar’s Evolution",
     "requiredCards": [
       {
         "options": ["A2b-11"],
@@ -31,7 +32,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×1"
+    "reward": "Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -42,22 +44,24 @@
         "amount": 2
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2b",
     "name": "Beach Peekaboo",
     "requiredCards": [
       {
-        "options": ["A2b-18", "A2b-101"],
+        "options": ["A4b-127", "A2b-81", "A2b-109"],
         "amount": 1
       },
       {
-        "options": ["A2b-19", "A2b-109"],
+        "options": ["A4b-125", "A2b-101", "A4b-126"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×3"
+    "reward": "Shinedust ×300",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -72,7 +76,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×1"
+    "reward": "Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -87,7 +92,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -102,18 +108,20 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2b",
     "name": "Shadows of the Distortion World",
     "requiredCards": [
       {
-        "options": ["A2b-35", "A2b-83", "A2b-96"],
+        "options": ["A4b-172", "A2b-83", "A2b-96", "A4b-377"],
         "amount": 2
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×1"
+    "reward": "Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -132,7 +140,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×2"
+    "reward": "Shinedust ×200",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -143,7 +152,8 @@
         "amount": 2
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -158,45 +168,48 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2b",
     "name": "Needling Frenzy",
     "requiredCards": [
       {
-        "options": ["A2b-1", "A2b-97"],
+        "options": ["A4b-6", "A2b-97", "A4b-7"],
         "amount": 1
       },
       {
-        "options": ["A2b-2", "A2b-98"],
+        "options": ["A4b-8", "A2b-98", "A4b-9"],
         "amount": 1
       },
       {
-        "options": ["A2b-3", "A2b-79", "A2b-107"],
+        "options": ["A4b-10", "A2b-79", "A2b-107"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×3"
+    "reward": "Shinedust ×300",
+    "secret": false
   },
   {
     "expansionId": "A2b",
-    "name": "Sprigatito's Green Sprouting",
+    "name": "Sprigatito’s Green Sprouting",
     "requiredCards": [
       {
         "options": ["A2b-5"],
         "amount": 1
       },
       {
-        "options": ["A2b-6"],
+        "options": ["A4b-53", "A2b-73", "A4b-54", "B2a-118"],
         "amount": 1
       },
       {
-        "options": ["A2b-7", "A2b-73"],
+        "options": ["A4b-51"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×2"
+    "reward": "Shinedust ×200",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -207,7 +220,8 @@
         "amount": 2
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -218,15 +232,16 @@
         "amount": 1
       },
       {
-        "options": ["A2b-53"],
+        "options": ["A4b-266", "A2b-86", "A2b-94", "B2a-129"],
         "amount": 1
       },
       {
-        "options": ["A2b-54", "A2b-86", "A2b-94"],
+        "options": ["A4b-264"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×3"
+    "reward": "Shinedust ×300",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -237,11 +252,12 @@
         "amount": 1
       },
       {
-        "options": ["A2b-57"],
+        "options": ["A2b-57", "A2b-77", "B2a-125"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×1"
+    "reward": "Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -256,22 +272,24 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2b",
     "name": "Aura Masters",
     "requiredCards": [
       {
-        "options": ["A2b-42", "A2b-104"],
+        "options": ["A4b-214", "A2b-84", "A2b-110"],
         "amount": 1
       },
       {
-        "options": ["A2b-43", "A2b-84", "A2b-110"],
+        "options": ["A4b-210", "A2b-104", "A4b-211", "P-A-59"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×3"
+    "reward": "Shinedust ×300",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -290,7 +308,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×1"
+    "reward": "Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -305,7 +324,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -316,18 +336,20 @@
         "amount": 2
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2b",
     "name": "Electric Cheeks",
     "requiredCards": [
       {
-        "options": ["A2b-22", "A2b-82", "A2b-92"],
+        "options": ["A4b-132", "A2b-82", "A2b-92", "B1-321"],
         "amount": 2
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×3"
+    "reward": "Shinedust ×300",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -346,7 +368,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×2"
+    "reward": "Shinedust ×200",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -361,22 +384,24 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2b",
     "name": "Dangerous Poison Spikes",
     "requiredCards": [
       {
-        "options": ["A2b-47"],
+        "options": ["A4b-238", "A2b-85", "A2b-93", "A4a-104"],
         "amount": 1
       },
       {
-        "options": ["A2b-48", "A2b-85", "A2b-93"],
+        "options": ["A4b-236"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×3"
+    "reward": "Shinedust ×300",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -391,7 +416,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×1"
+    "reward": "Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -406,7 +432,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -417,7 +444,8 @@
         "amount": 2
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Emblem Ticket (Shining Revelry) ×1<br />Shop Ticket ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -428,11 +456,12 @@
         "amount": 1
       },
       {
-        "options": ["A2b-65", "A2b-87", "A2b-95"],
+        "options": ["A4b-296", "A2b-87", "A2b-95", "B1-327"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×3"
+    "reward": "Shinedust ×300",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -447,18 +476,20 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×1"
+    "reward": "Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "A2b",
     "name": "Shiny Museum 1",
     "requiredCards": [
       {
-        "amount": "1",
-        "options": ["A2b-97", "A2b-98", "A2b-99", "A2b-100", "A2b-101", "A2b-102", "A2b-103", "A2b-104", "A2b-105", "A2b-106"]
+        "options": ["A4b-6", "A2b-97", "A4b-7"],
+        "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Shining Revelry) ×1"
+    "reward": "Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "A2b",
@@ -469,62 +500,68 @@
         "amount": 3
       }
     ],
-    "reward": "Sprigatito (icon)"
+    "reward": "Sprigatito (profile icon)",
+    "secret": false
   },
   {
     "expansionId": "A2b",
     "name": "Shiny Museum 2",
     "requiredCards": [
       {
-        "amount": "2",
-        "options": ["A2b-97", "A2b-98", "A2b-99", "A2b-100", "A2b-101", "A2b-102", "A2b-103", "A2b-104", "A2b-105", "A2b-106"]
+        "options": ["A4b-6", "A2b-97", "A4b-7"],
+        "amount": 2
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A2b",
     "name": "Shiny Museum 3",
     "requiredCards": [
       {
-        "amount": "3",
-        "options": ["A2b-97", "A2b-98", "A2b-99", "A2b-100", "A2b-101", "A2b-102", "A2b-103", "A2b-104", "A2b-105", "A2b-106"]
+        "options": ["A4b-6", "A2b-97", "A4b-7"],
+        "amount": 3
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A2b",
     "name": "Shiny Museum 4",
     "requiredCards": [
       {
-        "amount": "1",
-        "options": ["A2b-107", "A2b-108", "A2b-109", "A2b-110"]
+        "options": ["A4b-10", "A2b-79", "A2b-107"],
+        "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A2b",
     "name": "Shiny Museum 5",
     "requiredCards": [
       {
-        "amount": "2",
-        "options": ["A2b-107", "A2b-108", "A2b-109", "A2b-110"]
+        "options": ["A4b-10", "A2b-79", "A2b-107"],
+        "amount": 2
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A2b",
     "name": "Shiny Museum 6",
     "requiredCards": [
       {
-        "amount": "3",
-        "options": ["A2b-107", "A2b-108", "A2b-109", "A2b-110"]
+        "options": ["A4b-10", "A2b-79", "A2b-107"],
+        "amount": 3
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A2b",
@@ -555,7 +592,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A2b",
@@ -578,7 +616,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A2b",
@@ -589,6 +628,7 @@
         "amount": 99
       }
     ],
-    "reward": "Gholdengo (emblem)"
+    "reward": "Gholdengo (emblem)",
+    "secret": true
   }
 ]

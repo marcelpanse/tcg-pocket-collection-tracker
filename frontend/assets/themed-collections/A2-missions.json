@@ -4,7 +4,7 @@
     "name": "Myths of Sinnoh Resurrected",
     "requiredCards": [
       {
-        "options": ["A2-49", "A2-182", "A2-204", "A2-206"],
+        "options": ["A4b-107", "A2-182", "A2-204", "A2-206", "A4b-363", "B1-319"],
         "amount": 1
       },
       {
@@ -20,15 +20,16 @@
         "amount": 1
       },
       {
-        "options": ["A2-78", "A2-167"],
+        "options": ["A4b-170", "A2-167", "A4b-171"],
         "amount": 1
       },
       {
-        "options": ["A2-119", "A2-188", "A2-205", "A2-207"],
+        "options": ["A4b-254", "A2-188", "A2-205", "A2-207", "A4b-368", "B1-326"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Space-Time Smackdown) ×22"
+    "reward": "Shinedust ×2200",
+    "secret": false
   },
   {
     "expansionId": "A2",
@@ -47,11 +48,12 @@
         "amount": 1
       },
       {
-        "options": ["A2-78", "A2-167"],
+        "options": ["A4b-170", "A2-167", "A4b-171"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Space-Time Smackdown) ×6"
+    "reward": "Shinedust ×600",
+    "secret": false
   },
   {
     "expansionId": "A2",
@@ -66,7 +68,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Space-Time Smackdown) ×5"
+    "reward": "Shinedust ×500",
+    "secret": false
   },
   {
     "expansionId": "A2",
@@ -85,11 +88,12 @@
         "amount": 1
       },
       {
-        "options": ["A2-143", "A2-179"],
+        "options": ["A2-143", "A2-179", "P-A-115"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Space-Time Smackdown) ×4"
+    "reward": "Shinedust ×400",
+    "secret": false
   },
   {
     "expansionId": "A2",
@@ -100,7 +104,7 @@
         "amount": 1
       },
       {
-        "options": ["A2-22", "A2-159"],
+        "options": ["A4b-30", "A2-159", "A4b-31", "P-A-116"],
         "amount": 1
       },
       {
@@ -112,7 +116,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Space-Time Smackdown) ×4"
+    "reward": "Shinedust ×400",
+    "secret": false
   },
   {
     "expansionId": "A2",
@@ -131,7 +136,7 @@
         "amount": 1
       },
       {
-        "options": ["A2-50", "A2-162"],
+        "options": ["A4b-108", "A2-162", "A4b-109", "B1-299", "P-A-48"],
         "amount": 1
       },
       {
@@ -139,7 +144,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Space-Time Smackdown) ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×200<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2",
@@ -162,7 +168,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Space-Time Smackdown) ×4"
+    "reward": "Shinedust ×400",
+    "secret": false
   },
   {
     "expansionId": "A2",
@@ -177,11 +184,7 @@
         "amount": 1
       },
       {
-        "options": ["A2-98"],
-        "amount": 1
-      },
-      {
-        "options": ["A2-99", "A2-186", "A2-201"],
+        "options": ["A4b-244", "A2-186", "A2-201", "A4-238"],
         "amount": 1
       },
       {
@@ -211,145 +214,82 @@
       {
         "options": ["A2-172"],
         "amount": 1
+      },
+      {
+        "options": ["A4b-242"],
+        "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Space-Time Smackdown) ×16"
+    "reward": "Shinedust ×1600",
+    "secret": false
   },
   {
     "expansionId": "A2",
     "name": "Battle with Champion Cynthia",
     "requiredCards": [
       {
-        "options": ["A2-152", "A2-192"],
-        "amount": 1
+        "options": ["A2-104", "A2-172"],
+        "amount": 2
       },
       {
         "options": ["A2-123", "A2-175"],
         "amount": 1
       },
       {
-        "amount": "2",
-        "options": ["A2-9", "A2-41", "A2-161", "A2-92", "A2-170", "A2-104", "A2-172"]
+        "options": ["A2-152", "A2-192"],
+        "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Space-Time Smackdown) ×4"
+    "reward": "Shinedust ×400",
+    "secret": false
   },
   {
     "expansionId": "A2",
     "name": "A Variety of Pokémon Abilities",
     "requiredCards": [
       {
-        "amount": "5",
-        "options": [
-          "A2-22",
-          "A2-159",
-          "A2-32",
-          "A2-33",
-          "A2-160",
-          "A2-34",
-          "A2-72",
-          "A2-78",
-          "A2-167",
-          "A2-87",
-          "A2-92",
-          "A2-170",
-          "A2-110",
-          "A2-187",
-          "A2-202",
-          "A2-114",
-          "A2-123",
-          "A2-175"
-        ]
+        "options": ["A2-32"],
+        "amount": 5
       }
     ],
-    "reward": "Emblem Ticket (Space-Time Smackdown) ×4"
+    "reward": "Shinedust ×400",
+    "secret": false
   },
   {
     "expansionId": "A2",
     "name": "Slightly Scary Pokémon",
     "requiredCards": [
       {
-        "amount": "4",
-        "options": ["A2-66", "A2-67", "A2-185", "A2-199", "A2-70", "A2-71", "A2-72", "A2-73", "A2-165", "A2-74", "A2-110", "A2-187", "A2-202"]
+        "options": ["A2-70"],
+        "amount": 4
       }
     ],
-    "reward": "Emblem Ticket (Space-Time Smackdown) ×9"
+    "reward": "Shinedust ×900",
+    "secret": false
   },
   {
     "expansionId": "A2",
     "name": "Pokémon Grown Large",
     "requiredCards": [
       {
-        "amount": "5",
-        "options": [
-          "A2-5",
-          "A2-12",
-          "A2-24",
-          "A2-33",
-          "A2-160",
-          "A2-45",
-          "A2-53",
-          "A2-57",
-          "A2-72",
-          "A2-82",
-          "A2-169",
-          "A2-89",
-          "A2-94",
-          "A2-114",
-          "A2-117",
-          "A2-118",
-          "A2-125",
-          "A2-189",
-          "A2-203"
-        ]
+        "options": ["A2-94"],
+        "amount": 5
       }
     ],
-    "reward": "Emblem Ticket (Space-Time Smackdown) ×4"
+    "reward": "Shinedust ×400",
+    "secret": false
   },
   {
     "expansionId": "A2",
     "name": "New Discoveries of the Sinnoh Region",
     "requiredCards": [
       {
-        "amount": "10",
-        "options": [
-          "A2-5",
-          "A2-7",
-          "A2-180",
-          "A2-196",
-          "A2-9",
-          "A2-20",
-          "A2-24",
-          "A2-33",
-          "A2-160",
-          "A2-46",
-          "A2-53",
-          "A2-57",
-          "A2-65",
-          "A2-67",
-          "A2-185",
-          "A2-199",
-          "A2-72",
-          "A2-82",
-          "A2-169",
-          "A2-84",
-          "A2-95",
-          "A2-185",
-          "A2-200",
-          "A2-97",
-          "A2-99",
-          "A2-186",
-          "A2-201",
-          "A2-118",
-          "A2-125",
-          "A2-189",
-          "A2-203",
-          "A2-129",
-          "A2-118"
-        ]
+        "options": ["A2-131"],
+        "amount": 10
       }
     ],
-    "reward": "Emblem Ticket (Space-Time Smackdown) ×12"
+    "reward": "Shinedust ×1200",
+    "secret": false
   },
   {
     "expansionId": "A2",
@@ -380,7 +320,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Space-Time Smackdown) ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×200<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2",
@@ -399,19 +340,20 @@
         "amount": 1
       },
       {
-        "options": ["A2-150", "A2-190"],
-        "amount": 1
-      },
-      {
         "options": ["A2-151", "A2-191"],
         "amount": 1
       },
       {
-        "options": ["A2-155", "A2-195"],
+        "options": ["A4b-326", "A2-190", "A4b-327"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-344", "A2-195", "A4b-345"],
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Space-Time Smackdown) ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×200<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A2",
@@ -422,7 +364,8 @@
         "amount": 3
       }
     ],
-    "reward": "Turtwig (profile icon)"
+    "reward": "Turtwig (profile icon)",
+    "secret": false
   },
   {
     "expansionId": "A2",
@@ -433,7 +376,8 @@
         "amount": 3
       }
     ],
-    "reward": "Chimchar (profile icon)"
+    "reward": "Chimchar (profile icon)",
+    "secret": false
   },
   {
     "expansionId": "A2",
@@ -444,7 +388,32 @@
         "amount": 3
       }
     ],
-    "reward": "Piplup (profile icon)"
+    "reward": "Piplup (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "A2",
+    "name": "Garden of Smiling Flowers 2",
+    "requiredCards": [
+      {
+        "options": ["A2-4"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-30", "A2-159", "A4b-31", "P-A-116"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-63"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-137"],
+        "amount": 1
+      }
+    ],
+    "reward": "Garden Of Smiling Flowers (cover)",
+    "secret": true
   },
   {
     "expansionId": "A2",
@@ -499,7 +468,8 @@
         "amount": 1
       }
     ],
-    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A2",
@@ -554,7 +524,8 @@
         "amount": 1
       }
     ],
-    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A2",
@@ -577,7 +548,8 @@
         "amount": 1
       }
     ],
-    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A2",
@@ -600,7 +572,8 @@
         "amount": 1
       }
     ],
-    "reward": "Pack Hourglass ×12<br />Wonder Hourglass ×36<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A2",
@@ -627,6 +600,7 @@
         "amount": 1
       }
     ],
-    "reward": "Garchomp (emblem)"
+    "reward": "Garchomp (emblem)",
+    "secret": true
   }
 ]

@@ -8,11 +8,11 @@
         "amount": 1
       },
       {
-        "options": ["A4a-20", "A4a-80", "A4a-90"],
+        "options": ["A4a-20", "A4a-80", "A4a-90", "B2a-127"],
         "amount": 1
       },
       {
-        "options": ["A4a-22", "A4a-72"],
+        "options": ["A4a-22", "A4a-72", "P-A-104"],
         "amount": 1
       },
       {
@@ -24,7 +24,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Secluded Springs) ×10"
+    "reward": "Shinedust ×1000",
+    "secret": false
   },
   {
     "expansionId": "A4a",
@@ -35,7 +36,7 @@
         "amount": 1
       },
       {
-        "options": ["A4a-10", "A4a-79", "A4a-87"],
+        "options": ["A4a-10", "A4a-79", "A4a-87", "B2a-126", "P-A-110"],
         "amount": 1
       },
       {
@@ -51,26 +52,19 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Secluded Springs) ×10"
+    "reward": "Shinedust ×1000",
+    "secret": false
   },
   {
     "expansionId": "A4a",
     "name": "Raikou and Waterside Lightning-type Pokémon",
     "requiredCards": [
       {
-        "options": ["A4a-25", "A4a-81", "A4a-88"],
+        "options": ["A4a-25", "A4a-81", "A4a-88", "B2a-128"],
         "amount": 1
       },
       {
         "options": ["A4a-26"],
-        "amount": 1
-      },
-      {
-        "options": ["A4a-27"],
-        "amount": 1
-      },
-      {
-        "options": ["A4a-28"],
         "amount": 1
       },
       {
@@ -82,7 +76,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Secluded Springs) ×10"
+    "reward": "Shinedust ×1000",
+    "secret": false
   },
   {
     "expansionId": "A4a",
@@ -113,7 +108,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Secluded Springs) ×6"
+    "reward": "Shinedust ×600",
+    "secret": false
   },
   {
     "expansionId": "A4a",
@@ -124,7 +120,7 @@
         "amount": 1
       },
       {
-        "options": ["A4a-11"],
+        "options": ["A4a-16"],
         "amount": 1
       },
       {
@@ -132,7 +128,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Secluded Springs) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A4a",
@@ -147,7 +144,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Secluded Springs) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A4a",
@@ -162,7 +160,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Secluded Springs) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A4a",
@@ -177,7 +176,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Secluded Springs) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A4a",
@@ -188,11 +188,12 @@
         "amount": 1
       },
       {
-        "options": ["A4a-37", "A4a-75"],
+        "options": ["A4a-37", "A4a-75", "B2-217"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Secluded Springs) ×4"
+    "reward": "Shinedust ×400",
+    "secret": false
   },
   {
     "expansionId": "A4a",
@@ -203,14 +204,15 @@
         "amount": 5
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Secluded Springs) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A4a",
     "name": "Pokémon that can Use Attacks Immediately",
     "requiredCards": [
       {
-        "options": ["A4a-23", "A4a-105"],
+        "options": ["A4a-23", "A4a-105", "B2-210"],
         "amount": 1
       },
       {
@@ -222,7 +224,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Secluded Springs) ×5"
+    "reward": "Shinedust ×500",
+    "secret": false
   },
   {
     "expansionId": "A4a",
@@ -233,7 +236,8 @@
         "amount": 3
       }
     ],
-    "reward": "Igglybuff (profile icon)"
+    "reward": "Igglybuff (profile icon)",
+    "secret": false
   },
   {
     "expansionId": "A4a",
@@ -252,7 +256,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A4a",
@@ -271,7 +276,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A4a",
@@ -302,7 +308,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A4a",
@@ -325,7 +332,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A4a",
@@ -352,6 +360,7 @@
         "amount": 1
       }
     ],
-    "reward": "Mantyke (emblem)"
+    "reward": "Mantyke (emblem)",
+    "secret": true
   }
 ]

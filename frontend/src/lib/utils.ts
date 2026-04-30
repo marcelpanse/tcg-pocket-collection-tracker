@@ -110,19 +110,8 @@ export type MissionType = 'all' | 'normal' | 'secret' | 'complete'
 
 export function getMissionType(mission: Mission): Exclude<MissionType, 'all'> {
   const name = mission.name.toLowerCase()
-  const reward = (mission.reward || '').toLowerCase()
   if (name.includes('complete') || name.includes('pokedex') || name.includes('pokédex') || name.endsWith('immersive experience')) {
     return 'complete'
   }
-  if (
-    name.includes('museum') ||
-    name.startsWith('collect ') ||
-    name.includes('immersive') ||
-    reward.includes('pack hourglass') ||
-    (reward.includes('(emblem)') && !reward.includes('emblem ticket')) ||
-    mission.requiredCards.some((card) => card.amount > 1)
-  ) {
-    return 'secret'
-  }
-  return 'normal'
+  return mission.secret ? 'secret' : 'normal'
 }

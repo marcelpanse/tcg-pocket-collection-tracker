@@ -20,7 +20,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Fantastical Parade) ×12"
+    "reward": "Shinedust ×1200",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -43,7 +44,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Fantastical Parade) ×12"
+    "reward": "Shinedust ×1200",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -70,7 +72,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Fantastical Parade) ×12"
+    "reward": "Shinedust ×1200",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -85,7 +88,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Fantastical Parade) ×9"
+    "reward": "Shinedust ×900",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -96,33 +100,16 @@
         "amount": 1
       },
       {
-        "amount": "5",
-        "options": [
-          "B2-2",
-          "B2-3",
-          "B2-18",
-          "B2-22",
-          "B2-32",
-          "B2-37",
-          "B2-61",
-          "B2-67",
-          "B2-71",
-          "B2-130",
-          "B2-134",
-          "B2-137",
-          "B2-143",
-          "B2-159",
-          "B2-172",
-          "B2-194",
-          "B2-204"
-        ]
+        "options": ["B2-2"],
+        "amount": 5
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Fantastical Parade) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2",
-    "name": "Pokémon that Dance in the Town",
+    "name": "Pokémon That Dance in the Town",
     "requiredCards": [
       {
         "options": ["B2-18"],
@@ -141,7 +128,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Fantastical Parade) ×2"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×200<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -160,7 +148,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Fantastical Parade) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -183,11 +172,12 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Fantastical Parade) ×1"
+    "reward": "Shinedust ×1600",
+    "secret": false
   },
   {
     "expansionId": "B2",
-    "name": "Each Meowth is Different",
+    "name": "Each Meowth Is Different",
     "requiredCards": [
       {
         "options": ["B2-94"],
@@ -202,7 +192,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Fantastical Parade) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -217,7 +208,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Fantastical Parade) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -232,18 +224,20 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Fantastical Parade) ×5"
+    "reward": "Shinedust ×500",
+    "secret": false
   },
   {
     "expansionId": "B2",
     "name": "Warning: May Be Prickly",
     "requiredCards": [
       {
-        "amount": "5",
-        "options": ["B2-6", "B2-156", "B2-7", "B2-8", "B2-9", "B2-10", "B2-78", "B2-115", "B2-116"]
+        "options": ["B2-6", "B2-156"],
+        "amount": 5
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Fantastical Parade) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -258,11 +252,12 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Fantastical Parade) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2",
-    "name": "Want Some... Ice Cream?",
+    "name": "Want Some...Ice Cream?",
     "requiredCards": [
       {
         "options": ["B2-37"],
@@ -281,7 +276,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Fantastical Parade) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -296,7 +292,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Fantastical Parade) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -315,29 +312,32 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Fantastical Parade) ×12"
+    "reward": "Shinedust ×1200",
+    "secret": false
   },
   {
     "expansionId": "B2",
     "name": "Alolan Form Pokémon",
     "requiredCards": [
       {
-        "amount": "5",
-        "options": ["B2-18", "B2-28", "B2-29", "B2-182", "B2-196", "B2-50", "B2-94", "B2-95", "B2-96", "B2-97", "B2-173"]
+        "options": ["B2-28", "P-B-32"],
+        "amount": 5
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Fantastical Parade) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2",
     "name": "Galarian Form Pokémon",
     "requiredCards": [
       {
-        "amount": "5",
-        "options": ["B2-30", "B2-31", "B2-58", "B2-167", "B2-59", "B2-98", "B2-99", "B2-100", "B2-176", "B2-110", "B2-111", "B2-177", "B2-117"]
+        "options": ["B2-30"],
+        "amount": 5
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Fantastical Parade) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -368,12 +368,17 @@
         "amount": 1
       }
     ],
-    "reward": "Starting Plains Battle (cover)<br />Emblem Ticket (Fantastical Parade) ×1"
+    "reward": "Starting Plains Battle (cover)<br />Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "B2",
     "name": "Peculiar Plaza and Psychic-type Pokémon",
     "requiredCards": [
+      {
+        "options": ["B2-58", "B2-167"],
+        "amount": 5
+      },
       {
         "options": ["B2-66", "B2-185", "B2-203"],
         "amount": 1
@@ -383,18 +388,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Fantastical Parade) ×9"
-  },
-  {
-    "expansionId": "B2",
-    "name": "Collect 3 Mudkip cards",
-    "requiredCards": [
-      {
-        "options": ["B2-33"],
-        "amount": 3
-      }
-    ],
-    "reward": "Mudkip (profile icon)"
+    "reward": "Shinedust ×900",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -405,7 +400,8 @@
         "amount": 3
       }
     ],
-    "reward": "Cramorant (profile icon)"
+    "reward": "Cramorant (profile icon)",
+    "secret": false
   },
   {
     "expansionId": "B2",
@@ -416,7 +412,96 @@
         "amount": 3
       }
     ],
-    "reward": "Meloetta (profile icon)"
+    "reward": "Meloetta (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B2",
+    "name": "Collect 3 Mudkip cards",
+    "requiredCards": [
+      {
+        "options": ["B2-33"],
+        "amount": 3
+      }
+    ],
+    "reward": "Mudkip (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B2",
+    "name": "Pokémon and the Town Festival",
+    "requiredCards": [
+      {
+        "options": ["B2-2"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-3"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-18"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-22"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-32"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-37"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-61"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-67"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-71"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-130"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-134"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-137"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-143"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-159"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-172"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-194"],
+        "amount": 1
+      },
+      {
+        "options": ["B2-204"],
+        "amount": 1
+      }
+    ],
+    "reward": "Meowth (emblem)",
+    "secret": true
   },
   {
     "expansionId": "B2",
@@ -519,7 +604,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "B2",
@@ -562,7 +648,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "B2",
@@ -585,7 +672,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "B2",
@@ -600,81 +688,7 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
-  },
-  {
-    "expansionId": "B2",
-    "name": "Pokémon and the Town Festival",
-    "requiredCards": [
-      {
-        "options": ["B2-2"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-3"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-18"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-22"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-32"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-37"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-61"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-67"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-71"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-130"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-134"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-137"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-143"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-159"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-172"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-194"],
-        "amount": 1
-      },
-      {
-        "options": ["B2-204"],
-        "amount": 1
-      }
-    ],
-    "reward": "Meowth (emblem)"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   }
 ]

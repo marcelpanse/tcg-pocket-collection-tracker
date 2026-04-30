@@ -4,7 +4,11 @@
     "name": "Eevee and its Evolutions 1",
     "requiredCards": [
       {
-        "options": ["A3b-55", "A3b-56", "A3b-83"],
+        "options": ["A3b-2"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-64", "A3b-71", "A4-213", "A4b-65"],
         "amount": 1
       },
       {
@@ -12,11 +16,11 @@
         "amount": 1
       },
       {
-        "options": ["A3b-25"],
+        "options": ["A3b-17"],
         "amount": 1
       },
       {
-        "options": ["A3b-8", "A3b-9", "A3b-79"],
+        "options": ["A3b-25"],
         "amount": 1
       },
       {
@@ -24,30 +28,31 @@
         "amount": 1
       },
       {
+        "options": ["A3b-33", "A3b-76"],
+        "amount": 1
+      },
+      {
         "options": ["A3b-43"],
         "amount": 1
       },
       {
-        "options": ["A3b-2"],
-        "amount": 1
-      },
-      {
-        "options": ["A3b-17"],
-        "amount": 1
-      },
-      {
-        "options": ["A3b-33", "A3b-34", "A3b-81"],
+        "options": ["A4b-285", "A3b-78", "A4b-286"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Eevee Grove) ×13"
+    "reward": "Shinedust ×1300",
+    "secret": false
   },
   {
     "expansionId": "A3b",
     "name": "Eevee and its Evolutions 2",
     "requiredCards": [
       {
-        "options": ["A3b-78", "A3b-92"],
+        "options": ["A3b-70"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-64", "A3b-71", "A4-213", "A4b-65"],
         "amount": 1
       },
       {
@@ -55,11 +60,11 @@
         "amount": 1
       },
       {
-        "options": ["A3b-74"],
+        "options": ["A3b-73"],
         "amount": 1
       },
       {
-        "options": ["A3b-71", "A3b-87"],
+        "options": ["A3b-74"],
         "amount": 1
       },
       {
@@ -67,23 +72,20 @@
         "amount": 1
       },
       {
+        "options": ["A3b-33", "A3b-76"],
+        "amount": 1
+      },
+      {
         "options": ["A3b-77"],
         "amount": 1
       },
       {
-        "options": ["A3b-70"],
-        "amount": 1
-      },
-      {
-        "options": ["A3b-73"],
-        "amount": 1
-      },
-      {
-        "options": ["A3b-76", "A3b-89"],
+        "options": ["A4b-285", "A3b-78", "A4b-286"],
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Eevee Grove) ×26"
+    "reward": "Shinedust ×2600",
+    "secret": false
   },
   {
     "expansionId": "A3b",
@@ -98,7 +100,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Eevee Grove) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A3b",
@@ -121,7 +124,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Eevee Grove) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A3b",
@@ -144,7 +148,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Eevee Grove) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A3b",
@@ -163,23 +168,24 @@
         "amount": 1
       },
       {
-        "options": ["A3b-31"],
+        "options": ["A4b-173"],
         "amount": 1
       },
       {
-        "options": ["A3b-32"],
+        "options": ["A4b-175"],
         "amount": 1
       },
       {
-        "options": ["A3b-36"],
+        "options": ["A4b-185"],
         "amount": 1
       },
       {
-        "options": ["A3b-37"],
+        "options": ["A4b-187"],
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2<br />Emblem Ticket (Eevee Grove) ×1"
+    "reward": "Wonder Hourglass ×12<br />Shinedust ×100<br />Shop Ticket ×2",
+    "secret": false
   },
   {
     "expansionId": "A3b",
@@ -198,14 +204,15 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Eevee Grove) ×2"
+    "reward": "Shinedust ×200",
+    "secret": false
   },
   {
     "expansionId": "A3b",
     "name": "A Gluttonous Snorlax",
     "requiredCards": [
       {
-        "options": ["A3b-57", "A3b-84", "A3b-91"],
+        "options": ["A4b-288", "A3b-84", "A3b-91"],
         "amount": 1
       },
       {
@@ -213,18 +220,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Eevee Grove) ×5"
-  },
-  {
-    "expansionId": "A3b",
-    "name": "Collect 3 Alcremie cards",
-    "requiredCards": [
-      {
-        "options": ["A3b-37"],
-        "amount": 3
-      }
-    ],
-    "reward": "Alcremie (profile icon)"
+    "reward": "Shinedust ×500",
+    "secret": false
   },
   {
     "expansionId": "A3b",
@@ -251,7 +248,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A3b",
@@ -278,17 +276,19 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "A3b",
-    "name": "A Sweet Party of Epic Proportions",
+    "name": "A Sweets Party of Epic Proportions",
     "requiredCards": [
       {
-        "amount": "100",
-        "options": ["A3b-7", "A3b-18", "A3b-19", "A3b-31", "A3b-32", "A3b-36", "A3b-37"]
+        "options": ["A4b-185", "A4b-186"],
+        "amount": 100
       }
     ],
-    "reward": "Alcremie (emblem)"
+    "reward": "Alcremie (emblem)",
+    "secret": true
   }
 ]
