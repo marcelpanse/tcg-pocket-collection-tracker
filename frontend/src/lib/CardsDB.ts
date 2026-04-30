@@ -337,7 +337,7 @@ export const expansions: Expansion[] = [
     tradeable: true,
     openable: true,
     packStructure: {
-      containsShinies: false,
+      containsShinies: true,
       containsBabies: false,
       containsLinkedCards: false,
       cardsPerPack: 5,
