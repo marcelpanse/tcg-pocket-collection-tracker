@@ -1,1 +1,0 @@
-import{B as e}from"./useAccount-Cas4wQDs.js";function t(e){let t=new Map;for(let n of e)t.set(n,(t.get(n)??0)+1);return[...t].toSorted(([e,t],[n,r])=>e-n)}function n(t,n){return t.reduce((t,[r,i])=>t+Math.max(0,i-(e(r)?.alternate_versions?.reduce((e,t)=>e+(n.get(t)?.amount_owned??0),0)??0)),0)}export{n,t};
