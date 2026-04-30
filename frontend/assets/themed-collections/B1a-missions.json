@@ -20,7 +20,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Crimson Blaze) ×11"
+    "reward": "Shinedust ×1100",
+    "secret": false
   },
   {
     "expansionId": "B1a",
@@ -39,7 +40,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Crimson Blaze) ×8"
+    "reward": "Shinedust ×800",
+    "secret": false
   },
   {
     "expansionId": "B1a",
@@ -62,7 +64,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Crimson Blaze) ×8"
+    "reward": "Shinedust ×800",
+    "secret": false
   },
   {
     "expansionId": "B1a",
@@ -89,11 +92,12 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Crimson Blaze) ×6"
+    "reward": "Shinedust ×600",
+    "secret": false
   },
   {
     "expansionId": "B1a",
-    "name": "Sunkern's Growth Diary",
+    "name": "Sunkern’s Growth Diary",
     "requiredCards": [
       {
         "options": ["B1a-7"],
@@ -104,7 +108,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Crimson Blaze) ×1"
+    "reward": "Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "B1a",
@@ -127,7 +132,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Crimson Blaze) ×6"
+    "reward": "Shinedust ×600",
+    "secret": false
   },
   {
     "expansionId": "B1a",
@@ -148,9 +154,14 @@
       {
         "options": ["B1a-41"],
         "amount": 1
+      },
+      {
+        "options": ["B1a-53"],
+        "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Crimson Blaze) ×4"
+    "reward": "Shinedust ×400",
+    "secret": false
   },
   {
     "expansionId": "B1a",
@@ -161,7 +172,8 @@
         "amount": 5
       }
     ],
-    "reward": "Emblem Ticket (Crimson Blaze) ×1"
+    "reward": "Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "B1a",
@@ -184,7 +196,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Crimson Blaze) ×1"
+    "reward": "Shinedust ×100",
+    "secret": false
   },
   {
     "expansionId": "B1a",
@@ -207,7 +220,8 @@
         "amount": 1
       }
     ],
-    "reward": "Emblem Ticket (Crimson Blaze) ×4"
+    "reward": "Shinedust ×400",
+    "secret": false
   },
   {
     "expansionId": "B1a",
@@ -218,7 +232,8 @@
         "amount": 3
       }
     ],
-    "reward": "Serena (profile icon)"
+    "reward": "Serena (profile icon)",
+    "secret": false
   },
   {
     "expansionId": "B1a",
@@ -249,7 +264,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "B1a",
@@ -272,7 +288,8 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "B1a",
@@ -291,11 +308,12 @@
         "amount": 1
       }
     ],
-    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10"
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
   },
   {
     "expansionId": "B1a",
-    "name": "Mega Venusaur's Evolution",
+    "name": "Mega Venusaur’s Evolution",
     "requiredCards": [
       {
         "options": ["B1a-1"],
@@ -322,7 +340,8 @@
         "amount": 1
       }
     ],
-    "reward": "Mega Venusaur (emblem)"
+    "reward": "Mega Venusaur (emblem)",
+    "secret": true
   },
   {
     "expansionId": "B1a",
@@ -345,10 +364,11 @@
         "amount": 1
       },
       {
-        "options": ["B1a-80", "B1a-86"],
+        "options": ["B1a-52", "B1a-80", "B1a-86", "B3-232"],
         "amount": 1
       }
     ],
-    "reward": "Mega Blastoise (emblem)"
+    "reward": "Mega Blastoise (emblem)",
+    "secret": true
   }
 ]

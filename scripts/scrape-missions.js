@@ -1,147 +1,168 @@
+import { execFileSync } from 'node:child_process'
 import fs from 'node:fs'
-import path from 'node:path'
 import * as cheerio from 'cheerio'
-import fetch from 'node-fetch'
 
-const BASE_URL = 'https://bulbapedia.bulbagarden.net/wiki'
-const targetDir = './frontend/assets/themed-collections/'
-const expansions = ['B1a', 'B2', 'B2a', 'B2b']
-// const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a']
-const expansionToName = {
-  A1: 'Genetic_Apex',
-  A1a: 'Mythical_Island',
-  A2: 'Space-Time_Smackdown',
-  A2a: 'Triumphant_Light',
-  A2b: 'Shining_Revelry',
-  A3: 'Celestial_Guardians',
-  A3a: 'Extradimensional_Crisis',
-  A3b: 'Eevee_Grove',
-  A4: 'Wisdom of Sea and Sky',
-  A4a: 'Secluded Springs',
-  A4b: 'Deluxe Pack: ex',
-  B1: 'Mega Rising',
-  B1a: 'Crimson Blaze',
-  B2: 'Fantastical Parade',
-  B2a: 'Paldean Wonders',
-  B2b: 'Mega Shine',
-}
+const BASE_URL = 'https://www.pokemon-zone.com/themed-collections'
+const TARGET_DIR = './frontend/assets/themed-collections/'
+const CARDS_PATH = './frontend/assets/cards.json'
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36'
 
-async function fetchHTML(url) {
-  const response = await fetch(url)
-  const text = await response.text()
+const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'A4b', 'B1', 'B1a', 'B2', 'B2a', 'B2b', 'B3']
+
+const allCards = JSON.parse(fs.readFileSync(CARDS_PATH, 'utf8'))
+const cardById = new Map(allCards.map((c) => [c.card_id, c]))
+const cardByInternalId = new Map(allCards.map((c) => [c.internal_id, c]))
+
+// pokemon-zone is behind Cloudflare and rejects node-fetch. Shell out to curl with full browser headers.
+function fetchHTML(url) {
+  const args = [
+    '-sL',
+    '--compressed',
+    '--fail',
+    '--retry',
+    '3',
+    '--retry-delay',
+    '5',
+    '-H',
+    `User-Agent: ${UA}`,
+    '-H',
+    'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    '-H',
+    'Accept-Language: en-US,en;q=0.9',
+    '-H',
+    'Sec-Fetch-Dest: document',
+    '-H',
+    'Sec-Fetch-Mode: navigate',
+    '-H',
+    'Upgrade-Insecure-Requests: 1',
+    url,
+  ]
+  const text = execFileSync('curl', args, { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 })
   return cheerio.load(text)
 }
 
-function parseCards($, cards, expansion) {
-  const cardsList = []
-  let isOfTheFollowing = false
-  const combinationCard = {}
-  cards.contents().each((_i, elem) => {
-    const line = $(elem).text()
-    const numOfFollowing = line.match(/\d+ of the following:/)
-    const numOfCombination = line.match(/\d+ in any combination of:/)
-    if (numOfFollowing != null) {
-      isOfTheFollowing = true
-      combinationCard.amount = numOfFollowing[0].slice(0, -18)
-      combinationCard.options = []
-    } else if (numOfCombination != null) {
-      isOfTheFollowing = true
-      combinationCard.amount = numOfCombination[0].slice(0, -23)
-      combinationCard.options = []
-    } else {
-      const ids = line.match(/#\d\d\d/g)
-      if (ids != null) {
-        const options = ids.map((id) => `${expansion}-${Number.parseInt(id.slice(1), 10)}`)
-        if (isOfTheFollowing) {
-          combinationCard.options = combinationCard.options.concat(options)
-        } else {
-          const card = {}
-          card.options = options
-          const amount = line.match(/×\d+/g)
-          if (amount != null) {
-            card.amount = Number.parseInt(amount[0].slice(1), 10)
-          } else {
-            card.amount = 1
-          }
-          cardsList.push(card)
-        }
+// Pokemon-zone item titles like "Shop ticket" need normalizing to match the UI's expected labels.
+function normalizeRewardLabel(raw) {
+  // Title-case each word, but preserve parenthesized suffixes verbatim (lowercase inside).
+  const segs = raw.split(/(\s\([^)]+\))/)
+  return segs
+    .map((seg, i) => {
+      if (i % 2 === 1) {
+        return seg.toLowerCase()
       }
-    }
-  })
-  if (isOfTheFollowing) {
-    cardsList.push(combinationCard)
-  }
-  return cardsList
+      return seg.replace(/\b\w/g, (m) => m.toUpperCase())
+    })
+    .join('')
 }
 
-async function getExpansionMissions(expansion) {
-  const expansionUrl = `${BASE_URL}/${expansionToName[expansion]}_(TCG_Pocket)#Themed_Collections`
-  console.log(`Fetching details for ${expansionUrl}...`)
-  try {
-    const $ = await fetchHTML(expansionUrl)
-    const missions = []
-    $('table').each((_i, table) => {
-      if ($(table).text().includes('Required cards')) {
-        $(table)
-          .find('tr')
-          .each((_j, row) => {
-            const tableRow = $(row).find('td')
-            const mission = {}
-            mission.expansionId = expansion
-            mission.name = tableRow.eq(0).text()
-            // mission.requiredCards = tableRow.eq(1).text()
-            mission.requiredCards = parseCards($, tableRow.eq(1), expansion)
-            const rewardCell = tableRow.eq(2)
-            const rewardItems = []
+function formatReward(qty, label) {
+  let normalized = normalizeRewardLabel(label)
+  // Pokemon-zone uses "(icon)" for profile icons; legacy data uses "(profile icon)".
+  normalized = normalized.replace(/\s\(icon\)$/i, ' (profile icon)')
+  if (qty === '1' && /\(emblem\)|\(profile icon\)|\(icon\)|\(cover\)|\(backdrop\)$/i.test(normalized)) {
+    return normalized
+  }
+  return `${normalized} ×${qty}`
+}
 
-            // Get text content from each child node or text node, respecting <br> tags
-            rewardCell.contents().each((_k, node) => {
-              if (node.type === 'text') {
-                // Add text content to rewards array if it's not just whitespace
-                const text = $(node).text().trim()
-                if (text) {
-                  rewardItems.push(text)
-                }
-              } else if (node.name === 'br') {
-                // Don't need to do anything special for <br> tags as we're collecting items separately
-              } else if (node.name) {
-                // Handle other HTML elements (spans with images, etc.)
-                const text = $(node).text().trim()
-                if (text) {
-                  rewardItems.push(text)
-                }
-              }
-            })
-
-            // Join the reward items with newlines and remove extra spaces
-            mission.reward = rewardItems.map((item) => item.replace(/\s+/g, ' ').trim()).join('<br />')
-            if (mission.name !== '') {
-              missions.push(mission)
-            }
-          })
-      }
-    })
-    return missions
-  } catch (error) {
-    console.error(`Error fetching missions for ${expansionUrl}:`, error)
+function extractCardId(altText) {
+  const m = altText.match(/\(([A-Z]\d+[a-z]?)\)\s*#(\d+)/)
+  if (!m) {
     return null
   }
+  return `${m[1]}-${Number.parseInt(m[2], 10)}`
 }
 
-async function scrapeMissions() {
-  for (const expansion of expansions) {
-    try {
-      fs.mkdirSync(targetDir, { recursive: true })
+function resolveAlternates(cardId) {
+  const card = cardById.get(cardId)
+  if (!card) {
+    return [cardId]
+  }
+  const ids = card.alternate_versions
+    .map((iid) => cardByInternalId.get(iid))
+    .filter(Boolean)
+    .map((c) => c.card_id)
+  return ids.length > 0 ? ids : [cardId]
+}
 
-      const missions = await getExpansionMissions(expansion)
-      console.log(`Scraping completed. Found ${missions.length} missions for ${expansion}.`)
+function parseMissionCard($, $card) {
+  const title = $card.find('.theme-collection-mission-card__title').first().text().trim()
 
-      fs.writeFileSync(path.join(targetDir, `${expansion}-missions.json`), JSON.stringify(missions, null, 2))
-      console.log('Cards saved to %s-missions.json', expansion)
-    } catch (error) {
-      console.error('Error scraping missions:', error)
+  const rewards = []
+  $card.find('.theme-collection-mission-card__rewards .icon-list__item .common-item-icon').each((_i, el) => {
+    const titleAttr = $(el).attr('title') || ''
+    const m = titleAttr.match(/^(\d+)x\s+(.+)$/)
+    if (m) {
+      rewards.push(formatReward(m[1], m[2].trim()))
     }
+  })
+
+  const slots = []
+  $card.find('.theme-collection-mission-card__cards > figure').each((_i, fig) => {
+    const $fig = $(fig)
+    const altText = $fig.find('img').attr('alt') || ''
+    const cardId = extractCardId(altText)
+    if (!cardId) {
+      return
+    }
+    const countText = $fig.find('.theme-collection-mission-card__card-count').text().trim()
+    // "+N Card(s)" inside a figure indicates this slot has alternate-art versions; resolve via cards.json.
+    const hasAlternates = /\+\d+\s+Cards?/i.test(countText)
+    slots.push({ cardId, hasAlternates })
+  })
+
+  // Group consecutive identical slots into one requirement with amount = duplicate count.
+  const requiredCards = []
+  for (const slot of slots) {
+    const options = slot.hasAlternates ? resolveAlternates(slot.cardId) : [slot.cardId]
+    const last = requiredCards[requiredCards.length - 1]
+    if (last && JSON.stringify(last.options) === JSON.stringify(options)) {
+      last.amount += 1
+    } else {
+      requiredCards.push({ options, amount: 1 })
+    }
+  }
+
+  return { name: title, requiredCards, reward: rewards.join('<br />') }
+}
+
+function scrapeExpansion(expansionId) {
+  const url = `${BASE_URL}/${expansionId.toLowerCase()}`
+  console.log(`Fetching ${url}`)
+  const $ = fetchHTML(url)
+
+  const missions = []
+  const headers = $('.themed-collection-detail__category_header').toArray()
+  for (const h of headers) {
+    const $h = $(h)
+    const headerText = $h.text().trim()
+    const isSecret = /secret/i.test(headerText)
+    let $node = $h.next()
+    while ($node.length && !$node.hasClass('themed-collection-detail__category_header')) {
+      $node.find('.theme-collection-mission-card').each((_i, el) => {
+        const m = parseMissionCard($, $(el))
+        missions.push({ expansionId, name: m.name, requiredCards: m.requiredCards, reward: m.reward, secret: isSecret })
+      })
+      $node = $node.next()
+    }
+  }
+  return missions
+}
+
+function sleep(ms) {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms)
+}
+
+function main() {
+  for (const [i, exp] of expansions.entries()) {
+    if (i > 0) {
+      sleep(1500)
+    }
+    const missions = scrapeExpansion(exp)
+    const outPath = `${TARGET_DIR}${exp}-missions.json`
+    fs.writeFileSync(outPath, `${JSON.stringify(missions, null, 2)}\n`)
+    console.log(`  → ${exp}: ${missions.length} missions written`)
   }
 }
 
-scrapeMissions().catch(console.error)
+main()

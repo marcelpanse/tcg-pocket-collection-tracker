@@ -185,6 +185,7 @@ export interface Mission {
   requiredCards: MissionCard[]
   expansionId: ExpansionId
   reward?: string
+  secret?: boolean
   completed?: boolean
 }
 
