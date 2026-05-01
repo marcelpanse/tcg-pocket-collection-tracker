@@ -92548,5 +92548,413 @@
     "alternate_versions": [1052352, 12651536],
     "artist": "Mizue",
     "internal_id": 12651536
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-49",
+    "image": "/images/en-US/P-B-49.webp",
+    "hp": 70,
+    "energy": "fire",
+    "name": "Victini",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire", "colorless"],
+        "name": "V-Flame",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Victory Star",
+      "effect": "Once during your turn, after you flip any coins for an attack of 1 of your [R] Pokémon, you may ignore all results of those coin flips and begin flipping those coins again. You can't use more than 1 Victory Star Ability each turn."
+    },
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12651600],
+    "artist": "Orca",
+    "internal_id": 12651600
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-50",
+    "image": "/images/en-US/P-B-50.webp",
+    "hp": 70,
+    "energy": "psychic",
+    "name": "Meloetta",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["psychic", "psychic"],
+        "name": "Psyshot",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Strange Singing",
+      "effect": "At the beginning of your turn, if this Pokémon is in the Active Spot, put a random [P] Pokémon from your deck into your hand."
+    },
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12651664],
+    "artist": "Mizue",
+    "internal_id": 12651664
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-51",
+    "image": "/images/en-US/P-B-51.webp",
+    "hp": 80,
+    "energy": "fighting",
+    "name": "Zygarde",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fighting"],
+        "name": "Bite",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12651728],
+    "artist": "Akira Komayama",
+    "internal_id": 12651728
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-52",
+    "image": "/images/en-US/P-B-52.webp",
+    "hp": 120,
+    "energy": "fighting",
+    "name": "Zygarde",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fighting", "fighting", "colorless"],
+        "name": "Cell Storm",
+        "damage": "60",
+        "effect": "Heal 20 damage from this Pokémon."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12651792],
+    "artist": "Shin Nagasawa",
+    "internal_id": 12651792
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-53",
+    "image": "/images/en-US/P-B-53.webp",
+    "hp": 170,
+    "energy": "fighting",
+    "name": "Zygarde ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fighting", "fighting", "fighting"],
+        "name": "Land Laser",
+        "damage": "100x",
+        "effect": "Flip 2 coins. This attack does 100 damage for each heads."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 4,
+    "rarity": "P",
+    "ex": true,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12651856],
+    "artist": "PLANETA CG Works",
+    "internal_id": 12651856
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-54",
+    "image": "/images/en-US/P-B-54.webp",
+    "hp": 50,
+    "energy": "colorless",
+    "name": "Eevee",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Stampede",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Boosted Evolution",
+      "effect": "As long as this Pokémon is in the Active Spot, it can evolve during your first turn or the turn you play it."
+    },
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12651920],
+    "artist": "Lee HyunJung",
+    "internal_id": 12651920
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-55",
+    "image": "/images/en-US/P-B-55.webp",
+    "hp": 170,
+    "energy": "fighting",
+    "name": "Zygarde ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fighting", "fighting", "fighting"],
+        "name": "Land Laser",
+        "damage": "100x",
+        "effect": "Flip 2 coins. This attack does 100 damage for each heads."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 4,
+    "rarity": "P",
+    "ex": true,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12651984],
+    "artist": "PLANETA CG Works",
+    "internal_id": 12651984
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-56",
+    "image": "/images/en-US/P-B-56.webp",
+    "hp": 180,
+    "energy": "grass",
+    "name": "Mega Heracross ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass", "grass", "grass", "colorless"],
+        "name": "Dynamic Horn",
+        "damage": "170",
+        "effect": "Flip a coin. If tails, this Pokémon also does 60 damage to itself."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "P",
+    "ex": true,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12652048],
+    "artist": "PLANETA CG Works",
+    "internal_id": 12652048
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-57",
+    "image": "/images/en-US/P-B-57.webp",
+    "hp": 70,
+    "energy": "fire",
+    "name": "Castform Sunny Form",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire"],
+        "name": "Sunny Scorching",
+        "damage": "30",
+        "effect": "If a Stadium is in play, your opponent's Active Pokémon is now Burned."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12652112],
+    "artist": "Yuka Morii",
+    "internal_id": 12652112
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-58",
+    "image": "/images/en-US/P-B-58.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Tepig",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire"],
+        "name": "Firebreathing",
+        "damage": "10+",
+        "effect": "Flip a coin. If heads, this attack does 30 more damage."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12652176],
+    "artist": "Kouki Saitou",
+    "internal_id": 12652176
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-59",
+    "image": "/images/en-US/P-B-59.webp",
+    "hp": 70,
+    "energy": "fighting",
+    "name": "Dwebble",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fighting"],
+        "name": "Stampede",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "ability": {
+      "name": "Shell Armor",
+      "effect": "This Pokémon takes -10 damage from attacks."
+    },
+    "weakness": "grass",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12652240],
+    "artist": "Akira Komayama",
+    "internal_id": 12652240
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-60",
+    "image": "/images/en-US/P-B-60.webp",
+    "hp": 90,
+    "energy": "darkness",
+    "name": "Zarude",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["darkness", "darkness"],
+        "name": "Dark Vengeance",
+        "damage": "40+",
+        "effect": "If any of your [D] Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 80 more damage."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12652304],
+    "artist": "Shin Nagasawa",
+    "internal_id": 12652304
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-61",
+    "image": "/images/en-US/P-B-61.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Treecko",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass"],
+        "name": "Pound",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12652368],
+    "artist": "Sekio",
+    "internal_id": 12652368
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-62",
+    "image": "/images/en-US/P-B-62.webp",
+    "hp": 150,
+    "energy": "fighting",
+    "name": "Gallade",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["fighting", "colorless", "colorless"],
+        "name": "Earthen Sword",
+        "damage": "70+",
+        "effect": "If a Stadium is in play, this attack does 70 more damage."
+      }
+    ],
+    "weakness": "psychic",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "set_details": "promo-b",
+    "pack": "everypack",
+    "alternate_versions": [12652432],
+    "artist": "kawayoo",
+    "internal_id": 12652432
   }
 ]
