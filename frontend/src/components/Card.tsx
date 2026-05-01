@@ -36,7 +36,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
   const handleMinusButtonClick = () => {
     if (card.collected && amountOwned === 0) {
       startTransition(async () => {
-        await deleteCardMutation.mutateAsync({ cardId: card.card_id })
+        await deleteCardMutation.mutateAsync({ internal_id: card.internal_id, cardId: card.card_id })
       })
     } else {
       updateCardCount(amountOwned - 1)

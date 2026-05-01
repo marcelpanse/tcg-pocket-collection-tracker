@@ -59,33 +59,35 @@ export interface AccountRow {
 }
 
 export interface CollectionRow {
-  amount_owned: number
   email: string
+  internal_id: number
+  amount_owned: number
+  amount_wanted: number | null
   created_at: Date
   updated_at: Date
-  internal_id: number
-
   collection: string[] // array of cardIds
 }
 
+export type Collection = Map<number, CollectionRow>
+
 export interface CardAmountUpdate {
-  amount_owned: number
   internal_id: number
+  amount_owned: number
   card_id: string
 }
 
 export interface CardAmountsRowUpdate {
   email: string
-  amount_owned: number
   internal_id: number
   updated_at: Date
+  amount_owned: number
 }
 
 export interface CollectionRowUpdate {
   email: string
-  card_id: string
   internal_id: number
   updated_at: Date
+  card_id: string
 }
 
 const tradeStatuses = ['offered', 'accepted', 'declined', 'finished'] as const

@@ -1,18 +1,22 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { CircleHelp } from 'lucide-react'
+import { CircleHelp, Trash2 } from 'lucide-react'
 import { type Resolver, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import { z } from 'zod'
+import { CardLine } from '@/components/CardLine'
 import { SocialShareButtons } from '@/components/SocialShareButtons'
+import { Spinner } from '@/components/Spinner'
 import { Alert } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
 import { toast } from '@/hooks/use-toast.ts'
+import { getCardByInternalId } from '@/lib/CardsDB'
 import { formatLanguage } from '@/lib/utils'
 import { useAccount, useUpdateAccountTradingFields } from '@/services/account/useAccount.ts'
+import { useCollection, useUpdateAmountWanted } from '@/services/collection/useCollection'
 import { gameLanguages, rarities } from '@/types/index.ts'
 
 function TradeSettings() {
@@ -20,6 +24,15 @@ function TradeSettings() {
 
   const { data: account } = useAccount()
   const updateAccountTradingFieldsMutation = useUpdateAccountTradingFields()
+  const updateAmountWantedMutation = useUpdateAmountWanted()
+
+  const { data: ownedCards, isLoading: isLoadingCollection } = useCollection()
+  const overridenCards = (ownedCards !== undefined ? [...ownedCards.values()].filter((row) => row.amount_wanted !== null) : []).toSorted((a, b) => {
+    if ((a.internal_id & 63) !== (b.internal_id & 63)) {
+      return (a.internal_id & 63) - (b.internal_id & 63)
+    }
+    return b.internal_id - a.internal_id
+  })
 
   const formSchema = z.object({
     is_active_trading: z.boolean(),
@@ -187,6 +200,36 @@ function TradeSettings() {
           </Button>
         </form>
       </Form>
+      <div className="rounded-md border-1 border-neutral-700 space-y-2 p-4 mx-auto max-w-xl mt-4">
+        <h2 className="text-xl text-center">Wanted card amounts</h2>
+        {isLoadingCollection ? (
+          <Spinner size="md" className="mx-auto mt-4" />
+        ) : (
+          <>
+            <p className="text-neutral-400">
+              {overridenCards.length !== 0
+                ? 'You can set the number of cards wanted for specific cards on the collection page. It allows you to keep generic per rarity settings and additionally marking some cards as wanted or for trade.'
+                : 'The cards below have custom amount wanted and are not affected by rarity settings.'}
+            </p>
+            {overridenCards.map((row) => (
+              <div key={row.internal_id} className="flex gap-2">
+                <CardLine
+                  className="flex-1 h-6"
+                  card_id={getCardByInternalId(row.internal_id)?.card_id ?? ''}
+                  increment={(row.amount_wanted ?? 0) - row.amount_owned}
+                />
+                <Button
+                  variant="outline"
+                  className="flex-0 size-6"
+                  onClick={async () => updateAmountWantedMutation.mutateAsync({ internal_id: row.internal_id, amount_wanted: null })}
+                >
+                  <Trash2 />
+                </Button>
+              </div>
+            ))}
+          </>
+        )}
+      </div>
       <SocialShareButtons className="mt-4 mx-auto w-fit" />
     </div>
   )

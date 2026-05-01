@@ -1,6 +1,6 @@
 import i18n from 'i18next'
-import { CircleHelp } from 'lucide-react'
-import { type ReactNode, useEffect, useState } from 'react'
+import { CircleHelp, Trash2 } from 'lucide-react'
+import { type ReactNode, startTransition, useEffect, useOptimistic, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { Tooltip } from 'react-tooltip'
@@ -13,7 +13,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sh
 import { craftingCost, getCardByInternalId, getExpansionById } from '@/lib/CardsDB.ts'
 import { pullRateForSpecificCard } from '@/lib/stats'
 import { getCardNameByLang } from '@/lib/utils'
-import { useCollection, useDeleteCard, useSelectedCard } from '@/services/collection/useCollection'
+import { useCollection, useDeleteCard, useSelectedCard, useUpdateAmountWanted } from '@/services/collection/useCollection'
 import { type Card, type CollectionRow, tradableRarities } from '@/types'
 
 function CardProperty({ name, children }: { name: string; children: ReactNode }) {
@@ -50,6 +50,7 @@ export default function CardDetail() {
 
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const deleteCardMutation = useDeleteCard()
+  const updateAmountWantedMutation = useUpdateAmountWanted()
 
   const [isOpen, setIsOpen] = useState(false)
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false)
@@ -61,6 +62,18 @@ export default function CardDetail() {
     amount_owned: ownedCards.get(alternate_id)?.amount_owned ?? 0,
   }))
   const expansion = card && getExpansionById(card.expansion)
+
+  const [amountWanted, setAmountWanted] = useOptimistic<number | null, number | null>(row?.amount_wanted ?? null, (_prev, curr: number | null) => curr)
+  const updateAmountWanted = (amount_wanted: number | null) => {
+    if (id === undefined) {
+      return
+    }
+    startTransition(async () => {
+      console.log(`updateAmountWanted(${amount_wanted})`)
+      setAmountWanted(amount_wanted)
+      await updateAmountWantedMutation.mutateAsync({ internal_id: id, amount_wanted, do_insert: row === undefined && !updateAmountWantedMutation.isPending })
+    })
+  }
 
   useEffect(() => {
     if (id) {
@@ -90,7 +103,7 @@ export default function CardDetail() {
 
   const handleUncollect = (cardId: string) => {
     if (id && row?.collection.includes(cardId)) {
-      deleteCardMutation.mutate({ cardId })
+      deleteCardMutation.mutate({ internal_id: id, cardId })
     }
   }
 
@@ -135,8 +148,8 @@ export default function CardDetail() {
             </DialogContent>
           </Dialog>
 
-          <div className="p-4 w-full">
-            <div className="mb-3">
+          <div className="p-4 w-full flex flex-col gap-2">
+            <div>
               <h2 className="text-xl font-semibold">{t('text.alternateVersions')}</h2>
               {alternatives && (
                 <Radio className="w-fit" value={String(id)} onValueChange={(x) => setId(Number(x))}>
@@ -156,8 +169,32 @@ export default function CardDetail() {
               )}
             </div>
 
+            <div className="flex w-fit rounded border border-neutral-700 divide-x divide-neutral-700 mt-4">
+              <span className="flex items-center px-2">
+                <label htmlFor="amount-wanted">Wanted</label>
+                <Tooltip id="amount-wanted-tooltip" style={{ maxWidth: '300px' }} />
+                <CircleHelp
+                  className="ml-2 size-4"
+                  data-tooltip-id="amount-wanted-tooltip"
+                  data-tooltip-content="Used in trading to deretmine if you want to get or give a copy of this card. It reffers to this specific card and does not count alternate versions. If not set, uses the value set in trade settings for this card rarity."
+                />
+              </span>
+              <input
+                id="amount-wanted"
+                className="px-2 w-24"
+                type="number"
+                min="0"
+                placeholder="default"
+                value={amountWanted ?? ''}
+                onChange={(e) => updateAmountWanted(Number(e.target.value))}
+              />
+              <button className="px-2 py-1 w-fit" onClick={() => updateAmountWanted(null)} type="button">
+                <Trash2 />
+              </button>
+            </div>
+
             {card?.rarity && tradableRarities.includes(card.rarity as (typeof tradableRarities)[number]) && (
-              <Link to={`/trade/matches/results?card_id=${card?.internal_id}`} onClick={() => setOpen(false)}>
+              <Link className="w-fit" to={`/trade/matches/results?card_id=${card?.internal_id}`} onClick={() => setOpen(false)}>
                 <Button>Find trades</Button>
               </Link>
             )}
