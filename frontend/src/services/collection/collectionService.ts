@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabase'
-import type { AccountRow, CardAmountsRowUpdate, CardAmountUpdate, CollectionRow } from '@/types'
+import type { AccountRow, CardAmountsRowUpdate, CardAmountUpdate, Collection, CollectionRow } from '@/types'
 
 export interface CollectionRowUpdate {
   email: string
@@ -18,7 +18,7 @@ export const removeLocalCacheItems = (email: string) => {
   localStorage.removeItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
 }
 
-export const getCollection = async (email: string, collectionLastUpdatedRaw?: Date | string): Promise<Map<number, CollectionRow>> => {
+export async function getCollection(email: string, collectionLastUpdatedRaw?: Date | string): Promise<Collection> {
   if (!email) {
     throw new Error('Email is required to fetch collection')
   }
@@ -41,8 +41,7 @@ export const getCollection = async (email: string, collectionLastUpdatedRaw?: Da
         const cacheLastUpdated = new Date(cacheLastUpdatedRaw)
 
         if (cacheLastUpdated && !Number.isNaN(cacheLastUpdated.getTime()) && cacheLastUpdated >= collectionLastUpdated && cachedCollection !== null) {
-          console.log('Using cached collection', cachedCollection.length)
-          return new Map(cachedCollection.map((row) => [row.internal_id, { ...row, amount_wanted: row.amount_wanted ?? null }]))
+          return cachedCollection
         }
       } catch (e) {
         console.log('Error parsing cache timestamp', e)
@@ -52,23 +51,19 @@ export const getCollection = async (email: string, collectionLastUpdatedRaw?: Da
 
   // Fetch from API if cache is invalid or not available
   const collection = await fetchCollectionFromAPI('card_amounts', 'email', email)
-  console.log('collection', collection.length)
 
-  // Update cache with new data
   if (collectionLastUpdated) {
     updateCollectionCache(collection, email, collectionLastUpdated)
   }
 
-  return new Map(collection.map((row) => [row.internal_id, { ...row, amount_wanted: row.amount_wanted ?? null }]))
+  return collection
 }
 
-export const getPublicCollection = async (friendId: string): Promise<Map<number, CollectionRow>> => {
+export function getPublicCollection(friendId: string) {
   if (!friendId) {
     throw new Error('Friend ID is required to fetch public collection')
   }
-
-  const collection = await fetchCollectionFromAPI('public_card_amounts_collection', 'friend_id', friendId)
-  return new Map(collection.map((row) => [row.internal_id, { ...row, amount_wanted: row.amount_wanted ?? null }]))
+  return fetchCollectionFromAPI('public_card_amounts_collection', 'friend_id', friendId)
 }
 
 export async function updateCollectionTimestamp(email: string, now: Date) {
@@ -84,7 +79,7 @@ export async function updateCollectionTimestamp(email: string, now: Date) {
   return data as AccountRow
 }
 
-export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[]) => {
+export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[], collection: Collection) => {
   if (!email) {
     throw new Error('Email is required to update cards')
   }
@@ -95,21 +90,18 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   const now = new Date()
 
   // Update collection records
-  const collectionRows: CollectionRowUpdate[] = rowsToUpdate
-    .filter((row) => row.card_id)
-    .map((row) => ({
-      email,
-      card_id: row.card_id as string,
-      internal_id: row.internal_id,
-      updated_at: now,
-    }))
+  const collectionRows: CollectionRowUpdate[] = rowsToUpdate.map((row) => ({
+    email,
+    card_id: row.card_id,
+    internal_id: row.internal_id,
+    updated_at: now,
+  }))
   const amountRows: CardAmountsRowUpdate[] = rowsToUpdate
-    .filter((row) => row.amount_owned !== undefined || row.amount_wanted !== undefined)
     .map((row) => ({
       email,
       internal_id: row.internal_id,
-      amount_owned: row.amount_owned as number,
-      amount_wanted: row.amount_wanted,
+      amount_owned: row.amount_owned,
+      amount_wanted: collection.get(row.internal_id)?.amount_wanted ?? null,
       updated_at: now,
     }))
     // Deduplicate amountRows on internal_id, needed for card csv import feature
@@ -136,15 +128,12 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
     throw error
   }
 
-  // Update cache with the changes
-  const latestCollection = getCollectionFromCache(email) || (await fetchCollectionFromAPI('collection', 'email', email))
-
   for (const row of rowsToUpdate) {
     // for each card that has updated, we need to find the matching internal card in the cache by internal_id and update it.
-    const existing = latestCollection.find((r) => r.internal_id === row.internal_id)
+    const existing = collection.get(row.internal_id)
     if (existing) {
-      const { internal_id, ...card } = row
-      Object.assign(existing, card)
+      const { internal_id, ...data } = row
+      Object.assign(existing, data)
       existing.updated_at = now
 
       if (row.card_id !== undefined && !existing.collection.includes(row.card_id)) {
@@ -153,11 +142,11 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
       }
     } else {
       // the card is not yet in the cache, so we need to add it.
-      latestCollection.push({
+      collection.set(row.internal_id, {
         email,
         internal_id: row.internal_id,
         amount_owned: row.amount_owned ?? 0,
-        amount_wanted: row.amount_wanted === undefined ? null : row.amount_wanted,
+        amount_wanted: null,
         created_at: now,
         updated_at: now,
         collection: row.card_id === undefined ? [] : [row.card_id],
@@ -165,15 +154,22 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
     }
   }
 
-  updateCollectionCache(latestCollection, email, now)
+  updateCollectionCache(collection, email, now)
 
   return {
-    cards: new Map(latestCollection.map((row) => [row.internal_id, row])),
+    cards: collection,
     account: account as AccountRow,
   }
 }
 
-export async function updateAmountWanted(email: string, internal_id: number, amount_wanted: number | null, updated_at: Date, do_insert?: boolean) {
+export async function updateAmountWanted(
+  email: string,
+  collection: Collection,
+  internal_id: number,
+  amount_wanted: number | null,
+  updated_at: Date,
+  do_insert?: boolean,
+) {
   if (do_insert) {
     const { error } = await supabase.from('card_amounts').insert({ email, internal_id })
     if (error) {
@@ -186,14 +182,13 @@ export async function updateAmountWanted(email: string, internal_id: number, amo
     throw new Error(`Failed updating amount_wanted: ${error.message}`)
   }
 
-  const latestCollection = getCollectionFromCache(email) || (await fetchCollectionFromAPI('collection', 'email', email))
-  const existing = latestCollection.find((r) => r.internal_id === internal_id)
+  const existing = collection.get(internal_id)
 
   if (existing) {
     existing.amount_wanted = amount_wanted
     existing.updated_at = updated_at
   } else {
-    latestCollection.push({
+    collection.set(internal_id, {
       email,
       internal_id,
       amount_owned: 0,
@@ -204,12 +199,12 @@ export async function updateAmountWanted(email: string, internal_id: number, amo
     })
   }
 
-  updateCollectionCache(latestCollection, email, updated_at)
+  updateCollectionCache(collection, email, updated_at)
 
-  return new Map(latestCollection.map((row) => [row.internal_id, row]))
+  return collection
 }
 
-export const deleteCard = async (email: string, cardId: string) => {
+export const deleteCard = async (email: string, collection: Collection, internal_id: number, cardId: string) => {
   if (!email) {
     throw new Error('Email is required to delete card')
   }
@@ -219,61 +214,41 @@ export const deleteCard = async (email: string, cardId: string) => {
 
   const now = new Date()
 
-  // First fetch the current account data
-  const { data: account, error: accountError } = await supabase.from('accounts').select().eq('email', email).single()
-
-  if (accountError) {
-    throw new Error(`Error fetching account: ${accountError.message}`)
-  }
-
-  // Update account's collection_last_updated timestamp
-  const { error: accountUpdateError, data: updatedAccount } = await supabase
-    .from('accounts')
-    .upsert({ ...account, collection_last_updated: now })
-    .select()
-    .single()
-
-  if (accountUpdateError) {
-    throw new Error(`Error updating account timestamp: ${accountUpdateError.message}`)
-  }
-
-  // Delete from collection table
-  const { error: collectionError } = await supabase.from('collection').delete().eq('card_id', cardId)
+  const [updatedAccount, { error: collectionError }] = await Promise.all([
+    updateCollectionTimestamp(email, now),
+    supabase.from('collection').delete().eq('card_id', cardId),
+  ])
 
   if (collectionError) {
     throw new Error(`Error deleting from collection: ${collectionError.message}`)
   }
 
-  // Update cache by removing the card
-  const latestFromCache = getCollectionFromCache(email)
-  if (!latestFromCache) {
-    return {}
-  }
-
   // Find and update the cache - remove the card_id from the collection array and set amount_owned to 0
-  const rowToUpdate = latestFromCache?.find((row) => row.collection.includes(cardId))
-  if (rowToUpdate) {
-    rowToUpdate.collection = rowToUpdate.collection.filter((id) => id !== cardId)
-    rowToUpdate.updated_at = now
-
-    updateCollectionCache(latestFromCache, email, now)
+  const row = collection.get(internal_id)
+  if (row?.collection.includes(cardId)) {
+    row.collection = row.collection.filter((id) => id !== cardId)
+    row.updated_at = now
+    updateCollectionCache(collection, email, now)
+  } else {
+    throw new Error(`Cannot disown a card that is not already owned`)
   }
 
   return {
-    cards: new Map(latestFromCache.map((row) => [row.internal_id, row])),
+    cards: collection,
     account: updatedAccount as AccountRow,
   }
 }
 
 // Helper functions
-async function fetchCollectionFromAPI(table: string, key: string, value: string): Promise<CollectionRow[]> {
+async function fetchCollectionFromAPI(table: string, key: string, value: string): Promise<Collection> {
   const { count, error } = await supabase.from(table).select('*', { count: 'exact', head: true }).eq(key, value)
 
   if (error) {
     throw new Error(`Error fetching collection: ${error.message}`)
   }
 
-  return count ? await fetchRange(table, key, value, count, 0, PAGE_SIZE) : []
+  const arr = count ? await fetchRange(table, key, value, count, 0, PAGE_SIZE) : []
+  return new Map(arr.map((row) => [row.internal_id, { ...row, amount_wanted: row.amount_wanted ?? null }]))
 }
 
 async function fetchRange(table: string, key: string, value: string, total: number, start: number, end: number): Promise<CollectionRow[]> {
@@ -314,7 +289,7 @@ async function fetchRange(table: string, key: string, value: string, total: numb
   }
 }
 
-function getCollectionFromCache(email: string): CollectionRow[] | null {
+function getCollectionFromCache(email: string): Collection | null {
   if (typeof localStorage === 'undefined') {
     console.warn('localStorage is not available, cannot retrieve cached collection')
     return null
@@ -323,8 +298,13 @@ function getCollectionFromCache(email: string): CollectionRow[] | null {
   try {
     const cachedData = localStorage.getItem(`${COLLECTION_CACHE_KEY}_${email}`)
     if (cachedData) {
-      const data = JSON.parse(cachedData) as CollectionRow[]
-      return data.map((row) => ({ ...row, updated_at: new Date(row.updated_at), created_at: new Date(row.created_at) }))
+      const arr = JSON.parse(cachedData) as CollectionRow[]
+      return new Map(
+        arr.map((row) => [
+          row.internal_id,
+          { ...row, amount_wanted: row.amount_wanted ?? null, updated_at: new Date(row.updated_at), created_at: new Date(row.created_at) },
+        ]),
+      )
     }
   } catch (error) {
     console.error('Error retrieving collection from cache:', error)
@@ -342,7 +322,7 @@ function getCollectionFromCache(email: string): CollectionRow[] | null {
   return null
 }
 
-function updateCollectionCache(collection: CollectionRow[], email: string, timestamp: Date) {
+function updateCollectionCache(collection: Collection, email: string, timestamp: Date) {
   if (!email) {
     return
   }
@@ -359,7 +339,7 @@ function updateCollectionCache(collection: CollectionRow[], email: string, times
     } else {
       // FIXIT: sometimes timestamp is a string, but I don't know why
       localStorage.setItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`, typeof timestamp === 'string' ? timestamp : timestamp.toISOString())
-      localStorage.setItem(`${COLLECTION_CACHE_KEY}_${email}`, JSON.stringify(collection))
+      localStorage.setItem(`${COLLECTION_CACHE_KEY}_${email}`, JSON.stringify([...collection.values()]))
     }
 
     console.log('Collection cache updated')

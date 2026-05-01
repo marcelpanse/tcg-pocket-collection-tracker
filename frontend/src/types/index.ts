@@ -68,11 +68,12 @@ export interface CollectionRow {
   collection: string[] // array of cardIds
 }
 
+export type Collection = Map<number, CollectionRow>
+
 export interface CardAmountUpdate {
   internal_id: number
-  amount_owned?: number
-  amount_wanted?: number | null
-  card_id?: string
+  amount_owned: number
+  card_id: string
 }
 
 export interface CardAmountsRowUpdate {

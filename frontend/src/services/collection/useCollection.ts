@@ -12,7 +12,7 @@ import {
   updateCards,
   updateCollectionTimestamp,
 } from '@/services/collection/collectionService.ts'
-import type { CardAmountUpdate } from '@/types'
+import type { CardAmountUpdate, CollectionRow } from '@/types'
 
 export function useCollection() {
   const { data: user } = useUser()
@@ -39,16 +39,20 @@ export function usePublicCollection(friendId: string | undefined) {
 
 export function useUpdateCards() {
   const { toast } = useToast()
-  const { data: user } = useUser()
+  const { data: user, isLoading: isLoadingUser } = useUser()
+  const { data: collection, isLoading: isLoadingCollection } = useCollection()
   const email = user?.user.email
 
   const queryClient = useQueryClient()
   return useMutation({
     mutationFn: (updates: CardAmountUpdate[]) => {
+      if (isLoadingUser || isLoadingCollection) {
+        throw new Error('Context not yet loaded')
+      }
       if (!email) {
         throw new Error('Email is required to update cards')
       }
-      return updateCards(email, updates)
+      return updateCards(email, updates, collection ?? new Map<number, CollectionRow>())
     },
     onSuccess: (result) => {
       queryClient.setQueryData(['collection', email], result.cards)
@@ -65,17 +69,24 @@ export function useUpdateCards() {
 
 export function useUpdateAmountWanted() {
   const { toast } = useToast()
-  const { data: user } = useUser()
+  const { data: user, isLoading: isLoadingUser } = useUser()
+  const { data: collection, isLoading: isLoadingCollection } = useCollection()
   const email = user?.user.email
 
   const queryClient = useQueryClient()
   return useMutation({
     mutationFn: ({ internal_id, amount_wanted, do_insert }: { internal_id: number; amount_wanted: number | null; do_insert?: boolean }) => {
+      if (isLoadingUser || isLoadingCollection) {
+        throw new Error('Context not yet loaded')
+      }
       if (!email) {
         throw new Error('Email is required to update amount wanted')
       }
       const now = new Date()
-      return Promise.all([updateAmountWanted(email, internal_id, amount_wanted, now, do_insert), updateCollectionTimestamp(email, now)])
+      return Promise.all([
+        updateAmountWanted(email, collection ?? new Map<number, CollectionRow>(), internal_id, amount_wanted, now, do_insert),
+        updateCollectionTimestamp(email, now),
+      ])
     },
     onSuccess: async ([cards, account]) => {
       queryClient.setQueryData(['collection', email], cards)
@@ -89,16 +100,20 @@ export function useUpdateAmountWanted() {
 }
 
 export function useDeleteCard() {
-  const { data: user } = useUser()
+  const { data: user, isLoading: isLoadingUser } = useUser()
+  const { data: collection, isLoading: isLoadingCollection } = useCollection()
   const email = user?.user.email
 
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: ({ cardId }: { cardId: string }) => {
+    mutationFn: ({ internal_id, cardId }: { internal_id: number; cardId: string }) => {
+      if (isLoadingUser || isLoadingCollection) {
+        throw new Error('Context not yet loaded')
+      }
       if (!email) {
         throw new Error('Email is required to delete card')
       }
-      return deleteCard(email, cardId)
+      return deleteCard(email, collection ?? new Map<number, CollectionRow>(), internal_id, cardId)
     },
     onSuccess: (result) => {
       queryClient.setQueryData(['collection', email], result.cards)

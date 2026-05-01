@@ -103,7 +103,7 @@ export default function CardDetail() {
 
   const handleUncollect = (cardId: string) => {
     if (id && row?.collection.includes(cardId)) {
-      deleteCardMutation.mutate({ cardId })
+      deleteCardMutation.mutate({ internal_id: id, cardId })
     }
   }
 

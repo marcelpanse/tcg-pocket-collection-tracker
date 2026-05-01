@@ -1,5 +1,5 @@
 import i18n from '@/i18n'
-import { type Card, type CollectionRow, cardTypes, expansionIds, type Rarity, type RaritySettingsRow } from '@/types'
+import { type Card, type Collection, cardTypes, expansionIds, type Rarity, type RaritySettingsRow } from '@/types'
 import { allCards, getCardByInternalId } from './CardsDB'
 import { levenshtein } from './levenshtein'
 import { getCardNameByLang, getExtraCards, getNeededCards } from './utils'
@@ -52,7 +52,7 @@ const sortComparators: Record<SortByOption, (a: Card, b: Card) => number> = {
   },
 }
 
-export function getFilteredCards(filters: Filters, cards: Map<number, CollectionRow>, tradingSettings?: RaritySettingsRow[]) {
+export function getFilteredCards(filters: Filters, cards: Collection, tradingSettings?: RaritySettingsRow[]) {
   let filteredCards = allCards
 
   if (filters.deckbuildingMode) {

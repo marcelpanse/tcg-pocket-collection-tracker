@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import type { Card, CollectionRow, GameLanguage, Mission, RaritySettingsRow } from '@/types'
+import type { Card, Collection, GameLanguage, Mission, RaritySettingsRow } from '@/types'
 import pokemonTranslations from '../../assets/pokemon_translations.json'
 import toolTranslations from '../../assets/tools_translations.json'
 import trainerTranslations from '../../assets/trainers_translations.json'
@@ -83,7 +83,7 @@ interface TradeSettings {
 }
 
 function getTradingCards(
-  collection: Map<number, CollectionRow>,
+  collection: Collection,
   settings_rows: RaritySettingsRow[],
   filter_func: (card: Card & { amount_owned: number }, settings: TradeSettings) => boolean,
 ) {
@@ -101,11 +101,11 @@ function getTradingCards(
   return [...new Set(arr)]
 }
 
-export function getExtraCards(cards: Map<number, CollectionRow>, settings_rows: RaritySettingsRow[]): number[] {
+export function getExtraCards(cards: Collection, settings_rows: RaritySettingsRow[]): number[] {
   return getTradingCards(cards, settings_rows, (c, settings) => c.amount_owned > settings.to_keep)
 }
 
-export function getNeededCards(cards: Map<number, CollectionRow>, settings_rows: RaritySettingsRow[]): number[] {
+export function getNeededCards(cards: Collection, settings_rows: RaritySettingsRow[]): number[] {
   return getTradingCards(cards, settings_rows, (c, settings) => c.amount_owned < settings.to_collect)
 }
 
