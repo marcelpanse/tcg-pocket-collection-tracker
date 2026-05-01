@@ -169,14 +169,14 @@ export default function CardDetail() {
               )}
             </div>
 
-            <div className="flex w-fit rounded border border-neutral-700 divide-x divide-neutral-700">
+            <div className="flex w-fit rounded border border-neutral-700 divide-x divide-neutral-700 mt-4">
               <span className="flex items-center px-2">
-                <label htmlFor="amount-wanted">Amount wanted</label>
+                <label htmlFor="amount-wanted">Wanted</label>
                 <Tooltip id="amount-wanted-tooltip" style={{ maxWidth: '300px' }} />
                 <CircleHelp
                   className="ml-2 size-4"
                   data-tooltip-id="amount-wanted-tooltip"
-                  data-tooltip-content="Used in trading to deretmine if you want to get or give a copy of this card. If not set, uses the value set in trade settings for this card rarity."
+                  data-tooltip-content="Used in trading to deretmine if you want to get or give a copy of this card. It reffers to this specific card and does not count alternate versions. If not set, uses the value set in trade settings for this card rarity."
                 />
               </span>
               <input
