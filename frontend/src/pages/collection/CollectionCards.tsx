@@ -16,7 +16,7 @@ import { toast } from '@/hooks/use-toast'
 import { getFilteredCards, ownershipOptions, sortByOptions, tradingOptions } from '@/lib/filters'
 import { getCardNameByLang } from '@/lib/utils.ts'
 import { useProfileDialog } from '@/services/account/useAccount'
-import { type Card as CardType, type Collection, cardTypes, expansionIds, rarities, AccountRow } from '@/types'
+import { type AccountRow, type Card as CardType, type Collection, cardTypes, expansionIds, rarities } from '@/types'
 
 const schema = z.object({
   search: z.string().default(''),
