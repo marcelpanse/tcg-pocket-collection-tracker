@@ -43,29 +43,49 @@ Deno.serve(async (req) => {
   const connection = await pool.connect()
   console.log('Database connection acquired')
   try {
-    const { action, friend_id } = await req.json()
-    console.log('Action:', action, '| friend_id:', friend_id)
+    const { action, friend_id, request_id } = await req.json()
+    console.log('Action:', action, '| friend_id:', friend_id, '| request_id:', request_id)
 
-    if (!action || !friend_id) {
-      return new Response('Missing action or friend_id', { status: 400 })
+    if (!action) {
+      return new Response('Missing action', { status: 400 })
     }
 
-    // Resolve friend_id → email + username, and look up caller's username
-    const friendLookupSql = 'SELECT email, username FROM accounts WHERE friend_id = $1'
-    console.log('Executing SQL:', friendLookupSql, '| params:', [friend_id])
-    const { rows: friendRows } = await connection.queryObject<{ email: string; username: string }>(friendLookupSql, [friend_id])
-    console.log('Friend lookup result:', friendRows)
+    // For accept/decline with a stale request (no friend_id), resolve via the friends row id
+    let friendEmail: string
+    let friendUsername: string
 
-    if (friendRows.length === 0) {
-      return new Response(JSON.stringify({ error: 'Friend not found' }), {
-        status: 404,
-        headers: { 'Content-Type': 'application/json', ...corsHeaders },
-      })
+    if ((action === 'accept' || action === 'decline') && !friend_id && request_id) {
+      const rowLookupSql = `SELECT email_requester, username_requester FROM friends WHERE id = $1 AND email_accepter = $2 AND state = 'pending'`
+      const { rows } = await connection.queryObject<{ email_requester: string; username_requester: string }>(rowLookupSql, [request_id, callerEmail])
+      if (rows.length === 0) {
+        return new Response(JSON.stringify({ error: 'Friend request not found' }), {
+          status: 404,
+          headers: { 'Content-Type': 'application/json', ...corsHeaders },
+        })
+      }
+      friendEmail = rows[0].email_requester
+      friendUsername = rows[0].username_requester
+    } else {
+      if (!friend_id) {
+        return new Response('Missing friend_id', { status: 400 })
+      }
+      // Resolve friend_id → email + username
+      const friendLookupSql = 'SELECT email, username FROM accounts WHERE friend_id = $1'
+      console.log('Executing SQL:', friendLookupSql, '| params:', [friend_id])
+      const { rows: friendRows } = await connection.queryObject<{ email: string; username: string }>(friendLookupSql, [friend_id])
+      console.log('Friend lookup result:', friendRows)
+
+      if (friendRows.length === 0) {
+        return new Response(JSON.stringify({ error: 'Friend not found' }), {
+          status: 404,
+          headers: { 'Content-Type': 'application/json', ...corsHeaders },
+        })
+      }
+
+      friendEmail = friendRows[0].email
+      friendUsername = friendRows[0].username
+      console.log('Resolved friend:', { friendEmail, friendUsername })
     }
-
-    const friendEmail = friendRows[0].email
-    const friendUsername = friendRows[0].username
-    console.log('Resolved friend:', { friendEmail, friendUsername })
 
     if (callerEmail === friendEmail) {
       return new Response(JSON.stringify({ error: 'Cannot add yourself as a friend' }), {
@@ -82,6 +102,12 @@ Deno.serve(async (req) => {
     console.log('Caller username:', callerUsername, '| caller friend_id:', callerFriendId)
 
     if (action === 'send_request') {
+      if (!callerUsername || !callerFriendId) {
+        return new Response(JSON.stringify({ error: 'Please set a username and friend ID before sending friend requests.' }), {
+          status: 400,
+          headers: { 'Content-Type': 'application/json', ...corsHeaders },
+        })
+      }
       // Check for existing row between the pair (either direction)
       const existingCheckSql = `SELECT id, state FROM friends
          WHERE (email_requester = $1 AND email_accepter = $2)

@@ -32,7 +32,7 @@ export function useManageFriend() {
   const queryClient = useQueryClient()
 
   return useMutation({
-    mutationFn: ({ friend_id, action }: { friend_id: string; action: string }) => manageFriend(friend_id, action),
+    mutationFn: ({ friend_id, action, request_id }: { friend_id: string; action: string; request_id?: number }) => manageFriend(friend_id, action, request_id),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['friends'] })
       queryClient.invalidateQueries({ queryKey: ['friendRequests'] })

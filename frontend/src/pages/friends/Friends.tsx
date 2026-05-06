@@ -51,6 +51,14 @@ export default function Friends() {
     if (!trimmed) {
       return
     }
+    if (!account?.username || !account?.friend_id) {
+      toast({
+        variant: 'destructive',
+        title: 'Profile incomplete',
+        description: 'Please set a username and friend ID in your profile before sending friend requests.',
+      })
+      return
+    }
     manageFriend.mutate(
       { friend_id: trimmed, action: 'send_request' },
       {
@@ -65,9 +73,9 @@ export default function Friends() {
     )
   }
 
-  const handleAccept = (friend_id: string) => {
+  const handleAccept = (friend_id: string, request_id: number) => {
     manageFriend.mutate(
-      { friend_id, action: 'accept' },
+      { friend_id, action: 'accept', request_id },
       {
         onSuccess: () => toast({ title: 'Friend request accepted!' }),
         onError: (err) => toast({ variant: 'destructive', title: 'Error', description: err.message }),
@@ -75,9 +83,9 @@ export default function Friends() {
     )
   }
 
-  const handleDecline = (friend_id: string) => {
+  const handleDecline = (friend_id: string, request_id: number) => {
     manageFriend.mutate(
-      { friend_id, action: 'decline' },
+      { friend_id, action: 'decline', request_id },
       {
         onSuccess: () => toast({ title: 'Friend request declined.' }),
         onError: (err) => toast({ variant: 'destructive', title: 'Error', description: err.message }),
@@ -171,7 +179,7 @@ export default function Friends() {
                       </div>
                     </div>
                     <div className="flex gap-2">
-                      <Button size="sm" className="flex-1 md:flex-none" onClick={() => handleAccept(req.friend_id)} disabled={manageFriend.isPending}>
+                      <Button size="sm" className="flex-1 md:flex-none" onClick={() => handleAccept(req.friend_id, req.id)} disabled={manageFriend.isPending}>
                         <UserCheck className="h-4 w-4 mr-1" />
                         Accept
                       </Button>
@@ -179,7 +187,7 @@ export default function Friends() {
                         size="sm"
                         variant="outline"
                         className="flex-1 md:flex-none"
-                        onClick={() => handleDecline(req.friend_id)}
+                        onClick={() => handleDecline(req.friend_id, req.id)}
                         disabled={manageFriend.isPending}
                       >
                         <UserX className="h-4 w-4 mr-1" />

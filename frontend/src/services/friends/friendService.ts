@@ -40,12 +40,12 @@ export async function getPendingRequests(userId: string): Promise<FriendRow[]> {
   })) as FriendRow[]
 }
 
-export async function manageFriend(friend_id: string, action: string): Promise<void> {
+export async function manageFriend(friend_id: string, action: string, request_id?: number): Promise<void> {
   umami(`Friend: ${action}`)
 
   const { error } = await supabase.functions.invoke('manage-friend', {
     method: 'POST',
-    body: { friend_id, action },
+    body: { friend_id, action, request_id },
   })
   if (error) {
     let message = 'Something went wrong. Please try again.'
