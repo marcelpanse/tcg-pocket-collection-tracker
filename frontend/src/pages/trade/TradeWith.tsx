@@ -92,16 +92,16 @@ function TradeWith() {
     )
   }
 
-  const userTrades = getTradeCards(
+  const cardsToGive = getTradeCards(
     getExtraCards(ownedCards, account.trade_rarity_settings || []),
     getNeededCards(friendCards, friendAccount.trade_rarity_settings || []),
   )
-  const friendTrades = getTradeCards(
+  const cardsToReceive = getTradeCards(
     getExtraCards(friendCards, friendAccount.trade_rarity_settings || []),
     getNeededCards(ownedCards, account.trade_rarity_settings || []),
   )
 
-  const hasPossibleTrades = tradableRarities.some((r) => (userTrades[r] ?? []).length > 0 && (friendTrades[r] ?? []).length > 0)
+  const hasPossibleTrades = tradableRarities.some((r) => (cardsToGive[r] ?? []).length > 0 && (cardsToReceive[r] ?? []).length > 0)
   const isAlreadyFriend = friends.some((f) => f.friend_id === friendAccount.friend_id && f.state === 'accepted')
   const hasPendingRequest = friends.some((f) => f.friend_id === friendAccount.friend_id && f.state === 'pending')
 
@@ -209,16 +209,16 @@ function TradeWith() {
           <div className="flex flex-col-reverse sm:flex-row gap-2 sm:gap-4">
             <div className="w-full sm:w-1/2">
               <h4 className="text-md font-medium mb-1 ml-2 text-neutral-400">{t('youHave')}</h4>
-              {userTrades[rarity] ? (
-                <CardList cards={userTrades[rarity]} selected={yourCard} setSelected={setYourCard} />
+              {cardsToGive[rarity] ? (
+                <CardList cards={cardsToGive[rarity]} selected={yourCard} setSelected={setYourCard} />
               ) : (
                 <div className="text-center text-neutral-500 rounded-lg border-1 border-neutral-700 border-solid p-2">No cards to trade</div>
               )}
             </div>
             <div className="w-full sm:w-1/2">
               <h4 className="text-md font-medium mb-1 ml-2 text-neutral-400">{t('friendHas')}</h4>
-              {friendTrades[rarity] ? (
-                <CardList cards={friendTrades[rarity]} selected={friendCard} setSelected={setFriendCard} />
+              {cardsToReceive[rarity] ? (
+                <CardList cards={cardsToReceive[rarity]} selected={friendCard} setSelected={setFriendCard} />
               ) : (
                 <div className="text-center text-neutral-500  rounded-lg border-1 border-neutral-700 border-solid p-2">No cards to trade</div>
               )}

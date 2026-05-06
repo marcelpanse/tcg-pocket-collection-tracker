@@ -18,7 +18,7 @@ export const ImportReader = () => {
 
   const processFileRows = async (data: ImportExportRow[]) => {
     const cardArray: CardAmountUpdate[] = []
-    const cardIdsToDelete: string[] = []
+    const cardIdsToDelete: [number, string][] = []
 
     for (let i = 0; i < data.length; i++) {
       const r = data[i]
@@ -32,7 +32,7 @@ export const ImportReader = () => {
         cardArray.push({ card_id: cardId, internal_id: r.InternalId, amount_owned: newAmount })
       } else if (ownedCard?.collection.includes(cardId)) {
         // Card is currently collected but CSV says it should be uncollected — delete it
-        cardIdsToDelete.push(cardId)
+        cardIdsToDelete.push([ownedCard.internal_id, cardId])
       }
 
       // update UI
@@ -48,8 +48,8 @@ export const ImportReader = () => {
       updateCardsMutation.mutate(cardArray)
     }
 
-    for (const cardId of cardIdsToDelete) {
-      await deleteCardMutation.mutateAsync({ cardId })
+    for (const [internal_id, cardId] of cardIdsToDelete) {
+      await deleteCardMutation.mutateAsync({ internal_id, cardId })
     }
   }
 

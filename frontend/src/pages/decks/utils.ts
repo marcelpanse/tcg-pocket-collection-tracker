@@ -1,5 +1,5 @@
 import { getCardByInternalId } from '@/lib/CardsDB'
-import type { CollectionRow } from '@/types'
+import type { Collection } from '@/types'
 
 export function getDeckCardCounts(cards: number[]) {
   const map = new Map<number, number>()
@@ -9,7 +9,7 @@ export function getDeckCardCounts(cards: number[]) {
   return [...map].toSorted(([a, _n1], [b, _n2]) => a - b)
 }
 
-export function getMissingCardsCount(cards: [number, number][], ownedCards: Map<number, CollectionRow>) {
+export function getMissingCardsCount(cards: [number, number][], ownedCards: Collection) {
   return cards.reduce(
     (acc, [id, amount]) =>
       acc + Math.max(0, amount - (getCardByInternalId(id)?.alternate_versions?.reduce((acc2, id2) => acc2 + (ownedCards.get(id2)?.amount_owned ?? 0), 0) ?? 0)),
