@@ -1,13 +1,67 @@
 import { useSearchParams } from 'react-router'
 import { z } from 'zod'
 
-function safeJson(val: string) {
+function tryParseJson(val: string): unknown {
   try {
     const parsed = JSON.parse(val)
     return parsed === null ? val : parsed
   } catch {
     return val
   }
+}
+
+function getFieldType(field: z.ZodType): 'array' | 'boolean' | 'number' | 'string' | 'unknown' {
+  // Unwrap ZodDefault
+  let unwrapped: z.ZodTypeAny = field as z.ZodTypeAny
+  if (unwrapped instanceof z.ZodDefault) {
+    unwrapped = unwrapped.unwrap() as z.ZodTypeAny
+  }
+
+  // Check for array
+  if (unwrapped instanceof z.ZodArray) {
+    return 'array'
+  }
+
+  // Check for boolean
+  if (unwrapped instanceof z.ZodBoolean) {
+    return 'boolean'
+  }
+
+  // Check for number types
+  if (unwrapped instanceof z.ZodNumber || (unwrapped instanceof z.ZodUnion && unwrapped.options.some((opt) => opt instanceof z.ZodNumber))) {
+    return 'number'
+  }
+
+  // Check for string types
+  if (unwrapped instanceof z.ZodString || (unwrapped instanceof z.ZodUnion && unwrapped.options.some((opt) => opt instanceof z.ZodString))) {
+    return 'string'
+  }
+
+  return 'unknown'
+}
+
+function getArrayElementType(field: z.ZodType): 'string' | 'number' | 'unknown' {
+  let unwrapped: z.ZodTypeAny = field as z.ZodTypeAny
+  if (unwrapped instanceof z.ZodDefault) {
+    unwrapped = unwrapped.unwrap() as z.ZodTypeAny
+  }
+
+  if (unwrapped instanceof z.ZodArray) {
+    const elementType = unwrapped.element
+
+    if (elementType instanceof z.ZodString) {
+      return 'string'
+    }
+    if (elementType instanceof z.ZodNumber) {
+      return 'number'
+    }
+    if (elementType instanceof z.ZodEnum || elementType instanceof z.ZodLiteral || elementType instanceof z.ZodUnion) {
+      // Enums and unions typically contain strings
+      return 'string'
+    }
+  }
+
+  return 'unknown'
 }
 
 export default function useSearchState<T extends z.ZodObject>(schema: T): [z.infer<T>, (updates: Partial<z.infer<T>>) => void, number] {
@@ -24,7 +78,9 @@ export default function useSearchState<T extends z.ZodObject>(schema: T): [z.inf
         continue
       }
 
-      if (field instanceof z.ZodArray || (field instanceof z.ZodDefault && field.unwrap() instanceof z.ZodArray)) {
+      const fieldType = getFieldType(field)
+
+      if (fieldType === 'array') {
         if (!Array.isArray(val)) {
           console.warn(`useSearchState(): ${key} should be an array`)
           continue
@@ -50,10 +106,31 @@ export default function useSearchState<T extends z.ZodObject>(schema: T): [z.inf
       if (!searchParams.has(key)) {
         return [key, undefined]
       }
-      if (field instanceof z.ZodArray || (field instanceof z.ZodDefault && field.unwrap() instanceof z.ZodArray)) {
-        return [key, searchParams.get(key)?.split(',').map(safeJson)]
+
+      const fieldType = getFieldType(field)
+      const paramValue = searchParams.get(key) as string
+
+      if (fieldType === 'array') {
+        const elementType = getArrayElementType(field)
+        const elements = paramValue.split(',')
+
+        if (elementType === 'string') {
+          // For string arrays, keep elements as strings
+          return [key, elements]
+        } else if (elementType === 'number') {
+          // For number arrays, parse each element as number
+          return [key, elements.map(tryParseJson)]
+        } else {
+          // For unknown element types, try to parse
+          return [key, elements.map(tryParseJson)]
+        }
+      } else if (fieldType === 'boolean') {
+        return [key, paramValue === 'true']
+      } else if (fieldType === 'number') {
+        return [key, tryParseJson(paramValue)]
       } else {
-        return [key, safeJson(searchParams.get(key) as string)]
+        // For strings and unknown types, keep as string
+        return [key, paramValue]
       }
     }),
   )
