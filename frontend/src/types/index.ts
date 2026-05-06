@@ -48,7 +48,7 @@ export interface RaritySettingsRow {
 export interface AccountRow {
   $id: string
   email: string
-  username: string
+  username: string | null
   friend_id: string
   language: GameLanguage | null
   collection_last_updated: Date

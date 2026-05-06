@@ -39,7 +39,7 @@ export const getAccount = async (email: string) => {
   // no account exists yet, create one
   return await updateAccount({
     email,
-    username: '',
+    username: null,
   } as AccountRow)
 }
 
