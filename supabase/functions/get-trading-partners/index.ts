@@ -19,6 +19,7 @@ WITH recent_accounts AS (
         email != $1
       AND is_active_trading = TRUE
       AND is_public = TRUE
+      AND username IS NOT NULL
       AND collection_last_updated IS NOT NULL
       AND ($2::text IS NULL OR language = $2::text)
     ORDER BY collection_last_updated DESC
@@ -98,6 +99,7 @@ WITH recent_accounts AS (
         a.email != $1
         AND a.is_active_trading = TRUE
         AND a.is_public = TRUE
+        AND a.username IS NOT NULL
         AND a.collection_last_updated IS NOT NULL
         AND EXISTS (
             SELECT internal_id
