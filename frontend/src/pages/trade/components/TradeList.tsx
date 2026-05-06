@@ -29,6 +29,7 @@ function TradeList({ children, trades }: Props) {
       {selectedTrade && (
         <div className="flex gap-2 text-center items-center mt-2">
           <Actions trade={selectedTrade} setSelected={setSelectedTradeId} />
+          <span className="ml-auto text-neutral-400">{selectedTrade.updated_at.toLocaleString()}</span>
         </div>
       )}
     </div>
