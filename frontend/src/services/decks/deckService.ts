@@ -44,7 +44,7 @@ export async function getDecks(filters: DeckFilters) {
   if (filters.from === 'my') {
     tbl = tbl.from('decks').select('*', { count: 'exact' }).order('updated_at', { ascending: false })
   } else if (filters.from === 'liked') {
-    tbl = tbl.from('deck_likes').select('*, public_decks!id(*)', { count: 'exact' })
+    tbl = tbl.from('deck_likes').select('*, public_decks!id(*)', { count: 'exact' }).order('created_at', { ascending: false })
   } else if (filters.from === 'community') {
     tbl = tbl.from('public_decks').select('*', { count: 'exact' })
     if (filters.orderby === 'popular') {
