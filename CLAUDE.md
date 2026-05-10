@@ -47,6 +47,16 @@ frontend/src/
 - Edge functions (Deno): `stats-tracker`, `get-trading-partners`, `manage-friend`
 - Database schema managed via Supabase migrations
 
+#### Column-level security on `friends`
+
+The `authenticated` and `anon` roles have **no table-level SELECT** on `friends` — only explicit column-level grants. This prevents email columns from leaking via the REST API.
+
+Currently granted columns: `id`, `created_at`, `updated_at`, `state`, `friend_id_requester`, `friend_id_accepter`, `username_requester`, `username_accepter`
+
+**When adding a new column to `friends`:**
+1. If it is non-sensitive, run in Supabase SQL editor: `GRANT SELECT (your_column) ON friends TO authenticated, anon;`
+2. Because there is no table-level SELECT, all frontend queries on `friends` **must use explicit column lists** — `select('*')` will fail with "permission denied for table friends".
+
 ### Data & Card Database
 
 Card/pack/mission data is scraped and stored as static assets. `frontend/src/lib/CardsDB.ts` is the primary interface for querying card data. Expansion sets are identified by codes like `A1`, `A2`, `B1`, `B2`, etc.

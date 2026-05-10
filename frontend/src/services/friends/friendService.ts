@@ -25,7 +25,11 @@ export async function getFriends(userId: string): Promise<FriendRow[]> {
 }
 
 export async function getPendingRequests(userId: string): Promise<FriendRow[]> {
-  const { data, error } = await supabase.from('friends').select('*').eq('friend_id_accepter', userId).eq('state', 'pending')
+  const { data, error } = await supabase
+    .from('friends')
+    .select('id,created_at,friend_id_requester,username_requester,state')
+    .eq('friend_id_accepter', userId)
+    .eq('state', 'pending')
 
   if (error) {
     throw new Error(`Error fetching pending requests: ${error.message}`)
