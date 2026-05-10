@@ -126,7 +126,6 @@ export interface Expansion {
   id: ExpansionId
   internalId: number
   packs: Pack[]
-  missions?: Mission[]
   tradeable: boolean
   openable: boolean
   promo?: boolean

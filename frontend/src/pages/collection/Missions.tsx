@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { DropdownFilter, TabsFilter } from '@/components/Filters'
 import { MissionsTable } from '@/components/MissionsTable'
-import { expansions, getExpansionById } from '@/lib/CardsDB'
+import { getExpansionById } from '@/lib/CardsDB'
+import { expansionsWithMissions, getMissionsForExpansion } from '@/lib/MissionsDB'
 import { getMissionType, type MissionType } from '@/lib/utils'
 import { useAccount } from '@/services/account/useAccount'
 import type { ExpansionId, Mission } from '@/types'
@@ -12,8 +13,6 @@ const ownedOptions = ['all', 'owned', 'missing'] as const
 type OwnedOption = (typeof ownedOptions)[number]
 
 const typeOptions: MissionType[] = ['all', 'normal', 'secret', 'complete']
-
-const expansionsWithMissions = expansions.filter((e) => e.missions && e.missions.length > 0).map((e) => e.id as ExpansionId)
 
 export default function Missions() {
   const { t } = useTranslation(['pages/collection', 'filters'])
@@ -29,8 +28,8 @@ export default function Missions() {
   const getLocalizedExpansion = (id: ExpansionId) => t(getExpansionById(id).name, { ns: 'common/sets' })
 
   useEffect(() => {
-    let missions = getExpansionById(expansion).missions
-    if (!missions) {
+    let missions = getMissionsForExpansion(expansion)
+    if (!missions.length) {
       return
     }
     if (ownedFilter === 'owned') {
