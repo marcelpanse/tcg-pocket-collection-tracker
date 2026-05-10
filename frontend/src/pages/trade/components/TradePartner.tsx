@@ -39,7 +39,7 @@ function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
       <div className="flex justify-between items-center mb-1 mx-1">
         <p>
           <span className="text-md">{t('tradingWith')}</span>
-          <span className="text-md font-bold"> {friendAccount?.username || 'unknown'} </span>
+          <span className="text-md font-bold"> {friendAccount?.username || friendId} </span>
           {friendAccount?.language && <small className="bg-neutral-800 px-2 rounded-full">{friendAccount.language}</small>}
           {friendAccount && (
             <FriendIdDisplay

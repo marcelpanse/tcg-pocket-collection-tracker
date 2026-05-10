@@ -54,7 +54,7 @@ Deno.serve(async (req) => {
     let friendEmail: string
     let friendUsername: string
 
-    if ((action === 'accept' || action === 'decline') && !friend_id && request_id) {
+    if ((action === 'accept' || action === 'decline') && request_id) {
       const rowLookupSql = `SELECT email_requester, username_requester FROM friends WHERE id = $1 AND email_accepter = $2 AND state = 'pending'`
       const { rows } = await connection.queryObject<{ email_requester: string; username_requester: string }>(rowLookupSql, [request_id, callerEmail])
       if (rows.length === 0) {
