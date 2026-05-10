@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Spinner } from '@/components/Spinner'
+import { Alert } from '@/components/ui/alert.tsx'
 import TradePartner from '@/pages/trade/components/TradePartner.tsx'
 import { useAccount } from '@/services/account/useAccount'
 import { useActiveTrades } from '@/services/trade/useTrade.ts'
@@ -17,6 +18,10 @@ function TradeOffers() {
 
   if (!trades || !account) {
     return <p className="text-xl text-center py-8">{t('common:error')}</p>
+  }
+
+  if (!account.username || !account.friend_id) {
+    return <Alert className="mb-8 border-1 border-neutral-700 shadow-none">{t('noAccount')}</Alert>
   }
 
   if (trades.length === 0) {

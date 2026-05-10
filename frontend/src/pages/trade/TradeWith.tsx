@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation, useParams } from 'react-router'
 import { Spinner } from '@/components/Spinner'
+import { Alert } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { Switch } from '@/components/ui/switch'
@@ -69,6 +70,10 @@ function TradeWith() {
 
   if (!account) {
     return null
+  }
+
+  if (!account.username || !account.friend_id) {
+    return <Alert className="mb-8 border-1 border-neutral-700 shadow-none">{t('noAccount')}</Alert>
   }
 
   if (friendAccount === null) {

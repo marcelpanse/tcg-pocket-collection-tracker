@@ -33,6 +33,10 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
     if (!enabled) {
       return
     }
+    if (!yourId?.match(/^\d{16}$/)) {
+      toast({ title: t('noAccount'), variant: 'destructive' })
+      return
+    }
     const trade: TradeRow = {
       offering_friend_id: yourId,
       receiving_friend_id: friendId,
@@ -41,16 +45,15 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
       status: 'offered',
     } as TradeRow
     try {
-      insertTradeMutation.mutate(trade)
+      await insertTradeMutation.mutateAsync(trade)
+      setYourCard(null)
+      setFriendCard(null)
+      toast({ title: t('tradeOffered'), variant: 'default' })
+      umami('Offer trade')
     } catch (e) {
       console.log('TradeOffer: Error inserting trade', e)
-      toast({ title: t('tradeFailed'), variant: 'default' })
+      toast({ title: t('tradeFiled'), variant: 'destructive' })
     }
-
-    setYourCard(null)
-    setFriendCard(null)
-    toast({ title: t('tradeOffered'), variant: 'default' })
-    umami('Offer trade')
   }
 
   if (!yourCard && !friendCard) {
