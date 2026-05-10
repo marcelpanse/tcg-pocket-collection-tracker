@@ -37,7 +37,7 @@ export default function Decks() {
           className="w-full"
           options={deckKinds}
           value={filters.from}
-          onChange={(from) => setFilters({ from })}
+          onChange={(from) => setFilters({ from, page: 0 })}
           show={(from) => `${capitalize(from)} decks`}
         />
         {filters.from === 'community' && (
