@@ -21,7 +21,8 @@ export async function getDeck(id: number) {
     supabase.from('decks').select('*').eq('id', id).maybeSingle(),
     supabase.from('public_decks').select('*').eq('id', id).maybeSingle(),
   ])
-  let res = {}
+  // biome-ignore lint: enable dynamic properties
+  let res: any = {}
   if (!popular.error && popular.data) {
     res = { ...res, ...popular.data, is_public: true }
   }
@@ -29,8 +30,9 @@ export async function getDeck(id: number) {
     res = { ...res, ...personal.data }
   }
   if (Object.keys(res).length > 0) {
+    console.log('dupa', res)
     // at least one query succeeded
-    return res as Deck
+    return { ...res, created_at: new Date(res.created_at), updated_at: new Date(res.updated_at) } as Deck
   }
   console.error('supabase error?', personal.error, popular.error)
   throw new Error('Failed fetching deck')
@@ -72,6 +74,7 @@ export async function getDecks(filters: DeckFilters) {
   } else {
     decks = data as Deck[]
   }
+  decks = decks.map((x) => ({ ...x, created_at: new Date(x.created_at), updated_at: new Date(x.updated_at) }))
   return { decks, count, hasNext: (filters.page + 1) * pageSize < count }
 }
 
