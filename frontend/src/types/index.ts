@@ -205,8 +205,8 @@ export interface Deck {
   name: string
   energy: Energy[]
   cards: number[]
-  created_at?: string
-  updated_at?: string
+  created_at: string
+  updated_at: string
 }
 
 export type FriendState = 'accepted' | 'declined' | 'revoked' | 'pending'

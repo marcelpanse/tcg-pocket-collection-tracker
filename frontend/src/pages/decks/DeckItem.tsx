@@ -142,7 +142,10 @@ export function DeckItem({ deck }: { deck: Deck }) {
             <img key={energy} src={`/images/energy/${energy}.webp`} alt={energy} className="size-4" />
           ))}
         </div>
-        <h2 className="font-semibold">{deck.name}</h2>
+        <div>
+          <h2 className="font-semibold">{deck.name}</h2>
+          <span className="text-sm text-neutral-400">Updated {deck.updated_at.toLocaleDateString()}</span>
+        </div>
         {deck.likes !== undefined ? (
           <span className="ml-auto inline-flex gap-1">
             <span>{deck.likes}</span>

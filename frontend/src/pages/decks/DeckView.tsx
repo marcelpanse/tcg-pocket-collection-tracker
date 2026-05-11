@@ -48,6 +48,14 @@ export default function DeckView() {
   return (
     <div className="flex flex-col mx-auto max-w-sm p-2 rounded border border-neutral-700">
       <h2 className="text-lg font-semibold">{deck.name}</h2>
+      <p className="text-sm text-neutral-400 mb-2">
+        {deck.username && (
+          <>
+            Created by {deck.username}.<br />
+          </>
+        )}
+        Last updated {deck.updated_at.toLocaleDateString()}.
+      </p>
       <div className="flex items-center gap-2">
         <h3>Energy</h3>
         <span className="inline-flex gap-1">
@@ -79,15 +87,6 @@ export default function DeckView() {
           )
         })}
       </ul>
-      <div className="flex items-center justify-center gap-1 mt-2 text-sm text-neutral-400">
-        <span>Created on {deck.created_at ? new Date(deck.created_at).toLocaleDateString() : 'N/A'}</span>
-        {deck.username && (
-          <>
-            <span>by</span>
-            <span>{deck.username}</span>
-          </>
-        )}
-      </div>
       <div className="flex items-center mt-2 justify-between">
         {deck.is_public ? (
           deck.email !== undefined && deck.email === account?.email ? (
