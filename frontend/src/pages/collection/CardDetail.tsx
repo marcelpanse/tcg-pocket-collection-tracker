@@ -94,13 +94,6 @@ export default function CardDetail() {
   // if we draw from 'everypack' we need to take one of the packs to base calculations on
   const packName = card?.pack === 'everypack' ? expansion?.packs[0].name : card?.pack
 
-  const formatTimestamp = (date: Date) => {
-    return new Intl.DateTimeFormat(undefined, {
-      dateStyle: 'long',
-      timeStyle: 'long',
-    }).format(date)
-  }
-
   const handleUncollect = (cardId: string) => {
     if (id && row?.collection.includes(cardId)) {
       deleteCardMutation.mutate({ internal_id: id, cardId })
@@ -241,8 +234,8 @@ export default function CardDetail() {
               </>
             )}
 
-            <p className="mt-4 text-neutral-400 text-sm flex">
-              <strong className="font-semibold mr-1">{t('text.updated')}</strong> {row?.updated_at ? formatTimestamp(row.updated_at) : 'N/A'}
+            <p className="mt-4 text-neutral-400 text-sm">
+              {row?.updated_at ? t('text.updated', { time: row.updated_at.toLocaleString() }) : t('text.neverUpdated')}
             </p>
           </div>
         </div>
