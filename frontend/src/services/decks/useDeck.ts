@@ -16,11 +16,11 @@ export function useUpdateDeck() {
   const email = user?.user.email
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: (deck: Deck) => {
+    mutationFn: (deck: Omit<Deck, 'updated_at'>) => {
       if (!email) {
         throw new Error('Email is required to update a deck')
       }
-      return updateDeck({ ...deck, email })
+      return updateDeck({ ...deck, email, updated_at: new Date() })
     },
     onSuccess: (deck) => {
       queryClient.setQueryData(['deck', deck.id], deck)

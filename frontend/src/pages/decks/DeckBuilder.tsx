@@ -53,7 +53,9 @@ export default function DeckBuilder() {
   const { setSelectedCardId } = useSelectedCard()
 
   const shouldFetch = !location.state && deckId !== undefined
-  const [deck, setDeck] = useState<Deck>(location.state ?? ({ is_public: false, name: '', energy: [], cards: [] } satisfies Deck))
+  const [deck, setDeck] = useState<Omit<Deck, 'updated_at'>>(
+    location.state ?? ({ is_public: false, name: '', energy: [], cards: [], created_at: new Date() } satisfies Omit<Deck, 'updated_at'>),
+  )
   const [isLoading, setIsLoading] = useState(shouldFetch)
   const [isError, setIsError] = useState(false)
   useEffect(() => {
@@ -91,6 +93,7 @@ export default function DeckBuilder() {
 
   const formSchema = z.object({
     id: z.number().optional(),
+    created_at: z.date(),
     is_public: z.boolean(),
     name: z.string().min(4),
     energy: z.array(z.enum(energies)).min(1),
@@ -117,7 +120,7 @@ export default function DeckBuilder() {
     })
   }
 
-  const onSave = (deck: Deck) => {
+  const onSave = (deck: Omit<Deck, 'updated_at'>) => {
     updateDeckMutation.mutateAsync(deck, {
       onSuccess: (savedDeck) => {
         console.log(savedDeck)
