@@ -8,7 +8,7 @@ import { useCollection } from '@/services/collection/useCollection'
 import type { CollectionRow, ImportExportRow } from '@/types'
 
 export const ExportWriter = () => {
-  const { t } = useTranslation('pages/export')
+  const { t } = useTranslation('pages/import')
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const { data: cards = new Map<number, CollectionRow>() } = useCollection()
 
@@ -31,8 +31,8 @@ export const ExportWriter = () => {
   }
 
   return (
-    <Button onClick={() => createFile()} type="submit" className="w-40">
-      {t('downloadCSV')}
+    <Button onClick={() => createFile()} type="submit" className="w-40 block mx-auto mt-2">
+      {t('export.downloadCSV')}
     </Button>
   )
 }

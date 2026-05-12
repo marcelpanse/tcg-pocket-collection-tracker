@@ -1,11 +1,13 @@
+import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Alert, AlertDescription, AlertTitle } from './ui/alert'
 
 interface Props {
   error?: unknown
+  children?: ReactNode
 }
 
-export default function ErrorAlert({ error }: Props) {
+export default function ErrorAlert({ error, children }: Props) {
   const { t } = useTranslation('common')
   return (
     <Alert className="mt-12 mx-auto max-w-xl">
@@ -25,6 +27,7 @@ export default function ErrorAlert({ error }: Props) {
             <span className="block font-mono border-1 border-neutral-700 p-1 rounded mt-1">{error instanceof Error ? error.message : String(error)}</span>
           </p>
         )}
+        {children}
       </AlertDescription>
     </Alert>
   )

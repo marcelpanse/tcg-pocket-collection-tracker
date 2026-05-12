@@ -106,14 +106,14 @@ export function useDeleteCard() {
 
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: ({ internal_id, cardId }: { internal_id: number; cardId: string }) => {
+    mutationFn: (cardIds: string[]) => {
       if (isLoadingUser || isLoadingCollection) {
         throw new Error('Context not yet loaded')
       }
       if (!email) {
         throw new Error('Email is required to delete card')
       }
-      return deleteCard(email, collection ?? new Map<number, CollectionRow>(), internal_id, cardId)
+      return deleteCard(email, collection ?? new Map<number, CollectionRow>(), cardIds)
     },
     onSuccess: (result) => {
       queryClient.setQueryData(['collection', email], result.cards)

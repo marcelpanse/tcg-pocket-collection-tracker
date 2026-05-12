@@ -23,7 +23,7 @@ function Trade() {
 
   return (
     <Tabs className="flex flex-col mx-auto max-w-[900px]" value={currentTab} onValueChange={(value) => navigate(`/trade/${value}`)}>
-      <TabsList className="gap-4 mb-6 rounded-lg border-b-1 border-neutral-700 border-solid dark:bg-transparent pb-2">
+      <TabsList className="gap-4 mb-6 rounded-lg border-b-1 border-neutral-700 bg-transparent pb-2">
         <TabsTrigger className="text-md" value="offers">
           {t('tabOffers')}
         </TabsTrigger>

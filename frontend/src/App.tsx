@@ -25,6 +25,7 @@ const Trade = lazy(() => import('./pages/trade/Trade.tsx'))
 const Scan = lazy(() => import('./pages/scan/Scan.tsx'))
 const EditProfile = lazy(() => import('./components/EditProfile.tsx'))
 const CardDetail = lazy(() => import('./pages/collection/CardDetail.tsx'))
+const Import = lazy(() => import('./pages/import/Import.tsx'))
 
 const Friends = lazy(() => import('./pages/friends/Friends.tsx'))
 
@@ -95,6 +96,7 @@ function App() {
         { path: '/scan', element: <Scan /> },
         { path: '/trade/*', element: <Trade /> },
         { path: '/friends', element: <Friends /> },
+        { path: '/import', element: <Import /> },
       ],
     },
   ])

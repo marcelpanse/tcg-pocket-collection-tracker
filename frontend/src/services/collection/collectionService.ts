@@ -1,4 +1,6 @@
+import { getCardById } from '@/lib/CardsDB'
 import { supabase } from '@/lib/supabase'
+import { chunk } from '@/lib/utils'
 import type { AccountRow, CardAmountsRowUpdate, CardAmountUpdate, Collection, CollectionRow } from '@/types'
 
 export interface CollectionRowUpdate {
@@ -204,34 +206,38 @@ export async function updateAmountWanted(
   return collection
 }
 
-export const deleteCard = async (email: string, collection: Collection, internal_id: number, cardId: string) => {
+export const deleteCard = async (email: string, collection: Collection, cardIds: string[]) => {
   if (!email) {
     throw new Error('Email is required to delete card')
   }
-  if (!cardId) {
-    throw new Error('Card ID is required to delete card')
-  }
-
   const now = new Date()
 
   const [updatedAccount, { error: collectionError }] = await Promise.all([
     updateCollectionTimestamp(email, now),
-    supabase.from('collection').delete().eq('card_id', cardId),
+    ...chunk(cardIds, 400).map((ids) => supabase.from('collection').delete().in('card_id', ids)),
   ])
 
   if (collectionError) {
     throw new Error(`Error deleting from collection: ${collectionError.message}`)
   }
 
-  // Find and update the cache - remove the card_id from the collection array and set amount_owned to 0
-  const row = collection.get(internal_id)
-  if (row?.collection.includes(cardId)) {
-    row.collection = row.collection.filter((id) => id !== cardId)
-    row.updated_at = now
-    updateCollectionCache(collection, email, now)
-  } else {
-    throw new Error(`Cannot disown a card that is not already owned`)
+  // Find and update the cache - remove the card_id from the collection array
+  for (const cardId of cardIds) {
+    const internal_id = getCardById(cardId)?.internal_id
+    if (internal_id === undefined) {
+      console.error('Invalid card_id:', cardId)
+      continue
+    }
+    const row = collection.get(internal_id)
+    if (row?.collection.includes(cardId)) {
+      row.collection = row.collection.filter((id) => id !== cardId)
+      row.updated_at = now
+    } else {
+      console.warn('Card not owned:', cardId)
+    }
   }
+
+  updateCollectionCache(collection, email, now)
 
   return {
     cards: collection,
@@ -341,8 +347,6 @@ function updateCollectionCache(collection: Collection, email: string, timestamp:
       localStorage.setItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`, typeof timestamp === 'string' ? timestamp : timestamp.toISOString())
       localStorage.setItem(`${COLLECTION_CACHE_KEY}_${email}`, JSON.stringify([...collection.values()]))
     }
-
-    console.log('Collection cache updated')
   } catch (error) {
     console.error('Error updating collection cache:', error)
 
