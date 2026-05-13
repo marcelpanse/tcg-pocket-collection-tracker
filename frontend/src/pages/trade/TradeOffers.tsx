@@ -38,7 +38,7 @@ function TradeOffers() {
   })
 
   return (
-    <div className="flex flex-col items-center mx-auto gap-6 sm:px-4 mb-12 w-full">
+    <div className="flex flex-col items-center mx-auto gap-4 sm:px-4 mb-12 w-full">
       {friendIds.map((friend_id) => (
         <TradePartner key={friend_id} friendId={friend_id} activeTrades={friends[friend_id] as TradeRow[]} />
       ))}

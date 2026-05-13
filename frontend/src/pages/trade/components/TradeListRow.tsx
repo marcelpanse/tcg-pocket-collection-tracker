@@ -56,18 +56,18 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
 
   return (
     <li
-      className={`flex cursor-pointer rounded gap-1 md:gap-2 p-1 ${selectedTradeId === row.id && 'bg-green-900'} hover:bg-neutral-500`}
+      className={`flex cursor-pointer rounded gap-1 md:gap-2 p-1 ${selectedTradeId === row.id && 'bg-green-800/75'} hover:bg-neutral-700`}
       onClick={() => onClick(row)}
     >
       {status(row)}
       <div className="flex flex-col-reverse md:flex-row grow-1 justify-between gap-1 md:gap-2">
         <div className="flex flex-1">
           <ChevronsUp />
-          <CardLine className="flex-1" card_id={yourCard} increment={-1} />
+          <CardLine className="flex-1 bg-neutral-900" card_id={yourCard} increment={-1} />
         </div>
         <div className="flex flex-1">
           <ChevronsDown />
-          <CardLine className="flex-1" card_id={friendCard} increment={1} />
+          <CardLine className="flex-1 bg-neutral-900" card_id={friendCard} increment={1} />
         </div>
       </div>
     </li>
