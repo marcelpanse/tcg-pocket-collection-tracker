@@ -13,7 +13,7 @@ function PartnerRow({ partner, activeTrades, card_id }: { partner: TradePartners
   const { t } = useTranslation('trade-matches')
   return (
     <Link to={`/trade/${partner.friend_id}`} state={{ friendCard: card_id }}>
-      <div className="max-w-lg w-full h-14 flex justify-between items-center mx-auto px-4 py-1 rounded-md border border-neutral-700 bg-neutral-800 hover:bg-neutral-700">
+      <div className="max-w-lg w-full min-h-14 flex justify-between items-center mx-auto px-4 py-1 rounded-md border border-neutral-700 bg-neutral-800 hover:bg-neutral-700">
         <p className="mr-2">
           <span>{partner.username}</span>
           {partner.language && <small className="bg-neutral-700 px-2 rounded-full ml-2">{partner.language}</small>}
@@ -23,7 +23,7 @@ function PartnerRow({ partner, activeTrades, card_id }: { partner: TradePartners
             <p>{t('nMatches', { n: partner.trade_matches })}</p>
             {activeTrades > 0 && <p className="text-sm text-neutral-400 italic">{t('nPending', { n: activeTrades })}</p>}
           </div>
-          <ChevronRight className="ml-4" />
+          <ChevronRight className="ml-2" />
         </div>
       </div>
     </Link>
