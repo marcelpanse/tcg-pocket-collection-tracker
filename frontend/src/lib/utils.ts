@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import type { Card, Collection, GameLanguage, Mission, RaritySettingsRow } from '@/types'
+import type { Card, Collection, GameLanguage, Mission, RaritySettingsRow, TradeRow } from '@/types'
 import pokemonTranslations from '../../assets/pokemon_translations.json'
 import toolTranslations from '../../assets/tools_translations.json'
 import trainerTranslations from '../../assets/trainers_translations.json'
@@ -107,6 +107,19 @@ export function getExtraCards(cards: Collection, settings_rows: RaritySettingsRo
 
 export function getNeededCards(cards: Collection, settings_rows: RaritySettingsRow[]): number[] {
   return getTradingCards(cards, settings_rows, (c, settings) => c.amount_owned < settings.to_collect)
+}
+
+export function groupTrades(arr: TradeRow[], user_id: string) {
+  return Object.groupBy(arr, (row) => {
+    if (row.offering_friend_id === user_id) {
+      return row.receiving_friend_id
+    } else if (row.receiving_friend_id === user_id) {
+      return row.offering_friend_id
+    } else {
+      console.log('Fetched row does not match user friend_id', row)
+      return 'undefined'
+    }
+  })
 }
 
 export function umami(event: string) {
