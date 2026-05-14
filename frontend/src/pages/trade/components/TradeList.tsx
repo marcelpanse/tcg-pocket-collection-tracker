@@ -17,7 +17,7 @@ function TradeList({ children, trades }: Props) {
   }
 
   return (
-    <div className="rounded-lg border-1 border-neutral-700 border-solid p-1 md:p-2">
+    <div>
       <ul className="flex flex-col gap-2 md:gap-0">
         {trades
           .toSorted((a, b) => (a.created_at > b.created_at ? -1 : 1))

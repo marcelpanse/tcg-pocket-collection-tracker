@@ -35,8 +35,8 @@ function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
   }
 
   return (
-    <div className="w-full">
-      <div className="flex justify-between items-center mb-1 mx-1">
+    <div className="w-full p-2 rounded-md border border-neutral-700 bg-neutral-800">
+      <div className="flex justify-between items-center my-1 mx-1">
         <p>
           <span className="text-md">{t('tradingWith')}</span>
           <span className="text-md font-bold"> {friendAccount?.username || friendId} </span>
@@ -63,6 +63,7 @@ function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
           </Link>
         </span>
       </div>
+      <hr className="border-neutral-700 my-2" />
       {viewHistory ? (
         allTrades.isLoading ? (
           <Spinner size="md" />
