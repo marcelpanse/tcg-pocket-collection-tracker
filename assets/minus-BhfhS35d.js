@@ -1,1 +1,0 @@
-import{H as e}from"./types-B0VvlOEY.js";var t=e(`minus`,[[`path`,{d:`M5 12h14`,key:`1ays0h`}]]);export{t};
