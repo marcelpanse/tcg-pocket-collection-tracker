@@ -69,7 +69,8 @@ function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
           <Spinner size="md" />
         ) : (
           allTrades.data && (
-            <TradeList trades={allTrades.data.trades}>
+            <>
+              <TradeList trades={allTrades.data.trades} />
               <p className="flex justify-between mt-2">
                 <span className="text-neutral-400">{allTrades.data.count} total offers</span>
                 <div className="flex items-center gap-2">
@@ -85,7 +86,7 @@ function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
                   </Button>
                 </div>
               </p>
-            </TradeList>
+            </>
           )
         )
       ) : (
