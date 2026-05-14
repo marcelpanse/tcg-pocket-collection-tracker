@@ -1,0 +1,1 @@
+import{U as e}from"./types-BdD-npMc.js";var t=e(`chevron-right`,[[`path`,{d:`m9 18 6-6-6-6`,key:`mthhwq`}]]);export{t};
