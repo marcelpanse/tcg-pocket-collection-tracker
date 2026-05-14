@@ -10,7 +10,6 @@ import type { CollectionRow, ImportExportRow } from '@/types'
 export const ExportWriter = () => {
   const { t } = useTranslation('pages/import')
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
-  const { data: cards = new Map<number, CollectionRow>() } = useCollection()
 
   const createFile = () => {
     const json: ImportExportRow[] = allCards.map((ac) => {
@@ -22,7 +21,7 @@ export const ExportWriter = () => {
         Expansion: ac.expansion,
         Pack: ac.pack,
         Rarity: ac.rarity,
-        Collected: cards.get(ac.internal_id)?.collection.includes(ac.card_id) ?? false,
+        Collected: ownedCards.get(ac.internal_id)?.collection.includes(ac.card_id) ?? false,
       }
     })
     const sheet = XLSX.utils.json_to_sheet(json)

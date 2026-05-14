@@ -47,7 +47,7 @@ export const ImportReader = () => {
     }
 
     reader.onerror = () => {
-      throw new Error('Failed reading file')
+      setError(new Error('Failed reading file'))
     }
 
     reader.onload = async (e) => {
@@ -58,6 +58,10 @@ export const ImportReader = () => {
         const jsonData = XLSX.utils.sheet_to_json<ImportExportRow>(worksheet)
 
         const requiredColumns = ['Id', 'InternalId', 'NumberOwned', 'Collected']
+
+        if (jsonData.length === 0) {
+          throw new Error('File contains no data rows')
+        }
         const firstRow = jsonData[0]
         const missingColumns = requiredColumns.filter((col) => !(col in firstRow))
         if (missingColumns.length > 0) {
