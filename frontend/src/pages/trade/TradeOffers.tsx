@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Spinner } from '@/components/Spinner'
 import { Alert } from '@/components/ui/alert.tsx'
+import { groupTrades } from '@/lib/utils'
 import TradePartner from '@/pages/trade/components/TradePartner.tsx'
 import { useAccount } from '@/services/account/useAccount'
 import { useActiveTrades } from '@/services/trade/useTrade.ts'
@@ -44,19 +45,6 @@ function TradeOffers() {
       ))}
     </div>
   )
-}
-
-function groupTrades(arr: TradeRow[], id: string) {
-  return Object.groupBy(arr, (row) => {
-    if (row.offering_friend_id === id) {
-      return row.receiving_friend_id
-    } else if (row.receiving_friend_id === id) {
-      return row.offering_friend_id
-    } else {
-      console.log('Fetched row does not match user friend_id', row)
-      return 'undefined'
-    }
-  })
 }
 
 export default TradeOffers
