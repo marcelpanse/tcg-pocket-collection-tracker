@@ -196,7 +196,7 @@ const Scan = () => {
   return (
     <div className="flex flex-col mx-auto max-w-[900px] p-1 sm:p-2 gap-2 rounded-lg border-1 border-neutral-700 border-solid">
       {state === State.UploadImages && (
-        <div className="file-input-container flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-md hover:bg-gray-50 dark:hover:bg-gray-900/10">
+        <div className="flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-md">
           <AlertDescription>
             <p className="text-neutral-400 mb-4 text-center">{t('description')}</p>
           </AlertDescription>

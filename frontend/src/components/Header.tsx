@@ -2,7 +2,7 @@ import { Globe, LogOut, UserRoundPen } from 'lucide-react'
 import { useState } from 'react'
 import GitHubButton from 'react-github-btn'
 import { useTranslation } from 'react-i18next'
-import { Link, useLocation } from 'react-router'
+import { Link, useLocation, useNavigate } from 'react-router'
 import HamburgerMenu from '@/components/HamburgerMenu.tsx'
 import { Login } from '@/components/Login.tsx'
 import { Button } from '@/components/ui/button.tsx'
@@ -17,8 +17,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu.tsx'
-import Export from '@/pages/export/Export'
-import Import from '@/pages/import/Import'
 import { useProfileDialog } from '@/services/account/useAccount'
 import { useLoginDialog, useLogout, useUser } from '@/services/auth/useAuth'
 import { usePendingRequests } from '@/services/friends/useFriends'
@@ -27,6 +25,7 @@ import { Badge } from './ui/badge'
 
 export function Header() {
   const location = useLocation()
+  const navigate = useNavigate()
   const { t, i18n } = useTranslation('header')
   const { data: user } = useUser()
   const { data: actionableTradeCount } = useActionableTradeCount()
@@ -37,8 +36,6 @@ export function Header() {
   const { isLoginDialogOpen, setIsLoginDialogOpen } = useLoginDialog()
   const { setIsProfileDialogOpen } = useProfileDialog()
 
-  const [isImportDialogOpen, setIsImportDialogOpen] = useState<boolean>(false)
-  const [isExportDialogOpen, setIsExportDialogOpen] = useState<boolean>(false)
   const [isAboutUsDialogOpen, setIsAboutUsDialogOpen] = useState<boolean>(false)
 
   const changeLanguage = (lng: string) => i18n.changeLanguage(lng)
@@ -181,12 +178,7 @@ export function Header() {
                   <DropdownMenuLabel>{t('myAccount')}</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem onClick={() => setIsProfileDialogOpen(true)}>{t('editProfile')}</DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/friends">{t('friends')}</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem onClick={() => setIsExportDialogOpen(true)}>{t('export')}</DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setIsImportDialogOpen(true)}>{t('import')}</DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => navigate('/import')}>{t('importExport')}</DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem onClick={() => setIsAboutUsDialogOpen(true)}>{t('aboutUs')}</DropdownMenuItem>
 
@@ -215,22 +207,6 @@ export function Header() {
           )}
         </div>
       </header>
-      <Dialog open={isImportDialogOpen} onOpenChange={setIsImportDialogOpen}>
-        <DialogContent className="border-1 border-neutral-700 shadow-none">
-          <DialogHeader>
-            <DialogTitle>{t('import')}</DialogTitle>
-          </DialogHeader>
-          <Import />
-        </DialogContent>
-      </Dialog>
-      <Dialog open={isExportDialogOpen} onOpenChange={setIsExportDialogOpen}>
-        <DialogContent className="border-1 border-neutral-700 shadow-none">
-          <DialogHeader>
-            <DialogTitle>{t('export')}</DialogTitle>
-          </DialogHeader>
-          <Export />
-        </DialogContent>
-      </Dialog>
       <Dialog open={isAboutUsDialogOpen} onOpenChange={setIsAboutUsDialogOpen}>
         <DialogContent className="border-1 border-neutral-700 shadow-none">
           <DialogHeader>
