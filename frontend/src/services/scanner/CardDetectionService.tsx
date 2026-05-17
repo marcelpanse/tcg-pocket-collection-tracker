@@ -237,62 +237,71 @@ export async function extractCardImages(file: File, detections: DetectionResult,
   const image = new Image()
   const imageUrl = URL.createObjectURL(file)
 
-  return new Promise<ExtractedCard[]>((resolve) => {
+  return new Promise<ExtractedCard[]>((resolve, reject) => {
     image.onload = async () => {
-      const canvas = document.createElement('canvas')
-      const ctx = canvas.getContext('2d')
-      if (ctx === null) {
-        throw new Error('Failed creating context')
+      try {
+        const canvas = document.createElement('canvas')
+        const ctx = canvas.getContext('2d')
+        if (ctx === null) {
+          throw new Error('Failed creating context')
+        }
+
+        const extractedCards = await Promise.all(
+          detections.detections
+            .filter((detection) => detection.confidence >= 50)
+            .map(async (detection) => {
+              const [[x1, y1], _1, [x2, y2], _2] = detection.points
+              const width = x2 - x1
+              const height = y2 - y1
+
+              canvas.width = width
+              canvas.height = height
+
+              ctx.drawImage(image, x1, y1, width, height, 0, 0, width, height)
+
+              const cardImageUrl = canvas.toDataURL('image/png')
+              const buffers = await imageToBuffers(cardImageUrl)
+              const hash = calculatePerceptualHash(buffers)
+
+              // Calculate similarityes for all cards from the selected expansion and sort them
+              const matches = Object.keys(hashes)
+                .map((k) => [Number(k), calculateSimilarity(hash, hashes[k])] as [number, number])
+                .sort(([_1, a], [_2, b]) => b - a)
+              console.log(`Confidence: ${matches[0][1] - matches[1][1]}\n`, 'Best matches:', matches.slice(0, 5))
+
+              const [id, similarity] = matches[0]
+              const card = getCardByInternalId(id)
+              if (!card) {
+                throw new Error('Hashes key does not correspond to any card')
+              }
+              const resolvedImageUrl = await getRightPathOfImage(card.image, language)
+
+              return {
+                matchedCard: { card, similarity },
+                imageUrl: cardImageUrl,
+                resolvedImageUrl,
+                increment: 1,
+              }
+            }),
+        )
+
+        URL.revokeObjectURL(imageUrl)
+        resolve(extractedCards)
+      } catch (err) {
+        URL.revokeObjectURL(imageUrl)
+        reject(err)
       }
-
-      const extractedCards = await Promise.all(
-        detections.detections
-          .filter((detection) => detection.confidence >= 50)
-          .map(async (detection) => {
-            const [[x1, y1], _1, [x2, y2], _2] = detection.points
-            const width = x2 - x1
-            const height = y2 - y1
-
-            canvas.width = width
-            canvas.height = height
-
-            ctx.drawImage(image, x1, y1, width, height, 0, 0, width, height)
-
-            const cardImageUrl = canvas.toDataURL('image/png')
-            const buffers = await imageToBuffers(cardImageUrl)
-            const hash = calculatePerceptualHash(buffers)
-
-            // Calculate similarityes for all cards from the selected expansion and sort them
-            const matches = Object.keys(hashes)
-              .map((k) => [Number(k), calculateSimilarity(hash, hashes[k])] as [number, number])
-              .sort(([_1, a], [_2, b]) => b - a)
-            console.log(`Confidence: ${matches[0][1] - matches[1][1]}\n`, 'Best matches:', matches.slice(0, 5))
-
-            const [id, similarity] = matches[0]
-            const card = getCardByInternalId(id)
-            if (!card) {
-              throw new Error('Hashes key does not correspond to any card')
-            }
-            const resolvedImageUrl = await getRightPathOfImage(card.image, language)
-
-            return {
-              matchedCard: { card, similarity },
-              imageUrl: cardImageUrl,
-              resolvedImageUrl,
-              increment: 1,
-            }
-          }),
-      )
-
+    }
+    image.onerror = () => {
       URL.revokeObjectURL(imageUrl)
-      resolve(extractedCards)
+      reject(new Error('Failed to load image'))
     }
     if (imageUrl.startsWith('blob:')) {
       image.src = imageUrl
     } else {
       console.error('Invalid image URL:', imageUrl)
       URL.revokeObjectURL(imageUrl)
-      throw new Error('PokemonCardDetectorComponent.tsx:extractCardImages: Invalid image URL')
+      reject(new Error('PokemonCardDetectorComponent.tsx:extractCardImages: Invalid image URL'))
     }
   })
 }
