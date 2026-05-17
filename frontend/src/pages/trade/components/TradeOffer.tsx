@@ -8,6 +8,14 @@ import { umami } from '@/lib/utils.ts'
 import { useInsertTrade } from '@/services/trade/useTrade.ts'
 import type { Card, TradeRow } from '@/types'
 
+function OfferCard({ card }: { card: Card | null }) {
+  return card === null ? (
+    <span className="inline-block mx-auto">—</span>
+  ) : (
+    <CardLine className="flex-1 bg-neutral-900" card_id={card.card_id} details="hidden" />
+  )
+}
+
 interface Props {
   yourId: string
   friendId: string
@@ -15,10 +23,6 @@ interface Props {
   friendCard: Card | null
   setYourCard: (card: Card | null) => void
   setFriendCard: (card: Card | null) => void
-}
-
-function card(c: Card | null) {
-  return c === null ? <span className="inline-block mx-auto">—</span> : <CardLine className="flex-1" card_id={c.card_id} details="hidden" />
 }
 
 export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, setYourCard, setFriendCard }) => {
@@ -58,25 +62,25 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
 
   if (!yourCard && !friendCard) {
     return (
-      <div className="sticky top-0 z-10 flex rounded-lg border-1 bg-neutral-900 border-neutral-700 border-solid p-2 w-full items-center justify-around text-center h-[110px] sm:h-[82px]">
+      <div className="sticky top-0 z-10 flex rounded-lg border-1 bg-neutral-800 border-neutral-700 border-solid p-2 w-full items-center justify-around text-center h-[110px] sm:h-[82px]">
         <h4 className="text-lg font-medium text-neutral-400">{t('selectCardsToTrade')}</h4>
       </div>
     )
   }
 
   return (
-    <div className="sticky top-0 z-10 bg-neutral-900 rounded-lg border-1 border-neutral-700 border-solid p-1">
+    <div className="sticky top-0 z-10 bg-neutral-800 rounded-lg border-1 border-neutral-700 border-solid p-1">
       <div className="flex flex-col-reverse sm:flex-row gap-x-4 gap-y-1 p-1">
         <div className="flex w-full sm:w-1/2">
           <ChevronsUp />
-          {card(yourCard)}
+          <OfferCard card={yourCard} />
         </div>
         <div className="flex w-full sm:w-1/2">
           <ChevronsDown />
-          {card(friendCard)}
+          <OfferCard card={friendCard} />
         </div>
       </div>
-      <Button className="block w-full sm:w-96 mx-auto mt-1 text-center" variant="outline" onClick={submit} disabled={!enabled}>
+      <Button className="block w-full sm:w-96 mx-auto mt-1 text-center" variant="default" onClick={submit} disabled={!enabled}>
         {t('offerTrades')}
       </Button>
     </div>

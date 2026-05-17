@@ -1,14 +1,13 @@
-import { type ReactNode, useState } from 'react'
+import { useState } from 'react'
 import { TradeListRow } from '@/pages/trade/components/TradeListRow.tsx'
 import type { TradeRow } from '@/types'
 import Actions from './Actions'
 
 interface Props {
-  children?: ReactNode
   trades: TradeRow[]
 }
 
-function TradeList({ children, trades }: Props) {
+function TradeList({ trades }: Props) {
   const [selectedTradeId, setSelectedTradeId] = useState<number | undefined>(undefined)
   const selectedTrade = trades.find((r) => r.id === selectedTradeId)
 
@@ -25,7 +24,6 @@ function TradeList({ children, trades }: Props) {
             <TradeListRow key={x.id} row={x} selectedTradeId={selectedTradeId} setSelectedTradeId={setSelectedTradeId} />
           ))}
       </ul>
-      {children}
       {selectedTrade && (
         <div className="flex gap-2 text-center items-center mt-2">
           <Actions trade={selectedTrade} setSelected={setSelectedTradeId} />

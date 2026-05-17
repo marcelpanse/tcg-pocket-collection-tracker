@@ -121,117 +121,123 @@ function TradeWith() {
   }
 
   return (
-    <div className="flex flex-col gap-4 w-full px-1 sm:px-2">
+    <>
       <title>{`Trade with ${friendAccount.username} – TCG Pocket Collection Tracker`}</title>
-      <div className="mx-1 flex justify-between">
-        <h1>
-          <span className="text-2xl font-light">{t('tradingWith')}</span>
-          <span className="text-2xl font-bold"> {friendAccount.username}</span>
-          {friendAccount.language && <span className="text-lg bg-neutral-800 px-2 rounded-full ml-1">{friendAccount.language}</span>}
-          <span className="block sm:inline text-sm sm:ml-1">
-            <FriendIdDisplay
-              friendId={friendAccount.friend_id}
-              onChat={isAlreadyFriend ? () => openChat(friendAccount.friend_id, friendAccount.username || friendAccount.friend_id) : undefined}
-            />
-          </span>
-        </h1>
-        <div className="flex flex-col-reverse sm:flex-row gap-2">
-          <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">
-            {t('viewHistory')}
-            <Switch
-              id={`history-${friendId}`}
-              className="ml-2 my-auto"
-              checked={viewHistory}
-              onCheckedChange={(x) => {
-                setViewHistory(x)
-                setPageHistory(0)
-              }}
-            />
-          </label>
-          {!isAlreadyFriend && (
-            <Button
-              onClick={handleAddFriend}
-              disabled={manageFriend.isPending || hasPendingRequest}
-              title={hasPendingRequest ? 'Friend request already sent' : undefined}
-            >
-              <UserPlus className="h-4 w-4 mr-1" />
-              {hasPendingRequest ? 'Request Sent' : 'Add Friend'}
-            </Button>
-          )}
-          <Link to={`/collection/${friendId}`}>
-            <Button>
-              Collection
-              <ChevronRight />
-            </Button>
-          </Link>
-        </div>
-      </div>
-      {allTrades.isLoading ? (
-        <Spinner size="md" />
-      ) : (
-        allTrades.data && (
-          <TradeList trades={allTrades.data.trades}>
-            <div className="flex justify-between mt-2">
-              <span className="text-neutral-400">{allTrades.data.count} total offers</span>
-              <div className="flex items-center gap-2">
-                <span>Page {pageHistory + 1}</span>
-                <Button variant="outline" onClick={() => setPageHistory(() => 0)} disabled={pageHistory <= 0}>
-                  <ChevronFirst />
+      <div className="flex flex-col gap-4 w-full mb-4">
+        <div className="rounded-lg border border-neutral-700 bg-neutral-800 p-1">
+          <div className="flex justify-between">
+            <h1>
+              <span className="text-2xl font-light">{t('tradingWith')}</span>
+              <span className="text-2xl font-bold"> {friendAccount.username}</span>
+              {friendAccount.language && <span className="text-lg bg-neutral-800 px-2 rounded-full ml-1">{friendAccount.language}</span>}
+              <span className="block sm:inline text-sm sm:ml-1">
+                <FriendIdDisplay
+                  friendId={friendAccount.friend_id}
+                  onChat={isAlreadyFriend ? () => openChat(friendAccount.friend_id, friendAccount.username || friendAccount.friend_id) : undefined}
+                />
+              </span>
+            </h1>
+            <div className="flex flex-col-reverse sm:flex-row gap-2">
+              <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">
+                {t('viewHistory')}
+                <Switch
+                  id={`history-${friendId}`}
+                  className="ml-2 my-auto"
+                  checked={viewHistory}
+                  onCheckedChange={(x) => {
+                    setViewHistory(x)
+                    setPageHistory(0)
+                  }}
+                />
+              </label>
+              {!isAlreadyFriend && (
+                <Button
+                  variant="outline"
+                  onClick={handleAddFriend}
+                  disabled={manageFriend.isPending || hasPendingRequest}
+                  title={hasPendingRequest ? 'Friend request already sent' : undefined}
+                >
+                  <UserPlus className="h-4 w-4 mr-1" />
+                  {hasPendingRequest ? 'Request Sent' : 'Add Friend'}
                 </Button>
-                <Button variant="outline" onClick={() => setPageHistory((prev) => prev - 1)} disabled={pageHistory <= 0}>
-                  <ChevronLeft />
-                </Button>
-                <Button variant="outline" onClick={() => setPageHistory((prev) => prev + 1)} disabled={!allTrades.data.hasNext}>
+              )}
+              <Link to={`/collection/${friendId}`}>
+                <Button variant="outline">
+                  Collection
                   <ChevronRight />
                 </Button>
-              </div>
-            </div>
-          </TradeList>
-        )
-      )}
-
-      <TradeOffer
-        yourId={account.friend_id}
-        friendId={friendAccount.friend_id}
-        yourCard={yourCard}
-        friendCard={friendCard}
-        setYourCard={setYourCard}
-        setFriendCard={setFriendCard}
-      />
-
-      {!hasPossibleTrades && (
-        <div className="text-center py-8">
-          <p className="text-xl ">{t('noPossibleTrades')}</p>
-          <p className="text-sm text-gray-300 mt-2">{t('noPossibleTradesDescription')}</p>
-        </div>
-      )}
-
-      {tradableRarities.map((rarity) => (
-        <div key={rarity}>
-          <h3 id={rarity} className="text-xl font-semibold mb-2 text-center">
-            [ {rarity} ]
-          </h3>
-          <div className="flex flex-col-reverse sm:flex-row gap-2 sm:gap-4">
-            <div className="w-full sm:w-1/2">
-              <h4 className="text-md font-medium mb-1 ml-2 text-neutral-400">{t('youHave')}</h4>
-              {cardsToGive[rarity] ? (
-                <CardList cards={cardsToGive[rarity]} selected={yourCard} setSelected={setYourCard} />
-              ) : (
-                <div className="text-center text-neutral-500 rounded-lg border-1 border-neutral-700 border-solid p-2">No cards to trade</div>
-              )}
-            </div>
-            <div className="w-full sm:w-1/2">
-              <h4 className="text-md font-medium mb-1 ml-2 text-neutral-400">{t('friendHas')}</h4>
-              {cardsToReceive[rarity] ? (
-                <CardList cards={cardsToReceive[rarity]} selected={friendCard} setSelected={setFriendCard} />
-              ) : (
-                <div className="text-center text-neutral-500  rounded-lg border-1 border-neutral-700 border-solid p-2">No cards to trade</div>
-              )}
+              </Link>
             </div>
           </div>
+          {allTrades.isLoading ? (
+            <Spinner size="md" />
+          ) : (
+            allTrades.data && (
+              <>
+                <TradeList trades={allTrades.data.trades} />
+                <div className="flex justify-between items-center mt-2">
+                  <span className="text-neutral-400">{allTrades.data.count} total offers</span>
+                  <div className="flex items-center gap-2">
+                    <span>Page {pageHistory + 1}</span>
+                    <Button variant="outline" onClick={() => setPageHistory(() => 0)} disabled={pageHistory <= 0}>
+                      <ChevronFirst />
+                    </Button>
+                    <Button variant="outline" onClick={() => setPageHistory((prev) => prev - 1)} disabled={pageHistory <= 0}>
+                      <ChevronLeft />
+                    </Button>
+                    <Button variant="outline" onClick={() => setPageHistory((prev) => prev + 1)} disabled={!allTrades.data.hasNext}>
+                      <ChevronRight />
+                    </Button>
+                  </div>
+                </div>
+              </>
+            )
+          )}
         </div>
-      ))}
-    </div>
+
+        <TradeOffer
+          yourId={account.friend_id}
+          friendId={friendAccount.friend_id}
+          yourCard={yourCard}
+          friendCard={friendCard}
+          setYourCard={setYourCard}
+          setFriendCard={setFriendCard}
+        />
+
+        {!hasPossibleTrades && (
+          <div className="text-center py-8">
+            <p className="text-xl ">{t('noPossibleTrades')}</p>
+            <p className="text-sm text-gray-300 mt-2">{t('noPossibleTradesDescription')}</p>
+          </div>
+        )}
+
+        {tradableRarities.map((rarity) => (
+          <div key={rarity}>
+            <h3 id={rarity} className="text-xl font-semibold mb-2 text-center">
+              [ {rarity} ]
+            </h3>
+            <div className="flex flex-col-reverse sm:flex-row gap-2 sm:gap-4">
+              <div className="w-full sm:w-1/2 p-1 border rounded-lg border-neutral-700 bg-neutral-800">
+                <h4 className="text-md font-medium mb-1 ml-1 text-neutral-400">{t('youHave')}</h4>
+                {cardsToGive[rarity] ? (
+                  <CardList cards={cardsToGive[rarity]} selected={yourCard} setSelected={setYourCard} />
+                ) : (
+                  <div className="text-center text-neutral-500 mb-1">No cards to trade</div>
+                )}
+              </div>
+              <div className="w-full sm:w-1/2 p-1 border rounded-lg border-neutral-700 bg-neutral-800">
+                <h4 className="text-md font-medium mb-1 ml-1 text-neutral-400">{t('friendHas')}</h4>
+                {cardsToReceive[rarity] ? (
+                  <CardList cards={cardsToReceive[rarity]} selected={friendCard} setSelected={setFriendCard} />
+                ) : (
+                  <div className="text-center text-neutral-500 mb-1">No cards to trade</div>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   )
 }
 
