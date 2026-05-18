@@ -120,20 +120,46 @@ function computeDCT(pixels: number[]): number[] {
   return result
 }
 
-function ensureImage(source: string | HTMLImageElement): Promise<HTMLImageElement> {
+function ensureImage(source: string | HTMLImageElement, attempt = 0): Promise<HTMLImageElement> {
+  const deviceInfo = () => {
+    const mem = (navigator as { deviceMemory?: number }).deviceMemory
+    return mem !== undefined ? `mem=${mem}GB` : ''
+  }
+
   return new Promise((resolve, reject) => {
     if (source instanceof HTMLImageElement) {
-      if (source.complete) {
+      // naturalWidth > 0 guards against browsers that set complete=true on broken images
+      if (source.complete && source.naturalWidth > 0) {
         resolve(source)
-      } else {
-        source.onload = () => resolve(source)
-        source.onerror = () => reject(new Error('Failed to load image'))
+        return
+      }
+      const buildError = () =>
+        `Failed to load image — src="${source.src?.slice(0, 80) ?? '(none)'}" ` +
+        `complete=${source.complete} naturalSize=${source.naturalWidth}x${source.naturalHeight} ` +
+        `attempt=${attempt} ${deviceInfo()}`
+      source.onload = () => resolve(source)
+      source.onerror = () => {
+        if (attempt === 0) {
+          ensureImage(source, 1).then(resolve, reject)
+        } else {
+          reject(new Error(buildError()))
+        }
       }
     } else {
       const img = new Image()
       img.crossOrigin = 'Anonymous'
+      const buildError = () =>
+        `Failed to load image from URL — src="${source.slice(0, 80)}" ` +
+        `naturalSize=${img.naturalWidth}x${img.naturalHeight} ` +
+        `attempt=${attempt} ${deviceInfo()}`
       img.onload = () => resolve(img)
-      img.onerror = () => reject(new Error('Failed to load image from URL'))
+      img.onerror = () => {
+        if (attempt === 0) {
+          ensureImage(source, 1).then(resolve, reject)
+        } else {
+          reject(new Error(buildError()))
+        }
+      }
       img.src = source
     }
   })
