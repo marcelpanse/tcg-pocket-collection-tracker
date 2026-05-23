@@ -64,7 +64,7 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
         />
       )}
       {filters.pack !== undefined && packsToShow && (
-        <TabsFilter className="block" options={packsToShow} value={filters.pack} onChange={changeFilter('pack')} show={(x) => t(x, { ns: 'common/packs' })} />
+        <TabsFilter options={packsToShow} value={filters.pack} onChange={changeFilter('pack')} show={(x) => t(x, { ns: 'common/packs' })} />
       )}
       {filters.rarity !== undefined && (
         <RarityFilter rarityFilter={filters.rarity} setRarityFilter={changeFilter('rarity')} deckbuildingMode={filters.deckbuildingMode} />
@@ -74,7 +74,6 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
       )}
       {filters.ownership !== undefined && (
         <TabsFilter
-          className="block"
           options={ownershipOptions}
           value={filters.ownership}
           onChange={changeFilter('ownership')}
@@ -84,7 +83,6 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
       )}
       {filters.trading !== undefined && (
         <TabsFilter
-          className="block"
           options={tradingOptions}
           value={filters.trading}
           onChange={changeFilter('trading')}

@@ -1,44 +1,21 @@
 import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group'
-import type { VariantProps } from 'class-variance-authority'
-import * as React from 'react'
+import type * as React from 'react'
 
-import { toggleVariants } from '@/components/ui/toggle'
 import { cn } from '@/lib/utils'
 
-const ToggleGroupContext = React.createContext<VariantProps<typeof toggleVariants>>({
-  size: 'default',
-  variant: 'default',
-})
-
-export function ToggleGroup({
-  className,
-  variant,
-  size,
-  children,
-  ...props
-}: React.ComponentProps<typeof ToggleGroupPrimitive.Root> & VariantProps<typeof toggleVariants>) {
+export function ToggleGroup({ className, children, ...props }: React.ComponentProps<typeof ToggleGroupPrimitive.Root>) {
   return (
-    <ToggleGroupPrimitive.Root className={cn('flex items-center justify-center gap-1', className)} {...props}>
-      <ToggleGroupContext.Provider value={{ variant, size }}>{children}</ToggleGroupContext.Provider>
+    <ToggleGroupPrimitive.Root className={cn('flex flex-wrap justify-start items-center gap-1', className)} {...props}>
+      {children}
     </ToggleGroupPrimitive.Root>
   )
 }
 
-export function ToggleGroupItem({
-  className,
-  children,
-  variant,
-  size,
-  ...props
-}: ToggleGroupPrimitive.ToggleGroupItemProps & VariantProps<typeof toggleVariants>) {
-  const context = React.useContext(ToggleGroupContext)
+export function ToggleGroupItem({ className, children, ...props }: ToggleGroupPrimitive.ToggleGroupItemProps) {
   return (
     <ToggleGroupPrimitive.Item
       className={cn(
-        toggleVariants({
-          variant: context.variant || variant,
-          size: context.size || size,
-        }),
+        'cursor-pointer inline-flex items-center justify-center rounded-sm text-sm font-medium text-neutral-400 bg-transparent focus-visible:outline-none focus-visible:ring-2 ring-neutral-400 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-neutral-700 hover:text-neutral-300 data-[state=on]:bg-neutral-600 data-[state=on]:text-neutral-300 h-8 px-1 min-w-8',
         className,
       )}
       {...props}
