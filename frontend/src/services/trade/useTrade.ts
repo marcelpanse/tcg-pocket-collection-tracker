@@ -43,6 +43,22 @@ export function useTradingPartners(cardId: number | undefined, language: GameLan
   })
 }
 
+export function usePendingTrades() {
+  const { data: account } = useAccount()
+  const { data: trades } = useActiveTrades()
+  if (account === undefined || trades === undefined) {
+    return undefined
+  }
+
+  const res = new Map<string, number>()
+  for (const t of trades) {
+    res.set(t.offer_card_id, (res.get(t.offer_card_id) ?? 0) + 1)
+    res.set(t.receiver_card_id, (res.get(t.receiver_card_id) ?? 0) + 1)
+  }
+
+  return res
+}
+
 // MUTATIONS
 
 export function useInsertTrade() {
