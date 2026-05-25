@@ -1,6 +1,8 @@
-import type { Dispatch, FC, SetStateAction } from 'react'
+import { type Dispatch, type FC, type SetStateAction, useState } from 'react'
 import { CardLine } from '@/components/CardLine'
 import type { Card } from '@/types'
+
+const TRUNCATE_TO = 10
 
 interface Props {
   cards: Card[]
@@ -9,6 +11,9 @@ interface Props {
 }
 
 export const CardList: FC<Props> = ({ cards, selected, setSelected }) => {
+  const shouldTruncate = cards.length > TRUNCATE_TO
+  const [showAll, setShowAll] = useState(!shouldTruncate)
+
   // Sort cards by set name first, then by card number
   const sortedCards = [...cards].sort((a, b) => {
     const parseCardId = (cardId: string) => {
@@ -49,5 +54,14 @@ export const CardList: FC<Props> = ({ cards, selected, setSelected }) => {
     )
   }
 
-  return <ul className="space-y-1">{sortedCards.map(item)}</ul>
+  return (
+    <ul className="space-y-1">
+      {(showAll ? sortedCards : sortedCards.slice(0, TRUNCATE_TO)).map(item)}
+      {shouldTruncate && (
+        <button type="button" className="ml-1 hover:underline cursor-pointer" onClick={() => setShowAll((value) => !value)}>
+          {showAll ? 'Show less' : `Show ${sortedCards.length - TRUNCATE_TO} more`}
+        </button>
+      )}
+    </ul>
+  )
 }
