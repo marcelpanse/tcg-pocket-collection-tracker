@@ -1,24 +1,21 @@
-import type { ClassValue } from 'clsx'
-import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getCardById } from '@/lib/CardsDB'
 import { cn, getCardNameByLang } from '@/lib/utils'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLSpanElement> {
   card_id: string
-  className?: string
   amount_owned?: number // optionally override collection amount
   increment?: number
 
-  rarity?: ClassValue
-  id?: ClassValue
-  name?: ClassValue
-  amount?: ClassValue
-  details?: ClassValue
+  rarity?: string | undefined
+  id?: string | undefined
+  name?: string | undefined
+  amount?: string | undefined
+  details?: string | undefined
 }
 
-export const CardLine: FC<Props> = ({ card_id, className, amount_owned, increment, rarity, id, name, amount, details }) => {
+export function CardLine({ card_id, className, amount_owned, increment, rarity, id, name, amount, details, children, ...props }: Props) {
   const { i18n } = useTranslation('trade-matches')
 
   const { data: ownedCards } = useCollection()
@@ -32,10 +29,11 @@ export const CardLine: FC<Props> = ({ card_id, className, amount_owned, incremen
   }
 
   return (
-    <span className={cn('flex rounded pl-1 bg-zinc-800', className)}>
+    <span className={cn('flex rounded pl-1 bg-zinc-800', className)} {...props}>
       <span className={cn('mr-2 sm:min-w-10', rarity)}>{card.rarity === 'Crown Rare' ? '♛' : card.rarity} </span>
       <span className={cn('mr-2 sm:min-w-14 me-4', id)}>{card.card_id} </span>
       <span className={cn('mr-auto', name)}>{getCardNameByLang(card, i18n.language)}</span>
+      {children}
       {ownedAmount !== undefined && (
         <span className={cn('text-neutral-400 ml-1 mr-2', amount)}>
           ×{ownedAmount}

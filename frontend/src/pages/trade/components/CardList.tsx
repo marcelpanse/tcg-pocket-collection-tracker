@@ -1,5 +1,7 @@
 import { type Dispatch, type FC, type SetStateAction, useState } from 'react'
+import { Tooltip } from 'react-tooltip'
 import { CardLine } from '@/components/CardLine'
+import { usePendingTrades } from '@/services/trade/useTrade'
 import type { Card } from '@/types'
 
 const TRUNCATE_TO = 10
@@ -11,6 +13,7 @@ interface Props {
 }
 
 export const CardList: FC<Props> = ({ cards, selected, setSelected }) => {
+  const pendingTrades = usePendingTrades()
   const shouldTruncate = cards.length > TRUNCATE_TO
   const [showAll, setShowAll] = useState(!shouldTruncate)
 
@@ -43,13 +46,28 @@ export const CardList: FC<Props> = ({ cards, selected, setSelected }) => {
         setSelected(card)
       }
     }
+    const pending = pendingTrades?.get(card.card_id)
     return (
-      <li key={card.card_id} className="rounded cursor-pointer" onClick={onClick}>
+      <li key={card.card_id} className="rounded flex">
         <CardLine
-          className={`w-full bg-neutral-900 hover:bg-neutral-600 ${selected?.card_id === card.card_id && 'bg-green-800/50'}`}
+          className={`w-full cursor-pointer bg-neutral-900 hover:bg-neutral-700 ${selected?.card_id === card.card_id && 'bg-green-800/50'}`}
           card_id={card.card_id}
           rarity="hidden"
-        />
+          onClick={onClick}
+        >
+          {pending && (
+            <>
+              <Tooltip id={`trading-${card.card_id}`} clickable={true} style={{ maxWidth: '300px', whiteSpace: 'normal' }} />
+              <span
+                className="text-xs mr-1 my-1 px-1 rounded border border-yellow-700/50 bg-yellow-800/40"
+                data-tooltip-id={`trading-${card.card_id}`}
+                data-tooltip-content={`You have ${pending} pending trade with this card.`}
+              >
+                {pending}
+              </span>
+            </>
+          )}
+        </CardLine>
       </li>
     )
   }

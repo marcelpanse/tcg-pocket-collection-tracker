@@ -28,6 +28,7 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
 
   const yourCard = row.offering_friend_id === account.friend_id ? row.offer_card_id : row.receiver_card_id
   const friendCard = row.offering_friend_id === account.friend_id ? row.receiver_card_id : row.offer_card_id
+  const ended = row.offering_friend_id === account.friend_id ? row.offerer_ended : row.receiver_ended
 
   function onClick(row: TradeRow) {
     if (selectedTradeId === row.id) {
@@ -63,11 +64,11 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
       <div className="flex flex-col-reverse md:flex-row grow-1 justify-between gap-1 md:gap-2">
         <div className="flex flex-1">
           <ChevronsUp />
-          <CardLine className="flex-1 bg-neutral-900" card_id={yourCard} increment={-1} />
+          <CardLine className="flex-1 bg-neutral-900" card_id={yourCard} increment={ended ? undefined : -1} />
         </div>
         <div className="flex flex-1">
           <ChevronsDown />
-          <CardLine className="flex-1 bg-neutral-900" card_id={friendCard} increment={1} />
+          <CardLine className="flex-1 bg-neutral-900" card_id={friendCard} increment={ended ? undefined : 1} />
         </div>
       </div>
     </li>
