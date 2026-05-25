@@ -17,7 +17,7 @@ function Trade() {
   useEffect(() => {
     // Redirect to offers if at /trade
     if (location.pathname === '/trade') {
-      navigate('/trade/offers')
+      navigate('/trade/offers', { replace: true })
     }
   }, [location.pathname, navigate])
 

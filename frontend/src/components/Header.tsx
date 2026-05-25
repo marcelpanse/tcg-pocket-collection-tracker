@@ -132,13 +132,6 @@ export function Header() {
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild className="hidden lg:block">
-              <Link to="https://blog.tcgpocketcollectiontracker.com" className="hidden lg:block">
-                <Button className="px-2 sm:px-4" variant="ghost">
-                  {t('blog')}
-                </Button>
-              </Link>
-            </NavigationMenuLink>
-            <NavigationMenuLink asChild className="hidden lg:block">
               <Link to="https://community.tcgpocketcollectiontracker.com" className="hidden lg:block">
                 <Button className="px-2 sm:px-4" variant="ghost">
                   {t('community')}

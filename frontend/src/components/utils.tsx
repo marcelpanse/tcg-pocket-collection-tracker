@@ -7,20 +7,20 @@ export function formatRarity(rarity: Rarity) {
     case '◊◊':
     case '◊◊◊':
     case '◊◊◊◊':
-      return <span className="text-gray-400 hover:text-gray-500 px-1">{rarity}</span>
+      return rarity
     case '☆':
     case '☆☆':
     case '☆☆☆':
-      return <span className="text-yellow-500 hover:text-yellow-600 data-[state=on]:text-yellow-500 px-1">{rarity}</span>
+      return <span className="text-yellow-500 hover:text-yellow-400 data-[state=on]:text-yellow-300">{rarity}</span>
     case '✵':
     case '✵✵':
-      return <span className="text-pink-300 hover:text-pink-500 .dark:data-[state=on]:text-pink-400 px-1">{rarity}</span>
+      return <span className="text-pink-300 hover:text-pink-300 data-[state=on]:text-pink-300">{rarity}</span>
     case 'Crown Rare':
-      return <span className="px-1">👑</span>
+      return '👑'
     case 'P':
-      return <span className="px-1">P</span>
+      return 'P'
   }
-  return null
+  throw new Error(`Unrecognized rarity: ${rarity}`)
 }
 
 export function showCardType(x: CardTypeOption) {

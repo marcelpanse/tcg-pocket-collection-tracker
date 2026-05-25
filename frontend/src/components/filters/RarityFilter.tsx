@@ -8,19 +8,18 @@ interface Props {
   rarityFilter: Rarity[]
   setRarityFilter: (rarityFilter: Rarity[]) => void
   deckbuildingMode?: boolean
-  className?: string
 }
 
 const basicRarities: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊', 'P']
 
-const RarityFilter: FC<Props> = ({ rarities, rarityFilter, setRarityFilter, deckbuildingMode, className }) => {
+const RarityFilter: FC<Props> = ({ rarities, rarityFilter, setRarityFilter, deckbuildingMode }) => {
   useEffect(() => {
     if (deckbuildingMode) {
       setRarityFilter(rarityFilter.filter((rf) => basicRarities.includes(rf)))
     }
   }, [deckbuildingMode])
   const raritiesToUse: readonly Rarity[] = rarities ?? (deckbuildingMode ? basicRarities : allRarities)
-  return <ToggleFilter className={className} options={raritiesToUse} value={rarityFilter} onChange={setRarityFilter} show={formatRarity} asChild />
+  return <ToggleFilter options={raritiesToUse} value={rarityFilter} onChange={setRarityFilter} show={formatRarity} />
 }
 
 export default RarityFilter
