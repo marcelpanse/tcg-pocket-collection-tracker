@@ -6,8 +6,8 @@
     "eligibleCards-singular": "Liste des cartes éligibles : {{options}} option",
     "eligibleCards-plural": "Liste des cartes éligibles : {{options}} options",
     "chanceFrom": "Chance dans {{pack}} : {{chance}}%",
-    "manuallyMarkedComplete": "Manually marked as completed",
-    "manuallyMarkComplete": "Manually mark as complete"
+    "manuallyMarkedComplete": "Marquée manuellement comme terminée",
+    "manuallyMarkComplete": "Marquer manuellement comme terminée"
   },
   "filters": {
     "allFilters": "Tous les filtres",
@@ -19,7 +19,7 @@
     "summary": "{{selected}} sélectionnée(s), {{uniquesOwned}} unique(s) possédée(s), {{totalOwned}} total possédée(s)",
     "mewCardOwned": "Vous avez débloqué la carte spéciale de Mew ! Elle est incluse dans votre total de carte, mais le total dans le jeu n'inclus pas la carte."
   },
-  "collectionOf": "Collection of",
+  "collectionOf": "Collection de",
   "trade": {
     "button": "Copier le message d'échange",
     "publicTradePage": "Page d'échange publique ",
