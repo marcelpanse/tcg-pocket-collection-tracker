@@ -5,7 +5,7 @@
     "default": "ID de carte",
     "recent": "Mise à jour récemment",
     "expansion-newest": "Plus récent en premier",
-    "rarity": "Rarity",
+    "rarity": "Rareté",
     "type": "Type"
   },
   "f-number": {
@@ -26,9 +26,9 @@
   "carddex": "Card Dex",
   "trading": "Échanges",
   "f-owned": {
-    "all": "All",
-    "owned": "Owned",
-    "missing": "Missing"
+    "all": "Toutes",
+    "owned": "Possédées",
+    "missing": "Manquantes"
   },
   "f-missiontype": {
     "all": "Toutes",
