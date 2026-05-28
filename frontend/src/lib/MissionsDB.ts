@@ -17,6 +17,7 @@ const B2Missions = await import('../../assets/themed-collections/B2-missions.jso
 const B2aMissions = await import('../../assets/themed-collections/B2a-missions.json')
 const B2bMissions = await import('../../assets/themed-collections/B2b-missions.json')
 const B3Missions = await import('../../assets/themed-collections/B3-missions.json')
+const B3aMissions = await import('../../assets/themed-collections/B3a-missions.json')
 
 export const missionsMap: Partial<Record<ExpansionId, Mission[]>> = {
   A1: A1Missions.default as Mission[],
@@ -36,6 +37,7 @@ export const missionsMap: Partial<Record<ExpansionId, Mission[]>> = {
   B2a: B2aMissions.default as Mission[],
   B2b: B2bMissions.default as Mission[],
   B3: B3Missions.default as Mission[],
+  B3a: B3aMissions.default as Mission[],
 }
 
 export const expansionsWithMissions = (Object.keys(missionsMap) as ExpansionId[]).filter((id) => (missionsMap[id]?.length ?? 0) > 0)
