@@ -8,11 +8,11 @@
         "amount": 1
       },
       {
-        "options": ["B2a-2", "B2a-117"],
+        "options": ["B2a-2", "B2a-117", "P-B-69"],
         "amount": 1
       },
       {
-        "options": ["B2a-3", "B2a-100", "B2a-110"],
+        "options": ["B2a-3", "B2a-100", "B2a-110", "B3a-104", "P-B-63"],
         "amount": 1
       }
     ],
@@ -212,7 +212,7 @@
     "name": "Collect 5 Iono cards",
     "requiredCards": [
       {
-        "options": ["B2a-89"],
+        "options": ["A4b-340", "A2b-88", "B2a-89", "A4b-341", "B2a-106"],
         "amount": 5
       }
     ],

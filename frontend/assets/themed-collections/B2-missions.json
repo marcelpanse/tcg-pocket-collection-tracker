@@ -396,7 +396,7 @@
     "name": "Collect 3 Cramorant cards",
     "requiredCards": [
       {
-        "options": ["B2-45"],
+        "options": ["B2-45", "B2-164"],
         "amount": 3
       }
     ],
@@ -408,7 +408,7 @@
     "name": "Collect 3 Meloetta cards",
     "requiredCards": [
       {
-        "options": ["B2-70"],
+        "options": ["B2-70", "B2-233", "P-B-50"],
         "amount": 3
       }
     ],
