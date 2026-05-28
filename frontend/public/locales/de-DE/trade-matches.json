@@ -43,20 +43,20 @@
   "rarity": "Seltenheit",
   "toCollect": "Zu Sammeln",
   "toKeep": "Zu Behalten",
-  "notFound": "Account not found",
+  "notFound": "Konto nicht gefunden",
   "nMatches": "{{n}} Tauschtreffer",
   "nPending": "{{n}} ausstehend",
-  "noTradePartners": "We couldn't find anyone for you to trade with.",
-  "isActiveTrading": "Accepting new trades",
+  "noTradePartners": "Wir konnten niemanden zum Tauschen für dich finden.",
+  "isActiveTrading": "Neue Tauschangebote annehmen",
   "isActiveTradingDisabledTooltip": "Du musst dein Profil öffentlich machen, bevor du den aktiven Tausch aktivieren kannst.",
-  "toCollectTooltip": "The amount of cards you want to collect by trading. Tip: Set this value to 0 to exclude a rarity from trading.",
-  "toKeepTooltip": "The minimum amount of cards you want to trade down to.",
-  "tabMatches": "Matches",
-  "noAccount": "First set up your account using 'Edit profile' in the top right corner.",
-  "longOperation": "This might take a while.",
+  "toCollectTooltip": "Die Anzahl der Karten, die du durch Tauschen sammeln möchtest. Tipp: Setze diesen Wert auf 0, um eine Seltenheit vom Tausch auszuschließen.",
+  "toKeepTooltip": "Die minimale Anzahl an Karten, die du behalten möchtest.",
+  "tabMatches": "Treffer",
+  "noAccount": "Richte zuerst dein Konto über 'Profil bearbeiten' oben rechts ein.",
+  "longOperation": "Dies kann eine Weile dauern.",
   "search": {
-    "byCard": "Search {{cardName}}",
-    "selectCard": "Select card to search",
-    "allCards": "Search all cards"
+    "byCard": "{{cardName}} suchen",
+    "selectCard": "Karte zum Suchen auswählen",
+    "allCards": "Alle Karten durchsuchen"
   }
 }

@@ -5,8 +5,8 @@
     "default": "Kartennummer",
     "recent": "Zuletzt hinzugefügt",
     "expansion-newest": "Neueste Erweiterung",
-    "rarity": "Rarity",
-    "type": "Type"
+    "rarity": "Seltenheit",
+    "type": "Typ"
   },
   "f-number": {
     "numberCards": "Anzahl der gesuchten Karten",
@@ -14,21 +14,21 @@
     "minNum": "Minimale Anzahl der Karten"
   },
   "f-ownership": {
-    "all": "All",
-    "missing": "Missing",
-    "registered": "Registered"
+    "all": "Alle",
+    "missing": "Fehlend",
+    "registered": "Registriert"
   },
   "f-trading": {
-    "all": "All",
-    "wanted": "Wanted",
-    "extra": "For trade"
+    "all": "Alle",
+    "wanted": "Gesucht",
+    "extra": "Zum Tausch"
   },
   "carddex": "Card Dex",
-  "trading": "Trading",
+  "trading": "Tausch",
   "f-owned": {
-    "all": "All",
-    "owned": "Owned",
-    "missing": "Missing"
+    "all": "Alle",
+    "owned": "Im Besitz",
+    "missing": "Fehlend"
   },
   "f-missiontype": {
     "all": "Alle",
