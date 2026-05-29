@@ -4,28 +4,28 @@
     "eligibleCards-singular": "Liste der berechtigten Karten: {{options}} option",
     "eligibleCards-plural": "Liste der berechtigten Karten: {{options}} optionen",
     "chanceFrom": "Wahrscheinlichkeit aus {{pack}}: {{chance}}%",
-    "manuallyMarkedComplete": "Manually marked as completed",
-    "manuallyMarkComplete": "Manually mark as complete"
+    "manuallyMarkedComplete": "Manuell als abgeschlossen markiert",
+    "manuallyMarkComplete": "Manuell als abgeschlossen markieren"
   },
   "filters": {
     "allFilters": "Alle Filter",
-    "filtersCount": "Filters",
+    "filtersCount": "Filter",
     "clear": "Zurücksetzen",
     "share": "Teilen"
   },
   "stats": {
     "summary": "{{selected}} ausgewählt, {{uniquesOwned}} einzigartige im Besitz, {{totalOwned}} Gesamt",
-    "mewCardOwned": "You unlocked the special Mew card! This is included in our totals, but note that the in-game totals don't include this card."
+    "mewCardOwned": "Du hast die spezielle Mew-Karte freigeschaltet! Sie ist in unseren Gesamtzahlen enthalten, aber beachte, dass die spielinternen Gesamtzahlen diese Karte nicht berücksichtigen."
   },
   "trade": {
-    "button": "Copy trade message",
+    "button": "Tauschnachricht kopieren",
     "publicTradePage": "Öffentliche Tauschseite",
     "friendID": "Freundescode",
     "lookingForCards": "Suche",
     "forTradeCards": "Tausche",
     "copiedInClipboard": "Zu tauschende Karten wurden in die Zwischenablage kopiert!"
   },
-  "collectionOf": "Collection of",
-  "goToCollection": "Go to collection",
-  "goToMissions": "Go to missions"
+  "collectionOf": "Sammlung von",
+  "goToCollection": "Zur Sammlung",
+  "goToMissions": "Zu den Missionen"
 }
