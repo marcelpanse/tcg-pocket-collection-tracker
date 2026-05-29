@@ -98,8 +98,10 @@ export function CardsTable({ className, children, cards, groupExpansions, render
                       alt={row.expansion.name}
                       className="max-w-[60px]"
                       onError={(e) => {
-                        if (i18n.language !== 'en-US') {
-                          ;(e.target as HTMLImageElement).src = `/images/sets/en-US/${row.expansion.id}.webp`
+                        const img = e.currentTarget
+                        const fallback = `/images/sets/en-US/${row.expansion.id}.webp`
+                        if (!img.src.endsWith(fallback)) {
+                          img.src = fallback
                         }
                       }}
                     />
