@@ -34,7 +34,10 @@ function Overview() {
   const ownedCardsCount = () => {
     let total = 0
     ownedCards.forEach((card) => {
-      total += card.amount_owned
+      // Skip ghost rows (amount_owned > 0, collection: []) to match CollectionCards.totalOwned.
+      if (card.collection.length > 0) {
+        total += card.amount_owned
+      }
     })
     return total
   }

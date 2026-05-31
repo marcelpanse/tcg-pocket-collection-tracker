@@ -16,7 +16,7 @@ Deno.serve(async (_req) => {
 
     try {
       // Run a query
-      const collectionSql = 'SELECT SUM(amount_owned) as count FROM collection;'
+      const collectionSql = 'SELECT SUM(amount_owned) as count FROM card_amounts;'
       console.log('Executing SQL:', collectionSql)
       const collectionCountResult = await connection.queryObject<{ count: number }>(collectionSql)
       const collectionCount = collectionCountResult.rows[0]?.count.toLocaleString()
