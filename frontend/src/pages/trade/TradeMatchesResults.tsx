@@ -13,10 +13,10 @@ function PartnerRow({ partner, activeTrades, card_id }: { partner: TradePartners
   const { t } = useTranslation('trade-matches')
   return (
     <Link to={`/trade/${partner.friend_id}`} state={{ friendCard: card_id }}>
-      <div className="max-w-lg w-full min-h-14 flex justify-between items-center mx-auto px-4 py-1 rounded-md border border-neutral-700 bg-neutral-800 hover:bg-neutral-700">
+      <div className="group max-w-lg min-h-14 flex justify-between items-center mx-auto px-4 py-1 rounded-md border border-neutral-700 bg-neutral-800 hover:bg-neutral-700">
         <p className="mr-2">
           <span>{partner.username}</span>
-          {partner.language && <small className="bg-neutral-700 px-2 rounded-full ml-2">{partner.language}</small>}
+          {partner.language && <small className="bg-neutral-700 group-hover:bg-neutral-600 px-2 rounded-full ml-2">{partner.language}</small>}
         </p>
         <div className="flex items-center">
           <div>
