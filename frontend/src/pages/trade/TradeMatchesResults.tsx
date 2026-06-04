@@ -64,7 +64,7 @@ export default function TradeMatchesResults() {
   }
 
   if (data.length === 0) {
-    return <p className="text-xl text-center py-8">{t('noTradePartners')}</p>
+    return <p className="text-lg text-center px-2 py-8">{t('noTradePartners')}</p>
   }
 
   const friendIdSet = new Set(friends.filter((f) => f.state === 'accepted').map((f) => f.friend_id))

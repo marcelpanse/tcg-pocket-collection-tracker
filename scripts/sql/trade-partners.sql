@@ -9,6 +9,9 @@ WITH recent_accounts AS (
       AND username IS NOT NULL
       AND collection_last_updated IS NOT NULL
       AND ($2::text IS NULL OR language = $2::text)
+      AND collection_last_updated >= now() - interval '4 days'
+      AND (SELECT COUNT(*) FROM trades WHERE status = 'accepted' AND (offering_friend_id = friend_id OR receiving_friend_id = friend_id)) < 8
+      AND (SELECT COUNT(*) FROM trades WHERE status = 'offered' AND receiving_friend_id = friend_id) < 3
     ORDER BY collection_last_updated DESC
     LIMIT 50
 )
@@ -96,6 +99,9 @@ WITH recent_accounts AS (
                 AND ca.amount_owned > COALESCE(ca.amount_wanted, t.to_keep)
         )
         AND ($3::text IS NULL OR language = $3::text)
+        AND collection_last_updated >= now() - interval '4 days'
+        AND (SELECT COUNT(*) FROM trades WHERE status = 'accepted' AND (offering_friend_id = friend_id OR receiving_friend_id = friend_id)) < 8
+        AND (SELECT COUNT(*) FROM trades WHERE status = 'offered' AND receiving_friend_id = friend_id) < 3
     ORDER BY collection_last_updated DESC
     LIMIT 50
 )
