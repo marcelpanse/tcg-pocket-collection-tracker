@@ -7,6 +7,7 @@ export interface IDialogContext {
   setIsLoginDialogOpen: (isOpen: boolean) => void
   selectedCardId: number | undefined
   setSelectedCardId: (id: number | undefined) => void
+  setFriendIdQrCode: (id: string | undefined) => void
 }
 
 export const DialogContext = createContext<IDialogContext>({
@@ -16,4 +17,5 @@ export const DialogContext = createContext<IDialogContext>({
   setIsLoginDialogOpen: () => {},
   selectedCardId: undefined,
   setSelectedCardId: () => {},
+  setFriendIdQrCode: () => {},
 })

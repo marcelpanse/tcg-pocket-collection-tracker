@@ -175,7 +175,7 @@ export default function Friends() {
                       <FriendAvatar name={req.username || req.friend_id} />
                       <div className="min-w-0">
                         <p className="font-medium truncate">{req.username || req.friend_id}</p>
-                        <FriendIdDisplay friendId={req.friend_id} showCopyButton={false} className="text-xs text-neutral-500" />
+                        <FriendIdDisplay friendId={req.friend_id} showCopyButton={false} showQrCode={false} className="text-xs text-neutral-500" />
                       </div>
                     </div>
                     <div className="flex gap-2">
@@ -229,7 +229,7 @@ export default function Friends() {
                     <FriendAvatar name={friend.username || friend.friend_id} />
                     <div className="min-w-0">
                       <p className="font-medium truncate">{friend.username || friend.friend_id}</p>
-                      <FriendIdDisplay friendId={friend.friend_id} showCopyButton={false} className="text-xs text-neutral-500" />
+                      <FriendIdDisplay friendId={friend.friend_id} showCopyButton={false} showQrCode={false} className="text-xs text-neutral-500" />
                     </div>
                   </div>
                   <div className="flex gap-2 shrink-0">
@@ -279,7 +279,7 @@ export default function Friends() {
                             <p className="font-medium truncate">{friend.username || friend.friend_id}</p>
                             <span className="text-xs border border-neutral-600 rounded-full px-2 py-0.5 text-neutral-400">Pending</span>
                           </div>
-                          <FriendIdDisplay friendId={friend.friend_id} showCopyButton={false} className="text-xs text-neutral-500" />
+                          <FriendIdDisplay friendId={friend.friend_id} showCopyButton={false} showQrCode={false} className="text-xs text-neutral-500" />
                         </div>
                       </div>
                       <Button

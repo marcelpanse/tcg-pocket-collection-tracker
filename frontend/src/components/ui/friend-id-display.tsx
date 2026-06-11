@@ -1,5 +1,6 @@
-import { Copy, MessageSquare } from 'lucide-react'
-import type { FC } from 'react'
+import { Copy, MessageSquare, QrCode } from 'lucide-react'
+import { type FC, useContext } from 'react'
+import { DialogContext } from '@/context/DialogContext'
 import { useToast } from '@/hooks/use-toast.ts'
 import { cn, formatFriendId } from '@/lib/utils'
 import { Button } from './button'
@@ -9,11 +10,20 @@ interface FriendIdDisplayProps {
   className?: string
   showCopyButton?: boolean
   showFriendId?: boolean
+  showQrCode?: boolean
   onChat?: () => void
 }
 
-export const FriendIdDisplay: FC<FriendIdDisplayProps> = ({ friendId, className = '', showFriendId = true, showCopyButton = true, onChat }) => {
+export const FriendIdDisplay: FC<FriendIdDisplayProps> = ({
+  friendId,
+  className = '',
+  showFriendId = true,
+  showCopyButton = true,
+  showQrCode = true,
+  onChat,
+}) => {
   const { toast } = useToast()
+  const { setFriendIdQrCode } = useContext(DialogContext)
 
   const handleCopy = async () => {
     try {
@@ -46,10 +56,22 @@ export const FriendIdDisplay: FC<FriendIdDisplayProps> = ({ friendId, className 
           variant="ghost"
           size="icon"
           onClick={handleCopy}
-          className="h-4 w-4 text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+          className="size-4 text-neutral-400 hover:text-neutral-200"
           aria-label="Copy friend ID"
         >
           <Copy className="h-2.5 w-2.5" />
+        </Button>
+      )}
+      {showQrCode && (
+        <Button
+          title="open qr code"
+          variant="ghost"
+          size="icon"
+          onClick={() => setFriendIdQrCode(friendId)}
+          className="size-4 text-neutral-400 hover:text-neutral-200"
+          aria-label="Open Qr Code"
+        >
+          <QrCode className="size-4" />
         </Button>
       )}
       {onChat && (
@@ -58,7 +80,7 @@ export const FriendIdDisplay: FC<FriendIdDisplayProps> = ({ friendId, className 
           variant="ghost"
           size="icon"
           onClick={onChat}
-          className="h-4 w-4 text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+          className="size-4 text-neutral-400 hover:text-neutral-200"
           aria-label="Open chat"
         >
           <MessageSquare className="h-2.5 w-2.5" />

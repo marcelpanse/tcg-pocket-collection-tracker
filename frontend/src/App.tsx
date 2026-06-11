@@ -8,6 +8,7 @@ import { useToast } from '@/hooks/use-toast.ts'
 import { useAuthSSO, useUser } from '@/services/auth/useAuth'
 import { ChatManager } from './components/chat/ChatManager.tsx'
 import ErrorAlert from './components/ErrorAlert.tsx'
+import FriendIdQrCodeDialog from './components/FriendIdQrCode.tsx'
 import { Header } from './components/Header.tsx'
 import { Spinner } from './components/Spinner.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
@@ -50,6 +51,7 @@ function App() {
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false)
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false)
   const [selectedCardId, setSelectedCardId] = useState<number | undefined>(undefined)
+  const [friendIdQrCode, setFriendIdQrCode] = useState<string | undefined>('8689035465547431')
 
   // Check for SSO parameters
   useEffect(() => {
@@ -80,6 +82,7 @@ function App() {
           <ErrorBoundary fallback={null} onError={() => toast({ variant: 'destructive', description: 'Failed opening card details.' })}>
             <CardDetail />
           </ErrorBoundary>
+          <FriendIdQrCodeDialog friendId={friendIdQrCode} onOpenChange={(open) => open || setFriendIdQrCode(undefined)} />
           <EditProfile />
         </>
       ),
@@ -108,6 +111,7 @@ function App() {
     setIsProfileDialogOpen,
     selectedCardId,
     setSelectedCardId,
+    setFriendIdQrCode,
   }
 
   return (
