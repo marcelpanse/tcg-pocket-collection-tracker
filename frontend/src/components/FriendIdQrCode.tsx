@@ -8,13 +8,13 @@ interface Props {
 }
 
 export default function FriendIdQrCodeDialog({ friendId, onOpenChange }: Props) {
-  const formated = friendId && formatFriendId(friendId)
+  const formatted = friendId && formatFriendId(friendId)
 
   return (
-    <Dialog open={Boolean(formated)} onOpenChange={onOpenChange}>
+    <Dialog open={Boolean(formatted)} onOpenChange={onOpenChange}>
       <DialogContent className="w-fit">
         <p className="max-w-[256px]">Scan this QR code in Pokemon TCG Pocket app to add a friend.</p>
-        <QRCodeSVG value={`${formated},${formated}`} size={256} marginSize={2} fgColor="#0a0a0a" bgColor="#ebebeb" />
+        <QRCodeSVG value={`${formatted},${formatted}`} size={256} marginSize={2} fgColor="#0a0a0a" bgColor="#ebebeb" />
       </DialogContent>
     </Dialog>
   )

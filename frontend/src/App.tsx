@@ -51,7 +51,7 @@ function App() {
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false)
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false)
   const [selectedCardId, setSelectedCardId] = useState<number | undefined>(undefined)
-  const [friendIdQrCode, setFriendIdQrCode] = useState<string | undefined>('8689035465547431')
+  const [friendIdQrCode, setFriendIdQrCode] = useState<string | undefined>(undefined)
 
   // Check for SSO parameters
   useEffect(() => {
