@@ -1,10 +1,9 @@
 import i18n from 'i18next'
-import { CircleAlert, Trash2 } from 'lucide-react'
+import { Trash2 } from 'lucide-react'
 import { type ReactNode, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from 'react-responsive'
 import { useSearchParams } from 'react-router'
-import { Tooltip } from 'react-tooltip'
 import { z } from 'zod'
 import { Card } from '@/components/Card'
 import { CardsTable } from '@/components/CardsTable.tsx'
@@ -123,8 +122,6 @@ export default function CollectionCards({ children, cards, account }: Props) {
     return total
   }
 
-  const mewCardOwned = Boolean((cards?.get(83654)?.amount_owned ?? 0) > 0)
-
   const filtersPanel = (
     <div className="flex flex-col h-fit gap-2">
       <small className="flex gap-2">
@@ -133,12 +130,6 @@ export default function CollectionCards({ children, cards, account }: Props) {
           uniquesOwned: filteredCards.filter((card) => Boolean(card.collected)).length,
           totalOwned: totalOwned(),
         })}
-        {mewCardOwned && (
-          <>
-            <Tooltip id="mewCardOwned" className="text-start max-w-72" clickable={true} />
-            <CircleAlert className="h-5 w-5" data-tooltip-id="mewCardOwned" data-tooltip-content={t('stats.mewCardOwned')} />
-          </>
-        )}
       </small>
       <FiltersPanel className="flex flex-col gap-y-3" filters={filters} setFilters={setFilters} clearFilters={clearFilters} />
       <div className="flex flex-col mt-4 gap-2">
