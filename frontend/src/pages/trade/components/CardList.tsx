@@ -1,42 +1,23 @@
-import { type Dispatch, type FC, type SetStateAction, useState } from 'react'
+import { type Dispatch, type SetStateAction, useState } from 'react'
 import { Tooltip } from 'react-tooltip'
 import { CardLine } from '@/components/CardLine'
 import { usePendingTrades } from '@/services/trade/useTrade'
 import type { Card } from '@/types'
 
-const TRUNCATE_TO = 10
-
 interface Props {
   cards: Card[]
   selected: Card | null
   setSelected: Dispatch<SetStateAction<Card | null>>
+  truncateTo: number
 }
 
-export const CardList: FC<Props> = ({ cards, selected, setSelected }) => {
+export function CardList({ cards, selected, setSelected, truncateTo }: Props) {
   const pendingTrades = usePendingTrades()
-  const shouldTruncate = cards.length > TRUNCATE_TO
+  const shouldTruncate = cards.length > truncateTo
   const [showAll, setShowAll] = useState(!shouldTruncate)
 
   // Sort cards by set name first, then by card number
-  const sortedCards = [...cards].sort((a, b) => {
-    const parseCardId = (cardId: string) => {
-      const parts = cardId.split('-')
-      const setName = parts[0] || ''
-      const cardNumber = parts.length > 1 ? parseInt(parts[1], 10) : 0
-      return { setName, cardNumber }
-    }
-
-    const aInfo = parseCardId(a.card_id)
-    const bInfo = parseCardId(b.card_id)
-
-    // First sort by set name
-    if (aInfo.setName !== bInfo.setName) {
-      return aInfo.setName.localeCompare(bInfo.setName)
-    }
-
-    // Then sort by card number
-    return aInfo.cardNumber - bInfo.cardNumber
-  })
+  const sortedCards = cards.toSorted((a, b) => a.internal_id - b.internal_id)
 
   function item(card: Card) {
     function onClick() {
@@ -74,10 +55,10 @@ export const CardList: FC<Props> = ({ cards, selected, setSelected }) => {
 
   return (
     <ul className="space-y-1">
-      {(showAll ? sortedCards : sortedCards.slice(0, TRUNCATE_TO)).map(item)}
+      {(showAll ? sortedCards : sortedCards.slice(0, truncateTo)).map(item)}
       {shouldTruncate && (
         <button type="button" className="ml-1 hover:underline cursor-pointer" onClick={() => setShowAll((value) => !value)}>
-          {showAll ? 'Show less' : `Show ${sortedCards.length - TRUNCATE_TO} more`}
+          {showAll ? 'Show less' : truncateTo > 0 ? `Show ${sortedCards.length - truncateTo} more cards` : `Show ${sortedCards.length} cards`}
         </button>
       )}
     </ul>
