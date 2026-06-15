@@ -222,7 +222,7 @@ function TradeWith() {
                 {cardsToGive[rarity] ? (
                   <CardList cards={cardsToGive[rarity]} selected={yourCard} setSelected={setYourCard} truncateTo={cardsToReceive[rarity] ? 8 : 0} />
                 ) : (
-                  <div className="text-center text-neutral-500 mb-1">No cards to trade</div>
+                  <div className="text-neutral-500 ml-1">No cards to trade</div>
                 )}
               </div>
               <div className="w-full sm:w-1/2 p-1 border rounded-lg border-neutral-700 bg-neutral-800">
@@ -230,7 +230,7 @@ function TradeWith() {
                 {cardsToReceive[rarity] ? (
                   <CardList cards={cardsToReceive[rarity]} selected={friendCard} setSelected={setFriendCard} truncateTo={cardsToGive[rarity] ? 8 : 0} />
                 ) : (
-                  <div className="text-center text-neutral-500 mb-1">No cards to trade</div>
+                  <div className="text-neutral-500 ml-1">No cards to trade</div>
                 )}
               </div>
             </div>
