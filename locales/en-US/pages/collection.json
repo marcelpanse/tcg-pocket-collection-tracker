@@ -17,8 +17,7 @@
     "share": "Share"
   },
   "stats": {
-    "summary": "{{selected}} selected, {{uniquesOwned}} uniques owned, {{totalOwned}} total owned",
-    "mewCardOwned": "You unlocked the special Mew card! This is included in our totals, but note that the in-game totals don't include this card."
+    "summary": "{{selected}} selected, {{uniquesOwned}} uniques owned, {{totalOwned}} total owned"
   },
   "trade": {
     "button": "Copy trade message",
