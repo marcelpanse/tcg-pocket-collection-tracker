@@ -220,7 +220,7 @@ function TradeWith() {
               <div className="w-full sm:w-1/2 p-1 border rounded-lg border-neutral-700 bg-neutral-800">
                 <h4 className="text-md font-medium mb-1 ml-1 text-neutral-400">{t('youHave')}</h4>
                 {cardsToGive[rarity] ? (
-                  <CardList cards={cardsToGive[rarity]} selected={yourCard} setSelected={setYourCard} />
+                  <CardList cards={cardsToGive[rarity]} selected={yourCard} setSelected={setYourCard} truncateTo={cardsToReceive[rarity] ? 8 : 0} />
                 ) : (
                   <div className="text-center text-neutral-500 mb-1">No cards to trade</div>
                 )}
@@ -228,7 +228,7 @@ function TradeWith() {
               <div className="w-full sm:w-1/2 p-1 border rounded-lg border-neutral-700 bg-neutral-800">
                 <h4 className="text-md font-medium mb-1 ml-1 text-neutral-400">{t('friendHas')}</h4>
                 {cardsToReceive[rarity] ? (
-                  <CardList cards={cardsToReceive[rarity]} selected={friendCard} setSelected={setFriendCard} />
+                  <CardList cards={cardsToReceive[rarity]} selected={friendCard} setSelected={setFriendCard} truncateTo={cardsToGive[rarity] ? 8 : 0} />
                 ) : (
                   <div className="text-center text-neutral-500 mb-1">No cards to trade</div>
                 )}
