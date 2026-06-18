@@ -32,13 +32,16 @@ function Overview() {
   const [usersCount, setUsersCount] = useState('')
 
   const ownedCardsCount = () => {
+    // Count from the card database (same logic as CollectionCards.totalOwned) so orphaned
+    // collection rows — card_ids no longer present in allCards — don't inflate the total.
     let total = 0
-    ownedCards.forEach((card) => {
-      // Skip ghost rows (amount_owned > 0, collection: []) to match CollectionCards.totalOwned.
-      if (card.collection.length > 0) {
-        total += card.amount_owned
+    const countedIds = new Set<number>()
+    for (const card of getFilteredCards({}, ownedCards)) {
+      if (card.collected && !countedIds.has(card.internal_id)) {
+        total += card.amount_owned ?? 0
+        countedIds.add(card.internal_id)
       }
-    })
+    }
     return total
   }
 
