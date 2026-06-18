@@ -1,4 +1,13 @@
 packages:
   - frontend
+
 onlyBuiltDependencies:
+  - esbuild
   - lefthook
+
+overrides:
+  axios@<1.12.0: '>=1.12.0'
+
+peerDependencyRules:
+  allowedVersions:
+    react: ^19.0.0
