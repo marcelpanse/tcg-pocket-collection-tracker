@@ -35,7 +35,7 @@ export function capitalize(str: string) {
 }
 
 export function formatFriendId(friendId: string): string {
-  if (!friendId || friendId.length !== 16) {
+  if (friendId?.length !== 16) {
     return friendId
   }
   return `${friendId.slice(0, 4)}-${friendId.slice(4, 8)}-${friendId.slice(8, 12)}-${friendId.slice(12, 16)}`

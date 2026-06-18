@@ -15,9 +15,9 @@ export default function ErrorAlert({ error, children }: Props) {
       <AlertDescription>
         <p>Refresh the page to try again.</p>
         <p>
-          If that doesn't work, let us know by filing a bug report{' '}
+          If that doesn't work, let us know by{' '}
           <a className="underline" href="https://community.tcgpocketcollectiontracker.com/">
-            here
+            filing a bug report
           </a>
           .
         </p>
