@@ -131,7 +131,6 @@ const handleCard = async (id: number, locale: string) => {
 const all_ids_set = new Set(allCards.map((c) => c.internal_id))
 const all_ids = [...all_ids_set]
 
-console.log()
 for (const locale of allLocales) {
   console.log(`Processing locale: ${locale}`)
 
@@ -154,7 +153,6 @@ for (const locale of allLocales) {
     processed += ids.length
     process.stdout.write(`\rProgress: ${processed}/${all_ids.length} cards (${((100 * processed) / all_ids.length).toFixed()}%)`)
   }
-  console.log()
 }
 
 if (values.verify) {
