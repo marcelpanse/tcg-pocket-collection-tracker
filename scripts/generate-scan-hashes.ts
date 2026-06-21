@@ -128,10 +128,24 @@ const handleCard = async (id: number, locale: string) => {
   }
 }
 
-const all_ids = [...new Set(allCards.map((c) => c.internal_id))]
+const all_ids_set = new Set(allCards.map((c) => c.internal_id))
+const all_ids = [...all_ids_set]
 
+console.log()
 for (const locale of allLocales) {
-  console.log(`\nProcessing locale: ${locale}`)
+  console.log(`Processing locale: ${locale}`)
+
+  for (const id in hashes[locale]) {
+    if (!all_ids_set.has(Number(id))) {
+      if (values.verify) {
+        console.log(`Stored hash for unknown id: ${id}`)
+        ret |= 1
+      } else {
+        delete hashes[locale][id]
+      }
+    }
+  }
+
   const chunks = chunk(all_ids, 10)
   let processed = 0
 
