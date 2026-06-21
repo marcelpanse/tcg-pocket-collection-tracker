@@ -5,6 +5,7 @@ import type { CheerioAPI } from 'cheerio'
 import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
 import { expansions as allExpansions } from '../frontend/src/lib/CardsDB'
+import { chunk } from '../frontend/src/lib/utils'
 import { type Card, type CardType, cardTypes, type Expansion, type ExpansionId, type Rarity } from '../frontend/src/types'
 import { encode } from './encoder'
 
@@ -215,7 +216,6 @@ function extractSetAndPackInfo($: CheerioAPI) {
   const packTemp = setInfo.find('span').last().text().trim()
   const packInfo = packTemp.split('·').pop().trim().replaceAll(' ', '').toLowerCase()
   const pack = packs.includes(packInfo) ? packInfo : 'everypack'
-  console.log(`packInfo = ${packInfo}, pack = ${pack}`)
 
   return { setDetails, pack }
 }
@@ -254,10 +254,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
   const imageName = card_id + path.extname(imageUrl)
   const imageDest = path.join(imagesDir, imageName)
   if (!fs.existsSync(imageDest)) {
-    console.log(`Downloading: ${imageUrl}`)
     await downloadImage(imageUrl, imageDest)
-  } else {
-    console.log(`Skipping image, already exists: ${imageName}`)
   }
   const image = imagesPath + imageName
 
@@ -319,7 +316,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
   const weaknessAndRetreat = $('p.card-text-wrr').text().trim().split('\n')
   const weakness = weaknessAndRetreat[0]?.split(': ')[1]?.toLowerCase().trim() || 'N/A'
   const retreatString = weaknessAndRetreat[1]?.split(': ')[1]?.toLowerCase().trim()
-  const retreat: number | undefined = retreatString && parseInt(retreatString, 10)
+  const retreat: number | undefined = retreatString ? parseInt(retreatString, 10) : undefined
 
   const raritySection = $('table.card-prints-versions tr.current')
   let rarity = (cardUrl.toString().includes('P-A') ? 'P' : raritySection.find('td:last-child').text().trim() || 'P') as Rarity
@@ -343,7 +340,6 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
   let foundMyself = false
   const containsLinkedCards = expansion.packStructure?.containsLinkedCards
 
-  console.log('processing alternates for', card_id)
   $('table.card-prints-versions tr').each((_i, version) => {
     const versionName = $(version).find('a').text().trim().replace(/\s+/g, ' ')
     if (versionName) {
@@ -362,7 +358,6 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
         baseExpansion = alternate_card_id ? (urlToCardId(alternate_card_id).expansion as ExpansionId) : expansion.id
         baseCardNr = alternate_card_id && containsLinkedCards ? urlToCardId(alternate_card_id).cardNr : inPackId
         linked = !!alternate_card_id // just for reference to double-check
-        console.log('found alternate option', alternate_card_id, baseExpansion, baseCardNr, linked)
       }
 
       // However, a foil card would link to a base card, but in the game that isn't the case. So we need to check for foil cards.
@@ -374,7 +369,6 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
           baseExpansion = expansion.id // foils don't have linked cards (at least not yet!)
           baseCardNr = inPackId
           linked = false
-          console.log('disregarding alternate-->unique', baseExpansion, baseCardNr, linked)
         }
       }
     }
@@ -388,7 +382,6 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
 
   const artist = $('div.card-text-section.card-text-artist a').text().trim() || 'Unknown'
 
-  console.log('returning card info', card_id)
   return {
     expansion: expansion.id as ExpansionId,
     card_id,
@@ -415,7 +408,6 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
 
 async function getCardDetails(cardUrl: string, expansion: Expansion) {
   try {
-    console.log(`Fetching details for ${cardUrl}...`)
     const $ = await fetchHTML(cardUrl)
     return await extractCardInfo($, cardUrl, expansion)
   } catch (error) {
@@ -440,48 +432,24 @@ async function getCardLinks(mainUrl: string) {
 
 const cards1: Awaited<ReturnType<typeof getCardDetails>>[] = []
 
-async function scrapeCards() {
-  for (const expansion of allExpansions) {
-    try {
-      const mainUrl = `${BASE_URL}/cards/${expansion.id}`
-      const cardLinks = await getCardLinks(mainUrl)
-      console.log(`Found ${cardLinks.length} card links.`)
+for (const expansion of allExpansions) {
+  try {
+    const mainUrl = `${BASE_URL}/cards/${expansion.id}`
+    const cardLinks = await getCardLinks(mainUrl)
 
-      const concurrencyLimit = 10
-      let index = 0 // Track the current index of the cardLinks being processed
-
-      // Function to process a batch of tasks with a given concurrency limit
-      async function processBatch() {
-        // Queue up to `concurrencyLimit` promises at the same time
-        const promises: Promise<void>[] = []
-        while (index < cardLinks.length && promises.length < concurrencyLimit) {
-          const link = cardLinks[index++]
-          promises.push(
-            getCardDetails(link, expansion).then((card) => {
-              if (card) {
-                cards1.push(card)
-              }
-            }),
-          )
-        }
-        // Wait for the batch of promises to resolve
-        await Promise.all(promises)
-
-        // Process the next batch if there are more links remaining
-        if (index < cardLinks.length) {
-          await processBatch()
-        }
-      }
-
-      // Start processing the batches
-      await processBatch()
-    } catch (error) {
-      console.error('Error scraping cards:', error)
+    let processed = 0
+    for (const links of chunk(cardLinks, 40)) {
+      const cards = await Promise.all(links.map((link) => getCardDetails(link, expansion)))
+      cards1.push(...cards.filter(Boolean))
+      processed += links.length
+      process.stdout.write(`\rProcessing ${expansion.id}: ${processed}/${cardLinks.length}`)
     }
+    process.stdout.write('\r')
+  } catch (error) {
+    console.error('Error scraping cards:', error)
   }
+  process.stdout.write(`\rProcessed ${expansion.id}              \n`)
 }
-
-await scrapeCards().catch(console.error)
 
 // Sort the cards array by id as a number
 cards1.sort((a, b) => {
@@ -510,4 +478,3 @@ for (const overriding_id of deckbuildingOverrides) {
 
 fs.mkdirSync(targetDir, { recursive: true })
 fs.writeFileSync(path.join(targetDir, `cards.json`), JSON.stringify(cards2, null, 2))
-console.log('Cards saved to cards.json')
