@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query'
 import { ChevronFirst, ChevronLeft, ChevronRight, UserPlus } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -10,7 +11,7 @@ import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { Switch } from '@/components/ui/switch'
 import { useChatContext } from '@/context/ChatContext'
 import { useToast } from '@/hooks/use-toast'
-import { useAccount, usePublicAccount } from '@/services/account/useAccount'
+import { publicAccountQuery, useAccount } from '@/services/account/useAccount'
 import { useFriends, useManageFriend } from '@/services/friends/useFriends'
 import { useAllTrades } from '@/services/trade/useTrade'
 import TradeList from './components/TradeList'
@@ -21,7 +22,7 @@ function TradeWith() {
   const { friendId } = useParams()
 
   const { data: account, isLoading: isLoadingAccount } = useAccount()
-  const { data: friendAccount, isLoading: isLoadingFriendAccount } = usePublicAccount(friendId)
+  const { data: friendAccount, isLoading: isLoadingFriendAccount } = useQuery(publicAccountQuery(friendId))
 
   const { data: friends = [] } = useFriends()
   const manageFriend = useManageFriend()

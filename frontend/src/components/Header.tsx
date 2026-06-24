@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query'
 import { Globe, LogOut, UserRoundPen } from 'lucide-react'
 import { useState } from 'react'
 import GitHubButton from 'react-github-btn'
@@ -18,7 +19,7 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu.tsx'
 import { useProfileDialog } from '@/services/account/useAccount'
-import { useLoginDialog, useLogout, useUser } from '@/services/auth/useAuth'
+import { useLoginDialog, useLogout, userQuery } from '@/services/auth/useAuth'
 import { usePendingRequests } from '@/services/friends/useFriends'
 import { useActionableTradeCount } from '@/services/trade/useTrade.ts'
 import { Badge } from './ui/badge'
@@ -27,7 +28,7 @@ export function Header() {
   const location = useLocation()
   const navigate = useNavigate()
   const { t, i18n } = useTranslation('header')
-  const { data: user } = useUser()
+  const { data: user } = useQuery(userQuery)
   const { data: actionableTradeCount } = useActionableTradeCount()
   const { data: pendingRequests = [] } = usePendingRequests()
   const pendingFriendCount = pendingRequests.length

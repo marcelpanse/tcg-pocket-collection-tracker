@@ -20,7 +20,7 @@ export function getCardsByInternalId(internalId: number) {
   return allCardsByInternalIdList[internalId]
 }
 
-export const getInteralIdByCardId = (card_id: string) => {
+export const getInternalIdByCardId = (card_id: string) => {
   const internalId = getCardById(card_id)?.internal_id
   if (!internalId) {
     throw new Error(`Internal ID for card with id ${card_id} not found`)

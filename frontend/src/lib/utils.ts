@@ -1,10 +1,20 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import type { Card, Collection, GameLanguage, Mission, RaritySettingsRow, TradeRow } from '@/types'
+import {
+  type Card,
+  type Collection,
+  type GameLanguage,
+  type Mission,
+  type Rarity,
+  type RaritySettingsRow,
+  type TradableRarity,
+  type TradeRow,
+  tradableRarities,
+} from '@/types'
 import pokemonTranslations from '../../assets/pokemon_translations.json'
 import toolTranslations from '../../assets/tools_translations.json'
 import trainerTranslations from '../../assets/trainers_translations.json'
-import { allCards } from './CardsDB'
+import { allCards, getCardByInternalId, tradeableExpansions } from './CardsDB'
 
 export const formatLanguage: Record<GameLanguage, string> = {
   en: 'English',
@@ -107,6 +117,15 @@ export function getExtraCards(cards: Collection, settings_rows: RaritySettingsRo
 
 export function getNeededCards(cards: Collection, settings_rows: RaritySettingsRow[]): number[] {
   return getTradingCards(cards, settings_rows, (c, settings) => c.amount_owned < settings.to_collect)
+}
+
+export function getTradeCards(extraCards: number[], neededCards: number[]) {
+  const neededCardsSet = new Set(neededCards)
+  const common = extraCards
+    .filter((internal_id) => neededCardsSet.has(internal_id))
+    .map((internal_id) => getCardByInternalId(internal_id) as Card)
+    .filter((card) => (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion))
+  return Object.groupBy(common, (card) => card.rarity as TradableRarity)
 }
 
 export function groupTrades(arr: TradeRow[], user_id: string) {

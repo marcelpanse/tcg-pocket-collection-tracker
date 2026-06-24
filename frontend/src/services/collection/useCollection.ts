@@ -1,9 +1,9 @@
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { queryOptions, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useAccount } from '@/services/account/useAccount.ts'
-import { useUser } from '@/services/auth/useAuth.ts'
+import { userQuery } from '@/services/auth/useAuth.ts'
 import {
   deleteCard,
   getCollection,
@@ -14,33 +14,36 @@ import {
 } from '@/services/collection/collectionService.ts'
 import type { CardAmountUpdate, CollectionRow } from '@/types'
 
-export function useCollection() {
-  const { data: user } = useUser()
-  const email = user?.user.email
-  const { data: account } = useAccount()
-  const collectionLastUpdated = account?.collection_last_updated
-
-  return useQuery({
+export function collectionQuery(email: string | undefined, collectionLastUpdated: Date | undefined) {
+  return queryOptions({
     queryKey: ['collection', email],
-    queryFn: () => getCollection(email as string, collectionLastUpdated),
-    enabled: Boolean(email && account),
+    queryFn: () => getCollection(email as string, collectionLastUpdated as Date),
+    enabled: Boolean(email) && Boolean(collectionLastUpdated),
     staleTime: 10, // Set a short stale time here because we handle the cache internally already (in case someone is using two devices at the same time)
   })
 }
 
-export function usePublicCollection(friendId: string | undefined) {
-  return useQuery({
+export function useCollection() {
+  const { data: user } = useQuery(userQuery)
+  const { data: account } = useAccount()
+
+  return useQuery(collectionQuery(user?.user.email, account?.collection_last_updated))
+}
+
+export function publicCollectionQuery(friendId: string | undefined) {
+  return queryOptions({
     queryKey: ['collection', friendId],
     queryFn: () => getPublicCollection(friendId as string),
     enabled: !!friendId,
     throwOnError: true,
-    staleTime: Infinity, // Public collections don't change while viewing and we don't want to refetch, so cache indefinitely
+    // Public collections don't change while viewing and we don't want to refetch, so cache indefinitely
+    staleTime: 60 * 60 * 1000, // 1 hour
   })
 }
 
 export function useUpdateCards() {
   const { toast } = useToast()
-  const { data: user, isLoading: isLoadingUser } = useUser()
+  const { data: user, isLoading: isLoadingUser } = useQuery(userQuery)
   const { data: collection, isLoading: isLoadingCollection } = useCollection()
   const email = user?.user.email
 
@@ -70,7 +73,7 @@ export function useUpdateCards() {
 
 export function useUpdateAmountWanted() {
   const { toast } = useToast()
-  const { data: user, isLoading: isLoadingUser } = useUser()
+  const { data: user, isLoading: isLoadingUser } = useQuery(userQuery)
   const { data: collection, isLoading: isLoadingCollection } = useCollection()
   const email = user?.user.email
 
@@ -101,7 +104,7 @@ export function useUpdateAmountWanted() {
 }
 
 export function useDeleteCard() {
-  const { data: user, isLoading: isLoadingUser } = useUser()
+  const { data: user, isLoading: isLoadingUser } = useQuery(userQuery)
   const { data: collection, isLoading: isLoadingCollection } = useCollection()
   const email = user?.user.email
 

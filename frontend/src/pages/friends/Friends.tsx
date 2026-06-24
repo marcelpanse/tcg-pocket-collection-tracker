@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query'
 import { ArrowRight, Clock, MessageSquare, UserCheck, UserPlus, Users, UserX } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router'
@@ -7,7 +8,7 @@ import { Input } from '@/components/ui/input'
 import { useChatContext } from '@/context/ChatContext'
 import { useToast } from '@/hooks/use-toast'
 import { useAccount } from '@/services/account/useAccount'
-import { useLoginDialog, useUser } from '@/services/auth/useAuth'
+import { useLoginDialog, userQuery } from '@/services/auth/useAuth'
 import { useFriends, useManageFriend, usePendingRequests } from '@/services/friends/useFriends'
 
 function FriendAvatar({ name }: { name: string }) {
@@ -18,7 +19,7 @@ function FriendAvatar({ name }: { name: string }) {
 }
 
 export default function Friends() {
-  const { data: user } = useUser()
+  const { data: user } = useQuery(userQuery)
   const { setIsLoginDialogOpen } = useLoginDialog()
   const { data: account } = useAccount()
   const { data: friends = [], isLoading: friendsLoading } = useFriends()

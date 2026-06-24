@@ -52,8 +52,12 @@ export function usePendingTrades() {
 
   const res = new Map<string, number>()
   for (const t of trades) {
-    res.set(t.offer_card_id, (res.get(t.offer_card_id) ?? 0) + 1)
-    res.set(t.receiver_card_id, (res.get(t.receiver_card_id) ?? 0) + 1)
+    if (t.offer_card_id) {
+      res.set(t.offer_card_id, (res.get(t.offer_card_id) ?? 0) + 1)
+    }
+    if (t.receiver_card_id) {
+      res.set(t.receiver_card_id, (res.get(t.receiver_card_id) ?? 0) + 1)
+    }
   }
 
   return res

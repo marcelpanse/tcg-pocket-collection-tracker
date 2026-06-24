@@ -1,12 +1,13 @@
+import { useQuery } from '@tanstack/react-query'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocation } from 'react-router'
 import ErrorAlert from '@/components/ErrorAlert'
 import { Spinner } from '@/components/Spinner'
-import { getCardByInternalId, tradeableExpansions } from '@/lib/CardsDB'
-import { getExtraCards, getNeededCards } from '@/lib/utils'
-import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
-import { type AccountRow, type Card, type Rarity, type TradableRarity, tradableRarities } from '@/types'
+import { getCardByInternalId } from '@/lib/CardsDB'
+import { getExtraCards, getNeededCards, getTradeCards } from '@/lib/utils'
+import { publicCollectionQuery, useCollection } from '@/services/collection/useCollection'
+import { type AccountRow, type Card, tradableRarities } from '@/types'
 import { CardList } from './CardList'
 import { TradeOffer } from './TradeOffer'
 
@@ -20,7 +21,7 @@ export default function TradeWithTable({ ownAccount, friendAccount }: Props) {
   const location = useLocation()
 
   const { data: ownedCards, isLoading: isLoadingOwnCards } = useCollection()
-  const { data: friendCards, isLoading: isLoadingFriendCards } = usePublicCollection(friendAccount.friend_id)
+  const { data: friendCards, isLoading: isLoadingFriendCards } = useQuery(publicCollectionQuery(friendAccount.friend_id))
 
   const [yourCard, setYourCard] = useState<Card | null>(null)
   const [friendCard, setFriendCard] = useState<Card | null>(
@@ -109,13 +110,4 @@ export default function TradeWithTable({ ownAccount, friendAccount }: Props) {
       )}
     </>
   )
-}
-
-function getTradeCards(extraCards: number[], neededCards: number[]) {
-  const neededCardsSet = new Set(neededCards)
-  const common = extraCards
-    .filter((internal_id) => neededCardsSet.has(internal_id))
-    .map((internal_id) => getCardByInternalId(internal_id) as Card)
-    .filter((card) => (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion))
-  return Object.groupBy(common, (card) => card.rarity as TradableRarity)
 }

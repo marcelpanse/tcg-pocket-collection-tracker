@@ -1,4 +1,4 @@
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { queryOptions, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
 import { supabase } from '@/lib/supabase.ts'
@@ -6,16 +6,14 @@ import { authSSO, getCurrentUser, logout } from '@/services/auth/authService.ts'
 import { removeLocalCacheItems } from '@/services/collection/collectionService.ts'
 import type { User } from '@/types'
 
-export function useUser() {
-  return useQuery({
-    queryKey: ['user'],
-    queryFn: getCurrentUser,
-    staleTime: Infinity, // User data doesn't change without explicit action
-  })
-}
+export const userQuery = queryOptions({
+  queryKey: ['user'],
+  queryFn: getCurrentUser,
+  staleTime: Infinity, // User data doesn't change without explicit action
+})
 
 export function useLogout() {
-  const { data: user } = useUser()
+  const { data: user } = useQuery(userQuery)
   const email = user?.user.email
   const queryClient = useQueryClient()
 
