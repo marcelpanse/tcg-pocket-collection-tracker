@@ -13,6 +13,7 @@ export function useAccount() {
     queryKey: ['account', email],
     queryFn: () => getAccount(email as string),
     enabled: !!email,
+    throwOnError: true,
   })
 }
 
@@ -21,6 +22,7 @@ export function usePublicAccount(friendId: string | undefined) {
     queryKey: ['account', friendId],
     queryFn: () => getPublicAccount(friendId as string),
     enabled: !!friendId,
+    throwOnError: true,
   })
 }
 

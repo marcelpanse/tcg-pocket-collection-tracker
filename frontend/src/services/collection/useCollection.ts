@@ -33,6 +33,7 @@ export function usePublicCollection(friendId: string | undefined) {
     queryKey: ['collection', friendId],
     queryFn: () => getPublicCollection(friendId as string),
     enabled: !!friendId,
+    throwOnError: true,
     staleTime: Infinity, // Public collections don't change while viewing and we don't want to refetch, so cache indefinitely
   })
 }
