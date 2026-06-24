@@ -1,5 +1,5 @@
 import i18n from 'i18next'
-import { CircleHelp, Trash2 } from 'lucide-react'
+import { CircleHelp, Minus, Plus, Trash2 } from 'lucide-react'
 import { type ReactNode, startTransition, useEffect, useOptimistic, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
@@ -13,6 +13,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sh
 import { craftingCost, getCardByInternalId, getExpansionById } from '@/lib/CardsDB.ts'
 import { pullRateForSpecificCard } from '@/lib/stats'
 import { getCardNameByLang } from '@/lib/utils'
+import { useAccount } from '@/services/account/useAccount'
 import { useCollection, useDeleteCard, useSelectedCard, useUpdateAmountWanted } from '@/services/collection/useCollection'
 import { type Card, type CollectionRow, tradableRarities } from '@/types'
 
@@ -48,6 +49,7 @@ export default function CardDetail() {
 
   const { selectedCardId: id, setSelectedCardId: setId } = useSelectedCard()
 
+  const { data: account } = useAccount()
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const deleteCardMutation = useDeleteCard()
   const updateAmountWantedMutation = useUpdateAmountWanted()
@@ -74,6 +76,14 @@ export default function CardDetail() {
       await updateAmountWantedMutation.mutateAsync({ internal_id: id, amount_wanted, do_insert: row === undefined && !updateAmountWantedMutation.isPending })
     })
   }
+
+  const tradingSettingsRow = account?.trade_rarity_settings?.find((row) => row.rarity === card?.rarity)
+  const startingAmount = tradingSettingsRow?.to_collect ?? 0
+  const wantedPlaceholder = tradingSettingsRow
+    ? tradingSettingsRow.to_collect === tradingSettingsRow.to_keep
+      ? `${tradingSettingsRow.to_collect}`
+      : `${tradingSettingsRow.to_collect}-${tradingSettingsRow.to_keep}`
+    : ''
 
   useEffect(() => {
     if (id) {
@@ -169,19 +179,25 @@ export default function CardDetail() {
                 <CircleHelp
                   className="ml-2 size-4"
                   data-tooltip-id="amount-wanted-tooltip"
-                  data-tooltip-content="Used in trading to deretmine if you want to get or give a copy of this card. It reffers to this specific card and does not count alternate versions. If not set, uses the value set in trade settings for this card rarity."
+                  data-tooltip-content="Used in trading to determine if you want to get or give a copy of this card. It reffers to this specific card and does not count alternate versions. If not set, uses the value set in trade settings for this card rarity."
                 />
               </span>
               <input
                 id="amount-wanted"
-                className="px-2 w-24"
+                className="no-spinner px-2 w-12 text-center"
                 type="number"
                 min="0"
-                placeholder="default"
+                placeholder={wantedPlaceholder}
                 value={amountWanted ?? ''}
                 onChange={(e) => updateAmountWanted(Number(e.target.value))}
               />
-              <button className="px-2 py-1 w-fit" onClick={() => updateAmountWanted(null)} type="button">
+              <button type="button" className="px-1 w-fit" onClick={() => updateAmountWanted(Math.max((amountWanted ?? startingAmount) - 1, 0))}>
+                <Minus />
+              </button>
+              <button type="button" className="px-1 w-fit" onClick={() => updateAmountWanted((amountWanted ?? startingAmount) + 1)}>
+                <Plus />
+              </button>
+              <button type="button" className="px-2 py-1 w-fit" onClick={() => updateAmountWanted(null)}>
                 <Trash2 />
               </button>
             </div>
