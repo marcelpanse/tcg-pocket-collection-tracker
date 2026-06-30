@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
@@ -5,11 +6,12 @@ import { createHashRouter, Navigate, Outlet, RouterProvider, useLocation, usePar
 import DonationPopup from '@/components/DonationPopup.tsx'
 import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
-import { useAuthSSO, useUser } from '@/services/auth/useAuth'
+import { useAuthSSO, userQuery } from '@/services/auth/useAuth'
 import { ChatManager } from './components/chat/ChatManager.tsx'
 import ErrorAlert from './components/ErrorAlert.tsx'
 import FriendIdQrCodeDialog from './components/FriendIdQrCode.tsx'
 import { Header } from './components/Header.tsx'
+import { SelectCardContext, SelectCardDialog, type SelectCardRequest } from './components/SelectCard.tsx'
 import { Spinner } from './components/Spinner.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { ChatProvider } from './context/ChatProvider.tsx'
@@ -46,12 +48,13 @@ function Analytics() {
 
 function App() {
   const { toast } = useToast()
-  const { data: user } = useUser()
+  const { data: user } = useQuery(userQuery)
   const authSSOQuery = useAuthSSO()
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false)
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false)
   const [selectedCardId, setSelectedCardId] = useState<number | undefined>(undefined)
   const [friendIdQrCode, setFriendIdQrCode] = useState<string | undefined>(undefined)
+  const [selectCardRequest, setSelectedCardRequest] = useState<SelectCardRequest | undefined>(undefined)
 
   // Check for SSO parameters
   useEffect(() => {
@@ -83,6 +86,7 @@ function App() {
             <CardDetail />
           </ErrorBoundary>
           <FriendIdQrCodeDialog friendId={friendIdQrCode} onOpenChange={(open) => open || setFriendIdQrCode(undefined)} />
+          <SelectCardDialog request={selectCardRequest} onClose={() => setSelectedCardRequest(undefined)} />
           <EditProfile />
         </>
       ),
@@ -114,18 +118,24 @@ function App() {
     setFriendIdQrCode,
   }
 
+  const selectCardContextValue = {
+    selectCard: setSelectedCardRequest,
+  }
+
   return (
     <ErrorBoundary FallbackComponent={ErrorAlert}>
       <DialogContext.Provider value={dialogContextValue}>
-        <ChatProvider>
-          <Toaster />
-          <RouterProvider router={router} />
-          <InstallPrompt />
-          <DonationPopup />
-          <ChatManager />
-          {/* Add React Query DevTools (only in development) */}
-          {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
-        </ChatProvider>
+        <SelectCardContext.Provider value={selectCardContextValue}>
+          <ChatProvider>
+            <Toaster />
+            <RouterProvider router={router} />
+            <InstallPrompt />
+            <DonationPopup />
+            <ChatManager />
+            {/* Add React Query DevTools (only in development) */}
+            {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
+          </ChatProvider>
+        </SelectCardContext.Provider>
       </DialogContext.Provider>
     </ErrorBoundary>
   )

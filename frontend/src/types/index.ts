@@ -102,8 +102,8 @@ export interface TradeRow {
   updated_at: Date
   offering_friend_id: string
   receiving_friend_id: string
-  offer_card_id: string
-  receiver_card_id: string
+  offer_card_id: string | null
+  receiver_card_id: string | null
   offerer_ended: boolean
   receiver_ended: boolean
   status: TradeStatus

@@ -1,7 +1,9 @@
+import { useQuery } from '@tanstack/react-query'
 import { ChevronFirst, ChevronLeft, ChevronRight, UserPlus } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link, useLocation, useParams } from 'react-router'
+import { Link, Navigate, useParams } from 'react-router'
+import ErrorAlert from '@/components/ErrorAlert'
 import { Spinner } from '@/components/Spinner'
 import { Alert } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button'
@@ -9,36 +11,19 @@ import { FriendIdDisplay } from '@/components/ui/friend-id-display'
 import { Switch } from '@/components/ui/switch'
 import { useChatContext } from '@/context/ChatContext'
 import { useToast } from '@/hooks/use-toast'
-import { getCardByInternalId, tradeableExpansions } from '@/lib/CardsDB.ts'
-import { getExtraCards, getNeededCards } from '@/lib/utils'
-import { CardList } from '@/pages/trade/components/CardList.tsx'
-import { TradeOffer } from '@/pages/trade/components/TradeOffer.tsx'
-import { useAccount, usePublicAccount } from '@/services/account/useAccount'
-import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
+import { publicAccountQuery, useAccount } from '@/services/account/useAccount'
 import { useFriends, useManageFriend } from '@/services/friends/useFriends'
 import { useAllTrades } from '@/services/trade/useTrade'
-import { type Card, type CollectionRow, type Rarity, type TradableRarity, tradableRarities } from '@/types'
 import TradeList from './components/TradeList'
-
-function getTradeCards(extraCards: number[], neededCards: number[]) {
-  const neededCardsSet = new Set(neededCards)
-  const common = extraCards
-    .filter((internal_id) => neededCardsSet.has(internal_id))
-    .map((internal_id) => getCardByInternalId(internal_id) as Card)
-    .filter((card) => (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion))
-  return Object.groupBy(common, (card) => card.rarity as TradableRarity)
-}
+import TradeWithTable from './components/TradeWithTable'
 
 function TradeWith() {
   const { t } = useTranslation(['trade-matches', 'common'])
   const { friendId } = useParams()
-  const location = useLocation()
 
-  const { data: friendAccount, isLoading: friendAccountLoading, isError: friendAccountError } = usePublicAccount(friendId)
-  const { data: friendCards = new Map<number, CollectionRow>(), isLoading: friendCardsLoading, isError: friendCardsError } = usePublicCollection(friendId)
+  const { data: account, isLoading: isLoadingAccount } = useAccount()
+  const { data: friendAccount, isLoading: isLoadingFriendAccount } = useQuery(publicAccountQuery(friendId))
 
-  const { data: account } = useAccount()
-  const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
   const { data: friends = [] } = useFriends()
   const manageFriend = useManageFriend()
   const { toast } = useToast()
@@ -46,46 +31,27 @@ function TradeWith() {
 
   const [viewHistory, setViewHistory] = useState(false)
   const [pageHistory, setPageHistory] = useState(0)
-  const allTrades = useAllTrades(friendAccount?.friend_id, viewHistory, pageHistory, true)
+  const allTrades = useAllTrades(friendId, viewHistory, pageHistory, true)
 
-  const [yourCard, setYourCard] = useState<Card | null>(null)
-  const [friendCard, setFriendCard] = useState<Card | null>(
-    location.state?.friendCard === undefined ? null : (getCardByInternalId(location.state.friendCard) ?? null),
-  )
-
-  useEffect(() => {
-    const id = location.state?.friendCard
-    if (!id || !friendCards || !ownedCards) {
-      return
-    }
-    const card = getCardByInternalId(id)
-    if (!card) {
-      return
-    }
-    const el = document.getElementById(card.rarity)
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
-    }
-  }, [location, friendCards, ownedCards?.size]) // Uses size because ReactQuery returns a different object every 10 seconds
-
-  if (!account) {
-    return null
+  if (isLoadingAccount || isLoadingFriendAccount) {
+    return <Spinner size="lg" overlay />
   }
 
-  if (!account.username || !account.friend_id) {
-    return <Alert className="mb-8 border-1 border-neutral-700 shadow-none">{t('noAccount')}</Alert>
+  if (friendAccount === undefined) {
+    return <ErrorAlert />
   }
 
   if (friendAccount === null) {
     return <p className="text-xl text-center py-8">{t('notFound')}</p>
   }
 
-  if (friendAccountError || friendCardsError) {
-    return <p className="text-xl text-center py-8">{t('common:error')}</p>
+  if (account === undefined) {
+    // User not logged in
+    return <Navigate to={`/collection/${friendId}`} replace />
   }
 
-  if (friendAccountLoading || friendCardsLoading) {
-    return <Spinner size="lg" overlay />
+  if (!account.username || !account.friend_id) {
+    return <Alert className="mb-8 border-1 border-neutral-700 shadow-none">{t('noAccount')}</Alert>
   }
 
   if (!friendAccount?.is_active_trading) {
@@ -97,16 +63,6 @@ function TradeWith() {
     )
   }
 
-  const cardsToGive = getTradeCards(
-    getExtraCards(ownedCards, account.trade_rarity_settings || []),
-    getNeededCards(friendCards, friendAccount.trade_rarity_settings || []),
-  )
-  const cardsToReceive = getTradeCards(
-    getExtraCards(friendCards, friendAccount.trade_rarity_settings || []),
-    getNeededCards(ownedCards, account.trade_rarity_settings || []),
-  )
-
-  const hasPossibleTrades = tradableRarities.some((r) => (cardsToGive[r] ?? []).length > 0 && (cardsToReceive[r] ?? []).length > 0)
   const isAlreadyFriend = friends.some((f) => f.friend_id === friendAccount.friend_id && f.state === 'accepted')
   const hasPendingRequest = friends.some((f) => f.friend_id === friendAccount.friend_id && f.state === 'pending')
 
@@ -195,47 +151,7 @@ function TradeWith() {
           )}
         </div>
 
-        <TradeOffer
-          yourId={account.friend_id}
-          friendId={friendAccount.friend_id}
-          yourCard={yourCard}
-          friendCard={friendCard}
-          setYourCard={setYourCard}
-          setFriendCard={setFriendCard}
-        />
-
-        {!hasPossibleTrades && (
-          <div className="text-center py-8">
-            <p className="text-xl ">{t('noPossibleTrades')}</p>
-            <p className="text-sm text-gray-300 mt-2">{t('noPossibleTradesDescription')}</p>
-          </div>
-        )}
-
-        {tradableRarities.map((rarity) => (
-          <div key={rarity}>
-            <h3 id={rarity} className="text-xl font-semibold mb-2 text-center">
-              [ {rarity} ]
-            </h3>
-            <div className="flex flex-col-reverse sm:flex-row gap-2 sm:gap-4">
-              <div className="w-full sm:w-1/2 p-1 border rounded-lg border-neutral-700 bg-neutral-800">
-                <h4 className="text-md font-medium mb-1 ml-1 text-neutral-400">{t('youHave')}</h4>
-                {cardsToGive[rarity] ? (
-                  <CardList cards={cardsToGive[rarity]} selected={yourCard} setSelected={setYourCard} truncateTo={cardsToReceive[rarity] ? 8 : 0} />
-                ) : (
-                  <div className="text-neutral-500 ml-1">No cards to trade</div>
-                )}
-              </div>
-              <div className="w-full sm:w-1/2 p-1 border rounded-lg border-neutral-700 bg-neutral-800">
-                <h4 className="text-md font-medium mb-1 ml-1 text-neutral-400">{t('friendHas')}</h4>
-                {cardsToReceive[rarity] ? (
-                  <CardList cards={cardsToReceive[rarity]} selected={friendCard} setSelected={setFriendCard} truncateTo={cardsToGive[rarity] ? 8 : 0} />
-                ) : (
-                  <div className="text-neutral-500 ml-1">No cards to trade</div>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
+        <TradeWithTable ownAccount={account} friendAccount={friendAccount} />
       </div>
     </>
   )

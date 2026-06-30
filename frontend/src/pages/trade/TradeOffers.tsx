@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import ErrorAlert from '@/components/ErrorAlert'
 import { Spinner } from '@/components/Spinner'
 import { Alert } from '@/components/ui/alert.tsx'
 import { groupTrades } from '@/lib/utils'
@@ -17,8 +18,12 @@ function TradeOffers() {
     return <Spinner size="lg" overlay />
   }
 
-  if (!trades || !account) {
-    return <p className="text-xl text-center py-8">{t('common:error')}</p>
+  if (!account) {
+    return t('noAccount')
+  }
+
+  if (!trades) {
+    return <ErrorAlert />
   }
 
   if (!account.username || !account.friend_id) {

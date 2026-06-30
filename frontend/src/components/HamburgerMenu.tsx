@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query'
 import { LogOut, Menu, UserRoundPen } from 'lucide-react'
 import type * as React from 'react'
 import { useState } from 'react'
@@ -8,7 +9,7 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 import { useProfileDialog } from '@/services/account/useAccount'
-import { useLoginDialog, useLogout, useUser } from '@/services/auth/useAuth'
+import { useLoginDialog, useLogout, userQuery } from '@/services/auth/useAuth'
 import { useActionableTradeCount } from '@/services/trade/useTrade.ts'
 
 type MenuItem = {
@@ -33,7 +34,7 @@ export default function HamburgerMenu() {
 
   const { setIsProfileDialogOpen } = useProfileDialog()
   const { setIsLoginDialogOpen } = useLoginDialog()
-  const { data: user } = useUser()
+  const { data: user } = useQuery(userQuery)
   const logoutMutation = useLogout()
   const { data: actionableTradeCount = 0 } = useActionableTradeCount()
 

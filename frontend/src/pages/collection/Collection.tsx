@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query'
 import { ChevronRight } from 'lucide-react'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -5,8 +6,8 @@ import { Link, useLocation, useNavigate, useParams } from 'react-router'
 import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { FriendIdDisplay } from '@/components/ui/friend-id-display'
-import { useAccount, usePublicAccount } from '@/services/account/useAccount.ts'
-import { useCollection, usePublicCollection } from '@/services/collection/useCollection'
+import { publicAccountQuery, useAccount } from '@/services/account/useAccount.ts'
+import { publicCollectionQuery, useCollection } from '@/services/collection/useCollection'
 import type { CollectionRow } from '@/types'
 import CollectionCards from './CollectionCards'
 
@@ -21,8 +22,8 @@ function OwnCollection() {
 
 function FriendCollection({ friendId }: { friendId: string }) {
   const { t } = useTranslation(['pages/collection', 'common'])
-  const { data: account, isLoading: isLoadingAccount } = usePublicAccount(friendId)
-  const { data: cards, isLoading: isLoadingCards } = usePublicCollection(friendId)
+  const { data: account, isLoading: isLoadingAccount } = useQuery(publicAccountQuery(friendId))
+  const { data: cards, isLoading: isLoadingCards } = useQuery(publicCollectionQuery(friendId))
 
   if (isLoadingAccount || isLoadingCards) {
     return <Spinner size="lg" overlay />

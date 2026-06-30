@@ -1,13 +1,15 @@
-import type { Dispatch, SetStateAction } from 'react'
+import { useQueryClient } from '@tanstack/react-query'
+import { type Dispatch, type SetStateAction, useContext, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { SelectCardContext } from '@/components/SelectCard'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast'
-import { getInteralIdByCardId } from '@/lib/CardsDB'
-import { umami } from '@/lib/utils'
-import { useAccount } from '@/services/account/useAccount'
-import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
+import { getCardById, getCardByInternalId, getInternalIdByCardId } from '@/lib/CardsDB'
+import { getExtraCards, getNeededCards, getTradeCards, umami } from '@/lib/utils'
+import { publicAccountQuery, useAccount } from '@/services/account/useAccount'
+import { publicCollectionQuery, useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import { useUpdateTrade } from '@/services/trade/useTrade'
-import type { CardAmountUpdate, TradeRow, TradeStatus } from '@/types'
+import type { CardAmountUpdate, TradableRarity, TradeRow, TradeStatus } from '@/types'
 
 interface Props {
   trade: TradeRow
@@ -17,11 +19,15 @@ interface Props {
 export default function Actions({ trade, setSelected }: Props) {
   const { t } = useTranslation('trade-matches')
   const { toast } = useToast()
+  const queryClient = useQueryClient()
+
+  const { selectCard } = useContext(SelectCardContext)
 
   const { data: account, isLoading: isLoadingAccount } = useAccount()
   const { data: ownedCards, isLoading: isLoadingCollection } = useCollection()
   const updateCardsMutation = useUpdateCards()
   const updateTradeMutation = useUpdateTrade()
+  const [fetchingSelectCard, setFetchingSelectCard] = useState(false)
 
   if (isLoadingAccount || isLoadingCollection) {
     return null
@@ -32,7 +38,7 @@ export default function Actions({ trade, setSelected }: Props) {
   }
 
   const getAndIncrement = (card_id: string, increment: number): CardAmountUpdate => {
-    const internal_id = getInteralIdByCardId(card_id)
+    const internal_id = getInternalIdByCardId(card_id)
     return { card_id, internal_id, amount_owned: (ownedCards.get(internal_id)?.amount_owned ?? 0) + increment }
   }
 
@@ -55,6 +61,9 @@ export default function Actions({ trade, setSelected }: Props) {
   const increment = async () => {
     if (trade.offer_card_id === trade.receiver_card_id) {
       return
+    }
+    if (!trade.offer_card_id || !trade.receiver_card_id) {
+      throw new Error(`Can't increment trade without cards`)
     }
 
     const updates =
@@ -83,6 +92,58 @@ export default function Actions({ trade, setSelected }: Props) {
 
   switch (trade.status) {
     case 'offered':
+      if (!trade.offer_card_id || !trade.receiver_card_id) {
+        const friendFriendId = trade.offering_friend_id === account.friend_id ? trade.receiving_friend_id : trade.offering_friend_id
+        const choosingTheirCard = trade.offering_friend_id === account.friend_id ? trade.receiver_card_id === null : trade.offer_card_id === null
+        const callback = async (internal_id: number) => {
+          const card = getCardByInternalId(internal_id)
+          if (!card) {
+            throw new Error(`Unrecognized internal id: ${internal_id}`)
+          }
+          const swap = trade.receiving_friend_id === account.friend_id
+          const { id, ...newTrade } = swap ? swapSides(trade) : { ...trade }
+          if (choosingTheirCard) {
+            newTrade.receiver_card_id = card.card_id
+          } else {
+            newTrade.offer_card_id = card.card_id
+          }
+          await updateTradeMutation.mutateAsync({ id, trade: newTrade })
+        }
+        const onSelect = async () => {
+          setFetchingSelectCard(true)
+          const [friendAccount, friendCards] = await Promise.all([
+            queryClient.ensureQueryData(publicAccountQuery(friendFriendId)),
+            queryClient.ensureQueryData(publicCollectionQuery(friendFriendId)),
+          ])
+          if (!friendAccount || !friendCards) {
+            throw new Error('Failed selecting card: failed to load accounts')
+          }
+          const existingCardId = trade.offer_card_id === null ? trade.receiver_card_id : trade.offer_card_id
+          const rarity = existingCardId && getCardById(existingCardId)?.rarity
+          if (!rarity) {
+            throw new Error('Failed selecting card: could not recognize existing card')
+          }
+          const cardsToSelect = choosingTheirCard
+            ? getTradeCards(
+                getExtraCards(friendCards, friendAccount.trade_rarity_settings ?? []),
+                getNeededCards(ownedCards, account.trade_rarity_settings ?? []),
+              )
+            : getTradeCards(
+                getExtraCards(ownedCards, account.trade_rarity_settings ?? []),
+                getNeededCards(friendCards, friendAccount.trade_rarity_settings ?? []),
+              )
+          setFetchingSelectCard(false)
+          selectCard({ cards: cardsToSelect?.[rarity as TradableRarity] ?? [], callback })
+        }
+        return (
+          <>
+            <Button onClick={onSelect} isPending={fetchingSelectCard}>
+              Select card
+            </Button>
+            <Button onClick={() => updateStatus('declined')}>{trade.receiving_friend_id === account.friend_id ? t('actionDecline') : t('actionCancel')}</Button>
+          </>
+        )
+      }
       return (
         <>
           {trade.receiving_friend_id === account.friend_id && <Button onClick={() => updateStatus('accepted')}>{t('actionAccept')}</Button>}
@@ -112,7 +173,18 @@ export default function Actions({ trade, setSelected }: Props) {
         </>
       )
     default:
-      console.log(`Unknown trade status ${trade.status}`)
-      return null
+      throw new Error(`Unknown trade status ${trade.status}`)
+  }
+}
+
+function swapSides(trade: TradeRow): TradeRow {
+  return {
+    ...trade,
+    offering_friend_id: trade.receiving_friend_id,
+    receiving_friend_id: trade.offering_friend_id,
+    offer_card_id: trade.receiver_card_id,
+    receiver_card_id: trade.offer_card_id,
+    offerer_ended: trade.receiver_ended,
+    receiver_ended: trade.offerer_ended,
   }
 }

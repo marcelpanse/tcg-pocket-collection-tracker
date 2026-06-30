@@ -10,7 +10,7 @@ import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { getCardById, getCardsByInternalId } from '@/lib/CardsDB'
-import { getInteralIdByCardId } from '@/lib/CardsDB.ts'
+import { getInternalIdByCardId } from '@/lib/CardsDB.ts'
 import type { Hashes } from '@/lib/hash'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import { detectImages, type ExtractedCard, extractCardImages, loadModel } from '@/services/scanner/CardDetectionService'
@@ -171,7 +171,7 @@ const Scan = () => {
     updateCardsMutation.mutate(
       updates.map((x) => ({
         card_id: x.card_id,
-        internal_id: getInteralIdByCardId(x.card_id),
+        internal_id: getInternalIdByCardId(x.card_id),
         amount_owned: Math.max(0, x.previous_amount + x.increment),
       })),
     )

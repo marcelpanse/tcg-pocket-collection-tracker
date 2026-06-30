@@ -1,4 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useQuery } from '@tanstack/react-query'
 import { Siren } from 'lucide-react'
 import type { FC } from 'react'
 import { useForm } from 'react-hook-form'
@@ -13,13 +14,13 @@ import { Input } from '@/components/ui/input'
 import { Switch } from '@/components/ui/switch.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useAccount, useProfileDialog, useUpdateAccount } from '@/services/account/useAccount'
-import { useUser } from '@/services/auth/useAuth'
+import { userQuery } from '@/services/auth/useAuth'
 import type { AccountRow } from '@/types'
 import { SocialShareButtons } from './SocialShareButtons'
 
 const EditProfile: FC = () => {
   const navigate = useNavigate()
-  const { data: user } = useUser()
+  const { data: user } = useQuery(userQuery)
   const { data: account } = useAccount()
   const updateAccountMutation = useUpdateAccount()
   const { isProfileDialogOpen, setIsProfileDialogOpen } = useProfileDialog()

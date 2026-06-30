@@ -1,26 +1,30 @@
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { queryOptions, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
-import { useUser } from '@/services/auth/useAuth.ts'
+import { userQuery } from '@/services/auth/useAuth.ts'
 import type { AccountRow } from '@/types'
 import { getAccount, getPublicAccount, updateAccount, updateAccountTradingFields } from './accountService'
 
-export function useAccount() {
-  const { data: user } = useUser()
-  const email = user?.user.email
-
-  return useQuery({
+export function accountQuery(email: string | undefined) {
+  return queryOptions({
     queryKey: ['account', email],
     queryFn: () => getAccount(email as string),
     enabled: !!email,
+    throwOnError: true,
   })
 }
 
-export function usePublicAccount(friendId: string | undefined) {
-  return useQuery({
+export function useAccount() {
+  const { data: user } = useQuery(userQuery)
+  return useQuery(accountQuery(user?.user.email))
+}
+
+export function publicAccountQuery(friendId: string | undefined) {
+  return queryOptions({
     queryKey: ['account', friendId],
     queryFn: () => getPublicAccount(friendId as string),
     enabled: !!friendId,
+    throwOnError: true,
   })
 }
 
@@ -37,7 +41,7 @@ export function useUpdateAccount() {
 
 export function useUpdateAccountTradingFields() {
   const queryClient = useQueryClient()
-  const { data: user } = useUser()
+  const { data: user } = useQuery(userQuery)
   const email = user?.user.email
 
   return useMutation({

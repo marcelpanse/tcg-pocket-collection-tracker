@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query'
 import { ChevronFirst, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -8,7 +9,7 @@ import { FriendIdDisplay } from '@/components/ui/friend-id-display.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
 import { useChatContext } from '@/context/ChatContext'
 import TradeList from '@/pages/trade/components/TradeList.tsx'
-import { usePublicAccount } from '@/services/account/useAccount.ts'
+import { publicAccountQuery } from '@/services/account/useAccount.ts'
 import { useFriends } from '@/services/friends/useFriends'
 import { useAllTrades } from '@/services/trade/useTrade'
 import type { TradeRow } from '@/types'
@@ -21,7 +22,7 @@ interface TradePartnerProps {
 function TradePartner({ friendId, activeTrades }: TradePartnerProps) {
   const { t } = useTranslation(['trade-matches', 'common'])
 
-  const { data: friendAccount, isLoading: isLoadingAccount } = usePublicAccount(friendId)
+  const { data: friendAccount, isLoading: isLoadingAccount } = useQuery(publicAccountQuery(friendId))
   const { data: friends = [] } = useFriends()
   const { openChat } = useChatContext()
   const isAlreadyFriend = friends.some((f) => f.friend_id === friendId && f.state === 'accepted')

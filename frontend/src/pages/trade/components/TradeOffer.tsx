@@ -31,7 +31,7 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
 
   const insertTradeMutation = useInsertTrade()
 
-  const enabled = yourCard && friendCard && yourCard.rarity === friendCard.rarity
+  const enabled = (!yourCard && friendCard) || (yourCard && friendCard && yourCard.rarity === friendCard.rarity)
 
   async function submit() {
     if (!enabled) {
@@ -44,7 +44,7 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
     const trade: TradeRow = {
       offering_friend_id: yourId,
       receiving_friend_id: friendId,
-      offer_card_id: yourCard.card_id,
+      offer_card_id: yourCard?.card_id,
       receiver_card_id: friendCard.card_id,
       status: 'offered',
     } as TradeRow

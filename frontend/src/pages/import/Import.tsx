@@ -1,15 +1,16 @@
+import { useQuery } from '@tanstack/react-query'
 import { Siren } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Spinner } from '@/components/Spinner'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { useUser } from '@/services/auth/useAuth'
+import { userQuery } from '@/services/auth/useAuth'
 import { ExportWriter } from '../export/components/ExportWriter'
 import { ImportReader } from './components/ImportReader'
 
 function Import() {
   const { t } = useTranslation('pages/import')
-  const { data: user, isLoading } = useUser()
+  const { data: user, isLoading } = useQuery(userQuery)
 
   if (isLoading) {
     return <Spinner size="lg" overlay />

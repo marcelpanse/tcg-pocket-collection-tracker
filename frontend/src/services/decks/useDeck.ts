@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import type { Deck } from '@/types'
-import { useUser } from '../auth/useAuth'
+import { userQuery } from '../auth/useAuth'
 import { type DeckFilters, deleteDeck, getDecks, isLiked, likeDeck, unlikeDeck, updateDeck } from './deckService'
 
 export function useDecksSearch(filters: DeckFilters) {
@@ -12,7 +12,7 @@ export function useDecksSearch(filters: DeckFilters) {
 }
 
 export function useUpdateDeck() {
-  const { data: user } = useUser()
+  const { data: user } = useQuery(userQuery)
   const email = user?.user.email
   const queryClient = useQueryClient()
   return useMutation({
@@ -41,7 +41,7 @@ export function useDeleteDeck() {
 }
 
 export function useDeckLiked(id: number) {
-  const { data: user } = useUser()
+  const { data: user } = useQuery(userQuery)
   return useQuery({
     queryKey: ['deck', id, 'liked', user?.user.email],
     queryFn: () => isLiked(id as number),
@@ -50,7 +50,7 @@ export function useDeckLiked(id: number) {
 }
 
 export function useLikeDeck(id: number) {
-  const { data: user } = useUser()
+  const { data: user } = useQuery(userQuery)
   const email = user?.user.email
   const queryClient = useQueryClient()
   return useMutation({

@@ -64,11 +64,19 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
       <div className="flex flex-col-reverse md:flex-row grow-1 justify-between gap-1 md:gap-2">
         <div className="flex flex-1">
           <ChevronsUp />
-          <CardLine className="flex-1 bg-neutral-900" card_id={yourCard} increment={ended ? undefined : -1} />
+          {yourCard ? (
+            <CardLine className="flex-1 bg-neutral-900" card_id={yourCard} increment={ended ? undefined : -1} />
+          ) : (
+            <span className="flex-1 bg-neutral-900 rounded-sm text-center">Select card</span>
+          )}
         </div>
         <div className="flex flex-1">
           <ChevronsDown />
-          <CardLine className="flex-1 bg-neutral-900" card_id={friendCard} increment={ended ? undefined : 1} />
+          {friendCard ? (
+            <CardLine className="flex-1 bg-neutral-900" card_id={friendCard} increment={ended ? undefined : 1} />
+          ) : (
+            <span className="flex-1 bg-neutral-900 rounded-sm text-center">Select card</span>
+          )}
         </div>
       </div>
     </li>
