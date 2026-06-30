@@ -7,7 +7,7 @@ import { Dialog, DialogContent, DialogTitle } from './ui/dialog'
 
 export interface SelectCardRequest {
   cards: Card[]
-  callback: (internal_id: number) => void
+  callback: (internal_id: number) => void | Promise<void>
 }
 
 export interface ISelectCardContext {
@@ -28,12 +28,27 @@ export interface Props {
 export function SelectCardDialog({ request, onClose }: Props) {
   const [scrollElement, setScrollElement] = useState<HTMLDivElement | null>(null)
   const [selected, setSelected] = useState<Card | undefined>(undefined)
+  const [submitting, setSubmitting] = useState(false)
 
   useEffect(() => {
     if (!request) {
       setSelected(undefined)
+      setSubmitting(false)
     }
-  }, [request, setSelected])
+  }, [request])
+
+  const onSubmit = async () => {
+    if (!selected || submitting) {
+      return
+    }
+    setSubmitting(true)
+    try {
+      await request?.callback(selected.internal_id)
+      onClose()
+    } finally {
+      setSubmitting(false)
+    }
+  }
 
   const virtualizer = useVirtualizer({
     getScrollElement: () => scrollElement,
@@ -64,7 +79,7 @@ export function SelectCardDialog({ request, onClose }: Props) {
             })}
           </ul>
         </div>
-        <Button disabled={!selected} onClick={() => request?.callback((selected as Card).internal_id)}>
+        <Button disabled={!selected || submitting} isPending={submitting} onClick={onSubmit}>
           {selected ? `Select ${selected.name}` : 'Select a card above'}
         </Button>
       </DialogContent>

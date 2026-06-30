@@ -101,7 +101,6 @@ export default function Actions({ trade, setSelected }: Props) {
             throw new Error(`Unrecognized internal id: ${internal_id}`)
           }
           const swap = trade.receiving_friend_id === account.friend_id
-          console.log('swap', swap)
           const { id, ...newTrade } = swap ? swapSides(trade) : { ...trade }
           if (choosingTheirCard) {
             newTrade.receiver_card_id = card.card_id
