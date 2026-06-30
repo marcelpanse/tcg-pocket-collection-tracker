@@ -39,6 +39,7 @@ const packs = [
   'megashinepack',
   'pulsingaurapack',
   'paradoxdrivepack',
+  'everydaywonderspack',
   'allcards',
 ]
 
@@ -112,6 +113,10 @@ const rarityOverrides: Record<ExpansionId, { rarity: Rarity; start: number; end:
   B3a: [
     { rarity: '✵', start: 94, end: 103 },
     { rarity: '✵✵', start: 104, end: 107 },
+  ],
+  B3b: [
+    { rarity: '✵', start: 91, end: 100 },
+    { rarity: '✵✵', start: 101, end: 104 },
   ],
   'P-A': [],
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],

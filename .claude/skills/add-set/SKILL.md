@@ -20,7 +20,8 @@ Start by asking the user for the following details (ask all in one message):
 9. **Contains shinies?** – yes/no (default: yes)
 10. **Shiny ranges** (only if contains shinies) – card number ranges for `✵` (1-shiny) and `✵✵` (2-shiny) cards, e.g. `✵: 87–110, ✵✵: 111–115`. These are the card index numbers within the set.
 11. **Contains babies?** – yes/no (default: no)
-12. **Cards per pack** – number (default: 5)
+12. **Contains linked cards?** – yes/no (default: no)
+13. **Cards per pack** – number (default: 5)
 
 Once you have all the details, perform **all** of the following steps:
 
@@ -35,55 +36,37 @@ export const expansionIds = ['<NEW_ID>', 'B2a', ...] as const
 
 ---
 
-## Step 2 — `frontend/assets/themed-collections/<ID>-missions.json`
+## Step 2 — `frontend/src/lib/CardsDB.ts`
 
-Create the file with an empty array:
-```json
-[]
-```
-
----
-
-## Step 3 — `frontend/src/lib/CardsDB.ts`
-
-**3a.** Add import at the bottom of the existing imports block:
-```ts
-const <IdCamel>Missions = await import('../../assets/themed-collections/<ID>-missions.json')
-```
-
-**3b.** Add missions variable after the last existing missions variable:
-```ts
-const <idCamel>Missions: Mission[] = <IdCamel>Missions.default as Mission[]
-```
-
-**3c.** Add the expansion entry after the previous set and before the promo sets comment:
+Add the expansion entry to the `expansions` array, after the previous set and before the promo sets comment (`// Pack colors should have saturation ...`):
 ```ts
 {
   name: '<nameLowercase>',
   id: '<ID>',
   internalId: <internalId>,
   packs: [{ name: '<packname>', color: '<color>' }],
-  missions: <idCamel>Missions,
   tradeable: <true|false>,
   openable: <true|false>,
   packStructure: {
     containsShinies: <true|false>,
     containsBabies: <true|false>,
+    containsLinkedCards: <true|false>,
     cardsPerPack: <number>,
   },
 },
 ```
+All four `packStructure` fields are required by the `PackStructure` type in `frontend/src/types/index.ts`. There is no `missions` field on `Expansion`.
 
 ---
 
-## Step 4 — `scripts/scraper.ts`
+## Step 3 — `scripts/scraper.ts`
 
-**4a.** Add each pack name to the `packs` array (before `'allcards'`):
+**3a.** Add each pack name to the `packs` array (before `'allcards'`):
 ```ts
 '<packname>',
 ```
 
-**4b.** Add the set to `rarityOverrides` with the shiny ranges provided. If the set contains shinies:
+**3b.** Add the set to `rarityOverrides` with the shiny ranges provided. `rarityOverrides` is typed `Record<ExpansionId, ...>`, so it **must** have an entry for the new ID or the build fails. If the set contains shinies:
 ```ts
 <ID>: [
   { rarity: '✵', start: <shiny1Start>, end: <shiny1End> },
@@ -95,7 +78,7 @@ Place it in the correct alphabetical/sequential position among the other set IDs
 
 ---
 
-## Step 5 — Locale files: `sets.json` (all 6 locales)
+## Step 4 — Locale files: `sets.json` (all 6 locales)
 
 Files: `frontend/public/locales/{en-US,es-ES,it-IT,pt-BR,de-DE,fr-FR}/common/sets.json`
 
@@ -117,7 +100,7 @@ Use the English display name as a placeholder for non-English locales.
 
 ---
 
-## Step 6 — Locale files: `packs.json` (all 6 locales)
+## Step 5 — Locale files: `packs.json` (all 6 locales)
 
 Files: `frontend/public/locales/{en-US,es-ES,it-IT,pt-BR,de-DE,fr-FR}/common/packs.json`
 
@@ -137,12 +120,10 @@ For **all other locales**, append at the end (before the closing `}`):
 
 - `<nameLowercase>` = display name lowercased with all spaces removed, e.g. `Paldean Wonders` → `paldeanwonders`
 - `<idLower>` = set ID lowercased, e.g. `B2a` → `b2a`
-- `<IdCamel>` = set ID as camelCase import name, e.g. `B2a` → `B2aMissions`
-- `<idCamel>` = set ID as camelCase variable, e.g. `B2a` → `b2aMissions`
 
 ---
 
-## Step 7 — Set banner image
+## Step 6 — Set banner image
 
 Place the set artwork image at:
 ```
