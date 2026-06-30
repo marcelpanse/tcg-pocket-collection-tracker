@@ -304,6 +304,20 @@ export const expansions: Expansion[] = [
       cardsPerPack: 5,
     },
   },
+  {
+    name: 'everydaywonders',
+    id: 'B3b',
+    internalId: 19,
+    packs: [{ name: 'everydaywonderspack', color: '#78c09c' }],
+    tradeable: true,
+    openable: true,
+    packStructure: {
+      containsShinies: true,
+      containsBabies: false,
+      containsLinkedCards: false,
+      cardsPerPack: 5,
+    },
+  },
   // Pack colors should have saturation 37.5% (96) and value 75% (192). The distance in hue between any two packs should not be smaller than 3.33% (12)
   {
     name: 'promo-a',
