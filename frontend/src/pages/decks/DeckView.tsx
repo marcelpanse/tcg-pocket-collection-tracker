@@ -99,13 +99,13 @@ export default function DeckView() {
       {missingCards > 0 && <span className="text-neutral-300 italic">{missingCards} missing cards</span>}
       <hr className="border-neutral-700 my-2" />
       <div className="flex flex-wrap gap-2">
-        {cardsWithOwnedStatus.map(([id, owned]) => {
+        {cardsWithOwnedStatus.map(([id, owned], idx) => {
           const card = getCardByInternalId(id)
           if (!card) {
             return null
           }
           return (
-            <button key={id} className="cursor-pointer" onClick={() => setSelectedCardId(id)} type="button">
+            <button key={idx} className="cursor-pointer" onClick={() => setSelectedCardId(id)} type="button">
               <img className={`w-28 sm:w-36 ${owned ? '' : 'grayscale'}`} src={card.image} alt={`${card.card_id} ${card.name}`} />
             </button>
           )

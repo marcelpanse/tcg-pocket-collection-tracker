@@ -26,15 +26,34 @@ export function getMissingCardsCount(cards: [number, number][], ownedCards: Coll
 
 export function getOwnedStatus(cards: number[], ownedCards: Collection) {
   const pastCopies = new Map<number, number>()
-  cards.map(getCardByInternalId).filter(Boolean).toSorted()
-  return cards.map((id) => {
-    const card = getCardByInternalId(id)
-    if (!card) {
-      throw new Error(`Unknown internal_id: ${id}`)
-    }
-    id = card.alternate_versions[0]
-    const curr = (pastCopies.get(id) ?? 0) + 1
-    pastCopies.set(id, curr)
-    return [id, curr <= getDeckbuildingCopies(card, ownedCards)] as [number, boolean]
-  })
+  return cards
+    .map(getCardByInternalId)
+    .filter((c): c is Card => c !== undefined)
+    .toSorted(cmp)
+    .map((card) => {
+      const id = card.alternate_versions[0]
+      const curr = (pastCopies.get(id) ?? 0) + 1
+      pastCopies.set(id, curr)
+      return [id, curr <= getDeckbuildingCopies(card, ownedCards)] as [number, boolean]
+    })
+}
+
+function sortRank(card: Card) {
+  return card.card_type === 'pokémon'
+    ? 0
+    : card.evolution_type === 'item'
+      ? 1
+      : card.evolution_type === 'tool'
+        ? 2
+        : card.evolution_type === 'supporter'
+          ? 3
+          : card.evolution_type === 'stadium'
+            ? 4
+            : 5
+}
+
+function cmp(a: Card, b: Card) {
+  const ar = sortRank(a)
+  const br = sortRank(b)
+  return ar === br ? a.internal_id - b.internal_id : ar - br
 }
