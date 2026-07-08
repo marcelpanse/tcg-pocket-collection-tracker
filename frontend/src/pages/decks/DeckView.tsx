@@ -47,8 +47,8 @@ export default function DeckView() {
   const isOwn = deck.email !== undefined && deck.email === account?.email
 
   return (
-    <div className="flex flex-col mx-auto max-w-159 p-2 sm:p-4 rounded sm:rounded-md border border-neutral-700 bg-neutral-800">
-      <div className="flex flex-col sm:flex-row justify-between">
+    <div className="flex flex-col mx-2 sm:mx-auto mb-2 max-w-197 p-2 sm:p-4 rounded-md border border-neutral-700 bg-neutral-800">
+      <div className="flex flex-col sm:flex-row gap-2 justify-between">
         <div>
           <h2 className="text-xl font-semibold">{deck.name}</h2>
           <div className="flex items-center gap-2">
@@ -59,7 +59,7 @@ export default function DeckView() {
               ))}
             </span>
           </div>
-          <p className="text-sm text-neutral-400 mb-2">
+          <p className="text-sm text-neutral-400">
             {deck.username && (
               <>
                 Created by {deck.username}.<br />
@@ -67,6 +67,7 @@ export default function DeckView() {
             )}
             Last updated {deck.updated_at.toLocaleDateString()}.
           </p>
+          {missingCards > 0 && <span>{missingCards} missing cards</span>}
         </div>
         <div className="flex flex-row sm:flex-col gap-2">
           {deck.is_public &&
@@ -96,7 +97,6 @@ export default function DeckView() {
           </Link>
         </div>
       </div>
-      {missingCards > 0 && <span className="text-neutral-300 italic">{missingCards} missing cards</span>}
       <hr className="border-neutral-700 my-2" />
       <div className="flex flex-wrap gap-2">
         {cardsWithOwnedStatus.map(([id, owned], idx) => {
