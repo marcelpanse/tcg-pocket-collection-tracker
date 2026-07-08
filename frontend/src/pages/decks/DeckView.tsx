@@ -1,23 +1,23 @@
 import { Slot } from '@radix-ui/react-slot'
 import { useQuery } from '@tanstack/react-query'
-import { ChevronLeft, ChevronRight, Heart, HeartMinus, HeartPlus } from 'lucide-react'
-import { Link, useLocation, useNavigate, useParams } from 'react-router'
-import { CardLine } from '@/components/CardLine'
+import { ChevronRight, Heart, HeartMinus, HeartPlus } from 'lucide-react'
+import { Link, useLocation, useParams } from 'react-router'
 import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { showCardType } from '@/components/utils'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { cn } from '@/lib/utils'
 import { useAccount } from '@/services/account/useAccount'
-import { useCollection } from '@/services/collection/useCollection'
+import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
 import { getDeck } from '@/services/decks/deckService'
 import { useDeckLiked, useLikeDeck } from '@/services/decks/useDeck'
-import { getDeckCardCounts, getMissingCardsCount } from './utils'
+import { getDeckCardCounts, getMissingCardsCount, getOwnedStatus } from './utils'
 
 export default function DeckView() {
   const { id: deckId } = useParams()
   const location = useLocation()
-  const navigate = useNavigate()
+
+  const { setSelectedCardId } = useSelectedCard()
 
   const { data: account } = useAccount()
   const { data: ownedCards } = useCollection()
@@ -42,87 +42,74 @@ export default function DeckView() {
 
   const cards = getDeckCardCounts(deck.cards)
   const missingCards = ownedCards ? getMissingCardsCount(cards, ownedCards) : 0
+  const cardsWithOwnedStatus = ownedCards ? getOwnedStatus(deck.cards, ownedCards) : deck.cards.map((id) => [id, true] as [number, boolean])
 
   const isOwn = deck.email !== undefined && deck.email === account?.email
 
   return (
-    <div className="flex flex-col mx-auto max-w-sm p-2 rounded border border-neutral-700">
-      <h2 className="text-lg font-semibold">{deck.name}</h2>
-      <p className="text-sm text-neutral-400 mb-2">
-        {deck.username && (
-          <>
-            Created by {deck.username}.<br />
-          </>
-        )}
-        Last updated {deck.updated_at.toLocaleDateString()}.
-      </p>
-      <div className="flex items-center gap-2">
-        <h3>Energy</h3>
-        <span className="inline-flex gap-1">
-          {deck.energy.map((x) => (
-            <span key={x}>{showCardType(x)}</span>
-          ))}
-        </span>
-      </div>
-      <h3>Cards {missingCards > 0 && <span className="text-neutral-400 text-sm"> ({missingCards} missing)</span>}</h3>
-      <ul className="overflow-y-auto space-y-1">
-        {cards.map(([id, amount]) => {
-          const card = getCardByInternalId(id)
-          if (!card) {
-            return null
-          }
-          const amount_owned = ownedCards && card.alternate_versions.reduce((acc, curr) => acc + (ownedCards.get(curr)?.amount_owned ?? 0), 0)
-          const owned = amount_owned !== undefined && amount_owned < amount
-          return (
-            <li key={id} className="flex">
-              <b className="mr-2">{amount}×</b>
-              <CardLine
-                className={`w-full ${owned ? 'bg-red-950' : ''}`}
-                card_id={getCardByInternalId(id)?.card_id as string}
-                id="hidden"
-                amount={owned ? 'text-red-300' : ''}
-                amount_owned={amount_owned}
-              />
-            </li>
-          )
-        })}
-      </ul>
-      <div className="flex items-center mt-2 justify-between">
-        {deck.is_public ? (
-          deck.email !== undefined && deck.email === account?.email ? (
-            <p className="flex items-center gap-1">
-              <Heart className="size-[1em]" />
-              <span>{deck.likes}</span>
-            </p>
-          ) : (
-            <Button
-              variant="ghost"
-              className="group"
-              onClick={() => likeMutation.mutate(!liked)}
-              disabled={likeMutation.isPending}
-              isPending={likeMutation.isPending}
-            >
-              <Heart className={cn('group-hover:hidden', liked && 'fill-current')} />
-              <Slot className="hidden group-hover:block">{liked ? <HeartMinus /> : <HeartPlus />}</Slot>
-              {deck.likes !== undefined && <span>{deck.likes}</span>}
-            </Button>
-          )
-        ) : (
-          <span className="italic text-neutral-400 text-sm">Private</span>
-        )}
-
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" onClick={() => navigate(-1)}>
-            <ChevronLeft /> Back
-          </Button>
-
+    <div className="flex flex-col mx-auto max-w-159 p-2 sm:p-4 rounded sm:rounded-md border border-neutral-700 bg-neutral-800">
+      <div className="flex flex-col sm:flex-row justify-between">
+        <div>
+          <h2 className="text-xl font-semibold">{deck.name}</h2>
+          <div className="flex items-center gap-2">
+            <h3>Energy</h3>
+            <span className="inline-flex gap-1">
+              {deck.energy.map((x) => (
+                <span key={x}>{showCardType(x)}</span>
+              ))}
+            </span>
+          </div>
+          <p className="text-sm text-neutral-400 mb-2">
+            {deck.username && (
+              <>
+                Created by {deck.username}.<br />
+              </>
+            )}
+            Last updated {deck.updated_at.toLocaleDateString()}.
+          </p>
+        </div>
+        <div className="flex flex-row sm:flex-col gap-2">
+          {deck.is_public &&
+            (deck.email !== undefined && deck.email === account?.email ? (
+              <p className="flex justify-center items-center gap-1 h-9 px-4 py-2">
+                <Heart className="size-[1em]" />
+                <span>{deck.likes}</span>
+              </p>
+            ) : (
+              <Button
+                variant="outline"
+                className="group"
+                onClick={() => likeMutation.mutate(!liked)}
+                disabled={likeMutation.isPending}
+                isPending={likeMutation.isPending}
+              >
+                <Heart className={cn('group-hover:hidden', liked && 'fill-current')} />
+                <Slot className="hidden group-hover:block">{liked ? <HeartMinus /> : <HeartPlus />}</Slot>
+                {deck.likes !== undefined && <span>{deck.likes}</span>}
+              </Button>
+            ))}
           <Link to={`/decks/edit/${isOwn ? deck.id : ''}`} state={isOwn ? deck : { ...deck, id: undefined }}>
-            <Button>
+            <Button variant="outline">
               {isOwn ? 'Edit' : 'Copy and edit'}
               <ChevronRight />
             </Button>
           </Link>
         </div>
+      </div>
+      {missingCards > 0 && <span className="text-neutral-300 italic">{missingCards} missing cards</span>}
+      <hr className="border-neutral-700 my-2" />
+      <div className="flex flex-wrap gap-2">
+        {cardsWithOwnedStatus.map(([id, owned]) => {
+          const card = getCardByInternalId(id)
+          if (!card) {
+            return null
+          }
+          return (
+            <button key={id} className="cursor-pointer" onClick={() => setSelectedCardId(id)} type="button">
+              <img className={`w-28 sm:w-36 ${owned ? '' : 'grayscale'}`} src={card.image} alt={`${card.card_id} ${card.name}`} />
+            </button>
+          )
+        })}
       </div>
     </div>
   )
