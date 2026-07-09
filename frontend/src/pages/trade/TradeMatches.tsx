@@ -58,13 +58,13 @@ export default function TradeMatches() {
         onChange={setSelectedLanguage}
         show={(x) => (x === '' ? 'Any language' : formatLanguage[x])}
       />
-      <div className="mt-2 flex gap-2">
-        <Button variant="outline" className="flex-1" onClick={() => selectCard({ cards, callback: setSelectedCard })}>
+      <div className="h-9 mt-2 flex rounded border border-neutral-700 divide-x divide-neutral-700 bg-neutral-900 [&>*:enabled]:hover:bg-neutral-600 [&>*:disabled]:opacity-50">
+        <button className="flex-1" onClick={() => selectCard({ cards, callback: setSelectedCard })} type="button">
           {card ? getCardNameByLang(card, i18n.language) : 'Select wanted card'}
-        </Button>
-        <Button variant="outline" className="flex-0" onClick={() => setSelectedCard(undefined)} disabled={selectedCard === undefined}>
-          <Trash2 />
-        </Button>
+        </button>
+        <button className="flex-0" onClick={() => setSelectedCard(undefined)} disabled={selectedCard === undefined} type="button">
+          <Trash2 className="mx-2 size-5" />
+        </button>
       </div>
       <div className="flex gap-2 mt-4">
         <Button className="w-full" onClick={() => navigate(buildUrl(selectedCard, selectedLanguage))}>
