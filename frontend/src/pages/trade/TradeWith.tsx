@@ -80,32 +80,36 @@ function TradeWith() {
     <>
       <title>{`Trade with ${friendAccount.username} – TCG Pocket Collection Tracker`}</title>
       <div className="flex flex-col gap-4 w-full mb-4">
-        <div className="rounded-lg border border-neutral-700 bg-neutral-800 p-1">
-          <div className="flex justify-between">
-            <h1>
-              <span className="text-2xl font-light">{t('tradingWith')}</span>
-              <span className="text-2xl font-bold"> {friendAccount.username}</span>
-              {friendAccount.language && <span className="text-lg bg-neutral-800 px-2 rounded-full ml-1">{friendAccount.language}</span>}
-              <span className="block sm:inline text-sm sm:ml-1">
+        <div className="rounded-lg border border-neutral-700 bg-neutral-800 p-2 md:p-4">
+          <div className="flex flex-col md:flex-row gap-2 justify-between">
+            <div>
+              <h1>
+                <span className="text-2xl font-light">{t('tradingWith')}</span>
+                <span className="text-2xl font-bold"> {friendAccount.username}</span>
+                {friendAccount.language && <span className="text-lg bg-neutral-800 px-2 rounded-full ml-1">{friendAccount.language}</span>}
+              </h1>
+              <p>
                 <FriendIdDisplay
                   friendId={friendAccount.friend_id}
                   onChat={isAlreadyFriend ? () => openChat(friendAccount.friend_id, friendAccount.username || friendAccount.friend_id) : undefined}
                 />
-              </span>
-            </h1>
-            <div className="flex flex-col-reverse sm:flex-row gap-2">
-              <label htmlFor={`history-${friendId}`} className="my-auto flex items-center">
-                {t('viewHistory')}
+              </p>
+            </div>
+            <div className="flex flex-col md:flex-row items-center gap-2 [&>*]:w-full">
+              <div className="flex items-center">
+                <label htmlFor={`history-${friendId}`} className="whitespace-nowrap">
+                  {t('viewHistory')}
+                </label>
                 <Switch
                   id={`history-${friendId}`}
-                  className="ml-2 my-auto"
+                  className="ml-2"
                   checked={viewHistory}
                   onCheckedChange={(x) => {
                     setViewHistory(x)
                     setPageHistory(0)
                   }}
                 />
-              </label>
+              </div>
               {!isAlreadyFriend && (
                 <Button
                   variant="outline"
@@ -118,13 +122,14 @@ function TradeWith() {
                 </Button>
               )}
               <Link to={`/collection/${friendId}`}>
-                <Button variant="outline">
+                <Button variant="outline" className="w-full">
                   Collection
                   <ChevronRight />
                 </Button>
               </Link>
             </div>
           </div>
+          <hr className="border-neutral-700 my-2" />
           {allTrades.isLoading ? (
             <Spinner size="md" />
           ) : (
