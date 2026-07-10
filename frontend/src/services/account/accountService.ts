@@ -65,7 +65,7 @@ export const updateAccount = async (account: UserAccountRow) => {
   }
   const { data, error } = await supabase
     .from('accounts')
-    .upsert({ ...account, trade_rarity_settings: undefined, last_active: undefined })
+    .upsert({ ...account, trade_rarity_settings: undefined })
     .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
     .single()
 
