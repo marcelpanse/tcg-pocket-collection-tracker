@@ -47,16 +47,18 @@ export interface RaritySettingsRow {
   to_keep: number
 }
 
-export interface AccountRow {
-  $id: string
-  email: string
+export interface PublicAccountRow {
   username: string | null
   friend_id: string
   language: GameLanguage | null
+  is_active_trading: boolean
+  trade_rarity_settings: RaritySettingsRow[]
+}
+
+export interface UserAccountRow extends PublicAccountRow {
+  email: string
   collection_last_updated: Date
   is_public: boolean
-  is_active_trading: boolean
-  trade_rarity_settings?: RaritySettingsRow[]
   completed_missions?: string[]
 }
 

@@ -15,7 +15,7 @@ import { toast } from '@/hooks/use-toast'
 import { getFilteredCards, ownershipOptions, sortByOptions, tradingOptions } from '@/lib/filters'
 import { getCardNameByLang } from '@/lib/utils.ts'
 import { useProfileDialog } from '@/services/account/useAccount'
-import { type AccountRow, type Card as CardType, type Collection, cardTypes, expansionIds, rarities } from '@/types'
+import { type Card as CardType, type Collection, cardTypes, expansionIds, type PublicAccountRow, rarities, type UserAccountRow } from '@/types'
 
 const schema = z.object({
   search: z.string().default(''),
@@ -36,7 +36,7 @@ const schema = z.object({
 interface Props {
   children?: ReactNode
   cards: Collection
-  account: AccountRow | undefined
+  account: PublicAccountRow | UserAccountRow | undefined
 }
 
 export default function CollectionCards({ children, cards, account }: Props) {
@@ -45,7 +45,7 @@ export default function CollectionCards({ children, cards, account }: Props) {
 
   const { setIsProfileDialogOpen } = useProfileDialog()
   const [isFiltersSheetOpen, setIsFiltersSheetOpen] = useState(false) // used only on mobile
-  const isPublic = account?.email === undefined
+  const isPublic = account !== undefined && !('email' in account)
 
   const [filters, setFilters, activeFilters] = useSearchState(schema)
   const [_, setSearchParams] = useSearchParams()
@@ -54,8 +54,8 @@ export default function CollectionCards({ children, cards, account }: Props) {
   const filteredCards = getFilteredCards(filters, cards, account?.trade_rarity_settings)
 
   const getTradingMessage = () => {
-    if (!account) {
-      throw new Error('Cannot copy trade message without account')
+    if (!account || isPublic) {
+      throw new Error('Cannot copy trade message without account or of public accounts')
     }
     let cardValues = ''
 
@@ -94,7 +94,7 @@ export default function CollectionCards({ children, cards, account }: Props) {
   }
 
   async function onShare() {
-    if (account?.email === undefined) {
+    if (!account || isPublic) {
       throw new Error("Can't share collection: not logged in or not on own collection")
     }
     if (account.friend_id === '' || !account.is_public) {

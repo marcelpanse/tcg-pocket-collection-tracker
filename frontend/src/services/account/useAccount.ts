@@ -2,13 +2,13 @@ import { queryOptions, useMutation, useQuery, useQueryClient } from '@tanstack/r
 import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
 import { userQuery } from '@/services/auth/useAuth.ts'
-import type { AccountRow } from '@/types'
-import { getAccount, getPublicAccount, updateAccount, updateAccountTradingFields } from './accountService'
+import type { UserAccountRow } from '@/types'
+import { getPublicAccount, getUserAccount, updateAccount, updateAccountTradingFields } from './accountService'
 
 export function accountQuery(email: string | undefined) {
   return queryOptions({
     queryKey: ['account', email],
-    queryFn: () => getAccount(email as string),
+    queryFn: () => getUserAccount(email as string),
     enabled: !!email,
     throwOnError: true,
   })
@@ -32,7 +32,7 @@ export function useUpdateAccount() {
   const queryClient = useQueryClient()
 
   return useMutation({
-    mutationFn: (account: AccountRow) => updateAccount(account),
+    mutationFn: updateAccount,
     onSuccess: (updatedAccount) => {
       queryClient.setQueryData(['account', updatedAccount.email], updatedAccount)
     },
@@ -53,8 +53,8 @@ export function useUpdateAccountTradingFields() {
     }: {
       username: string
       is_active_trading: boolean
-      language: AccountRow['language']
-      trade_rarity_settings: AccountRow['trade_rarity_settings']
+      language: UserAccountRow['language']
+      trade_rarity_settings: UserAccountRow['trade_rarity_settings']
     }) => {
       if (!email) {
         throw new Error('Email is required to update account')

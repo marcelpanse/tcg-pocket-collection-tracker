@@ -15,7 +15,7 @@ import { Switch } from '@/components/ui/switch.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useAccount, useProfileDialog, useUpdateAccount } from '@/services/account/useAccount'
 import { userQuery } from '@/services/auth/useAuth'
-import type { AccountRow } from '@/types'
+import type { UserAccountRow } from '@/types'
 import { SocialShareButtons } from './SocialShareButtons'
 
 const EditProfile: FC = () => {
@@ -50,7 +50,7 @@ const EditProfile: FC = () => {
         friend_id: values.friend_id,
         is_public: values.is_public,
         is_active_trading: values.is_public === false ? false : account?.is_active_trading,
-      } as AccountRow,
+      } as UserAccountRow,
       {
         onSuccess: () => toast({ title: t('accountSaved'), variant: 'default' }),
         onError: (e) => {

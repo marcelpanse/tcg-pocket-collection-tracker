@@ -7,13 +7,13 @@ import { Spinner } from '@/components/Spinner'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { getExtraCards, getNeededCards, getTradeCards } from '@/lib/utils'
 import { publicCollectionQuery, useCollection } from '@/services/collection/useCollection'
-import { type AccountRow, type Card, tradableRarities } from '@/types'
+import { type Card, type PublicAccountRow, tradableRarities } from '@/types'
 import { CardList } from './CardList'
 import { TradeOffer } from './TradeOffer'
 
 interface Props {
-  ownAccount: AccountRow
-  friendAccount: AccountRow
+  ownAccount: PublicAccountRow
+  friendAccount: PublicAccountRow
 }
 
 export default function TradeWithTable({ ownAccount, friendAccount }: Props) {

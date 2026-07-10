@@ -1,38 +1,27 @@
 import { supabase } from '@/lib/supabase'
-import { type AccountRow, tradableRarities } from '@/types'
+import { type PublicAccountRow, tradableRarities, type UserAccountRow } from '@/types'
 
-export const getAccount = async (email: string) => {
+export const getUserAccount = async (email: string) => {
   if (!email) {
     throw new Error('Email is required to fetch account')
   }
 
-  const { data, error } = await supabase
-    .from('accounts')
-    .select(`
-    *,
-    trade_rarity_settings:trade_rarity_settings!email(*)
-  `)
-    .eq('email', email)
-    .maybeSingle()
+  const { data, error } = await supabase.from('accounts').select('*, trade_rarity_settings:trade_rarity_settings!email(*)').eq('email', email).maybeSingle()
 
   if (error) {
-    console.log('supa error', error)
-    throw new Error('Error fetching account')
+    throw new Error(`Error fetching account: ${error.message}`)
   }
 
-  console.log('fetched account', data)
-
   if (data) {
-    const accountRow = data as AccountRow
+    const accountRow = data as UserAccountRow
 
     for (const rarity of tradableRarities) {
       //set default values for each rarity that we don't have a setting for yet.
-      if (!accountRow.trade_rarity_settings?.find((r) => r.rarity === rarity)) {
-        accountRow.trade_rarity_settings?.push({ rarity, to_collect: 1, to_keep: 1 })
+      if (!accountRow.trade_rarity_settings.find((r) => r.rarity === rarity)) {
+        accountRow.trade_rarity_settings.push({ rarity, to_collect: 1, to_keep: 1 })
       }
     }
 
-    console.log('returning account', accountRow)
     return accountRow
   }
 
@@ -40,7 +29,7 @@ export const getAccount = async (email: string) => {
   return await updateAccount({
     email,
     username: null,
-  } as AccountRow)
+  } as UserAccountRow)
 }
 
 export const getPublicAccount = async (friendId: string) => {
@@ -58,24 +47,29 @@ export const getPublicAccount = async (friendId: string) => {
   console.log('fetched public account', data)
 
   if (data) {
-    return data as AccountRow
+    return data as PublicAccountRow
   }
 
   return null
 }
 
-export const updateAccount = async (account: AccountRow) => {
+export const updateAccount = async (account: UserAccountRow) => {
   if (!account.email) {
     throw new Error('Email is required to update account')
   }
 
-  const { data, error } = await supabase.from('accounts').upsert(account).select().single()
+  const { data, error } = await supabase
+    .from('accounts')
+    .upsert(account)
+    .eq('email', account.email)
+    .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
+    .single()
 
   if (error) {
     throw new Error(`Error updating account: ${error.message}`)
   }
 
-  return data as AccountRow
+  return data as UserAccountRow
 }
 
 export const updateAccountTradingFields = async ({
@@ -88,10 +82,10 @@ export const updateAccountTradingFields = async ({
   email: string
   username: string
   is_active_trading: boolean
-  language: AccountRow['language']
-  trade_rarity_settings: AccountRow['trade_rarity_settings']
+  language: UserAccountRow['language']
+  trade_rarity_settings: UserAccountRow['trade_rarity_settings']
 }) => {
-  const { data: rarityData, error: rarityError } = await supabase
+  const { error: rarityError } = await supabase
     .from('trade_rarity_settings')
     .upsert(trade_rarity_settings?.map((r) => ({ email, ...r })) ?? [])
     .select()
@@ -100,14 +94,16 @@ export const updateAccountTradingFields = async ({
     throw new Error(`Error updating trade rarity settings: ${rarityError.message}`)
   }
 
-  const { data, error } = await supabase.from('accounts').upsert({ email, username, is_active_trading, language: language }).select().single()
+  const { data, error } = await supabase
+    .from('accounts')
+    .upsert({ email, username, is_active_trading, language: language })
+    .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
+    .single()
 
   if (error) {
     throw new Error(`Error updating account: ${error.message}`)
   }
 
-  data.trade_rarity_settings = rarityData
-
   console.log('updated account', data)
-  return data as AccountRow
+  return data as UserAccountRow
 }
