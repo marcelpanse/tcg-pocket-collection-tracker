@@ -7,7 +7,6 @@ WITH recent_accounts AS (
     WHERE
         a.is_active_trading = TRUE
         AND a.is_public = TRUE
-        AND a.collection_last_updated IS NOT NULL
         AND EXISTS (
             SELECT internal_id
             FROM card_amounts ca
@@ -16,7 +15,7 @@ WITH recent_accounts AS (
                 AND ca.internal_id = 792963
                 AND ca.amount_owned > t.to_keep
         )
-    ORDER BY collection_last_updated DESC
+    ORDER BY last_active DESC
     LIMIT 50
 )
 SELECT
