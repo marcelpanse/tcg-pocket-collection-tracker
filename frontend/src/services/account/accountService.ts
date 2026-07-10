@@ -1,35 +1,41 @@
 import { supabase } from '@/lib/supabase'
 import { type PublicAccountRow, tradableRarities, type UserAccountRow } from '@/types'
 
+function transformUserAccount(account: UserAccountRow) {
+  account.collection_last_updated = new Date(account.collection_last_updated)
+  account.last_active = new Date(account.last_active)
+
+  for (const rarity of tradableRarities) {
+    // set default values for each rarity that we don't have a setting for yet.
+    if (!account.trade_rarity_settings.find((r) => r.rarity === rarity)) {
+      account.trade_rarity_settings.push({ rarity, to_collect: 1, to_keep: 1 })
+    }
+  }
+
+  return account as UserAccountRow
+}
+
 export const getUserAccount = async (email: string) => {
   if (!email) {
     throw new Error('Email is required to fetch account')
   }
 
   const { data, error } = await supabase.from('accounts').select('*, trade_rarity_settings:trade_rarity_settings!email(*)').eq('email', email).maybeSingle()
-
   if (error) {
     throw new Error(`Error fetching account: ${error.message}`)
   }
 
   if (data) {
-    const accountRow = data as UserAccountRow
-
-    for (const rarity of tradableRarities) {
-      //set default values for each rarity that we don't have a setting for yet.
-      if (!accountRow.trade_rarity_settings.find((r) => r.rarity === rarity)) {
-        accountRow.trade_rarity_settings.push({ rarity, to_collect: 1, to_keep: 1 })
-      }
-    }
-
-    return accountRow
+    return transformUserAccount(data as UserAccountRow)
   }
 
   // no account exists yet, create one
-  return await updateAccount({
-    email,
-    username: null,
-  } as UserAccountRow)
+  return transformUserAccount(
+    await updateAccount({
+      email,
+      username: null,
+    } as UserAccountRow),
+  )
 }
 
 export const getPublicAccount = async (friendId: string) => {
@@ -57,11 +63,9 @@ export const updateAccount = async (account: UserAccountRow) => {
   if (!account.email) {
     throw new Error('Email is required to update account')
   }
-
   const { data, error } = await supabase
     .from('accounts')
-    .upsert(account)
-    .eq('email', account.email)
+    .upsert({ ...account, trade_rarity_settings: undefined, last_active: undefined })
     .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
     .single()
 
@@ -69,7 +73,7 @@ export const updateAccount = async (account: UserAccountRow) => {
     throw new Error(`Error updating account: ${error.message}`)
   }
 
-  return data as UserAccountRow
+  return transformUserAccount(data as UserAccountRow)
 }
 
 export const updateAccountTradingFields = async ({
@@ -105,5 +109,18 @@ export const updateAccountTradingFields = async ({
   }
 
   console.log('updated account', data)
-  return data as UserAccountRow
+  return transformUserAccount(data as UserAccountRow)
+}
+
+export async function updateCollectionTimestamp(email: string, now: Date) {
+  const { error, data } = await supabase
+    .from('accounts')
+    .update({ collection_last_updated: now })
+    .eq('email', email)
+    .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
+    .single()
+  if (error) {
+    throw new Error(`Failed updating account: ${error.message}`)
+  }
+  return transformUserAccount(data as UserAccountRow)
 }

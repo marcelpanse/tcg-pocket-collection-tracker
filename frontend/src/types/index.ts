@@ -57,6 +57,7 @@ export interface PublicAccountRow {
 
 export interface UserAccountRow extends PublicAccountRow {
   email: string
+  last_active: Date
   collection_last_updated: Date
   is_public: boolean
   completed_missions?: string[]

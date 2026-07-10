@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { lazy, Suspense, useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { createHashRouter, Navigate, Outlet, RouterProvider, useLocation, useParams } from 'react-router'
 import DonationPopup from '@/components/DonationPopup.tsx'
@@ -17,6 +17,7 @@ import { Toaster } from './components/ui/toaster.tsx'
 import { ChatProvider } from './context/ChatProvider.tsx'
 import { DialogContext } from './context/DialogContext.ts'
 import DeckView from './pages/decks/DeckView.tsx'
+import { accountQuery, useUpdateAccount } from './services/account/useAccount.ts'
 
 // Lazy import for chunking
 const Overview = lazy(() => import('./pages/overview/Overview.tsx'))
@@ -48,8 +49,13 @@ function Analytics() {
 
 function App() {
   const { toast } = useToast()
-  const { data: user } = useQuery(userQuery)
   const authSSOQuery = useAuthSSO()
+
+  const { data: user } = useQuery(userQuery)
+  const { data: account } = useQuery(accountQuery(user?.user.email))
+  const updateAccountMutation = useUpdateAccount()
+  const lastLoggedInAs = useRef<string | null>(null)
+
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false)
   const [isProfileDialogOpen, setIsProfileDialogOpen] = useState(false)
   const [selectedCardId, setSelectedCardId] = useState<number | undefined>(undefined)
@@ -70,6 +76,24 @@ function App() {
       }
     }
   }, [user])
+
+  useEffect(() => {
+    console.log(account)
+    if (!account) {
+      lastLoggedInAs.current = null
+      return
+    }
+    if (lastLoggedInAs.current === account.email) {
+      return
+    }
+    lastLoggedInAs.current = account.email
+    updateAccountMutation.mutate(
+      { ...account, last_active: new Date() },
+      {
+        onError: (error) => console.error('Failed registering login\n', error),
+      },
+    )
+  }, [account])
 
   const router = createHashRouter([
     {
