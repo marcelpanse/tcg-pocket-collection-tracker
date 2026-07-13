@@ -172,40 +172,41 @@ export default function CardDetail() {
               )}
             </div>
 
-            <div className="flex w-fit rounded border border-neutral-700 divide-x divide-neutral-700 mt-4">
-              <span className="flex items-center px-2">
-                <label htmlFor="amount-wanted">Wanted</label>
-                <Tooltip id="amount-wanted-tooltip" style={{ maxWidth: '300px' }} />
-                <CircleHelp
-                  className="ml-2 size-4"
-                  data-tooltip-id="amount-wanted-tooltip"
-                  data-tooltip-content="Used in trading to determine if you want to get or give a copy of this card. It reffers to this specific card and does not count alternate versions. If not set, uses the value set in trade settings for this card rarity."
-                />
-              </span>
-              <input
-                id="amount-wanted"
-                className="no-spinner px-2 w-12 text-center"
-                type="number"
-                min="0"
-                placeholder={wantedPlaceholder}
-                value={amountWanted ?? ''}
-                onChange={(e) => updateAmountWanted(Number(e.target.value))}
-              />
-              <button type="button" className="px-1 w-fit" onClick={() => updateAmountWanted(Math.max((amountWanted ?? startingAmount) - 1, 0))}>
-                <Minus />
-              </button>
-              <button type="button" className="px-1 w-fit" onClick={() => updateAmountWanted((amountWanted ?? startingAmount) + 1)}>
-                <Plus />
-              </button>
-              <button type="button" className="px-2 py-1 w-fit" onClick={() => updateAmountWanted(null)}>
-                <Trash2 />
-              </button>
-            </div>
-
             {card?.rarity && tradableRarities.includes(card.rarity as (typeof tradableRarities)[number]) && (
-              <Link className="w-fit" to={`/trade/matches/results?card_id=${card?.internal_id}`} onClick={() => setOpen(false)}>
-                <Button>Find trades</Button>
-              </Link>
+              <>
+                <div className="flex w-fit rounded border border-neutral-700 divide-x divide-neutral-700 mt-4">
+                  <span className="flex items-center px-2">
+                    <label htmlFor="amount-wanted">Wanted</label>
+                    <Tooltip id="amount-wanted-tooltip" style={{ maxWidth: '300px' }} />
+                    <CircleHelp
+                      className="ml-2 size-4"
+                      data-tooltip-id="amount-wanted-tooltip"
+                      data-tooltip-content="Used in trading to determine if you want to get or give a copy of this card. It reffers to this specific card and does not count alternate versions. If not set, uses the value set in trade settings for this card rarity."
+                    />
+                  </span>
+                  <input
+                    id="amount-wanted"
+                    className="no-spinner px-2 w-12 text-center"
+                    type="number"
+                    min="0"
+                    placeholder={wantedPlaceholder}
+                    value={amountWanted ?? ''}
+                    onChange={(e) => updateAmountWanted(Number(e.target.value))}
+                  />
+                  <button type="button" className="px-1 w-fit" onClick={() => updateAmountWanted(Math.max((amountWanted ?? startingAmount) - 1, 0))}>
+                    <Minus />
+                  </button>
+                  <button type="button" className="px-1 w-fit" onClick={() => updateAmountWanted((amountWanted ?? startingAmount) + 1)}>
+                    <Plus />
+                  </button>
+                  <button type="button" className="px-2 py-1 w-fit" onClick={() => updateAmountWanted(null)}>
+                    <Trash2 />
+                  </button>
+                </div>
+                <Link className="w-fit" to={`/trade/matches/results?card_id=${card?.internal_id}`} onClick={() => setOpen(false)}>
+                  <Button>Find trades</Button>
+                </Link>
+              </>
             )}
 
             <div className="mt-8">
