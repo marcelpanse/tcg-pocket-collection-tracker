@@ -1,11 +1,10 @@
-import { useVirtualizer } from '@tanstack/react-virtual'
 import i18n from 'i18next'
-import { useEffect, useRef, useState } from 'react'
+import { Trash2 } from 'lucide-react'
+import { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
-import { CardLine } from '@/components/CardLine'
 import { DropdownFilter } from '@/components/Filters'
-import SearchInput from '@/components/filters/SearchInput'
+import { SelectCardContext } from '@/components/SelectCard'
 import { Button } from '@/components/ui/button'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { getFilteredCards } from '@/lib/filters'
@@ -31,9 +30,9 @@ export default function TradeMatches() {
   const { t } = useTranslation(['trade-matches', 'common'])
   const navigate = useNavigate()
 
-  const scrollRef = useRef(null)
-  const [search, setSearch] = useState('')
-  const [selectedCard, setSelectedCard] = useState<number>()
+  const { selectCard } = useContext(SelectCardContext)
+
+  const [selectedCard, setSelectedCard] = useState<number | undefined>(undefined)
   const { data: account } = useAccount()
   const [selectedLanguage, setSelectedLanguage] = useState<GameLanguage | ''>('')
   useEffect(() => {
@@ -41,49 +40,32 @@ export default function TradeMatches() {
       setSelectedLanguage(account.language as GameLanguage)
     }
   }, [account?.language])
-  const cards = getFilteredCards({ search, rarity: [...tradableRarities] }, new Map())
+  const cards = getFilteredCards({ rarity: [...tradableRarities] }, new Map())
   const card = selectedCard && getCardByInternalId(selectedCard)
-
-  const virtualizer = useVirtualizer({
-    getScrollElement: () => scrollRef.current,
-    count: cards.length,
-    getItemKey: (index) => cards[index].card_id,
-    estimateSize: () => 32,
-  })
 
   if (selectedCard && !card) {
     throw new Error('Selected card was not found in the database')
   }
 
   return (
-    <div className="sm:w-sm mx-auto">
-      <SearchInput setValue={setSearch} />
-      <div ref={scrollRef} className="mt-2 h-72 rounded-md border border-neutral-700 px-1 overflow-y-auto">
-        <ul style={{ height: `${virtualizer.getTotalSize()}px` }} className="relative">
-          {virtualizer.getVirtualItems().map((row) => {
-            const c = cards[row.index]
-            return (
-              <button
-                type="button"
-                key={row.key}
-                className="absolute top-0 left-0 w-full cursor-pointer"
-                style={{ height: `${row.size}px`, transform: `translateY(${row.start}px)` }}
-                onClick={() => setSelectedCard((prev) => (prev === c.internal_id ? undefined : c.internal_id))}
-              >
-                <CardLine className={`w-full ${selectedCard === c.internal_id && 'bg-green-900'} hover:bg-neutral-600`} card_id={c.card_id} />
-              </button>
-            )
-          })}
-        </ul>
-      </div>
+    <div className="max-w-xs w-full mx-auto p-4 rounded-md border bg-neutral-800 border-neutral-700">
+      <h1 className="text-lg mb-4">Find trades</h1>
       <DropdownFilter
-        className="mt-2"
+        className="mt-2 bg-neutral-900"
         label="Card language"
         options={['', ...gameLanguages]}
         value={selectedLanguage}
         onChange={setSelectedLanguage}
         show={(x) => (x === '' ? 'Any language' : formatLanguage[x])}
       />
+      <div className="h-9 mt-2 flex rounded border border-neutral-700 divide-x divide-neutral-700 bg-neutral-900 [&>*:enabled]:hover:bg-neutral-600 [&>*:disabled]:opacity-50">
+        <button className="flex-1" onClick={() => selectCard({ cards, callback: setSelectedCard })} type="button">
+          {card ? getCardNameByLang(card, i18n.language) : 'Select wanted card'}
+        </button>
+        <button className="flex-0" onClick={() => setSelectedCard(undefined)} disabled={selectedCard === undefined} type="button">
+          <Trash2 className="mx-2 size-5" />
+        </button>
+      </div>
       <div className="flex gap-2 mt-4">
         <Button className="w-full" onClick={() => navigate(buildUrl(selectedCard, selectedLanguage))}>
           {card ? t('search.byCard', { cardName: getCardNameByLang(card, i18n.language) }) : t('search.allCards')}

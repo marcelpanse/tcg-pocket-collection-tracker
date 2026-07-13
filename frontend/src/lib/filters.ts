@@ -86,27 +86,7 @@ export function getFilteredCards(filters: Filters, cards: Collection, tradingSet
   }
 
   if (filters.search) {
-    const query = filters.search.toLowerCase()
-    const threshold = 2 // tweak if needed
-
-    filteredCards = filteredCards.filter((card) => {
-      const name = getCardNameByLang(card, i18n.language).toLowerCase()
-
-      let filterAllText = false
-      if (filters.allTextSearch) {
-        filterAllText =
-          (card.ability && (card.ability.name.toLowerCase().includes(query) || card.ability.effect.toLowerCase().includes(query))) ||
-          card.attacks.some(
-            (attack) =>
-              attack.name?.toLowerCase().includes(query) || (attack.effect?.toLowerCase() !== 'no effect' && attack.effect?.toLowerCase()?.includes(query)),
-          )
-      }
-      const isExactMatch = name.includes(query)
-      const isFuzzyMatch = levenshtein(name, query) <= threshold
-      const isIdMatch = card.card_id.toLowerCase().includes(query)
-
-      return filterAllText || isExactMatch || isFuzzyMatch || isIdMatch
-    })
+    filteredCards = filteredCards.filter(searchPredicate(filters.search, filters.allTextSearch))
   }
 
   // Fill up `collected` and `updated at`
@@ -142,4 +122,27 @@ export function getFilteredCards(filters: Filters, cards: Collection, tradingSet
   }
 
   return filteredCards
+}
+
+export function searchPredicate(search: string, allTextSearch?: boolean) {
+  const query = search.toLowerCase()
+  const threshold = 2 // tweak if needed
+  return (card: Card) => {
+    const name = getCardNameByLang(card, i18n.language).toLowerCase()
+
+    let filterAllText = false
+    if (allTextSearch) {
+      filterAllText =
+        (card.ability && (card.ability.name.toLowerCase().includes(query) || card.ability.effect.toLowerCase().includes(query))) ||
+        card.attacks.some(
+          (attack) =>
+            attack.name?.toLowerCase().includes(query) || (attack.effect?.toLowerCase() !== 'no effect' && attack.effect?.toLowerCase()?.includes(query)),
+        )
+    }
+    const isExactMatch = name.includes(query)
+    const isFuzzyMatch = levenshtein(name, query) <= threshold
+    const isIdMatch = card.card_id.toLowerCase().includes(query)
+
+    return filterAllText || isExactMatch || isFuzzyMatch || isIdMatch
+  }
 }
