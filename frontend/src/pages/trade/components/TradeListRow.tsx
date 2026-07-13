@@ -48,7 +48,7 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
     return (
       <>
         <Tooltip id={`status-${row.id}`} />
-        <Slot className="rounded-full p-[3px] my-auto" data-tooltip-id={`status-${row.id}`} data-tooltip-content={t(`status.${row.status}`)}>
+        <Slot className="shrink-0 rounded-full p-[3px] my-auto" data-tooltip-id={`status-${row.id}`} data-tooltip-content={t(`status.${row.status}`)}>
           {style[row.status]}
         </Slot>
       </>
