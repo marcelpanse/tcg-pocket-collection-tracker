@@ -48,6 +48,7 @@ CREATE TABLE public.accounts (
     collection_last_updated timestamp with time zone,
     completed_missions character varying[],
     language character(2),
+    last_active timestamp with time zone DEFAULT now() NOT NULL,
     CONSTRAINT username_min_length CHECK (((username IS NULL) OR (length((username)::text) >= 2)))
 );
 
@@ -312,8 +313,8 @@ CREATE TABLE public.trades (
     updated_at timestamp with time zone DEFAULT now() NOT NULL,
     offering_friend_id character varying NOT NULL,
     receiving_friend_id character varying NOT NULL,
-    offer_card_id character varying NOT NULL,
-    receiver_card_id character varying NOT NULL,
+    offer_card_id character varying,
+    receiver_card_id character varying,
     status character varying NOT NULL,
     offerer_ended boolean DEFAULT false NOT NULL,
     receiver_ended boolean DEFAULT false NOT NULL
@@ -461,7 +462,7 @@ CREATE INDEX idx_accounts_collection_last_updated ON public.accounts USING btree
 -- Name: idx_accounts_recent; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX idx_accounts_recent ON public.accounts USING btree (is_active_trading, is_public, collection_last_updated DESC) WHERE (collection_last_updated IS NOT NULL);
+CREATE INDEX idx_accounts_recent ON public.accounts USING btree (is_active_trading, is_public, last_active DESC);
 
 
 --

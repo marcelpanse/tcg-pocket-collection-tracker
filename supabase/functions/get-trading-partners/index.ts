@@ -20,12 +20,11 @@ WITH recent_accounts AS (
       AND is_active_trading = TRUE
       AND is_public = TRUE
       AND username IS NOT NULL
-      AND collection_last_updated IS NOT NULL
       AND ($2::text IS NULL OR language = $2::text)
-      AND collection_last_updated >= now() - interval '14 days'
+      AND last_active >= now() - interval '14 days'
       AND (SELECT COUNT(*) FROM trades WHERE status = 'accepted' AND (offering_friend_id = friend_id OR receiving_friend_id = friend_id)) < 8
       AND (SELECT COUNT(*) FROM trades WHERE status = 'offered' AND receiving_friend_id = friend_id) < 3
-    ORDER BY collection_last_updated DESC
+    ORDER BY last_active DESC
     LIMIT 50
 )
 SELECT
@@ -103,7 +102,6 @@ WITH recent_accounts AS (
         AND a.is_active_trading = TRUE
         AND a.is_public = TRUE
         AND a.username IS NOT NULL
-        AND a.collection_last_updated IS NOT NULL
         AND EXISTS (
             SELECT internal_id
             FROM card_amounts ca
@@ -113,10 +111,10 @@ WITH recent_accounts AS (
                 AND ca.amount_owned > COALESCE(ca.amount_wanted, t.to_keep)
         )
         AND ($3::text IS NULL OR language = $3::text)
-        AND collection_last_updated >= now() - interval '14 days'
+        AND last_active >= now() - interval '14 days'
         AND (SELECT COUNT(*) FROM trades WHERE status = 'accepted' AND (offering_friend_id = friend_id OR receiving_friend_id = friend_id)) < 8
         AND (SELECT COUNT(*) FROM trades WHERE status = 'offered' AND receiving_friend_id = friend_id) < 3
-    ORDER BY collection_last_updated DESC
+    ORDER BY last_active DESC
     LIMIT 50
 )
 SELECT

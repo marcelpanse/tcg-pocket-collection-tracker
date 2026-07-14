@@ -1,7 +1,8 @@
 import { getCardById } from '@/lib/CardsDB'
 import { supabase } from '@/lib/supabase'
 import { chunk } from '@/lib/utils'
-import type { AccountRow, CardAmountsRowUpdate, CardAmountUpdate, Collection, CollectionRow } from '@/types'
+import type { CardAmountsRowUpdate, CardAmountUpdate, Collection, CollectionRow, UserAccountRow } from '@/types'
+import { updateCollectionTimestamp } from '../account/accountService'
 
 export interface CollectionRowUpdate {
   email: string
@@ -20,17 +21,9 @@ export const removeLocalCacheItems = (email: string) => {
   localStorage.removeItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
 }
 
-export async function getCollection(email: string, collectionLastUpdatedRaw?: Date | string): Promise<Collection> {
+export async function getCollection(email: string, collectionLastUpdated?: Date): Promise<Collection> {
   if (!email) {
     throw new Error('Email is required to fetch collection')
-  }
-
-  // it seems sometimes the collectionLastUpdated is a string, then we need to parse it into a Date.
-  let collectionLastUpdated: Date | undefined
-  if (typeof collectionLastUpdatedRaw === 'string') {
-    collectionLastUpdated = new Date(collectionLastUpdatedRaw)
-  } else {
-    collectionLastUpdated = collectionLastUpdatedRaw
   }
 
   // Check if we should use cached data
@@ -68,19 +61,6 @@ export function getPublicCollection(friendId: string) {
   return fetchCollectionFromAPI('public_card_amounts_collection', 'friend_id', friendId)
 }
 
-export async function updateCollectionTimestamp(email: string, now: Date) {
-  const { error, data } = await supabase
-    .from('accounts')
-    .update({ collection_last_updated: now })
-    .eq('email', email)
-    .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
-    .single()
-  if (error) {
-    throw new Error(`Failed updating account: ${error.message}`)
-  }
-  return data as AccountRow
-}
-
 export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[], collection: Collection) => {
   if (!email) {
     throw new Error('Email is required to update cards')
@@ -110,7 +90,7 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
     .filter((row, index, self) => index === self.findIndex((r) => r.internal_id === row.internal_id))
 
   // Execute all three database calls in parallel
-  let account: AccountRow
+  let account: UserAccountRow
   try {
     const [accountResult, cardAmountsResult] = await Promise.all([updateCollectionTimestamp(email, now), supabase.from('card_amounts').upsert(amountRows)])
 
@@ -160,7 +140,7 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
 
   return {
     cards: collection,
-    account: account as AccountRow,
+    account: account as UserAccountRow,
   }
 }
 
@@ -241,7 +221,7 @@ export const deleteCard = async (email: string, collection: Collection, cardIds:
 
   return {
     cards: collection,
-    account: updatedAccount as AccountRow,
+    account: updatedAccount as UserAccountRow,
   }
 }
 

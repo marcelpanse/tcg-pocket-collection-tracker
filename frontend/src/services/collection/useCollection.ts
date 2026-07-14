@@ -2,16 +2,10 @@ import { queryOptions, useMutation, useQuery, useQueryClient } from '@tanstack/r
 import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
 import { useToast } from '@/hooks/use-toast.ts'
+import { updateCollectionTimestamp } from '@/services/account/accountService'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { userQuery } from '@/services/auth/useAuth.ts'
-import {
-  deleteCard,
-  getCollection,
-  getPublicCollection,
-  updateAmountWanted,
-  updateCards,
-  updateCollectionTimestamp,
-} from '@/services/collection/collectionService.ts'
+import { deleteCard, getCollection, getPublicCollection, updateAmountWanted, updateCards } from '@/services/collection/collectionService.ts'
 import type { CardAmountUpdate, CollectionRow } from '@/types'
 
 export function collectionQuery(email: string | undefined, collectionLastUpdated: Date | undefined) {

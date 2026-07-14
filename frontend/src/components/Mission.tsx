@@ -168,7 +168,6 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
       ...account,
       completed_missions: updatedMissions,
     }
-    delete mergedAccount.trade_rarity_settings
     updateAccount(mergedAccount)
   }
 
