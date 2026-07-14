@@ -1,0 +1,1 @@
+import{J as e}from"./useAuth-CiuKxwO2.js";var t=e(`chevron-first`,[[`path`,{d:`m17 18-6-6 6-6`,key:`1yerx2`}],[`path`,{d:`M7 6v12`,key:`1p53r6`}]]),n=e(`chevron-left`,[[`path`,{d:`m15 18-6-6 6-6`,key:`1wnfg3`}]]);export{t as n,n as t};
