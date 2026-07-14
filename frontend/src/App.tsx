@@ -17,7 +17,7 @@ import { Toaster } from './components/ui/toaster.tsx'
 import { ChatProvider } from './context/ChatProvider.tsx'
 import { DialogContext } from './context/DialogContext.ts'
 import DeckView from './pages/decks/DeckView.tsx'
-import { accountQuery, useUpdateAccount } from './services/account/useAccount.ts'
+import { accountQuery, useUpdateLastActive } from './services/account/useAccount.ts'
 
 // Lazy import for chunking
 const Overview = lazy(() => import('./pages/overview/Overview.tsx'))
@@ -53,7 +53,7 @@ function App() {
 
   const { data: user } = useQuery(userQuery)
   const { data: account } = useQuery(accountQuery(user?.user.email))
-  const updateAccountMutation = useUpdateAccount()
+  const updateLastActiveMutation = useUpdateLastActive()
   const lastLoggedInAs = useRef<string | null>(null)
 
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false)
@@ -78,7 +78,6 @@ function App() {
   }, [user])
 
   useEffect(() => {
-    console.log(account)
     if (!account) {
       lastLoggedInAs.current = null
       return
@@ -87,8 +86,8 @@ function App() {
       return
     }
     lastLoggedInAs.current = account.email
-    updateAccountMutation.mutate(
-      { ...account, last_active: new Date() },
+    updateLastActiveMutation.mutate(
+      { email: account.email, now: new Date() },
       {
         onError: (error) => console.error('Failed registering login\n', error),
       },

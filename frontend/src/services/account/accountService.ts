@@ -112,6 +112,19 @@ export const updateAccountTradingFields = async ({
   return transformUserAccount(data as UserAccountRow)
 }
 
+export async function updateLastActive(email: string, now: Date) {
+  const { error, data } = await supabase
+    .from('accounts')
+    .update({ last_active: now })
+    .eq('email', email)
+    .select('*, trade_rarity_settings:trade_rarity_settings!email(*)')
+    .single()
+  if (error) {
+    throw new Error(`Failed updating last active: ${error.message}`)
+  }
+  return transformUserAccount(data as UserAccountRow)
+}
+
 export async function updateCollectionTimestamp(email: string, now: Date) {
   const { error, data } = await supabase
     .from('accounts')

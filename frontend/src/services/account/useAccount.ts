@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
 import { userQuery } from '@/services/auth/useAuth.ts'
 import type { UserAccountRow } from '@/types'
-import { getPublicAccount, getUserAccount, updateAccount, updateAccountTradingFields } from './accountService'
+import { getPublicAccount, getUserAccount, updateAccount, updateAccountTradingFields, updateLastActive } from './accountService'
 
 export function accountQuery(email: string | undefined) {
   return queryOptions({
@@ -33,6 +33,17 @@ export function useUpdateAccount() {
 
   return useMutation({
     mutationFn: updateAccount,
+    onSuccess: (updatedAccount) => {
+      queryClient.setQueryData(['account', updatedAccount.email], updatedAccount)
+    },
+  })
+}
+
+export function useUpdateLastActive() {
+  const queryClient = useQueryClient()
+
+  return useMutation({
+    mutationFn: ({ email, now }: { email: string; now: Date }) => updateLastActive(email, now),
     onSuccess: (updatedAccount) => {
       queryClient.setQueryData(['account', updatedAccount.email], updatedAccount)
     },
