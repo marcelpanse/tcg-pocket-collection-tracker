@@ -44,7 +44,7 @@ export default function TradeWithTable({ ownAccount, friendAccount }: Props) {
   }, [location, friendCards, ownedCards?.size]) // Uses size because ReactQuery returns a different object every 10 seconds
 
   if (isLoadingOwnCards || isLoadingFriendCards) {
-    return <Spinner size="lg" overlay />
+    return <Spinner size="lg" className="mx-auto mt-8" />
   }
 
   if (ownedCards === undefined || friendCards === undefined) {
