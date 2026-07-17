@@ -131,7 +131,7 @@ function TradeWith() {
           </div>
           <hr className="border-neutral-700 my-2" />
           {allTrades.isLoading ? (
-            <Spinner size="md" />
+            <Spinner size="md" className="mx-auto" />
           ) : (
             allTrades.data && (
               <>
