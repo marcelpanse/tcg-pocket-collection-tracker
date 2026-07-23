@@ -23,18 +23,17 @@ interface Props {
   friendCard: Card | null
   setYourCard: (card: Card | null) => void
   setFriendCard: (card: Card | null) => void
+  disabled: boolean
 }
 
-export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, setYourCard, setFriendCard }) => {
+export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, setYourCard, setFriendCard, disabled }) => {
   const { t } = useTranslation('trade-matches')
   const { toast } = useToast()
 
   const insertTradeMutation = useInsertTrade()
 
-  const enabled = (!yourCard && friendCard) || (yourCard && friendCard && yourCard.rarity === friendCard.rarity)
-
   async function submit() {
-    if (!enabled) {
+    if (disabled) {
       return
     }
     if (!yourId?.match(/^\d{16}$/)) {
@@ -45,7 +44,7 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
       offering_friend_id: yourId,
       receiving_friend_id: friendId,
       offer_card_id: yourCard?.card_id,
-      receiver_card_id: friendCard.card_id,
+      receiver_card_id: friendCard?.card_id,
       status: 'offered',
     } as TradeRow
     try {
@@ -80,7 +79,7 @@ export const TradeOffer: FC<Props> = ({ yourId, friendId, yourCard, friendCard, 
           <OfferCard card={friendCard} />
         </div>
       </div>
-      <Button className="block w-full sm:w-96 mx-auto mt-1 text-center" variant="default" onClick={submit} disabled={!enabled}>
+      <Button className="block w-full sm:w-96 mx-auto mt-1 text-center" variant="default" onClick={submit} disabled={disabled}>
         {t('offerTrades')}
       </Button>
     </div>

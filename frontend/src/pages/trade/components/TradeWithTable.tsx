@@ -7,7 +7,7 @@ import { Spinner } from '@/components/Spinner'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { getExtraCards, getNeededCards, getTradeCards } from '@/lib/utils'
 import { publicCollectionQuery, useCollection } from '@/services/collection/useCollection'
-import { type Card, type PublicAccountRow, tradableRarities } from '@/types'
+import { type Card, type PublicAccountRow, type TradableRarity, tradableRarities } from '@/types'
 import { CardList } from './CardList'
 import { TradeOffer } from './TradeOffer'
 
@@ -62,6 +62,9 @@ export default function TradeWithTable({ ownAccount, friendAccount }: Props) {
 
   const hasPossibleTrades = tradableRarities.some((r) => (cardsToGive[r] ?? []).length > 0 && (cardsToReceive[r] ?? []).length > 0)
 
+  const canSendOffer =
+    (!yourCard && friendCard && !!cardsToGive[friendCard.rarity as TradableRarity]) || (yourCard && friendCard && yourCard.rarity === friendCard.rarity)
+
   return (
     <>
       <TradeOffer
@@ -71,6 +74,7 @@ export default function TradeWithTable({ ownAccount, friendAccount }: Props) {
         friendCard={friendCard}
         setYourCard={setYourCard}
         setFriendCard={setFriendCard}
+        disabled={!canSendOffer}
       />
 
       {!hasPossibleTrades && (
