@@ -90,7 +90,7 @@ export async function updateDeck(deck: Deck) {
   if (error) {
     throw new Error(`Failed updating decks: ${error.message}`)
   }
-  return data as Deck
+  return { ...data, updated_at: new Date(data.updated_at) } as Deck
 }
 
 export async function deleteDeck(id: number) {
