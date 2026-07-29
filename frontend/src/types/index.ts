@@ -70,7 +70,7 @@ export interface CollectionRow {
   amount_wanted: number | null
   created_at: Date
   updated_at: Date
-  collection: string[] // array of cardIds
+  collected: boolean
 }
 
 export type Collection = Map<number, CollectionRow>
@@ -78,7 +78,7 @@ export type Collection = Map<number, CollectionRow>
 export interface CardAmountUpdate {
   internal_id: number
   amount_owned: number
-  card_id: string
+  collected: boolean
 }
 
 export interface CardAmountsRowUpdate {

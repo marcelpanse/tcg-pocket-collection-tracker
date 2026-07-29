@@ -170,9 +170,9 @@ const Scan = () => {
 
     updateCardsMutation.mutate(
       updates.map((x) => ({
-        card_id: x.card_id,
         internal_id: getInternalIdByCardId(x.card_id),
         amount_owned: Math.max(0, x.previous_amount + x.increment),
+        collected: true,
       })),
     )
 

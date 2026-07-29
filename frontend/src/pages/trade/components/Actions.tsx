@@ -39,7 +39,7 @@ export default function Actions({ trade, setSelected }: Props) {
 
   const getAndIncrement = (card_id: string, increment: number): CardAmountUpdate => {
     const internal_id = getInternalIdByCardId(card_id)
-    return { card_id, internal_id, amount_owned: (ownedCards.get(internal_id)?.amount_owned ?? 0) + increment }
+    return { internal_id, amount_owned: (ownedCards.get(internal_id)?.amount_owned ?? 0) + increment, collected: true }
   }
 
   const end = async () => {

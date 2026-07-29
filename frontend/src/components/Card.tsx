@@ -4,7 +4,7 @@ import { startTransition, useOptimistic } from 'react'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { cn, getCardNameByLang } from '@/lib/utils'
-import { useDeleteCard, useSelectedCard, useUpdateCards } from '@/services/collection/useCollection'
+import { useSelectedCard, useSetCollected, useUpdateCards } from '@/services/collection/useCollection'
 import type { Card as CardType } from '@/types'
 import { Spinner } from './Spinner'
 
@@ -18,15 +18,15 @@ interface CardProps {
 export function Card({ card, onImageClick, className, editable = true }: CardProps) {
   const { setSelectedCardId } = useSelectedCard()
   const updateCardsMutation = useUpdateCards()
-  const deleteCardMutation = useDeleteCard()
-  const isPending = updateCardsMutation.isPending || deleteCardMutation.isPending
+  const setCollectedMutation = useSetCollected()
+  const isPending = updateCardsMutation.isPending || setCollectedMutation.isPending
   const [amountOwned, setAmountOwned] = useOptimistic(card.amount_owned ?? 0, (_prev, curr: number) => curr)
 
   const updateCardCount = (x: number) => {
     startTransition(async () => {
       setAmountOwned(x)
       try {
-        await updateCardsMutation.mutateAsync([{ card_id: card.card_id, internal_id: card.internal_id, amount_owned: x }])
+        await updateCardsMutation.mutateAsync([{ internal_id: card.internal_id, amount_owned: x, collected: true }])
       } catch (error) {
         console.log('Failed updating card count:', error)
       }
@@ -36,7 +36,7 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
   const handleMinusButtonClick = () => {
     if (card.collected && amountOwned === 0) {
       startTransition(async () => {
-        await deleteCardMutation.mutateAsync([card.card_id])
+        await setCollectedMutation.mutateAsync({ internal_ids: [card.internal_id], collected: false })
       })
     } else {
       updateCardCount(amountOwned - 1)
