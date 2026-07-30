@@ -40,6 +40,7 @@ const packs = [
   'pulsingaurapack',
   'paradoxdrivepack',
   'everydaywonderspack',
+  'ruleroftheskiespack',
   'allcards',
 ]
 
@@ -118,6 +119,13 @@ const rarityOverrides: Record<ExpansionId, { rarity: Rarity; start: number; end:
     { rarity: '✵', start: 91, end: 100 },
     { rarity: '✵✵', start: 101, end: 104 },
   ],
+  B4: [
+    { rarity: '✵', start: 156, end: 179 },
+    { rarity: '✵', start: 204, end: 223 },
+    { rarity: '✵✵', start: 180, end: 201 },
+    { rarity: '✵✵', start: 224, end: 231 },
+    // 202-203 are gold full art (Limitless shows ☆☆☆) — no override, the project's rarity symbol is preserved directly
+  ],
   'P-A': [],
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],
 }
@@ -137,6 +145,30 @@ async function downloadImage(imageUrl: string, dest: string) {
   }
 
   await pipeline(response.body, fs.createWriteStream(dest))
+}
+// Fallback to Serebii when Limitless CDN returns 403 for new sets
+async function downloadImageWithFallback(imageUrl: string, dest: string, cardNumber: number): Promise<boolean> {
+  try {
+    await downloadImage(imageUrl, dest)
+    return true
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err)
+    if (!msg.includes('403') && !msg.includes('Forbidden')) {
+      throw err
+    }
+    // Serebii URL pattern: https://www.serebii.net/tcgpocket/<setname>/<number>.jpg
+    const setSlug = imageUrl.match(/pocket\/([A-Za-z0-9]+)\//)?.[1]?.toLowerCase() ?? ''
+    const serebiiUrl = `https://www.serebii.net/tcgpocket/${setSlug}/${cardNumber}.jpg`
+    try {
+      await downloadImage(serebiiUrl, dest)
+      console.log(`  (used Serebii fallback for card ${cardNumber})`)
+      return true
+    } catch (serebiiErr) {
+      const sMsg = serebiiErr instanceof Error ? serebiiErr.message : String(serebiiErr)
+      console.warn(`  Serebii fallback also failed for card ${cardNumber}: ${sMsg}`)
+      return false
+    }
+  }
 }
 
 async function fetchHTML(url: string) {
@@ -259,7 +291,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
   const imageName = card_id + path.extname(imageUrl)
   const imageDest = path.join(imagesDir, imageName)
   if (!fs.existsSync(imageDest)) {
-    await downloadImage(imageUrl, imageDest)
+    await downloadImageWithFallback(imageUrl, imageDest, inPackId)
   }
   const image = imagesPath + imageName
 
