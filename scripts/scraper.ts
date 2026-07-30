@@ -40,6 +40,7 @@ const packs = [
   'pulsingaurapack',
   'paradoxdrivepack',
   'everydaywonderspack',
+  'ruleroftheskiespack',
   'allcards',
 ]
 
@@ -117,6 +118,13 @@ const rarityOverrides: Record<ExpansionId, { rarity: Rarity; start: number; end:
   B3b: [
     { rarity: '✵', start: 91, end: 100 },
     { rarity: '✵✵', start: 101, end: 104 },
+  ],
+  B4: [
+    { rarity: '✵', start: 156, end: 179 },
+    { rarity: '✵', start: 204, end: 223 },
+    { rarity: '✵✵', start: 180, end: 201 },
+    { rarity: '✵✵', start: 224, end: 231 },
+    // 202-203 are gold full art (Limitless shows ☆☆☆) — no override, the project's rarity symbol is preserved directly
   ],
   'P-A': [],
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],
