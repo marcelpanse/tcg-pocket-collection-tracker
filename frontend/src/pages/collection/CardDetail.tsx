@@ -105,10 +105,10 @@ export default function CardDetail() {
   const packName = card?.pack === 'everypack' ? expansion?.packs[0].name : card?.pack
 
   const setCollected = (collected: boolean) => {
-    if (!row) {
+    if (!id) {
       throw new Error('No card selected')
     }
-    setCollectedMutation.mutateAsync({ internal_ids: [row.internal_id], collected })
+    setCollectedMutation.mutateAsync({ internal_ids: [id], collected })
   }
 
   const setOpen = (open: boolean) => {
@@ -154,7 +154,13 @@ export default function CardDetail() {
 
           <div className="px-2 w-full flex flex-col gap-2">
             <label>
-              <input type="checkbox" className="mr-2" checked={row?.collected} onChange={(e) => setCollected(e.currentTarget.checked)} />
+              <input
+                type="checkbox"
+                className="mr-2"
+                checked={row?.collected}
+                onChange={(e) => setCollected(e.currentTarget.checked)}
+                disabled={row && row.amount_owned > 0}
+              />
               Collected
             </label>
 

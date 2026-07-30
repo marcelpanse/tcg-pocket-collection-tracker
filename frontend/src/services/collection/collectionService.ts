@@ -10,8 +10,8 @@ export interface CollectionRowUpdate {
   card_id: string
 }
 
-const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v2'
-const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v2'
+const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v3'
+const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v3'
 const PAGE_SIZE = 500
 
 export const removeLocalCacheItems = (email: string) => {
@@ -187,11 +187,19 @@ export const setCollected = async (email: string, collection: Collection, intern
   // Find and update the cache - remove the card_id from the collection array
   for (const internal_id of internal_ids) {
     const row = collection.get(internal_id)
-    if (row?.collected) {
-      row.collected = false
+    if (row) {
+      row.collected = collected
       row.updated_at = now
     } else {
-      console.warn('Card not owned:', internal_id)
+      collection.set(internal_id, {
+        email,
+        internal_id,
+        amount_owned: 0,
+        amount_wanted: null,
+        created_at: now,
+        updated_at: now,
+        collected,
+      })
     }
   }
 
