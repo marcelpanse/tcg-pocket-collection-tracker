@@ -120,11 +120,9 @@ const rarityOverrides: Record<ExpansionId, { rarity: Rarity; start: number; end:
     { rarity: '✵✵', start: 101, end: 104 },
   ],
   B4: [
-    { rarity: '✵', start: 156, end: 179 },
     { rarity: '✵', start: 204, end: 223 },
-    { rarity: '✵✵', start: 180, end: 201 },
     { rarity: '✵✵', start: 224, end: 231 },
-    // 202-203 are gold full art (Limitless shows ☆☆☆) — no override, the project's rarity symbol is preserved directly
+    // 156-201 are gold full-art (☆/☆☆), 202-203 are ☆☆☆, 232-233 are Crown — Limitless labels those correctly.
   ],
   'P-A': [],
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],
