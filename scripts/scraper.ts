@@ -144,8 +144,9 @@ async function downloadImage(imageUrl: string, dest: string) {
 
   await pipeline(response.body, fs.createWriteStream(dest))
 }
-// Fallback to Serebii when Limitless CDN returns 403 for new sets
-async function downloadImageWithFallback(imageUrl: string, dest: string, cardNumber: number): Promise<boolean> {
+// Fallback to Serebii when Limitless CDN returns 403 for new sets.
+// Serebii's URL slug matches expansion.name (e.g. B4 → "ruleroftheskies", P-B → "promo-b").
+async function downloadImageWithFallback(imageUrl: string, dest: string, cardNumber: number, serebiiSlug: string): Promise<boolean> {
   try {
     await downloadImage(imageUrl, dest)
     return true
@@ -154,9 +155,7 @@ async function downloadImageWithFallback(imageUrl: string, dest: string, cardNum
     if (!msg.includes('403') && !msg.includes('Forbidden')) {
       throw err
     }
-    // Serebii URL pattern: https://www.serebii.net/tcgpocket/<setname>/<number>.jpg
-    const setSlug = imageUrl.match(/pocket\/([A-Za-z0-9]+)\//)?.[1]?.toLowerCase() ?? ''
-    const serebiiUrl = `https://www.serebii.net/tcgpocket/${setSlug}/${cardNumber}.jpg`
+    const serebiiUrl = `https://www.serebii.net/tcgpocket/${serebiiSlug}/${cardNumber}.jpg`
     try {
       await downloadImage(serebiiUrl, dest)
       console.log(`  (used Serebii fallback for card ${cardNumber})`)
@@ -289,7 +288,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
   const imageName = card_id + path.extname(imageUrl)
   const imageDest = path.join(imagesDir, imageName)
   if (!fs.existsSync(imageDest)) {
-    await downloadImageWithFallback(imageUrl, imageDest, inPackId)
+    await downloadImageWithFallback(imageUrl, imageDest, inPackId, expansion.name)
   }
   const image = imagesPath + imageName
 
