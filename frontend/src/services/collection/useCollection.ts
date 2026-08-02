@@ -5,7 +5,7 @@ import { useToast } from '@/hooks/use-toast.ts'
 import { updateCollectionTimestamp } from '@/services/account/accountService'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { userQuery } from '@/services/auth/useAuth.ts'
-import { deleteCard, getCollection, getPublicCollection, updateAmountWanted, updateCards } from '@/services/collection/collectionService.ts'
+import { getCollection, getPublicCollection, setCollected, updateAmountWanted, updateCards } from '@/services/collection/collectionService.ts'
 import type { CardAmountUpdate, CollectionRow } from '@/types'
 
 export function collectionQuery(email: string | undefined, collectionLastUpdated: Date | undefined) {
@@ -97,21 +97,21 @@ export function useUpdateAmountWanted() {
   })
 }
 
-export function useDeleteCard() {
+export function useSetCollected() {
   const { data: user, isLoading: isLoadingUser } = useQuery(userQuery)
   const { data: collection, isLoading: isLoadingCollection } = useCollection()
   const email = user?.user.email
 
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: (cardIds: string[]) => {
+    mutationFn: ({ internal_ids, collected }: { internal_ids: number[]; collected: boolean }) => {
       if (isLoadingUser || isLoadingCollection) {
         throw new Error('Context not yet loaded')
       }
       if (!email) {
         throw new Error('Email is required to delete card')
       }
-      return deleteCard(email, collection ?? new Map<number, CollectionRow>(), cardIds)
+      return setCollected(email, collection ?? new Map<number, CollectionRow>(), internal_ids, collected)
     },
     onSuccess: (result) => {
       queryClient.setQueryData(['collection', email], result.cards)

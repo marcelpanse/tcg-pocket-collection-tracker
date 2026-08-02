@@ -5,7 +5,7 @@ import XLSX from 'xlsx'
 import ErrorAlert from '@/components/ErrorAlert.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button.tsx'
-import { useDeleteCard, useUpdateCards } from '@/services/collection/useCollection'
+import { useSetCollected, useUpdateCards } from '@/services/collection/useCollection'
 import type { ImportExportRow } from '@/types'
 
 enum State {
@@ -17,21 +17,21 @@ enum State {
 export const ImportReader = () => {
   const { t } = useTranslation('pages/import')
   const updateCardsMutation = useUpdateCards()
-  const deleteCardMutation = useDeleteCard()
+  const setCollectedMutation = useSetCollected()
 
   const [state, setState] = useState<State>(State.UploadFile)
   const [error, setError] = useState<Error | null>(null)
 
   const processFileRows = async (data: ImportExportRow[]) => {
-    const amountUpdates = data.map((r) => ({ internal_id: r.InternalId, card_id: r.Id, amount_owned: Math.max(0, Number(r.NumberOwned)) }))
-    const collectionDeletes = data.filter((r) => !r.Collected).map((r) => r.Id)
+    const amountUpdates = data.map((r) => ({ internal_id: r.InternalId, amount_owned: Math.max(0, Number(r.NumberOwned)), collected: r.Collected }))
+    const collectionDeletes = data.filter((r) => !r.Collected).map((r) => r.InternalId)
 
     if (amountUpdates.length > 0) {
       await updateCardsMutation.mutateAsync(amountUpdates)
     }
     // We need to do this sequentially to roll back unneccessary collection statuses
     if (collectionDeletes.length > 0) {
-      await deleteCardMutation.mutateAsync(collectionDeletes)
+      await setCollectedMutation.mutateAsync({ internal_ids: collectionDeletes, collected: false })
     }
 
     setState(State.Finished)

@@ -21,7 +21,7 @@ export const ExportWriter = () => {
         Expansion: ac.expansion,
         Pack: ac.pack,
         Rarity: ac.rarity,
-        Collected: ownedCards.get(ac.internal_id)?.collection.includes(ac.card_id) ?? false,
+        Collected: ownedCards.get(ac.internal_id)?.collected ?? false,
       }
     })
     const sheet = XLSX.utils.json_to_sheet(json)
