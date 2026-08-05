@@ -46,6 +46,12 @@ export interface RaritySettingsRow {
   rarity: Rarity
   to_collect: number
   to_keep: number
+  collecting_carddex: boolean
+}
+export const defaultRaritySettings: Omit<RaritySettingsRow, 'rarity'> = {
+  to_collect: 1,
+  to_keep: 1,
+  collecting_carddex: false,
 }
 
 export interface PublicAccountRow {

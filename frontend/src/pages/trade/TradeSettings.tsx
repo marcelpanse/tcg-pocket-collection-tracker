@@ -42,6 +42,7 @@ function TradeSettings() {
         rarity: z.enum(rarities),
         to_collect: z.coerce.number().min(0).max(100),
         to_keep: z.coerce.number().min(0).max(100),
+        collecting_carddex: z.boolean(),
       }),
     ),
   })
@@ -145,50 +146,76 @@ function TradeSettings() {
             )}
           />
 
-          <div className="grid grid-cols-3 gap-y-2 gap-x-8 w-fit mt-6">
-            <span>{t('rarity')}</span>
-            <span className="flex items-center">
-              {t('toCollect')}
-              <Tooltip id="to-collect" />
-              <CircleHelp className="size-4 ml-1" data-tooltip-id="to-collect" data-tooltip-content={t('toCollectTooltip')} />
-            </span>
-            <span className="flex items-center">
-              {t('toKeep')}
-              <Tooltip id="to-collect" />
-              <CircleHelp className="size-4 ml-1" data-tooltip-id="to-collect" data-tooltip-content={t('toKeepTooltip')} />
-            </span>
+          <table className="mt-4 border-separate border-spacing-y-2">
+            <tr>
+              <th>{t('rarity')}</th>
+              <th>
+                {t('toCollect')}
+                <Tooltip id="to-collect" />
+                <CircleHelp className="inline size-4 ml-1" data-tooltip-id="to-collect" data-tooltip-content={t('toCollectTooltip')} />
+              </th>
+              <th>
+                {t('toKeep')}
+                <Tooltip id="to-collect" />
+                <CircleHelp className="inline size-4 ml-1" data-tooltip-id="to-collect" data-tooltip-content={t('toKeepTooltip')} />
+              </th>
+              <th>
+                CardDex
+                <Tooltip id="collecting-carddex" />
+                <CircleHelp
+                  className="inline size-4 ml-1"
+                  data-tooltip-id="collecting-carddex"
+                  data-tooltip-content={
+                    'This option will consider unregistered cards as wanted. Use it in combination with 0 collect/keep values to be able to trade your cards down to 0 copies.'
+                  }
+                />
+              </th>
+            </tr>
             {form.watch('trade_rarity_settings').map((setting, index) => (
-              <>
-                <div key={`label-${setting.rarity}`} className="flex-1">
-                  {setting.rarity}
-                </div>
-                <FormField
-                  key={`to-collect-${setting.rarity}`}
-                  control={form.control}
-                  name={`trade_rarity_settings.${index}.to_collect`}
-                  render={({ field }) => (
-                    <FormItem className="flex-1">
-                      <FormControl>
-                        <Input className="w-24" type="number" {...field} />
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  key={`to-keep-${setting.rarity}`}
-                  control={form.control}
-                  name={`trade_rarity_settings.${index}.to_keep`}
-                  render={({ field }) => (
-                    <FormItem className="flex-1">
-                      <FormControl>
-                        <Input className="w-24" type="number" {...field} />
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-              </>
+              <tr key={`settings-row-${setting.rarity}`} className="[&>td]:px-2">
+                <td className="flex-1">{setting.rarity}</td>
+                <td>
+                  <FormField
+                    control={form.control}
+                    name={`trade_rarity_settings.${index}.to_collect`}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input className="w-24" type="number" {...field} />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                </td>
+                <td>
+                  <FormField
+                    control={form.control}
+                    name={`trade_rarity_settings.${index}.to_keep`}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input className="w-24" type="number" {...field} />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                </td>
+                <td>
+                  <FormField
+                    control={form.control}
+                    name={`trade_rarity_settings.${index}.collecting_carddex`}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <input type="checkbox" checked={field.value} onChange={field.onChange} />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                </td>
+              </tr>
             ))}
-          </div>
+          </table>
 
           <Button
             type="submit"

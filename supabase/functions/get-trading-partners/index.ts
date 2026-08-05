@@ -56,6 +56,7 @@ FROM
                 INNER JOIN trade_rarity_settings t ON t.email = a.email AND (to_give.internal_id & 63) = t.rarity_id
         WHERE
             COALESCE(ca.amount_owned, 0) < COALESCE(ca.amount_wanted, t.to_collect)
+          OR (t.collecting_carddex AND NOT ca.collected)
         GROUP BY a.friend_id, a.username, a.language, t.rarity_id
     ) give
         JOIN
@@ -76,6 +77,7 @@ FROM
                         INNER JOIN trade_rarity_settings t ON t.email = $1 AND (cl.internal_id & 63) = t.rarity_id
                 WHERE
                     COALESCE(ca.amount_owned, 0) < COALESCE(ca.amount_wanted, t.to_collect)
+                  OR (t.collecting_carddex AND NOT ca.collected)
             ) as to_get
                 CROSS JOIN recent_accounts a
                 INNER JOIN card_amounts ca ON ca.email = a.email AND ca.internal_id = to_get.internal_id
@@ -93,7 +95,7 @@ ORDER BY trade_matches DESC;
 
 const single_card_query = `
 WITH recent_accounts AS (
-    SELECT a.email, a.friend_id, a.username, a.language, t.to_collect
+    SELECT a.email, a.friend_id, a.username, a.language, t.to_collect, t.collecting_carddex
     FROM
         accounts a
         INNER JOIN trade_rarity_settings t ON t.email = a.email AND t.rarity_id = ($2::int & 63)
@@ -142,6 +144,7 @@ FROM
     LEFT JOIN card_amounts ca ON ca.email = a.email AND ca.internal_id = to_give.internal_id
 WHERE
     COALESCE(ca.amount_owned, 0) < a.to_collect
+  OR (a.collecting_carddex AND NOT COALESCE(ca.collected, false))
 GROUP BY a.friend_id, a.username, a.language
 ORDER BY trade_matches DESC;
 `

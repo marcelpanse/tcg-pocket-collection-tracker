@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabase'
-import { type PublicAccountRow, tradableRarities, type UserAccountRow } from '@/types'
+import { defaultRaritySettings, type PublicAccountRow, tradableRarities, type UserAccountRow } from '@/types'
 
 function transformUserAccount(account: UserAccountRow) {
   account.collection_last_updated = new Date(account.collection_last_updated)
@@ -8,8 +8,13 @@ function transformUserAccount(account: UserAccountRow) {
   for (const rarity of tradableRarities) {
     // set default values for each rarity that we don't have a setting for yet.
     if (!account.trade_rarity_settings.find((r) => r.rarity === rarity)) {
-      account.trade_rarity_settings.push({ rarity, to_collect: 1, to_keep: 1 })
+      account.trade_rarity_settings.push({ rarity, ...defaultRaritySettings })
     }
+  }
+
+  // FIXME: Testing, remove before merge
+  for (const row of account.trade_rarity_settings) {
+    row.collecting_carddex = row.collecting_carddex ?? false
   }
 
   return account as UserAccountRow
