@@ -101,7 +101,7 @@ export function getFilteredCards(filters: Filters, cards: Collection, tradingSet
     }
 
     const ownedCard = cards.get(card.internal_id)
-    card.collected = ownedCard?.collection.includes(card.card_id) ?? false
+    card.collected = ownedCard?.collected ?? false
     card.updated_at = ownedCard?.updated_at
   }
 

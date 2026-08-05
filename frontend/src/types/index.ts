@@ -46,6 +46,12 @@ export interface RaritySettingsRow {
   rarity: Rarity
   to_collect: number
   to_keep: number
+  collecting_carddex: boolean
+}
+export const defaultRaritySettings: Omit<RaritySettingsRow, 'rarity'> = {
+  to_collect: 1,
+  to_keep: 1,
+  collecting_carddex: false,
 }
 
 export interface PublicAccountRow {
@@ -71,7 +77,7 @@ export interface CollectionRow {
   amount_wanted: number | null
   created_at: Date
   updated_at: Date
-  collection: string[] // array of cardIds
+  collected: boolean
 }
 
 export type Collection = Map<number, CollectionRow>
@@ -79,7 +85,7 @@ export type Collection = Map<number, CollectionRow>
 export interface CardAmountUpdate {
   internal_id: number
   amount_owned: number
-  card_id: string
+  collected: boolean
 }
 
 export interface CardAmountsRowUpdate {

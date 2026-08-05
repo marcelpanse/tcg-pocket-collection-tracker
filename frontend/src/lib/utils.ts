@@ -3,6 +3,7 @@ import { twMerge } from 'tailwind-merge'
 import {
   type Card,
   type Collection,
+  defaultRaritySettings,
   type GameLanguage,
   type Mission,
   type Rarity,
@@ -87,10 +88,7 @@ export function getCardNameByLang(card: Card, lang: string): string {
   return card.name
 }
 
-interface TradeSettings {
-  to_collect: number
-  to_keep: number
-}
+type TradeSettings = Omit<RaritySettingsRow, 'rarity'>
 
 function getTradingCards(
   collection: Collection,
@@ -101,9 +99,13 @@ function getTradingCards(
   const arr = allCards
     .map((card) => {
       const row = collection.get(card.internal_id)
+      const settings = settings_map[card.rarity] ?? { rarity: card.rarity, ...defaultRaritySettings }
       return {
         card: { ...card, amount_owned: row?.amount_owned ?? 0 },
-        settings: row !== undefined && row.amount_wanted !== null ? { to_keep: row.amount_wanted, to_collect: row.amount_wanted } : settings_map[card.rarity],
+        settings:
+          row !== undefined && row.amount_wanted !== null
+            ? { to_keep: row.amount_wanted, to_collect: row.amount_wanted, collecting_carddex: settings.collecting_carddex }
+            : settings,
       }
     })
     .filter(({ card, settings }) => settings !== undefined && filter_func(card, settings))
@@ -116,7 +118,7 @@ export function getExtraCards(cards: Collection, settings_rows: RaritySettingsRo
 }
 
 export function getNeededCards(cards: Collection, settings_rows: RaritySettingsRow[]): number[] {
-  return getTradingCards(cards, settings_rows, (c, settings) => c.amount_owned < settings.to_collect)
+  return getTradingCards(cards, settings_rows, (c, settings) => c.amount_owned < settings.to_collect || (!c.collected && settings.collecting_carddex))
 }
 
 export function getTradeCards(extraCards: number[], neededCards: number[]) {

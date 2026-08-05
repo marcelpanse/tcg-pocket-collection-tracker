@@ -123,7 +123,7 @@ export const Mission: FC<Props> = ({ mission, setSelectedMissionCardOptions }) =
       for (const cardId of missionCard.options) {
         const internalId = getCardById(cardId)?.internal_id || 0
         const ownedCard = ownedCards.get(internalId)
-        if (ownedCard?.collection.includes(cardId)) {
+        if (ownedCard?.collected) {
           for (let i = 0; i < ownedCard.amount_owned; i++) {
             ownedMissionCards.push({ id: internalId, owned: true, missionCardOptions: missionCard.options })
 
