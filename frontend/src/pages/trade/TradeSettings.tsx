@@ -10,7 +10,6 @@ import { Spinner } from '@/components/Spinner'
 import { Alert } from '@/components/ui/alert.tsx'
 import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import { Input } from '@/components/ui/input.tsx'
 import { Switch } from '@/components/ui/switch.tsx'
 import { toast } from '@/hooks/use-toast.ts'
 import { getCardByInternalId } from '@/lib/CardsDB'
@@ -82,7 +81,7 @@ function TradeSettings() {
   return (
     <div>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="rounded-md border-1 border-neutral-700 space-y-2 p-4 mx-auto max-w-xl">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="rounded-xl bg-neutral-800 border-1 border-neutral-700 space-y-2 p-2 mx-auto max-w-xl">
           <h2 className="text-xl text-center mb-6">{t('settingsTitle')}</h2>
           <FormField
             control={form.control}
@@ -146,8 +145,10 @@ function TradeSettings() {
             )}
           />
 
-          <table className="mt-4 border-separate border-spacing-y-2">
-            <tr>
+          <hr className="border-neutral-700 mt-4" />
+
+          <table className="border-separate border-spacing-2">
+            <tr className="[&>th]:px-2">
               <th>{t('rarity')}</th>
               <th>
                 {t('toCollect')}
@@ -173,34 +174,34 @@ function TradeSettings() {
             </tr>
             {form.watch('trade_rarity_settings').map((setting, index) => (
               <tr key={`settings-row-${setting.rarity}`} className="[&>td]:px-2">
-                <td className="flex-1">{setting.rarity}</td>
-                <td>
+                <td>{setting.rarity}</td>
+                <td className="bg-neutral-900 rounded-md">
                   <FormField
                     control={form.control}
                     name={`trade_rarity_settings.${index}.to_collect`}
                     render={({ field }) => (
                       <FormItem>
                         <FormControl>
-                          <Input className="w-24" type="number" {...field} />
+                          <input className="w-20" type="number" min="0" {...field} />
                         </FormControl>
                       </FormItem>
                     )}
                   />
                 </td>
-                <td>
+                <td className="bg-neutral-900 rounded-md">
                   <FormField
                     control={form.control}
                     name={`trade_rarity_settings.${index}.to_keep`}
                     render={({ field }) => (
                       <FormItem>
                         <FormControl>
-                          <Input className="w-24" type="number" {...field} />
+                          <input className="w-20" type="number" min="0" {...field} />
                         </FormControl>
                       </FormItem>
                     )}
                   />
                 </td>
-                <td>
+                <td className="bg-neutral-900 rounded-md">
                   <FormField
                     control={form.control}
                     name={`trade_rarity_settings.${index}.collecting_carddex`}
