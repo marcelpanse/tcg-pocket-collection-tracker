@@ -4,6 +4,14 @@
     "name": "Ultra Beast Collection",
     "requiredCards": [
       {
+        "options": ["A4b-44", "A3a-76", "A3a-88", "A4b-360", "B1a-98"],
+        "amount": 1
+      },
+      {
+        "options": ["A4b-45", "A3a-71", "A4b-46"],
+        "amount": 1
+      },
+      {
         "options": ["A3a-8"],
         "amount": 1
       },
@@ -20,11 +28,11 @@
         "amount": 1
       },
       {
-        "options": ["A3a-44"],
+        "options": ["A4b-248", "A3a-79", "A3a-86", "B1a-100"],
         "amount": 1
       },
       {
-        "options": ["A4b-44", "A3a-76", "A3a-88", "A4b-360", "B1a-98"],
+        "options": ["A3a-44"],
         "amount": 1
       },
       {
@@ -32,15 +40,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-45", "A3a-71", "A4b-46"],
-        "amount": 1
-      },
-      {
         "options": ["A3a-53"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-248", "A3a-79", "A3a-86", "B1a-100"],
         "amount": 1
       },
       {
@@ -64,7 +64,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-149"],
+        "options": ["A3a-21"],
         "amount": 1
       }
     ],
@@ -96,15 +96,15 @@
     "name": "Type: Null’s Bonds",
     "requiredCards": [
       {
+        "options": ["A3a-60"],
+        "amount": 1
+      },
+      {
         "options": ["A4b-302", "A3a-74", "A4b-303", "B1a-97"],
         "amount": 1
       },
       {
         "options": ["A3a-67", "A3a-81"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-300"],
         "amount": 1
       }
     ],
@@ -133,7 +133,7 @@
   },
   {
     "expansionId": "A3a",
-    "name": "Pokémon that Get Nutrition from Minerals",
+    "name": "Pokémon That Get Nutrition from Minerals",
     "requiredCards": [
       {
         "options": ["A3a-48"],
@@ -185,7 +185,7 @@
   },
   {
     "expansionId": "A3a",
-    "name": "Pokémon with Black around their Eyes",
+    "name": "Pokémon with Black Around Their Eyes",
     "requiredCards": [
       {
         "options": ["A3a-35"],
@@ -225,7 +225,7 @@
   },
   {
     "expansionId": "A3a",
-    "name": "Fur that’s Pleasant to Touch",
+    "name": "Fur That’s Pleasant to Touch",
     "requiredCards": [
       {
         "options": ["A3a-38"],

@@ -29,10 +29,10 @@
   },
   {
     "expansionId": "B1",
-    "name": "An Immense Power That Rampages through the Ocean",
+    "name": "An Immense Power That Rampages Through the Ocean",
     "requiredCards": [
       {
-        "options": ["B1-52", "B1-255", "B1-285"],
+        "options": ["B1-52", "B1-255", "B1-285", "B3b-101"],
         "amount": 1
       },
       {
@@ -441,7 +441,7 @@
   },
   {
     "expansionId": "B1",
-    "name": "Collect 1 Mega Evolution Pokémon ex Card",
+    "name": "Collect 1 Mega Evolution Pokémon ex card",
     "requiredCards": [
       {
         "options": ["B1-36", "B1-254", "B1-284", "B3-226"],
@@ -453,7 +453,7 @@
   },
   {
     "expansionId": "B1",
-    "name": "Collect 3 Mega Evolution Pokémon ex Cards",
+    "name": "Collect 3 Mega Evolution Pokémon ex cards",
     "requiredCards": [
       {
         "options": ["B1-36", "B1-254", "B1-284", "B3-226"],
@@ -512,11 +512,11 @@
         "amount": 1
       },
       {
-        "options": ["B1-52", "B1-255", "B1-285"],
+        "options": ["B1-52", "B1-255", "B1-285", "B3b-101"],
         "amount": 1
       },
       {
-        "options": ["B1-85", "B1-258", "B1-277"],
+        "options": ["B1-85", "B1-258", "B1-277", "B3b-103"],
         "amount": 1
       },
       {

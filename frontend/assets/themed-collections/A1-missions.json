@@ -220,11 +220,11 @@
         "amount": 1
       },
       {
-        "options": ["A1-127"],
+        "options": ["A1-121"],
         "amount": 1
       },
       {
-        "options": ["A4b-153"],
+        "options": ["A1-127"],
         "amount": 1
       },
       {
@@ -276,11 +276,11 @@
         "amount": 1
       },
       {
-        "options": ["A1-226", "A1-273"],
+        "options": ["A4b-338", "A1-272", "A4b-339"],
         "amount": 1
       },
       {
-        "options": ["A4b-338", "A1-272", "A4b-339"],
+        "options": ["A1-226", "A1-273"],
         "amount": 1
       }
     ],
@@ -296,11 +296,11 @@
         "amount": 1
       },
       {
-        "options": ["A1-3", "A3-212", "P-A-18"],
+        "options": ["A1-2"],
         "amount": 1
       },
       {
-        "options": ["A4b-3"],
+        "options": ["A1-3", "A3-212", "P-A-18"],
         "amount": 1
       },
       {
@@ -316,15 +316,15 @@
         "amount": 1
       },
       {
+        "options": ["A4b-83", "A1-232", "A3-215", "A4b-84", "P-A-33"],
+        "amount": 1
+      },
+      {
         "options": ["A1-54"],
         "amount": 1
       },
       {
         "options": ["A1-55", "A3-217", "P-A-29"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-83", "A1-232", "A3-215", "A4b-84", "P-A-33"],
         "amount": 1
       }
     ],
@@ -388,11 +388,11 @@
     "name": "Category: Mouse Pokémon",
     "requiredCards": [
       {
-        "options": ["A1-95"],
+        "options": ["A4b-128", "A4b-129", "P-A-9", "P-A-15", "P-A-26"],
         "amount": 1
       },
       {
-        "options": ["A4b-128", "A4b-129", "P-A-9", "P-A-15", "P-A-26"],
+        "options": ["A1-95"],
         "amount": 1
       },
       {
@@ -453,6 +453,18 @@
   },
   {
     "expansionId": "A1",
+    "name": "Collect 5 Gardevoir cards",
+    "requiredCards": [
+      {
+        "options": ["A1-132"],
+        "amount": 5
+      }
+    ],
+    "reward": "Gardevoir (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "A1",
     "name": "Collect 5 Charizard cards",
     "requiredCards": [
       {
@@ -484,7 +496,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-3"],
+        "options": ["A1-2"],
         "amount": 1
       },
       {
@@ -624,6 +636,10 @@
         "amount": 1
       },
       {
+        "options": ["A4b-83", "A1-232", "A3-215", "A4b-84", "P-A-33"],
+        "amount": 1
+      },
+      {
         "options": ["A1-54"],
         "amount": 1
       },
@@ -732,15 +748,19 @@
         "amount": 1
       },
       {
-        "options": ["A4b-83", "A1-232", "A3-215", "A4b-84", "P-A-33"],
-        "amount": 1
-      },
-      {
         "options": ["A1-83", "B1-298"],
         "amount": 1
       },
       {
+        "options": ["A4b-128", "A4b-129", "P-A-9", "P-A-15", "P-A-26"],
+        "amount": 1
+      },
+      {
         "options": ["A1-95"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-97"],
         "amount": 1
       },
       {
@@ -800,6 +820,10 @@
         "amount": 1
       },
       {
+        "options": ["A1-121"],
+        "amount": 1
+      },
+      {
         "options": ["A1-122", "A3-222"],
         "amount": 1
       },
@@ -820,15 +844,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-128", "A4b-129", "P-A-9", "P-A-15", "P-A-26"],
-        "amount": 1
-      },
-      {
         "options": ["A1-128", "P-A-10"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-133"],
         "amount": 1
       },
       {
@@ -884,11 +900,11 @@
         "amount": 1
       },
       {
-        "options": ["A1-152", "A3-227"],
+        "options": ["A4b-194", "A1-239", "A3-226", "A4b-195"],
         "amount": 1
       },
       {
-        "options": ["A4b-153"],
+        "options": ["A1-152", "A3-227"],
         "amount": 1
       },
       {
@@ -1016,10 +1032,6 @@
         "amount": 1
       },
       {
-        "options": ["A4b-194", "A1-239", "A3-226", "A4b-195"],
-        "amount": 1
-      },
-      {
         "options": ["A1-194"],
         "amount": 1
       },
@@ -1029,6 +1041,10 @@
       },
       {
         "options": ["A1-197"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-198"],
         "amount": 1
       },
       {
@@ -1073,10 +1089,6 @@
       },
       {
         "options": ["A1-211", "A1-250"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-280"],
         "amount": 1
       }
     ],

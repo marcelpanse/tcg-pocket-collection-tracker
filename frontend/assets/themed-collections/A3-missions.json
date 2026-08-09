@@ -64,7 +64,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-178"],
+        "options": ["A3-77"],
         "amount": 1
       }
     ],
@@ -112,7 +112,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-233"],
+        "options": ["A3-110"],
         "amount": 1
       }
     ],
@@ -128,7 +128,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-38"],
+        "options": ["A3-10"],
         "amount": 1
       }
     ],
@@ -140,11 +140,11 @@
     "name": "A Day in the Life of Litten",
     "requiredCards": [
       {
-        "options": ["A3-31"],
+        "options": ["A3-30"],
         "amount": 1
       },
       {
-        "options": ["A4b-78"],
+        "options": ["A3-31"],
         "amount": 1
       }
     ],
@@ -264,15 +264,15 @@
     "name": "Lana and Waterside Pokémon",
     "requiredCards": [
       {
+        "options": ["A4b-124", "A3-184", "A3-202"],
+        "amount": 1
+      },
+      {
         "options": ["A3-52"],
         "amount": 1
       },
       {
         "options": ["A3-53"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-124", "A3-184", "A3-202"],
         "amount": 1
       },
       {
@@ -348,11 +348,11 @@
         "amount": 1
       },
       {
-        "options": ["A3-151", "A3-193", "A3-208"],
+        "options": ["A4b-233", "A4b-234"],
         "amount": 1
       },
       {
-        "options": ["A4b-233", "A4b-234"],
+        "options": ["A3-151", "A3-193", "A3-208"],
         "amount": 1
       }
     ],
@@ -368,11 +368,11 @@
         "amount": 1
       },
       {
-        "options": ["A4b-259", "A3-189", "A3-207", "A3-239", "A4b-369", "B1a-101"],
+        "options": ["A3-86"],
         "amount": 1
       },
       {
-        "options": ["A4b-182"],
+        "options": ["A4b-259", "A3-189", "A3-207", "A3-239", "A4b-369", "B1a-101"],
         "amount": 1
       },
       {
@@ -420,6 +420,10 @@
         "amount": 1
       },
       {
+        "options": ["A4b-124", "A3-184", "A3-202"],
+        "amount": 1
+      },
+      {
         "options": ["A3-65"],
         "amount": 1
       },
@@ -429,10 +433,6 @@
       },
       {
         "options": ["A3-107"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-124", "A3-184", "A3-202"],
         "amount": 1
       },
       {
@@ -468,6 +468,10 @@
         "amount": 1
       },
       {
+        "options": ["A4b-130", "A3-185", "A3-203"],
+        "amount": 1
+      },
+      {
         "options": ["A3-108"],
         "amount": 1
       },
@@ -481,10 +485,6 @@
       },
       {
         "options": ["A3-118"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-130", "A3-185", "A3-203"],
         "amount": 1
       }
     ],
@@ -524,11 +524,11 @@
         "amount": 1
       },
       {
-        "options": ["A4b-235", "A3-188", "A3-206"],
+        "options": ["A3-110"],
         "amount": 1
       },
       {
-        "options": ["A4b-233"],
+        "options": ["A4b-235", "A3-188", "A3-206"],
         "amount": 1
       }
     ],
@@ -580,6 +580,10 @@
         "amount": 1
       },
       {
+        "options": ["A3-30"],
+        "amount": 1
+      },
+      {
         "options": ["A3-46"],
         "amount": 1
       },
@@ -589,10 +593,6 @@
       },
       {
         "options": ["A3-76"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-78"],
         "amount": 1
       },
       {
@@ -636,6 +636,10 @@
     "name": "Moon Collection",
     "requiredCards": [
       {
+        "options": ["A3-10"],
+        "amount": 1
+      },
+      {
         "options": ["A3-31"],
         "amount": 1
       },
@@ -644,15 +648,15 @@
         "amount": 1
       },
       {
-        "options": ["A4b-38"],
-        "amount": 1
-      },
-      {
         "options": ["A3-45"],
         "amount": 1
       },
       {
         "options": ["A3-73"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-77"],
         "amount": 1
       },
       {
@@ -676,15 +680,11 @@
         "amount": 1
       },
       {
-        "options": ["A4b-178"],
+        "options": ["A3-110"],
         "amount": 1
       },
       {
         "options": ["A3-204"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-233"],
         "amount": 1
       }
     ],
@@ -868,7 +868,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-124"],
+        "options": ["A3-51"],
         "amount": 1
       },
       {

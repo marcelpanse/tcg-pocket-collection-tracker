@@ -8,10 +8,14 @@
   },
   {
     "expansionId": "A2a",
-    "name": "Pokémon with Abilities that “Link” with Arceus",
+    "name": "Pokémon with Abilities That “Link” with Arceus",
     "requiredCards": [
       {
         "options": ["A2a-9"],
+        "amount": 1
+      },
+      {
+        "options": ["A2a-13"],
         "amount": 1
       },
       {
@@ -31,19 +35,15 @@
         "amount": 1
       },
       {
+        "options": ["A2a-50"],
+        "amount": 1
+      },
+      {
         "options": ["A2a-55"],
         "amount": 1
       },
       {
         "options": ["A2a-70"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-76"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-230"],
         "amount": 1
       }
     ],
@@ -331,6 +331,10 @@
     "name": "Pokémon from Ancient Records",
     "requiredCards": [
       {
+        "options": ["A2a-13"],
+        "amount": 1
+      },
+      {
         "options": ["A2a-23"],
         "amount": 1
       },
@@ -344,10 +348,6 @@
       },
       {
         "options": ["A2a-71"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-76"],
         "amount": 1
       },
       {
