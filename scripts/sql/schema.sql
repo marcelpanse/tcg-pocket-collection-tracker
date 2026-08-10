@@ -71,6 +71,7 @@ CREATE TABLE public.card_amounts (
     updated_at timestamp without time zone DEFAULT now() NOT NULL,
     internal_id integer NOT NULL,
     amount_wanted integer,
+    collected boolean DEFAULT false NOT NULL,
     CONSTRAINT chk_amount_nonnegative CHECK ((amount_owned >= 0))
 );
 
@@ -279,12 +280,10 @@ CREATE VIEW public.public_card_amounts_collection AS
     ca.internal_id,
     ca.amount_owned,
     ca.amount_wanted,
-    array_agg(c.card_id) AS collection
-   FROM ((public.card_amounts ca
+    ca.collected
+   FROM (public.card_amounts ca
      LEFT JOIN public.accounts a ON (((ca.email)::text = (a.email)::text)))
-     LEFT JOIN public.collection c ON (((ca.internal_id = c.internal_id) AND ((ca.email)::text = (c.email)::text))))
-  WHERE (a.is_public = true)
-  GROUP BY a.friend_id, ca.internal_id, ca.amount_owned, ca.amount_wanted;
+  WHERE (a.is_public = true);
 
 
 --
