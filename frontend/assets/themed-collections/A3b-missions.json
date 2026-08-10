@@ -1,7 +1,7 @@
 [
   {
     "expansionId": "A3b",
-    "name": "Eevee and its Evolutions 1",
+    "name": "Eevee and Its Evolutions 1",
     "requiredCards": [
       {
         "options": ["A3b-2"],
@@ -45,7 +45,7 @@
   },
   {
     "expansionId": "A3b",
-    "name": "Eevee and its Evolutions 2",
+    "name": "Eevee and Its Evolutions 2",
     "requiredCards": [
       {
         "options": ["A3b-70"],
@@ -89,7 +89,7 @@
   },
   {
     "expansionId": "A3b",
-    "name": "Pokémon with Gems in their Bodies",
+    "name": "Pokémon with Gems in Their Bodies",
     "requiredCards": [
       {
         "options": ["A3b-42"],
@@ -105,7 +105,7 @@
   },
   {
     "expansionId": "A3b",
-    "name": "Pokémon that Use their Tails",
+    "name": "Pokémon That Use Their Tails",
     "requiredCards": [
       {
         "options": ["A3b-58"],
@@ -168,19 +168,19 @@
         "amount": 1
       },
       {
-        "options": ["A4b-173"],
+        "options": ["A3b-31"],
         "amount": 1
       },
       {
-        "options": ["A4b-175"],
+        "options": ["A3b-32"],
         "amount": 1
       },
       {
-        "options": ["A4b-185"],
+        "options": ["A3b-36"],
         "amount": 1
       },
       {
-        "options": ["A4b-187"],
+        "options": ["A3b-37"],
         "amount": 1
       }
     ],
@@ -221,6 +221,18 @@
       }
     ],
     "reward": "Shinedust ×500",
+    "secret": false
+  },
+  {
+    "expansionId": "A3b",
+    "name": "Collect 3 Alcremie cards",
+    "requiredCards": [
+      {
+        "options": ["A3b-37"],
+        "amount": 3
+      }
+    ],
+    "reward": "Alcremie (profile icon)",
     "secret": false
   },
   {

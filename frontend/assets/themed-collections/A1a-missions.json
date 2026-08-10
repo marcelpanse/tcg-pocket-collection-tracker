@@ -96,11 +96,11 @@
         "amount": 1
       },
       {
-        "options": ["A1a-62"],
+        "options": ["A4b-272", "A4b-273"],
         "amount": 1
       },
       {
-        "options": ["A4b-272", "A4b-273"],
+        "options": ["A1a-62"],
         "amount": 1
       }
     ],
@@ -180,7 +180,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-274"],
+        "options": ["A1a-58"],
         "amount": 1
       }
     ],
@@ -291,6 +291,10 @@
     "name": "Mew ex Museum",
     "requiredCards": [
       {
+        "options": ["A1a-32"],
+        "amount": 1
+      },
+      {
         "options": ["A1a-77"],
         "amount": 1
       },
@@ -300,10 +304,6 @@
       },
       {
         "options": ["A1a-86"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-159"],
         "amount": 1
       }
     ],

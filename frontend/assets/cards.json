@@ -81498,7 +81498,7 @@
         "cost": ["grass", "grass"],
         "name": "Terminating Tail",
         "damage": "130",
-        "effect": "Discard Grass[G] Energy from this Pokémon. Your opponent's Active Pokémon is now Poisoned."
+        "effect": "Discard a [G] Energy from this Pokémon. Your opponent's Active Pokémon is now Poisoned."
       }
     ],
     "weakness": "fire",
@@ -86329,7 +86329,7 @@
         "cost": ["grass", "grass"],
         "name": "Terminating Tail",
         "damage": "130",
-        "effect": "Discard Grass[G] Energy from this Pokémon. Your opponent's Active Pokémon is now Poisoned."
+        "effect": "Discard a [G] Energy from this Pokémon. Your opponent's Active Pokémon is now Poisoned."
       }
     ],
     "weakness": "fire",
@@ -86709,7 +86709,7 @@
         "cost": ["grass", "grass"],
         "name": "Terminating Tail",
         "damage": "130",
-        "effect": "Discard Grass[G] Energy from this Pokémon. Your opponent's Active Pokémon is now Poisoned."
+        "effect": "Discard a [G] Energy from this Pokémon. Your opponent's Active Pokémon is now Poisoned."
       }
     ],
     "weakness": "fire",
@@ -94448,7 +94448,7 @@
     "image": "/images/en-US/B4-19.webp",
     "hp": 90,
     "energy": "grass",
-    "name": "Teal Mask Ogerpon",
+    "name": "Teal MaskOgerpon",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [

@@ -1,18 +1,18 @@
 [
   {
     "expansionId": "A4",
-    "name": "The Golden Sky, where Ho-Oh Soars",
+    "name": "The Golden Sky, Where Ho-Oh Soars",
     "requiredCards": [
       {
         "options": ["A4-15"],
         "amount": 1
       },
       {
-        "options": ["A4-63"],
+        "options": ["A4b-68", "A4-187", "A4-210", "A4-240", "A4b-362", "B2-226"],
         "amount": 1
       },
       {
-        "options": ["A4b-68", "A4-187", "A4-210", "A4-240", "A4b-362", "B2-226"],
+        "options": ["A4-63"],
         "amount": 1
       },
       {
@@ -24,11 +24,11 @@
         "amount": 1
       },
       {
-        "options": ["A4-130"],
+        "options": ["A4b-252", "A4-194", "A4-209"],
         "amount": 1
       },
       {
-        "options": ["A4b-252", "A4-194", "A4-209"],
+        "options": ["A4-130"],
         "amount": 1
       }
     ],
@@ -37,8 +37,12 @@
   },
   {
     "expansionId": "A4",
-    "name": "The Silvery Ocean, where Lugia Dwells",
+    "name": "The Silvery Ocean, Where Lugia Dwells",
     "requiredCards": [
+      {
+        "options": ["A4b-92", "A4-188", "A4-203", "B2-227"],
+        "amount": 1
+      },
       {
         "options": ["A4-53", "A4-168"],
         "amount": 1
@@ -56,10 +60,6 @@
         "amount": 1
       },
       {
-        "options": ["A4b-92", "A4-188", "A4-203", "B2-227"],
-        "amount": 1
-      },
-      {
         "options": ["A4-106"],
         "amount": 1
       },
@@ -73,7 +73,7 @@
   },
   {
     "expansionId": "A4",
-    "name": "Pokémon that can Use Attacks Immediately",
+    "name": "Pokémon That Can Use Attacks Immediately",
     "requiredCards": [
       {
         "options": ["A4-32", "A4-166", "B2-206"],
@@ -105,7 +105,7 @@
   },
   {
     "expansionId": "A4",
-    "name": "Shapes that Resemble Ancient Writing",
+    "name": "Shapes That Resemble Ancient Writing",
     "requiredCards": [
       {
         "options": ["A4-84"],
@@ -176,11 +176,11 @@
         "amount": 1
       },
       {
-        "options": ["A4-160", "A4-200"],
+        "options": ["A4b-252", "A4-194", "A4-209"],
         "amount": 1
       },
       {
-        "options": ["A4b-252", "A4-194", "A4-209"],
+        "options": ["A4-160", "A4-200"],
         "amount": 1
       }
     ],
@@ -237,7 +237,7 @@
   },
   {
     "expansionId": "A4",
-    "name": "Pokémon you Meet at the National Park",
+    "name": "Pokémon You Meet at the National Park",
     "requiredCards": [
       {
         "options": ["A4-11"],
@@ -320,7 +320,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-16"],
+        "options": ["A4-14"],
         "amount": 1
       },
       {
@@ -333,7 +333,7 @@
   },
   {
     "expansionId": "A4",
-    "name": "They have Two Faces?",
+    "name": "They Have Two Faces?",
     "requiredCards": [
       {
         "options": ["A4-74"],
@@ -456,6 +456,14 @@
     "name": "Fishing for a Big Catch",
     "requiredCards": [
       {
+        "options": ["A4-41"],
+        "amount": 1
+      },
+      {
+        "options": ["A4-42"],
+        "amount": 1
+      },
+      {
         "options": ["A4-44"],
         "amount": 1
       },
@@ -472,15 +480,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-88"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-90"],
-        "amount": 1
-      },
-      {
-        "options": ["A4b-102"],
+        "options": ["A4-60"],
         "amount": 1
       },
       {
