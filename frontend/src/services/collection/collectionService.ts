@@ -173,36 +173,25 @@ export const setCollected = async (email: string, collection: Collection, intern
   if (!email) {
     throw new Error('Email is required to delete card')
   }
-  const now = new Date()
 
-  const [updatedAccount, { error: collectionError }] = await Promise.all([
+  const now = new Date()
+  const rows: CollectionRow[] = internal_ids.map((internal_id) => ({
+    ...(collection.get(internal_id) ?? { email, internal_id, amount_owned: 0, amount_wanted: null, created_at: now, updated_at: now }),
+    collected,
+  }))
+
+  const [updatedAccount, { error }] = await Promise.all([
     updateCollectionTimestamp(email, now),
-    ...chunk(internal_ids, 400).map((ids) => supabase.from('card_amounts').update({ collected }).in('internal_id', ids)),
+    ...chunk(rows, 400).map((curr) => supabase.from('card_amounts').upsert(curr)),
   ])
 
-  if (collectionError) {
-    throw new Error(`Error deleting from collection: ${collectionError.message}`)
+  if (error) {
+    throw new Error(`Error deleting from collection: ${error.message}`)
   }
 
-  // Find and update the cache - remove the card_id from the collection array
-  for (const internal_id of internal_ids) {
-    const row = collection.get(internal_id)
-    if (row) {
-      row.collected = collected
-      row.updated_at = now
-    } else {
-      collection.set(internal_id, {
-        email,
-        internal_id,
-        amount_owned: 0,
-        amount_wanted: null,
-        created_at: now,
-        updated_at: now,
-        collected,
-      })
-    }
+  for (const row of rows) {
+    collection.set(row.internal_id, row)
   }
-
   updateCollectionCache(collection, email, now)
 
   return {

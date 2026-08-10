@@ -159,7 +159,7 @@ export default function CardDetail() {
                 className="mr-2"
                 checked={row?.collected}
                 onChange={(e) => setCollected(e.currentTarget.checked)}
-                disabled={row && row.amount_owned > 0}
+                disabled={row?.collected && row.amount_owned > 0}
               />
               Collected
             </label>
