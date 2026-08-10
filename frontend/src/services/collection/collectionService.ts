@@ -1,4 +1,3 @@
-import { getCardById } from '@/lib/CardsDB'
 import { supabase } from '@/lib/supabase'
 import { chunk } from '@/lib/utils'
 import type { CardAmountsRowUpdate, CardAmountUpdate, Collection, CollectionRow, UserAccountRow } from '@/types'
@@ -11,8 +10,8 @@ export interface CollectionRowUpdate {
   card_id: string
 }
 
-const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v2'
-const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v2'
+const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v3'
+const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v3'
 const PAGE_SIZE = 500
 
 export const removeLocalCacheItems = (email: string) => {
@@ -72,18 +71,13 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
   const now = new Date()
 
   // Update collection records
-  const collectionRows: CollectionRowUpdate[] = rowsToUpdate.map((row) => ({
-    email,
-    card_id: row.card_id,
-    internal_id: row.internal_id,
-    updated_at: now,
-  }))
   const amountRows: CardAmountsRowUpdate[] = rowsToUpdate
     .map((row) => ({
       email,
       internal_id: row.internal_id,
       amount_owned: row.amount_owned,
       amount_wanted: collection.get(row.internal_id)?.amount_wanted ?? null,
+      collected: row.collected,
       updated_at: now,
     }))
     // Deduplicate amountRows on internal_id, needed for card csv import feature
@@ -96,12 +90,6 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
 
     if (cardAmountsResult.error) {
       throw new Error(`Error bulk updating card amounts: ${cardAmountsResult.error.message}`)
-    }
-
-    // this has to be after the card amounts update because otherwise the FK can't be created.
-    const collectionResult = await supabase.from('collection').upsert(collectionRows)
-    if (collectionResult.error) {
-      throw new Error(`Error bulk updating collection: ${collectionResult.error.message}`)
     }
 
     account = accountResult
@@ -117,11 +105,6 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
       const { internal_id, ...data } = row
       Object.assign(existing, data)
       existing.updated_at = now
-
-      if (row.card_id !== undefined && !existing.collection.includes(row.card_id)) {
-        //collected a new card, so add it to the collection array
-        existing.collection.push(row.card_id)
-      }
     } else {
       // the card is not yet in the cache, so we need to add it.
       collection.set(row.internal_id, {
@@ -131,7 +114,7 @@ export const updateCards = async (email: string, rowsToUpdate: CardAmountUpdate[
         amount_wanted: null,
         created_at: now,
         updated_at: now,
-        collection: row.card_id === undefined ? [] : [row.card_id],
+        collected: row.collected,
       })
     }
   }
@@ -177,7 +160,7 @@ export async function updateAmountWanted(
       amount_wanted: amount_wanted,
       created_at: updated_at,
       updated_at: updated_at,
-      collection: [],
+      collected: false,
     })
   }
 
@@ -186,37 +169,29 @@ export async function updateAmountWanted(
   return collection
 }
 
-export const deleteCard = async (email: string, collection: Collection, cardIds: string[]) => {
+export const setCollected = async (email: string, collection: Collection, internal_ids: number[], collected: boolean) => {
   if (!email) {
     throw new Error('Email is required to delete card')
   }
-  const now = new Date()
 
-  const [updatedAccount, { error: collectionError }] = await Promise.all([
+  const now = new Date()
+  const rows: CollectionRow[] = internal_ids.map((internal_id) => ({
+    ...(collection.get(internal_id) ?? { email, internal_id, amount_owned: 0, amount_wanted: null, created_at: now, updated_at: now }),
+    collected,
+  }))
+
+  const [updatedAccount, { error }] = await Promise.all([
     updateCollectionTimestamp(email, now),
-    ...chunk(cardIds, 400).map((ids) => supabase.from('collection').delete().in('card_id', ids)),
+    ...chunk(rows, 400).map((curr) => supabase.from('card_amounts').upsert(curr)),
   ])
 
-  if (collectionError) {
-    throw new Error(`Error deleting from collection: ${collectionError.message}`)
+  if (error) {
+    throw new Error(`Error deleting from collection: ${error.message}`)
   }
 
-  // Find and update the cache - remove the card_id from the collection array
-  for (const cardId of cardIds) {
-    const internal_id = getCardById(cardId)?.internal_id
-    if (internal_id === undefined) {
-      console.error('Invalid card_id:', cardId)
-      continue
-    }
-    const row = collection.get(internal_id)
-    if (row?.collection.includes(cardId)) {
-      row.collection = row.collection.filter((id) => id !== cardId)
-      row.updated_at = now
-    } else {
-      console.warn('Card not owned:', cardId)
-    }
+  for (const row of rows) {
+    collection.set(row.internal_id, row)
   }
-
   updateCollectionCache(collection, email, now)
 
   return {
@@ -240,33 +215,12 @@ async function fetchCollectionFromAPI(table: string, key: string, value: string)
 async function fetchRange(table: string, key: string, value: string, total: number, start: number, end: number): Promise<CollectionRow[]> {
   console.log('fetching range', total, start, end)
 
-  let select = '*'
-  if (!table.startsWith('public_')) {
-    select += ', collection(card_id)'
-  }
-  const { data, error } = await supabase.from(table).select(select).eq(key, value).range(start, end)
+  const { data, error } = await supabase.from(table).select('*').eq(key, value).range(start, end)
 
   if (error) {
     throw new Error(`Error fetching collection range: ${error.message}`)
   }
   const rows = data as unknown as CollectionRow[]
-
-  // collection is either an array of objects in case of the join, or it's an array of strings in case we get it from the public view.
-  // convert them here to array of card_ids for easier handling in the code.
-  for (const row of rows) {
-    if (row.collection) {
-      row.collection =
-        row.collection
-          .filter((c) => c !== null)
-          .map((c: { card_id: string } | string) => {
-            if (typeof c === 'string') {
-              return c
-            } else {
-              return c.card_id
-            }
-          }) || []
-    }
-  }
 
   if (end < total) {
     return [...rows, ...(await fetchRange(table, key, value, total, end + 1, Math.min(total, end + PAGE_SIZE)))]

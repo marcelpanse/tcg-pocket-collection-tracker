@@ -14,7 +14,7 @@ import { craftingCost, getCardByInternalId, getExpansionById } from '@/lib/Cards
 import { pullRateForSpecificCard } from '@/lib/stats'
 import { getCardNameByLang } from '@/lib/utils'
 import { useAccount } from '@/services/account/useAccount'
-import { useCollection, useDeleteCard, useSelectedCard, useUpdateAmountWanted } from '@/services/collection/useCollection'
+import { useCollection, useSelectedCard, useSetCollected, useUpdateAmountWanted } from '@/services/collection/useCollection'
 import { type Card, type CollectionRow, tradableRarities } from '@/types'
 
 function CardProperty({ name, children }: { name: string; children: ReactNode }) {
@@ -51,7 +51,7 @@ export default function CardDetail() {
 
   const { data: account } = useAccount()
   const { data: ownedCards = new Map<number, CollectionRow>() } = useCollection()
-  const deleteCardMutation = useDeleteCard()
+  const setCollectedMutation = useSetCollected()
   const updateAmountWantedMutation = useUpdateAmountWanted()
 
   const [isOpen, setIsOpen] = useState(false)
@@ -104,10 +104,11 @@ export default function CardDetail() {
   // if we draw from 'everypack' we need to take one of the packs to base calculations on
   const packName = card?.pack === 'everypack' ? expansion?.packs[0].name : card?.pack
 
-  const handleUncollect = (cardId: string) => {
-    if (id && row?.collection.includes(cardId)) {
-      deleteCardMutation.mutate([cardId])
+  const setCollected = (collected: boolean) => {
+    if (!id) {
+      throw new Error('No card selected')
     }
+    setCollectedMutation.mutateAsync({ internal_ids: [id], collected })
   }
 
   const setOpen = (open: boolean) => {
@@ -151,7 +152,18 @@ export default function CardDetail() {
             </DialogContent>
           </Dialog>
 
-          <div className="p-4 w-full flex flex-col gap-2">
+          <div className="px-2 w-full flex flex-col gap-2">
+            <label>
+              <input
+                type="checkbox"
+                className="mr-2"
+                checked={row?.collected}
+                onChange={(e) => setCollected(e.currentTarget.checked)}
+                disabled={row?.collected && row.amount_owned > 0}
+              />
+              Collected
+            </label>
+
             <div>
               <h2 className="text-xl font-semibold">{t('text.alternateVersions')}</h2>
               {alternatives && (
@@ -226,30 +238,6 @@ export default function CardDetail() {
               {card && craftingCost[card.rarity] && <CardProperty name={t('text.craftingCost')}>{craftingCost[card.rarity]}</CardProperty>}
               <CardProperty name={t('text.artist')}>{card?.artist}</CardProperty>
             </div>
-
-            {!!row?.collection?.length && (
-              <>
-                <p className="flex items-center gap-2 mt-6 mb-1">
-                  <span>Collected in</span>
-                  <Tooltip id="minInput" style={{ maxWidth: '300px', whiteSpace: 'normal' }} clickable={true} />
-                  <CircleHelp className="h-4 w-4" data-tooltip-id="minInput" data-tooltip-content={t('text.uncollectTooltip')} />
-                </p>
-                <div className="flex flex-col gap-1 w-fit">
-                  {row?.collection.map((cardId) => (
-                    <Button
-                      key={cardId}
-                      variant="destructive"
-                      className="mr-auto min-w-48 w-full"
-                      onClick={() => handleUncollect(cardId)}
-                      disabled={deleteCardMutation.isPending}
-                      isPending={deleteCardMutation.isPending}
-                    >
-                      {t('text.uncollect')} {cardId}
-                    </Button>
-                  ))}
-                </div>
-              </>
-            )}
 
             <p className="mt-4 text-neutral-400 text-sm">
               {row?.updated_at ? t('text.updated', { time: row.updated_at.toLocaleString() }) : t('text.neverUpdated')}
