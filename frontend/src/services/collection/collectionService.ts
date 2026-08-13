@@ -10,8 +10,11 @@ export interface CollectionRowUpdate {
   card_id: string
 }
 
-const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v3'
-const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v3'
+const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v4'
+const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v4'
+// Caches written by earlier versions may be partial: they were filled by an OFFSET-paginated fetch without an
+// ORDER BY, which silently dropped rows. Bumping the key above forces a resync; these get purged to free up quota.
+const STALE_CACHE_KEYS = ['tcg_collection_cache_v2', 'tcg_collection_timestamp_v2', 'tcg_collection_cache_v3', 'tcg_collection_timestamp_v3']
 const PAGE_SIZE = 500
 
 export const removeLocalCacheItems = (email: string) => {
@@ -20,10 +23,18 @@ export const removeLocalCacheItems = (email: string) => {
   localStorage.removeItem(`${COLLECTION_TIMESTAMP_KEY}_${email}`)
 }
 
+const removeStaleCacheItems = (email: string) => {
+  for (const key of STALE_CACHE_KEYS) {
+    localStorage.removeItem(`${key}_${email}`)
+  }
+}
+
 export async function getCollection(email: string, collectionLastUpdated?: Date): Promise<Collection> {
   if (!email) {
     throw new Error('Email is required to fetch collection')
   }
+
+  removeStaleCacheItems(email)
 
   // Check if we should use cached data
   if (collectionLastUpdated) {
@@ -208,24 +219,44 @@ async function fetchCollectionFromAPI(table: string, key: string, value: string)
     throw new Error(`Error fetching collection: ${error.message}`)
   }
 
-  const arr = count ? await fetchRange(table, key, value, count, 0, PAGE_SIZE) : []
+  if (!count) {
+    return new Map()
+  }
+
+  const arr = await fetchAllRows(table, key, value)
+
+  // Guard against a partial fetch ending up in the cache, where it would look like the user lost cards.
+  if (arr.length < count) {
+    throw new Error(`Error fetching collection: expected ${count} rows but got ${arr.length}`)
+  }
+
   return new Map(arr.map((row) => [row.internal_id, { ...row, amount_wanted: row.amount_wanted ?? null }]))
 }
 
-async function fetchRange(table: string, key: string, value: string, total: number, start: number, end: number): Promise<CollectionRow[]> {
-  console.log('fetching range', total, start, end)
+// Pages on internal_id rather than on an offset. internal_id is unique per collection, so every page picks up exactly
+// where the previous one ended, independent of the query plan Postgres happens to choose for that page.
+async function fetchAllRows(table: string, key: string, value: string): Promise<CollectionRow[]> {
+  const all: CollectionRow[] = []
+  let after: number | null = null
 
-  const { data, error } = await supabase.from(table).select('*').eq(key, value).range(start, end)
+  while (true) {
+    let query = supabase.from(table).select('*').eq(key, value).order('internal_id', { ascending: true }).limit(PAGE_SIZE)
+    if (after !== null) {
+      query = query.gt('internal_id', after)
+    }
 
-  if (error) {
-    throw new Error(`Error fetching collection range: ${error.message}`)
-  }
-  const rows = data as unknown as CollectionRow[]
+    const { data, error } = await query
+    if (error) {
+      throw new Error(`Error fetching collection range: ${error.message}`)
+    }
 
-  if (end < total) {
-    return [...rows, ...(await fetchRange(table, key, value, total, end + 1, Math.min(total, end + PAGE_SIZE)))]
-  } else {
-    return rows
+    const rows = (data ?? []) as unknown as CollectionRow[]
+    all.push(...rows)
+
+    if (rows.length < PAGE_SIZE) {
+      return all
+    }
+    after = rows[rows.length - 1].internal_id
   }
 }
 
