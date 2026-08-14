@@ -172,7 +172,7 @@ function TradeSettings() {
                       <FormItem>
                         <FormControl>
                           <select
-                            className="min-w-28"
+                            className="w-full"
                             value={setting.collecting_carddex ? 'carddex' : String(setting.to_collect)}
                             onChange={(e) => {
                               if (e.target.value === 'carddex') {
@@ -206,7 +206,7 @@ function TradeSettings() {
                     render={({ field }) => (
                       <FormItem>
                         <FormControl>
-                          <select className="min-w-28" value={field.value} onChange={(e) => field.onChange(Number(e.target.value))}>
+                          <select className="w-full" value={field.value} onChange={(e) => field.onChange(Number(e.target.value))}>
                             {[...new Set([0, 1, 2, 3, 4, 5, 100].concat([setting.to_keep]))]
                               .toSorted((a, b) => a - b)
                               .map((x) => (
@@ -234,21 +234,21 @@ function TradeSettings() {
           </Button>
         </form>
       </Form>
-      <div className="rounded-md border-1 border-neutral-700 space-y-2 p-4 mx-auto max-w-xl mt-4">
+      <div className="rounded-xl bg-neutral-800 border-1 border-neutral-700 space-y-2 p-2 mx-auto max-w-xl mt-4">
         <h2 className="text-xl text-center">Wanted card amounts</h2>
         {isLoadingCollection ? (
           <Spinner size="md" className="mx-auto mt-4" />
         ) : (
           <>
             <p className="text-neutral-400">
-              {overridenCards.length !== 0
+              {overridenCards.length === 0
                 ? 'You can set the number of cards wanted for specific cards on the collection page. It allows you to keep generic per rarity settings and additionally marking some cards as wanted or for trade.'
-                : 'The cards below have custom amount wanted and are not affected by rarity settings.'}
+                : 'The cards below have custom amount wanted and are not affected by rarity settings. Unregistered cards will still be considered as wanted when using "CardDex" setting.'}
             </p>
             {overridenCards.map((row) => (
               <div key={row.internal_id} className="flex gap-2">
                 <CardLine
-                  className="flex-1 h-6"
+                  className="flex-1 min-h-6 bg-neutral-900"
                   card_id={getCardByInternalId(row.internal_id)?.card_id ?? ''}
                   increment={(row.amount_wanted ?? 0) - row.amount_owned}
                 />
