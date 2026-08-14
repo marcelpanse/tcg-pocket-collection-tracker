@@ -128,7 +128,7 @@ function TradeSettings() {
                     data-tooltip-content="Indicates that you want to only trade cards in this language."
                   />
                   <FormControl className="ml-2">
-                    <span className="rounded-md border-1 border-neutral-800 px-3 py-1">
+                    <span className="rounded-md px-2 py-1 bg-neutral-900">
                       <select {...field}>
                         <option value="">Any language</option>
                         {gameLanguages.map((code) => (
@@ -148,7 +148,7 @@ function TradeSettings() {
           <hr className="border-neutral-700 mt-4" />
 
           <table className="border-separate border-spacing-2">
-            <tr className="[&>th]:px-2">
+            <tr className="[&>th]:px-2 text-left">
               <th>{t('rarity')}</th>
               <th>
                 {t('toCollect')}
@@ -159,17 +159,6 @@ function TradeSettings() {
                 {t('toKeep')}
                 <Tooltip id="to-collect" />
                 <CircleHelp className="inline size-4 ml-1" data-tooltip-id="to-collect" data-tooltip-content={t('toKeepTooltip')} />
-              </th>
-              <th>
-                CardDex
-                <Tooltip id="collecting-carddex" />
-                <CircleHelp
-                  className="inline size-4 ml-1"
-                  data-tooltip-id="collecting-carddex"
-                  data-tooltip-content={
-                    'This option will consider unregistered cards as wanted. Use it in combination with 0 collect/keep values to be able to trade your cards down to 0 copies.'
-                  }
-                />
               </th>
             </tr>
             {form.watch('trade_rarity_settings').map((setting, index) => (
@@ -182,7 +171,29 @@ function TradeSettings() {
                     render={({ field }) => (
                       <FormItem>
                         <FormControl>
-                          <input className="w-20" type="number" min="0" {...field} />
+                          <select
+                            className="min-w-28"
+                            value={setting.collecting_carddex ? 'carddex' : String(setting.to_collect)}
+                            onChange={(e) => {
+                              if (e.target.value === 'carddex') {
+                                field.onChange(0)
+                                form.setValue(`trade_rarity_settings.${index}.collecting_carddex`, true, { shouldDirty: true })
+                              } else {
+                                field.onChange(Number(e.target.value))
+                                form.setValue(`trade_rarity_settings.${index}.collecting_carddex`, false, { shouldDirty: true })
+                              }
+                            }}
+                          >
+                            <option value="carddex">CardDex</option>
+                            {setting.rarity}
+                            {[...new Set([0, 1, 2, 3, 4, 5].concat([setting.to_collect]))]
+                              .toSorted((a, b) => a - b)
+                              .map((x) => (
+                                <option key={x} value={x}>
+                                  {x}
+                                </option>
+                              ))}
+                          </select>
                         </FormControl>
                       </FormItem>
                     )}
@@ -195,20 +206,15 @@ function TradeSettings() {
                     render={({ field }) => (
                       <FormItem>
                         <FormControl>
-                          <input className="w-20" type="number" min="0" {...field} />
-                        </FormControl>
-                      </FormItem>
-                    )}
-                  />
-                </td>
-                <td className="bg-neutral-900 rounded-md">
-                  <FormField
-                    control={form.control}
-                    name={`trade_rarity_settings.${index}.collecting_carddex`}
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <input type="checkbox" checked={field.value} onChange={field.onChange} />
+                          <select className="min-w-28" value={field.value} onChange={(e) => field.onChange(Number(e.target.value))}>
+                            {[...new Set([0, 1, 2, 3, 4, 5, 100].concat([setting.to_keep]))]
+                              .toSorted((a, b) => a - b)
+                              .map((x) => (
+                                <option key={x} value={x}>
+                                  {x}
+                                </option>
+                              ))}
+                          </select>
                         </FormControl>
                       </FormItem>
                     )}
