@@ -12,11 +12,6 @@ function transformUserAccount(account: UserAccountRow) {
     }
   }
 
-  // FIXME: Testing, remove before merge
-  for (const row of account.trade_rarity_settings) {
-    row.collecting_carddex = row.collecting_carddex ?? false
-  }
-
   return account as UserAccountRow
 }
 
