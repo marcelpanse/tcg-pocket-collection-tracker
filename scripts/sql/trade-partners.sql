@@ -127,6 +127,6 @@ FROM
     CROSS JOIN recent_accounts a
     LEFT JOIN card_amounts ca ON ca.email = a.email AND ca.internal_id = to_give.internal_id
 WHERE
-    COALESCE(ca.amount_owned, 0) < a.to_collect
+    COALESCE(ca.amount_owned, 0) < COALESCE(ca.amount_wanted, a.to_collect)
 GROUP BY a.friend_id, a.username, a.language
 ORDER BY trade_matches DESC;
