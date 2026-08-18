@@ -5,18 +5,16 @@ import type { ChangeEvent, Dispatch, SetStateAction } from 'react'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CardLine } from '@/components/CardLine'
-import { DropdownFilter } from '@/components/Filters'
 import { Spinner } from '@/components/Spinner.tsx'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
-import { getCardById, getCardsByInternalId } from '@/lib/CardsDB'
-import { getInternalIdByCardId } from '@/lib/CardsDB.ts'
+import { getCardByInternalId } from '@/lib/CardsDB'
 import type { Hashes } from '@/lib/hash'
 import { useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import { detectImages, type ExtractedCard, extractCardImages, loadModel } from '@/services/scanner/CardDetectionService'
 
 interface IncrementedCard {
-  card_id: string
+  internal_id: number
   previous_amount: number
   increment: number
 }
@@ -101,10 +99,10 @@ const Scan = () => {
 
   const card_ids = extractedCards
     .filter((card) => card.increment !== 0 && card.matchedCard)
-    .map((card) => ({ card_id: card.matchedCard.card.card_id, increment: card.increment }))
-  const cardIncrements = new Map<string, number>()
-  for (const { card_id, increment } of card_ids) {
-    cardIncrements.set(card_id, (cardIncrements.get(card_id) ?? 0) + increment)
+    .map((card) => ({ internal_id: card.matchedCard.card.internal_id, increment: card.increment }))
+  const cardIncrements = new Map<number, number>()
+  for (const { internal_id, increment } of card_ids) {
+    cardIncrements.set(internal_id, (cardIncrements.get(internal_id) ?? 0) + increment)
   }
   for (const card_id of cardIncrements.keys()) {
     if (cardIncrements.get(card_id) === 0) {
@@ -162,15 +160,15 @@ const Scan = () => {
 
     const updates: IncrementedCard[] = []
 
-    for (const [card_id, increment] of cardIncrements) {
-      const card = getCardById(card_id)
+    for (const [internal_id, increment] of cardIncrements) {
+      const card = getCardByInternalId(internal_id)
       const previous_amount = ownedCards.get(card?.internal_id || 0)?.amount_owned ?? 0
-      updates.push({ card_id, previous_amount, increment })
+      updates.push({ internal_id, previous_amount, increment })
     }
 
     updateCardsMutation.mutate(
       updates.map((x) => ({
-        internal_id: getInternalIdByCardId(x.card_id),
+        internal_id: x.internal_id,
         amount_owned: Math.max(0, x.previous_amount + x.increment),
         collected: true,
       })),
@@ -225,21 +223,9 @@ const Scan = () => {
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 my-2">
             {extractedCards.map((card, index) => {
               const isSelected = card.increment !== 0
-              const cardInExpansions = getCardsByInternalId(card.matchedCard.card.internal_id)
-              if (!cardInExpansions) {
-                throw new Error('InternalId doesnt match any card')
-              }
-              const expansions = cardInExpansions.map((c) => c.expansion)
               const onIncrementChange = (inc: string) => {
                 const increment = Number(inc)
                 setExtractedCards((arr) => arr.map((x, i) => (i === index ? { ...x, increment } : x)))
-              }
-              const onExpansionChange = (expansionId: string) => {
-                const targetCard = cardInExpansions.find((c) => c.expansion === expansionId)
-                if (!targetCard) {
-                  throw new Error('Card expansion mismatch')
-                }
-                setExtractedCards((arr) => arr.map((x, i) => (i === index ? { ...x, matchedCard: { ...x.matchedCard, card: targetCard } } : x)))
               }
               const currentAmount = ownedCards?.get(card.matchedCard.card.internal_id)?.amount_owned ?? 0
               const newAmount = currentAmount + card.increment
@@ -254,28 +240,23 @@ const Scan = () => {
                       id="hidden"
                       rarity="hidden"
                       details="hidden"
-                      increment={cardIncrements.get(card.matchedCard.card.card_id)}
+                      increment={cardIncrements.get(card.matchedCard.card.internal_id)}
                     />
                   </h3>
-                  <div className="flex gap-2 justify-between mb-2">
-                    <div className="flex items-center gap-1">
-                      <Button
-                        variant="outline"
-                        size="icon"
-                        className="h-8 w-8"
-                        onClick={() => onIncrementChange(String(card.increment - 1))}
-                        disabled={!canDecrement}
-                      >
-                        <Minus className="h-4 w-4" />
-                      </Button>
-                      <div className="min-w-8 text-center font-semibold select-none">{card.increment > 0 ? `+${card.increment}` : card.increment}</div>
-                      <Button variant="outline" size="icon" className="h-8 w-8" onClick={() => onIncrementChange(String(card.increment + 1))}>
-                        <Plus className="h-4 w-4" />
-                      </Button>
-                    </div>
-                    {expansions.length > 1 && (
-                      <DropdownFilter className="inline-block" options={expansions} value={card.matchedCard.card.expansion} onChange={onExpansionChange} />
-                    )}
+                  <div className="flex items-center gap-1 mb-2">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="h-8 w-8"
+                      onClick={() => onIncrementChange(String(card.increment - 1))}
+                      disabled={!canDecrement}
+                    >
+                      <Minus className="h-4 w-4" />
+                    </Button>
+                    <div className="min-w-8 text-center font-semibold select-none">{card.increment > 0 ? `+${card.increment}` : card.increment}</div>
+                    <Button variant="outline" size="icon" className="h-8 w-8" onClick={() => onIncrementChange(String(card.increment + 1))}>
+                      <Plus className="h-4 w-4" />
+                    </Button>
                   </div>
                   <button
                     type="button"
@@ -321,8 +302,8 @@ const Scan = () => {
           <p className="text-xl text-center mb-4">{t('success', { n: incrementedCards.reduce((acc, x) => acc + x.increment, 0) })}</p>
           <ul className="flex flex-col gap-2 mb-8">
             {incrementedCards.map((x) => (
-              <li key={x.card_id}>
-                <CardLine card_id={x.card_id} amount_owned={x.previous_amount} increment={x.increment} />
+              <li key={x.internal_id}>
+                <CardLine card_id={getCardByInternalId(x.internal_id)?.card_id as string} amount_owned={x.previous_amount} increment={x.increment} />
               </li>
             ))}
           </ul>
