@@ -55,7 +55,7 @@
   "longOperation": "This might take a while.",
   "isActiveTrading": "Accepting new trades",
   "isActiveTradingDisabledTooltip": "Debes hacer público tu perfil antes de habilitar el intercambio activo.",
-  "toCollectTooltip": "The amount of cards you want to collect by trading. Tip: Set this value to 0 to exclude a rarity from trading.",
+  "toCollectTooltip": "La cantidad de cartas que quieres coleccionar mediante intercambios. Las cartas de las que tengas menos se considerarán buscadas. Al usar \"CardDex\", solo se considerarán buscadas las cartas no registradas.",
   "toKeepTooltip": "The minimum amount of cards you want to trade down to.",
   "search": {
     "byCard": "Search {{cardName}}",
