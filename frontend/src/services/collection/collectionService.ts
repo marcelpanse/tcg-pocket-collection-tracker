@@ -10,11 +10,19 @@ export interface CollectionRowUpdate {
   card_id: string
 }
 
-const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v4'
-const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v4'
+const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v5'
+const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v5'
 // Caches written by earlier versions may be partial: they were filled by an OFFSET-paginated fetch without an
-// ORDER BY, which silently dropped rows. Bumping the key above forces a resync; these get purged to free up quota.
-const STALE_CACHE_KEYS = ['tcg_collection_cache_v2', 'tcg_collection_timestamp_v2', 'tcg_collection_cache_v3', 'tcg_collection_timestamp_v3']
+// ORDER BY, which silently dropped rows. The v4 caches are keyed by internal_ids that predate the B4 rarity
+// re-encoding. Bumping the key above forces a resync; these get purged to free up quota.
+const STALE_CACHE_KEYS = [
+  'tcg_collection_cache_v2',
+  'tcg_collection_timestamp_v2',
+  'tcg_collection_cache_v3',
+  'tcg_collection_timestamp_v3',
+  'tcg_collection_cache_v4',
+  'tcg_collection_timestamp_v4',
+]
 const PAGE_SIZE = 500
 
 export const removeLocalCacheItems = (email: string) => {
