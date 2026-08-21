@@ -49,7 +49,7 @@
   "noTradePartners": "Wir konnten niemanden zum Tauschen für dich finden.",
   "isActiveTrading": "Neue Tauschangebote annehmen",
   "isActiveTradingDisabledTooltip": "Du musst dein Profil öffentlich machen, bevor du den aktiven Tausch aktivieren kannst.",
-  "toCollectTooltip": "Die Anzahl der Karten, die du durch Tauschen sammeln möchtest. Tipp: Setze diesen Wert auf 0, um eine Seltenheit vom Tausch auszuschließen.",
+  "toCollectTooltip": "Die Anzahl der Karten, die du durch Tauschen sammeln möchtest. Die Karten, von denen du weniger hast, werden als gesucht betrachtet. Bei Verwendung von \"CardDex\" werden nur nicht registrierte Karten als gesucht betrachtet.",
   "toKeepTooltip": "Die minimale Anzahl an Karten, die du behalten möchtest.",
   "tabMatches": "Treffer",
   "noAccount": "Richte zuerst dein Konto über 'Profil bearbeiten' oben rechts ein.",
