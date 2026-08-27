@@ -100480,6 +100480,3165 @@
     "internal_id": 1325644
   },
   {
+    "expansion": "B4a",
+    "card_id": "B4a-1",
+    "image": "/images/en-US/B4a-1.webp",
+    "hp": 80,
+    "energy": "grass",
+    "name": "Volbeat",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass"],
+        "name": "Tackle",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1048768, 1376320],
+    "artist": "Kanako Eo",
+    "internal_id": 1376320
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-2",
+    "image": "/images/en-US/B4a-2.webp",
+    "hp": 70,
+    "energy": "grass",
+    "name": "Illumise",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass", "colorless"],
+        "name": "Ire-Fly",
+        "damage": "30+",
+        "effect": "If Volbeat is in your discard pile, this attack does 60 more damage"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1048832, 1376384],
+    "artist": "Kanako Eo",
+    "internal_id": 1376384
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-3",
+    "image": "/images/en-US/B4a-3.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Snivy",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass"],
+        "name": "Leaf Boomerang",
+        "damage": "20x",
+        "effect": "Flip 2 coins. This attack does 20 damage for each heads."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [131328, 1376448],
+    "artist": "Atsuko Nishida",
+    "internal_id": 1376448
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-4",
+    "image": "/images/en-US/B4a-4.webp",
+    "hp": 80,
+    "energy": "grass",
+    "name": "Servine",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["grass"],
+        "name": "Leaf Step",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [131393, 1376513],
+    "artist": "Kagemaru Himeno",
+    "internal_id": 1376513
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-5",
+    "image": "/images/en-US/B4a-5.webp",
+    "hp": 100,
+    "energy": "grass",
+    "name": "Serperior",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless", "colorless"],
+        "name": "Flog",
+        "damage": "60+",
+        "effect": "Flip a coin. If heads, this attack does 60 more damage."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [131458, 1376578],
+    "artist": "Mizue",
+    "internal_id": 1376578,
+    "ability": {
+      "name": "Regal Bloom",
+      "effect": "This Pokémon gets +30 HP for each Grass Energy attached to it."
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-6",
+    "image": "/images/en-US/B4a-6.webp",
+    "hp": 70,
+    "energy": "fire",
+    "name": "Team Rocket's Magmar",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Derisive Roasting",
+        "damage": "10+",
+        "effect": "This attack does 50 more damage for each Special Condition affecting your opponent's Active Pokémon."
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1376640],
+    "artist": "matazo",
+    "internal_id": 1376640
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-7",
+    "image": "/images/en-US/B4a-7.webp",
+    "hp": 130,
+    "energy": "fire",
+    "name": "Team Rocket's Moltres ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire", "fighting"],
+        "name": "Heat Charged",
+        "damage": "0",
+        "effect": "Flip 3 coins. For each heads, produce a Fire Energy frm your Energy Zone and attach it ot this Pokémon"
+      },
+      {
+        "cost": ["fire", "fighting", "fire", "fighting", "fire", "fighting", "colorless"],
+        "name": "Netherwing",
+        "damage": "130",
+        "effect": "Discard a Fire Energy from this Pokémon"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1376707],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1376707
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-8",
+    "image": "/images/en-US/B4a-8.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Team Rocket's Houndour",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire", "fighting"],
+        "name": "Live Coal",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1376768],
+    "artist": "Mina Nakai",
+    "internal_id": 1376768
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-9",
+    "image": "/images/en-US/B4a-9.webp",
+    "hp": 90,
+    "energy": "fire",
+    "name": "Team Rocket's Houndoom",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["fire", "fighting"],
+        "name": "Toxfire Fang",
+        "damage": "20",
+        "effect": "Your opponent's Active Pokémon is now Poisoned and Burned"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1376832],
+    "artist": "toriyufu",
+    "internal_id": 1376832
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-10",
+    "image": "/images/en-US/B4a-10.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Fennekin",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Scratch",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1376896],
+    "artist": "Atsuko Nishida",
+    "internal_id": 1376896
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-11",
+    "image": "/images/en-US/B4a-11.webp",
+    "hp": 80,
+    "energy": "fire",
+    "name": "Braixen",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Psyshot",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1376961],
+    "artist": "5ban Graphics",
+    "internal_id": 1376961
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-12",
+    "image": "/images/en-US/B4a-12.webp",
+    "hp": 130,
+    "energy": "fire",
+    "name": "Delphox",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless", "colorless"],
+        "name": "Psychic",
+        "damage": "60+",
+        "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377026],
+    "artist": "5ban Graphics",
+    "internal_id": 1377026
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-13",
+    "image": "/images/en-US/B4a-13.webp",
+    "hp": 90,
+    "energy": "water",
+    "name": "Team Rocket's Lapras",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water", "colorless"],
+        "name": "Ruthless Whirlpool",
+        "damage": "40+",
+        "effect": "If this Pokémon has more Energy attached than your opponent's Active Pokémon, this attack does 40 more damage"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377089],
+    "artist": "MÃ©kayu",
+    "internal_id": 1377089
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-14",
+    "image": "/images/en-US/B4a-14.webp",
+    "hp": 130,
+    "energy": "water",
+    "name": "Team Rocket's Articuno ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water", "colorless"],
+        "name": "Ice Wing",
+        "damage": "40",
+        "effect": "No effect"
+      },
+      {
+        "cost": ["water", "water", "colorless"],
+        "name": "Hailstorm",
+        "damage": "130",
+        "effect": "This attack also does 20 damage to each of your Benched Pokémon"
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 2,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377155],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1377155
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-15",
+    "image": "/images/en-US/B4a-15.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Wingull",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Flap",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377216],
+    "artist": "Naoyo Kimura",
+    "internal_id": 1377216
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-16",
+    "image": "/images/en-US/B4a-16.webp",
+    "hp": 110,
+    "energy": "water",
+    "name": "Pelipper",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Wing Attack",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377281],
+    "artist": "Miki Tanaka",
+    "internal_id": 1377281
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-17",
+    "image": "/images/en-US/B4a-17.webp",
+    "hp": 70,
+    "energy": "water",
+    "name": "Hisuian Basculin",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water"],
+        "name": "Bite",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377344],
+    "artist": "Shin Nagasawa",
+    "internal_id": 1377344
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-18",
+    "image": "/images/en-US/B4a-18.webp",
+    "hp": 100,
+    "energy": "water",
+    "name": "Hisuian Basculegion",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["water", "water"],
+        "name": "Soul Counter",
+        "damage": "50+",
+        "effect": "This attack does 50 more damage for each point your opponent got during their last turn"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377409],
+    "artist": "Akira Komayama",
+    "internal_id": 1377409
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-19",
+    "image": "/images/en-US/B4a-19.webp",
+    "hp": 60,
+    "energy": "lightning",
+    "name": "Team Rocket's Voltorb",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["lightning"],
+        "name": "Rolling Attack",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377472],
+    "artist": "mingo",
+    "internal_id": 1377472
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-20",
+    "image": "/images/en-US/B4a-20.webp",
+    "hp": 70,
+    "energy": "lightning",
+    "name": "Team Rocket's Electrode",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["lightning"],
+        "name": "Random Spark",
+        "damage": "0",
+        "effect": "This attack does 30 damage to 1 of your opponent's Pokémon"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377537],
+    "artist": "Krgc",
+    "internal_id": 1377537,
+    "ability": {
+      "name": "Destiny Burst",
+      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, do 70 damage to the Attacking Pokémon"
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-21",
+    "image": "/images/en-US/B4a-21.webp",
+    "hp": 120,
+    "energy": "lightning",
+    "name": "Team Rocket's Zapdos ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["lightning", "colorless"],
+        "name": "Electro Ball",
+        "damage": "40",
+        "effect": "No effect"
+      },
+      {
+        "cost": ["lightning", "lightning", "lightning", "colorless"],
+        "name": "Thunderclaw",
+        "damage": "90",
+        "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokémon that has damage on it."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377603],
+    "artist": "PLANETA Mamiya",
+    "internal_id": 1377603
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-22",
+    "image": "/images/en-US/B4a-22.webp",
+    "hp": 60,
+    "energy": "lightning",
+    "name": "Blitzle",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["lightning"],
+        "name": "Double Headbutt",
+        "damage": "20x",
+        "effect": "Flip 2 coins. This attcak does 20 damage for each heads."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [72256, 1377664],
+    "artist": "Saya Tsuruta",
+    "internal_id": 1377664
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-23",
+    "image": "/images/en-US/B4a-23.webp",
+    "hp": 90,
+    "energy": "lightning",
+    "name": "Zebstrika",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["lightning"],
+        "name": "Zap Kick",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [72321, 1377729],
+    "artist": "0313",
+    "internal_id": 1377729
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-24",
+    "image": "/images/en-US/B4a-24.webp",
+    "hp": 70,
+    "energy": "lightning",
+    "name": "Team Rocket's Pincurchin",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["lightning"],
+        "name": "Poison Jab",
+        "damage": "20",
+        "effect": "Your opponent's Active Pokémon is now Poisoned."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377792],
+    "artist": "Ayako Ozaki",
+    "internal_id": 1377792
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-25",
+    "image": "/images/en-US/B4a-25.webp",
+    "hp": 80,
+    "energy": "psychic",
+    "name": "Team Rocket's Slowpoke",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["psychic"],
+        "name": "Scavenge",
+        "damage": "0",
+        "effect": "Put a random Item card from your discard pile into your hand."
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377856],
+    "artist": "MINAMINAMI Take",
+    "internal_id": 1377856
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-26",
+    "image": "/images/en-US/B4a-26.webp",
+    "hp": 130,
+    "energy": "psychic",
+    "name": "Team Rocket's Slowking ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["psychic", "colorless"],
+        "name": "Hand Kinesis",
+        "damage": "20x",
+        "effect": "This attack does 20 damage for each card in your hand"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 3,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377923],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1377923,
+    "ability": {
+      "name": "Evil Inspiration",
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may draw a card."
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-27",
+    "image": "/images/en-US/B4a-27.webp",
+    "hp": 60,
+    "energy": "psychic",
+    "name": "Team Rocket's Drowzee",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["psychic", "colorless"],
+        "name": "Mumble",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377984],
+    "artist": "Shinji Kanda",
+    "internal_id": 1377984
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-28",
+    "image": "/images/en-US/B4a-28.webp",
+    "hp": 90,
+    "energy": "psychic",
+    "name": "Team Rocket's Hypno",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["psychic", "psychic"],
+        "name": "Entrap",
+        "damage": "0",
+        "effect": "Switch in 1 of your opponent's Benched Pokémon to the Active Spo. If you do, this attack does 50 damage to the new Active Pokémon"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1378049],
+    "artist": "Nisota Niso",
+    "internal_id": 1378049
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-29",
+    "image": "/images/en-US/B4a-29.webp",
+    "hp": 60,
+    "energy": "psychic",
+    "name": "Team Rocket's Mr. Mime",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["psychic"],
+        "name": "Slap Push",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1378112],
+    "artist": "buchi",
+    "internal_id": 1378112
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-30",
+    "image": "/images/en-US/B4a-30.webp",
+    "hp": 100,
+    "energy": "psychic",
+    "name": "Team Rocket's Mewtwo",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["psychic", "psychic", "colorless"],
+        "name": "Psychic Explosion",
+        "damage": "130",
+        "effect": "This Pokémon also does 70 damage to itself"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1378178],
+    "artist": "danciao",
+    "internal_id": 1378178
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-31",
+    "image": "/images/en-US/B4a-31.webp",
+    "hp": 60,
+    "energy": "psychic",
+    "name": "Espurr",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["psychic", "psychic"],
+        "name": "Beam",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1118272, 1378240],
+    "artist": "Kagemaru Himeno",
+    "internal_id": 1378240
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-32",
+    "image": "/images/en-US/B4a-32.webp",
+    "hp": 90,
+    "energy": "psychic",
+    "name": "Meowstic",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["psychic", "psychic"],
+        "name": "Super Psy Bolt",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1118338, 1378305],
+    "artist": "Taira Akitsu",
+    "internal_id": 1378305
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-33",
+    "image": "/images/en-US/B4a-33.webp",
+    "hp": 100,
+    "energy": "psychic",
+    "name": "Oranguru",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["psychic", "colorless"],
+        "name": "Punch and Draw",
+        "damage": "40",
+        "effect": "Draw a card"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [402178, 1378369],
+    "artist": "Sekio",
+    "internal_id": 1378369
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-34",
+    "image": "/images/en-US/B4a-34.webp",
+    "hp": 50,
+    "energy": "psychic",
+    "name": "Gimmighoul",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Tackle",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [329984, 1378432],
+    "artist": "0313",
+    "internal_id": 1378432
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-35",
+    "image": "/images/en-US/B4a-35.webp",
+    "hp": 60,
+    "energy": "fighting",
+    "name": "Cubone",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fighting"],
+        "name": "Bone Beatdown",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [75200, 1378496],
+    "artist": "Hasuno",
+    "internal_id": 1378496
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-36",
+    "image": "/images/en-US/B4a-36.webp",
+    "hp": 110,
+    "energy": "fighting",
+    "name": "Marowak",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["fighting", "colorless"],
+        "name": "Punish",
+        "damage": "50+",
+        "effect": "If your opponent's Active Pokémon has \"Team Rocket\" in its name, this attack does 70 more damage"
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [75265, 1378561],
+    "artist": "kirisAki",
+    "internal_id": 1378561
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-37",
+    "image": "/images/en-US/B4a-37.webp",
+    "hp": 100,
+    "energy": "fighting",
+    "name": "Landorus",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fighting", "fighting", "colorless"],
+        "name": "Gaia Impact",
+        "damage": "130",
+        "effect": "Discard all Energy from this Pokémon"
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1378626],
+    "artist": "NC Empire",
+    "internal_id": 1378626
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-38",
+    "image": "/images/en-US/B4a-38.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Team Rocket's Ekans",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["darkness", "colorless"],
+        "name": "Darkness Fang",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1378688],
+    "artist": "Gemi",
+    "internal_id": 1378688
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-39",
+    "image": "/images/en-US/B4a-39.webp",
+    "hp": 100,
+    "energy": "darkness",
+    "name": "Team Rocket's Arbok",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["darkness", "darkness", "colorless"],
+        "name": "Shadow Seeker",
+        "damage": "70+",
+        "effect": "This attack does 10 more damage for each Energy in your opponent's Active Pokémon's Retreat Cost"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1378753],
+    "artist": "ILLUSTRATOR_242",
+    "internal_id": 1378753
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-40",
+    "image": "/images/en-US/B4a-40.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Team Rocket's Grimer",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["darkness"],
+        "name": "Sludge",
+        "damage": "20",
+        "effect": "Your opponent's Active Pokémon is now Poisoned."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1378816],
+    "artist": "Taiga Kasai",
+    "internal_id": 1378816
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-41",
+    "image": "/images/en-US/B4a-41.webp",
+    "hp": 120,
+    "energy": "darkness",
+    "name": "Team Rocket's Muk",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["darkness", "darkness", "colorless"],
+        "name": "Poison Absorption",
+        "damage": "80",
+        "effect": "If your opponent's Active Pokémon is Poisoned, heal 60 damage from this Pokémon"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 3,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1378881],
+    "artist": "Hitoshi Ariga",
+    "internal_id": 1378881
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-42",
+    "image": "/images/en-US/B4a-42.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Team Rocket's Koffing",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["darkness"],
+        "name": "Reverse Thrust",
+        "damage": "10",
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1378944],
+    "artist": "Takeshi Nakamura",
+    "internal_id": 1378944
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-43",
+    "image": "/images/en-US/B4a-43.webp",
+    "hp": 140,
+    "energy": "darkness",
+    "name": "Team Rocket's Weezing ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["darkness", "darkness"],
+        "name": "Confusion Gas",
+        "damage": "20",
+        "effect": "Your opponent's Active Pokémon is now Confused"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1379011],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1379011,
+    "ability": {
+      "name": "Boiler Smog",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may make your opponent's Active Pokémon Posioned and Burned"
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-44",
+    "image": "/images/en-US/B4a-44.webp",
+    "hp": 60,
+    "energy": "darkness",
+    "name": "Team Rocket's Sneasel",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["darkness", "colorless"],
+        "name": "Group Beatdown",
+        "damage": "30x",
+        "effect": "Flip a coin for each Pokémon you have in play. This attack does 30 damage for each heads."
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1379072],
+    "artist": "Kazumasa Yasukuni",
+    "internal_id": 1379072
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-45",
+    "image": "/images/en-US/B4a-45.webp",
+    "hp": 70,
+    "energy": "metal",
+    "name": "Togedemaru",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["metal"],
+        "name": "Tumbling Attack",
+        "damage": "20+",
+        "effect": "Flip a coin. If heads, this attack does 30 more damage"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [397504, 1379136],
+    "artist": "Megumi Mizutani",
+    "internal_id": 1379136
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-46",
+    "image": "/images/en-US/B4a-46.webp",
+    "hp": 90,
+    "energy": "metal",
+    "name": "Cufant",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["metal", "colorless"],
+        "name": "Rollout",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 3,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1182784, 1379200],
+    "artist": "kirisAki",
+    "internal_id": 1379200
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-47",
+    "image": "/images/en-US/B4a-47.webp",
+    "hp": 160,
+    "energy": "metal",
+    "name": "Copperajah",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["metal", "metal", "colorless"],
+        "name": "Heavy Impact",
+        "damage": "80",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 4,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1182849, 1379265],
+    "artist": "Kouki Saitou",
+    "internal_id": 1379265
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-48",
+    "image": "/images/en-US/B4a-48.webp",
+    "hp": 60,
+    "energy": "metal",
+    "name": "Team Rocket's Tinkatink",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["metal"],
+        "name": "Lunge Out",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1379328],
+    "artist": "mingo",
+    "internal_id": 1379328
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-49",
+    "image": "/images/en-US/B4a-49.webp",
+    "hp": 80,
+    "energy": "metal",
+    "name": "Team Rocket's Tinkatuff",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["metal", "colorless"],
+        "name": "Corkscrew Punch",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1379393],
+    "artist": "Mousho",
+    "internal_id": 1379393
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-50",
+    "image": "/images/en-US/B4a-50.webp",
+    "hp": 140,
+    "energy": "metal",
+    "name": "Team Rocket's Tinkaton",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["metal", "metal", "colorless"],
+        "name": "Pile-Driving Hammer",
+        "damage": "80",
+        "effect": "During your opponent's next turn, attacks used by the Defending Pokémon cost 2 Colorless more, and its Retreat Cost is 2 Colorless more."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1379458],
+    "artist": "Megumi Mizutani",
+    "internal_id": 1379458
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-51",
+    "image": "/images/en-US/B4a-51.webp",
+    "hp": 100,
+    "energy": "metal",
+    "name": "Gholdengo",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless", "colorless"],
+        "name": "Power Gem",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [331330, 1379521],
+    "artist": "Natsumi Yoshida",
+    "internal_id": 1379521,
+    "ability": {
+      "name": "Luxury Coin",
+      "effect": "Once during your tun, when you flip any coins for an effect of your Trainer cards, you may ignore all results of those coin flips and begin flipping those coins again. You can't use more than 1 Luxury Coin Ability each turn."
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-52",
+    "image": "/images/en-US/B4a-52.webp",
+    "hp": 60,
+    "energy": "dragon",
+    "name": "Gible",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Take Down",
+        "damage": "30",
+        "effect": "This Pokémon also does 10 damage to itself"
+      }
+    ],
+    "weakness": "none",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [204352, 1379584],
+    "artist": "saino misaki",
+    "internal_id": 1379584
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-53",
+    "image": "/images/en-US/B4a-53.webp",
+    "hp": 80,
+    "energy": "dragon",
+    "name": "Gabite",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["water", "fighting"],
+        "name": "Linear Attack",
+        "damage": "0",
+        "effect": "This attack does 50damage to 1 of yoyr opponent's Pokémon"
+      }
+    ],
+    "weakness": "none",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [204417, 1379649],
+    "artist": "Tomokazu Komiya",
+    "internal_id": 1379649
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-54",
+    "image": "/images/en-US/B4a-54.webp",
+    "hp": 150,
+    "energy": "dragon",
+    "name": "Garchomp",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["water", "fighting", "colorless"],
+        "name": "Land Crush",
+        "damage": "120",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "none",
+    "retreat": 1,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [204482, 1379714],
+    "artist": "Naoki Saito",
+    "internal_id": 1379714,
+    "ability": {
+      "name": "Mach Stealth",
+      "effect": "If you opponent's Pokémon is Knocked Out by damage from this Pokémon's attacks, during your opponent's next turn, prevent all damage from-and effects of-attacks done to this Pokémon"
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-55",
+    "image": "/images/en-US/B4a-55.webp",
+    "hp": 100,
+    "energy": "dragon",
+    "name": "Duraludon",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fighting", "metal"],
+        "name": "Power Beam",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "none",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1317889, 1379777],
+    "artist": "Ryuta Fuse",
+    "internal_id": 1379777
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-56",
+    "image": "/images/en-US/B4a-56.webp",
+    "hp": 140,
+    "energy": "dragon",
+    "name": "Archaludon",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["fighting", "metal", "colorless", "colorless"],
+        "name": "Protect Charge",
+        "damage": "110",
+        "effect": "During your opponent's next turn, this Pokémon takes -30 damage from attacks"
+      }
+    ],
+    "weakness": "none",
+    "retreat": 3,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1317954, 1379842],
+    "artist": "Shiburingaru",
+    "internal_id": 1379842
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-57",
+    "image": "/images/en-US/B4a-57.webp",
+    "hp": 110,
+    "energy": "dragon",
+    "name": "Regidrago",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass", "fire", "fighting", "colorless"],
+        "name": "Draconic Slam",
+        "damage": "140-",
+        "effect": "If this Pokémon has damage on it, this attack does -100 damage"
+      }
+    ],
+    "weakness": "none",
+    "retreat": 2,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1379905],
+    "artist": "Kouki Saitou",
+    "internal_id": 1379905
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-58",
+    "image": "/images/en-US/B4a-58.webp",
+    "hp": 40,
+    "energy": "colorless",
+    "name": "Team Rocket's Rattata",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Ambush",
+        "damage": "20+",
+        "effect": "Flip a coin. If heads, this attack does 20 more damage"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1379968],
+    "artist": "cochi8i",
+    "internal_id": 1379968
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-59",
+    "image": "/images/en-US/B4a-59.webp",
+    "hp": 120,
+    "energy": "colorless",
+    "name": "Team Rocket's Raticate ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Boost Dash",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 0,
+    "rarity": "◊◊◊◊",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380035],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1380035,
+    "ability": {
+      "name": "Thieving Incisors",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may move a random Energy from your opponent's Active Pokémon to this Pokémon"
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-60",
+    "image": "/images/en-US/B4a-60.webp",
+    "hp": 50,
+    "energy": "colorless",
+    "name": "Team Rocket's Meowth",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Scratch",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380096],
+    "artist": "Yuriko Akase",
+    "internal_id": 1380096
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-61",
+    "image": "/images/en-US/B4a-61.webp",
+    "hp": 100,
+    "energy": "colorless",
+    "name": "Team Rocket's Persian",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Dangerous Rogue",
+        "damage": "10+",
+        "effect": "This attack does 40 more damage for each of your opponent's Benched Pokémon"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380161],
+    "artist": "kodama",
+    "internal_id": 1380161
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-62",
+    "image": "/images/en-US/B4a-62.webp",
+    "hp": 70,
+    "energy": "colorless",
+    "name": "Team Rocket's Kecleon",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Hit and Hide",
+        "damage": "40",
+        "effect": "Flip a coin. If heads, during your opponent's next turn, prveent all damage from-and effects of-attacks done to this Pokémon"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380224],
+    "artist": "Jerky",
+    "internal_id": 1380224,
+    "ability": {
+      "name": "Spy Ops",
+      "effect": "Once during your turn, you may look at a random card from your opponent's hand."
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-63",
+    "image": "/images/en-US/B4a-63.webp",
+    "hp": 30,
+    "energy": "colorless",
+    "name": "Happiny",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["No Cost"],
+        "name": "Chubby Cheer",
+        "damage": "10",
+        "effect": "During your next turn, attacks used by your Pokémon do +20 damage to your opponent's Active Pokémon"
+      }
+    ],
+    "weakness": "none",
+    "retreat": 0,
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380290],
+    "artist": "Eri Yamaki",
+    "internal_id": 1380290
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-64",
+    "image": "/images/en-US/B4a-64.webp",
+    "hp": 70,
+    "energy": "colorless",
+    "name": "Furfrou",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Continuous Steps",
+        "damage": "30x",
+        "effect": "Flip a coin until you get tails. This attack does 30 damage for each heads"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [799617, 1380352],
+    "artist": "Orca",
+    "internal_id": 1380352,
+    "ability": {
+      "name": "Fur Coat",
+      "effect": "This Pokémon takes -20 damage from attacks"
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-65",
+    "image": "/images/en-US/B4a-65.webp",
+    "hp": 60,
+    "energy": "colorless",
+    "name": "Lechonk",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Headbutt",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [988096, 1380416],
+    "artist": "Mina Nakai",
+    "internal_id": 1380416
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-66",
+    "image": "/images/en-US/B4a-66.webp",
+    "hp": 110,
+    "energy": "colorless",
+    "name": "Oinkologne",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Sitdown Splash",
+        "damage": "40+",
+        "effect": "Flip a coin. If heads, this attack does 60 more damage"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [988160, 1380480],
+    "artist": "Akira Komayama",
+    "internal_id": 1380480
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-67",
+    "image": "/images/en-US/B4a-67.webp",
+    "energy": "trainer",
+    "name": "Team Rocket's Thieving Machine",
+    "card_type": "trainer",
+    "evolution_type": "item",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Put a random Item card, except any Team Rocket's Thieving Machine, from your opponent's discard pile into your hand."
+    },
+    "weakness": "N/A",
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380544],
+    "artist": "Toyste Beach",
+    "internal_id": 1380544
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-68",
+    "image": "/images/en-US/B4a-68.webp",
+    "energy": "trainer",
+    "name": "Team Rocket's Goo-zooka",
+    "card_type": "trainer",
+    "evolution_type": "item",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Until the end of your opponent's next turn, your opponent's Active Pokémon's Retreat Cost is 1 more."
+    },
+    "weakness": "N/A",
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380608],
+    "artist": "Toyste Beach",
+    "internal_id": 1380608
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-69",
+    "image": "/images/en-US/B4a-69.webp",
+    "energy": "trainer",
+    "name": "Team Rocket's Researcher",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Flip a coin until you get tails. For each heads, put a random Pokémon that has \"Team Rocket\" in its name from your deck into your hand."
+    },
+    "weakness": "N/A",
+    "rarity": "◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380672],
+    "artist": "hncl",
+    "internal_id": 1380672
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-70",
+    "image": "/images/en-US/B4a-70.webp",
+    "energy": "trainer",
+    "name": "Team Rocket's Master Plan",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Your opponent's Active Pokémon is now Confused. Flip a coin. If tails, your Active Pokémon is now Confused."
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380737],
+    "artist": "nagimiso",
+    "internal_id": 1380737
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-71",
+    "image": "/images/en-US/B4a-71.webp",
+    "energy": "trainer",
+    "name": "Team Rocket's Boss",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Look at your opponent's hand and put any number of Basic Pokémon you find there onto your opponent's Bench."
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380801],
+    "artist": "Atsushi Furusawa",
+    "internal_id": 1380801
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-72",
+    "image": "/images/en-US/B4a-72.webp",
+    "energy": "trainer",
+    "name": "Arcade",
+    "card_type": "trainer",
+    "evolution_type": "stadium",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Once during each player's turn, that player may flip 3 coins. If all of them are heads, that player draws cards until they have 7 cards in their hand."
+    },
+    "weakness": "N/A",
+    "rarity": "◊◊◊",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380866],
+    "artist": "MARINA Chikazawa",
+    "internal_id": 1380866
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-73",
+    "image": "/images/en-US/B4a-73.webp",
+    "hp": 130,
+    "energy": "fire",
+    "name": "Delphox",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless", "colorless"],
+        "name": "Psychic",
+        "damage": "60+",
+        "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377026, 1380932],
+    "artist": "Gemi",
+    "internal_id": 1380932
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-74",
+    "image": "/images/en-US/B4a-74.webp",
+    "hp": 90,
+    "energy": "psychic",
+    "name": "Team Rocket's Hypno",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["psychic", "psychic"],
+        "name": "Entrap",
+        "damage": "0",
+        "effect": "Switch in 1 of your opponent's Benched Pokémon to the Active Spo. If you do, this attack does 50 damage to the new Active Pokémon"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1378049, 1380996],
+    "artist": "Tetsu Kayama",
+    "internal_id": 1380996
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-75",
+    "image": "/images/en-US/B4a-75.webp",
+    "hp": 140,
+    "energy": "metal",
+    "name": "Team Rocket's Tinkaton",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["metal", "metal", "colorless"],
+        "name": "Pile-Driving Hammer",
+        "damage": "80",
+        "effect": "During your opponent's next turn, attacks used by the Defending Pokémon cost 2 Colorless more, and its Retreat Cost is 2 Colorless more."
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1379458, 1381060],
+    "artist": "Terada Tera",
+    "internal_id": 1381060
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-76",
+    "image": "/images/en-US/B4a-76.webp",
+    "hp": 70,
+    "energy": "colorless",
+    "name": "Team Rocket's Kecleon",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Hit and Hide",
+        "damage": "40",
+        "effect": "Flip a coin. If heads, during your opponent's next turn, prveent all damage from-and effects of-attacks done to this Pokémon"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380224, 1381124],
+    "artist": "Saboteri",
+    "internal_id": 1381124,
+    "ability": {
+      "name": "Spy Ops",
+      "effect": "Once during your turn, you may look at a random card from your opponent's hand."
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-77",
+    "image": "/images/en-US/B4a-77.webp",
+    "hp": 30,
+    "energy": "colorless",
+    "name": "Happiny",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["No Cost"],
+        "name": "Chubby Cheer",
+        "damage": "10",
+        "effect": "During your next turn, attacks used by your Pokémon do +20 damage to your opponent's Active Pokémon"
+      }
+    ],
+    "weakness": "none",
+    "retreat": 0,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380290, 1381188],
+    "artist": "Narumi Sato",
+    "internal_id": 1381188
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-78",
+    "image": "/images/en-US/B4a-78.webp",
+    "hp": 60,
+    "energy": "colorless",
+    "name": "Lechonk",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Headbutt",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [988096, 1380416, 1381252],
+    "artist": "buchi",
+    "internal_id": 1381252
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-79",
+    "image": "/images/en-US/B4a-79.webp",
+    "hp": 130,
+    "energy": "fire",
+    "name": "Team Rocket's Moltres ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire", "fighting"],
+        "name": "Heat Charged",
+        "damage": "0",
+        "effect": "Flip 3 coins. For each heads, produce a Fire Energy frm your Energy Zone and attach it ot this Pokémon"
+      },
+      {
+        "cost": ["fire", "fighting", "fire", "fighting", "fire", "fighting", "colorless"],
+        "name": "Netherwing",
+        "damage": "130",
+        "effect": "Discard a Fire Energy from this Pokémon"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1376707, 1381317, 1381893],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1381317
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-80",
+    "image": "/images/en-US/B4a-80.webp",
+    "hp": 130,
+    "energy": "water",
+    "name": "Team Rocket's Articuno ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water", "colorless"],
+        "name": "Ice Wing",
+        "damage": "40",
+        "effect": "No effect"
+      },
+      {
+        "cost": ["water", "water", "colorless"],
+        "name": "Hailstorm",
+        "damage": "130",
+        "effect": "This attack also does 20 damage to each of your Benched Pokémon"
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 2,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377155, 1381381, 1381957],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1381381
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-81",
+    "image": "/images/en-US/B4a-81.webp",
+    "hp": 120,
+    "energy": "lightning",
+    "name": "Team Rocket's Zapdos ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["lightning", "colorless"],
+        "name": "Electro Ball",
+        "damage": "40",
+        "effect": "No effect"
+      },
+      {
+        "cost": ["lightning", "lightning", "lightning", "colorless"],
+        "name": "Thunderclaw",
+        "damage": "90",
+        "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokémon that has damage on it."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377603, 1381445, 1382021],
+    "artist": "PLANETA Mamiya",
+    "internal_id": 1381445
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-82",
+    "image": "/images/en-US/B4a-82.webp",
+    "hp": 130,
+    "energy": "psychic",
+    "name": "Team Rocket's Slowking ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["psychic", "colorless"],
+        "name": "Hand Kinesis",
+        "damage": "20x",
+        "effect": "This attack does 20 damage for each card in your hand"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 3,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377923, 1381509, 1382085],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1381509,
+    "ability": {
+      "name": "Evil Inspiration",
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may draw a card."
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-83",
+    "image": "/images/en-US/B4a-83.webp",
+    "hp": 140,
+    "energy": "darkness",
+    "name": "Team Rocket's Weezing ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["darkness", "darkness"],
+        "name": "Confusion Gas",
+        "damage": "20",
+        "effect": "Your opponent's Active Pokémon is now Confused"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1379011, 1381573, 1382149],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1381573,
+    "ability": {
+      "name": "Boiler Smog",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may make your opponent's Active Pokémon Posioned and Burned"
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-84",
+    "image": "/images/en-US/B4a-84.webp",
+    "hp": 120,
+    "energy": "colorless",
+    "name": "Team Rocket's Raticate ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Boost Dash",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 0,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380035, 1381637, 1382213],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1381637,
+    "ability": {
+      "name": "Thieving Incisors",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may move a random Energy from your opponent's Active Pokémon to this Pokémon"
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-85",
+    "image": "/images/en-US/B4a-85.webp",
+    "energy": "trainer",
+    "name": "Team Rocket's Researcher",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Flip a coin until you get tails. For each heads, put a random Pokémon that has \"Team Rocket\" in its name from your deck into your hand."
+    },
+    "weakness": "N/A",
+    "rarity": "☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380672, 1381701],
+    "artist": "hncl",
+    "internal_id": 1381701
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-86",
+    "image": "/images/en-US/B4a-86.webp",
+    "energy": "trainer",
+    "name": "Team Rocket's Master Plan",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Your opponent's Active Pokémon is now Confused. Flip a coin. If tails, your Active Pokémon is now Confused."
+    },
+    "weakness": "N/A",
+    "rarity": "☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380737, 1381765, 1382278],
+    "artist": "nagimiso",
+    "internal_id": 1381765
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-87",
+    "image": "/images/en-US/B4a-87.webp",
+    "energy": "trainer",
+    "name": "Team Rocket's Boss",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Look at your opponent's hand and put any number of Basic Pokémon you find there onto your opponent's Bench."
+    },
+    "weakness": "N/A",
+    "rarity": "☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380801, 1381829],
+    "artist": "Atsushi Furusawa",
+    "internal_id": 1381829
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-88",
+    "image": "/images/en-US/B4a-88.webp",
+    "hp": 130,
+    "energy": "fire",
+    "name": "Team Rocket's Moltres ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire", "fighting"],
+        "name": "Heat Charged",
+        "damage": "0",
+        "effect": "Flip 3 coins. For each heads, produce a Fire Energy frm your Energy Zone and attach it ot this Pokémon"
+      },
+      {
+        "cost": ["fire", "fighting", "fire", "fighting", "fire", "fighting", "colorless"],
+        "name": "Netherwing",
+        "damage": "130",
+        "effect": "Discard a Fire Energy from this Pokémon"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1376707, 1381317, 1381893],
+    "artist": "REND",
+    "internal_id": 1381893
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-89",
+    "image": "/images/en-US/B4a-89.webp",
+    "hp": 130,
+    "energy": "water",
+    "name": "Team Rocket's Articuno ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water", "colorless"],
+        "name": "Ice Wing",
+        "damage": "40",
+        "effect": "No effect"
+      },
+      {
+        "cost": ["water", "water", "colorless"],
+        "name": "Hailstorm",
+        "damage": "130",
+        "effect": "This attack also does 20 damage to each of your Benched Pokémon"
+      }
+    ],
+    "weakness": "metal",
+    "retreat": 2,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377155, 1381381, 1381957],
+    "artist": "REND",
+    "internal_id": 1381957
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-90",
+    "image": "/images/en-US/B4a-90.webp",
+    "hp": 120,
+    "energy": "lightning",
+    "name": "Team Rocket's Zapdos ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["lightning", "colorless"],
+        "name": "Electro Ball",
+        "damage": "40",
+        "effect": "No effect"
+      },
+      {
+        "cost": ["lightning", "lightning", "lightning", "colorless"],
+        "name": "Thunderclaw",
+        "damage": "90",
+        "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokémon that has damage on it."
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377603, 1381445, 1382021],
+    "artist": "REND",
+    "internal_id": 1382021
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-91",
+    "image": "/images/en-US/B4a-91.webp",
+    "hp": 130,
+    "energy": "psychic",
+    "name": "Team Rocket's Slowking ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["psychic", "colorless"],
+        "name": "Hand Kinesis",
+        "damage": "20x",
+        "effect": "This attack does 20 damage for each card in your hand"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 3,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1377923, 1381509, 1382085],
+    "artist": "Takeshi Nakamura",
+    "internal_id": 1382085,
+    "ability": {
+      "name": "Evil Inspiration",
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may draw a card."
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-92",
+    "image": "/images/en-US/B4a-92.webp",
+    "hp": 140,
+    "energy": "darkness",
+    "name": "Team Rocket's Weezing ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["darkness", "darkness"],
+        "name": "Confusion Gas",
+        "damage": "20",
+        "effect": "Your opponent's Active Pokémon is now Confused"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1379011, 1381573, 1382149],
+    "artist": "Shimaris Yukichi",
+    "internal_id": 1382149,
+    "ability": {
+      "name": "Boiler Smog",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may make your opponent's Active Pokémon Posioned and Burned"
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-93",
+    "image": "/images/en-US/B4a-93.webp",
+    "hp": 120,
+    "energy": "colorless",
+    "name": "Team Rocket's Raticate ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Boost Dash",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 0,
+    "rarity": "☆☆",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380035, 1381637, 1382213],
+    "artist": "Krgc",
+    "internal_id": 1382213,
+    "ability": {
+      "name": "Thieving Incisors",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may move a random Energy from your opponent's Active Pokémon to this Pokémon"
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-94",
+    "image": "/images/en-US/B4a-94.webp",
+    "energy": "trainer",
+    "name": "Team Rocket's Master Plan",
+    "card_type": "trainer",
+    "evolution_type": "supporter",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Your opponent's Active Pokémon is now Confused. Flip a coin. If tails, your Active Pokémon is now Confused."
+    },
+    "weakness": "N/A",
+    "rarity": "☆☆☆",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380737, 1381765, 1382278],
+    "artist": "Yukihiro Tada",
+    "internal_id": 1382278
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-95",
+    "image": "/images/en-US/B4a-95.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Vulpix",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Hold Still",
+        "damage": "0",
+        "effect": "Heal 20 damage from this Pokémon"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [67904, 591424, 1245696, 1249668, 1382344],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 1382344
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-96",
+    "image": "/images/en-US/B4a-96.webp",
+    "hp": 100,
+    "energy": "fire",
+    "name": "Ninetales",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["fighting", "colorless", "colorless"],
+        "name": "Ember Dance",
+        "damage": "20x",
+        "effect": "Flip 9 coins. This attack does 20 damage for each heads"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [67969, 591490, 1245761, 1382408],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 1382408
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-97",
+    "image": "/images/en-US/B4a-97.webp",
+    "hp": 50,
+    "energy": "water",
+    "name": "Goldeen",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water"],
+        "name": "Horn Attack",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [70144, 1245952, 1382472],
+    "artist": "Taiga Kasai",
+    "internal_id": 1382472
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-98",
+    "image": "/images/en-US/B4a-98.webp",
+    "hp": 90,
+    "energy": "water",
+    "name": "Seaking",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["water"],
+        "name": "Aqua Bullet",
+        "damage": "30",
+        "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [70208, 1246017, 1382536],
+    "artist": "Taiga Kasai",
+    "internal_id": 1382536
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-99",
+    "image": "/images/en-US/B4a-99.webp",
+    "hp": 60,
+    "energy": "lightning",
+    "name": "Toxel",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["lightning", "colorless"],
+        "name": "Static Shock",
+        "damage": "30",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [920960, 928132, 1117952, 1382600],
+    "artist": "MAHOU",
+    "internal_id": 1382600
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-100",
+    "image": "/images/en-US/B4a-100.webp",
+    "hp": 30,
+    "energy": "psychic",
+    "name": "Sinistea",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["psychic"],
+        "name": "Hide",
+        "damage": "0",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [922240, 1382664],
+    "artist": "MAHOU",
+    "internal_id": 1382664
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-101",
+    "image": "/images/en-US/B4a-101.webp",
+    "hp": 70,
+    "energy": "psychic",
+    "name": "Polteageist",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["psychic"],
+        "name": "Spooky Shot",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [922305, 1382728],
+    "artist": "MAHOU",
+    "internal_id": 1382728,
+    "ability": {
+      "name": "Refreshing Tea",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may have your opponent shuffle their hand into the deck. For each remaining point that your opponent needs to win, they draw a card."
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-102",
+    "image": "/images/en-US/B4a-102.webp",
+    "hp": 80,
+    "energy": "metal",
+    "name": "Mawile",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["metal", "colorless"],
+        "name": "Cavernous Chomp",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [76928, 265728, 527296, 597824, 924672, 1317440, 1382792],
+    "artist": "Souichirou Gunjima",
+    "internal_id": 1382792
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-103",
+    "image": "/images/en-US/B4a-103.webp",
+    "hp": 60,
+    "energy": "colorless",
+    "name": "Taillow",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Peck",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [925952, 1382856],
+    "artist": "whomor Inc.",
+    "internal_id": 1382856
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-104",
+    "image": "/images/en-US/B4a-104.webp",
+    "hp": 80,
+    "energy": "colorless",
+    "name": "Swellow",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Wing Attack",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "✵",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [926018, 1382920],
+    "artist": "whomor Inc.",
+    "internal_id": 1382920,
+    "ability": {
+      "name": "Repelling Wind",
+      "effect": "Once during your turn, you may switch out your opponent's Active Basic Pokémon to the Bench. (Your opponent chooses the new Active Pokémon)"
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-105",
+    "image": "/images/en-US/B4a-105.webp",
+    "hp": 220,
+    "energy": "fire",
+    "name": "Mega Charizard Y ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["fire", "fighting", "fire", "fighting", "fire", "fighting", "colorless"],
+        "name": "Crimson Dive",
+        "damage": "250",
+        "effect": "This Pokémon also does 50 damage to itself"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1382985],
+    "artist": "PLANETA Igarashi",
+    "internal_id": 1382985
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-106",
+    "image": "/images/en-US/B4a-106.webp",
+    "hp": 150,
+    "energy": "lightning",
+    "name": "Toxtricity ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["lightning", "lightning", "colorless"],
+        "name": "Damaging Spark",
+        "damage": "90",
+        "effect": "This attack also does 30 damage to each of your opponent's Benched Pokémon that has damage on it"
+      }
+    ],
+    "weakness": "fighting",
+    "retreat": 2,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [921027, 929285, 930181, 1383049],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1383049
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-107",
+    "image": "/images/en-US/B4a-107.webp",
+    "hp": 120,
+    "energy": "psychic",
+    "name": "Mimikyu ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["psychic", "psychic"],
+        "name": "Claw Slash",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [922179, 929413, 930245, 1383113],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1383113,
+    "ability": {
+      "name": "Disguise",
+      "effect": "When this Pokémon is first damaged by an attack after coming into play, prevent that damage"
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-108",
+    "image": "/images/en-US/B4a-108.webp",
+    "hp": 170,
+    "energy": "metal",
+    "name": "Mega Mawile ex",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["metal", "colorless"],
+        "name": "Heat-Up Crunch",
+        "damage": "60",
+        "effect": "Until this Pokémon leaves the Active Spot, this Pokémon's Heat-Up Crunch does +30 damage. This effect stacks"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "✵✵",
+    "ex": true,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [924739, 929541, 930373, 1383177],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1383177
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-109",
+    "image": "/images/en-US/B4a-109.webp",
+    "hp": 100,
+    "energy": "metal",
+    "name": "Gholdengo",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless", "colorless"],
+        "name": "Power Gem",
+        "damage": "50",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "Crown Rare",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [331330, 332612, 991048, 1379521, 1383244],
+    "artist": "PLANETA CG Works",
+    "internal_id": 1383244,
+    "ability": {
+      "name": "Luxury Coin",
+      "effect": "Once during your tun, when you flip any coins for an effect of your Trainer cards, you may ignore all results of those coin flips and begin flipping those coins again. You can't use more than 1 Luxury Coin Ability each turn."
+    }
+  },
+  {
+    "expansion": "B4a",
+    "card_id": "B4a-110",
+    "image": "/images/en-US/B4a-110.webp",
+    "energy": "trainer",
+    "name": "Team Rocket's Goo-zooka",
+    "card_type": "trainer",
+    "evolution_type": "item",
+    "attacks": [],
+    "ability": {
+      "name": "",
+      "effect": "Until the end of your opponent's next turn, your opponent's Active Pokémon's Retreat Cost is 1 more."
+    },
+    "weakness": "N/A",
+    "rarity": "Crown Rare",
+    "ex": false,
+    "baby": false,
+    "set_details": "teamrocketsambition(b4a)",
+    "pack": "everypack",
+    "alternate_versions": [1380608, 1383308],
+    "artist": "Toyste Beach",
+    "internal_id": 1383308
+  },
+  {
     "expansion": "P-A",
     "card_id": "P-A-1",
     "image": "/images/en-US/P-A-1.webp",
