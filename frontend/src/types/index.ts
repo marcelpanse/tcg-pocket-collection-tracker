@@ -3,6 +3,7 @@ import type { Session } from '@supabase/supabase-js'
 export type User = Session
 
 export const expansionIds = [
+  'B4a',
   'B4',
   'B3b',
   'B3a',

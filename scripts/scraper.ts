@@ -41,6 +41,7 @@ const packs = [
   'paradoxdrivepack',
   'everydaywonderspack',
   'ruleroftheskiespack',
+  'teamrocketsambitionpack',
   'allcards',
 ]
 
@@ -123,6 +124,11 @@ const rarityOverrides: Record<ExpansionId, { rarity: Rarity; start: number; end:
     { rarity: '✵', start: 204, end: 223 },
     { rarity: '✵✵', start: 224, end: 231 },
     // 156-201 are gold full-art (☆/☆☆), 202-203 are ☆☆☆, 232-233 are Crown — Limitless labels those correctly.
+  ],
+  B4a: [
+    { rarity: '✵', start: 95, end: 104 },
+    { rarity: '✵✵', start: 105, end: 108 },
+    // 73-78 are gold full-art (☆), 79-93 are ☆☆, 94 is ☆☆☆, 109-110 are Crown — Serebii labels those correctly.
   ],
   'P-A': [],
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],
