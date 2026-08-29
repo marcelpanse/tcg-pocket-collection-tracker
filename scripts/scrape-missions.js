@@ -7,7 +7,7 @@ const TARGET_DIR = './frontend/assets/themed-collections/'
 const CARDS_PATH = './frontend/assets/cards.json'
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36'
 
-const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'A4b', 'B1', 'B1a', 'B2', 'B2a', 'B2b', 'B3']
+const expansions = ['A1', 'A1a', 'A2', 'A2a', 'A2b', 'A3', 'A3a', 'A3b', 'A4', 'A4a', 'A4b', 'B1', 'B1a', 'B2', 'B2a', 'B2b', 'B3', 'B3a', 'B3b', 'B4', 'B4a']
 
 const allCards = JSON.parse(fs.readFileSync(CARDS_PATH, 'utf8'))
 const cardById = new Map(allCards.map((c) => [c.card_id, c]))

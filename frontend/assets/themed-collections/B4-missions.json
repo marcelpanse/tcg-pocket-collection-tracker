@@ -1,0 +1,366 @@
+[
+  {
+    "expansionId": "B4",
+    "name": "Dragon-type Pokémon",
+    "requiredCards": [
+      {
+        "options": ["B4-116"],
+        "amount": 5
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B4",
+    "name": "A Storm Is Coming",
+    "requiredCards": [
+      {
+        "options": ["B4-8"],
+        "amount": 5
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B4",
+    "name": "Pokémon That Live in the City",
+    "requiredCards": [
+      {
+        "options": ["B4-71", "B4-167"],
+        "amount": 5
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B4",
+    "name": "Under Construction",
+    "requiredCards": [
+      {
+        "options": ["B4-87"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-88"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B4",
+    "name": "Pokémon That Emit Sonic Waves",
+    "requiredCards": [
+      {
+        "options": ["B4-75"],
+        "amount": 4
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B4",
+    "name": "Collect 3 Absol cards",
+    "requiredCards": [
+      {
+        "options": ["B4-100"],
+        "amount": 3
+      }
+    ],
+    "reward": "Absol (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B4",
+    "name": "Collect 3 Ralts cards",
+    "requiredCards": [
+      {
+        "options": ["B4-71", "B4-167"],
+        "amount": 3
+      }
+    ],
+    "reward": "Ralts (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B4",
+    "name": "Legends of the Hoenn Region",
+    "requiredCards": [
+      {
+        "options": ["B4-41", "B4-162"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-83"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-119"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B4",
+    "name": "Pokémon at the Harbor",
+    "requiredCards": [
+      {
+        "options": ["B4-32"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-34"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-165"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B4",
+    "name": "Pokémon Spending Time in the Park",
+    "requiredCards": [
+      {
+        "options": ["B4-49"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-54"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-140"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-171"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B4",
+    "name": "Back-Alley Pokémon",
+    "requiredCards": [
+      {
+        "options": ["B4-27"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-93"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-96"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-129"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-130"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B4",
+    "name": "A Fusion of Mega Metagross",
+    "requiredCards": [
+      {
+        "options": ["B4-106"],
+        "amount": 2
+      },
+      {
+        "options": ["B4-107"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-108"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-109", "B4-187", "B4-200"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B4",
+    "name": "Ruler of the Skies Museum 1",
+    "requiredCards": [
+      {
+        "options": ["B4-156"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-157"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-158"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-159"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-160"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-161"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-162"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-163"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-164"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-165"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-166"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-167"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-168"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-169"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-170"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-171"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-172"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-173"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-174"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-175"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-176"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-177"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-178"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-179"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  },
+  {
+    "expansionId": "B4",
+    "name": "Ruler of the Skies Museum 2",
+    "requiredCards": [
+      {
+        "options": ["B4-194"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-195"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-196"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-197"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-198"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-199"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-200"],
+        "amount": 1
+      },
+      {
+        "options": ["B4-201"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  },
+  {
+    "expansionId": "B4",
+    "name": "A Profusion of Mega Metagross?!",
+    "requiredCards": [
+      {
+        "options": ["B4-106", "P-B-86"],
+        "amount": 29
+      },
+      {
+        "options": ["B4-109", "B4-187", "B4-200"],
+        "amount": 1
+      }
+    ],
+    "reward": "Mega Metagross (emblem)",
+    "secret": true
+  }
+]

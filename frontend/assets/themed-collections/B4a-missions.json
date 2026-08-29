@@ -1,0 +1,586 @@
+[
+  {
+    "expansionId": "B4a",
+    "name": "Boss and Partner",
+    "requiredCards": [
+      {
+        "options": ["B4a-61"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-71"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Pile of Coins",
+    "requiredCards": [
+      {
+        "options": ["B4a-34"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-57", "B4a-51"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-72"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "The Researcher’s Shady Inventions",
+    "requiredCards": [
+      {
+        "options": ["B4a-67"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-68"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-69"],
+        "amount": 1
+      }
+    ],
+    "reward": "Team Rocket’S Researcher (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Illumise and Volbeat",
+    "requiredCards": [
+      {
+        "options": ["B4a-1"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-2"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Pokémon with Long Noses",
+    "requiredCards": [
+      {
+        "options": ["B4a-27"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-46"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-47"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Team Rocket Grunt 1",
+    "requiredCards": [
+      {
+        "options": ["B4a-6"],
+        "amount": 3
+      },
+      {
+        "options": ["B4a-70"],
+        "amount": 1
+      }
+    ],
+    "reward": "Team Rocket Grunt (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Team Rocket Grunt 2",
+    "requiredCards": [
+      {
+        "options": ["B4a-8"],
+        "amount": 3
+      },
+      {
+        "options": ["B4a-70"],
+        "amount": 1
+      }
+    ],
+    "reward": "Team Rocket Grunt Ver. 2 (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Beware of Poison Gas!",
+    "requiredCards": [
+      {
+        "options": ["B4a-42"],
+        "amount": 3
+      }
+    ],
+    "reward": "Team Rocket Grunt Ver. 3 (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Team Rocket’s Pokémon",
+    "requiredCards": [
+      {
+        "options": ["B4a-6"],
+        "amount": 100
+      }
+    ],
+    "reward": "Team Rocket’S Boss (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Team Rocket Grunt Army!",
+    "requiredCards": [
+      {
+        "options": ["B4a-70"],
+        "amount": 20
+      }
+    ],
+    "reward": "Team Rocket Grunt (emblem)",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Shady Invention Collector",
+    "requiredCards": [
+      {
+        "options": ["B4a-67"],
+        "amount": 42
+      }
+    ],
+    "reward": "Team Rocket’S Researcher (emblem)",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "All Team Rocket Cards Complete!",
+    "requiredCards": [
+      {
+        "options": ["B4a-6"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-7"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-8"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-9"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-13"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-14"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-19"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-20"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-21"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-24"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-25"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-26"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-27"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-28"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-29"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-30"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-38"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-39"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-40"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-41"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-42"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-43"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-44"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-48"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-49"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-50"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-58"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-59"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-60"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-61"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-62"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-67"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-68"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-69"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-70"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-71"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-74"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-75"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-76"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-79"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-80"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-81"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-82"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-83"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-84"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-85"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-86"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-87"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-88"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-89"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-90"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-91"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-92"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-93"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-94"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-110"],
+        "amount": 1
+      }
+    ],
+    "reward": "Team Rocket’S Boss (emblem)",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Obtain 3 Team Rocket’s Drowzee cards!",
+    "requiredCards": [
+      {
+        "options": ["B4a-27"],
+        "amount": 3
+      }
+    ],
+    "reward": "Team Rocket’S Drowzee (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Search for Legendary Pokémon!",
+    "requiredCards": [
+      {
+        "options": ["B4a-8"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-13"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-75"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Infiltrate the lab!",
+    "requiredCards": [
+      {
+        "options": ["B4a-38"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-41"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-49"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-76"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Find recruits for Team Rocket!",
+    "requiredCards": [
+      {
+        "options": ["B4a-29"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-60"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-74"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Pokémon Holding Things in Their Hands",
+    "requiredCards": [
+      {
+        "options": ["B4a-12"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-28"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-33"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-35"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-36"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-48"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-49"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-50"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Team Rocket’s Ambition Museum 1",
+    "requiredCards": [
+      {
+        "options": ["B4a-73"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-74"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-75"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-76"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-77"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-78"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  },
+  {
+    "expansionId": "B4a",
+    "name": "Team Rocket’s Ambition Museum 2",
+    "requiredCards": [
+      {
+        "options": ["B4a-88"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-89"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-90"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-91"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-92"],
+        "amount": 1
+      },
+      {
+        "options": ["B4a-93"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  }
+]

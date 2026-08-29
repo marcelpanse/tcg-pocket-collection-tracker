@@ -1,0 +1,238 @@
+[
+  {
+    "expansionId": "B3b",
+    "name": "All Zoned Out",
+    "requiredCards": [
+      {
+        "options": ["B3b-11"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-26"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-37"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-48"],
+        "amount": 1
+      }
+    ],
+    "reward": "All Zoned Out (cover)",
+    "secret": false
+  },
+  {
+    "expansionId": "B3b",
+    "name": "Sleepy Time",
+    "requiredCards": [
+      {
+        "options": ["B3b-8"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-10"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-22"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-29"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-63"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B3b",
+    "name": "Look, Bubbles!",
+    "requiredCards": [
+      {
+        "options": ["B3b-21"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-36"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B3b",
+    "name": "Puppy Pile",
+    "requiredCards": [
+      {
+        "options": ["B3b-10"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-25"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-34"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-38"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-67", "B3b-84"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B3b",
+    "name": "Collect 1 ★ card!",
+    "requiredCards": [
+      {
+        "options": ["B3b-8", "B3b-70"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B3b",
+    "name": "Collect 3 Hisuian Zorua cards",
+    "requiredCards": [
+      {
+        "options": ["B3b-59"],
+        "amount": 3
+      }
+    ],
+    "reward": "Hisuian Zorua (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B3b",
+    "name": "Carbink’s Spontaneous Mutation",
+    "requiredCards": [
+      {
+        "options": ["B3b-31"],
+        "amount": 3
+      },
+      {
+        "options": ["B3b-32", "B3b-80", "B3b-87"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B3b",
+    "name": "Gathering Berries",
+    "requiredCards": [
+      {
+        "options": ["B3b-54"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-55"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-62"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-63"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B3b",
+    "name": "Everyday Wonders Museum 1",
+    "requiredCards": [
+      {
+        "options": ["B3b-70"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-71"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-72"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-73"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-74"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-75"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-76"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-77"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  },
+  {
+    "expansionId": "B3b",
+    "name": "Everyday Wonders Museum 2",
+    "requiredCards": [
+      {
+        "options": ["B3b-86"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-87"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-88"],
+        "amount": 1
+      },
+      {
+        "options": ["B3b-89"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  },
+  {
+    "expansionId": "B3b",
+    "name": "A Pack of Puppy Pokémon!",
+    "requiredCards": [
+      {
+        "options": ["B3b-10", "P-B-77"],
+        "amount": 50
+      }
+    ],
+    "reward": "Yamper (emblem)",
+    "secret": true
+  }
+]
