@@ -94448,14 +94448,14 @@
     "image": "/images/en-US/B4-19.webp",
     "hp": 90,
     "energy": "grass",
-    "name": "Teal MaskOgerpon",
+    "name": "Teal Mask Ogerpon",
     "card_type": "pokémon",
     "evolution_type": "basic",
     "attacks": [
       {
         "cost": ["grass", "grass", "colorless"],
-        "name": "Ogre’s",
-        "damage": "Whip",
+        "name": "Ogre’s Whip",
+        "damage": "",
         "effect": "This attack does damage to your opponent's Active Pokémon equal to this Pokémon's remaining HP."
       }
     ],
