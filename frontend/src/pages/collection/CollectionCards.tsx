@@ -12,16 +12,26 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import useSearchState from '@/hooks/use-search-state'
 import { toast } from '@/hooks/use-toast'
-import { getFilteredCards, ownershipOptions, sortByOptions, tradingOptions } from '@/lib/filters'
+import {
+  abilityOptions,
+  cardTypeOptions,
+  getFilteredCards,
+  ownershipOptions,
+  pokemonKindOptions,
+  sortByOptions,
+  stageOptions,
+  tradingOptions,
+  trainerSubtypeOptions,
+} from '@/lib/filters'
 import { getCardNameByLang } from '@/lib/utils.ts'
 import { useProfileDialog } from '@/services/account/useAccount'
-import { type Card as CardType, type Collection, cardTypes, expansionIds, type PublicAccountRow, rarities, type UserAccountRow } from '@/types'
+import { type Card as CardType, type Collection, expansionIds, type PublicAccountRow, rarities, type UserAccountRow } from '@/types'
 
 const schema = z.object({
   search: z.string().default(''),
   expansion: z.union([z.enum(expansionIds), z.literal('all')]).default('all'),
   pack: z.string().default('all'),
-  cardType: z.array(z.enum(cardTypes)).default([]),
+  cardType: z.array(z.enum(cardTypeOptions)).default([]),
   rarity: z.array(z.enum(rarities)).default([]),
   ownership: z.enum(ownershipOptions).default('all'),
   trading: z.enum(tradingOptions).default('all'),
@@ -31,6 +41,14 @@ const schema = z.object({
   maxNumber: z.union([z.number(), z.literal('∞')]).default('∞'),
   deckbuildingMode: z.boolean().default(false),
   allTextSearch: z.boolean().default(false),
+  stage: z.array(z.enum(stageOptions)).default([]),
+  pokemonKind: z.array(z.enum(pokemonKindOptions)).default([]),
+  trainerSubtype: z.array(z.enum(trainerSubtypeOptions)).default([]),
+  ability: z.enum(abilityOptions).default('all'),
+  minHp: z.number().default(0),
+  maxHp: z.union([z.number(), z.literal('∞')]).default('∞'),
+  minRetreat: z.number().default(0),
+  maxRetreat: z.union([z.number(), z.literal('∞')]).default('∞'),
 })
 
 interface Props {

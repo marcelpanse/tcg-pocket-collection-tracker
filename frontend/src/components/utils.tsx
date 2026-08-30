@@ -24,9 +24,5 @@ export function formatRarity(rarity: Rarity) {
 }
 
 export function showCardType(x: CardTypeOption) {
-  if (x === 'trainer') {
-    return 'T'
-  } else {
-    return <img src={`/images/energy/${x}.webp`} alt={x} className="h-4" />
-  }
+  return <img src={`/images/energy/${x}.webp`} alt={x} className="h-4" />
 }

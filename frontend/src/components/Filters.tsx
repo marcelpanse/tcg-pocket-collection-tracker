@@ -61,16 +61,45 @@ export function DropdownFilter<T extends string | number>({ label, options, valu
 interface PropsToggle<T> extends Props<T> {
   value: T[]
   onChange: (value: T[]) => void
+  label?: string
+  selectAllLabel?: string
+  clearAllLabel?: string
 }
 
-export function ToggleFilter<T extends string>({ options, value, onChange, className, show = (x) => x }: PropsToggle<T>) {
-  return (
-    <ToggleGroup type="multiple" className={cn(commonClassName, 'flex flex-wrap justify-start', className)} value={value} onValueChange={onChange}>
+export function ToggleFilter<T extends string>({ options, value, onChange, className, show = (x) => x, label, selectAllLabel, clearAllLabel }: PropsToggle<T>) {
+  const allSelected = value.length === options.length
+  const group = (
+    <ToggleGroup
+      type="multiple"
+      className={cn(commonClassName, 'flex flex-wrap justify-start', className, label && 'rounded-tl-none -mt-px')}
+      value={value}
+      onValueChange={onChange}
+    >
       {options.map((x) => (
         <ToggleGroupItem key={x} value={x} aria-label={x}>
           {show(x)}
         </ToggleGroupItem>
       ))}
+      {selectAllLabel && (
+        <button
+          type="button"
+          onClick={() => onChange(allSelected ? [] : [...options])}
+          className="cursor-pointer text-xs text-neutral-400 hover:text-neutral-300 px-2 py-1 ml-auto"
+        >
+          {allSelected && clearAllLabel ? clearAllLabel : selectAllLabel}
+        </button>
+      )}
     </ToggleGroup>
+  )
+  if (!label) {
+    return group
+  }
+  return (
+    <div>
+      <span className="block w-fit bg-neutral-800 border border-b-0 rounded-t-md border-neutral-700 text-neutral-400 px-4 py-0.5 text-xs relative">
+        {label}
+      </span>
+      {group}
+    </div>
   )
 }

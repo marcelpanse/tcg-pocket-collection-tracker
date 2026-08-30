@@ -6,7 +6,21 @@ import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { getExpansionById } from '@/lib/CardsDB.ts'
-import { cardTypeOptions, type ExpansionOption, expansionOptions, type Filters, ownershipOptions, sortByOptions, tradingOptions } from '@/lib/filters'
+import {
+  abilityOptions,
+  cardTypeOptions,
+  type ExpansionOption,
+  expansionOptions,
+  type Filters,
+  hpOptions,
+  ownershipOptions,
+  pokemonKindOptions,
+  retreatOptions,
+  sortByOptions,
+  stageOptions,
+  tradingOptions,
+  trainerSubtypeOptions,
+} from '@/lib/filters'
 import { DropdownFilter, TabsFilter, ToggleFilter } from './Filters'
 import AllTextSearchFilter from './filters/AllTextSearchFilter'
 import DeckbuildingFilter from './filters/DeckbuildingFilter'
@@ -69,8 +83,102 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
       {filters.rarity !== undefined && (
         <RarityFilter rarityFilter={filters.rarity} setRarityFilter={changeFilter('rarity')} deckbuildingMode={filters.deckbuildingMode} />
       )}
-      {filters.cardType !== undefined && (
-        <ToggleFilter options={cardTypeOptions} value={filters.cardType} onChange={changeFilter('cardType')} show={showCardType} />
+      {(filters.cardType !== undefined || filters.trainerSubtype !== undefined) && (
+        <div className="flex flex-col gap-1">
+          {filters.cardType !== undefined && (
+            <ToggleFilter
+              options={cardTypeOptions}
+              value={filters.cardType}
+              onChange={changeFilter('cardType')}
+              show={showCardType}
+              label={t('f-type.pokemon', { ns: 'filters' })}
+              selectAllLabel={t('f-selectAll', { ns: 'filters' })}
+              clearAllLabel={t('f-clearAll', { ns: 'filters' })}
+            />
+          )}
+          {filters.trainerSubtype !== undefined && (
+            <ToggleFilter
+              options={trainerSubtypeOptions}
+              value={filters.trainerSubtype}
+              onChange={changeFilter('trainerSubtype')}
+              show={(x) => t(`f-trainerSubtype.${x}`, { ns: 'filters' })}
+              label={t('f-type.trainer', { ns: 'filters' })}
+              selectAllLabel={t('f-selectAll', { ns: 'filters' })}
+              clearAllLabel={t('f-clearAll', { ns: 'filters' })}
+            />
+          )}
+        </div>
+      )}
+      {filters.stage !== undefined && (
+        <ToggleFilter
+          options={stageOptions}
+          value={filters.stage}
+          onChange={changeFilter('stage')}
+          show={(x) => t(`f-stage.${x}`, { ns: 'filters' })}
+          label={t('f-stage.label', { ns: 'filters' })}
+        />
+      )}
+      {filters.pokemonKind !== undefined && (
+        <ToggleFilter
+          options={pokemonKindOptions}
+          value={filters.pokemonKind}
+          onChange={changeFilter('pokemonKind')}
+          show={(x) => t(`f-pokemonKind.${x}`, { ns: 'filters' })}
+          label={t('f-pokemonKind.label', { ns: 'filters' })}
+        />
+      )}
+      {filters.ability !== undefined && (
+        <TabsFilter
+          options={abilityOptions}
+          value={filters.ability}
+          onChange={changeFilter('ability')}
+          label={t('f-ability.label', { ns: 'filters' })}
+          show={(x) => t(`f-ability.${x}`, { ns: 'filters' })}
+        />
+      )}
+      {(filters.minHp !== undefined || filters.maxHp !== undefined) && (
+        <div className="flex gap-2">
+          {filters.minHp !== undefined && (
+            <DropdownFilter
+              className="flex-1"
+              label={t('f-hp.minHp', { ns: 'filters' })}
+              options={hpOptions}
+              value={filters.minHp}
+              onChange={changeFilter('minHp')}
+            />
+          )}
+          {filters.maxHp !== undefined && (
+            <DropdownFilter
+              className="flex-1"
+              label={t('f-hp.maxHp', { ns: 'filters' })}
+              options={['∞', ...hpOptions]}
+              value={filters.maxHp}
+              onChange={changeFilter('maxHp')}
+            />
+          )}
+        </div>
+      )}
+      {(filters.minRetreat !== undefined || filters.maxRetreat !== undefined) && (
+        <div className="flex gap-2">
+          {filters.minRetreat !== undefined && (
+            <DropdownFilter
+              className="flex-1"
+              label={t('f-retreat.minRetreat', { ns: 'filters' })}
+              options={retreatOptions}
+              value={filters.minRetreat}
+              onChange={changeFilter('minRetreat')}
+            />
+          )}
+          {filters.maxRetreat !== undefined && (
+            <DropdownFilter
+              className="flex-1"
+              label={t('f-retreat.maxRetreat', { ns: 'filters' })}
+              options={['∞', ...retreatOptions]}
+              value={filters.maxRetreat}
+              onChange={changeFilter('maxRetreat')}
+            />
+          )}
+        </div>
       )}
       {filters.ownership !== undefined && (
         <TabsFilter

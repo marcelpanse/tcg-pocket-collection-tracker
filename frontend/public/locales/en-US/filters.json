@@ -2,6 +2,8 @@
   "rarity": "Rarity",
   "carddex": "Card Dex",
   "trading": "Trading",
+  "f-selectAll": "Select all",
+  "f-clearAll": "Clear",
   "f-ownership": {
     "all": "All",
     "missing": "Missing",
@@ -34,5 +36,42 @@
     "normal": "Normal",
     "secret": "Secret",
     "complete": "Complete"
+  },
+  "f-type": {
+    "type": "Type",
+    "pokemon": "Pokémon",
+    "trainer": "Trainer"
+  },
+  "f-stage": {
+    "label": "Stage",
+    "basic": "Basic",
+    "stage1": "Stage 1",
+    "stage2": "Stage 2"
+  },
+  "f-pokemonKind": {
+    "label": "Kind",
+    "regular": "Regular",
+    "ex": "ex",
+    "megaex": "Mega ex"
+  },
+  "f-trainerSubtype": {
+    "item": "Item",
+    "supporter": "Supporter",
+    "tool": "Tool",
+    "stadium": "Stadium"
+  },
+  "f-ability": {
+    "label": "Ability",
+    "all": "All",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "f-hp": {
+    "minHp": "Min HP",
+    "maxHp": "Max HP"
+  },
+  "f-retreat": {
+    "minRetreat": "Min retreat",
+    "maxRetreat": "Max retreat"
   }
 }

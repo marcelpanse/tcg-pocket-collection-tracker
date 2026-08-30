@@ -25,6 +25,8 @@
   },
   "carddex": "Card Dex",
   "trading": "Tausch",
+  "f-selectAll": "Alle auswählen",
+  "f-clearAll": "Löschen",
   "f-owned": {
     "all": "Alle",
     "owned": "Im Besitz",
@@ -35,5 +37,42 @@
     "normal": "Normal",
     "secret": "Geheim",
     "complete": "Komplett"
+  },
+  "f-type": {
+    "type": "Typ",
+    "pokemon": "Pokémon",
+    "trainer": "Trainer"
+  },
+  "f-stage": {
+    "label": "Phase",
+    "basic": "Basis",
+    "stage1": "Phase 1",
+    "stage2": "Phase 2"
+  },
+  "f-pokemonKind": {
+    "label": "Art",
+    "regular": "Normal",
+    "ex": "ex",
+    "megaex": "Mega ex"
+  },
+  "f-trainerSubtype": {
+    "item": "Item",
+    "supporter": "Unterstützer",
+    "tool": "Werkzeug",
+    "stadium": "Stadion"
+  },
+  "f-ability": {
+    "label": "Fähigkeit",
+    "all": "Alle",
+    "yes": "Ja",
+    "no": "Nein"
+  },
+  "f-hp": {
+    "minHp": "KP min",
+    "maxHp": "KP max"
+  },
+  "f-retreat": {
+    "minRetreat": "Rückzug min",
+    "maxRetreat": "Rückzug max"
   }
 }

@@ -25,6 +25,8 @@
   },
   "carddex": "Card Dex",
   "trading": "Trading",
+  "f-selectAll": "Seleziona tutto",
+  "f-clearAll": "Cancella",
   "f-owned": {
     "all": "All",
     "owned": "Owned",
@@ -35,5 +37,42 @@
     "normal": "Normale",
     "secret": "Segreta",
     "complete": "Completa"
+  },
+  "f-type": {
+    "type": "Tipo",
+    "pokemon": "Pokémon",
+    "trainer": "Allenatore"
+  },
+  "f-stage": {
+    "label": "Fase",
+    "basic": "Base",
+    "stage1": "Fase 1",
+    "stage2": "Fase 2"
+  },
+  "f-pokemonKind": {
+    "label": "Categoria",
+    "regular": "Normale",
+    "ex": "ex",
+    "megaex": "Mega ex"
+  },
+  "f-trainerSubtype": {
+    "item": "Strumento",
+    "supporter": "Sostenitore",
+    "tool": "Attrezzo",
+    "stadium": "Stadio"
+  },
+  "f-ability": {
+    "label": "Abilità",
+    "all": "Tutte",
+    "yes": "Sì",
+    "no": "No"
+  },
+  "f-hp": {
+    "minHp": "PS min",
+    "maxHp": "PS max"
+  },
+  "f-retreat": {
+    "minRetreat": "Ritirata min",
+    "maxRetreat": "Ritirata max"
   }
 }
