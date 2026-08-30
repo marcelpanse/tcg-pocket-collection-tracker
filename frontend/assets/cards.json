@@ -100501,9 +100501,9 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1048768, 1376320],
+    "alternate_versions": [1376320],
     "artist": "Kanako Eo",
     "internal_id": 1376320
   },
@@ -100521,7 +100521,7 @@
         "cost": ["grass", "colorless"],
         "name": "Ire-Fly",
         "damage": "30+",
-        "effect": "If Volbeat is in your discard pile, this attack does 60 more damage"
+        "effect": "If Volbeat is in your discard pile, this attack does 60 more damage."
       }
     ],
     "weakness": "fire",
@@ -100529,9 +100529,9 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1048832, 1376384],
+    "alternate_versions": [1376384],
     "artist": "Kanako Eo",
     "internal_id": 1376384
   },
@@ -100557,9 +100557,9 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [131328, 1376448],
+    "alternate_versions": [1376448],
     "artist": "Atsuko Nishida",
     "internal_id": 1376448
   },
@@ -100585,9 +100585,9 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [131393, 1376513],
+    "alternate_versions": [1376513],
     "artist": "Kagemaru Himeno",
     "internal_id": 1376513
   },
@@ -100608,20 +100608,20 @@
         "effect": "Flip a coin. If heads, this attack does 60 more damage."
       }
     ],
+    "ability": {
+      "name": "Regal Bloom",
+      "effect": "This Pokémon gets +30 HP for each [G] Energy attached to it."
+    },
     "weakness": "fire",
     "retreat": 2,
     "rarity": "◊◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [131458, 1376578],
+    "alternate_versions": [1376578],
     "artist": "Mizue",
-    "internal_id": 1376578,
-    "ability": {
-      "name": "Regal Bloom",
-      "effect": "This Pokémon gets +30 HP for each Grass Energy attached to it."
-    }
+    "internal_id": 1376578
   },
   {
     "expansion": "B4a",
@@ -100645,7 +100645,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1376640],
     "artist": "matazo",
@@ -100662,16 +100662,16 @@
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["fire", "fighting"],
-        "name": "Heat Charged",
-        "damage": "0",
-        "effect": "Flip 3 coins. For each heads, produce a Fire Energy frm your Energy Zone and attach it ot this Pokémon"
+        "cost": ["fire"],
+        "name": "Heat",
+        "damage": "Charged",
+        "effect": "Flip 3 coins. For each heads, produce a [R] Energy from your Energy Zone and attach it to this Pokémon."
       },
       {
-        "cost": ["fire", "fighting", "fire", "fighting", "fire", "fighting", "colorless"],
+        "cost": ["fire", "fire", "fire", "colorless"],
         "name": "Netherwing",
         "damage": "130",
-        "effect": "Discard a Fire Energy from this Pokémon"
+        "effect": "Discard a [R] Energy from this Pokémon."
       }
     ],
     "weakness": "water",
@@ -100679,9 +100679,9 @@
     "rarity": "◊◊◊◊",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1376707],
+    "alternate_versions": [1376707, 1381317, 1381893],
     "artist": "PLANETA CG Works",
     "internal_id": 1376707
   },
@@ -100696,7 +100696,7 @@
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["fire", "fighting"],
+        "cost": ["fire"],
         "name": "Live Coal",
         "damage": "20",
         "effect": "No effect"
@@ -100707,7 +100707,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1376768],
     "artist": "Mina Nakai",
@@ -100724,10 +100724,10 @@
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["fire", "fighting"],
+        "cost": ["fire"],
         "name": "Toxfire Fang",
         "damage": "20",
-        "effect": "Your opponent's Active Pokémon is now Poisoned and Burned"
+        "effect": "Your opponent's Active Pokémon is now Poisoned and Burned."
       }
     ],
     "weakness": "water",
@@ -100735,7 +100735,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1376832],
     "artist": "toriyufu",
@@ -100763,7 +100763,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1376896],
     "artist": "Atsuko Nishida",
@@ -100791,7 +100791,7 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1376961],
     "artist": "5ban Graphics",
@@ -100811,7 +100811,7 @@
         "cost": ["colorless", "colorless", "colorless"],
         "name": "Psychic",
         "damage": "60+",
-        "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon"
+        "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
     "weakness": "water",
@@ -100819,9 +100819,9 @@
     "rarity": "◊◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1377026],
+    "alternate_versions": [1377026, 1380932],
     "artist": "5ban Graphics",
     "internal_id": 1377026
   },
@@ -100839,7 +100839,7 @@
         "cost": ["water", "colorless"],
         "name": "Ruthless Whirlpool",
         "damage": "40+",
-        "effect": "If this Pokémon has more Energy attached than your opponent's Active Pokémon, this attack does 40 more damage"
+        "effect": "If this Pokémon has more Energy attached than your opponent's Active Pokémon, this attack does 40 more damage."
       }
     ],
     "weakness": "lightning",
@@ -100847,10 +100847,10 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377089],
-    "artist": "MÃ©kayu",
+    "artist": "Mékayu",
     "internal_id": 1377089
   },
   {
@@ -100873,7 +100873,7 @@
         "cost": ["water", "water", "colorless"],
         "name": "Hailstorm",
         "damage": "130",
-        "effect": "This attack also does 20 damage to each of your Benched Pokémon"
+        "effect": "This attack also does 20 damage to each of your Benched Pokémon."
       }
     ],
     "weakness": "metal",
@@ -100881,9 +100881,9 @@
     "rarity": "◊◊◊◊",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1377155],
+    "alternate_versions": [1377155, 1381381, 1381957],
     "artist": "PLANETA CG Works",
     "internal_id": 1377155
   },
@@ -100909,7 +100909,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377216],
     "artist": "Naoyo Kimura",
@@ -100937,7 +100937,7 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377281],
     "artist": "Miki Tanaka",
@@ -100965,7 +100965,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377344],
     "artist": "Shin Nagasawa",
@@ -100985,7 +100985,7 @@
         "cost": ["water", "water"],
         "name": "Soul Counter",
         "damage": "50+",
-        "effect": "This attack does 50 more damage for each point your opponent got during their last turn"
+        "effect": "This attack does 50 more damage for each point your opponent got during their last turn."
       }
     ],
     "weakness": "lightning",
@@ -100993,7 +100993,7 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377409],
     "artist": "Akira Komayama",
@@ -101021,7 +101021,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377472],
     "artist": "mingo",
@@ -101039,25 +101039,25 @@
     "attacks": [
       {
         "cost": ["lightning"],
-        "name": "Random Spark",
-        "damage": "0",
-        "effect": "This attack does 30 damage to 1 of your opponent's Pokémon"
+        "name": "Random",
+        "damage": "Spark",
+        "effect": "This attack does 30 damage to 1 of your opponent's Pokémon."
       }
     ],
+    "ability": {
+      "name": "Destiny Burst",
+      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, do 70 damage to the Attacking Pokémon."
+    },
     "weakness": "fighting",
     "retreat": 1,
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377537],
     "artist": "Krgc",
-    "internal_id": 1377537,
-    "ability": {
-      "name": "Destiny Burst",
-      "effect": "If this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, do 70 damage to the Attacking Pokémon"
-    }
+    "internal_id": 1377537
   },
   {
     "expansion": "B4a",
@@ -101076,7 +101076,7 @@
         "effect": "No effect"
       },
       {
-        "cost": ["lightning", "lightning", "lightning", "colorless"],
+        "cost": ["lightning", "lightning", "colorless"],
         "name": "Thunderclaw",
         "damage": "90",
         "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokémon that has damage on it."
@@ -101087,9 +101087,9 @@
     "rarity": "◊◊◊◊",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1377603],
+    "alternate_versions": [1377603, 1381445, 1382021],
     "artist": "PLANETA Mamiya",
     "internal_id": 1377603
   },
@@ -101107,7 +101107,7 @@
         "cost": ["lightning"],
         "name": "Double Headbutt",
         "damage": "20x",
-        "effect": "Flip 2 coins. This attcak does 20 damage for each heads."
+        "effect": "Flip 2 coins. This attack does 20 damage for each heads."
       }
     ],
     "weakness": "fighting",
@@ -101115,9 +101115,9 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [72256, 1377664],
+    "alternate_versions": [1377664],
     "artist": "Saya Tsuruta",
     "internal_id": 1377664
   },
@@ -101143,9 +101143,9 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [72321, 1377729],
+    "alternate_versions": [1377729],
     "artist": "0313",
     "internal_id": 1377729
   },
@@ -101171,7 +101171,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377792],
     "artist": "Ayako Ozaki",
@@ -101199,7 +101199,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377856],
     "artist": "MINAMINAMI Take",
@@ -101219,23 +101219,23 @@
         "cost": ["psychic", "colorless"],
         "name": "Hand Kinesis",
         "damage": "20x",
-        "effect": "This attack does 20 damage for each card in your hand"
+        "effect": "This attack does 20 damage for each card in your hand."
       }
     ],
+    "ability": {
+      "name": "Evil Inspiration",
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may draw a card."
+    },
     "weakness": "darkness",
     "retreat": 3,
     "rarity": "◊◊◊◊",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1377923],
+    "alternate_versions": [1377923, 1381509, 1382085],
     "artist": "PLANETA CG Works",
-    "internal_id": 1377923,
-    "ability": {
-      "name": "Evil Inspiration",
-      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may draw a card."
-    }
+    "internal_id": 1377923
   },
   {
     "expansion": "B4a",
@@ -101259,7 +101259,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377984],
     "artist": "Shinji Kanda",
@@ -101279,7 +101279,7 @@
         "cost": ["psychic", "psychic"],
         "name": "Entrap",
         "damage": "0",
-        "effect": "Switch in 1 of your opponent's Benched Pokémon to the Active Spo. If you do, this attack does 50 damage to the new Active Pokémon"
+        "effect": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. If you do, this attack does 50 damage to the new Active Pokémon."
       }
     ],
     "weakness": "darkness",
@@ -101287,9 +101287,9 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1378049],
+    "alternate_versions": [1378049, 1380996],
     "artist": "Nisota Niso",
     "internal_id": 1378049
   },
@@ -101315,7 +101315,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1378112],
     "artist": "buchi",
@@ -101335,7 +101335,7 @@
         "cost": ["psychic", "psychic", "colorless"],
         "name": "Psychic Explosion",
         "damage": "130",
-        "effect": "This Pokémon also does 70 damage to itself"
+        "effect": "This Pokémon also does 70 damage to itself."
       }
     ],
     "weakness": "darkness",
@@ -101343,7 +101343,7 @@
     "rarity": "◊◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1378178],
     "artist": "danciao",
@@ -101371,9 +101371,9 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1118272, 1378240],
+    "alternate_versions": [1378240],
     "artist": "Kagemaru Himeno",
     "internal_id": 1378240
   },
@@ -101399,9 +101399,9 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1118338, 1378305],
+    "alternate_versions": [1378305],
     "artist": "Taira Akitsu",
     "internal_id": 1378305
   },
@@ -101419,7 +101419,7 @@
         "cost": ["psychic", "colorless"],
         "name": "Punch and Draw",
         "damage": "40",
-        "effect": "Draw a card"
+        "effect": "Draw a card."
       }
     ],
     "weakness": "darkness",
@@ -101427,9 +101427,9 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [402178, 1378369],
+    "alternate_versions": [1378369],
     "artist": "Sekio",
     "internal_id": 1378369
   },
@@ -101455,9 +101455,9 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [329984, 1378432],
+    "alternate_versions": [1378432],
     "artist": "0313",
     "internal_id": 1378432
   },
@@ -101483,9 +101483,9 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [75200, 1378496],
+    "alternate_versions": [1378496],
     "artist": "Hasuno",
     "internal_id": 1378496
   },
@@ -101503,7 +101503,7 @@
         "cost": ["fighting", "colorless"],
         "name": "Punish",
         "damage": "50+",
-        "effect": "If your opponent's Active Pokémon has \"Team Rocket\" in its name, this attack does 70 more damage"
+        "effect": "If your opponent's Active Pokémon has “Team Rocket” in its name, this attack does 70 more damage."
       }
     ],
     "weakness": "grass",
@@ -101511,9 +101511,9 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [75265, 1378561],
+    "alternate_versions": [1378561],
     "artist": "kirisAki",
     "internal_id": 1378561
   },
@@ -101531,7 +101531,7 @@
         "cost": ["fighting", "fighting", "colorless"],
         "name": "Gaia Impact",
         "damage": "130",
-        "effect": "Discard all Energy from this Pokémon"
+        "effect": "Discard all Energy from this Pokémon."
       }
     ],
     "weakness": "grass",
@@ -101539,7 +101539,7 @@
     "rarity": "◊◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1378626],
     "artist": "NC Empire",
@@ -101567,7 +101567,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1378688],
     "artist": "Gemi",
@@ -101587,7 +101587,7 @@
         "cost": ["darkness", "darkness", "colorless"],
         "name": "Shadow Seeker",
         "damage": "70+",
-        "effect": "This attack does 10 more damage for each Energy in your opponent's Active Pokémon's Retreat Cost"
+        "effect": "This attack does 10 more damage for each Energy in your opponent's Active Pokémon's Retreat Cost."
       }
     ],
     "weakness": "fighting",
@@ -101595,10 +101595,10 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1378753],
-    "artist": "ILLUSTRATOR_242",
+    "artist": "Kazuki Minami",
     "internal_id": 1378753
   },
   {
@@ -101623,7 +101623,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1378816],
     "artist": "Taiga Kasai",
@@ -101643,7 +101643,7 @@
         "cost": ["darkness", "darkness", "colorless"],
         "name": "Poison Absorption",
         "damage": "80",
-        "effect": "If your opponent's Active Pokémon is Poisoned, heal 60 damage from this Pokémon"
+        "effect": "If your opponent's Active Pokémon is Poisoned, heal 60 damage from this Pokémon."
       }
     ],
     "weakness": "fighting",
@@ -101651,7 +101651,7 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1378881],
     "artist": "Hitoshi Ariga",
@@ -101671,7 +101671,7 @@
         "cost": ["darkness"],
         "name": "Reverse Thrust",
         "damage": "10",
-        "effect": "Switch this Pokémon with 1 of your Benched Pokémon"
+        "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
       }
     ],
     "weakness": "fighting",
@@ -101679,7 +101679,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1378944],
     "artist": "Takeshi Nakamura",
@@ -101698,24 +101698,24 @@
       {
         "cost": ["darkness", "darkness"],
         "name": "Confusion Gas",
-        "damage": "20",
-        "effect": "Your opponent's Active Pokémon is now Confused"
+        "damage": "60",
+        "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
+    "ability": {
+      "name": "Boiler Smog",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may make your opponent's Active Pokémon Poisoned and Burned."
+    },
     "weakness": "fighting",
     "retreat": 2,
     "rarity": "◊◊◊◊",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1379011],
+    "alternate_versions": [1379011, 1381573, 1382149],
     "artist": "PLANETA CG Works",
-    "internal_id": 1379011,
-    "ability": {
-      "name": "Boiler Smog",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may make your opponent's Active Pokémon Posioned and Burned"
-    }
+    "internal_id": 1379011
   },
   {
     "expansion": "B4a",
@@ -101739,7 +101739,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1379072],
     "artist": "Kazumasa Yasukuni",
@@ -101759,7 +101759,7 @@
         "cost": ["metal"],
         "name": "Tumbling Attack",
         "damage": "20+",
-        "effect": "Flip a coin. If heads, this attack does 30 more damage"
+        "effect": "Flip a coin. If heads, this attack does 30 more damage."
       }
     ],
     "weakness": "fire",
@@ -101767,9 +101767,9 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [397504, 1379136],
+    "alternate_versions": [1379136],
     "artist": "Megumi Mizutani",
     "internal_id": 1379136
   },
@@ -101795,9 +101795,9 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1182784, 1379200],
+    "alternate_versions": [1379200],
     "artist": "kirisAki",
     "internal_id": 1379200
   },
@@ -101823,9 +101823,9 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1182849, 1379265],
+    "alternate_versions": [1379265],
     "artist": "Kouki Saitou",
     "internal_id": 1379265
   },
@@ -101851,7 +101851,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1379328],
     "artist": "mingo",
@@ -101879,7 +101879,7 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1379393],
     "artist": "Mousho",
@@ -101899,7 +101899,7 @@
         "cost": ["metal", "metal", "colorless"],
         "name": "Pile-Driving Hammer",
         "damage": "80",
-        "effect": "During your opponent's next turn, attacks used by the Defending Pokémon cost 2 Colorless more, and its Retreat Cost is 2 Colorless more."
+        "effect": "During your opponent's next turn, attacks used by the Defending Pokémon cost 2 [C] more, and its Retreat Cost is 2 [C] more."
       }
     ],
     "weakness": "fire",
@@ -101907,9 +101907,9 @@
     "rarity": "◊◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1379458],
+    "alternate_versions": [1379458, 1381060],
     "artist": "Megumi Mizutani",
     "internal_id": 1379458
   },
@@ -101930,20 +101930,20 @@
         "effect": "No effect"
       }
     ],
+    "ability": {
+      "name": "Luxury Coin",
+      "effect": "Once during your turn, when you flip any coins for an effect of your Trainer cards, you may ignore all results of those coin flips and begin flipping those coins again. You can't use more than 1 Luxury Coin Ability each turn."
+    },
     "weakness": "fire",
     "retreat": 1,
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [331330, 1379521],
+    "alternate_versions": [1379521, 1383244],
     "artist": "Natsumi Yoshida",
-    "internal_id": 1379521,
-    "ability": {
-      "name": "Luxury Coin",
-      "effect": "Once during your tun, when you flip any coins for an effect of your Trainer cards, you may ignore all results of those coin flips and begin flipping those coins again. You can't use more than 1 Luxury Coin Ability each turn."
-    }
+    "internal_id": 1379521
   },
   {
     "expansion": "B4a",
@@ -101959,7 +101959,7 @@
         "cost": ["colorless"],
         "name": "Take Down",
         "damage": "30",
-        "effect": "This Pokémon also does 10 damage to itself"
+        "effect": "This Pokémon also does 10 damage to itself."
       }
     ],
     "weakness": "none",
@@ -101967,9 +101967,9 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [204352, 1379584],
+    "alternate_versions": [1379584],
     "artist": "saino misaki",
     "internal_id": 1379584
   },
@@ -101985,9 +101985,9 @@
     "attacks": [
       {
         "cost": ["water", "fighting"],
-        "name": "Linear Attack",
-        "damage": "0",
-        "effect": "This attack does 50damage to 1 of yoyr opponent's Pokémon"
+        "name": "Linear",
+        "damage": "Attack",
+        "effect": "This attack does 50 damage to 1 of your opponent's Pokémon."
       }
     ],
     "weakness": "none",
@@ -101995,9 +101995,9 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [204417, 1379649],
+    "alternate_versions": [1379649],
     "artist": "Tomokazu Komiya",
     "internal_id": 1379649
   },
@@ -102018,20 +102018,20 @@
         "effect": "No effect"
       }
     ],
+    "ability": {
+      "name": "Mach Stealth",
+      "effect": "If your opponent's Pokémon is Knocked Out by damage from this Pokémon's attacks, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
+    },
     "weakness": "none",
     "retreat": 1,
     "rarity": "◊◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [204482, 1379714],
+    "alternate_versions": [1379714],
     "artist": "Naoki Saito",
-    "internal_id": 1379714,
-    "ability": {
-      "name": "Mach Stealth",
-      "effect": "If you opponent's Pokémon is Knocked Out by damage from this Pokémon's attacks, during your opponent's next turn, prevent all damage from-and effects of-attacks done to this Pokémon"
-    }
+    "internal_id": 1379714
   },
   {
     "expansion": "B4a",
@@ -102055,9 +102055,9 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1317889, 1379777],
+    "alternate_versions": [1379777],
     "artist": "Ryuta Fuse",
     "internal_id": 1379777
   },
@@ -102075,7 +102075,7 @@
         "cost": ["fighting", "metal", "colorless", "colorless"],
         "name": "Protect Charge",
         "damage": "110",
-        "effect": "During your opponent's next turn, this Pokémon takes -30 damage from attacks"
+        "effect": "During your opponent's next turn, this Pokémon takes −30 damage from attacks."
       }
     ],
     "weakness": "none",
@@ -102083,9 +102083,9 @@
     "rarity": "◊◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1317954, 1379842],
+    "alternate_versions": [1379842],
     "artist": "Shiburingaru",
     "internal_id": 1379842
   },
@@ -102100,10 +102100,10 @@
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["grass", "fire", "fighting", "colorless"],
+        "cost": ["grass", "fire", "colorless"],
         "name": "Draconic Slam",
         "damage": "140-",
-        "effect": "If this Pokémon has damage on it, this attack does -100 damage"
+        "effect": "If this Pokémon has damage on it, this attack does −100 damage."
       }
     ],
     "weakness": "none",
@@ -102111,7 +102111,7 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1379905],
     "artist": "Kouki Saitou",
@@ -102131,7 +102131,7 @@
         "cost": ["colorless"],
         "name": "Ambush",
         "damage": "20+",
-        "effect": "Flip a coin. If heads, this attack does 20 more damage"
+        "effect": "Flip a coin. If heads, this attack does 20 more damage."
       }
     ],
     "weakness": "fighting",
@@ -102139,7 +102139,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1379968],
     "artist": "cochi8i",
@@ -102162,20 +102162,20 @@
         "effect": "No effect"
       }
     ],
+    "ability": {
+      "name": "Thieving Incisors",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may move a random Energy from your opponent's Active Pokémon to this Pokémon."
+    },
     "weakness": "fighting",
     "retreat": 0,
     "rarity": "◊◊◊◊",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1380035],
+    "alternate_versions": [1380035, 1381637, 1382213],
     "artist": "PLANETA CG Works",
-    "internal_id": 1380035,
-    "ability": {
-      "name": "Thieving Incisors",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may move a random Energy from your opponent's Active Pokémon to this Pokémon"
-    }
+    "internal_id": 1380035
   },
   {
     "expansion": "B4a",
@@ -102199,7 +102199,7 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1380096],
     "artist": "Yuriko Akase",
@@ -102219,7 +102219,7 @@
         "cost": ["colorless", "colorless"],
         "name": "Dangerous Rogue",
         "damage": "10+",
-        "effect": "This attack does 40 more damage for each of your opponent's Benched Pokémon"
+        "effect": "This attack does 40 more damage for each of your opponent's Benched Pokémon."
       }
     ],
     "weakness": "fighting",
@@ -102227,7 +102227,7 @@
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1380161],
     "artist": "kodama",
@@ -102247,23 +102247,23 @@
         "cost": ["colorless", "colorless"],
         "name": "Hit and Hide",
         "damage": "40",
-        "effect": "Flip a coin. If heads, during your opponent's next turn, prveent all damage from-and effects of-attacks done to this Pokémon"
+        "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
+    "ability": {
+      "name": "Spy Ops",
+      "effect": "Once during your turn, you may look at a random card from your opponent's hand."
+    },
     "weakness": "fighting",
     "retreat": 1,
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1380224],
+    "alternate_versions": [1380224, 1381124],
     "artist": "Jerky",
-    "internal_id": 1380224,
-    "ability": {
-      "name": "Spy Ops",
-      "effect": "Once during your turn, you may look at a random card from your opponent's hand."
-    }
+    "internal_id": 1380224
   },
   {
     "expansion": "B4a",
@@ -102279,17 +102279,17 @@
         "cost": ["No Cost"],
         "name": "Chubby Cheer",
         "damage": "10",
-        "effect": "During your next turn, attacks used by your Pokémon do +20 damage to your opponent's Active Pokémon"
+        "effect": "During your next turn, attacks used by your Pokémon do +20 damage to your opponent's Active Pokémon."
       }
     ],
     "weakness": "none",
     "retreat": 0,
     "rarity": "◊◊◊",
     "ex": false,
-    "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "baby": true,
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1380290],
+    "alternate_versions": [1380290, 1381188],
     "artist": "Eri Yamaki",
     "internal_id": 1380290
   },
@@ -102307,23 +102307,23 @@
         "cost": ["colorless"],
         "name": "Continuous Steps",
         "damage": "30x",
-        "effect": "Flip a coin until you get tails. This attack does 30 damage for each heads"
+        "effect": "Flip a coin until you get tails. This attack does 30 damage for each heads."
       }
     ],
+    "ability": {
+      "name": "Fur Coat",
+      "effect": "This Pokémon takes −20 damage from attacks."
+    },
     "weakness": "fighting",
     "retreat": 1,
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [799617, 1380352],
+    "alternate_versions": [1380352],
     "artist": "Orca",
-    "internal_id": 1380352,
-    "ability": {
-      "name": "Fur Coat",
-      "effect": "This Pokémon takes -20 damage from attacks"
-    }
+    "internal_id": 1380352
   },
   {
     "expansion": "B4a",
@@ -102347,9 +102347,9 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [988096, 1380416],
+    "alternate_versions": [1380416, 1381252],
     "artist": "Mina Nakai",
     "internal_id": 1380416
   },
@@ -102367,7 +102367,7 @@
         "cost": ["colorless", "colorless"],
         "name": "Sitdown Splash",
         "damage": "40+",
-        "effect": "Flip a coin. If heads, this attack does 60 more damage"
+        "effect": "Flip a coin. If heads, this attack does 60 more damage."
       }
     ],
     "weakness": "fighting",
@@ -102375,9 +102375,9 @@
     "rarity": "◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [988160, 1380480],
+    "alternate_versions": [1380480],
     "artist": "Akira Komayama",
     "internal_id": 1380480
   },
@@ -102392,17 +102392,17 @@
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Put a random Item card, except any Team Rocket's Thieving Machine, from your opponent's discard pile into your hand."
+      "effect": "Put a random Item card, except any Team Rocket's Thieving Machine, from your opponent's discard pile into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
     },
     "weakness": "N/A",
-    "rarity": "◊",
+    "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1380544],
+    "alternate_versions": [1380545],
     "artist": "Toyste Beach",
-    "internal_id": 1380544
+    "internal_id": 1380545
   },
   {
     "expansion": "B4a",
@@ -102415,17 +102415,17 @@
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Until the end of your opponent's next turn, your opponent's Active Pokémon's Retreat Cost is 1 more."
+      "effect": "Until the end of your opponent's next turn, your opponent's Active Pokémon's Retreat Cost is 1 more.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
     },
     "weakness": "N/A",
-    "rarity": "◊",
+    "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1380608],
+    "alternate_versions": [1380609, 1383308],
     "artist": "Toyste Beach",
-    "internal_id": 1380608
+    "internal_id": 1380609
   },
   {
     "expansion": "B4a",
@@ -102438,17 +102438,17 @@
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Flip a coin until you get tails. For each heads, put a random Pokémon that has \"Team Rocket\" in its name from your deck into your hand."
+      "effect": "Flip a coin until you get tails. For each heads, put a random Pokémon that has “Team Rocket” in its name from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                hncl"
     },
     "weakness": "N/A",
-    "rarity": "◊",
+    "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1380672],
+    "alternate_versions": [1380673, 1381701],
     "artist": "hncl",
-    "internal_id": 1380672
+    "internal_id": 1380673
   },
   {
     "expansion": "B4a",
@@ -102461,15 +102461,15 @@
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Your opponent's Active Pokémon is now Confused. Flip a coin. If tails, your Active Pokémon is now Confused."
+      "effect": "Your opponent's Active Pokémon is now Confused. Flip a coin. If tails, your Active Pokémon is now also Confused.\n\n            \n                    \n    \n            Illustrated by \n            \n                nagimiso"
     },
     "weakness": "N/A",
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1380737],
+    "alternate_versions": [1380737, 1381765, 1382278],
     "artist": "nagimiso",
     "internal_id": 1380737
   },
@@ -102484,15 +102484,15 @@
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Look at your opponent's hand and put any number of Basic Pokémon you find there onto your opponent's Bench."
+      "effect": "Look at your opponent's hand and put any number of Basic Pokémon you find there onto your opponent's Bench.\n\n            \n                    \n    \n            Illustrated by \n            \n                Atsushi Furusawa"
     },
     "weakness": "N/A",
     "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1380801],
+    "alternate_versions": [1380801, 1381829],
     "artist": "Atsushi Furusawa",
     "internal_id": 1380801
   },
@@ -102507,17 +102507,17 @@
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Once during each player's turn, that player may flip 3 coins. If all of them are heads, that player draws cards until they have 7 cards in their hand."
+      "effect": "Once during each player's turn, that player may flip 3 coins. If all of them are heads, that player draws cards until they have 7 cards in their hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                MARINA Chikazawa"
     },
     "weakness": "N/A",
-    "rarity": "◊◊◊",
+    "rarity": "◊◊",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1380866],
+    "alternate_versions": [1380865],
     "artist": "MARINA Chikazawa",
-    "internal_id": 1380866
+    "internal_id": 1380865
   },
   {
     "expansion": "B4a",
@@ -102533,7 +102533,7 @@
         "cost": ["colorless", "colorless", "colorless"],
         "name": "Psychic",
         "damage": "60+",
-        "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon"
+        "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon."
       }
     ],
     "weakness": "water",
@@ -102541,7 +102541,7 @@
     "rarity": "☆",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377026, 1380932],
     "artist": "Gemi",
@@ -102561,7 +102561,7 @@
         "cost": ["psychic", "psychic"],
         "name": "Entrap",
         "damage": "0",
-        "effect": "Switch in 1 of your opponent's Benched Pokémon to the Active Spo. If you do, this attack does 50 damage to the new Active Pokémon"
+        "effect": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. If you do, this attack does 50 damage to the new Active Pokémon."
       }
     ],
     "weakness": "darkness",
@@ -102569,7 +102569,7 @@
     "rarity": "☆",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1378049, 1380996],
     "artist": "Tetsu Kayama",
@@ -102589,7 +102589,7 @@
         "cost": ["metal", "metal", "colorless"],
         "name": "Pile-Driving Hammer",
         "damage": "80",
-        "effect": "During your opponent's next turn, attacks used by the Defending Pokémon cost 2 Colorless more, and its Retreat Cost is 2 Colorless more."
+        "effect": "During your opponent's next turn, attacks used by the Defending Pokémon cost 2 [C] more, and its Retreat Cost is 2 [C] more."
       }
     ],
     "weakness": "fire",
@@ -102597,7 +102597,7 @@
     "rarity": "☆",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1379458, 1381060],
     "artist": "Terada Tera",
@@ -102617,23 +102617,23 @@
         "cost": ["colorless", "colorless"],
         "name": "Hit and Hide",
         "damage": "40",
-        "effect": "Flip a coin. If heads, during your opponent's next turn, prveent all damage from-and effects of-attacks done to this Pokémon"
+        "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
+    "ability": {
+      "name": "Spy Ops",
+      "effect": "Once during your turn, you may look at a random card from your opponent's hand."
+    },
     "weakness": "fighting",
     "retreat": 1,
     "rarity": "☆",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1380224, 1381124],
     "artist": "Saboteri",
-    "internal_id": 1381124,
-    "ability": {
-      "name": "Spy Ops",
-      "effect": "Once during your turn, you may look at a random card from your opponent's hand."
-    }
+    "internal_id": 1381124
   },
   {
     "expansion": "B4a",
@@ -102649,15 +102649,15 @@
         "cost": ["No Cost"],
         "name": "Chubby Cheer",
         "damage": "10",
-        "effect": "During your next turn, attacks used by your Pokémon do +20 damage to your opponent's Active Pokémon"
+        "effect": "During your next turn, attacks used by your Pokémon do +20 damage to your opponent's Active Pokémon."
       }
     ],
     "weakness": "none",
     "retreat": 0,
     "rarity": "☆",
     "ex": false,
-    "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "baby": true,
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1380290, 1381188],
     "artist": "Narumi Sato",
@@ -102685,9 +102685,9 @@
     "rarity": "☆",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [988096, 1380416, 1381252],
+    "alternate_versions": [1380416, 1381252],
     "artist": "buchi",
     "internal_id": 1381252
   },
@@ -102702,16 +102702,16 @@
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["fire", "fighting"],
-        "name": "Heat Charged",
-        "damage": "0",
-        "effect": "Flip 3 coins. For each heads, produce a Fire Energy frm your Energy Zone and attach it ot this Pokémon"
+        "cost": ["fire"],
+        "name": "Heat",
+        "damage": "Charged",
+        "effect": "Flip 3 coins. For each heads, produce a [R] Energy from your Energy Zone and attach it to this Pokémon."
       },
       {
-        "cost": ["fire", "fighting", "fire", "fighting", "fire", "fighting", "colorless"],
+        "cost": ["fire", "fire", "fire", "colorless"],
         "name": "Netherwing",
         "damage": "130",
-        "effect": "Discard a Fire Energy from this Pokémon"
+        "effect": "Discard a [R] Energy from this Pokémon."
       }
     ],
     "weakness": "water",
@@ -102719,7 +102719,7 @@
     "rarity": "☆☆",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1376707, 1381317, 1381893],
     "artist": "PLANETA CG Works",
@@ -102745,7 +102745,7 @@
         "cost": ["water", "water", "colorless"],
         "name": "Hailstorm",
         "damage": "130",
-        "effect": "This attack also does 20 damage to each of your Benched Pokémon"
+        "effect": "This attack also does 20 damage to each of your Benched Pokémon."
       }
     ],
     "weakness": "metal",
@@ -102753,7 +102753,7 @@
     "rarity": "☆☆",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377155, 1381381, 1381957],
     "artist": "PLANETA CG Works",
@@ -102776,7 +102776,7 @@
         "effect": "No effect"
       },
       {
-        "cost": ["lightning", "lightning", "lightning", "colorless"],
+        "cost": ["lightning", "lightning", "colorless"],
         "name": "Thunderclaw",
         "damage": "90",
         "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokémon that has damage on it."
@@ -102787,7 +102787,7 @@
     "rarity": "☆☆",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377603, 1381445, 1382021],
     "artist": "PLANETA Mamiya",
@@ -102807,23 +102807,23 @@
         "cost": ["psychic", "colorless"],
         "name": "Hand Kinesis",
         "damage": "20x",
-        "effect": "This attack does 20 damage for each card in your hand"
+        "effect": "This attack does 20 damage for each card in your hand."
       }
     ],
+    "ability": {
+      "name": "Evil Inspiration",
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may draw a card."
+    },
     "weakness": "darkness",
     "retreat": 3,
     "rarity": "☆☆",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377923, 1381509, 1382085],
     "artist": "PLANETA CG Works",
-    "internal_id": 1381509,
-    "ability": {
-      "name": "Evil Inspiration",
-      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may draw a card."
-    }
+    "internal_id": 1381509
   },
   {
     "expansion": "B4a",
@@ -102838,24 +102838,24 @@
       {
         "cost": ["darkness", "darkness"],
         "name": "Confusion Gas",
-        "damage": "20",
-        "effect": "Your opponent's Active Pokémon is now Confused"
+        "damage": "60",
+        "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
+    "ability": {
+      "name": "Boiler Smog",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may make your opponent's Active Pokémon Poisoned and Burned."
+    },
     "weakness": "fighting",
     "retreat": 2,
     "rarity": "☆☆",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1379011, 1381573, 1382149],
     "artist": "PLANETA CG Works",
-    "internal_id": 1381573,
-    "ability": {
-      "name": "Boiler Smog",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may make your opponent's Active Pokémon Posioned and Burned"
-    }
+    "internal_id": 1381573
   },
   {
     "expansion": "B4a",
@@ -102874,20 +102874,20 @@
         "effect": "No effect"
       }
     ],
+    "ability": {
+      "name": "Thieving Incisors",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may move a random Energy from your opponent's Active Pokémon to this Pokémon."
+    },
     "weakness": "fighting",
     "retreat": 0,
     "rarity": "☆☆",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1380035, 1381637, 1382213],
     "artist": "PLANETA CG Works",
-    "internal_id": 1381637,
-    "ability": {
-      "name": "Thieving Incisors",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may move a random Energy from your opponent's Active Pokémon to this Pokémon"
-    }
+    "internal_id": 1381637
   },
   {
     "expansion": "B4a",
@@ -102900,15 +102900,15 @@
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Flip a coin until you get tails. For each heads, put a random Pokémon that has \"Team Rocket\" in its name from your deck into your hand."
+      "effect": "Flip a coin until you get tails. For each heads, put a random Pokémon that has “Team Rocket” in its name from your deck into your hand.\n\n            \n                    \n    \n            Illustrated by \n            \n                hncl"
     },
     "weakness": "N/A",
     "rarity": "☆☆",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1380672, 1381701],
+    "alternate_versions": [1380673, 1381701],
     "artist": "hncl",
     "internal_id": 1381701
   },
@@ -102923,13 +102923,13 @@
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Your opponent's Active Pokémon is now Confused. Flip a coin. If tails, your Active Pokémon is now Confused."
+      "effect": "Your opponent's Active Pokémon is now Confused. Flip a coin. If tails, your Active Pokémon is now also Confused.\n\n            \n                    \n    \n            Illustrated by \n            \n                nagimiso"
     },
     "weakness": "N/A",
     "rarity": "☆☆",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1380737, 1381765, 1382278],
     "artist": "nagimiso",
@@ -102946,13 +102946,13 @@
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Look at your opponent's hand and put any number of Basic Pokémon you find there onto your opponent's Bench."
+      "effect": "Look at your opponent's hand and put any number of Basic Pokémon you find there onto your opponent's Bench.\n\n            \n                    \n    \n            Illustrated by \n            \n                Atsushi Furusawa"
     },
     "weakness": "N/A",
     "rarity": "☆☆",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1380801, 1381829],
     "artist": "Atsushi Furusawa",
@@ -102969,16 +102969,16 @@
     "evolution_type": "basic",
     "attacks": [
       {
-        "cost": ["fire", "fighting"],
-        "name": "Heat Charged",
-        "damage": "0",
-        "effect": "Flip 3 coins. For each heads, produce a Fire Energy frm your Energy Zone and attach it ot this Pokémon"
+        "cost": ["fire"],
+        "name": "Heat",
+        "damage": "Charged",
+        "effect": "Flip 3 coins. For each heads, produce a [R] Energy from your Energy Zone and attach it to this Pokémon."
       },
       {
-        "cost": ["fire", "fighting", "fire", "fighting", "fire", "fighting", "colorless"],
+        "cost": ["fire", "fire", "fire", "colorless"],
         "name": "Netherwing",
         "damage": "130",
-        "effect": "Discard a Fire Energy from this Pokémon"
+        "effect": "Discard a [R] Energy from this Pokémon."
       }
     ],
     "weakness": "water",
@@ -102986,7 +102986,7 @@
     "rarity": "☆☆",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1376707, 1381317, 1381893],
     "artist": "REND",
@@ -103012,7 +103012,7 @@
         "cost": ["water", "water", "colorless"],
         "name": "Hailstorm",
         "damage": "130",
-        "effect": "This attack also does 20 damage to each of your Benched Pokémon"
+        "effect": "This attack also does 20 damage to each of your Benched Pokémon."
       }
     ],
     "weakness": "metal",
@@ -103020,7 +103020,7 @@
     "rarity": "☆☆",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377155, 1381381, 1381957],
     "artist": "REND",
@@ -103043,7 +103043,7 @@
         "effect": "No effect"
       },
       {
-        "cost": ["lightning", "lightning", "lightning", "colorless"],
+        "cost": ["lightning", "lightning", "colorless"],
         "name": "Thunderclaw",
         "damage": "90",
         "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokémon that has damage on it."
@@ -103054,7 +103054,7 @@
     "rarity": "☆☆",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377603, 1381445, 1382021],
     "artist": "REND",
@@ -103074,23 +103074,23 @@
         "cost": ["psychic", "colorless"],
         "name": "Hand Kinesis",
         "damage": "20x",
-        "effect": "This attack does 20 damage for each card in your hand"
+        "effect": "This attack does 20 damage for each card in your hand."
       }
     ],
+    "ability": {
+      "name": "Evil Inspiration",
+      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may draw a card."
+    },
     "weakness": "darkness",
     "retreat": 3,
     "rarity": "☆☆",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1377923, 1381509, 1382085],
     "artist": "Takeshi Nakamura",
-    "internal_id": 1382085,
-    "ability": {
-      "name": "Evil Inspiration",
-      "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may draw a card."
-    }
+    "internal_id": 1382085
   },
   {
     "expansion": "B4a",
@@ -103105,24 +103105,24 @@
       {
         "cost": ["darkness", "darkness"],
         "name": "Confusion Gas",
-        "damage": "20",
-        "effect": "Your opponent's Active Pokémon is now Confused"
+        "damage": "60",
+        "effect": "Your opponent's Active Pokémon is now Confused."
       }
     ],
+    "ability": {
+      "name": "Boiler Smog",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may make your opponent's Active Pokémon Poisoned and Burned."
+    },
     "weakness": "fighting",
     "retreat": 2,
     "rarity": "☆☆",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1379011, 1381573, 1382149],
     "artist": "Shimaris Yukichi",
-    "internal_id": 1382149,
-    "ability": {
-      "name": "Boiler Smog",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may make your opponent's Active Pokémon Posioned and Burned"
-    }
+    "internal_id": 1382149
   },
   {
     "expansion": "B4a",
@@ -103141,20 +103141,20 @@
         "effect": "No effect"
       }
     ],
+    "ability": {
+      "name": "Thieving Incisors",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may move a random Energy from your opponent's Active Pokémon to this Pokémon."
+    },
     "weakness": "fighting",
     "retreat": 0,
     "rarity": "☆☆",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1380035, 1381637, 1382213],
     "artist": "Krgc",
-    "internal_id": 1382213,
-    "ability": {
-      "name": "Thieving Incisors",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may move a random Energy from your opponent's Active Pokémon to this Pokémon"
-    }
+    "internal_id": 1382213
   },
   {
     "expansion": "B4a",
@@ -103167,13 +103167,13 @@
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Your opponent's Active Pokémon is now Confused. Flip a coin. If tails, your Active Pokémon is now Confused."
+      "effect": "Your opponent's Active Pokémon is now Confused. Flip a coin. If tails, your Active Pokémon is now also Confused.\n\n            \n                    \n    \n            Illustrated by \n            \n                Yukihiro Tada"
     },
     "weakness": "N/A",
     "rarity": "☆☆☆",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
     "alternate_versions": [1380737, 1381765, 1382278],
     "artist": "Yukihiro Tada",
@@ -103191,9 +103191,9 @@
     "attacks": [
       {
         "cost": ["colorless"],
-        "name": "Hold Still",
-        "damage": "0",
-        "effect": "Heal 20 damage from this Pokémon"
+        "name": "Hold",
+        "damage": "Still",
+        "effect": "Heal 20 damage from this Pokémon."
       }
     ],
     "weakness": "water",
@@ -103201,9 +103201,9 @@
     "rarity": "✵",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [67904, 591424, 1245696, 1249668, 1382344],
+    "alternate_versions": [1382344, null],
     "artist": "Souichirou Gunjima",
     "internal_id": 1382344
   },
@@ -103218,10 +103218,10 @@
     "evolution_type": "stage1",
     "attacks": [
       {
-        "cost": ["fighting", "colorless", "colorless"],
+        "cost": ["fire", "colorless", "colorless"],
         "name": "Ember Dance",
         "damage": "20x",
-        "effect": "Flip 9 coins. This attack does 20 damage for each heads"
+        "effect": "Flip 9 coins. This attack does 20 damage for each heads."
       }
     ],
     "weakness": "water",
@@ -103229,9 +103229,9 @@
     "rarity": "✵",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [67969, 591490, 1245761, 1382408],
+    "alternate_versions": [1382408, null],
     "artist": "Souichirou Gunjima",
     "internal_id": 1382408
   },
@@ -103257,9 +103257,9 @@
     "rarity": "✵",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [70144, 1245952, 1382472],
+    "alternate_versions": [1382472, null],
     "artist": "Taiga Kasai",
     "internal_id": 1382472
   },
@@ -103277,7 +103277,7 @@
         "cost": ["water"],
         "name": "Aqua Bullet",
         "damage": "30",
-        "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon"
+        "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon."
       }
     ],
     "weakness": "lightning",
@@ -103285,9 +103285,9 @@
     "rarity": "✵",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [70208, 1246017, 1382536],
+    "alternate_versions": [1382536, null],
     "artist": "Taiga Kasai",
     "internal_id": 1382536
   },
@@ -103313,9 +103313,9 @@
     "rarity": "✵",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [920960, 928132, 1117952, 1382600],
+    "alternate_versions": [1382600, null],
     "artist": "MAHOU",
     "internal_id": 1382600
   },
@@ -103333,7 +103333,7 @@
         "cost": ["psychic"],
         "name": "Hide",
         "damage": "0",
-        "effect": "No effect"
+        "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from—and effects of—attacks done to this Pokémon."
       }
     ],
     "weakness": "darkness",
@@ -103341,9 +103341,9 @@
     "rarity": "✵",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [922240, 1382664],
+    "alternate_versions": [1382664, null],
     "artist": "MAHOU",
     "internal_id": 1382664
   },
@@ -103364,20 +103364,20 @@
         "effect": "No effect"
       }
     ],
+    "ability": {
+      "name": "Refreshing Tea",
+      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may have your opponent shuffle their hand into their deck. For each remaining point that your opponent needs to win, they draw a card."
+    },
     "weakness": "darkness",
     "retreat": 1,
     "rarity": "✵",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [922305, 1382728],
+    "alternate_versions": [1382728, null],
     "artist": "MAHOU",
-    "internal_id": 1382728,
-    "ability": {
-      "name": "Refreshing Tea",
-      "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may have your opponent shuffle their hand into the deck. For each remaining point that your opponent needs to win, they draw a card."
-    }
+    "internal_id": 1382728
   },
   {
     "expansion": "B4a",
@@ -103401,9 +103401,9 @@
     "rarity": "✵",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [76928, 265728, 527296, 597824, 924672, 1317440, 1382792],
+    "alternate_versions": [1382792, null],
     "artist": "Souichirou Gunjima",
     "internal_id": 1382792
   },
@@ -103429,9 +103429,9 @@
     "rarity": "✵",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [925952, 1382856],
+    "alternate_versions": [1382856, null],
     "artist": "whomor Inc.",
     "internal_id": 1382856
   },
@@ -103452,20 +103452,20 @@
         "effect": "No effect"
       }
     ],
+    "ability": {
+      "name": "Repelling Wind",
+      "effect": "Once during your turn, you may switch out your opponent's Active Basic Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
+    },
     "weakness": "lightning",
     "retreat": 1,
     "rarity": "✵",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [926018, 1382920],
+    "alternate_versions": [1382920, null],
     "artist": "whomor Inc.",
-    "internal_id": 1382920,
-    "ability": {
-      "name": "Repelling Wind",
-      "effect": "Once during your turn, you may switch out your opponent's Active Basic Pokémon to the Bench. (Your opponent chooses the new Active Pokémon)"
-    }
+    "internal_id": 1382920
   },
   {
     "expansion": "B4a",
@@ -103478,10 +103478,10 @@
     "evolution_type": "stage2",
     "attacks": [
       {
-        "cost": ["fire", "fighting", "fire", "fighting", "fire", "fighting", "colorless"],
+        "cost": ["fire", "fire", "fire", "colorless"],
         "name": "Crimson Dive",
         "damage": "250",
-        "effect": "This Pokémon also does 50 damage to itself"
+        "effect": "This Pokémon also does 50 damage to itself."
       }
     ],
     "weakness": "water",
@@ -103489,9 +103489,9 @@
     "rarity": "✵✵",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1382985],
+    "alternate_versions": [1382985, null],
     "artist": "PLANETA Igarashi",
     "internal_id": 1382985
   },
@@ -103509,7 +103509,7 @@
         "cost": ["lightning", "lightning", "colorless"],
         "name": "Damaging Spark",
         "damage": "90",
-        "effect": "This attack also does 30 damage to each of your opponent's Benched Pokémon that has damage on it"
+        "effect": "This attack also does 30 damage to each of your opponent's Benched Pokémon that has damage on it."
       }
     ],
     "weakness": "fighting",
@@ -103517,9 +103517,9 @@
     "rarity": "✵✵",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [921027, 929285, 930181, 1383049],
+    "alternate_versions": [1383049, null],
     "artist": "PLANETA CG Works",
     "internal_id": 1383049
   },
@@ -103540,20 +103540,20 @@
         "effect": "No effect"
       }
     ],
+    "ability": {
+      "name": "Disguise",
+      "effect": "When this Pokémon is first damaged by an attack after coming into play, prevent that damage."
+    },
     "weakness": "darkness",
     "retreat": 2,
     "rarity": "✵✵",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [922179, 929413, 930245, 1383113],
+    "alternate_versions": [1383113, null],
     "artist": "PLANETA CG Works",
-    "internal_id": 1383113,
-    "ability": {
-      "name": "Disguise",
-      "effect": "When this Pokémon is first damaged by an attack after coming into play, prevent that damage"
-    }
+    "internal_id": 1383113
   },
   {
     "expansion": "B4a",
@@ -103569,7 +103569,7 @@
         "cost": ["metal", "colorless"],
         "name": "Heat-Up Crunch",
         "damage": "60",
-        "effect": "Until this Pokémon leaves the Active Spot, this Pokémon's Heat-Up Crunch does +30 damage. This effect stacks"
+        "effect": "Until this Pokémon leaves the Active Spot, this Pokémon's Heat-Up Crunch attack does +30 damage. This effect stacks."
       }
     ],
     "weakness": "fire",
@@ -103577,9 +103577,9 @@
     "rarity": "✵✵",
     "ex": true,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [924739, 929541, 930373, 1383177],
+    "alternate_versions": [1383177, null],
     "artist": "PLANETA CG Works",
     "internal_id": 1383177
   },
@@ -103600,20 +103600,20 @@
         "effect": "No effect"
       }
     ],
+    "ability": {
+      "name": "Luxury Coin",
+      "effect": "Once during your turn, when you flip any coins for an effect of your Trainer cards, you may ignore all results of those coin flips and begin flipping those coins again. You can't use more than 1 Luxury Coin Ability each turn."
+    },
     "weakness": "fire",
     "retreat": 1,
     "rarity": "Crown Rare",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [331330, 332612, 991048, 1379521, 1383244],
+    "alternate_versions": [1379521, 1383244],
     "artist": "PLANETA CG Works",
-    "internal_id": 1383244,
-    "ability": {
-      "name": "Luxury Coin",
-      "effect": "Once during your tun, when you flip any coins for an effect of your Trainer cards, you may ignore all results of those coin flips and begin flipping those coins again. You can't use more than 1 Luxury Coin Ability each turn."
-    }
+    "internal_id": 1383244
   },
   {
     "expansion": "B4a",
@@ -103626,15 +103626,15 @@
     "attacks": [],
     "ability": {
       "name": "",
-      "effect": "Until the end of your opponent's next turn, your opponent's Active Pokémon's Retreat Cost is 1 more."
+      "effect": "Until the end of your opponent's next turn, your opponent's Active Pokémon's Retreat Cost is 1 more.\n\n            \n                    \n    \n            Illustrated by \n            \n                Toyste Beach"
     },
     "weakness": "N/A",
     "rarity": "Crown Rare",
     "ex": false,
     "baby": false,
-    "set_details": "teamrocketsambition(b4a)",
+    "set_details": "teamrocket'sambition(b4a)",
     "pack": "everypack",
-    "alternate_versions": [1380608, 1383308],
+    "alternate_versions": [1380609, 1383308],
     "artist": "Toyste Beach",
     "internal_id": 1383308
   },
