@@ -11,6 +11,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Radio, RadioIndicator, RadioItem } from '@/components/ui/radio'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { craftingCost, getCardByInternalId, getExpansionById } from '@/lib/CardsDB.ts'
+import { getLocalizedImagePath } from '@/lib/imageLocales'
 import { pullRateForSpecificCard } from '@/lib/stats'
 import { getCardNameByLang } from '@/lib/utils'
 import { useAccount } from '@/services/account/useAccount'
@@ -141,9 +142,9 @@ export default function CardDetail() {
             </DialogHeader>
 
             <DialogContent className="flex items-center justify-center p-0 max-w-3xl max-h-[90vh]">
-              {card?.image && (
+              {card && (
                 <img
-                  src={card.image}
+                  src={getLocalizedImagePath(card, i18n.language)}
                   alt={getCardNameByLang(card, i18n.language)}
                   className="w-full h-full object-scale-down"
                   onClick={() => setIsImageDialogOpen(false)}
