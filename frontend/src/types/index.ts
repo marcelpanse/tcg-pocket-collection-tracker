@@ -175,7 +175,6 @@ export interface Card {
   rarity: Rarity
   ex: boolean
   baby: boolean
-  set_details: string
   pack: string
   alternate_versions: number[]
   artist: string

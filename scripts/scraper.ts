@@ -240,7 +240,7 @@ function extractAbility($: CheerioAPI) {
   }
 }
 
-function extractSetAndPackInfo($: CheerioAPI) {
+function extractPackInfo($: CheerioAPI) {
   const setInfo = $('div.card-prints-current')
 
   if (!setInfo.length) {
@@ -251,13 +251,12 @@ function extractSetAndPackInfo($: CheerioAPI) {
   if (!setDetailsElement.length) {
     throw new Error(`Failed fetching set info`)
   }
-  const setDetails = setDetailsElement.text().replaceAll(' ', '').toLowerCase().trim()
 
   const packTemp = setInfo.find('span').last().text().trim()
   const packInfo = packTemp.split('·').pop().trim().replaceAll(' ', '').toLowerCase()
   const pack = packs.includes(packInfo) ? packInfo : 'everypack'
 
-  return { setDetails, pack }
+  return pack
 }
 
 function urlToCardId(url: string): { expansion: string; cardNr: number; cardId: string } {
@@ -371,7 +370,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
   // Check if card is a baby pokemon (Not currently specified exactly on Limitless TCG page)
   const baby = weakness === 'none' && hp === 30 && energy !== 'dragon'
 
-  const { setDetails: set_details, pack } = extractSetAndPackInfo($)
+  const pack = extractPackInfo($)
 
   const alternate_versions: string[] = []
   let linked = false
@@ -438,7 +437,6 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
     rarity,
     ex,
     baby,
-    set_details,
     pack,
     alternate_versions,
     artist,
