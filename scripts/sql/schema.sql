@@ -89,26 +89,6 @@ CREATE TABLE public.cards_list (
 
 
 --
--- Name: collection; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.collection (
-    email character varying NOT NULL,
-    card_id character varying NOT NULL,
-    created_at timestamp with time zone DEFAULT now(),
-    updated_at timestamp with time zone DEFAULT now() NOT NULL,
-    internal_id integer
-);
-
-
---
--- Name: TABLE collection; Type: COMMENT; Schema: public; Owner: -
---
-
-COMMENT ON TABLE public.collection IS 'Holds the card collections';
-
-
---
 -- Name: deck_likes; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -388,14 +368,6 @@ ALTER TABLE ONLY public.cards_list
 
 
 --
--- Name: collection collection_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.collection
-    ADD CONSTRAINT collection_pkey PRIMARY KEY (email, card_id);
-
-
---
 -- Name: deck_likes deck_likes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -493,27 +465,6 @@ CREATE INDEX idx_cards_list_rarity_id ON public.cards_list USING btree (((intern
 
 
 --
--- Name: idx_collection_card_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX idx_collection_card_id ON public.collection USING btree (card_id);
-
-
---
--- Name: idx_collection_email_internal_id_card_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX idx_collection_email_internal_id_card_id ON public.collection USING btree (email, internal_id, card_id);
-
-
---
--- Name: idx_collection_internal_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX idx_collection_internal_id ON public.collection USING btree (internal_id);
-
-
---
 -- Name: idx_friends_accepter; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -559,14 +510,6 @@ CREATE OR REPLACE VIEW public.public_decks AS
      LEFT JOIN public.accounts a ON (((a.email)::text = (d.email)::text)))
   WHERE (d.is_public = true)
   GROUP BY d.id, a.username, d.name, d.energy, d.cards;
-
-
---
--- Name: collection collection_card_amounts_internal_id_email_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.collection
-    ADD CONSTRAINT collection_card_amounts_internal_id_email_fk FOREIGN KEY (internal_id, email) REFERENCES public.card_amounts(internal_id, email);
 
 
 --
@@ -667,12 +610,6 @@ ALTER TABLE public.card_amounts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.cards_list ENABLE ROW LEVEL SECURITY;
 
 --
--- Name: collection; Type: ROW SECURITY; Schema: public; Owner: -
---
-
-ALTER TABLE public.collection ENABLE ROW LEVEL SECURITY;
-
---
 -- Name: deck_likes; Type: ROW SECURITY; Schema: public; Owner: -
 --
 
@@ -703,13 +640,6 @@ CREATE POLICY "ensure only own rows" ON public.decks USING (((email)::text = ( S
 --
 
 CREATE POLICY "ensure-only-own-rows" ON public.card_amounts USING (((email)::text = ( SELECT auth.email() AS email)));
-
-
---
--- Name: collection ensure-only-own-rows; Type: POLICY; Schema: public; Owner: -
---
-
-CREATE POLICY "ensure-only-own-rows" ON public.collection USING (((email)::text = ( SELECT auth.email() AS email)));
 
 
 --
@@ -769,13 +699,6 @@ CREATE POLICY greg ON public.card_amounts FOR SELECT TO greg USING (true);
 --
 
 CREATE POLICY greg ON public.cards_list FOR SELECT TO greg USING (true);
-
-
---
--- Name: collection greg; Type: POLICY; Schema: public; Owner: -
---
-
-CREATE POLICY greg ON public.collection FOR SELECT TO greg USING (true);
 
 
 --
