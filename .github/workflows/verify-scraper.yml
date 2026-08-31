@@ -1,0 +1,42 @@
+name: Verify scraper
+
+on:
+  pull_request:
+    paths:
+      - 'frontend/assets/cards.json'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-scraper:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - name: Checkout 🛠️
+        uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          check-latest: true
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run scraper
+        run: pnpm run scraper-cards
+
+      - name: Verify scraper output is committed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git status --short
+            git diff --stat
+            echo "::error::pnpm run scraper produced uncommitted changes."
+            exit 1
+          fi
