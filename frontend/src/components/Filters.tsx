@@ -4,6 +4,18 @@ import { ToggleGroup, ToggleGroupItem } from './ui/toggle-group'
 
 const commonClassName = 'rounded-md border-1 border-neutral-700 bg-neutral-800'
 
+function FilterField({ label, children, className }: { label?: string; children: React.ReactNode; className?: string }) {
+  if (!label) {
+    return <div className={className}>{children}</div>
+  }
+  return (
+    <div className={cn('flex flex-col gap-1', className)}>
+      <span className="text-[10px] font-medium uppercase tracking-wider text-neutral-500 px-0.5">{label}</span>
+      {children}
+    </div>
+  )
+}
+
 interface Props<T> {
   options: readonly T[]
   show?: (x: T) => React.ReactNode
@@ -18,14 +30,9 @@ interface PropsTabs<T> extends Props<T> {
 
 export function TabsFilter<T extends string>({ options, value, onChange, className, label, show = (x) => x }: PropsTabs<T>) {
   return (
-    <div className="inline-block">
-      {label && (
-        <span className="block w-fit bg-neutral-800 border border-b-0 rounded-t-md border-neutral-700 text-neutral-400 px-4 py-0.5 text-xs relative">
-          {label}
-        </span>
-      )}
+    <FilterField label={label}>
       <Tabs value={value} onValueChange={(x) => onChange(x as T)}>
-        <TabsList className={cn(commonClassName, 'flex-wrap block', className, label && 'rounded-tl-none -mt-px')}>
+        <TabsList className={cn(commonClassName, 'flex-wrap block', className)}>
           {options.map((x) => (
             <TabsTrigger className="rounded-sm" key={x} value={x}>
               {show(x)}
@@ -33,7 +40,7 @@ export function TabsFilter<T extends string>({ options, value, onChange, classNa
           ))}
         </TabsList>
       </Tabs>
-    </div>
+    </FilterField>
   )
 }
 
@@ -58,19 +65,81 @@ export function DropdownFilter<T extends string | number>({ label, options, valu
   )
 }
 
+interface PropsRange<T> {
+  label: string
+  minOptions: readonly T[]
+  maxOptions: readonly T[]
+  minValue: T
+  maxValue: T
+  onMinChange: (value: T) => void
+  onMaxChange: (value: T) => void
+  className?: string
+}
+
+/** A min/max pair rendered as a single control: `HP   0 – ∞` */
+export function RangeFilter<T extends string | number>({
+  label,
+  minOptions,
+  maxOptions,
+  minValue,
+  maxValue,
+  onMinChange,
+  onMaxChange,
+  className,
+}: PropsRange<T>) {
+  // Fixed width so every range row lines up, regardless of how wide each filter's widest option is.
+  const selectClassName = 'min-h-[27px] w-14 text-sm text-right text-neutral-300 cursor-pointer'
+  return (
+    <div className={cn(commonClassName, 'flex items-center justify-between gap-4 px-3 py-1 text-neutral-400', className)}>
+      <span className="text-sm">{label}</span>
+      <div className="flex items-center gap-1">
+        <select aria-label={`${label} min`} value={minValue} onChange={(e) => onMinChange(e.target.value as T)} className={selectClassName}>
+          {minOptions.map((x) => (
+            <option key={x} value={x}>
+              {x}
+            </option>
+          ))}
+        </select>
+        <select aria-label={`${label} max`} value={maxValue} onChange={(e) => onMaxChange(e.target.value as T)} className={selectClassName}>
+          {maxOptions.map((x) => (
+            <option key={x} value={x}>
+              {x}
+            </option>
+          ))}
+        </select>
+      </div>
+    </div>
+  )
+}
+
 interface PropsToggle<T> extends Props<T> {
   value: T[]
   onChange: (value: T[]) => void
+  label?: string
+  selectAllLabel?: string
+  clearAllLabel?: string
 }
 
-export function ToggleFilter<T extends string>({ options, value, onChange, className, show = (x) => x }: PropsToggle<T>) {
+export function ToggleFilter<T extends string>({ options, value, onChange, className, show = (x) => x, label, selectAllLabel, clearAllLabel }: PropsToggle<T>) {
+  const allSelected = value.length === options.length
   return (
-    <ToggleGroup type="multiple" className={cn(commonClassName, 'flex flex-wrap justify-start', className)} value={value} onValueChange={onChange}>
-      {options.map((x) => (
-        <ToggleGroupItem key={x} value={x} aria-label={x}>
-          {show(x)}
-        </ToggleGroupItem>
-      ))}
-    </ToggleGroup>
+    <FilterField label={label}>
+      <ToggleGroup type="multiple" className={cn(commonClassName, 'flex flex-wrap justify-start', className)} value={value} onValueChange={onChange}>
+        {options.map((x) => (
+          <ToggleGroupItem key={x} value={x} aria-label={x}>
+            {show(x)}
+          </ToggleGroupItem>
+        ))}
+        {selectAllLabel && (
+          <button
+            type="button"
+            onClick={() => onChange(allSelected ? [] : [...options])}
+            className="cursor-pointer text-xs text-neutral-400 hover:text-neutral-300 px-2 py-1 ml-auto"
+          >
+            {allSelected && clearAllLabel ? clearAllLabel : selectAllLabel}
+          </button>
+        )}
+      </ToggleGroup>
+    </FilterField>
   )
 }

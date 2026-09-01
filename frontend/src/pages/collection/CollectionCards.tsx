@@ -12,16 +12,26 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import useSearchState from '@/hooks/use-search-state'
 import { toast } from '@/hooks/use-toast'
-import { getFilteredCards, ownershipOptions, sortByOptions, tradingOptions } from '@/lib/filters'
+import {
+  abilityOptions,
+  cardTypeOptions,
+  getFilteredCards,
+  ownershipOptions,
+  pokemonKindOptions,
+  sortByOptions,
+  stageOptions,
+  tradingOptions,
+  trainerSubtypeOptions,
+} from '@/lib/filters'
 import { getCardNameByLang } from '@/lib/utils.ts'
 import { useProfileDialog } from '@/services/account/useAccount'
-import { type Card as CardType, type Collection, cardTypes, expansionIds, type PublicAccountRow, rarities, type UserAccountRow } from '@/types'
+import { type Card as CardType, type Collection, expansionIds, type PublicAccountRow, rarities, type UserAccountRow } from '@/types'
 
 const schema = z.object({
   search: z.string().default(''),
   expansion: z.union([z.enum(expansionIds), z.literal('all')]).default('all'),
   pack: z.string().default('all'),
-  cardType: z.array(z.enum(cardTypes)).default([]),
+  cardType: z.array(z.enum(cardTypeOptions)).default([]),
   rarity: z.array(z.enum(rarities)).default([]),
   ownership: z.enum(ownershipOptions).default('all'),
   trading: z.enum(tradingOptions).default('all'),
@@ -31,6 +41,14 @@ const schema = z.object({
   maxNumber: z.union([z.number(), z.literal('∞')]).default('∞'),
   deckbuildingMode: z.boolean().default(false),
   allTextSearch: z.boolean().default(false),
+  stage: z.array(z.enum(stageOptions)).default([]),
+  pokemonKind: z.array(z.enum(pokemonKindOptions)).default([]),
+  trainerSubtype: z.array(z.enum(trainerSubtypeOptions)).default([]),
+  ability: z.enum(abilityOptions).default('all'),
+  minHp: z.number().default(0),
+  maxHp: z.union([z.number(), z.literal('∞')]).default('∞'),
+  minRetreat: z.number().default(0),
+  maxRetreat: z.union([z.number(), z.literal('∞')]).default('∞'),
 })
 
 interface Props {
@@ -122,15 +140,22 @@ export default function CollectionCards({ children, cards, account }: Props) {
     return total
   }
 
+  const stats = [
+    { key: 'shown', value: filteredCards.length },
+    { key: 'owned', value: filteredCards.filter((card) => Boolean(card.collected)).length },
+    { key: 'copies', value: totalOwned() },
+  ]
+
   const filtersPanel = (
     <div className="flex flex-col h-fit gap-2">
-      <small className="flex gap-2">
-        {t('stats.summary', {
-          selected: filteredCards.length,
-          uniquesOwned: filteredCards.filter((card) => Boolean(card.collected)).length,
-          totalOwned: totalOwned(),
-        })}
-      </small>
+      <div className="grid grid-cols-3 gap-2 mb-1">
+        {stats.map(({ key, value }) => (
+          <div key={key} className="flex flex-col">
+            <span className="text-lg font-semibold leading-tight text-neutral-200 tabular-nums">{value.toLocaleString(i18n.language)}</span>
+            <span className="text-[10px] font-medium uppercase tracking-wider text-neutral-500">{t(`stats.${key}`)}</span>
+          </div>
+        ))}
+      </div>
       <FiltersPanel className="flex flex-col gap-y-3" filters={filters} setFilters={setFilters} clearFilters={clearFilters} />
       <div className="flex flex-col mt-4 gap-2">
         {!isPublic && (

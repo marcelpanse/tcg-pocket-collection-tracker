@@ -17,7 +17,9 @@
     "share": "Share"
   },
   "stats": {
-    "summary": "{{selected}} selected, {{uniquesOwned}} uniques owned, {{totalOwned}} total owned"
+    "shown": "Shown",
+    "owned": "Owned",
+    "copies": "Copies"
   },
   "trade": {
     "button": "Copy trade message",
