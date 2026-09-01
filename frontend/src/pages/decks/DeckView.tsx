@@ -1,11 +1,13 @@
 import { Slot } from '@radix-ui/react-slot'
 import { useQuery } from '@tanstack/react-query'
+import i18n from 'i18next'
 import { ChevronRight, Heart, HeartMinus, HeartPlus } from 'lucide-react'
 import { Link, useLocation, useParams } from 'react-router'
 import { Spinner } from '@/components/Spinner'
 import { Button } from '@/components/ui/button'
 import { showCardType } from '@/components/utils'
 import { getCardByInternalId } from '@/lib/CardsDB'
+import { getLocalizedImagePath } from '@/lib/imageLocales'
 import { cn } from '@/lib/utils'
 import { useAccount } from '@/services/account/useAccount'
 import { useCollection, useSelectedCard } from '@/services/collection/useCollection'
@@ -106,7 +108,11 @@ export default function DeckView() {
           }
           return (
             <button key={idx} className="cursor-pointer" onClick={() => setSelectedCardId(id)} type="button">
-              <img className={`w-28 sm:w-36 ${owned ? '' : 'grayscale'}`} src={card.image} alt={`${card.card_id} ${card.name}`} />
+              <img
+                className={`w-28 sm:w-36 ${owned ? '' : 'grayscale'}`}
+                src={getLocalizedImagePath(card, i18n.language)}
+                alt={`${card.card_id} ${card.name}`}
+              />
             </button>
           )
         })}

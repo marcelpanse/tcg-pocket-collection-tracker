@@ -1,6 +1,7 @@
 import * as tf from '@tensorflow/tfjs'
 import { getCardByInternalId } from '@/lib/CardsDB'
 import { calculatePerceptualHash, calculateSimilarity, type Hashes, imageToBuffers } from '@/lib/hash'
+import { getLocalizedImagePath } from '@/lib/imageLocales'
 import type { Card } from '@/types'
 
 export interface BoundingBox {
@@ -209,24 +210,6 @@ export async function detectImages(model: tf.GraphModel, imageFiles: File[]): Pr
   return results
 }
 
-function getRightPathOfImage(imageUrl: string, language: string): Promise<string> {
-  const baseName = imageUrl.split('/').at(-1)
-  const localizedPath = `/images/${language}/${baseName}`
-  const fallbackPath = `/images/en-US/${baseName}`
-
-  return new Promise((resolve) => {
-    const img = new Image()
-    img.onload = () => {
-      console.log('[Image Load] Success:', localizedPath)
-      resolve(localizedPath)
-    }
-    img.onerror = () => {
-      console.warn('[Image Load] Failed:', localizedPath, 'returning', fallbackPath, 'instead')
-      resolve(fallbackPath)
-    }
-    img.src = localizedPath
-  })
-}
 export async function extractCardImages(file: File, detections: DetectionResult, hashes: Hashes, language: string) {
   if (!file.type.startsWith('image/')) {
     throw new Error('PokemonCardDetectorComponent.tsx:extractCardImages: Invalid file type')
@@ -274,7 +257,7 @@ export async function extractCardImages(file: File, detections: DetectionResult,
               if (!card) {
                 throw new Error('Hashes key does not correspond to any card')
               }
-              const resolvedImageUrl = await getRightPathOfImage(card.image, language)
+              const resolvedImageUrl = getLocalizedImagePath(card, language)
 
               return {
                 matchedCard: { card, similarity },
