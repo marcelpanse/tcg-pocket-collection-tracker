@@ -1,1 +1,0 @@
-import{K as e}from"./useAuth-BHdkT1Q1.js";var t=e(`minus`,[[`path`,{d:`M5 12h14`,key:`1ays0h`}]]);export{t};
