@@ -1,5 +1,6 @@
 import i18n from 'i18next'
 import { type CSSProperties, useCallback, useRef, useState } from 'react'
+import { getLocalizedImagePath } from '@/lib/imageLocales'
 import { getCardNameByLang } from '@/lib/utils'
 import type { Card } from '@/types'
 
@@ -61,8 +62,7 @@ function FancyCard({ selected, card, size = 'default' }: Readonly<FancyCardProps
     height: size === 'small' ? '112px' : 'auto', // Adjust size based on prop
   }
 
-  const baseName = card.image?.split('/').at(-1)
-  const imagePath = `/images/${i18n.language}/${baseName}`
+  const imagePath = getLocalizedImagePath(card, i18n.language)
 
   return (
     <div
@@ -76,7 +76,7 @@ function FancyCard({ selected, card, size = 'default' }: Readonly<FancyCardProps
         zIndex: isHovering ? 10 : 0,
       }}
     >
-      {baseName && (
+      {card.card_id && (
         // biome-ignore lint/a11y/noStaticElementInteractions: interative for hover animation
         <div
           style={{
@@ -94,9 +94,6 @@ function FancyCard({ selected, card, size = 'default' }: Readonly<FancyCardProps
             style={cardStyle}
             src={imagePath}
             alt={getCardNameByLang(card, i18n.language)}
-            onError={(e) => {
-              ;(e.target as HTMLImageElement).src = card.image
-            }}
           />
         </div>
       )}

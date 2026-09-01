@@ -11,7 +11,8 @@
   "f-number": {
     "numberCards": "Número de cartas deseadas",
     "maxNum": "Número máximo de cartas",
-    "minNum": "Número mínimo de cartas"
+    "minNum": "Número mínimo de cartas",
+    "label": "Copies owned"
   },
   "f-trading": {
     "all": "All",
@@ -25,6 +26,8 @@
   },
   "carddex": "Card Dex",
   "trading": "Trading",
+  "f-selectAll": "Seleccionar todo",
+  "f-clearAll": "Vaciar",
   "f-owned": {
     "all": "All",
     "owned": "Owned",
@@ -35,5 +38,47 @@
     "normal": "Normal",
     "secret": "Secretas",
     "complete": "Completas"
+  },
+  "f-type": {
+    "type": "Tipo",
+    "pokemon": "Pokémon",
+    "trainer": "Entrenador"
+  },
+  "f-stage": {
+    "label": "Fase",
+    "basic": "Básico",
+    "stage1": "Fase 1",
+    "stage2": "Fase 2"
+  },
+  "f-pokemonKind": {
+    "label": "Clase",
+    "regular": "Normal",
+    "ex": "ex",
+    "megaex": "Mega ex"
+  },
+  "f-trainerSubtype": {
+    "item": "Objeto",
+    "supporter": "Partidario",
+    "tool": "Herramienta",
+    "stadium": "Estadio"
+  },
+  "f-ability": {
+    "label": "Habilidad",
+    "all": "Todas",
+    "yes": "Sí",
+    "no": "No"
+  },
+  "f-hp": {
+    "minHp": "PS mín",
+    "maxHp": "PS máx",
+    "label": "HP"
+  },
+  "f-retreat": {
+    "minRetreat": "Retirada mín",
+    "maxRetreat": "Retirada máx",
+    "label": "Retreat"
+  },
+  "f-advanced": {
+    "label": "More filters"
   }
 }

@@ -1,19 +1,31 @@
 import i18n from '@/i18n'
-import { type Card, type Collection, cardTypes, expansionIds, type Rarity, type RaritySettingsRow } from '@/types'
+import { type Card, type Collection, energies, expansionIds, type Rarity, type RaritySettingsRow } from '@/types'
 import { allCards, getCardByInternalId } from './CardsDB'
 import { levenshtein } from './levenshtein'
 import { getCardNameByLang, getExtraCards, getNeededCards } from './utils'
 
 export const expansionOptions = ['all', ...expansionIds] as const
 export const sortByOptions = ['expansion-newest', 'rarity', 'type', 'recent'] as const
-export const cardTypeOptions = cardTypes
+export const cardTypeOptions = [...energies, 'dragon', 'colorless'] as const
 export const ownershipOptions = ['all', 'missing', 'registered'] as const
 export const tradingOptions = ['all', 'wanted', 'extra'] as const
+export const stageOptions = ['basic', 'stage1', 'stage2'] as const
+export const pokemonKindOptions = ['regular', 'ex', 'megaex'] as const
+export const trainerSubtypeOptions = ['item', 'supporter', 'tool', 'stadium'] as const
+export const abilityOptions = ['all', 'yes', 'no'] as const
+export const hpOptions: readonly number[] = [...new Set([0, ...allCards.map((c) => c.hp).filter((v): v is number => v !== undefined)])].sort((a, b) => a - b)
+export const retreatOptions: readonly number[] = [...new Set([0, ...allCards.map((c) => c.retreat).filter((v): v is number => v !== undefined)])].sort(
+  (a, b) => a - b,
+)
 export type ExpansionOption = (typeof expansionOptions)[number]
 export type SortByOption = (typeof sortByOptions)[number]
 export type CardTypeOption = (typeof cardTypeOptions)[number]
 export type OwnershipOptions = (typeof ownershipOptions)[number]
 export type TradingOption = (typeof tradingOptions)[number]
+export type StageOption = (typeof stageOptions)[number]
+export type PokemonKindOption = (typeof pokemonKindOptions)[number]
+export type TrainerSubtypeOption = (typeof trainerSubtypeOptions)[number]
+export type AbilityOption = (typeof abilityOptions)[number]
 
 export interface FiltersAll {
   search: string
@@ -29,6 +41,14 @@ export interface FiltersAll {
   maxNumber: number | '∞'
   deckbuildingMode: boolean
   allTextSearch: boolean
+  stage: StageOption[]
+  pokemonKind: PokemonKindOption[]
+  trainerSubtype: TrainerSubtypeOption[]
+  ability: AbilityOption
+  minHp: number
+  maxHp: number | '∞'
+  minRetreat: number
+  maxRetreat: number | '∞'
 }
 export type Filters = Partial<FiltersAll>
 
@@ -40,7 +60,7 @@ const sortComparators: Record<SortByOption, (a: Card, b: Card) => number> = {
     return a.card_id.localeCompare(b.card_id, i18n.language || 'en', { numeric: true })
   },
   rarity: (a, b) => (a.internal_id & 63) - (b.internal_id & 63),
-  type: (a, b) => cardTypeOptions.indexOf(a.energy) - cardTypeOptions.indexOf(b.energy),
+  type: (a, b) => (cardTypeOptions as readonly string[]).indexOf(a.energy) - (cardTypeOptions as readonly string[]).indexOf(b.energy),
   recent: (a, b) => {
     if (a.updated_at && b.updated_at) {
       return b.updated_at.getTime() - a.updated_at.getTime()
@@ -80,9 +100,49 @@ export function getFilteredCards(filters: Filters, cards: Collection, tradingSet
     const rarity = filters.rarity
     filteredCards = filteredCards.filter((c) => rarity.includes(c.rarity))
   }
-  if (filters.cardType !== undefined && filters.cardType.length > 0) {
-    const cardType = filters.cardType
-    filteredCards = filteredCards.filter((c) => (c.card_type.toLowerCase() === 'trainer' ? cardType.includes('trainer') : cardType.includes(c.energy)))
+  const cardTypeSelected = filters.cardType !== undefined && filters.cardType.length > 0
+  const trainerSubtypeSelected = filters.trainerSubtype !== undefined && filters.trainerSubtype.length > 0
+  if (cardTypeSelected || trainerSubtypeSelected) {
+    const cardType = filters.cardType ?? []
+    const trainerSubtype = filters.trainerSubtype ?? []
+    filteredCards = filteredCards.filter((c) =>
+      c.card_type === 'trainer' ? trainerSubtype.includes(c.evolution_type as TrainerSubtypeOption) : cardType.includes(c.energy as CardTypeOption),
+    )
+  }
+  if (filters.stage !== undefined && filters.stage.length > 0) {
+    const stage = filters.stage
+    filteredCards = filteredCards.filter((c) => c.card_type === 'pokémon' && stage.includes(c.evolution_type as StageOption))
+  }
+  if (filters.pokemonKind !== undefined && filters.pokemonKind.length > 0) {
+    const kinds = filters.pokemonKind
+    filteredCards = filteredCards.filter((c) => {
+      if (c.card_type !== 'pokémon') {
+        return false
+      }
+      const isMega = c.name.startsWith('Mega ')
+      const kind: PokemonKindOption = c.ex ? (isMega ? 'megaex' : 'ex') : 'regular'
+      return kinds.includes(kind)
+    })
+  }
+  if (filters.ability !== undefined && filters.ability !== 'all') {
+    const wantAbility = filters.ability === 'yes'
+    filteredCards = filteredCards.filter((c) => Boolean(c.ability?.name || c.ability?.effect) === wantAbility)
+  }
+  if (filters.minHp !== undefined && filters.minHp > 0) {
+    const minHp = filters.minHp
+    filteredCards = filteredCards.filter((c) => (c.hp ?? 0) >= minHp)
+  }
+  if (filters.maxHp !== undefined && filters.maxHp !== '∞') {
+    const maxHp = filters.maxHp
+    filteredCards = filteredCards.filter((c) => (c.hp ?? 0) <= maxHp)
+  }
+  if (filters.minRetreat !== undefined && filters.minRetreat > 0) {
+    const minRetreat = filters.minRetreat
+    filteredCards = filteredCards.filter((c) => c.card_type === 'pokémon' && (c.retreat ?? 0) >= minRetreat)
+  }
+  if (filters.maxRetreat !== undefined && filters.maxRetreat !== '∞') {
+    const maxRetreat = filters.maxRetreat
+    filteredCards = filteredCards.filter((c) => c.card_type !== 'pokémon' || (c.retreat ?? 0) <= maxRetreat)
   }
 
   if (filters.search) {

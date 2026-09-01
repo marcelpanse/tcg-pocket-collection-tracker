@@ -14,7 +14,9 @@
     "share": "Teilen"
   },
   "stats": {
-    "summary": "{{selected}} ausgewählt, {{uniquesOwned}} einzigartige im Besitz, {{totalOwned}} Gesamt"
+    "shown": "Shown",
+    "owned": "Owned",
+    "copies": "Copies"
   },
   "trade": {
     "button": "Tauschnachricht kopieren",

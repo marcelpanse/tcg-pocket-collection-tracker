@@ -11,7 +11,8 @@
   "f-number": {
     "numberCards": "Nombre d'exemplaire voulu",
     "maxNum": "Nombre maximum de cartes",
-    "minNum": "Nombre minimum de cartes"
+    "minNum": "Nombre minimum de cartes",
+    "label": "Copies owned"
   },
   "f-trading": {
     "all": "Tout",
@@ -25,6 +26,8 @@
   },
   "carddex": "Card Dex",
   "trading": "Échanges",
+  "f-selectAll": "Tout sélectionner",
+  "f-clearAll": "Effacer",
   "f-owned": {
     "all": "Toutes",
     "owned": "Possédées",
@@ -35,5 +38,47 @@
     "normal": "Normale",
     "secret": "Secrète",
     "complete": "Complète"
+  },
+  "f-type": {
+    "type": "Type",
+    "pokemon": "Pokémon",
+    "trainer": "Dresseur"
+  },
+  "f-stage": {
+    "label": "Niveau",
+    "basic": "Base",
+    "stage1": "Niveau 1",
+    "stage2": "Niveau 2"
+  },
+  "f-pokemonKind": {
+    "label": "Sorte",
+    "regular": "Normal",
+    "ex": "ex",
+    "megaex": "Méga ex"
+  },
+  "f-trainerSubtype": {
+    "item": "Objet",
+    "supporter": "Supporter",
+    "tool": "Outil",
+    "stadium": "Stade"
+  },
+  "f-ability": {
+    "label": "Talent",
+    "all": "Tous",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "f-hp": {
+    "minHp": "PV min",
+    "maxHp": "PV max",
+    "label": "HP"
+  },
+  "f-retreat": {
+    "minRetreat": "Retraite min",
+    "maxRetreat": "Retraite max",
+    "label": "Retreat"
+  },
+  "f-advanced": {
+    "label": "More filters"
   }
 }
