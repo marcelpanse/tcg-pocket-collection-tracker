@@ -1,1 +1,0 @@
-import{q as e}from"./useAuth-CbJCK_58.js";var t=e(`chevron-right`,[[`path`,{d:`m9 18 6-6-6-6`,key:`mthhwq`}]]);export{t};
