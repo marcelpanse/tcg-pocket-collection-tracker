@@ -96,13 +96,6 @@ export interface CardAmountsRowUpdate {
   amount_owned: number
 }
 
-export interface CollectionRowUpdate {
-  email: string
-  internal_id: number
-  updated_at: Date
-  card_id: string
-}
-
 const tradeStatuses = ['offered', 'accepted', 'declined', 'finished'] as const
 
 export type TradeStatus = (typeof tradeStatuses)[number]
@@ -175,7 +168,6 @@ export interface Card {
   rarity: Rarity
   ex: boolean
   baby: boolean
-  set_details: string
   pack: string
   alternate_versions: number[]
   artist: string

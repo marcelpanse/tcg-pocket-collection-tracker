@@ -133,8 +133,23 @@ This is a **manually sourced asset** — the scraper only downloads individual c
 
 ---
 
+## Step 7 — Push the new cards to the database
+
+`pnpm scraper` regenerates `scripts/sql/output/bulk-insert.sql` automatically, but **applying it is a
+separate manual step**: paste it into the Supabase SQL editor. It is `TRUNCATE TABLE cards_list` +
+`INSERT`, so it fully replaces the table.
+
+Do not skip this. `supabase/functions/get-trading-partners` reads `cards_list` for the "cards I still
+need" side of the match query, so until it is applied, trade matching silently ignores the new set.
+
+---
+
 ## Important notes
 
 - `internalId` must **never change** after a set is released — the DB encoding depends on it.
 - Promo sets use internalIds 192+ to avoid conflicts with regular sets.
 - If shiny ranges were not provided upfront, remind the user to fill in `rarityOverrides` in `scripts/scraper.ts` once the set's card list is confirmed.
+- **Rarity is part of `internal_id`** (low 6 bits — see `scripts/encoder.ts`), so correcting a card's
+  rarity *after* release changes its id and orphans user data in `card_amounts` and `decks.cards`.
+  That needs a remapping migration plus a localStorage cache-key bump, not just a scraper rerun — see
+  `scripts/sql/migrations/2026-08-b4a-rarity-remap.sql` for the procedure.

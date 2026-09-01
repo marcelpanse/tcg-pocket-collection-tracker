@@ -3,18 +3,12 @@ import { chunk } from '@/lib/utils'
 import type { CardAmountsRowUpdate, CardAmountUpdate, Collection, CollectionRow, UserAccountRow } from '@/types'
 import { updateCollectionTimestamp } from '../account/accountService'
 
-export interface CollectionRowUpdate {
-  email: string
-  internal_id: number
-  updated_at: Date
-  card_id: string
-}
-
-const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v5'
-const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v5'
+const COLLECTION_CACHE_KEY = 'tcg_collection_cache_v6'
+const COLLECTION_TIMESTAMP_KEY = 'tcg_collection_timestamp_v6'
 // Caches written by earlier versions may be partial: they were filled by an OFFSET-paginated fetch without an
-// ORDER BY, which silently dropped rows. The v4 caches are keyed by internal_ids that predate the B4 rarity
-// re-encoding. Bumping the key above forces a resync; these get purged to free up quota.
+// ORDER BY, which silently dropped rows. Rarity lives in the low 6 bits of internal_id, so every rarity
+// correction re-keys the cache: v4 predates the B4 re-encoding, v5 predates the B4a one. Bumping the key above
+// forces a resync; these get purged to free up quota.
 const STALE_CACHE_KEYS = [
   'tcg_collection_cache_v2',
   'tcg_collection_timestamp_v2',
@@ -22,6 +16,8 @@ const STALE_CACHE_KEYS = [
   'tcg_collection_timestamp_v3',
   'tcg_collection_cache_v4',
   'tcg_collection_timestamp_v4',
+  'tcg_collection_cache_v5',
+  'tcg_collection_timestamp_v5',
 ]
 const PAGE_SIZE = 500
 
@@ -205,7 +201,7 @@ export const setCollected = async (email: string, collection: Collection, intern
   ])
 
   if (error) {
-    throw new Error(`Error deleting from collection: ${error.message}`)
+    throw new Error(`Error updating card_amounts: ${error.message}`)
   }
 
   for (const row of rows) {
