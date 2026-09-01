@@ -16,9 +16,9 @@
     "sync-locales": "node scripts/sync-locales.js"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.0",
-    "lefthook": "^2.1.9",
-    "tsx": "^4.22.4"
+    "@biomejs/biome": "2.5.11",
+    "lefthook": "^2.1.12",
+    "tsx": "^4.23.13"
   },
   "type": "module",
   "packageManager": "pnpm@10.30.3",
@@ -27,9 +27,9 @@
   },
   "dependencies": {
     "cheerio": "^1.1.2",
-    "fs-extra": "^11.3.5",
+    "fs-extra": "^11.4.0",
     "glob": "^13.0.0",
     "node-fetch": "^3.3.2",
-    "sharp": "0.35.1"
+    "sharp": "0.35.4"
   }
 }
