@@ -1,1 +1,322 @@
-[]
+[
+  {
+    "expansionId": "B3a",
+    "name": "Area Zero Ecology",
+    "requiredCards": [
+      {
+        "options": ["B3a-31"],
+        "amount": 6
+      }
+    ],
+    "reward": "Area Zero Ecology (cover)",
+    "secret": false
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Over 1,000 Pounds!",
+    "requiredCards": [
+      {
+        "options": ["B3a-50"],
+        "amount": 4
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Pokémon That Resemble Volcarona",
+    "requiredCards": [
+      {
+        "options": ["B3a-4"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-5"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Pokémon That Resemble Donphan",
+    "requiredCards": [
+      {
+        "options": ["B3a-34"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-51"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Pokémon with Long Necks",
+    "requiredCards": [
+      {
+        "options": ["B3a-58"],
+        "amount": 6
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": false
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Collect 3 Scream Tail cards",
+    "requiredCards": [
+      {
+        "options": ["B3a-25"],
+        "amount": 3
+      }
+    ],
+    "reward": "Scream Tail (profile icon)",
+    "secret": false
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Glittering Like Jewels",
+    "requiredCards": [
+      {
+        "options": ["B3a-7"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-39"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-40"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-68", "B3a-85", "B3a-93"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Legends of the Paldea Region",
+    "requiredCards": [
+      {
+        "options": ["B3a-19", "B3a-82", "B3a-90"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-36", "B3a-84", "B3a-92"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Future Swords of Justice?",
+    "requiredCards": [
+      {
+        "options": ["B3a-28"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-29", "B3a-77"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-30"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Legends Racing Across the Ancient World",
+    "requiredCards": [
+      {
+        "options": ["B3a-53"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-54"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-55", "B3a-79"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×12<br />Shop Ticket ×2",
+    "secret": true
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Paradox Drive Museum 1",
+    "requiredCards": [
+      {
+        "options": ["B3a-75"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-76"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-77"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-78"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-79"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-80"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Paradox Drive Museum 2",
+    "requiredCards": [
+      {
+        "options": ["B3a-89"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-90"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-91"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-92"],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Ancient Pokémon",
+    "requiredCards": [
+      {
+        "options": ["B3a-3"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-4"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-25"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-26", "B3a-83", "B3a-91"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-34"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-35"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-36", "B3a-84", "B3a-92"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-47", "B3a-109"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-53"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-54"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-55", "B3a-79"],
+        "amount": 1
+      }
+    ],
+    "reward": "Roaring Moon (emblem)",
+    "secret": true
+  },
+  {
+    "expansionId": "B3a",
+    "name": "Future Pokémon",
+    "requiredCards": [
+      {
+        "options": ["B3a-5"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-13", "B3a-81", "B3a-89"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-17"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-18"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-19", "B3a-82", "B3a-90"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-27", "B3a-108"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-28"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-29", "B3a-77"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-30"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-46"],
+        "amount": 1
+      },
+      {
+        "options": ["B3a-51"],
+        "amount": 1
+      }
+    ],
+    "reward": "Iron Valiant (emblem)",
+    "secret": true
+  }
+]
