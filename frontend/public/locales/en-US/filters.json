@@ -22,6 +22,7 @@
     "recent": "Recently updated"
   },
   "f-number": {
+    "label": "Copies owned",
     "numberCards": "Number of cards wanted",
     "maxNum": "Maximum number of cards",
     "minNum": "Minimum number of cards"
@@ -67,11 +68,16 @@
     "no": "No"
   },
   "f-hp": {
+    "label": "HP",
     "minHp": "Min HP",
     "maxHp": "Max HP"
   },
   "f-retreat": {
+    "label": "Retreat",
     "minRetreat": "Min retreat",
     "maxRetreat": "Max retreat"
+  },
+  "f-advanced": {
+    "label": "More filters"
   }
 }

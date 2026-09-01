@@ -11,7 +11,8 @@
   "f-number": {
     "numberCards": "Anzahl der gesuchten Karten",
     "maxNum": "Maximale Anzahl der Karten",
-    "minNum": "Minimale Anzahl der Karten"
+    "minNum": "Minimale Anzahl der Karten",
+    "label": "Copies owned"
   },
   "f-ownership": {
     "all": "Alle",
@@ -69,10 +70,15 @@
   },
   "f-hp": {
     "minHp": "KP min",
-    "maxHp": "KP max"
+    "maxHp": "KP max",
+    "label": "HP"
   },
   "f-retreat": {
     "minRetreat": "Rückzug min",
-    "maxRetreat": "Rückzug max"
+    "maxRetreat": "Rückzug max",
+    "label": "Retreat"
+  },
+  "f-advanced": {
+    "label": "More filters"
   }
 }

@@ -11,7 +11,8 @@
   "f-number": {
     "numberCards": "Nombre d'exemplaire voulu",
     "maxNum": "Nombre maximum de cartes",
-    "minNum": "Nombre minimum de cartes"
+    "minNum": "Nombre minimum de cartes",
+    "label": "Copies owned"
   },
   "f-trading": {
     "all": "Tout",
@@ -69,10 +70,15 @@
   },
   "f-hp": {
     "minHp": "PV min",
-    "maxHp": "PV max"
+    "maxHp": "PV max",
+    "label": "HP"
   },
   "f-retreat": {
     "minRetreat": "Retraite min",
-    "maxRetreat": "Retraite max"
+    "maxRetreat": "Retraite max",
+    "label": "Retreat"
+  },
+  "f-advanced": {
+    "label": "More filters"
   }
 }

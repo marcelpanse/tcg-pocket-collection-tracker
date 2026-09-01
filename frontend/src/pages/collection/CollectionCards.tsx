@@ -140,15 +140,22 @@ export default function CollectionCards({ children, cards, account }: Props) {
     return total
   }
 
+  const stats = [
+    { key: 'shown', value: filteredCards.length },
+    { key: 'owned', value: filteredCards.filter((card) => Boolean(card.collected)).length },
+    { key: 'copies', value: totalOwned() },
+  ]
+
   const filtersPanel = (
     <div className="flex flex-col h-fit gap-2">
-      <small className="flex gap-2">
-        {t('stats.summary', {
-          selected: filteredCards.length,
-          uniquesOwned: filteredCards.filter((card) => Boolean(card.collected)).length,
-          totalOwned: totalOwned(),
-        })}
-      </small>
+      <div className="grid grid-cols-3 gap-2 mb-1">
+        {stats.map(({ key, value }) => (
+          <div key={key} className="flex flex-col">
+            <span className="text-lg font-semibold leading-tight text-neutral-200 tabular-nums">{value.toLocaleString(i18n.language)}</span>
+            <span className="text-[10px] font-medium uppercase tracking-wider text-neutral-500">{t(`stats.${key}`)}</span>
+          </div>
+        ))}
+      </div>
       <FiltersPanel className="flex flex-col gap-y-3" filters={filters} setFilters={setFilters} clearFilters={clearFilters} />
       <div className="flex flex-col mt-4 gap-2">
         {!isPublic && (

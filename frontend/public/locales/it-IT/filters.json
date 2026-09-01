@@ -3,7 +3,8 @@
   "f-number": {
     "numberCards": "Numero di carte desiderate",
     "maxNum": "Massimo numero di carte",
-    "minNum": "Minimo numero di carte"
+    "minNum": "Minimo numero di carte",
+    "label": "Copies owned"
   },
   "f-sortBy": {
     "sortBy": "Sort By",
@@ -69,10 +70,15 @@
   },
   "f-hp": {
     "minHp": "PS min",
-    "maxHp": "PS max"
+    "maxHp": "PS max",
+    "label": "HP"
   },
   "f-retreat": {
     "minRetreat": "Ritirata min",
-    "maxRetreat": "Ritirata max"
+    "maxRetreat": "Ritirata max",
+    "label": "Retreat"
+  },
+  "f-advanced": {
+    "label": "More filters"
   }
 }

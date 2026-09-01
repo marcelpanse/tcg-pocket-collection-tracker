@@ -1,6 +1,6 @@
 import { Slot } from '@radix-ui/react-slot'
-import { ArrowDownAZ, ArrowUpAZ } from 'lucide-react'
-import type { FC } from 'react'
+import { ArrowDownAZ, ArrowUpAZ, ChevronDown } from 'lucide-react'
+import { type FC, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import RarityFilter from '@/components/filters/RarityFilter.tsx'
 import SearchInput from '@/components/filters/SearchInput.tsx'
@@ -21,7 +21,8 @@ import {
   tradingOptions,
   trainerSubtypeOptions,
 } from '@/lib/filters'
-import { DropdownFilter, TabsFilter, ToggleFilter } from './Filters'
+import { cn } from '@/lib/utils'
+import { DropdownFilter, RangeFilter, TabsFilter, ToggleFilter } from './Filters'
 import AllTextSearchFilter from './filters/AllTextSearchFilter'
 import DeckbuildingFilter from './filters/DeckbuildingFilter'
 import { showCardType } from './utils'
@@ -37,6 +38,21 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
   const { t } = useTranslation(['pages/collection', 'common/sets', 'common/packs', 'filters'])
 
   const changeFilter = (k: keyof Filters) => (x: Filters[typeof k]) => setFilters({ [k]: x })
+
+  // Stage / Kind / Ability / HP / Retreat / copies owned are low-traffic, so they live behind a disclosure at the bottom.
+  const advancedActive = [
+    filters.stage !== undefined && filters.stage.length > 0,
+    filters.pokemonKind !== undefined && filters.pokemonKind.length > 0,
+    filters.ability !== undefined && filters.ability !== 'all',
+    (filters.minHp !== undefined && filters.minHp > 0) || (filters.maxHp !== undefined && filters.maxHp !== '∞'),
+    (filters.minRetreat !== undefined && filters.minRetreat > 0) || (filters.maxRetreat !== undefined && filters.maxRetreat !== '∞'),
+    (filters.minNumber !== undefined && filters.minNumber > 0) || (filters.maxNumber !== undefined && filters.maxNumber !== '∞'),
+  ]
+  const activeAdvancedFilters = advancedActive.filter(Boolean).length
+  const hasAdvancedFilters = [filters.stage, filters.pokemonKind, filters.ability, filters.minHp, filters.minRetreat, filters.minNumber].some(
+    (x) => x !== undefined,
+  )
+  const [advancedOpen, setAdvancedOpen] = useState(activeAdvancedFilters > 0)
 
   const getPacksToShow = () => {
     if (filters.expansion === undefined || filters.expansion === 'all') {
@@ -84,7 +100,7 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
         <RarityFilter rarityFilter={filters.rarity} setRarityFilter={changeFilter('rarity')} deckbuildingMode={filters.deckbuildingMode} />
       )}
       {(filters.cardType !== undefined || filters.trainerSubtype !== undefined) && (
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-3">
           {filters.cardType !== undefined && (
             <ToggleFilter
               options={cardTypeOptions}
@@ -105,77 +121,6 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
               label={t('f-type.trainer', { ns: 'filters' })}
               selectAllLabel={t('f-selectAll', { ns: 'filters' })}
               clearAllLabel={t('f-clearAll', { ns: 'filters' })}
-            />
-          )}
-        </div>
-      )}
-      {filters.stage !== undefined && (
-        <ToggleFilter
-          options={stageOptions}
-          value={filters.stage}
-          onChange={changeFilter('stage')}
-          show={(x) => t(`f-stage.${x}`, { ns: 'filters' })}
-          label={t('f-stage.label', { ns: 'filters' })}
-        />
-      )}
-      {filters.pokemonKind !== undefined && (
-        <ToggleFilter
-          options={pokemonKindOptions}
-          value={filters.pokemonKind}
-          onChange={changeFilter('pokemonKind')}
-          show={(x) => t(`f-pokemonKind.${x}`, { ns: 'filters' })}
-          label={t('f-pokemonKind.label', { ns: 'filters' })}
-        />
-      )}
-      {filters.ability !== undefined && (
-        <TabsFilter
-          options={abilityOptions}
-          value={filters.ability}
-          onChange={changeFilter('ability')}
-          label={t('f-ability.label', { ns: 'filters' })}
-          show={(x) => t(`f-ability.${x}`, { ns: 'filters' })}
-        />
-      )}
-      {(filters.minHp !== undefined || filters.maxHp !== undefined) && (
-        <div className="flex gap-2">
-          {filters.minHp !== undefined && (
-            <DropdownFilter
-              className="flex-1"
-              label={t('f-hp.minHp', { ns: 'filters' })}
-              options={hpOptions}
-              value={filters.minHp}
-              onChange={changeFilter('minHp')}
-            />
-          )}
-          {filters.maxHp !== undefined && (
-            <DropdownFilter
-              className="flex-1"
-              label={t('f-hp.maxHp', { ns: 'filters' })}
-              options={['∞', ...hpOptions]}
-              value={filters.maxHp}
-              onChange={changeFilter('maxHp')}
-            />
-          )}
-        </div>
-      )}
-      {(filters.minRetreat !== undefined || filters.maxRetreat !== undefined) && (
-        <div className="flex gap-2">
-          {filters.minRetreat !== undefined && (
-            <DropdownFilter
-              className="flex-1"
-              label={t('f-retreat.minRetreat', { ns: 'filters' })}
-              options={retreatOptions}
-              value={filters.minRetreat}
-              onChange={changeFilter('minRetreat')}
-            />
-          )}
-          {filters.maxRetreat !== undefined && (
-            <DropdownFilter
-              className="flex-1"
-              label={t('f-retreat.maxRetreat', { ns: 'filters' })}
-              options={['∞', ...retreatOptions]}
-              value={filters.maxRetreat}
-              onChange={changeFilter('maxRetreat')}
             />
           )}
         </div>
@@ -219,24 +164,87 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
           )}
         </div>
       )}
-      {filters.minNumber !== undefined && (
-        <DropdownFilter
-          label={t('f-number.minNum', { ns: 'filters' })}
-          options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
-          value={filters.minNumber}
-          onChange={changeFilter('minNumber')}
-        />
-      )}
-      {filters.maxNumber !== undefined && (
-        <DropdownFilter
-          label={t('f-number.maxNum', { ns: 'filters' })}
-          options={['∞', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-          value={filters.maxNumber}
-          onChange={changeFilter('maxNumber')}
-        />
-      )}
       {filters.deckbuildingMode !== undefined && (
         <DeckbuildingFilter deckbuildingMode={filters.deckbuildingMode} setDeckbuildingMode={changeFilter('deckbuildingMode')} />
+      )}
+      {hasAdvancedFilters && (
+        <div className="flex flex-col gap-1">
+          <button
+            type="button"
+            onClick={() => setAdvancedOpen((x) => !x)}
+            className="group flex items-center gap-1.5 w-fit text-xs text-neutral-400 hover:text-neutral-300 cursor-pointer py-1"
+          >
+            <ChevronDown className={cn('size-3.5 transition-transform', !advancedOpen && '-rotate-90')} />
+            {t('f-advanced.label', { ns: 'filters' })}
+            {activeAdvancedFilters > 0 && (
+              <span className="rounded-full bg-neutral-700 text-neutral-200 text-[10px] leading-none px-1.5 py-0.5">{activeAdvancedFilters}</span>
+            )}
+          </button>
+          {advancedOpen && (
+            <div className="flex flex-col gap-3">
+              {filters.stage !== undefined && (
+                <ToggleFilter
+                  options={stageOptions}
+                  value={filters.stage}
+                  onChange={changeFilter('stage')}
+                  show={(x) => t(`f-stage.${x}`, { ns: 'filters' })}
+                  label={t('f-stage.label', { ns: 'filters' })}
+                />
+              )}
+              {filters.pokemonKind !== undefined && (
+                <ToggleFilter
+                  options={pokemonKindOptions}
+                  value={filters.pokemonKind}
+                  onChange={changeFilter('pokemonKind')}
+                  show={(x) => t(`f-pokemonKind.${x}`, { ns: 'filters' })}
+                  label={t('f-pokemonKind.label', { ns: 'filters' })}
+                />
+              )}
+              {filters.ability !== undefined && (
+                <TabsFilter
+                  options={abilityOptions}
+                  value={filters.ability}
+                  onChange={changeFilter('ability')}
+                  label={t('f-ability.label', { ns: 'filters' })}
+                  show={(x) => t(`f-ability.${x}`, { ns: 'filters' })}
+                />
+              )}
+              {filters.minHp !== undefined && filters.maxHp !== undefined && (
+                <RangeFilter
+                  label={t('f-hp.label', { ns: 'filters' })}
+                  minOptions={hpOptions}
+                  maxOptions={['∞', ...hpOptions]}
+                  minValue={filters.minHp}
+                  maxValue={filters.maxHp}
+                  onMinChange={changeFilter('minHp')}
+                  onMaxChange={changeFilter('maxHp')}
+                />
+              )}
+              {filters.minRetreat !== undefined && filters.maxRetreat !== undefined && (
+                <RangeFilter
+                  label={t('f-retreat.label', { ns: 'filters' })}
+                  minOptions={retreatOptions}
+                  maxOptions={['∞', ...retreatOptions]}
+                  minValue={filters.minRetreat}
+                  maxValue={filters.maxRetreat}
+                  onMinChange={changeFilter('minRetreat')}
+                  onMaxChange={changeFilter('maxRetreat')}
+                />
+              )}
+              {filters.minNumber !== undefined && filters.maxNumber !== undefined && (
+                <RangeFilter
+                  label={t('f-number.label', { ns: 'filters' })}
+                  minOptions={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]}
+                  maxOptions={['∞', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+                  minValue={filters.minNumber}
+                  maxValue={filters.maxNumber}
+                  onMinChange={changeFilter('minNumber')}
+                  onMaxChange={changeFilter('maxNumber')}
+                />
+              )}
+            </div>
+          )}
+        </div>
       )}
       <Button variant="outline" className="!text-red-700" onClick={clearFilters}>
         {t('filters.clear')}

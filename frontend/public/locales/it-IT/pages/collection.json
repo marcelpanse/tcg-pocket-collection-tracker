@@ -16,7 +16,9 @@
   "goToCollection": "Go to collection",
   "goToMissions": "Go to missions",
   "stats": {
-    "summary": "{{selected}} selected, {{uniquesOwned}} uniques owned, {{totalOwned}} total owned"
+    "shown": "Shown",
+    "owned": "Owned",
+    "copies": "Copies"
   },
   "collectionOf": "Collection of",
   "trade": {
