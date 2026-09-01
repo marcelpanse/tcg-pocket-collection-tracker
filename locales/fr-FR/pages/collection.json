@@ -16,7 +16,9 @@
     "share": "Partager"
   },
   "stats": {
-    "summary": "{{selected}} sélectionnée(s), {{uniquesOwned}} unique(s) possédée(s), {{totalOwned}} total possédée(s)"
+    "shown": "Shown",
+    "owned": "Owned",
+    "copies": "Copies"
   },
   "collectionOf": "Collection de",
   "trade": {
