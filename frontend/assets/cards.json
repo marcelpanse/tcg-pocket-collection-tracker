@@ -105530,5 +105530,221 @@
     "alternate_versions": [1317504, 12653968],
     "artist": "Naoyo Kimura",
     "internal_id": 12653968
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-87",
+    "image": "/images/en-US/P-B-87.webp",
+    "hp": 210,
+    "energy": "grass",
+    "name": "Mega Sceptile ex",
+    "card_type": "pokémon",
+    "evolution_type": "stage2",
+    "attacks": [
+      {
+        "cost": ["grass", "grass"],
+        "name": "Terminating Tail",
+        "damage": "130",
+        "effect": "Discard a Grass Energy from this Pokémon. Your opponent's Active Pokémon is now Poisoned"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": true,
+    "baby": false,
+    "pack": "everypack",
+    "alternate_versions": [1114627, 1125637, 1126533, 12654032],
+    "artist": "PLANETA CG Works",
+    "internal_id": 12654032
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-88",
+    "image": "/images/en-US/P-B-88.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Team Rocket's Scyther",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass", "colorless"],
+        "name": "Second Strike",
+        "damage": "20+",
+        "effect": "If your opponent's Active Pokémon has any damage on it, this attack does 70 more damage"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "pack": "everypack",
+    "alternate_versions": [12654096],
+    "artist": "Anesaki Dynamic",
+    "internal_id": 12654096
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-89",
+    "image": "/images/en-US/P-B-89.webp",
+    "hp": 90,
+    "energy": "water",
+    "name": "Team Rocket's Lapras",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water", "colorless"],
+        "name": "Ruthless Whirlpool",
+        "damage": "40+",
+        "effect": "If this Pokémon has more Energy attached than your opponent's Active Pokémon, this attack does 40 more damage"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "pack": "everypack",
+    "alternate_versions": [1377089, 12654160],
+    "artist": "matazo",
+    "internal_id": 12654160
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-90",
+    "image": "/images/en-US/P-B-90.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Wingull",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Flap",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "pack": "everypack",
+    "alternate_versions": [1377216, 12654224],
+    "artist": "Midori Harada",
+    "internal_id": 12654224
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-91",
+    "image": "/images/en-US/P-B-91.webp",
+    "hp": 80,
+    "energy": "psychic",
+    "name": "Team Rocket's Wobbuffet",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless", "colorless"],
+        "name": "Rocket Frenzy",
+        "damage": "30x",
+        "effect": "Reveal the top 6 cards of your deck. This attack does 30 damage for each Pokémon found there with Team Rocket in the name. Shuffle the revealed cards back into your deck"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "pack": "everypack",
+    "alternate_versions": [12654288],
+    "artist": "coichi8",
+    "internal_id": 12654288
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-92",
+    "image": "/images/en-US/P-B-92.webp",
+    "hp": 110,
+    "energy": "fighting",
+    "name": "Marowak",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["fighting", "colorless"],
+        "name": "Punish",
+        "damage": "50+",
+        "effect": "If your opponent's Active Pokémon has \"Team Rocket\" in its name, this attack does 70 more damage"
+      }
+    ],
+    "weakness": "grass",
+    "retreat": 2,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "pack": "everypack",
+    "alternate_versions": [75265, 407752, 1378561, 12654352],
+    "artist": "kawayoo",
+    "internal_id": 12654352
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-93",
+    "image": "/images/en-US/P-B-93.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Fennekin",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["colorless"],
+        "name": "Scratch",
+        "damage": "10",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "pack": "everypack",
+    "alternate_versions": [1376896, 12654416],
+    "artist": "Kanako Eo",
+    "internal_id": 12654416
+  },
+  {
+    "expansion": "P-B",
+    "card_id": "P-B-94",
+    "image": "/images/en-US/P-B-94.webp",
+    "hp": 90,
+    "energy": "psychic",
+    "name": "Meowstic",
+    "card_type": "pokémon",
+    "evolution_type": "stage1",
+    "attacks": [
+      {
+        "cost": ["psychic", "psychic"],
+        "name": "Super Psy Bolt",
+        "damage": "70",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "pack": "everypack",
+    "alternate_versions": [1118338, 1124676, 1378305, 12654480],
+    "artist": "Kagemaru Himeno",
+    "internal_id": 12654480
   }
 ]
