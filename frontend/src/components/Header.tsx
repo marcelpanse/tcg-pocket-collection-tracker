@@ -18,6 +18,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu.tsx'
+import { useUnreadChangelogCount } from '@/lib/useChangelog'
 import { useProfileDialog } from '@/services/account/useAccount'
 import { useLoginDialog, useLogout, userQuery } from '@/services/auth/useAuth'
 import { usePendingRequests } from '@/services/friends/useFriends'
@@ -32,6 +33,7 @@ export function Header() {
   const { data: actionableTradeCount } = useActionableTradeCount()
   const { data: pendingRequests = [] } = usePendingRequests()
   const pendingFriendCount = pendingRequests.length
+  const unreadChangelog = useUnreadChangelogCount()
   const logoutMutation = useLogout()
 
   const { isLoginDialogOpen, setIsLoginDialogOpen } = useLoginDialog()
@@ -174,6 +176,14 @@ export function Header() {
                   <DropdownMenuItem onClick={() => setIsProfileDialogOpen(true)}>{t('editProfile')}</DropdownMenuItem>
                   <DropdownMenuItem onClick={() => navigate('/import')}>{t('importExport')}</DropdownMenuItem>
                   <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={() => navigate('/changelog')}>
+                    {t('whatsNew')}
+                    {unreadChangelog > 0 && (
+                      <Badge className="ml-auto h-5 min-w-5 rounded-full font-mono tabular-nums justify-center" variant="destructive">
+                        {unreadChangelog}
+                      </Badge>
+                    )}
+                  </DropdownMenuItem>
                   <DropdownMenuItem onClick={() => setIsAboutUsDialogOpen(true)}>{t('aboutUs')}</DropdownMenuItem>
 
                   <DropdownMenuGroup>

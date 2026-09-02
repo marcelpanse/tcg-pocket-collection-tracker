@@ -1,0 +1,425 @@
+{
+  "generatedAt": "2026-09-02T11:13:54.980Z",
+  "entries": [
+    {
+      "sha": "a1b92c81",
+      "date": "2026-09-01",
+      "type": "feat",
+      "scope": null,
+      "title": "add missions for B3a, B3b, B4 and B4a"
+    },
+    {
+      "sha": "7a911760",
+      "date": "2026-09-01",
+      "type": "feat",
+      "scope": "collection",
+      "title": "add stage/kind/subtype/ability/HP/retreat filters"
+    },
+    {
+      "sha": "241555d2",
+      "date": "2026-09-01",
+      "type": "fix",
+      "scope": "ui",
+      "title": "stop image flicker loop and use locale image in card modal"
+    },
+    {
+      "sha": "8384cb5f",
+      "date": "2026-09-01",
+      "type": "fix",
+      "scope": null,
+      "title": "removed scrape-missions from scraper because it gets blocked by Cloudflare"
+    },
+    {
+      "sha": "a4003602",
+      "date": "2026-08-29",
+      "type": "feat",
+      "scope": null,
+      "title": "add pt-BR card and set translations"
+    },
+    {
+      "sha": "fd752244",
+      "date": "2026-08-29",
+      "type": "feat",
+      "scope": null,
+      "title": "B4a translations + es-ES backfill + B4-19 data fixes"
+    },
+    {
+      "sha": "89d2a595",
+      "date": "2026-08-29",
+      "type": "fix",
+      "scope": "ui",
+      "title": "truncate long card names on desktop with tooltip"
+    },
+    {
+      "sha": "2975e381",
+      "date": "2026-08-28",
+      "type": "feat",
+      "scope": null,
+      "title": "add Team Rocket's Ambition (B4a) set"
+    },
+    {
+      "sha": "4e779ccf",
+      "date": "2026-08-13",
+      "type": "fix",
+      "scope": null,
+      "title": "properly paginate while fetching, bump cache to force refetch, sanity check when pulling"
+    },
+    {
+      "sha": "7a10d324",
+      "date": "2026-08-02",
+      "type": "fix",
+      "scope": "promo-b",
+      "title": "add missing images P-B-79 to P-B-86 and fix Serebii fal…"
+    },
+    {
+      "sha": "a43869f1",
+      "date": "2026-08-02",
+      "type": "fix",
+      "scope": "B4",
+      "title": "correct trainer name translations for Drayden, Skyla, Wally,…"
+    },
+    {
+      "sha": "b60b849a",
+      "date": "2026-07-31",
+      "type": "fix",
+      "scope": "B4",
+      "title": "correct 46 mislabeled gold full-art cards from shiny"
+    },
+    {
+      "sha": "b21bf873",
+      "date": "2026-07-30",
+      "type": "feat",
+      "scope": null,
+      "title": "add Ruler of the Skies (B4) set"
+    },
+    {
+      "sha": "66af4cfc",
+      "date": "2026-06-30",
+      "type": "feat",
+      "scope": null,
+      "title": "added B3b set"
+    },
+    {
+      "sha": "dea05445",
+      "date": "2026-06-18",
+      "type": "fix",
+      "scope": null,
+      "title": "#964 discrepancy between overview counts and collection counts - overview now discards orphaned card amounts"
+    },
+    {
+      "sha": "b1d1ffc1",
+      "date": "2026-06-12",
+      "type": "fix",
+      "scope": null,
+      "title": "qr code popped up on load"
+    },
+    {
+      "sha": "5422ffa2",
+      "date": "2026-05-29",
+      "type": "fix",
+      "scope": null,
+      "title": "add missing B3a set image and stop set-header onError retry loop"
+    },
+    {
+      "sha": "17d731ad",
+      "date": "2026-05-18",
+      "type": "fix",
+      "scope": null,
+      "title": "added retry for image loading in scan and more diagnostic information in case it fails"
+    },
+    {
+      "sha": "76f1a8b0",
+      "date": "2026-05-10",
+      "type": "fix",
+      "scope": null,
+      "title": "always use request id on backend and show friend id if username is missing"
+    },
+    {
+      "sha": "40333323",
+      "date": "2026-05-10",
+      "type": "fix",
+      "scope": null,
+      "title": "#928 separate missions loading from cardsdb and only load on missions page"
+    },
+    {
+      "sha": "20fb4228",
+      "date": "2026-05-10",
+      "type": "fix",
+      "scope": null,
+      "title": "#926 show proper errors when req fails and prevent anon users from using the trade features before settings profile info"
+    },
+    {
+      "sha": "beae9231",
+      "date": "2026-05-06",
+      "type": "feat",
+      "scope": null,
+      "title": "highlight friends in the matches page"
+    },
+    {
+      "sha": "9f7b7292",
+      "date": "2026-05-06",
+      "type": "fix",
+      "scope": null,
+      "title": "prevent and unblock stale friend requests (ref #910)"
+    },
+    {
+      "sha": "59a7cc7a",
+      "date": "2026-05-06",
+      "type": "fix",
+      "scope": null,
+      "title": "#922 users without username should not appear in trade lists"
+    },
+    {
+      "sha": "6effd3e6",
+      "date": "2026-05-06",
+      "type": "fix",
+      "scope": null,
+      "title": "resolve TypeScript errors blocking number field search feature (fixes #912)"
+    },
+    {
+      "sha": "806b6e5a",
+      "date": "2026-04-30",
+      "type": "feat",
+      "scope": null,
+      "title": "B3 translations and themed collections refresh"
+    },
+    {
+      "sha": "9687bf66",
+      "date": "2026-04-30",
+      "type": "fix",
+      "scope": null,
+      "title": "correct B3 shiny rarities (✵ and ✵✵)"
+    },
+    {
+      "sha": "644d42ae",
+      "date": "2026-04-28",
+      "type": "feat",
+      "scope": null,
+      "title": "Add Pulsing Aura B3 set"
+    },
+    {
+      "sha": "8ff4d507",
+      "date": "2026-04-26",
+      "type": "fix",
+      "scope": null,
+      "title": "resolve horizontal line overlap and responsive spacing in missions (fixes #897)"
+    },
+    {
+      "sha": "1bc7ee85",
+      "date": "2026-04-22",
+      "type": "fix",
+      "scope": null,
+      "title": "display energy types with correct capitalisation in card detail sidebar (#752)"
+    },
+    {
+      "sha": "b0abd5a4",
+      "date": "2026-04-14",
+      "type": "fix",
+      "scope": null,
+      "title": "added diegomarnie as contributor"
+    },
+    {
+      "sha": "79a6aba0",
+      "date": "2026-04-01",
+      "type": "feat",
+      "scope": null,
+      "title": "add dynamic year in copyright modal"
+    },
+    {
+      "sha": "ea48f3ec",
+      "date": "2026-03-31",
+      "type": "feat",
+      "scope": null,
+      "title": "add dynamic year in footer"
+    },
+    {
+      "sha": "58a13cf5",
+      "date": "2026-03-26",
+      "type": "feat",
+      "scope": null,
+      "title": "Add Mega Shine B2b set"
+    },
+    {
+      "sha": "4b61deba",
+      "date": "2026-03-01",
+      "type": "fix",
+      "scope": null,
+      "title": "remove email dep from query"
+    },
+    {
+      "sha": "dfbdbd2a",
+      "date": "2026-03-01",
+      "type": "fix",
+      "scope": null,
+      "title": "load friends list in chat so we can always display username in title"
+    },
+    {
+      "sha": "faaefbfe",
+      "date": "2026-03-01",
+      "type": "fix",
+      "scope": null,
+      "title": "try to fix production chunking problem"
+    },
+    {
+      "sha": "d46e6bd8",
+      "date": "2026-03-01",
+      "type": "fix",
+      "scope": null,
+      "title": "try to fix production chunking problem"
+    },
+    {
+      "sha": "29eadc56",
+      "date": "2026-03-01",
+      "type": "fix",
+      "scope": null,
+      "title": "use lazy from react19 instead of loadable"
+    },
+    {
+      "sha": "dc8cfcac",
+      "date": "2026-02-28",
+      "type": "fix",
+      "scope": null,
+      "title": "TS errors"
+    },
+    {
+      "sha": "ae989ae3",
+      "date": "2026-02-28",
+      "type": "feat",
+      "scope": null,
+      "title": "added open chat button in trading views"
+    },
+    {
+      "sha": "11f20e6e",
+      "date": "2026-02-28",
+      "type": "feat",
+      "scope": null,
+      "title": "add browser notification when receiving a chat"
+    },
+    {
+      "sha": "50e83569",
+      "date": "2026-02-28",
+      "type": "feat",
+      "scope": null,
+      "title": "#858 chat feature"
+    },
+    {
+      "sha": "de1406a7",
+      "date": "2026-02-28",
+      "type": "feat",
+      "scope": null,
+      "title": "#856 manage friends"
+    },
+    {
+      "sha": "37f1901a",
+      "date": "2026-02-27",
+      "type": "fix",
+      "scope": null,
+      "title": "#854 CSV import does not allow reverting Collected from TRUE to FALSE"
+    },
+    {
+      "sha": "e0b0d090",
+      "date": "2026-02-27",
+      "type": "fix",
+      "scope": null,
+      "title": "#855 Penny and Iono incorrectly marked as reprints"
+    },
+    {
+      "sha": "4e49642c",
+      "date": "2026-01-06",
+      "type": "feat",
+      "scope": null,
+      "title": "decks added username and deck creation date"
+    },
+    {
+      "sha": "08d02ca4",
+      "date": "2026-01-06",
+      "type": "feat",
+      "scope": null,
+      "title": "decks added username and created/updated dates"
+    },
+    {
+      "sha": "6ec4dc6b",
+      "date": "2025-12-31",
+      "type": "fix",
+      "scope": null,
+      "title": "collection update should be after card amounts update to prevent FK issue"
+    },
+    {
+      "sha": "9d603a18",
+      "date": "2025-12-27",
+      "type": "fix",
+      "scope": null,
+      "title": "#774 update cards in parallel with proper error handling"
+    },
+    {
+      "sha": "baf24c0e",
+      "date": "2025-12-21",
+      "type": "feat",
+      "scope": null,
+      "title": "updated translations (fr + a bit of de)"
+    },
+    {
+      "sha": "c61bb1f5",
+      "date": "2025-12-20",
+      "type": "feat",
+      "scope": null,
+      "title": "added the missing and owned filter option back"
+    },
+    {
+      "sha": "989916b1",
+      "date": "2025-12-18",
+      "type": "fix",
+      "scope": null,
+      "title": "#809"
+    },
+    {
+      "sha": "9dce256d",
+      "date": "2025-12-17",
+      "type": "fix",
+      "scope": null,
+      "title": "crimson blaze packs"
+    },
+    {
+      "sha": "43f48347",
+      "date": "2025-12-17",
+      "type": "feat",
+      "scope": null,
+      "title": "added b1a: Crimson Blaze"
+    },
+    {
+      "sha": "1899ba3a",
+      "date": "2025-12-17",
+      "type": "feat",
+      "scope": null,
+      "title": "added card assets for new PROMO-B cards (all lang)"
+    },
+    {
+      "sha": "48fa5ba2",
+      "date": "2025-12-17",
+      "type": "feat",
+      "scope": null,
+      "title": "added missing set image (included B1a set image)"
+    },
+    {
+      "sha": "795df2e7",
+      "date": "2025-12-17",
+      "type": "feat",
+      "scope": null,
+      "title": "added cards for B4a extension for all languages"
+    },
+    {
+      "sha": "b7bf35b6",
+      "date": "2025-12-16",
+      "type": "fix",
+      "scope": null,
+      "title": "placed scan labels below cards instead of overlap to improve readability of the card amount box on the card"
+    },
+    {
+      "sha": "72d324a5",
+      "date": "2025-12-16",
+      "type": "feat",
+      "scope": null,
+      "title": "added missing translations and did the french version"
+    }
+  ]
+}
