@@ -4,6 +4,7 @@ import { useState } from 'react'
 import GitHubButton from 'react-github-btn'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation, useNavigate } from 'react-router'
+import { ChangelogDialog } from '@/components/ChangelogDialog.tsx'
 import HamburgerMenu from '@/components/HamburgerMenu.tsx'
 import { Login } from '@/components/Login.tsx'
 import { Button } from '@/components/ui/button.tsx'
@@ -142,6 +143,7 @@ export function Header() {
           </NavigationMenuList>
         </NavigationMenu>
         <div className="items-center gap-2 flex">
+          <ChangelogDialog />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button className="px-2 sm:px-4" variant="ghost" size="icon">
