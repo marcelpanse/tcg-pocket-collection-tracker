@@ -15,7 +15,7 @@ import {
 import pokemonTranslations from '../../assets/pokemon_translations.json'
 import toolTranslations from '../../assets/tools_translations.json'
 import trainerTranslations from '../../assets/trainers_translations.json'
-import { allCards, getCardByInternalId, tradeableExpansions } from './CardsDB'
+import { allCards, getCardByInternalId, tradableExpansions } from './CardsDB'
 
 export const formatLanguage: Record<GameLanguage, string> = {
   en: 'English',
@@ -97,6 +97,7 @@ function getTradingCards(
 ) {
   const settings_map = Object.fromEntries(settings_rows.map(({ rarity, ...rest }) => [rarity, rest]))
   const arr = allCards
+    .filter((card) => (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradableExpansions.includes(card.expansion))
     .map((card) => {
       const row = collection.get(card.internal_id)
       const settings = settings_map[card.rarity] ?? { rarity: card.rarity, ...defaultRaritySettings }
@@ -117,16 +118,16 @@ export function getExtraCards(cards: Collection, settings_rows: RaritySettingsRo
   return getTradingCards(cards, settings_rows, (c, settings) => c.amount_owned > settings.to_keep)
 }
 
-export function getNeededCards(cards: Collection, settings_rows: RaritySettingsRow[]): number[] {
+export function getWantedCards(cards: Collection, settings_rows: RaritySettingsRow[]): number[] {
   return getTradingCards(cards, settings_rows, (c, settings) => c.amount_owned < settings.to_collect || (!c.collected && settings.collecting_carddex))
 }
 
-export function getTradeCards(extraCards: number[], neededCards: number[]) {
+export function getTradeMatchesCards(extraCards: number[], neededCards: number[]) {
   const neededCardsSet = new Set(neededCards)
   const common = extraCards
     .filter((internal_id) => neededCardsSet.has(internal_id))
     .map((internal_id) => getCardByInternalId(internal_id) as Card)
-    .filter((card) => (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion))
+    .filter((card) => (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradableExpansions.includes(card.expansion))
   return Object.groupBy(common, (card) => card.rarity as TradableRarity)
 }
 

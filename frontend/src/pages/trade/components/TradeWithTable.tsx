@@ -5,7 +5,7 @@ import { useLocation } from 'react-router'
 import ErrorAlert from '@/components/ErrorAlert'
 import { Spinner } from '@/components/Spinner'
 import { getCardByInternalId } from '@/lib/CardsDB'
-import { getExtraCards, getNeededCards, getTradeCards } from '@/lib/utils'
+import { getExtraCards, getTradeMatchesCards, getWantedCards } from '@/lib/utils'
 import { publicCollectionQuery, useCollection } from '@/services/collection/useCollection'
 import { type Card, type PublicAccountRow, type TradableRarity, tradableRarities } from '@/types'
 import { CardList } from './CardList'
@@ -51,13 +51,13 @@ export default function TradeWithTable({ ownAccount, friendAccount }: Props) {
     return <ErrorAlert />
   }
 
-  const cardsToGive = getTradeCards(
+  const cardsToGive = getTradeMatchesCards(
     getExtraCards(ownedCards, ownAccount.trade_rarity_settings ?? []),
-    getNeededCards(friendCards, friendAccount.trade_rarity_settings ?? []),
+    getWantedCards(friendCards, friendAccount.trade_rarity_settings ?? []),
   )
-  const cardsToReceive = getTradeCards(
+  const cardsToReceive = getTradeMatchesCards(
     getExtraCards(friendCards, friendAccount.trade_rarity_settings ?? []),
-    getNeededCards(ownedCards, ownAccount.trade_rarity_settings ?? []),
+    getWantedCards(ownedCards, ownAccount.trade_rarity_settings ?? []),
   )
 
   const hasPossibleTrades = tradableRarities.some((r) => (cardsToGive[r] ?? []).length > 0 && (cardsToReceive[r] ?? []).length > 0)
