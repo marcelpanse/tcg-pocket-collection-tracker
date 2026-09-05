@@ -377,7 +377,7 @@ export const getExpansionById = (id: ExpansionId): Expansion => {
   return expansion
 }
 
-export const tradeableExpansions = expansions.filter((e) => e.tradeable).map((e) => e.id)
+export const tradableExpansions = expansions.filter((e) => e.tradeable).map((e) => e.id)
 
 export const basicRarities: Rarity[] = ['◊', '◊◊', '◊◊◊', '◊◊◊◊']
 

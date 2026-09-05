@@ -2,7 +2,7 @@ import i18n from '@/i18n'
 import { type Card, type Collection, energies, expansionIds, type Rarity, type RaritySettingsRow } from '@/types'
 import { allCards, getCardByInternalId } from './CardsDB'
 import { levenshtein } from './levenshtein'
-import { getCardNameByLang, getExtraCards, getNeededCards } from './utils'
+import { getCardNameByLang, getExtraCards, getWantedCards } from './utils'
 
 export const expansionOptions = ['all', ...expansionIds] as const
 export const sortByOptions = ['expansion-newest', 'rarity', 'type', 'recent'] as const
@@ -92,7 +92,7 @@ export function getFilteredCards(filters: Filters, cards: Collection, tradingSet
     if (!tradingSettings) {
       throw new Error('Cannot filter by trading status without trading settings')
     }
-    const filtered = new Set(filters.trading === 'wanted' ? getNeededCards(cards, tradingSettings) : getExtraCards(cards, tradingSettings))
+    const filtered = new Set(filters.trading === 'wanted' ? getWantedCards(cards, tradingSettings) : getExtraCards(cards, tradingSettings))
     filteredCards = filteredCards.filter((card) => filtered.has(card.internal_id))
   }
 
