@@ -3656,4 +3656,12 @@ INSERT INTO cards_list (internal_id, card_id, rarity, tradable) VALUES
   (12653776, 'P-B-83', 'P', false),
   (12653840, 'P-B-84', 'P', false),
   (12653904, 'P-B-85', 'P', false),
-  (12653968, 'P-B-86', 'P', false);
+  (12653968, 'P-B-86', 'P', false),
+  (12654032, 'P-B-87', 'P', false),
+  (12654096, 'P-B-88', 'P', false),
+  (12654160, 'P-B-89', 'P', false),
+  (12654224, 'P-B-90', 'P', false),
+  (12654288, 'P-B-91', 'P', false),
+  (12654352, 'P-B-92', 'P', false),
+  (12654416, 'P-B-93', 'P', false),
+  (12654480, 'P-B-94', 'P', false);
