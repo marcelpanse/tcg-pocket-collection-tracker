@@ -5,7 +5,7 @@ import { SelectCardContext } from '@/components/SelectCard'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast'
 import { getCardById, getCardByInternalId, getInternalIdByCardId } from '@/lib/CardsDB'
-import { getExtraCards, getNeededCards, getTradeCards, umami } from '@/lib/utils'
+import { getExtraCards, getTradeMatchesCards, getWantedCards, umami } from '@/lib/utils'
 import { publicAccountQuery, useAccount } from '@/services/account/useAccount'
 import { publicCollectionQuery, useCollection, useUpdateCards } from '@/services/collection/useCollection'
 import { useUpdateTrade } from '@/services/trade/useTrade'
@@ -124,13 +124,13 @@ export default function Actions({ trade, setSelected }: Props) {
             throw new Error('Failed selecting card: could not recognize existing card')
           }
           const cardsToSelect = choosingTheirCard
-            ? getTradeCards(
+            ? getTradeMatchesCards(
                 getExtraCards(friendCards, friendAccount.trade_rarity_settings ?? []),
-                getNeededCards(ownedCards, account.trade_rarity_settings ?? []),
+                getWantedCards(ownedCards, account.trade_rarity_settings ?? []),
               )
-            : getTradeCards(
+            : getTradeMatchesCards(
                 getExtraCards(ownedCards, account.trade_rarity_settings ?? []),
-                getNeededCards(friendCards, friendAccount.trade_rarity_settings ?? []),
+                getWantedCards(friendCards, friendAccount.trade_rarity_settings ?? []),
               )
           setFetchingSelectCard(false)
           selectCard({ cards: cardsToSelect?.[rarity as TradableRarity] ?? [], callback })
