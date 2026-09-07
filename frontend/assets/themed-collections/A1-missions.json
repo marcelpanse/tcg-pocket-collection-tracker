@@ -4,15 +4,15 @@
     "name": "First Choice",
     "requiredCards": [
       {
-        "options": ["A4b-1", "A1-227", "A3-210", "A4b-2", "P-A-23"],
+        "options": ["A1-1", "A4b-1", "A1-227"],
         "amount": 1
       },
       {
-        "options": ["A4b-55", "A1-230", "A4b-56", "P-A-32"],
+        "options": ["A1-33", "A4b-55", "A1-230"],
         "amount": 1
       },
       {
-        "options": ["A4b-83", "A1-232", "A3-215", "A4b-84", "P-A-33"],
+        "options": ["A1-53", "A4b-83", "A1-232"],
         "amount": 1
       }
     ],
@@ -56,7 +56,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-128", "A4b-129", "P-A-9", "P-A-15", "P-A-26"],
+        "options": ["A1-94", "A4b-128", "A1-96", "A4b-131", "A1-259", "A1-281", "A1-285"],
         "amount": 1
       }
     ],
@@ -76,7 +76,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-188", "A1-245", "A3a-97"],
+        "options": ["A1-188", "A1-245"],
         "amount": 1
       }
     ],
@@ -96,7 +96,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-168", "A1-240", "A4-225"],
+        "options": ["A1-168", "A1-240"],
         "amount": 1
       },
       {
@@ -108,7 +108,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-171", "A1-241", "A4-228"],
+        "options": ["A1-171", "A1-241"],
         "amount": 1
       }
     ],
@@ -148,15 +148,15 @@
     "name": "The Legendary Flight",
     "requiredCards": [
       {
-        "options": ["A1-46", "B1-292"],
+        "options": ["A1-46", "A1-47", "A4b-67", "A1-255", "A1-274"],
         "amount": 1
       },
       {
-        "options": ["A1-83", "B1-298"],
+        "options": ["A1-83", "A1-84", "A4b-101", "A1-258", "A1-275"],
         "amount": 1
       },
       {
-        "options": ["A1-103", "B1-302"],
+        "options": ["A1-103", "A1-104", "A4b-139", "A1-260", "A1-276"],
         "amount": 1
       }
     ],
@@ -168,11 +168,11 @@
     "name": "Triple Power",
     "requiredCards": [
       {
-        "options": ["A1-22"],
+        "options": ["A1-22", "A1-23", "A4b-13", "A1-252"],
         "amount": 1
       },
       {
-        "options": ["A1-98"],
+        "options": ["A1-98", "A4b-135"],
         "amount": 1
       },
       {
@@ -252,7 +252,7 @@
     "name": "The Gym Leaders of the Kanto Region",
     "requiredCards": [
       {
-        "options": ["A4b-328", "A1-266", "A4b-329"],
+        "options": ["A1-219", "A4b-328", "A1-266"],
         "amount": 1
       },
       {
@@ -268,7 +268,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-334", "A1-270", "A4b-335"],
+        "options": ["A1-223", "A4b-334", "A1-270"],
         "amount": 1
       },
       {
@@ -276,7 +276,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-338", "A1-272", "A4b-339"],
+        "options": ["A1-225", "A4b-338", "A1-272"],
         "amount": 1
       },
       {
@@ -292,39 +292,39 @@
     "name": "Different Journeys, Different Growth",
     "requiredCards": [
       {
-        "options": ["A4b-1", "A1-227", "A3-210", "A4b-2", "P-A-23"],
+        "options": ["A1-1", "A4b-1", "A1-227"],
         "amount": 1
       },
       {
-        "options": ["A1-2"],
+        "options": ["A1-2", "A4b-3"],
         "amount": 1
       },
       {
-        "options": ["A1-3", "A3-212", "P-A-18"],
+        "options": ["A1-3", "A1-4", "A4b-5", "A1-251"],
         "amount": 1
       },
       {
-        "options": ["A4b-55", "A1-230", "A4b-56", "P-A-32"],
+        "options": ["A1-33", "A4b-55", "A1-230"],
         "amount": 1
       },
       {
-        "options": ["A1-34"],
+        "options": ["A1-34", "A4b-57"],
         "amount": 1
       },
       {
-        "options": ["A1-35"],
+        "options": ["A1-35", "A1-36", "A4b-59", "A1-253", "A1-280", "A1-284"],
         "amount": 1
       },
       {
-        "options": ["A4b-83", "A1-232", "A3-215", "A4b-84", "P-A-33"],
+        "options": ["A1-53", "A4b-83", "A1-232"],
         "amount": 1
       },
       {
-        "options": ["A1-54"],
+        "options": ["A1-54", "A4b-85"],
         "amount": 1
       },
       {
-        "options": ["A1-55", "A3-217", "P-A-29"],
+        "options": ["A1-55", "A1-56", "A4b-87", "A1-256"],
         "amount": 1
       }
     ],
@@ -336,7 +336,7 @@
     "name": "Safari Zone",
     "requiredCards": [
       {
-        "options": ["A1-21"],
+        "options": ["A1-21", "A4b-11"],
         "amount": 1
       },
       {
@@ -388,7 +388,7 @@
     "name": "Category: Mouse Pokémon",
     "requiredCards": [
       {
-        "options": ["A4b-128", "A4b-129", "P-A-9", "P-A-15", "P-A-26"],
+        "options": ["A1-94", "A4b-128", "A1-96", "A4b-131", "A1-259", "A1-281", "A1-285"],
         "amount": 1
       },
       {
@@ -420,7 +420,7 @@
     "name": "Pokémon Super Express",
     "requiredCards": [
       {
-        "options": ["A1-40", "A3a-90"],
+        "options": ["A1-40", "A1-41", "A4b-63", "A1-254"],
         "amount": 1
       },
       {
@@ -492,15 +492,15 @@
     "name": "Complete the Kanto Pokédex!",
     "requiredCards": [
       {
-        "options": ["A4b-1", "A1-227", "A3-210", "A4b-2", "P-A-23"],
+        "options": ["A1-1", "A4b-1", "A1-227"],
         "amount": 1
       },
       {
-        "options": ["A1-2"],
+        "options": ["A1-2", "A4b-3"],
         "amount": 1
       },
       {
-        "options": ["A1-3", "A3-212", "P-A-18"],
+        "options": ["A1-3", "A1-4", "A4b-5", "A1-251"],
         "amount": 1
       },
       {
@@ -568,11 +568,11 @@
         "amount": 1
       },
       {
-        "options": ["A1-21"],
+        "options": ["A1-21", "A4b-11"],
         "amount": 1
       },
       {
-        "options": ["A1-22"],
+        "options": ["A1-22", "A1-23", "A4b-13", "A1-252"],
         "amount": 1
       },
       {
@@ -588,15 +588,15 @@
         "amount": 1
       },
       {
-        "options": ["A4b-55", "A1-230", "A4b-56", "P-A-32"],
+        "options": ["A1-33", "A4b-55", "A1-230"],
         "amount": 1
       },
       {
-        "options": ["A1-34"],
+        "options": ["A1-34", "A4b-57"],
         "amount": 1
       },
       {
-        "options": ["A1-35"],
+        "options": ["A1-35", "A1-36", "A4b-59", "A1-253", "A1-280", "A1-284"],
         "amount": 1
       },
       {
@@ -608,11 +608,11 @@
         "amount": 1
       },
       {
-        "options": ["A1-39"],
+        "options": ["A1-39", "A4b-61"],
         "amount": 1
       },
       {
-        "options": ["A1-40", "A3a-90"],
+        "options": ["A1-40", "A1-41", "A4b-63", "A1-254"],
         "amount": 1
       },
       {
@@ -632,19 +632,19 @@
         "amount": 1
       },
       {
-        "options": ["A1-46", "B1-292"],
+        "options": ["A1-46", "A1-47", "A4b-67", "A1-255", "A1-274"],
         "amount": 1
       },
       {
-        "options": ["A4b-83", "A1-232", "A3-215", "A4b-84", "P-A-33"],
+        "options": ["A1-53", "A4b-83", "A1-232"],
         "amount": 1
       },
       {
-        "options": ["A1-54"],
+        "options": ["A1-54", "A4b-85"],
         "amount": 1
       },
       {
-        "options": ["A1-55", "A3-217", "P-A-29"],
+        "options": ["A1-55", "A1-56", "A4b-87", "A1-256"],
         "amount": 1
       },
       {
@@ -716,11 +716,11 @@
         "amount": 1
       },
       {
-        "options": ["A1-74"],
+        "options": ["A1-74", "A4b-93"],
         "amount": 1
       },
       {
-        "options": ["A1-75", "A3-219"],
+        "options": ["A1-75", "A1-76", "A4b-95", "A1-257"],
         "amount": 1
       },
       {
@@ -732,7 +732,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-79", "A1-234", "A3b-94"],
+        "options": ["A1-79", "A1-234"],
         "amount": 1
       },
       {
@@ -748,11 +748,11 @@
         "amount": 1
       },
       {
-        "options": ["A1-83", "B1-298"],
+        "options": ["A1-83", "A1-84", "A4b-101", "A1-258", "A1-275"],
         "amount": 1
       },
       {
-        "options": ["A4b-128", "A4b-129", "P-A-9", "P-A-15", "P-A-26"],
+        "options": ["A1-94", "A4b-128", "A1-96", "A4b-131", "A1-259", "A1-281", "A1-285"],
         "amount": 1
       },
       {
@@ -760,11 +760,11 @@
         "amount": 1
       },
       {
-        "options": ["A1-97"],
+        "options": ["A1-97", "A4b-133"],
         "amount": 1
       },
       {
-        "options": ["A1-98"],
+        "options": ["A1-98", "A4b-135"],
         "amount": 1
       },
       {
@@ -784,7 +784,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-103", "B1-302"],
+        "options": ["A1-103", "A1-104", "A4b-139", "A1-260", "A1-276"],
         "amount": 1
       },
       {
@@ -816,15 +816,15 @@
         "amount": 1
       },
       {
-        "options": ["A1-120"],
+        "options": ["A1-120", "A4b-151"],
         "amount": 1
       },
       {
-        "options": ["A1-121"],
+        "options": ["A1-121", "A4b-153"],
         "amount": 1
       },
       {
-        "options": ["A1-122", "A3-222"],
+        "options": ["A1-122", "A1-123", "A4b-155", "A1-261", "A1-277"],
         "amount": 1
       },
       {
@@ -840,11 +840,11 @@
         "amount": 1
       },
       {
-        "options": ["A1-127"],
+        "options": ["A1-127", "A4b-156"],
         "amount": 1
       },
       {
-        "options": ["A1-128", "P-A-10"],
+        "options": ["A1-128", "A1-129", "A4b-158", "A1-262", "A1-282", "A1-286"],
         "amount": 1
       },
       {
@@ -872,15 +872,15 @@
         "amount": 1
       },
       {
-        "options": ["A1-143"],
+        "options": ["A1-143", "A4b-189"],
         "amount": 1
       },
       {
-        "options": ["A1-144"],
+        "options": ["A1-144", "A4b-191"],
         "amount": 1
       },
       {
-        "options": ["A1-145"],
+        "options": ["A1-145", "A1-146", "A4b-193", "A1-263", "A1-278"],
         "amount": 1
       },
       {
@@ -900,11 +900,11 @@
         "amount": 1
       },
       {
-        "options": ["A4b-194", "A1-239", "A3-226", "A4b-195"],
+        "options": ["A1-151", "A4b-194", "A1-239"],
         "amount": 1
       },
       {
-        "options": ["A1-152", "A3-227"],
+        "options": ["A1-152", "A1-153", "A4b-196", "A1-264"],
         "amount": 1
       },
       {
@@ -948,7 +948,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-168", "A1-240", "A4-225"],
+        "options": ["A1-168", "A1-240"],
         "amount": 1
       },
       {
@@ -960,7 +960,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-171", "A1-241", "A4-228"],
+        "options": ["A1-171", "A1-241"],
         "amount": 1
       },
       {
@@ -1008,7 +1008,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-188", "A1-245", "A3a-97"],
+        "options": ["A1-188", "A1-245"],
         "amount": 1
       },
       {
@@ -1028,15 +1028,15 @@
         "amount": 1
       },
       {
-        "options": ["A1-193"],
+        "options": ["A1-193", "A4b-277"],
         "amount": 1
       },
       {
-        "options": ["A1-194"],
+        "options": ["A1-194", "A1-195", "A4b-279", "A1-265", "A1-279"],
         "amount": 1
       },
       {
-        "options": ["A1-196", "A1-246", "B1-312", "P-A-12"],
+        "options": ["A1-196", "A1-246"],
         "amount": 1
       },
       {
@@ -1044,7 +1044,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-198"],
+        "options": ["A1-198", "A4b-280"],
         "amount": 1
       },
       {
@@ -1076,7 +1076,7 @@
         "amount": 1
       },
       {
-        "options": ["A1-206", "A1-207", "A1-208", "A1-248", "P-A-92"],
+        "options": ["A1-206", "A1-207", "A1-208", "A1-248"],
         "amount": 1
       },
       {

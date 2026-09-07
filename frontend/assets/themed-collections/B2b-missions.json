@@ -160,7 +160,7 @@
     "name": "Seeking Prey from the Shadows",
     "requiredCards": [
       {
-        "options": ["B2b-37", "B2b-100", "P-B-47"],
+        "options": ["B2b-37", "B2b-38", "B2b-100", "B2b-101"],
         "amount": 4
       },
       {
@@ -176,7 +176,37 @@
     "name": "Shiny Radiance",
     "requiredCards": [
       {
-        "options": ["B2b-1", "B2b-87"],
+        "options": [
+          "B2b-87",
+          "B2b-88",
+          "B2b-89",
+          "B2b-90",
+          "B2b-91",
+          "B2b-92",
+          "B2b-93",
+          "B2b-94",
+          "B2b-95",
+          "B2b-96",
+          "B2b-97",
+          "B2b-98",
+          "B2b-99",
+          "B2b-100",
+          "B2b-101",
+          "B2b-102",
+          "B2b-103",
+          "B2b-104",
+          "B2b-105",
+          "B2b-106",
+          "B2b-107",
+          "B2b-108",
+          "B2b-109",
+          "B2b-110",
+          "B2b-111",
+          "B2b-112",
+          "B2b-113",
+          "B2b-114",
+          "B2b-115"
+        ],
         "amount": 1
       }
     ],
