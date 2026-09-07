@@ -35,8 +35,16 @@ export default function Changelog() {
     <main className="mx-auto max-w-2xl px-4 py-6 md:py-10">
       <header className="mb-6">
         <h1 className="text-2xl font-semibold text-neutral-100">What's new</h1>
+        <p className="mt-1 text-sm text-neutral-400">Recent changes to the tracker.</p>
         <p className="mt-1 text-sm text-neutral-400">
-          Recent changes to the tracker. Want to discuss?{' '}
+          This project is open source — if you'd like to help, head over to our{' '}
+          <a href="https://github.com/marcelpanse/tcg-pocket-collection-tracker" target="_blank" rel="noreferrer" className="text-neutral-200 underline">
+            github repo
+          </a>
+          .
+        </p>
+        <p className="mt-1 text-sm text-neutral-400">
+          Want to discuss?{' '}
           <a href="https://community.tcgpocketcollectiontracker.com" target="_blank" rel="noreferrer" className="text-neutral-200 underline">
             Join the community forum →
           </a>
@@ -52,11 +60,11 @@ export default function Changelog() {
               <ul className="flex flex-col gap-1.5">
                 {entries.map((e) => (
                   <li key={e.sha} className="flex items-start gap-2 rounded-md border border-neutral-800 bg-neutral-900/60 px-3 py-2">
-                    <span className="pt-0.5">{typeBadge(e.type)}</span>
                     <div className="min-w-0 flex-1">
                       {e.scope && <span className="mr-1.5 text-xs text-neutral-500">{e.scope}</span>}
                       <span className="text-sm text-neutral-200">{e.title}</span>
                     </div>
+                    <span className="shrink-0 pt-0.5">{typeBadge(e.type)}</span>
                   </li>
                 ))}
               </ul>
