@@ -1,6 +1,6 @@
+import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
-import { pipeline } from 'node:stream/promises'
 import fsExtra from 'fs-extra'
 
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
@@ -37,14 +37,16 @@ const expansionImageBaseUrl = 'https://s3.limitlesstcg.com/pocket/sets/'
 // Target directory to save expansion images
 const targetDir = 'frontend/public/images/sets/en-US/'
 
-async function downloadImage(imageUrl, dest) {
+async function fetchImage(imageUrl) {
   const response = await fetch(imageUrl)
   if (!response.ok) {
     throw new Error(`Failed to download image: ${response.statusText}`)
   }
-  const stream = response.body
-  const writer = fs.createWriteStream(dest)
-  await pipeline(stream, writer)
+  return Buffer.from(await response.arrayBuffer())
+}
+
+function sha1(buffer) {
+  return crypto.createHash('sha1').update(buffer).digest('hex')
 }
 
 async function downloadExpansionImages() {
@@ -54,15 +56,19 @@ async function downloadExpansionImages() {
     const imageUrl = `${expansionImageBaseUrl}${expansion}.webp`
     const dest = path.join(targetDir, `${expansion}.webp`)
 
-    if (!fs.existsSync(dest)) {
-      try {
-        console.log(`Downloading image for expansion ${expansion}: ${imageUrl}`)
-        await downloadImage(imageUrl, dest)
-      } catch (error) {
-        console.error(`Error downloading image for expansion ${expansion}:`, error)
+    try {
+      const remote = await fetchImage(imageUrl)
+      // Always refresh: Limitless replaces early placeholders once the real
+      // set logo lands, so a plain existsSync check leaves the old one behind
+      // forever. Skip the write when the bytes match to keep git tidy.
+      if (fs.existsSync(dest) && sha1(fs.readFileSync(dest)) === sha1(remote)) {
+        console.log(`Image for expansion ${expansion} unchanged.`)
+        continue
       }
-    } else {
-      console.log(`Image for expansion ${expansion} already exists.`)
+      console.log(`Updating image for expansion ${expansion}: ${imageUrl}`)
+      fs.writeFileSync(dest, remote)
+    } catch (error) {
+      console.error(`Error downloading image for expansion ${expansion}:`, error)
     }
   }
 }
