@@ -60,11 +60,11 @@ export default function Changelog() {
               <ul className="flex flex-col gap-1.5">
                 {entries.map((e) => (
                   <li key={e.sha} className="flex items-start gap-2 rounded-md border border-neutral-800 bg-neutral-900/60 px-3 py-2">
-                    <div className="min-w-0 flex-1">
-                      {e.scope && <span className="mr-1.5 text-xs text-neutral-500">{e.scope}</span>}
-                      <span className="text-sm text-neutral-200">{e.title}</span>
+                    <span className="min-w-0 flex-1 text-sm text-neutral-200">{e.title}</span>
+                    <div className="flex shrink-0 items-center gap-1.5 pt-0.5">
+                      {e.scope && <span className="text-xs text-neutral-500">{e.scope}</span>}
+                      {typeBadge(e.type)}
                     </div>
-                    <span className="shrink-0 pt-0.5">{typeBadge(e.type)}</span>
                   </li>
                 ))}
               </ul>
