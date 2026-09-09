@@ -9,7 +9,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { allCards as cardsToInsert, tradeableExpansions } from '../../frontend/src/lib/CardsDB'
+import { allCards as cardsToInsert, tradableExpansions } from '../../frontend/src/lib/CardsDB'
 import { type Card, type Rarity, tradableRarities } from '../../frontend/src/types'
 
 // Get the directory name using ESM compatible approach
@@ -43,7 +43,7 @@ INSERT INTO cards_list (internal_id, card_id, rarity, tradable) VALUES
   const values = dedupedCards
     .map((card) => {
       const rarity = card.rarity
-      const tradable = (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion)
+      const tradable = (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradableExpansions.includes(card.expansion)
 
       return `(${card.internal_id}, '${card.card_id}', '${rarity}', ${tradable})`
     })
