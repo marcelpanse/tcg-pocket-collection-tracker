@@ -108,7 +108,7 @@
     "name": "Trading Punches with Mega Lucario",
     "requiredCards": [
       {
-        "options": ["B3-46"],
+        "options": ["B3-12", "B3-27", "B3-28", "B3-30", "B3-46", "B3-229", "B3-77", "B3-79", "B3-169", "B3-80", "B3-82", "B3-83", "B3-91", "B3-113", "B3-123"],
         "amount": 5
       },
       {
@@ -124,7 +124,7 @@
     "name": "Mega Sceptile and the Power of Tails",
     "requiredCards": [
       {
-        "options": ["B3-5", "B3-156", "P-B-61"],
+        "options": ["B3-5", "B3-156", "B3-38", "B3-143", "B3-130", "B3-74", "B3-75", "B3-104"],
         "amount": 3
       },
       {
@@ -140,7 +140,7 @@
     "name": "Mega Camerupt and Explosive Eruptions",
     "requiredCards": [
       {
-        "options": ["B3-55"],
+        "options": ["B3-22", "B3-55", "B3-56", "B3-101", "B3-102", "B3-94"],
         "amount": 3
       },
       {
@@ -156,7 +156,7 @@
     "name": "Mega Audino and the Power of Healing",
     "requiredCards": [
       {
-        "options": ["B3-19"],
+        "options": ["B3-19", "B3-67", "B3-127", "B3-220", "B3-128", "B3-221", "B3-140"],
         "amount": 3
       },
       {
@@ -504,7 +504,7 @@
         "amount": 1
       },
       {
-        "options": ["B3-37", "B3-182", "B3-196", "B3b-102"],
+        "options": ["B3-37", "B3-182", "B3-196"],
         "amount": 1
       },
       {
