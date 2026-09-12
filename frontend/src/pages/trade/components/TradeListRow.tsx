@@ -4,8 +4,10 @@ import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tooltip'
 import { CardLine } from '@/components/CardLine'
+import { getInternalIdByCardId } from '@/lib/CardsDB'
 import { useAccount } from '@/services/account/useAccount'
-import type { TradeRow } from '@/types'
+import { useTradingCards } from '@/services/collection/useCollection'
+import type { TradeRow, TradeStatus } from '@/types'
 
 interface Props {
   row: TradeRow
@@ -13,10 +15,13 @@ interface Props {
   setSelectedTradeId: (id: number | undefined) => void
 }
 
+const pendingStatuses: TradeStatus[] = ['offered', 'accepted']
+
 export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTradeId }) => {
   const { t } = useTranslation('trade-matches')
 
   const { data: account, isLoading } = useAccount()
+  const { data: trading } = useTradingCards()
 
   if (isLoading) {
     return null
@@ -65,7 +70,20 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
         <div className="flex flex-1">
           <ChevronsUp />
           {yourCard ? (
-            <CardLine className="flex-1 bg-neutral-900" card_id={yourCard} increment={ended ? undefined : -1} />
+            <CardLine className="flex-1 bg-neutral-900" card_id={yourCard} increment={ended ? undefined : -1}>
+              {pendingStatuses.includes(row.status) && trading && !trading.extra.includes(getInternalIdByCardId(yourCard)) && (
+                <>
+                  <Tooltip id={`notextra-${yourCard}`} clickable={true} style={{ maxWidth: '300px', whiteSpace: 'normal' }} />
+                  <span
+                    className="text-xs mr-1 my-1 px-1.5 rounded border border-red-700/50 bg-red-800/40"
+                    data-tooltip-id={`notextra-${yourCard}`}
+                    data-tooltip-content="You no longer have extra copies of that card"
+                  >
+                    !
+                  </span>
+                </>
+              )}
+            </CardLine>
           ) : (
             <span className="flex-1 bg-neutral-900 rounded-sm text-center">Select card</span>
           )}
@@ -73,7 +91,20 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
         <div className="flex flex-1">
           <ChevronsDown />
           {friendCard ? (
-            <CardLine className="flex-1 bg-neutral-900" card_id={friendCard} increment={ended ? undefined : 1} />
+            <CardLine className="flex-1 bg-neutral-900" card_id={friendCard} increment={ended ? undefined : 1}>
+              {pendingStatuses.includes(row.status) && trading && !trading.wanted.includes(getInternalIdByCardId(friendCard)) && (
+                <>
+                  <Tooltip id={`notextra-${yourCard}`} clickable={true} style={{ maxWidth: '300px', whiteSpace: 'normal' }} />
+                  <span
+                    className="text-xs mr-1 my-1 px-1.5 rounded border border-red-700/50 bg-red-800/40"
+                    data-tooltip-id={`notextra-${yourCard}`}
+                    data-tooltip-content="You no longer need that card"
+                  >
+                    !
+                  </span>
+                </>
+              )}
+            </CardLine>
           ) : (
             <span className="flex-1 bg-neutral-900 rounded-sm text-center">Select card</span>
           )}

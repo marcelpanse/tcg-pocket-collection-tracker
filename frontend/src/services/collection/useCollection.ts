@@ -2,6 +2,7 @@ import { queryOptions, useMutation, useQuery, useQueryClient } from '@tanstack/r
 import { useContext } from 'react'
 import { DialogContext } from '@/context/DialogContext.ts'
 import { useToast } from '@/hooks/use-toast.ts'
+import { getExtraCards, getWantedCards } from '@/lib/utils'
 import { updateCollectionTimestamp } from '@/services/account/accountService'
 import { useAccount } from '@/services/account/useAccount.ts'
 import { userQuery } from '@/services/auth/useAuth.ts'
@@ -13,7 +14,7 @@ export function collectionQuery(email: string | undefined, collectionLastUpdated
     queryKey: ['collection', email],
     queryFn: () => getCollection(email as string, collectionLastUpdated as Date),
     enabled: Boolean(email) && Boolean(collectionLastUpdated),
-    staleTime: 10, // Set a short stale time here because we handle the cache internally already (in case someone is using two devices at the same time)
+    staleTime: 500, // Set a short stale time here because we handle the cache internally already (in case someone is using two devices at the same time)
   })
 }
 
@@ -22,6 +23,24 @@ export function useCollection() {
   const { data: account } = useAccount()
 
   return useQuery(collectionQuery(user?.user.email, account?.collection_last_updated))
+}
+
+export function useTradingCards() {
+  const { data: user } = useQuery(userQuery)
+  const { data: account } = useAccount()
+
+  return useQuery({
+    ...collectionQuery(user?.user.email, account?.collection_last_updated),
+    select: (collection) => {
+      if (!account) {
+        throw new Error('Trading cards can only be fetched for logged in users.')
+      }
+      return {
+        wanted: getWantedCards(collection, account.trade_rarity_settings),
+        extra: getExtraCards(collection, account.trade_rarity_settings),
+      }
+    },
+  })
 }
 
 export function publicCollectionQuery(friendId: string | undefined) {
