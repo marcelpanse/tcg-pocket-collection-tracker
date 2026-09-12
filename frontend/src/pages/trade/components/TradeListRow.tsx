@@ -7,13 +7,15 @@ import { CardLine } from '@/components/CardLine'
 import { getInternalIdByCardId } from '@/lib/CardsDB'
 import { useAccount } from '@/services/account/useAccount'
 import { useTradingCards } from '@/services/collection/useCollection'
-import type { TradeRow } from '@/types'
+import type { TradeRow, TradeStatus } from '@/types'
 
 interface Props {
   row: TradeRow
   selectedTradeId?: number
   setSelectedTradeId: (id: number | undefined) => void
 }
+
+const pendingStatuses: TradeStatus[] = ['offered', 'accepted']
 
 export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTradeId }) => {
   const { t } = useTranslation('trade-matches')
@@ -69,7 +71,7 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
           <ChevronsUp />
           {yourCard ? (
             <CardLine className="flex-1 bg-neutral-900" card_id={yourCard} increment={ended ? undefined : -1}>
-              {trading && !trading.extra.includes(getInternalIdByCardId(yourCard)) && (
+              {pendingStatuses.includes(row.status) && trading && !trading.extra.includes(getInternalIdByCardId(yourCard)) && (
                 <>
                   <Tooltip id={`notextra-${yourCard}`} clickable={true} style={{ maxWidth: '300px', whiteSpace: 'normal' }} />
                   <span
@@ -90,7 +92,7 @@ export const TradeListRow: FC<Props> = ({ row, selectedTradeId, setSelectedTrade
           <ChevronsDown />
           {friendCard ? (
             <CardLine className="flex-1 bg-neutral-900" card_id={friendCard} increment={ended ? undefined : 1}>
-              {trading && !trading.wanted.includes(getInternalIdByCardId(friendCard)) && (
+              {pendingStatuses.includes(row.status) && trading && !trading.wanted.includes(getInternalIdByCardId(friendCard)) && (
                 <>
                   <Tooltip id={`notextra-${yourCard}`} clickable={true} style={{ maxWidth: '300px', whiteSpace: 'normal' }} />
                   <span
