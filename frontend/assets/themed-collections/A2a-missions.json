@@ -15,7 +15,7 @@
         "amount": 1
       },
       {
-        "options": ["A2a-13"],
+        "options": ["A2a-13", "A4b-76"],
         "amount": 1
       },
       {
@@ -35,7 +35,7 @@
         "amount": 1
       },
       {
-        "options": ["A2a-50"],
+        "options": ["A2a-50", "A4b-230"],
         "amount": 1
       },
       {
@@ -43,7 +43,7 @@
         "amount": 1
       },
       {
-        "options": ["A2a-70"],
+        "options": ["A2a-70", "A2a-71", "A4b-299", "A2a-86", "A2a-95", "A2a-96"],
         "amount": 1
       }
     ],
@@ -55,7 +55,7 @@
     "name": "Magnezone of Fuego Ironworks",
     "requiredCards": [
       {
-        "options": ["A2a-53", "A2a-80"],
+        "options": ["A2a-53", "A2a-80", "A2a-54"],
         "amount": 4
       },
       {
@@ -155,7 +155,31 @@
     "name": "Pokémon with 60 HP",
     "requiredCards": [
       {
-        "options": ["A2a-43"],
+        "options": [
+          "A2a-43",
+          "A2a-51",
+          "A2a-14",
+          "A2a-77",
+          "A2a-24",
+          "A2a-25",
+          "A2a-37",
+          "A2a-11",
+          "A2a-16",
+          "A2a-62",
+          "A2a-18",
+          "A2a-27",
+          "A2a-29",
+          "A2a-64",
+          "A2a-34",
+          "A2a-78",
+          "A2a-39",
+          "A2a-45",
+          "A4b-205",
+          "A2a-53",
+          "A2a-80",
+          "A2a-58",
+          "A2a-66"
+        ],
         "amount": 4
       }
     ],
@@ -191,7 +215,7 @@
     "name": "Water-type Pokémon",
     "requiredCards": [
       {
-        "options": ["A2a-18"],
+        "options": ["A2a-18", "A2a-22", "A4b-106", "A2a-14", "A2a-77", "A2a-24", "A2a-20", "A2a-19", "A2a-16", "A2a-17", "A2a-15", "A2a-23"],
         "amount": 5
       }
     ],
@@ -223,7 +247,7 @@
     "name": "Hard-Bodied Pokémon",
     "requiredCards": [
       {
-        "options": ["A4b-203", "A4b-204"],
+        "options": ["A2a-57", "A4b-253", "A2a-85", "A2a-94", "A2a-42", "A4b-203", "A2a-53", "A2a-80", "A2a-54", "A2a-55", "A2a-38", "A2a-40"],
         "amount": 4
       }
     ],

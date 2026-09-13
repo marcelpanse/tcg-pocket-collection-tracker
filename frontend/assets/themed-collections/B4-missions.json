@@ -4,7 +4,27 @@
     "name": "Dragon-type Pokémon",
     "requiredCards": [
       {
-        "options": ["B4-116"],
+        "options": [
+          "B4-116",
+          "B4-117",
+          "B4-118",
+          "B4-119",
+          "B4-120",
+          "B4-121",
+          "B4-122",
+          "B4-123",
+          "B4-124",
+          "B4-125",
+          "B4-126",
+          "B4-127",
+          "B4-128",
+          "B4-175",
+          "B4-176",
+          "B4-177",
+          "B4-188",
+          "B4-203",
+          "B4-233"
+        ],
         "amount": 5
       }
     ],
@@ -16,7 +36,7 @@
     "name": "A Storm Is Coming",
     "requiredCards": [
       {
-        "options": ["B4-8"],
+        "options": ["B4-8", "B4-25", "B4-30", "B4-51", "B4-52", "B4-53", "B4-56", "B4-59", "B4-66", "B4-98", "B4-100"],
         "amount": 5
       }
     ],
@@ -28,7 +48,7 @@
     "name": "Pokémon That Live in the City",
     "requiredCards": [
       {
-        "options": ["B4-71", "B4-167"],
+        "options": ["B4-22", "B4-50", "B4-67", "B4-71", "B4-111", "B4-174", "B4-115", "B4-121", "B4-128", "B4-177", "B4-132", "B4-135", "B4-173", "B4-178"],
         "amount": 5
       }
     ],
@@ -56,7 +76,7 @@
     "name": "Pokémon That Emit Sonic Waves",
     "requiredCards": [
       {
-        "options": ["B4-75"],
+        "options": ["B4-75", "B4-76", "B4-121", "B4-122", "B4-176"],
         "amount": 4
       }
     ],
@@ -100,7 +120,7 @@
         "amount": 1
       },
       {
-        "options": ["B4-119"],
+        "options": ["B4-119", "B4-120", "B4-188", "B4-203"],
         "amount": 1
       }
     ],
@@ -352,7 +372,7 @@
     "name": "A Profusion of Mega Metagross?!",
     "requiredCards": [
       {
-        "options": ["B4-106", "P-B-86"],
+        "options": ["B4-106", "B4-107", "B4-108"],
         "amount": 29
       },
       {
