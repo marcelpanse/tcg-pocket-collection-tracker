@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import useSearchState from '@/hooks/use-search-state'
 import { toast } from '@/hooks/use-toast'
+import { useRemainingViewportHeight } from '@/hooks/useRemainingViewportHeight'
 import {
   abilityOptions,
   cardTypeOptions,
@@ -58,6 +59,7 @@ interface Props {
 }
 
 export default function CollectionCards({ children, cards, account }: Props) {
+  const { ref: pageRef, height: pageHeight } = useRemainingViewportHeight()
   const { t } = useTranslation('pages/collection')
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' }) // tailwind "md"
 
@@ -182,7 +184,7 @@ export default function CollectionCards({ children, cards, account }: Props) {
   )
 
   return (
-    <div className="flex justify-center gap-2 xl:gap-8 px-1">
+    <div ref={pageRef} style={{ height: pageHeight }} className="flex min-h-0 justify-center gap-2 xl:gap-8 px-1">
       {isMobile ? (
         <Sheet open={isFiltersSheetOpen} onOpenChange={setIsFiltersSheetOpen}>
           <SheetContent side="left" className="w-full">
@@ -193,11 +195,11 @@ export default function CollectionCards({ children, cards, account }: Props) {
           </SheetContent>
         </Sheet>
       ) : (
-        <div className="w-80">{filtersPanel}</div>
+        <div className="w-80 min-h-0 overflow-y-auto">{filtersPanel}</div>
       )}
-      <div className="w-full max-w-[900px]">
+      <div className="flex min-h-0 min-w-0 w-full max-w-[900px] flex-col">
         {isMobile && (
-          <div className="h-9 flex overflow-hidden text-center rounded-md text-sm font-medium border shadow-sm border-neutral-700 divide-x divide-neutral-700 [&>*]:cursor-pointer [&>*]:hover:bg-neutral-600 [&>*]:hover:text-neutral-50">
+          <div className="h-9 shrink-0 flex overflow-hidden text-center rounded-md text-sm font-medium border shadow-sm border-neutral-700 divide-x divide-neutral-700 [&>*]:cursor-pointer [&>*]:hover:bg-neutral-600 [&>*]:hover:text-neutral-50">
             <button type="button" className="flex-1" onClick={() => setIsFiltersSheetOpen(true)}>
               Filters
               {activeFilters > 0 && ` (${activeFilters})`}
@@ -209,7 +211,7 @@ export default function CollectionCards({ children, cards, account }: Props) {
             )}
           </div>
         )}
-        {children}
+        {children && <div className="shrink-0">{children}</div>}
         <CardsTable
           cards={filteredCards}
           groupExpansions={filters.sortBy === 'expansion-newest'}
