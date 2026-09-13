@@ -3,7 +3,6 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { createHashRouter, Navigate, Outlet, RouterProvider, useLocation, useParams } from 'react-router'
-import DonationPopup from '@/components/DonationPopup.tsx'
 import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useAuthSSO, userQuery } from '@/services/auth/useAuth'
@@ -155,7 +154,6 @@ function App() {
             <Toaster />
             <RouterProvider router={router} />
             <InstallPrompt />
-            <DonationPopup />
             <ChatManager />
             {/* Add React Query DevTools (only in development) */}
             {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
