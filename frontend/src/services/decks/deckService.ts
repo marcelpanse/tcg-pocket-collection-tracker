@@ -9,6 +9,7 @@ export interface DeckFilters {
   orderby: (typeof deckOrder)[number]
   page: number
   energy: Energy[]
+  buildable: boolean
 }
 
 export async function getDeck(id: number) {
@@ -48,12 +49,13 @@ export async function getDecks(filters: DeckFilters) {
   } else if (filters.from === 'liked') {
     tbl = tbl.from('deck_likes').select('*, public_decks!id(*)', { count: 'exact' }).order('created_at', { ascending: false })
   } else if (filters.from === 'community') {
-    tbl = tbl.from('public_decks').select('*', { count: 'exact' })
+    tbl = filters.buildable ? supabase.rpc('get_buildable_decks', {}, { count: 'exact' }) : supabase.from('public_decks').select('*', { count: 'exact' })
     if (filters.orderby === 'popular') {
       tbl = tbl.order('likes', { ascending: false })
     } else if (filters.orderby === 'new') {
       tbl = tbl.order('created_at', { ascending: false })
     }
+    tbl = tbl.order('id', { ascending: false })
   }
 
   const col_prefix = filters.from === 'liked' ? 'public_decks.' : ''
