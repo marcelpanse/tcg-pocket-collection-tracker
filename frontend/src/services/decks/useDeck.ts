@@ -1,13 +1,17 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import type { Deck } from '@/types'
+import { useAccount } from '../account/useAccount'
 import { userQuery } from '../auth/useAuth'
 import { type DeckFilters, deleteDeck, getDecks, isLiked, likeDeck, unlikeDeck, updateDeck } from './deckService'
 
 export function useDecksSearch(filters: DeckFilters) {
+  const { data: user } = useQuery(userQuery)
+  const { data: account } = useAccount()
+  const buildable = filters.from === 'community' && filters.buildable
   return useQuery({
-    queryKey: ['decks', filters],
+    queryKey: ['decks', filters, user?.user.email, buildable ? account?.collection_last_updated : null],
     queryFn: () => getDecks(filters),
-    enabled: filters.page >= 0,
+    enabled: filters.page >= 0 && (!buildable || !!user?.user.email),
   })
 }
 

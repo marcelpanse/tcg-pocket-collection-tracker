@@ -78624,7 +78624,7 @@
     "ex": true,
     "baby": false,
     "pack": "everypack",
-    "alternate_versions": [1114627, 1125637, 1126533],
+    "alternate_versions": [1114627, 1125637, 1126533, 12654032],
     "artist": "PLANETA Igarashi",
     "internal_id": 1114627
   },
@@ -83283,7 +83283,7 @@
     "ex": true,
     "baby": false,
     "pack": "everypack",
-    "alternate_versions": [1114627, 1125637, 1126533],
+    "alternate_versions": [1114627, 1125637, 1126533, 12654032],
     "artist": "PLANETA Mamiya",
     "internal_id": 1125637
   },
@@ -83649,7 +83649,7 @@
     "ex": true,
     "baby": false,
     "pack": "everypack",
-    "alternate_versions": [1114627, 1125637, 1126533],
+    "alternate_versions": [1114627, 1125637, 1126533, 12654032],
     "artist": "danciao",
     "internal_id": 1126533
   },
@@ -97197,7 +97197,7 @@
     "ex": false,
     "baby": false,
     "pack": "everypack",
-    "alternate_versions": [1376896],
+    "alternate_versions": [1376896, 12654416],
     "artist": "Atsuko Nishida",
     "internal_id": 1376896
   },
@@ -97278,7 +97278,7 @@
     "ex": false,
     "baby": false,
     "pack": "everypack",
-    "alternate_versions": [1377089],
+    "alternate_versions": [1377089, 12654160],
     "artist": "Mékayu",
     "internal_id": 1377089
   },
@@ -97338,7 +97338,7 @@
     "ex": false,
     "baby": false,
     "pack": "everypack",
-    "alternate_versions": [1377216],
+    "alternate_versions": [1377216, 12654224],
     "artist": "Naoyo Kimura",
     "internal_id": 1377216
   },
@@ -97811,7 +97811,7 @@
     "ex": false,
     "baby": false,
     "pack": "everypack",
-    "alternate_versions": [1378305],
+    "alternate_versions": [1378305, 12654480],
     "artist": "Taira Akitsu",
     "internal_id": 1378305
   },
@@ -97919,7 +97919,7 @@
     "ex": false,
     "baby": false,
     "pack": "everypack",
-    "alternate_versions": [1378561],
+    "alternate_versions": [1378561, 12654352],
     "artist": "kirisAki",
     "internal_id": 1378561
   },
@@ -105545,7 +105545,7 @@
         "cost": ["grass", "grass"],
         "name": "Terminating Tail",
         "damage": "130",
-        "effect": "Discard a Grass Energy from this Pokémon. Your opponent's Active Pokémon is now Poisoned"
+        "effect": "Discard a [G] Energy from this Pokémon. Your opponent's Active Pokémon is now Poisoned."
       }
     ],
     "weakness": "fire",
@@ -105572,7 +105572,7 @@
         "cost": ["grass", "colorless"],
         "name": "Second Strike",
         "damage": "20+",
-        "effect": "If your opponent's Active Pokémon has any damage on it, this attack does 70 more damage"
+        "effect": "If your opponent's Active Pokémon has damage on it, this attack does 70 more damage."
       }
     ],
     "weakness": "fire",
@@ -105599,7 +105599,7 @@
         "cost": ["water", "colorless"],
         "name": "Ruthless Whirlpool",
         "damage": "40+",
-        "effect": "If this Pokémon has more Energy attached than your opponent's Active Pokémon, this attack does 40 more damage"
+        "effect": "If this Pokémon has more Energy attached than your opponent's Active Pokémon, this attack does 40 more damage."
       }
     ],
     "weakness": "lightning",
@@ -105653,7 +105653,7 @@
         "cost": ["colorless", "colorless"],
         "name": "Rocket Frenzy",
         "damage": "30x",
-        "effect": "Reveal the top 6 cards of your deck. This attack does 30 damage for each Pokémon found there with Team Rocket in the name. Shuffle the revealed cards back into your deck"
+        "effect": "Reveal the top 6 cards of your deck. This attack does 30 damage for each Pokémon you find there that has “Team Rocket” in its name. Shuffle the revealed cards back into your deck."
       }
     ],
     "weakness": "darkness",
@@ -105663,7 +105663,7 @@
     "baby": false,
     "pack": "everypack",
     "alternate_versions": [12654288],
-    "artist": "coichi8",
+    "artist": "cochi8i",
     "internal_id": 12654288
   },
   {
@@ -105680,7 +105680,7 @@
         "cost": ["fighting", "colorless"],
         "name": "Punish",
         "damage": "50+",
-        "effect": "If your opponent's Active Pokémon has \"Team Rocket\" in its name, this attack does 70 more damage"
+        "effect": "If your opponent's Active Pokémon has “Team Rocket” in its name, this attack does 70 more damage."
       }
     ],
     "weakness": "grass",
@@ -105689,7 +105689,7 @@
     "ex": false,
     "baby": false,
     "pack": "everypack",
-    "alternate_versions": [75265, 407752, 1378561, 12654352],
+    "alternate_versions": [1378561, 12654352],
     "artist": "kawayoo",
     "internal_id": 12654352
   },
@@ -105743,7 +105743,7 @@
     "ex": false,
     "baby": false,
     "pack": "everypack",
-    "alternate_versions": [1118338, 1124676, 1378305, 12654480],
+    "alternate_versions": [1378305, 12654480],
     "artist": "Kagemaru Himeno",
     "internal_id": 12654480
   }

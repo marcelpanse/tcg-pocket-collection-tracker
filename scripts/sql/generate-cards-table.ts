@@ -26,7 +26,7 @@ if (!fs.existsSync(outputDir)) {
 function generateBulkInsertSQL(cards: Card[]): string {
   let sql = `
 TRUNCATE TABLE cards_list;
-INSERT INTO cards_list (internal_id, card_id, rarity, tradable) VALUES
+INSERT INTO cards_list (internal_id, deckbuilding_id, card_id, rarity, tradable) VALUES
 `
 
   //deduplicate cards on card.internal_id
@@ -45,7 +45,7 @@ INSERT INTO cards_list (internal_id, card_id, rarity, tradable) VALUES
       const rarity = card.rarity
       const tradable = (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradableExpansions.includes(card.expansion)
 
-      return `(${card.internal_id}, '${card.card_id}', '${rarity}', ${tradable})`
+      return `(${card.internal_id}, ${card.alternate_versions[0]}, '${card.card_id}', '${rarity}', ${tradable})`
     })
     .join(',\n  ')
 
