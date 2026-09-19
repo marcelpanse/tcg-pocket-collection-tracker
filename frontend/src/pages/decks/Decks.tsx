@@ -91,13 +91,17 @@ export default function Decks() {
           </Button>
           {data && <p className="italic text-neutral-400">Found {data.count} decks</p>}
         </div>
-        {isLoading || (needsLogin && isLoadingUser) ? (
+        {needsLogin ? (
+          isLoadingUser ? (
+            <Spinner size="md" className="mx-auto my-4" />
+          ) : (
+            <div className="flex flex-col items-start gap-2">
+              <p>Sign in to find decks you can build from your collection.</p>
+              <Button onClick={() => setIsLoginDialogOpen(true)}>Sign in</Button>
+            </div>
+          )
+        ) : isLoading ? (
           <Spinner size="md" className="mx-auto my-4" />
-        ) : needsLogin ? (
-          <div className="flex flex-col items-start gap-2">
-            <p>Sign in to find decks you can build from your collection.</p>
-            <Button onClick={() => setIsLoginDialogOpen(true)}>Sign in</Button>
-          </div>
         ) : isError || !data ? (
           <ErrorAlert error={error ?? undefined} />
         ) : (

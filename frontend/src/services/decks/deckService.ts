@@ -1,5 +1,6 @@
 import { supabase } from '@/lib/supabase'
-import type { Deck, Energy } from '@/types'
+import { getDeckCardCounts, getMissingCardsCount } from '@/pages/decks/utils'
+import type { Collection, Deck, Energy } from '@/types'
 
 export const deckKinds = ['community', 'liked', 'my'] as const
 export const deckOrder = ['popular', 'new'] as const
@@ -49,7 +50,7 @@ export async function getDecks(filters: DeckFilters) {
   } else if (filters.from === 'liked') {
     tbl = tbl.from('deck_likes').select('*, public_decks!id(*)', { count: 'exact' }).order('created_at', { ascending: false })
   } else if (filters.from === 'community') {
-    tbl = filters.buildable ? supabase.rpc('get_buildable_decks', {}, { count: 'exact' }) : supabase.from('public_decks').select('*', { count: 'exact' })
+    tbl = supabase.from('public_decks').select('*', { count: 'exact' })
     if (filters.orderby === 'popular') {
       tbl = tbl.order('likes', { ascending: false })
     } else if (filters.orderby === 'new') {
@@ -78,6 +79,46 @@ export async function getDecks(filters: DeckFilters) {
   }
   decks = decks.map((x) => ({ ...x, created_at: new Date(x.created_at), updated_at: new Date(x.updated_at) }))
   return { decks, count, hasNext: (filters.page + 1) * pageSize < count }
+}
+
+/* The "decks I can build" filter is evaluated client-side: the predicate needs the user's full collection plus the
+   alternate_versions groups from cards.json, both of which only exist in the browser. So we pull every public deck
+   once (~300B per row) and filter, sort and paginate locally. This keeps a single source of truth for "is this deck
+   buildable" (getMissingCardsCount, also used by DeckView) and needs no per-user aggregate in the database. */
+const fetchChunk = 1000
+export async function getAllPublicDecks() {
+  const decks: Deck[] = []
+  for (let from = 0; ; from += fetchChunk) {
+    const { data, error } = await supabase
+      .from('public_decks')
+      .select('*')
+      .order('id', { ascending: true })
+      .range(from, from + fetchChunk - 1)
+    if (error) {
+      throw new Error(`Failed fetching decks: ${error.message}`)
+    }
+    decks.push(...(data as Deck[]).map((x) => ({ ...x, created_at: new Date(x.created_at), updated_at: new Date(x.updated_at) })))
+    if (data.length < fetchChunk) {
+      return decks
+    }
+  }
+}
+
+export function selectBuildableDecks(allDecks: Deck[], filters: DeckFilters, collection: Collection) {
+  const matches = allDecks
+    // `contains` semantics: a deck matches when it has every selected energy.
+    .filter((deck) => deck.cards.length > 0 && filters.energy.every((energy) => deck.energy.includes(energy)))
+    .filter((deck) => getMissingCardsCount(getDeckCardCounts(deck.cards), collection) === 0)
+    .toSorted((a, b) =>
+      filters.orderby === 'popular'
+        ? (b.likes ?? 0) - (a.likes ?? 0) || (b.id ?? 0) - (a.id ?? 0)
+        : b.created_at.getTime() - a.created_at.getTime() || (b.id ?? 0) - (a.id ?? 0),
+    )
+  return {
+    decks: matches.slice(filters.page * pageSize, (filters.page + 1) * pageSize),
+    count: matches.length,
+    hasNext: (filters.page + 1) * pageSize < matches.length,
+  }
 }
 
 export async function updateDeck(deck: Deck) {
