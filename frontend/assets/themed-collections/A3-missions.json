@@ -240,7 +240,7 @@
     "name": "Acerola and Spooky Pokémon",
     "requiredCards": [
       {
-        "options": ["A4b-43", "A3-181", "A3-199"],
+        "options": ["A3-23", "A4b-43", "A3-181", "A3-199"],
         "amount": 1
       },
       {
@@ -264,7 +264,7 @@
     "name": "Lana and Waterside Pokémon",
     "requiredCards": [
       {
-        "options": ["A4b-124", "A3-184", "A3-202"],
+        "options": ["A3-51", "A4b-124", "A3-184", "A3-202"],
         "amount": 1
       },
       {
@@ -348,7 +348,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-233", "A4b-234"],
+        "options": ["A3-110", "A4b-233", "A3-107", "A3-35", "A3-115"],
         "amount": 1
       },
       {
@@ -364,19 +364,19 @@
     "name": "Lillie and Nebby’s Growth",
     "requiredCards": [
       {
-        "options": ["A4b-180", "A3-171", "A4b-181", "P-A-67"],
+        "options": ["A3-85", "A4b-180", "A3-171"],
         "amount": 1
       },
       {
-        "options": ["A3-86"],
+        "options": ["A3-86", "A4b-182"],
         "amount": 1
       },
       {
-        "options": ["A4b-259", "A3-189", "A3-207", "A3-239", "A4b-369", "B1a-101"],
+        "options": ["A3-122", "A4b-259", "A3-189", "A3-207", "A3-239", "A3-87", "A4b-184", "A3-186", "A3-204", "A3-238"],
         "amount": 1
       },
       {
-        "options": ["A4b-348", "A3-197", "A3-209", "A4b-349", "A4b-374"],
+        "options": ["A3-155", "A4b-348", "A3-197", "A3-209"],
         "amount": 1
       }
     ],
@@ -420,7 +420,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-124", "A3-184", "A3-202"],
+        "options": ["A3-51", "A4b-124", "A3-184", "A3-202"],
         "amount": 1
       },
       {
@@ -452,7 +452,7 @@
     "name": "An Assembly of Alolan Forms 1",
     "requiredCards": [
       {
-        "options": ["A3-2", "A3-156", "P-A-69"],
+        "options": ["A3-2", "A3-156"],
         "amount": 1
       },
       {
@@ -468,7 +468,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-130", "A3-185", "A3-203"],
+        "options": ["A3-58", "A4b-130", "A3-185", "A3-203"],
         "amount": 1
       },
       {
@@ -524,11 +524,11 @@
         "amount": 1
       },
       {
-        "options": ["A3-110"],
+        "options": ["A3-110", "A4b-233"],
         "amount": 1
       },
       {
-        "options": ["A4b-235", "A3-188", "A3-206"],
+        "options": ["A3-111", "A4b-235", "A3-188", "A3-206"],
         "amount": 1
       }
     ],
@@ -540,7 +540,7 @@
     "name": "Collect 3 Rowlet cards",
     "requiredCards": [
       {
-        "options": ["A3-9"],
+        "options": ["A3-9", "A3-10", "A4b-38"],
         "amount": 3
       }
     ],
@@ -552,7 +552,7 @@
     "name": "Collect 3 Litten cards",
     "requiredCards": [
       {
-        "options": ["A4b-78", "A4b-79", "B1-293"],
+        "options": ["A3-30", "A4b-78", "A3-31"],
         "amount": 3
       }
     ],
@@ -564,7 +564,7 @@
     "name": "Collect 3 Popplio cards",
     "requiredCards": [
       {
-        "options": ["A3-46"],
+        "options": ["A3-46", "A3-45"],
         "amount": 3
       }
     ],
