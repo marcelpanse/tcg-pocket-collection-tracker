@@ -84,8 +84,16 @@ CREATE TABLE public.cards_list (
     card_id character varying NOT NULL,
     rarity character varying NOT NULL,
     tradable boolean DEFAULT false NOT NULL,
-    internal_id integer NOT NULL
+    internal_id integer NOT NULL,
+    deckbuilding_id integer NOT NULL
 );
+
+
+--
+-- Name: COLUMN cards_list.deckbuilding_id; Type: COMMENT; Schema: public; Owner: -
+--
+
+COMMENT ON COLUMN public.cards_list.deckbuilding_id IS 'Canonical internal_id shared by card variants that are interchangeable for deckbuilding.';
 
 
 --
@@ -232,7 +240,8 @@ CASE rarity
     WHEN 'Crown Rare'::text THEN 12
     WHEN 'P'::text THEN 16
     ELSE NULL::integer
-END) STORED
+END) STORED,
+    collecting_carddex boolean DEFAULT false NOT NULL
 );
 
 

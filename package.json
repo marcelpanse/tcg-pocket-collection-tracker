@@ -13,6 +13,7 @@
     "scraper": "tsx scripts/scraper.js && tsx scripts/backfill-promo-b.ts && node scripts/download-packs.js && tsx scripts/generate-scan-hashes.ts && tsx scripts/generate-image-locales.ts && tsx scripts/sql/generate-cards-table.ts && pnpm lint:fix",
     "scraper-cards": "tsx scripts/scraper.js && tsx scripts/backfill-promo-b.ts && node scripts/download-packs.js && tsx scripts/generate-scan-hashes.ts && tsx scripts/generate-image-locales.ts && tsx scripts/sql/generate-cards-table.ts && pnpm lint:fix",
     "hashes": "tsx scripts/generate-scan-hashes.ts",
+    "schema:dump": "pg_dump --host=db.vcwloujmsjuacqpwthee.supabase.co --username=postgres --dbname=postgres --port=5432 --schema-only --no-owner --no-privileges --schema=public --file=scripts/sql/schema.sql",
     "sync-locales": "node scripts/sync-locales.js"
   },
   "devDependencies": {

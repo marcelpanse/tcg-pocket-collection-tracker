@@ -1,14 +1,34 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { useMemo } from 'react'
 import type { Deck } from '@/types'
 import { userQuery } from '../auth/useAuth'
-import { type DeckFilters, deleteDeck, getDecks, isLiked, likeDeck, unlikeDeck, updateDeck } from './deckService'
+import { useCollection } from '../collection/useCollection'
+import { type DeckFilters, deleteDeck, getAllPublicDecks, getDecks, isLiked, likeDeck, selectBuildableDecks, unlikeDeck, updateDeck } from './deckService'
 
 export function useDecksSearch(filters: DeckFilters) {
-  return useQuery({
-    queryKey: ['decks', filters],
+  const { data: user } = useQuery(userQuery)
+  const { data: collection } = useCollection()
+  const buildable = filters.from === 'community' && filters.buildable
+
+  const serverSide = useQuery({
+    queryKey: ['decks', filters, user?.user.email],
     queryFn: () => getDecks(filters),
-    enabled: filters.page >= 0,
+    enabled: filters.page >= 0 && !buildable,
   })
+
+  // Every public deck, fetched once and shared across pages, orderings and energy filters.
+  const allDecks = useQuery({
+    queryKey: ['decks', 'all-public'],
+    queryFn: getAllPublicDecks,
+    enabled: buildable && !!collection,
+    staleTime: 5 * 60 * 1000,
+  })
+  const page = useMemo(
+    () => (allDecks.data && collection ? selectBuildableDecks(allDecks.data, filters, collection) : undefined),
+    [allDecks.data, collection, filters],
+  )
+
+  return buildable ? { ...allDecks, data: page, isLoading: allDecks.isLoading || !page } : serverSide
 }
 
 export function useUpdateDeck() {
