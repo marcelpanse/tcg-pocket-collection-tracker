@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { Globe, LogOut, UserRoundPen } from 'lucide-react'
+import { Globe, Heart, LogOut, UserRoundPen } from 'lucide-react'
 import { useState } from 'react'
 import GitHubButton from 'react-github-btn'
 import { useTranslation } from 'react-i18next'
@@ -225,7 +225,16 @@ export function Header() {
               {t('support')}
             </span>
 
-            <span className="flex mt-6 justify-center gap-4">
+            <span className="flex flex-wrap mt-6 justify-center gap-2">
+              <button
+                type="button"
+                className="inline-flex h-[28px] cursor-pointer items-center gap-1.5 rounded-sm border border-[#d1d9e0] bg-[#f6f8fa] px-[10px] text-[14px] leading-[20px] font-semibold text-[#24292f] hover:bg-[#eff2f5]"
+                onClick={() => (window as unknown as { QuietJar?: { open?: () => void } }).QuietJar?.open?.()}
+              >
+                <Heart className="size-4" />
+                {t('supportDonate')}
+              </button>
+
               <GitHubButton
                 href="https://github.com/marcelpanse/tcg-pocket-collection-tracker"
                 data-color-scheme="no-preference: light; light: light; dark: light;"
