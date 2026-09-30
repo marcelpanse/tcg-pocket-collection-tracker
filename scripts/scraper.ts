@@ -42,6 +42,7 @@ const packs = [
   'everydaywonderspack',
   'ruleroftheskiespack',
   'teamrocketsambitionpack',
+  'deluxepackmega',
   'allcards',
 ]
 
@@ -130,6 +131,7 @@ const rarityOverrides: Record<ExpansionId, { rarity: Rarity; start: number; end:
     { rarity: '✵✵', start: 105, end: 108 },
     // 73-78 are gold full-art (☆), 79-93 are ☆☆, 94 is ☆☆☆, 109-110 are Crown — Serebii labels those correctly.
   ],
+  B4b: [{ rarity: '✵✵', start: 426, end: 427 }],
   'P-A': [],
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],
 }
