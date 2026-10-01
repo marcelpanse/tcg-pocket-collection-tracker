@@ -346,6 +346,20 @@ export const expansions: Expansion[] = [
       cardsPerPack: 5,
     },
   },
+  {
+    name: 'deluxepackmega',
+    id: 'B4b',
+    internalId: 22,
+    packs: [{ name: 'deluxepackmega', color: '#7878bf' }],
+    tradeable: true,
+    openable: false,
+    packStructure: {
+      containsShinies: true,
+      containsBabies: false,
+      containsLinkedCards: true,
+      cardsPerPack: 4,
+    },
+  },
   // Pack colors should have saturation 37.5% (96) and value 75% (192). The distance in hue between any two packs should not be smaller than 3.33% (12)
   {
     name: 'promo-a',

@@ -72,7 +72,7 @@
     }
   },
   "files": {
-    "maxSize": 3000000,
+    "maxSize": 3500000,
     "ignoreUnknown": true,
     "includes": ["**", "!**/node_modules/**/*", "!**/dist/**/*", "!**/*.svg"]
   }
