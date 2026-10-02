@@ -100,7 +100,7 @@
     "name": "Collect 1 ★ card!",
     "requiredCards": [
       {
-        "options": ["B3b-8", "B3b-70"],
+        "options": ["B3b-70", "B3b-71", "B3b-72", "B3b-73", "B3b-74", "B3b-75", "B3b-76", "B3b-77"],
         "amount": 1
       }
     ],
@@ -228,7 +228,7 @@
     "name": "A Pack of Puppy Pokémon!",
     "requiredCards": [
       {
-        "options": ["B3b-10", "P-B-77"],
+        "options": ["B3b-10", "B3b-25", "B3b-34", "B3b-38"],
         "amount": 50
       }
     ],

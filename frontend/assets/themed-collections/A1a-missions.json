@@ -4,7 +4,7 @@
     "name": "Untouched Forest",
     "requiredCards": [
       {
-        "options": ["A1a-52"],
+        "options": ["A1a-52", "A1a-2", "A1a-69", "A1a-8", "A1a-62", "A1a-53", "A1a-28", "A1a-41", "A1a-26"],
         "amount": 5
       }
     ],
@@ -16,7 +16,7 @@
     "name": "Tranquil Lake",
     "requiredCards": [
       {
-        "options": ["A4b-96", "A4-214", "A4b-97"],
+        "options": ["A1a-17", "A4b-96", "A1a-24", "A1a-23", "A1a-11", "A1a-18", "A4b-98", "A1a-76"],
         "amount": 7
       }
     ],
@@ -28,7 +28,7 @@
     "name": "Scorching Wilderness",
     "requiredCards": [
       {
-        "options": ["A1a-15", "A1a-71"],
+        "options": ["A1a-50", "A1a-15", "A1a-71", "A1a-12", "A1a-43", "A1a-14"],
         "amount": 10
       }
     ],
@@ -40,7 +40,7 @@
     "name": "Forgotten Ruins",
     "requiredCards": [
       {
-        "options": ["A1a-48"],
+        "options": ["A1a-48", "A1a-35", "A1a-6", "A4b-36", "A1a-70"],
         "amount": 9
       },
       {
@@ -72,7 +72,7 @@
         "amount": 1
       },
       {
-        "options": ["A1a-55"],
+        "options": ["A1a-55", "A1a-29", "A1a-14"],
         "amount": 1
       }
     ],
@@ -84,23 +84,23 @@
     "name": "Pokémon That Fly",
     "requiredCards": [
       {
-        "options": ["A1a-24"],
+        "options": ["A1a-24", "A1a-46", "A4b-197"],
         "amount": 1
       },
       {
-        "options": ["A1a-36"],
+        "options": ["A1a-36", "A1a-33"],
         "amount": 1
       },
       {
-        "options": ["A1a-37"],
+        "options": ["A1a-37", "A1a-14"],
         "amount": 1
       },
       {
-        "options": ["A4b-272", "A4b-273"],
+        "options": ["A1a-57", "A4b-272", "A1a-58", "A4b-274", "A1a-59", "A4b-276"],
         "amount": 1
       },
       {
-        "options": ["A1a-62"],
+        "options": ["A1a-62", "A1a-18", "A4b-98"],
         "amount": 1
       }
     ],
@@ -112,23 +112,23 @@
     "name": "Attacks with 20 Damage",
     "requiredCards": [
       {
-        "options": ["A1a-7"],
+        "options": ["A1a-7", "A1a-20"],
         "amount": 1
       },
       {
-        "options": ["A1a-34"],
+        "options": ["A1a-34", "A1a-31"],
         "amount": 1
       },
       {
-        "options": ["A1a-39"],
+        "options": ["A1a-39", "A1a-32", "A4b-159"],
         "amount": 1
       },
       {
-        "options": ["A1a-51"],
+        "options": ["A1a-51", "A1a-53"],
         "amount": 1
       },
       {
-        "options": ["A1a-54"],
+        "options": ["A1a-54", "A1a-57", "A4b-272"],
         "amount": 1
       }
     ],
@@ -140,7 +140,7 @@
     "name": "Small Pokémon",
     "requiredCards": [
       {
-        "options": ["A1a-7"],
+        "options": ["A1a-7", "A1a-57", "A4b-272"],
         "amount": 1
       },
       {
@@ -148,15 +148,15 @@
         "amount": 1
       },
       {
-        "options": ["A1a-28"],
+        "options": ["A1a-28", "A1a-30"],
         "amount": 1
       },
       {
-        "options": ["A1a-36"],
+        "options": ["A1a-36", "A1a-37"],
         "amount": 1
       },
       {
-        "options": ["A1a-61"],
+        "options": ["A1a-61", "A1a-62"],
         "amount": 1
       }
     ],

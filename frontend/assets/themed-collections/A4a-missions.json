@@ -8,11 +8,11 @@
         "amount": 1
       },
       {
-        "options": ["A4a-20", "A4a-80", "A4a-90", "B2a-127"],
+        "options": ["A4a-20", "A4a-80", "A4a-90"],
         "amount": 1
       },
       {
-        "options": ["A4a-22", "A4a-72", "P-A-104"],
+        "options": ["A4a-22", "A4a-72"],
         "amount": 1
       },
       {
@@ -36,7 +36,7 @@
         "amount": 1
       },
       {
-        "options": ["A4a-10", "A4a-79", "A4a-87", "B2a-126", "P-A-110"],
+        "options": ["A4a-10", "A4a-79", "A4a-87"],
         "amount": 1
       },
       {
@@ -60,11 +60,11 @@
     "name": "Raikou and Waterside Lightning-type Pokémon",
     "requiredCards": [
       {
-        "options": ["A4a-25", "A4a-81", "A4a-88", "B2a-128"],
+        "options": ["A4a-25", "A4a-81", "A4a-88"],
         "amount": 1
       },
       {
-        "options": ["A4a-26"],
+        "options": ["A4a-26", "A4a-27", "A4a-28"],
         "amount": 1
       },
       {
@@ -188,7 +188,7 @@
         "amount": 1
       },
       {
-        "options": ["A4a-37", "A4a-75", "B2-217"],
+        "options": ["A4a-37", "A4a-75"],
         "amount": 1
       }
     ],
@@ -212,7 +212,7 @@
     "name": "Pokémon That Can Use Attacks Immediately",
     "requiredCards": [
       {
-        "options": ["A4a-23", "A4a-105", "B2-210"],
+        "options": ["A4a-23", "A4a-105"],
         "amount": 1
       },
       {
