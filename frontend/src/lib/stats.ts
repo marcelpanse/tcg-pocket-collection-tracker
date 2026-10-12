@@ -224,7 +224,9 @@ const pullRateForCardSubset = (missingCards: Card[], cardsInPack: Card[], struct
         chanceToGetThisCardPerPosition[2] = foilProbability[rarity] / 100 / nrOfcardsOfThisRarity
       } else {
         // Crown Rare babies and non-baby cards use normal probability distributions
-        const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && (rarity === 'Crown Rare' || !c.baby) && !c.foil).length
+        const nrOfcardsOfThisRarity = cardsInPack.filter(
+          (c) => c.rarity === rarity && (rarity === 'Crown Rare' || !(c.baby && structure.containsBabies)) && !c.foil,
+        ).length
 
         // Calculate probability for each position
         for (let position = 1; position <= structure.cardsPerPack; position++) {

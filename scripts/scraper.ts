@@ -370,7 +370,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
   const ex = name.includes(' ex')
 
   // Check if card is a baby pokemon (Not currently specified exactly on Limitless TCG page)
-  const baby = weakness === 'none' && hp === 30 && energy !== 'dragon' && expansion.id.startsWith('A')
+  const baby = weakness === 'none' && hp === 30 && energy !== 'dragon'
 
   const pack = extractPackInfo($)
 
