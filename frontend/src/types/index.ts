@@ -123,7 +123,7 @@ export interface TradePartners {
 
 export interface PackStructure {
   containsShinies: boolean
-  containsBabies: boolean
+  containSixthCardBabies: boolean
   containsLinkedCards: boolean
   cardsPerPack: 4 | 5
 }

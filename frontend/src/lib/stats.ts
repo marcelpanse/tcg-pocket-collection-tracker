@@ -65,7 +65,8 @@ const standardPackProbabilities = {
   }),
 }
 
-// 4-card deluxe pack probabilities
+// 4-card deluxe ex pack probabilities
+// TODO: rework with foil odds if A4b comes back in rotation
 // const deluxePackProbabilities = {
 //   position1: createRarityProbability({'◊': 100}),
 //   position2: createRarityProbability({'◊': 17.73, '◊◊': 82.27}),
@@ -119,6 +120,7 @@ const probabilityPerRarityBaby: Record<Rarity, number> = createRarityProbability
 function getPositionProbability(structure: PackStructure, position: number): Record<Rarity, number> {
   // 4-card deluxe pack
   if (structure?.cardsPerPack === 4) {
+    // A4b and B4b have different probability distributions, reverify upon rerelease of one of these packs
     const positionKey = `position${position}` as keyof typeof deluxeMegaPackProbabilities
     return deluxeMegaPackProbabilities[positionKey] || standardPackProbabilities.positions1to3
   }
@@ -214,7 +216,7 @@ const pullRateForCardSubset = (missingCards: Card[], cardsInPack: Card[], struct
     let chanceToGetThisCardBaby = 0
 
     for (const rarity of rarityList) {
-      if (card.baby && rarity !== 'Crown Rare' && structure.containsBabies) {
+      if (card.baby && rarity !== 'Crown Rare' && structure.containSixthCardBabies) {
         // if the card is a baby (but not Crown Rare), we only consider 6-card packs
         const nrOfcardsOfThisRarity = cardsInPack.filter((c) => c.rarity === rarity && c.baby).length
 
@@ -225,7 +227,7 @@ const pullRateForCardSubset = (missingCards: Card[], cardsInPack: Card[], struct
       } else {
         // Crown Rare babies and non-baby cards use normal probability distributions
         const nrOfcardsOfThisRarity = cardsInPack.filter(
-          (c) => c.rarity === rarity && (rarity === 'Crown Rare' || !(c.baby && structure.containsBabies)) && !c.foil,
+          (c) => c.rarity === rarity && (rarity === 'Crown Rare' || !(c.baby && structure.containSixthCardBabies)) && !c.foil,
         ).length
 
         // Calculate probability for each position
@@ -262,7 +264,7 @@ const pullRateForCardSubset = (missingCards: Card[], cardsInPack: Card[], struct
   let chanceToGetNewCardInRarePack = 0
   let changeToGetNewCardIn6CardPack = 0
 
-  if (structure.containsBabies) {
+  if (structure.containSixthCardBabies) {
     chanceToGetNewCard = 0.9162 * (1 - chanceToGetInStandardPack)
     chanceToGetNewCardInRarePack = 0.0005 * (1 - (1 - rareProbability1_5) ** 5)
     changeToGetNewCardIn6CardPack = 0.0833 * (1 - chanceToGetInStandardPack * (1 - babyProbability))
