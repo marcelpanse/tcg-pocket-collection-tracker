@@ -9,7 +9,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { allCards as cardsToInsert, tradeableExpansions } from '../../frontend/src/lib/CardsDB'
+import { allCards as cardsToInsert, tradableExpansions } from '../../frontend/src/lib/CardsDB'
 import { type Card, type Rarity, tradableRarities } from '../../frontend/src/types'
 
 // Get the directory name using ESM compatible approach
@@ -26,7 +26,7 @@ if (!fs.existsSync(outputDir)) {
 function generateBulkInsertSQL(cards: Card[]): string {
   let sql = `
 TRUNCATE TABLE cards_list;
-INSERT INTO cards_list (internal_id, card_id, rarity, tradable) VALUES
+INSERT INTO cards_list (internal_id, deckbuilding_id, card_id, rarity, tradable) VALUES
 `
 
   //deduplicate cards on card.internal_id
@@ -39,13 +39,19 @@ INSERT INTO cards_list (internal_id, card_id, rarity, tradable) VALUES
     return true
   })
 
+  // Deckbuilding groups are resolved last-wins, matching the `allCards.toReversed()` lookup in
+  // CardsDB. Every duplicated internal_id currently agrees on alternate_versions[0], so this is a
+  // no-op today; it keeps cards_list.deckbuilding_id from drifting from the frontend if that stops
+  // being true. The rest of the row stays first-wins, which keeps card_id on the original printing.
+  const deckbuildingIds = new Map(cards.map((card) => [card.internal_id, card.alternate_versions[0]]))
+
   // Generate values for bulk insert
   const values = dedupedCards
     .map((card) => {
       const rarity = card.rarity
-      const tradable = (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradeableExpansions.includes(card.expansion)
+      const tradable = (tradableRarities as readonly Rarity[]).includes(card.rarity) && tradableExpansions.includes(card.expansion)
 
-      return `(${card.internal_id}, '${card.card_id}', '${rarity}', ${tradable})`
+      return `(${card.internal_id}, ${deckbuildingIds.get(card.internal_id)}, '${card.card_id}', '${rarity}', ${tradable})`
     })
     .join(',\n  ')
 

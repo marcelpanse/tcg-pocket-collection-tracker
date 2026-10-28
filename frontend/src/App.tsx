@@ -3,7 +3,6 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { createHashRouter, Navigate, Outlet, RouterProvider, useLocation, useParams } from 'react-router'
-import DonationPopup from '@/components/DonationPopup.tsx'
 import InstallPrompt from '@/components/InstallPrompt.tsx'
 import { useToast } from '@/hooks/use-toast.ts'
 import { useAuthSSO, userQuery } from '@/services/auth/useAuth'
@@ -30,6 +29,7 @@ const Scan = lazy(() => import('./pages/scan/Scan.tsx'))
 const EditProfile = lazy(() => import('./components/EditProfile.tsx'))
 const CardDetail = lazy(() => import('./pages/collection/CardDetail.tsx'))
 const Import = lazy(() => import('./pages/import/Import.tsx'))
+const Changelog = lazy(() => import('./pages/changelog/Changelog.tsx'))
 
 const Friends = lazy(() => import('./pages/friends/Friends.tsx'))
 
@@ -127,6 +127,7 @@ function App() {
         { path: '/trade/*', element: <Trade /> },
         { path: '/friends', element: <Friends /> },
         { path: '/import', element: <Import /> },
+        { path: '/changelog', element: <Changelog /> },
       ],
     },
   ])
@@ -153,7 +154,6 @@ function App() {
             <Toaster />
             <RouterProvider router={router} />
             <InstallPrompt />
-            <DonationPopup />
             <ChatManager />
             {/* Add React Query DevTools (only in development) */}
             {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}

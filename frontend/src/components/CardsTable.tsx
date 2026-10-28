@@ -1,7 +1,8 @@
 import { useVirtualizer } from '@tanstack/react-virtual'
 import i18n from 'i18next'
-import { type ReactNode, useEffect, useRef, useState } from 'react'
+import { type ReactNode, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useRemainingViewportHeight } from '@/hooks/useRemainingViewportHeight'
 import { getExpansionById } from '@/lib/CardsDB.ts'
 import { chunk, cn } from '@/lib/utils.ts'
 import { type Card as CardType, type Expansion, type ExpansionId, expansionIds } from '@/types'
@@ -18,11 +19,8 @@ interface Props {
 export function CardsTable({ className, children, cards, groupExpansions, render }: Props) {
   const { t } = useTranslation(['common/sets', 'pages/collection'])
 
-  const scrollRef = useRef<HTMLDivElement>(null)
+  const { ref: scrollRef, height: scrollContainerHeight } = useRemainingViewportHeight()
   const [width, setWidth] = useState(900)
-  // this has to be a small number because it is what initially is rendered before we calculated the actual max height. When setting it to 'auto' it will render the entire collection on first render.
-  const [scrollContainerHeight, setScrollContainerHeight] = useState('100px')
-
   useEffect(() => {
     const el = scrollRef.current
     if (!el) {
@@ -30,9 +28,6 @@ export function CardsTable({ className, children, cards, groupExpansions, render
     }
     const observer = new ResizeObserver((entries) => {
       setWidth(entries[0].contentRect.width)
-      const headerHeight = (document.querySelector('#header') as HTMLElement | null)?.offsetHeight || 0
-      const maxHeight = window.innerHeight - headerHeight
-      setScrollContainerHeight(`${maxHeight}px`)
     })
     observer.observe(el)
     return () => observer.disconnect()
@@ -78,48 +73,46 @@ export function CardsTable({ className, children, cards, groupExpansions, render
   })
 
   return (
-    <div ref={scrollRef} className={cn('overflow-y-auto', className)} style={{ scrollbarWidth: 'thin' }}>
+    <div ref={scrollRef} className={cn('overflow-y-auto', className)} style={{ scrollbarWidth: 'thin', height: scrollContainerHeight }}>
       {children}
       {cards.length === 0 && <p className="text-xl text-center py-8">No cards to show</p>}
-      <div style={{ height: scrollContainerHeight }}>
-        <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
-          {rowVirtualizer.getVirtualItems().map((virtualRow) => {
-            const row = rows[virtualRow.index]
-            return (
-              <div
-                key={virtualRow.key}
-                style={{ height: `${virtualRow.size}px`, transform: `translateY(${virtualRow.start}px)` }}
-                className="absolute top-0 left-0 w-full"
-              >
-                {row.type === 'header' ? (
-                  <div className="flex items-center gap-2 scroll-m-20 border-b-2 border-slate-600 pb-2 tracking-tight transition-colors">
-                    <img
-                      src={`/images/sets/${i18n.language}/${row.expansion.id}.webp`}
-                      alt={row.expansion.name}
-                      className="max-w-[60px]"
-                      onError={(e) => {
-                        const img = e.currentTarget
-                        const fallback = `/images/sets/en-US/${row.expansion.id}.webp`
-                        if (!img.src.endsWith(fallback)) {
-                          img.src = fallback
-                        }
-                      }}
-                    />
-                    <h2 className="text-center font-semibold sm:text-lg md:text-2xl">{t(row.expansion.name)}</h2>
-                  </div>
-                ) : (
-                  <div className="w-full flex justify-start">
-                    {row.cards.map((c) => (
-                      <div key={`${c.expansion}-${c.internal_id}`} className={`${basis} min-w-0 px-2`}>
-                        {render(c)}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )
-          })}
-        </div>
+      <div style={{ height: `${rowVirtualizer.getTotalSize()}px` }} className="relative w-full">
+        {rowVirtualizer.getVirtualItems().map((virtualRow) => {
+          const row = rows[virtualRow.index]
+          return (
+            <div
+              key={virtualRow.key}
+              style={{ height: `${virtualRow.size}px`, transform: `translateY(${virtualRow.start}px)` }}
+              className="absolute top-0 left-0 w-full"
+            >
+              {row.type === 'header' ? (
+                <div className="flex items-center gap-2 scroll-m-20 border-b-2 border-slate-600 pb-2 tracking-tight transition-colors">
+                  <img
+                    src={`/images/sets/${i18n.language}/${row.expansion.id}.webp`}
+                    alt={row.expansion.name}
+                    className="max-w-[60px]"
+                    onError={(e) => {
+                      const img = e.currentTarget
+                      const fallback = `/images/sets/en-US/${row.expansion.id}.webp`
+                      if (!img.src.endsWith(fallback)) {
+                        img.src = fallback
+                      }
+                    }}
+                  />
+                  <h2 className="text-center font-semibold sm:text-lg md:text-2xl">{t(row.expansion.name)}</h2>
+                </div>
+              ) : (
+                <div className="w-full flex justify-start">
+                  {row.cards.map((c) => (
+                    <div key={`${c.expansion}-${c.internal_id}`} className={`${basis} min-w-0 px-2`}>
+                      {render(c)}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )
+        })}
       </div>
     </div>
   )

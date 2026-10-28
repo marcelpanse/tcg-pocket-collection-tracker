@@ -110,7 +110,7 @@ Modifying existing sets is as easy as executing `pnpm run scraper`.
 ## Support us
 If you like this project, consider donating to help us keep it running.
 
-<a href="https://buymeacoffee.com/pocketcollectiontracker" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://tcgpocketcollectiontracker.com?qj_open=1"><img src="https://api.quietjar.com/api/widget/image/eyJzaXRlIjoicWpfNzk3MGRlZWQzYjNkNzIyZGJjZDlkZjQ1IiwiY3VycmVuY3kiOiJldXIiLCJsYWJlbHMiOnsiaGVhZGxpbmUiOiJTdXBwb3J0IHRoaXMgc2l0ZSIsImJvZHkiOiJFdmVyeSBkb25hdGlvbiBoZWxwcyBrZWVwIHRoZSBleHBlcmllbmNlIGNsZWFuLiIsImFjdGlvbiI6IlRpcCIsImljb24iOiJwaWdneSJ9LCJzdHlsZSI6eyJjb2xvciI6IiMwMzY5YTEiLCJmb250Ijoicm91bmRlZCJ9LCJjbG9zZSI6eyJlbmFibGVkIjp0cnVlLCJhZnRlciI6InNlc3Npb24iLCJkYXlzIjo3fSwiZG9uYXRpb24iOnsiaGlkZURheXMiOjMwfSwicG9zaXRpb24iOnsiY29ybmVyIjoiYm90dG9tLXJpZ2h0In0sImdvYWwiOiJxZ183OTU1NTNhNTkwODgzODNhIn0.png" alt="Support this site" width="360" /></a>
 
 ## License
 

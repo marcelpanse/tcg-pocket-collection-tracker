@@ -13,15 +13,16 @@
     "scraper": "tsx scripts/scraper.js && tsx scripts/backfill-promo-b.ts && node scripts/download-packs.js && tsx scripts/generate-scan-hashes.ts && tsx scripts/generate-image-locales.ts && tsx scripts/sql/generate-cards-table.ts && pnpm lint:fix",
     "scraper-cards": "tsx scripts/scraper.js && tsx scripts/backfill-promo-b.ts && node scripts/download-packs.js && tsx scripts/generate-scan-hashes.ts && tsx scripts/generate-image-locales.ts && tsx scripts/sql/generate-cards-table.ts && pnpm lint:fix",
     "hashes": "tsx scripts/generate-scan-hashes.ts",
+    "schema:dump": "pg_dump --host=db.vcwloujmsjuacqpwthee.supabase.co --username=postgres --dbname=postgres --port=5432 --schema-only --no-owner --no-privileges --schema=public --file=scripts/sql/schema.sql",
     "sync-locales": "node scripts/sync-locales.js"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.11",
+    "@biomejs/biome": "2.5.12",
     "lefthook": "^2.1.12",
     "tsx": "^4.23.13"
   },
   "type": "module",
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@12.4.1+sha512.2e81e399d73fe8390dab25e06aa788ab7a5908248d2f5a370f82b481147a6a7a367bf8048f9a6fdb6460f21a66f0542dedb8b94ca2c8723596741920b1656d4c",
   "engines": {
     "node": ">=20"
   },

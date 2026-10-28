@@ -1,9 +1,10 @@
 packages:
   - frontend
 
-onlyBuiltDependencies:
-  - esbuild
-  - lefthook
+allowBuilds:
+  core-js: true
+  esbuild: true
+  lefthook: true
 
 overrides:
   axios@<1.12.0: '>=1.12.0'

@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query'
 import { ChevronFirst, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Link } from 'react-router'
 import { z } from 'zod'
@@ -8,6 +9,7 @@ import { Button } from '@/components/ui/button'
 import { showCardType } from '@/components/utils'
 import useSearchState from '@/hooks/use-search-state'
 import { capitalize } from '@/lib/utils'
+import { useLoginDialog, userQuery } from '@/services/auth/useAuth'
 import { deckKinds, deckOrder } from '@/services/decks/deckService'
 import { useDecksSearch } from '@/services/decks/useDeck'
 import { energies } from '@/types'
@@ -18,11 +20,15 @@ const schema = z.object({
   orderby: z.enum(deckOrder).default('popular'),
   page: z.number().gte(0).default(0),
   energy: z.array(z.enum(energies)).default([]),
+  buildable: z.boolean().default(false),
 })
 
 export default function Decks() {
   const [filters, setFilters] = useSearchState(schema)
+  const { data: user, isLoading: isLoadingUser } = useQuery(userQuery)
+  const { setIsLoginDialogOpen } = useLoginDialog()
   const { data, isLoading, isError, error } = useDecksSearch(filters)
+  const needsLogin = filters.from === 'community' && filters.buildable && !user?.user.email
 
   return (
     <div className="flex gap-4 flex-col sm:flex-row sm:w-fit mx-auto px-1">
@@ -37,13 +43,39 @@ export default function Decks() {
           className="w-full"
           options={deckKinds}
           value={filters.from}
-          onChange={(from) => setFilters({ from, page: 0 })}
+          onChange={(from) => setFilters({ from, page: 0, buildable: false })}
           show={(from) => `${capitalize(from)} decks`}
         />
         {filters.from === 'community' && (
-          <DropdownFilter options={deckOrder} value={filters.orderby} onChange={(orderby) => setFilters({ orderby })} label="Sort by" show={capitalize} />
+          <>
+            <DropdownFilter
+              options={deckOrder}
+              value={filters.orderby}
+              onChange={(orderby) => setFilters({ orderby, page: 0 })}
+              label="Sort by"
+              show={capitalize}
+            />
+            <div className="flex items-center space-x-2 text-white/50">
+              <input
+                type="checkbox"
+                id="buildable-decks"
+                className="w-5 h-5"
+                checked={filters.buildable}
+                onChange={(event) => {
+                  const buildable = event.target.checked
+                  setFilters({ buildable, page: 0 })
+                  if (buildable && !user?.user.email) {
+                    setIsLoginDialogOpen(true)
+                  }
+                }}
+              />
+              <label htmlFor="buildable-decks" className="text-md">
+                Decks I can build
+              </label>
+            </div>
+          </>
         )}
-        <ToggleFilter options={energies} value={filters.energy} onChange={(energy) => setFilters({ energy })} show={showCardType} />
+        <ToggleFilter options={energies} value={filters.energy} onChange={(energy) => setFilters({ energy, page: 0 })} show={showCardType} />
       </div>
       <div className="flex flex-col gap-2 sm:w-xl">
         <div className="flex items-center gap-2">
@@ -59,8 +91,17 @@ export default function Decks() {
           </Button>
           {data && <p className="italic text-neutral-400">Found {data.count} decks</p>}
         </div>
-        {isLoading ? (
-          <Spinner size="md" overlay />
+        {needsLogin ? (
+          isLoadingUser ? (
+            <Spinner size="md" className="mx-auto my-4" />
+          ) : (
+            <div className="flex flex-col items-start gap-2">
+              <p>Sign in to find decks you can build from your collection.</p>
+              <Button onClick={() => setIsLoginDialogOpen(true)}>Sign in</Button>
+            </div>
+          )
+        ) : isLoading ? (
+          <Spinner size="md" className="mx-auto my-4" />
         ) : isError || !data ? (
           <ErrorAlert error={error ?? undefined} />
         ) : (
