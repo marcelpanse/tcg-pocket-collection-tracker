@@ -5,6 +5,7 @@ import type { CheerioAPI } from 'cheerio'
 import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
 import { expansions as allExpansions } from '../frontend/src/lib/CardsDB'
+import { compactCards } from '../frontend/src/lib/cardsFile'
 import { chunk } from '../frontend/src/lib/utils'
 import { type Card, type CardType, cardTypes, type Expansion, type ExpansionId, type Rarity } from '../frontend/src/types'
 import { encode } from './encoder'
@@ -522,4 +523,4 @@ for (const overriding_id of deckbuildingOverrides) {
 }
 
 fs.mkdirSync(targetDir, { recursive: true })
-fs.writeFileSync(path.join(targetDir, `cards.json`), JSON.stringify(cards2, null, 2))
+fs.writeFileSync(path.join(targetDir, `cards.json`), JSON.stringify(compactCards(cards2), null, 2))

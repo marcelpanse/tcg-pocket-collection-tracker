@@ -179,6 +179,18 @@ export interface Card {
   updated_at?: Date // calculated from the card amounts table
 }
 
+// A print of a card in an expansion: the same card can be reprinted in several expansions
+export interface CardPrint {
+  expansion: ExpansionId
+  number: number
+  pack: string
+}
+
+// How cards are stored in cards.json: one entry per card (internal_id), with all its prints
+export type StoredCard = Omit<Card, 'card_id' | 'expansion' | 'image' | 'pack' | 'amount_owned' | 'collected' | 'updated_at'> & {
+  expansions: CardPrint[]
+}
+
 export interface ImportExportRow {
   Id: string
   CardName: string

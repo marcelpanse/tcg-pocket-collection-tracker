@@ -7,6 +7,7 @@ import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
 import sharp from 'sharp'
 import { expansions } from '../frontend/src/lib/CardsDB'
+import { compactCards, compareCards, expandCards } from '../frontend/src/lib/cardsFile'
 import type { Card, CardType } from '../frontend/src/types'
 import { encode } from './encoder'
 
@@ -242,7 +243,7 @@ async function isBrokenWebp(filePath: string): Promise<boolean> {
 
 async function main() {
   const dryRun = process.argv.includes('--dry-run')
-  const cards: Card[] = JSON.parse(fs.readFileSync(CARDS_JSON, 'utf8'))
+  const cards: Card[] = expandCards(JSON.parse(fs.readFileSync(CARDS_JSON, 'utf8')))
   const existingPB = cards.filter((c) => c.expansion === EXPANSION_ID)
   const existingNumbers = new Set(existingPB.map((c) => Number.parseInt(c.card_id.split('-').pop() ?? '0', 10)))
   console.log(`cards.json: ${existingPB.length} existing P-B cards, max #${Math.max(...existingNumbers)}`)
@@ -353,15 +354,8 @@ async function main() {
   }
 
   // Insert new records preserving sort order (expansion, then card number)
-  const merged = [...cards, ...newRecords].sort((a, b) => {
-    if (a.expansion !== b.expansion) {
-      return a.expansion < b.expansion ? -1 : 1
-    }
-    const na = Number.parseInt(a.card_id.split('-').pop() ?? '0', 10)
-    const nb = Number.parseInt(b.card_id.split('-').pop() ?? '0', 10)
-    return na - nb
-  })
-  fs.writeFileSync(CARDS_JSON, JSON.stringify(merged, null, 2))
+  const merged = [...cards, ...newRecords].sort(compareCards)
+  fs.writeFileSync(CARDS_JSON, JSON.stringify(compactCards(merged), null, 2))
   console.log(`\nWrote ${newRecords.length} new cards to ${CARDS_JSON}`)
   console.log(
     'Next: run "pnpm biome check --write --files-max-size=4000000 frontend/assets/cards.json" and then "tsx scripts/generate-image-locales.ts && pnpm hashes"',

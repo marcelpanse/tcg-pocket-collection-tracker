@@ -3,6 +3,7 @@ import fs from 'node:fs'
 import type { CheerioAPI } from 'cheerio'
 import * as cheerio from 'cheerio'
 import { expansions as allExpansions } from '../frontend/src/lib/CardsDB'
+import { expandCards } from '../frontend/src/lib/cardsFile'
 import type { Card } from '../frontend/src/types'
 
 const BASE_URL = 'https://www.pokemon-zone.com/themed-collections'
@@ -12,7 +13,7 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 const expansions = allExpansions.map((e) => e.id)
 
-const allCards: Card[] = JSON.parse(fs.readFileSync(CARDS_PATH, 'utf8'))
+const allCards: Card[] = expandCards(JSON.parse(fs.readFileSync(CARDS_PATH, 'utf8')))
 const cardById = new Map(allCards.map((c) => [c.card_id, c]))
 const cardByInternalId = new Map(allCards.map((c) => [c.internal_id, c]))
 

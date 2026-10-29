@@ -1,8 +1,9 @@
-import type { Card, Expansion, ExpansionId, Rarity } from '@/types'
+import { expandCards } from '@/lib/cardsFile'
+import type { Card, Expansion, ExpansionId, Rarity, StoredCard } from '@/types'
 
 const AllCardsJson = await import('../../assets/cards.json')
 
-export const allCards: Card[] = AllCardsJson.default as Card[]
+export const allCards: Card[] = expandCards(AllCardsJson.default as StoredCard[])
 
 const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
 const allCardsByInternalId: Map<number, Card> = new Map(allCards.toReversed().map((card) => [card.internal_id, card]))
