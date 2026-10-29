@@ -360,6 +360,23 @@ export const expansions: Expansion[] = [
       cardsPerPack: 4,
     },
   },
+  {
+    name: 'dualfusion',
+    id: 'C1',
+    internalId: 23,
+    packs: [
+      { name: 'pikachupack', color: '#78c08a' },
+      { name: 'megamewtwoxpack', color: '#c078aa' },
+    ],
+    tradeable: true,
+    openable: true,
+    packStructure: {
+      containsShinies: true,
+      containSixthCardBabies: false,
+      containsLinkedCards: false,
+      cardsPerPack: 5,
+    },
+  },
   // Pack colors should have saturation 37.5% (96) and value 75% (192). The distance in hue between any two packs should not be smaller than 3.33% (12)
   {
     name: 'promo-a',
@@ -374,6 +391,15 @@ export const expansions: Expansion[] = [
     name: 'promo-b',
     id: 'P-B',
     internalId: 193,
+    packs: [{ name: 'everypack', color: '#c0c0c0' }],
+    tradeable: false,
+    openable: false,
+    promo: true,
+  },
+  {
+    name: 'promo-c',
+    id: 'P-C',
+    internalId: 194,
     packs: [{ name: 'everypack', color: '#c0c0c0' }],
     tradeable: false,
     openable: false,

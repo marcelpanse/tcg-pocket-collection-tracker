@@ -106,7 +106,9 @@ export function getFilteredCards(filters: Filters, cards: Collection, tradingSet
     const cardType = filters.cardType ?? []
     const trainerSubtype = filters.trainerSubtype ?? []
     filteredCards = filteredCards.filter((c) =>
-      c.card_type === 'trainer' ? trainerSubtype.includes(c.evolution_type as TrainerSubtypeOption) : cardType.includes(c.energy as CardTypeOption),
+      c.card_type === 'trainer'
+        ? trainerSubtype.includes(c.evolution_type as TrainerSubtypeOption)
+        : cardType.includes(c.energy as CardTypeOption) || (c.secondary_energy !== undefined && cardType.includes(c.secondary_energy as CardTypeOption)),
     )
   }
   if (filters.stage !== undefined && filters.stage.length > 0) {

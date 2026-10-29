@@ -3,6 +3,7 @@ import type { Session } from '@supabase/supabase-js'
 export type User = Session
 
 export const expansionIds = [
+  'C1',
   'B4b',
   'B4a',
   'B4',
@@ -25,6 +26,7 @@ export const expansionIds = [
   'A2',
   'A1a',
   'A1',
+  'P-C',
   'P-B',
   'P-A',
 ] as const
@@ -151,6 +153,7 @@ export interface Card {
   name: string
   hp?: number
   energy: CardType
+  secondary_energy?: CardType // dual-type Pokémon (e.g. Water/Darkness), introduced in C1
   card_type: 'pokémon' | 'trainer'
   evolution_type: string
   image: string
