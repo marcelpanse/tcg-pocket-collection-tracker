@@ -31,6 +31,8 @@ const expansions = [
   'B4b',
   'C1',
   'P-A',
+  'P-B',
+  'P-C',
 ]
 
 // Base URL for expansion images
