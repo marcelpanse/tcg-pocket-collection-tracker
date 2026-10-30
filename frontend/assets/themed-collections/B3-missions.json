@@ -12,7 +12,7 @@
         "amount": 1
       },
       {
-        "options": ["B3-147"],
+        "options": ["B3-147", "B4b-202"],
         "amount": 1
       }
     ],
@@ -84,7 +84,7 @@
     "name": "Collect 3 Sobble cards",
     "requiredCards": [
       {
-        "options": ["B3-48", "B3-203"],
+        "options": ["B3-48", "B4b-74", "B3-203"],
         "amount": 3
       }
     ],
@@ -108,11 +108,28 @@
     "name": "Trading Punches with Mega Lucario",
     "requiredCards": [
       {
-        "options": ["B3-46"],
+        "options": [
+          "B3-12",
+          "B3-27",
+          "B3-28",
+          "B3-30",
+          "B3-46",
+          "B3-229",
+          "B3-77",
+          "B3-79",
+          "B4b-126",
+          "B3-169",
+          "B3-80",
+          "B3-82",
+          "B3-83",
+          "B3-91",
+          "B3-113",
+          "B3-123"
+        ],
         "amount": 5
       },
       {
-        "options": ["B3-81", "B3-184", "B3-204"],
+        "options": ["B3-81", "B4b-127", "B3-184", "B3-204"],
         "amount": 1
       }
     ],
@@ -124,11 +141,11 @@
     "name": "Mega Sceptile and the Power of Tails",
     "requiredCards": [
       {
-        "options": ["B3-5", "B3-156", "P-B-61"],
+        "options": ["B3-5", "B4b-10", "B3-156", "B3-38", "B3-143", "B3-130", "B3-74", "B3-75", "B3-104"],
         "amount": 3
       },
       {
-        "options": ["B3-8", "B3-180", "B3-194"],
+        "options": ["B3-8", "B4b-12", "B3-180", "B3-194"],
         "amount": 1
       }
     ],
@@ -140,11 +157,11 @@
     "name": "Mega Camerupt and Explosive Eruptions",
     "requiredCards": [
       {
-        "options": ["B3-55"],
+        "options": ["B3-22", "B3-55", "B3-56", "B3-101", "B3-102", "B3-94"],
         "amount": 3
       },
       {
-        "options": ["B3-23", "B3-181", "B3-195"],
+        "options": ["B3-23", "B4b-43", "B3-181", "B3-195"],
         "amount": 1
       }
     ],
@@ -156,11 +173,11 @@
     "name": "Mega Audino and the Power of Healing",
     "requiredCards": [
       {
-        "options": ["B3-19"],
+        "options": ["B3-19", "B3-67", "B3-127", "B3-220", "B3-128", "B3-221", "B3-140"],
         "amount": 3
       },
       {
-        "options": ["B3-141", "B3-189", "B3-202"],
+        "options": ["B3-141", "B4b-190", "B3-189", "B3-202"],
         "amount": 1
       }
     ],
@@ -240,7 +257,7 @@
     "name": "Desert Ecosystem",
     "requiredCards": [
       {
-        "options": ["B3-76"],
+        "options": ["B3-76", "B4b-124"],
         "amount": 1
       },
       {
@@ -252,11 +269,11 @@
         "amount": 1
       },
       {
-        "options": ["B3-125"],
+        "options": ["B3-125", "B4b-171"],
         "amount": 1
       },
       {
-        "options": ["B3-126", "B3-188", "B3-201"],
+        "options": ["B3-126", "B4b-172", "B3-188", "B3-201"],
         "amount": 1
       }
     ],
@@ -492,7 +509,7 @@
         "amount": 1
       },
       {
-        "options": ["B3-21"],
+        "options": ["B3-21", "B4b-42"],
         "amount": 1
       },
       {
@@ -504,7 +521,7 @@
         "amount": 1
       },
       {
-        "options": ["B3-37", "B3-182", "B3-196", "B3b-102"],
+        "options": ["B3-37", "B4b-61", "B3-182", "B3-196"],
         "amount": 1
       },
       {

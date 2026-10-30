@@ -4,11 +4,11 @@
     "name": "A Journey of Evolution That Fires Up Your Fighting Spirit",
     "requiredCards": [
       {
-        "options": ["B1-33"],
+        "options": ["B1-33", "B4b-39"],
         "amount": 1
       },
       {
-        "options": ["B1-34"],
+        "options": ["B1-34", "B4b-40"],
         "amount": 1
       },
       {
@@ -16,11 +16,11 @@
         "amount": 1
       },
       {
-        "options": ["B1-36", "B1-254", "B1-284", "B3-226"],
+        "options": ["B1-36", "B4b-41", "B1-254", "B1-284"],
         "amount": 1
       },
       {
-        "options": ["B1-223", "B1-268"],
+        "options": ["B1-223", "B4b-220", "B1-268"],
         "amount": 1
       }
     ],
@@ -32,7 +32,7 @@
     "name": "An Immense Power That Rampages Through the Ocean",
     "requiredCards": [
       {
-        "options": ["B1-52", "B1-255", "B1-285", "B3b-101"],
+        "options": ["B1-52", "B4b-60", "B1-255", "B1-285"],
         "amount": 1
       },
       {
@@ -60,15 +60,15 @@
     "name": "Bodies of Tightly Packed Fluff",
     "requiredCards": [
       {
-        "options": ["B1-15"],
+        "options": ["B1-15", "B4b-16"],
         "amount": 1
       },
       {
-        "options": ["B1-82"],
+        "options": ["B1-82", "B4b-88"],
         "amount": 1
       },
       {
-        "options": ["B1-102", "B1-259", "B1-286", "B3a-107"],
+        "options": ["B1-102", "B4b-107", "B1-259", "B1-286"],
         "amount": 1
       },
       {
@@ -408,7 +408,7 @@
         "amount": 1
       },
       {
-        "options": ["B1-69", "B1-234", "B3-210"],
+        "options": ["B1-69", "B1-234"],
         "amount": 1
       },
       {
@@ -444,7 +444,32 @@
     "name": "Collect 1 Mega Evolution Pokémon ex card",
     "requiredCards": [
       {
-        "options": ["B1-36", "B1-254", "B1-284", "B3-226"],
+        "options": [
+          "B1-36",
+          "B4b-41",
+          "B1-254",
+          "B1-284",
+          "B1-52",
+          "B4b-60",
+          "B1-255",
+          "B1-285",
+          "B1-102",
+          "B4b-107",
+          "B1-259",
+          "B1-286",
+          "B1-2",
+          "B4b-8",
+          "B1-251",
+          "B1-272",
+          "B1-151",
+          "B4b-143",
+          "B1-262",
+          "B1-280",
+          "B1-85",
+          "B4b-90",
+          "B1-258",
+          "B1-277"
+        ],
         "amount": 1
       }
     ],
@@ -456,7 +481,32 @@
     "name": "Collect 3 Mega Evolution Pokémon ex cards",
     "requiredCards": [
       {
-        "options": ["B1-36", "B1-254", "B1-284", "B3-226"],
+        "options": [
+          "B1-36",
+          "B4b-41",
+          "B1-254",
+          "B1-284",
+          "B1-52",
+          "B4b-60",
+          "B1-255",
+          "B1-285",
+          "B1-102",
+          "B4b-107",
+          "B1-259",
+          "B1-286",
+          "B1-2",
+          "B4b-8",
+          "B1-251",
+          "B1-272",
+          "B1-151",
+          "B4b-143",
+          "B1-262",
+          "B1-280",
+          "B1-85",
+          "B4b-90",
+          "B1-258",
+          "B1-277"
+        ],
         "amount": 3
       }
     ],
@@ -504,27 +554,27 @@
     "name": "A Multitude of Mega Evolution Pokémon!",
     "requiredCards": [
       {
-        "options": ["B1-2", "B1-251", "B1-272"],
+        "options": ["B1-2", "B4b-8", "B1-251", "B1-272"],
         "amount": 1
       },
       {
-        "options": ["B1-36", "B1-254", "B1-284", "B3-226"],
+        "options": ["B1-36", "B4b-41", "B1-254", "B1-284"],
         "amount": 1
       },
       {
-        "options": ["B1-52", "B1-255", "B1-285", "B3b-101"],
+        "options": ["B1-52", "B4b-60", "B1-255", "B1-285"],
         "amount": 1
       },
       {
-        "options": ["B1-85", "B1-258", "B1-277", "B3b-103"],
+        "options": ["B1-85", "B4b-90", "B1-258", "B1-277"],
         "amount": 1
       },
       {
-        "options": ["B1-102", "B1-259", "B1-286", "B3a-107"],
+        "options": ["B1-102", "B4b-107", "B1-259", "B1-286"],
         "amount": 1
       },
       {
-        "options": ["B1-151", "B1-262", "B1-280", "B3-230", "P-B-9"],
+        "options": ["B1-151", "B4b-143", "B1-262", "B1-280"],
         "amount": 1
       }
     ],

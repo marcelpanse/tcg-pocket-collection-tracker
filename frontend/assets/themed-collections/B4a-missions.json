@@ -8,7 +8,7 @@
         "amount": 1
       },
       {
-        "options": ["B4a-71"],
+        "options": ["B4a-71", "B4a-87"],
         "amount": 1
       }
     ],
@@ -24,7 +24,7 @@
         "amount": 1
       },
       {
-        "options": ["A2b-57", "B4a-51"],
+        "options": ["B4a-51", "B4a-109"],
         "amount": 1
       },
       {
@@ -44,11 +44,11 @@
         "amount": 1
       },
       {
-        "options": ["B4a-68"],
+        "options": ["B4a-68", "B4a-110"],
         "amount": 1
       },
       {
-        "options": ["B4a-69"],
+        "options": ["B4a-69", "B4a-85"],
         "amount": 1
       }
     ],
@@ -96,11 +96,11 @@
     "name": "Team Rocket Grunt 1",
     "requiredCards": [
       {
-        "options": ["B4a-6"],
+        "options": ["B4a-6", "B4a-13", "B4a-19", "B4a-20", "B4a-25", "B4a-27", "B4a-28", "B4a-29", "B4a-40", "B4a-41", "B4a-42", "B4a-74"],
         "amount": 3
       },
       {
-        "options": ["B4a-70"],
+        "options": ["B4a-70", "B4a-86", "B4a-94"],
         "amount": 1
       }
     ],
@@ -112,11 +112,11 @@
     "name": "Team Rocket Grunt 2",
     "requiredCards": [
       {
-        "options": ["B4a-8"],
+        "options": ["B4a-8", "B4a-9", "B4a-24", "B4a-38", "B4a-39", "B4a-44", "B4a-48", "B4a-49", "B4a-58", "B4a-60", "B4a-61", "B4a-62", "B4a-76"],
         "amount": 3
       },
       {
-        "options": ["B4a-70"],
+        "options": ["B4a-70", "B4a-86", "B4a-94"],
         "amount": 1
       }
     ],
@@ -128,7 +128,7 @@
     "name": "Beware of Poison Gas!",
     "requiredCards": [
       {
-        "options": ["B4a-42"],
+        "options": ["B4a-42", "B4a-43", "B4a-83", "B4a-92"],
         "amount": 3
       }
     ],
@@ -140,7 +140,54 @@
     "name": "Team Rocket’s Pokémon",
     "requiredCards": [
       {
-        "options": ["B4a-6"],
+        "options": [
+          "B4a-6",
+          "B4a-7",
+          "B4a-8",
+          "B4a-9",
+          "B4a-13",
+          "B4a-14",
+          "B4a-19",
+          "B4a-20",
+          "B4a-21",
+          "B4a-24",
+          "B4a-25",
+          "B4a-26",
+          "B4a-27",
+          "B4a-28",
+          "B4a-29",
+          "B4a-30",
+          "B4a-38",
+          "B4a-39",
+          "B4a-40",
+          "B4a-41",
+          "B4a-42",
+          "B4a-43",
+          "B4a-44",
+          "B4a-48",
+          "B4a-49",
+          "B4a-50",
+          "B4a-58",
+          "B4a-59",
+          "B4a-60",
+          "B4a-61",
+          "B4a-62",
+          "B4a-74",
+          "B4a-75",
+          "B4a-76",
+          "B4a-79",
+          "B4a-80",
+          "B4a-81",
+          "B4a-82",
+          "B4a-83",
+          "B4a-84",
+          "B4a-88",
+          "B4a-89",
+          "B4a-90",
+          "B4a-91",
+          "B4a-92",
+          "B4a-93"
+        ],
         "amount": 100
       }
     ],
@@ -152,7 +199,7 @@
     "name": "Team Rocket Grunt Army!",
     "requiredCards": [
       {
-        "options": ["B4a-70"],
+        "options": ["B4a-70", "B4a-86", "B4a-94"],
         "amount": 20
       }
     ],
@@ -164,7 +211,7 @@
     "name": "Shady Invention Collector",
     "requiredCards": [
       {
-        "options": ["B4a-67"],
+        "options": ["B4a-67", "B4a-68", "B4a-110"],
         "amount": 42
       }
     ],
@@ -484,11 +531,11 @@
     "name": "Pokémon Holding Things in Their Hands",
     "requiredCards": [
       {
-        "options": ["B4a-12"],
+        "options": ["B4a-12", "B4a-73"],
         "amount": 1
       },
       {
-        "options": ["B4a-28"],
+        "options": ["B4a-28", "B4a-74"],
         "amount": 1
       },
       {
@@ -512,7 +559,7 @@
         "amount": 1
       },
       {
-        "options": ["B4a-50"],
+        "options": ["B4a-50", "B4a-75"],
         "amount": 1
       }
     ],
