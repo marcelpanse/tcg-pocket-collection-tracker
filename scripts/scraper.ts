@@ -43,6 +43,7 @@ const packs = [
   'ruleroftheskiespack',
   'teamrocketsambitionpack',
   'deluxepackmega',
+  'megamewtwoxpack',
   'allcards',
 ]
 
@@ -132,8 +133,13 @@ const rarityOverrides: Record<ExpansionId, { rarity: Rarity; start: number; end:
     // 73-78 are gold full-art (☆), 79-93 are ☆☆, 94 is ☆☆☆, 109-110 are Crown — Serebii labels those correctly.
   ],
   B4b: [{ rarity: '✵✵', start: 426, end: 427 }],
+  C1: [
+    { rarity: '✵', start: 187, end: 206 },
+    { rarity: '✵✵', start: 207, end: 214 },
+  ],
   'P-A': [],
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],
+  'P-C': [{ rarity: 'P', start: 0, end: 999 }],
 }
 
 // The cards that should be the deckbuilding version, instead of the default "smallest internal_id"
@@ -309,15 +315,22 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
   const hpString = titleParts.length > 1 ? titleParts[titleParts.length - 1].replace(/\D/g, '') : undefined
   const hp: number | undefined = hpString && parseInt(hpString, 10)
 
-  // Assign the energy type from the second part if it exists
+  // Assign the energy type from the second part if it exists. Dual-type Pokémon (C1 onwards) read "Water/Darkness".
   let energyString = titleParts.length > 1 ? titleParts[1].trim().toLowerCase() : 'trainer'
   if (energyString === '40 hp' && (name.includes('Fossil') || name === 'Old Amber')) {
     energyString = 'trainer'
   }
-  if (!energyString || !(cardTypes as readonly string[]).includes(energyString)) {
-    throw new Error(`Failed to find energy: ${energyString}, ${cardUrl}`)
+  const [primaryEnergy, secondaryEnergy, ...extraEnergies] = energyString.split('/').map((e) => e.trim())
+  for (const e of [primaryEnergy, secondaryEnergy].filter((e) => e !== undefined)) {
+    if (!e || !(cardTypes as readonly string[]).includes(e)) {
+      throw new Error(`Failed to find energy: ${energyString}, ${cardUrl}`)
+    }
   }
-  const energy = energyString as CardType
+  if (extraEnergies.length > 0) {
+    throw new Error(`More than two energy types: ${energyString}, ${cardUrl}`)
+  }
+  const energy = primaryEnergy as CardType
+  const secondary_energy = secondaryEnergy as CardType | undefined
 
   const typeAndEvolution = $('p.card-text-type').text().trim().split('-')
   const card_type = typeAndEvolution[0].toLowerCase().trim()
@@ -433,6 +446,7 @@ async function extractCardInfo($: CheerioAPI, cardUrl: string, expansion: Expans
     image,
     hp,
     energy,
+    ...(secondary_energy && { secondary_energy }),
     name,
     card_type,
     evolution_type,

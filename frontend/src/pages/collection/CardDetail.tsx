@@ -225,7 +225,14 @@ export default function CardDetail() {
             <div className="mt-8">
               <CardProperty name={t('text.expansion')}>{card?.expansion}</CardProperty>
               <CardProperty name={t('text.pack')}>{card && t(card.pack, { ns: 'common/packs' })}</CardProperty>
-              <CardProperty name="Energy">{(card && t(card.energy, { ns: 'common/types' })) || 'N/A'}</CardProperty>
+              <CardProperty name="Energy">
+                {(card &&
+                  [card.energy, card.secondary_energy]
+                    .filter(Boolean)
+                    .map((e) => t(e as string, { ns: 'common/types' }))
+                    .join(' / ')) ||
+                  'N/A'}
+              </CardProperty>
               <CardProperty name={t('text.weakness')}>{(card && t(card.weakness, { ns: 'common/types' })) || 'N/A'}</CardProperty>
               {card?.hp && <CardProperty name={t('text.hp')}>{card?.hp}</CardProperty>}
               {card?.retreat && <CardProperty name={t('text.retreat')}>{card.retreat}</CardProperty>}

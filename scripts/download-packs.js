@@ -28,6 +28,8 @@ const expansions = [
   'B3b',
   'B4',
   'B4a',
+  'B4b',
+  'C1',
   'P-A',
 ]
 
