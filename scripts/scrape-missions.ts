@@ -8,7 +8,9 @@ const BASE_URL = 'https://www.pokemon-zone.com'
 const TARGET_DIR = './frontend/assets/themed-collections/'
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36'
 
-const expansions = allExpansions.map((e) => e.id)
+// Optional CLI filter: `tsx scripts/scrape-missions.ts C1 B4b` only scrapes those sets.
+const onlyIds = process.argv.slice(2)
+const expansions = allExpansions.map((e) => e.id).filter((id) => onlyIds.length === 0 || onlyIds.includes(id))
 
 type PZCard = {
   cardId: string

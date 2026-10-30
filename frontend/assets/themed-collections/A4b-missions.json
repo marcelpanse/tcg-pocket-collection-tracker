@@ -796,6 +796,37 @@
   },
   {
     "expansionId": "A4b",
+    "name": "ex Collection • Fighting",
+    "requiredCards": [
+      {
+        "options": [
+          "A1-146",
+          "A4b-193",
+          "A1-153",
+          "A4b-196",
+          "A1a-46",
+          "A4b-197",
+          "A4-100",
+          "A4b-202",
+          "A2a-47",
+          "A4b-209",
+          "A2b-43",
+          "A4b-214",
+          "A2-95",
+          "A4b-215",
+          "A3a-33",
+          "A4b-222",
+          "A3-104",
+          "A4b-223"
+        ],
+        "amount": 5
+      }
+    ],
+    "reward": "Shinedust ×600",
+    "secret": false
+  },
+  {
+    "expansionId": "A4b",
     "name": "ex Collection • Darkness",
     "requiredCards": [
       {
@@ -901,6 +932,314 @@
           "A4b-362",
           "A4b-371"
         ],
+        "amount": 1
+      }
+    ],
+    "reward": "Wonder Hourglass ×36<br />Pack Hourglass ×12<br />Shop Ticket ×10",
+    "secret": true
+  },
+  {
+    "expansionId": "A4b",
+    "name": "ex Complete!",
+    "requiredCards": [
+      {
+        "options": ["A2b-3"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-3"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-4"],
+        "amount": 1
+      },
+      {
+        "options": ["A3a-6"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-7"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-9"],
+        "amount": 1
+      },
+      {
+        "options": ["A2a-10"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-10"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-12"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-18"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-19"],
+        "amount": 1
+      },
+      {
+        "options": ["A3a-19"],
+        "amount": 1
+      },
+      {
+        "options": ["A4-21"],
+        "amount": 1
+      },
+      {
+        "options": ["A2a-22"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-22"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-23"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-23"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-24"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-29"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-32"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-33"],
+        "amount": 1
+      },
+      {
+        "options": ["A3a-33"],
+        "amount": 1
+      },
+      {
+        "options": ["A4-34"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-34"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-35"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-36"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-41"],
+        "amount": 1
+      },
+      {
+        "options": ["A4-43"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-43"],
+        "amount": 1
+      },
+      {
+        "options": ["A3a-43"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-46"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-47"],
+        "amount": 1
+      },
+      {
+        "options": ["A2a-47"],
+        "amount": 1
+      },
+      {
+        "options": ["A3a-47"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-48"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-49"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-49"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-51"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-53"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-54"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-56"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-56"],
+        "amount": 1
+      },
+      {
+        "options": ["A2a-57"],
+        "amount": 1
+      },
+      {
+        "options": ["A3b-57"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-58"],
+        "amount": 1
+      },
+      {
+        "options": ["A1a-59"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-61"],
+        "amount": 1
+      },
+      {
+        "options": ["A4-65"],
+        "amount": 1
+      },
+      {
+        "options": ["A2b-65"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-67"],
+        "amount": 1
+      },
+      {
+        "options": ["A2a-71"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-76"],
+        "amount": 1
+      },
+      {
+        "options": ["A4-83"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-84"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-87"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-95"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-96"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-99"],
+        "amount": 1
+      },
+      {
+        "options": ["A4-100"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-104"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-104"],
+        "amount": 1
+      },
+      {
+        "options": ["A4-109"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-110"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-111"],
+        "amount": 1
+      },
+      {
+        "options": ["A4-112"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-119"],
+        "amount": 1
+      },
+      {
+        "options": ["A3-122"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-123"],
+        "amount": 1
+      },
+      {
+        "options": ["A4-124"],
+        "amount": 1
+      },
+      {
+        "options": ["A2-125"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-129"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-146"],
+        "amount": 1
+      },
+      {
+        "options": ["A4-149"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-153"],
+        "amount": 1
+      },
+      {
+        "options": ["A1-195"],
         "amount": 1
       }
     ],

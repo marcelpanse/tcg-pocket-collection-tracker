@@ -4,15 +4,15 @@
     "name": "First Partners 1",
     "requiredCards": [
       {
-        "options": ["B2a-1", "B2a-116"],
+        "options": ["B2a-1", "B4b-21", "B2a-116"],
         "amount": 1
       },
       {
-        "options": ["B2a-2", "B2a-117"],
+        "options": ["B2a-2", "B4b-22", "B2a-117"],
         "amount": 1
       },
       {
-        "options": ["B2a-3", "B2a-100", "B2a-110", "B2a-118"],
+        "options": ["B2a-3", "B4b-23", "B2a-100", "B2a-110", "B2a-118"],
         "amount": 1
       }
     ],
@@ -24,15 +24,15 @@
     "name": "First Partners 2",
     "requiredCards": [
       {
-        "options": ["B2a-16", "B2a-94"],
+        "options": ["B2a-16", "B4b-46", "B2a-94"],
         "amount": 1
       },
       {
-        "options": ["B2a-17"],
+        "options": ["B2a-17", "B4b-47"],
         "amount": 1
       },
       {
-        "options": ["B2a-18"],
+        "options": ["B2a-18", "B4b-48"],
         "amount": 1
       }
     ],
@@ -88,7 +88,7 @@
         "amount": 1
       },
       {
-        "options": ["B2a-37", "B2a-102", "B2a-112"],
+        "options": ["B2a-37", "B4b-81", "B2a-102", "B2a-112"],
         "amount": 1
       },
       {
@@ -124,7 +124,7 @@
         "amount": 1
       },
       {
-        "options": ["B2a-91", "B2a-108", "B2a-115"],
+        "options": ["B2a-91", "B4b-222", "B2a-108", "B2a-115"],
         "amount": 1
       }
     ],
@@ -136,7 +136,7 @@
     "name": "Wafting Fragrances",
     "requiredCards": [
       {
-        "options": ["B2a-1", "B2a-116"],
+        "options": ["B2a-1", "B4b-21", "B2a-116"],
         "amount": 1
       },
       {

@@ -16,7 +16,7 @@
         "amount": 1
       },
       {
-        "options": ["B1a-14", "B1a-77", "B1a-87"],
+        "options": ["B1a-14", "B4b-32", "B1a-77", "B1a-87"],
         "amount": 1
       }
     ],
@@ -28,11 +28,11 @@
     "name": "Mighty Water Blasts",
     "requiredCards": [
       {
-        "options": ["B1a-18"],
+        "options": ["B1a-18", "B4b-53"],
         "amount": 1
       },
       {
-        "options": ["B1a-20", "B1a-78", "B1a-84"],
+        "options": ["B1a-20", "B4b-54", "B1a-78", "B1a-84"],
         "amount": 1
       },
       {
@@ -48,7 +48,7 @@
     "name": "Overpowering Aromas",
     "requiredCards": [
       {
-        "options": ["B1a-4", "B1a-76", "B1a-83"],
+        "options": ["B1a-4", "B4b-3", "B1a-76", "B1a-83"],
         "amount": 1
       },
       {
@@ -180,7 +180,7 @@
     "name": "Clemont the Inventor",
     "requiredCards": [
       {
-        "options": ["B1a-25"],
+        "options": ["B1a-25", "B4b-85"],
         "amount": 1
       },
       {
@@ -192,7 +192,7 @@
         "amount": 1
       },
       {
-        "options": ["B1a-68", "B1a-81"],
+        "options": ["B1a-68", "B4b-218", "B1a-81"],
         "amount": 1
       }
     ],
@@ -228,7 +228,7 @@
     "name": "Collect 3 Serena cards",
     "requiredCards": [
       {
-        "options": ["B1a-69", "B1a-82"],
+        "options": ["B1a-69", "B4b-219", "B1a-82"],
         "amount": 3
       }
     ],
@@ -348,23 +348,23 @@
     "name": "A Multitude of Mega Evolution Pokémon!",
     "requiredCards": [
       {
-        "options": ["B1a-4", "B1a-76", "B1a-83"],
+        "options": ["B1a-4", "B4b-3", "B1a-76", "B1a-83"],
         "amount": 1
       },
       {
-        "options": ["B1a-14", "B1a-77", "B1a-87"],
+        "options": ["B1a-14", "B4b-32", "B1a-77", "B1a-87"],
         "amount": 1
       },
       {
-        "options": ["B1a-20", "B1a-78", "B1a-84"],
+        "options": ["B1a-20", "B4b-54", "B1a-78", "B1a-84"],
         "amount": 1
       },
       {
-        "options": ["B1a-42", "B1a-79", "B1a-85"],
+        "options": ["B1a-42", "B4b-125", "B1a-79", "B1a-85"],
         "amount": 1
       },
       {
-        "options": ["B1a-52", "B1a-80", "B1a-86"],
+        "options": ["B1a-52", "B4b-155", "B1a-80", "B1a-86"],
         "amount": 1
       }
     ],
