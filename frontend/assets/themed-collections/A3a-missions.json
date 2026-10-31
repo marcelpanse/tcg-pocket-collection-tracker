@@ -4,19 +4,19 @@
     "name": "Ultra Beast Collection",
     "requiredCards": [
       {
-        "options": ["A4b-44", "A3a-76", "A3a-88", "A4b-360", "B1a-98"],
+        "options": ["A3a-6", "A4b-44", "A3a-76", "A3a-88"],
         "amount": 1
       },
       {
-        "options": ["A4b-45", "A3a-71", "A4b-46"],
+        "options": ["A3a-7", "A4b-45", "A3a-71"],
         "amount": 1
       },
       {
-        "options": ["A3a-8"],
+        "options": ["A3a-8", "A4b-47"],
         "amount": 1
       },
       {
-        "options": ["A3a-9", "A3a-72", "P-A-76"],
+        "options": ["A3a-9", "A3a-72"],
         "amount": 1
       },
       {
@@ -24,11 +24,11 @@
         "amount": 1
       },
       {
-        "options": ["A4b-246", "A3a-103", "A4b-247"],
+        "options": ["A3a-42", "A4b-246", "A3a-103"],
         "amount": 1
       },
       {
-        "options": ["A4b-248", "A3a-79", "A3a-86", "B1a-100"],
+        "options": ["A3a-43", "A4b-248", "A3a-79", "A3a-86"],
         "amount": 1
       },
       {
@@ -44,7 +44,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-304", "A3a-75", "A4b-305"],
+        "options": ["A3a-62", "A4b-304", "A3a-75"],
         "amount": 1
       }
     ],
@@ -60,11 +60,11 @@
         "amount": 1
       },
       {
-        "options": ["A4b-148", "A3a-77", "A3a-84", "B1-322", "P-A-84"],
+        "options": ["A3a-19", "A4b-148", "A3a-77", "A3a-84"],
         "amount": 1
       },
       {
-        "options": ["A3a-21"],
+        "options": ["A3a-21", "A4b-149"],
         "amount": 1
       }
     ],
@@ -84,7 +84,7 @@
         "amount": 1
       },
       {
-        "options": ["A4b-350", "A3a-83", "A4b-351", "A4b-375"],
+        "options": ["A3a-69", "A4b-350", "A3a-83"],
         "amount": 1
       }
     ],
@@ -96,11 +96,11 @@
     "name": "Type: Null’s Bonds",
     "requiredCards": [
       {
-        "options": ["A3a-60"],
+        "options": ["A3a-60", "A4b-300"],
         "amount": 1
       },
       {
-        "options": ["A4b-302", "A3a-74", "A4b-303", "B1a-97"],
+        "options": ["A3a-61", "A4b-302", "A3a-74"],
         "amount": 1
       },
       {
@@ -244,7 +244,7 @@
     "name": "Collect 5 Nihilego cards",
     "requiredCards": [
       {
-        "options": ["A4b-246", "A3a-103", "A4b-247"],
+        "options": ["A3a-42", "A4b-246", "A3a-103"],
         "amount": 5
       }
     ],
