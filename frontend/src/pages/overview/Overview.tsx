@@ -61,9 +61,11 @@ function Overview() {
 
   useEffect(() => localStorage.setItem('overview-filters', JSON.stringify(filters)), [filters])
 
-  const availableCards = getFilteredCards(filters, ownedCards)
-  const collectedCards = ownedCards && getFilteredCards({ ...filters, minNumber: filters.number }, ownedCards)
-  const wantedCards = ownedCards && getFilteredCards({ ...filters, maxNumber: filters.number - 1 }, ownedCards)
+  // Like the game, set totals leave out cards no pack gives (e.g. mission rewards).
+  const countsTowardsSet = (c: Card) => !c.not_in_packs
+  const availableCards = getFilteredCards(filters, ownedCards).filter(countsTowardsSet)
+  const collectedCards = ownedCards && getFilteredCards({ ...filters, minNumber: filters.number }, ownedCards).filter(countsTowardsSet)
+  const wantedCards = ownedCards && getFilteredCards({ ...filters, maxNumber: filters.number - 1 }, ownedCards).filter(countsTowardsSet)
 
   const getHighestProbabilityPack = () => {
     let newHighestProbabilityPack: { packName: string; percentage: number; fill: string } | undefined

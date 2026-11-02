@@ -240,7 +240,7 @@ export default function CardDetail() {
               {card?.ability && <CardProperty name={t('text.abilityEffect')}>{translateEnergySymbols(card.ability.effect)}</CardProperty>}
               <CardProperty name={t('text.cardType')}>{card && t(`cardType.${card.card_type}`)}</CardProperty>
               <CardProperty name={t('text.evolutionType')}>{card && t(`evolutionType.${card.evolution_type}`)}</CardProperty>
-              {expansion && packName && card && card.rarity !== 'P' && (
+              {expansion && packName && card && card.rarity !== 'P' && !card.not_in_packs && (
                 <CardProperty name={t('text.chanceToPull')}>{card && pullRateForSpecificCard(expansion, packName, card).toFixed(2)}%</CardProperty>
               )}
               {card && craftingCost[card.rarity] && <CardProperty name={t('text.craftingCost')}>{craftingCost[card.rarity]}</CardProperty>}
