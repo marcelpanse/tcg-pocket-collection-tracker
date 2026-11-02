@@ -1,6 +1,7 @@
 import i18n from 'i18next'
-import { MinusIcon, PlusIcon, Trash2Icon } from 'lucide-react'
+import { MinusIcon, PackageXIcon, PlusIcon, Trash2Icon } from 'lucide-react'
 import { startTransition, useOptimistic } from 'react'
+import { useTranslation } from 'react-i18next'
 import FancyCard from '@/components/FancyCard.tsx'
 import { Button } from '@/components/ui/button.tsx'
 import { cn, getCardNameByLang } from '@/lib/utils'
@@ -16,6 +17,7 @@ interface CardProps {
 }
 
 export function Card({ card, onImageClick, className, editable = true }: CardProps) {
+  const { t } = useTranslation('pages/card-detail')
   const { setSelectedCardId } = useSelectedCard()
   const updateCardsMutation = useUpdateCards()
   const setCollectedMutation = useSetCollected()
@@ -61,6 +63,11 @@ export function Card({ card, onImageClick, className, editable = true }: CardPro
         }}
       >
         <FancyCard card={card} selected={Boolean(card.collected) && !isPending} />
+        {card.not_in_packs && (
+          <span className="absolute top-1 left-1 rounded-full bg-neutral-900/80 p-1" title={t('text.notInPacks')}>
+            <PackageXIcon className="size-4 text-amber-400" aria-label={t('text.notInPacks')} />
+          </span>
+        )}
         {isPending && <Spinner size="md" overlay />}
       </button>
       <p

@@ -2,7 +2,11 @@ import type { MissionDetailProps } from '@/components/Mission'
 import type { Card, Expansion, ExpansionId, Mission, Pack, PackStructure, Rarity } from '@/types'
 import { allCards, getCardById, getExpansionById } from './CardsDB'
 
-const expansionCards = Object.groupBy(allCards, (c) => c.expansion) as Partial<Record<ExpansionId, Card[]>>
+// Only cards a pack can actually give count towards pull rates.
+const expansionCards = Object.groupBy(
+  allCards.filter((c) => !c.not_in_packs),
+  (c) => c.expansion,
+) as Partial<Record<ExpansionId, Card[]>>
 
 // Helper to create a full rarity probability record with defaults
 const createRarityProbability = (probabilities: Partial<Record<Rarity, number>>): Record<Rarity, number> => ({
