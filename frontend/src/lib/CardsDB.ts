@@ -371,6 +371,7 @@ export const expansions: Expansion[] = [
     packs: [
       { name: 'pikachupack', color: '#78c08a' },
       { name: 'megamewtwoxpack', color: '#c078aa' },
+      { name: 'everypack', color: '#c0c0c0' },
     ],
     tradeable: true,
     openable: true,
