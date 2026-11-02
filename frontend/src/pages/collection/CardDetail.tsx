@@ -243,6 +243,7 @@ export default function CardDetail() {
               {expansion && packName && card && card.rarity !== 'P' && !card.not_in_packs && (
                 <CardProperty name={t('text.chanceToPull')}>{card && pullRateForSpecificCard(expansion, packName, card).toFixed(2)}%</CardProperty>
               )}
+              {card?.not_in_packs && <CardProperty name={t('text.chanceToPull')}>{t('text.notInPacks')}</CardProperty>}
               {card && craftingCost[card.rarity] && <CardProperty name={t('text.craftingCost')}>{craftingCost[card.rarity]}</CardProperty>}
               <CardProperty name={t('text.artist')}>{card?.artist}</CardProperty>
             </div>
