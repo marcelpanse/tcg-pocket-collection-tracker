@@ -352,7 +352,7 @@ export const expansions: Expansion[] = [
     internalId: 22,
     packs: [{ name: 'deluxepackmega', color: '#7878bf' }],
     tradeable: true,
-    openable: true,
+    openable: false,
     packStructure: {
       containsShinies: true,
       containSixthCardBabies: false,
