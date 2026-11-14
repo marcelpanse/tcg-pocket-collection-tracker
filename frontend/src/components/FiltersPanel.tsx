@@ -12,6 +12,7 @@ import {
   type ExpansionOption,
   expansionOptions,
   type Filters,
+  getExpansionSeries,
   hpOptions,
   ownershipOptions,
   pokemonKindOptions,
@@ -80,6 +81,10 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
     return t(id === 'all' ? 'all' : getExpansionById(id).name, { ns: 'common/sets' })
   }
 
+  function getExpansionGroup(id: ExpansionOption) {
+    return id === 'all' ? undefined : getExpansionSeries(id)
+  }
+
   return (
     <div className={className}>
       {filters.search !== undefined && <SearchInput value={filters.search} setValue={changeFilter('search')} />}
@@ -91,6 +96,7 @@ const FilterPanel: FC<Props> = ({ className, filters, setFilters, clearFilters }
           value={filters.expansion}
           onChange={onExpansionChange}
           show={getLocalizedExpansion}
+          group={getExpansionGroup}
         />
       )}
       {filters.pack !== undefined && packsToShow && (
