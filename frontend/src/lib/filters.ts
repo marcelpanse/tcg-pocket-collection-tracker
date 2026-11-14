@@ -1,10 +1,15 @@
 import i18n from '@/i18n'
-import { type Card, type Collection, energies, expansionIds, type Rarity, type RaritySettingsRow } from '@/types'
+import { type Card, type Collection, type ExpansionId, energies, expansionIds, type Rarity, type RaritySettingsRow } from '@/types'
 import { allCards, getCardByInternalId } from './CardsDB'
 import { levenshtein } from './levenshtein'
 import { getCardNameByLang, getExtraCards, getWantedCards } from './utils'
 
 export const expansionOptions = ['all', ...expansionIds] as const
+
+export function getExpansionSeries(id: ExpansionId): string {
+  const series = id.startsWith('P-') ? 'promo' : id.startsWith('SP') ? 'special' : id.charAt(0)
+  return i18n.t(`series-${series}`, { ns: 'common/sets', defaultValue: `Series ${series}` })
+}
 export const sortByOptions = ['expansion-newest', 'rarity', 'type', 'recent'] as const
 export const cardTypeOptions = [...energies, 'dragon', 'colorless'] as const
 export const ownershipOptions = ['all', 'missing', 'registered'] as const

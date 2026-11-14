@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { DropdownFilter, TabsFilter } from '@/components/Filters'
 import { MissionsTable } from '@/components/MissionsTable'
 import { getExpansionById } from '@/lib/CardsDB'
+import { getExpansionSeries } from '@/lib/filters'
 import { expansionsWithMissions, getMissionsForExpansion } from '@/lib/MissionsDB'
 import { getMissionType, type MissionType } from '@/lib/utils'
 import { useAccount } from '@/services/account/useAccount'
@@ -60,6 +61,7 @@ export default function Missions() {
           value={expansion}
           onChange={setExpansion}
           show={getLocalizedExpansion}
+          group={getExpansionSeries}
         />
         <TabsFilter options={ownedOptions} value={ownedFilter} onChange={setOwnedFilter} show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-owned' })} />
         <TabsFilter options={typeOptions} value={typeFilter} onChange={setTypeFilter} show={(x) => t(x, { ns: 'filters', keyPrefix: 'f-missiontype' })} />
