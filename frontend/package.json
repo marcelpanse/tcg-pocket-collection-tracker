@@ -37,7 +37,7 @@
     "clsx": "^2.1.1",
     "i18next": "^26.4.1",
     "i18next-browser-languagedetector": "^8.2.1",
-    "i18next-http-backend": "^4.0.1",
+    "i18next-http-backend": "^4.0.4",
     "input-otp": "^1.5.0",
     "lucide-react": "^1.39.0",
     "qrcode.react": "^4.2.0",
@@ -57,7 +57,7 @@
     "tailwindcss": "^4.3.3",
     "tailwindcss-animate": "^1.0.7",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
-    "zod": "^4.5.4"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@rolldown/plugin-babel": "^0.2.3",
@@ -69,7 +69,7 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "globals": "^17.12.0",
     "typescript": "~7.0.2",
-    "vite": "^8.2.2",
+    "vite": "^8.3.3",
     "vite-plugin-mkcert": "^2.1.0",
     "vite-plugin-strip-comments": "^0.0.10"
   },
