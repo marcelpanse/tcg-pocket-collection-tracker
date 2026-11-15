@@ -383,7 +383,7 @@ export const expansions: Expansion[] = [
     internalId: 24,
     packs: [{ name: 'firstpartnerspack', color: '#78c0ad' }],
     tradeable: true,
-    openable: true,
+    openable: false, //setting this false since it doesn't help showing it in the next pack to open overview (limited pack)
     packStructure: {
       containsShinies: false,
       containSixthCardBabies: false,
