@@ -6,6 +6,7 @@ import { expansions as allExpansions } from '../frontend/src/lib/CardsDB'
 
 const BASE_URL = 'https://www.pokemon-zone.com'
 const TARGET_DIR = './frontend/assets/themed-collections/'
+const NOT_IN_PACKS_PATH = './frontend/assets/not-in-packs.json'
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36'
 
 // CLI: `tsx scripts/scrape-missions.ts [--bundle <file>] [SET ...]`
@@ -36,6 +37,9 @@ if (unknownIds.length > 0) {
 type PZCard = {
   cardId: string
   expansionCollectionNumbers: { expansionId: string; collectionNumber: number }[]
+  isPromotion: boolean
+  foundInPacks: string[] | null
+  isInAllExpansionPacks: boolean
 }
 
 // pokemon-zone is behind Cloudflare and rejects node-fetch. Shell out to curl with full browser headers.
@@ -110,9 +114,7 @@ type PZMissionResponse = {
 // Build once and reused: maps a pokemon-zone card id (e.g. "PK_10_021240_00") to
 // every card_id we know for that card (a single card can live in more than one
 // expansion — Bulbasaur is A1-1 and A4b-1, for instance).
-function buildCardIdIndex(source: DataSource): Map<string, string[]> {
-  console.log('Loading pokemon-zone card catalog...')
-  const cardData = source.cardData()
+function buildCardIdIndex(cardData: { cards: PZCard[] }): Map<string, string[]> {
   const index = new Map<string, string[]>()
   for (const card of cardData.cards) {
     const ids = card.expansionCollectionNumbers.map((ecn) => `${ecn.expansionId}-${ecn.collectionNumber}`)
@@ -123,6 +125,26 @@ function buildCardIdIndex(source: DataSource): Map<string, string[]> {
   }
   console.log(`  → ${index.size} cards indexed`)
   return index
+}
+
+// Cards no booster pack can give (e.g. A1-283 Mew, a mission reward). The game leaves them out of a
+// set's card total, so the frontend excludes them from set totals and pull rates. Promo cards are
+// skipped: they are never in packs, and promo sets have no pull rates anyway.
+function writeNotInPacks(cardData: { cards: PZCard[] }) {
+  const ids = new Set<string>()
+  for (const card of cardData.cards) {
+    if (card.isPromotion || card.isInAllExpansionPacks || (card.foundInPacks ?? []).length > 0) {
+      continue
+    }
+    for (const ecn of card.expansionCollectionNumbers) {
+      if (knownIds.includes(ecn.expansionId)) {
+        ids.add(`${ecn.expansionId}-${ecn.collectionNumber}`)
+      }
+    }
+  }
+  const sorted = [...ids].sort((a, b) => a.localeCompare(b, 'en', { numeric: true }))
+  fs.writeFileSync(NOT_IN_PACKS_PATH, `${JSON.stringify(sorted, null, 2)}\n`)
+  console.log(`  → ${sorted.length} cards not obtainable from packs written to ${NOT_IN_PACKS_PATH}: ${sorted.join(', ')}`)
 }
 
 function resolveTargetIds(targetIds: string[], index: Map<string, string[]>): string[] {
@@ -348,7 +370,10 @@ function main() {
   const bundle = bundlePath ? loadBundle(bundlePath) : null
   const source = bundle ? bundleSource(bundle) : liveSource
   const expansions = onlyIds.length > 0 ? onlyIds : (bundle?.expansions ?? knownIds)
-  const index = buildCardIdIndex(source)
+  console.log('Loading pokemon-zone card catalog...')
+  const cardData = source.cardData()
+  writeNotInPacks(cardData)
+  const index = buildCardIdIndex(cardData)
   for (const [i, exp] of expansions.entries()) {
     if (i > 0 && !bundle) {
       sleep(1500)

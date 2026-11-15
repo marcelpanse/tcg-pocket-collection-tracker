@@ -19,7 +19,8 @@
     "alternateVersions": "Alternate versions",
     "totalAmount": "Total amount",
     "uncollect": "Uncollect",
-    "uncollectTooltip": "Uncollecting a card doesn't decrease the card count, but it will show the card as not collected."
+    "uncollectTooltip": "Uncollecting a card doesn't decrease the card count, but it will show the card as not collected.",
+    "notInPacks": "Not found in packs · doesn't count towards the set total"
   },
   "cardType": {
     "pokémon": "Pokémon",

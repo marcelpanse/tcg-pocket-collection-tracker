@@ -176,6 +176,7 @@ export interface Card {
   pack: string
   alternate_versions: number[]
   artist: string
+  not_in_packs?: boolean // no booster pack gives it (e.g. a mission reward); excluded from set totals and pull rates
 
   amount_owned?: number // calculated from the card amounts table
   collected?: boolean // calculated from the card amounts table

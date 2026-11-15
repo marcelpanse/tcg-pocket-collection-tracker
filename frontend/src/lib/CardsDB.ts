@@ -1,8 +1,12 @@
 import type { Card, Expansion, ExpansionId, Rarity } from '@/types'
+import NotInPacksJson from '../../assets/not-in-packs.json'
 
 const AllCardsJson = await import('../../assets/cards.json')
 
-export const allCards: Card[] = AllCardsJson.default as Card[]
+// Written by scripts/scrape-missions.ts from the game's card catalog.
+const notInPacks = new Set<string>(NotInPacksJson)
+
+export const allCards: Card[] = (AllCardsJson.default as Card[]).map((card) => (notInPacks.has(card.card_id) ? { ...card, not_in_packs: true } : card))
 
 const allCardsDict: Map<string, Card> = new Map(allCards.map((card) => [card.card_id, card]))
 const allCardsByInternalId: Map<number, Card> = new Map(allCards.toReversed().map((card) => [card.internal_id, card]))
@@ -367,6 +371,7 @@ export const expansions: Expansion[] = [
     packs: [
       { name: 'pikachupack', color: '#78c08a' },
       { name: 'megamewtwoxpack', color: '#c078aa' },
+      { name: 'everypack', color: '#c0c0c0' },
     ],
     tradeable: true,
     openable: true,
