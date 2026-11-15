@@ -16,7 +16,7 @@ export const missionsMap: Partial<Record<ExpansionId, Mission[]>> = Object.fromE
   }),
 )
 
-export const expansionsWithMissions = (Object.keys(missionsMap) as ExpansionId[]).filter((id) => (missionsMap[id]?.length ?? 0) > 0)
+export const expansionsWithMissions = expansionIds.filter((id) => (missionsMap[id]?.length ?? 0) > 0)
 
 export function getMissionsForExpansion(id: ExpansionId): Mission[] {
   return missionsMap[id] ?? []

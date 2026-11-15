@@ -48,18 +48,31 @@ interface PropsDropdown<T> extends Props<T> {
   label?: string
   value: T
   onChange: (value: T) => void
+  group?: (x: T) => string | undefined
 }
 
-export function DropdownFilter<T extends string | number>({ label, options, value, onChange, className, show = (x) => String(x) }: PropsDropdown<T>) {
+export function DropdownFilter<T extends string | number>({ label, options, value, onChange, className, show = (x) => String(x), group }: PropsDropdown<T>) {
+  const renderOption = (x: T) => (
+    <option key={x} value={x}>
+      {show(x)}
+    </option>
+  )
+
+  const groups = Map.groupBy(options, (x) => group?.(x))
+
   return (
     <label className={cn(commonClassName, 'flex items-baseline justify-between gap-4 px-2 py-1 text-neutral-400', className)}>
       {label && <span className="text-sm ml-1">{label}</span>}
-      <select value={value} onChange={(e) => onChange(e.target.value as T)} className="min-h-[27px] text-sm text-right cursor-pointer">
-        {options.map((x) => (
-          <option key={x} value={x}>
-            {show(x)}
-          </option>
-        ))}
+      <select value={value} onChange={(e) => onChange(e.target.value as T)} className="min-w-0 min-h-[27px] text-sm text-right cursor-pointer">
+        {[...groups].map(([groupLabel, items]) =>
+          groupLabel === undefined ? (
+            items.map(renderOption)
+          ) : (
+            <optgroup key={groupLabel} label={groupLabel}>
+              {items.map(renderOption)}
+            </optgroup>
+          ),
+        )}
       </select>
     </label>
   )
