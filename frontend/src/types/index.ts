@@ -26,6 +26,7 @@ export const expansionIds = [
   'A2',
   'A1a',
   'A1',
+  'SP1',
   'P-C',
   'P-B',
   'P-A',
@@ -127,7 +128,7 @@ export interface PackStructure {
   containsShinies: boolean
   containSixthCardBabies: boolean
   containsLinkedCards: boolean
-  cardsPerPack: 4 | 5
+  cardsPerPack: 1 | 4 | 5
 }
 
 export interface Expansion {

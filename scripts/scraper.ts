@@ -44,6 +44,7 @@ const packs = [
   'teamrocketsambitionpack',
   'deluxepackmega',
   'megamewtwoxpack',
+  'firstpartnerspack',
   'allcards',
 ]
 
@@ -137,6 +138,7 @@ const rarityOverrides: Record<ExpansionId, { rarity: Rarity; start: number; end:
     { rarity: '✵', start: 187, end: 206 },
     { rarity: '✵✵', start: 207, end: 214 },
   ],
+  SP1: [], // not on Limitless; cards and rarities come from scripts/backfill-from-serebii.ts
   'P-A': [],
   'P-B': [{ rarity: 'P', start: 0, end: 999 }],
   'P-C': [{ rarity: 'P', start: 0, end: 999 }],

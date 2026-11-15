@@ -67,7 +67,9 @@ function Overview() {
 
   const getHighestProbabilityPack = () => {
     let newHighestProbabilityPack: { packName: string; percentage: number; fill: string } | undefined
-    const filteredExpansions = expansions.filter((expansion) => expansion.openable)
+    // 1-card special packs (SP1) open weekly from their own hourglasses, not regular stamina, so they never compete for
+    // "best pack to open" (their near-100% new-card chance would always win). They still show in the table below.
+    const filteredExpansions = expansions.filter((expansion) => expansion.openable && expansion.packStructure?.cardsPerPack !== 1)
     for (const expansion of filteredExpansions) {
       const pullRates = expansion.packs
         .filter((p) => p.name !== 'everypack')

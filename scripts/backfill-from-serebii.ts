@@ -1,22 +1,56 @@
-// Fills in Promo-B cards Limitless does not list yet (recurring problem).
-// Metadata from Serebii, evolution stage from pokemongohub, image from pokemongohub PNG → sharp WebP.
-// Run: tsx scripts/backfill-promo-b.ts
+// Fills in cards Limitless does not list, from Serebii (metadata) and pokemongohub (evolution stage + PNG image).
+// Used for Promo-B cards Limitless has not caught up with yet (recurring), and for sets Limitless does not list
+// at all, like the SP1 First Partners special pack.
+// Runs as part of `pnpm scraper`, after scraper.ts has rewritten cards.json, and is idempotent.
+// Run: tsx scripts/backfill-from-serebii.ts [--dry-run]
 import fs from 'node:fs'
 import path from 'node:path'
 import * as cheerio from 'cheerio'
 import fetch from 'node-fetch'
 import sharp from 'sharp'
 import { expansions } from '../frontend/src/lib/CardsDB'
-import type { Card, CardType } from '../frontend/src/types'
+import type { Card, CardType, ExpansionId, Rarity } from '../frontend/src/types'
 import { encode } from './encoder'
 
 // Windows: sharp keeps a file lock on files opened via file path, blocking overwrite in the same
 // process. Disable the cache so metadata() releases the handle before we rewrite the file.
 sharp.cache(false)
 
-const EXPANSION_ID = 'P-B'
-const SEREBII_LIST = 'https://www.serebii.net/tcgpocket/promo-b/'
-const HUB_LIST = 'https://pocket.pokemongohub.net/en/set/vxunkwyap88g5jr-promo-b'
+interface Target {
+  id: ExpansionId
+  serebiiSlug: string // https://www.serebii.net/tcgpocket/<slug>/
+  hubSet: string // https://pocket.pokemongohub.net/en/set/<hubSet>
+  rarity: (cardNr: number) => Rarity
+  pack: string
+  // How alternate_versions is filled:
+  // - 'name': every existing card with the same name, one way only (Promo-B's original behaviour, kept so its output does not change).
+  // - 'gameplay': existing cards with identical card text (Limitless's "versions"), and the new id is added to theirs too,
+  //   so deckbuilding mode treats the prints as the same card in both directions.
+  link: 'name' | 'gameplay'
+}
+
+const targets: Target[] = [
+  {
+    id: 'P-B',
+    serebiiSlug: 'promo-b',
+    hubSet: 'vxunkwyap88g5jr-promo-b',
+    rarity: () => 'P',
+    pack: 'everypack',
+    link: 'name',
+  },
+  {
+    // First Partners special pack: not on Limitless at all. 1-27 are the ☆ starters; 28-30 are the three Mews, which
+    // carry no rarity symbol (Serebii shows its promo icon), so they are stored as 'P'. That also keeps them out of
+    // trading, matching the game.
+    id: 'SP1',
+    serebiiSlug: 'firstpartners',
+    hubSet: 'sp1firstpartner-special-pack-first-partners',
+    rarity: (cardNr) => (cardNr <= 27 ? '☆' : 'P'),
+    pack: 'firstpartnerspack',
+    link: 'gameplay',
+  },
+]
+
 const CARDS_JSON = 'frontend/assets/cards.json'
 const IMAGES_DIR = 'frontend/public/images/en-US'
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) TCG-Pocket-Collection-Tracker-Backfill'
@@ -44,14 +78,14 @@ async function get(url: string): Promise<string> {
   return res.text()
 }
 
-// Serebii promo-b listing: extract {number, url} for every card currently on the set page.
-async function listSerebiiCards(): Promise<{ number: number; url: string }[]> {
-  const html = await get(SEREBII_LIST)
+// Serebii set listing: extract {number, url} for every card currently on the set page.
+async function listSerebiiCards(slug: string): Promise<{ number: number; url: string }[]> {
+  const html = await get(`https://www.serebii.net/tcgpocket/${slug}/`)
   const $ = cheerio.load(html)
   const out: { number: number; url: string }[] = []
-  $('a[href^="/tcgpocket/promo-b/"]').each((_i, a) => {
+  $(`a[href^="/tcgpocket/${slug}/"]`).each((_i, a) => {
     const href = $(a).attr('href')
-    const m = href?.match(/\/tcgpocket\/promo-b\/(\d{3})\.shtml$/)
+    const m = href?.match(new RegExp(`/tcgpocket/${slug}/(\\d{3})\\.shtml$`))
     if (m) {
       const n = parseInt(m[1], 10)
       if (!out.some((c) => c.number === n)) {
@@ -63,8 +97,8 @@ async function listSerebiiCards(): Promise<{ number: number; url: string }[]> {
 }
 
 // pokemongohub set page: extract {number, name, cardUrl, imageUrl} from JSON-LD ItemList in the SSR HTML.
-async function listHubCards(): Promise<Map<number, { name: string; cardUrl: string; imageUrl: string }>> {
-  const html = await get(HUB_LIST)
+async function listHubCards(hubSet: string): Promise<Map<number, { name: string; cardUrl: string; imageUrl: string }>> {
+  const html = await get(`https://pocket.pokemongohub.net/en/set/${hubSet}`)
   const rx =
     /\\"position\\":(\d+),\\"item\\":\{\\"@type\\":\\"CreativeWork\\",\\"name\\":\\"([^\\"]+)\\",\\"url\\":\\"([^\\"]+)\\",\\"image\\":\\"([^\\"]+)\\"/g
   const out = new Map<number, { name: string; cardUrl: string; imageUrl: string }>()
@@ -187,7 +221,7 @@ function parseSerebiiCard(html: string, number: number): SerebiiData {
   // Illustrator
   const artistAnchor = $('a[href*="/dex/artist/"]').first()
   const artist = artistAnchor.text().replace(/\s+/g, ' ').trim() || 'Unknown'
-  // Card type: all Promo-B so far are Pokémon (no Trainers). If ability contains no ability icon and no energy icon in title, it could be trainer. Assume Pokémon here.
+  // Card type: all backfilled cards so far are Pokémon (no Trainers). If ability contains no ability icon and no energy icon in title, it could be trainer. Assume Pokémon here.
   const card_type = 'pokémon' as const
   return { name, hp, energy, card_type, attacks, ability, weakness, retreat, artist }
 }
@@ -225,7 +259,7 @@ async function downloadAsWebp(pngUrl: string, dest: string) {
   await sharp(buf).webp({ quality: 90 }).toFile(dest)
 }
 
-// Existing P-B WebP files that Serebii-JPG-based scrapes produced were VP8 without alpha.
+// Existing WebP files that Serebii-JPG-based scrapes produced (P-B 79-86) were VP8 without alpha.
 // The app's FancyCard (lazy load + 3D transforms) refuses to render those; only VP8X-with-alpha
 // works. Detect the broken ones by reading metadata, then re-download from pokemongohub PNG.
 async function isBrokenWebp(filePath: string): Promise<boolean> {
@@ -240,23 +274,70 @@ async function isBrokenWebp(filePath: string): Promise<boolean> {
   }
 }
 
-async function main() {
-  const dryRun = process.argv.includes('--dry-run')
-  const cards: Card[] = JSON.parse(fs.readFileSync(CARDS_JSON, 'utf8'))
-  const existingPB = cards.filter((c) => c.expansion === EXPANSION_ID)
-  const existingNumbers = new Set(existingPB.map((c) => Number.parseInt(c.card_id.split('-').pop() ?? '0', 10)))
-  console.log(`cards.json: ${existingPB.length} existing P-B cards, max #${Math.max(...existingNumbers)}`)
+const cardNumber = (c: Card) => Number.parseInt(c.card_id.split('-').pop() ?? '0', 10)
 
-  const [serebiiList, hubList] = await Promise.all([listSerebiiCards(), listHubCards()])
-  console.log(`Serebii lists ${serebiiList.length} P-B cards; pokemongohub lists ${hubList.size}`)
+// Limitless writes energy in card text as symbols ("Discard a [R] Energy"), Serebii spells it out ("a Fire Energy").
+const energySymbols: Record<string, string> = {
+  G: 'grass',
+  R: 'fire',
+  W: 'water',
+  L: 'lightning',
+  P: 'psychic',
+  F: 'fighting',
+  D: 'darkness',
+  M: 'metal',
+  C: 'colorless',
+}
+
+// Card text compared loosely: Serebii and Limitless also differ in punctuation, spacing and accents.
+const norm = (text: string | undefined) =>
+  (text ?? '')
+    .replace(/\[([GRWLPFDMC])\]/g, (_m, symbol: string) => energySymbols[symbol])
+    .replace(/electric/gi, 'lightning')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9+]/g, '')
+
+function gameplayKey(c: Pick<Card, 'name' | 'hp' | 'energy' | 'attacks' | 'ability' | 'weakness' | 'retreat'>) {
+  return JSON.stringify([
+    norm(c.name),
+    c.hp,
+    c.energy,
+    norm(c.weakness),
+    c.retreat,
+    norm(c.ability?.name),
+    norm(c.ability?.effect),
+    (c.attacks ?? []).map((a) => [a.cost.join(','), norm(a.name), norm(a.damage), norm(a.effect)]),
+  ])
+}
+
+// Adds `id` to a card's alternate_versions, keeping the first entry (its deckbuilding id) in place.
+function addAlternate(card: Card, id: number) {
+  if (card.alternate_versions.includes(id)) {
+    return
+  }
+  const [head, ...rest] = card.alternate_versions
+  card.alternate_versions = [head, ...[...rest, id].toSorted((a, b) => a - b)]
+}
+
+async function backfill(target: Target, cards: Card[], dryRun: boolean): Promise<Card[]> {
+  const { id } = target
+  console.log(`\n=== ${id} ===`)
+  const existing = cards.filter((c) => c.expansion === id)
+  const existingNumbers = new Set(existing.map(cardNumber))
+  console.log(`cards.json: ${existing.length} existing ${id} cards${existing.length ? `, max #${Math.max(...existingNumbers)}` : ''}`)
+
+  const [serebiiList, hubList] = await Promise.all([listSerebiiCards(target.serebiiSlug), listHubCards(target.hubSet)])
+  console.log(`Serebii lists ${serebiiList.length} ${id} cards; pokemongohub lists ${hubList.size}`)
 
   const missing = serebiiList.filter((c) => !existingNumbers.has(c.number))
   console.log(`Missing (present on Serebii but not in cards.json): ${missing.map((m) => `#${m.number}`).join(', ') || '(none)'}`)
 
-  // Also check existing P-B images for the "broken VP8-only" encoding that the app cannot render.
+  // Also check existing images for the "broken VP8-only" encoding that the app cannot render.
   const brokenNumbers: number[] = []
   for (const num of existingNumbers) {
-    const imgPath = path.join(IMAGES_DIR, `${EXPANSION_ID}-${num}.webp`)
+    const imgPath = path.join(IMAGES_DIR, `${id}-${num}.webp`)
     if (await isBrokenWebp(imgPath)) {
       brokenNumbers.push(num)
     }
@@ -271,34 +352,37 @@ async function main() {
         console.warn(`  #${num} broken but pokemongohub has no entry, skipping`)
         continue
       }
-      const dest = path.join(IMAGES_DIR, `${EXPANSION_ID}-${num}.webp`)
+      const dest = path.join(IMAGES_DIR, `${id}-${num}.webp`)
       await downloadAsWebp(hub.imageUrl, dest)
       console.log(`  #${num} image refreshed → ${dest}`)
+    }
+    if (brokenNumbers.length > 0) {
+      console.log(`Refreshed ${brokenNumbers.length} broken images. Regenerate manifest with "tsx scripts/generate-image-locales.ts".`)
     }
   }
 
   if (missing.length === 0) {
-    if (brokenNumbers.length > 0 && !dryRun) {
-      console.log(`\nRefreshed ${brokenNumbers.length} broken images. Regenerate manifest with "tsx scripts/generate-image-locales.ts".`)
-    } else {
-      console.log('Nothing to do.')
-    }
-    return
+    console.log('Nothing to add.')
+    return cards
   }
 
-  const expansion = expansions.find((e) => e.id === EXPANSION_ID)
+  const expansion = expansions.find((e) => e.id === id)
   if (!expansion) {
-    throw new Error('P-B expansion missing from CardsDB')
+    throw new Error(`${id} expansion missing from CardsDB`)
   }
 
   const cardsByName = new Map<string, number[]>()
+  const cardsByGameplay = new Map<string, Card[]>()
   for (const c of cards) {
     const arr = cardsByName.get(c.name) ?? []
     arr.push(c.internal_id)
     cardsByName.set(c.name, arr)
+    const key = gameplayKey(c)
+    cardsByGameplay.set(key, [...(cardsByGameplay.get(key) ?? []), c])
   }
 
   const newRecords: Card[] = []
+  let backLinked = 0
   for (const { number, url } of missing) {
     console.log(`\n#${number} → fetching Serebii detail…`)
     const html = await get(url)
@@ -308,13 +392,42 @@ async function main() {
       console.warn(`  pokemongohub has no entry for #${number}, skipping (need image + stage)`)
       continue
     }
+    if (norm(hub.name) !== norm(data.name)) {
+      throw new Error(`#${number}: Serebii says "${data.name}" but pokemongohub position ${number} is "${hub.name}"`)
+    }
     const stage = data.card_type === 'pokémon' ? await fetchHubStage(hub.cardUrl) : 'basic'
-    const card_id = `${EXPANSION_ID}-${number}`
-    const internal_id = encode(expansion, number, 'P')
-    const siblings = cardsByName.get(data.name) ?? []
-    const alternate_versions = [...new Set([...siblings, internal_id])].toSorted((a, b) => a - b)
+    const card_id = `${id}-${number}`
+    const rarity = target.rarity(number)
+    const internal_id = encode(expansion, number, rarity)
+
+    let alternate_versions: number[]
+    if (target.link === 'name') {
+      const siblings = cardsByName.get(data.name) ?? []
+      alternate_versions = [...new Set([...siblings, internal_id])].toSorted((a, b) => a - b)
+    } else {
+      // Matches can include cards added earlier in this run (the three SP1 Mews share their text).
+      const matches = cardsByGameplay.get(gameplayKey(data)) ?? []
+      if (matches.length === 0) {
+        alternate_versions = [internal_id]
+      } else {
+        // Join the existing group; its deckbuilding id (first entry) stays first.
+        const head = matches[0].alternate_versions[0]
+        const rest = new Set([...matches.flatMap((m) => m.alternate_versions), internal_id])
+        rest.delete(head)
+        alternate_versions = [head, ...[...rest].toSorted((a, b) => a - b)]
+        const group = new Set(alternate_versions)
+        for (const c of [...cards, ...newRecords]) {
+          if (group.has(c.internal_id)) {
+            addAlternate(c, internal_id)
+            backLinked++
+          }
+        }
+        console.log(`  same card text as: ${matches.map((m) => m.card_id).join(', ')}`)
+      }
+    }
+
     const record: Card = {
-      expansion: EXPANSION_ID as Card['expansion'],
+      expansion: id,
       card_id,
       image: `/images/en-US/${card_id}.webp`,
       hp: data.hp,
@@ -326,30 +439,34 @@ async function main() {
       ability: data.ability,
       weakness: data.weakness,
       retreat: data.retreat,
-      rarity: 'P',
+      rarity,
       ex: data.name.includes(' ex'),
       baby: false,
-      pack: 'everypack',
+      pack: target.pack,
       alternate_versions,
       artist: data.artist,
       internal_id,
     } as Card
 
-    console.log(`  ${data.name} — HP ${data.hp}, ${data.energy}, retreat ${data.retreat}, weakness ${data.weakness}, stage ${stage}`)
+    console.log(`  ${data.name} — ${rarity}, HP ${data.hp}, ${data.energy}, retreat ${data.retreat}, weakness ${data.weakness}, stage ${stage}`)
     console.log(`  ability: ${data.ability?.name ?? '(none)'} — attacks: ${data.attacks.map((a) => `${a.name} (${a.damage})`).join(', ')}`)
-    console.log(`  internal_id: ${internal_id}, alternate_versions: [${alternate_versions.join(', ')}]`)
+    console.log(`  artist: ${data.artist}, internal_id: ${internal_id}, alternate_versions: [${alternate_versions.join(', ')}]`)
 
     if (!dryRun) {
       const dest = path.join(IMAGES_DIR, `${card_id}.webp`)
-      await downloadAsWebp(hub.imageUrl, dest)
-      console.log(`  image → ${dest}`)
+      if (!fs.existsSync(dest)) {
+        await downloadAsWebp(hub.imageUrl, dest)
+        console.log(`  image → ${dest}`)
+      }
     }
     newRecords.push(record)
+    const key = gameplayKey(record)
+    cardsByGameplay.set(key, [...(cardsByGameplay.get(key) ?? []), record])
   }
 
   if (dryRun) {
-    console.log(`\nDry run — would add ${newRecords.length} cards. Re-run without --dry-run to write.`)
-    return
+    console.log(`\nDry run — would add ${newRecords.length} ${id} cards and back-link ${backLinked} cards.`)
+    return cards
   }
 
   // Insert new records preserving sort order (expansion, then card number)
@@ -357,12 +474,26 @@ async function main() {
     if (a.expansion !== b.expansion) {
       return a.expansion < b.expansion ? -1 : 1
     }
-    const na = Number.parseInt(a.card_id.split('-').pop() ?? '0', 10)
-    const nb = Number.parseInt(b.card_id.split('-').pop() ?? '0', 10)
-    return na - nb
+    return cardNumber(a) - cardNumber(b)
   })
-  fs.writeFileSync(CARDS_JSON, JSON.stringify(merged, null, 2))
-  console.log(`\nWrote ${newRecords.length} new cards to ${CARDS_JSON}`)
+  console.log(`\nAdded ${newRecords.length} ${id} cards${backLinked ? `, back-linked ${backLinked} cards` : ''}`)
+  return merged
+}
+
+async function main() {
+  const dryRun = process.argv.includes('--dry-run')
+  const original = fs.readFileSync(CARDS_JSON, 'utf8')
+  let cards: Card[] = JSON.parse(original)
+  for (const target of targets) {
+    cards = await backfill(target, cards, dryRun)
+  }
+  const output = JSON.stringify(cards, null, 2)
+  if (dryRun || output === JSON.stringify(JSON.parse(original), null, 2)) {
+    console.log(dryRun ? '\nDry run — nothing written. Re-run without --dry-run to write.' : '\nNothing to do.')
+    return
+  }
+  fs.writeFileSync(CARDS_JSON, output)
+  console.log(`\nWrote ${CARDS_JSON}`)
   console.log(
     'Next: run "pnpm biome check --write --files-max-size=4000000 frontend/assets/cards.json" and then "tsx scripts/generate-image-locales.ts && pnpm hashes"',
   )
