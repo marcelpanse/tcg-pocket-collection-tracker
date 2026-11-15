@@ -115598,7 +115598,7 @@
     "baby": false,
     "foil": false,
     "pack": "pikachupack",
-    "alternate_versions": [1507392],
+    "alternate_versions": [1507392, 1572932],
     "artist": "OKACHEKE",
     "internal_id": 1507392
   },
@@ -116026,7 +116026,7 @@
     "baby": false,
     "foil": false,
     "pack": "megamewtwoxpack",
-    "alternate_versions": [1508352],
+    "alternate_versions": [1508352, 1572996],
     "artist": "DOM",
     "internal_id": 1508352
   },
@@ -116404,7 +116404,7 @@
     "baby": false,
     "foil": false,
     "pack": "megamewtwoxpack",
-    "alternate_versions": [1509184],
+    "alternate_versions": [1509184, 1573060],
     "artist": "Gemi",
     "internal_id": 1509184
   },
@@ -116716,7 +116716,7 @@
     "baby": false,
     "foil": false,
     "pack": "pikachupack",
-    "alternate_versions": [1509888],
+    "alternate_versions": [1509888, 1574020],
     "artist": "Atsuya Uki",
     "internal_id": 1509888
   },
@@ -128345,5 +128345,815 @@
     "alternate_versions": [1513731, 1517701, 1518853, 1520841, 12714832],
     "artist": "PLANETA Mamiya",
     "internal_id": 12714832
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-1",
+    "image": "/images/en-US/SP1-1.webp",
+    "hp": 70,
+    "energy": "grass",
+    "name": "Bulbasaur",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass", "colorless"],
+        "name": "Leech Seed",
+        "damage": "30",
+        "effect": "Heal 10 damage from this Pokémon"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1507392, 1572932],
+    "artist": "Saboteri",
+    "internal_id": 1572932
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-2",
+    "image": "/images/en-US/SP1-2.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Charmander",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire", "colorless"],
+        "name": "Ember",
+        "damage": "50",
+        "effect": "Discard a Fire Energy from this Pokémon"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1508352, 1572996],
+    "artist": "Saboteri",
+    "internal_id": 1572996
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-3",
+    "image": "/images/en-US/SP1-3.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Squirtle",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water"],
+        "name": "Bubble",
+        "damage": "10",
+        "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1509184, 1573060],
+    "artist": "Saboteri",
+    "internal_id": 1573060
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-4",
+    "image": "/images/en-US/SP1-4.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Chikorita",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass", "colorless"],
+        "name": "Razor Leaf",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573124],
+    "artist": "Saboteri",
+    "internal_id": 1573124
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-5",
+    "image": "/images/en-US/SP1-5.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Cyndaquil",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire"],
+        "name": "Tackle",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573188],
+    "artist": "Saboteri",
+    "internal_id": 1573188
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-6",
+    "image": "/images/en-US/SP1-6.webp",
+    "hp": 70,
+    "energy": "water",
+    "name": "Totodile",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water", "water", "colorless"],
+        "name": "Bite",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 2,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573252],
+    "artist": "Saboteri",
+    "internal_id": 1573252
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-7",
+    "image": "/images/en-US/SP1-7.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Treecko",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass", "colorless"],
+        "name": "Pound",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573316],
+    "artist": "Saboteri",
+    "internal_id": 1573316
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-8",
+    "image": "/images/en-US/SP1-8.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Torchic",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire", "colorless"],
+        "name": "Peck",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573380],
+    "artist": "Saboteri",
+    "internal_id": 1573380
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-9",
+    "image": "/images/en-US/SP1-9.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Mudkip",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water", "colorless"],
+        "name": "Mud-Slap",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573444],
+    "artist": "Saboteri",
+    "internal_id": 1573444
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-10",
+    "image": "/images/en-US/SP1-10.webp",
+    "hp": 70,
+    "energy": "grass",
+    "name": "Turtwig",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass", "grass", "colorless"],
+        "name": "Razor Leaf",
+        "damage": "60",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 2,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573508],
+    "artist": "Saboteri",
+    "internal_id": 1573508
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-11",
+    "image": "/images/en-US/SP1-11.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Chimchar",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire"],
+        "name": "Fury Swipes",
+        "damage": "10x",
+        "effect": "Flip 3 coins. This attack does 10 damage for each heads"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573572],
+    "artist": "Saboteri",
+    "internal_id": 1573572
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-12",
+    "image": "/images/en-US/SP1-12.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Piplup",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water"],
+        "name": "Peck",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573636],
+    "artist": "Saboteri",
+    "internal_id": 1573636
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-13",
+    "image": "/images/en-US/SP1-13.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Snivy",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass"],
+        "name": "Vine Whip",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573700],
+    "artist": "Saboteri",
+    "internal_id": 1573700
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-14",
+    "image": "/images/en-US/SP1-14.webp",
+    "hp": 70,
+    "energy": "fire",
+    "name": "Tepig",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire"],
+        "name": "Ember",
+        "damage": "30",
+        "effect": "Discard a Fire Energy from this Pokémon"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573764],
+    "artist": "Saboteri",
+    "internal_id": 1573764
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-15",
+    "image": "/images/en-US/SP1-15.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Oshawott",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water", "colorless"],
+        "name": "Razor Shell",
+        "damage": "20+",
+        "effect": "Flip a coin. If heads, this attack does 30 more damage"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573828],
+    "artist": "Saboteri",
+    "internal_id": 1573828
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-16",
+    "image": "/images/en-US/SP1-16.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Chespin",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass", "colorless"],
+        "name": "Pin Missile",
+        "damage": "20x",
+        "effect": "Flip 4 coins. This attack does 20 damage for each heads"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573892],
+    "artist": "Saboteri",
+    "internal_id": 1573892
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-17",
+    "image": "/images/en-US/SP1-17.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Fennekin",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire"],
+        "name": "Scratch",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1573956],
+    "artist": "Saboteri",
+    "internal_id": 1573956
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-18",
+    "image": "/images/en-US/SP1-18.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Froakie",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water"],
+        "name": "Pound",
+        "damage": "20",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1509888, 1574020],
+    "artist": "Saboteri",
+    "internal_id": 1574020
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-19",
+    "image": "/images/en-US/SP1-19.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Rowlet",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass", "colorless"],
+        "name": "Tackle",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1574084],
+    "artist": "Saboteri",
+    "internal_id": 1574084
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-20",
+    "image": "/images/en-US/SP1-20.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Litten",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire", "fire", "colorless"],
+        "name": "Fire Fang",
+        "damage": "40",
+        "effect": "Your opponent's Active Pokémon is now Burned"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1574148],
+    "artist": "Saboteri",
+    "internal_id": 1574148
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-21",
+    "image": "/images/en-US/SP1-21.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Popplio",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water", "colorless"],
+        "name": "Disarming Voice",
+        "damage": "30",
+        "effect": "Your opponent's Active Pokémon is now Confused"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1574212],
+    "artist": "Saboteri",
+    "internal_id": 1574212
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-22",
+    "image": "/images/en-US/SP1-22.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Grookey",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass", "colorless"],
+        "name": "Branch Poke",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1574276],
+    "artist": "Saboteri",
+    "internal_id": 1574276
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-23",
+    "image": "/images/en-US/SP1-23.webp",
+    "hp": 60,
+    "energy": "fire",
+    "name": "Scorbunny",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire", "colorless"],
+        "name": "Double Kick",
+        "damage": "40x",
+        "effect": "Flip 2 coins. This attack does 40 damage for each heads"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1574340],
+    "artist": "Saboteri",
+    "internal_id": 1574340
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-24",
+    "image": "/images/en-US/SP1-24.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Sobble",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water", "colorless"],
+        "name": "Water Gun",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1574404],
+    "artist": "Saboteri",
+    "internal_id": 1574404
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-25",
+    "image": "/images/en-US/SP1-25.webp",
+    "hp": 60,
+    "energy": "grass",
+    "name": "Sprigatito",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["grass", "colorless"],
+        "name": "Leafage",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "fire",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1574468],
+    "artist": "Saboteri",
+    "internal_id": 1574468
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-26",
+    "image": "/images/en-US/SP1-26.webp",
+    "hp": 70,
+    "energy": "fire",
+    "name": "Fuecoco",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["fire", "colorless"],
+        "name": "Flamethrower",
+        "damage": "50",
+        "effect": "Discard a Fire Energy from this Pokémon"
+      }
+    ],
+    "weakness": "water",
+    "retreat": 2,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1574532],
+    "artist": "Saboteri",
+    "internal_id": 1574532
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-27",
+    "image": "/images/en-US/SP1-27.webp",
+    "hp": 60,
+    "energy": "water",
+    "name": "Quaxly",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["water", "colorless"],
+        "name": "Wing Attack",
+        "damage": "40",
+        "effect": "No effect"
+      }
+    ],
+    "weakness": "lightning",
+    "retreat": 1,
+    "rarity": "☆",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1574596],
+    "artist": "Saboteri",
+    "internal_id": 1574596
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-28",
+    "image": "/images/en-US/SP1-28.webp",
+    "hp": 70,
+    "energy": "psychic",
+    "name": "Mew",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["psychic", "colorless"],
+        "name": "Psychic",
+        "damage": "30+",
+        "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1574672, 1574736, 1574800],
+    "artist": "YOSHIROTTEN",
+    "internal_id": 1574672
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-29",
+    "image": "/images/en-US/SP1-29.webp",
+    "hp": 70,
+    "energy": "psychic",
+    "name": "Mew",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["psychic", "colorless"],
+        "name": "Psychic",
+        "damage": "30+",
+        "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1574672, 1574736, 1574800],
+    "artist": "YOSHIROTTEN",
+    "internal_id": 1574736
+  },
+  {
+    "expansion": "SP1",
+    "card_id": "SP1-30",
+    "image": "/images/en-US/SP1-30.webp",
+    "hp": 70,
+    "energy": "psychic",
+    "name": "Mew",
+    "card_type": "pokémon",
+    "evolution_type": "basic",
+    "attacks": [
+      {
+        "cost": ["psychic", "colorless"],
+        "name": "Psychic",
+        "damage": "30+",
+        "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon"
+      }
+    ],
+    "weakness": "darkness",
+    "retreat": 1,
+    "rarity": "P",
+    "ex": false,
+    "baby": false,
+    "pack": "firstpartnerspack",
+    "alternate_versions": [1574672, 1574736, 1574800],
+    "artist": "YOSHIROTTEN",
+    "internal_id": 1574800
   }
 ]
