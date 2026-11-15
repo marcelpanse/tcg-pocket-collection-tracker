@@ -97,6 +97,11 @@ const deluxeMegaPackProbabilities = {
   position4: createRarityProbability({ '◊◊◊◊': 100 }),
 }
 
+// 1-card Special Pack (SP1 First Partners): 99.95% one of the ☆ starters, 0.05% one of the Mews (no rarity symbol, stored as 'P')
+const specialPackProbabilities = {
+  position1: createRarityProbability({ '☆': 99.95, P: 0.05 }),
+}
+
 const foilProbability: Record<Rarity, number> = createRarityProbability({
   '◊': 21.385,
   '◊◊': 19.578,
@@ -118,6 +123,11 @@ const probabilityPerRarityBaby: Record<Rarity, number> = createRarityProbability
 })
 
 function getPositionProbability(structure: PackStructure, position: number): Record<Rarity, number> {
+  // 1-card special pack
+  if (structure?.cardsPerPack === 1) {
+    return specialPackProbabilities.position1
+  }
+
   // 4-card deluxe pack
   if (structure?.cardsPerPack === 4) {
     // A4b and B4b have different probability distributions, reverify upon rerelease of one of these packs
@@ -254,8 +264,8 @@ const pullRateForCardSubset = (missingCards: Card[], cardsInPack: Card[], struct
   // Calculate chance across all positions
   const chanceToGetInStandardPack = totalProbabilityPerPosition.reduce((acc, posProb) => acc * (1 - posProb), 1)
 
-  // 4-card packs: no special packs (rare/baby)
-  if (structure.cardsPerPack === 4) {
+  // 1- and 4-card packs: no special packs (rare/baby)
+  if (structure.cardsPerPack !== 5) {
     return 1 - chanceToGetInStandardPack
   }
 

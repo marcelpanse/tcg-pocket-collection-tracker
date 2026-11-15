@@ -377,6 +377,20 @@ export const expansions: Expansion[] = [
       cardsPerPack: 5,
     },
   },
+  {
+    name: 'firstpartners',
+    id: 'SP1',
+    internalId: 24,
+    packs: [{ name: 'firstpartnerspack', color: '#78c0ad' }],
+    tradeable: true,
+    openable: true,
+    packStructure: {
+      containsShinies: false,
+      containSixthCardBabies: false,
+      containsLinkedCards: false,
+      cardsPerPack: 1,
+    },
+  },
   // Pack colors should have saturation 37.5% (96) and value 75% (192). The distance in hue between any two packs should not be smaller than 3.33% (12)
   {
     name: 'promo-a',
