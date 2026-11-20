@@ -144,6 +144,30 @@ export function groupTrades(arr: TradeRow[], user_id: string) {
   })
 }
 
+/**
+ * Whether a trade is waiting on an action from the given user ("ball in your court"):
+ * - offered: the receiver needs to accept/decline (or pick the missing card)
+ * - accepted: either side can complete the trade, so it needs everyone's attention
+ * - finished / declined: still needs this user to update their collection or hide it
+ */
+export function tradeNeedsAttention(row: TradeRow, user_id: string) {
+  const iAmOfferer = row.offering_friend_id === user_id
+  const iEnded = iAmOfferer ? row.offerer_ended : row.receiver_ended
+  if (iEnded) {
+    return false
+  }
+  switch (row.status) {
+    case 'offered':
+      return row.receiving_friend_id === user_id
+    case 'accepted':
+    case 'finished':
+    case 'declined':
+      return true
+    default:
+      return false
+  }
+}
+
 export function umami(event: string) {
   // @ts-expect-error runtime script on window object
   window.umami?.track(event)
