@@ -153,3 +153,6 @@ need" side of the match query, so until it is applied, trade matching silently i
   rarity *after* release changes its id and orphans user data in `card_amounts` and `decks.cards`.
   That needs a remapping migration plus a localStorage cache-key bump, not just a scraper rerun — see
   `scripts/sql/migrations/2026-08-b4a-rarity-remap.sql` for the procedure.
+- **Mission-only cards** (e.g. a ☆☆☆ given only by a themed collection mission) get `pack: 'everypack'` from the
+  scraper, the same as cards that drop from every pack. Once the set's missions are known, add their card ids to
+  `missionOnlyCardIds` in `frontend/src/lib/stats.ts`, or every pack's odds for that rarity come out too low.
