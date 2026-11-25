@@ -2,7 +2,27 @@ import type { MissionDetailProps } from '@/components/Mission'
 import type { Card, Expansion, ExpansionId, Mission, Pack, PackStructure, Rarity } from '@/types'
 import { allCards, getCardById, getExpansionById } from './CardsDB'
 
-const expansionCards = Object.groupBy(allCards, (c) => c.expansion) as Partial<Record<ExpansionId, Card[]>>
+/**
+ * Cards that belong to an expansion but never drop from its booster packs: they are only given as mission rewards.
+ * pokemon-zone lists no pack for them, just as for cards that drop from every pack, so the scraper stores them as
+ * 'everypack'. Left in the pack pools, they take a share of their rarity's odds in every pack of the expansion.
+ * Check each new expansion's mission rewards for cards like these.
+ */
+const missionOnlyCardIds = new Set([
+  'A1-283', // Mew ☆☆☆, Kanto Pokédex secret mission
+  'C1-152', // Sweet Honey ☆, "Flower Garden Honey Gathering" missions
+  'C1-183', // Pikachu ex ☆☆☆, "The Path to Pikachu ex" missions
+  'C1-185', // Mega Mewtwo X ex ☆☆☆, "The Path to Mega Mewtwo X ex" missions
+])
+
+const packCardsByExpansion = Object.groupBy(
+  allCards.filter((c) => !missionOnlyCardIds.has(c.card_id)),
+  (c) => c.expansion,
+) as Partial<Record<ExpansionId, Card[]>>
+
+/** Every card that can drop from the given booster pack: its own cards plus the ones every pack of the expansion shares. */
+const cardsInPack = (expansionId: ExpansionId, packName: string) =>
+  (packCardsByExpansion[expansionId] ?? []).filter((c) => c.pack === packName || c.pack === 'everypack')
 
 // Helper to create a full rarity probability record with defaults
 const createRarityProbability = (probabilities: Partial<Record<Rarity, number>>): Record<Rarity, number> => ({
@@ -153,10 +173,9 @@ export function pullRate(wantedCards: Card[], expansion: Expansion, pack: Pack, 
   if (!expansion.packStructure) {
     throw new Error(`${expansion.id}: can't calculate probability without 'packStructure' field`)
   }
-  const cardsInPack = (expansionCards[expansion.id] ?? []).filter((c) => c.pack === pack.name || c.pack === 'everypack')
   return pullRateForCardSubset(
     wantedCards.filter((c) => c.expansion === expansion.id),
-    cardsInPack,
+    cardsInPack(expansion.id, pack.name),
     expansion.packStructure,
     deckbuildingMode,
   )
@@ -167,8 +186,7 @@ export const pullRateForSpecificCard = (expansion: Expansion, packName: string, 
     throw new Error(`${expansion.id}: can't calculate probability without 'packStructure' field`)
   }
   const validatedPackName = packName === 'everypack' ? expansion?.packs[0].name : packName
-  const cardsInPack = (expansionCards[expansion.id] ?? []).filter((c) => c.pack === validatedPackName || c.pack === 'everypack')
-  return pullRateForCardSubset([card], cardsInPack, expansion.packStructure, false) * 100
+  return pullRateForCardSubset([card], cardsInPack(expansion.id, validatedPackName), expansion.packStructure, false) * 100
 }
 
 export const pullRateForSpecificMission = (mission: Mission, missionGridRows: MissionDetailProps[][]) => {
@@ -189,16 +207,7 @@ export const pullRateForSpecificMission = (mission: Mission, missionGridRows: Mi
   ]
   return (
     expansion?.packs.map(
-      (pack) =>
-        [
-          pack.name,
-          pullRateForCardSubset(
-            missingCards,
-            (expansionCards[expansion.id] ?? []).filter((c) => c.pack === pack.name || c.pack === 'everypack'),
-            packStructure,
-            false,
-          ) * 100,
-        ] as const,
+      (pack) => [pack.name, pullRateForCardSubset(missingCards, cardsInPack(expansion.id, pack.name), packStructure, false) * 100] as const,
     ) || []
   )
 }
